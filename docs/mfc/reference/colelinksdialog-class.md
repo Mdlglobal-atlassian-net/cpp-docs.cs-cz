@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853875"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203502"
 ---
 # <a name="colelinksdialog-class"></a>Colelinksdialog – třída
 Používá se pro dialogové okno úpravy odkazů OLE.  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  Generované průvodcem kontejneru kódu aplikace používá tuto třídu.  
   
- Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) struktura v sadě Windows SDK.  
   
  Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce v sadě Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_el](#m_el) strukturu, proveďte to před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Poznámky  
  Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Coledialog – třída](../../mfc/reference/coledialog-class.md)   

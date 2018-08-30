@@ -1,5 +1,5 @@
 ---
-title: OLE ve MFC | Microsoft Docs
+title: OLE ve MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,68 +20,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef23f0b7e031c6866b7792bca61c5e4d5bd470da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6c39c47762f4ac61e3192d5d3ecef997c3078bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204111"
 ---
 # <a name="ole-in-mfc"></a>OLE ve MFC
-Tyto články vysvětlují základní informace o použití prostředí MFC programování OLE. MFC poskytuje nejjednodušší způsob, jak psát programy, které používají OLE:  
+Tyto články vysvětlují základní informace o použití prostředí MFC programování technologie OLE. Knihovna MFC poskytuje nejjednodušší způsob, jak psát programy, které používají OLE:  
   
--   Chcete-li použít OLE visual úpravy (místní aktivace).  
+-   Použití OLE vizuální úpravy (aktivace na místě).  
   
--   Pracovat jako kontejnery OLE nebo servery.  
+-   Chcete-li fungují jako kontejnery OLE nebo servery.  
   
 -   K implementaci funkcí přetahování myší.  
   
--   Práce s daty datum a čas.  
+-   Pro práci s data a času.  
   
--   Správa dat stavu MFC moduly, včetně exportovat vstupní body funkce DLL rozhraní OLE/COM – vstupní body a body vstupu procedury oken.  
+-   Abyste mohli spravovat data stavu knihovny MFC moduly, včetně exportovat vstupní body DLL – funkce rozhraní OLE/COM – vstupní body a body vstupu procedury oken.  
   
  Můžete také použít [automatizace](../mfc/automation.md).  
   
 > [!NOTE]
->  Termín, který označuje OLE technologie související s propojování a vkládání, včetně kontejnery OLE, serverů OLE, OLE – položky, aktivace na místě (nebo úpravy s náhledem), snímačů, přetažení a slučování nabídek. Termín Active se vztahuje na modelu COM (Component Object) a objektů na základě modelu COM, jako je ovládací prvky ActiveX. OLE – automatizace nyní nazývá automatizace.  
+>  Termín, který označuje OLE technologie přidružené propojování a vkládání, jako jsou kontejnery OLE, serverů OLE, položky OLE, aktivace na místě (nebo vizuální úpravy), snímače, přetáhnout a slučováním nabídek. Termín Active se vztahuje na modelu COM (Component Object) a založený na modelu COM objektů, jako je ovládací prvky ActiveX. Automatizace OLE se teď nazývá automatizace.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [OLE – pozadí](../mfc/ole-background.md)  
- Popisuje OLE a obsahuje koncepční informace o tom, jak funguje.  
+ Tento článek popisuje OLE a obsahuje koncepční informace o tom, jak funguje.  
   
  [Aktivace](../mfc/activation-cpp.md)  
- Popisuje roli aktivace k úpravám OLE – položky.  
+ Popisuje role aktivace v úpravách položky OLE.  
   
  [Kontejnery](../mfc/containers.md)  
  Obsahuje odkazy na použití kontejnerů v prostředí OLE.  
   
  [Datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-ole.md)  
- Obsahuje odkazy na témata pojednávající o použití `COleDataObject` a `COleDataSource` třídy.  
+ Obsahuje odkazy na témata popisující použití `COleDataObject` a `COleDataSource` třídy.  
   
  [Přetažení](../mfc/drag-and-drop-ole.md)  
- Popisuje použití, kopírování a vkládání s OLE.  
+ Popisuje použití, kopírování a vkládání technologií OLE.  
   
  [OLE – nabídky a prostředky](../mfc/menus-and-resources-ole.md)  
- Popisuje použití nabídky a prostředky v aplikacích MFC OLE dokumentu.  
+ Vysvětluje použití nabídky a prostředky v aplikacích MFC OLE dokumentu.  
   
  [Registrace](../mfc/registration.md)  
- Popisuje instalaci serveru a inicializace.  
+ Tento článek popisuje instalaci serveru a inicializace.  
   
  [Servery](../mfc/servers.md)  
- Popisuje postup vytvoření OLE položky (nebo součásti) pro použití aplikacemi kontejneru.  
+ Popisuje, jak vytvořit OLE položky (nebo komponent) pro použití aplikací typu kontejner.  
   
  [Snímače](../mfc/trackers.md)  
- Poskytuje informace o `CRectTracker` třídy, která poskytuje grafické rozhraní pro povolit uživatelům interakci s OLE klientské položky.  
+ Poskytuje informace o `CRectTracker` třídu, která poskytuje grafické rozhraní pro povolení uživatelům interakci s klientské položky OLE.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Body připojení](../mfc/connection-points.md)  
- Vysvětluje, jak implementovat spojovací body (dříve označované jako OLE spojovací body) pomocí třídy MFC `CCmdTarget` a `CConnectionPoint`.  
+ Vysvětluje, jak implementovat spojovací body (dříve OLE spojovací body) pomocí tříd knihovny MFC `CCmdTarget` a `CConnectionPoint`.  
   
- [Součásti Server/kontejner modelu COM](../mfc/containers-advanced-features.md)  
- Popisuje kroky potřebné k začlenit volitelné pokročilých funkcí do existující aplikace typu kontejner.  
+ [Komponenty modelu COM Server/kontejner](../mfc/containers-advanced-features.md)  
+ Popisuje kroky potřebné k začlenit volitelné pokročilé funkce do stávajících aplikací typu kontejner.  
   
- [Komponentový objektový Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- Popisuje použití OLE bez MFC.  
+ [Component Object Model](/windows/desktop/com/the-component-object-model)  
+ Popisuje použití OLE bez knihovny MFC.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../mfc/mfc-concepts.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131851"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195232"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkce běhové knihovny jazyka C pro řízení vláken
 Všechny programy Win32 mají alespoň jedno vlákno. Jakékoli vlákno můžete vytvořit další vlákna. Vlákno může rychle dokončí svou práci a pak ukončete, nebo může zůstat aktivní po dobu životnosti programu.  
@@ -40,7 +40,7 @@ Knihovny runtime LIBCMT a MSVCRT jazyka C poskytují následující funkce pro v
  
 `_beginthread` a `_beginthreadex` funkce vytvořit nové vlákno. Vlákno sdílí segmentů kódu a dat procesů pro ostatní vlákna v procesu, ale má svůj vlastní jedinečný registr hodnoty, místo v zásobníku a aktuální adresa instrukce. Systém přiděluje čas procesoru pro každé vlákno tak, aby všechna vlákna v procesu mohou být prováděna současně.  
   
-`_beginthread` a `_beginthreadex` je podobný jako [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) – funkce rozhraní Win32 API, ale nemá tyto rozdíly:  
+`_beginthread` a `_beginthreadex` je podobný jako [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) – funkce rozhraní Win32 API, ale nemá tyto rozdíly:  
   
 - Inicializují určité proměnné knihovny run-time C. To je důležité, pouze při použití knihovny run-time jazyka C v vlákna.  
   

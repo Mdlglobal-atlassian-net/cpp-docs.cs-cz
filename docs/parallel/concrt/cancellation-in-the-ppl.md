@@ -1,5 +1,5 @@
 ---
-title: Zrušení v knihovně PPL | Microsoft Docs
+title: Zrušení v knihovně PPL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,214 +19,214 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694833"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221752"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
-Tento dokument popisuje roli zrušení v paralelní vzory knihovny (PPL), jak zrušit paralelní práce a jak určit, kdy je zrušena paralelní práce.  
+Tento dokument popisuje roli zrušení v knihovna paralelních vzorů (PPL), jak zrušení paralelně prováděných úloh a jak určit, kdy zrušení paralelně prováděných úloh.  
   
 > [!NOTE]
->  Modul runtime používá výjimek implementovat zrušení. Catch nebo zpracování těchto výjimek v kódu. Kromě toho doporučujeme napsat kód výjimky bezpečných v těla funkce pro vaše úkoly. Například můžete použít *prostředků pořízení je inicializace* (RAII) vzor zajistit prostředky jsou při je vyvolána výjimka v těle úlohy správně zpracována. Úplný příklad, který používá vzor RAII k vyčištění prostředků v úlohu možné zrušit, najdete v části [návod: odstranění práce z uživatelského rozhraní vláken](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).  
+>  Modul runtime používá k implementaci zrušení zpracování výjimek. Catch nebo zpracování těchto výjimek v kódu. Kromě toho doporučujeme psát kód bezpečnost výjimek v těla funkcí pro své úkoly. Například můžete použít *získání prostředků je inicializace* vzorek (RAII), ujistěte se, že prostředky jsou správně zpracují, když dojde k výjimce v těle úlohy. Kompletní příklad, který používá vzor RAII pro vyčištění prostředků v zrušitelný úkol, naleznete v tématu [návod: odebrání práce z uživatelského rozhraní vlákna](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).  
   
 ## <a name="key-points"></a>Klíčové body  
   
--   Zrušení je spolupráci a zahrnuje koordinovat kód, který požaduje zrušení a úloha, která reaguje na zrušení.  
+-   Zrušení je spolupráce a zahrnuje koordinaci mezi kód, který požaduje zrušení a úlohu, která bude reagovat na zrušení.  
   
--   Pokud je to možné, slouží ke zrušení pracovní zrušení tokenů. [Concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třída definuje token zrušení.  
+-   Pokud je to možné, použijte tokeny zrušení pro zrušení pracovní. [Concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třída definuje token zrušení.  
   
 
--   Pokud použijete zrušení tokenů, použijte [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metoda zahájíte zrušení a [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkce reagovat na zrušení. Použití [concurrency::cancellation_token::is_canceled](reference/cancellation-token-class.md#is_canceled) metoda zkontrolujte, zda jiná úloha vyžaduje zrušení.
+-   Při použití tokenů zrušení, použijte [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metoda k iniciaci zrušení a [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkce reagovat na zrušení. Použití [concurrency::cancellation_token::is_canceled](reference/cancellation-token-class.md#is_canceled) metodu ke kontrole, jestli jakoukoliv jinou úlohu požadoval zrušení.
   
--   Zrušení neproběhne okamžitě. I když nový pracovní neběží, pokud úlohy nebo skupina úloh byla zrušena, musí aktivní prací. Zkontrolujte a reagovat na zrušení.  
+-   Zrušení se nevyskytuje okamžitě. I když nových neběží, pokud se zrušila, úkolu nebo skupiny úkolů, aktivních pracovních musí vyhledat a reagovat na zrušení.  
   
--   Na základě hodnoty pokračování dědí tokenu zrušení jeho předchozí úlohou. Pokračování založený na úlohách nikdy dědí tokenu svou předchozí úlohou.  
+-   Pokračování založené na hodnotách zdědí token zrušení svého předchozího úkolu. Pokračování podle úloh nikdy zdědí token svého předchozího úkolu.  
   
--   Použití [concurrency::cancellation_token:: žádné](reference/cancellation-token-class.md#none) metoda při volání konstruktoru nebo funkce, která přebírá `cancellation_token` objektu, ale nechcete, aby se zrušit operaci. Navíc pokud se nepředají token zrušení pro [concurrency::task](../../parallel/concrt/reference/task-class.md) konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tuto úlohu je nevratné.  
+-   Použití [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) metody při volání konstruktoru nebo funkce, která přijímá `cancellation_token` objekt, ale nechcete, aby operace zrušit. Také pokud nelze předat token zrušení pro [concurrency::task](../../parallel/concrt/reference/task-class.md) konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tento úkol není zrušitelný.  
 
 
   
 ##  <a name="top"></a> V tomto dokumentu  
   
-- [Paralelní pracovní stromy](#trees)  
+- [Paralelně prováděné stromy](#trees)  
   
 - [Zrušení paralelních úloh](#tasks)  
   
-    - [Použití Token zrušení pro zrušení paralelní práce](#tokens)  
+    - [Zrušení paralelně prováděných úloh pomocí tokenu zrušení](#tokens)  
   
-    - [Pomocí Storno metodu zrušit paralelní práce](#cancel)  
+    - [Pomocí metody zrušení paralelně prováděných cancel](#cancel)  
   
-    - [Použití výjimek zrušit paralelní práce](#exceptions)  
+    - [Zrušení paralelně prováděných úloh pomocí výjimek](#exceptions)  
   
 - [Zrušení paralelních algoritmů](#algorithms)  
   
 - [Kdy nepoužívat zrušení](#when)  
   
-##  <a name="trees"></a> Paralelní pracovní stromy  
- Knihovně PPL používá ke správě podrobných úlohy a výpočty úlohy a skupiny úloh. Vnoření skupin úloh do formuláře *stromy* paralelní práce. Následující obrázek znázorňuje stromu paralelní práce. V tomto obrázku `tg1` a `tg2` představují skupiny úloh; `t1`, `t2`, `t3`, `t4`, a `t5` představují práci, kterou provést skupiny úloh.  
+##  <a name="trees"></a> Paralelně prováděné stromy  
+ PPL používá úloh a skupin úloh pro správu jemně úkoly a výpočty. Skupiny úloh do formuláře můžete vnořit *stromů* paralelní práce. Následující obrázek znázorňuje stromové struktuře paralelní práce. Na tomto obrázku `tg1` a `tg2` reprezentaci skupin úkolů; `t1`, `t2`, `t3`, `t4`, a `t5` představují práci, kterou vytvořili skupiny úloh.  
   
- ![Paralelní pracovní stromu](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
+ ![Stromové struktuře paralelní práce](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
   
- Následující příklad ukazuje kód, který je potřeba vytvořit stromu na obrázku. V tomto příkladu `tg1` a `tg2` jsou [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objekty; `t1`, `t2`, `t3`, `t4`, a `t5` jsou [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) objekty.  
+ Následující příklad ukazuje kód, který je potřebný k vytvoření stromu na obrázku. V tomto příkladu `tg1` a `tg2` jsou [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objekty; `t1`, `t2`, `t3`, `t4`, a `t5` jsou [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) objekty.  
   
  [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]  
   
- Můžete také [concurrency::task_group](reference/task-group-class.md) třídy za účelem vytvoření podobné pracovní větev. [Concurrency::task](../../parallel/concrt/reference/task-class.md) třída také podporuje představu o stromu práce. Ale `task` stromu je závislost stromu. V `task` stromu budoucí funguje dokončena po aktuální pracovní. Ve stromu skupiny úloh interní pracovní dokončení před vnější práci. Další informace o rozdílech mezi úlohy a skupin úloh naleznete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Můžete také použít [concurrency::task_group](reference/task-group-class.md) třídy za účelem vytvoření podobné pracovní stromu. [Concurrency::task](../../parallel/concrt/reference/task-class.md) třídy také podporuje pojem stromu práce. Ale `task` stromu je strom závislostí. V `task` stromu budoucí funguje dokončena po aktuální práci. Ve stromové struktuře skupiny úloh interní pracovní dokončí než vnější práce. Další informace o rozdílech mezi úloh a skupin úloh naleznete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  [[Horní](#top)]  
   
 ##  <a name="tasks"></a> Zrušení paralelních úloh  
 
- Chcete-li zrušit paralelní práce několika způsoby. Upřednostňovaný způsob je pomocí tokenu zrušení. Skupiny úloh také podporu [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metoda a [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metoda. Posledním způsobem je vyvolána výjimka v těle funkce pracovních úloh. Bez ohledu na to, jakou metodu zvolíte Pochopte, že zrušení neproběhne okamžitě. I když nový pracovní neběží, pokud úlohy nebo skupina úloh byla zrušena, musí aktivní prací. Zkontrolujte a reagovat na zrušení.  
+ Zrušení paralelně prováděných úloh několika způsoby. Upřednostňovaným způsobem je použít token zrušení. Skupiny úloh také podporu [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metoda a [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) metody. Posledním způsobem je vyvolat výjimku v těle funkce pracovních úkolů. Bez ohledu na to, jakou metodu zvolíte pochopit, že zrušení nedojde okamžitě. I když nových neběží, pokud se zrušila, úkolu nebo skupiny úkolů, aktivních pracovních musí vyhledat a reagovat na zrušení.  
 
   
- Další příklady, které zrušení paralelních úloh najdete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), a [postupy: použití Zpracování přerušení paralelní smyčky výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
+ Další příklady, které zrušení paralelních úloh, naleznete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), a [postupy: použití Zpracování výjimek pro přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a> Použití Token zrušení pro zrušení paralelní práce  
- `task`, `task_group`, A `structured_task_group` třídy podporují zrušení prostřednictvím zrušení tokenů. Definuje knihovně PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) a [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třídy pro tento účel. Použijete-li zrušit pracovní token zrušení, modul runtime nespustí nové práci, která si předplatí tento token. Můžete použít pracovní, která je již aktivní [is_canceled –](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) – členská funkce ke sledování token zrušení a zastavit, když je to možné.  
+###  <a name="tokens"></a> Zrušení paralelně prováděných úloh pomocí tokenu zrušení  
+ `task`, `task_group`, A `structured_task_group` třídy podporují zrušení prostřednictvím použití tokenů zrušení. Definuje PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) a [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třídy pro tento účel. Při použití token zrušení pro zrušení pracovní modul runtime nelze spustit novou práci, která si předplatí tento token. Můžete použít práci, která je již aktivní [is_canceled –](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) členskou funkci monitorování token zrušení a zastaví, jakmile ho může.  
   
 
- Chcete-li zahájit zrušení, volejte [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metoda. Můžete reagovat na zrušení těmito způsoby:  
+ Abyste zahájili zrušení, zavolejte [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metody. Můžete tak reagovat na zrušení následujícími způsoby:  
   
--   Pro `task` objekty, používají [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkce. `cancel_current_task` Zruší aktuální úlohy a všechny jeho pokračování na základě hodnoty. (Nezruší zrušení *tokenu* který je přidružen úlohu nebo jeho pokračování.)  
+-   Pro `task` objekty, použijte [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkce. `cancel_current_task` Zruší aktuální úloha a všechny jeho pokračování založené na hodnotách. (Nezruší zrušení *token* přidružený k úkolu nebo jeho pokračování.)  
   
--   U skupin úloh a paralelní algoritmy, použijte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce ke zjišťování zrušení a vracet co nejdříve z textu úloh funkce vrátí hodnotu `true`. (Nevolejte `cancel_current_task` ze skupiny úloh.)  
+-   U skupin úloh a paralelní algoritmy, použijte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce zjistit zrušení a vrátit co nejdříve z těla úkolu, když se tato funkce vrátí `true`. (Nevolejte `cancel_current_task` ze skupiny úkolů.)  
 
   
- Následující příklad ukazuje první základní vzor pro zrušení úlohy. Úloha textu příležitostně zkontroluje zrušení uvnitř smyčku.  
+ Následující příklad ukazuje první základní vzor pro zrušení úlohy. Tělo úkolu příležitostně zkontroluje zrušení uvnitř smyčka.  
   
  [!code-cpp[concrt-task-basic-cancellation#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_2.cpp)]  
   
- `cancel_current_task` Funkce vrátí; proto není potřeba explicitně vrátit z aktuální smyčky nebo funkce.  
+ `cancel_current_task` Funkce vyvolá výjimku, proto není potřeba explicitně vrátit z aktuální smyčku nebo funkce.  
   
 > [!TIP]
 
->  Alternativně můžete volat [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) funkce místo `cancel_current_task`.  
+>  Alternativně můžete volat [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) místo funkce `cancel_current_task`.  
   
- Je důležité k volání `cancel_current_task` když jste reagovat na zrušení vzhledem k tomu, že přechází úlohu zrušené stavu. Pokud jste již v rané fázi vrátí místo volání `cancel_current_task`operaci přechází do stavu dokončení a spouštějí žádné pokračování na základě hodnoty.  
+ Je potřeba volat `cancel_current_task` kdy můžete reagovat na zrušení protože přechází na zrušeném stavu úlohy. Pokud jste již v rané fázi vrátíte namísto volání metody `cancel_current_task`, operace přejde do dokončeného stavu a spouštějí se všechny pokračování založené na hodnotách.  
   
 > [!CAUTION]
->  Nikdy throw `task_canceled` z vašeho kódu. Volání `cancel_current_task` místo.  
+>  Nikdy nevyvolají `task_canceled` z vašeho kódu. Volání `cancel_current_task` místo.  
   
- Při ukončení úlohy v zrušené stavu, [concurrency::task::get](reference/task-class.md#get) vyvolá metoda [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (Pokud naopak [concurrency::task::wait](reference/task-class.md#wait) vrátí [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) a nevyvolá výjimku.) Následující příklad ilustruje toto chování pro pokračování založený na úlohách. Pokračování založeného na úloze je volána vždy, i když se zruší předchozí úloha.  
+ Pokud úkol skončí ve zrušeném stavu [Concurrency::Task:: Get](reference/task-class.md#get) vyvolá metoda výjimku [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (A naopak, [Concurrency::Task:: wait](reference/task-class.md#wait) vrátí [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) a nevyvolá.) Následující příklad ukazuje toto chování pro pokračování podle úloh. Pokračování podle úloh je volána vždy, i když je předchozí úloha se zruší.  
 
   
  [!code-cpp[concrt-task-canceled#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_3.cpp)]  
   
- Vzhledem k tomu, že na základě hodnoty pokračování zdědí tokenu jejich předchozí úlohou, pokud byly vytvořeny s explicitní token, pokračování okamžitě zadejte zrušené stavu i v případě, že předchozí úloha stále probíhá. Jakékoli výjimky vyvolané předchozí úlohou po zrušení není tedy rozšíří do úloh pokračování. Zrušení vždy přepíše stav předchozí úlohou. V následujícím příkladu se podobá předchozí, ale ukazuje chování pro pokračování na základě hodnoty.  
+ Proto, že pokračování založené na hodnotách zdědí token svého předchozího úkolu, pokud byly vytvořené pomocí explicitní tokenu, pokračování okamžitě zadejte zrušeném stavu i v případě, že je stále provádí předchozí úlohy. Proto jakékoli výjimce, která je vyvolána předchozí úlohou od zrušení předplatného se nerozšíří do pokračujících úloh. Zrušení vždy přepíše stav předchozí úlohy. Následující příklad se podobá předchozí, ale ukazuje chování pro pokračování založené na hodnotách.  
   
  [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]  
   
 > [!CAUTION]
 
->  Pokud se nepředají token zrušení pro `task` konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tuto úlohu je nevratné. Kromě toho je nutné předat stejný token zrušení do konstruktoru všech vnořených úloh (to znamená, úlohy, které jsou vytvořené v těle jiná úloha) současně zrušit všechny úlohy.  
+>  Pokud nelze předat token zrušení pro `task` konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tento úkol není zrušitelný. Kromě toho je nutné předat stejný token zrušení do konstruktoru všech vnořených úloh (to znamená, úkoly, které jsou vytvořeny v těle jiný úkol) k zrušení všech úloh současně.  
   
- Můžete chtít spustit libovolný kód, když se zruší token zrušení. Například pokud uživatel vybere **zrušit** tlačítko na uživatelské rozhraní na tlačítko Storno, může zakázat toto tlačítko, dokud uživatel spustí jiná operace. Následující příklad ukazuje, jak používat [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) metody pro registraci funkce zpětného volání, která se spouští při zrušení token zrušení.  
+ Můžete chtít spustit libovolný kód, když je zrušen token zrušení. Například, pokud uživatel klikne **zrušit** tlačítko v uživatelském rozhraní na tlačítko Storno, může zakázat toto tlačítko, dokud uživatel spustí jiná operace. Následující příklad ukazuje způsob použití [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) metody pro registraci funkce zpětného volání, která se spustí, když je zrušen token zrušení.  
 
   
  [!code-cpp[concrt-task-cancellation-callback#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_5.cpp)]  
   
- Dokument [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md) najdete vysvětlení rozdílu mezi pokračování založené na hodnotu a založený na úlohách. Pokud nezadáte `cancellation_token` objekt úkolů pokračování, pokračování dědí token zrušení z předchozí úlohou následujícími způsoby:  
+ Dokument [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md) vysvětluje rozdíl mezi pokračování založené na hodnotách a založený na úlohách. Pokud nezadáte `cancellation_token` objektu úkolu pokračování, pokračování token rušení, který dědí z předchozí úlohy následujícími způsoby:  
   
--   Pokračování založené na hodnotu vždy dědí tokenu zrušení předchozí úlohou.  
+-   Pokračování založené na hodnotách vždy zdědí token zrušení předchozího úkolu.  
   
--   Pokračování založený na úlohách nikdy dědí tokenu zrušení předchozí úlohou. Jediný způsob, jak provést pokračování založený na úlohách možné zrušit je explicitně předat token zrušení.  
+-   Pokračování podle úloh nikdy zdědí token zrušení předchozího úkolu. Jediným způsobem, aby bylo možné zrušit pokračování podle úloh je explicitně předat token zrušení.  
   
- Tyto chování nemá vliv chybný úkolu (to znamená, jeden, který vyvolá výjimku). V takovém případě je zrušena pokračování na základě hodnoty; pokračování založený na úlohách není zrušena.  
+ Těchto projevů nejsou ovlivněny chybnou úkolu (to znamená, vyvolá výjimku). V takovém případě se zrušila, pokračování založené na hodnotách; pokračování podle úloh není zrušena.  
   
 > [!CAUTION]
->  Úloha, která je vytvořen v jiné úloze (jinými slovy, vnořené úlohy) nedědí token zrušení úlohy nadřazené. Pouze na základě hodnoty pokračování dědí tokenu zrušení jeho předchozí úlohou.  
+>  Úloha, která je vytvořena v jiném úkolu (jinými slovy, vnořené úlohy) nedědí token zrušení nadřazeného úkolu. Pouze pokračování založené na hodnotách zdědí token zrušení svého předchozího úkolu.  
   
 > [!TIP]
 
->  Použití [concurrency::cancellation_token:: žádné](reference/cancellation-token-class.md#none) metoda při volání konstruktoru nebo funkce, která přebírá `cancellation_token` objektu a vy nechcete, aby se zrušit operaci.  
+>  Použití [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) metody při volání konstruktoru nebo funkce, která přijímá `cancellation_token` objektů a nechcete, aby operace zrušit.  
   
- Můžete zadat také token zrušení do konstruktoru objektu `task_group` nebo `structured_task_group` objektu. Důležitým aspektem to je, že podřízené skupiny úloh zdědí tento token zrušení. Pro příklad, který ukazuje tento koncept pomocí [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) funkce spustit na volání `parallel_for`, najdete v části [zrušení paralelních algoritmů](#algorithms) později v tomto dokument.  
+ Můžete také zadat token zrušení pro konstruktor třídy `task_group` nebo `structured_task_group` objektu. Důležitou součástí to je, že podřízené skupiny úloh zdědí tento token zrušení. Příklad, který tento koncept demonstruje pomocí [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) spouštění pro volání funkce `parallel_for`, naleznete v tématu [zrušení paralelních algoritmů](#algorithms) dále v tomto dokument.  
   
  [[Horní](#top)]  
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Tokeny zrušení a skládání úloh  
 
- [Souběžnosti:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all –](reference/concurrency-namespace-functions.md#when_all) a [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkce vám může pomoct vytvořit více úloh k implementaci běžných vzorů. Tato část popisuje, jak tyto funkce fungují s zrušení tokenů.  
+ [Souběžnosti:: hypertextový odkaz "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all –](reference/concurrency-namespace-functions.md#when_all) a [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcí můžete vytvořit více úkolů k implementaci běžných vzorů. Tato část popisuje, jak tyto funkce pracují s tokeny zrušení.  
   
- Když zadáte token zrušení pro buď `when_all` a `when_any` fungovat, že funkce zruší jenom v případě, že token zrušení byla zrušena, nebo pokud jeden účastníka úloh končí ve stavu, zrušené nebo vyvolá výjimku.  
+ Když zadáte token zrušení pro buď `when_all` a `when_any` fungovala, že funkce zruší pouze v případě, že je zrušen token zrušení, nebo když jeden účastník úkoly skončí ve zrušeném stavu nebo vyvolá výjimku.  
   
- `when_all` Funkce zdědí každý úkol, který vytvoří celou operaci, když nezadáte token zrušení k němu token zrušení. Úloha, která je vrácena z `when_all` se zruší, pokud všechny tyto tokeny zrušena a alespoň jeden z účastníků úlohy ještě nezačala nebo je spuštěná. K podobné chování dochází při jednu z úloh vyvolá výjimku - úloha, která je vrácena z `when_all` se okamžitě zruší, k této výjimce.  
+ `when_all` Funkce dědí z každý úkol, který lze kombinovat celkovou operaci, pokud nezadáte token zrušení do ní token zrušení. Úloha, která je vrácena z `when_all` zruší se, když některý z těchto tokenů se zruší a alespoň jeden z účastníků úkolů ještě nezačala nebo je spuštěná. Podobného chování nastane, pokud jeden z úkolů dojde k výjimce – úloha, která je vrácena z `when_all` je okamžitě bylo zrušeno s tuto výjimku.  
   
- Modul runtime rozhodne token zrušení pro úlohu, která je vrácena z `when_any` fungovat po dokončení této úlohy. Pokud žádná z účastnické úlohy dokončíte ve stavu dokončení a vyvolá výjimku, jeden nebo více úloh, jednu z úloh, které vrátil je zvolen k dokončení `when_any` a jeho token je zvolen jako token pro konečnou úlohu. Je-li více než jeden úkol dokončí v dokončené uveďte, úloha, která je vrácena z `when_any` končí úloha ve stavu dokončení. Modul runtime pokusí vyberte dokončené úlohy, jejichž token není zrušena v době dokončení tak, aby úloha, která je vrácena z `when_any` není zrušena okamžitě, přestože jiných provádění úkolů může dokončit později.  
+ Modul runtime zvolí token zrušení pro úlohu, která je vrácena z `when_any` fungovat po dokončení této úlohy. Je-li žádný účastníka úlohy dokončení ve stavu dokončení a vyvolá výjimku, jeden nebo více úkolů, jednu z úloh, které vyvolala je vybrán k dokončení `when_any` a jeho token je vybrán jako token pro poslední úlohu. Pokud více než jeden úkol skončí ve dokončenou stavu, úloha, která je vrácena z `when_any` úkol skončí ve stavu dokončení. Modul runtime pokusí vyberte dokončené úlohy, jehož token není zrušena v době dokončení tak, aby úloha, která je vrácena z `when_any` není zrušena okamžitě i v případě, že ostatní spuštěné úlohy může dokončit později.  
   
  [[Horní](#top)]  
   
-###  <a name="cancel"></a> Pomocí Storno metodu zrušit paralelní práce  
+###  <a name="cancel"></a> Pomocí metody zrušení paralelně prováděných cancel  
 
- [Concurrency::task_group::cancel](reference/task-group-class.md#cancel) a [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metody nastavit skupinu úkolů zrušené stav. Po zavolání metody `cancel`, skupině úloh nespustí budoucí úlohy. `cancel` Metody je možné volat v několika podřízené úlohy. Zrušené úlohy [concurrency::task_group::wait](reference/task-group-class.md#wait) a [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait) metody vrátit [concurrency::canceled](reference/concurrency-namespace-enums.md#task_group_status).  
+ [Concurrency::task_group::cancel](reference/task-group-class.md#cancel) a [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) nastavit skupinu úloh pro zrušeném stavu. Po zavolání `cancel`, skupina úloh nespustí budoucí úlohy. `cancel` Metody mohou být volány více podřízených úloh. Zrušené úlohy způsobí, že [Concurrency::task_group:: wait](reference/task-group-class.md#wait) a [Concurrency::structured_task_group:: wait](reference/structured-task-group-class.md#wait) metody k vrácení [concurrency::canceled](reference/concurrency-namespace-enums.md#task_group_status).  
 
   
- Pokud je zrušena skupinu úloh, můžete aktivovat volání z každé podřízené úlohy do modulu runtime *bod přerušení*, což způsobí, že modulu runtime throw a catch typ vnitřní výjimky pro zrušení aktivních úloh. Concurrency Runtime nedefinuje specifické přerušení body; mohou probíhat v žádném volání modulu runtime. Modul runtime musí zpracování výjimek, které vyvolává za účelem provedení zrušení. Proto není zpracování neznámé výjimek v těle úlohy.  
+ Pokud dojde ke zrušení skupiny úloh, můžete aktivovat volání z každé podřízené úlohy do modulu runtime *bodu přerušení*, což způsobí, že modul runtime throw a catch – typ vnitřní výjimky pro zrušení aktivních úloh. Modulu Runtime souběžnosti nedefinuje konkrétní přerušení body; můžete k nim dojde v kterémkoli volání modulu runtime. Modul runtime musí zpracovat výjimky, které se vyvolá, aby bylo možné provést zrušení. Proto není zpracovat Neznámý výjimky v těle úlohy.  
   
- Pokud podřízené úlohy provede časově náročná operace a nevyvolá do modulu runtime, musí pravidelně kontrolovat zrušení a ukončete včas. Následující příklad ukazuje jeden způsob jak určit, kdy je zrušena pracovní. Úloha `t4` zruší nadřazenou skupinu úloh, když dojde k chybě. Úloha `t5` příležitostně volá `structured_task_group::is_canceling` umožňuje kontrolu pro zrušení. Pokud je zrušena nadřazenou skupinu úloh, úkolů `t5` vytiskne zprávu a ukončí.  
+ Pokud podřízená úloha provede časově náročná operace a nevolá do modulu runtime, musí pravidelně kontrolovat zrušení a ukončete včas. Následující příklad ukazuje jeden způsob, jak zjistit, když se zruší práce. Úloha `t4` zruší skupinu nadřazeného úkolu, když dojde k chybě. Úloha `t5` čas od času volání `structured_task_group::is_canceling` metodu ke kontrole pro zrušení. Pokud dojde ke zrušení nadřazené skupiny úloh, úkolů `t5` vytiskne zprávu a ukončí.  
   
  [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]  
   
- Tento příklad zkontroluje pro zrušení na každých 100<sup>tý</sup> iteraci smyčky úloh. Frekvence, ve kterém můžete kontrolovat pro zrušení závisí na množství práce, kterou vaše úloha provede a jak rychle potřebujete pro úlohy reagovat na zrušení.  
+ Tento příklad kontroluje pro zrušení na každých 100<sup>th</sup> iteraci smyčky úloh. Frekvence, se kterým můžete zkontrolovat zrušení závisí na množství práce, kterou provádí vaše úlohy a jak rychle je potřeba pro úlohy reagovat na zrušení.  
   
- Pokud nemáte přístup k nadřazený objekt skupiny úloh, zavolejte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce k určení, zda je zrušená nadřazené skupiny úloh.  
+ Pokud nemáte přístup k nadřazeného objektu skupiny úloh, zavolejte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce určit, zda je zrušena skupinu nadřazeného úkolu.  
 
   
- `cancel` Metoda má vliv pouze na podřízené úlohy. Například, pokud zrušíte skupiny úloh `tg1` obrázek stromu paralelní práce, všechny úlohy ve stromové struktuře (`t1`, `t2`, `t3`, `t4`, a `t5`) se vztahuje. Pokud zrušíte skupině vnořené úlohy `tg2`, pouze úlohy `t4` a `t5` vliv.  
+ `cancel` Metoda má vliv pouze podřízených úloh. Například, pokud zrušíte skupiny úloh `tg1` obrázku stromové struktuře paralelní práce, všechny úlohy ve stromové struktuře (`t1`, `t2`, `t3`, `t4`, a `t5`) se to týká. Pokud zrušíte skupiny vnořené úlohy `tg2`, pouze úlohy `t4` a `t5` se to týká.  
   
- Při volání `cancel` metoda, všechny podřízené úlohy skupiny také došlo ke zrušení. Zrušení neovlivní žádné nadřazených položek skupiny úloh ve stromu paralelní práce. Následující příklady ukazují to podle budovy na obrázku stromu paralelní práce.  
+ Při volání `cancel` metoda, všechny podřízené úlohy také zrušení skupiny. Zrušení neovlivní žádné nadřazené skupiny úloh ve stromové struktuře paralelní práce. Následující příklady ukazují to vytvořením obrázek stromu paralelní práci.  
   
- První z těchto příkladech vytvoří pracovní funkci pro úlohu `t4`, která je podřízená této skupiny úloh `tg2`. Pracovní funkce volá funkci `work` ve smyčce. Pokud žádné volat na `work` selže, úloha zruší své nadřazené skupiny úloh. To způsobí, že skupina úkolů `tg2` k zadání zrušené stavu, ale nezruší skupina úkolů `tg1`.  
+ První z těchto příkladů vytvoří pracovní funkce pro úlohu `t4`, což je podřízenou skupinu úloh `tg2`. Pracovní funkce volá funkci `work` ve smyčce. Pokud některý volání `work` selže, úloha zruší její nadřazenou skupinu úloh. To způsobí, že skupina úloh `tg2` zadat zrušeném stavu, ale nezruší skupina úloh `tg1`.  
   
  [!code-cpp[concrt-task-tree#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_7.cpp)]  
   
- Tato druhém příkladu vypadá takto: první z nich, s tím rozdílem, že úloha zruší skupina úkolů `tg1`. Tato akce ovlivní všechny úlohy ve stromové struktuře (`t1`, `t2`, `t3`, `t4`, a `t5`).  
+ Tento druhý příklad vypadá podobně jako první z nich, s tím rozdílem, že úloha zruší skupina úloh `tg1`. Tato akce ovlivní všechny úlohy ve stromové struktuře (`t1`, `t2`, `t3`, `t4`, a `t5`).  
   
  [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]  
   
- `structured_task_group` Třída není bezpečné pro přístup z více vláken. Proto podřízené úlohy, který volá metodu nadřazené `structured_task_group` objekt vytváří neurčené chování. Výjimky pro toto pravidlo jsou `structured_task_group::cancel` a [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) metody. Tyto metody zrušit nadřazené skupině úloh a zkontrolujte pro zrušení můžete volat podřízené úlohy.  
+ `structured_task_group` Třída není bezpečná pro vlákno. Proto podřízená úloha, která volá metodu svého nadřazeného objektu `structured_task_group` objekt vytváří neurčené chování. Výjimky z tohoto pravidla jsou `structured_task_group::cancel` a [Concurrency::structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) metody. Podřízená úloha může tyto metody volat a zrušit skupinu nadřazeného úkolu a zkontrolovat zrušení.  
 
  
 > [!CAUTION]
->  I když používáte token zrušení zrušit práci, kterou provádí skupinu úkolů, který běží jako podřízenou `task` objektu, nemůžete použít `task_group::cancel` nebo `structured_task_group::cancel` metody zrušit `task` objekty, které spustit ve skupině úloh.  
+>  I když používáte token zrušení pro zrušení práci, která se provádí pomocí skupiny úloh, na kterém běží jako podřízený objekt `task` objektu nelze použít `task_group::cancel` nebo `structured_task_group::cancel` metody zrušit `task` objekty, které běží ve skupině úloh.  
   
  [[Horní](#top)]  
   
-###  <a name="exceptions"></a> Použití výjimek zrušit paralelní práce  
- Použití zrušení tokenů a `cancel` metoda jsou efektivnější než zpracování na zrušení paralelní práce stromu výjimek. Zrušení tokenů a `cancel` metoda zrušení úlohy a všechny podřízené úlohy způsobem shora dolů. Zpracovávání výjimek v jazyce naopak funguje způsobem zdola nahoru a musí zrušit každou podřízenou skupinu úloh nezávisle jako výjimka šíří směrem nahoru. Téma [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) vysvětluje, jak Concurrency Runtime používá ke komunikaci chyby výjimky. Ne všechny výjimky však znamenat chybu. Například vyhledávacího algoritmu může zrušit jeho přidružených úloh, pokud najde výsledek. Jak je uvedeno nahoře, výjimek je však méně efektivní než při použití `cancel` metoda zrušit paralelní práce.  
+###  <a name="exceptions"></a> Zrušení paralelně prováděných úloh pomocí výjimek  
+ Použití tokenů zrušení a `cancel` metody jsou účinnější než na zrušení paralelně prováděných úloh stromu zpracování výjimek. Tokeny zrušení a `cancel` metodu zrušení úlohy a všechny podřízené úkoly způsobem shora dolů. Naopak zpracování výjimek funguje způsobem zdola nahoru a musíte zrušit každou podřízenou skupinu úloh nezávisle na sobě jako výjimka šíří, směrem nahoru. Téma [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) vysvětluje, jak Concurrency Runtime používá k předání chyby výjimky. Ale ne všechny výjimky signalizují chybu. Například vyhledávací algoritmus může zrušit jeho přidružené úlohy, najde-výsledek. Jak už bylo zmíněno dříve, zpracování výjimek je však méně efektivní než při použití `cancel` metodu zrušení paralelně prováděných úloh.  
   
 > [!CAUTION]
->  Doporučujeme používat výjimky zrušit paralelní práce pouze v případě potřeby. Zrušení tokenů a skupině úloh `cancel` metody jsou efektivnější a méně náchylné k chybám.  
+>  Doporučujeme používat výjimky zrušení paralelně prováděných pouze v případě potřeby. Tokeny zrušení a skupiny úloh `cancel` metody jsou efektivnější a méně náchylná k chybě.  
   
- Pokud je vyvolána výjimka v těle pracovní funkce, kterou předáte pro skupinu úloh, modulu runtime ukládá této výjimky a zařazuje výjimka, která má kontext, který se čeká na skupině úloh ukončíte. Stejně jako u `cancel` metoda, modul runtime, zahodí se všechny úlohy, které nebyly ještě nezačala a nepřijímá nové úkoly.  
+ Při vyvolání výjimky v textu, který předáte pracovní funkce pro skupinu úloh, modul runtime ukládá tuto výjimku a zařadí výjimka, která má kontext, který se čeká na skupinu úloh na dokončení. Stejně jako u `cancel` metody, modul runtime zahodí všechny úkoly, které ještě nebyly spuštěny a nepřijímá nové úkoly.  
   
- Tento příklad třetí podobá druhý, s výjimkou této úlohy `t4` vyvolá výjimku pro zrušení skupiny úloh `tg2`. Tento příklad používá `try` - `catch` bloku ke kontrole pro zrušení při skupiny úloh `tg2` čeká na dokončení úkolů jeho podřízené. Podobně jako v prvním příkladu, to způsobí, že skupina úkolů `tg2` k zadání zrušené stavu, ale nezruší skupina úkolů `tg1`.  
+ Tento třetí příklad se podobá druhý, s výjimkou tento úkol `t4` vyvolá výjimku zrušení skupiny úloh `tg2`. Tento příklad používá `try` - `catch` bloku zkontrolovat zrušení při skupina úloh `tg2` čeká na dokončení podřízených úloh. Podobně jako v prvním příkladu, způsobí to, že skupina úloh `tg2` zadat zrušeném stavu, ale nezruší skupina úloh `tg1`.  
   
  [!code-cpp[concrt-task-tree#4](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_9.cpp)]  
   
- Zpracovávání výjimek v jazyce zrušit stromu celou pracovní tomto čtvrtý příkladu. V příkladu zachytí výjimky při úkolů skupiny `tg1` čeká na dokončení místo při jeho podřízených úkolů úkolů skupiny `tg2` čeká na jeho podřízené úlohy. Jako druhém příkladu to způsobí, že obě úlohy skupiny ve stromu `tg1` a `tg2`, zadat zrušené stavu.  
+ Zpracování výjimek pro zrušení stromu celý pracovní tento čtvrtý příkladu. V příkladu zachytí výjimku při úkol skupiny `tg1` čeká na dokončení místo při jeho podřízených úloh, úkolů skupiny `tg2` počká na jeho podřízené úlohy. Podobně jako v druhém příkladu to způsobí, že obě úlohy ve stromové struktuře `tg1` a `tg2`, zadat zrušeném stavu.  
   
  [!code-cpp[concrt-task-tree#5](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_10.cpp)]  
   
- Protože `task_group::wait` a `structured_task_group::wait` metody výjimku při podřízené úlohy vyvolá výjimku, neobdržíte návratovou hodnotu z nich.  
+ Vzhledem k tomu, `task_group::wait` a `structured_task_group::wait` metody vyvolání v případě, že podřízená úloha vyvolá výjimku, neobdržíte návratovou hodnotu z nich.  
   
  [[Horní](#top)]  
   
 ##  <a name="algorithms"></a> Zrušení paralelních algoritmů  
- Paralelní algoritmy v knihovně PPL, například `parallel_for`, sestavení na skupiny úloh. Proto můžete řadu se stejné techniky zrušit paralelní algoritmus.  
+ Paralelní algoritmy v knihovně PPL, například `parallel_for`, vytvářet skupiny úkolů. Proto řadu stejné postupy můžete použít pro zrušení paralelních algoritmů.  
   
- Následující příklady ilustrují několik způsobů, jak zrušit paralelní algoritmus.  
+ Následující příklady znázorňují několik způsobů, jak zrušit paralelního algoritmu.  
   
- Následující příklad používá `run_with_cancellation_token` funkce k volání `parallel_for` algoritmus. `run_with_cancellation_token` Funkce přijme token jako argument zrušení a zavolá funkci zadané pracovní synchronně. Protože paralelní algoritmy jsou založena na úlohy, dědí token zrušení úlohy nadřazené. Proto `parallel_for` může reagovat na zrušení.  
+ V následujícím příkladu `run_with_cancellation_token` funkce má být volána `parallel_for` algoritmus. `run_with_cancellation_token` Funkce přijme token jako argument zrušení a volá zadaný pracovní funkce synchronně. Protože paralelní algoritmy jsou postavené na úkoly, zdědí token zrušení nadřazeného úkolu. Proto `parallel_for` můžou reagovat na zrušení.  
   
  [!code-cpp[concrt-cancel-parallel-for#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_11.cpp)]  
   
 
- Následující příklad používá [concurrency::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait) metoda k volání `parallel_for` algoritmus. `structured_task_group::run_and_wait` Metoda čeká na dokončení zadané úlohy. `structured_task_group` Objektu umožňuje pracovní funkce se zrušit úlohy.  
+ V následujícím příkladu [Concurrency::structured_task_group:: run_and_wait](reference/structured-task-group-class.md#run_and_wait) metoda se má volat `parallel_for` algoritmus. `structured_task_group::run_and_wait` Metoda čeká na dokončení zadané úlohy. `structured_task_group` Objektu umožňuje pracovní funkce pro zrušení úkolu.  
   
  [!code-cpp[concrt-task-tree#7](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_12.cpp)]  
   
@@ -236,7 +236,7 @@ Tento dokument popisuje roli zrušení v paralelní vzory knihovny (PPL), jak zr
 The task group status is: canceled.  
 ```  
   
- Následující příklad používá výjimek zrušit `parallel_for` smyčky. Modul runtime zařazuje výjimka, která má kontext volání.  
+ Následující příklad používá pro zrušení zpracování výjimek `parallel_for` smyčky. Modul runtime zařazuje výjimka, která má kontext volání.  
   
  [!code-cpp[concrt-task-tree#9](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_13.cpp)]  
   
@@ -246,16 +246,16 @@ The task group status is: canceled.
 Caught 50  
 ```  
   
- Následující příklad používá ke koordinaci zrušení v logický příznak `parallel_for` smyčky. Spustí každý úkol, protože v tomto příkladu se nepoužívá `cancel` metoda nebo výjimky zpracování zrušit celou sadu úloh. Proto tato technika může mít větší výpočetní režijní náklady než mechanismus zrušení.  
+ Následující příklad používá ke koordinaci zrušení v příznak logické hodnoty `parallel_for` smyčky. Každý úkol spustí, protože v tomto příkladu nepoužívá `cancel` zpracování metody nebo výjimky zrušit celkové sady úloh. Proto tato technika může mít více nadměrnou výpočetní zátěž než mechanismus kterém jste předplatné zrušili.  
   
  [!code-cpp[concrt-task-tree#8](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_14.cpp)]  
   
- Každá metoda zrušení má oproti ostatním výhod. Zvolte metodu, která odpovídá vašim konkrétním potřebám.  
+ Každá metoda zrušení má výhody oproti ostatním. Zvolte metodu, která odpovídá vašim konkrétním potřebám.  
   
  [[Horní](#top)]  
   
 ##  <a name="when"></a> Kdy nepoužívat zrušení  
- Použití zrušení je vhodné, když každého člena skupiny souvisejících úloh můžete ukončit včas. Je však několik scénářů, kde zrušení nemusí být vhodné pro vaši aplikaci. Například zrušení úlohy je spolupráci, a proto celou sadu úloh nebude zrušit, pokud je blokovaný všechny jednotlivé úlohy. Například pokud ještě nezačala jeden úkol, ale jeho odblokuje aktivní jiná úloha, se nespustí, pokud došlo ke zrušení skupiny úloh. To může způsobit zablokování v aplikaci. Je druhý například použití zrušení kde nemusí být vhodné v případě, že úloha se zruší, ale důležité operace, jako je například uvolnění prostředku provede jeho podřízené úlohy. Protože celou sadu úloh se zruší, když nadřazený úkol je zrušeno, nebude provést tuto operaci. Příklad, který znázorňuje tento bod, najdete v článku [Rady pro pochopení jak zrušení a výjimky zpracování odstranění objektu ovlivnit](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) část v osvědčené postupy v tématu Parallel Library vzory.  
+ Použití zrušení je vhodné, když každého člena skupiny souvisejících úloh můžete ukončit včas. Existují však některé scénáře, kde zrušení nemusí být vhodné pro vaši aplikaci. Například protože zrušení úlohy je kooperativní, celkové sady úloh nebude zrušit, pokud se zablokuje všechny jednotlivé úlohy. Například pokud dosud nebyl spuštěn jeden úkol, ale odblokuje jiné aktivní úlohy, se nespustí, pokud skupina úloh se zruší. To může způsobit zablokování aplikace. Druhý příklad, kde nemusí být vhodné použít zrušení při zrušení úkolu, ale jeho podřízených úloh provádí důležité operace, jako je například uvolnění prostředku. Protože celé sadě úkolů dojde ke zrušení při zrušení nadřazeného úkolu, tato operace nebude spuštěno. Příklad, který ilustruje tento bod, najdete v článku [porozumění jak zrušení a výjimky zpracování odstraňování objektů ovlivnit](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) kapitoly osvědčené postupy v paralelních vzorcích knihovny tématu.  
   
  [[Horní](#top)]  
   
@@ -263,12 +263,12 @@ Caught 50
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Postupy: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Ukazuje, jak použít k implementaci paralelního vyhledávacího algoritmu zrušení.|  
-|[Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Ukazuje, jak používat `task_group` třída pro psaní vyhledávacího algoritmu pro základní stromové struktury.|  
-|[Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány skupiny úloh, prosté úlohy a asynchronních agentů a jak reagovat na výjimky ve vašich aplikacích.|  
-|[Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Popisuje, jak úlohy vztahují k skupin úloh a použití strukturovaných a nestrukturovaných úloh ve svých aplikacích.|  
-|[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)|Popisuje paralelní algoritmy, které souběžně provádět práci na kolekce dat|  
-|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Poskytuje přehled Parallel Library vzory.|  
+|[Postupy: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Ukazuje, jak můžete implementovat paralelního vyhledávacího algoritmu zrušení.|  
+|[Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Ukazuje způsob použití `task_group` třídu pro zápis vyhledávacího algoritmu pro základní stromové struktury.|  
+|[Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Popisuje způsob, jakým modul runtime zpracovává výjimky, které jsou vyvolány skupiny úloh, lehkých úloh a asynchronních agentů a jak reagovat na výjimky ve vašich aplikacích.|  
+|[Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Popisuje, jak se úlohy týkají u skupin úloh a použití nestrukturovaných a strukturovaných úloh ve svých aplikacích.|  
+|[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)|Popisuje paralelní algoritmy, které provádějí práci současně na kolekce dat|  
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Přehled knihovny Ppl.|  
   
 ## <a name="reference"></a>Odkaz  
  [task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  

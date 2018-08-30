@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214943"
 ---
 # <a name="cgopherfilefind-class"></a>Cgopherfilefind – třída
 Pomáhá při hledání internetových souborů na serverech gopher.  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING Pokud je to možné, opakovaně používat existující připojení k serveru na nový `FindFile` požadavky, místo vytvoření nové relace pro každý požadavek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
  Po volání `FindFile` načíst první objekt gopher, můžete volat [FindNextFile](#findnextfile) načíst soubory následné gopher.  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
+ Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  Získá čas vytvoření pro aktuální soubor.  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *pTimeStamp*  
- Ukazatel [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas vytvoření souboru.  
+ Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas vytvoření souboru.  
   
  *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetCreationTime`.  
   
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) rozhraní API pro další informace.  
+>  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  Získá čas posledního přístupu k souboru.  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
  *pTimeStamp*  
- Ukazatel [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas posledního přístupu k souboru.  
+ Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas posledního přístupu k souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetLastAccessTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CGopherFileFind` objektu.  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastAccessTime`.  
   
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) rozhraní API pro další informace.  
+>  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  Získá čas poslední změny souboru.  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *pTimeStamp*  
- Ukazatel [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující času posledního zápisu souboru na.  
+ Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující času posledního zápisu souboru na.  
   
  *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastWriteTime`.  
   
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) rozhraní API pro další informace.  
+>  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  Voláním této členské funkce, chcete-li získat délku v bajtech nalezený soubor.  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  Délka v bajtech, souboru nalezen.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetLength` používá strukturu Win32 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) má být získána hodnota velikosti souboru v bajtech.  
+ `GetLength` používá strukturu Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) má být získána hodnota velikosti souboru v bajtech.  
   
 > [!NOTE]
 >  Od verze MFC 7.0 `GetLength` podporuje 64bitové celočíselné typy. Dříve existující kód vytvořený s touto novější verzí knihovny může vést ke zkrácení upozornění.  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882894"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197143"
 ---
 # <a name="ipropertypage2impl-class"></a>Ipropertypage2impl – třída
 Tato třída implementuje `IUnknown` a zdědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md).  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Určuje, který vlastnost ovládací prvek získá fokus, když je aktivován na stránce vlastností. Implementace knihovny ATL vrátí E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) rozhraní rozšiřuje [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) tak, že přidáte `EditProperty` metody. Tato metoda umožňuje vybrat konkrétní vlastnost v objektu vlastností stránky klientovi.  
+ [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) rozhraní rozšiřuje [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) tak, že přidáte `EditProperty` metody. Tato metoda umožňuje vybrat konkrétní vlastnost v objektu vlastností stránky klientovi.  
   
  Třída `IPropertyPage2Impl` jednoduše vrací E_NOTIMPL pro `IPropertyPage2::EditProperty`. Ale dědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md) a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) ve Windows SDK.  
+ Zobrazit [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Iperpropertybrowsingimpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)   

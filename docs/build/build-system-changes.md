@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613198"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202154"
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 Systém MSBuild se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a dřívějších verzích, ale systém VCBuild se použil. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou reprezentovány odlišně v aktuálním systému. Tento dokument popisuje rozdíly v aktuálním systému sestavení.  
@@ -55,7 +55,7 @@ Systém MSBuild se používá k sestavení projektů Visual C++. V sadě Visual 
   
  V aktuální verzi je podporována dědičnost tak, že zadáte hodnotu vlastnosti jako zřetězení jeden nebo více literálních hodnot a makra vlastností. **$(Inherit)** a **$(NoInherit)** makra nejsou podporovány.  
   
- V následujícím příkladu je seznam oddělený středníkem přiřazená vlastnost na stránce vlastností. Seznam obsahuje zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnost, která je přístupné pomocí zápisu – makro, **$(***MyProperty***)** .  
+ V následujícím příkladu je seznam oddělený středníkem přiřazená vlastnost na stránce vlastností. Seznam obsahuje zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnost, která je přístupné pomocí zápisu – makro, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a55daa9f8c742d847944ddb0459db208c7edf9cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221540"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -36,7 +36,7 @@ Definuje objekt, který se nedá vytvořit instance samostatně.
 
 ## <a name="remarks"></a>Poznámky
 
-**Noncreatable** C++ atribut má stejné funkce jako [noncreatable –](http://msdn.microsoft.com/library/windows/desktop/aa367118) atribut MIDL a automaticky předána do vytvořeného. Soubor IDL kompilátorem.
+**Noncreatable** C++ atribut má stejné funkce jako [noncreatable –](/windows/desktop/Midl/noncreatable) atribut MIDL a automaticky předána do vytvořeného. Soubor IDL kompilátorem.
 
 Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, se změní chování atributu. Kromě výše uvedených chování atribut také vloží [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) – makro. Toto makro označuje s knihovnou ATL objekt nelze vytvořit externě.
 

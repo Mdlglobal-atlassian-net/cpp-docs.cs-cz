@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339407"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217330"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 Základní třída použitá pro zobrazování dialogových oken na obrazovce.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  K vytvoření modálního dialogového okna, sestavte objekt v zásobníku pomocí konstruktoru pro vlastní třídy odvozené dialogového okna a poté zavolejte `DoModal` vytvoření dialogového okna a jeho ovládací prvky. Pokud chcete vytvořit nemodální dialogové okno, zavolejte `Create` v konstruktoru vlastní třídy dialogového okna.  
   
- Můžete také vytvořit šablonu v paměti pomocí [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) datové struktury, jak je popsáno v sadě Windows SDK. Poté, co vytvoříte `CDialog` objektu, volejte [CreateIndirect](#createindirect) k vytvoření nemodální dialogové okno nebo volání [InitModalIndirect](#initmodalindirect) a [DoModal](#domodal) vytvoření modální Dialogové okno.  
+ Můžete také vytvořit šablonu v paměti pomocí [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) datové struktury, jak je popsáno v sadě Windows SDK. Poté, co vytvoříte `CDialog` objektu, volejte [CreateIndirect](#createindirect) k vytvoření nemodální dialogové okno nebo volání [InitModalIndirect](#initmodalindirect) a [DoModal](#domodal) vytvoření modální Dialogové okno.  
   
  Mapování výměna a ověřování dat je napsána v přepsání `CWnd::DoDataExchange` , který se přidá do vaší nové třídy dialogového okna. Zobrazit [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) členské funkce v `CWnd` pro další informace o funkci výměna a ověřování.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  `Create` Členská funkce vrátí okamžitě po vytvoření dialogových oken.  
   
- WS_VISIBLE styl šablony dialogového okna použijte, pokud při vytváření nadřazeného okna by se zobrazit dialogové okno. V opačném případě je nutné volat `ShowWindow`. Další styly dialogového okna a jejich použití naleznete v tématu [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktura v sadě Windows SDK a [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) v *odkaz knihovny MFC*.  
+ WS_VISIBLE styl šablony dialogového okna použijte, pokud při vytváření nadřazeného okna by se zobrazit dialogové okno. V opačném případě je nutné volat `ShowWindow`. Další styly dialogového okna a jejich použití naleznete v tématu [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktura v sadě Windows SDK a [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) v *odkaz knihovny MFC*.  
   
  Použití `CWnd::DestroyWindow` funkce zničit dialogové okno vytvořené `Create` funkce.  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parametry  
  *lpDialogTemplate*  
- Odkazuje na paměti, která obsahuje šablony dialog-box umožňuje vytvořit dialogové okno. Tato šablona je ve formě [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktury a ovládací prvek informace, jak je popsáno v sadě Windows SDK.  
+ Odkazuje na paměti, která obsahuje šablony dialog-box umožňuje vytvořit dialogové okno. Tato šablona je ve formě [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktury a ovládací prvek informace, jak je popsáno v sadě Windows SDK.  
   
  *pParentWnd*  
  Odkazuje na objekt okna nadřazeného objektu dialogového okna (typu [CWnd](../../mfc/reference/cwnd-class.md)). Pokud je hodnota NULL, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Poznámky  
  `CreateIndirect` Členská funkce vrátí okamžitě po vytvoření dialogových oken.  
   
- WS_VISIBLE styl šablony dialogového okna použijte, pokud při vytváření nadřazeného okna by se zobrazit dialogové okno. V opačném případě je nutné volat `ShowWindow` způsobit má objevit. Další informace o tom, jak můžete zadat další styly dialogového okna v šabloně, najdete v článku [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktura v sadě Windows SDK.  
+ WS_VISIBLE styl šablony dialogového okna použijte, pokud při vytváření nadřazeného okna by se zobrazit dialogové okno. V opačném případě je nutné volat `ShowWindow` způsobit má objevit. Další informace o tom, jak můžete zadat další styly dialogového okna v šabloně, najdete v článku [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktura v sadě Windows SDK.  
   
  Použití `CWnd::DestroyWindow` funkce zničit dialogové okno vytvořené `CreateIndirect` funkce.  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Int** hodnotu, která určuje hodnotu *Nvýsledek* parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který slouží k zavření dialogového okna. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno nebo IDABORT, pokud došlo k nějaké chybě, v takovém případě v okně Výstup bude obsahovat informace o chybě z [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ **Int** hodnotu, která určuje hodnotu *Nvýsledek* parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který slouží k zavření dialogového okna. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno nebo IDABORT, pokud došlo k nějaké chybě, v takovém případě v okně Výstup bude obsahovat informace o chybě z [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
  Tato členská funkce zpracovává všechny interakce s uživatelem, dialogové okno je aktivní. Toto je kvůli tomu dialogové okno modální; To znamená uživatel nemohou komunikovat s ostatní okna, dokud není zavřena dialogových oken.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parametry  
  *lpDialogTemplate*  
- Odkazuje na paměti, která obsahuje šablony dialog-box umožňuje vytvořit dialogové okno. Tato šablona je ve formě [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktury a ovládací prvek informace, jak je popsáno v sadě Windows SDK.  
+ Odkazuje na paměti, která obsahuje šablony dialog-box umožňuje vytvořit dialogové okno. Tato šablona je ve formě [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktury a ovládací prvek informace, jak je popsáno v sadě Windows SDK.  
   
  *hDialogTemplate*  
  Obsahuje popisovač do globální paměti, který obsahuje šablony dialog-box. Tato šablona je ve formě `DLGTEMPLATE` strukturu a data pro každý ovládací prvek v dialogovém okně.  

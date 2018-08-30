@@ -1,5 +1,5 @@
 ---
-title: _strdec –, _wcsdec –, _mbsdec _mbsdec_l – | Microsoft Docs
+title: _strdec – _wcsdec –, _mbsdec _mbsdec_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414214"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211471"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
-Přesune řetězec ukazatel zpět jeden znak.
+Přejde zpět o jeden znak řetězec ukazatele.
 
 > [!IMPORTANT]
-> **mbsdec –** a **mbsdec_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec –** a **mbsdec_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,28 +89,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parametry
 
 *Spuštění*<br/>
-Ukazatel na libovolný znak (nebo **_mbsdec** a **_mbsdec_l –**, první bajt žádné vícebajtových znaků) v zdrojový řetězec; *spustit* musí předcházet *aktuální* v zdrojový řetězec.
+Ukazatel na libovolný znak (nebo pro **_mbsdec** a **_mbsdec_l –**, první bajt libovolného vícebajtového znaku) ve zdrojovém řetězci; *start* musí předcházet *aktuální* ve zdrojovém řetězci.
 
-*Aktuální*<br/>
-Ukazatel na libovolný znak (nebo **_mbsdec** a **_mbsdec_l –**, první bajt žádné vícebajtových znaků) v zdrojový řetězec; *aktuální* musí následovat *spustit* v zdrojový řetězec.
+*aktuální*<br/>
+Ukazatel na libovolný znak (nebo pro **_mbsdec** a **_mbsdec_l –**, první bajt libovolného vícebajtového znaku) ve zdrojovém řetězci; *aktuální* musí následovat *start* ve zdrojovém řetězci.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsdec –**, **_mbsdec_l –**, **_strdec –**, a **_wcsdec –** každý ukazatel vrátí znak, který se nachází bezprostředně před *aktuální*; **_mbsdec** vrátí **NULL** Pokud hodnota *spustit* je větší než nebo rovno počtu *aktuální*. **_tcsdec –** mapy na jednu z těchto funkcí a hodnoty závisí na mapování.
+**_mbsdec**, **_mbsdec_l –**, **_strdec –**, a **_wcsdec –** vrátí ukazatel na znak, který bezprostředně předchází *aktuální*; **_mbsdec** vrátí **NULL** Pokud hodnota *start* je větší než nebo rovna hodnotě *aktuální*. **_tcsdec –** mapuje na jednu z těchto funkcí a vrácená hodnota závisí na mapování.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsdec** a **_mbsdec_l –** funkce vrátí ukazatel na první bajt vícebajtových znaků, který se nachází bezprostředně před *aktuální* v řetězci, který obsahuje *spustit*.
+**_Mbsdec** a **_mbsdec_l –** funkce vrátí ukazatel na první bajt vícebajtového znaku, která bezprostředně předchází *aktuální* v řetězci, který obsahuje *start*.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace.  **_mbsdec –** rozpozná sekvencí vícebajtových znaků podle národního prostředí, který je aktuálně používán, když **_mbsdec_l –** se shoduje s tím rozdílem, že místo toho používá parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace.  **_mbsdec** rozpozná vícebajtové znakové sekvence podle národního prostředí, která je aktuálně používán, zatímco **_mbsdec_l –** je totožný s tím rozdílem, že místo toho používá parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *spustit* nebo *aktuální* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **einval –** a nastaví **errno** k **einval –**.
+Pokud *start* nebo *aktuální* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **EINVAL** a nastaví **errno** k **EINVAL**.
 
 > [!IMPORTANT]
-> Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít pro útoky systému, protože může dojít k tomu bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce by mohly být vystaveny ohrožení přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti lze použít pro systémové útoky, protože mohou způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -118,24 +118,24 @@ Pokud *spustit* nebo *aktuální* je **NULL**, obslužná rutina neplatný param
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec –**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec –** a **_wcsdec –** jsou jedním znaková a široká charakterová verze **_mbsdec** a **_mbsdec_l –**. **_strdec –** a **_wcsdec –** jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat.
+**_strdec –** a **_wcsdec –** jsou jedním jednobajtového znaku a širokoznaká verze **_mbsdec** a **_mbsdec_l –**. **_strdec –** a **_wcsdec –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak.
 
 Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_mbsdec**|\<Mbstring.h >|\<Mbctype.h >|
 |**_mbsdec_l**|\<Mbstring.h >|\<Mbctype.h >|
 |**_strdec**|\<tchar.h>||
 |**_wcsdec**|\<tchar.h>||
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje k využívání **_tcsdec –**.
+Následující příklad ukazuje použití **_tcsdec –**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-Následující příklad ukazuje k využívání **_mbsdec**.
+Následující příklad ukazuje použití **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp
@@ -188,7 +188,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

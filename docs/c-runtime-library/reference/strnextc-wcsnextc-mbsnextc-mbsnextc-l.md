@@ -1,5 +1,5 @@
 ---
-title: _strnextc –, _wcsnextc –, _mbsnextc –, _mbsnextc_l – | Microsoft Docs
+title: _strnextc – _wcsnextc –, _mbsnextc – _mbsnextc_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222426"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
-Vyhledá další znak v řetězci.
+Najde další znak v řetězci.
 
 > [!IMPORTANT]
-> **_mbsnextc –** a **_mbsnextc_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnextc –** a **_mbsnextc_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,23 +89,23 @@ unsigned int _mbsnextc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
+*str*<br/>
 Zdrojový řetězec.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí celočíselnou hodnotu na další znak v *str*.
+Každá z těchto funkcí vrací celočíselnou hodnotu dalšího znaku v *str*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsnextc –** funkce vrátí celé číslo další vícebajtových znaků v *str*, bez posunutí ukazatele řetězec. **_mbsnextc –** rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.
+**_Mbsnextc –** funkce vrátí celočíselnou hodnotu dalšího vícebajtového znaku v *str*, bez posunutí ukazatele na řetězec. **_mbsnextc –** rozpozná vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.
 
-Pokud *str* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu 0.
+Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí 0.
 
-**Poznámka k zabezpečení** toto rozhraní API způsobuje potenciální hrozbu způsobené problém přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti problémy jsou často metodu systému útoku, výsledkem bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** toto rozhraní API způsobuje potenciální ohrožení způsobené problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti jsou častou metodou útoku na systém. Výsledkem je negarantované zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -113,9 +113,9 @@ Pokud *str* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc –**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc –** a **_wcsnextc –** jsou jedním znaková řetězec a verze široká charakterová řetězec **_mbsnextc –**. **_wcsnextc –** vrátí celočíselnou hodnotu Další široké znak v *str*; **_strnextc –** vrátí celočíselnou hodnotu na další znak jednobajtové v *str*. **_strnextc –** a **_wcsnextc –** jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc –** a **_wcsnextc –** jsou řetězce jedním jednobajtového znaku a verze řetězce širokého znaku **_mbsnextc –**. **_wcsnextc –** vrátí celočíselnou hodnotu dalšího širokého znaku v *str*; **_strnextc –** vrátí celočíselnou hodnotu dalšího jednobajtového znaku v *str*. **_strnextc –** a **_wcsnextc –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsnextc_l –** se shoduje s tím rozdílem, že používá parametr národního prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_mbsnextc_l –** je totožný s tím rozdílem, že používá Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -126,9 +126,9 @@ Pokud *str* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak 
 |**_strnextc**|\<tchar.h>|
 |**_wcsnextc**|\<tchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

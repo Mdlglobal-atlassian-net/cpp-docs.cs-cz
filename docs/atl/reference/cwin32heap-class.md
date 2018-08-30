@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195329"
 ---
 # <a name="cwin32heap-class"></a>Cwin32heap – třída
 Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí přidělení haldy Win32.  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Popisovač objektu haldy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWin32Heap` implementuje metody přidělení paměti pomocí funkcí přidělení haldy Win32 včetně [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) a [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Na rozdíl od jiných tříd haldy `CWin32Heap` vyžaduje platným popisovačem haldy poskytované předtím, než je paměť přidělena: ostatní výchozí třídy pomocí haldy procesu. Popisovač lze je zadat do konstruktoru nebo položky [CWin32Heap::Attach](#attach) metody. Zobrazit [CWin32Heap::CWin32Heap](#cwin32heap) metoda pro další podrobnosti.  
+ `CWin32Heap` implementuje metody přidělení paměti pomocí funkcí přidělení haldy Win32 včetně [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) a [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree). Na rozdíl od jiných tříd haldy `CWin32Heap` vyžaduje platným popisovačem haldy poskytované předtím, než je paměť přidělena: ostatní výchozí třídy pomocí haldy procesu. Popisovač lze je zadat do konstruktoru nebo položky [CWin32Heap::Attach](#attach) metody. Zobrazit [CWin32Heap::CWin32Heap](#cwin32heap) metoda pro další podrobnosti.  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CWin32Heap::Free](#free) nebo [CWin32Heap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementované pomocí [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Implementované pomocí [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
  Objekt haldy se připojí k existující haldu.  

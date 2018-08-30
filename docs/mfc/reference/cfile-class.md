@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203053"
 ---
 # <a name="cfile-class"></a>Cfile – třída
 Základní třída pro třídy souborů Microsoft Foundation Class.  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  Název základního souboru.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) k načtení názvu souboru. V případě úspěchu, metoda vrátí řetězec, který systém použít k zobrazovaný název souboru pro uživatele. V opačném případě metoda volá [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) načíst název souboru základního souboru (včetně přípony souboru). V nadpisu vráceného souboru proto nebudou vždy zahrnuty příponu souboru. Další informace najdete v tématu [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) a [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) v sadě Windows SDK.  
+ Tato metoda volá [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) k načtení názvu souboru. V případě úspěchu, metoda vrátí řetězec, který systém použít k zobrazovaný název souboru pro uživatele. V opačném případě metoda volá [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) načíst název souboru základního souboru (včetně přípony souboru). V nadpisu vráceného souboru proto nebudou vždy zahrnuty příponu souboru. Další informace najdete v tématu [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) a [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) v sadě Windows SDK.  
   
  Chcete-li vrátit celou cestu k souboru, včetně názvu, zavolejte [GetFilePath](#getfilepath). Chcete-li vrátit pouze název souboru, zavolejte [GetFileName](#getfilename).  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator POPISOVAČ  
- Operátor pro předání popisovač `CFile` objekt funkce, jako [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) a [funkce GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) , které očekávají `HANDLE`.  
+ Operátor pro předání popisovač `CFile` objekt funkce, jako [readfileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-readfileex) a [funkce GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) , které očekávají `HANDLE`.  
   
 ```  
 operator HANDLE() const;  

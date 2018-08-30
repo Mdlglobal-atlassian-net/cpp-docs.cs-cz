@@ -1,5 +1,5 @@
 ---
-title: '&lt;Param&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Param&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325380"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217250"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;Param&gt; (Visual C++)
-\<Param > Značka je třeba používat v komentář pro deklaraci metody k popisu jeden z parametrů pro metodu.  
+\<Param > značky byste měli použít ve komentář pro deklaraci metody, popisující jeden z parametrů pro metodu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ ms.locfileid: "33325380"
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- Název parametru metody.  Uzavřete název v jednoduchých nebo dvojitých uvozovek.  Kompilátor vydá upozornění, pokud jej nenalezne `name`.  
+ Název parametru metody.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.  
   
  `description`  
- Popis parametru.  
+ Popis pro parametr.  
   
 ## <a name="remarks"></a>Poznámky  
- Text pro \<param > Značka se zobrazí v technologii IntelliSense, [Prohlížeč objektů](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)a v sestavě webové komentář kódu.  
+ Text \<param > značky se zobrazí v IntelliSense, [prohlížeče objektů](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)a v sestavě webového kódu komentář.  
   
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   

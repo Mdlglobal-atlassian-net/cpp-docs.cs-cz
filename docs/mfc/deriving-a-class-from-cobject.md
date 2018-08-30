@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9e098890a90b76da8452fb2a2ca86222b49c296
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198252"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Odvození třídy z objektu CObject
 Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObject](../mfc/reference/cobject-class.md). Další `CObject` třídy články popisují kroky potřebné k využít výhod konkrétní `CObject` funkce, jako je serializaci a diagnostických podporu ladění.  
@@ -68,7 +68,7 @@ Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObj
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).  
   
  Tento článek [určení úrovní funkčnosti](../mfc/specifying-levels-of-functionality.md) popisuje, jak určit jiných úrovních funkčnosti, včetně informací o třídě za běhu, vytváření dynamických objektů a serializace.  
   

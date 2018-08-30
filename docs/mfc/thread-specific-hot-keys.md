@@ -1,5 +1,5 @@
 ---
-title: Klávesové zkratky specifické pro vlákno | Microsoft Docs
+title: Klávesové zkratky specifické pro vlákno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f480b293e9c57e7fa189c6427ab39147681cfdaf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206857"
 ---
 # <a name="thread-specific-hot-keys"></a>Klávesové zkratky specifické pro vlákno
-Aplikace nastaví klávesové zkratky specifické pro vlákno ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) pomocí Windows `RegisterHotKey` funkce. Když uživatel stiskne klávesové zkratky specifické pro vlákno, odešle Windows [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) zpráva na začátek fronty zpráv konkrétní vlákno. WM_HOTKEY zpráva obsahuje virtuální klíče kódu, stav shift a uživatelské ID konkrétní klávesové zkratky, která byla stisknuta. Seznam kódů standardní virtuální klíčů najdete v tématu winuser. Další informace o této metodě naleznete v tématu [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Aplikace nastaví klávesové zkratky specifické pro vlákno ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) s použitím Windows `RegisterHotKey` funkce. Když uživatel stiskne klávesovou zkratku specifické pro vlákno, odešle Windows [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) zprávy na začátek fronty zpráv konkrétní vlákno. Zpráva WM_HOTKEY obsahuje virtuální kód, shift stavu a uživatelského ID konkrétní klávesovou zkratku, která byla stisknuta. Seznam kódů standardní virtuální klíče najdete v tématu winuser. Další informace o této metodě naleznete v tématu [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Všimněte si, že příznaky stavu shift použitá ve volání do `RegisterHotKey` nejsou stejná jako ta, vrácený [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) – členská funkce; budete muset převede tyto příznaky před voláním `RegisterHotKey`.  
+ Všimněte si, že shift stavové značky použité ve volání `RegisterHotKey` nejsou stejné jako vrácené [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) členské funkce; bude nutné převést tyto příznaky před voláním `RegisterHotKey`.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

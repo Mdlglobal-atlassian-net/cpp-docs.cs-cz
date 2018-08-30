@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201659"
 ---
 # <a name="cwndclassinfo-class"></a>Cwndclassinfo – třída
 Tato třída poskytuje metody pro registraci informace pro třídu okna.  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Další informace o třídách oken, naleznete v tématu [tříd oken](http://msdn.microsoft.com/library/windows/desktop/ms632596) v sadě Windows SDK.  
+ Další informace o třídách oken, naleznete v tématu [tříd oken](https://msdn.microsoft.com/library/windows/desktop/ms632596) v sadě Windows SDK.  
   
  Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` používá `m_szAutoName` pouze tehdy, pokud je předána hodnota NULL `WndClassName` parametr [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) nebo [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL – vytvoří název třídy okna se po zaregistrování.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Udržuje informace o třídě okna v [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) struktury.  
+ Udržuje informace o třídě okna v [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) struktury.  
   
 ```
 WNDCLASSEX m_wc;

@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ba3b93c1c45edabc86759a14f27309849d58553
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 656a19b6cddfb7e8353bb0eabf8975c733129a52
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207907"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízené okno.  
@@ -149,7 +149,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::GetBarHeight](#getbarheight)|Získá výšku ovládacího prvku rebar.|  
 |[CReBarCtrl::GetBarInfo](#getbarinfo)|Načte informace o ovládacím prvku matrice a seznam obrázků, které používá.|  
 |[CReBarCtrl::GetBkColor](#getbkcolor)|Načte výchozí barva pozadí ovládacího prvku rebar.|  
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Načte [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktura přidružený k ovládacímu prvku matrice.|  
+|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Načte [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura přidružený k ovládacímu prvku matrice.|  
 |[CReBarCtrl::GetDropTarget](#getdroptarget)|Načte ovládacím prvku matrice `IDropTarget` ukazatel rozhraní.|  
 |[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Získá rozšířeného stylu aktuální ovládacího prvku rebar.|  
 |[CReBarCtrl::GetImageList](#getimagelist)|Načte seznam obrázků, které jsou spojené s ovládacím prvkem matrice.|  
@@ -208,7 +208,7 @@ class CReBarCtrl : public CWnd
   
 -   Vlastní vykreslení funkce.  
   
--   Širokou škálu – styly ovládacích prvků kromě standardní okno styly. Seznam těchto stylů, najdete v části [– styly ovládacího prvku Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) v sadě Windows SDK.  
+-   Širokou škálu – styly ovládacích prvků kromě standardní okno styly. Seznam těchto stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.  
   
  Další informace najdete v tématu [používání atributu CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
@@ -225,7 +225,7 @@ class CReBarCtrl : public CWnd
  **Záhlaví:** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag  
- Implementuje chování zprávy Win32 [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_BEGINDRAG](/windows/desktop/Controls/rb-begindrag), jak je popsáno v sadě Windows SDK.  
   
 ```  
 void BeginDrag(
@@ -253,10 +253,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Zobrazit [– styly ovládacího prvku Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) v sadě Windows SDK pro seznam podporovaných styly.  
+ Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Zobrazit [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK pro seznam podporovaných styly.  
   
  *Rect*  
- Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, což je umístění a velikost ovládacího prvku rebar.  
+ Odkaz na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, což je umístění a velikost ovládacího prvku rebar.  
   
  *pParentWnd*  
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku rebar. Nesmí být NULL.  
@@ -293,13 +293,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Seznam podporovaných stylů, najdete v části [– styly ovládacího prvku Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) v sadě Windows SDK.  
+ Určuje kombinaci – styly ovládacího prvku matrice použité pro ovládací prvek. Seznam podporovaných stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -324,7 +324,7 @@ CReBarCtrl();
   Podívejte se na příklad pro [CReBarCtrl::Create](#create).  
   
 ##  <a name="deleteband"></a>  CReBarCtrl::DeleteBand  
- Implementuje chování zprávy Win32 [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_DELETEBAND](/windows/desktop/Controls/rb-deleteband), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL DeleteBand(UINT uBand);
@@ -352,14 +352,14 @@ void DragMove(DWORD dwPos = (DWORD)-1);
  Hodnota DWORD, který obsahuje novou souřadnic myši. Vodorovné bod se souřadnicemi je součástí LOWORD a bod se souřadnicemi svislé je součástí HIWORD. Pokud předáte (DWORD) -1, ovládacího prvku rebar. použije pozice myši posledního vlákno ovládacího prvku volá `GetMessage` nebo `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
- Implementuje chování zprávy Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_ENDDRAG](/windows/desktop/Controls/rb-enddrag), jak je popsáno v sadě Windows SDK.  
   
 ```  
 void EndDrag();
 ```  
   
 ##  <a name="getbandborders"></a>  CReBarCtrl::GetBandBorders  
- Implementuje chování zprávy Win32 [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETBANDBORDERS](/windows/desktop/Controls/rb-getbandborders), jak je popsáno v sadě Windows SDK.  
   
 ```  
 void GetBandBorders(
@@ -372,10 +372,10 @@ void GetBandBorders(
  Index založený na nule pásmo, pro kterou budou načteny ohraničení.  
   
  *Čínská lidová republika*  
- Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která se zobrazí ohraničení obsluhy vzdálené správy. Pokud ovládacího prvku rebar. má RBS_BANDBORDERS styl, dostane každý člen této struktury počet pixelů na straně odpovídajícího pásmu, které tvoří ohraničení. Pokud ovládacího prvku rebar. nemá žádné RBS_BANDBORDERS styl, obdrží jenom levé člen této struktury platné informace. Popis – styly ovládacího prvku matrice, naleznete v tématu [– styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) v sadě Windows SDK.  
+ Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která se zobrazí ohraničení obsluhy vzdálené správy. Pokud ovládacího prvku rebar. má RBS_BANDBORDERS styl, dostane každý člen této struktury počet pixelů na straně odpovídajícího pásmu, které tvoří ohraničení. Pokud ovládacího prvku rebar. nemá žádné RBS_BANDBORDERS styl, obdrží jenom levé člen této struktury platné informace. Popis – styly ovládacího prvku matrice, naleznete v tématu [– styly ovládacího prvku matrice](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
- Implementuje chování zprávy Win32 [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETBANDCOUNT](/windows/desktop/Controls/rb-getbandcount), jak je popsáno v sadě Windows SDK.  
   
 ```  
 UINT GetBandCount() const;  
@@ -385,7 +385,7 @@ UINT GetBandCount() const;
  Počet pásma přiřazenou ovládacímu prvku.  
   
 ##  <a name="getbandinfo"></a>  CReBarCtrl::GetBandInfo  
- Implementuje chování zprávy Win32 [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETBANDINFO](/windows/desktop/Controls/rb-getbandinfo) jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL GetBandInfo(
@@ -398,7 +398,7 @@ BOOL GetBandInfo(
  Index založený na nule pásmo, pro kterou budou načteny informace.  
   
  *prbbi*  
- Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktuře získávat informace obsluhy vzdálené správy. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARBANDINFO)` a nastavit `fMask` člena do položky, které chcete načíst před odesláním této zprávy.  
+ Ukazatel [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktuře získávat informace obsluhy vzdálené správy. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARBANDINFO)` a nastavit `fMask` člena do položky, které chcete načíst před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -412,10 +412,10 @@ void GetBandMargins(PMARGINS pMargins);
   
 ### <a name="parameters"></a>Parametry  
  *pMargins*  
- Ukazatel [OKRAJE](http://msdn.microsoft.com/library/windows/desktop/bb773244)struktura, která bude dostávat informace.  
+ Ukazatel [OKRAJE](/windows/desktop/api/uxtheme/ns-uxtheme-_margins)struktura, která bude dostávat informace.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [RB_GETBANDMARGINS](/windows/desktop/Controls/rb-getbandmargins) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getbarheight"></a>  CReBarCtrl::GetBarHeight  
  Načte výška panelu matrice.  
@@ -428,7 +428,7 @@ UINT GetBarHeight() const;
  Hodnota, která představuje výšku v pixelech, ovládacího prvku.  
   
 ##  <a name="getbarinfo"></a>  CReBarCtrl::GetBarInfo  
- Implementuje chování zprávy Win32 [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETBARINFO](/windows/desktop/Controls/rb-getbarinfo), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL GetBarInfo(REBARINFO* prbi) const;  
@@ -436,13 +436,13 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
   
 ### <a name="parameters"></a>Parametry  
  *prbi*  
- Ukazatel [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktura, která bude dostávat informace ovládacího prvku rebar. Je nutné nastavit *cbSize* členem této struktury `sizeof(REBARINFO)` před odesláním této zprávy.  
+ Ukazatel [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) struktura, která bude dostávat informace ovládacího prvku rebar. Je nutné nastavit *cbSize* členem této struktury `sizeof(REBARINFO)` před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ##  <a name="getbkcolor"></a>  CReBarCtrl::GetBkColor  
- Implementuje chování zprávy Win32 [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETBKCOLOR](/windows/desktop/Controls/rb-getbkcolor), jak je popsáno v sadě Windows SDK.  
   
 ```  
 COLORREF GetBkColor() const;  
@@ -452,7 +452,7 @@ COLORREF GetBkColor() const;
  COLORREF hodnotu představující aktuální výchozí barvu pozadí.  
   
 ##  <a name="getcolorscheme"></a>  CReBarCtrl::GetColorScheme  
- Načte [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktura ovládacího prvku rebar.  
+ Načte [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura ovládacího prvku rebar.  
   
 ```  
 BOOL GetColorScheme(COLORSCHEME* lpcs);
@@ -460,7 +460,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
   
 ### <a name="parameters"></a>Parametry  
  *lpcs*  
- Ukazatel [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktury, jak je popsáno v sadě Windows SDK.  
+ Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -469,14 +469,14 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
  `COLORSCHEME` Struktura zahrnuje barvu zvýraznění tlačítka a tlačítka Barva stínu.  
   
 ##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget  
- Implementuje chování zprávy Win32 [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETDROPTARGET](/windows/desktop/Controls/rb-getdroptarget), jak je popsáno v sadě Windows SDK.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní.  
+ Ukazatel [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) rozhraní.  
   
 ##  <a name="getextendedstyle"></a>  CReBarCtrl::GetExtendedStyle  
  Získá rozšířené styly aktuálního ovládacího prvku rebar.  
@@ -489,7 +489,7 @@ DWORD GetExtendedStyle() const;
  Bitová kombinace (nebo) příznaků, které označují rozšířené styly. Je to možné příznaky jsou RBS_EX_SPLITTER a RBS_EX_TRANSPARENT. Další informace najdete v tématu *dwMask* parametr [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metody.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [RB_GETEXTENDEDSTYLE](/windows/desktop/Controls/rb-dragmove) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CReBarCtrl::GetImageList  
  Získá `CImageList` objektu souvisejícího s ovládacím prvkem matrice.  
@@ -502,7 +502,7 @@ CImageList* GetImageList() const;
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu. Vrátí hodnotu NULL, pokud je pro ovládací prvek nastavené žádné seznamu obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce používá velikost a maska informací uložených v [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktury, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce používá velikost a maska informací uložených v [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) struktury, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getpalette"></a>  CReBarCtrl::GetPalette  
  Načte aktuální palety ovládacího prvku rebar.  
@@ -521,7 +521,7 @@ CPalette* GetPalette() const;
  [!code-cpp[NVC_MFC_CReBarCtrl#5](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
   
 ##  <a name="getrect"></a>  CReBarCtrl::GetRect  
- Implementuje chování zprávy Win32 [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETRECT](/windows/desktop/Controls/rb-getrect), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL GetRect(
@@ -534,7 +534,7 @@ BOOL GetRect(
  Index založený na nule vzdálené správy v rámci ovládacího prvku rebar.  
   
  *Čínská lidová republika*  
- Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat hranice vzdálené matrice.  
+ Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat hranice vzdálené matrice.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -543,7 +543,7 @@ BOOL GetRect(
  [!code-cpp[NVC_MFC_CReBarCtrl#6](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
   
 ##  <a name="getrowcount"></a>  CReBarCtrl::GetRowCount  
- Implementuje chování zprávy Win32 [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETROWCOUNT](/windows/desktop/Controls/rb-getrowcount), jak je popsáno v sadě Windows SDK.  
   
 ```  
 UINT GetRowCount() const;  
@@ -556,7 +556,7 @@ UINT GetRowCount() const;
  [!code-cpp[NVC_MFC_CReBarCtrl#7](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
   
 ##  <a name="getrowheight"></a>  CReBarCtrl::GetRowHeight  
- Implementuje chování zprávy Win32 [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETROWHEIGHT](/windows/desktop/Controls/rb-getrowheight), jak je popsáno v sadě Windows SDK.  
   
 ```  
 UINT GetRowHeight(UINT uRow) const;  
@@ -573,7 +573,7 @@ UINT GetRowHeight(UINT uRow) const;
  [!code-cpp[NVC_MFC_CReBarCtrl#8](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
   
 ##  <a name="gettextcolor"></a>  CReBarCtrl::GetTextColor  
- Implementuje chování zprávy Win32 [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETTEXTCOLOR](/windows/desktop/Controls/rb-gettextcolor), jak je popsáno v sadě Windows SDK.  
   
 ```  
 COLORREF GetTextColor() const;  
@@ -583,7 +583,7 @@ COLORREF GetTextColor() const;
  COLORREF hodnotu představující aktuální výchozí barva textu.  
   
 ##  <a name="gettooltips"></a>  CReBarCtrl::GetToolTips  
- Implementuje chování zprávy Win32 [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_GETTOOLTIPS](/windows/desktop/Controls/rb-gettooltips), jak je popsáno v sadě Windows SDK.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
@@ -596,7 +596,7 @@ CToolTipCtrl* GetToolTips() const;
  Všimněte si, že implementace MFC `GetToolTips` vrací ukazatel na `CToolTipCtrl`, místo popisovačem HWND.  
   
 ##  <a name="hittest"></a>  CReBarCtrl::HitTest  
- Implementuje chování zprávy Win32 [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_HITTEST](/windows/desktop/Controls/rb-hittest), jak je popsáno v sadě Windows SDK.  
   
 ```  
 int HitTest(RBHITTESTINFO* prbht);
@@ -604,13 +604,13 @@ int HitTest(RBHITTESTINFO* prbht);
   
 ### <a name="parameters"></a>Parametry  
  *prbht*  
- Ukazatel [RBHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774391) struktury. Před odesláním zprávy, `pt` člena této struktury musí být inicializován na bod, který se má testovat, v souřadnicích klienta.  
+ Ukazatel [RBHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_rb_hittestinfo) struktury. Před odesláním zprávy, `pt` člena této struktury musí být inicializován na bod, který se má testovat, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule obsluhy vzdálené správy na časovém okamžiku nebo -1, pokud žádné vzdálené matrice byl na místě.  
   
 ##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex  
- Implementuje chování zprávy Win32 [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_IDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774496), jak je popsáno v sadě Windows SDK.  
   
 ```  
 int IDToIndex(UINT uBandID) const;  
@@ -618,13 +618,13 @@ int IDToIndex(UINT uBandID) const;
   
 ### <a name="parameters"></a>Parametry  
  *uBandID*  
- Předaný identifikátor definovaného aplikací zadané obsluhy vzdálené správy `wID` člena [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktury při vložení pásmo.  
+ Předaný identifikátor definovaného aplikací zadané obsluhy vzdálené správy `wID` člena [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury při vložení pásmo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule obsluhy vzdálené správy v případě úspěchu, nebo jinak -1. Pokud existují duplicitní obsluhy vzdálené správy indexů, vrátí se první z nich.  
   
 ##  <a name="insertband"></a>  CReBarCtrl::InsertBand  
- Implementuje chování zprávy Win32 [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_INSERTBAND](/windows/desktop/Controls/rb-insertband), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL InsertBand(
@@ -637,7 +637,7 @@ BOOL InsertBand(
  Z nuly vycházející index umístění, kde se vloží vzdálené. Pokud tento parametr nastavíte na hodnotu -1, ovládací prvek přidá nový obsluhy vzdálené správy na posledním místě.  
   
  *prbbi*  
- Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) strukturu, která definuje obsluhy vzdálené správy, která se má vložit. Je nutné nastavit *cbSize* členem této struktury `sizeof(REBARBANDINFO)` před voláním této funkce.  
+ Ukazatel [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) strukturu, která definuje obsluhy vzdálené správy, která se má vložit. Je nutné nastavit *cbSize* členem této struktury `sizeof(REBARBANDINFO)` před voláním této funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -657,7 +657,7 @@ void MaximizeBand(UINT uBand);
  Index založený na nule pásmo maximalizovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementuje chování zprávy Win32 [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) s `fIdeal` nastavena na hodnotu 0, jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) s `fIdeal` nastavena na hodnotu 0, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CReBarCtrl#10](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
@@ -674,13 +674,13 @@ void MinimizeBand(UINT uBand);
  Index založený na nule vzdálené minimalizaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementuje chování zprávy Win32 [RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_MINIMIZEBAND](/windows/desktop/Controls/rb-minimizeband), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CReBarCtrl#11](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
   
 ##  <a name="moveband"></a>  CReBarCtrl::MoveBand  
- Implementuje chování zprávy Win32 [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_MOVEBAND](/windows/desktop/Controls/rb-moveband), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL MoveBand(
@@ -699,7 +699,7 @@ BOOL MoveBand(
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ##  <a name="pushchevron"></a>  CReBarCtrl::PushChevron  
- Implementuje chování zprávy Win32 [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron), jak je popsáno v sadě Windows SDK.  
   
 ```  
 void PushChevron(
@@ -712,7 +712,7 @@ void PushChevron(
  Index založený na nule obsluhy vzdálené správy, jejichž šipky je doručit bez vyžádání.  
   
  *lAppValue*  
- Aplikace je definována hodnota 32-bit. Zobrazit *lAppValue* v [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) v sadě Windows SDK.  
+ Aplikace je definována hodnota 32-bit. Zobrazit *lAppValue* v [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron) v sadě Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Změní velikost svazku v ovládacím prvku matrice na jeho ideální velikost.  
@@ -726,13 +726,13 @@ void RestoreBand(UINT uBand);
  Index založený na nule pásmo maximalizovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementuje chování zprávy Win32 [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) s `fIdeal` nastavena na hodnotu 1, jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) s `fIdeal` nastavena na hodnotu 1, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CReBarCtrl#12](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
   
 ##  <a name="setbandinfo"></a>  CReBarCtrl::SetBandInfo  
- Implementuje chování zprávy Win32 [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETBANDINFO](/windows/desktop/Controls/rb-setbandinfo), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL SetBandInfo(
@@ -745,7 +745,7 @@ BOOL SetBandInfo(
  Index založený na nule obsluhy vzdálené správy, aby přijaly nové nastavení.  
   
  *prbbi*  
- Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) strukturu, která definuje obsluhy vzdálené správy, která se má vložit. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARBANDINFO)` před odesláním této zprávy.  
+ Ukazatel [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) strukturu, která definuje obsluhy vzdálené správy, která se má vložit. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARBANDINFO)` před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -773,7 +773,7 @@ BOOL SetBandWidth(
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [RB_SETBANDWIDTH](/windows/desktop/Controls/rb-setbandwidth) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_rebar`, která je pro přístup k aktuálnímu ovládacímu prvku matrice. Tato proměnná se používá v následujícím příkladu.  
@@ -786,7 +786,7 @@ BOOL SetBandWidth(
  [!code-cpp[NVC_MFC_CReBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
   
 ##  <a name="setbarinfo"></a>  CReBarCtrl::SetBarInfo  
- Implementuje chování zprávy Win32 [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETBARINFO](/windows/desktop/Controls/rb-setbarinfo), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL SetBarInfo(REBARINFO* prbi);
@@ -794,7 +794,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
   
 ### <a name="parameters"></a>Parametry  
  *prbi*  
- Ukazatel [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) strukturu, která obsahuje informace o nastavení. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARINFO)` před odesláním této zprávy  
+ Ukazatel [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) strukturu, která obsahuje informace o nastavení. Je nutné nastavit `cbSize` členem této struktury `sizeof(REBARINFO)` před odesláním této zprávy  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -803,7 +803,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
  [!code-cpp[NVC_MFC_CReBarCtrl#14](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
   
 ##  <a name="setbkcolor"></a>  CReBarCtrl::SetBkColor  
- Implementuje chování zprávy Win32 [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETBKCOLOR](/windows/desktop/Controls/rb-setbkcolor), jak je popsáno v sadě Windows SDK.  
   
 ```  
 COLORREF SetBkColor(COLORREF clr);
@@ -814,7 +814,7 @@ COLORREF SetBkColor(COLORREF clr);
  COLORREF hodnotu, která představuje výchozí barvu pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představuje předchozí výchozí barvu pozadí.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která představuje předchozí výchozí barvu pozadí.  
   
 ### <a name="remarks"></a>Poznámky  
  V tomto tématu pro další informace o kdy se má nastavit barvu pozadí a jak nastavit výchozí.  
@@ -828,7 +828,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
   
 ### <a name="parameters"></a>Parametry  
  *lpcs*  
- Ukazatel [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktury, jak je popsáno v sadě Windows SDK.  
+ Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  `COLORSCHEME` Struktura zahrnuje barvu zvýraznění tlačítka a tlačítka Barva stínu.  
@@ -846,14 +846,14 @@ DWORD SetExtendedStyle(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwMask*|Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zprávu nadřazenému oknu.|  
+|[in] *dwMask*|Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu nadřazenému oknu.|  
 |[in] *dwStyleEx*|Bitová kombinace (nebo) příznaků, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejný příznak, který se používá v *dwMask* parametru. Pokud chcete resetovat styl, zadejte binární nulu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí rozšířený styl.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [RB_SETEXTENDEDSTYLE](/windows/desktop/Controls/rb-setextendedstyle) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setimagelist"></a>  CReBarCtrl::SetImageList  
  Seznam obrázků přiřadí ovládacím prvkem matrice.  
@@ -870,7 +870,7 @@ BOOL SetImageList(CImageList* pImageList);
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ##  <a name="setowner"></a>  CReBarCtrl::SetOwner  
- Implementuje chování zprávy Win32 [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETPARENT](/windows/desktop/Controls/rb-setparent), jak je popsáno v sadě Windows SDK.  
   
 ```  
 CWnd* SetOwner(CWnd* pWnd);
@@ -890,7 +890,7 @@ CWnd* SetOwner(CWnd* pWnd);
 >  Tato členská funkce nezmění skutečné nadřazeného objektu, který byl nastaven při vytvoření ovládacího prvku; Místo toho odešle zprávy s oznámením v okně, které zadáte.  
   
 ##  <a name="setpalette"></a>  CReBarCtrl::SetPalette  
- Implementuje chování zprávy Win32 [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETPALETTE](/windows/desktop/Controls/rb-setpalette), jak je popsáno v sadě Windows SDK.  
   
 ```  
 CPalette* SetPalette(HPALETTE hPal);
@@ -907,7 +907,7 @@ CPalette* SetPalette(HPALETTE hPal);
  Všimněte si, že tato členská funkce používá `CPalette` jako jeho návratovou hodnotu, nikoli HPALETTE objekt.  
   
 ##  <a name="settextcolor"></a>  CReBarCtrl::SetTextColor  
- Implementuje chování zprávy Win32 [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SETTEXTCOLOR](/windows/desktop/Controls/rb-settextcolor), jak je popsáno v sadě Windows SDK.  
   
 ```  
 COLORREF SetTextColor(COLORREF clr);
@@ -918,7 +918,7 @@ COLORREF SetTextColor(COLORREF clr);
  COLORREF hodnotu, která představuje nový text barvy v `CReBarCtrl` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) přidružené hodnotu představující na předchozí barvu textu `CReBarCtrl` objektu.  
+ [COLORREF](/windows/desktop/gdi/colorref) přidružené hodnotu představující na předchozí barvu textu `CReBarCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Poskytuje pro podporu flexibilitu barvu textu v ovládacím prvku matrice.  
@@ -952,10 +952,10 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Návratová hodnota se nepoužívá.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [RB_SETWINDOWTHEME](/windows/desktop/Controls/rb-setwindowtheme) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="showband"></a>  CReBarCtrl::ShowBand  
- Implementuje chování zprávy Win32 [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SHOWBAND](/windows/desktop/Controls/rb-showband), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL ShowBand(
@@ -974,7 +974,7 @@ BOOL ShowBand(
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ##  <a name="sizetorect"></a>  CReBarCtrl::SizeToRect  
- Implementuje chování zprávy Win32 [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534), jak je popsáno v sadě Windows SDK.  
+ Implementuje chování zprávy Win32 [RB_SIZETORECT](/windows/desktop/Controls/rb-sizetorect), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL SizeToRect(CRect& rect);

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9b144e08e0f87165c284310afc86267f67b1c124
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880151"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222051"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Ithreadpoolconfig – rozhraní
 Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.  
@@ -105,7 +105,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.  
   
- Pokud *nNumThreads* je nula, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  
+ Pokud *nNumThreads* je nula, [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  

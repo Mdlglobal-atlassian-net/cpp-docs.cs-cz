@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9cef186c18622dc361f97bd65e7bd264a6f03cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214388"
 ---
 # <a name="how-to-copy-resources"></a>Postupy: Kopírování prostředků
 
@@ -37,7 +37,7 @@ Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo s
 Prostředky můžete snadno zkopírovat z existující prostředek nebo spustitelného souboru k aktuálnímu souboru prostředků. K tomuto účelu můžete otevřete oba soubory, které obsahují prostředky ve stejnou dobu a přetáhněte položky z jednoho souboru nebo kopírování a vkládání mezi dva soubory. Tato metoda se dá použít pro soubory skriptů (.rc) prostředků a soubory prostředků šablon (.rct), jakož i spustitelné soubory (.exe).
 
 > [!NOTE]
-> Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [Klipart: běžným prostředkům](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [Klipart: běžným prostředkům](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
 
 Můžete použít metodu a přetažení mezi soubory .rc, které jsou otevřené [mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

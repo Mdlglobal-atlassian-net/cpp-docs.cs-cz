@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4295fe855728f82567685a336211c2ef8c855e7
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 18217b1d4574f6591287ab6cb83e28c67fe95537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218121"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 Migrace aplikací ze systému UNIX do Windows, máte několik možností:  
@@ -66,15 +66,15 @@ Server jiného výrobce pro společnost poskytující softwarem, který podporuj
  
 Další možností je přenesení aplikací systému UNIX do Win32 přímo. Pomocí knihovny ANSI jazyka C/C++ a obchodní knihovny kompilátoru jazyka C, řadu tradiční systém, který volá spoléhal na podle aplikací systému UNIX jsou k dispozici v aplikacích Win32.  
   
-Výstupní model **stdio**– na základě aplikací není potřeba změnit od konzoly Win32 API napodobují **stdio** model a verze *curses* existují, které používají rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
+Výstupní model **stdio**– na základě aplikací není potřeba změnit od konzoly Win32 API napodobují **stdio** model a verze *curses* existují, které používají rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).  
   
 Aplikace založené na soketu Berkeley potřebovat velmi málo změny pracovních jako aplikace typu Win32. Rozhraní Windows Sockets je navržená pro přenositelnost sokety BSD, s minimálními změnami, které jsou popsány v úvodní části specifikace rozhraní WinSock.  
   
-Windows podporuje CLS DCE, který RPC, tak, aby byly snadno použitelné aplikace založené na protokolu RPC. Zobrazit [RPC funkce](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
+Windows podporuje CLS DCE, který RPC, tak, aby byly snadno použitelné aplikace založené na protokolu RPC. Zobrazit [RPC funkce](/windows/desktop/Rpc/rpc-functions).  
   
-Jedna z největších oblastí rozdíl je v modelu procesu. Se systémem UNIX `fork`; Win32 je nepodporuje. V závislosti na využívání `fork` a kódové základny Win32 má dvě rozhraní API, které je možné: `CreateProcess` a `CreateThread`. Aplikace systému UNIX, která větve více kopií sebe sama, může být přepracována v systému Win32 má více procesů nebo jednoho procesu s více vlákny. Pokud jsou používány více procesů, existují různé způsoby IPC, který slouží ke komunikaci mezi procesy, které (a možná se aktualizovat kód a data nového procesu vypadal nadřazeným prvkem, pokud funkce, která `fork` poskytuje je potřeba). Další informace o IPC najdete v tématu [meziprocesová komunikace](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
+Jedna z největších oblastí rozdíl je v modelu procesu. Se systémem UNIX `fork`; Win32 je nepodporuje. V závislosti na využívání `fork` a kódové základny Win32 má dvě rozhraní API, které je možné: `CreateProcess` a `CreateThread`. Aplikace systému UNIX, která větve více kopií sebe sama, může být přepracována v systému Win32 má více procesů nebo jednoho procesu s více vlákny. Pokud jsou používány více procesů, existují různé způsoby IPC, který slouží ke komunikaci mezi procesy, které (a možná se aktualizovat kód a data nového procesu vypadal nadřazeným prvkem, pokud funkce, která `fork` poskytuje je potřeba). Další informace o IPC najdete v tématu [meziprocesová komunikace](/windows/desktop/ipc/interprocess-communications).  
   
-Windows a UNIX Grafické modely se velmi liší. UNIX používá X okno systému grafického uživatelského rozhraní, zatímco Windows používá rozhraní GDI. Když je to podobný koncept, neexistuje jednoduchý mapování rozhraní API X GDI rozhraní API. Podpora OpenGL je ale k dispozici pro migraci aplikací založené na OpenGL systému UNIX. A jsou X klienti a servery pro Windows X. Zobrazit [kontexty zařízení](http://msdn.microsoft.com/library/windows/desktop/dd183553) informace o rozhraní GDI.  
+Windows a UNIX Grafické modely se velmi liší. UNIX používá X okno systému grafického uživatelského rozhraní, zatímco Windows používá rozhraní GDI. Když je to podobný koncept, neexistuje jednoduchý mapování rozhraní API X GDI rozhraní API. Podpora OpenGL je ale k dispozici pro migraci aplikací založené na OpenGL systému UNIX. A jsou X klienti a servery pro Windows X. Zobrazit [kontexty zařízení](https://msdn.microsoft.com/library/windows/desktop/dd183553) informace o rozhraní GDI.  
   
 Základní aplikace v systému UNIX, včetně mnoha aplikace CGI, by měl port snadno do prostředí Visual C++, které běží na Windows. Funkce jako `open`, `fopen`, `read`, `write` a ostatní jsou k dispozici v knihovně runtime Visual C++. Navíc existuje mapování 1: 1 mezi rozhraním API systému UNIX C a rozhraní API systému Win32: `open` k `CreateFile`, `read` k `ReadFile`, `write` k `WriteFile`, `ioctl` k `DeviceIOControl`, `close` k `CloseFile`, a tak dále.  
   

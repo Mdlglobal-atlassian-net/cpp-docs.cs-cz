@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218159"
 ---
 # <a name="catlfilemappingbase-class"></a>Catlfilemappingbase – třída
 Tato třída reprezentuje soubor mapovaných do paměti.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Poznámky  
  Mapování souboru je přidružení obsah souboru s částí virtuálního adresového prostoru procesu. Tato třída poskytuje metody pro vytváření objektů mapování souborů, které umožňují aplikacím snadný přístup k a sdílet data.  
   
- Další informace najdete v tématu [mapování souboru](http://msdn.microsoft.com/library/windows/desktop/aa366556) v sadě Windows SDK.  
+ Další informace najdete v tématu [mapování souboru](/windows/desktop/Memory/file-mapping) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.  
   
  *dwMappingProtection*  
- Ochrana požadovanou pro zobrazení souborů při mapování souboru. Zobrazit *flProtect* v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) v sadě Windows SDK.  
+ Ochrana požadovanou pro zobrazení souborů při mapování souboru. Zobrazit *flProtect* v [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) v sadě Windows SDK.  
   
  *dwViewDesiredAccess*  
- Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objekt mapování souboru. Pokud ano, ne veškerý obsah souboru nebudou k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) a [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
+ Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objekt mapování souboru. Pokud ano, ne veškerý obsah souboru nebudou k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) a [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Odkazuje na hodnotu BOOL, která je nastavena na hodnotu TRUE, pokud objekt mapování již existuje.  
   
  *lpsa*  
- Ukazatel `SECURITY_ATTRIBUTES` struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Zobrazit *lpAttributes* v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) v sadě Windows SDK.  
+ Ukazatel `SECURITY_ATTRIBUTES` struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Zobrazit *lpAttributes* v [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) v sadě Windows SDK.  
   
  *dwMappingProtection*  
  Ochrana požadovaného pro zobrazení souborů, když je namapován soubor. Zobrazit *flProtect* v `CreateFileMapping` v sadě Windows SDK.  
   
  *dwViewDesiredAccess*  
- Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `MapShareMem` Umožňuje existující objekt mapování souboru, vytvořil [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), chcete-li být sdílen mezi procesy.  
+ `MapShareMem` Umožňuje existující objekt mapování souboru, vytvořil [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), chcete-li být sdílen mezi procesy.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Volejte tuto metodu za účelem otevření pojmenovaný objekt mapování souboru pro určený soubor.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.  
   
  *dwViewDesiredAccess*  
- Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) v sadě Windows SDK pro další podrobnosti.  
+ Zobrazit [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) v sadě Windows SDK pro další podrobnosti.  
   
 ## <a name="see-also"></a>Viz také  
  [Catlfilemapping – třída](../../atl/reference/catlfilemapping-class.md)   

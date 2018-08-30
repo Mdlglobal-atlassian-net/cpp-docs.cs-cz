@@ -1,5 +1,5 @@
 ---
-title: Posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam | Microsoft Docs
+title: Posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznamu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f9ff7afa5440e0d0b83240b1248c33ab0d385e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 073a11b8b798e9b94164a79af2340b0ad133d957
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197819"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam
-Ovládací prvky seznamu ([CListCtrl](../mfc/reference/clistctrl-class.md)) jsou posouvatelného ve výchozím nastavení. Další informace najdete v tématu [pozici posunutí](http://msdn.microsoft.com/library/windows/desktop/bb774736) ve Windows SDK a [Scroll](../mfc/reference/clistctrl-class.md#scroll) – členská funkce.  
+Seznam ovládacích prvků ([CListCtrl](../mfc/reference/clistctrl-class.md)) jsou posuvný ve výchozím nastavení. Další informace najdete v tématu [pozici posunutí](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK a [posuvníku](../mfc/reference/clistctrl-class.md#scroll) členskou funkci.  
   
- Můžete volat `CListCtrl` členské funkce k uspořádání položek seznamu v ovládacím prvku položky řadit a najít konkrétní položky. Další informace najdete v tématu [Arranging, řazení a hledání](http://msdn.microsoft.com/library/windows/desktop/bb774736) ve Windows SDK a [CListCtrl](../mfc/reference/clistctrl-class.md) členy [uspořádat](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , a [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
+ Můžete volat `CListCtrl` členské funkce pro uspořádání položek seznamu v ovládacím prvku položky řadit a vyhledat konkrétní položky. Další informace najdete v tématu [Arranging, řazení a vyhledávání](https://msdn.microsoft.com/library/windows/desktop/bb774736) v sadě Windows SDK a [CListCtrl](../mfc/reference/clistctrl-class.md) členy [uspořádat](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , a [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   

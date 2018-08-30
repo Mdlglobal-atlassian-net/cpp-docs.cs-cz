@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882842"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207193"
 ---
 # <a name="ccontainedwindowt-class"></a>Ccontainedwindowt – třída
 Tato třída implementuje oken obsažených v rámci jiného objektu.  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|  
 |Pomocí systému windows v knihovně ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|  
 |Průvodce projektem ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) a dalších tématech v sadě Windows SDK|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) a dalších tématech v sadě Windows SDK|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in] Popisovač okna nadřazené nebo vlastníka.  
   
  *Rect*  
- [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.  
+ [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.  
   
  *szWindowName*  
  [in] Určuje název okna. Výchozí hodnota je NULL.  
   
  *dwStyle*  
- [in] Styl okna. Výchozí hodnota je WS_CHILD &#124; WS_VISIBLE. Seznam možných hodnot najdete v tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ [in] Styl okna. Výchozí hodnota je WS_CHILD &#124; WS_VISIBLE. Seznam možných hodnot najdete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
   
  *dwExStyle*  
- [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu. Seznam možných hodnot najdete v tématu [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu. Seznam možných hodnot najdete v tématu [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *MenuOrID*  
  [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.  
   
  *lpCreateParam*  
- [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu popisovač do nově vytvořeného okna. v opačném případě hodnota NULL.  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  Výsledek zpracování zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení `DefWindowProc` volání [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) funkci Win32 k odeslání informací zprávu do okna postupem uvedeným v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Ve výchozím nastavení `DefWindowProc` volání [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) funkci Win32 k odeslání informací zprávu do okna postupem uvedeným v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Vrátí aktuální zprávu (`m_pCurrentMsg`).  

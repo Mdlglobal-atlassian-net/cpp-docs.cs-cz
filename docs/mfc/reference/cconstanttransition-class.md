@@ -1,5 +1,5 @@
 ---
-title: Třída CConstantTransition | Microsoft Docs
+title: Cconstanttransition – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210576"
 ---
-# <a name="cconstanttransition-class"></a>CConstantTransition – třída
-Zapouzdří konstantní přechod.  
+# <a name="cconstanttransition-class"></a>Cconstanttransition – třída
+Zapouzdřuje konstantní přechod.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ class CConstantTransition : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Vytvoří objekt přechod a inicializuje jeho trvání.|  
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Vytvoří objekt přechodu a inicializuje vlastnost duration.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CConstantTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -59,12 +59,12 @@ class CConstantTransition : public CBaseTransition;
 |[CConstantTransition::m_duration](#m_duration)|Doba trvání přechodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během konstantní přechodu hodnota proměnné animace zůstává na počáteční hodnotu za celou dobu přechodu. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během konstantní přechod hodnota proměnné animace zůstává na počáteční hodnotu na dobu trvání přechodu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
  `CConstantTransition`  
   
@@ -72,7 +72,7 @@ class CConstantTransition : public CBaseTransition;
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
- Vytvoří objekt přechod a inicializuje jeho trvání.  
+ Vytvoří objekt přechodu a inicializuje vlastnost duration.  
   
 ```  
 CConstantTransition (UI_ANIMATION_SECONDS duration);
@@ -83,7 +83,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  Doba trvání přechodu.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -93,10 +93,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
 
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  Doba trvání přechodu.  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217855"
 ---
 # <a name="cftpconnection-class"></a>Cftpconnection – třída
 Spravuje FTP připojení k internetovému serveru a umožňuje přímou manipulaci s adresářů a souborů na tomto serveru.  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` Očekává se odpověď.  
   
  *dwFlags*  
- Hodnota obsahující příznaky, které řídí této funkce. Úplný seznam najdete v tématu [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
+ Hodnota obsahující příznaky, které řídí této funkce. Úplný seznam najdete v tématu [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).  
   
  *dwContext*  
  Ukazatel na hodnotu obsahující hodnotu definovaného aplikací umožňují určit kontext aplikace v zpětná volání.  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) fungovat, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda) fungovat, jak je popsáno v sadě Windows SDK.  
   
  Pokud dojde k chybě, MFC, vyvolá výjimku typu [cinternetexception –](../../mfc/reference/cinternetexception-class.md).  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  Ukazatel na řetězec obsahující název adresář, který chcete vytvořit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud selže volání funkce Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud selže volání funkce Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `GetCurrentDirectory` určit aktuální pracovní adresář pro toto připojení k serveru. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |Při návratu|Počet znaků, které jsou uloženy do *pstrDirName*. Pokud má členská funkce se nezdaří a ERROR_INSUFFICIENT_BUFFER nevrátí, znamená *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit za účelem přijímání řetězec.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Jako adresu URL získat místo toho název adresáře, volání [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |Při návratu|Počet znaků, které jsou uloženy do *pstrDirName*. Pokud má členská funkce se nezdaří a ERROR_INSUFFICIENT_BUFFER nevrátí, znamená *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit za účelem přijímání řetězec.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetCurrentDirectoryAsURL` chová se stejně jako [GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY soubor se používá jako dočasné úložiště. Aplikace by měla zapisovat do souboru pouze v případě, že je nezbytně nutné. Většina dat souboru zůstane v paměti bez vyprazdňuje na médiu, protože ho budou brzy odstraněny.  
   
  *dwFlags*  
- Určuje podmínky, za kterých dojde k přenosu. Tento parametr lze rozdělit *dwFlags* podle hodnoty [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) v sadě Windows SDK.  
+ Určuje podmínky, za kterých dojde k přenosu. Tento parametr lze rozdělit *dwFlags* podle hodnoty [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) v sadě Windows SDK.  
   
  *dwContext*  
  Identifikátor kontextu načítání souborů. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetFile` je základní rutinu, která zpracovává všechny režie spojená se čtením souboru ze serveru FTP a ukládat místně. Aplikace, které jen načítají data souboru nebo Zavřít kontrolu nad přenosy souborů, které vyžadují by měly používat `OpenFile` a [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) místo.  
@@ -410,7 +410,7 @@ BOOL PutFile(
  Identifikátor kontextu umístění souboru. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  `PutFile` je základní rutinu, která zpracovává všechny operace spojené s ukládáním souboru na serveru FTP. Aplikace, která odesílala jen data, nebo, které vyžadují kontrolu nad přenosy souborů, by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  Ukazatel na řetězec obsahující název souboru, který chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  *PstrFileName* parametr může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `Remove` Funkce překládá název oddělovač do příslušných znaků před jejich použití.  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  Ukazatel na řetězec obsahující adresář, který má být odebrán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [GetCurrentDirectory](#getcurrentdirectory) určit aktuální pracovní adresář serveru. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.  
@@ -470,7 +470,7 @@ BOOL Rename(
  Ukazatel na řetězec obsahující název nového souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  *PstrExisting* a *pstrNew* parametrů může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `Rename` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Ukazatel na řetězec obsahující název adresáře.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  *PstrDirName* parametr může být buď částečně nebo plně kvalifikovaný název souboru relativní vzhledem k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `SetCurrentDirectory` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  

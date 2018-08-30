@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336602"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212040"
 ---
 # <a name="event-sink-maps"></a>Mapy jímek událostí
 Jakmile se vloženému ovládacímu prvku OLE aktivuje událost, kontejneru ovládacího prvku přijímat události pomocí mechanismu, nazývá "událostí jímky mapa," dodávané knihovnou MFC. Toto mapování jímky událostí určuje funkce obslužné rutiny pro každé konkrétní události, stejně jako parametry těchto událostí. Další informace o mapy jímek událostí, najdete v článku [ActiveX – kontejnery ovládacích prvků](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  ID odbavení vlastnost účastnící se oznámení.  
   
  *pfnRequest*  
- Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít BOOL návratový typ a **BOOL\***  parametru. Tato funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
+ Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít BOOL návratový typ a **BOOL** <strong>\*</strong> parametru. Tato funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
   
  *pfnChanged*  
  Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tuto vlastnost. Funkce by měla obsahovat BOOL návratový typ a parametr UINT. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  ID odbavení vlastnost účastnící se oznámení.  
   
  *pfnRequest*  
- Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít BOOL návratový typ a UINT a **BOOL\***  parametry. Funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
+ Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít `BOOL` návratový typ a `UINT` a `BOOL*` parametry. Funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
   
  *pfnChanged*  
- Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tuto vlastnost. Funkce by měla obsahovat BOOL návratový typ a parametr UINT. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
+ Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tuto vlastnost. Funkce by měla být `BOOL` návratový typ a `UINT` parametru. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
   
 ### <a name="requirements"></a>Požadavky  
   **Hlavička** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  ID odbavení vlastnost účastnící se oznámení.  
   
  *pfnRequest*  
- Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít BOOL návratový typ a **BOOL\***  parametru. Tato funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
+ Ukazatel na členskou funkci, která zpracovává `OnRequestEdit` oznámení pro tuto vlastnost. Tato funkce by měla mít BOOL návratový typ a **BOOL** <strong>\*</strong> parametru. Tato funkce by měl nastavit parametr na hodnotu TRUE, vlastnost, která má změna povolit a hodnotu FALSE, aby se zakáže. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  
   
  *pfnChanged*  
  Ukazatel na členskou funkci, která zpracovává `OnChanged` oznámení pro tuto vlastnost. Funkce by měla obsahovat BOOL návratový typ a žádné parametry. Funkce by měla vrátit hodnotu TRUE označuje, že byla zpracována oznámení; v opačném případě FALSE.  

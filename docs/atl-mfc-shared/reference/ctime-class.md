@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205984"
 ---
 # <a name="ctime-class"></a>CTime – třída
 Představuje datum a absolutní čas.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Převede `CTime` do formátovaný řetězec objektu – podle místního časového pásma.|  
 |[CTime::FormatGmt](#formatgmt)|Převede `CTime` do formátovaný řetězec objektu – podle standardu UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Převede čas informací uložených v `CTime` objektu na strukturu DBTIMESTAMP Win32 kompatibilní.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Převede čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Převede čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
 |[CTime::GetCurrentTime](#getcurrenttime)|Vytvoří `CTime` objekt, který představuje aktuální čas (statické členské funkce).|  
 |[CTime::GetDay](#getday)|Vrátí den představují podle `CTime` objektu.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Vrátí den v týdnu, reprezentovaný `CTime` objektu.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  Pomocí konstruktoru `DBTIMESTAMP` parametr je k dispozici, pouze když OLEDB.h je součástí.  
   
- Další informace najdete v tématu [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) a [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura v sadě Windows SDK. Viz také [zástupného kódu MS-DOS datum a čas](http://msdn.microsoft.com/library/windows/desktop/ms724503) položku v sadě Windows SDK.  
+ Další informace najdete v tématu [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) a [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktura v sadě Windows SDK. Viz také [zástupného kódu MS-DOS datum a čas](/windows/desktop/SysInfo/ms-dos-date-and-time) položku v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Voláním této členské funkce pro převod čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura.  
+ Voláním této členské funkce pro převod čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *timeDest*  
- Odkaz na [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude obsahovat hodnota převedená data a času `CTime` objektu.  
+ Odkaz na [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude obsahovat hodnota převedená data a času `CTime` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  

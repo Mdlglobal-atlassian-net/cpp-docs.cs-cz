@@ -1,5 +1,5 @@
 ---
-title: threadprivate | Microsoft Docs
+title: threadprivate | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217742"
 ---
 # <a name="threadprivate"></a>threadprivate
-Určuje, že je na vlákno soukromé proměnné.  
+Určuje, že proměnná je privátní pro vlákno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,25 +33,25 @@ Určuje, že je na vlákno soukromé proměnné.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- kde  
+ Pokud  
   
  `var`  
- Seznam proměnných, které chcete nastavit jako soukromé na vlákno oddělených čárkami. `var` musí být buď globální nebo obor názvů obor proměnné nebo místní statické proměnné.  
+ Čárkou oddělený seznam proměnných, které chcete označit jako soukromé ve vlákně. `var` musí být globální nebo obor názvů rozsahem proměnné nebo statické místní proměnné.  
   
 ## <a name="remarks"></a>Poznámky  
- `threadprivate` – Direktiva podporuje žádné OpenMP – klauzule.  
+ `threadprivate` Podporuje bez klauzule OpenMP – direktiva.  
   
  Další informace najdete v tématu [2.7.1 threadprivate – direktiva](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
   
- `threadprivate` – Direktiva je založena na [vlákno](../../../cpp/thread.md) `__declspec` atribut; omezení **__declspec(thread)** platí pro `threadprivate`.  
+ `threadprivate` Podle směrnice [vlákno](../../../cpp/thread.md) `__declspec` atribut; omezení **__declspec(thread)** platí pro `threadprivate`.  
   
- Nemůžete použít `threadprivate` v jakékoli knihovnu DLL, kterou bude načten prostřednictvím [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175).  To zahrnuje knihovny DLL, které jsou načtené s [/DELAYLOAD (Import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá **LoadLibrary**.  
+ Nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  To zahrnuje knihovny DLL, které načítají s [/delayload (Import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá **LoadLibrary**.  
   
- Můžete použít `threadprivate` v knihovně DLL, která je staticky načtena při spuštění procesu.  
+ Můžete použít `threadprivate` v knihovně DLL, která je staticky načtená při spouštění procesu.  
   
- Protože `threadprivate` je založena na **__declspec(thread)**, `threadprivate` proměnné budou existovat v jakékoli vlákno spuštěna v procesu, ne jenom vláken, které jsou součástí seskupení adaptérů vlákno vytvořený službou paralelní oblast.  Toto je podrobností implementace, kterou chcete mít na paměti, vzhledem k tomu může dojít, například konstruktory pro `threadprivate` uživatelem definovaný typ volat další často pak očekává.  
+ Protože `threadprivate` vychází **__declspec(thread)**, `threadprivate` proměnné budou existovat v jakékoli vlákno spuštění v procesu, nejen vlákna, které jsou součástí týmu vlákna vytvořený službou paralelní oblasti.  Toto je podrobnosti implementace, které chcete mít na paměti, protože jste si všimnout, například konstruktory pro `threadprivate` uživatelem definovaného typu vyvoláno více často, než očekáváte.  
   
- A `threadprivate` proměnné destructable typu není zaručena tak, aby měl jeho destruktor volat.  Příklad:  
+ A `threadprivate` proměnnou typu destructable nemusí mít jeho destruktor volá.  Příklad:  
   
 ```  
 struct MyType   
@@ -68,10 +68,10 @@ int main()
 }  
 ```  
   
- Uživatelé nemají žádnou kontrolu, když bude ukončen vláken tvořící paralelní oblast.  Pokud tyto vláken existovat, pokud proces bude ukončen, vláken nebude upozorněn na ukončení procesu a destruktoru nebude volána pro `threaded_var` na jakékoli vlákno kromě toho, který ukončí (tady, primární vlákno).  Takže kód neměli spoléhat na správné zničení `threadprivate` proměnné.  
+ Uživatelé nemají žádnou kontrolu, když se ukončí vlákna tvořící paralelní oblasti.  Pokud tato vlákna při ukončení procesu, vlákna nebudete nijak upozorněni o ukončení procesu a destruktor se nebude volat pro `threaded_var` v libovolném vlákně kromě toho, který ukončí (tady, primární vlákno).  Takže kód by neměl spolehnout na řádné zničení `threadprivate` proměnné.  
   
 ## <a name="example"></a>Příklad  
- Pro ukázkové použití `threadprivate`, najdete v části [privátní](../../../parallel/openmp/reference/private-openmp.md).  
+ Pro ukázkový používání `threadprivate`, naleznete v tématu [privátní](../../../parallel/openmp/reference/private-openmp.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Direktivy](../../../parallel/openmp/reference/openmp-directives.md)

@@ -1,5 +1,5 @@
 ---
-title: je, isw – rutiny | Microsoft Docs
+title: is, isw – rutiny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206130"
 ---
 # <a name="is-isw-routines"></a>is, isw – rutiny
 |||  
@@ -41,104 +41,103 @@ ms.locfileid: "32391958"
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
 |[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
-|[iscsym –, iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
+|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto rutiny test znaků pro zadaných podmínek.  
+ Tyto rutiny testují znaky na zadané podmínky.  
   
- **Je** rutiny vytvořit smysluplný výsledky pro některý argument celé číslo od -1 (`EOF`) k **uchar_max –** (0xFF), včetně. Typ očekávaný argument je `int`.  
+ **Je** rutiny vytvářejí smysluplné výsledky pro libovolný celočíselný argument od -1 (`EOF`) k **UCHAR_MAX** (0xFF) včetně. Očekávaný typ argumentu je `int`.  
   
 > [!CAUTION]
->  Pro **je** rutiny, předáním argumentu typu `char` mohou vést k neočekávaným výsledkům. Jednobajtové znak SBCS nebo MBCS typu `char` s hodnotou vyšší než 0x7F je záporná. Pokud `char` je předán, kompilátor může převést hodnotu přihlášeni `int` nebo přihlášeni **dlouho**. Tato hodnota může být rozšířeny kompilátorem s neočekávaným výsledkům.  
+>  Pro **je** rutiny předání argumentu typu `char` může vést k nepředvídatelným výsledkům. Jednobajtový znak SBCS nebo MBCS typu `char` s hodnotou větší než 0x7F jsou negativní. Pokud `char` je předán, kompilátor může převést hodnotu na podepsané `int` nebo podepsané **dlouhé**. Tato hodnota může být rozšířena o znaménko kompilátorem s neočekávanými výsledky.  
   
- **Isw** rutiny vytvořit smysluplný výsledky pro jakékoli celé číslo od - 1 (**weof –**) k 0xFFFF (včetně). **Wint_t –** datový typ je definována v WCHAR. H jako **nepodepsané prostě**; může uchovávat všechny wide znak nebo na široká charakterová koncoví souboru (**weof –**) hodnotu.  
+ **Isw** rutiny vytvářejí smysluplné výsledky pro libovolnou celočíselnou hodnotu od - 1 (**WEOF**) do 0xFFFF včetně. **Wint_t** datový typ je definován v WCHAR. H jako **unsigned short**; může pojmout libovolný široký znak nebo širokého znaku end z – soubor (**WEOF**) hodnotu.  
   
- Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná.  
+ Výstupní hodnota je ovlivněna nastavením `LC_CTYPE` nastavením kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v.  
   
- V národním prostředí "C", test podmínky pro **je** rutiny jsou následující:  
+ V národním prostředí "C" podmínky testy pro **je** jsou následující rutiny:  
   
  `isalnum`  
  Alfanumerické znaky (A – Z, a - z nebo 0 - 9).  
   
  `isalpha`  
- Abecední znaky (A - Z nebo a - z).  
+ Abecední (A - Z nebo a - z).  
   
  `__isascii`  
- Znaků ASCII (0x00 – 0x7F).  
+ Znak ASCII (0x00 – 0x7F).  
   
  `isblank`  
  Vodorovné nebo mezerou znak (0x09 nebo 0x20).  
   
  `iscntrl`  
- Řízení znak (0x00-0x1F nebo 0x7F).  
+ Řídící znaku (0x00 – 0x1F nebo 0x7F).  
   
  `__iscsym`  
- Písmeno, podtržítko nebo číslice.  
+ Písmeno, znak podtržení nebo číslice.  
   
  `__iscsymf`  
  Písmenem nebo podtržítkem.  
   
- **IsDigit –**  
+ `isdigit`  
  Desítková číslice (0 - 9).  
   
  `isgraph`  
- Tisknutelná znaku kromě (místa).  
+ Tisknutelný znaky kromě mezery ().  
   
  `islower`  
- Malé písmeno (a – ž).  
+ Malé písmeno (a – z).  
   
  `isprint`  
- Tisknutelná znak včetně znaků (0x20 - 0x7E).  
+ Tisknutelný znak včetně mezery (0x20 – 0x7E).  
   
  `ispunct`  
- Interpunkční znaménko.  
+ Znak interpunkce.  
   
  `isspace`  
- Prázdné znaky (0x09-0x0D nebo 0x20).  
+ Prázdný znak (0x09 – 0x0D nebo 0x20).  
   
  `isupper`  
- Velké písmeno (A – Ž).  
+ Velké písmeno (A – Z).  
   
  `isxdigit`  
- Šestnáctková číslice (A - F, a - f, nebo 0 - 9).  
+ Šestnáctková číslice (A – F, a – f nebo 0 - 9).  
   
- Pro **isw** rutiny, výsledkem testu pro zadanou podmínku je nezávislé na národním prostředí. Test podmínky pro **isw** funkce jsou následující:  
+ Pro **isw** rutiny, je výsledek testu pro zadanou podmínku nezávislý na národním prostředí. Testovací podmínky pro **isw** funkce jsou následující:  
   
  `iswalnum`  
  `iswalpha` nebo `iswdigit`.  
   
  `iswalpha`  
- Všechny wide znak, který je jedním z sadu definované implementací, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswalpha` vrátí nenulovou hodnotu pouze pro široké znaky pro kterou `iswupper` nebo `iswlower` nenulový.  
+ Široký znak, který je jednou ze sad definovaných implementací pro kterou žádná z hodnot `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulové. `iswalpha` vrátí nenulovou hodnotu pouze pro široké znaky, pro kterou `iswupper` nebo `iswlower` nenulové.  
   
  `iswascii`  
- Široká charakterová reprezentace znaků ASCII (0x0000 - 0x007F).  
+ Širokoznaká reprezentace znaku ASCII (0x0000 – 0x007F).  
   
  `iswblank`  
- Celý znak, odpovídá standardní znak nebo je jedním z definované implementací sadu široké znaky, pro kterou `iswalnum` je false. Standardní prázdné znaky jsou místa (L "") a vodorovné karty (L "\t").  
+ Široký znak který odpovídá standardnímu znaku mezery nebo je jednou ze sad definovaných implementací širokých znaků, pro které `iswalnum` má hodnotu false. Standardní prázdné znaky jsou mezera (L' ') a horizontální tabelátor (L '\t').  
   
  `iswcntrl`  
- Široká znaková ovládacího prvku.  
+ Řídicí široký znak.  
   
- **__iswcsym**  
- Všechny wide znak, pro který **isalnum –** hodnotu true, nebo je znak "_".  
+ `__iswcsym`  
+ Všechny široké znaky, pro kterou `isalnum` je true nebo znak "_".  
   
- **__iswcsymf**  
- Všechny wide znak, pro který `iswalpha` hodnotu true, nebo je znak "_".  
+ `__iswcsymf`  
+ Všechny široké znaky, pro kterou `iswalpha` je true nebo znak "_".  
   
  `iswctype`  
- Znak má vlastnost určeného `desc` argument. Pro každý platná hodnota `desc` argument `iswctype`, jak je znázorněno v následující tabulce je rutiny ekvivalentní široká charakterová klasifikace:  
+ Znak má vlastnost určenou `desc` argument. Pro každou platnou hodnotu `desc` argument `iswctype`, existuje ekvivalentní klasifikace širokého znaku rutiny, jak je znázorněno v následující tabulce:  
   
- **Ekvivalence (iswctype –**   
- ***c, desc* ) do jiné isw – rutiny testování**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Rovnocennost iswctype (c, desc) do jiné isw – testování rutiny
   
-|Hodnota *desc* argument|iswctype – ( *c, desc* ) ekvivalentní|  
+|Hodnota *desc* argument|iswctype ( *c, desc* ) ekvivalentní|  
 |------------------------------|----------------------------------------|  
 |**ÚROVNĚ _ALPHA**|**iswalpha – (** `c` **)**|  
 |**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT**|**iswalnum – (** `c` **)**|  
 |**_BLANK**|**iswblank (** `c` **)**|  
-|**_CONTROL**|**iswcntrl – (** `c` **)**|  
+|**OVLÁDA_CÍHO PRVKU**|**iswcntrl – (** `c` **)**|  
 |**_DIGIT**|**iswdigit – (** `c` **)**|  
 |**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswgraph – (** `c` **)**|  
 |**_LOWER**|**iswlower – (** `c` **)**|  
@@ -150,28 +149,28 @@ ms.locfileid: "32391958"
 |**_HEX**|**iswxdigit – (** `c` **)**|  
   
  `iswdigit`  
- Široká znaková odpovídající znaku desetinných číslic.  
+ Široký znak odpovídající znaku desítkové číslice.  
   
  `iswgraph`  
- Tisknutelná široké znaku kromě místa celý znak (L "").  
+ Tisknutelný široký znak s výjimkou širokého znaku mezery (L' ').  
   
  `iswlower`  
- Malé písmeno, nebo jeden z definované implementací sadu široké znaky pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswlower` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na malá písmena.  
+ Malé písmeno nebo jedna ze sad definovaných implementací širokých znaků pro kterou žádná z hodnot `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulové. `iswlower` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají malým písmenům.  
   
  `iswprint`  
- Tisknutelná široká znaková, včetně místa celý znak (L "").  
+ Tisknutelný široký znak včetně širokého znaku mezery (L' ').  
   
  `iswpunct`  
- Tisknutelná široké znak, který je ani místa celý znak (L ".) ani celý znak, pro kterou `iswalnum` nenulový.  
+ Tisknutelný široký znak, který není široký znak (L' ') ani široký znak, pro kterou `iswalnum` nenulové.  
   
  `iswspace`  
- Celý znak, odpovídá standardní prázdný znak nebo je jedním z definované implementací sadu široké znaky pro kterou `iswalnum` je false. Standardní prázdné znaky jsou: místa (L ""), formfeed (L '\f'), nový řádek (L '\n'), CR (L '\r'), vodorovné karta (L "\t") a vertikální tabulátor (L '\v').  
+ Široký znak který odpovídá standardnímu znaku prázdný znak nebo je jednou ze sad definovaných implementací širokých znaků pro kterou `iswalnum` má hodnotu false. Standardní prázdné znaky jsou: místa (L' '), formfeed (L '\f'), nový řádek (L '\n'), návrat vozíku (L '\r;), horizontální tabelátor (L '\t') a vertikální tabulátor (L '\v').  
   
  `iswupper`  
- Celý znak, je velká nebo je jedním z definované implementací sadu široké znaky, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswupper` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na velká písmena.  
+ Široký znak, který je velká nebo je jednou ze sad definovaných implementací širokých znaků, pro kterou žádná z hodnot `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulové. `iswupper` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají velkým písmenům.  
   
  `iswxdigit`  
- Široká znaková, která odpovídá znak hexadecimální číslice.  
+ Široký znak odpovídající znaku šestnáctkové číslice.  
   
 ## <a name="example"></a>Příklad  
   
@@ -347,6 +346,6 @@ int main( void )
 ## <a name="see-also"></a>Viz také  
  [Klasifikace znaků](../c-runtime-library/character-classification.md)   
  [Národní prostředí](../c-runtime-library/locale.md)   
- [setlocale –, _wsetlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Výklad sekvencí vícebajtových znaků](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [to – funkce](../c-runtime-library/to-functions.md)

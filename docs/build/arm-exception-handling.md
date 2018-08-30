@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209115"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205700"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -25,7 +25,7 @@ Windows na ARM používá stejné strukturovaného zpracování mechanismus pro 
 
 ## <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
-Používá Windows na ARM *parsovat kódy unwind* řídit během odvíjení zásobníku [strukturované zpracování výjimek](http://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Unwind kódy jsou posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
+Používá Windows na ARM *parsovat kódy unwind* řídit během odvíjení zásobníku [strukturované zpracování výjimek](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Unwind kódy jsou posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
 
 EABI ARM (vložené aplikace binary interface) určuje parsovat kódy unwind odvíjení model výjimek, který používá, ale nepostačuje pro SEH odvíjení ve Windows, které musí zpracovat asynchronní případech, kdy procesor je uprostřed prologu nebo epilogu funkce. Windows také odděluje odvíjení řízení na odvíjení úrovni funkcí a uvolnění oboru specifické pro jazyk, který unified v ARM EABI. Z těchto důvodů Windows na ARM Určuje další podrobnosti pro data a procedura odvíjení.
 

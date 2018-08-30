@@ -1,5 +1,5 @@
 ---
-title: Přidávání položek do ovládacího prvku záhlaví | Microsoft Docs
+title: Přidávání položek do ovládacího prvku záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342732"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206144"
 ---
 # <a name="adding-items-to-the-header-control"></a>Přidávání položek do ovládacího prvku záhlaví
-Po vytvoření ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) v jeho nadřazeného okna přidat tolik "záhlaví položky" podle potřeby: obvykle jeden na každý sloupec.  
+Po vytvoření ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) v jeho nadřazenému oknu, přidejte libovolný počet "položky hlavičky" podle potřeby: obvykle jeden sloupec.  
   
 ### <a name="to-add-a-header-item"></a>Chcete-li přidat položky záhlaví  
   
-1.  Příprava [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.  
+1.  Příprava [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.  
   
-2.  Volání [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), předávání strukturu.  
+2.  Volání [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), předejte strukturu.  
   
 3.  Opakujte kroky 1 a 2 pro další položky.  
   
- Další informace najdete v tématu [přidání položky do ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK.  
+ Další informace najdete v tématu [přidání položky do ovládacího prvku záhlaví](/windows/desktop/Controls/header-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   

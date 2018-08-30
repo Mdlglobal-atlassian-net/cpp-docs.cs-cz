@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196007"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl – třída
 Tato třída implementuje dialog (modálním nebo nemodálním), který je hostitelem ovládacích prvků ActiveX.  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametry  
  *hWndParent*  
- [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.  
+ [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.  
   
  *dwInitParam*  
  [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>Parametry  
  *pMsg*  
- Ukazatel [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) strukturu, která obsahuje zprávy, která se má zkontrolovat.  
+ Ukazatel [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturu, která obsahuje zprávy, která se má zkontrolovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, pokud zpráva byla zpracovaných, FALSE, jinak.  

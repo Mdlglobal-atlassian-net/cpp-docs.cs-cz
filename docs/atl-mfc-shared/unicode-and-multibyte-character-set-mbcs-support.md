@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202931"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Kódování Unicode a vícebajtových znaků (MBCS) podporu sady
 
@@ -67,9 +67,9 @@ K dokončení programování Unicode vaší aplikace, musíte také:
 
    - Použít TCHAR, kde můžete využít **char**.
 
-   - Použít LPTSTR, kde můžete využít **char\***.
+   - Použít LPTSTR, kde můžete využít **char**<strong>\*</strong>.
 
-   - Použít LPCTSTR, kde můžete využít **const char\***. `CString` poskytuje operátor LPCTSTR k převodu mezi `CString` a LPCTSTR.
+   - Použít LPCTSTR, kde můžete využít **const char**<strong>\*</strong>. `CString` poskytuje operátor LPCTSTR k převodu mezi `CString` a LPCTSTR.
 
 `CString` poskytuje také s ohledem na Unicode konstruktory, operátory přiřazení a operátory porovnání.
 
@@ -101,7 +101,7 @@ V části DBCS daný řetězec může obsahovat všechny jednobajtové znaky ANS
 
 Mapování obecného textu funkcí pro všechny rutiny zpracování řetězce za běhu jsou popsány v [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Seznam najdete v tématu [internacionalizace](../c-runtime-library/internationalization.md).
 
-Obdobně `CString` metody jsou implementovány pomocí mapování obecného datového typu. Povolit znakovou sadu MBCS a Unicode, knihovna MFC používá TCHAR pro **char** nebo `wchar_t`, LPTSTR pro **char\***  nebo `wchar_t*`a LPCTSTR pro **const char\***  nebo `const wchar_t*`. Tyto zajistit správné mapování znakové sady MBCS a Unicode.
+Obdobně `CString` metody jsou implementovány pomocí mapování obecného datového typu. Povolit znakovou sadu MBCS a Unicode, knihovna MFC používá TCHAR pro **char** nebo `wchar_t`, LPTSTR pro **char** <strong>\*</strong> nebo `wchar_t*`a LPCTSTR pro **const char** <strong>\*</strong> nebo `const wchar_t*`. Tyto zajistit správné mapování znakové sady MBCS a Unicode.
 
 ## <a name="see-also"></a>Viz také
 

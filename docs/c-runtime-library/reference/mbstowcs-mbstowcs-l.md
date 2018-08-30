@@ -1,5 +1,5 @@
 ---
-title: mbstowcs –, _mbstowcs_l – | Microsoft Docs
+title: mbstowcs _mbstowcs_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14beb076a83952529155fa0a4b1da780efae3c7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d179e53967817bb622074987e3309e159547e819
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218102"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 
-Převede posloupnost více-bajtové znaky na odpovídající posloupnost široké znaky. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [mbstowcs_s –, _mbstowcs_s_l –](mbstowcs-s-mbstowcs-s-l.md).
+Převede sekvence vícebajtových znaků na odpovídající pořadí širokých znaků. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [mbstowcs_s _mbstowcs_s_l –](mbstowcs-s-mbstowcs-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,44 +77,44 @@ size_t _mbstowcs_l(
 ### <a name="parameters"></a>Parametry
 
 *wcstr*<br/>
-Adresa posloupnost široké znaky.
+Adresa sekvence širokých znaků.
 
 *mbstr*<br/>
-Adresu pořadí Null byla ukončena více-bajtové znaky.
+Adresa sekvence NULL byl ukončen vícebajtových znaků.
 
 *Počet*<br/>
-Maximální počet více-bajtové znaky převést.
+Maximální počet vícebajtových znaků k převodu.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **mbstowcs –** úspěšně převede zdrojový řetězec, vrátí počet převedený více-bajtové znaky. Pokud *wcstr* argument je **NULL**, funkce vrátí hodnotu požadovaná velikost (v široké znaky) cílové řetězce. Pokud **mbstowcs –** zaznamená neplatný vícebajtových znaků, vrátí hodnotu -1. Pokud je vrácenou hodnotou *počet*, není široká charakterová řetězce ukončené hodnotou null.
+Pokud **mbstowcs** úspěšně převede zdrojový řetězec, vrátí převedený vícebajtových znaků. Pokud *wcstr* argument je **NULL**, funkce vrátí požadovaná velikost (v širokých znaků) na cílový řetězec. Pokud **mbstowcs** zaznamená platný vícebajtový znak, vrátí hodnotu -1. Pokud je návratová hodnota *počet*, není širokoznaký řetězec zakončený hodnotou null.
 
 > [!IMPORTANT]
-> Ujistěte se, že *wcstr* a *mbstr* se nepřekrývají a že *počet* správně odpovídá počtu více-bajtové znaky převést.
+> Ujistěte se, že *wcstr* a *mbstr* nepřekrývají a že *počet* správně odráží číslo k převodu vícebajtových znaků.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbstowcs –** funkce převede až do maximální počet *počet* více-bajtové znaky na kterou odkazuje *mbstr* na řetězec odpovídající široké znaky, které jsou Určuje aktuální národní prostředí. Ukládá výsledný řetězec široká charakterová na adrese reprezentována *wcstr*. Výsledkem je podobná řadu volání [mbtowc –](mbtowc-mbtowc-l.md). Pokud **mbstowcs –** zaznamená znak hodnoty null jednobajtové (\0) před nebo po *počet* dojde, převede ji hodnotu null znak, který má prázdný znak široká charakterová (L '\0') a zastaví. Proto široká charakterová řetězce na *wcstr* je ukončené hodnotou null jenom v případě, že je během převodu došlo k znak hodnoty null. Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování není definován.
+**Mbstowcs** funkce převede až do maximálního počtu *počet* vícebajtových znaků na které odkazuje *mbstr* na řetězec odpovídající široké znaky, které jsou Určuje aktuální národní prostředí. Uloží výsledný řetězec širokých znaků v adrese reprezentované výrazem *wcstr*. Výsledek je podobný sérii volání [mbtowc](mbtowc-mbtowc-l.md). Pokud **mbstowcs** zaznamená jednobajtový znak null ('\0') před nebo po *počet* dojde, převede znak null na prázdný znak širokého znaku (L '\0') a zastaví. Proto řetězce širokého znaku na *wcstr* je zakončený hodnotou null jenom v případě, že znak null dochází při převodu. Pokud sekvence odkazované *wcstr* a *mbstr* překrývají, chování není definováno.
 
-Pokud *wcstr* argument je **NULL**, **mbstowcs –** vrátí počet široké znaky, které by mohly být výsledkem převodu není včetně zakončením hodnotu null. Zdrojový řetězec musí být ukončen null pro správnou hodnotu, která má být vrácen. Pokud potřebujete výsledné široká znaková řetězec, který má být ukončené hodnotou null, přidejte jednu pro vrácené hodnoty.
+Pokud *wcstr* argument je **NULL**, **mbstowcs** vrátí počet širokých znaků, které by byl výsledkem převodu, nikoli včetně ukončovacího znaku null. Zdrojový řetězec musí být zakončené znakem null pro správnou hodnotu, která má být vrácen. Pokud potřebujete výsledný řetězec širokých znaků bude zakončený hodnotou null, přidejte jej do vrácené hodnoty.
 
-Pokud *mbstr* argument je **NULL**, nebo pokud *počet* je > **INT_MAX**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, kód chyby je nastavena na **einval –** a funkce vrátí hodnotu -1.
+Pokud *mbstr* argument je **NULL**, nebo pokud *počet* je > **INT_MAX**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, kód chyby je nastaven na **EINVAL** a funkce vrátí hodnotu -1.
 
-**mbstowcs –** používá aktuální národní prostředí pro chování všech závislých na národním prostředí; **_mbstowcs_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**mbstowcs** používá aktuální národní prostředí pro všechna závislá chování; **_mbstowcs_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**mbstowcs –**|\<stdlib.h>|
+|**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -211,7 +211,7 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
@@ -220,4 +220,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

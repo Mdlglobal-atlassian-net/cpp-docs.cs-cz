@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466105"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214918"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 `CNetAddressCtrl` Třída reprezentuje ovládacího prvku síťové adresy, které můžete použít k zadání a ověření formátu protokolu IPv4, IPv6 a pojmenovaných adres DNS.  
@@ -80,7 +80,7 @@ class CNetAddressCtrl : public CEdit
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ze souboru záhlaví dialogového okna definuje [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) a [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) proměnné, které jsou vyžadované [CNetAddressCtrl::GetAddress](#getaddress)metody.  
+ Následující příklad kódu ze souboru záhlaví dialogového okna definuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) a [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) proměnné, které jsou vyžadované [CNetAddressCtrl::GetAddress](#getaddress)metody.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
@@ -128,7 +128,7 @@ virtual BOOL Create(
 |Parametr|Popis|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Bitová kombinace hodnot styly použité na ovládací prvek. Další informace najdete v tématu [upravit styly](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
+|[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
 |[in] *pParentWnd*|Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  
 |[in] *nID*|ID ovládacího prvku.|  
   
@@ -151,9 +151,9 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitová kombinace (nebo) rozšířené stylů pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
+|[in] *dwExStyle*|Bitová kombinace (nebo) rozšířené stylů pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
 |[in] *dwStyle*|Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [upravit styly](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
+|[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
 |[in] *pParentWnd*|Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  
 |[in] *nID*|ID ovládacího prvku.|  
   
@@ -173,7 +173,7 @@ HRESULT DisplayErrorTip();
 ### <a name="remarks"></a>Poznámky  
  Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů adresy, které může podporovat ovládacího prvku aktuální síťové adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.  
   
- Vyvolá tuto zprávu [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) makra, která je popsána v sadě Windows SDK. Toto makro odešle `NCM_DISPLAYERRORTIP` zprávy.  
+ Vyvolá tuto zprávu [NetAddr_DisplayErrorTip](/windows/desktop/api/shellapi/nf-shellapi-netaddr_displayerrortip) makra, která je popsána v sadě Windows SDK. Toto makro odešle `NCM_DISPLAYERRORTIP` zprávy.  
   
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  Získá ověřených a Analyzovaná reprezentace síťové adresy, který je přidružený aktuální ovládací prvek síťové adresy.  
@@ -186,17 +186,17 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out v] *pAddress*|Ukazatel [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) struktury.  Nastavte *pAddrInfo* člena této struktury na adresu [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) strukturu před voláním metody GetAddress.|  
+|[out v] *pAddress*|Ukazatel [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Nastavte *pAddrInfo* člena této struktury na adresu [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) strukturu před voláním metody GetAddress.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM. Další informace o kódech chyb najdete v části vrátit hodnotu z [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) – makro.  
+ Hodnota S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM. Další informace o kódech chyb najdete v části vrátit hodnotu z [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) – makro.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda je úspěšná, [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) struktura obsahuje další informace o síťové adrese.  
+ Pokud tato metoda je úspěšná, [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktura obsahuje další informace o síťové adrese.  
   
  Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů ovládacího prvku aktuální síťové adresy může podporovat adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.  
   
- Tato metoda vyvolá [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETADDRESS.  
+ Tato metoda vyvolá [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETADDRESS.  
   
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  Načte typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.  
@@ -206,10 +206,10 @@ DWORD GetAllowType() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
+ Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Poznámky  
- Vyvolá tuto zprávu [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETALLOWTYPE.  
+ Vyvolá tuto zprávu [NetAddr_GetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getallowtype) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Nastaví typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *dwAddrMask*|Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM.  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>Poznámky  
  Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů adresy, které může podporovat ovládacího prvku aktuální síťové adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.  
   
- Vyvolá tuto zprávu [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_SETALLOWTYPE.  
+ Vyvolá tuto zprávu [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Viz také  
  [Cnetaddressctrl – třída](../../mfc/reference/cnetaddressctrl-class.md)   

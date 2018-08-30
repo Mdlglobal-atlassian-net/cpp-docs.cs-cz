@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220177"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Iprovideclassinfo2impl – třída
-Tato třída poskytuje výchozí implementaci třídy [iprovideclassinfo –](http://msdn.microsoft.com/library/windows/desktop/ms687303) a [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.  
+Tato třída poskytuje výchozí implementaci třídy [iprovideclassinfo –](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) a [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|Spravuje informace o typu coclass.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) rozhraní rozšiřuje [iprovideclassinfo –](http://msdn.microsoft.com/library/windows/desktop/ms687303) tak, že přidáte `GetGUID` metody. Tato metoda umožňuje klientovi k načtení objektu odchozí rozhraní IID pro jeho výchozí sadu událostí. Třída `IProvideClassInfo2Impl` poskytuje výchozí implementaci třídy `IProvideClassInfo` a `IProvideClassInfo2` metody.  
+ [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) rozhraní rozšiřuje [iprovideclassinfo –](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) tak, že přidáte `GetGUID` metody. Tato metoda umožňuje klientovi k načtení objektu odchozí rozhraní IID pro jeho výchozí sadu událostí. Třída `IProvideClassInfo2Impl` poskytuje výchozí implementaci třídy `IProvideClassInfo` a `IProvideClassInfo2` metody.  
   
  `IProvideClassInfo2Impl` obsahuje statický člen typu `CComTypeInfoHolder` , který spravuje informace o typu coclass.  
   
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) ve Windows SDK.  
+ Zobrazit [IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) ve Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  Získá identifikátor GUID pro odchozí dispinterface daného objektu.  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) ve Windows SDK.  
+ Zobrazit [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) ve Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Konstruktor  
@@ -138,7 +138,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Poznámky  
- `_tih` spravuje informace o typu coclass.  
+ `_tih` Spravuje informace o typu coclass.  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled tříd](../../atl/atl-class-overview.md)

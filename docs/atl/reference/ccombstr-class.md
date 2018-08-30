@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202206"
 ---
 # <a name="ccombstr-class"></a>CComBSTR – třída
 Tato třída představuje obálku pro datových typů BSTR.  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Zobrazit [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) ve Windows SDK.  
+ Zobrazit [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, pokud je řetězec úspěšně načten. v opačném případě vrátí hodnotu FALSE.  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parametry  
  *pStream*  
- [in] Ukazatel [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) rozhraní v datovém proudu, který obsahuje data.  
+ [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní v datovém proudu, který obsahuje data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní hodnoty HRESULT.  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parametry  
  *pStream*  
- [in] Ukazatel [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) rozhraní na datovém proudu.  
+ [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní na datovém proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní hodnoty HRESULT.  

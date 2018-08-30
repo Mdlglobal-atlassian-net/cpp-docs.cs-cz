@@ -1,5 +1,5 @@
 ---
-title: rand_s – | Microsoft Docs
+title: rand_s – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/02/2018
 ms.technology:
@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210159"
 ---
 # <a name="rands"></a>rand_s
 
-Generuje pseudonáhodná čísla. Toto je bezpečnější verze funkce [rand –](rand.md), vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generuje pseudonáhodná čísla. Toto je bezpečnější verze funkce [rand](rand.md), s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,24 +57,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parametry
 
 *randomValue*<br/>
-Ukazatel na celočíselnou hodnotu pro uložení generované hodnoty.
+Ukazatel na celé číslo k uložení vygenerovanou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, jinak hodnota chybový kód. Pokud je vstupní ukazatel _randomValue_ je ukazatel s hodnotou null, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **einval –** a nastaví **errno** k **einval –**. Pokud funkce selže z jiného důvodu, *_randomValue_ je nastaven na hodnotu 0.
+Nula v případě úspěchu, jinak kód chyby. Pokud vstupní ukazatel _randomValue_ je ukazatel s hodnotou null, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** k **EINVAL**. Pokud funkce selže z jiného důvodu, *_randomValue_ je nastavena na hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**Rand_s –** funkce zápisů pseudonáhodných celé číslo v rozsahu od 0 do **uint_max –** do vstupní ukazatele. **Rand_s –** funkce operačního systému používá ke generování kryptograficky zabezpečené náhodných čísel. Nepoužívá počáteční hodnoty generované [srand –](srand.md) funkce, ani neovlivní sekvenci náhodné číslo používané [rand –](rand.md).
+**Rand_s –** funkce zapíše pseudonáhodných celé číslo v rozsahu 0 až **UINT_MAX** na vstupní ukazatel. **Rand_s –** funkce operačního systému používá k vygenerování kryptograficky zabezpečená náhodná čísla. Nepoužívá generovaných počáteční hodnotu [srand –](srand.md) funkce, ani to ovlivní náhodné číslo pořadí používané [rand](rand.md).
 
-**Rand_s –** funkce vyžaduje, že konstanta **_CRT_RAND_S** definovat před příkaz zahrnutí pro funkci deklarovat, jako v následujícím příkladu:
+**Rand_s –** vyžaduje funkce této konstanty **_CRT_RAND_S** nadefinovat před příkaz zahrnutí má funkce deklarovaná jako v následujícím příkladu:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s –** závisí na [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) rozhraní API, které je pouze k dispozici v systému Windows XP nebo novější.
+**rand_s –** závisí [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) rozhraní API, které je dostupný jenom ve Windows XP a vyšší.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -160,7 +160,7 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

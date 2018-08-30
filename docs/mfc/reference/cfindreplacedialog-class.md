@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204002"
 ---
 # <a name="cfindreplacedialog-class"></a>Cfindreplacedialog – třída
 Umožňuje implementovat dialogová okna Najít a nahradit standardní řetězec ve vaší aplikaci.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Jednou `CFindReplaceDialog` objekt byl vytvořen, je třeba zavolat [vytvořit](#create) členskou funkci k vytváření a zobrazování dialogových oken.  
   
- Použití [m_fr](#m_fr) struktura inicializace dialogových oken před voláním `Create`. `m_fr` Struktury je typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Další informace o této struktuře naleznete v tématu Windows SDK.  
+ Použití [m_fr](#m_fr) struktura inicializace dialogových oken před voláním `Create`. `m_fr` Struktury je typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Další informace o této struktuře naleznete v tématu Windows SDK.  
   
- Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) fungovat a využívat [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra map zpráv v rámce okno, která zpracovává tuto zprávu registrovaný.  
+ Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) fungovat a využívat [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra map zpráv v rámce okno, která zpracovává tuto zprávu registrovaný.  
   
  Můžete určit, zda uživatel se rozhodl ukončí dialogové okno s `IsTerminating` členskou funkci.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Ukazatel na řetězec nahrazení výchozí, když se zobrazí dialogové okno. Pokud má hodnotu NULL, dialogové okno neobsahuje výchozí řetězec nahrazení.  
   
  *dwFlags*  
- Jeden nebo více příznaků, které vám umožní přizpůsobit nastavení dialogovém okně kombinované pomocí bitového operátoru OR. Výchozí hodnota je FR_DOWN, které určuje, že hledání pokračovat směrem dolů. Zobrazit [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) struktura v sadě Windows SDK pro další informace o těchto příznacích.  
+ Jeden nebo více příznaků, které vám umožní přizpůsobit nastavení dialogovém okně kombinované pomocí bitového operátoru OR. Výchozí hodnota je FR_DOWN, které určuje, že hledání pokračovat směrem dolů. Zobrazit [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) struktura v sadě Windows SDK pro další informace o těchto příznacích.  
   
  *pParentWnd*  
  Ukazatel na okno nadřazené nebo vlastník dialogových oken. To je okno, které se zobrazí zvláštní zpráva označující, že je požadována akce najít a nahradit. Pokud má hodnotu NULL, použije se v hlavním okně aplikace.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Nenulové, pokud objekt dialog box byl úspěšně vytvořen; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funkce, vrácená hodnota je zpráva číslo jedinečné pro instanci aplikace. Okno rámce by měl mít položku mapování zpráv, který deklaruje funkci zpětného volání ( `OnFindReplace` v následujícím příkladu), která zpracovává tuto zprávu registrovaný. Následující fragment kódu je příklad toho, jak to provést u okna rámce třídy s názvem `CMyRichEditView`:  
+ Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkce, vrácená hodnota je zpráva číslo jedinečné pro instanci aplikace. Okno rámce by měl mít položku mapování zpráv, který deklaruje funkci zpětného volání ( `OnFindReplace` v následujícím příkladu), která zpracovává tuto zprávu registrovaný. Následující fragment kódu je příklad toho, jak to provést u okna rámce třídy s názvem `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_fr` Struktura typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Jeho členové uložení vlastnosti z objektu dialogového okna. Po sestavení `CFindReplaceDialog` objektu, můžete použít `m_fr` na různé hodnoty v dialogovém okně Upravit.  
+ `m_fr` Struktura typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Jeho členové uložení vlastnosti z objektu dialogového okna. Po sestavení `CFindReplaceDialog` objektu, můžete použít `m_fr` na různé hodnoty v dialogovém okně Upravit.  
   
  Další informace o této struktuře naleznete v tématu `FINDREPLACE` struktura v sadě Windows SDK.  
   

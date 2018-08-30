@@ -1,5 +1,5 @@
 ---
-title: Jednorozměrná pole | Microsoft Docs
+title: Jednorozměrná pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196973"
 ---
 # <a name="one-dimensional-arrays"></a>Jednorozměrná pole
-Výraz operátory následováno výrazem do hranatých závorek (**[]**) je dolního indexu reprezentace elementu objektu array. Výraz dolního indexu představuje hodnotu na adresu, která je *výraz* umisťuje nad rámec *operátory výraz* při vyjádřený jako  
+Výraz přípony následovaný výraz v hranatých závorkách (**[] č.**) je zkratkou reprezentace elementu objektu array. Výraz dolního indexu představuje hodnotu na adrese, která je *výraz* umístí nad rámec *postfix-expression* při vyjádřený jako  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
- Obvykle hodnota reprezentována *operátory výraz* je hodnota ukazatele, jako je například identifikátorem pole a *výraz* je celočíselné hodnoty. Ale všechny možnosti, které je vyžadován syntakticky jeden z výrazů se ukazatel typu a dalších být integrální typu. Proto integrální hodnotou může být v *operátory výraz* pozice a hodnota ukazatele s hodnotou může být v závorkách v *výraz*, nebo "dolního indexu," pozici. Tento kód je například právní informace:  
+ Obvykle hodnota reprezentovaná *postfix-expression* je hodnota ukazatele, jako je například identifikátor pole a *výraz* je celé číslo. Všechny možnosti, které je však vyžaduje syntakticky je jeden z výrazů být typu ukazatele a druhý být celočíselného typu. Proto může být celočíselná hodnota v *postfix-expression* pozice a hodnota ukazatele může být v závorkách v *výraz*, nebo "dolního indexu," pozici. Například tento kód je platný:  
   
 ```  
 // one_dimensional_arrays.c  
@@ -50,9 +45,9 @@ int main() {
 }  
 ```  
   
- Výrazy v dolním indexu se obecně používají k odkazování na elementy pole, ale můžete použít dolní index pro všechny ukazatele. Ať pořadí hodnot, *výraz* musí být uzavřena do hranatých závorek (**[]**).  
+ Výrazy dolního indexu se obecně používají k odkazování na prvky pole, ale index můžete použít na jakýkoli ukazatel. Bez ohledu pořadí hodnot, *výraz* musí být uzavřen v závorkách (**[] č.**).  
   
- Výraz dolního indexu je vyhodnocován přidáním celočíselné hodnoty na hodnotu ukazatele a použití indirection – operátor (**\****) na výsledek. (Viz [Deferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md) diskuzi o deferenční operátor.) Ve skutečnosti pro jednorozměrné pole, následující čtyři výrazy jsou ekvivalentní, za předpokladu, který `a` ukazatel a `b` je celé číslo:  
+ Výraz dolního indexu je vyhodnocován přidáním celočíselné hodnoty na hodnotu ukazatele a použití indirection – operátor (<strong>\**</strong>) na výsledek. (Viz [dereference a Address-of operátory](../c-language/indirection-and-address-of-operators.md) diskuzi o operátoru dereference.) V důsledku toho pro jednorozměrné pole, následující čtyři výrazy jsou ekvivalentní, za předpokladu, že `a` ukazatel a `b` je celé číslo:  
   
 ```  
 a[b]  
@@ -61,17 +56,17 @@ a[b]
 b[a]  
 ```  
   
- Podle pravidel převodu pro operátor sčítání (daného v [doplňkové operátory](../c-language/c-additive-operators.md)), celočíselné hodnoty jsou převedeny na adresu posun vynásobením délka typu řešit ukazatel.  
+ Podle pravidla převodu pro operátor sčítání (v daném [operátory součtu](../c-language/c-additive-operators.md)), celočíselné hodnoty je převedena na posun adresy vynásobením délka typ adresovaný ukazatelem.  
   
- Předpokládejme například, identifikátor `line` odkazuje na pole `int` hodnoty. Následující postup slouží k vyhodnocení výraz dolního indexu `line[ i ]`:  
+ Předpokládejme například, identifikátor `line` odkazuje na pole `int` hodnoty. Následující postup slouží k vyhodnocení výrazu dolního indexu `line[ i ]`:  
   
-1.  Celočíselná hodnota `i` se násobí hodnotou počet bajtů, které jsou definované jako délka `int` položky. Převedená hodnota `i` představuje `i` `int` pozic.  
+1.  Celočíselná hodnota `i` se násobí hodnotou počet bajtů, které jsou definované jako délku `int` položky. Převedená hodnota `i` představuje `i` `int` pozic.  
   
-2.  Tato převedená hodnota se přidá na původní hodnotu ukazatele (`line`) k získání adresu, která je posun `i` `int` umisťuje z `line`.  
+2.  Tato hodnota převedená se přidá k hodnotě původního ukazatele (`line`) pozastavit adresu, která je `i` `int` umístí z `line`.  
   
-3.  Deferenční operátor je použita na novou adresu. Výsledkem je hodnota elementu pole na této pozici (intuitivně, `line [ i ]`).  
+3.  Operátor dereference je použit na novou adresu. Výsledkem je hodnota prvku pole na této pozici (intuitivně, `line [ i ]`).  
   
- Výraz dolního indexu `line[0]` představuje hodnotu první prvek řádku, od posun z adresy reprezentována `line` je 0. Podobně výrazem jako `line[5]` odkazuje na pozice posun pět element z řádku nebo element šesté pole.  
+ Výraz dolního indexu `line[0]` představuje hodnotu elementu první řádek, od posun od adrese reprezentované výrazem `line` je 0. Obdobně výrazu, jako `line[5]` odkazuje na element pozice posun pět z řádku nebo šestého prvku v poli.  
   
 ## <a name="see-also"></a>Viz také  
  [Operátor dolního indexu: []](../cpp/subscript-operator.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338434"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196794"
 ---
 # <a name="clongbinary-class"></a>CLongBinary – třída
 Zjednodušuje práci s velmi velkými binárními datovými objekty (často nazývané objekty BLOB nebo "binární rozsáhlé objekty") v databázi.  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato velikost může být menší než velikost bloku paměti přidělené pro data. Volání Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) funkce získáte přidělená velikost.  
+ Tato velikost může být menší než velikost bloku paměti přidělené pro data. Volání Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize) funkce získáte přidělená velikost.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Uloží popisovač Windows HGLOBAL data skutečné binárního rozsáhlého objektu.  

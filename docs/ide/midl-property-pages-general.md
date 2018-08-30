@@ -1,5 +1,5 @@
 ---
-title: 'MIDL – stránky vlastností: Obecné | Microsoft Docs'
+title: 'MIDL – stránky vlastností: Obecné | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,39 +25,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329979"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204686"
 ---
 # <a name="midl-property-pages-general"></a>MIDL – stránky vlastností: Obecné
-**Obecné** stránka vlastností v **MIDL** složky určuje následující volby kompilátoru MIDL:  
+**Obecné** stránku vlastností v **MIDL** složky určuje následující možnosti kompilátoru MIDL:  
   
--   Definice preprocesoru [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Definice preprocesoru [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Další zahrnuté adresáře ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Další adresáře souborů k zahrnutí ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Ignorovat standardní cestu zahrnují ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Ignorovat standardní cestu zahrnují ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib – kompatibilní ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   Kompatibilní s MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Úroveň upozornění ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Úroveň upozornění ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Varování jako chyba ([wdn](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Uporoznit jako chybu ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Potlačit úvodní nápis při spouštění ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Potlačit úvodní nápis při spouštění ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   Znakový typ MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   Znakový typ MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Cílové prostředí ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   Cílové prostředí ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Generovat provizorní proxy ([/oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Generovat proxy bez zástupných procedur ([/oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Informace o tom, jak získat přístup **Obecné** stránka vlastností v **MIDL** složky, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Informace o tom, jak získat přístup k **Obecné** stránku vlastností v **MIDL** složky, najdete v článku [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
- Informace o tom, jak programového přístupu MIDL pro projekty C++ najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objektu.  
+ Informace o tom, jak programově přistupovat k MIDL pro projekty C++, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [MIDL – stránky vlastností](../ide/midl-property-pages.md)

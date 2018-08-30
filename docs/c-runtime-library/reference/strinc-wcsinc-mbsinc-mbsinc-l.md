@@ -1,5 +1,5 @@
 ---
-title: _strinc –, _wcsinc –, _mbsinc _mbsinc_l – | Microsoft Docs
+title: _strinc – _wcsinc –, _mbsinc _mbsinc_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86822cfeb26428a53e94d50a3d831732241007ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195155"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
-Posune ukazatel řetězec o jeden znak.
+Přesune ukazatel řetězce o jeden znak.
 
 > [!IMPORTANT]
-> **_mbsinc –** a **_mbsinc_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** a **_mbsinc_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,26 +87,26 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Aktuální*<br/>
-Znak ukazatel.
+*aktuální*<br/>
+Ukazatel znaku.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí ukazatel na znak, který následuje *aktuální*.
+Každá z těchto rutin vrací ukazatel na znak, který následuje *aktuální*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsinc** funkce vrací ukazatel na první bajt vícebajtových znaků, který následuje *aktuální*. **_mbsinc –** rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) který je aktuálně používán; **_mbsinc_l –** se shoduje s tím rozdílem, že místo toho používá parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_Mbsinc** funkce vrátí ukazatel na první bajt vícebajtového znaku, který následuje *aktuální*. **_mbsinc** rozpozná vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) , který je aktuálně používán; **_mbsinc_l –** je totožný s tím rozdílem, že místo toho používá parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Funkce obecného textu **_tcsinc –**, definované v souboru Tchar.h, mapuje **_mbsinc** Pokud **_MBCS** byla definována, nebo **_wcsinc –** Pokud **_UNICODE** byla definována. V opačném **_tcsinc –** mapuje **_strinc –**. **_strinc –** a **_wcsinc –** jsou jedním znaková a široká charakterová verze **_mbsinc**. **_strinc –** a **_wcsinc –** jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
+Obecná textová funkce **_tcsinc –** definované v souboru Tchar.h se mapuje na **_mbsinc** Pokud **_MBCS** byla definována, nebo **_wcsinc –** Pokud **_UNICODE** byla definována. V opačném případě **_tcsinc –** mapuje **_strinc –**. **_strinc –** a **_wcsinc –** jsou jedním jednobajtového znaku a širokoznaká verze **_mbsinc**. **_strinc –** a **_wcsinc –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
-Pokud *aktuální* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **einval –** a nastaví **errno** k **einval –**.
+Pokud *aktuální* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **EINVAL** a nastaví **errno** k **EINVAL**.
 
 > [!IMPORTANT]
-> Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít pro útoky systému, protože může dojít k tomu bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce by mohly být vystaveny ohrožení přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti lze použít pro systémové útoky, protože mohou způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -117,9 +117,9 @@ Pokud *aktuální* je **NULL**, obslužná rutina neplatný parametr je vyvolán
 |**_strinc**|\<tchar.h>|
 |**_wcsinc**|\<tchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>

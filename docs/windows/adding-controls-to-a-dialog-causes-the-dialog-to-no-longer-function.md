@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592811"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215367"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Přidání ovládacích prvků do dialogového okna způsobí nefunkčnost okna.
 
@@ -61,11 +61,11 @@ V současné době editor dialogového okna automaticky nedojde k přidání kó
 
 ## <a name="the-fix-for-common-controls"></a>Oprava pro běžné ovládací prvky
 
-Chcete-li použít běžné ovládací prvky v dialogovém okně, je třeba volat [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) nebo `AFXInitCommonControls` předtím, než vytvoříte dialogové okno.
+Chcete-li použít běžné ovládací prvky v dialogovém okně, je třeba volat [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) nebo `AFXInitCommonControls` předtím, než vytvoříte dialogové okno.
 
 ## <a name="the-fix-for-richedit-controls"></a>Oprava pro ovládací prvky RichEdit
 
-Je nutné volat `LoadLibrary` pro ovládací prvky pro úpravy s formátováním. Další informace najdete v tématu [pomocí ovládacího prvku RichEdit 1.0 s MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [o bohaté upravit ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb787873) v sadě Windows SDK a [– Přehled ovládacího prvku Rich upravit](../mfc/overview-of-the-rich-edit-control.md).
+Je nutné volat `LoadLibrary` pro ovládací prvky pro úpravy s formátováním. Další informace najdete v tématu [pomocí ovládacího prvku RichEdit 1.0 s MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [o bohaté upravit ovládací prvky](/windows/desktop/Controls/about-rich-edit-controls) v sadě Windows SDK a [– Přehled ovládacího prvku Rich upravit](../mfc/overview-of-the-rich-edit-control.md).
 
 ## <a name="requirements"></a>Požadavky
 

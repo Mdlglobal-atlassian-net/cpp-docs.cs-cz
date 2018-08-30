@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8c92bc8a0b7ac02bae85697eae047acf117652f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213753"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -36,7 +36,7 @@ Určuje výraz nebo identifikátor, který funguje jako sjednocení discriminant
 
 ## <a name="remarks"></a>Poznámky
 
-**Switch_is –** C++ atribut má stejné funkce jako [switch_is –](http://msdn.microsoft.com/library/windows/desktop/aa367275) atribut MIDL.
+**Switch_is –** C++ atribut má stejné funkce jako [switch_is –](/windows/desktop/Midl/switch-is) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

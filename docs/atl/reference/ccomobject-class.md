@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198657"
 ---
 # <a name="ccomobject-class"></a>CComObject – třída
 Tato třída implementuje `IUnknown` pro neagregovaná objekt.  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Sníží počet odkaz na objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro neagregovaná objekt. Nicméně volání `QueryInterface`, `AddRef`, a `Release` se deleguje na `CComObjectRootEx`.  
+ `CComObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro neagregovaná objekt. Nicméně volání `QueryInterface`, `AddRef`, a `Release` se deleguje na `CComObjectRootEx`.  
   
  Další informace o používání `CComObject`, najdete v článku [základy ATL COM objekty](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **Typ void\***  
- [in] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom***XXX*`Object`*XXX* konstruktory.  
+ <em>Typ void\*</em>  
+ [in] Tento nepojmenovaný parametr se nepoužívá. Existuje symetrie s jinými `CComXXXObjectXXX` konstruktory.  
   
 ### <a name="remarks"></a>Poznámky  
  Sníží destruktor ho.  

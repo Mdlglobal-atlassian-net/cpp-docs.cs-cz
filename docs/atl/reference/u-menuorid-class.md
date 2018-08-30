@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211184"
 ---
 # <a name="umenuorid-class"></a>_U_menuorid – třída
 Tato třída poskytuje obálky pro `CreateWindow` a `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Poznámky  
  Tato třída argument adaptér umožňuje ID (uvedený) nebo nabídku popisovače (HMENUs), které se mají předat funkci bez nutnosti explicitního přetypování straně volajícího.  
   
- Tato třída slouží k implementaci obálek rozhraní Windows API, zejména [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) a [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce, které přijímají argument HMENU, které mohou být podřízené okno identifikátor (UINT) spíše než popisovač nabídky. Například můžete zobrazit tato třída používá jako parametr [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Tato třída slouží k implementaci obálek rozhraní Windows API, zejména [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) a [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce, které přijímají argument HMENU, které mohou být podřízené okno identifikátor (UINT) spíše než popisovač nabídky. Například můžete zobrazit tato třída používá jako parametr [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  Třída definuje dvě přetížení konstruktoru: přijímá jeden UINT argument a druhý HMENU argument. UINT argumentu je stačí přetypován na HMENU v konstruktoru a výsledek uložený v single – datový člen třídy, [m_hMenu](#_u_menuorid__m_hmenu). Argument pro konstruktor HMENU ukládána přímo bez převodu.  

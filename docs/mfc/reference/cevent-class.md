@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205460"
 ---
 # <a name="cevent-class"></a>CEvent – třída
 Představuje událost, což je synchronizační objekt umožňující vždy jednomu vláknu upozornit jiné, že došlo k události.  
@@ -113,7 +113,7 @@ CEvent(
  Název `CEvent` objektu. Je nutné zadat, pokud se použije objekt přes hranice procesu. Pokud jeho název odpovídá existující událost, konstruktor vytvoří novou `CEvent` objekt, který odkazuje na události s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není událost, procesu vytváření se nezdaří. Pokud má hodnotu NULL, bude mít název hodnotu null.  
   
  *lpsaAttribute*  
- Atributy zabezpečení pro objekt události. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
+ Atributy zabezpečení pro objekt události. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Přístup nebo vydání `CEvent` objektu, vytvořit [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce.  
@@ -121,7 +121,7 @@ CEvent(
  Chcete-li změnit stav `CEvent` objekt signalizován (vláken nemusíte čekat), volání [SetEvent](#setevent) nebo [PulseEvent](#pulseevent). Nastavit stav `CEvent` objekt nonsignaled (musíte počkat vláken), volání [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  Po vytvoření `CEvent` objektu, použijte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.  
+>  Po vytvoření `CEvent` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Nastaví stav události pro signalizován (k dispozici), verze všech čekajících vláken a vynuluje ji do nonsignaled (není k dispozici) automaticky.  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  Pokud žádná vlákna čekající nebo žádná vlákna mohou být vydány okamžitě, `PulseEvent` nastaví stav události pro nonsignaled a vrátí.  
   
- `PulseEvent` používá základní Win32 `PulseEvent` funkce, která je možné okamžité odebrat ze stavu čekání pomocí volání asynchronní procedury režimu jádra. Proto `PulseEvent` nespolehlivá a by se nemělo používat nové aplikace. Další informace najdete v tématu [PulseEvent funkce](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` používá základní Win32 `PulseEvent` funkce, která je možné okamžité odebrat ze stavu čekání pomocí volání asynchronní procedury režimu jádra. Proto `PulseEvent` nespolehlivá a by se nemělo používat nové aplikace. Další informace najdete v tématu [PulseEvent funkce](/windows/desktop/api/winbase/nf-winbase-pulseevent).  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Nastaví stav události pro nonsignaled až do, explicitně nastaven do signalizovaného podle [SetEvent](#setevent) členskou funkci.  

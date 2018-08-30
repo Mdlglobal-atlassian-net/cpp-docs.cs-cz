@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200490"
 ---
 # <a name="indirection-operator-"></a>Deferenční operátor: *
 ## <a name="syntax"></a>Syntaxe  
@@ -32,7 +32,7 @@ ms.locfileid: "39408626"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátor unární dereference (**\***) přistoupí přes ukazatel; to znamená, převede hodnotu ukazatele na l hodnotou. Operand operátoru dereference musí být ukazatel na typ. Výsledek výrazu dereference je typ, ze kterého je odvozen typ ukazatele. Použití **\*** operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
+ Operátor unární dereference (<strong>\*</strong>) přistoupí přes ukazatel; to znamená, převede hodnotu ukazatele na l hodnotou. Operand operátoru dereference musí být ukazatel na typ. Výsledek výrazu dereference je typ, ze kterého je odvozen typ ukazatele. Použití <strong>\*</strong> operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
   
  Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li na umístění úložiště, je výsledkem l-hodnota označující umístění úložiště.  
   

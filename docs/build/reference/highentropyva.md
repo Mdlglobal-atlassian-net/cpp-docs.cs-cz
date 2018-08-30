@@ -1,7 +1,7 @@
 ---
-title: -HIGHENTROPYVA | Microsoft Docs
+title: -HIGHENTROPYVA | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,26 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122f524db9af10449ce809e5a8de78148d04d431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fec9314be9d69e2cb0af2a98884bd78de1ff679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211688"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
-Určuje, jestli spustitelné bitové kopie podporuje vysokou entropií 64-bit adresu místa rozložení náhodné (technologie ASLR).  
-  
-```  
-  
-/HIGHENTROPYVA[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost upravuje hlavičku souboru .dll nebo .exe indikující, zda je podporováno technologie ASLR s adresami 64-bit. Pokud je tato možnost nastavená na spustitelný soubor a všechny moduly, které závisí na, operační systém, který podporuje 64bitové technologie ASLR rebase segmentů spustitelné bitové kopie v době zatížení pomocí náhodnou adres v 64-bit virtuálního adresového prostoru. Tento velký adresní prostor je obtížnější pro útočníka tak snadno uhodnout umístění paměti konkrétní oblasti.  
-  
- Ve výchozím nastavení nastaví linkeru tuto možnost pro 64bitové spustitelné bitové kopie. Chcete-li nastavit tuto možnost, [/DYNAMICBASE](../../build/reference/dynamicbase.md) musí být také nastavena možnost.  
-  
-## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)   
- [/ DYNAMICBASE](../../build/reference/dynamicbase.md)   
- [Obrany zabezpečení ISV softwaru Windows](http://msdn.microsoft.com/library/bb430720.aspx)
+
+Určuje, zda spustitelné bitové kopie podporují náhodného generování rozložení prostoru adres 64-bit vysokou mírou entropie (technologie ASLR).
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ HIGHENTROPYVA**[**: NO**]
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost změní záhlaví *spustitelné bitové kopie*, soubor .dll nebo .exe souboru, označuje, zda je podporována 64-bit ASLR. Pokud tato možnost je nastavena na spustitelný soubor a všechny moduly, na kterých závisí, operační systém, který podporuje 64bitové technologie ASLR základ segmentů spustitelné bitové kopie v okamžiku načtení pomocí náhodných adres v 64bitové virtuální adresní prostor. Tento rozsáhlý adresní prostor ztěžuje útočníkovi možnost uhádnout umístění konkrétní paměťové oblasti.
+
+Ve výchozím nastavení, linker umožňuje **/highentropyva** pro 64bitové spustitelné bitové kopie. Tato možnost vyžaduje [/LARGEADDRESSAWARE](largeaddressaware.md), je také povolená ve výchozím nastavení pro 64bitové obrazy. **/ HIGHENTROPYVA** neplatí pro 32bitové spustitelné bitové kopie, pokud tato možnost je ignorována. Chcete-li explicitně zakázat tuto možnost, použijte **/HIGHENTROPYVA:NO**. Pro tuto možnost mají nějaký efekt [možnost/DynamicBase](dynamicbase.md) možnost musí být také nastavena.
+
+## <a name="see-also"></a>Viz také:
+
+- [EDITBIN – možnosti](editbin-options.md)
+- [/DYNAMICBASE](dynamicbase.md)
+- [Obrana zabezpečení ISV softwaru Windows](https://msdn.microsoft.com/library/bb430720.aspx)

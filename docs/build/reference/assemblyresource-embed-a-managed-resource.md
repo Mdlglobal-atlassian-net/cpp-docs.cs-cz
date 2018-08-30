@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYRESOURCE (spravovaný prostředek pro vložení) | Microsoft Docs
+title: -ASSEMBLYRESOURCE (vložení spravovaného prostředku) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213398"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (integrovaný spravovaný zdroj)
 ```  
@@ -35,21 +35,21 @@ ms.locfileid: "32372175"
   
 ## <a name="parameters"></a>Parametry  
  *Název souboru*  
- Spravovaný prostředek, který chcete vložit v tomto sestavení.  
+ Spravovaný prostředek, který chcete vložit do tohoto sestavení.  
   
  *Jméno*  
- Volitelné. Logický název prostředku; název slouží k načtení prostředku. Výchozí hodnota je název souboru.  
+ Volitelné. Logický název prostředku. Název používaný k načtení prostředku. Výchozí hodnota je název souboru.  
   
- Volitelně můžete zadat, pokud soubor by měly být privátní v manifestu sestavení. Ve výchozím nastavení *název* je veřejný v sestavení.  
+ Volitelně můžete zadat, pokud soubor by měl být privátní v manifestu sestavení. Ve výchozím nastavení *název* veřejnou v sestavení.  
   
 ## <a name="remarks"></a>Poznámky  
- Pomocí možnosti /ASSEMBLYRESOURCE prostředek pro vložení do sestavení.  
+ Pomocí možnosti narozdíl od prostředek pro vložení do sestavení.  
   
- Prostředky jsou veřejné v sestavení při vytvoření s linkeru. Linkeru neumožňuje přejmenovat prostředků v sestavení.  
+ Prostředky jsou v sestavení při vytvořené pomocí linkeru veřejné. Linker neumožňuje přejmenovat prostředků v sestavení.  
   
- Pokud *filename* je vytvořen, například pomocí souboru prostředků (.resources) rozhraní .NET Framework [Generátor zdrojových souborů (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí k němu se členy v **System.Resources** obor názvů (viz [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) informace). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** třídy pro přístup k prostředku v době běhu.  
+ Pokud *filename* je soubor prostředků (.resources) rozhraní .NET Framework vytvořený, například podle [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí, můžete přistupovat pomocí členů z **System.Resources** obor názvů (viz [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Další informace). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** pro přístup k prostředku v době běhu.  
   
- Další možnosti linkeru, které mají vliv vytváření sestavení jsou:  
+ Další možnosti linkeru, které ovlivňují generování sestavení jsou:  
   
 -   [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -67,17 +67,17 @@ ms.locfileid: "32372175"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **Linkeru** složky.  
+2.  Klikněte na tlačítko **Linkeru** složky.  
   
-3.  Klikněte **vstup** stránku vlastností.  
+3.  Klikněte na tlačítko **vstup** stránku vlastností.  
   
-4.  Změnit **vložení spravované zdrojového souboru** vlastnost.  
+4.  Upravit **vložit soubor spravovaných prostředků** vlastnost.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
   
-1.  V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>.  
+1.  Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   

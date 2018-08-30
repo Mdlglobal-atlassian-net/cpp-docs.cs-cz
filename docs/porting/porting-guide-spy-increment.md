@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc7abdcdad1c44d0758100abdea96101fb68e52
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222378"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 Tento přenos případovou studii – slouží k získáte představu o jaké typické přenosem projekt je jako typů problémů můžete setkat, a některé obecné tipy a triky pro účely řešení problémů s přenosem. Není má určené jako úplnou příručku k přenesení, protože funkce přenesení do projektu z velké části závisí na konkrétním kódu.  
@@ -527,7 +527,7 @@ Teď nám skutečně aktualizujte starý kód vícebajtové znakové sady (MBCS)
   
 Portování do Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost kompilace do znakové sady MBCS, nebo ne.  Pokud chcete mít možnost pro podporu znakové sady MBCS, bychom měli použít makra TCHAR jako typ znaku, který se přeloží na buď **char** nebo **wchar_t**, v závislosti na tom, zda je definován _MBCS nebo _UNICODE během kompilace. Přepnutí do Tchar – a TCHAR verzích různá rozhraní API namísto **wchar_t** a jeho přidružené rozhraní API znamená, že můžete vrátit na verzi znakové sady MBCS kódu jednoduše tak, že definice makra _MBCS místo _UNICODE. Kromě TCHAR existuje širokou škálu TCHAR verze jako je často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** oddíl, změna **znaková sada** vlastnost z **pomocí znakové sady MBCS Znaková sada** k **použít znakovou sadu Unicode**. Toto nastavení má vliv, které – makro je předdefinovaná během kompilace. Je UNICODE makra a makra _UNICODE. Vlastnost projektu ovlivňuje konzistentně. Záhlaví Windows používat kódování UNICODE, kde _UNICODE použít záhlaví Visual C++, jako je například knihovny MFC, ale v případě, že je definován, druhá je vždy definována.  
   
-Vhodná [průvodce](http://msdn.microsoft.com/library/cc194801.aspx) pomocí TCHAR existuje pro přenos ze znakové sady MBCS do kódu Unicode UTF-16. Můžeme vybrat tuto trasu. Nejprve Změníme **znaková sada** vlastnost **pomocí Unicode znaková sada** a sestavte projekt znovu.  
+Vhodná [průvodce](https://msdn.microsoft.com/library/cc194801.aspx) pomocí TCHAR existuje pro přenos ze znakové sady MBCS do kódu Unicode UTF-16. Můžeme vybrat tuto trasu. Nejprve Změníme **znaková sada** vlastnost **pomocí Unicode znaková sada** a sestavte projekt znovu.  
   
 Některá místa v kódu už používali TCHAR, zjevně čekat na případná nakonec podporu kódování Unicode. Některé nebyly. Jsme hledali výskyty ZNAKU, který je **– typedef** pro **char**a nahradí TCHAR většina z nich. Kromě toho jsme hledán `sizeof(CHAR)`. Pokaždé, když jsme změnili z CHAR TCHAR, jsme obvykle měli změnit na `sizeof(TCHAR)` vzhledem k tomu, že to se často používá k určení počtu znaků v řetězci. Pomocí nesprávného typu tady nevytváří chybu kompilátoru, proto je vhodné platit hodně pozornost tento případ.  
   

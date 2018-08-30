@@ -1,5 +1,5 @@
 ---
-title: wcstombs_s –, _wcstombs_s_l – | Microsoft Docs
+title: wcstombs_s – _wcstombs_s_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416498"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216974"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
-Převede posloupnost široké znaky na odpovídající posloupnost více-bajtové znaky. Verzi [wcstombs –, _wcstombs_l –](wcstombs-wcstombs-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede sekvenci širokých znaků na odpovídající sekvence vícebajtových znaků. Verze [wcstombs – _wcstombs_l –](wcstombs-wcstombs-l.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -91,61 +91,61 @@ errno_t _wcstombs_s_l(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Počet znaků převést.
+Počet znaků, převodu.
 
 *mbstr*<br/>
-Adresa vyrovnávací paměti pro výsledný řetězec převedený vícebajtových znaků.
+Adresa vyrovnávací paměti pro výsledný řetězec převedený vícebajtového znaku.
 
 *sizeInBytes*<br/>
 Velikost v bajtech *mbstr* vyrovnávací paměti.
 
 *wcstr*<br/>
-Odkazuje na široká znaková řetězec, který má být převeden.
+Odkazuje na řetězec širokých znaků, který má být převeden.
 
 *Počet*<br/>
-Maximální počet bajtů pro ukládání *mbstr* vyrovnávací paměti není včetně ukončující znak hodnoty null, nebo [_truncate –](../../c-runtime-library/truncate.md).
+Maximální počet bajtů k ukládání *mbstr* vyrovnávací paměti, bez ukončujícího znaku null, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, kód chyby při selhání.
+Nula v případě úspěchu, při selhání kód chyby.
 
-|Chybový stav|Vrátí hodnotu a **kód chyby**|
+|Chybový stav|Vrátí hodnotu a **errno**|
 |---------------------|------------------------------|
-|*mbstr* je **NULL** a *sizeInBytes* > 0|**EINVAL –**|
-|*wcstr* je **hodnotu NULL.**|**EINVAL –**|
-|Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (Pokud *počet* je **_truncate –**; viz poznámky níže)|**ERANGE –**|
+|*mbstr* je **NULL** a *sizeInBytes* > 0|**EINVAL**|
+|*wcstr* je **NULL**|**EINVAL**|
+|Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (není-li *počet* je **_TRUNCATE**; viz poznámky níže)|**ERANGE**|
 
-Pokud dojde k některé z těchto podmínek, jak je popsáno v je vyvolána výjimka neplatný parametr [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, funkce vrátí kód chyby a nastaví **errno** , které je uvedené v tabulce.
+Pokud některá z těchto podmínek dojde k je vyvolána výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, funkce vrátí chybový kód a nastaví **errno** jak je uvedeno v tabulce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcstombs_s –** funkce převede řetězec z široké znaky, na kterou odkazuje *wcstr* do více-bajtové znaky, které jsou uložené ve vyrovnávací paměti, na kterou odkazuje *mbstr*. Převod bude pokračovat pro jednotlivé znaky, dokud je splněna jedna z těchto podmínek:
+**Wcstombs_s –** funkce převede řetězec širokých znaků, na které odkazuje *wcstr* na vícebajtové znaky, které jsou uloženy ve vyrovnávací paměti, na které odkazuje *mbstr*. Převod bude pokračovat pro jednotlivé znaky, dokud nebude splněna jedna z těchto podmínek:
 
-- Vyskytl se null široká znaková
+- Zjistil se široké znaky null
 
-- Vyskytl se široká znaková, kterou nelze převést
+- Zjistil se široký znak, který nejde převést
 
-- Počet bajtů, které jsou uložené v *mbstr* vyrovnávací paměti je rovno *počet*.
+- Počet bajtů uložených v *mbstr* vyrovnávací paměti je rovno *počet*.
 
-Cílový řetězec je vždy ukončený hodnotou null (i v případě chyby).
+Cílový řetězec je vždy zakončený (i v případě chyby).
 
-Pokud *počet* je speciální hodnota [_truncate –](../../c-runtime-library/truncate.md), pak **wcstombs_s –** převede co nejvíc řetězec jako bude začlenit do cílové vyrovnávací paměti, a přesto nechat místnosti s hodnotou Null ukončovací znak. Pokud se zkrátí řetězec, je vrácenou hodnotu **struncate –**, a převod je považovat za úspěšné.
+Pokud *počet* je zvláštní hodnota [_TRUNCATE](../../c-runtime-library/truncate.md), pak **wcstombs_s –** převede největší část řetězce, jako se vejde do cílové vyrovnávací paměti a stále ponechají prostor s hodnotou Null ukončovací znak. Pokud je oříznutá. řetězec, návratovou hodnotou je **STRUNCATE**, a převod se považuje za úspěšné.
 
-Pokud **wcstombs_s –** úspěšně převede zdrojový řetězec, uloží je velikost v bajtech převedený řetězec, včetně null ukončení do  *&#42;pReturnValue* (zadat  *pReturnValue* není **NULL**). K tomu dojde i v případě *mbstr* argument je **NULL** a poskytuje způsob, jak určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *mbstr* je **NULL**, *počet* je ignorována.
+Pokud **wcstombs_s –** úspěšně převede zdrojový řetězec uloží velikost v bajtech převedený řetězec, včetně ukončovacího znaku null do  *&#42;pReturnValue* (k dispozici  *pReturnValue* není **NULL**). K tomu dojde i v případě, *mbstr* argument je **NULL** a poskytuje způsob, jak určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *mbstr* je **NULL**, *počet* se ignoruje.
 
-Pokud **wcstombs_s –** zaznamená široká znaková nelze převést na vícebajtových znaků, uloží je 0  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **kód chyby**  k **eilseq –** a vrátí **eilseq –**.
+Pokud **wcstombs_s –** nejde převést na vícebajtový znak, široký znak, zaznamená se vloží 0  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno**  k **EILSEQ**a vrátí **EILSEQ**.
 
-Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování **wcstombs_s –** není definován.
+Pokud sekvence odkazované *wcstr* a *mbstr* překrývají, chování **wcstombs_s –** není definován.
 
 > [!IMPORTANT]
-> Ujistěte se, že *wcstr* a *mbstr* se nepřekrývají a že *počet* správně odpovídá počtu široké znaky převést.
+> Ujistěte se, že *wcstr* a *mbstr* nepřekrývají a že *počet* správně odráží počet širokých znaků pro převod.
 
-**wcstombs_s –** používá aktuální národní prostředí pro chování všech závislých na národním prostředí; **_wcstombs_s_l –** je stejný jako **wcstombs –** s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**wcstombs_s –** používá aktuální národní prostředí pro všechna závislá chování; **_wcstombs_s_l –** je stejný jako **wcstombs –** s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -153,11 +153,11 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 |-------------|---------------------|
 |**wcstombs_s**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program znázorňuje chování **wcstombs_s –** funkce.
+Tento program ukazuje chování **wcstombs_s –** funkce.
 
 ```C
 // crt_wcstombs_s.c
@@ -200,7 +200,7 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

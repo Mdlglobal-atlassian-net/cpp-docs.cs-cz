@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885318"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196316"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation – třída
 Tato třída se vrátí [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekty do nonimpersonating stavu, když dostane mimo rozsah.  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Načte aktuální token přístupu asociovaném s tímto objektem.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows NT nebo Windows 2000. Tyto tokeny přístupu lze znázornit pomocí `CAccessToken` třídy.  
+ [Přístupový token](/windows/desktop/SecAuthZ/access-tokens) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows NT nebo Windows 2000. Tyto tokeny přístupu lze znázornit pomocí `CAccessToken` třídy.  
   
  Někdy je nezbytné k zosobnění přístupové tokeny. Tato třída je k dispozici pro zjednodušení, ale neprovádí zosobnění přístupové tokeny; provádí pouze k automatické obnovení do nonimpersonated stavu. Je to proto, že přístup pomocí tokenu zosobnění lze provést několika různými způsoby.  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka ATLSecurity](../../visual-cpp-samples.md)   
- [Přístupové tokeny](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)   
  [Přehled tříd](../../atl/atl-class-overview.md)

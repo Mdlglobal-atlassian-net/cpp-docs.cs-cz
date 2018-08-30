@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026430"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203146"
 ---
 # <a name="cmemorystate-structure"></a>Cmemorystate – struktura
 Poskytuje pohodlný způsob, jak zjistit, že nevracení paměti v programu.  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   Celková paměť aktuálně používá tento program (v bajtech)  
   
- Počet bloků, jehož zrušení přidělení opozdila, pokud jsou zdarma bloky `afxMemDF` byl nastaven na `delayFreeMemDF`. Další informace najdete v tématu [afxmemdf –](diagnostic-services.md#afxmemdf), v části "MFC makra a globální prvky". Zobrazit [typy bloků na haldě ladění](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) pro další informace o těchto blokování typů.  
+ Počet bloků, jehož zrušení přidělení opozdila, pokud jsou zdarma bloky `afxMemDF` byl nastaven na `delayFreeMemDF`. Další informace najdete v tématu [afxmemdf –](diagnostic-services.md#afxmemdf), v části "MFC makra a globální prvky". Zobrazit [typy bloků na haldě ladění](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) pro další informace o těchto blokování typů.  
   
 ### <a name="example"></a>Příklad  
   Následující kód musí být umístěné ve *název_projektu*App.cpp. Definujte tyto globální proměnné:  

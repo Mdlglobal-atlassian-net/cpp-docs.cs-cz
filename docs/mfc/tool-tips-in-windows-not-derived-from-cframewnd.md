@@ -1,5 +1,5 @@
 ---
-title: Popisy tlačítek v oknech Neodvozených ze třídy CFrameWnd | Microsoft Docs
+title: Popisy tlačítek v Windows Neodvozených ze třídy CFrameWnd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f187ae7e3d5d9dbe6441aa8e2ba0f7631fd5072
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 380435001bdcfacdc22c80d25d5ef228b67e3127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956529"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207586"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd
-Rodina Tento článek popisuje povolení popisy pro ovládací prvky obsažené v okně, které není odvozen od [CFrameWnd](../mfc/reference/cframewnd-class.md). Článek [panely nástrojů popisy](../mfc/toolbar-tool-tips.md) poskytuje informace o popisy pro ovládací prvky v `CFrameWnd`.  
+Řada Tento článek popisuje povolení popisů tlačítek pro ovládací prvky obsažené v okně, který není odvozen od [CFrameWnd](../mfc/reference/cframewnd-class.md). Tento článek [popisů tlačítek panelů nástrojů](../mfc/toolbar-tool-tips.md) poskytuje informace o popisy pro ovládací prvky v `CFrameWnd`.  
   
- Obsahuje následující témata v této rodině článku:  
+ Tento článek řady probíraná témata zahrnují:  
   
 -   [Povolení popisů tlačítek](../mfc/enabling-tool-tips.md)  
   
@@ -37,11 +37,11 @@ Rodina Tento článek popisuje povolení popisy pro ovládací prvky obsažené 
   
 -   [ToolTipText – struktura](../mfc/tooltiptext-structure.md)  
   
- Pro tlačítka se automaticky zobrazují popisy tlačítek a jiných ovládacích prvků, součástí nadřazeného okna odvozen od `CFrameWnd`. Důvodem je, že `CFrameWnd` má výchozí obslužnou rutinu pro [TTN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) oznámení, která zpracovává **TTN_NEEDTEXT** oznámení z nástroje tip ovládací prvky přidružené k ovládací prvky.  
+ Popisy tlačítek se automaticky zobrazí pro tlačítka a další ovládací prvky obsažené v nadřazené okno odvozené od `CFrameWnd`. Důvodem je, že `CFrameWnd` má výchozí obslužnou rutinu pro [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) oznámení, která zpracovává **TTN_NEEDTEXT** oznámení z nástroje pro tip ovládací prvky přidružené ovládací prvky.  
   
- Tento výchozí obslužnou rutinu však není volána při **TTN_NEEDTEXT** oznámení se odesílá z ovládacího prvku popisek nástroj spojené s ovládacím prvkem v okně, které není `CFrameWnd`, jako je například ovládací prvek dialogového okna nebo zobrazení formuláře. Proto je nutné k funkci obslužné rutiny pro zabezpečení **TTN_NEEDTEXT** zprávy oznámení, aby bylo možné zobrazit popisy pro podřízené ovládací prvky.  
+ Nicméně, tato výchozí obslužná rutina není voláno, když **TTN_NEEDTEXT** oznámení se odesílá z ovládacího prvku tip nástroj, který je přidružený k ovládacímu prvku v okně, které nejsou `CFrameWnd`, jako je například ovládací prvek na dialogové okno nebo zobrazení formuláře. Proto je nezbytná k poskytnutí funkci obslužné rutiny pro **TTN_NEEDTEXT** zprávy oznámení, aby bylo možné zobrazit popisy tlačítek pro podřízené prvky.  
   
- Popisy tlačítek výchozí, zadaná pro váš windows podle [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nemají text související s nimi. K načtení textu pro tip nástroj, který chcete zobrazit, **TTN_NEEDTEXT** oznámení se odesílá do nadřazeného okna prvkem popis tlačítka, těsně před se zobrazí okno tip nástroje. Pokud není žádná obslužná rutina pro tuto zprávu přiřadit některé hodnotu *pszText* členem **ToolTipText –** struktury, budou existovat žádný text pro popis tlačítka zobrazen.  
+ Popisy tlačítek výchozí k dispozici pro windows pomocí [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nemají text související s nimi. Načíst text tlačítka, který se zobrazí, **TTN_NEEDTEXT** oznámení se posílá ovládacím prvkem popis tlačítka nástroj nadřazenému oknu, těsně před plánovaným se zobrazí okno tipů nástrojů. Pokud neexistuje žádná obslužná rutina pro přiřazení nějakou hodnotu pro tuto zprávu *pszText* členem **TOOLTIPTEXT** struktury, nebude žádný text pro popis tlačítka zobrazen.  
   
 ## <a name="see-also"></a>Viz také  
  [Popisy tlačítek](../mfc/tool-tips.md)

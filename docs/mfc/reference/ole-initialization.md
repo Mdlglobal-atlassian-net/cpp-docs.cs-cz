@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330701c4fcc75d40e782d25baa55044b88852f50
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3e31e7e9a7a15c70c74193d77181122c022a938a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217308"
 ---
 # <a name="ole-initialization"></a>Inicializace OLE
 Předtím, než aplikace může použít systémových služeb OLE, musí inicializovat OLE systémové knihovny DLL a ověřte, zda správnou verzi knihovny DLL. `AfxOleInit` Funkce inicializuje OLE systémové knihovny DLL.  
@@ -63,15 +63,15 @@ BOOL AFXAPI AfxOleInit();
 ### <a name="remarks"></a>Poznámky  
  Voláním této funkce lze inicializovat podporu technologie OLE pro aplikaci MFC. Při volání této funkce dojde k následujícím akcím:  
   
--   Inicializuje knihovnu modelu COM v aktuálním objektu apartment volající aplikace. Další informace najdete v tématu [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
+-   Inicializuje knihovnu modelu COM v aktuálním objektu apartment volající aplikace. Další informace najdete v tématu [OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize).  
   
--   Vytvoří objekt filtru zprávy implementace [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) rozhraní. Tomuto filtru zprávy lze přistupovat pomocí volání [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
+-   Vytvoří objekt filtru zprávy implementace [IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter) rozhraní. Tomuto filtru zprávy lze přistupovat pomocí volání [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
 >  Pokud **AfxOleInit** je volána z knihovny MFC DLL, volání se nezdaří. K selhání dojde, protože funkce předpokládá, že pokud je volána z knihovny DLL, systém technologie OLE byl dříve inicializován volající aplikací.  
   
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338578"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205932"
 ---
 # <a name="cclientdc-class"></a>Cclientdc – třída
-Se postará o volání funkcí Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) v době konstrukce a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) v době zničení.  
+Se postará o volání funkcí Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) v době konstrukce a [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) v době zničení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  Okno, jehož klientské oblasti bude mít přístup k objektu kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Konstruktor zavolá funkci Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Konstruktor zavolá funkci Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc).  
   
  Výjimky (typu `CResourceException`) je vyvolána, pokud Windows `GetDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   

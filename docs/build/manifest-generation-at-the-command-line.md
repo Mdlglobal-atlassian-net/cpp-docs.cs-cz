@@ -1,5 +1,5 @@
 ---
-title: Generování manifestu v příkazovém řádku | Microsoft Docs
+title: Generování manifestu v příkazovém řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f740030e48a33284a31da4ebd46f0c4d7b6ac7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97e2bb423deb4a50da0cf0772ae81e19bb4b48eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220724"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generování manifestu v příkazovém řádku
-Při sestavování aplikací C/C++ z příkazového řádku pomocí nmake nebo podobné nástrojů, manifest se generuje po linkeru má zpracovat všechny soubory objektů a vytvořené konečné binárního souboru. Linkeru shromažďuje informace o sestavení, které jsou uložené v souborech objektu a kombinuje tyto informace do konečné souboru manifestu. Ve výchozím nastavení vygeneruje linkeru do souboru s názvem < binary_name >. \<rozšíření > Manifest k popisu konečné binárního souboru. Linkeru nevloží soubor manifestu uvnitř binárního souboru a můžete pouze generování manifestu jako externí soubor. Existuje několik způsobů pro vložení manifestu do konečné binárního souboru, například pomocí [Nástroj Manifest (mt.exe)](http://msdn.microsoft.com/library/aa375649) nebo kompilování manifest do souboru prostředků. Je důležité mějte na paměti, které specifická pravidla k při vložení manifestu do konečné binárního souboru k povolení funkcí, jako jsou přírůstkové propojování dodržovat podepisování, upravit a pokračovat. Tyto a další možnosti jsou popsané v [postupy: vložení manifestu uvnitř C/C++ aplikace](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) při sestavování na příkazovém řádku.  
+Při vytváření aplikací C/C++ z příkazového řádku pomocí nmake nebo podobné nástroje, manifest se vygeneruje po zpracování všech souborů objektů a vytvořené koncovém binárním souboru linkeru. Propojovací program shromažďuje informace o sestavení, které jsou uloženy v souborech objektů a slučuje tyto informace do konečného souboru manifestu. Ve výchozím nastavení bude linkeru generovat soubor s názvem < binary_name >. \<přípona > .manifest k popisu koncovém binárním souboru. Propojovací program nelze vložit soubor manifestu do binárního souboru a můžou jenom generovat manifest jako externího souboru. Existuje několik způsobů pro vložení manifestu do konečného binárního souboru, jako je třeba použití [Nástroj Manifest (mt.exe)](https://msdn.microsoft.com/library/aa375649) nebo kompilování manifestu do souboru prostředků. Je důležité mít na paměti, které určitá pravidla platí při vkládání manifestu v koncovém binárním souboru k povolení funkcí, jako přírůstkové propojování, podepisování, a upravit a pokračovat. Tyto a další možnosti jsou popsány v [postupy: vložení manifestu uvnitř jazyka C/C++ aplikace](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) při sestavování v příkazovém řádku.  
   
 ## <a name="see-also"></a>Viz také  
- [Manifesty](http://msdn.microsoft.com/library/aa375365)   
+ [Manifesty](https://msdn.microsoft.com/library/aa375365)   
  [/ INCREMENTAL (Inkrementální odkaz)](../build/reference/incremental-link-incrementally.md)   
  [Sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
  [Upravit a pokračovat](/visualstudio/debugger/edit-and-continue)   

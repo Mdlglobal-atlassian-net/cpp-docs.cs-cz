@@ -1,5 +1,5 @@
 ---
-title: 'MIDL – stránky vlastností: Výstup | Microsoft Docs'
+title: 'MIDL – stránky vlastností: Output | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,33 +22,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212753"
 ---
 # <a name="midl-property-pages-output"></a>MIDL – stránky vlastností: Output
-**Výstup** stránka vlastností v **MIDL** složky určuje následující volby kompilátoru MIDL:  
+**Výstup** stránku vlastností v **MIDL** složky určuje následující možnosti kompilátoru MIDL:  
   
--   Výstupní adresář ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Výstupní adresář ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   Soubor hlaviček ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   Soubor hlaviček ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   Datový soubor knihovny DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   Soubor dat DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   Soubor IID ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   Soubor IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   Soubor proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   Soubor proxy ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Vytvoření knihovny typů ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Generovat knihovnu typů ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Knihovny typů ([/TLB](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Knihovna typů ([/TLB](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- Informace o tom, jak získat přístup **výstup** stránka vlastností v **MIDL** složky, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Informace o tom, jak získat přístup k **výstup** stránku vlastností v **MIDL** složky, najdete v článku [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
- Informace o tom, jak programového přístupu MIDL pro projekty C++ najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
+ Informace o tom, jak programově přistupovat k MIDL pro projekty C++, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Viz také  
  [MIDL – stránky vlastností](../ide/midl-property-pages.md)

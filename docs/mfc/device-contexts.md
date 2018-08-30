@@ -1,5 +1,5 @@
 ---
-title: Kontexty zařízení | Microsoft Docs
+title: Kontexty zařízení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,44 +42,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efda2666a1d7cf47a485a9e1ceb53c09f4966989
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203829"
 ---
 # <a name="device-contexts"></a>Kontexty zařízení
-Kontext zařízení je datová struktura Windows obsahující informace o kreslení atributy zařízení, například zobrazení nebo tiskárnu. Všechny kreslení volání prostřednictvím objektu kontextu zařízení, který zapouzdřuje rozhraní API systému Windows pro kreslení čáry, tvary a text. Kontexty zařízení povolí kreslení nezávislé na zařízení v systému Windows. Kontexty zařízení lze použít k vykreslení na obrazovku, na tiskárnu nebo metasoubory.  
+Kontext zařízení je datová struktura Windows obsahující informace o vykreslování atributy zařízení, jako je například tiskárnu nebo zobrazení. Všechna volání kreslení probíhají prostřednictvím objektů kontextu zařízení, který zapouzdřuje rozhraní Windows API pro kreslení čáry, tvary a text. Kontexty zařízení povolit kreslení nezávislé na zařízení ve Windows. Kontexty zařízení slouží k vykreslení na obrazovku, na tiskárně nebo do metasouboru.  
   
- [CPaintDC](../mfc/reference/cpaintdc-class.md) objekty zapouzdřují běžné stylu systému Windows, volání `BeginPaint` funkce, a kreslení v kontextu zařízení a potom volání `EndPaint` funkce. `CPaintDC` Volá konstruktor `BeginPaint` , a volání destruktoru `EndPaint`. Zjednodušený proces je vytvoření [CDC](../mfc/reference/cdc-class.md) objektu, kreslení a pak odstraňte `CDC` objektu. V rozhraní framework většinu i tento proces automatizovat. Konkrétně vaše `OnDraw` funkce je předána `CPaintDC` již připravena (prostřednictvím `OnPrepareDC`), a jednoduše kreslení do ní. Byla rámcem a základního kontextu zařízení vydání systému Windows po návratu z volání vaší `OnDraw` funkce.  
+ [Cpaintdc –](../mfc/reference/cpaintdc-class.md) objekty zapouzdřují běžné idiom Windows, volání `BeginPaint` funkce, a kreslení v kontextu zařízení a potom volání `EndPaint` funkce. `CPaintDC` Volá konstruktor `BeginPaint` pro vás a volání destruktoru `EndPaint`. Zjednodušený proces je vytvořit [CDC](../mfc/reference/cdc-class.md) objektu, kreslení a pak zničilo `CDC` objektu. V rámci velkou část i tento proces automatizovat. Konkrétně se vaše `OnDraw` funkce je předána `CPaintDC` už připravené (prostřednictvím `OnPrepareDC`), a které upoutat do něj. Je zničen rozhraním, a po návratu z volání vydání Windows základního kontextu zařízení vaší `OnDraw` funkce.  
   
- [CClientDC](../mfc/reference/cclientdc-class.md) objekty zapouzdřují práci s kontext zařízení, který představuje pouze klientské oblasti časového období. `CClientDC` Volá konstruktor `GetDC` funkce a volání destruktoru `ReleaseDC` funkce. [CWindowDC](../mfc/reference/cwindowdc-class.md) objekty zapouzdřují kontextu zařízení, která představuje celou okna, včetně jeho rámečku.  
+ [Cclientdc –](../mfc/reference/cclientdc-class.md) objekty zapouzdřují práci s kontextu zařízení, která představuje jenom klientské oblasti okna. `CClientDC` Volá konstruktor `GetDC` funkce a volání destruktoru `ReleaseDC` funkce. [Cwindowdc –](../mfc/reference/cwindowdc-class.md) objekty zapouzdřují kontextu zařízení, která představuje celé okno, včetně jeho rámce.  
   
- [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) objekty zapouzdřují kreslení do WMF. Rozdíl k `CPaintDC` předaný `OnDraw`, v takovém případě musí volat [onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) sami.  
+ [Cmetafiledc –](../mfc/reference/cmetafiledc-class.md) objekty zapouzdřují kreslení do Windows metafile. Rozdíl od `CPaintDC` předán `OnDraw`, v tomto případě je nutné volat [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) sami.  
   
 ## <a name="mouse-drawing"></a>Kreslení myši  
- Většina kreslení v rámci programu – a tedy většinu práce kontextu zařízení – se provádí v zobrazení `OnDraw` – členská funkce. Objekty kontextu zařízení ale můžete použít pro jiné účely. Například k poskytnutí zpětné vazby sledování pohybu myši v zobrazení, budete muset kreslení přímo do zobrazení bez čekání na `OnDraw` k volání.  
+ Většina kreslení v rámci programu – a tedy většinu práce kontextu zařízení – provádí se v zobrazení `OnDraw` členskou funkci. Objekty kontextu zařízení však lze použít pro jiné účely. Například k poskytnutí zpětné vazby sledování pohybu myši v zobrazení, budete muset kreslení přímo do zobrazení bez čekání na `OnDraw` volat.  
   
- V takovém případě můžete použít [CClientDC](../mfc/reference/cclientdc-class.md) objekt kontextu zařízení kreslení přímo do zobrazení.  
+ V takovém případě můžete použít [cclientdc –](../mfc/reference/cclientdc-class.md) objekt kontext zařízení pro kreslení přímo do zobrazení.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
--   [Kontexty zařízení (definice)](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
+-   [Kontexty zařízení (definice)](https://msdn.microsoft.com/library/windows/desktop/dd183553)  
   
 -   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
   
 -   [Interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md)  
   
--   [Čar a křivek](http://msdn.microsoft.com/library/windows/desktop/dd145028)  
+-   [Čar a křivek](https://msdn.microsoft.com/library/windows/desktop/dd145028)  
   
--   [Vyplněné tvary](http://msdn.microsoft.com/library/windows/desktop/dd162714)  
+-   [Vyplněné tvary](https://msdn.microsoft.com/library/windows/desktop/dd162714)  
   
--   [Písma a text.](http://msdn.microsoft.com/library/windows/desktop/dd144819)  
+-   [Písma a text](/windows/desktop/gdi/fonts-and-text)  
   
--   [Barvy](http://msdn.microsoft.com/library/windows/desktop/dd183450)  
+-   [Barvy](https://msdn.microsoft.com/library/windows/desktop/dd183450)  
   
--   [Mezery souřadnic a transformace](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
+-   [Mezery souřadnic a transformace](https://msdn.microsoft.com/library/windows/desktop/dd183475)  
   
 ## <a name="see-also"></a>Viz také  
  [Objekty oken](../mfc/window-objects.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e5720fcbc5c52936a0e29c2ccf0847309636b5f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132073"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211854"
 ---
 # <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
 Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a kompilátor Visual C++ teď podporují staticky vazbou (během načítání) dat pro vlákno kromě stávající implementaci rozhraní API.  
@@ -113,7 +113,7 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
   
      Jazyk C++ neumožňuje takovou dynamickou inicializaci vlákna dat z důvodu možných budoucí vylepšení zařízení místní úložiště vláken.  
   
-- V operačních systémech Windows než Windows Vista `__declspec`(vlákno) má určitá omezení. Pokud knihovna DLL deklaruje data ani jako objekt `__declspec`(vlákno), může to způsobit selhání ochrany Pokud dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), dojde k selhání systému pokaždé, když se kód odkazuje `__declspec`data (vlákno). Vzhledem k tomu, že v době běhu je přiděleno globální proměnné místo pro vlákno, velikost toto místo je založená na výpočtu požadavkům aplikace a všechny knihovny DLL staticky propojené požadavky. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro místní proměnné vlákna deklarované pomocí `__declspec`(vlákno). Použít rozhraní API pro protokol TLS, například [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), v knihovně DLL přidělit TLS, pokud knihovna DLL může být načten s `LoadLibrary`.  
+- V operačních systémech Windows než Windows Vista `__declspec`(vlákno) má určitá omezení. Pokud knihovna DLL deklaruje data ani jako objekt `__declspec`(vlákno), může to způsobit selhání ochrany Pokud dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175), dojde k selhání systému pokaždé, když se kód odkazuje `__declspec`data (vlákno). Vzhledem k tomu, že v době běhu je přiděleno globální proměnné místo pro vlákno, velikost toto místo je založená na výpočtu požadavkům aplikace a všechny knihovny DLL staticky propojené požadavky. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro místní proměnné vlákna deklarované pomocí `__declspec`(vlákno). Použít rozhraní API pro protokol TLS, například [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), v knihovně DLL přidělit TLS, pokud knihovna DLL může být načten s `LoadLibrary`.  
   
 ## <a name="see-also"></a>Viz také  
  

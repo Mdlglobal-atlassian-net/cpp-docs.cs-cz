@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954928"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211589"
 ---
 # <a name="hashmap-class"></a>hash_map – třída
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* datový typ klíče, který bude uložen do hash_map.
+*Key*<br/>
+ Datový typ klíče, který bude uložen do hash_map.
 
-*Typ* typ dat prvku, který bude uložen do hash_map.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen do hash_map.
 
-*Vlastnosti* na typ, který obsahuje dva objekty funkce, jeden z třídy porovnání moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a funkce hash, který je unární predikát mapování hodnot klíče prvků na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a hash_compare – <`Key`, méně <`Key`>> je výchozí hodnota.
+*Osobnostní rysy*<br/>
+ Typ, který obsahuje dva objekty funkce, jedním z třídy porovnání moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hodnoty hash funkce, které je unární predikát mapování hodnot klíče prvků na celá čísla bez znaménka typu `size_t`. Tento argument je nepovinný a hash_compare – <`Key`, méně <`Key`>> je výchozí hodnota.
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_map. Tento argument je nepovinný a výchozí hodnota je allocator < pair < const `Key`, `Type`>>.
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_map –. Tento argument je nepovinný a výchozí hodnota je allocator < pair < const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
-`const_iterator` Určené hash_map – odkazuje na prvky, které jsou objekty [value_type](#value_type), která je typu `pair` *\< ***const Key, typ*** >*, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
+`const_iterator` Určené hash_map – odkazuje na prvky, které jsou objekty [value_type](#value_type), která je typu `pair< const Key, Type >`, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
 
 Ke zrušení `const_iterator` `cIter` odkazující na prvek v hash_map, použijte `->` operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter` **-> nejprve**, což je totéž jako (\* `cIter`) **.first**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter` **-> druhé**, což je totéž jako (\* `cIter`) **.second**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter->first`, což je totéž jako `(*cIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter->second`, což je totéž jako `(*cIter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* hodnota klíče prvků lze porovnat z hash_map.
+*Klíč*<br/>
+ Hodnota klíče prvků lze porovnat z hash_map.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s klíči řazení prvek z hash_map vyhledávaná.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozici elementu, který má být odebrán z hash_map –.
+*_Where*<br/>
+ Pozice prvku, který chcete odebrat z hash_map.
 
-*první* pozice prvního prvku odebrán z hash_map.
+*první*<br/>
+ Pozice prvního prvku odebrán hash_map.
 
-*poslední* pozice bezprostředně za posledním prvkem odebírat hash_map.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem odebrán hash_map.
 
-*klíč* prvky, které mají být odebrány hash_map – hodnota klíče.
+*Klíč*<br/>
+ Hodnota klíče prvky, které mají být odebrány hash_map –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* k porovnání s klíči řazení prvek z hash_map vyhledávaná hodnota klíče.
+*Klíč*<br/>
+ Hodnota klíče k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1537,7 +1548,7 @@ hash_map(
 |-|-|
 |*Al*|Třída úložiště alokátoru má být použit pro tento objekt hash_map, kde je použit výchozí `Allocator`.|
 |*Kompozice*|Funkce porovnání typu const `Traits` používají k seřazení prvků v hash_map, kde je použit výchozí `hash_compare`.|
-|*Doprava*|Hash_map –, který je vytvořený map kopií.|
+|*doprava*|Hash_map –, který je vytvořený map kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list|
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s klíči řazení prvek z hash_map vyhledávaná.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* hash_map argument poskytující prvky pro záměnu s hash_map – cíl.
+*doprava*<br/>
+ Hash_map – argument poskytující prvky pro záměnu s hash_map – cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s hodnotou klíče řazení elementu z hash_map vyhledaly.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s hodnotou klíče řazení elementu z hash_map být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type` je deklarováno jako `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * a ne `pair`  **\<key_type mapped_type >** protože klíče asociativní kontejner, nelze ji změnit pomocí nekonstantním iterátoru nebo odkaz.
+`value_type` je deklarováno jako `pair<const key_type, mapped_type>` a ne `pair<key_type, mapped_type>` protože klíče asociativní kontejner, nelze ji změnit pomocí nekonstantním iterátoru nebo odkaz.
 
 ### <a name="example"></a>Příklad
 

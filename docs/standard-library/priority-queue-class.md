@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199235"
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ dat prvku, který bude uložen do priority_queue –.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen do priority_queue –.
 
-*Kontejner* typu základního kontejneru používaný k implementaci priority_queue –.
+*Kontejner*<br/>
+ Typ základního kontejneru používaný k implementaci priority_queue –.
 
-*Porovnání* typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v priority_queue –. Tento argument je nepovinný a binární predikát **méně***\<*** typename** *kontejneru ***:: value_type*** >* je výchozí hodnota.
+*Compare*<br/>
+ Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v priority_queue –. Tento argument je nepovinný a binární predikát `less<typename Container::value_type>` je výchozí hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parametry
 
-*kompozice _* funkce porovnání typu **constTraits** používají k seřazení prvků v priority_queue –, kde je použit výchozí porovnání funkce základní kontejneru.
+*kompozice _*<br/>
+ Funkce porovnání typu **constTraits** používají k seřazení prvků v priority_queue –, kde je použit výchozí porovnání funkce základní kontejneru.
 
-*_Cont* základní kontejneru je vytvořený priority_queue – kopií.
+*_Cont*<br/>
+ Základní kontejner, který je vytvořený priority_queue – kopií.
 
-*správné* priority_queue – je vytvořen objekt set kopií.
+*doprava*<br/>
+ Priority_queue –, který je vytvořen objekt set kopií.
 
-*první* pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
+*první*<br/>
+ Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*poslední* pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
+*poslední*<br/>
+ Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* prvku přidán do horní části priority_queue –.
+*Val*<br/>
+ Prvek přidán do horní části priority_queue –.
 
 ### <a name="remarks"></a>Poznámky
 

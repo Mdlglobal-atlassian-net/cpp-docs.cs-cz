@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849913"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214974"
 ---
 # <a name="cscrollview-class"></a>Cscrollview – třída
 A [CView](../../mfc/reference/cview-class.md) s možností posouvání.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   V reakci na zprávy z klávesnice, myš neposouvaných nebo kolečkem posouvá automaticky.  
   
- V reakci na zprávy z klávesnice, posouvání automaticky, přidejte je zpráva WM_KEYDOWN a test pro VK_DOWN, VK_PREV a volání [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ V reakci na zprávy z klávesnice, posouvání automaticky, přidejte je zpráva WM_KEYDOWN a test pro VK_DOWN, VK_PREV a volání [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Dokáže zpracovat kolečko myši posouvání sami tak, že přepíšete mapované zpráva [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) a [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) členské funkce. Protože jde o pro `CScrollView`, tyto členské funkce podporují doporučené chování pro [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), zpráva otočení kolečka.  
+ Dokáže zpracovat kolečko myši posouvání sami tak, že přepíšete mapované zpráva [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) a [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) členské funkce. Protože jde o pro `CScrollView`, tyto členské funkce podporují doporučené chování pro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), zpráva otočení kolečka.  
   
  Abyste mohli využívat automatické posouvání, odvodit třídu vaše zobrazení z `CScrollView` namísto z `CView`. Když je zobrazení nejprve vytvořit, pokud chcete vypočítat velikost zobrazení posuvný na základě velikosti dokumentu, volání `SetScrollSizes` členskou funkci ze přepsání buď [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) nebo [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Musíte napsat vlastní kód pro dotazování velikost dokumentu. Příklad najdete v tématu [ukázky Scribble](../../visual-cpp-samples.md).)  
   
@@ -190,7 +190,7 @@ CPoint GetDeviceScrollPosition() const;
  `GetDeviceScrollPosition` Vrátí hodnoty v jednotkách zařízení. Pokud chcete logické jednotky, použijte `GetScrollPosition` místo.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes` získá aktuální režim mapování, celková velikost a velikost řádku a stránky posuvný zobrazení.  
+ `GetDeviceScrollSizes` Získá aktuální režim mapování, celková velikost a velikost řádku a stránky posuvný zobrazení.  
   
 ```  
 void GetDeviceScrollSizes(

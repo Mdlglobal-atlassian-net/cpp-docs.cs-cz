@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf1f012067c3a3b85dd5168cf93521e4b2024e00
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d578aeea847ff04bf29fab11ecf7db2a1776b04f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884038"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217600"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl – třída
 Tato třída implementuje bod připojení.  
@@ -96,7 +96,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Poznámky  
  Použití [Unadvise](#unadvise) ukončení volání připojení.  
   
- Zobrazit [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) ve Windows SDK.  
+ Zobrazit [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) ve Windows SDK.  
   
 ##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Vytvoří čítač k iteraci v rámci připojení bodu připojení.  
@@ -106,7 +106,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) ve Windows SDK.  
+ Zobrazit [IConnectionPoint::EnumConnections](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) ve Windows SDK.  
   
 ##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Načte identifikátor IID rozhraní reprezentována spojovací bod.  
@@ -116,7 +116,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) ve Windows SDK.  
+ Zobrazit [IConnectionPoint::GetConnectionInterface](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) ve Windows SDK.  
   
 ##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Načte ukazatel rozhraní umožňující připojení k objektu.  
@@ -126,7 +126,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) ve Windows SDK.  
+ Zobrazit [IConnectionPoint::GetConnectionPointContainer](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) ve Windows SDK.  
   
 ##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Spravuje připojení mezi objektu bodu připojení a jímku.  
@@ -146,8 +146,8 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) ve Windows SDK.  
+ Zobrazit [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   
+ [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
  [Přehled tříd](../../atl/atl-class-overview.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195535"
 ---
 # <a name="coccmanager-class"></a>Coccmanager – třída
 Spravuje různé vlastní ovládací prvky stránky; implementované `COleControlContainer` a `COleControlSite` objekty.  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Ovládací prvek musí mít OLEMISC_ACTSLIKEBUTTON stav bit sady. Další informace o OLEMISC příznaky, najdete v článku [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) téma v sadě Windows SDK.  
+>  Ovládací prvek musí mít OLEMISC_ACTSLIKEBUTTON stav bit sady. Další informace o OLEMISC příznaky, najdete v článku [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) téma v sadě Windows SDK.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Volá se rozhraním, aby rozdělit tyto ovládací prvky ActiveX z běžných ovládacích prvků dialogového okna.  

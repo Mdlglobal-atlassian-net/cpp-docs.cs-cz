@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027122"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199261"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Umístění ovládacích prvků na panely nástrojů
 Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástrojů obsahující ovládací prvek systému Windows. V knihovně MFC, musí být tlačítko panelu nástrojů [cmfctoolbarbutton – třída](../mfc/reference/cmfctoolbarbutton-class.md)-odvozené třídy, například [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton – třída](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton – třída](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), nebo [cmfctoolbarmenubutton – třída](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -65,7 +65,7 @@ Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástroj�
   
 2.  Vytvořte novou třídu, `CFindComboBox`odvozenou z [CComboBox – třída](../mfc/reference/ccombobox-class.md).  
   
-3.  Ve třídě `CFindComboBox` přepište virtuální metodu `PreTranslateMessage`. Tato metoda umožní poli se seznamem zpracovávat [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) zprávy. Stiskne-li uživatel klávesu Escape (`VK_ESCAPE`), vraťte fokus na okno hlavního rámce. Pokud uživatel stiskne klávesu Enter (`VK_ENTER`), publikuje do okna hlavního rámce wm_command – zpráva, která obsahuje `ID_EDIT_FIND_COMBO` Apple ID.  
+3.  Ve třídě `CFindComboBox` přepište virtuální metodu `PreTranslateMessage`. Tato metoda umožní poli se seznamem zpracovávat [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy. Stiskne-li uživatel klávesu Escape (`VK_ESCAPE`), vraťte fokus na okno hlavního rámce. Pokud uživatel stiskne klávesu Enter (`VK_ENTER`), publikuje do okna hlavního rámce wm_command – zpráva, která obsahuje `ID_EDIT_FIND_COMBO` Apple ID.  
   
 4.  Vytvořte třídu pro **najít** tlačítko pole se seznamem, odvozený z [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). V tomto příkladu je pojmenována `CFindComboButton`.  
   
@@ -73,7 +73,7 @@ Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástroj�
   
     1.  Jako identifikátor příkazu předejte hodnotu `ID_EDIT_FIND_COMBO`.  
   
-    2.  Použití [CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) s `ID_EDIT_FIND` získat index bitové kopie.  
+    2.  Použití [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) s `ID_EDIT_FIND` získat index bitové kopie.  
   
     3.  Seznam dostupných – pole se seznamem styly najdete v tématu [pole se seznamem stylů](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222300"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 `AFX_GLOBAL_DATA` Struktura obsahuje pole a metody, které se používají ke správě rozhraní nebo upravit vzhled a chování aplikace.  
@@ -64,13 +64,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Inicializuje `D2D`, `DirectWrite`, a `WIC` objekty pro vytváření. Tuto metodu volejte před dokončením inicializace hlavního okna.|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Označuje, zda jsou předdefinované 32-bit ikony.|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Určuje, zda `D2D` byl inicializován.|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Poskytuje jednoduchý způsob, jak volat Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) metody.|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Poskytuje jednoduchý způsob, jak volat Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) metody.|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Určuje, zda Image jsou aktuálně zobrazeny s vysokým kontrastem.|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Zjistí aktuální stav nabídky animace a funkcí automatické skrývání hlavním panelu ploše.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Zaregistruje zadanou třídu okna knihovny MFC.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Uvolní rozhraní, které získali prostřednictvím GetITaskbarList a GetITaskbarList3 metody.|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Znovu inicializuje ukazatele interních funkcí, které přístup k metodám, které podporují Windows [motivů a stylů](/windows/desktop/Controls/visual-styles-overview).|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) metody.|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Vytvoří zadané logické písma.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Vytvoří a inicializuje objekt prostředí položky z názvu analýzy.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reintializes logické písma, které se používají v rámci rozhraní.|  
@@ -205,16 +205,16 @@ BOOL DrawTextOnGlass(
  [in] *hTheme*  
  Zpracování dat motiv okna, nebo hodnotu NULL. Rozhraní používá zadaný motiv vykreslování textu, pokud tento parametr není NULL a motivy podporují. V opačném případě rozhraní framework nepoužívá motiv vykreslování textu.  
   
- Použití [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) metodu pro vytvoření HTHEME.  
+ Použití [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodu pro vytvoření HTHEME.  
   
  [in] *primárního řadiče domény*  
  Ukazatel na kontext zařízení.  
   
  [in] *iPartId*  
- Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](http://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.  
+ Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.  
   
  [in] *iStateId*  
- Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
+ Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
  [in] *strText*  
  Text, chcete-li nakreslit.  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in] *dwFlags*  
  Bitová kombinace (OR) mezi příznaky, které určují, jak je vykreslen zadaným textem.  
   
- Pokud *hTheme* parametr je `NULL` nebo pokud nejsou podporované a povolení motivů *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) popisuje platnými – metoda Příznaky. Pokud jsou podporovány motivy, *dwFlags* parametr [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda popisuje platné příznaky.  
+ Pokud *hTheme* parametr je `NULL` nebo pokud nejsou podporované a povolení motivů *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) popisuje platnými – metoda Příznaky. Pokud jsou podporovány motivy, *dwFlags* parametr [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda popisuje platné příznaky.  
   
  [in] *nGlowSize*  
  Velikost záře efekt, který je vykreslen na pozadí před kreslením zadaný text. Výchozí hodnota je 0.  
@@ -237,16 +237,16 @@ BOOL DrawTextOnGlass(
  Hodnota TRUE, pokud, motiv se používá k nakreslení zadaný text; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Motiv určuje vizuální styl aplikace. Motiv se nepoužívá k vykreslování textu, pokud *hTheme* parametr hodnotu NULL, nebo pokud [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda není podporována, nebo pokud [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) složení (DWM) je zakázané.  
+ Motiv určuje vizuální styl aplikace. Motiv se nepoužívá k vykreslování textu, pokud *hTheme* parametr hodnotu NULL, nebo pokud [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda není podporována, nebo pokud [Správce oken plochy](/windows/desktop/dwm/dwm-overview) složení (DWM) je zakázané.  
   
 ### <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [Části a stavy](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [Části a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Povolit a řídit kompozici DWM](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [Správce oken plochy](/windows/desktop/dwm/dwm-overview)   
+ [Povolit a řídit kompozici DWM](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 Povolí nebo zakáže Microsoft Active Accessibility podporu.  
@@ -323,19 +323,19 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>Parametry   
  [in] *nColor*  
- Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
+ Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota barvy RGB elementu zadaného uživatelského rozhraní. Další informace najdete v části poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *nColor* parametr je mimo rozsah, vrácená hodnota je nula. Protože nula je také platné hodnoty RGB, tuto metodu nelze použít k určení, zda je podporován systémové barvy podle aktuálního operačního systému. Místo toho použijte [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metodu, která vrátí hodnotu NULL, pokud není podporovaná barvu.  
+ Pokud *nColor* parametr je mimo rozsah, vrácená hodnota je nula. Protože nula je také platné hodnoty RGB, tuto metodu nelze použít k určení, zda je podporován systémové barvy podle aktuálního operačního systému. Místo toho použijte [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) metodu, která vrátí hodnotu NULL, pokud není podporovaná barvu.  
   
 ### <a name="see-also"></a>Viz také  
 
- [GetSysColor – funkce](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor – funkce](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  Vrací ukazatel na rozhraní ID2D1Factory, která je uložena v globálních datech. Pokud není inicializována rozhraní, je vytvořen a má výchozí parametry.  
@@ -369,14 +369,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>Parametry   
  [out v] *informace*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.  
+ A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  
  
   
 ### <a name="see-also"></a>Viz také   
- [Struktura NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [Struktura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  Získá výšku textové znaky v aktuálním písmem.  
@@ -483,7 +483,7 @@ BOOL IsD2DInitialized() const;
  Hodnota TRUE, pokud byl inicializován D2D; v opačném případě FALSE.  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-Poskytuje jednoduchý způsob, jak volat Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) metody.  
+Poskytuje jednoduchý způsob, jak volat Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) metody.  
   
   
 ```  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE v případě [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) složené je povoleno; jinak FALSE.  
+ Hodnota TRUE v případě [Správce oken plochy](/windows/desktop/dwm/dwm-overview) složené je povoleno; jinak FALSE.  
   
 ### <a name="see-also"></a>Viz také    
- [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Povolit a řídit kompozici DWM](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Správce oken plochy](/windows/desktop/dwm/dwm-overview)   
+ [Povolit a řídit kompozici DWM](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  Určuje, zda Image jsou aktuálně zobrazeny s vysokým kontrastem.    
@@ -649,7 +649,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Název třídy okna k registraci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném případě [prostředků výjimka](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném případě [prostředků výjimka](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Poznámky  
  Vrácená hodnota je seznam oddělit středníkem *lpszClassNamePrefix* parametr řetězce a reprezentace šestnáctkového textu zpracovává aktuální instance aplikace; aplikace kurzor, který je na šipku kurzor, jehož identifikátor je IDC_ARROW; a štětec pozadí. Další informace o registrace tříd oken MFC naleznete v tématu [afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -670,10 +670,10 @@ BOOL Resume();
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE. V režimu ladění tato metoda vyhodnotí, pokud tato metoda neúspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána, když obdrží rozhraní [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) zprávy.  
+ Tato metoda je volána, když obdrží rozhraní [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) zprávy.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) metody.  
+Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.  
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL SetLayeredAttrib(
  Popisovač okna vrstvami.  
   
  [in] *crKey*  
- Průhledná barva klíče, který [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) používá k vytvoření okna vrstvami.  
+ Průhledná barva klíče, který [Správce oken plochy](/windows/desktop/dwm/dwm-overview) používá k vytvoření okna vrstvami.  
   
  [in] *bAlpha*  
  Alfa hodnotu, která se používá k popisu krytí okně vrstvami.  
@@ -701,8 +701,8 @@ BOOL SetLayeredAttrib(
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.   
  
 ### <a name="see-also"></a>Viz také   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Vytvoří zadané logické písma.  

@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets v prostředí MFC | Microsoft Docs
+title: Windows Sockets v prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8b497fc7e5e22a654d1f5037a983165fcd5594c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385509"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194978"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows sockets v prostředí MFC
 > [!NOTE]
->  MFC podporuje Windows Sockets 1, ale nepodporuje [rozhraní Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673). Windows Sockets 2 nejdřív dodávané se systémem Windows 98 a je verze systému Windows 2000.  
+>  MFC podporuje Windows Sockets 1, ale nepodporuje [Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2). Windows Sockets 2 nejprve součástí Windows 98 a verze systému Windows 2000.  
   
- MFC poskytuje dva modely pro zápis programy komunikaci sítě s Windows Sockets, součástí dvě třídy MFC. Tento článek popisuje tyto modely a další podrobnosti MFC sokety podpory. "Soket" je koncový bod komunikace: objekt, pomocí kterého aplikace komunikuje s jinými aplikacemi Windows Sockets v síti.  
+ Knihovna MFC poskytuje dva modely pro psaní programů síťové komunikace pomocí rozhraní Windows Sockets, součástí dvě třídy knihovny MFC. Tento článek popisuje tyto modely a podpora soketů podrobnosti knihovny MFC. "Soket" je koncový bod komunikace: objekt, jehož prostřednictvím aplikace komunikuje s jinými aplikacemi Windows Sockets přes síť.  
   
- Informace o rozhraní Windows Sockets, včetně vysvětlení konceptu soketu, najdete v části [Windows Sockets: pozadí](../mfc/windows-sockets-background.md).  
+ Informace o rozhraní Windows Sockets, včetně vysvětlení konceptu soketu, naleznete v tématu [rozhraní Windows Sockets: pozadí](../mfc/windows-sockets-background.md).  
   
-##  <a name="_core_sockets_programming_models"></a> Modely programování soketů  
- Programovací modely dva Windows Sockets MFC podporuje následující třídy:  
+##  <a name="_core_sockets_programming_models"></a> Sokety programovací modely  
+ Dva Windows soketů knihovny MFC programovací modely jsou podporovány následující třídy:  
   
 -   `CAsyncSocket`  
   
-     Tato třída zapouzdří rozhraní Windows Sockets API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) je pro programátory, kteří vědět síťové programování a chcete flexibilitu programování přímo na sokety rozhraní API, ale také chcete pohodlím, které představuje funkce zpětného volání pro oznámení o události sítě. Než balení sockets v objektově orientované formuláře pro použití v jazyce C++, je jenom další abstrakce, kterou tato třída poskytuje převodu některé zprávy související s soketu Windows zpětných volání. Další informace najdete v tématu [Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md).  
+     Tato třída zapouzdří rozhraní Windows Sockets API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) je pro programátory, kteří vědět síťové programování a chtějí flexibilně využívat přímé programování soketů rozhraní API, ale také chcete pohodlné funkce zpětného volání pro oznámení o událostech sítě. Než balení soketů ve formuláři objektově orientované pro použití v jazyce C++, je převod jedinými dodatečnými abstrakce, kterou tato třída poskytuje některé zprávy související s soketu Windows na zpětná volání. Další informace najdete v tématu [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md).  
   
 -   `CSocket`  
   
-     Tato třída odvozená z `CAsyncSocket`, poskytuje vyšší úrovni abstrakce pro práci s sockets prostřednictvím knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. Soket pomocí archiv výrazně se podobá pomocí knihovny MFC souboru serializace protokolu. Díky tomu je jednodušší než `CAsyncSocket` modelu. [CSocket](../mfc/reference/csocket-class.md) dědí z mnoha členské funkce `CAsyncSocket` zapouzdřují rozhraní API systému Windows Sockets; bude mít používat některé z těchto funkcí a pochopit obecně programování soketů. Ale `CSocket` spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracovaná rozhraní API nebo třída `CAsyncSocket`. Co je nejdůležitější – `CSocket` poskytuje blokování (s pozadí zpracování zpráv systému Windows), které je nezbytné pro synchronní operace `CArchive`.  
+     Tato třída odvozená z `CAsyncSocket`, poskytuje vyšší úroveň abstrakce pro práci s sockets pomocí knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. Použití soketu se archiv výrazně se podobá pomocí protokolu serializace soubor knihovny MFC. To usnadňuje použití než `CAsyncSocket` modelu. [Csocket –](../mfc/reference/csocket-class.md) dědí mnoho funkcí členů z `CAsyncSocket` zapouzdřují rozhraní Windows Sockets API, budete muset použít některé z těchto funkcí a pochopit obecně programování soketů. Ale `CSocket` spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracované rozhraní API nebo třída `CAsyncSocket`. Co je nejdůležitější `CSocket` poskytuje blokování (s zpracování na pozadí zpráv Windows), což je nezbytné pro synchronní operace `CArchive`.  
   
- Vytváření a používání `CSocket` a `CAsyncSocket` objektů je popsaná v [Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) a [Windows Sockets: použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
+ Vytváření a používání `CSocket` a `CAsyncSocket` objekty je popsána v [rozhraní Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) a [rozhraní Windows Sockets: použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
   
 ##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets – knihovny DLL  
- Windows Sockets dynamické knihovny (DLL), zadejte operační systémy Microsoft Windows. Visual C++ poskytuje odpovídající hlavičkových souborů a knihoven a specifikace rozhraní Windows Sockets.  
+ Operační systémy Microsoft Windows zadat rozhraní Windows Sockets dynamické knihovny (DLL). Visual C++ poskytuje vhodné záhlaví souborů a knihoven a specifikace rozhraní Windows Sockets.  
   
- Další informace o rozhraní Windows Sockets najdete v tématu:  
+ Další informace o rozhraní Windows Sockets naleznete v tématu:  
   
 -   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   

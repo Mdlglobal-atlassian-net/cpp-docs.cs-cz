@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217001"
 ---
 # <a name="standard-types"></a>Standardní typy
 Běhové knihovny Microsoft definuje následující standardní typy a definice TypeDef.  
@@ -211,7 +211,7 @@ Běhové knihovny Microsoft definuje následující standardní typy a definice 
 |`div_t`, `ldiv_t` a `lldiv_t` struktury|Store hodnot vrácených [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md), a [lldiv](../c-runtime-library/reference/ldiv-lldiv.md)v uvedeném pořadí.|STDLIB.H|  
 |`errno_t` celé číslo|Návratový typ funkce nebo parametr, který se zabývá chybových kódů `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception` Struktura|Ukládá informace o chybě pro [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Obsahuje záznam o výjimce. Zobrazit [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331) Další informace.|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Obsahuje záznam o výjimce. Zobrazit [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers) Další informace.|FPIEEE.H|  
 |`FILE` Struktura|Ukládá informace o aktuálním stavu datového proudu, používá se u všech vstupně-výstupních operací datového proudu.|STDIO.H|  
 |`_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t` struktury|Informace o atributu souboru vracené Store [_findfirst _wfindfirst – a související funkce](../c-runtime-library/reference/findfirst-functions.md) a [_findnext _wfindnext – a související funkce](../c-runtime-library/reference/findnext-functions.md). Zobrazit [název souboru hledat funkce](../c-runtime-library/filename-search-functions.md) informace o členech struktury.|IO.H, WCHAR.H|  
 |`_FPIEEE_RECORD` Struktura|Obsahuje informace týkající se výjimky s plovoucí desetinnou čárkou IEEE; předány do uživatelem definované obslužné rutiny ve [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|  

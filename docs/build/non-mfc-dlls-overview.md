@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613216"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199461"
 ---
 # <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC – přehled
 Je non - MFC DLL knihovnu DLL, která nepoužívá knihovnu MFC interně a exportované funkce v knihovně DLL je možné vyvolat v MFC nebo knihovny non-MFC spustitelné soubory. Funkce jsou obvykle exportovány z non - MFC DLL pomocí standardních rozhraní C.  
   
- Další informace o non - MFC knihovny DLL, naleznete v tématu [dynamické knihovny](http://msdn.microsoft.com/library/windows/desktop/ms682589) v sadě Windows SDK.  
+ Další informace o non - MFC knihovny DLL, naleznete v tématu [dynamické knihovny](https://msdn.microsoft.com/library/windows/desktop/ms682589) v sadě Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
   

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610202"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220579"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Přípony komponent pro platformy běhového prostředí
 
@@ -34,7 +34,7 @@ Visual C++ poskytuje rozšíření jazyka pomoci programovat proti platformy bě
 
 C + +/ CX je podmnožinou jazyka C + +/ CLI. Pro rozšíření, které jsou společné pro C + +/ CX a C + +/ CLI, sémantika závisí na tom, zda cílíte na modul CLR (CLR) nebo prostředí Windows Runtime. Chcete-li zkompilovat aplikaci pro spuštění v modulu Windows Runtime, zadejte `/ZW` – možnost kompilátoru. Chcete-li zkompilovat jeho spuštění na modulu CLR, zadejte `/clr` – možnost kompilátoru. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.
 
-Další informace o vytváření aplikací pro univerzální platformu Windows v jazyce C++ naleznete v tématu [plán pro prostředí Windows Runtime aplikací pomocí C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
+Další informace o vytváření aplikací pro univerzální platformu Windows v jazyce C++ naleznete v tématu [plán pro prostředí Windows Runtime aplikací pomocí C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
 
 C + +/ CLI rozšiřuje standard ISO/ANSI C++ a je definován v části s Ecma C + +/ CLI Standard. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 491f6f75a87e478966d5f0fb0cbbe8fe88a42670
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4251ee7d373e7c2d3e35f65f6b83b3af28d7eecc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209195"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -36,7 +36,7 @@ Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.
 
 ## <a name="remarks"></a>Poznámky
 
-**Ms_union –** C++ atribut má stejné funkce jako [ms_union –](http://msdn.microsoft.com/library/windows/desktop/aa367100) atribut MIDL.
+**Ms_union –** C++ atribut má stejné funkce jako [ms_union –](/windows/desktop/Midl/ms-union-attrib) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

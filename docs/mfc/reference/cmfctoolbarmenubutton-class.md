@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465675"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205142"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton – třída
 Tlačítka panelu nástrojů, který obsahuje místní nabídku.  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Určuje, zda můžete přetáhnout tlačítka. (Přepíše [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Volá se rozhraním pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy. (Přepíše [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Volá se rozhraním pro zpracování [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) zprávy. (Přepíše [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši. (Přepíše [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Volá se rozhraním, když uživatel vybere položku v místní nabídce.|  

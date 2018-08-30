@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218420"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -267,7 +267,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) a [CollectionChange výčet](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) a [CollectionChange výčet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
@@ -290,7 +290,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>  Map::size – metoda
 
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvků v objektu Map.
+Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvků v objektu Map.
 
 ### <a name="syntax"></a>Syntaxe
 

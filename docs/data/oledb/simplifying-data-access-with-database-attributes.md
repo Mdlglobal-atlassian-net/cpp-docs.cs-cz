@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f8221b44d668a3ca2446913958645bb5e160dc87
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194901"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Zjednodušení přístupu k datům s použitím atributů databáze
 Toto téma popisuje použití atributů databáze pro zjednodušení databázových operací.  
@@ -208,4 +208,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>Viz také  
  [Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Návody pro atributy](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [Návody pro atributy](https://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

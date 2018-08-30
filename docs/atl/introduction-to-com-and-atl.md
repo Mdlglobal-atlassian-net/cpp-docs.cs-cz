@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222547"
 ---
 # <a name="introduction-to-com-and-atl"></a>Úvod do modelu COM a knihovny ATL
 Tato část obsahuje stručný úvod do modelu COM a knihovny ATL.  
@@ -34,7 +34,7 @@ Tato část obsahuje stručný úvod do modelu COM a knihovny ATL.
  Tento článek popisuje, stručně, co aktivní šablony knihovny (ATL) je navržená pro šablony knihoven a knihovny ATL čísla verzí. Obsahuje doporučení k výběru mezi ATL a MFC.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [Component Object Model](/windows/desktop/com/the-component-object-model)  
  Sada Windows SDK materiálu modelu COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

@@ -1,5 +1,5 @@
 ---
-title: -constexpr (zkušební constexpr ovládací prvek) | Microsoft Docs
+title: -constexpr (kontrolní vyhodnocení constexpr) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,51 +19,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373956"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202571"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (zkušební constexpr řízení)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/ constexpr (kontrolní vyhodnocení constexpr)  
   
-Použití **/constexpr** – možnosti kompilátoru řízení parametry pro `constexpr` vyhodnocení v době kompilace.  
+Použití **/constexpr** – možnosti kompilátoru pro ovládací prvek parametry pro **constexpr** vyhodnocení za kompilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-> /constexpr:Depth*N*  
-> /constexpr:backtrace*N*  
-> /constexpr:steps*N*  
+> **/ constexpr: Depth**<em>N</em>  
+> **/ constexpr: backtrace**<em>N</em>  
+> **steps**<em>N</em>  
   
 ## <a name="arguments"></a>Arguments  
   
-**Hloubka *** N*  
-Omezení hloubky rekurzivní `constexpr` fungovat na vyvolání *N* úrovně. Výchozí hodnota je 512.  
+**Hloubka**<em>N</em>  
+Omezení hloubky rekurzivní **constexpr** volání do funkce *N* úrovně. Výchozí hodnota je 512.  
   
-**backtrace *** N*  
-Zobrazit až *N* `constexpr` hodnocení v diagnostice. Výchozí hodnota je 10.  
+**backtrace**<em>N</em>  
+Zobrazit až *N* **constexpr** hodnocení v diagnostice. Výchozí hodnota je 10.  
   
-**kroky *** N*  
-Ukončit `constexpr` zkušební verzi po *N* kroky. Výchozí hodnota je 100 000.  
+**kroky**<em>N</em>  
+Ukončit **constexpr** zkušební verzi po *N* kroky. Výchozí hodnota je 100 000.  
   
 ## <a name="remarks"></a>Poznámky  
   
-**/Constexpr** – možnosti kompilátoru řízení kompilaci vyhodnocení `constexpr` výrazy. Postup vyhodnocení, rekurze úrovně a backtrace hloubka jsou ovládaná zabránit kompilátor výdaje příliš mnoho času na `constexpr` vyhodnocení. Další informace o `constexpr` prvek jazyka najdete v části [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+**/Constexpr** – možnosti kompilátoru řídí vyhodnocení za kompilace **constexpr** výrazy. Vyhodnocení kroků, rekurze úrovně a hloubka backtrace jsou řízeny pro zabránění kompilátoru útraty uběhla spousta času na **constexpr** hodnocení. Další informace o **constexpr** prvek jazyka naleznete v tématu [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
-**/Constexpr** možnosti jsou dostupné od ve Visual Studiu 2015.  
+**/Constexpr** možnosti jsou k dispozici od verze Visual Studio 2015.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
-1. Otevřete váš projekt **stránky vlastností** dialogové okno.   
+1. Otevřete svůj projekt **stránky vlastností** dialogové okno.   
   
 2. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **příkazového řádku** stránku vlastností.  
   
-3. Zadejte všechny **/constexpr** kompilátoru možnosti v **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.  
+3. Zadejte libovolné **/constexpr** možnosti kompilátoru **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
 ## <a name="see-also"></a>Viz také  
   

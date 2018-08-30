@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213147"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog – třída
 `CPaneDialog` Podporuje nemodální ukotvitelné dialogové třídy.  
@@ -54,12 +54,12 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::Create](#create)|Vytvoří ukotvitelné dialogové okno a připojí ho k `CPaneDialog` objektu.|  
 |`CPaneDialog::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
 |`CPaneDialog::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Předefinuje `CBasePane::HandleInitDialog`.)|  
-|`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zprávy. (Předefinuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
-|`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy. (Předefinuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
-|`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) zprávy. (Předefinuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Volá se rozhraním, chcete-li aktualizovat pole dialogovém okně. (Přepíše [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) zprávy. (Předefinuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Zpracovává [nezavěsíte](/windows/desktop/dlgbox/wm-initdialog) zprávy. (Předefinuje `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávy. (Předefinuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) zprávy. (Předefinuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) zprávy. (Předefinuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Volá se rozhraním, chcete-li aktualizovat pole dialogovém okně. (Přepíše [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) zprávy. (Předefinuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Určuje šablonu pro dialogové okno, které je kontejnerem ovládacího prvku OLE.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -161,7 +161,7 @@ BOOL Create(
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy.  
+ Zpracovává [nezavěsíte](/windows/desktop/dlgbox/wm-initdialog) zprávy.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(

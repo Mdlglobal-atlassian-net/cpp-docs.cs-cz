@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ba9be0fe6d75a861b82bf600f97fc1ed5dc2d64
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216669"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -85,7 +85,7 @@ Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned
 |**p**|Typ ukazatele|Argument se zobrazí jako adresy v šestnáctkové číslice.|
 |**s**|String|Při použití s `printf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce; při použití s `wprintf` funkce, určí širokoznaký řetězec. Až po první znak null, nebo dokud se zobrazí znaky *přesnost* nebude dosaženo hodnoty.|
 |**S**|String|Při použití s `printf` funguje, určí širokoznaký řetězec; při použití s `wprintf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce. Až po první znak null, nebo dokud se zobrazí znaky *přesnost* nebude dosaženo hodnoty.|
-|**Z**|`ANSI_STRING` nebo `UNICODE_STRING` struktura|Když adresu [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) nebo [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktura je předán jako argument, zobrazí řetězec obsažený ve vyrovnávací paměti, na které odkazují `Buffer` pole struktury. Použití *velikost* modifikátor předponu **w** k určení `UNICODE_STRING` argument – například `%wZ`. `Length` Pole struktury musí být nastaveno na délku řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délka vyrovnávací paměti v bajtech.<br /><br /> Obvykle **Z** – znak typu se používá jenom v ladění funkcí, které používají specifikace převodu, jako například ovladače `dbgPrint` a `kdPrint`.|
+|**Z**|`ANSI_STRING` nebo `UNICODE_STRING` struktura|Když adresu [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) nebo [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktura je předán jako argument, zobrazí řetězec obsažený ve vyrovnávací paměti, na které odkazují `Buffer` pole struktury. Použití *velikost* modifikátor předponu **w** k určení `UNICODE_STRING` argument – například `%wZ`. `Length` Pole struktury musí být nastaveno na délku řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délka vyrovnávací paměti v bajtech.<br /><br /> Obvykle **Z** – znak typu se používá jenom v ladění funkcí, které používají specifikace převodu, jako například ovladače `dbgPrint` a `kdPrint`.|
 
 Od verze sady Visual Studio 2015, pokud argument, který odpovídá specifikátor převody plovoucí desetinné čárky (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) je nekonečné neomezené, nebo NaN, formátovaný výstup vyhovuje C99 standard. Tato tabulka shrnuje formátovaný výstup:
 

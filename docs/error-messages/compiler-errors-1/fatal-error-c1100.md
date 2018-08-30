@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1100 | Microsoft Docs
+title: Závažná chyba C1100 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da442ea76d6c559213b319d3e91d447ec47bc848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220043"
 ---
 # <a name="fatal-error-c1100"></a>Závažná chyba C1100
-Nepodařilo se inicializovat OLE: systému chybová zpráva  
+Nepodařilo se inicializovat OLE: chybovou zprávu systému  
   
- Kompilátor nelze inicializovat knihovnu modelu COM (Component Object). V tématu [funkce CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543).
+ Kompilátor nemůže inicializovat knihovnu modelu COM (Component Object). Zobrazit [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).

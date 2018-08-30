@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f64902f4636d7933a368e28cac42a27abb440c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 67a4f03db6a7c4cf37e59e05464865016d836097
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215005"
 ---
 # <a name="coledataobject-class"></a>Coledataobject – třída
 Používáno v přenosech dat pro načtení dat v různých formátech ze schránky pomocí přetažení, nebo z vložené položky OLE.  
@@ -84,7 +84,7 @@ class COleDataObject
   
  Tato třída umožňuje určit, zda data existuje v zadaném formátu. Můžete také vytvořit výčet dostupných datových formátů nebo zkontrolujte, zda je k dispozici daném formátu a načítají v preferovaném formátu. Načítání objektu lze provést několika různými způsoby, včetně použití [cfile –](../../mfc/reference/cfile-class.md), což je HGLOBAL nebo `STGMEDIUM` struktury.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura v sadě Windows SDK.  
   
  Další informace o používání datových objektů ve vaší aplikaci, najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
@@ -111,7 +111,7 @@ void Attach(
  Hodnota TRUE, pokud datový objekt OLE by měla být uvolněna při `COleDataObject` objekt je zničen; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) v sadě Windows SDK.  
   
 ##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Voláním této funkce se připojit datový objekt, který je aktuálně ze schránky do `COleDataObject` objektu.  
@@ -126,7 +126,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Volání této funkce zamkne schránky, dokud se neuvolní tímto datovým objektem. Datový objekt vydanou destruktor `COleDataObject`. Další informace najdete v tématu [Modul OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) a [Modul CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) v dokumentaci k systému Win32.  
+>  Volání této funkce zamkne schránky, dokud se neuvolní tímto datovým objektem. Datový objekt vydanou destruktor `COleDataObject`. Další informace najdete v tématu [Modul OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard) a [Modul CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) v dokumentaci k systému Win32.  
   
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  Voláním této funkce Příprava následných volání `GetNextFormat` pro načtení z položky seznam datových formátů.  
@@ -140,7 +140,7 @@ void BeginEnumFormats();
   
  Chcete-li zkontrolovat dostupnost dat v daném formátu, použijte [COleDataObject::IsDataAvailable](#isdataavailable).  
   
- Další informace najdete v tématu [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) v sadě Windows SDK.  
   
 ##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Vytvoří `COleDataObject` objektu.  
@@ -179,21 +179,21 @@ BOOL GetData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpStgMedium*  
- Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat data.  
+ Odkazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura, která bude přijímat data.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Volání této funkce můžete vytvořit `CFile` nebo `CFile`-odvozenému objektu a k načtení dat v zadaném formátu do `CFile` ukazatele.  
@@ -206,10 +206,10 @@ CFile* GetFileData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou `CFile` nebo `CFile`-odvozené objekt, který obsahuje data, je-li úspěšné; jinak hodnota NULL.  
@@ -220,9 +220,9 @@ CFile* GetFileData(
 > [!NOTE]
 >  `CFile` Volající vlastní objekt, návratová hodnota této funkce. Je odpovědností volajícího, aby **odstranit** `CFile` objektu, a tím zavírání souboru.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Voláním této funkce se přidělit blok globální paměti a k načtení dat v zadaném formátu do HGLOBAL.  
@@ -235,18 +235,18 @@ HGLOBAL GetGlobalData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát, ve kterém má být vrácena data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém má být vrácena data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Obslužná rutina bloku globální paměti obsahující data v případě úspěchu; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Voláním této funkce opakovaně získat všechny formáty, které jsou k dispozici pro načítání dat z položky.  
@@ -257,7 +257,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura, která přijímá informace o formátu při volání funkce vrátí.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura, která přijímá informace o formátu při volání funkce vrátí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud jiný formát je k dispozici. jinak 0.  
@@ -280,10 +280,10 @@ BOOL IsDataAvailable(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát dat schránky pro použití ve struktuře odkazované *lpFormatEtc*. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát dat schránky pro použití ve struktuře odkazované *lpFormatEtc*. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující požadovaného formátu. Zadejte hodnotu pro tento parametr pouze v případě, že chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující požadovaného formátu. Zadejte hodnotu pro tento parametr pouze v případě, že chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud jsou k dispozici v zadaném formátu; data jinak 0.  
@@ -291,22 +291,22 @@ BOOL IsDataAvailable(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je užitečná před voláním `GetData`, `GetFileData`, nebo `GetGlobalData`.  
   
- Další informace najdete v tématu [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
 ##  <a name="release"></a>  COleDataObject::Release  
- Voláním této funkce uvolní vlastnictví [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objektu, která byla dříve přidružená `COleDataObject` objektu.  
+ Voláním této funkce uvolní vlastnictví [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) objektu, která byla dříve přidružená `COleDataObject` objektu.  
   
 ```  
 void Release();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `IDataObject` Byl přidružen `COleDataObject` voláním `Attach` nebo `AttachClipboard` explicitně nebo rozhraní. Pokud *bAutoRelease* parametr `Attach` má hodnotu FALSE, `IDataObject` objekt nebude uvolněn. V tomto případě je zodpovědná za uvolnění volající `IDataObject` voláním [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ `IDataObject` Byl přidružen `COleDataObject` voláním `Attach` nebo `AttachClipboard` explicitně nebo rozhraní. Pokud *bAutoRelease* parametr `Attach` má hodnotu FALSE, `IDataObject` objekt nebude uvolněn. V tomto případě je zodpovědná za uvolnění volající `IDataObject` voláním [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   

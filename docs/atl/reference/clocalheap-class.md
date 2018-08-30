@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6f30208cbe3ebb72014f027533c7b3c659e4ac23
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213270"
 ---
 # <a name="clocalheap-class"></a>Clocalheap – třída
 Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí lokální haldy Win32.  
@@ -55,7 +55,7 @@ class CLocalHeap : public IAtlMemMgr
  `CLocalHeap` implementuje funkce přidělení paměti pomocí funkce lokální haldy Win32.  
   
 > [!NOTE]
->  Funkce lokální haldy jsou pomalejší než jiné funkce správy paměti a neposkytuje tolik funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou dostupné v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy.  
+>  Funkce lokální haldy jsou pomalejší než jiné funkce správy paměti a neposkytuje tolik funkcí. Proto měli používat nové aplikace [haldy funkce](/windows/desktop/Memory/heap-functions). Tyto jsou dostupné v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy.  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CLocalHeap::Free](#free) nebo [CLocalHeap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementované pomocí [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) s parametrem příznak LMEM_FIXED.  
+ Implementované pomocí [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) s parametrem příznak LMEM_FIXED.  
   
 ##  <a name="free"></a>  CLocalHeap::Free  
  Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementované pomocí [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
+ Implementované pomocí [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree).  
   
 ##  <a name="getsize"></a>  CLocalHeap::GetSize  
  Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Vrátí velikost bloku přidělené paměti v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementované pomocí [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
+ Implementované pomocí [LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize).  
   
 ##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
  Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CLocalHeap::Free](#free) k uvolnění paměti přidělené touto metodou.  
   
- Implementované pomocí [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
+ Implementované pomocí [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc).  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled tříd](../../atl/atl-class-overview.md)   

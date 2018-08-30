@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465578"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217226"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 Objekt zdroje dat OLE DB, což představuje prostřednictvím poskytovatele připojení ke zdroji dat odpovídá.  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Přetížení metody, která používá *hWnd* parametr otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci součásti služby funkcí, jako je třeba sdílení prostředků ve fondech, automaticky Zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Přetížení metody, která používá *hWnd* parametr otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci součásti služby funkcí, jako je třeba sdílení prostředků ve fondech, automaticky Zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Přetížení metody, které nepoužívají *hWnd* parametr otevřít objekt zdroje dat bez použití v oledb32.dll součásti služby. A [CDataSource](../../data/oledb/cdatasource-class.md) objekt otevřené se tyto funkce přetížení se nebudete moct využívat některé funkce součásti služby.  
   
@@ -299,7 +299,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
 Otevře se zdroji dat určené uživatelem zadané inicializačního řetězce.  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+ Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
 Otevře objekt zdroje dat pomocí služby komponent v oledb32.dll.  
@@ -385,7 +385,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+ Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>Viz také  
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217086"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Cmfcvisualmanageroffice2003 – třída
 `CMFCVisualManagerOffice2003` Poskytuje vzhled aplikace Microsoft Office 2003 aplikace.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Rámec volá tuto metodu při kreslení zvýrazněný přizpůsobení rychlé tlačítka nabídky. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Rozhraní volá tuto metodu při kreslení zvýrazněný příkaz. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Rozhraní volá tuto funkci při změně systémových barev. (Přepíše `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Určuje, zda má být použito globální motiv Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Určuje, jestli má správce vzhledu jako globální motiv.|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Parametry  
  [in] *clrBaseGroupBackground*  
- Odkaz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) nastavit barvu pozadí.  
+ Odkaz [COLORREF](/windows/desktop/gdi/colorref) nastavit barvu pozadí.  
   
  [in] *clrBaseGroupBorder*  
- Odkaz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) nastavit barvu ohraničení.  
+ Odkaz [COLORREF](/windows/desktop/gdi/colorref) nastavit barvu ohraničení.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) obsahující barvu zvýraznění tónu.  
+ Vrátí [COLORREF](/windows/desktop/gdi/colorref) obsahující barvu zvýraznění tónu.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  Ukazatel na okno s kartami, kde je rámec vykreslení na kartě.  
   
  [out] *clrDark*  
- Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.  
+ Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.  
   
  [out] *clrBlack*  
  Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna Karta. Výchozí barvu ohraničení je černá.  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) obsahující barvu zakázané.  
+ Vrátí [COLORREF](/windows/desktop/gdi/colorref) obsahující barvu zakázané.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  Obdélník, který určuje hranice titulek tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu popisku.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu popisku.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Ukazatel na záhlaví. Správce vzhledu nakreslí to [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu v záhlaví.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu záhlaví pro kategorii pásu karet.  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Rozhraní volá tuto metodu v rámci zpracování WM_SYSCOLORCHANGE zprávy. Přepsáním této metody v odvozené vizuálního správce, pokud chcete spustit vlastní kód při změně barev ve vaší aplikaci.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

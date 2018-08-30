@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197469"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 Třídy [CObject](../../mfc/reference/cobject-class.md) a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) zapouzdření několik objektů služeb, včetně přístupu k informacím o třídě za běhu, serializace a vytváření dynamických objektů. Všechny třídy odvozené z `CObject` dědí tuto funkci.  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  Ukazatel na řetězec zakončený hodnotou null obsahující název funkce nebo určuje pořadové číslo funkce. Pokud tento parametr je pořadové číslo, musí být v nižší řád slova; vyšší řád slova musí být nula. Tento parametr musí být v kódování Unicode.  
    
 ### <a name="remarks"></a>Poznámky  
- Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+ Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Požadavky  
  afxcomctl32.h, afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  Ukazatel na řetězec zakončený hodnotou null obsahující název funkce nebo určuje pořadové číslo funkce. Pokud tento parametr je pořadové číslo, musí být v nižší řád slova; vyšší řád slova musí být nula. Tento parametr musí být v kódování Unicode.  
    
 ### <a name="remarks"></a>Poznámky  
- Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Toto makro je verzi AFX_COMCTL32_IF_EXISTS kódování Unicode.  
+ Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Toto makro je verzi AFX_COMCTL32_IF_EXISTS kódování Unicode.  
    
 ### <a name="requirements"></a>Požadavky  
  afxcomctl32.h, afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` Nastaví model vláken v registru ThreadingModel = objektu Apartment.    
     -   `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.  
       
-         Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu. 
+         Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu. 
    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Součástí CLSID pro třídu.  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [Klíč CLSID](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  ID prostředku řetězce obsahující externí název ovládacího prvku.  
   
  *dwOleMisc*  
- Výčet obsahující jeden nebo více příznaků. Další informace o tomto výčtu, naleznete v tématu [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) v sadě Windows SDK.  
+ Výčet obsahující jeden nebo více příznaků. Další informace o tomto výčtu, naleznete v tématu [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) v sadě Windows SDK.  
    
 ### <a name="remarks"></a>Poznámky  
  Kromě IMPLEMENT_OLECTLTYPE musíte přidat DECLARE_OLECTLTYPE – makro do deklarace třídy ovládacího prvku.  
   
- `GetUserTypeNameID` Členská funkce vrátí řetězec prostředku, který identifikuje třídy vašeho ovládacího prvku. `GetMiscStatus` Vrátí OLEMISC bity ovládacího prvku. Tento výčet Určuje soubor nastavení popisující různé vlastnosti ovládacího prvku. Úplný popis OLEMISC nastavení najdete v tématu [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) v sadě Windows SDK.  
+ `GetUserTypeNameID` Členská funkce vrátí řetězec prostředku, který identifikuje třídy vašeho ovládacího prvku. `GetMiscStatus` Vrátí OLEMISC bity ovládacího prvku. Tento výčet Určuje soubor nastavení popisující různé vlastnosti ovládacího prvku. Úplný popis OLEMISC nastavení najdete v tématu [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) v sadě Windows SDK.  
   
 > [!NOTE]
 >  Výchozí nastavení používané ActiveX ControlWizard: OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE a OLEMISC_RECOMPOSEONRESIZE.  

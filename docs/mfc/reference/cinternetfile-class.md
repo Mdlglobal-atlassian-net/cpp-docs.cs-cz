@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202727"
 ---
 # <a name="cinternetfile-class"></a>Cinternetfile – třída
 Umožňuje přístup k souborům ve vzdálených systémech, které používají protokoly sítě Internet.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který přijme čtení řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel do vyrovnávací paměti obsahující prostý dat načtených z [cinternetfile –](../../mfc/reference/cinternetfile-class.md) objektu. Bez ohledu na datový typ vyrovnávací paměť předaná této metodě neprovádí žádné manipulace s daty (například převod na kódování Unicode), takže vrácená data musí být namapovaný na strukturu, který jste očekávali, jako kdyby **void\***  typ byly vráceny.  
+ Ukazatel do vyrovnávací paměti obsahující prostý dat načtených z [cinternetfile –](../../mfc/reference/cinternetfile-class.md) objektu. Bez ohledu na datový typ vyrovnávací paměť předaná této metodě neprovádí žádné manipulace s daty (například převod na kódování Unicode), takže vrácená data musí být namapovaný na strukturu, který jste očekávali, jako kdyby **void** <strong>\*</strong> typ byly vráceny.  
   
  Hodnota NULL, pokud bylo dosaženo souboru bez přečtení všech dat; nebo, pokud je logická, FALSE, pokud ukončení souboru bylo dosaženo bez přečtení žádná data.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Velikost požadované vyrovnávací paměti v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Základní rozhraní API rozhraní WinInet není provádět ukládání do vyrovnávací paměti, proto zvolte velikost vyrovnávací paměti, který umožňuje aplikaci číst data efektivně, bez ohledu na množství dat pro čtení. Pokud se každé volání [čtení](#read) obvykle zahrnuje velké aount dat (například čtyři nebo více kilobajtů), neměli byste potřebovat vyrovnávací paměti. Ale při volání `Read` získat menší bloky dat, nebo pokud používáte [ReadString](#readstring) číst jednotlivých řádků najednou, pak vyrovnávací paměti pro čtení vylepšuje výkon aplikace.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Velikost vyrovnávací paměti v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Základní rozhraní API rozhraní WinInet neprovádí se ukládání do vyrovnávací paměti, takže zvolte velikost vyrovnávací paměti, která umožňuje vaší aplikaci k zápisu dat efektivně bez ohledu na množství dat, která má být proveden zápis. Pokud se každé volání [zápisu](#write) obvykle zahrnuje velké množství dat (například čtyři nebo více kilobajtů najednou), neměli byste potřebovat vyrovnávací paměti. Ale při volání [zápisu](#write) pro zápis menší bloky dat, vyrovnávací paměti pro zápis zlepšuje výkon vaší aplikace.  

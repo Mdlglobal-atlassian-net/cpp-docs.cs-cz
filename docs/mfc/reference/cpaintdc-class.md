@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208367"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc – třída
 Kontext zařízení třída odvozená z [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Poznámky  
  Funguje [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) v době konstrukce a [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) v době zničení.  
   
- A `CPaintDC` objektu jde použít jenom při odpovídání na [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) zpráv, obvykle v vaše `OnPaint` obslužná rutina zprávy členskou funkci.  
+ A `CPaintDC` objektu jde použít jenom při odpovídání na [WM_PAINT](/windows/desktop/gdi/wm-paint) zpráv, obvykle v vaše `OnPaint` obslužná rutina zprávy členskou funkci.  
   
  Další informace o používání `CPaintDC`, naleznete v tématu [kontexty zařízení](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Odkazuje na `CWnd` objekt, na který `CPaintDC` objekt patří.  
   
 ### <a name="remarks"></a>Poznámky  
- Výjimky (typu `CResourceException`) je vyvolána, pokud Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
+ Výjimky (typu `CResourceException`) je vyvolána, pokud Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

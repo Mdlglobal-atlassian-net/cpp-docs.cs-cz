@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 47b0058cba19ac804c2d996052e9a5ec2df68bc5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879336"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208945"
 ---
 # <a name="csecurityattributes-class"></a>Csecurityattributes – třída
 Tato třída představuje dynamického zajišťování obálku pro strukturu atributy zabezpečení.  
@@ -53,9 +53,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes::Set](#set)|Volejte tuto metodu za účelem nastavení atributů `CSecurityAttributes` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `SECURITY_ATTRIBUTES` Struktura obsahuje [popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379561) používají k vytvoření objektu a určuje, zda je popisovač načíst tak, že zadáte tuto strukturu odvoditelný.  
+ `SECURITY_ATTRIBUTES` Struktura obsahuje [popisovače zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) používají k vytvoření objektu a určuje, zda je popisovač načíst tak, že zadáte tuto strukturu odvoditelný.  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SECURITY_ATTRIBUTES`  
@@ -99,7 +99,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
- [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [Popisovač zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [Popisovač zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

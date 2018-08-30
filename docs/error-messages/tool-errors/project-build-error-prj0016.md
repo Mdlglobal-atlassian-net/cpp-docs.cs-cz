@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0016 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0016 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6184e5bb251a2b74e8500cc195a38f2d814c1b5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c07de9e766b7c2126d0ce4c8d1daed631a8355c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319049"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194737"
 ---
 # <a name="project-build-error-prj0016"></a>Chyba sestavení projektu PRJ0016
-Nastavení zabezpečení uživatele zabránit procesu vytváření. Tato nastavení se vyžadují pro vytvoření.  
+Nastavení zabezpečení uživatele zabránit procesu vytváření. Tato nastavení pro sestavování jsou vyžadována.  
   
- Jste přihlášeni jako uživatel, který nemá oprávnění k vytvoření procesů pomocí procesu. Musíte změnit úrovně oprávnění pro tento uživatelský účet, nebo požádejte správce účtu.  
+ Jste přihlášeni jako uživatel, který nemá oprávnění k vytváření procesů pomocí procesu. Musíte změnit úrovně oprávnění pro tento uživatelský účet nebo kontaktujte správce účtu.  
   
- Tato chyba může vyskytnout, pokud je nastaven následující klíč registru:  
+ K této chybě může dojít, pokud nastavte následující klíč registru:  
   
  \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- Pokud chcete tuto chybu vyřešit, odstraňte klíč RestrictRun. V případě potřeby tento klíč registru připojit **vcspawn.exe** do seznamu položek v klíči.  
+ Chcete-li tuto chybu vyřešit, odstraňte klíč RestrictRun. Pokud tento klíč registru je potřeba, připojte **vcspawn.exe** do seznamu položek v klíči.  
   
- Další příčinou této chyby je, že vaše zásady nastavení nezahrnuje VCSpawn.exe v klíči registru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako Povolené okno program pro tento uživatelský účet.  
+ Další příčinou této chyby je, že vaše nastavení zásad nezahrnuje VCSpawn.exe v klíči registru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako Povolené program okno pro tento uživatelský účet.  
   
  Další informace najdete v tématu:  
   
--   Článek znalostní báze Knowledge Base 324153, která je k dispozici na [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Znalostní báze Knowledge Base 324153, která je k dispozici na [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
--   [Dodržujte zásady nastavení systému](http://msdn.microsoft.com/library/aa372139), v sekci "Spouštět pouze povolené aplikace systému Windows".
+-   [Týkajícími se nastavení zásad systému](https://msdn.microsoft.com/library/aa372139), v sekci "Spouštět pouze povolené aplikace Windows".

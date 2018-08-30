@@ -1,7 +1,7 @@
 ---
-title: Chyba sestavení projektu PRJ0002 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0002 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e1870ce9137ba172f848a499dd31133119eea0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0e48130c17e04c2671395161452c9e66000047
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195712"
 ---
 # <a name="project-build-error-prj0002"></a>Chyba sestavení projektu PRJ0002
-Chyba výsledku vrácený z 'příkazového řádku'.  
-  
- A příkaz ***příkazového řádku***, který byl vytvořen z uživatelský vstup ve **stránky vlastností** dialogové okno, vrátila kód chyby, ale žádné informace se zobrazí v okně výstupu.  
-  
- Řešení této chyby závisí na nástroj, který vytvořil chybu. MIDL získáte představu o kde došlo k chybě, pokud je definována /o (výstup přesměrování).  
-  
- Dávkový soubor, jako je například vlastního kroku sestavení nebo události sestavení, který není informativní o podmínky selhání mohou být také z důvodu této chyby.
+
+> Chyba výsledek vrácený z "*příkazového řádku*".
+
+V příkazu *příkazového řádku*, který byl vytvořen ze vstupu uživatele v **stránky vlastností** zobrazí se v dialogovém okně vrátil kód chyby, ale žádné informace o **výstup** okna .
+
+Řešení této chyby závisí na který nástroj vygeneruje chybu. MIDL získáte představu, co došlo k chybě, pokud je definován /o (přesměrovat výstup).
+
+Dávkový soubor, jako je například vlastního kroku sestavení nebo události sestavení, který není informativní o podmínky při selhání může být také důvodem této chyby.

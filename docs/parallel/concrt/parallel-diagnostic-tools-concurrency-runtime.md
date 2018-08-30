@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217343"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Paralelní diagnostické nástroje (Concurrency Runtime)
 Visual Studio poskytuje rozsáhlou podporu pro ladění a profilování vícevláknových aplikacích.  
@@ -31,7 +31,7 @@ Visual Studio poskytuje rozsáhlou podporu pro ladění a profilování vícevl�
  Nástroje pro profilaci poskytují tři zobrazení dat, které zobrazují grafické, tabulky a číselné informace o interakci vícevláknové aplikace se sebou samým a s jinými programy. Zobrazení vám umožní rychle identifikovat oblastí zájmu a přejít z bodů na grafické zobrazení volání zásobníků, volání lokality a zdrojového kódu. Další informace najdete v tématu [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Trasování událostí  
- Modul Concurrency Runtime používá [události trasování pro Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) upozornění instrumentace nástrojů, jako je profilovací programy, pokud dojde k různým událostem. Tyto události patří když Plánovač se aktivuje nebo deaktivuje, pokud kontext začíná, skončí, blokuje, odblokuje nebo provede, a když paralelního algoritmu začíná nebo končí.  
+ Modul Concurrency Runtime používá [události trasování pro Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) upozornění instrumentace nástrojů, jako je profilovací programy, pokud dojde k různým událostem. Tyto události patří když Plánovač se aktivuje nebo deaktivuje, pokud kontext začíná, skončí, blokuje, odblokuje nebo provede, a když paralelního algoritmu začíná nebo končí.  
   
  Nástroje, jako [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer) využívat tuto funkci; proto obvykle nemusíte pracovat přímo s těmito událostmi. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje Sledování událostí, jako [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

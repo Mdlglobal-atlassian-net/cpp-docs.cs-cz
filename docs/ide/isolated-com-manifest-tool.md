@@ -1,5 +1,5 @@
 ---
-title: Nástroj manifest izolované vlastnosti modelu COM (Visual C++) | Microsoft Docs
+title: Nástroj manifest izolované modely COM vlastnosti (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216377"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Izolované modelu COM, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností
-Pomocí tohoto dialogového okna zadejte **izolované COM** možnosti pro [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Izolované modely COM, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností projektu
+Použít toto dialogové okno k zadání **izolovaná komponenta COM** možnosti pro [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Pro přístup k toto dialogové okno stránky vlastností, otevřete stránku vlastností projektu nebo seznam vlastnosti. Rozbalte **Nástroj Manifest** pod uzlem **společných vlastností**a potom vyberte **izolované COM**.  
+ Pro přístup k této dialogové okno stránky vlastností, otevřete stránky vlastností projektu, nebo seznam vlastností. Rozbalte **Nástroj Manifest** pod uzlem **společné vlastnosti**a pak vyberte **izolovaná komponenta COM**.  
   
 ## <a name="task-list"></a>Seznam úloh  
   
@@ -35,19 +35,19 @@ Pomocí tohoto dialogového okna zadejte **izolované COM** možnosti pro [Mt.ex
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **Soubor knihovny typů**  
- Pomocí možnosti/tlb lze zadat název souboru knihovny typu (souboru .tlb), který nástroj manifestu použije k vygenerování souboru manifestu.  
+ Pomocí možnosti/tlb lze zadat název souboru knihovny typů (souboru .tlb), který nástroj manifest použije k vygenerování souboru manifestu.  
   
- **Soubor skriptu registrátora**  
- Používá rgs zadat název souboru skriptu registrátora (.rgs soubor), který nástroj manifestu použije k vygenerování souboru manifestu.  
+ **Soubor skriptu registrátoru**  
+ Rgs používá k určení názvu soubor skriptu registrátoru (souboru .rgs), nástroj manifest použije k vygenerování souboru manifestu.  
   
  **Název souboru komponenty**  
- Pomocí možnosti/dll lze zadat název prostředku, který manifestu nástroj vygeneruje. Musíte zadat hodnotu pro tuto vlastnost při hodnoty pro buď **soubor knihovny typu** nebo **soubor skriptu registrátora** nejsou zadány.  
+ Možnost/DLL používá k určení názvu prostředku, který vygeneruje nástroj manifest. Musíte zadat hodnotu pro tuto vlastnost při hodnoty pro buď **soubor knihovny typů** nebo **soubor skriptu registrátoru** jsou uvedeny.  
   
- **Soubor nahrazení**  
- Používá replacements k zadejte úplnou cestu k souboru, který obsahuje hodnoty pro replaceable řetězce v souboru.  
+ **Soubor náhrad**  
+ Pomocí replacements Určuje úplnou cestu k souboru, který obsahuje hodnoty pro nahraditelné řetězce v souboru .rgs.  
   
 ## <a name="see-also"></a>Viz také  
- [Izolované aplikace](http://msdn.microsoft.com/library/aa375190)   
+ [Izolované aplikace](/windows/desktop/SbsCs/isolated-applications)   
  [ClickOnce – Manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)   
  [Stránky vlastností nástroje manifest](../ide/manifest-tool-property-pages.md)   
  [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)   

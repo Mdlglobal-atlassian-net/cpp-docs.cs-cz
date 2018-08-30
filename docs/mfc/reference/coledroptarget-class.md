@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027439"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218486"
 ---
 # <a name="coledroptarget-class"></a>Coledroptarget – třída
 Poskytuje mechanismus pro komunikaci mezi oknem a knihovnami OLE.  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkce můžete povolit operace přetažení vyskytuje v okně. Výchozí implementace volá [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), který jednoduše vrací DROPEFFECT_NONE ve výchozím nastavení.  
   
- Další informace najdete v tématu [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) v sadě Windows SDK.  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Volá se rozhraním, když ukazatel opustí okna při přetahování operace je v platnosti.  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce přepište, pokud mají zvláštní chování při operaci přetažení opustí určené okno. Výchozí implementace této funkce se volá [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
- Další informace najdete v tématu [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) v sadě Windows SDK.  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Volá se rozhraním, když se kurzor přesune na okno.  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce by měla být potlačena za účelem povolení operací přetažení vyskytuje v okně. Výchozí implementace této funkce se volá [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), která vrací DROPEFFECT_NONE ve výchozím nastavení. Protože tato funkce je volána často během operace přetažení myší, to by mělo být optimalizované co největší míře.  
   
- Další informace najdete v tématu [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ Obsahuje umístění kurzoru v pixelech, vzhledem k obrazovce.
   
  Výchozí implementace `COleDropTarget::OnDrop` volání [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), který jednoduše vrací hodnotu FALSE ve výchozím nastavení.  
   
- Další informace najdete v tématu [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) v sadě Windows SDK.  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Volá se rozhraním, když operace přetažení, která se má použít.  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL znamená, že operace přetažení posuvníku se použije nebo dochází v cíli.  
   
- Další informace najdete v tématu [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) v sadě Windows SDK.  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  Voláním této funkce zaregistrovat okna OLE knihovny DLL jako cíl přetažení. platné.  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce musí být volána pro operace přetažení na přijetí.  
   
- Další informace najdete v tématu [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) v sadě Windows SDK.  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Voláním této funkce před zničení jakékoli okno, který byl zaregistrován jako cíl přetažení přímo pomocí volání [zaregistrovat](#register) odebrat ze seznamu cílů přetažení.  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána automaticky [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) obslužná rutina okna, která byla zaregistrována, takže obvykle není nutné explicitně voláním této funkce.  
   
- Další informace najdete v tématu [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) v sadě Windows SDK.  
+ Další informace najdete v tématu [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   

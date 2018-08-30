@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b5957d55ae75723331e35984b9ab3c8e34c4fa78
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884867"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204955"
 ---
 # <a name="ccomcriticalsection-class"></a>Ccomautocriticalsection – třída
 Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.  
@@ -84,7 +84,7 @@ CComCriticalSection() throw();
  Nastaví [m_sec](#m_sec) datový člen na hodnotu NULL.  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- Volá funkci Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), který inicializuje objekt kritický oddíl součástí [m_sec](#m_sec) datový člen.  
+ Volá funkci Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), který inicializuje objekt kritický oddíl součástí [m_sec](#m_sec) datový člen.  
   
 ```
 HRESULT Init() throw();
@@ -94,7 +94,7 @@ HRESULT Init() throw();
  Vrátí hodnotu S_OK při úspěchu, E_OUTOFMEMORY nebo E_FAIL při selhání.  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- Volá funkci Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), které počká, dokud vlákno může převzít vlastnictví kritický oddíl objektů obsažených v [m_sec](#m_sec) datový člen.  
+ Volá funkci Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), které počká, dokud vlákno může převzít vlastnictví kritický oddíl objektů obsažených v [m_sec](#m_sec) datový člen.  
   
 ```
 HRESULT Lock() throw();
@@ -114,7 +114,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- Volá funkci Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), což uvolní všechny prostředky používané objektem kritický oddíl součástí [m_sec](#m_sec) datový člen.  
+ Volá funkci Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), což uvolní všechny prostředky používané objektem kritický oddíl součástí [m_sec](#m_sec) datový člen.  
   
 ```
 HRESULT Term() throw();
@@ -127,7 +127,7 @@ HRESULT Term() throw();
  Jednou `Term` byla volána, důležité části může již nebude používán k synchronizaci.  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- Volá funkci Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), která uvolní vlastnictví objektu kritický oddíl součástí [m_sec](#m_sec) datový člen.  
+ Volá funkci Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), která uvolní vlastnictví objektu kritický oddíl součástí [m_sec](#m_sec) datový člen.  
   
 ```
 HRESULT Unlock() throw();

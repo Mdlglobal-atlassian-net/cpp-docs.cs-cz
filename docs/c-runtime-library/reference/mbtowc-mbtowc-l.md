@@ -1,5 +1,5 @@
 ---
-title: mbtowc –, _mbtowc_l – | Microsoft Docs
+title: mbtowc _mbtowc_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200304"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 
-Převeďte na odpovídající široká znaková vícebajtových znaků.
+Převeďte vícebajtový znak na odpovídající širokého znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,10 +65,10 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parametry
 
 *wchar*<br/>
-Adresa široká znaková (typ **wchar_t**).
+Adresa širokého znaku (typ **wchar_t**).
 
 *mbchar*<br/>
-Adresa pořadí bajtů (vícebajtových znaků).
+Adresa sekvence bajtů (vícebajtového znaku).
 
 *Počet*<br/>
 Počet bajtů ke kontrole.
@@ -78,24 +78,24 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **mbchar** není **NULL** a pokud objekt, *mbchar* odkazuje na forms platný vícebajtových znaků **mbtowc –** vrátí délku v počet bajtů vícebajtových znaků. Pokud *mbchar* je **NULL** nebo objekt, který odkazuje je prázdný znak široká charakterová (L '\0'), funkce vrátí hodnotu 0. Pokud objekt, *mbchar* body netvoří platnou vícebajtových znaků v rámci první *počet* znaky, vrátí hodnotu -1.
+Pokud **mbchar** není **NULL** a, pokud objekt, který *mbchar* odkazuje na formulářích je platný vícebajtový znak **mbtowc** vrátí délku v bajtech vícebajtového znaku. Pokud *mbchar* je **NULL** nebo objekt, který odkazuje na prázdný znak širokého znaku (L '\0'), funkce vrátí 0. Pokud objekt, který *mbchar* odkazuje na netvoří platné vícebajtové znaky v prvních *počet* znaků, vrátí hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbtowc –** funkce převede *počet* nebo méně bajtů, na kterou odkazuje *mbchar*, pokud *mbchar* není **NULL**, odpovídající široké znak. **mbtowc –** uloží výsledné široké znak, od *wchar,* Pokud *wchar* není **NULL**. **mbtowc –** není prozkoumat více než **mb_cur_max –** bajtů. **mbtowc –** používá aktuální národní prostředí pro chování závislých na národním prostředí; **_mbtowc_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**Mbtowc** funkce převede *počet* nebo menší počet bajtů, na které odkazuje *mbchar*, pokud *mbchar* není **NULL**, odpovídající široký znak. **mbtowc** uloží výsledný širokého znaku v *wchar,* Pokud *wchar* není **NULL**. **mbtowc** nezkoumá více než **MB_CUR_MAX** bajtů. **mbtowc** používá aktuální národní prostředí pro chování závislé na národním prostředí **_mbtowc_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**mbtowc –**|\<stdlib.h>|
+|**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -153,10 +153,10 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

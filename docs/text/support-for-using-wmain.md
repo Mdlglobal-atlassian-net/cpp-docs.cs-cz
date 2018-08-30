@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604060"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205713"
 ---
 # <a name="support-for-using-wmain"></a>Podpora použití funkce wmain
 Jazyk Visual C++ podporuje definování **wmain** funkce a předávání argumentů širokého znaku Unicode aplikace. Deklarovat formální parametry **wmain**, pomocí ve formátu podobném `main`. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry **wmain** jsou typu `wchar_t*`. Příklad:  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>Viz také  
  [Podpora pro Unicode](../text/support-for-unicode.md)   
  [Souhrn programování s kódem Unicode](../text/unicode-programming-summary.md)   
- [Funkce WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [Funkce WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)

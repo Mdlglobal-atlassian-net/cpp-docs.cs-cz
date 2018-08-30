@@ -1,5 +1,5 @@
 ---
-title: Třída CCubicTransition | Microsoft Docs
+title: Ccubictransition – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953214"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210741"
 ---
-# <a name="ccubictransition-class"></a>CCubicTransition – třída
-Zapouzdří krychlový přechod.  
+# <a name="ccubictransition-class"></a>Ccubictransition – třída
+Zapouzdřuje kubický přechod.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,29 +48,29 @@ class CCubicTransition : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCubicTransition::CCubicTransition](#ccubictransition)|Vytvoří objekt přechod a inicializuje jeho parametry.|  
+|[CCubicTransition::CCubicTransition](#ccubictransition)|Vytvoří objekt přechodu a inicializuje parametry.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCubicTransition::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CCubicTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|  
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Rychlosti proměnnou na konci přechodu.|  
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Rychlost proměnnou na konci přechodu.|  
 |[CCubicTransition::m_duration](#m_duration)|Doba trvání přechodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během krychlový přechodu hodnota proměnné animace změny od počáteční hodnoty zadané konečná hodnota za celou dobu přechodu, končí zadanou rychlostí. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během kubický přechod hodnotu proměnné animace změní z její počáteční hodnotu na zadaný konečnou hodnotu na dobu trvání přechodu končící zadaným rychlosti. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
  `CCubicTransition`  
   
@@ -78,7 +78,7 @@ class CCubicTransition : public CBaseTransition;
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
- Vytvoří objekt přechod a inicializuje jeho parametry.  
+ Vytvoří objekt přechodu a inicializuje parametry.  
   
 ```  
 CCubicTransition(
@@ -95,10 +95,10 @@ CCubicTransition(
  Hodnota proměnné animace na konci přechodu.  
   
  *finalVelocity*  
- Rychlosti proměnnou na konci přechodu.  
+ Rychlost proměnnou na konci přechodu.  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -108,10 +108,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
 
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
  Hodnota proměnné animace na konci přechodu.  
@@ -121,7 +121,7 @@ DOUBLE m_dblFinalValue;
 ```  
   
 ##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
- Rychlosti proměnnou na konci přechodu.  
+ Rychlost proměnnou na konci přechodu.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219518"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 Obor názvů je standardní C++ konstrukci pro seskupení typů, které mají související funkce a pro předcházení kolizi názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, že všechny veřejné typy Windows Runtime, včetně těch, které ve svém vlastním kódu, musí být deklarovány v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarovány v globálním oboru nebo vnořit do jiné třídy způsobí chybu kompilace.  
@@ -43,7 +43,7 @@ Obor názvů je standardní C++ konstrukci pro seskupení typů, které mají so
 |`internal` Nebo `private public`|Člen je veřejný v rámci aplikace nebo komponenty, ale není viditelný v metadatech.|Ne|  
   
 ## <a name="windows-runtime-namespaces"></a>Obory názvů Windows Runtime  
- Rozhraní Windows API se skládá z typů, které jsou deklarovány v Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **prohlížeče objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní Windows API](http://msdn.microsoft.com/library/windows/apps/br211377).  
+ Rozhraní Windows API se skládá z typů, které jsou deklarovány v Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **prohlížeče objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).  
   
 ## <a name="ccx-namespaces"></a>C + +/ CX obory názvů  
  C + +/ CX definují určité typy v těchto oborech názvů jako součást projekce systém typů prostředí Windows Runtime.  

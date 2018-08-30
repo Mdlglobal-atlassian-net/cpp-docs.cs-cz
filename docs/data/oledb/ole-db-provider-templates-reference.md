@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220884"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenční dokumentace k šablonám zprostředkovatelů OLE DB
 Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou být seskupeny do následujících kategorií. Referenční materiál obsahuje také informace o [makra pro šablony zprostředkovatele technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -63,7 +63,7 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou bý
  Implementuje rozhraní OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
   
  [Irowsetcreatorimpl –](../../data/oledb/irowsetcreatorimpl-class.md)  
- Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS` a `DBPROPCANFETCHBACKWARDS`.  
+ Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS` a `DBPROPCANFETCHBACKWARDS`.  
   
  [Irowsetidentityimpl –](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementuje `IRowsetIdentity` rozhraní, které vám umožní porovnat, zda dva řádky dat jsou stejné, nebo ne.  

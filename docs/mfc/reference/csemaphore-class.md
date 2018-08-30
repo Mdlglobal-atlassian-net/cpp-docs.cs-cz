@@ -1,5 +1,5 @@
 ---
-title: Třída prohlížení | Microsoft Docs
+title: CSemaphore – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00e7e1bc42317b4028264a49006b40de4fbb507
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: feb595a5b963e3898c1ce467a5a0487062dd9bca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198508"
 ---
-# <a name="csemaphore-class"></a>Prohlížení – třída
-Objekt třídy `CSemaphore` představuje "semafor" – na synchronizační objekt, který umožňuje omezený počet vláken v jedné nebo více procesech pro přístup Maintains počet vláken, na které se právě používají zadaný prostředek.  
+# <a name="csemaphore-class"></a>CSemaphore – třída
+Objekt třídy `CSemaphore` představuje "semafor" – synchronizační objekt, který umožňuje omezenému počtu vláken v jednom nebo více procesech přístup a udržuje přehled o počtu vláken aktuálně přístup k určitému zdroji.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,20 +43,20 @@ class CSemaphore : public CSyncObject
 |[CSemaphore::CSemaphore](#csemaphore)|Vytvoří `CSemaphore` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Semaforů jsou užitečné při řízení přístupu k sdílený prostředek, který podporuje pouze omezený počet uživatelů. Aktuální počet `CSemaphore` objektu je počet další uživatele povolena. Pokud je počet hodnota nula, všechny pokusí použít prostředek řídí `CSemaphore` objekt bude vložen do systému fronty a počkejte, dokud se buď vypršení časového limitu nebo roste počet větší než 0. Maximální počet uživatelů, kteří mohou přístup řízené prostředku v jednom okamžiku se stanoví během vytváření `CSemaphore` objektu.  
+ Semafory jsou užitečné při řízení přístupu ke sdílenému prostředku, který může podporovat jenom omezený počet uživatelů. Aktuální počet `CSemaphore` objektu je počet další uživatele povolená. Když počet dosáhne nuly, všechny pokusí použít na prostředek řídí `CSemaphore` objektu se vloží do fronty systému a počkejte, dokud se buď časový limit nebo počet překročí 0. Maximální počet uživatelů, kteří mohou přistupovat k prostředku, řízené najednou specifikovaném během procesu vytváření `CSemaphore` objektu.  
   
- Použít `CSemaphore` objektu, vytvořit `CSemaphore` objektu, když je to potřeba. Zadejte název semafor, chcete čekat na a že vaše aplikace by měl původně jeho vlastníkem. Semafor můžete přistoupit po návratu konstruktoru. Volání [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) po dokončení přístup k řízenému prostředku.  
+ Použití `CSemaphore` objektu, vytvořit `CSemaphore` objektu, když ho nepotřebují. Zadejte název semafor chcete čekat na a, která vaše aplikace by měl původně jejím vlastníkem. Po návratu konstruktoru moct semafor. Volání [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) až budete mít přístup k řízenému prostředku.  
   
- Alternativní metoda pro používání `CSemaphore` objektů je přidání proměnné typu `CSemaphore` jako datový člen třídy chcete ovládacího prvku. Při vytváření objektu řízené volání konstruktoru `CSemaphore` zadání počáteční – datový člen přístup počet, počet maximální připojení, název semafor (Pokud se použije přes hranice procesu) a potřeby atributů zabezpečení.  
+ Alternativní způsob pro použití `CSemaphore` objekty, je přidat proměnnou typu `CSemaphore` jako datový člen třídy, které chcete ovládací prvek. Během konstrukce objektu řízené volání konstruktoru `CSemaphore` datový člen určující počáteční přístup počet, počet maximální připojení, název semafor (Pokud se bude používat přes hranice procesu) a požadované atributy zabezpečení.  
   
- Pro přístup k prostředkům řídí `CSemaphore` objekty tímto způsobem, nejprve vytvořte proměnnou buď typu [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) ve vašem prostředku přístup – členská funkce. Potom zavolejte zámek objektu `Lock` – členská funkce (například [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, počkat na prostředek, který uvolnit a získat přístup nebo počkejte prostředek k uvolnění a vypršení časového limitu, nejsou-li získat přístup k prostředku. V každém případě prostředku přistupovalo způsobem bezpečné pro přístup z více vláken. K uvolnění prostředku, použijte objekt zámků `Unlock` – členská funkce (například [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), nebo Povolit zámek objektu tak, aby spadal mimo rozsah.  
+ Pro přístup k prostředkům řídí `CSemaphore` objekty tímto způsobem, nejprve vytvořte proměnnou jednoho z těchto typů [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) v členské funkci přístup váš prostředek. Poté zavolejte zamknout objekt `Lock` členskou funkci (například [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, počkejte prostředek, který má být všeobecně dostupné a získat přístup nebo počkejte prostředek uvolnit a vypršení časového limitu, selhání získat přístup k prostředku. V každém případě váš prostředek má byla přístupná takovým způsobem bezpečným pro vlákno. K uvolnění prostředku, použijte zámek objektu `Unlock` členskou funkci (například [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), nebo povolíte zámek objektu spadá mimo rozsah.  
   
- Alternativně můžete vytvořit `CSemaphore` objektu samostatné a k němu přístup explicitně před pokusem o přístup k řízené prostředku. Tato metoda při přesnější někomu čtení vašeho zdrojového kódu, je více náchylné k chybám.  
+ Alternativně můžete vytvořit `CSemaphore` objektu samostatné a k němu přístup explicitně před pokusem o přístup k řízenému prostředku. Tato metoda při přesnější někomu čtení zdrojového kódu, je více náchylné k chybám.  
   
  Další informace o tom, jak používat `CSemaphore` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
@@ -66,7 +66,7 @@ class CSemaphore : public CSyncObject
  **Záhlaví:** afxmt.h  
   
 ##  <a name="csemaphore"></a>  CSemaphore::CSemaphore  
- Konstrukce a pojmenované nebo nepojmenované `CSemaphore` objektu.  
+ Konstrukce a pojmenované a nepojmenované `CSemaphore` objektu.  
   
 ```  
 CSemaphore(
@@ -78,22 +78,22 @@ CSemaphore(
   
 ### <a name="parameters"></a>Parametry  
  *lInitialCount*  
- Počet počáteční využití pro semafor. Musí být větší než nebo rovna 0 a menší než nebo rovno *lMaxCount*.  
+ Použití počáteční počet pro semafor. Musí být větší než nebo rovna 0 a menší než nebo rovna hodnotě *lMaxCount*.  
   
  *lMaxCount*  
- Počet maximální využití pro semafor. Musí být větší než 0.  
+ Maximální využití počet pro semafor. Musí být větší než 0.  
   
  *pstrName*  
- Název semaforu. Je nutné zadat Pokud semaforu budou mít přístup přes hranice procesu. Pokud `NULL`, bude objekt nepojmenované. Pokud název odpovídá existující semafor, konstruktoru vytvoří novou `CSemaphore` objekt, který odkazuje na semafor s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není semafor, konstrukce se nezdaří.  
+ Název semafor. Je nutné zadat, pokud semafor budou mít přístup přes hranice procesu. Pokud `NULL`, bude objekt musí být pojmenovaná. Pokud název odpovídá existující semafor, konstruktoru vytvoří novou `CSemaphore` objekt, který odkazuje na spolupráci s tímto názvem. Pokud název odpovídá existující synchronizační objekt, který není semafor, procesu vytváření se nezdaří.  
   
  *lpsaAttributes*  
- Atributy zabezpečení pro objekt semafor. Úplný popis tuto strukturu, najdete v části [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) ve Windows SDK.  
+ Atributy zabezpečení pro objekt pro spolupráci. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Přístup k nebo verzi `CSemaphore` objektu, vytvoření [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objekt a volání jeho [zámku](../../mfc/reference/csinglelock-class.md#lock) a [odemčení](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce.  
+ Přístup nebo vydání `CSemaphore` objektu, vytvořit [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce.  
   
 > [!IMPORTANT]
->  Po vytvoření `CSemaphore` objektu, použijte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistovaly. Pokud objekt mutex neočekávaně neexistuje, může to znamenat podvodný proces obsazení a může být hodláte použít mutex závadně. V takovém případě je zavřít popisovač a pokračovat, jako kdyby došlo k chybě při vytváření objektu doporučeného postupu zabezpečení.  
+>  Po vytvoření `CSemaphore` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.  
   
 ## <a name="see-also"></a>Viz také  
  [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)   

@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203639"
 ---
 # <a name="cmfcvisualmanager-class"></a>Cmfcvisualmanager – třída
 Poskytuje podporu pro změnu vzhledu aplikace na globální úrovni. `CMFCVisualManager` Třídy spolupracuje se třídou, která poskytuje pokyny pro vykreslení ovládacích prvků GUI ve vaší aplikaci v jednotném stylu. Tyto třídy jsou označovány jako vizuální vedoucí a dědí z `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Ukazatel na automaticky skrýt tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu *pButton*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu *pButton*.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě přizpůsobit barvu textu tlačítka automatického schovávání ve vaší aplikaci. Chcete-li to provést, vrátí barvu, která chcete, aby vaše aplikace pro použití jako barva textu.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Ukazatel na záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu v *pBar*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v *pBar*.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě přizpůsobit barvu textu pro záhlaví. Ve své metodě přepsaného vraťte požadovanou barvu.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Ukazatel na seznam vlastností, které kreslení rozhraní framework.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu pozadí *pPropList*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu pozadí *pPropList*.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkce můžete přizpůsobit barvu pozadí seznamu vlastností v aplikaci.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Ukazatel na seznam vlastností.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu, seznamu vlastností.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu, seznamu vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkce můžete přizpůsobit barvu textu, seznamu vlastností v aplikaci.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Ukazatel na okno s kartami, kde je rámec vykreslení na kartě.  
   
  [out] *clrDark*  
- Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.  
+ Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.  
   
  [out] *clrBlack*  
  Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna Karta. Výchozí barvu ohraničení je černá.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Výčtová hodnota, která určuje stav tlačítka.  
   
  [out] *clrText*  
- Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. Toto je rezervovanou hodnotu a momentálně nepoužívá.  
+ Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Toto je rezervovanou hodnotu a momentálně nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Obdélník, který určuje hranice titulek tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu popisku.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu popisku.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu popisků podokně.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Ukazatel na záhlaví. Správce vzhledu nakreslí to [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu v záhlaví.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu záhlaví pro kategorii pásu karet. Další informace o záhlaví najdete v tématu [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  Aktuální průběh indikátor průběhu.  
   
  [in] *clrBar*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje počáteční barvu indikátoru průběhu. Hodnota je buď Počáteční barva přechodu nebo celý barevný indikátor průběhu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje počáteční barvu indikátoru průběhu. Hodnota je buď Počáteční barva přechodu nebo celý barevný indikátor průběhu.  
   
  [in] *clrProgressBarDest*  
  COLORREF parametr, který označuje konec gradientu barvu pro indikátor průběhu. Pokud *clrProgressBarDest* se -1, rozhraní není nakreslit indikátor průběhu jako barva přechodu. Místo toho vloží indikátor průběhu celé barva určená *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Obdélník, který určuje hranice záhlaví.  
   
  [out] *clrText*  
- Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. Metoda zapíše barvu textu v záhlaví pro tento parametr.  
+ Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Metoda zapíše barvu textu v záhlaví pro tento parametr.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této metody vyplní záhlaví barvou pro stínů podle aktuální vzhledu. Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit barvu titulek panel aplikace Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Parametr logické hodnoty, která určuje, zda stisknutí tlačítka.  
   
  [out] *clrText*  
- Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. Tato metoda ukládá barvu textu tlačítka stránky aplikace outlook v tomto parametru.  
+ Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Tato metoda ukládá barvu textu tlačítka stránky aplikace outlook v tomto parametru.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto funkci v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka stránky aplikace Outlook.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216199"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog – třída
 Zapouzdřuje dialogové okno Vlastnosti objektu OLE Windows běžné.  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Návratová hodnota  
  IDOK nebo IDCANCEL v případě úspěchu; jinak 0. IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
- Pokud se vrátí IDCANCEL, můžete volat Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ Pokud se vrátí IDCANCEL, můžete volat Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Strukturu typu [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), která slouží k inicializaci stránku Obecné dialogové okno Vlastnosti objektu OLE.  
+ Strukturu typu [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), která slouží k inicializaci stránku Obecné dialogové okno Vlastnosti objektu OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  Další informace o `OLEUIGNRLPROPS` struktury, naleznete v sadě Windows SDK.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Strukturu typu [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), která slouží k inicializaci stránky odkaz v dialogovém okně vlastností objektu OLE.  
+ Strukturu typu [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), která slouží k inicializaci stránky odkaz v dialogovém okně vlastností objektu OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  Další informace o `OLEUILINKPROPS` struktury, naleznete v sadě Windows SDK.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Strukturu typu [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), která slouží k inicializaci běžné dialogové okno Vlastnosti objektu OLE.  
+ Strukturu typu [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), která slouží k inicializaci běžné dialogové okno Vlastnosti objektu OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Poznámky  
  Tato struktura obsahuje členy použitý k inicializaci Obecné, propojení a zobrazení stránek.  
   
- Další informace najdete v článku OLEUIOBJECTPROPS a [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) struktury v sadě Windows SDK.  
+ Další informace najdete v článku OLEUIOBJECTPROPS a [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) struktury v sadě Windows SDK.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Strukturu typu [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), jejíž členové uložení vlastnosti z objektu dialogového okna.  
+ Strukturu typu [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), jejíž členové uložení vlastnosti z objektu dialogového okna.  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  Další informace o `PROPSHEETHEADER` struktury, naleznete v sadě Windows SDK.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Strukturu typu [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), která slouží k inicializaci stránky zobrazení dialogového okna vlastnosti objektu OLE.  
+ Strukturu typu [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), která slouží k inicializaci stránky zobrazení dialogového okna vlastnosti objektu OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

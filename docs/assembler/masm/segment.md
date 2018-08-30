@@ -1,5 +1,5 @@
 ---
-title: SEGMENT | Microsoft Docs
+title: SEGMENT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f5defce11b611f23b67e5e44ac1b9d406f73c0ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210416"
 ---
 # <a name="segment"></a>SEGMENT
-Definuje segment program volá *název* s atributy segmentu  
+Definuje segment program s názvem *název* s atributy segmentu  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,40 +37,40 @@ name ENDS
   
 #### <a name="parameters"></a>Parametry  
  *align*  
- Rozsah adres paměti, ze kterých lze vybrat počáteční adresy segmentu. Typ zarovnání může být jakýkoli z následujících akcí:  
+ Rozsah adresy paměti, ze kterých lze vybrat počáteční adresu segmentu. Typ zarovnání může být jedna z následujících akcí:  
   
-|Zarovnat typu|Počáteční adresa|  
+|Typ zarovnání|Počáteční adresa|  
 |----------------|----------------------|  
 |**BAJTŮ**|Další adresa k dispozici bajtů.|  
-|**WORD**|Další adresa k dispozici word (2 bajty na slovo).|  
-|**DWORD**|Další adresa k dispozici double aplikace word (4 bajty na dvojitou hodnotu word).|  
-|**PARA**|Další adresa k dispozici odstavce (16 bajtů za odstavce).|  
-|**PAGE**|Další adresa k dispozici stránky (256 bajtů na stránce).|  
-|**ALIGN**(*n*)|Další dostupný *n*tý bajtů adresu. Další informace jsou uvedeny v části poznámky.|  
+|**WORD**|Další adresa k dispozici word (2 bajty za word).|  
+|**DWORD**|Další adresa k dispozici double word (4 bajtů na typ double word).|  
+|**PARA**|Další adresa k dispozici odstavci (16 bajtů za odstavci).|  
+|**PAGE**|Další adresa k dispozici stránky (256 bajtů na stránku).|  
+|**ALIGN**(*n*)|Další dostupné *n*th bajtů adresu. Další informace jsou uvedeny v části poznámky.|  
   
- Pokud není tento parametr zadán, **ODSTAVEC** se používá ve výchozím nastavení.  
+ Pokud není tento parametr zadán, **PARA** se používá ve výchozím nastavení.  
   
  *kombinování*  
- **VEŘEJNÉ**, **zásobníku**, **běžné**, **paměti**, **v *** adresu*, **PRIVÁTNÍ**  
+ **VEŘEJNÉ**, **zásobníku**, **běžné**, **paměti**, **na**<em>adresu</em>, **PRIVÁTNÍ**  
   
  *Použití*  
- **USE16**, **USE32**, **PLOCHÉ**  
+ **USE16**, **USE32**, **BEZ STROMOVÉ STRUKTURY**  
   
  `characteristics`  
- **Informace o**, **ČÍST**, **zápisu**, **EXECUTE**, **SDÍLENÉ**, **NOPAGE**, **NOCACHE**, a **ZAHODIT**  
+ **Informace o**, **čtení**, **zápisu**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, a **ZAHOZENÍ**  
   
- Tyto jsou podporovány pouze pro COFF a odpovídat vlastností části COFF s podobným názvem (například **SDÍLENÉ** odpovídá IMAGE_SCN_MEM_SHARED). ČTENÍ nastavuje příznak IMAGE_SCN_MEM_READ. Příznak zastaralé jen pro čtení z důvodu části příznaku IMG_SCN_MEM_WRITE. Pokud existuje `characteristics` jsou nastavené, nepoužívají výchozí vlastnosti a jsou platné pouze příznaky programátory zadaný.  
+ Tyto jsou podporovaná jenom pro COFF a odpovídají vlastnostem oddílu COFF podobným názvem (například **SHARED** odpovídá IMAGE_SCN_MEM_SHARED). ČTENÍ nastaví příznak IMAGE_SCN_MEM_READ. Zastaralé příznaku READONLY způsobila části zrušte příznak IMG_SCN_MEM_WRITE. Pokud existuje `characteristics` je nastaveno, nejsou použity výchozí charakteristiky a jsou jenom příznaky programátor zadané aktivní.  
   
  `ALIAS(` `string` `)`  
- Tento řetězec se používá jako název oddílu v emitovaného COFF objektu.  Vytvoří se stejným názvem externí, s odlišné názvy segment MASM více oddílů.  
+ Tento řetězec se používá jako název oddílu, který v emitovaný objekt COFF.  Vytváří více oddílů se stejným názvem externí, se liší názvy MASM segmentu.  
   
  Není podporováno s **/omf**.  
   
  `class`  
- Určuje, jak by měla být segmenty kombinaci a řazení v sestavený souboru. Jsou typické hodnoty, `'DATA'`, `'CODE'`, `'CONST'` a `'STACK'`  
+ Určuje, jak by měla být segmenty kombinovat a uspořádané v souboru sestavený. Typické hodnoty se `'DATA'`, `'CODE'`, `'CONST'` a `'STACK'`  
   
 ## <a name="remarks"></a>Poznámky  
- Pro `ALIGN(n)`, `n` může být jakékoli power 2 od 1 do 8192; není podporován s **/omf**.  
+ Pro `ALIGN(n)`, `n` může být jakékoli Mocnina 2 od 1 do 8 192; nepodporuje **/omf**.  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

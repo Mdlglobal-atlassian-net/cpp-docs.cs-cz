@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595580"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220417"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -53,7 +53,7 @@ Pokud není zadána žádná výchozí zdrojové rozhraní, první zdrojové roz
 
 ## <a name="remarks"></a>Poznámky
 
-**Výchozí** C++ atribut má stejné funkce jako [výchozí](http://msdn.microsoft.com/library/windows/desktop/aa366787) atribut MIDL. **Výchozí** atribut je použit také s [případ](../windows/case-cpp.md) atribut.
+**Výchozí** C++ atribut má stejné funkce jako [výchozí](/windows/desktop/Midl/default) atribut MIDL. **Výchozí** atribut je použit také s [případ](../windows/case-cpp.md) atribut.
 
 ## <a name="example"></a>Příklad
 

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197454"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog – třída
 Zapouzdřuje služby poskytované dialogovým oknem běžných nastavení stránky OLE Windows s další podporou nastavení a úprav okrajů tisku.  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION zakáže ovládací prvek dialogového okna orientace stránky.  
   
-- Způsobí, že PSD_RETURNDEFAULT `CPageSetupDialog` vrátit [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány pro výchozí tiskárna systému bez zobrazení dialogového okna. Předpokládá se, jak `hDevNames` a `hDevMode` hodnotu Null; v opačném případě vrátí chybu. Pokud se výchozí tiskárna systému je podporována staré ovladače tiskárny (dřívější než Windows verze 3.0), pouze `hDevNames` je vrácena. `hDevMode` má hodnotu NULL.  
+- Způsobí, že PSD_RETURNDEFAULT `CPageSetupDialog` vrátit [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány pro výchozí tiskárna systému bez zobrazení dialogového okna. Předpokládá se, jak `hDevNames` a `hDevMode` hodnotu Null; v opačném případě vrátí chybu. Pokud se výchozí tiskárna systému je podporována staré ovladače tiskárny (dřívější než Windows verze 3.0), pouze `hDevNames` je vrácena. `hDevMode` má hodnotu NULL.  
   
 - PSD_DISABLEPAPER zakáže ovládacího prvku pro výběr dokumentu.  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- Vytvoří kontext zařízení tiskárny ze [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.  
+ Vytvoří kontext zařízení tiskárny ze [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě.  
   
  IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) datová struktura, která obsahuje informace o inicializaci zařízení a prostředí, které ovladače tiskárny. Musíte odemknout paměť provedenou tato struktura se Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkce, která je popsána v sadě Windows SDK.  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) datová struktura, která obsahuje informace o inicializaci zařízení a prostředí, které ovladače tiskárny. Musíte odemknout paměť provedenou tato struktura se Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) funkce, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Voláním této funkce po volání [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) načíst název definovaných systémem ovladače zařízení.  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  Pokud změníte `m_psd` datový člen přímo, budou všechny výchozí chování přepsat.  
   
- Další informace o [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) struktury, naleznete v sadě Windows SDK.  
+ Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) struktury, naleznete v sadě Windows SDK.  
   
  Podívejte se na příklad pro [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>Parametry  
  *wPaper*  
- Určuje hodnotu, která určuje velikost papíru. Tato hodnota může být jedna z **DMPAPER_** hodnoty uvedené v popisu [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury.  
+ Určuje hodnotu, která určuje velikost papíru. Tato hodnota může být jedna z **DMPAPER_** hodnoty uvedené v popisu [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury.  
   
  *wFlags*  
  Určuje orientaci ovládacího prvku dokument nebo obálky, a jestli je tiskárna jehličkové nebo zařízení HPPCL (jazyk pro ovládací prvek Hewlett Packard tiskárny). Tento parametr může mít jednu z následujících hodnot:  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f Obálka v režimu na výšku (jehličkové tiskárny)  
   
  *pPSD*  
- Ukazatel `PAGESETUPDLG` struktury. Další informace o [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), naleznete v sadě Windows SDK.  
+ Ukazatel `PAGESETUPDLG` struktury. Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), naleznete v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulová hodnota, pokud zpracovává; jinak 0.  

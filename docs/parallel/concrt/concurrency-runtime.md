@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203940"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Concurrency Runtime pro jazyk C++ umožňuje zápis robustní, škálovatelné a interaktivní paralelních aplikací. Vyvolá úroveň abstrakce, takže není nutné spravovat infrastrukturu podrobnosti, které se týkají souběžnosti. Také ho můžete použít k určení plánování zásad, které splňují kvalitu služby potřebám vašich aplikací. Pomocí těchto prostředků vám pomohou v začátcích práce s modulem Runtime souběžnost.  
@@ -107,7 +107,7 @@ Concurrency Runtime pro jazyk C++ umožňuje zápis robustní, škálovatelné a
   
 |||  
 |-|-|  
-|[Vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak můžete využít modul Concurrency Runtime pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.|  
+|[Vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak můžete využít modul Concurrency Runtime pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.|  
 |[Ukázky kódu pro Concurrency Runtime a knihovna paralelních vzorů v sadě Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Poskytuje vzorové aplikace a nástroje, které ukazují modulu Runtime souběžnosti.|  
 |[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blogový další články o paralelním programování v modulu Runtime souběžnosti.|  
 |[V C++ a nativním kódu fórum pro paralelní výpočty](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|  

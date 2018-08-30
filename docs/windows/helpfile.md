@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37309f9170a1fe78c7db802ca13cc81112be9cbb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221926"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -43,7 +43,7 @@ Název souboru, který obsahuje témata nápovědy.
 
 ## <a name="remarks"></a>Poznámky
 
-**HelpFile –** C++ atribut má stejné funkce jako [HelpFile –](http://msdn.microsoft.com/library/windows/desktop/aa366853) atribut MIDL.
+**HelpFile –** C++ atribut má stejné funkce jako [HelpFile –](/windows/desktop/Midl/helpfile) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

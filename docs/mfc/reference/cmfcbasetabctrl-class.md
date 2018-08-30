@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198565"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Cmfcbasetabctrl – třída
 Implementuje základní funkce pro okna s kartami.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Přepočítá rozložení interní okno s kartami.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Odebere všechny karty z okna s kartami.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Odebere kartu z okna s kartami.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje barvu pozadí na aktivní kartě.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnota, která určuje barvu pozadí na aktivní kartě.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je barvu pozadí na aktivní kartě COLOR_WINDOW. Můžete změnit barvu pozadí na aktivní kartě pomocí metody [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje barvu textu na aktivní kartě.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnota, která určuje barvu textu na aktivní kartě.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je barva textu pro aktivní karty COLOR_WINDOWTEXT. Můžete změnit barvu textu metodou [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na pole [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnot, které [cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md) objekt se používá pro barevné zvýraznění automatické kartu.  
+ Odkaz na pole [COLORREF](/windows/desktop/gdi/colorref) hodnot, které [cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md) objekt se používá pro barevné zvýraznění automatické kartu.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení inicializuje rozhraní škály barev pro barvy definované knihovny. Můžete zadat vlastní pole barev voláním metody [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Index založený na nule kartě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která určuje barvu pozadí na zadanou kartu; -1, pokud *iTab* je mimo rozsah.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která určuje barvu pozadí na zadanou kartu; -1, pokud *iTab* je mimo rozsah.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Získá velikost ohraničení karty v ovládacím prvku karty.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Index založený na nule kartě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu zadaného karty; -1, pokud *iTab* je mimo rozsah.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu zadaného karty; -1, pokud *iTab* je mimo rozsah.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Vrátí ukazatel na podokno, který se nachází na kartě zadané.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Určuje novou barvou pozadí.  
   
 ### <a name="remarks"></a>Poznámky  
- Získá výchozí barva pozadí pro aktivní karty z rozhraní [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)metody.  
+ Získá výchozí barva pozadí pro aktivní karty z rozhraní [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)metody.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Nastaví barvu textu pro aktivní karty.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parametry  
  [in] *clr*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu nového textu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu nového textu.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, získá rozhraní textového barvu z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Přepsat toto výchozí barvy pomocí `SetActiveTabTextColor` metody.  
+ Ve výchozím nastavení, získá rozhraní textového barvu z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Přepsat toto výchozí barvy pomocí `SetActiveTabTextColor` metody.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Nastaví barvu ovládacího prvku karta, který používá rozhraní v režimu Automatická barva.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  Šířka jednotlivých obrázků v pixelech.  
   
  [in] *clrTransp*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje průhlednou barvu na obrázku.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje průhlednou barvu na obrázku.  
   
  [in] *hImageList*  
  Popisovač do seznamu předem image.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Index založený na nule kartě.  
   
  [in] *barva*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu nového textu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu nového textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  

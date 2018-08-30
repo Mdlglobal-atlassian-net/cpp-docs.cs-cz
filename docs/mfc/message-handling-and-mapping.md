@@ -1,5 +1,5 @@
 ---
-title: Zpracování a mapování zpráv | Microsoft Docs
+title: Zpracování a mapování zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 11ac9e794aef374012f2b15faa7e93b907f6a15c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194538"
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
-Rodina Tento článek popisuje zpracování zprávy a příkazy pomocí rozhraní MFC framework a jak se připojit je k jejich funkcím obslužných rutin.  
+Řada Tento článek popisuje způsob zpracování zprávy a příkazy v rámci rozhraní knihovny MFC a způsob jejich připojení k příslušným obslužným funkcím.  
   
- Tradiční aplikace pro Windows jsou zpracovávány zpráv systému Windows v velké Switch v postupu okno. Místo toho používá MFC [zprávy mapy](../mfc/message-categories.md) mapovat přímé zprávy členské funkce distinct třídy. Mapy zpráv jsou efektivnější než virtuální funkce pro tento účel, které umožňují zprávy zpracovávat objekt nejvhodnější C++ – aplikace, dokumentu, zobrazení a tak dále. Můžete namapovat do jedné zprávy nebo rozsah zpráv, identifikátory příkazů nebo řízení ID.  
+ Tradiční aplikace pro Windows Windows zprávy jsou zpracovány v příkazu switch velké v proceduru okna. Knihovna MFC používá místo toho [zprávy maps](../mfc/message-categories.md) k mapování přímé zprávy na členské funkce různých tříd. Mapy zpráv jsou účinnější než virtuální funkce pro tento účel a umožňují zprávy zpracovávat nejvhodnější objekt jazyka C++ – aplikace, dokumentu, zobrazení a tak dále. Můžete mapovat do jedné zprávy nebo zprávy, ID příkazů rozsah nebo ovládací prvek ID.  
   
- Wm_command – zprávy – obvykle generují nabídky, tlačítek panelu nástrojů nebo akcelerátorů – také používat mechanismus map zpráv. MFC definuje standard [směrování](../mfc/command-routing.md) příkaz zpráv mezi aplikace, s rámečkem oken, zobrazení a aktivní dokumenty v programu. Můžete přepsat toto směrování, pokud je potřeba.  
+ Wm_command – zprávy – obvykle generovaných nabídek, tlačítek panelu nástrojů nebo akcelerátory – také použití mechanismu mapování zprávy. MFC definuje standardní [směrování](../mfc/command-routing.md) příkaz zpráv mezi aplikace, rámec okna, zobrazení a aktivní dokumenty v programu. Můžete přepsat, toto směrování, pokud je potřeba.  
   
- Mapy zpráv také zadat způsob aktualizace objektů uživatelského rozhraní (například nabídky a tlačítka panelu nástrojů), povolení nebo zakázání je podle aktuálního kontextu.  
+ Mapy zpráv také zadat způsob aktualizace objektů uživatelského rozhraní (jako jsou nabídky a tlačítka panelu nástrojů), povolení nebo zakázání je tak, aby odpovídaly aktuálním kontextu.  
   
- Obecné informace o zprávy a fronty zpráv v systému Windows najdete v tématu [zprávy a fronty zpráv](http://msdn.microsoft.com/library/windows/desktop/ms632590) ve Windows SDK.  
+ Obecné informace o zprávy a fronty zpráv ve Windows najdete v tématu [zprávy a fronty zpráv](https://msdn.microsoft.com/library/windows/desktop/ms632590) v sadě Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)  
   
--   [Jakým způsobem volá rámec obslužné rutiny zpráv](../mfc/how-the-framework-calls-a-handler.md)  
+-   [Jakým způsobem volá framework obslužné rutiny zpráv](../mfc/how-the-framework-calls-a-handler.md)  
   
 -   [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)  
   

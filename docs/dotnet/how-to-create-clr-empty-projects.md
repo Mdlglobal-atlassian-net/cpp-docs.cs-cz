@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření prázdných projektů CLR | Microsoft Docs'
+title: 'Postupy: vytváření prázdných projektů CLR | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128511"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212706"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Postupy: Vytváření prázdných projektů CLR
-Pokud chcete vytvořit prázdný projekt CLR, použijte **prázdný projekt CLR** šablony, která je k dispozici z **nový projekt** dialogové okno.  
+Chcete-li vytvořit prázdný projekt CLR, použijte **prázdný projekt CLR** šablonu, která je k dispozici **nový projekt** dialogové okno.  
   
 > [!NOTE]
->  Vzhled funkcí v prostředí IDE, může záviset na aktivním nastavení nebo edici a může lišit od těch popsaných v nápovědě. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Vzhled funkcí v rozhraní IDE může záviset na aktivních nastaveních nebo edici a mohou lišit od těch popsaných v nápovědě. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-clr-empty-project"></a>Chcete-li vytvořit prázdný projekt CLR  
   
-1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu**.  
+1.  Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
      **Nový projekt** zobrazí se dialogové okno.  
   
-2.  V části **nainstalovaných šablonách**, klikněte na tlačítko **Visual C++** uzlu, jinak klikněte **CLR** uzlu. Vyberte **prázdný projekt CLR** ikonu.  
+2.  V části **nainstalované šablony**, klikněte na tlačítko **Visual C++** uzel; potom klikněte na tlačítko **CLR** uzlu. Zvolte **prázdný projekt CLR** ikonu.  
   
 3.  V **název** zadejte jedinečný název pro vaši aplikaci.  
   
     > [!NOTE]
-    >  Můžete také zadat další nastavení projektu a řešení od **nový projekt** dialogové okno, ale tato nastavení nejsou povinné.  
+    >  Můžete také zadat další nastavení projektu a řešení od **nový projekt** dialogovému oknu, ale tato nastavení se nevyžadují.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
 ## <a name="see-also"></a>Viz také  
  [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)   

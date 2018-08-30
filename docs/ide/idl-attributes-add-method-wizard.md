@@ -1,5 +1,5 @@
 ---
-title: IDL – atributy, Průvodce přidáním metody | Microsoft Docs
+title: IDL – atributy, Průvodce přidáním metody | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2c7f7784e57f0dc66b6a4c77565016d17420eb55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219119"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL – atributy, Průvodce přidáním metody
-Tato stránka Průvodce přidáním metody použijte k určení nastavení rozhraní definice jazyka IDL () pro metodu.  
+Na této stránce Průvodce přidáním metody k určení nastavení jakékoli interface definition language (IDL) pro metodu.  
   
  **id**  
- Nastaví číselný Identifikátor, který identifikuje metodu. V tématu [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) v *MIDL odkazu*.  
+ Nastaví číselný Identifikátor, který identifikuje metodu. Zobrazit [id](/windows/desktop/Midl/id) v *MIDL odkazu*.  
   
- Toto políčko není dostupná pro vlastní rozhraní a není k dispozici pro odesílající MFC rozhraní.  
+ Toto pole není k dispozici pro vlastní rozhraní a není k dispozici pro odesílající rozhraní knihovny MFC.  
   
  **call_as**  
- Určuje název vzdálené metody, ke kterému se dá namapovat tato metoda místní. V tématu [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) v *MIDL odkazu*.  
+ Určuje název vzdálené metody, do které je možné mapovat tato metoda místní. Zobrazit [call_as](/windows/desktop/Midl/call-as) v *MIDL odkazu*.  
   
- Není k dispozici pro odesílající MFC rozhraní.  
+ Není k dispozici pro odesílající rozhraní knihovny MFC.  
   
  **helpcontext**  
- Určuje Identifikátor kontext, který umožňuje uživateli zobrazit informace o této metodě v souboru nápovědy. V tématu [HelpContext –](http://msdn.microsoft.com/library/windows/desktop/aa366851) v *MIDL odkazu*.  
+ Určuje ID kontextu, který umožňuje uživateli zobrazit informace o této metodě v souboru nápovědy. Zobrazit [helpcontext](/windows/desktop/Midl/helpcontext) v *MIDL odkazu*.  
   
- Není k dispozici pro odesílající MFC rozhraní.  
+ Není k dispozici pro odesílající rozhraní knihovny MFC.  
   
  **helpstring**  
- Určuje řetězec znaků, který se používá k popisu elementu, na který se vztahuje. Ve výchozím nastavení je nastavena na "metoda *název metody*." V tématu [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) v *MIDL odkazu*.  
+ Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje. Ve výchozím nastavení, je nastavena "metoda *název metody*." Zobrazit [helpstring](/windows/desktop/Midl/helpstring) v *MIDL odkazu*.  
   
- Není k dispozici pro odesílající MFC rozhraní.  
+ Není k dispozici pro odesílající rozhraní knihovny MFC.  
   
  **Další atributy**  
- Není k dispozici pro odesílající MFC rozhraní.  
+ Není k dispozici pro odesílající rozhraní knihovny MFC.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|**hidden**|Určuje, že metoda existuje, ale by se neměly zobrazovat v prohlížeči uživatele. V tématu [Skrytá](http://msdn.microsoft.com/library/windows/desktop/aa366861) v *MIDL odkazu*.|  
-|**Zdroj**|Označuje, že je uživatel členem metodu zdroj událostí systému. V tématu [zdroj](http://msdn.microsoft.com/library/windows/desktop/aa367166) v *MIDL odkazu*.|  
-|`local`|Kompilátoru MIDL Určuje, že metoda není vzdálená. V tématu [místní](http://msdn.microsoft.com/library/windows/desktop/aa367071) v *MIDL odkazu*.|  
-|**restricted**|Určuje metodu nelze volat libovolně. V tématu [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) v *MIDL odkazu*.|  
-|**vararg**|Určuje, že metoda přijímá proměnný počet argumentů. K tomu, poslední argument musí být typu bezpečné pole **VARIANT** typ, který obsahuje všechny zbývající argumenty. V tématu [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) v *MIDL odkazu*.|  
+|**hidden**|Označuje, jestli metoda existuje, ale nebude se zobrazovat v prohlížeči uživatele. Zobrazit [skryté](/windows/desktop/Midl/hidden) v *MIDL odkazu*.|  
+|**Zdroj**|Označuje, že člen metoda je zdrojem událostí. Zobrazit [zdroj](/windows/desktop/Midl/source) v *MIDL odkazu*.|  
+|`local`|Určuje kompilátor MIDL o tom, že metoda není vzdálený. Zobrazit [místní](/windows/desktop/Midl/local) v *MIDL odkazu*.|  
+|**restricted**|Určuje metodu nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) v *MIDL odkazu*.|  
+|**vararg**|Určuje, že tato metoda přebírá proměnný počet argumentů. Jak toho dosáhnout, musí být posledním argumentem bezpečné pole **VARIANT** typ, který obsahuje všechny zbývající argumenty. Zobrazit [vararg](/windows/desktop/Midl/vararg) v *MIDL odkazu*.|  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání metody](../ide/adding-a-method-visual-cpp.md)   

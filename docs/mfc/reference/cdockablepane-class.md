@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465490"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223062"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane – třída
 Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Určuje, zda jsou umístěny v horní nebo dolní části podokna karty.|  
 |[CDockablePane::IsTracked](#istracked)|Určuje, zda podokno je přetažen uživatelem.|  
 |[CDockablePane::IsVisible](#isvisible)|Určuje, zda se zobrazuje aktuální podokno.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Interně.|  
+|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Interně.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním při změně nadřazené podokno. (Přepíše [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Volá se rozhraním, když s plovoucí desetinnou čárkou dokovací panel ukotvené v okně s rámečkem.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Volá se rozhraním, když nadřazené v podokně se chystá změna. (Přepíše [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

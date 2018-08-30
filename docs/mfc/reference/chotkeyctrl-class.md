@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337255"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206263"
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
 Poskytuje funkce ovládacího prvku Windows běžné výměně klíče.  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Když uživatel se rozhodl kombinaci kláves, můžete aplikaci načíst zadanou kombinaci kláves z ovládacího prvku a pomocí WM_SETHOTKEY nastavení klávesové zkratky v systému. Vždy, když uživatel stiskne klávesovou zkratku po tomto datu, z jakékoliv části systému, určená ve zprávě WM_SETHOTKEY okno obdrží zprávu WM_SYSCOMMAND zadání SC_HOTKEY. Tato zpráva aktivuje okně, které obdrží. Klávesové zkratky zůstane platný až do aplikace, která volá WM_SETHOTKEY ukončí.  
   
- Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.  
+ Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.  
   
  Další informace o používání `CHotKeyCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Zobrazit [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK pro další informace.  
+ Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Zobrazit [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK pro další informace.  
   
  *Rect*  
  Určuje velikost a umístění výměně klíčů ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Další informace najdete v tématu [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK.  
+ Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Další informace najdete v tématu [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  

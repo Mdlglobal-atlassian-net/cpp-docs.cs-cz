@@ -1,5 +1,5 @@
 ---
-title: vfprintf –, _vfprintf_l –, vfwprintf –, _vfwprintf_l – | Microsoft Docs
+title: vfprintf – _vfprintf_l –, vfwprintf – _vfwprintf_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,16 +45,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45ff050a00382f8e10c38fecd5001e20efcacf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fb905384d2efd75c9f8059b462ed8a6949a90cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216046"
 ---
 # <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
-Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Existují bezpečnější verze tyto funkce; v tématu [vfprintf_s –, _vfprintf_s_l –, vfwprintf_s –, _vfwprintf_s_l –](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
+Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Existují bezpečnější verze těchto funkcí; Zobrazit [vfprintf_s – _vfprintf_s_l –, vfwprintf_s – _vfwprintf_s_l –](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,8 +85,8 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 *Formát*<br/>
 Specifikace formátu.
@@ -101,44 +101,44 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**vfprintf –** a **vfwprintf –** vrátí počet znaků zapsána, pokud dojde k chybě výstup není včetně ukončující znak hodnoty null nebo záporná hodnota. Pokud buď *datového proudu* nebo *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+**vfprintf –** a **vfwprintf –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *stream* nebo *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí má ukazatel na seznam argumentů, pak naformátuje a zapíše daná data na *datového proudu*.
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje poskytnutá data do *stream*.
 
-**vfwprintf –** je verze široká charakterová **vfprintf –**; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **vfprintf –** nepodporuje aktuálně výstup do proudu kódování UNICODE.
+**vfwprintf –** je verze širokého znaku **vfprintf –**; tyto dvě funkce se chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **vfprintf –** aktuálně nepodporuje výstup do datového proudu UNICODE.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftprintf –**|**vfprintf –**|**vfprintf –**|**vfwprintf –**|
 |**_vftprintf_l –**|**_vfprintf_l**|**_vfprintf_l**|**_vfwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
 |**vfprintf –**, **_vfprintf_l –**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
 |**vfwprintf –**, **_vfwprintf_l –**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility V systému UNIX.
+\* Vyžaduje se pro kompatibility systému UNIX V.
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

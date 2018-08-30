@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464523"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215608"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 Používá [CEnumerator](../../data/oledb/cenumerator-class.md) pro přístup k datům z enumerátor sady řádků.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.|  
 |[m_szDescription](#szdescription)|Popis zdroje dat nebo enumerátor.|  
 |[m_szName](#szname)|Název zdroje dat nebo enumerátor.|  
-|[m_szParseName](#szparsename)|Řetězec pro [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) získat monikeru pro zdroj dat nebo enumerátor.|  
+|[m_szParseName](#szparsename)|Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tato sada řádků se skládá z zdroje dat a enumerátory viditelné z aktuálního výčtu.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
-Řetězec pro [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) získat monikeru pro zdroj dat nebo enumerátor.  
+Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.  
   
 ### <a name="syntax"></a>Syntaxe  
   

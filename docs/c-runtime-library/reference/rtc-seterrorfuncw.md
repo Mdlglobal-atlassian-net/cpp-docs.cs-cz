@@ -1,5 +1,5 @@
 ---
-title: _Rtc_seterrorfuncw – | Microsoft Docs
+title: _RTC_SetErrorFuncW | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199588"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
-Funkce označí jako obslužná rutina pro vytváření sestav Kontrola chyb za běhu (RTCs).
+Označí funkci jako obslužnou rutinu pro zasílání zpráv o chybách kontroly chyb za běhu (RTCs).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,42 +56,55 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkce*<br/>
-Adresa funkce, která bude zpracovávat Kontrola chyb za běhu.
+*– funkce*<br/>
+Adresa funkce, která bude zpracovávat kontroly chyb za běhu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce dříve definovaném chyba; nebo **NULL** Pokud není žádná dříve definované funkce.
+Dříve definované chybovou funkci; nebo **NULL** Pokud neexistuje žádná dříve definované funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-V nový kód, použijte pouze **_rtc_seterrorfuncw –**. **_Rtc_seterrorfunc –** je pouze součástí knihovny z důvodu zpětné kompatibility.
+V novém kódu používat jenom **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** pouze součástí knihovny z důvodu zpětné kompatibility.
 
-**_Rtc_seterrorfuncw –** zpětné volání se vztahuje pouze na jiné součásti, která byla propojena, ale není globálně.
+**_RTC_SetErrorFuncW** zpětného volání platí pouze pro komponentu, která se připojují, ale ne globálně.
 
-Ujistěte se, že na adresu, kterou předáte **_rtc_seterrorfuncw –** je, že platná chyba zpracování funkce.
+Ujistěte se, že na adresu, kterou můžete předat **_RTC_SetErrorFuncW** je, že platný chyby zpracování funkce.
 
-Pokud k chybě byla přiřazena typu-1 pomocí [_rtc_seterrortype –](rtc-seterrortype.md), není volán zpracování funkce chyb.
+Pokud k chybě byl přiřazen typ-1 s použitím [_RTC_SetErrorType](rtc-seterrortype.md), chyba zpracování funkce není volána.
 
-Než bude možné volat tuto funkci, nejprve je třeba volat jedna z funkcí běhové chyby – kontrolní inicializace. Další informace najdete v tématu [pomocí Run-Time kontroluje bez C Run-Time knihovny](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
+Než bude možné volat tuto funkci, nejprve je třeba volat jednu z funkcí inicializace Kontrola chyb za běhu. Další informace najdete v tématu [použití knihovny Run-Time kontroluje bez the C Run-Time](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
-**_Rtc_error_fnw – definice** je definován následujícím způsobem:
+**_RTC_error_fnW** je definovaná následujícím způsobem:
 
-> **int – TypeDef (__cdecl \*_rtc_error_fnw – definice) (int** *errorType* **, const wchar_t \***  *filename* **, int***linenumber* **, const wchar_t \***  *moduleName* **, const wchar_t \***  *formátu* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 kde:
 
-*errorType* typ chyby, která je zadána [_rtc_seterrortype –](rtc-seterrortype.md).
+*ErrorType.*<br/>
+Typ chyby, která je určená [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*Název souboru* zdrojový soubor, kde došlo k chybě, nebo hodnota null, pokud je k dispozici žádné informace o ladění.
+*Název souboru*<br/>
+Zdrojový soubor, ve kterém došlo k chybě, nebo hodnota null, pokud nejsou dostupné žádné ladicí informace.
 
-*lineNumber* na řádku *filename* kde došlo k chybě, nebo 0, pokud je k dispozici žádné informace o ladění.
+*Číslo řádku*<br/>
+Na řádku *filename* kde došlo k selhání, nebo 0, pokud nejsou dostupné žádné ladicí informace.
 
-*Název modulu* knihovna DLL nebo název spustitelného souboru, kde došlo k chybě.
+*Název modulu:*<br/>
+Knihovna DLL nebo název spustitelného souboru, kde došlo k chybě.
 
-*Formát* printf styl řetězec k zobrazení chybovou zprávu, pomocí zbývající parametrů. První argument funkce VA_ARGLIST je číslo RTC chyby, které došlo k chybě.
+*Formát*<br/>
+řetězec ve stylu printf zobrazíte chybovou zprávu, pomocí zbývajících parametrů. Prvním argumentem funkce VA_ARGLIST je číslo RTC chyby, ke které došlo.
 
-Pro příklad, který ukazuje způsob použití **_rtc_error_fnw – definice**, najdete v části [nativní Run-Time kontroluje přizpůsobení](/visualstudio/debugger/native-run-time-checks-customization).
+Příklad, který ukazuje způsob použití **_RTC_error_fnW**, naleznete v tématu [přizpůsobení nativní kontroly za běhu](/visualstudio/debugger/native-run-time-checks-customization).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -103,9 +116,9 @@ Další informace najdete v tématu [kompatibility](../../c-runtime-library/comp
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
 [Kontrola chyb za běhu](../../c-runtime-library/run-time-error-checking.md)<br/>

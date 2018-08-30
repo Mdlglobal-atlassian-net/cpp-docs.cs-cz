@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879280"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201334"
 ---
 # <a name="iolecontrolimpl-class"></a>Iolecontrolimpl – třída
 Tato třída poskytuje výchozí implementaci třídy `IOleControl` rozhraní a implementuje `IUnknown`.  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|Informuje o ovládací prvek, že uživatel stiskl zadané stisk klávesy. Implementace knihovny ATL vrátí E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída `IOleControlImpl` poskytuje výchozí implementaci třídy [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
+ Třída `IOleControlImpl` poskytuje výchozí implementaci třídy [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol) rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
  **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>Poznámky  
  `FreezeEvents` Vrátí hodnotu S_OK.  
   
- Zobrazit [: IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) ve Windows SDK.  
+ Zobrazit [: IOleControl::FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) ve Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Vyplní informace o chování klávesnice ovládacího prvku.  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) ve Windows SDK.  
+ Zobrazit [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí E_NOTIMPL.  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) ve Windows SDK.  
+ Zobrazit [IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) ve Windows SDK.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Informuje o ovládací prvek, že uživatel stiskl zadané stisk klávesy.  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) ve Windows SDK.  
+ Zobrazit [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ioleobjectimpl – třída](../../atl/reference/ioleobjectimpl-class.md)   
- [Rozhraní – ovládací prvky ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Přehled tříd](../../atl/atl-class-overview.md)

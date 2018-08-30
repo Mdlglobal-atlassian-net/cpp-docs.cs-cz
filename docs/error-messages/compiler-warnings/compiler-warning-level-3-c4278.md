@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4278 | Microsoft Docs
+title: Upozornění (úroveň 3) C4278 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b556166f61c5d77ac34fb7243ac25d5baeaa2b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f63337de2e14b1cb0f9d854df962ab2aa9c8014e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296673"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205778"
 ---
-# <a name="compiler-warning-level-3-c4278"></a>C4278 kompilátoru upozornění (úroveň 3)
-"identifikátor": identifikátor v knihovny typů, tlb' je již makra. použít kvalifikátor 'přejmenovat.  
-  
- Při použití [#import](../../preprocessor/hash-import-directive-cpp.md), identifikátoru v typelib importujete se pokouší deklarovat identifikátor ***identifikátor***. To je však již symbol platný.  
-  
- Použití `#import` **přejmenovat** atribut alias přiřadit symbol v knihovně typů.
+# <a name="compiler-warning-level-3-c4278"></a>Kompilátor upozornění (úroveň 3) C4278
+
+> "*identifikátor*': identifikátor v knihovně typů '*vyrovnávací paměti tlb*" už je makro; použijte kvalifikátor "přejmenovat"
+
+Při použití [#import](../../preprocessor/hash-import-directive-cpp.md), identifikátor v knihovně typů, který importujete se pokouší o deklaraci identifikátoru *identifikátor*. To je však již symbol platný.
+
+Použití `#import` **přejmenovat** atribut přiřadit alias symbolů v knihovně typů.

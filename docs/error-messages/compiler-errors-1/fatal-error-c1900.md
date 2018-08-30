@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1900 | Microsoft Docs
+title: Závažná chyba C1900 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220278"
 ---
 # <a name="fatal-error-c1900"></a>Závažná chyba C1900
-IL Neshoda mezi verzí 'tool1' 'Číslo1' a 'tool2' verze 'číslo2.  
-  
- Nástroje pro spouštění v různých předává kompilátoru se neshodují. ***Číslo1*** a ***číslo2*** naleznete v souborech kalendářní data. Například při průchodu 1, kompilátoru front end běží (c1.dll) a při průchodu 2, kompilátor back end běží (c2.dll). Data v souborech se musí shodovat.  
-  
- Chcete-li tento problém vyřešit, ujistěte se, zda všechny aktualizace byla použita k sadě Visual Studio. Pokud potíže potrvají, použijte **programy a funkce** v Ovládacích panelech opravy a nové instalace sady Visual Studio.
+
+> IL – Neshoda mezi "*tool1*'version'*Číslo1*"a"*tool2*'version'*číslo2*.
+
+Nástroje pro spuštění v různých průchody kompilátoru se neshodují. *Číslo1* a *číslo2* odkazují na data na souborech. Například v kroku 1, kompilátor front-end spuštění (c1.dll) a v kroku 2, kompilátor back-end spuštění (c2.dll). Data se soubory se musí shodovat.
+
+Chcete-li vyřešit tento problém, ujistěte se, že všechny aktualizace se použily k sadě Visual Studio. Pokud se problém nevyřeší, použijte **programy a funkce** v Ovládacích panelech Windows opravte nebo přeinstalujte Visual Studio.

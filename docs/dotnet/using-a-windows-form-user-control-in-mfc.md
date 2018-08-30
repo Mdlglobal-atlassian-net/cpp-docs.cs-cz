@@ -1,5 +1,5 @@
 ---
-title: Uživatelský ovládací prvek pomocí Windows Form v prostředí MFC | Microsoft Docs
+title: Použití Windows v prostředí MFC formuláře uživatelského ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,36 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222105"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
 
-Použití tříd MFC Windows Forms podpory, můžete hostovat ovládací prvky Windows Forms v aplikacích MFC jako ovládací prvek ActiveX v dialogových oknech MFC nebo zobrazení. Kromě toho může být hostovaný modelu Windows Forms jako dialogových oken MFC.
+Pomocí třídy pro podporu knihovny MFC Windows Forms může hostovat ovládacích prvků Windows Forms v rámci vašich aplikací knihovny MFC jako ovládací prvek ActiveX v dialogových oknech MFC nebo zobrazení. Kromě toho je možné hostovat modelu Windows Forms jako dialogová okna knihovny MFC.
 
-Následující části popisují postup:
+Následující části popisují, jak:
 
 - Hostování ovládacího prvku Windows Forms v dialogovém okně knihovny MFC.
 
 - Hostování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC.
 
-- Hostitel Windows Forms formuláře jako dialogového okna knihovny MFC.
+- Hostování formuláře Windows Forms jako dialogového okna knihovny MFC.
 
 > [!NOTE]
-> MFC Windows Forms integrace funguje jenom v projektech, které jsou dynamicky propojené s knihovnou MFC (projekty, ve kterém `_AFXDLL` je definována).
+> Integrace formulářů Windows MFC funguje jenom v projektech, které dynamicky propojit s knihovnou MFC (projekty, ve kterém `_AFXDLL` je definována).
 
 > [!NOTE]
-> Když vytvoříte aplikaci pomocí privátního (upravené) kopie rozhraní MFC Windows Forms DLL (mfcmifc80.dll), se nezdaří instalace v mezipaměti GAC, pokud je klíč Microsoft nahradit klíč dodavatele. Další informace o podepisování sestavení najdete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Když vytváříte aplikaci pomocí privátního (upravené) kopírování z rozhraní Windows Forms knihovny MFC DLL (mfcmifc80.dll), dojde k instalaci v mezipaměti GAC, není-li nahradit klíč Microsoftu s vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Ukázkové aplikace pomocí Windows Forms, najdete v části [BirthdayPicker Sample: ukazuje rozhraní .NET Framework prostředky s Windows Forms](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [ukázka kalkulačku: Windows Forms Pocket Calculator](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)a [ Ukázka Scribble: MDI kreslení aplikace](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
-
-Ukázkové aplikace, která ukazuje použití MFC modelu Windows Forms, najdete v části [integrace produktů Windows Forms a MFC](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
-Pokud vaše aplikace MFC používá Windows Forms, budete muset znovu distribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../ide/redistributing-the-mfc-library.md).
+Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../ide/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -77,9 +73,9 @@ Pokud vaše aplikace MFC používá Windows Forms, budete muset znovu distribuov
 
 [CommandHandler](../atl/commandhandler.md)
 
-[DDX_ManagedControl –](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)
 
-[UICheckState](../mfc/reference/uicheckstate-enumeration.md)
+[Uicheckstate –](../mfc/reference/uicheckstate-enumeration.md)
 
 ## <a name="related-sections"></a>Související oddíly
 
@@ -87,7 +83,7 @@ Pokud vaše aplikace MFC používá Windows Forms, budete muset znovu distribuov
 
 [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/index)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)  
 [Zobrazení formulářů](../mfc/form-views-mfc.md)  

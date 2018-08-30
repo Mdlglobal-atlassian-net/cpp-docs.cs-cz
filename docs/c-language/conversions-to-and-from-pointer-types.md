@@ -1,5 +1,5 @@
 ---
-title: Převod na a z typů ukazatele | Microsoft Docs
+title: Převod na a z typů ukazatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384291"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216095"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Převod na a z typů ukazatele
 Ukazatel na jeden typ hodnoty lze převést na ukazatel na jiný typ. Výsledek však může být nedefinovaný z důvodu požadavků na přiřazení a velikostí různých typů v úložišti. Ukazatel na objekt lze převést na ukazatel na objekt, jehož typ vyžaduje méně nebo stejně striktní zarovnání úložiště, a beze změny také zpět.  
@@ -41,9 +41,9 @@ Ukazatel na jeden typ hodnoty lze převést na ukazatel na jiný typ. Výsledek 
   
 -   Je-li celočíselný typ stejné velikosti jako typ ukazatele, převod pouze zajistí, že je celočíselný typ považován za ukazatel (celé číslo bez znaménka).  
   
--   Pokud je velikost integrální typu liší od velikost je ukazatel typu, integrální typ nejprve převeden na velikost ukazatele, pomocí cesty převod uvedených v tabulkách [převod z podepsané integrálních typů](../c-language/conversions-from-signed-integral-types.md) a [ Převod z nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md). Poté je považován za hodnotu ukazatele.  
+-   Je-li velikost celočíselného typu se liší od velikosti typu ukazatele, celočíselný typ nejprve převeden na velikost ukazatele pomocí cest převodu dle tabulek [převod z celočíselných typů se znaménkem](../c-language/conversions-from-signed-integral-types.md) a [ Převod z celočíselných typů bez znaménka](../c-language/conversions-from-unsigned-integral-types.md). Poté je považován za hodnotu ukazatele.  
   
- Celočíselné konstantní výraz s hodnotou 0 nebo takový výraz přetypovat na typ **void \***  lze převést typ přetypování pomocí přiřazení nebo porovnání se ukazatel libovolného typu. Tím dojde k vytvoření nulového ukazatele, který je roven jinému nulovému ukazateli stejného typu, avšak tento nulový ukazatel není roven jinému ukazateli na funkci nebo objekt. Celá čísla jiná než konstantní 0 lze převést na typ ukazatele, ale výsledek není přenosný.  
+ Celočíselný konstantní výraz s hodnotou 0 nebo takový výraz přetypovaný na typ **void** <strong>\*</strong> lze převést přetypováním, přiřazením nebo porovnáním ukazatelem libovolného typu. Tím dojde k vytvoření nulového ukazatele, který je roven jinému nulovému ukazateli stejného typu, avšak tento nulový ukazatel není roven jinému ukazateli na funkci nebo objekt. Celá čísla jiná než konstantní 0 lze převést na typ ukazatele, ale výsledek není přenosný.  
   
 ## <a name="see-also"></a>Viz také  
  [Převody přiřazení](../c-language/assignment-conversions.md)

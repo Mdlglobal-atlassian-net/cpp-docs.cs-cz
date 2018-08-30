@@ -1,5 +1,5 @@
 ---
-title: Třída CLinearTransitionFromSpeed | Microsoft Docs
+title: Clineartransitionfromspeed – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039479"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203305"
 ---
-# <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed – třída
-Zapouzdří lineární rychlost přechodu.  
+# <a name="clineartransitionfromspeed-class"></a>Clineartransitionfromspeed – třída
+Zapouzdřuje přechod lineární rychlostí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,13 +46,13 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Vytvoří objekt přechod lineární rychlost a inicializuje s rychlostí a konečná hodnota.|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Vytvoří objekt přechod s lineární rychlostí a inicializuje ji s rychlostí a konečná hodnota.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CLinearTransitionFromSpeed::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -62,20 +62,20 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Absolutní hodnota proměnné rychlosti.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během přechodu lineární rychlost, hodnota proměnné změny animace na určenou míru. Doba trvání přechodu je určen podle rozdíl mezi počáteční hodnota a zadaný konečná hodnota. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během přechodu lineární rychlostí hodnota proměnné animace změní na určenou míru. Dobu trvání přechodu určuje rozdíl mezi počáteční hodnotou a zadané konečnou hodnotu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
- [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
+ [Clineartransitionfromspeed –](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- Vytvoří objekt přechod lineární rychlost a inicializuje s rychlostí a konečná hodnota.  
+ Vytvoří objekt přechod s lineární rychlostí a inicializuje ji s rychlostí a konečná hodnota.  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -91,7 +91,7 @@ CLinearTransitionFromSpeed(
  Hodnota proměnné animace na konci přechodu.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
  Hodnota proměnné animace na konci přechodu.  

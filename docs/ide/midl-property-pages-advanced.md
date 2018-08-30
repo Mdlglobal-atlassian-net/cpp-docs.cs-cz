@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197957"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL – stránky vlastností: Upřesnit
 **Upřesnit** stránku vlastností v **MIDL** složky určuje následující možnosti kompilátoru MIDL:  
   
--   Povolit kontrolu chyb ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Povolit kontrolu chyb ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Kontrolovat přidělení paměti ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Kontrolovat přidělení paměti ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Kontrolovat rozsah ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Kontrolovat rozsah ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Kontrolovat rozsah výčtu ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Kontrolovat rozsah výčtu ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Kontrolovat referenční ukazatele ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Kontrolovat referenční ukazatele ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Kontrolovat Data zástupných procedur ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Kontrolovat Data zástupných procedur ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Ověřit parametry ([/ robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Ověřit parametry ([/ robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Zarovnání členů struktury ([/zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Zarovnání členů struktury ([/zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Přesměrovat výstup ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Přesměrovat výstup ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Možnosti předzpracování jazyka C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Možnosti předzpracování jazyka C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Zrušit Definice preprocesoru ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Zrušit Definice preprocesoru ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* / Robustní platí pouze pro použití při sestavování pro Windows 2000 nebo novější počítače. Pokud se sestavení projektu ATL a chcete použít / robust, změňte tento řádek v souboru dlldatax.c:  
   

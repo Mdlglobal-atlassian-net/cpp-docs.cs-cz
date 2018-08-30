@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110005"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212166"
 ---
 # <a name="reflection-ccli"></a>Reflexe (C++/CLI)
 
@@ -42,12 +42,12 @@ Reflexe umožňuje známé datové typy se zkontroloval za běhu. Reflexe umož�
 
 Mějte na paměti, že zadaný název sestavení se silným názvem (viz [vytvoření a použití sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), který obsahuje sestavení verze, jazykovou verzi a podpisové informace. Všimněte si také, že název oboru názvů, ve kterém je definován typ dat, může být načten spolu s názvem základní třídy.
 
-Nejběžnější způsob přístupu k funkcím reflexe, je prostřednictvím <xref:System.Object.GetType%2A> metody. Tato metoda poskytuje [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), ze které jsou odvozeny všechny třídy uvolnění paměti.
+Nejběžnější způsob přístupu k funkcím reflexe, je prostřednictvím <xref:System.Object.GetType%2A> metody. Tato metoda poskytuje [System::Object](https://msdn.microsoft.com/library/system.object.aspx), ze které jsou odvozeny všechny třídy uvolnění paměti.
 
 > [!NOTE]
 > Reflexe na .exe vytvořených pomocí kompilátoru jazyka Visual C++ je povolen, pouze pokud je sestavován .exe **/CLR: pure** nebo **/CLR: safe** – možnosti kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není k dispozici v sadě Visual Studio 2017. Zobrazit [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace.
 
-Další informace najdete v tématu [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Další informace najdete v tématu [System.Reflection Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Příklad: GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Příklad: Kontrola sestavení
 
-Pokud výše uvedený kód je zkompilován do knihovny DLL s názvem vcpp_reflection_6.dll, pak můžete reflexe pro kontrolu obsahu tohoto sestavení. To zahrnuje použití statické funkce rozhraní API reflexe [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) načíst sestavení. Tato funkce vrátí adresu **sestavení** objekt, který může být dotazován o moduly a typy v rámci.
+Pokud výše uvedený kód je zkompilován do knihovny DLL s názvem vcpp_reflection_6.dll, pak můžete reflexe pro kontrolu obsahu tohoto sestavení. To zahrnuje použití statické funkce rozhraní API reflexe [Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) načíst sestavení. Tato funkce vrátí adresu **sestavení** objekt, který může být dotazován o moduly a typy v rámci.
 
-Jakmile systém reflexe úspěšně načte sestavení pole **typ** objekty získáte pomocí [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) funkce. Každý prvek pole obsahuje informace o jiný typ, i když v tomto případě je definována pouze jednu třídu. Využitím smyčky, každý **typ** v tomto poli je dotazován členy typu pomocí **Type::GetMembers** funkce. Tato funkce vrací pole **MethodInfo** objekty, každý objekt, který obsahuje informace o členskou funkci, datový člen nebo vlastnost v typu.
+Jakmile systém reflexe úspěšně načte sestavení pole **typ** objekty získáte pomocí [Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) funkce. Každý prvek pole obsahuje informace o jiný typ, i když v tomto případě je definována pouze jednu třídu. Využitím smyčky, každý **typ** v tomto poli je dotazován členy typu pomocí **Type::GetMembers** funkce. Tato funkce vrací pole **MethodInfo** objekty, každý objekt, který obsahuje informace o členskou funkci, datový člen nebo vlastnost v typu.
 
 Všimněte si, že seznam metod zahrnuje funkce explicitně definované v **TestClass** a funkce se implicitně dědí z **System::Object** třídy. Jako součást popisovaný v .NET, nikoli v jazyce Visual C++ syntaxi vlastnosti se zobrazí jako základní datový člen přístupný funkce get/set. Funkce get/set se v tomto seznamu zobrazí jako běžné metody. Reflexe je podporované prostřednictvím modul common language runtime není kompilátorem jazyka Visual C++.
 

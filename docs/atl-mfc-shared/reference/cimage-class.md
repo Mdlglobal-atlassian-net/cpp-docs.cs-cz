@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213611"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 `CImage` poskytuje podporu rozšířenou rastrový obrázek, včetně možnosti k načtení a uložení Image ve formátu JPEG, GIF, BMP a Portable Network Graphics (PNG).  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  Funkce alfa blending pro zdroj a cílovým bitmapám, globální alfa hodnotu použít celý zdrojovou bitmapu a informace o formátu pro zdrojovou bitmapu. Funkce blendu zdrojových a cílových jsou aktuálně omezené na AC_SRC_OVER.  
   
  *pointDest*  
- Odkaz na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.  
+ Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.  
   
  *nDestWidth*  
  Šířka v logické jednotky cílového obdélníku.  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  Výška v logických jednotkách, zdrojového obdélníku.  
   
  *rectDest*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
   
  *rectSrc*  
  Odkaz na `RECT` strukturu, identifikace zdroji.  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  Logickou souřadnici y levého horního rohu cílového obdélníku.  
   
  *dwROP*  
- Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](http://msdn.microsoft.com/library/windows/desktop/dd183370) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.  
+ Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.  
   
  *pointDest*  
- A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levém horním rohu cílového obdélníku.  
+ A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levém horním rohu cílového obdélníku.  
   
  *nDestWidth*  
  Šířka v logické jednotky cílového obdélníku.  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  Logickou souřadnici y levého horního rohu zdrojového obdélníku.  
   
  *rectDest*  
- A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura označující cílového obdélníku.  
+ A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura označující cílového obdélníku.  
   
  *pointSrc*  
  A `POINT` struktura označující levém horním rohu zdrojového obdélníku.  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [přenos bitových bloků](http://msdn.microsoft.com/library/windows/desktop/dd183370) v sadě Windows SDK.  
+ Další informace najdete v tématu [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK.  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  Vytvoří `CImage` objektu.  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - Tabulky barev se skládá ze tří masky barva DWORD, které v uvedeném pořadí, zadejte komponenty červené, zelené a modré každý pixel BI_BITFIELDS formát nekomprimované. Toto je platný při použití s 16 a 32 bpp rastrových obrázků.  
   
  *pdwBitfields*  
- Použít jenom v případě *eCompression* je nastavena na BI_BITFIELDS, jinak ho musí mít hodnotu NULL. Ukazatel na pole tři vyčíslení DWORD zadání bity každý pixel, které se používají pro komponenty červené, zelené a modré barvy. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK.  
+ Použít jenom v případě *eCompression* je nastavena na BI_BITFIELDS, jinak ho musí mít hodnotu NULL. Ukazatel na pole tři vyčíslení DWORD zadání bity každý pixel, které se používají pro komponenty červené, zelené a modré barvy. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK.  
   
  *dwFlags*  
  Určuje, zda má objekt bitmap alfa kanál. Může být kombinace nuly nebo více z následujících hodnot:  
@@ -578,13 +578,13 @@ BOOL Draw(
  Výška v logických jednotkách, zdrojového obdélníku.  
   
  *rectDest*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
   
  *rectSrc*  
  Odkaz na `RECT` strukturu, identifikace zdroji.  
   
  *pointDest*  
- Odkaz na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.  
+ Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota určuje počet bitů, které definují každý pixel a maximální počet barev v rastrového obrázku.  
   
- Bitů na pixel, je obvykle 1, 4, 8, 16, 24 nebo 32. Zobrazit `biBitCount` členem [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK pro další informace o této hodnotě.  
+ Bitů na pixel, je obvykle 1, 4, 8, 16, 24 nebo 32. Zobrazit `biBitCount` členem [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK pro další informace o této hodnotě.  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Načte červená, zelená, modrá barva hodnoty (RGB) z rozsahu položek na paletě DIB oddílu.  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  Počet zápisy v tabulce barev pro načtení.  
   
  *prgbColors*  
- Ukazatel na pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury načíst barvu tabulky položky.  
+ Ukazatel na pole [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktury načíst barvu tabulky položky.  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  Načte kontext zařízení, který nemá aktuálně vybrán do něj obrázek.  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  Souřadnice y levého horního rohu monochromatický rastrový obrázek.  
   
  *rectSrc*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura zadání souřadnic zdrojového obdélníku.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura zadání souřadnic zdrojového obdélníku.  
   
  *pointMask*  
- A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levý horní roh maska rastrového obrázku.  
+ A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura označující levý horní roh maska rastrového obrázku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná, jinak 0.  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Poznámky  
  Pokud *hbmMask* identifikuje platný monochromatický rastrový obrázek, `PlgBit` používá tento rastrový obrázek k maskování bitů barev dat ze zdrojového obdélníku.  
   
- Tato metoda se vztahuje na Windows NT verze 4.0 nebo vyšší. Zobrazit [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) v sadě Windows SDK pro podrobnější informace.  
+ Tato metoda se vztahuje na Windows NT verze 4.0 nebo vyšší. Zobrazit [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) v sadě Windows SDK pro podrobnější informace.  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Uvolní kontextu zařízení.  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  Počet zápisy v tabulce barev k nastavení.  
   
  *prgbColors*  
- Ukazatel na pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury barvu tabulky položky.  
+ Ukazatel na pole [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktury barvu tabulky položky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda podporuje pouze část bitmap DIB.  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  Výška v logických jednotkách cílového obdélníku.  
   
  *dwROP*  
- Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](http://msdn.microsoft.com/library/windows/desktop/dd183370) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.  
+ Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.  
   
  *rectDest*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
   
  *xSrc*  
  Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  Nenulové, pokud je úspěšná, jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) v sadě Windows SDK.  
+ Další informace najdete v tématu [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) v sadě Windows SDK.  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Zkopíruje bitmapu ze kontext zdrojového zařízení pro toto aktuální kontext zařízení.  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  Barva v zdrojovou bitmapu do považována za průhlednou. Ve výchozím nastavení CLR_INVALID, by měl být použit označující, že barva aktuálně nastavený jako průhledná barva obrázku.  
   
  *rectDest*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, identifikace cíle.  
   
  *xSrc*  
  Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>Viz také  
  [Ukázka MMXSwarm](../../visual-cpp-samples.md)   
  [Ukázka SimpleImage](../../visual-cpp-samples.md)   
- [Bitmap nezávislých na zařízení](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [COM desktopové komponenty ATL](../../atl/atl-com-desktop-components.md) [bitmap nezávislých na zařízení](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [Bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [COM desktopové komponenty ATL](../../atl/atl-com-desktop-components.md) [bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

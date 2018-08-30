@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2ac698466709931259f1df28d6c75aa38b30f2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 656500e69f97481c90cdbea41b8c640f470e7b1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850703"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210014"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 Implementuje OLE třídy factory, která vytváří objekty OLE, jako jsou servery, automatizační objekty a dokumenty.  
@@ -157,7 +157,7 @@ COleObjectFactory(
   
 - `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.  
   
-     Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.  
+     Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.  
   
  *lpszProgID*  
  Ukazatel na řetězec obsahující identifikátor slovní programu, jako je například "Microsoft Excelu."  
@@ -165,7 +165,7 @@ COleObjectFactory(
 ### <a name="remarks"></a>Poznámky  
  Tento objekt použít, ale zaregistrujte ji.  
   
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.  
   
 ##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  Vrátí odkaz na ID třídy OLE, představuje tento objekt pro vytváření.  
@@ -178,7 +178,7 @@ REFCLSID GetClassID() const;
  Představuje odkaz na ID třídy OLE tento objekt pro vytváření.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  Požaduje jedinečný licenční klíč z ovládacího prvku knihovny DLL a ukládá ho do BSTR, na které odkazuje *pbstrKey*.  

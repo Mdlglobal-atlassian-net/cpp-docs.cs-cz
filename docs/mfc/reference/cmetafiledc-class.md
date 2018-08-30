@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338857"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197000"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc – třída
 Implementuje metasoubor systému Windows, který obsahuje posloupnost grafiky zařízení (GDI) příkazy, které můžete zopakovat pro vytvoření požadovaného obrázku nebo textu.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Po odeslání požadované příkazy metasoubor volání `Close` členské funkce, která uzavře metasouborů kontexty zařízení a vrátí popisovač metasouboru. Potom `CMetaFileDC` objektu.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) popisovač metasouboru. poté použít k přehrávání metasoubor opakovaně. Tento metasoubor lze také ovládat pomocí funkcí Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), který zkopíruje metasoubor na disk.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) popisovač metasouboru. poté použít k přehrávání metasoubor opakovaně. Tento metasoubor lze také ovládat pomocí funkcí Windows, jako [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), který zkopíruje metasoubor na disk.  
   
- Pokud je tento metasoubor už nepotřebujete, odstraňte ho z paměti s [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce Windows.  
+ Pokud je tento metasoubor už nepotřebujete, odstraňte ho z paměti s [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) funkce Windows.  
   
  Můžete také implementovat `CMetaFileDC` objektu tak, aby ji zvládne výstup volání i atribut GDI volání, jako `GetTextExtent`. Takové metasoubor je flexibilnější a můžete informace snadno opakovaně použít obecné rozhraní GDI kód, který se často se skládá z kombinace volání výstup a atribut. `CMetaFileDC` Třída dědí dvě kontexty zařízení `m_hDC` a `m_hAttribDC`, z CSP. `m_hDC` Kontextu zařízení zpracovává všechny [CDC](../../mfc/reference/cdc-class.md) GDI výstup volání a `m_hAttribDC` kontextu zařízení zpracovává všechna volání rozhraní GDI CDC atribut. Za normálních okolností kontexty tyto dvě zařízení odkazovat do stejného zařízení. V případě třídy `CMetaFileDC`, atribut řadič domény je standardně nastavená na hodnotu NULL.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Platný HMETAFILE, pokud je funkce úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač Windows metafile lze také použít k manipulaci s metasoubor s funkcemi Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Popisovač Windows metafile lze také použít k manipulaci s metasoubor s funkcemi Windows, jako [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Odstranit tento metasoubor po použití voláním Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce.  
+ Odstranit tento metasoubor po použití voláním Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) funkce.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Objekt context enhanced metafile zařízení se zavře a vrátí popisovač, který identifikuje metasoubor rozšířeného formátu.  

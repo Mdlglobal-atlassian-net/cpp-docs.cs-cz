@@ -1,5 +1,5 @@
 ---
-title: Rozdíly v chování zpracování výjimek v - CLR | Microsoft Docs
+title: Rozdíly v chování zpracování výjimek v - CLR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df2f04e89175855db36790f22e8fd718288603b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217429"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Rozdíly v chování zpracování výjimek v režimu kompilace /CLR
-[Základní koncepce při použití spravovaných výjimek](../dotnet/basic-concepts-in-using-managed-exceptions.md) popisuje zpracování výjimek v spravovaných aplikací. V tomto tématu se rozdíl oproti standardní chování zpracování výjimek a určitá omezení jsou podrobněji. Další informace najdete v tématu [_set_se_translator – funkce](../c-runtime-library/reference/set-se-translator.md).  
+[Základní koncepce při používání spravovaných výjimek](../dotnet/basic-concepts-in-using-managed-exceptions.md) popisuje zpracování výjimek v spravovaných aplikací. V tomto tématu rozdíl oproti standardní chování zpracování výjimek a určitá omezení jsou podrobně popsány v. Další informace najdete v tématu [_set_se_translator funkce](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a> Přechod z a nakonec blokovat.  
- V nativním kódu C/C++, přechod z __**nakonec** bloku pomocí strukturované zpracování výjimek (SEH) je povolen, i když vyvolá upozornění.  V části [/CLR](../build/reference/clr-common-language-runtime-compilation.md), přechod z **nakonec** bloku dojde k chybě:  
+##  <a name="vcconjumpingoutofafinallyblock"></a> Opuštění blok Finally  
+ V nativním kódu C/C++, skok mimo __**nakonec** bloku pomocí zpracování strukturovaných výjimek (SEH) je povolený, i když se vytvoří upozornění.  V části [/CLR](../build/reference/clr-common-language-runtime-compilation.md), jsem přeskočil z celkového počtu **nakonec** blok způsobí chybu:  
   
 ```  
 // clr_exception_handling_4.cpp  
@@ -40,10 +40,10 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Vyvolávání výjimek v rámci filtru výjimek  
- Když dojde k výjimce během zpracování [filtru výjimek](../cpp/writing-an-exception-filter.md) v rámci spravovaného kódu, je výjimka zachycena a zpracován jako filtr, vrátí hodnotu 0.  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Vyvolání výjimek v rámci filtru výjimky  
+ Když je výjimka vyvolána během zpracování [filtr výjimek](../cpp/writing-an-exception-filter.md) v rámci spravovaného kódu, je výjimka zachycena a považována jako Pokud filtr vrátí hodnotu 0.  
   
- Tím se liší od chování v nativním kódu, kde vnořených výjimka vyvolána, **ExceptionRecord** pole **EXCEPTION_RECORD** struktury (jak ho vrátila [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) je nastavena a **příznaky výjimky** pole nastaví 0x10 bit. Následující příklad ukazuje rozdíl v chování:  
+ Tím se liší od chování v nativním kódu, kde je vnořená výjimka vyvolána, **ExceptionRecord** pole **EXCEPTION_RECORD** strukturu (vrácené [ GetExceptionInformation](/windows/desktop/Debug/getexceptioninformation)) je nastavena a **příznaky výjimky** nastaví 0x10 bitové pole. Následující příklad ukazuje rozdíl v chování:  
   
 ```  
 // clr_exception_handling_5.cpp  
@@ -103,10 +103,10 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a> Znovu vyvolá některému programu  
- **/ CLR** nepodporuje opětné vyvolání k výjimce mimo obslužná rutina catch (označované jako některému programu opětovné). Výjimky tohoto typu jsou zpracovány jako standardní C++ opětovné. V případě některému programu opětovné po výjimku active spravované výjimka je zabalená jako C++ výjimky a pak znovu vyvolány. Výjimky tohoto typu může být zachyceny pouze jako výjimku typu [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
+##  <a name="vccondisassociatedrethrows"></a> Znovu vyvolá zrušeným přidružením  
+ **/ CLR** nepodporuje opětné vyvolání výjimky mimo obslužné rutiny catch (říká se zrušeným přidružením přegenerování). Výjimky tohoto typu jsou zpracovány jako standardní přegenerování C++. Pokud se zrušeným přidružením přegenerování dochází, když je aktivní spravované výjimky, výjimky zabalena jako výjimky jazyka C++ a pak znovu vyvolána. Výjimky tohoto typu se dá zachytit jedině jako výjimku typu [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).  
   
- Následující příklad ukazuje spravované výjimky vyvolány jako výjimka C++:  
+ Následující příklad ukazuje spravovaný výjimka znovu vyvolána jako výjimky jazyka C++:  
   
 ```  
 // clr_exception_handling_6.cpp  
@@ -154,8 +154,8 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtry výjimek a exception_continue_execution –  
- Pokud filtr vrátí `EXCEPTION_CONTINUE_EXECUTION` ve spravované aplikaci, se zpracovává jako v případě, že filtr vrátil `EXCEPTION_CONTINUE_SEARCH`. Další informace o těchto konstanty najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md).  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtry výjimek a EXCEPTION_CONTINUE_EXECUTION  
+ Pokud filtr vrátí `EXCEPTION_CONTINUE_EXECUTION` ve spravované aplikaci, je zacházeno, jako by filtr vrátil `EXCEPTION_CONTINUE_SEARCH`. Další informace o těchto konstanty, naleznete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md).  
   
  Následující příklad ukazuje tento rozdíl:  
   
@@ -195,7 +195,7 @@ Counter=-3
 ```  
   
 ##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator – funkce  
- Ve volání funkce překladač nastavení `_set_se_translator`, ovlivňuje pouze úlovky v nespravovaném kódu. Následující příklad ukazuje, toto omezení:  
+ Nastavení funkce translator voláním `_set_se_translator`, ovlivňuje pouze přetáhněte aktivity catch v nespravovaném kódu. Následující příklad ukazuje toto omezení:  
   
 ```  
 // clr_exception_handling_8.cpp  

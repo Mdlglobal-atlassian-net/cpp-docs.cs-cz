@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9968a3601e366628b3539343dde34e956387356a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ea4bfc278e0912248c437123bd1510002a5c3829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201624"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
 Tato třída představuje obálku pro `SECURITY_DESCRIPTOR` struktury.  
@@ -115,7 +115,7 @@ class CSecurityDesc
   
  Aplikace by neměla změnit `SECURITY_DESCRIPTOR` struktura přímo a místo toho by měla používat metody třídy, které jsou k dispozici.  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
 ### <a name="parameters"></a>Parametry  
  *pstr*  
- Ukazatel na řetězec zakončený hodnotou null, který obsahuje [formát řetězce popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379570) má být převeden.  
+ Ukazatel na řetězec zakončený hodnotou null, který obsahuje [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format) má být převeden.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true v případě úspěchu. Vyvolá výjimku při selhání.  
@@ -163,7 +163,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Poznámky  
  Řetězec je možné vytvořit pomocí [CSecurityDesc::ToString](#tostring). Převod popisovače zabezpečení do řetězce usnadňuje ukládání a přenosu.  
   
- Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Načte ovládací prvek informace z popisovače zabezpečení.  
@@ -180,7 +180,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Vrátí true, pokud metoda uspěje, false Pokud selže.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Tato metoda volá [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Načte informace o volitelném řízení přístupu na seznamu (DACL) z popisovače zabezpečení.  
@@ -251,7 +251,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) struktury.  
+ Vrací ukazatel [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struktury.  
   
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Načte informace o systému řízení přístupu (SACL) seznam z popisovače zabezpečení.  
@@ -428,7 +428,7 @@ bool IsSelfRelative() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí true, pokud je popisovač zabezpečení ve formátu self-relative se všechny informace o zabezpečení v souvislém bloku paměti. Vrátí hodnotu false, pokud je popisovač zabezpečení v absolutním formátu. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Vrátí true, pokud je popisovač zabezpečení ve formátu self-relative se všechny informace o zabezpečení v souvislém bloku paměti. Vrátí hodnotu false, pokud je popisovač zabezpečení v absolutním formátu. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Voláním této metody lze převést popisovač zabezpečení na absolutním formátu.  
@@ -441,7 +441,7 @@ bool MakeAbsolute() throw(...);
  Pokud metoda uspěje, false v opačném případě vrátí hodnotu true.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, místo samotného informace. Popisovač zabezpečení ve formátu self-relative informacemi v souvislém bloku paměti. V popisovači samorelativní zabezpečení `SECURITY_DESCRIPTOR` struktura vždycky spustí informace, ale popisovače zabezpečení v jiné součásti můžete vycházet ze struktury v libovolném pořadí. Namísto použití adresy paměti, součástí samorelativní popisovače jsou označeny posun od začátku popisovač zabezpečení. Tento formát je užitečný při popisovače zabezpečení musí být uložená na disku nebo přenášet prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, místo samotného informace. Popisovač zabezpečení ve formátu self-relative informacemi v souvislém bloku paměti. V popisovači samorelativní zabezpečení `SECURITY_DESCRIPTOR` struktura vždycky spustí informace, ale popisovače zabezpečení v jiné součásti můžete vycházet ze struktury v libovolném pořadí. Namísto použití adresy paměti, součástí samorelativní popisovače jsou označeny posun od začátku popisovač zabezpečení. Tento formát je užitečný při popisovače zabezpečení musí být uložená na disku nebo přenášet prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Volání této metody se převést popisovač zabezpečení do seberelativního formátu.  
@@ -454,7 +454,7 @@ bool MakeSelfRelative() throw(...);
  Pokud metoda uspěje, false v opačném případě vrátí hodnotu true.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, nikoli obsahující informace o samotné. Popisovač zabezpečení ve formátu self-relative informacemi v souvislém bloku paměti. V popisovači samorelativní zabezpečení `SECURITY_DESCRIPTOR` struktura vždycky spustí informace, ale popisovače zabezpečení v jiné součásti můžete vycházet ze struktury v libovolném pořadí. Místo adresy paměti součásti popisovače zabezpečení jsou označeny posun od začátku popisovač zabezpečení. Tento formát je užitečný při popisovače zabezpečení musí být uložená na disku nebo přenášet prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, nikoli obsahující informace o samotné. Popisovač zabezpečení ve formátu self-relative informacemi v souvislém bloku paměti. V popisovači samorelativní zabezpečení `SECURITY_DESCRIPTOR` struktura vždycky spustí informace, ale popisovače zabezpečení v jiné součásti můžete vycházet ze struktury v libovolném pořadí. Místo adresy paměti součásti popisovače zabezpečení jsou označeny posun od začátku popisovač zabezpečení. Tento formát je užitečný při popisovače zabezpečení musí být uložená na disku nebo přenášet prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovačů zabezpečení Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Operátor přiřazení.  
@@ -489,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>Parametry  
  *ControlBitsOfInterest*  
- SECURITY_DESCRIPTOR_CONTROL maska, která označuje nastavované řídicí bity. Seznam příznaků, které je možné nastavit, najdete v části [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ SECURITY_DESCRIPTOR_CONTROL maska, která označuje nastavované řídicí bity. Seznam příznaků, které je možné nastavit, najdete v části [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
  *ControlBitsToSet*  
  Masku SECURITY_DESCRIPTOR_CONTROL, která určuje nové hodnoty řídicích bitů určených maskou *ControlBitsOfInterest* masky. Tento parametr může být kombinací příznaků uvedených pro *ControlBitsOfInterest* parametru.  
@@ -498,7 +498,7 @@ bool SetControl(
  Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Tato metoda volá [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Nastaví informace v seznamu volitelných řízení přístupu (DACL). Pokud DACL již existuje v popisovači zabezpečení, se nahradí.  
@@ -592,7 +592,7 @@ bool ToString(
   
 ### <a name="parameters"></a>Parametry  
  *pstr*  
- Ukazatel na řetězec zakončený hodnotou null, která se zobrazí [formát řetězce popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379570).  
+ Ukazatel na řetězec zakončený hodnotou null, která se zobrazí [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format).  
   
  *si*  
  Určuje kombinaci SECURITY_INFORMATION bitové příznaky označující součásti popisovače zabezpečení, které chcete zahrnout do výstupního řetězce.  
@@ -614,12 +614,12 @@ bool ToString(
   
  Pokud seznam DACL má hodnotu NULL a je nastaven bit ovládací prvek SE_DACL_PRESENT v vstupní popisovač zabezpečení, metoda se nezdaří.  
   
- Pokud je DACL hodnoty NULL a bit SE_DACL_PRESENT ovládací prvek kódu není nastavený vstupní popisovač zabezpečení, výsledného řetězce popisovače zabezpečení nemá D: komponenty. Zobrazit [formát řetězce popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379570) další podrobnosti.  
+ Pokud je DACL hodnoty NULL a bit SE_DACL_PRESENT ovládací prvek kódu není nastavený vstupní popisovač zabezpečení, výsledného řetězce popisovače zabezpečení nemá D: komponenty. Zobrazit [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format) další podrobnosti.  
   
- Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

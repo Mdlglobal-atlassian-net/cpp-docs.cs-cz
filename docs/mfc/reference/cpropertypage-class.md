@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203400"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage – třída
 Představuje jednotlivé stránky seznamu vlastností, jinak známé jako dialogové okno Karta.  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Změní na tlačítko OK číst zavřít a zakáže tlačítko Storno po neopravitelné změnit na stránce modální seznam vlastností.|  
 |[CPropertyPage::Construct](#construct)|Vytvoří `CPropertyPage` objektu. Použití `Construct` Pokud chcete zadat parametry v době běhu, nebo pokud používáte pole.|  
-|[CPropertyPage::GetPSP](#getpsp)|Načte Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktura `CPropertyPage` objektu.|  
+|[CPropertyPage::GetPSP](#getpsp)|Načte Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktura `CPropertyPage` objektu.|  
 |[CPropertyPage::OnApply](#onapply)|Volá se rozhraním, když dojde ke kliknutí na tlačítko použít.|  
 |[CPropertyPage::OnCancel](#oncancel)|Volá se rozhraním, když dojde ke kliknutí na tlačítko Storno.|  
 |[CPropertyPage::OnKillActive](#onkillactive)|Volá se rozhraním, když aktuální stránka už není aktivní stránkou. Ověřování dat v tomto poli.|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury. Poskytuje přístup k základní vlastnost parametry stránky.|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury. Poskytuje přístup k základní vlastnost parametry stránky.|  
   
 ## <a name="remarks"></a>Poznámky  
  Jak se standardní dialogová okna, odvoďte třídu z `CPropertyPage` pro každou stránku vašeho seznamu vlastností. Použití `CPropertyPage`-nejprve vytvořit odvozené objekty [cpropertysheet –](../../mfc/reference/cpropertysheet-class.md) objektu a pak vytvořte objekt pro každou stránku, který odkazuje v seznamu vlastností. Volání [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) pro každou stránku v seznamu a zobrazte seznam vlastností voláním [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) pro modální seznam vlastností, nebo [cpropertysheet –:: Vytvoření](../../mfc/reference/cpropertysheet-class.md#create) pro nemodálního seznamu vlastností.  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Načte Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktura `CPropertyPage` objektu.  
+ Načte Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktura `CPropertyPage` objektu.  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  Odkaz na `PROPSHEETPAGE` struktury.  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` je struktura, jejíž členové uložení vlastnosti [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+ `m_psp` je struktura, jejíž členové uložení vlastnosti [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  Výchozí implementace `OnApply` volání `OnOK`.  
   
- Další informace o oznámení poslaných zpráv, když uživatel stiskne použít na tlačítko OK v okně vlastností najdete v tématu [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) v sadě Windows SDK.  
+ Další informace o oznámení poslaných zpráv, když uživatel stiskne použít na tlačítko OK v okně vlastností najdete v tématu [PSN_APPLY](/windows/desktop/Controls/psn-apply) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPropertyPage::OnOK](#onok).  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Když se uživatel rozhodne OK nebo použít tlačítko, rozhraní přijímá [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) oznámení na stránce vlastností. Volání `OnOK` nebudou provedeny při volání [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) vzhledem k tomu, že na stránce vlastností neodešle oznámení v takovém případě.  
+ Když se uživatel rozhodne OK nebo použít tlačítko, rozhraní přijímá [PSN_APPLY](/windows/desktop/Controls/psn-apply) oznámení na stránce vlastností. Volání `OnOK` nebudou provedeny při volání [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) vzhledem k tomu, že na stránce vlastností neodešle oznámení v takovém případě.  
   
  Přepište tato členská funkce implementovat další chování specifické pro aktuálně aktivní stránkou. když uživatel nezavře celý seznam vlastností.  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  Můžete přepsat tato členská funkce k určení některá z akcí, které musí uživatel provést, když se stiskne tlačítko Dokončit. Při přepisování tuto funkci, vrátí hodnotu FALSE, aby seznam vlastností z zničen.  
   
- Další informace o oznámení poslaných zpráv, když uživatel stiskne tlačítko pro dokončení v seznamu vlastností průvodce najdete v tématu [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) v sadě Windows SDK.  
+ Další informace o oznámení poslaných zpráv, když uživatel stiskne tlačítko pro dokončení v seznamu vlastností průvodce najdete v tématu [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) v sadě Windows SDK.  
   
  Další informace o tom, aby seznamu vlastností wizard-type, naleznete v tématu [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   

@@ -1,5 +1,5 @@
 ---
-title: _memccpy – | Microsoft Docs
+title: _memccpy – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199537"
 ---
 # <a name="memccpy"></a>_memccpy
 
-Kopie znaky z vyrovnávací paměti.
+Kopie znaků z vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,11 +56,11 @@ void *_memccpy(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
+*cíl*<br/>
 Ukazatel na cíl.
 
 *src*<br/>
-Ukazatel na zdroji.
+Ukazatel na zdroj.
 
 *c*<br/>
 Poslední znak pro kopírování.
@@ -70,13 +70,13 @@ Počet znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je znak *c* se zkopíruje, **_memccpy –** vrací ukazatel na typ char v *cíle* , následuje znak. Pokud *c* není zkopírovali, a vrátí **NULL**.
+Pokud znak *c* zkopírován, **_memccpy –** vrací ukazatel na typ char v *dest* , který následuje znak. Pokud *c* není zkopírován, vrátí **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Memccpy –** funkce zkopíruje 0 nebo více znaků *src* k *cíle*, při zastavení znak *c* byl zkopírován a kdy *počet* byly zkopírovány znaků, nastane dříve.
+**_Memccpy –** funkce zkopíruje 0 nebo více znaků z *src* k *dest*, při zastavení znak *c* byl zkopírován nebo když *počet* znaků byly zkopírovány, podle toho, co nastane dřív.
 
-**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je stejný, velké nebo větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je stejný velké nebo větší než zdrojové vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -84,11 +84,11 @@ Pokud je znak *c* se zkopíruje, **_memccpy –** vrací ukazatel na typ char v 
 |-------------|---------------------|
 |**_memccpy**|\<Memory.h > nebo \<string.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -124,7 +124,7 @@ Result: The quick brown dog jumps
 Length: 25 characters
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>

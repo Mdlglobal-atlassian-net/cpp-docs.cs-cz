@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464440"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199492"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -120,7 +120,7 @@ class vector
  Typ dat prvku mají být uloženy ve vektoru
 
 *Allocator –*  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti vektoru. Tento argument je nepovinný a výchozí hodnota je **alokátoru ***\<typ >.*
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti vektoru. Tento argument je nepovinný a výchozí hodnota je `allocator<Type>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* hodnota pro přiřazení k elementu přidány na konec vektoru.
+*Val*<br/>
+ Hodnota, kterou chcete přiřadit k elementu přidány na konec vektoru.
 
 ### <a name="example"></a>Příklad
 

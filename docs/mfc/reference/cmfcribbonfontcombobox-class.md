@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466045"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216471"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox – třída
 Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na panel pásu karet.  
@@ -144,9 +144,9 @@ CMFCRibbonFontComboBox(
  Určuje šířku v pixelech, pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci Windows SDK.  
+ Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci Windows SDK.  
   
- Další informace o platné znakových sad, které je možné přiřadit *nCharSet*a platné hodnoty, které je možné přiřadit *nPitchAndFamily*, naleznete v tématu [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) v Dokumentace k sadě Windows SDK.  
+ Další informace o platné znakových sad, které je možné přiřadit *nCharSet*a platné hodnoty, které je možné přiřadit *nPitchAndFamily*, naleznete v tématu [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) v Dokumentace k sadě Windows SDK.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  

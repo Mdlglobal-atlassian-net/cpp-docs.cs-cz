@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199570"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT – struktura
 `PAINTSTRUCT` Struktura obsahuje informace, které slouží k vykreslení klientské oblasti okna.  
@@ -44,7 +44,7 @@ typedef struct tagPAINTSTRUCT {
  Určuje kontext zobrazení má být použit pro kreslení.  
   
  *fErase*  
- Určuje, jestli potřebuje překreslit na pozadí. Není 0, pokud aplikace byste ho překreslit na pozadí. Aplikace je zodpovědné za vykreslování na pozadí, pokud se vytvoří okno Windows-třídy bez štětec pozadí (viz popis `hbrBackground` člen [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK).  
+ Určuje, jestli potřebuje překreslit na pozadí. Není 0, pokud aplikace byste ho překreslit na pozadí. Aplikace je zodpovědné za vykreslování na pozadí, pokud se vytvoří okno Windows-třídy bez štětec pozadí (viz popis `hbrBackground` člen [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK).  
   
  *rcPaint*  
  Určuje horní vlevo a pravém dolním rohu obdélníku, ve které je požadováno pro malování.  

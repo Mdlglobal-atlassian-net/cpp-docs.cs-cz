@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199962"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
-Rozšířené uložené procedury lze zabalit jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL serveru pomocí funkce byly vyvinuty v sadě Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definujte rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (jako je součet a průměr).  
+Rozšířené uložené procedury lze zabalit jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL serveru pomocí funkce byly vyvinuty v sadě Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definujte rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (jako je součet a průměr).  
   
  Když klient provede rozšířené uložené procedury, vyhledávání systému SQL Server pro knihovnu DLL přidružené k rozšířené uložené procedury a načte knihovnu DLL. SQL Server volá požadovaný rozšířené uložené procedury a spustí ji v rámci zadaného kontextu zabezpečení. Rozšířená uložená procedura, pak předá sady výsledků a vrátí parametry zpět na server.  
   

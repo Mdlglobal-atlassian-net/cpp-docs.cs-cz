@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879949"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206567"
 ---
 # <a name="csacl-class"></a>Csacl – třída
 Tato třída představuje obálku pro strukturu SACL (seznam řízení přístupu systému).  
@@ -72,7 +72,7 @@ class CSacl : public CAcl
   
  Používat metody třídy přidat, odebrat, vytvářet a odstraňovat položky řízení přístupu z k dispozici `SACL` objektu. Viz také [AtlGetSacl](security-global-functions.md#atlgetsacl) a [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Cacl –](../../atl/reference/cacl-class.md)  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>Poznámky  
  A `CSacl` objekt obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení. Tato metoda přidá tyto ESEM k `CSacl` objektu.  
   
- Zobrazit [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které je možné nastavit v *AceFlags* parametru.  
+ Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) popis různé příznaky, které je možné nastavit v *AceFlags* parametru.  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  Konstruktor  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>Viz také  
  [Cacl – třída](../../atl/reference/cacl-class.md)   
- [Seznamy ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Položky řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)   
  [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Aktuální výběr v ovládacím prvku pro úpravy s formátováním | Microsoft Docs
+title: Aktuální výběr v ovládacím prvku pro úpravy s formátováním | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b115f576100ec89b2de4d3b2e63fe74b96337c7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345007"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209828"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Aktuální výběr v ovládacích prvcích pro úpravy s formátováním
-Uživatele můžete vybrat text v ovládacím prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí myši nebo klávesnice. Aktuální výběr je rozsah vybrané znaky nebo jsou vybrané pozice kurzoru, pokud se žádné znaky. Aplikaci můžete získat informace o aktuálním výběrem, nastavit aktuální výběr, určit, kdy aktuální výběr změny a zobrazit nebo skrýt výběr zvýrazněte.  
+Uživatel může vybrat text v ovládacím prvku RTF ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí myši nebo klávesnice. Aktuální výběr je rozsah vybrané znaky nebo jsou vybrány pozice kurzoru, pokud žádné znaky. Aplikace můžete získat informace o aktuální výběr, nastavit aktuální výběr, určují, kdy zvýrazněte aktuálního výběru změny a zobrazit nebo skrýt výběr.  
   
- Chcete-li zjistit aktuální výběr v ovládacím prvku RichEdit, použijte [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) – členská funkce. Pokud chcete nastavit aktuální výběr, použijte [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) – členská funkce. [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura s tyto funkce slouží k určení rozsah znaků. Pokud chcete načíst informace o obsahu aktuální výběr, můžete použít [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) – členská funkce.  
+ Chcete-li zjistit aktuální výběr v ovládacím prvku RichEdit, použijte [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) členskou funkci. Chcete-li nastavit aktuální výběr, použijte [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) členskou funkci. [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktura se tyto funkce slouží k určení rozsahu znaků. Pokud chcete načíst informace o obsahu aktuálně vybraný, můžete použít [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) členskou funkci.  
   
- Ve výchozím nastavení ovládacího prvku RichEdit ukazuje a skryje zvýraznění výběr při získá a již není vybrán. Můžete zobrazit nebo skrýt výběr zvýraznění kdykoli pomocí [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) – členská funkce. Aplikace může například zadat dialogové okno hledání najít text v ovládacím prvku RichEdit. Aplikace může vyberte text, odpovídající bez zavření dialogového okna, v takovém případě musíte použít `HideSelection` zvýrazněte výběr.  
+ Ve výchozím nastavení ovládacího prvku zobrazí a skryje zvýraznění výběr při získává a ztratí fokus. Můžete zobrazit nebo skrýt zvýraznění výběr kdykoli pomocí [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) členskou funkci. Aplikace může například poskytovat dialogové okno hledání, hledání v textu v ovládacím prvku RichEdit. Aplikace může vybrat odpovídající text bez zavření dialogového okna, v takovém případě musíte použít `HideSelection` zvýrazněte výběr.  
   
- Zobrazí vybraný text v ovládacím prvku RichEdit, použijte [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) – členská funkce. Text je zkopírován do zadané pole znaků. Je nutné zajistit, že je pole dostatečně velký pro uložení vybraného textu plus ukončující znak hodnoty null.  
+ Chcete-li získat vybraný text v ovládacím prvku RichEdit, použijte [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) členskou funkci. Text, je zkopírován do zadané pole znaků. Ujistěte se, že pole je příliš velká pro uložení vybraného textu a ukončujícího znaku null.  
   
- Můžete hledat řetězec v ovládacím prvku RichEdit pomocí [řetězec FindText](../mfc/reference/cricheditctrl-class.md#findtext) – členská funkce [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) struktura používaná pomocí této funkce určuje rozsah text a hledaný řetězec pro hledání. Tyto možnosti můžete zadat taky jako jestli hledání je malá a velká písmena.  
+ Můžete hledat pomocí řetězce v ovládacím prvku RichEdit [FindText](../mfc/reference/cricheditctrl-class.md#findtext) členskou funkci [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) struktury použité s touto funkcí určuje rozsah textu vyhledávání a hledaný řetězec. Tyto možnosti můžete zadat také určuje, zda je hledání malá a velká písmena.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   

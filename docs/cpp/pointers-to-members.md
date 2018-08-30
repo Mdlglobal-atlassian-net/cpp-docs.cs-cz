@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208513"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
@@ -45,7 +45,7 @@ Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů. 
   - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
 1. Kvalifikovaný název třídy obsahující odkazovala na členy.  
   - :: Operator.  
-  - **\*** Operátor.  
+  - <strong>\*</strong> Operátor.  
   - Volitelné **const** a/nebo **volatile** specifikátorů.  
   - Identifikátor pojmenování ukazatel na člen.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Rozdíl mezi **.\***  a **-> \*** operátory (operátory pointer-to-member) je, že **.\***  operátor vybere členů zadaný objekt nebo odkaz na objekt, zatímco **-> \*** operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorech naleznete v tématu [výrazy s operátory Pointer-to-Member](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Rozdíl mezi **.** <strong>\*</strong> a **->** <strong>\*</strong> operátory (operátory pointer-to-member) je, že **.** <strong>\*</strong> operátor vybere členů zadaný objekt nebo odkaz na objekt, zatímco **->** <strong>\*</strong> – operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorech naleznete v tématu [výrazy s operátory Pointer-to-Member](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Typ člena je výsledek operátory pointer-to-member – v takovém případě `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Omezení ukazatelů členů  
- Adresa statického členu není ukazatelem na člen. Je běžným ukazatelem na jednu instanci statického členu. Vzhledem k tomu, že existuje pouze jedna instance statického členu pro všechny objekty dané třídy, běžné adresa of **(&)** a přístupu přes ukazatel **(\*)** operátory lze používat.  
+ Adresa statického členu není ukazatelem na člen. Je běžným ukazatelem na jednu instanci statického členu. Vzhledem k tomu, že existuje pouze jedna instance statického členu pro všechny objekty dané třídy, běžné adresa of (**&**) a přístupu přes ukazatel (<strong>\*</strong>) operátory lze používat.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Ukazatelé na členy a virtuální funkce  
  Volání virtuální funkce pomocí funkce ukazatele na člen funguje, jako by byla tato funkce volána přímo. Správná funkce je vyhledána v tabulce a zavolána.  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208063"
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -55,7 +55,7 @@ Dva obory **operátor new** funkce jsou popsány v následující tabulce.
 |**:: new – operátor**|Globální|  
 |*Název třídy* **:: new – operátor**|Třída|  
   
- První argument **operátor new** musí být typu `size_t` (typ definovaný v \<stddef.h >), a návratový typ je vždy **void \*** .  
+ První argument **operátor new** musí být typu `size_t` (typ definovaný v \<stddef.h >), a návratový typ je vždy **void** <strong>\*</strong>.  
   
  Globální **operátor new** funkce je volána, když **nové** operátor se používá k přidělení paměti pro objekty předdefinovaných typů, uživatelem definované objekty typu třídy, které neobsahují **operátor new** funkce a pole libovolného typu. Při **nové** operátor se používá k přidělení paměti pro objekty typu třídy kde **operátor new** je definován, tuto třídu **operátor new** je volána.  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211574"
 ---
 # <a name="chttpconnection-class"></a>Chttpconnection – třída
 Spravuje připojení k serveru HTTP.  
@@ -129,7 +129,7 @@ CHttpConnection(
 |Řetězec NENULOVÉ|Řetězec NENULOVÉ|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- Libovolnou kombinaci **INTERNET_ FLAG_\***  příznaky. Viz tabulka **poznámky** část [CHttpConnection::OpenRequest](#openrequest) popis *dwFlags* hodnoty.  
+ Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Viz tabulka **poznámky** část [CHttpConnection::OpenRequest](#openrequest) popis *dwFlags* hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
  Nikdy nevytvářejte `CHttpConnection` přímo. Místo toho vytvořit objekt voláním [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  

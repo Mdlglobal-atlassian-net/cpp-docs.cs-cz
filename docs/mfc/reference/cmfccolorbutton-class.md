@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465655"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215325"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
 `CMFCColorButton` a [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md) třídy se používají společně k implementaci ovládacího prvku pro výběr barvy.  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|Logická hodnota. Při hodnotě TRUE se zobrazí rozhraní [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) Barva dialogové okno při *jiných* po kliknutí na tlačítko, nebo pokud je hodnota FALSE, systém barvy dialogové okno. Výchozí hodnota je TRUE. Další informace najdete v tématu [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
 |`m_bAutoSetFocus`|Logická hodnota. Při hodnotě TRUE se rozhraní nastaví fokus v nabídce barvy v případě, že v nabídce se zobrazí, nebo pokud je hodnota FALSE, zaměřuje nezmění. Výchozí hodnota je TRUE.|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Označuje, zda je povolen režim úprav pro bude tlačítko barev.|  
-|`m_Color`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu. Obsahuje aktuálně vybranou barvu.|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu. Obsahuje aktuálně vybraný výchozí barvy.|  
-|`m_Colors`|A [carray –](../../mfc/reference/carray-class.md) z [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnoty. Obsahuje aktuálně dostupných barev.|  
-|`m_lstDocColors`|A [CList –](../../mfc/reference/clist-class.md) z [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnoty. Obsahuje aktuální barvy dokumentu.|  
+|`m_Color`|A [COLORREF](/windows/desktop/gdi/colorref) hodnotu. Obsahuje aktuálně vybranou barvu.|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref) hodnotu. Obsahuje aktuálně vybraný výchozí barvy.|  
+|`m_Colors`|A [carray –](../../mfc/reference/carray-class.md) z [COLORREF](/windows/desktop/gdi/colorref) hodnoty. Obsahuje aktuálně dostupných barev.|  
+|`m_lstDocColors`|A [CList –](../../mfc/reference/clist-class.md) z [COLORREF](/windows/desktop/gdi/colorref) hodnoty. Obsahuje aktuální barvy dokumentu.|  
 |`m_nColumns`|Celé číslo. Obsahuje číslo sloupce, které chcete zobrazit v mřížce barvy v nabídce pro výběr barvy.|  
 |`m_pPalette`|Ukazatel [cpalette –](../../mfc/reference/cpalette-class.md). Obsahuje barvy, které jsou k dispozici v aktuální nabídce pro výběr barvy.|  
 |`m_pPopup`|Ukazatel [cmfccolorpopupmenu – třída](../../mfc/reference/cmfccolorpopupmenu-class.md) objektu. Nabídce pro výběr barev, které se zobrazí, když kliknete na tlačítko barvy.|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [Cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md)   
  [Cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [Cpalette – třída](../../mfc/reference/cpalette-class.md)   
  [Carray – třída](../../mfc/reference/carray-class.md)   
  [CList – třída](../../mfc/reference/clist-class.md)   

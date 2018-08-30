@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196302"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap – třída
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* datový typ klíče, který bude uložen do hash_multimap.
+*Key*<br/>
+ Datový typ klíče, který bude uložen do hash_multimap.
 
-*Typ* typ dat prvku, který bude uložen do hash_multimap.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen do hash_multimap.
 
-*Vlastnosti* typ, který obsahuje dva objekty funkce, jeden z třídy *osobnostní rysy* , který je možné porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíč unární predikát mapování hodnoty prvků, které se celá čísla bez znaménka typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key>>` je výchozí hodnota.
+*Osobnostní rysy*<br/>
+ Typ, který obsahuje dva objekty funkce, jeden z třídy *osobnostní rysy* , který je možné porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je unární predikát mapování hodnot klíče prvků, které se celá čísla typu unsigned `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key>>` je výchozí hodnota.
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multimap. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type>>`.
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multimap –. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
-`const_iterator` Určené hash_multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` *\< ***constKey, typ*** >*. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+`const_iterator` Určené hash_multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
 
 Ke zrušení `const_iterator` `cIter` odkazující na prvek v hash_multimap, použijte `->` operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter`  ->  **první**, což je totéž jako (\* `cIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter`  ->  **druhý**, což je totéž jako (\* `cIter`). **první**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter->first`, což je totéž jako `(*cIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter->second`, což je totéž jako `(*cIter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_reverse_iterator` hodnotu prvku nelze změnit a použít k iteraci v rámci hash_multimap – v opačném pořadí.
 
-`const_reverse_iterator` Určené hash_multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` * \< * **const Key, typ >**, jehož první člen je klíčem k elementu a jejichž second – člen se nachází mapované datum elementem.
+`const_reverse_iterator` Určené hash_multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
 
 Ke zrušení `const_reverse_iterator` `crIter` odkazující na prvek v hash_multimap, použijte `->` operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `crIter`  ->  **první**, což je totéž jako (\* `crIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `crIter`  ->  **druhý**, což je totéž jako (\* `crIter`). **první**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `crIter->first`, což je totéž jako `(*crIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `crIter->second`, což je totéž jako `(*crIter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíče prvků lze porovnat z hash_multimap.
+*Klíč*<br/>
+ Klíč prvky lze porovnat z hash_multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozici elementu, který má být odebrán z hash_multimap –.
+*_Where*<br/>
+ Pozice prvku, který chcete odebrat z hash_multimap.
 
-*první* pozice prvního prvku odebrán z hash_multimap.
+*první*<br/>
+ Pozice prvního prvku odebrán hash_multimap.
 
-*poslední* pozice bezprostředně za posledním prvkem odebírat hash_multimap.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem odebrán hash_multimap.
 
-*klíč* klíč prvky, které mají být odebrány hash_multimap –.
+*Klíč*<br/>
+ Klíč prvky, které mají být odebrány hash_multimap –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč k porovnání s klíči řazení prvek z hash_multimap vyhledaly.
+*Klíč*<br/>
+ Klíč určený k porovnání s klíči řazení prvek z hash_multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1517,7 +1528,7 @@ hash_multimap(
 |-|-|
 |*Al*|Třída úložiště alokátoru má být použit pro tento objekt hash_multimap, kde je použit výchozí `Allocator`.|
 |*Kompozice*|Funkce porovnání typu `const Traits` používají k seřazení prvků v objektu map, kde je použit výchozí `Traits`.|
-|*Doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
+|*doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list bude kopírováno.|
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* hash_multimap poskytující prvky pro záměnu nebo hash_multimap, jehož prvky mají vyměnit s těmi hash_multimap.
+*doprava*<br/>
+ Hash_multimap – poskytující prvky pro záměnu nebo hash_multimap, jehož prvky mají vyměnit s těmi hash_multimap.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multimap vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 

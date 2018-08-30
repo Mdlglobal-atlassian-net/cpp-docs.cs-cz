@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207821"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 Implementuje jednotné rozhraní dokumentu (SDI) překrytého nebo místního okna rámce funkcí Windows a poskytuje členy pro správu okna. Rozšiřuje [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Volá se rozhraním po vytvoření rámce.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Volá se rozhraním, když rámec je zničen.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Volá se rozhraním, když aplikace nakreslí obrázek přidružený k položce nabídky.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Volá se rozhraním při `CMFCPopupMenu` objektu procesy [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) zprávy.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Volá se rozhraním při `CMFCPopupMenu` objektu procesy [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Volá se rozhraním, když složení Správce oken plochy (DWM) bylo povoleno nebo zakázáno.|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Volá se rozhraním, když se zastaví rámce přesouvání nebo změny velikosti.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Volá se rozhraním, když rámu nastavení limitů dimenze okna.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Popisovač na strukturu obsahující pozice více oken. .  
   
 ### <a name="remarks"></a>Poznámky  
- Struktura hdwp je inicializován pomocí [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) metody.  
+ Struktura hdwp je inicializován pomocí [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) metody.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Nastaví rámec nabídky a pak aktualizuje při zpracování příkazu nečinnosti.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpMMI*  
- Ukazatel [minmaxinfo –](http://msdn.microsoft.com/library/windows/desktop/ms632605) struktury.  
+ Ukazatel [minmaxinfo –](https://msdn.microsoft.com/library/windows/desktop/ms632605) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONDOWN oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONDOWN oznámení](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *bodu*  
  Určuje x a y souřadnic ukazatele, relativní do levého horního rohu okna.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONUP oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Určuje, zda uživatel stiskl modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONUP oznámení](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *bodu*  
  Určuje x a y souřadnic ukazatele, relativní do levého horního rohu okna.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Určuje, zda uživatel stisknuta modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [wm_mousemove a oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Určuje, zda uživatel stisknuta modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [wm_mousemove a oznámení](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *bodu*  
  Určuje x a y souřadnic ukazatele myši relativně vzhledem k levém horním rohu okna.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  Umístění ukazatele myši v souřadnicovém systému obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výčtová hodnota přístupů na ukazatel. Seznam možných hodnot najdete v části [WM_NCHITTEST oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Výčtová hodnota přístupů na ukazatel. Seznam možných hodnot najdete v části [WM_NCHITTEST oznámení](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nHitTest*  
- Výčtová hodnota přístupů na ukazatel. Seznam možných hodnot najdete v části [WM_NCHITTEST oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Výčtová hodnota přístupů na ukazatel. Seznam možných hodnot najdete v části [WM_NCHITTEST oznámení](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *bodu*  
  Umístění ukazatele myši v souřadnicovém systému obrazovky.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parametry  
  [in] *webové části*  
- Událost správy napájení. Seznam možných hodnot najdete v části [WM_POWERBROADCAST zpráva](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ Událost správy napájení. Seznam možných hodnot najdete v části [WM_POWERBROADCAST zpráva](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *lp*  
  Tento parametr není používán.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Ukazatel na text okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Návratová hodnota z volání [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Návratová hodnota z volání [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nTyp*  
- Typ změny velikosti. Možné hodnoty najdete v tématu parametr *wParam* v [WM_SIZE oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ Typ změny velikosti. Možné hodnoty najdete v tématu parametr *wParam* v [WM_SIZE oznámení](/windows/desktop/winmsg/wm-size).  
   
  [in] *cx*  
  Nové šířka rámce v pixelech.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parametry  
  [in] *fwSide*  
- Okraji rámečku, která je přesunuta. Zobrazit parametr *wParam* v [WM_SIZING oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ Okraji rámečku, která je přesunuta. Zobrazit parametr *wParam* v [WM_SIZING oznámení](/windows/desktop/winmsg/wm-sizing).  
   
  [out v] *pRect*  
  Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](../../mfc/reference/rect-structure1.md) strukturu, která obsahuje souřadnice rámce.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parametry  
  *dwData*  
- Data, která závisí *nCmd* parametru. Seznam možných hodnot najdete v části [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Data, která závisí *nCmd* parametru. Seznam možných hodnot najdete v části [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- Příkaz help. Seznam možných hodnot najdete v části [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Příkaz help. Seznam možných hodnot najdete v části [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Poznámky  
   

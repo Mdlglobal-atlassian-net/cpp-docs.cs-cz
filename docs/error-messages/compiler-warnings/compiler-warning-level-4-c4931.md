@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4931 | Microsoft Docs
+title: Upozornění (úroveň 4) C4931 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f77d30a7e7d2386404c02c1b72cc30309bb6876c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20e39eda9f06330a84243634eba28fc9d351cafe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201539"
 ---
-# <a name="compiler-warning-level-4-c4931"></a>C4931 kompilátoru upozornění (úroveň 4)
-Předpokládáme, že knihovna typů byla sestavena pro ukazatele počtu bitů.  
-  
- Explicitní informace nebyla zadaná společně s **ptrsize** atribut [#import](../../preprocessor/hash-import-directive-cpp.md) direktivy; kompilátor dospělo k závěru, že je velikost ukazatele knihovny typů ***číslo***.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+# <a name="compiler-warning-level-4-c4931"></a>Kompilátor upozornění (úroveň 4) C4931
+
+> předpokládáme, knihovna typů byla sestavena pro *číslo*-bit ukazatele
+
+Explicitní informace nebyla zadaná společně s **ptrsize** atribut [#import](../../preprocessor/hash-import-directive-cpp.md) direktiv; kompilátor dospělo k závěru, že se velikost ukazatele knihovny typů *číslo*.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.

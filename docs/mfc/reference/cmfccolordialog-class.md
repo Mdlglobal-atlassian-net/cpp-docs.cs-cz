@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214149"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog – třída
 `CMFCColorDialog` Třída představuje dialogové okno Výběr barvy.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Vrátí aktuální vybraná barva.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Vrátí hodnotu barvy palety.|  
-|`CMFCColorDialog::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Z palety systému je odvozena barevnou paletu.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Nastaví aktuální vybraná barva.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Nastavuje barvu nejvíce odpovídá zadané hodnoty RGB.|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje informace o RGB barva vybraná v dialogovém okně barev.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která obsahuje informace o RGB barva vybraná v dialogovém okně barev.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této funkce po volání `DoModal` metody.  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Parametry  
  [in] *rgb*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , který určuje barva RGB.  
+ A [COLORREF](/windows/desktop/gdi/colorref) , který určuje barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   

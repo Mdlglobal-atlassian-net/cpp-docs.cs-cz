@@ -1,5 +1,5 @@
 ---
-title: Popis argumentu | Microsoft Docs
+title: Popis argumentu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 615fc3a68153386174ce0477ee5c946f50f37d90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cecc47bc4633aa40f38bda23d1aee0007ea34ab4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201879"
 ---
 # <a name="argument-description"></a>Popis argumentu
-`argc` Parametr ve **hlavní** a **wmain** functions je celé číslo určující, kolik argumenty jsou předány program z příkazového řádku. Vzhledem k tomu, že název programu je považován za argument, hodnota `argc` alespoň jeden.  
+`argc` Parametr **hlavní** a **wmain** funkce je celé číslo určující počet argumenty jsou předány do programu z příkazového řádku. Protože název programu je považován za argument hodnotu `argc` je alespoň jednou.  
   
 ## <a name="remarks"></a>Poznámky  
- `argv` Parametr je pole ukazatele na představující program argumenty řetězce ukončené hodnotou null. Každý element pole ukazuje na řetězcovou reprezentaci argument předaný **hlavní** (nebo **wmain**). (Informace o polích najdete v tématu [deklarace pole](../c-language/array-declarations.md).) `argv` Parametr lze deklarovat buď jako pole ukazatelé na typ `char` (`char *argv[]`) nebo jako ukazatel na ukazatele na typ `char` (`char **argv`). Pro **wmain**, `argv` parametr lze deklarovat buď jako pole ukazatelé na typ `wchar_t` (`wchar_t *argv[]`) nebo jako ukazatel na ukazatele na typ `wchar_t` (`wchar_t **argv`).  
+ `argv` Parametr je pole ukazatelů na řetězec zakončený null představující argumenty programu. Každý prvek pole odkazuje na řetězec představující argument předaný **hlavní** (nebo **wmain**). (Informace o polích naleznete v tématu [deklarace pole](../c-language/array-declarations.md).) `argv` Parametru lze deklarovat jako pole ukazatelů na typ `char` (`char *argv[]`) nebo jako ukazatel na ukazatele na typ `char` (`char **argv`). Pro **wmain**, `argv` parametru lze deklarovat jako pole ukazatelů na typ `wchar_t` (`wchar_t *argv[]`) nebo jako ukazatel na ukazatele na typ `wchar_t` (`wchar_t **argv`).  
   
- Podle konvence `argv` **[0]** je příkaz, ke které je voláno program.  Je však možné vytvořit, využívá proces [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) načíst název spustitelného souboru.  
+ Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName –](https://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru.  
   
- Poslední ukazatele (`argv[argc]`) je **NULL**. (Viz [GETENV –](../c-runtime-library/reference/getenv-wgetenv.md) v *referenční dokumentace běhové knihovny* pro alternativní metoda pro získání informace o proměnných prostředí.)  
+ Poslední ukazatel (`argv[argc]`) je **NULL**. (Viz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) v *Run-Time Library Reference* alternativní metody pro získání informací o proměnné prostředí.)  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- `envp` Parametr je ukazatel na pole řetězce ukončené hodnotou null, které představují s hodnotami nastavenými v proměnných prostředí uživatele. `envp` Parametr lze deklarovat jako pole ukazatele na `char` (`char *envp[]`) nebo jako ukazatel na ukazatele na `char` (`char **envp`). V **wmain** funkce, `envp` parametr lze deklarovat jako pole ukazatele na `wchar_t` (`wchar_t *envp[]`) nebo jako ukazatel na ukazatele na `wchar_t` (`wchar_t **envp`). Je indikován konce pole **NULL** \*ukazatel. Všimněte si, že předaný bloku prostředí **hlavní** nebo **wmain** je "ukotvené" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání _**putenv –** nebo `_wputenv`, aktuální prostředí (jak ho vrátila `getenv` / `_wgetenv` a `_environ` nebo `_wenviron` proměnné) se změní, ale bloku na kterou odkazuje `envp` nedojde ke změně. `envp` Parametr je kompatibilní v C, ale ne v C++ ANSI.  
+ `envp` Parametru je ukazatel na pole řetězců zakončený hodnotou null, které představují hodnoty nastavené v proměnné prostředí uživatele. `envp` Parametru lze deklarovat jako pole ukazatelů na `char` (`char *envp[]`) nebo jako ukazatel na ukazatele na `char` (`char **envp`). V **wmain** funkce, `envp` parametru lze deklarovat jako pole ukazatelů na `wchar_t` (`wchar_t *envp[]`) nebo jako ukazatel na ukazatele na `wchar_t` (`wchar_t **envp`). Konec pole je označeno **NULL** \*ukazatele. Všimněte si, že blok prostředí předaný **hlavní** nebo **wmain** je "zmrazená" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání _**putenv** nebo `_wputenv`, aktuální prostředí (vrácené `getenv` / `_wgetenv` a `_environ` nebo `_wenviron` proměnné) se změní, ale blok odkazované `envp` nedojde ke změně. `envp` Parametr je ANSI kompatibilní v jazyce C, ale ne v jazyce C++.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

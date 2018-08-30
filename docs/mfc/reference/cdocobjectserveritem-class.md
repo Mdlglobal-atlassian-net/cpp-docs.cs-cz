@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027135"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211802"
 ---
 # <a name="cdocobjectserveritem-class"></a>Cdocobjectserveritem – třída
 Příkazy Implements OLE servere speciálně pro servery DocObject.  
@@ -62,7 +62,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|Volá se rozhraním, aby vytisknout položky na místě aktivní. Pokud položka není DocObject, zavolá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
+ `CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
   
  Použití `CDocObjectServerItem`, bylo zaručeno, že [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) přepsat v vaše `COleServerDoc`-odvozené třídě vrátí nový `CDocObjectServerItem` objektu. Pokud potřebujete změnit všechny funkce v vaši položku, můžete vytvořit novou instanci třídy vlastní `CDocObjectServerItem`-odvozené třídy.  
   

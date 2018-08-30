@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214779"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a je možné změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.  
@@ -70,7 +70,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a j
  Tyto ovládací prvky se použije k zobrazovaný název souboru dokumentu a jeho stav jen pro čtení.  
   
 > [!NOTE]
->  Prostředku dialogového okna rámce nebo příkazového tlačítka nezahrnuje ani nemá s kartami vzhled, který může očekávat. Tyto funkce jsou poskytovány rámec pro stránky vlastností, jako jsou vytvořeny pomocí volání [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Prostředku dialogového okna rámce nebo příkazového tlačítka nezahrnuje ani nemá s kartami vzhled, který může očekávat. Tyto funkce jsou poskytovány rámec pro stránky vlastností, jako jsou vytvořeny pomocí volání [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Přidání obslužných rutin zpráv  
  Pomocí ovládacích prvků na místě můžete přidat obslužné rutiny zpráv pro aktualizaci změny stavu stránky při změně hodnoty buď ovládacích prvků:  

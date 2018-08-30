@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 795261da81fbe8082e279bc3830f004d845e1ea7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336016"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196933"
 ---
 # <a name="cftpfilefind-class"></a>Cftpfilefind – třída
 Pomáhá při hledání internetových souborů na serverech FTP.  
@@ -120,14 +120,14 @@ virtual BOOL FindFile(
   
 -   INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v žádné brány.  
   
--   INTERNET_FLAG_RAW_DATA přepsat výchozí nastavení pro vrácení nezpracovaných dat ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury protokolu FTP).  
+-   INTERNET_FLAG_RAW_DATA přepsat výchozí nastavení pro vrácení nezpracovaných dat ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury protokolu FTP).  
   
 -   Zabezpečuje INTERNET_FLAG_SECURE transakce na lince (Secure Sockets Layer) nebo v PROC. Tento příznak se vztahuje pouze na požadavky HTTP.  
   
 -   INTERNET_FLAG_EXISTING_CONNECT Pokud je to možné, opakovaně používat existující připojení k serveru na nový `FindFile` požadavky na místo vytvoření nové relace pro každý požadavek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
  Po volání `FindFile` načíst první soubor protokolu FTP, můžete volat [FindNextFile](#findnextfile) načíst následující soubory protokolu FTP.  
@@ -143,12 +143,12 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
+ Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Poznámky  
  Lze zavolat tuto funkci alespoň jednou před voláním jakékoli funkce atribut (viz [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile` zabalí funkci Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` zabalí funkci Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad výše v tomto tématu.  

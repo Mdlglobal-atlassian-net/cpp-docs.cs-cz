@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466029"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202472"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject – třída
-Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní pro agregovaného objektu. Podle definice agregovaného objektu je součástí vnějšího objektu. `CComAggObject` Třída je podobně jako [CComObject – třída](../../atl/reference/ccomobject-class.md), s tím rozdílem, že poskytuje rozhraní, které jsou přímo přístupné specialistům do externích klientů.  
+Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) rozhraní pro agregovaného objektu. Podle definice agregovaného objektu je součástí vnějšího objektu. `CComAggObject` Třída je podobně jako [CComObject – třída](../../atl/reference/ccomobject-class.md), s tím rozdílem, že poskytuje rozhraní, které jsou přímo přístupné specialistům do externích klientů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Delegáti `IUnknown` volání vnější neznámá.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComAggObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro agregovaného objektu. `CComAggObject` má vlastní `IUnknown` rozhraní, odděleně od vnějšího objektu `IUnknown` rozhraní a udržuje svůj vlastní počet odkazů.  
+ `CComAggObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro agregovaného objektu. `CComAggObject` má vlastní `IUnknown` rozhraní, odděleně od vnějšího objektu `IUnknown` rozhraní a udržuje svůj vlastní počet odkazů.  
   
  Další informace o agregaci naleznete v článku [základy ATL COM objekty](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametry  
  *str*  
- [out] Ukazatel **CComAggObject\<*** obsažené* **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.  
+ [out] Ukazatel **CComAggObject\<**<em>obsažené</em> **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní hodnoty HRESULT.  

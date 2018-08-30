@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4306 | Microsoft Docs
+title: Upozornění (úroveň 3) C4306 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,19 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a490fc90ee9a977442548406ea2aec4baac3fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5372213819375a6c1fec3cfc43970415b6486a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299000"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219991"
 ---
-# <a name="compiler-warning-level-3-c4306"></a>C4306 kompilátoru upozornění (úroveň 3)
-**'**   
- ***identifikátor* ': převod.**   
- ***Type1* 'do'**   
- ***Type2* ' větší velikosti**  
-  
- Identifikátor, který je typu přetypovat na větší ukazatel. Nevyplněný vysoké bits nového typu bude vyplněno nula.  
-  
- Toto upozornění může znamenat konverzi nežádoucí. Výsledný ukazatele nemusí být platný.
+# <a name="compiler-warning-level-3-c4306"></a>Kompilátor upozornění (úroveň 3) C4306
+
+> "*identifikátor*': převod z '*type1*"do"*type2*' větší velikosti
+
+Identifikátor je typ přetypování na ukazatel na větší. Nevyplněným bitů nového typu se nulami.
+
+Toto upozornění může znamenat nežádoucí převodu. Výsledný ukazatel nemusí být platný.

@@ -1,5 +1,5 @@
 ---
-title: Sestavení projektů C++ v sadě Visual Studio | Microsoft Docs
+title: Sestavení projektů C++ v sadě Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,75 +16,75 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195863"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Sestavení projektů C++ v sadě Visual Studio
-V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několik způsobů vytvářet celé řešení nebo jedním projektu v ní. Můžete také upravit nastavení sestavení a zadejte vlastní kroky sestavení aby vývojových procesech efektivnější.  
+V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několik způsobů k sestavení celé řešení nebo pouze jeden projekt v ní. Můžete také upravit nastavení sestavení a určit vlastní kroky sestavení k zefektivnit vašeho vývojového procesu.  
   
- K vytvoření řešení, které je otevřete v sadě Visual Studio a vybrané v **Průzkumníku**, můžete:  
+ K vytvoření řešení, která je otevřený v sadě Visual Studio a vybrat v **Průzkumníka řešení**, můžete:  
   
--   Na řádku nabídek zvolte **sestavení**, **sestavit řešení**.  
+-   V panelu nabídky zvolte **sestavení**, **sestavit řešení**.  
   
--   Nebo v **Průzkumníku řešení**, otevřete místní nabídku pro řešení a zvolte **sestavit řešení**.  
+-   Nebo v **Průzkumníka řešení**, otevřete místní nabídku řešení a klikněte na tlačítko **sestavit řešení**.  
   
--   Nebo stiskněte klávesu F7. (Toto je výchozí klávesové zkratky pro nastavení vývoj C/C++.)  
+-   Nebo stisknutím klávesy F7. (To je výchozí klávesovou zkratku pro vývojového nastavení jazyka C/C++.)  
   
--   Nebo v [příkazové okno](/visualstudio/ide/reference/command-window) (na řádku nabídek zvolte **zobrazení**, **ostatní okna**, **příkazové okno**), zadejte `Build.BuildSolution`.  
+-   Nebo v [příkazové okno](/visualstudio/ide/reference/command-window) (na řádku nabídek zvolte **zobrazení**, **ostatní Windows**, **příkazové okno**), zadejte `Build.BuildSolution`.  
   
 -   Nebo v [Snadné spuštění](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) zadejte `build build solution`.  
   
- Pro vytvoření projektu, který je vybraný v **Průzkumníku**, můžete:  
+ Sestavení projektu, který je vybraný v **Průzkumníka řešení**, můžete:  
   
--   Na řádku nabídek zvolte **sestavení**, **sestavení \<název projektu >**.  
+-   V panelu nabídky zvolte **sestavení**, **sestavení \<název projektu >**.  
   
--   Nebo v **Průzkumníku řešení**, otevřete místní nabídky projektu a zvolte **sestavení**.  
+-   Nebo v **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **sestavení**.  
   
--   Nebo, v příkazovém okně (na řádku nabídek zvolte **zobrazení**, **ostatní okna**, **příkazové okno**), zadejte `Build.BuildOnlyProject`.  
+-   Nebo v příkazovém okně (na řádku nabídek zvolte **zobrazení**, **ostatní Windows**, **příkazové okno**), zadejte `Build.BuildOnlyProject`.  
   
--   Nebo v dialogovém okně Snadné spuštění zadejte `build project only build only <project name>`.  
+-   V dialogovém okně Snadné spuštění zadat `build project only build only <project name>`.  
   
- Když vytvoříte aplikaci Visual C++ v sadě Visual Studio, můžete upravit řadu nastavení sestavení v dialogovém okně stránky vlastností projektu. Informace o tom, jak nastavit vlastnosti projektu najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Při vytváření aplikace v jazyce Visual C++ v sadě Visual Studio, můžete upravit mnoho nastavení sestavení v dialogovém okně stránky vlastností projektu. Informace o tom, jak nastavit vlastnosti projektu naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
- Příklad o tom, jak vytvořit sestavení a ladění projektu jazyka C++ pomocí rozhraní IDE, naleznete v části [návod: prozkoumat Visual Studio IDE s jazykem C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Příklad o tom, jak pomocí rozhraní IDE sestavení C + +/ projektu CLR, najdete v části [návod: kompilace programu C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Příklad o tom, jak pomocí rozhraní IDE k vytvoření aplikace pro prostředí Windows Runtime naleznete v části [vytvoření první aplikace Windows Runtime s použitím jazyka C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Příklad, jak používat rozhraní IDE k vytvoření, sestavení a ladění projektu jazyka C++, naleznete v tématu [názorný postup: prozkoumání Visual Studio IDE v jazyce C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Pro příklad, jak použít rozhraní IDE k sestavení a C + +/ CLR projekt, naleznete v tématu [návod: kompilace programu v jazyce C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Příklad, jak použít rozhraní IDE k vytvoření aplikace pro Windows Runtime, naleznete v tématu [vytvoření první aplikace pro Windows Runtime pomocí jazyka C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
- Číst informace o tom, jak vytvářet, upravovat nastavení sestavení a zadejte vlastní kroky sestavení, najdete v následujících článcích.  
+ Další informace o tom, jak vytvářet, upravovat nastavení sestavení a zadat vlastní kroky sestavení, naleznete v následujících článcích.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Seznámení s kroky vlastního sestavení a s událostmi sestavení](../ide/understanding-custom-build-steps-and-build-events.md)  
- Popisuje postup přizpůsobení procesu sestavení v integrovaném vývojovém prostředí.  
+ Popisuje, jak přizpůsobit proces sestavení v integrovaném vývojovém prostředí.  
   
  [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
- Uvádí makra, které můžete použít, pokud jsou přijaty řetězce.  
+ Seznam maker, které můžete použít, kde se přijímají řetězce.  
   
  [Sestavení externích projektů](../ide/building-external-projects.md)  
- Popisuje sestavení projektů, které používají zařízení mimo integrované vývojové prostředí.  
+ Tento článek popisuje vytváření projektů, které používají zařízení mimo integrované vývojové prostředí.  
   
  [Soubory projektu](../ide/project-files.md)  
- Uvede strukturu XML souboru.  
+ Představuje strukturu XML souboru .vcxproj.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [VC ++ adresáře, projekty, dialogové okno Možnosti](vcpp-directories-property-page.md)  
- (Jenom projektů MSBuild) Popisuje, jak změnit cesta hledání pro spustitelné soubory, zahrnout soubory, soubory knihovny a soubory zdrojového kódu během sestavení.  
+ (Pouze projekty MSBuild) Popisuje, jak změnit cesty hledání pro spustitelné soubory, zahrňte soubory, soubory knihovny a soubory zdrojového kódu během sestavení.  
   
  [Kompilace a sestavení](/visualstudio/ide/compiling-and-building-in-visual-studio)  
- Poskytuje informace o sestavení v sadě Visual Studio.  
+ Obsahuje informace o sestavování v sadě Visual Studio.  
   
  [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
- Obsahuje odkazy na témata popisující sestavení programu z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.  
+ Obsahuje odkazy na témata popisující vytváření vaší aplikace z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.  
   
  [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)  
- Obsahuje odkazy na přehled sestavování programů v jazycích C++, kompilátoru a linkeru možnosti a další sestavovací nástroje.  
+ Obsahuje odkazy na přehled o vytváření programů v jazyce C++, kompilátoru a linkeru možnosti a nástroje pro další sestavení.  
   
  [Upgrade projektů z dřívějších verzí Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Obsahuje odkazy na témata týkající se problémů na upgrade na novější verze sady nástrojů kompilátoru projektu jazyka C++.  
+ Obsahuje odkazy na témata týkající se problémů na upgrade na novější verze sady nástrojů kompilátoru projektu v jazyce C++.  
   
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  Podrobné informace o tom, jak upgradovat aplikací C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a také k migraci aplikace, které byly vytvořeny pomocí nástrojů pro jiné než Visual Studio.  
+  Podrobné informace o tom, jak upgradovat aplikací v jazyce C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a postupu při migraci aplikací, které byly vytvořeny pomocí jiných nástrojů než Visual Studio.  
   
 ## <a name="see-also"></a>Viz také  
  [Univerzální aplikace pro Windows (C++)](../windows/universal-windows-apps-cpp.md)

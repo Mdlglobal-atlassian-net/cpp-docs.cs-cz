@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464917"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199843"
 ---
 # <a name="cmfctabctrl-class"></a>Cmfctabctrl – třída
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Volá se rozhraním, když je kurzor nejprve přetáhnout do okna ovládacího prvku karta.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Po přesunutí v okně cíl přetažení myší, volá se rozhraním při operaci přetažení. (Přepíše [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Zobrazí místní nabídka okna s kartami, počká, až uživatel vybere na kartě a je vybraná karta na aktivní kartě.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Přepočítá rozložení vnitřní ovládací prvek karty. (Přepíše [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Aktuální karta ovládacím prvkem karta nastaví jako aktivní karty ve skupině karta rozhraní více dokumentů.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje na kartě. (Přepíše [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Odkazuje na datový objekt, který obsahuje data, která uživatel přetáhne.  
   
  [in] *dwKeyState*  
- Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *bodu*  
  Obsahuje aktuální umístění kurzoru v souřadnicích klienta.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objekt, který se přesune cíl přetažení.  
   
  [in] *dwKeyState*  
- Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *bodu*  
  Aktuální pozice myši.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Parametry  
  [out] *pScrollInfo*  
- Ukazatel [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury nebo hodnota NULL. Po návratu tato metoda, a pokud tento parametr není NULL, struktura obsahuje všechny parametry posuvníku. Výchozí hodnota je NULL.  
+ Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury nebo hodnota NULL. Po návratu tato metoda, a pokud tento parametr není NULL, struktura obsahuje všechny parametry posuvníku. Výchozí hodnota je NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  

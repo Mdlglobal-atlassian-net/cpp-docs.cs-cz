@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205337"
 ---
 # <a name="bitset-class"></a>bitset – třída
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>Parametry
 
-*N* určuje počet bitů v objektu bitset – s nenulového celého čísla typu `size_t` , který musí být v době kompilace znám.
+*N*<br/>
+ Určuje počet bitů v objektu bitset – s nenulového celého čísla typu `size_t` , který musí být v době kompilace znám.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parametry
 
-*Val* celé číslo bez znaménka, jehož vyjádření base dvě slouží k inicializaci bity v bitset – vytváří.
+*Val*<br/>
+ Číslo bez znaménka, jehož vyjádření base dvě slouží k inicializaci bity v bitset – vytváří.
 
-*Str* řetězec nulové hodnoty a ty, které slouží k inicializaci bitset – bitové hodnoty.
+*str*<br/>
+ Řetězec nulové hodnoty a ty, které slouží k inicializaci bitset – bitové hodnoty.
 
-*_CStr* řetězec C-style nuly a ty, které slouží k inicializaci bitset – bitové hodnoty.
+*_CStr*<br/>
+ Řetězec C-style nuly a ty, které slouží k inicializaci bitset – bitové hodnoty.
 
-*_Pos* pozice znaku v řetězci, počítací zleva doprava a začíná s nulou, použitý k inicializaci prvního bitu v bitset –.
+*_Pos*<br/>
+ Pozice znaku v řetězci, počítací zleva doprava a od nuly, použitý k inicializaci prvního bitu v bitset –.
 
-*počet* počet znaků v řetězci, který se používá k zadání bity bitset – počáteční hodnoty.
+*Počet*<br/>
+ Počet znaků v řetězci, který se používá k zadání bity bitset – počáteční hodnoty.
 
-*_Zero* znak, který se používá k reprezentování nulu. Výchozí hodnota je "0".
+*_Zero*<br/>
+ Znak, který se používá k reprezentování nulu. Výchozí hodnota je "0".
 
-*_Jedna* znak, který se používá k reprezentování jeden. Výchozí hodnota je '1'.
+*_Jedna*<br/>
+ Znak, který se používá k reprezentování jeden. Výchozí hodnota je '1'.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozici bitu, jejíž hodnota má být obrácený.
+*_Pos*<br/>
+ Pozice bit, jejíž hodnota má být obrácený.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -473,7 +482,7 @@ Zkopírujte upravený bitset –, pro kterou má členská funkce se vyvolala.
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá členská funkce vyvolá [out_of_range –](../standard-library/out-of-range-class.md) výjimku, pokud je větší než velikost zadaná jako parametr pozice *N* z **bitset –\<***N***  >**  jehož bit byl obrácený.
+Druhá členská funkce vyvolá [out_of_range –](../standard-library/out-of-range-class.md) výjimku, pokud je větší než velikost zadaná jako parametr pozice *N* z **bitset –\<**  *N* **>** jehož bit byl obrácený.
 
 ### <a name="example"></a>Příklad
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* bitset –, který je k porovnání s bitset – cíl pro nerovnost.
+*doprava*<br/>
+ Bitset –, který je k porovnání s bitset – cíl pro nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* bitset –, který je bitový kombinovat s bitset – cíl.
+*doprava*<br/>
+ Bitset –, který je bitový kombinovat s bitset – cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* počet pozic, které jsou bity bitset – posunutí doleva.
+*_Pos*<br/>
+ Počet pozic, které jsou bity bitset – posunutí doleva.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* počet pozic vlevo bity bitset – jsou posunutí.
+*_Pos*<br/>
+ Počet pozic, o bity bitset – jsou posunutí doleva.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* bitset –, který je k porovnání s bitset – cíl pro rovnost.
+*doprava*<br/>
+ Bitset –, který je k porovnání s bitset – cíl pro rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* počet pozic napravo bity bitset – jsou posunutí.
+*_Pos*<br/>
+ Počet pozic napravo bity bitset – jsou posunutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* počet pozic napravo bity bitset – jsou posunutí.
+*_Pos*<br/>
+ Počet pozic napravo bity bitset – jsou posunutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozici bitu v rámci bitset – vyhledání.
+*_Pos*<br/>
+ Pozici bitu v rámci bitset – vyhledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* bitset –, který je bitový kombinovat s bitset – cíl.
+*doprava*<br/>
+ Bitset –, který je bitový kombinovat s bitset – cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* bitset –, který je bitový kombinovat s bitset – cíl.
+*doprava*<br/>
+ Bitset –, který je bitový kombinovat s bitset – cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Val* hodnotu objektu typu **bool** má být přiřazena k bitu v bitset –.
+*Val*<br/>
+ Hodnota objektu typu **bool** má být přiřazena k bitu v bitset –.
 
-*_Bitref* odkaz ve formuláři *x [i]* bitů na pozici *můžu* v bitset – *x*.
+*_Bitref*<br/>
+ Odkaz ve formuláři *x [i]* bitů na pozici *můžu* v bitset – *x*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1213,7 +1234,7 @@ Odkaz na bit v bitset – určená pozice argumentu pro první, druhý a pátý 
 
 ### <a name="remarks"></a>Poznámky
 
-Třída `reference` existuje pouze jako pomocnou třídu pro bitset – `operator[]`. Člen třídy popisuje objekt, který můžete přístup k individuální verzi v rámci bitset –. Umožní *b* být objekt typu **bool**, *x* a *y* objekty typu **bitset –\<***N***  >** , a *můžu* a *j* platná pozice v rámci takového objektu. Zápis *x [i]* odkazuje na pozici bitu *můžu* v bitset – *x*. Členské funkce třídy `reference` v pořadí, zadejte následující operace:
+Třída `reference` existuje pouze jako pomocnou třídu pro bitset – `operator[]`. Člen třídy popisuje objekt, který můžete přístup k individuální verzi v rámci bitset –. Umožní *b* být objekt typu **bool**, *x* a *y* objekty typu **bitset –\<**  *N* **>**, a *můžu* a *j* platná pozice v rámci takového objektu. Zápis *x [i]* odkazuje na pozici bitu *můžu* v bitset – *x*. Členské funkce třídy `reference` v pořadí, zadejte následující operace:
 
 |Operace|Definice|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozici bitu v bitset – Chcete-li nastaven na hodnotu 0.
+*_Pos*<br/>
+ Pozici bitu v bitset – Chcete-li nastaven na hodnotu 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozici bitu v bitset – nastavit přiřazena hodnota.
+*_Pos*<br/>
+ Pozici bitu v bitset – nastavit přiřazena hodnota.
 
-*Val* hodnota, která má být přiřazena k bitu na zadané pozici.
+*Val*<br/>
+ Hodnota má být přiřazena k bitu na zadané pozici.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozici bitu v bitset – má být testována pro jeho hodnotu.
+*_Pos*<br/>
+ Pozici bitu v bitset – má být testována pro jeho hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vyvolá [out_of_range –](../standard-library/out-of-range-class.md)
-

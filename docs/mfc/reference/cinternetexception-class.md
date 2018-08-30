@@ -1,5 +1,5 @@
 ---
-title: Třída CInternetException | Microsoft Docs
+title: Cinternetexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f1439fc2a5d49a775f55c7c25e45f4faa9b9c99f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211274"
 ---
-# <a name="cinternetexception-class"></a>CInternetException – třída
-Představuje podmínku výjimky související s operace Internetu.  
+# <a name="cinternetexception-class"></a>Cinternetexception – třída
+Představuje podmínku výjimky vztahující se k Internetu operaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,18 +50,18 @@ class CInternetException : public CException
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CInternetException::m_dwContext](#m_dwcontext)|Hodnota kontextu přidružené operace, který způsobil výjimku.|  
+|[CInternetException::m_dwContext](#m_dwcontext)|Hodnota kontextu přidružené operaci, která způsobila výjimku.|  
 |[CInternetException::m_dwError](#m_dwerror)|Chyba, která způsobila výjimku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CInternetException` Třída obsahuje dva členy veřejná data: jeden obsahuje kód chyby související s tím rozdílem, a druhá obsahuje identifikátor kontextu Internetové aplikace přidružené k chybě.  
+ `CInternetException` Třída zahrnuje dvě veřejné datové členy: jeden obsahuje kód chyby související s výjimkou a druhý obsahuje identifikátor kontextu Internetové aplikace přidružené k chybě.  
   
- Další informace o kontextu identifikátory pro webové aplikace, najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Další informace o kontextu identifikátory pro aplikace, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CException](../../mfc/reference/cexception-class.md)  
+ [Cexception –](../../mfc/reference/cexception-class.md)  
   
  `CInternetException`  
   
@@ -69,7 +69,7 @@ class CInternetException : public CException
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cinternetexception"></a>  CInternetException::CInternetException  
- Tento člen funkce je volána, když `CInternetException` je vytvořen objekt.  
+ Tato členská funkce je volána, když `CInternetException` je vytvořen objekt.  
   
 ```  
 CInternetException(DWORD dwError);
@@ -80,17 +80,17 @@ CInternetException(DWORD dwError);
  Chyba, která způsobila výjimku.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li throw CInternetException, volejte globální funkce MFC [afxthrowinternetexception –](internet-url-parsing-globals.md#afxthrowinternetexception).  
+ Vyvolání cinternetexception – volání globální funkce MFC [afxthrowinternetexception –](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
- Hodnota kontextu přidružené k související operace Internetu.  
+ Kontext hodnotu přidruženou k související operaci na Internetu.  
   
 ```  
 DWORD_PTR m_dwContext;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Identifikátor kontextu je byl původně specifikován v [CInternetSession](../../mfc/reference/cinternetsession-class.md) a předaná MFC k [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- a [CInternetFile](../../mfc/reference/cinternetfile-class.md)-odvozených třídách. Můžete přepsat toto výchozí nastavení a přiřazení některého *dwContext* parametr hodnotu dle vlastního výběru. *dwContext* souvisí s všechny operace daného objektu. *dwContext* identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ Identifikátor kontextu je původně určeno [cinternetsession –](../../mfc/reference/cinternetsession-class.md) a předávány knihovny MFC pro [cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)– a [cinternetfile –](../../mfc/reference/cinternetfile-class.md)-odvozené třídy. Můžete přepsat toto výchozí nastavení a přiřazení některého *dwContext* parametr hodnotu podle vašeho výběru. *dwContext* souvisí s jakoukoli operaci daného objektu. *dwContext* identifikuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  Chyba, která způsobila výjimku.  
@@ -100,11 +100,11 @@ DWORD m_dwError;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato hodnota chyba může být systém kód chyby v nezdařila nalezen. H nebo chybovou hodnotu z WININET. H.  
+ Tato hodnota chyba může být systém kód chyby v nezdařila. H nebo chybovou hodnotu z rozhraní WININET. H.  
   
- Seznam kódů chyb Win32 najdete v tématu [kódy chyb](http://msdn.microsoft.com/library/windows/desktop/ms681381). Seznam Internet specifické chybové zprávy najdete v tématu. Obě témata jsou ve Windows SDK.  
+ Seznam kódy chyb systému Win32 naleznete v tématu [kódy chyb](/windows/desktop/Debug/system-error-codes). Seznam Internet specifické chybové zprávy najdete v tématu. Obě témata jsou v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [CException – třída](../../mfc/reference/cexception-class.md)   
+ [Cexception – třída](../../mfc/reference/cexception-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CException – třída](../../mfc/reference/cexception-class.md)

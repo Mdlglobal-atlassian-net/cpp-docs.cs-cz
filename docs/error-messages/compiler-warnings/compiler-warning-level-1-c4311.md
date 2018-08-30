@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4311 | Microsoft Docs
+title: Upozornění (úroveň 1) C4311 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba06488ed41e7e296f9f6c16f34af827274acfd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adfd27a116ae5747a2dd899ce51c38f01055f356
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279120"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218537"
 ---
-# <a name="compiler-warning-level-1-c4311"></a>C4311 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4311"></a>Kompilátor upozornění (úroveň 1) C4311
 'variable': zkrácení ukazatele z 'type' na 'type'  
   
- Toto upozornění zjišťuje ukazatele 64-bit zkrácení problémy. Například pokud kompilace kódu pro architekturu 64-bit hodnota ukazatele (64bitová verze) bude zkrácen když je přiřazena `int` (32bitová verze). Další informace najdete v tématu [pravidla pro používání ukazatele](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Toto upozornění zjistí problémy zkrácení 64bitového ukazatele. Například pokud kód je zkompilován pro 64bitová architektura, hodnotou ukazatele (64bitová verze) se zkrátí Pokud je přiřazen `int` (32bitová verze). Další informace najdete v tématu [pravidla pro používání ukazatele](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
- Další informace o běžných příčin upozornění C4311 najdete v tématu [běžné chyby kompilátoru](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Další informace o běžných příčin upozornění C4311 najdete v tématu [běžné chyby kompilátoru](/windows/desktop/WinProg64/common-compiler-errors).  
   
- Následující příklad kódu generuje C4311 při kompilaci pro 64bitové cílové a pak ukazuje, jak to opravit:  
+ Následující příklad kódu generuje C4311 při kompilaci pro 64bitové cílové a uvidíte, jak ho opravit:  
   
 ```  
 // C4311.cpp  

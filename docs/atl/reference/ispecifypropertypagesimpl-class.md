@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d784d7f3c03b18d2f81d6eec8bc9e4b76c7ee8da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216766"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl – třída
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) rozhraní.  
+Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) rozhraní.  
   
 > [!IMPORTANT]
 >  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Vyplní hodnoty počítá pole UUID. Každý identifikátor UUID odpovídá CLSID pro jednu ze stránek vlastností, které se dají zobrazit v seznamu vlastností objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) rozhraní umožňuje klientům získat seznam CLSID pro stránky vlastností podporována objektem. Třída `ISpecifyPropertyPagesImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
+ [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) rozhraní umožňuje klientům získat seznam CLSID pro stránky vlastností podporována objektem. Třída `ISpecifyPropertyPagesImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
 > [!NOTE]
 >  Nezveřejňujte `ISpecifyPropertyPages` rozhraní, pokud objekt nepodporuje stránky vlastností.  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **Záhlaví:** atlcom  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Vyplní pole [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) strukturu s CLSID pro stránky vlastností, které se dají zobrazit v seznamu vlastností objektu.  
+ Vyplní pole [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid) strukturu s CLSID pro stránky vlastností, které se dají zobrazit v seznamu vlastností objektu.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>Poznámky  
  ATL – používá k načtení každý identifikátor CLSID mapy vlastností objektu.  
   
- Zobrazit [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) ve Windows SDK.  
+ Zobrazit [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ipropertypageimpl – třída](../../atl/reference/ipropertypageimpl-class.md)   

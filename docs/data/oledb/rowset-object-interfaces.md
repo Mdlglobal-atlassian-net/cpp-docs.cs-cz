@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217547"
 ---
 # <a name="rowset-object-interfaces"></a>Rozhraní objektu sady řádků
 V následující tabulce jsou uvedeny povinných a volitelných rozhraní určené v objektu sady řádků OLE DB.  
@@ -39,7 +39,7 @@ V následující tabulce jsou uvedeny povinných a volitelných rozhraní určen
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Nepovinné|Ne|  
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Nepovinné|Ne|  
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Nepovinné|Ne|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Nepovinné|Ano (pomocí knihovny ATL)|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Nepovinné|Ano (pomocí knihovny ATL)|  
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Nepovinné|Ne|  
 |[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Nepovinné|Ne|  
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Nepovinné|Ano|  

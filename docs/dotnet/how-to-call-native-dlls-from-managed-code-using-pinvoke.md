@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke | Microsoft Docs'
+title: 'Postupy: volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195664"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke
-Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+Funkce, které jsou implementovány v nespravovaných knihoven DLL lze volat ze spravovaného kódu pomocí vyvolání platformy (nespravovaného) funkce. Pokud není k dispozici zdrojový kód pro knihovnu DLL, P/Invoke je jedinou možností pro spolupráci. Ale na rozdíl od jiných jazyků .NET, Visual C++ poskytuje alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu používá Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) funkce načíst aktuální rozlišení obrazovky v pixelech.  
+ Následující příklad kódu používá Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkce načtete aktuální rozlišení obrazovky v pixelech.  
   
- Pro funkce, které používají pouze vnitřní typy jako argumenty a návratové hodnoty nejsou vyžadované žádné další kroky. Jiné datové typy, jako jsou ukazatele na funkce, pole a struktury, vyžadují další atributy, které zajistí řádné zařazování dat.  
+ Pro funkce, které používají jenom vnitřní typy jako argumenty a návratové hodnoty žádná další práce je nutná. Jiné datové typy, jako je například ukazatele na funkce, polí a struktur, vyžadují další atributy, aby zařazování správná data.  
   
- I když to není nutné, je vhodné zajistit P/Invoke deklarace statické členy třídy hodnot, takže neexistují v globálním oboru názvů, jak je ukázáno v tomto příkladu.  
+ I když to není potřeba, je vhodné nastavit P/Invoke deklarace statické členy třídy value class, takže neexistují v globálním oboru názvů, jak je ukázáno v tomto příkladu.  
   
 ```  
 // pinvoke_basic.cpp  

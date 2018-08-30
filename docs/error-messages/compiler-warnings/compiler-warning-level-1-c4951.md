@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4951 | Microsoft Docs
+title: Upozornění (úroveň 1) C4951 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290462"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204232"
 ---
-# <a name="compiler-warning-level-1-c4951"></a>C4951 kompilátoru upozornění (úroveň 1)
-Po profil, který data nebyla shromážděna, data profilu funkce nepoužívá upraven 'function'.  
-  
- Funkce bylo upraveno v modulu vstupní s [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)tak, aby data profilu je nyní není platný. Vstupní modul byl překompilovat po **/LTCG:PGINSTRUMENT** a má funkci (***funkce***) s jinou toku řízení, než se v modulu v době **/LTCG:PGINSTRUMENT**  operaci.  
-  
- Toto upozornění je informační. Toto upozornění vyřešíte spuštěním **/LTCG:PGINSTRUMENT**, znovu všechny testovací běží a spusťte **/LTCG:PGOPTIMIZE**.  
-  
- Toto upozornění se zobrazí se chyba nahrazený, pokud **/LTCG:PGOPTIMIZE** bylo použito.
+# <a name="compiler-warning-level-1-c4951"></a>Kompilátor upozornění (úroveň 1) C4951
+
+> "*funkce*' byl upraven od shromáždění dat profilu data profilu funkce se nepoužijí
+
+Funkci byl upraven v vstupu modulu do [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)tak, aby data profilu je nyní neplatný. Vstupní modul byl znovu zkompilovat po **/LTCG:PGINSTRUMENT** a má funkci (*funkce*) s odlišný tok řízení, než se v modulu v době **/LTCG:PGINSTRUMENT**  operace.
+
+Toto upozornění je informační. Pokud chcete vyřešit toto upozornění, spusťte **/LTCG:PGINSTRUMENT**, znovu všech testů běží a spusťte **/LTCG:PGOPTIMIZE**.
+
+Toto upozornění by měl být nahrazen chybu, pokud **/LTCG:PGOPTIMIZE** nepoužilo.

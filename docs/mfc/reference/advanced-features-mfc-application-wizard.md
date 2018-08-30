@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464721"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198123"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Pokročilé funkce, Průvodce aplikací knihovny MFC
 Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je například nápověda, podpora tisku a tak dále. Každý oddíl popisuje doplňkovou podporu pro tyto rozšířené funkce.  
@@ -47,17 +47,17 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
  Podporuje rozhraní Windows Sockets, která lze použít k tvorbě aplikací, jež komunikují v sítích TCP/IP.  
   
  **Active Accessibility**  
- Přidává podporu pro [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) k [CWnd](../../mfc/reference/cwnd-class.md)-odvozené třídy, které můžete použít k přizpůsobení uživatelského rozhraní pro lepší interakci s klienty usnadnění.  
+ Přidává podporu pro [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) k [CWnd](../../mfc/reference/cwnd-class.md)-odvozené třídy, které můžete použít k přizpůsobení uživatelského rozhraní pro lepší interakci s klienty usnadnění.  
   
  **Manifest běžných ovládacích prvků**  
  Ve výchozím nastavení povoleno. Generuje manifest aplikace pro povolení knihovny DLL běžných ovládacích prvků, která je součástí systému Microsoft Windows XP a novějších operačních systémů.  
   
  Verze 6 knihovny DLL běžných ovládacích prvků neaktualizuje automaticky předchozí verze běžných ovládacích prvků, které používají existující aplikace. Chcete-li použít verzi 6 knihovny DLL běžných ovládacích prvků, je třeba vytvořit manifest aplikace, který aplikaci přesměruje k načtení této knihovny DLL. Tato knihovna DLL běžných ovládacích prvků podporuje také motivy systému Windows XP.  
   
- Manifest aplikace může určit také další knihovny DLL a verze, které aplikace potřebuje. Další informace o manifestech aplikace naleznete v tématu [izolované aplikace a sestavení vedle sebe](http://msdn.microsoft.com/library/dd408052) v sadě Windows SDK.  
+ Manifest aplikace může určit také další knihovny DLL a verze, které aplikace potřebuje. Další informace o manifestech aplikace naleznete v tématu [izolované aplikace a sestavení vedle sebe](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) v sadě Windows SDK.  
   
  **Podpora správce restartování**  
- Přidává podporu pro [správce restartování Windows](/windows/desktop/RstMgr/using-restart-manager). Toto video ukazuje, jak použít správce restartování z knihovny MFC: [návody: použití nového správce restartování](http://msdn.microsoft.com/vstudio/ee886407).  
+ Přidává podporu pro [správce restartování Windows](/windows/desktop/RstMgr/using-restart-manager). Toto video ukazuje, jak použít správce restartování z knihovny MFC: [návody: použití nového správce restartování](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Rozšířená podokna rámců**  
  |Možnost|Popis|  

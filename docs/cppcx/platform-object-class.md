@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216436"
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 Poskytuje běžné chování pro referenční třídy a struktury ref v aplikacích pro Windows Runtime. Všechny třídy ref class a instance struktury ref jsou implicitně převést na Platform::Object ^ a jeho virtuální metodu ToString lze přepsat.  
@@ -119,7 +119,7 @@ Object::GetType()
 ### <a name="remarks"></a>Poznámky  
  Statické [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) můžete použít k získání [Platform::TypeCode – výčet](../cppcx/platform-typecode-enumeration.md) hodnotu, která představuje aktuálního typu. To oceníte především pro předdefinované typy. Typ kódu pro všechny třídy ref class kromě [Platform::String](../cppcx/platform-string-class.md) je objekt (1).  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) třída se používá v rozhraní Windows API způsobem nezávislým na jazyku předávání informací o typu mezi součásti Windows a aplikace. T[Platform::type – třída](../cppcx/platform-type-class.md) má operátory pro převod mezi `Type` a `TypeName`.  
+ [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) třída se používá v rozhraní Windows API způsobem nezávislým na jazyku předávání informací o typu mezi součásti Windows a aplikace. T[Platform::type – třída](../cppcx/platform-type-class.md) má operátory pro převod mezi `Type` a `TypeName`.  
   
  Použití [typeid](../windows/typeid-cpp-component-extensions.md) operátor se vraťte `Platform::Type` objekt pro název třídy, například při navigaci mezi stránkami XAML:  
   

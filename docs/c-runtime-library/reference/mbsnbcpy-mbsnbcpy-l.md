@@ -1,5 +1,5 @@
 ---
-title: _mbsnbcpy –, _mbsnbcpy_l – | Microsoft Docs
+title: _mbsnbcpy _mbsnbcpy_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,19 +43,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fc3c849506401e44dfebcd4d0722953b557ae01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0972b1584f4df92455bb17e0db8e577f988ae8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213108"
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Kopie **n** bajtů řetězec tak, aby cílový řetězec. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [_mbsnbcpy_s –, _mbsnbcpy_s_l –](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Kopie **n** bajtů řetězce do cílového řetězce. Bezpečnější verze těchto funkcí jsou k dispozici, najdete v článku [_mbsnbcpy_s – _mbsnbcpy_s_l –](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,24 +98,24 @@ Cíl pro řetězec znaků, které se mají zkopírovat.
 Počet bajtů, které mají být zkopírovány.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbcpy –** vrací ukazatel na cílovém řetězcem znaků. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+**_mbsnbcpy –** vrací ukazatel na cílový řetězec znaků. Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsnbcpy –** funkce kopie *počet* bajtů z *strSource* k *strDest*. Pokud *počet* překračuje velikost *strDest* nebo zdrojové a cílové řetězce překrývají, chování **_mbsnbcpy –** není definován.
+**_Mbsnbcpy** funkce kopie *počet* bajtů z *strSource* k *strDest*. Pokud *počet* překračuje velikost *strDest* nebo zdrojový a cílový řetězec překrývají, chování **_mbsnbcpy** není definován.
 
-Pokud *strSource* nebo *strDest* ukazatel s hodnotou null, je tato funkce volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **NULL** a nastaví **errno** k **einval –**.
+Pokud *strSource* nebo *strDest* je ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **NULL** a nastaví **errno** k **EINVAL**.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s výjimkou, že ty, které nemají **_l** příponu použít aktuální národní prostředí a verze, které mají **_l** příponu, použijte parametr národního prostředí to je Předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí jsou identické, s výjimkou, že ty, které nemají **_l** přípona pomocí aktuálního národního prostředí a verze, které mají **_l** přípona místo toho používá parametr národního prostředí, která Předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít ke spuštění libovolného útočník kód, který může způsobit, že bude vyplacena neoprávněně zvýšení úrovně oprávnění a ohrozit zabezpečení systému. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce by mohly být vystaveny ohrožení přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti je možné ke spouštění kódu vytvořeného libovolného útočník, který může způsobit neoprávněné zvýšení úrovně oprávnění a ohrozit zabezpečení systému. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější, bezpečnější svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, lépe zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -131,9 +131,9 @@ V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání nověj
 |**_mbsnbcpy**|\<Mbstring.h >|
 |**_mbsnbcpy_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

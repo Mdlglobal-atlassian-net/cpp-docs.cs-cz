@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215580"
 ---
 # <a name="csharedfile-class"></a>Csharedfile – třída
 [Cmemfile –](../../mfc/reference/cmemfile-class.md)-odvozenou třídu, která podporuje sdílené soubory z paměti.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Poznámky  
  Soubory z paměti se chovat jako soubory disku s tím rozdílem, že je soubor uložený v paměti RAM, nikoli na disku. Soubor paměti je užitečné pro rychlé dočasné úložiště nebo při přenosech nezpracovaná bajtů nebo serializovat objekty mezi nezávislé procesy.  
   
- Soubory sdílené paměti liší od jiné soubory z paměti, že je paměť přidělená k [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkce Windows. `CSharedFile` Třídy ukládá data v bloku globálně přidělená paměť (vytvořené pomocí `GlobalAlloc`), a tento blok paměti je možné sdílet pomocí DDE, schránku nebo jiných OLE/COM jednotné operace přenosu dat, například pomocí `IDataObject`.  
+ Soubory sdílené paměti liší od jiné soubory z paměti, že je paměť přidělená k [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funkce Windows. `CSharedFile` Třídy ukládá data v bloku globálně přidělená paměť (vytvořené pomocí `GlobalAlloc`), a tento blok paměti je možné sdílet pomocí DDE, schránku nebo jiných OLE/COM jednotné operace přenosu dat, například pomocí `IDataObject`.  
   
  `GlobalAlloc` Vrátí HGLOBAL zpracování místo ukazatel na paměti, jako je například ukazatele vrácené [malloc](../../c-runtime-library/reference/malloc.md). Popisovač HGLOBAL je potřeba v určitých aplikacích. Například dávat data do schránky, budete potřebovat popisovač HGLOBAL.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Parametry  
  *nAllocFlags*  
- Příznaky určující, jak má přidělit paměť. Zobrazit [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) seznam platných hodnot příznaku.  
+ Příznaky určující, jak má přidělit paměť. Zobrazit [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) seznam platných hodnot příznaku.  
   
  *nGrowBytes*  
  Zvýšení přidělení paměti v bajtech.  

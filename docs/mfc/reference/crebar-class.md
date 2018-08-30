@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201851"
 ---
 # <a name="crebar-class"></a>Crebar – třída
 Ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Ukazatel `CBitmap` objekt, který se má zobrazit na pozadí matrice. Ve výchozím nastavení s hodnotou NULL.  
   
  *dwStyle*  
- DWORD obsahující stylu použít matrice. Najdete v článku `fStyle` funkce Popis ve struktuře Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) pro úplný seznam styly obsluhy vzdálené správy.  
+ DWORD obsahující stylu použít matrice. Najdete v článku `fStyle` funkce Popis ve struktuře Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) pro úplný seznam styly obsluhy vzdálené správy.  
   
  *clrFore*  
  COLORREF hodnotu, která představuje barvu popředí matrice.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Ukazatel `CWnd` objekt, jehož okno Windows je nadřazeného člena stavový řádek. Obvykle rámce okna.  
   
  *dwCtrlStyle*  
- Stylu ovládacího prvku rebar. Ve výchozím nastavení RBS_BANDBORDERS, která zobrazuje úzký řádky k oddělení sousední pruhy v ovládacím prvku matrice. Zobrazit [– styly ovládacího prvku Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) v sadě Windows SDK pro seznam styly.  
+ Stylu ovládacího prvku rebar. Ve výchozím nastavení RBS_BANDBORDERS, která zobrazuje úzký řádky k oddělení sousední pruhy v ovládacím prvku matrice. Zobrazit [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK pro seznam styly.  
   
  *dwStyle*  
  Styly oken matrice.  

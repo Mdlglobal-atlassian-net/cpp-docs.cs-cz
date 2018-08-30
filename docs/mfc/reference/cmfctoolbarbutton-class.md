@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851376"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210847"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton – třída
 Poskytuje funkce tlačítko na panely nástrojů.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Určuje, zda tlačítko je vlastník popisovač zadaného okna.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Určuje, zda je zobrazen tlačítka panelu nástrojů.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Určuje, zda je zobrazen podkladové popisovač okna tlačítka.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Určuje, zda můžete přetáhnout tlačítka.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Určuje, zda uživatele lze přetáhnout tlačítko na panelu nástrojů cíl.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Volá se rozhraním pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Volá se rozhraním pro zpracování [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) zprávy.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Volá se rozhraním, když uživatel uvolní tlačítko myši.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Volá se rozhraním, když zpracovává zprávu WM_HELPHITTEST nadřazeného panelu nástrojů.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Volá se rozhraním, když nadřazeného panelu nástrojů zpracovává WM_CTLCOLOR – zpráva.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Umožňuje na tlačítko Upravit zadaná nabídky aplikace zobrazí místní nabídka na panelu nástrojů nadřazené.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Volá se rozhraním, když zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Volá se rozhraním, když zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) zprávy.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit tlačítko s použitím zadaného styly a možnosti.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Volá se rozhraním, chcete-li nakreslit tlačítko **příkazy** podokně **vlastní** dialogové okno.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Volá se rozhraním pro text vlastního popisku tlačítka pro načtení.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Nastavte tento parametr na hodnotu PRAVDA, povolit vstup, nebo FALSE, pokud chcete zakázat vstup.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá `EnableWindow` funkce k povolení nebo zakázání vstup. Další informace najdete v tématu [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) v sadě Windows SDK.  
+ Tato metoda volá `EnableWindow` funkce k povolení nebo zakázání vstup. Další informace najdete v tématu [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) v sadě Windows SDK.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Zkopíruje text tlačítka na panelu nástrojů do nabídky.  
@@ -884,7 +884,7 @@ CString m_strText;
  Tomuto datovému členu obsahuje text popisku tlačítka. Textový popisek může být prázdný.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.  
+ Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Tato metoda vrátí hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní volá tuto metodu, když je odeslat [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávu nadřazenému oknu.  
+ Rozhraní volá tuto metodu, když je odeslat [wm_command –](/windows/desktop/menurc/wm-command) zprávu nadřazenému oknu.  
   
  Ve výchozím nastavení tato metoda vrátí hodnotu FALSE. Potlačí tuto metodu za účelem vrátí hodnotu PRAVDA, pokud chcete zpracovat wm_command – zprávy nebo hodnotu NEPRAVDA označuje, že nadřazeného panelu nástrojů by měl zpracovat zprávu.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Potlačí tuto metodu, pokud byste chtěli poskytnout velikost nestandardní tlačítka (například pole tlačítko pro úpravy).  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Volá se rozhraním pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy.  
+ Volá se rozhraním pro zpracování [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) zprávy.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této metody nemá žádný účinek. Potlačí tuto metodu, pokud chcete zpracovávat [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy.  
+ Výchozí implementace této metody nemá žádný účinek. Potlačí tuto metodu, pokud chcete zpracovávat [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) zprávy.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  Výchozí implementace neprovede žádnou akci a vrátí hodnotu FALSE. Potlačí tuto metodu a vrátí nenulovou hodnotu, pokud chcete upravit obsah poskytnutý nabídky.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Volá se rozhraním, když zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy.  
+ Volá se rozhraním, když zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) zprávy.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   Nadřazené okno tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána metodou `CMFCToolBar::OnLButtonDblClk` metoda při zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy.  
+ Tato metoda je volána metodou `CMFCToolBar::OnLButtonDblClk` metoda při zpracovává nadřazeného panelu nástrojů [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) zprávy.  
   
  Výchozí implementace této metody nemá žádný účinek.  
   

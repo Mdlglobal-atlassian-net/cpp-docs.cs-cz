@@ -1,5 +1,5 @@
 ---
-title: Multiplikativní operátory jazyka C | Microsoft Docs
+title: Multiplikativní operátory jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,58 +21,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0be97e271ce8b500274d0e2ab1f271183ef7c238
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387788"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199991"
 ---
 # <a name="c-multiplicative-operators"></a>Multiplikativní operátory jazyka C
-Multiplikativní operátory provést násobení (**\****), dělení (**/**) a zbytek (`%`) operace.  
+Operátory násobení provedení násobení (<strong>\*</strong>), dělení (**/**) a zbytek (**%**) operace.  
   
- **Syntaxe**  
+## <a name="syntax"></a>Syntaxe
+
+*multiplikativní výraz*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz CAST*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* <strong>\*</strong> *výrazem přetypování.*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **/** *výrazem přetypování.*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **%** *výrazem přetypování.*
+
+Operandy operátoru zbytek (**%**) musí být integrálního typu. Násobení (<strong>\**</strong>) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
   
- *multiplikativní výraz*:  
- *cast-expression*  
-  
- *multiplikativní výraz***\****výraz cast*  
-  
- *multiplikativní výraz***/***výraz cast*  
-  
- *multiplikativní výraz***%***výraz cast*  
-  
- Operandy operátoru zbývající (`%`) musí být celočíselné. Násobení (**\****) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
-  
- Multiplikativní operátory provést obvyklé aritmetické převody operandy. Typ výsledku je typ operandy po převodu.  
+Operátory násobení provádět běžné aritmetické převody operandů. Typ výsledku je typ operandu po převodu.  
   
 > [!NOTE]
 >  Vzhledem k tomu, že převody prováděné operátory násobení nepočítají s podmínkami přetečení nebo podtečení, informace se mohou ztratit, pokud výsledek operace násobení nelze reprezentovat v typu operandu po převodu.  
   
- Multiplikativní operátory jazyka C jsou následující:  
+ Multiplikativní operátory jazyka C jsou popsané níže:  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|**\***|Operátor násobení způsobí, že jeho dva operandy vynásobí.|  
-|**/**|Operátor dělení způsobí, že první operand rozdělit druhou. Pokud se dál dělí dva operandy celé číslo a výsledek není typu integer, zkrátí se podle následujících pravidel:|  
-||-Není definován podle standardu ANSI C výsledek dělení 0. Kompilátor Microsoft C generuje chybu v době kompilace nebo dobu spuštění.|  
-||– Pokud jsou oba operandy kladná nebo bez znaménka, výsledek se zkrátí na 0.|  
-||– Pokud buď operand je hodnota záporná, jestli je největší celé číslo menší než nebo rovna algebraických podílu výsledek operace, nebo je nejmenší celé číslo větší než nebo rovna hodnotě algebraických podílu je implementace definované. (Viz část Microsoft specifické níže.)|  
-|`%`|Výsledek operátor zbytku je zbývající při dělení první operand druhý. Když divizi je nepřesný, výsledek je dáno následující pravidla:|  
-||– Pokud pravý operand nulová, výsledkem nedefinovaný.|  
-||– Pokud jsou oba operandy kladná nebo bez znaménka, výsledkem je kladná.|  
-||– Pokud je záporná. buď operand a výsledkem je nepřesný, výsledkem je implementace definované. (Viz část Microsoft specifické níže.)|  
+|<strong>\*</strong>|Operátor násobení způsobí, že se vynásobí dva operandy.|  
+|**/**|Operátor dělení způsobí, že první operand k rozdělení po sekundách. Pokud jsou rozděleny dva celočíselné operandy a výsledek není typu integer, zkrátí se podle následujících pravidel:<br/><br/>-Není definováno podle standardu ANSI C výsledek dělení 0. Kompilátor Microsoft C generuje chybu v době kompilace nebo běhu.<br/><br/>-Pokud jsou oba operandy kladné nebo bez znaménka, výsledek je zkrácen na 0.<br/><br/>– Pokud některý operand je záporný, určuje, zda je největší celé číslo menší nebo rovna algebraických podíl výsledek operace, nebo je nejmenší celé číslo větší než nebo rovna hodnotě algebraických podíl je definován implementací. (Viz níže uvedené části specifické pro Microsoft.)|  
+|**%**|Výsledek operátoru zbývající je zbytek po prvním operandem, je vyděleno hodnotou druhého. Při dělení je nepřesný, je výsledek určen následujícími pravidly:<br/><br/>– Pokud pravý operand je nula, výsledek není definován.<br/><br/>-Pokud jsou oba operandy kladné nebo bez znaménka, výsledek je kladný.<br/><br/>– Pokud některý operand je záporný a výsledkem je nepřesný, výsledek je definován implementací. (Viz níže uvedené části specifické pro Microsoft.)|  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- V oblasti, kde je buď operand záporná je směr zkrácení směrem k 0.  
+ V oblasti, ve kterém některý operand je záporný je směr zkrácení směrem k 0.  
   
- Pokud je buď operace záporné v divizi s operátor zbytku, výsledek obsahuje stejné znaménko jako dělenec (První operand výrazu).  
+ Pokud je záporné dělení s operátor zbytku buď operace, výsledek má stejné znaménko jako podíl (První operand ve výrazu).  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="examples"></a>Příklady  
- Deklarací uvedené níže, se používají pro následující příklady:  
+ Následující příklady používají deklarací uvedené níže:  
   
 ```  
 int i = 10, j = 3, n;  
@@ -85,32 +76,32 @@ double x = 2.0, y;
 y = x * i;  
 ```  
   
- V takovém případě `x` se násobí hodnotou `i` poskytnout hodnota 20.0. Výsledek obsahuje **dvojité** typu.  
+ V takovém případě `x` se násobí hodnotou `i` aby byla hodnota 20.0. Výsledek obsahuje **double** typu.  
   
 ```  
 n = i / j;  
 ```  
   
- V tomto příkladu je rozdělena 10 3. Výsledek se zkrátí na 0, je hodnota celého čísla 3.  
+ V tomto příkladu je 10 dělený 3. Výsledkem je zkrácen na 0, což má za následek celočíselnou hodnotu 3.  
   
 ```  
 n = i % j;  
 ```  
   
- Tento příkaz přiřadí `n` zbývající celé číslo, 1, při dělení 10 3.  
+ Tento příkaz přiřadí `n` zbývající celé číslo, 1, 10, je vyděleno hodnotou 3.  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- Znaménko zbývající je stejný jako znaménko dělenec. Příklad:  
+ Znaménko zbytek je stejný jako znaménko podíl. Příklad:  
   
 ```  
 50 % -6 = 2  
 -50 % 6 = -2  
 ```  
   
- V každém případě `50` a `2` mít stejné znaménko.  
+ V obou případech `50` a `2` mají stejné znaménko.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Multiplikativní operátory a operátor numerického zbytku](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852299"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222856"
 ---
 # <a name="colecontrolcontainer-class"></a>Colecontrolcontainer – třída
 Funguje jako kontejner ovládacího prvku pro ovládací prvky ActiveX.  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|Mapa webu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Je to tím, že poskytuje podporu pro jednu nebo více lokalit ovládacího prvku ActiveX (implementované `COleControlSite`). `COleControlContainer` plně implementuje [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) a [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) rozhraní, což obsažené ovládací prvky ActiveX ke splnění jejich kvalifikace jako místní položky.  
+ Je to tím, že poskytuje podporu pro jednu nebo více lokalit ovládacího prvku ActiveX (implementované `COleControlSite`). `COleControlContainer` plně implementuje [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) a [IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer) rozhraní, což obsažené ovládací prvky ActiveX ke splnění jejich kvalifikace jako místní položky.  
   
  Tato třída se často používá ve spojení s `COccManager` a `COleControlSite` implementovat vlastní kontejner ovládacího prvku ActiveX, s vlastní weby pro jednu nebo více ovládacích prvků ActiveX.  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  Ukazatel na logickou hodnotu, která přijímá hodnotu úspěch nebo selhání – funkce (hodnota TRUE označuje úspěch, hodnota FALSE označuje selhání).  
   
  *bSigned*  
- Určuje, zda by měla funkce prozkoumají text pro znaménko mínus na začátku a nenalezne-li vrátit hodnotu se znaménkem. Pokud *bSigned* parametr má hodnotu TRUE, určení, že je hodnota má být načtena hodnota celé číslo se znaménkem, přetypovávat návratovou hodnotu pro **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Určuje, zda by měla funkce prozkoumají text pro znaménko mínus na začátku a nenalezne-li vrátit hodnotu se znaménkem. Pokud *bSigned* parametr má hodnotu TRUE, určení, že je hodnota má být načtena hodnota celé číslo se znaménkem, přetypovávat návratovou hodnotu pro **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud úspěšné, proměnná ukazuje *lpTrans* nastavena na hodnotu TRUE, a návratová hodnota je hodnota přeložený text ovládacího prvku.  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud funkce uspěje, vrácená hodnota určuje počet znaků, které jsou zkopírovány do vyrovnávací paměti, bez ukončujícího znaku null.  
   
- Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Určuje, pokud kontejner zpracovává WM_SETFOCUS zprávy.  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209565"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 implementuje na straně klienta automatizaci OLE.  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).  
   
- Další informace najdete v tématu [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
+ Další informace najdete v tématu [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](/windows/desktop/com/structure-of-com-error-codes) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](#createdispatch).  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `m_bAutoRelease` nastavena na hodnotu TRUE v konstruktoru.  
   
- Další informace o uvolnění objektů modelu COM, naleznete v tématu [implementace počítání odkazů](http://msdn.microsoft.com/library/windows/desktop/ms693431) a [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) v sadě Windows SDK.  
+ Další informace o uvolnění objektů modelu COM, naleznete v tématu [implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) a [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

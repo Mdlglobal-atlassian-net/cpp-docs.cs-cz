@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208863"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr písma.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Písmo logickou strukturu, která určuje atributy písma.  
   
  [in] *dwFontDialogFlags*  
- Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnotu rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnotu rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Popis vlastnosti font. Výchozí hodnota je NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura, která popisuje vybraného písma.  
+ Ukazatel [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktura, která popisuje vybraného písma.  
   
 ### <a name="remarks"></a>Poznámky  
   

@@ -1,5 +1,5 @@
 ---
-title: wctomb_s –, _wctomb_s_l – | Microsoft Docs
+title: wctomb_s – _wctomb_s_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195116"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
-Široká znaková převede na odpovídající vícebajtových znaků. Verzi [wctomb –, _wctomb_l –](wctomb-wctomb-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede široký znak na odpovídající vícebajtový znak. Verze [wctomb – _wctomb_l –](wctomb-wctomb-l.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,41 +71,41 @@ errno_t _wctomb_s_l(
 ### <a name="parameters"></a>Parametry
 
 *pRetValue*<br/>
-Počet bajtů nebo kód udávající výsledek.
+Počet bajtů nebo kód označující výsledek.
 
 *mbchar*<br/>
-Adresa vícebajtových znaků.
+Adresa vícebajtového znaku.
 
 *sizeInBytes*<br/>
 Velikost vyrovnávací paměti *mbchar*.
 
 *wchar*<br/>
-Široká znaková.
+Široký znak.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, kód chyby při selhání.
+Nula v případě úspěchu, při selhání kód chyby.
 
-Chybové stavy
+Chybové podmínky
 
 |*mbchar*|*sizeInBytes*|Návratová hodnota|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**HODNOTU NULL**|>0|**EINVAL –**|nedojde ke změně|
-|všechny|>**INT_MAX –**|**EINVAL –**|nedojde ke změně|
-|všechny|příliš malá|**EINVAL –**|nedojde ke změně|
+|**HODNOTU NULL**|>0|**EINVAL**|Nezměněno|
+|Všechny|>**INT_MAX**|**EINVAL**|Nezměněno|
+|Všechny|příliš malá|**EINVAL**|Nezměněno|
 
-Pokud dojde k některé z výše uvedených podmínek chyba, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **wctomb –** vrátí **einval –** a nastaví **errno** k **einval –**.
+Pokud dojde k některé z výše uvedených chybové stavy, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **wctomb –** vrátí **EINVAL** a nastaví **errno** k **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wctomb_s –** funkce převede jeho *wchar* argument odpovídající vícebajtových znaků a ukládá výsledek v *mbchar*. Funkce můžete volat z libovolného bodu v libovolné aplikaci.
+**Wctomb_s –** funkce převede její *wchar* argument odpovídající vícebajtový znak a uloží výsledek v *mbchar*. Funkce můžete volat z libovolného bodu v libovolné aplikaci.
 
-Pokud **wctomb_s –** převede široká znaková k vícebajtových znaků, uloží je počet bajtů (které se nikdy větší než **mb_cur_max –**) v široká znaková do celé číslo, na kterou odkazuje*pRetValue*. Pokud *wchar* je znak hodnoty null široká charakterová (L '\0'), **wctomb_s –** doplní *pRetValue* s 1. Pokud cílový ukazatel *mbchar* je **NULL**, **wctomb_s –** vloží 0 *pRetValue*. Pokud převod není pro aktuální prostředí **wctomb_s –** převádí na hodnotu -1 *pRetValue*.
+Pokud **wctomb_s –** převede širokého znaku na vícebajtový znak, uloží je počet bajtů (který se nikdy větší než **MB_CUR_MAX**) v širokého znaku do celé číslo, na které odkazuje *pRetValue*. Pokud *wchar* je prázdný znak širokého znaku (L '\0'), **wctomb_s –** vyplní *pRetValue* s 1. Pokud se ukazatel na cílový *mbchar* je **NULL**, **wctomb_s –** umístí 0 *pRetValue*. Pokud převod není v aktuálním národním prostředí, **wctomb_s –** převádí na hodnotu -1 *pRetValue*.
 
-**wctomb_s –** používá aktuální národní prostředí informace závislých na národním prostředí; **_wctomb_s_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**wctomb_s –** používá aktuální národní prostředí pro informace závislé na národním prostředí. **_wctomb_s_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -114,11 +114,11 @@ Pokud **wctomb_s –** převede široká znaková k vícebajtových znaků, ulo�
 |**wctomb_s –**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program znázorňuje chování **wctomb –** funkce.
+Tento program ukazuje chování **wctomb –** funkce.
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -144,7 +144,7 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab7b12c26854903379da0b67f9f64e2158195587
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211125"
 ---
 # <a name="colestreamfile-class"></a>Colestreamfile – třída
 Představuje datový proud (`IStream`) ve složeném souboru jako součást strukturovaného úložiště OLE.  
@@ -72,7 +72,7 @@ class COleStreamFile : public CFile
   
  Další informace o zpracování datových proudů a úložišť, najdete v článku [kontejnery: složené soubory](../../mfc/containers-compound-files.md)...  
   
- Další informace najdete v tématu [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) a [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStream](/windows/desktop/api/objidl/nn-objidl-istream) a [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) v sadě Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Třídy CObject](../../mfc/reference/cobject-class.md)  
@@ -98,7 +98,7 @@ void Attach(LPSTREAM lpStream);
 ### <a name="remarks"></a>Poznámky  
  Objekt nesmí být již přidružen proud OLE.  
   
- Další informace najdete v tématu [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStream](/windows/desktop/api/objidl/nn-objidl-istream) v sadě Windows SDK.  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Vytvoří `COleStreamFile` objektu.  
@@ -114,7 +114,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="remarks"></a>Poznámky  
  Pokud *lpStream* má hodnotu NULL, není objekt přidružen proud OLE, v opačném případě objekt je přidružený zadaný stream OLE.  
   
- Další informace najdete v tématu [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStream](/windows/desktop/api/objidl/nn-objidl-istream) v sadě Windows SDK.  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Bezpečně vytvoří nový datový proud z globální sdílenou paměť kde selhání je normální, očekávaný stav.  
@@ -133,7 +133,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="remarks"></a>Poznámky  
  Paměť je přidělena subsystému OLE.  
   
- Další informace najdete v tématu [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) v sadě Windows SDK.  
+ Další informace najdete v tématu [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) v sadě Windows SDK.  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Bezpečně vytvoří nový datový proud v objekt zadaný úložiště, kde je normální, očekávaný stav selhání.  
@@ -165,7 +165,7 @@ BOOL CreateStream(
 ### <a name="remarks"></a>Poznámky  
  Pokud selže otevřít, bude vyvolána výjimka souboru a *pError* nemá hodnotu NULL.  
   
- Další informace najdete v tématu [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) v sadě Windows SDK.  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  Zruší přidružení datový proud z objektu bez zavření datového proudu.  
@@ -180,7 +180,7 @@ LPSTREAM Detach();
 ### <a name="remarks"></a>Poznámky  
  Datový proud musí být uzavřen nějak jiných než program se ukončí.  
   
- Další informace najdete v tématu [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStream](/windows/desktop/api/objidl/nn-objidl-istream) v sadě Windows SDK.  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Voláním této funkce vrací ukazatel na aktuální datový proud.  
@@ -190,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na aktuální datový proud rozhraní ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
+ Ukazatel na aktuální datový proud rozhraní ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Otevře existující datový proud.  
@@ -222,7 +222,7 @@ BOOL OpenStream(
 ### <a name="remarks"></a>Poznámky  
  Pokud selže otevřít, bude vyvolána výjimka souboru a *pError* nemá hodnotu NULL.  
   
- Další informace najdete v tématu [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) v sadě Windows SDK.  
+ Další informace najdete v tématu [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Cfile – třída](../../mfc/reference/cfile-class.md)   

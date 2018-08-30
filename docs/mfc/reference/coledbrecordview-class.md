@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853690"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218225"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>Poznámky  
  Zobrazení je připojený přímo k zobrazení formuláře `CRowset` objektu. Toto zobrazení je vytvořen z prostředků šablony dialogového okna a zobrazí pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna. `COleDBRecordView` Objektu používá výměna dat dialogových oken (DDX) a navigačních funkce součástí `CRowset`, automatizovat přesouvání dat mezi ovládacími prvky ve formuláři a polí v sadě řádků. `COleDBRecordView` také poskytuje výchozí implementaci pro přechod na první další, předchozí nebo poslední záznam a rozhraní pro aktualizace záznamu aktuálně pro zobrazení.  
   
- Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Byste měli použít **DDX_\***  metody (jako `DDX_Text`), nikoli **DDX_Field –\***  funkce (například `DDX_FieldText`) s `COleDbRecordView`. `DDX_FieldText` nebude fungovat s `COleDbRecordView` protože `DDX_FieldText` přijímá další argument typu **CRecordset\***  (pro `CRecordView`) nebo **CDaoRecordset\***  (pro `CDaoRecordView`).  
+ Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Byste měli použít `DDX_*` metody (například `DDX_Text`), nikoli `DDX_Field*` funkce (například `DDX_FieldText`) s `COleDbRecordView`. `DDX_FieldText` nebude fungovat s `COleDbRecordView` protože `DDX_FieldText` přijímá další argument typu `CRecordset*` (pro `CRecordView`) nebo `CDaoRecordset*` (pro `CDaoRecordView`).  
   
 > [!NOTE]
 >  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy šablona příjemce technologie OLE DB, použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).  

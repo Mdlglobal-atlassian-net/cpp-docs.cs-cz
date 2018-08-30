@@ -1,5 +1,5 @@
 ---
-title: hodiny | Microsoft Docs
+title: Clock | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209863"
 ---
 # <a name="clock"></a>clock
 
-Vypočítá wall čas používá proces volání.
+Vypočítá skutečný čas používá volající proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,13 +54,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Uplynulý čas od inicializace CRT na začátku procesu, měřená v **CLOCKS_PER_SEC** jednotek za sekundu. Pokud není k dispozici uplynulý čas, nebo byla překročena maximální kladné dobu, kterou lze zaznamenat jako **clock_t –** typu, funkce vrátí hodnotu `(clock_t)(-1)`.
+Uplynulý čas od inicializace CRT na začátku procesu, se měří v **CLOCKS_PER_SEC** jednotek za sekundu. Pokud není k dispozici uplynulý čas, nebo byla překročena maximální doba kladné, mohou být zaznamenány jako **clock_t –** typ, vrátí funkce hodnotu `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Poznámky
 
-**Hodiny** funkce řekne, jak dlouho wall hodiny od inicializace CRT během procesu spuštění uplynul. Všimněte si, že tato funkce není v souladu s výhradně C ISO, který určuje net čas procesoru jako návratovou hodnotu. Chcete-li získat časy procesoru, použijte Win32 [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) funkce. Pokud chcete zjistit uplynulý čas v sekundách, dělení hodnoty vrácené **hodiny** funkce pomocí makro **CLOCKS_PER_SEC**.
+**Hodiny** funkce říká, kolik času plánovače prošel od inicializace CRT během spuštění procesu. Všimněte si, že tato funkce není v souladu s výhradně ISO C, který určuje net čas procesoru jako návratovou hodnotu. Chcete-li získat časy procesoru, použijte rozhraní Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) funkce. K určení uplynulý čas v sekundách, rozdělte hodnoty vrácené **hodiny** funkce makro **CLOCKS_PER_SEC**.
 
-Dispozici dostatek času nevrací **hodiny** může být vyšší než maximální hodnota kladné **clock_t –**. Při procesu byla spuštěna déle hodnoty vrácené **hodiny** je vždy `(clock_t)(-1)`podle specifikace standard ISO C99 (7.23.2.1) a standard ISO C11 (7.27.2.1). Microsoft implementuje **clock_t –** jako **dlouho**, znaménkem 32-bit a **CLOCKS_PER_SEC** makro je definován jako 1000. To dává maximální **hodiny** funkce návratovou hodnotu 2147483.647 vteřin, nebo o 24,8 dnů. Nespoléhejte na hodnoty vrácené **hodiny** v procesy, které mají spuštěna déle, než toto množství času. Můžete použít 64-bit [čas](time-time32-time64.md) funkce nebo Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funkce záznamů proces uplynulý čas mnoha let.
+Zadaný dostatek času, vrácena hodnota **hodiny** může být delší než maximální kladnou hodnotu **clock_t –**. Při procesu byla spuštěna déle, hodnoty vrácené **hodiny** je vždy `(clock_t)(-1)`, jak je určeno podle standardu ISO C99 (7.23.2.1) a standard ISO C11 (7.27.2.1). Microsoft implementuje **clock_t –** jako **dlouhé**, 32bitové celé číslo se znaménkem a **CLOCKS_PER_SEC** makro je definováno jako 1 000. Získáte tak maximální **hodiny** funkce návratová hodnota 2147483.647 sekund nebo přibližně 24,8 dnů. Nespoléhejte na hodnotu vrácenou příkazem **hodiny** v procesech, které mají spuštěný déle než určitou dobu. Můžete použít 64-bit [čas](time-time32-time64.md) funkci nebo Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funkce záznamu proces uplynulý čas mnoho let.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,7 +68,7 @@ Dispozici dostatek času nevrací **hodiny** může být vyšší než maximáln
 |-------------|---------------------|
 |**clock**|\<Time.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +121,7 @@ Done!
 Time to do 600000000 empty loops is 1.354 seconds
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [difftime, _difftime32, _difftime64](difftime-difftime32-difftime64.md)<br/>

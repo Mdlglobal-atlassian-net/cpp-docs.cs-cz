@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 224f4d78aec432a27b2a0258d0d6b3d4a8f2174d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209505"
 ---
 # <a name="atl-http-utility-functions"></a>Funkce nástrojů ATL HTTP
 
@@ -27,7 +27,7 @@ Tyto funkce podporují zpracování adresy URL.
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Získá výchozí číslo portu přidružené k určité Internet protocol nebo schéma.|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Určuje, zda znak je bezpečný pro použití v adrese URL.|  
 |[AtlUnescapeUrl](#atlunescapeurl)|Převede uvozen řídicími znaky, znaky zpět na původní hodnoty.|  
-|[RGBToHtml](#rgbtohtml)|Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající hodnotě této barvy.|
+|[RGBToHtml](#rgbtohtml)|Převede [COLORREF](/windows/desktop/gdi/colorref) hodnotu na text HTML odpovídající hodnotě této barvy.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.|
 
 ## <a name="requirements"></a>Požadavky  
@@ -69,10 +69,10 @@ inline BOOL AtlCanonicalizeUrl(
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Se chová jako aktuální verze [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
+ Se chová jako aktuální verze [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
   
 ### <a name="see-also"></a>Viz také  
- [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
+ [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
  Voláním této funkce zkombinujete základní a relativní adresu URL do jedné kanonické adresy URL.  
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Se chová jako aktuální verze [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
+ Se chová jako aktuální verze [InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  Voláním této funkce převedete všechny problematické znaky na řídicí sekvence.  
@@ -214,7 +214,7 @@ inline BOOL AtlUnescapeUrl(
  Obrátí procesu převodu použil(a) [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající hodnotě této barvy.  
+Převede [COLORREF](/windows/desktop/gdi/colorref) hodnotu na text HTML odpovídající hodnotě této barvy.  
   
 ```  
 bool inline RGBToHtml(  

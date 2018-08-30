@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ef5728a20cc97d330540b10c2de325f62583b69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203073"
 ---
 # <a name="cfontdialog-class"></a>Cfontdialog – třída
 Umožňuje zahrnout do vaší aplikace dialogové okno Výběr písma.  
@@ -96,13 +96,13 @@ class CFontDialog : public CCommonDialog
   
  K vytvoření `CFontDialog` objektu, použijte poskytnutý konstruktor nebo odvodit novou podtřídu a použít vlastní vlastního konstruktoru.  
   
- Jednou `CFontDialog` objekt byl vytvořen, můžete použít `m_cf` struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. [M_cf](#m_cf) struktury je typu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Další informace o této struktuře naleznete v tématu Windows SDK.  
+ Jednou `CFontDialog` objekt byl vytvořen, můžete použít `m_cf` struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. [M_cf](#m_cf) struktury je typu [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta). Další informace o této struktuře naleznete v tématu Windows SDK.  
   
  Po inicializaci objektu dialogového okna ovládacích prvků, volání `DoModal` členské funkce a zobrazte dialogové okno Povolit uživatelům výběr písma. `DoModal` Vrátí, zda uživatel vybral tlačítko OK (IDOK) nebo zrušit (IDCANCEL).  
   
  Pokud `DoModal` vrátí IDOK, můžete použít jednu z `CFontDialog`pro členské funkce načtete informace o vstup uživatele.  
   
- Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě. Další informace o této funkci najdete v tématu Windows SDK.  
+ Můžete použít Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě. Další informace o této funkci najdete v tématu Windows SDK.  
   
  `CFontDialog` využívá COMMDLG. Soubor knihovny DLL, která se dodává s Windows verze 3.1 nebo novější.  
   
@@ -147,13 +147,13 @@ CFontDialog(
   
 ### <a name="parameters"></a>Parametry  
  *plfInitial*  
- Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) datová struktura, která vám umožní nastavit některé z vlastností písma.  
+ Ukazatel [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) datová struktura, která vám umožní nastavit některé z vlastností písma.  
   
  *charFormat*  
- Ukazatel [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) datová struktura, která vám umožní nastavit některé z vlastností písma v bohaté ovládací prvek textové pole.  
+ Ukazatel [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) datová struktura, která vám umožní nastavit některé z vlastností písma v bohaté ovládací prvek textové pole.  
   
  *dwFlags*  
- Určuje jeden nebo více příznaků zvolit písmo. Jeden nebo více přednastavené hodnoty lze spojovat pomocí bitového operátoru OR. Pokud změníte `m_cf.Flag`člen struktury s, nezapomeňte použít bitový operátor OR své změny zachovat výchozí chování beze změny. Podrobnosti o každé z těchto příznaků, viz popis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktura v sadě Windows SDK.  
+ Určuje jeden nebo více příznaků zvolit písmo. Jeden nebo více přednastavené hodnoty lze spojovat pomocí bitového operátoru OR. Pokud změníte `m_cf.Flag`člen struktury s, nezapomeňte použít bitový operátor OR své změny zachovat výchozí chování beze změny. Podrobnosti o každé z těchto příznaků, viz popis [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) struktura v sadě Windows SDK.  
   
  *pdcPrinter*  
  Ukazatel na kontext zařízení tiskárny. Pokud je zadané, tento parametr odkazuje na kontext zařízení tiskárny pro tiskárny, na kterém mají být vybrán písma.  
@@ -178,7 +178,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě.  
   
  IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
@@ -199,7 +199,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
   
 ### <a name="parameters"></a>Parametry  
  *CF*  
- A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující informace o formátování vybraného písma.  
+ A [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktura obsahující informace o formátování vybraného písma.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Volání této funkce načtete barvu vybraného písma.  
@@ -215,7 +215,7 @@ COLORREF GetColor() const;
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- Voláním této funkce k přiřazení vlastnosti aktuálně vybraného písma k členům [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Voláním této funkce k přiřazení vlastnosti aktuálně vybraného písma k členům [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -348,7 +348,7 @@ CHOOSEFONT m_cf;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po sestavení `CFontDialog` objektu, můžete použít `m_cf` upravit různé aspekty dialogového okna před voláním `DoModal` členskou funkci. Další informace o této struktuře naleznete v tématu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) v sadě Windows SDK.  
+ Po sestavení `CFontDialog` objektu, můžete použít `m_cf` upravit různé aspekty dialogového okna před voláním `DoModal` členskou funkci. Další informace o této struktuře naleznete v tématu [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  

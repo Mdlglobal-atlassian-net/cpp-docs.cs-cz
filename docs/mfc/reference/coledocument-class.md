@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb66d7435331124b4455c476c10986931b4c6e1d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 95eea7434fdaa12a6178ebd9648e8088b24b4dc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205945"
 ---
 # <a name="coledocument-class"></a>Coledocument – třída
 Základní třída pro dokumenty OLE, které podporují vizuální úpravy.  
@@ -176,11 +176,11 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce aktualizuje tisk cílovému zařízení pro všechny položky, ale ne k aktualizaci mezipaměti prezentaci pro tyto položky. Chcete-li aktualizovat mezipaměť prezentaci pro některou položku, zavolejte [COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).  
   
- Argumenty pro tuto funkci obsahují informace, které OLE se používá k identifikaci cílové zařízení. [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktura obsahuje informace, které Windows používá k inicializaci dialogového okna běžné tisk. Poté, co uživatel zavře dialogové okno, Windows vrátí informace o výběru uživatele v této struktuře. `m_pd` Členem [cprintdialog –](../../mfc/reference/cprintdialog-class.md) je objekt `PRINTDLG` struktury.  
+ Argumenty pro tuto funkci obsahují informace, které OLE se používá k identifikaci cílové zařízení. [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktura obsahuje informace, které Windows používá k inicializaci dialogového okna běžné tisk. Poté, co uživatel zavře dialogové okno, Windows vrátí informace o výběru uživatele v této struktuře. `m_pd` Členem [cprintdialog –](../../mfc/reference/cprintdialog-class.md) je objekt `PRINTDLG` struktury.  
   
- Další informace najdete v tématu [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktura v sadě Windows SDK.  
   
 ##  <a name="coledocument"></a>  COleDocument::COleDocument  
  Vytvoří `COleDocument` objektu.  

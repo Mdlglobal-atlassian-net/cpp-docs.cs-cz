@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408524"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201442"
 ---
 # <a name="member-access-operators--and--gt"></a>Operátory přístupu členů:. a -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  V prvním *postfix-expression* představuje hodnotu struktury, třídy nebo typu sjednocení a *název* pojmenovává člen zadané struktury, sjednocení nebo třídy. Hodnotu operace má *název* a je l hodnotou, pokud *postfix-expression* l-hodnotou.  
   
-2.  Druhý typ *postfix-expression* představuje ukazatel na strukturu, sjednocení nebo třídy, a *název* pojmenovává člen zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnotou. **->** Operátor provádí dereferenci ukazatele. Proto výrazy * e ***->** `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory **->** nebo **\*** jsou přetížené).  
+2.  Druhý typ *postfix-expression* představuje ukazatel na strukturu, sjednocení nebo třídy, a *název* pojmenovává člen zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnotou. **->** Operátor provádí dereferenci ukazatele. Proto výrazy `e->member` a `(*e).member` (kde *e* představuje ukazatel) poskytují shodné výsledky (s výjimkou, kdy operátory **->** nebo <strong>\*</strong> jsou přetížené).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje obě formy operátoru pro přístup k členu.  

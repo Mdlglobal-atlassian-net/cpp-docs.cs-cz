@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849747"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216258"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox – třída
 Tlačítka panelu nástrojů obsahující ovládací prvek pole se seznamem, který umožňuje uživateli vybrat písmo ze seznamu systémových písem.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Chcete-li synchronizovat s písmo vybrané v poli se seznamem písma dokumentu, použijte [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) má metoda načíst atributy vybraného písma a použít tyto atributy k vytvoření [ Cfont – třída](../../mfc/reference/cfont-class.md) objektu.  
   
- Tlačítko pole se seznamem písma volá funkci Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) určit písma obrazovky a tiskárny, které jsou k dispozici v systému.  
+ Tlačítko pole se seznamem písma volá funkci Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) určit písma obrazovky a tiskárny, které jsou k dispozici v systému.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Třídy CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Pokud je nastaveno na DEFAULT_CHARSET, pole se seznamem obsahuje všechny jednoznačně názvem písma ve všech sadách znaků. (Pokud existují dvě písma se stejným názvem, pole se seznamem obsahuje jeden z nich). Pokud je nastaveno na hodnotu set platný znak pole se seznamem obsahuje pouze písma v zadanou znakovou sadu. Zobrazit [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) nastavuje pro výpis znaku je to možné.  
+ Pokud je nastaveno na DEFAULT_CHARSET, pole se seznamem obsahuje všechny jednoznačně názvem písma ve všech sadách znaků. (Pokud existují dvě písma se stejným názvem, pole se seznamem obsahuje jeden z nich). Pokud je nastaveno na hodnotu set platný znak pole se seznamem obsahuje pouze písma v zadanou znakovou sadu. Zobrazit [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) nastavuje pro výpis znaku je to možné.  
   
  [in] *dwStyle*  
  Styl pole se seznamem. (viz [pole se seznamem stylů](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

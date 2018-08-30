@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition Class1 | Microsoft Docs
+title: Cacceleratedeceleratetransition – Třída1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954705"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220131"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition – třída
-Implementuje accelerate-zpomalení přechodu.  
+# <a name="cacceleratedeceleratetransition-class"></a>Cacceleratedeceleratetransition – třída
+Implementuje zrychlení-zpomalení přechodu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,24 +45,24 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CAccelerateDecelerateTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Poměr čas strávený urychlení na dobu trvání.|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Poměr čas strávený zpomaluje na dobu trvání.|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Poměr čas strávený zkracuje dobu trvání.|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Poměr čas strávený zpomalení dobu trvání.|  
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|Doba trvání přechodu.|  
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Hodnota proměnné animace na konci přechodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během accelerate-zpomalení přechodu, proměnnou animace urychluje a pak zpomaluje za celou dobu přechodu, končí zadanou hodnotou. Můžete řídit, jak rychle proměnnou zrychluje a zpomaluje nezávisle, zadáním jiné akcelerace a zpomalení poměry. Při počáteční rychlost je nulová, poměr akcelerace je podíl dobu, která bude proměnná tráví urychlení; Podobně se zpomalení poměr. Pokud počáteční rychlosti je nulová, je zlomek času mezi rychlosti dosažení nula a na konci přechodu. Akcelerace poměr a zpomalení poměr by měl součet, kterou se maximálně 1.0. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během zrychlení-zpomalení přechodu, proměnné animace zrychluje a potom může zpomalit na dobu trvání přechodu končící na zadanou hodnotu. Můžete řídit rychlost proměnnou zrychluje a zadáním různých zrychlení a zpomalení poměry zpomalí nezávisle na sobě. Při počáteční je nula, je poměr akcelerace zlomek dobu, po kterou proměnné se věnovat zrychluje; Stejně tak se zpomalení poměr. Pokud počáteční je nenulová, je zlomek času mezi rychlosti dosažení nuly a na konci přechodu. Poměr zrychlení a zpomalení poměr by měl sečtou s až 1.0. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
  `CAccelerateDecelerateTransition`   
   
@@ -88,13 +88,13 @@ CAccelerateDecelerateTransition(
  Hodnota proměnné animace na konci přechodu.  
   
  *accelerationRatio*  
- Poměr čas strávený urychlení na dobu trvání.  
+ Poměr čas strávený zkracuje dobu trvání.  
   
  *decelerationRatio*  
- Poměr čas strávený zpomaluje na dobu trvání.  
+ Poměr čas strávený zpomalení dobu trvání.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -104,20 +104,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- Poměr čas strávený urychlení na dobu trvání.  
+ Poměr čas strávený zkracuje dobu trvání.  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- Poměr čas strávený zpomaluje na dobu trvání.  
+ Poměr čas strávený zpomalení dobu trvání.  
   
 ```  
 DOUBLE m_decelerationRatio;  

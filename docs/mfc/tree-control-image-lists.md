@@ -1,5 +1,5 @@
 ---
-title: Seznamy obrázků ovládacího prvku strom | Microsoft Docs
+title: Stromové seznamy obrázků ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 184a68ec29e806b5bb914d8744ff5c1f334db5ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382190"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203763"
 ---
 # <a name="tree-control-image-lists"></a>Seznamy obrázků v ovládacím prvku strom
-Každá položka v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít pár rastrových obrázků s ním spojená. Bitové kopie se zobrazí na levé straně popisku položky. Jednu image se zobrazí, když je položka vybrána, a druhé se zobrazí, pokud není vybrána položka. Například může položky zobrazit, otevřít složku, pokud je vybrána a uzavřené složku Pokud není vybraná.  
+Každá položka v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít pár rastrovými obrázky, které s ním spojená. Image se zobrazí na levé straně popisku položky. Při výběru položky a druhé se zobrazí, pokud položka není vybrána, zobrazí se jedné image. Například může položku zobrazit, otevřít složku, pokud je vybrána a uzavřené složky pokud není vybrán.  
   
- Pokud chcete použít obrázků položek, musíte vytvořit vytvořením seznamu obrázků [CImageList](../mfc/reference/cimagelist-class.md) objekt a pomocí [CImageList::Create](../mfc/reference/cimagelist-class.md#create) funkce k vytvoření seznamu přidruženou bitovou kopii. Pak přidejte do seznamu požadovanou rastrové obrázky a přidružit seznamu pomocí ovládacího prvku strom pomocí [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) – členská funkce. Ve výchozím nastavení umožňuje zobrazit všechny položky v seznamu obrázků pro vybrané a nevybrané stavy první obrázek. Výchozí chování pro konkrétní položku můžete změnit zadáním indexy obrázků na vybrané a nevybrané při přidávání položky do stromu ovládacího prvku pomocí [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) – členská funkce. Indexy můžete změnit po přidání položky pomocí [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) – členská funkce.  
+ Použití obrázků položek, musíte vytvořit seznam obrázků tak, že vytváří [atributu CImageList](../mfc/reference/cimagelist-class.md) objektů a pomocí [CImageList::Create](../mfc/reference/cimagelist-class.md#create) funkci, která vytvoří seznam přidružené image. Pak přidejte do seznamu požadovanou rastrové obrázky a přidružení seznamu pomocí ovládacího prvku stromu pomocí [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) členskou funkci. Ve výchozím nastavení všechny položky zobrazit první obrázek v seznamu obrázků pro vybranou a nevybrané stavy. Výchozí chování pro určité položky můžete změnit zadáním indexy imagí vybraných a nevybrané při přidání položky do stromu ovládacího prvku pomocí [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) členskou funkci. Indexy, které můžete změnit po přidání položky pomocí [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) členskou funkci.  
   
- Seznamy obrázků ovládacím prvku stromu může také obsahovat Image překrytí, které jsou určeny k překrývat obrázků položek. Určuje na základě jeden index bitové kopie překrytí nenulovou hodnotu v bitech 8 až 11 stav položky ovládacího prvku strom (0 znamená bez překrytí obrázek). Protože 4-bit, na základě jeden index je používán, překrytí obrázků musí být mezi první 15 obrázků v seznamech obrázků. Další informace o stavů položek ovládacího prvku strom najdete v tématu [přehled stavů položek ovládacího prvku strom](../mfc/tree-control-item-states-overview.md) výše v tomto tématu.  
+ Ovládací prvek stromu seznamů obrázků může také obsahovat obrázky překrytí, které mají být bude zobrazen na obrázků položek. Určuje založen na jedničce index obrázku, který překrytí nenulovou hodnotu v bitech 8 až 11 stav položky ovládacího prvku strom (0 znamená bez překrytí obrázku). Index 4-bit, založen na jedničce, protože se používají překrytí Image musí být mezi prvních 15 obrázků v seznamech obrázků. Další informace o stavů položek ovládacího prvku stromu, naleznete v tématu [přehled stavů položek ovládacího prvku stromu](../mfc/tree-control-item-states-overview.md) výše v tomto tématu.  
   
- Pokud je zadán seznam stavu bitové kopie, ovládacím prvkem strom rezervy místa nalevo od ikony každé položky pro obrázek stavu. Aplikace můžete použít stav Image, jako jsou zaškrtnuté a nezaškrtnuté zaškrtávací políčka, k označení stavů položek definované aplikací. Nenulovou hodnotu v bitech 12 až 15 určuje na základě jeden index bitové kopie stavu (0 znamená žádný obrázek stavu).  
+ Pokud je zadán seznam obrázků stavu, ovládací prvek stromu rezervuje prostor nalevo od každé položky ikonu obrázku stavu. Aplikace může použít Image stavu, jako jsou zaškrtnuto a nezaškrtnuté zaškrtávací políčka označíte stavy položky definované aplikací. Určuje index obrázku stavu založen na jedničce nenulovou hodnotu v bitech 12 až 15 (0 znamená bez obrázku stavu).  
   
- Zadáním **I_IMAGECALLBACK** hodnotu namísto index bitové kopie, můžete počkat, zadání bitovou kopii vybrané nebo nevybrané, dokud položka je překreslit. **I_IMAGECALLBACK** přesměruje ovládací prvek stromu k dotazování aplikací pro index odesláním [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) oznámení.  
+ Zadáním **I_IMAGECALLBACK** hodnotu místo index image, může pozdržet zadávání vybrané nebo nevybrané image, dokud se má položka přibližně vyžadovaly překreslení. **I_IMAGECALLBACK** přesměruje do ovládacího prvku stromu k dotazování aplikací pro index odesláním [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) zprávy oznámení.  
   
- [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) – členská funkce načte popisovač seznamu obrázků ovládacím prvku stromu. Tato funkce je užitečná, pokud potřebujete přidat další Image do seznamu. Další informace o seznamech obrázků najdete v tématu [pomocí ovládacího prvku CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC*, a [seznamy obrázků](http://msdn.microsoft.com/library/windows/desktop/bb761389) v Windows SDK.  
+ [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) členskou funkci načte popisovač ovládací prvek stromu seznamu obrázků. Tato funkce je užitečná, pokud je potřeba přidat další Image do seznamu. Další informace o seznamech image, najdete v části [používání atributu CImageList](../mfc/using-cimagelist.md), [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC*, a [seznamy obrázků](https://msdn.microsoft.com/library/windows/desktop/bb761389) v Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   

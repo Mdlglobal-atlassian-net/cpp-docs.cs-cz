@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213766"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek animace.  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci systému windows, styly, které jsou popsány v následující části poznámky a – styly ovládacích prvků animace popsané v [– styly ovládacích prvků animace](http://msdn.microsoft.com/library/windows/desktop/bb761886) v sadě Windows SDK.  
+ Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci systému windows, styly, které jsou popsány v následující části poznámky a – styly ovládacích prvků animace popsané v [– styly ovládacích prvků animace](/windows/desktop/Controls/animation-control-styles) v sadě Windows SDK.  
   
  *Rect*  
  Určuje pozici a velikost ovládacího prvku animace. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktury.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  Pokud chcete použít rozšířené windows styly ovládacího prvku animace, zavolejte [CreateEx](#createex) místo `Create`.  
   
- Kromě styly oken uvedené výše můžete použít jeden nebo více – styly ovládacích prvků animace ovládacího prvku animace. Sada Windows SDK pro další informace naleznete na [– styly ovládacích prvků animace](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ Kromě styly oken uvedené výše můžete použít jeden nebo více – styly ovládacích prvků animace ovládacího prvku animace. Sada Windows SDK pro další informace naleznete na [– styly ovládacích prvků animace](/windows/desktop/Controls/animation-control-styles).  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci okna a podle – styly ovládacích prvků animace [– styly ovládacích prvků animace](http://msdn.microsoft.com/library/windows/desktop/bb761886) v sadě Windows SDK.  
+ Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci okna a podle – styly ovládacích prvků animace [– styly ovládacích prvků animace](/windows/desktop/Controls/animation-control-styles) v sadě Windows SDK.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  Hodnota TRUE, pokud je přehrávání klip AVI; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  Voláním této funkce Otevřít klip AVI a zobrazit jeho prvního rámce.  

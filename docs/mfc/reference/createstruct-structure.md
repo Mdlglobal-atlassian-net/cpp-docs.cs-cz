@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848467"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203658"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT – struktura
 `CREATESTRUCT` Struktury definuje inicializační parametry předány do procedury okna aplikace.  
@@ -77,7 +77,7 @@ typedef struct tagCREATESTRUCT {
  Odkazuje na řetězec zakončený hodnotou null, který určuje název nového okna.  
   
  *lpszClass*  
- Odkazuje na řetězec zakončený hodnotou null, který určuje název třídy nové okno Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury; Další informace najdete v tématu Windows SDK).  
+ Odkazuje na řetězec zakončený hodnotou null, který určuje název třídy nové okno Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury; Další informace najdete v tématu Windows SDK).  
   
  *dwExStyle*  
  Určuje, [rozšířený styl](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v novém okně.  

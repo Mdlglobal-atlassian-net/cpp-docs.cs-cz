@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221353"
 ---
 # <a name="cstatusbarctrl-class"></a>Cstatusbarctrl – třída
 Poskytuje funkce pro Windows běžné stav panelu ovládacího prvku.  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.  
+ Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.  
   
  *Rect*  
- Určuje ovládací prvek panelu stavu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Určuje ovládací prvek panelu stavu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Určuje stavového řádku nadřazené okno ovládacího prvku, obvykle `CDialog`. Nesmí být NULL.  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.  
+ Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametry  
  *lpDrawItemStruct*  
- Dlouhým ukazatelem na [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) strukturu, která obsahuje informace o typu kreslení vyžaduje.  
+ Dlouhým ukazatelem na [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturu, která obsahuje informace o typu kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
  `itemAction` Člena `DRAWITEMSTRUCT` struktury definuje výkresu akci, která se má provést.  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  Popisovač na ikonu-li metoda úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [SB_GETICON](/windows/desktop/Controls/sb-geticon) zprávu, která je popsána v sadě Windows SDK.  
   
  Ovládací prvek panelu stavu se skládá z řádku výstupní podokna textu, které se také označují jako částí. Další informace o stavového řádku, naleznete v tématu [stav panelu implementace v prostředí MFC](../../mfc/status-bar-implementation-in-mfc.md) a [nastavení režimu objektu CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  Z nuly vycházející index části, jehož ohraničující obdélník má být načtena.  
   
  *lprect –*  
- Adresa [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.  
+ Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt obsahující text, který se použije v popisu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  Nenulové, pokud je ovládací prvek okno stavu v stručném režimu; jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Nastaví barvu pozadí ve stavovém řádku.  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  COLORREF hodnota, která určuje novou barvou pozadí. Zadejte hodnotu CLR_DEFAULT způsobit stavový řádek používat jeho výchozí barvu pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představuje předchozí výchozí barvu pozadí.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která představuje předchozí výchozí barvu pozadí.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [SB_SETICON](/windows/desktop/Controls/sb-seticon), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CStatusBarCtrl::SetBkColor](#setbkcolor).  
@@ -576,7 +576,7 @@ void SetTipText(
  Ukazatel na řetězec obsahující text popisku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

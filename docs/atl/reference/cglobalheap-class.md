@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195209"
 ---
 # <a name="cglobalheap-class"></a>Cglobalheap – třída
 Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkce globální haldy Win32.  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` implementuje funkce přidělení paměti pomocí funkce globální haldy Win32.  
   
 > [!NOTE]
->  Funkce globální haldy jsou pomalejší než jiné funkce správy paměti a neposkytuje tolik funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou dostupné v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy. Globální funkce se stále používají DDE a funkce schránky.  
+>  Funkce globální haldy jsou pomalejší než jiné funkce správy paměti a neposkytuje tolik funkcí. Proto měli používat nové aplikace [haldy funkce](/windows/desktop/Memory/heap-functions). Tyto jsou dostupné v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy. Globální funkce se stále používají DDE a funkce schránky.  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CGlobalHeap::Free](#free) nebo [CGlobalHeap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementované pomocí [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) s parametrem příznak GMEM_FIXED.  
+ Implementované pomocí [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) s parametrem příznak GMEM_FIXED.  
   
 ##  <a name="free"></a>  CGlobalHeap::Free  
  Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementované pomocí [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
+ Implementované pomocí [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Vrátí velikost bloku přidělené paměti v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementované pomocí [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
+ Implementované pomocí [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).  
   
 ##  <a name="reallocate"></a>  CGlobalHeap::Reallocate  
  Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CGlobalHeap::Free](#free) k uvolnění paměti přidělené touto metodou.  
   
- Implementované pomocí [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+ Implementované pomocí [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled tříd](../../atl/atl-class-overview.md)   

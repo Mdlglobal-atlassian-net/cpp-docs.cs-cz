@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7dd23a1b68e4ea97eb837e009c380514230de8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217116"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 
@@ -72,7 +72,7 @@ Jak ji unwinds zásobníku, operační systém zavolá libovolné obslužné rut
 
 - [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)
 
-- [Zpracování strukturovaných výjimek v jazyce C++](../cpp/exception-handling-differences.md)
+- [Ošetření strukturovaných výjimek v C++](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>Příklad
 
@@ -158,4 +158,4 @@ Další informace najdete v tématu [/EH (Model zpracování výjimek)](../build
 [Klíčová slova](../cpp/keywords-cpp.md)  
 [\<výjimky >](../standard-library/exception.md)  
 [Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[(Windows) pro zpracování strukturovaných výjimek](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[(Windows) pro zpracování strukturovaných výjimek](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  

@@ -1,5 +1,5 @@
 ---
-title: _dup –, _dup2 – | Microsoft Docs
+title: _dup – _dup2 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad477dc09ce6c8bee2d69e479f8e1615639cb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 820172e1e6ab4ad007c89b2b40f03512134f0f0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215950"
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 
-Vytvoří druhý popisovače souborů, pro otevření souboru (**_dup –**), nebo pouze Změna přiřazení popisovače souborů (**_dup2 –**).
+Vytvoří druhý popisovač souboru pro otevření souboru (**_dup –**), nebo znovu přiřadí popisovač souboru (**_dup2 –**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,22 +59,22 @@ int _dup2( int fd1, int fd2 );
 ### <a name="parameters"></a>Parametry
 
 *FD*, *fd1*<br/>
-Soubor popisovače odkazující na soubor otevřít.
+Popisovače souboru odkazující na otevření souboru.
 
-*FD2:*<br/>
-Všechny popisovače souborů.
+*FD2*<br/>
+Všechny popisovače souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_dup –** vrací nový popisovač souboru. **_dup2 –** vrátí hodnotu 0, čímž indikuje úspěšné provedení. Pokud dojde k chybě, každý funkce vrátí hodnotu -1 a nastaví **errno** k **ebadf –** Pokud popisovače souborů je neplatný nebo k **emfile –** Pokud jsou k dispozici žádné další popisovače souborů. V případě popisovač souboru je neplatný. funkce také vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+**_dup –** vrátí nový popisovač souboru. **_dup2 –** vrátí hodnotu 0 označující úspěšné provedení. Pokud dojde k chybě, každá funkce vrátí hodnotu -1 a nastaví **errno** k **EBADF** Pokud popisovač souboru je neplatný nebo **EMFILE** Pokud nejsou k dispozici žádné další popisovače souboru. V případě neplatného popisovače souboru, funkce také vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Dup –** a **_dup2 –** funkce přidružit aktuálně otevřených souborů druhý popisovače souborů. Tyto funkce lze použít k přiřazení popisovač předdefinovaného souboru, jako je například **stdout**, s jiný soubor. Operace na souboru se dá provést pomocí buď popisovače souborů. Typ přístupová oprávnění k souboru je vytvoření nový popisovač nemá vliv. **_dup –** vrátí další popisovač souboru k dispozici pro daný soubor. **_dup2 –** vynutí *fd2* k odkazování na stejném souboru jako *fd1*. Pokud *fd2* souvisí s otevřete soubor v době volání, že soubor zavřený.
+**_Dup –** a **_dup2 –** přidružují druhý popisovač souboru s aktuálně otevřený soubor. Tyto funkce slouží k přidružení předdefinovaného popisovače souboru, jako je například **stdout**, s použitím jiného souboru. Operace se souborem lze provádět pomocí libovolného popisovače souboru. Typ přístupu povolený pro soubor není ovlivněn vytvořením nového popisovače. **_dup –** vrátí další popisovače souborů pro daný soubor. **_dup2 –** vynutí *fd2* k odkazování na stejném souboru jako *fd1*. Pokud *fd2* je spojen s otevřeným souborem v okamžiku volání, daný soubor je zavřen.
 
-Obě **_dup –** a **_dup2 –** přijmout popisovače souborů jako parametry. Předávání datového proudu (**soubor \*** ) Chcete-li některé z těchto funkcí, použijte [_fileno –](fileno.md). **Fileno –** rutina vrátí popisovače souborů, které jsou aktuálně přidružen s daným datovým proudem. Následující příklad ukazuje, jak přidružit **stderr** (definován jako **soubor \***  v Stdio.h) s popisovače souborů:
+Obě **_dup –** a **_dup2 –** přijímají popisovače souborů jako parametry. Chcete-li předat proud (`FILE *`) Chcete-li některé z těchto funkcí, použijte [_fileno](fileno.md). **Fileno –** rutina vrátí popisovač souboru, který je aktuálně přiřazen k daným datovým proudem. Následující příklad ukazuje, jak přidružit **stderr** (definované jako `FILE *` v souboru Stdio.h) s popisovačem souboru:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -87,7 +87,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup –**|\<IO.h >|
 |**_dup2**|\<IO.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -150,7 +150,7 @@ The file 'data' contains:
 This goes to file 'data'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209998"
 ---
 # <a name="catlmodule-class"></a>Catlmodule – třída
 Tato třída poskytuje metody používané v několika ATL – třídy modulů.  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *ppGIT* je rovna hodnotě NULL, nebo pokud ukazatel Global Interface Table nelze získat.  
   
- Zobrazit [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) informace o globální tabulku rozhraní.  
+ Zobrazit [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) informace o globální tabulku rozhraní.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Vrací počet zámků.  

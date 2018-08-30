@@ -1,5 +1,5 @@
 ---
-title: Nastavení aplikace, Průvodce projektem souboru pravidel | Microsoft Docs
+title: Nastavení aplikace, Průvodce projektem souboru pravidel | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53d87c6f0109708023f57e2d30ae38fa4f4f574b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330736"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222657"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Nastavení aplikace, Průvodce projektem souboru pravidel 
-Zadejte informace pro projekt. Možnosti, které zadáte, se projeví v projektu [stránka vlastností](../ide/working-with-project-properties.md). Jakmile vytvoříte projekt, můžete zobrazit a upravit každé z následujících možností v **Nmake** stránky ze stránky vlastností projektu.  
+Zadejte informace pro projekt. Zadaných parametrů se projeví v projektu [stránku vlastností](../ide/working-with-project-properties.md). Po vytvoření projektu můžete zobrazit a upravit každé z následujících možností v **Nmake** stránky ze stránky vlastností projektu.  
   
  **Sestavení příkazového řádku**  
- Určuje příkazový řádek spustit, když uživatel vybere **sestavení** z **sestavení** nabídky. Zobrazí v **sestavení příkazového řádku** pole na **Nmake** stránky ze stránky vlastností projektu.  
+ Určuje příkazový řádek pro spuštění, když uživatel vybere **sestavení** z **sestavení** nabídky. Zobrazí v **příkazový řádek sestavení** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
  **Output**  
- Určuje název souboru, který bude obsahovat výstup příkazového řádku. Ve výchozím nastavení je tato možnost založen na název projektu. Zobrazí v **výstup** na **Nmake** stránky ze stránky vlastností projektu.  
+ Určuje název souboru, který bude obsahovat výstup do příkazového řádku. Ve výchozím nastavení tato možnost je podle názvu projektu. Zobrazí v **výstup** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
  **Vyčištění příkazy**  
- Určuje příkazový řádek spustit, když uživatel vybere **Vyčistit** z **sestavení** nabídky. Zobrazí v **čisté příkazového řádku** na **Nmake** stránky ze stránky vlastností projektu.  
+ Určuje příkazový řádek pro spuštění, když uživatel vybere **Vyčistit** z **sestavení** nabídky. Zobrazí v **příkazový řádek vyčištění** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
  **Opětovné sestavení příkazového řádku**  
- Určuje příkazový řádek spustit, když uživatel vybere **znovu sestavit** z **sestavení** nabídky. Zobrazí v **znovu vytvořit všechny příkazového řádku** na **Nmake** stránky ze stránky vlastností projektu.  
+ Určuje příkazový řádek pro spuštění, když uživatel vybere **znovu sestavit** z **sestavení** nabídky. Zobrazí v **znovu sestavit všechny příkazového řádku** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Průvodce projektem souboru pravidel](../ide/makefile-project-wizard.md)   
  [Vytvoření projektu souboru pravidel](../ide/creating-a-makefile-project.md)   
  [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)   
- [Tvorba běžných projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

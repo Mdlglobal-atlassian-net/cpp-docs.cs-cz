@@ -1,5 +1,5 @@
 ---
-title: Třída CMutex | Microsoft Docs
+title: CMutex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 8162ba8ffe70225980819d45ea55fb8427abd294
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196671"
 ---
 # <a name="cmutex-class"></a>CMutex – třída
-Představuje "mutex" – na synchronizační objekt, který umožňuje jedno vlákno vzájemně se vylučuje přístupu k prostředku.  
+Představuje "mutex" – synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,18 +43,18 @@ class CMutex : public CSyncObject
 |[CMutex::CMutex](#cmutex)|Vytvoří `CMutex` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Mutex – třídy jsou užitečné, když může být povoleno pouze jedno vlákno najednou upravovat data nebo jiný řízené prostředek. Například přidání uzlů do odkazovaného seznamu je proces, který pouze má být povoleno jedno vlákno najednou. Pomocí `CMutex` objektu k řízení odkazovaného seznamu pouze jedno vlákno najednou můžete získat přístup k seznamu.  
+ Vzájemně vyloučené přístupy jsou užitečné, pokud najednou pouze jedno vlákno může být povoleno upravovat data nebo jiný řízené prostředek. Například přidání uzlů do propojený seznam je proces, který pouze by měl být povoleno jedno vlákno najednou. Pomocí `CMutex` objekt pro řízení seznamu propojených pouze jedno vlákno najednou můžete získat přístup k seznamu.  
   
- Použít `CMutex` objektu, vytvořit `CMutex` objektu, když je to potřeba. Zadejte název mutex, chcete čekat na a že vaše aplikace by měl původně jeho vlastníkem. Mutex můžete poté přistoupit, když se vrátí konstruktoru. Volání [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) po dokončení přístup k řízenému prostředku.  
+ Použití `CMutex` objektu, vytvořit `CMutex` objektu, když ho nepotřebují. Zadejte název objektu mutex, chcete čekat na a, která vaše aplikace by měl původně jejím vlastníkem. Po návratu konstruktoru moct mutex. Volání [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) až budete mít přístup k řízenému prostředku.  
   
- Alternativní metoda pro používání `CMutex` objektů je přidání proměnné typu `CMutex` jako datový člen třídy chcete ovládacího prvku. Při vytváření objektu řízené volání konstruktoru `CMutex` zadání Pokud mutex původně vlastní, název mutex (Pokud se použije přes hranice procesu) a požadovaného atributů zabezpečení – datový člen.  
+ Alternativní způsob pro použití `CMutex` objekty, je přidat proměnnou typu `CMutex` jako datový člen třídy, které chcete ovládací prvek. Během konstrukce objektu řízené volání konstruktoru `CMutex` datový člen zadáte-li mutex je zpočátku vlastní, název mutex (Pokud se bude používat přes hranice procesu) a požadované atributy zabezpečení.  
   
- Pro přístup k prostředkům řídí `CMutex` objekty tímto způsobem, nejprve vytvořte proměnnou buď typu [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) ve vašem prostředku přístup – členská funkce. Potom zavolejte zámek objektu `Lock` – členská funkce (například [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, počkat na prostředek, který uvolnit a získat přístup nebo počkejte prostředek k uvolnění a vypršení časového limitu, nejsou-li získat přístup k prostředku. V každém případě prostředku přistupovalo způsobem bezpečné pro přístup z více vláken. K uvolnění prostředku, použijte objekt zámků `Unlock` – členská funkce (například [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), nebo Povolit zámek objektu tak, aby spadal mimo rozsah.  
+ Pro přístup k prostředkům řídí `CMutex` objekty tímto způsobem, nejprve vytvořte proměnnou jednoho z těchto typů [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo typ [CMultiLock](../../mfc/reference/cmultilock-class.md) v členské funkci přístup váš prostředek. Poté zavolejte zamknout objekt `Lock` členskou funkci (například [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). V tomto okamžiku vašeho vlákna budou buď získat přístup k prostředku, počkejte prostředek, který má být všeobecně dostupné a získat přístup nebo počkejte prostředek uvolnit a vypršení časového limitu, selhání získat přístup k prostředku. V každém případě váš prostředek má byla přístupná takovým způsobem bezpečným pro vlákno. K uvolnění prostředku, použijte zámek objektu `Unlock` členskou funkci (například [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), nebo povolíte zámek objektu spadá mimo rozsah.  
   
  Další informace o používání `CMutex` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
@@ -64,7 +64,7 @@ class CMutex : public CSyncObject
  **Záhlaví:** afxmt.h  
   
 ##  <a name="cmutex"></a>  CMutex::CMutex  
- Konstrukce a pojmenované nebo nepojmenované `CMutex` objektu.  
+ Konstrukce a pojmenované a nepojmenované `CMutex` objektu.  
   
 ```  
 CMutex(
@@ -75,19 +75,19 @@ CMutex(
   
 ### <a name="parameters"></a>Parametry  
  *bInitiallyOwn*  
- Určuje při vytváření vlákna `CMutex` objekt původně má přístup k prostředkům řídí mutex.  
+ Určuje, pokud vytváření vlákna `CMutex` objektu původně má přístup k prostředku řídí mutex.  
   
  *lpszName*  
- Název `CMutex` objektu. Pokud existuje jiný objekt mutex se stejným názvem, *lpszName* musí zadat, pokud objekt se použije přes hranice procesu. Pokud **NULL**, bude mutex nepojmenované. Pokud název odpovídá existující objekt mutex, konstruktoru vytvoří novou `CMutex` objekt, který odkazuje na objekt mutex s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není mutex, konstrukce se nezdaří.  
+ Název `CMutex` objektu. Pokud existuje jiný objekt mutex se stejným názvem, *lpszName* musí být zadán, pokud se použije objekt přes hranice procesu. Pokud **NULL**, mutex budou bez názvu. Pokud název odpovídá existující objekt mutex, konstruktoru vytvoří novou `CMutex` objekt, který odkazuje na objekt mutex s tímto názvem. Pokud název odpovídá existující synchronizační objekt, který není objekt mutex, procesu vytváření se nezdaří.  
   
  *lpsaAttribute*  
- Atributy zabezpečení pro objekt mutex. Úplný popis tuto strukturu, najdete v části [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) ve Windows SDK.  
+ Atributy zabezpečení pro objekt mutex. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Přístup k nebo verzi `CMutex` objektu, vytvoření [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objekt a volání jeho [zámku](../../mfc/reference/csinglelock-class.md#lock) a [odemčení](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce. Pokud `CMutex` objekt se používá samostatné, volejte jeho `Unlock` – členská funkce pro uvolnění.  
+ Přístup nebo vydání `CMutex` objektu, vytvořit [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce. Pokud `CMutex` objektu používá samostatné, zavolejte jeho `Unlock` členskou funkci pro uvolnění.  
   
 > [!IMPORTANT]
->  Po vytvoření `CMutex` objektu, použijte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistovaly. Pokud objekt mutex neočekávaně neexistuje, může to znamenat podvodný proces obsazení a může být hodláte použít mutex závadně. V takovém případě je zavřít popisovač a pokračovat, jako kdyby došlo k chybě při vytváření objektu doporučeného postupu zabezpečení.  
+>  Po vytvoření `CMutex` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.  
   
 ## <a name="see-also"></a>Viz také  
  [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)   

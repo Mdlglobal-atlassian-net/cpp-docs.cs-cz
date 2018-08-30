@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221437"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Toto nastavení se nazývá *přetížené* funkce. Přetížené funkce umožňují poskytnout různé sémantiky funkce, v závislosti na typech a počtu argumentů. 
@@ -43,8 +43,9 @@ Přetížit lze členské funkce a nečlenské funkce. Následující tabulka uk
 |**Const** nebo **volatile**|Ano, při použití na celou funkci|
 |[ref-qualifier](#ref-qualifier)|Ano|  
   
-## <a name="example"></a>Příklad  
- Následující příklad znázorňuje, jak lze přetížení použít.  
+## <a name="example"></a>Příklad
+
+Následující příklad znázorňuje, jak lze přetížení použít.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Přesná shoda. Přesná shoda mezi typy, se kterými je volána funkce a typy deklarované v prototypu funkce se vždy nejlepší shodu. Pořadí triviální převody jsou klasifikovány jako přesné shody. Nicméně sekvence, které Nedovolte, aby byly všechny tyto převody jsou považovány za lepší než pořadí, které provádějí převod:  
   
-    -   Z ukazatele na ukazatel na **const** (`type` **\*** k **const** `type` **\*** ).  
+    -   Z ukazatele na ukazatel na **const** (`type` <strong>\*</strong> k **const** `type` <strong>\*</strong> ).  
   
-    -   Z ukazatele na ukazatel na **volatile** (`type` **\*** k **volatile** `type` **\***).  
+    -   Z ukazatele na ukazatel na **volatile** (`type` <strong>\*</strong> k **volatile** `type` <strong>\*</strong>).  
   
     -   Z odkazu, odkaz na **const** (`type` **&** k **const** `type` **&**).  
   

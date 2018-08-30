@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: sestavení izolované aplikace pro zpracování součástí modelu COM | Microsoft Docs'
+title: 'Postupy: sestavení izolovaných aplikací pro zpracování součástí modelu COM | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed2f43721eb698552ccde3e1b51ed4d6e467179
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b94a41aef1122a507a8966c475b9a87c69e3789
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367882"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196829"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Postupy: Sestavení izolované aplikace pro zpracování součástí modelu COM
-Izolované aplikace jsou aplikace, které mají manifest integrovaný do programu. Můžete vytvořit izolované aplikace pro zpracování součástí modelu COM.  
+Izolované aplikace jsou aplikace, které mají manifesty integrovaný do programu. Můžete vytvořit izolované aplikace pro zpracování součástí modelu COM.  
   
-### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Chcete-li přidat COM odkazy na manifesty izolované aplikace  
+### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Chcete-li přidat odkazy modelu COM do manifestu izolované aplikace  
   
 1.  Otevření stránek vlastností projektu pro izolované aplikace.  
   
 2.  Rozbalte **vlastnosti konfigurace** uzel a potom rozbalte **Nástroj Manifest** uzlu.  
   
-3.  Vyberte **izolované COM** stránku vlastností a pak nastavte **název souboru součást** vlastnost na název součásti COM, která chcete izolované aplikace využívat.  
+3.  Vyberte **izolovaná komponenta COM** stránku vlastností a pak nastavte **název souboru komponenty** nastavte název komponenty modelu COM, který chcete izolované aplikace využívat.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
 ### <a name="to-build-manifests-into-isolated-applications"></a>K vytvoření manifestů do izolované aplikace  
   
@@ -40,12 +40,12 @@ Izolované aplikace jsou aplikace, které mají manifest integrovaný do program
   
 2.  Rozbalte **vlastnosti konfigurace** uzel a potom rozbalte **Nástroj Manifest** uzlu.  
   
-3.  Vyberte **vstup a výstup** stránku vlastností a pak nastavte **vložení manifestu** vlastností **Ano**.  
+3.  Vyberte **vstupní a výstupní** stránku vlastností a pak nastavte **vložit Manifest** vlastností **Ano**.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
 5.  Sestavte řešení.  
   
 ## <a name="see-also"></a>Viz také  
- [Izolované aplikace](http://msdn.microsoft.com/library/aa375190)   
- [O souběžně sdílená sestavení](http://msdn.microsoft.com/library/ff951640)
+ [Izolované aplikace](/windows/desktop/SbsCs/isolated-applications)   
+ [Informace o sestavení vedle sebe](/windows/desktop/SbsCs/about-side-by-side-assemblies-)

@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8b1b1452eceefbe6e04200d8aded544fdc4d1da
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590973"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219433"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Přidání, úprava nebo odstranění ovládacích prvků
 
 Použití **dialogové okno** editoru, můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, třeba jeho ID, nebo zda je zpočátku viditelné v době běhu.
 
-Můžete použít nabídku **dialogové okno** editor rychle přidáte zaregistrované ovládacích prvků ActiveX do dialogového okna a můžete přidat ovládací prvky ActiveX **nástrojů** pro rychlý přístup (Další informace najdete v tématu [Přizpůsobení panelu nástrojů – dialogové okno](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+Můžete použít nabídku **dialogové okno** editor rychle přidáte zaregistrované ovládacích prvků ActiveX do dialogového okna a můžete přidat ovládací prvky ActiveX **nástrojů** pro rychlý přístup (Další informace najdete v tématu [Přizpůsobení panelu nástrojů – dialogové okno](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
 
 - [Přidání ovládacího prvku do dialogového okna](adding-a-control-to-a-dialog-box.md)
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194724"
 ---
 # <a name="appearance-atl-control-wizard"></a>Vzhled, Průvodce ovládacím prvkem ATL
 Sem vložte "Výsledky hledání" souhrnu.  
@@ -32,7 +32,7 @@ Sem vložte "Výsledky hledání" souhrnu.
 **Zobrazit stav**  
 Nastaví vzhled ovládacího prvku v rámci kontejneru.  
   
- -   **Neprůhledný**: Nastaví bit v VIEWSTATUS_OPAQUE [které](http://msdn.microsoft.com/library/windows/desktop/ms687201) výčet a nakreslí obdélník celý ovládací prvek předán [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metoda. Ovládací prvek zobrazí se stane zcela neprůhledný, a žádný z kontejneru za hranice ovládacího prvku.      
+ -   **Neprůhledný**: Nastaví bit v VIEWSTATUS_OPAQUE [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) výčet a nakreslí obdélník celý ovládací prvek předán [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metoda. Ovládací prvek zobrazí se stane zcela neprůhledný, a žádný z kontejneru za hranice ovládacího prvku.      
       
         Toto nastavení pomůže rychleji nakreslete ovládací prvek kontejneru. Pokud tato možnost není vybraná, může obsahovat ovládací prvek průhledné části.  
       
@@ -82,7 +82,7 @@ Nastaví další možnosti vzhledu a chování ovládacího prvku.
   
  -   **Neviditelné při spuštění**: Nastaví ovládací prvek v době běhu byla neviditelná. Neviditelné prvky můžete použít k provádění operací na pozadí, jako je například vyvolává události v časových intervalech.  
       
- -   **Slouží jako tlačítko**: Nastaví bit v OLEMISC_ACTSLIKEBUTTON [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) výčet umožňuje ovládat tak, aby fungoval jako tlačítko. Pokud kontejneru označil lokality klienta ovládacího prvku jako výchozího tlačítka, výběr této možnosti umožní zobrazení samotného jako výchozího tlačítka nakreslením samotného objektu Frame silnější ovládacího prvku tlačítka. Zobrazit [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Další informace.  
+ -   **Slouží jako tlačítko**: Nastaví bit v OLEMISC_ACTSLIKEBUTTON [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) výčet umožňuje ovládat tak, aby fungoval jako tlačítko. Pokud kontejneru označil lokality klienta ovládacího prvku jako výchozího tlačítka, výběr této možnosti umožní zobrazení samotného jako výchozího tlačítka nakreslením samotného objektu Frame silnější ovládacího prvku tlačítka. Zobrazit [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Další informace.  
       
   -   **Funguje jako popisek**: Nastaví OLEMISC_ACTSLIKELABEL bit ve výčtu OLEMISC umožňuje ovládat nahradit nativní popisku kontejneru. Kontejner co dělat s Tento příznak určuje, zda cokoli.  
   

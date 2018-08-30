@@ -1,5 +1,5 @@
 ---
-title: putchar –, putwchar – | Microsoft Docs
+title: putchar, putwchar | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7602ca44d6f8ec8197d1ebc61b4ef1d0847133f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00016bb191cc3a4d7b4df47f5252706a129c3583
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404620"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199728"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
-Zapíše znak pro **stdout**.
+Zapíše znak do **stdout**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,38 +63,38 @@ wint_t putwchar(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být zapsána.
+Znak k zapsání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí znak zapsána. K označení chyba nebo podmínku end souboru **putc –** a **putchar –** vrátit ** EOF`; **putwc` a **putwchar –** vrátit **weof –**. Pro všechny čtyři rutiny, použijte [ferror –](ferror.md) nebo [feof –](feof.md) zkontrolujte chyba nebo konec souboru. Pokud pro předán ukazatele null *datového proudu*, tyto funkce vygeneruje výjimka neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet **EOF** nebo **weof –** a nastavte **errno** k **einval –**.
+Vrátí zapsaný znak. K označení chyby nebo stavu ukončení souboru **putc** a **putchar** vrátit ** EOF`; **putwc` a **putwchar** vrátit **WEOF**. Pro všechny čtyři rutiny použijte [ferror](ferror.md) nebo [feof](feof.md) zkontrolovat chyby nebo konce souboru. Je-li předán ukazatel s hodnotou null *stream*, tyto funkce generují výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** nebo **WEOF** a nastavte **errno** k **EINVAL**.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-**Putc –** rutiny zapíše jednoho znaku *c* k výstupu *datového proudu* na aktuální pozici. Jakékoliv celé číslo se dá předat do **putc –**, ale jsou zapsány pouze nižších 8 bitů. **Putchar –** rutiny je stejný jako **putc – (** * c ***, stdout)**. Pro každou rutinu Pokud dojde k chybě čtení, označení chyb pro datový proud nastavena. **putc –** a **putchar –** jsou podobné **fputc –** a **_fputchar –**, ale jsou implementované jako funkce i jako makra (najdete v části [ Volba mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc –** a **putwchar –** jsou verze široká charakterová **putc –** a **putchar –**, v uvedeném pořadí.
+**Putc** rutina zapíše jeden znak *c* do výstupu *stream* na aktuální pozici. Libovolné celé číslo může být předán **putc**, ale jsou zapsány pouze nižší 8bity. **Putchar** rutiny je stejný jako `putc( c, stdout )`. Pro každou rutinu je pokud dojde k chybě čtení, nastaven indikátor chyby pro datový proud. **putc** a **putchar** jsou podobné **fputc** a **_fputchar**v uvedeném pořadí, ale jsou implementovány jako funkce i makra (viz [ Volba mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** a **putwchar** jsou širokoznaké verze **putc** a **putchar**v uvedeném pořadí.
 
-Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_puttchar –**|**putchar –**|**putchar –**|**putwchar**|
+|**_puttchar –**|**putchar**|**putchar**|**putwchar**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**putchar –**|\<stdio.h>|
+|**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -126,8 +126,8 @@ int main( void )
 This is the line of output
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

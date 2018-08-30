@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204864"
 ---
 # <a name="ctype-class"></a>ctype – třída
 
@@ -66,7 +66,8 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků.
+*CharType*<br/>
+ Typ používaný v rámci programu ke kódování znaků.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,17 +75,17 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 Standardní knihovny C++ definuje dvě explicitní specializace této třídy šablony:
 
-- [ctype](../standard-library/ctype-char-class.md)< `char`>, jejíž rozdíly jsou popsány odděleně explicitní specializace.
+- `ctype<char>`, jehož rozdíly jsou popsány odděleně explicitní specializace. Další informace najdete v tématu [ctype&lt;char&gt; třídy](../standard-library/ctype-char-class.md).
 
-- **ctype**<`wchar_t`>, která zpracovává prvky jako širokých znaků.
+- `ctype<wchar_t>`, které považuje za prvky širokých znaků.
 
-Ostatní specializace třídy šablony **ctype** \< **CharType**>:
+Ostatní specializace třídy šablony `ctype<CharType>`:
 
-- Převést hodnotu ***ch*** typu `CharType` na hodnotu typu **char** s výrazem (`char`) **ch**.
+- Převést hodnotu *ch* typu *CharType* na hodnotu typu **char** s výrazem `(char)ch`.
 
-- Převést hodnotu ***bajtů*** typu **char** na hodnotu typu `CharType` s výrazem **CharType** (**bajtů**).
+- Převést hodnotu *bajtů* typu **char** na hodnotu typu *CharType* s výrazem `CharType(byte)`.
 
-Všechny ostatní operace jsou prováděny na **char** hodnoty stejným způsobem jako pro explicitní specializaci **ctype**<`char`>.
+Všechny ostatní operace jsou prováděny na **char** hodnoty stejným způsobem jako pro explicitní specializaci `ctype<char>`.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -149,7 +150,8 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+ Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -183,15 +185,20 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky, pro kterou je znak, který má být testována.
+*maskVal*<br/>
+ Hodnota masky, pro kterou je znak, který má být testována.
 
-*ch* znak, jejichž atributy jsou má být testována.
+*ch*<br/>
+ Znak, jejichž atributy jsou má být testována.
 
-*první* ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
+*první*<br/>
+ Ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*DEST* ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
+*cíl*<br/>
+ Ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -226,15 +233,20 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znaku typu `Chartype` používá národní prostředí, které má být převeden.
+*ch*<br/>
+ Znak typu `Chartype` používá národní prostředí, které má být převeden.
 
-*výchozí* výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType` , které nemají protějšek znaky typu **char**.
+*default*<br/>
+ Výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType` , které nemají protějšek znaky typu **char**.
 
-*první* ukazatel na první znak v rozsahu znaků, které mají být převedeny.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*DEST* konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
+*cíl*<br/>
+ Konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -263,11 +275,14 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky k porovnání s znak.
+*maskVal*<br/>
+ Hodnota masky k porovnání s znak.
 
-*první* ukazatel na první znak v rozsahu ke kontrole.
+*první*<br/>
+ Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -294,11 +309,14 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky není k porovnání s znak.
+*maskVal*<br/>
+ Hodnota masky není k porovnání s znak.
 
-*první* ukazatel na první znak v rozsahu ke kontrole.
+*první*<br/>
+ Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -327,11 +345,14 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, který má být převeden na malá písmena.
+*ch*<br/>
+ Znak, který má být převeden na malá písmena.
 
-*první* ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -360,11 +381,14 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, který má být převeden na velká písmena.
+*ch*<br/>
+ Znak, který má být převeden na velká písmena.
 
-*první* ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -394,13 +418,17 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>Parametry
 
-*bajtů* znaku typu **char** v nativní znakové sadě má být převeden.
+*byte*<br/>
+ Znak typu **char** v nativní znakové sadě má být převeden.
 
-*první* ukazatel na první znak v rozsahu znaků, které mají být převedeny.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*DEST* ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
+*cíl*<br/>
+ Ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -432,15 +460,20 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky, pro kterou je znak, který má být testována.
+*maskVal*<br/>
+ Hodnota masky, pro kterou je znak, který má být testována.
 
-*ch* znak, jejichž atributy jsou má být testována.
+*ch*<br/>
+ Znak, jejichž atributy jsou má být testována.
 
-*první* ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
+*první*<br/>
+ Ukazatel na první znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu, jejichž atributy jsou klasifikaci.
 
-*DEST* ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
+*cíl*<br/>
+ Ukazatel na začátku pole, kde jsou hodnoty masky charakterizuje atributy znaky mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -508,15 +541,20 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znaku typu `Chartype` používá národní prostředí, které má být převeden.
+*ch*<br/>
+ Znak typu `Chartype` používá národní prostředí, které má být převeden.
 
-*výchozí* výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType` , které nemají protějšek znaky typu **char**.
+*default*<br/>
+ Výchozí hodnota pro přiřazení pomocí členské funkce znaky typu `CharType` , které nemají protějšek znaky typu **char**.
 
-*první* ukazatel na první znak v rozsahu znaků, které mají být převedeny.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*DEST* konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
+*cíl*<br/>
+ Konstantní ukazatel na první znak typu **char** v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -567,11 +605,14 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky k porovnání s znak.
+*maskVal*<br/>
+ Hodnota masky k porovnání s znak.
 
-*první* ukazatel na první znak v rozsahu ke kontrole.
+*první*<br/>
+ Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -620,11 +661,14 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* hodnota masky není k porovnání s znak.
+*maskVal*<br/>
+ Hodnota masky není k porovnání s znak.
 
-*první* ukazatel na první znak v rozsahu ke kontrole.
+*první*<br/>
+ Ukazatel na první znak v rozsahu ke kontrole.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -673,11 +717,14 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, který má být převeden na malá písmena.
+*ch*<br/>
+ Znak, který má být převeden na malá písmena.
 
-*první* ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -725,11 +772,14 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, který má být převeden na velká písmena.
+*ch*<br/>
+ Znak, který má být převeden na velká písmena.
 
-*první* ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, jehož případy jsou má být převeden.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, jehož případy jsou má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -777,13 +827,17 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bajtů* znakové typu char v nativní znakové sady, které má být převeden.
+*byte*<br/>
+ Znak typu char v nativní znakové nastavit má být převeden.
 
-*první* ukazatel na první znak v rozsahu znaků, které mají být převedeny.
+*první*<br/>
+ Ukazatel na první znak v rozsahu znaků, které mají být převedeny.
 
-*poslední* ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
+*poslední*<br/>
+ Ukazatel na znak hned za poslední znak v rozsahu znaků, které mají být převedeny.
 
-*DEST* ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
+*cíl*<br/>
+ Ukazatel na první znak typu `CharType` v cílovém rozsahu, který ukládá převedený rozsahu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 

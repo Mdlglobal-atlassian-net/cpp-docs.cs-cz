@@ -1,5 +1,5 @@
 ---
-title: Správa paměti | Microsoft Docs
+title: Správa paměti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345075"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222348"
 ---
 # <a name="memory-management"></a>Správa paměti
-Tato skupina článků popisuje, jak využít pro obecné účely služby z Microsoft Foundation Class knihovny (MFC) související se správou paměti. Přidělení paměti je možné rozdělit do dvou hlavních kategorií: rámce přidělení a přidělení haldy.  
+Tato skupina článků popisuje, jak využít univerzální služby z třídy knihovny MFC (Microsoft Foundation) týkající se správy paměti. Přidělení paměti je možné rozdělit do dvou hlavních kategorií: rámec přidělení a přidělení haldy.  
   
- Jeden hlavní rozdíl mezi dvěma přidělení techniky je, že s přidělení rámce, který obvykle pracujete s skutečné paměti blokovat samostatně, když s přidělení haldy jsou vždy uvedeny ukazatel k bloku paměti. Další hlavní rozdíl mezi dvěma schémata je, že rámce objekty jsou automaticky odstraněny, při haldy objekty se musí explicitně odstranit programátorem.  
+ Jedním z hlavních rozdílů mezi dvěma přidělení techniky je, že s přidělení rámce, které většinou pracují s skutečná paměť blokovat, zatímco s přidělení haldy jsou vždy uvedeny ukazatele na blok paměti. Další hlavní rozdíl mezi dvě schémata je, že rámec objekty jsou automaticky odstraní, zatímco objektů haldy se musí explicitně odstranit programátorem.  
   
- Mimo MFC informace o správě paměti v aplikacích pro Windows najdete v tématu [Správa paměti](http://msdn.microsoft.com/library/windows/desktop/aa366779) ve Windows SDK.  
+ MFC – informace o správě paměti v aplikacích pro Windows najdete v tématu [Správa paměti](https://msdn.microsoft.com/library/windows/desktop/aa366779) v sadě Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Přidělení rámce](../mfc/memory-management-frame-allocation.md)  
   
@@ -40,9 +40,9 @@ Tato skupina článků popisuje, jak využít pro obecné účely služby z Micr
   
 -   [Přidělení paměti pro pole](../mfc/memory-management-examples.md)  
   
--   [Zrušení přidělení paměti pro pole z haldy](../mfc/memory-management-examples.md)  
+-   [Rušení přidělení paměti pro pole z haldy](../mfc/memory-management-examples.md)  
   
--   [Přidělení paměti pro datová struktura](../mfc/memory-management-examples.md)  
+-   [Přidělení paměti pro datové struktury](../mfc/memory-management-examples.md)  
   
 -   [Přidělení paměti pro objekt](../mfc/memory-management-examples.md)  
   

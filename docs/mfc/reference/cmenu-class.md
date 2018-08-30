@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220799"
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 Zapouzdření nabídky Windows `HMENU`.  
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  Pokud funkce uspěje, vrácená hodnota je identifikátor nebo pozici položky nabídky. Pokud funkce selže, vrácená hodnota je - 1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování funkce Win32 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování funkce Win32 [GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpcmi*  
- Ukazatel [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) struktura obsahující informace o nabídce.  
+ Ukazatel [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) struktura obsahující informace o nabídce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud funkce uspěje, vrácená hodnota je nenulové; jinak vrácená hodnota je nula.  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  Identifikátor nebo pozici položky nabídky pro získání informací. Význam tohoto parametru závisí na hodnotě `ByPos`.  
   
  *lpMenuItemInfo*  
- Ukazatel [MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578), jak je popsáno v sadě Windows SDK, který obsahuje informace o nabídce.  
+ Ukazatel [MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa), jak je popsáno v sadě Windows SDK, který obsahuje informace o nabídce.  
   
  *fByPos*  
  Hodnota, která určuje význam `nIDItem`. Ve výchozím nastavení `ByPos` má hodnotu FALSE, což znamená, že uItem je identifikátor položky nabídky. Pokud `ByPos` není nastaven na hodnotu FALSE, označuje pozici položky nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.  
+ Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování funkce Win32 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), jak je popsáno v sadě Windows SDK. Všimněte si, že se v implementaci MFC `GetMenuItemInfo`, nepoužívejte popisovač do nabídky.  
+ Tato členská funkce implementuje chování funkce Win32 [GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa), jak je popsáno v sadě Windows SDK. Všimněte si, že se v implementaci MFC `GetMenuItemInfo`, nepoužívejte popisovač do nabídky.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|Výklad lpszNewItem|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|Obsahuje hodnotu 32-bit poskytované aplikací, která aplikace můžete použít ke správě další data přidružená k položce nabídky. Tato hodnota 32-bit je k dispozici v aplikaci `itemData` členu struktury poskytnutých [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) a [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) zprávy. Tyto zprávy se odešlou, pokud položka nabídky je primárně zobrazen nebo je změnit.|  
+|MF_OWNERDRAW|Obsahuje hodnotu 32-bit poskytované aplikací, která aplikace můžete použít ke správě další data přidružená k položce nabídky. Tato hodnota 32-bit je k dispozici v aplikaci `itemData` členu struktury poskytnutých [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) a [WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem) zprávy. Tyto zprávy se odešlou, pokud položka nabídky je primárně zobrazen nebo je změnit.|  
 |MF_STRING|Obsahuje dlouhým ukazatelem na řetězec zakončený hodnotou null. Toto je výchozí výklad.|  
 |MF_SEPARATOR|*LpszNewItem* parametr se ignoruje (nejsou potřeba).|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>Parametry  
  *uItem*  
- Zobrazit popis *uItem* v [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) v sadě Windows SDK.  
+ Zobrazit popis *uItem* v [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) v sadě Windows SDK.  
   
  *lpMenuItemInfo*  
  Zobrazit popis *lpmii* v `InsertMenuItem` v sadě Windows SDK.  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  Zobrazit popis *fByPosition* v `InsertMenuItem` v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zabalí tuto funkci [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), které jsou popsány v sadě Windows SDK.  
+ Zabalí tuto funkci [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema), které jsou popsány v sadě Windows SDK.  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  Načte prostředek nabídky ze spustitelného souboru aplikace a připojí ho k `CMenu` objektu.  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>Parametry  
  *lpMenuTemplate*  
- Odkazuje na šablonu nabídky (což je jediný [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) strukturu a kolekce jednoho nebo víc [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) struktury). Další informace o těchto dvou struktur najdete v sadě Windows SDK.  
+ Odkazuje na šablonu nabídky (což je jediný [MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader) strukturu a kolekce jednoho nebo víc [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) struktury). Další informace o těchto dvou struktur najdete v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud nabídce prostředek se načetl úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Nabídka šablony je záhlaví, za nímž následuje kolekce jednoho nebo víc [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) struktury, z nichž každá může obsahovat jednu nebo více položek nabídky a nabídek.  
+ Nabídka šablony je záhlaví, za nímž následuje kolekce jednoho nebo víc [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) struktury, z nichž každá může obsahovat jednu nebo více položek nabídky a nabídek.  
   
  Číslo verze musí být 0.  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  Hodnota, která určuje význam *uItem*. Pokud tento parametr má hodnotu FALSE, *uItem* je identifikátor položky nabídky. V opačném případě je umístění položky v nabídce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.  
+ Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování funkce Win32 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování funkce Win32 [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>Parametry  
  *lpcmi*  
- Ukazatel [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) struktura obsahující informace o nabídce.  
+ Ukazatel [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) struktura obsahující informace o nabídce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud funkce uspěje, vrácená hodnota je nenulové; jinak vrácená hodnota je nula.  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>Parametry  
  *uItem*  
- Zobrazit popis *uItem* v [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) v sadě Windows SDK.  
+ Zobrazit popis *uItem* v [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) v sadě Windows SDK.  
   
  *lpMenuItemInfo*  
  Zobrazit popis *lpmii* v `SetMenuItemInfo` v sadě Windows SDK.  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  Zobrazit popis *fByPosition* v `SetMenuItemInfo` v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zabalí tuto funkci [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), které jsou popsány v sadě Windows SDK.  
+ Zabalí tuto funkci [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa), které jsou popsány v sadě Windows SDK.  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  Zobrazí místní nabídku s plovoucí desetinnou čárkou v zadaném umístění a sleduje výběr položek v místní nabídce.  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>Parametry  
  *nFlags*  
- Určuje umístění obrazovky a pozice myši příznaky. Zobrazit [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) seznam dostupných příznaků.  
+ Určuje umístění obrazovky a pozice myši příznaky. Zobrazit [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) seznam dostupných příznaků.  
   
  *x*  
  Určuje vodorovná pozice v souřadnicovém systému obrazovky místní nabídky. V závislosti na hodnotu *nFlags* parametr, v nabídce může být zarovnaný doleva, zarovnaný doprava nebo na střed vzhledem k této pozici.  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  Ignorovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato metoda vrátí výsledek volání [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) v sadě Windows SDK.  
+ Tato metoda vrátí výsledek volání [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Místní nabídka s plovoucí desetinnou čárkou může vyskytovat kdekoli na obrazovce.  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>Parametry  
  *fuFlags*  
- Určuje různé funkce pro nabídku Rozšířené. Seznam všech hodnot a jejich významu najdete v tématu [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Určuje různé funkce pro nabídku Rozšířené. Seznam všech hodnot a jejich významu najdete v tématu [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
  *x*  
  Určuje vodorovná pozice v souřadnicovém systému obrazovky místní nabídky.  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  Ukazatel na okno vlastnící rozbalovací nabídky a příjem zpráv z nabídky vytvořený. Toto okno může být jakékoli okno z aktuální aplikace, ale nemůže mít hodnotu NULL. Pokud zadáte TPM_NONOTIFY v *fuFlags* parametr funkce neodešle žádné zprávy k *pWnd*. Funkce musí vracet okna, na které odkazuje *pWnd* wm_command – zpráva.  
   
  *lptpm*  
- Ukazatel [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) struktura, která určuje oblast na obrazovce v nabídce se nesmí překrývat. Tento parametr může mít hodnotu NULL.  
+ Ukazatel [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) struktura, která určuje oblast na obrazovce v nabídce se nesmí překrývat. Tento parametr může mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud zadáte TPM_RETURNCMD v *fuFlags* parametr, návratová hodnota je identifikátor položky nabídky, kterou uživatel vybral položky. Pokud uživatel zruší nabídce bez výběru nebo pokud dojde k chybě, vrácená hodnota je 0.  
   
- Pokud nezadáte TPM_RETURNCMD v *fuFlags* nenulovou hodnotu, pokud je funkce úspěšná a 0 je návratová hodnota parametr, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Pokud nezadáte TPM_RETURNCMD v *fuFlags* nenulovou hodnotu, pokud je funkce úspěšná a 0 je návratová hodnota parametr, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
- Místní nabídka s plovoucí desetinnou čárkou může vyskytovat kdekoli na obrazovce. Další informace o zpracování chyb při vytváření v rozbalovací nabídce, naleznete v tématu [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Místní nabídka s plovoucí desetinnou čárkou může vyskytovat kdekoli na obrazovce. Další informace o zpracování chyb při vytváření v rozbalovací nabídce, naleznete v tématu [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC CTRLTEST](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4076 | Microsoft Docs
+title: Upozornění (úroveň 1) C4076 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198475"
 ---
-# <a name="compiler-warning-level-1-c4076"></a>C4076 kompilátoru upozornění (úroveň 1)
-'typemod': nelze použít s typu 'typename'  
-  
- Modifikátor typu, zda je **podepsané** nebo `unsigned`, nelze použít s typem položky jiné než celočíselné. ***typemod*** je ignorována.  
+# <a name="compiler-warning-level-1-c4076"></a>Kompilátor upozornění (úroveň 1) C4076
+
+> "*modifikátor typu*': nelze použít s typem '*typename*.
+
+## <a name="remarks"></a>Poznámky
+
+Modifikátor typu, ať už jde o **podepsané** nebo **bez znaménka**, nelze použít s typem jiných než celých čísel. *Modifikátor typu* se ignoruje.
   
 ## <a name="example"></a>Příklad  
- Následující ukázka generuje C4076:  
-  
-```  
+
+Následující ukázka generuje C4076; Chcete-li problém odstranit, odeberte **bez znaménka** modifikátor typu:
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

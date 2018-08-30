@@ -1,5 +1,5 @@
 ---
-title: Specifikace šířky scanf | Microsoft Docs
+title: Specifikace šířky scanf | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,89 +24,96 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e236f323d882ddc7091655d944f0ed78bdeac28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418195"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203385"
 ---
 # <a name="scanf-width-specification"></a>Specifikace šířky scanf
-Tyto informace platí pro interpretaci řetězce formátu v `scanf` řadu funkcí, včetně zabezpečené verze, jako například `scanf_s`. Tyto funkce normálně předpokládají, že vstupní datový proud je rozdělené do pořadí tokenů. Tokeny jsou oddělené prázdné znaky (mezera, tabulátor nebo nový řádek), nebo v případě číselné typy přirozené konec číselný datový typ podle prvního znaku, který nelze převést na číselné text. Specifikace šířky lze však způsobit analýza vstupu k zastavení před přirozené koncem token.  
-  
- *Šířka* specifikace obsahuje znaky mezi `%` a specifikátor typu pole, které mohou zahrnovat kladné celé číslo volat *šířka* pole a jeden nebo více znaků označující velikost pole, které mohou být považovány také modifikátory typ pole, jako je například údaj o tom, jestli je typ integer **krátké** nebo **dlouho**. Tyto znaky se označují jako předponu velikost.  
-  
-## <a name="the-width-field"></a>Šířka pole  
- *Šířka* pole je celé kladné desetinné číslo řízení maximální počet znaků čtení pro toto pole. Více než *šířka* znaky jsou převést a uložit na odpovídající `argument`. Méně než *šířka* znaky mohou být přečíst, pokud prázdný znak (mezera, tabulátor nebo nový řádek) nebo znak, který nelze převést podle dané formát dojde před *šířka* je dosaženo.  
-  
- Specifikace šířky je zvláštní a odlišný od argumentu velikost vyrovnávací paměti vyžaduje bezpečné verze těchto funkcí (tj, `scanf_s`, `wscanf_s`atd.). V následujícím příkladu je specifikace šířky 20, což indikuje, že až 20 znaků jsou čtení ze vstupního datového proudu. Délka vyrovnávací paměti je 21, která zahrnuje prostor pro možný 20 znaků plus null ukončení:  
-  
-```  
-char str[21];  
-scanf_s("%20s", str, 21);  
-```  
-  
- Pokud *šířka* pole se nepoužívá, `scanf_s` se pokusí přečíst celou token do řetězce. Pokud zadaná velikost není dostatečně velký pro uložení celé token, nic se zapíšou do cílový řetězec. Pokud *šířka* pole je zadán, pak první *šířka* znaků v tokenu se zapíšou do cílový řetězec spolu s hodnotou null ukončení.  
-  
-## <a name="the-size-prefix"></a>Předpona velikost  
- Volitelné předpony **h**, **l**, **udou**, **I64**, a **L** znamenat velikost `argument`(dlouhé nebo krátké, znakovou nebo široká znaková, v závislosti na typu znak, který se upravit). Tyto specifikace formátu znaky se používají s znaky typu v `scanf` nebo `wscanf` funkce k určení výklad argumenty, jak je znázorněno v následující tabulce. Zadejte předponu **I64** je rozšíření Microsoft a není ANSI kompatibilní. Znaky typu a jejich významy jsou popsané v tabulce "Typ znaků pro funkce scanf" v [znaky pole typu scanf](../c-runtime-library/scanf-type-field-characters.md).  
-  
+
+Tyto informace platí pro interpretaci formátovací řetězce v `scanf` řadu funkcí, včetně bezpečné verze, jako například `scanf_s`. Tyto funkce obvykle předpokládají, že vstupní datový proud je rozdělen do sekvence tokenů. Tokeny jsou odděleny mezer (místo, tabulátor nebo nový řádek), nebo v případě číselné typy, přirozené end typu číselných dat podle prvního znaku, který nelze převést na číselnou text. Specifikace šířky lze však způsobit parsování vstupu zastavit před ukončením přirozené tokenu.
+
+*Šířka* specifikace se skládá ze znaků mezi `%` a specifikátor typu pole, které mohou obsahovat kladné celé číslo, volá se *šířka* pole a jeden nebo více znaků určující velikost pole, které lze považovat také jako modifikátory typu pole, jako je například údaj o tom, jestli je celočíselný typ **krátký** nebo **dlouhé**. Tyto znaky se označují jako předpona velikosti.
+
+## <a name="the-width-field"></a>Šířka pole
+
+*Šířka* kladné desítkové celé číslo řízení maximální počet znaků ke čtení pro toto pole je pole. Více než *šířka* znaky jsou převést a uložit na odpovídající `argument`. Méně než *šířka* znaky mohou být přečíst, pokud znak mezery (místo, tabulátor nebo nový řádek) nebo znak, který nelze převést podle v daném formátu předchází *šířka* je dosaženo.
+
+Specifikace šířky je oddělená a odlišná od argumentu velikost vyrovnávací paměti vyžadované bezpečné verze těchto funkcí (například `scanf_s`, `wscanf_s`atd.). V následujícím příkladu je specifikace šířky 20, což indikuje, že až 20 znaků jsou ke čtení ze vstupního datového proudu. Délka vyrovnávací paměti je 21, která zahrnuje prostor pro možný 20 znaků plus ukončovacího znaku null:
+
+```C
+char str[21];
+scanf_s("%20s", str, 21);
+```
+
+Pokud *šířka* se pole nepoužívá, `scanf_s` se pokusí přečíst celý token do řetězce. Pokud zadaná velikost není dostatečně velký pro umístění celé token, nic se zapíšou do cílového řetězce. Pokud *šířka* pole není zadán, pak první *šířka* znaků v tokenu se zapíšou do cílového řetězce podél bez ukončovacího znaku null.
+
+## <a name="the-size-prefix"></a>Velikost předpony
+
+Volitelné předpony **h**, **l**, **ll**, **I64**, a **L** určení velikosti `argument`(long nebo short, jednobajtový znak nebo široký znak, v závislosti na typu znak, který mění). Tyto znaky specifikace formátu se používají s znaky typu v `scanf` nebo `wscanf` funkce zadejte interpretaci argumentů tak, jak je znázorněno v následující tabulce. Zadejte předponu **I64** je rozšířením společnosti Microsoft, který není ANSI kompatibilní. Znaky typů a jejich význam jsou popsané v tabulce "Zadejte pro funkce scanf – znaky" v [scanf – znaky pole typu](../c-runtime-library/scanf-type-field-characters.md).
+
 > [!NOTE]
->  **h**, **l**, a **L** jsou předpony rozšíření Microsoft při použití s daty typu `char`.  
-  
-### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Velikost předpon pro scanf a wscanf specifikátory typ formátu  
-  
-|Chcete-li určit|Použijte předponu|Pomocí specifikace typu|  
-|----------------|----------------|-------------------------|  
-|**double**|**l**|**e**, **E**, **f**, **g**, nebo **G**|  
-|**long double** (stejné jako dvojité)|**L**|**e**, **E**, **f**, **g**, nebo **G**|  
-|**dlouhé int**|**l**|**d**, **i**, **o**, **x**, nebo **X**|  
-|**int dlouho bez znaménka**|**l**|**u**|  
-|**dlouhé dlouho**|**Le**|**d**, **i**, **o**, **x**, nebo **X**|  
-|`short int`|**h**|**d**, **i**, **o**, **x**, nebo **X**|  
-|**krátká celočíselná bez znaménka**|**h**|**u**|  
-|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, nebo **X**|  
-|Znakovou s `scanf`|**h**|**c** nebo **C**|  
-|Znakovou s `wscanf`|**h**|**c** nebo **C**|  
-|Široká znaková s `scanf`|**l**|**c** nebo **C**|  
-|Široká znaková s `wscanf`|**l**|**c**, nebo **C**|  
-|Jednobajtové - řetězec znaků se `scanf`|**h**|**s** nebo **S**|  
-|Jednobajtové - řetězec znaků se `wscanf`|**h**|**s** nebo **S**|  
-|Široká charakterová řetězec s `scanf`|**l**|**s** nebo **S**|  
-|Široká charakterová řetězec s `wscanf`|**l**|**s** nebo **S**|  
-  
- Následující příklady použití **h** a **l** s `scanf_s` funkce a `wscanf_s` funkce:  
-  
-```  
-scanf_s("%ls", &x, 2);     // Read a wide-character string  
-wscanf_s(L"%hC", &x, 2);    // Read a single-byte character  
-```  
-  
- Pokud používáte nezabezpečená funkce v `scanf` rodiny, vynechejte parametr velikost označující délka vyrovnávací paměti předchozí argumentu.  
-  
-## <a name="reading-undelimited-strings"></a>Čtení Undelimited řetězce  
- Číst řetězce není oddělená prázdné znaky, sadu znaků do hranatých závorek (**[]**) můžete nahradit **s** – znak typu (string). Sadu znaků v závorkách se označuje jako řetězec ovládacího prvku. Odpovídající vstupní pole je zobrazeno na první znak, který se nenachází v řetězci ovládacího prvku. Pokud je první znak v sadě šipka nahoru (**^**), je obrácený účinek: vstupní pole je ke čtení na první znak, který se zobrazí ve zbývající části znaková sada.  
-  
- Všimněte si, že **% [-z]** a **% [z-a]** , jsou považovány za ekvivalentní **%[abcde...z]**. Toto je společného `scanf` rozšíření funkce, ale Všimněte si, že standardu ANSI nevyžaduje ho.  
-  
-## <a name="reading-unterminated-strings"></a>Čtení neukončený řetězce  
- Chcete-li uložit řetězec bez ukládání ukončující znak hodnoty null ('\0'), použijte specifikace `%` *n *** c** kde *n* desetinné číslo. V takovém případě **c** – znak typu označuje, že je argumentem ukazatel na pole znaků. Další *n* znaků se načítají z vstupního datového proudu do zadaného umístění a je připojeno žádné znak hodnoty null ('\0'). Pokud *n* není určena, výchozí hodnota je 1.  
-  
-## <a name="when-scanf-stops-reading-a-field"></a>Když se zastaví čtení pole scanf  
- `scanf` Funkce kontroluje každý vstupní pole po znacích. Může zastavit, čtení konkrétní vstupní pole, než dorazí do místa znak z různých důvodů:  
-  
--   Nastavená šířka byl dosažen.  
-  
--   Nelze převést na další znak uvedené.  
-  
--   Pro další znak v konfliktu s znak v řetězci ovládací prvek, který by měl odpovídat.  
-  
--   Další znak se nedaří se zobrazí v daném znakovou sadu.  
-  
- Z jakéhokoliv důvodu když `scanf` funkce zastaví čtení vstupního pole, další vstupní pole považuje zahájíte u prvního znaku nepřečtená. Konfliktní znaku, pokud je jedna, je považován za nepřečtená a první znak další vstupní pole nebo první znak v následných operací čtení na vstupního datového proudu.  
-  
-## <a name="see-also"></a>Viz také  
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [Pole Specifikace formátu: funkce scanf a wscanf](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)   
- [scanf – znaky pole typu](../c-runtime-library/scanf-type-field-characters.md)
+> **h**, **l**, a **L** předpony, které jsou rozšíření společnosti Microsoft při použití s daty typu `char`.
+
+### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Předpony velikosti pro scanf a wscanf specifikátory formátu
+
+|Chcete-li určit|Použijte předponu|Pomocí specifikátoru typu|
+|----------------|----------------|-------------------------|
+|**double**|**l**|**elektronické**, **E**, **f**, **g**, nebo **G**|
+|**long double** (stejně jako double)|**L**|**elektronické**, **E**, **f**, **g**, nebo **G**|
+|**Long int**|**l**|**d**, **můžu**, **o**, **x**, nebo **X**|
+|**Long unsigned int**|**l**|**u**|
+|**Long long**|**Vše**|**d**, **můžu**, **o**, **x**, nebo **X**|
+|`short int`|**h**|**d**, **můžu**, **o**, **x**, nebo **X**|
+|**krátký int bez znaménka**|**h**|**u**|
+|__**int64**|**I64**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
+|Jednobajtový znak s `scanf`|**h**|**c** nebo **C**|
+|Jednobajtový znak s `wscanf`|**h**|**c** nebo **C**|
+|Široký znak s `scanf`|**l**|**c** nebo **C**|
+|Široký znak s `wscanf`|**l**|**c**, nebo **C**|
+|Jednobajtové - řetězec znaků se `scanf`|**h**|**s** nebo **S**|
+|Jednobajtové - řetězec znaků se `wscanf`|**h**|**s** nebo **S**|
+|Širokoznaký řetězec s `scanf`|**l**|**s** nebo **S**|
+|Širokoznaký řetězec s `wscanf`|**l**|**s** nebo **S**|
+
+Následující příklady používají **h** a **l** s `scanf_s` funkce a `wscanf_s` funkce:
+
+```C
+scanf_s("%ls", &x, 2);     // Read a wide-character string
+wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
+```
+
+Pokud používáte nezabezpečené funkce v `scanf` řady, vynechejte parametr velikosti identifikující délku vyrovnávací paměti předchozí argumentu.
+
+## <a name="reading-undelimited-strings"></a>Čtení Undelimited řetězce
+
+Ke čtení řetězce není odděleny mezer znaky, sady znaků v hranatých závorkách (**[] č.**) mohou být nahrazeny **s** – znak typu (string). Množinu znaků v závorkách se označuje jako řetězec ovládacího prvku. Odpovídající vstupní pole je přečtěte si na první znak, který se nezobrazí v řetězci ovládacího prvku. Pokud je první znak v sadě stříšky (**^**), je obrácený efekt: vstupní pole je přečtěte si na první znak, který se zobrazí ve zbývající části znakovou sadu.
+
+Všimněte si, že **% [-z]** a **% [z-a]** jsou interpretovány jako ekvivalentní **%[abcde...z]**. Toto je běžný `scanf` rozšíření funkce, ale Všimněte si, že standardu ANSI nevyžaduje.
+
+## <a name="reading-unterminated-strings"></a>Neukončený čtení řetězce
+
+Pro uložení řetězce bez uložení ukončující znak null ('\0'), použijte specifikaci **%** <em>n</em>**c** kde *n* je desítkové celé číslo. V takovém případě **c** – znak typu označuje, že argument je ukazatel na pole znaků. Další *n* znaky jsou čtení ze vstupního datového proudu do zadaného umístění a je připojena žádná znak null ('\0'). Pokud *n* není zadán, výchozí hodnota je 1.
+
+## <a name="when-scanf-stops-reading-a-field"></a>Když scanf zastaví čtení pole
+
+`scanf` Funkce zkontroluje každý vstupní pole znak po znaku. Může systém přestat čtení konkrétní vstupní pole předtím, než dosáhne znak mezery pro celou řadu důvodů:
+
+- Byla dosažena zadaná šířka.
+
+- Nelze převést na další znak uvedené.
+
+- Na další znak je v konfliktu s znak v řetězci ovládací prvek, který by měl odpovídat.
+
+- Další znak se nedaří se zobrazí v danou znakovou sadu.
+
+Z jakéhokoli důvodu když `scanf` funkce zastaví čtení vstupního pole, další vstupní pole je považován za začít u prvního znaku nepřečtené. Konfliktní znak, pokud existuje, je považován za nepřečtené a je první znak další vstupní pole nebo první znak v další operacích čtení vstupního datového proudu.
+
+## <a name="see-also"></a>Viz také
+
+[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
+[Pole specifikace formátu: funkce scanf a wscanf](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)<br/>
+[scanf – znaky pole typu](../c-runtime-library/scanf-type-field-characters.md)<br/>

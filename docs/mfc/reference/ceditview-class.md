@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338490"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220827"
 ---
 # <a name="ceditview-class"></a>Ceditview – třída
 Typ třídy zobrazení, která poskytuje funkce pro Windows ovládacích prvků pro úpravy a slouží k implementaci funkcí jednoduchého textového editoru.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  Výchozí implementace třídy `CEditView` zpracovává následující příkazy: id_edit_select_all – ID_EDIT_FIND, id_edit_replace –, id_edit_repeat – a ID_FILE_PRINT.  
   
- Výchozí omezení počtu znaků pro `CEditView` je (1024 \* 1024-1 = 1048575). To lze změnit pomocí volání funkce EM_LIMITTEXT ovládacích prvků pro základní úpravy. Však omezení se liší v závislosti na operační systém a typ upravit ovládací prvek (jednoduchá nebo víceřádkové). Další informace o těchto omezeních najdete v tématu [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ Výchozí omezení počtu znaků pro `CEditView` je (1024 \* 1024-1 = 1048575). To lze změnit pomocí volání funkce EM_LIMITTEXT ovládacích prvků pro základní úpravy. Však omezení se liší v závislosti na operační systém a typ upravit ovládací prvek (jednoduchá nebo víceřádkové). Další informace o těchto omezeních najdete v tématu [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Chcete-li změnit toto omezení v ovládacím prvku, přepsat `OnCreate()` funkce pro vaše `CEditView` třídy a vložte následující řádek kódu:  
   

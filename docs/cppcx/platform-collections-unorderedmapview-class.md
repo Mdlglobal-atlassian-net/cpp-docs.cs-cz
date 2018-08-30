@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203025"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 Představuje zobrazení jen pro čtení *mapy*, což je kolekce párů klíč hodnota.  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Namespace:** Platform::Collections –  
 
 ## <a name="first"></a>  Unorderedmapview::First – metoda
-Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvek neuspořádanou mapu.  
+Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvek neuspořádanou mapu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  Unorderedmapview::size – metoda
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvky UnorderedMapView.  
+Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) prvky UnorderedMapView.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Typename UnorderedMapView.  
   
  `H`  
- Objekt funkce, která se dá hodnotu hash pro klíč. Výchozí hodnota je [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) pro typy, které `std::hash` podporuje.  
+ Objekt funkce, která se dá hodnotu hash pro klíč. Výchozí hodnota je [std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) pro typy, které `std::hash` podporuje.  
   
  `P`  
  Typ poskytující objekt funkce, který může porovnat dva klíče pro určení jejich rovnosti. Výchozí hodnota je [std::equal_to\<K >](../standard-library/equal-to-struct.md).  

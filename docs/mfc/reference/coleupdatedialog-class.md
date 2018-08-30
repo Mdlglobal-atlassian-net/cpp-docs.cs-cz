@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852104"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211605"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog – třída
 Používá pro zvláštní případ dialogového okna upravení odkazů OLE, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
@@ -114,7 +114,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL Pokud žádná z položek propojené nebo vložené v aktuálním dokumentu je třeba aktualizovat.  
   
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce v sadě Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud uživatel vybere tlačítko Storno, se aktualizují všechny odkazy a/nebo vložené části.  

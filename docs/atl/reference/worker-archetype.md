@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204851"
 ---
 # <a name="worker-archetype"></a>Archetyp pracovního procesu
 Třídy, které odpovídají *pracovního procesu* archetype zadejte kód pro proces pracovních položek ve frontě na fond vláken.  
@@ -31,8 +31,8 @@ Třídy, které odpovídají *pracovního procesu* archetype zadejte kód pro pr
 |Metoda|Popis|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Volána k inicializaci objektu pracovního procesu, než jsou předány žádné požadavky [Execute](#execute).|  
-|[Spuštění](#execute)|Volá se, aby zpracování pracovní položky.|  
-|[ukončit](#terminate)|K inicializaci objektu pracovního procesu po všechny požadavky byly předány volané [Execute](#execute).|  
+|[Execute](#execute)|Volá se, aby zpracování pracovní položky.|  
+|[Terminate](#terminate)|K inicializaci objektu pracovního procesu po všechny požadavky byly předány volané [Execute](#execute).|  
   
 |Definice TypeDef|Popis|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Vlastní parametr srozumitelné pro třídu pracovního procesu. Také předat `WorkerArchetype::Initialize` a `Terminate`.  
   
  *pOverlapped*  
- Ukazatel [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struktura používaná k vytvoření fronty, na které pracovní položky byly ve frontě.  
+ Ukazatel [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struktura používaná k vytvoření fronty, na které pracovní položky byly ve frontě.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Volána k inicializaci objektu pracovního procesu, než jsou předány žádné požadavky `WorkerArchetype::Execute`.  

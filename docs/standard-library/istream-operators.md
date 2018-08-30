@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961110"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195400"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operátory
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 Extrahuje až *N* + 1 prvků a ukládá je do pole, počínaje _ *Str*. Pokud `Istr`. [Šířka](../standard-library/ios-base-class.md#width) je větší než nula, *N* je `Istr`. **Šířka**; v opačném případě je velikost největšího pole `Elem` , které mohou být deklarovány. Funkce vždy ukládá hodnotu `Elem()` po žádné elementy, které je uložený. Extrakce zastaví již v rané fázi na konec souboru, na znak s hodnotou **Elem**(0) (které se extrahují), nebo na libovolný prvek (který se extrahuje), které by být zrušeny [ws](../standard-library/istream-functions.md#ws). Pokud funkci extrahuje žádné elementy, zavolá `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). V každém případě volá `Istr`. **Šířka**(0) a vrátí *Istr*.
 
-**Poznámka k zabezpečení** řetězec zakončený hodnotou null se extrahují z vstupního datového proudu nesmí překročit velikost cílové vyrovnávací paměti *str*. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** řetězec zakončený hodnotou null se extrahují z vstupního datového proudu nesmí překročit velikost cílové vyrovnávací paměti *str*. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Funkce šablony:
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-Vrátí `Istr` >> ( `char` **\***) `str`.
+Vrátí `Istr >> ( char * ) str`.
 
 Funkce šablony:
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-Vrátí `Istr` >> ( **char &**) `Ch`.
+Vrátí `Istr >> ( char& ) Ch`.
 
 Funkce šablony:
 
@@ -130,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-Vrátí `Istr` >> ( **char \*** ) `str`.
+Vrátí `Istr >> ( char * ) str`.
 
 Funkce šablony:
 
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-Vrátí `Istr` >> ( **char &**) `Ch`.
+Vrátí `Istr >> ( char& ) Ch`.
 
 Funkce šablony:
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Vrátí `Istr` `>>` `val` (a převede `rvalue reference` k `Istr` do `lvalue` v procesu).
+Vrátí `Istr >> val` (a převede odkaz rvalue na `Istr` na lvalue v procesu).
 
 ### <a name="example"></a>Příklad
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f271bff7c9516b92961131f424c1c77be29f644c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 97bba578e2759d335c4ad51e541ef3fc336aa888
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205302"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -36,7 +36,7 @@ Určuje volitelný parametr pro členské funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Volitelné** C++ atribut má stejné funkce jako [volitelné](http://msdn.microsoft.com/library/windows/desktop/aa367132) atribut MIDL.
+**Volitelné** C++ atribut má stejné funkce jako [volitelné](/windows/desktop/Midl/optional) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

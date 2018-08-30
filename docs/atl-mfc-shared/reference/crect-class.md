@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196645"
 ---
 # <a name="crect-class"></a>Crect – třída
 Podobně jako Windows [RECT](../../mfc/reference/rect-structure1.md) struktury.  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  Určuje počet jednotek, aby se horní a dolní část deflate `CRect`.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek deflate `CRect`. `cx` Hodnota určuje počet jednotek deflate levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se horní a dolní deflate.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek deflate `CRect`. `cx` Hodnota určuje počet jednotek deflate levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se horní a dolní deflate.  
   
  *lprect –*  
  Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` , která určuje počet jednotek na každé straně deflate.  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  Určuje počet jednotek, aby se zvýšilo horní a dolní část `CRect`.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek, aby se zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek, aby se zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se zvýšilo horní a dolní části.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek, aby se zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek, aby se zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se zvýšilo horní a dolní části.  
   
  *lprect –*  
  Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` , která určuje počet jednotek, aby se zvýšilo každé straně.  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) určující oba rozměry, podle kterého se má přesunout.  
   
  *Velikost*  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) určující oba rozměry, podle kterého se má přesunout.  
+ Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) určující oba rozměry, podle kterého se má přesunout.  
   
 ### <a name="remarks"></a>Poznámky  
  Přesune `CRect` *x* jednotky podél osy x a *y* jednotky podél osy y. *x* a *y* parametry jsou hodnoty se znaménkem, takže `CRect` může přesunou doleva nebo doprava a nahoru nebo dolů.  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
  *lprect –*  
  Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně rozšiřování `CRect`.  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
  *lprect –*  
  Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně deflate `CRect`.  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
  *lprect –*  
  Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek, aby se zvýšilo každé straně návratovou hodnotu.  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  A [bodu](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
  *lprect –*  
  Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně návratová hodnota deflate.  

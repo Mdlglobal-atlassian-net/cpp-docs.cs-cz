@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204138"
 ---
 # <a name="cpen-class"></a>Cpen – třída
 Zapouzdřuje pero rozhraní GDI systému Windows grafiky zařízení.  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Název|Popis|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Vytvoří logický kosmetické nebo geometrické pera určený styl, šířku a atributy štětce a připojí ho k `CPen` objektu.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Vytvoří pera s styl, šířku a barvu podle [logpen –](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktury a připojí ho k `CPen` objektu.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Vytvoří pera s styl, šířku a barvu podle [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury a připojí ho k `CPen` objektu.|  
 |[CPen::FromHandle](#fromhandle)|Vrací ukazatel `CPen` objektu při Windows HPEN.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Získá [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) základní struktury.|  
-|[CPen::GetLogPen](#getlogpen)|Získá [logpen –](http://msdn.microsoft.com/library/windows/desktop/dd145041) základní struktury.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Získá [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) základní struktury.|  
+|[CPen::GetLogPen](#getlogpen)|Získá [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) základní struktury.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -144,7 +144,7 @@ CPen(
   
 - Jsou sený PS_JOIN_BEVEL připojí.  
   
-- Připojí PS_JOIN_MITER jsou zkosené když jsou v rámci aktuální limit nastavil [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) funkce. Pokud připojení překročí tento limit, je sený.  
+- Připojí PS_JOIN_MITER jsou zkosené když jsou v rámci aktuální limit nastavil [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) funkce. Pokud připojení překročí tento limit, je sený.  
   
 - Připojí PS_JOIN_ROUND jsou kola.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Obsahuje barva RGB pro pero.  
   
  *pLogBrush*  
- Odkazuje [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury. Pokud *nPenStyle* PS_COSMETIC, je `lbColor` člena `LOGBRUSH` struktura Určuje barvu pera a *lbStyle* člena `LOGBRUSH` struktura musí být nastaveno na BS_ PLNÁ. Je-li nPenStyle PS_GEOMETRIC, všichni členové musí využívat pro zadání atributů štětce, pera.  
+ Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury. Pokud *nPenStyle* PS_COSMETIC, je `lbColor` člena `LOGBRUSH` struktura Určuje barvu pera a *lbStyle* člena `LOGBRUSH` struktura musí být nastaveno na BS_ PLNÁ. Je-li nPenStyle PS_GEOMETRIC, všichni členové musí využívat pro zadání atributů štětce, pera.  
   
  *nStyleCount*  
  Určuje délku v jednotkách doubleword *lpStyle* pole. Tato hodnota musí být nula, pokud *nPenStyle* není PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parametry  
  *pLogPen*  
- Odkazuje na [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) strukturu, která obsahuje informace o pera.  
+ Odkazuje na [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) strukturu, která obsahuje informace o pera.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Naleznete v následujících tématech v sadě Windows SDK informace o psaní perem atributy:  
   
-- [Funkce GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN –](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje volání `GetExtLogPen` načtení atributů na pero a potom vytvořit nové, kosmetické pera stejné barvy.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parametry  
  *pLogPen*  
- Odkazuje [logpen –](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktura bude obsahovat informace o pera.  
+ Odkazuje [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktura bude obsahovat informace o pera.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Naleznete v následujících tématech v sadě Windows SDK informace o psaní perem atributy:  
   
-- [Funkce GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN –](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje volání `GetLogPen` načtení pera znak, a pak vytvoříte novou, solid pera se stejnou barvu.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je operátor přetypování, která podporuje přímému použití objektu HPEN.  
   
- Další informace o použití grafických objektů najdete v článku [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v článku [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

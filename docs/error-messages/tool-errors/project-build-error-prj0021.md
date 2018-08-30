@@ -1,7 +1,7 @@
 ---
-title: Chyba sestavení projektu PRJ0021 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0021 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324454"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203336"
 ---
 # <a name="project-build-error-prj0021"></a>Chyba sestavení projektu PRJ0021
-Nástroj 'nástroj' vlastnost 'vlastnost' obsahuje neplatný název souboru.  
-  
- Zadaný ve vlastnosti, název souboru ***vlastnost***, pro nástroj, ***nástroj***, byl neplatný.  
-  
- Jste už použili makru neznámá nebo neplatná.  
-  
- V tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md) informace o tom, jak získat přístup k vlastnosti projektu.
+
+> Nástroj "*nástroj*", vlastnost '*vlastnost*' obsahuje neplatný název souboru.
+
+Název souboru zadaný ve vlastnosti *vlastnost* pro nástroj *nástroj* byl neplatný.
+
+Možná jste použili neznámému nebo neplatnému – makro.
+
+Zobrazit [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md) informace o tom, jak přistupovat k vlastnosti projektu.

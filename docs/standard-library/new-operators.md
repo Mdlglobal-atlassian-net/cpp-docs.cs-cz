@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216185"
 ---
 # <a name="ltnewgt-operators"></a>&lt;nové&gt; operátory
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 První funkce je volána výrazem odstranění k vykreslení hodnoty *ptr* neplatný. Program lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu *ptr* , který je null nebo který byl vrácen dřívějším volání [operátor new](../standard-library/new-operators.md#op_new)(**size_t**).
 
-Výchozí chování pro hodnotu null z *ptr* se neprovede žádnou akci. Jakákoli jiná hodnota *ptr* musí být číslo vrácen voláním jak už bylo popsáno dříve. Výchozí chování pro neprázdné hodnoty z *ptr* je uvolnit úložiště přidělené v dřívějším volání. Je zadán, za jakých podmínek část nebo všechny tyto uvolňovaného úložiště je přidělena následných volání `operator new`(**size_t**), nebo k některým `calloc`( **size_t**), `malloc`( **size_t**), nebo `realloc`( **void\***, **size_t**).
+Výchozí chování pro hodnotu null z *ptr* se neprovede žádnou akci. Jakákoli jiná hodnota *ptr* musí být číslo vrácen voláním jak už bylo popsáno dříve. Výchozí chování pro neprázdné hodnoty z *ptr* je uvolnit úložiště přidělené v dřívějším volání. Je zadán, za jakých podmínek část nebo všechny tyto uvolňovaného úložiště je přidělena následných volání `operator new`(**size_t**), nebo k některým `calloc`( **size_t**), `malloc`( **size_t**), nebo `realloc`( **void**<strong>\*</strong>, **size_t**).
 
 Druhá funkce je volána výrazem odstranit umístění odpovídající výraz new formuláře **nové**( **std::size_t**). To nemá žádný účinek.
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce je volána `delete[]` výraz k vykreslení hodnoty *ptr* neplatný. Funkce totiž replaceable programu lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu *ptr* , který je null nebo který byl vrácen dřívějším volání [operátor new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Výchozí chování pro hodnotu null z *ptr* se neprovede žádnou akci. Jakákoli jiná hodnota *ptr* musí být číslo vrácen voláním jak už bylo popsáno dříve. Výchozí chování pro neprázdné hodnoty z *ptr* je uvolnit úložiště přidělené v dřívějším volání. Je zadán, za jakých podmínek část nebo všechny tyto uvolňovaného úložiště je přidělena následných volání [operátor new](../standard-library/new-operators.md#op_new)(**size_t**), nebo k některým `calloc`(**size_t**), `malloc`(**size_t**), nebo `realloc`( **void\***, **size_t**).
+První funkce je volána `delete[]` výraz k vykreslení hodnoty *ptr* neplatný. Funkce totiž replaceable programu lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu *ptr* , který je null nebo který byl vrácen dřívějším volání [operátor new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Výchozí chování pro hodnotu null z *ptr* se neprovede žádnou akci. Jakákoli jiná hodnota *ptr* musí být číslo vrácen voláním jak už bylo popsáno dříve. Výchozí chování pro tyto nenulovou hodnotou *ptr* je uvolnit úložiště přidělené v dřívějším volání. Je zadán, za jakých podmínek část nebo všechny tyto uvolňovaného úložiště je přidělena následných volání [operátor new](../standard-library/new-operators.md#op_new)(**size_t**), nebo k některým `calloc`(**size_t**), `malloc`(**size_t**), nebo `realloc`( **void**<strong>\*</strong>, **size_t**) .
 
 Druhá funkce je volána umístění `delete[]` výraz odpovídá `new[]` výrazu v podobě `new[]`(**std::size_t**). To nemá žádný účinek.
 

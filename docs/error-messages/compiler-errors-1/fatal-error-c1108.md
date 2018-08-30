@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1108 | Microsoft Docs
+title: Závažná chyba C1108 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203921"
 ---
 # <a name="fatal-error-c1108"></a>Závažná chyba C1108
-Nelze najít knihovnu DLL: 'knihovny dll.  
-  
- Zadaný knihovny DLL (***dll***) nebyl nalezen v cestě.  
-  
- Pokud chcete tuto chybu vyřešit, přeinstalujte Visual C++ nebo zkopírujte příslušné .dll z instalačního disku CD na váš počítač.
+
+> nejde najít DLL: "*název knihovny dll*.
+
+Určené knihovny DLL (*název knihovny dll*) nebyl nalezen v cestě.
+
+Chcete-li vyřešit tuto chybu, přeinstalujte Visual C++ nebo zkopírujte soubor odpovídající DLL z instalace v počítači.

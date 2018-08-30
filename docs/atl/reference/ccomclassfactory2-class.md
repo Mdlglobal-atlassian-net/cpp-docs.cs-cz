@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ee8ab5fe6e410cf812c7c147f4673803b81903
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fe4ddaab8de2369c7cb1b31132f686bc6037676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205522"
 ---
 # <a name="ccomclassfactory2-class"></a>Ccomclassfactory2 – třída
-Tato třída implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní.  
+Tato třída implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ class CComClassFactory2 : public IClassFactory2,
  *Licence*  
  Třída, která implementuje následující statické funkce:  
   
-- **verifylicensekey – statické BOOL (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **getlicensekey – statické BOOL (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **statické BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ## <a name="members"></a>Členové  
   
@@ -64,7 +64,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Vytvoří a vrátí licenční klíč.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComClassFactory2` implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, která je rozšířením z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` vytvoření ovládacích prvků objektu prostřednictvím licenci. Třída objekt pro vytváření, provádění na licencovanou počítači může poskytnout za běhu licenční klíč. Tento licenční klíč umožňuje aplikaci k vytvoření instance objektů při úplné počítač licence neexistuje.  
+ `CComClassFactory2` implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní, která je rozšířením z [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` vytvoření ovládacích prvků objektu prostřednictvím licenci. Třída objekt pro vytváření, provádění na licencovanou počítači může poskytnout za běhu licenční klíč. Tento licenční klíč umožňuje aplikaci k vytvoření instance objektů při úplné počítač licence neexistuje.  
   
  Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactory2`, zadejte [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makra v definici třídy objektu. Příklad:  
   
@@ -149,7 +149,7 @@ STDMETHOD(CreateInstanceLic)(
  Můžete získat licenční klíč pomocí [RequestLicKey](#requestlickey). Chcete-li vytvořit objekt nelicencovaného počítači, je nutné volat `CreateInstanceLic`.  
   
 ##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
- Vyplní [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) struktura s informacemi, které popisují objekt pro vytváření tříd v možnosti licencování.  
+ Vyplní [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) struktura s informacemi, které popisují objekt pro vytváření tříd v možnosti licencování.  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -185,7 +185,7 @@ STDMETHOD(LockServer)(BOOL fLock);
  Volání `LockServer` umožňuje klientovi opřete se o objekt pro vytváření tříd tak, aby více objektů lze rychle vytvořit.  
   
 ##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
- Vytvoří a vrátí licenční klíč, za předpokladu, že `fRuntimeKeyAvail` člena [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) struktura je TRUE.  
+ Vytvoří a vrátí licenční klíč, za předpokladu, že `fRuntimeKeyAvail` člena [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) struktura je TRUE.  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);

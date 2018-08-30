@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221268"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 Když je program spuštěn, může dojít, počet nestandardní podmínky a chyb s názvem "výjimek". Ty mohou zahrnovat vyčerpání paměti, chyb přidělení prostředků a nepodařilo se najít soubory.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této funkce, pokud volání základní systémové paměti alokátory (například **malloc** a [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkce Windows) nezdaří. Není potřeba ji volat **nové** protože **nové** vyvolá výjimka paměti automaticky pokud selhání přidělení paměti.  
+ Voláním této funkce, pokud volání základní systémové paměti alokátory (například **malloc** a [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funkce Windows) nezdaří. Není potřeba ji volat **nové** protože **nové** vyvolá výjimka paměti automaticky pokud selhání přidělení paměti.  
   
 ### <a name="requirements"></a>Požadavky  
   **Hlavička** afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Zpracovat výsledek kódu, který označuje důvod výjimky.  
   
 ### <a name="remarks"></a>Poznámky  
- Verze, která přijímá HRESULT jako argument převede na odpovídající SCODE tento kód výsledku. Další informace o HRESULT a SCODE najdete v tématu [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) v sadě Windows SDK.  
+ Verze, která přijímá HRESULT jako argument převede na odpovídající SCODE tento kód výsledku. Další informace o HRESULT a SCODE najdete v tématu [struktura kódy chyb COM](/windows/desktop/com/structure-of-com-error-codes) v sadě Windows SDK.  
   
 ### <a name="requirements"></a>Požadavky  
   **Hlavička** afxdao.h  

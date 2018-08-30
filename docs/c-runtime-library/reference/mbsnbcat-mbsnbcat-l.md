@@ -1,5 +1,5 @@
 ---
-title: _mbsnbcat –, _mbsnbcat_l – | Microsoft Docs
+title: _mbsnbcat – _mbsnbcat_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,19 +42,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210079"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
-Připojí maximálně první **n** bajtů jednoho řetězce vícebajtových znaků do jiného. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_mbsnbcat_s –, _mbsnbcat_s_l –](mbsnbcat-s-mbsnbcat-s-l.md).
+Připojí maximálně prvních **n** bajtů jednoho řetězec vícebajtových znaků na jiný. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_mbsnbcat_s – _mbsnbcat_s_l –](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,33 +87,33 @@ unsigned char *_mbsnbcat_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
-Řetězce ukončené hodnotou Null cílové vícebajtových znaků.
+*cíl*<br/>
+Řetězec cíle zakončený hodnotou Null vícebajtového znaku.
 
 *src*<br/>
-Řetězce ukončené hodnotou Null zdroj vícebajtových znaků.
+Řetězec zakončený hodnotou Null zdroje vícebajtového znaku.
 
 *Počet*<br/>
-Počet bajtů z *src* připojit k *cíle*.
+Počet bajtů z *src* pro připojení k *dest*.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbcat –** vrací ukazatel na cílový řetězec. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+**_mbsnbcat –** vrací ukazatel na cílový řetězec. Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsnbcat –** funkce připojí maximálně první *počet* bajtů *src* k *cíle*. Pokud bajtů bezprostředně předcházející znak hodnoty null v *cíle* vedoucím bajtem, počáteční bajt *src* přepíše této úvodní bajt. V opačném počáteční bajt *src* přepíše ukončující znak null *cíle*. Pokud se objeví null bajtů v *src* před *počet* bajtů se připojují, **_mbsnbcat –** připojí všechny bajtů z *src*, až do znaku, hodnotu null. Pokud *počet* je větší než délka *src*, délka *src* slouží místě *počet*. Výsledný řetězec je byla ukončena s znak hodnoty null. Pokud kopírování probíhá mezi řetězce, které se překrývají, chování nedefinovaný.
+**_Mbsnbcat –** funkce připojí maximálně prvních *počet* bajtů *src* k *dest*. Pokud bajt bezprostředně předchází znak null v *dest* je vedoucí bajt úvodní bajt *src* přepíše tento úvodní bajt. Jinak úvodní bajt *src* přepíše ukončující znak null proměnné *dest*. Pokud se objeví nulový bajt v *src* před *počet* bajtů se připojují, **_mbsnbcat –** připojí všechny bajty z *src*, až po znak null. Pokud *počet* je větší než délka *src*, délka *src* je použito místo *počet*. Výsledný řetězec je ukončen znakem null. Pokud se kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. **_Mbsnbcat –** verzi funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí; **_mbsnbcat_l –** verze je stejná s tím rozdílem, že používají předaný v místo toho parametr národního prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. **_Mbsnbcat –** verzi funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí **_mbsnbcat_l –** verze je stejná s tím rozdílem, že používají Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**Poznámka k zabezpečení** pomocí řetězce ukončené hodnotou null. Řetězce ukončené hodnotou null nesmí překročit velikost cílové vyrovnávací paměti. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** použijte řetězec zakončený hodnotou null. Řetězec zakončený hodnotou null nesmí překročit velikost cílové vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Pokud *cíle* nebo *src* je **NULL**, funkce vygenerují chybu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud se zpracovává chyba, vrátí funkce **einval –** a nastaví **errno** k **einval –**.
+Pokud *dest* nebo *src* je **NULL**, funkce generuje chybu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** k **EINVAL**.
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -129,9 +129,9 @@ V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání nověj
 |**_mbsnbcat**|\<Mbstring.h >|
 |**_mbsnbcat_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>

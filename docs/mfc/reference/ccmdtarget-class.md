@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464954"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221707"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 Základní třída architektury zpráva – mapa knihovny Microsoft Foundation Class.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Číselný identifikátor příkazu.  
   
  *lpMsg*  
- Ukazatel [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) struktura popisující události (jako je například poklepání), která vyvolá příkaz.  
+ Ukazatel [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struktura popisující události (jako je například poklepání), která vyvolá příkaz.  
   
  *hWndParent*  
  Popisovač okna dokumentu obsahující objekt.  
   
  *lprect –*  
- Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury obsahující souřadnice, v pixelech, které definují objekt ohraničovacího rámečku v *hwndParent*.  
+ Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury obsahující souřadnice, v pixelech, které definují objekt ohraničovacího rámečku v *hwndParent*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud je úspěšná, jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce je v podstatě implementace [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Jsou ve výčtu možných akcí [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Tato členská funkce je v podstatě implementace [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). Jsou ve výčtu možných akcí [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Voláním této funkce umožňující automatizaci OLE pro objekt.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Parametry  
  *ppenumOleVerb*  
- Ukazatel na ukazatel [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) rozhraní.  
+ Ukazatel na ukazatel [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud objekt podporuje alespoň jeden příkaz OLE (v takovém případě \* *ppenumOleVerb* odkazuje na `IEnumOLEVERB` enumerátor rozhraní), jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce je v podstatě implementace [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Tato členská funkce je v podstatě implementace [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Voláním této funkce mapují `IDispatch` ukazatel přijatých ze služby automation členské funkce třídy, do `CCmdTarget` objekt, který implementuje rozhraní `IDispatch` objektu.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Parametry  
  *pIID*  
- Ukazatel na Identifikátor rozhraní ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Ukazatel na Identifikátor rozhraní ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud je úspěšná, jinak hodnota FALSE. V případě úspěšného ověření \* *pIID* je nastavena na ID odbavení primární rozhraní.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch` Ukazatel přidružená k objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pro objekty Toto volání `EnableAutomation` v jejich konstruktory, díky kterým jsou automatizace povolena, tato funkce vrací ukazatel na implementaci Foundation Class `IDispatch` , který používají klienti, kteří komunikují prostřednictvím `IDispatch` rozhraní. Volání této funkce automaticky přidá odkaz na ukazatel, takže není nutné provádět volání [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Pro objekty Toto volání `EnableAutomation` v jejich konstruktory, díky kterým jsou automatizace povolena, tato funkce vrací ukazatel na implementaci Foundation Class `IDispatch` , který používají klienti, kteří komunikují prostřednictvím `IDispatch` rozhraní. Volání této funkce automaticky přidá odkaz na ukazatel, takže není nutné provádět volání [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Získá počet rozhraní typu informací, které poskytuje objekt.  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  Identifikátor národního prostředí ( `LCID`).  
   
  *identifikátor GUID*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) popisu typu.  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) popisu typu.  
   
  *ppTypeInfo*  
  Ukazatel na ukazatel `ITypeInfo` rozhraní.  

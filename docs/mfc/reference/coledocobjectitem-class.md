@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216327"
 ---
 # <a name="coledocobjectitem-class"></a>Coledocobjectitem – třída
 Implementuje Active document containment.  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  Identifikátor příkazu ke spuštění. Musí být ve skupině identifikovaný *pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Určuje možnosti provedení příkazu. Ve výchozím nastavení ke spuštění příkazu bez výzvy pro uživatele. Zobrazit [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) seznam hodnot.  
+ Určuje možnosti provedení příkazu. Ve výchozím nastavení ke spuštění příkazu bez výzvy pro uživatele. Zobrazit [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) seznam hodnot.  
   
  *pguidCmdGroup*  
  Jedinečný identifikátor skupiny příkazů. Ve výchozím nastavení, NULL, který určuje skupiny standardní. Příkaz předaný *nCmdID* musí patřit do skupiny.  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) rozhraní zobrazit aktuálně aktivní. Pokud neexistuje žádné aktuální zobrazení, vrátí hodnotu NULL.  
+ Ukazatel [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) rozhraní zobrazit aktuálně aktivní. Pokud neexistuje žádné aktuální zobrazení, vrátí hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Počet odkazů na vrácený `IOleDocumentView` ukazatel není zvýší předtím, než je vrácená touto funkcí.  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  identifikátor příkazu, pro která je dotazována.  
   
  *pdwStatus*  
- Ukazatel na příznaky k navrácení výsledku dotazu. Seznam možných hodnot najdete v tématu [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
+ Ukazatel na příznaky k navrácení výsledku dotazu. Seznam možných hodnot najdete v tématu [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).  
   
  *pCmdText*  
- Ukazatel [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struktury, ve kterých se mají vracet informace o název a stav pro jeden příkaz. Může mít hodnotu NULL k označení, že volající není nutné tyto informace.  
+ Ukazatel [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) struktury, ve kterých se mají vracet informace o název a stav pro jeden příkaz. Může mít hodnotu NULL k označení, že volající není nutné tyto informace.  
   
  *pguidCmdGroup*  
  Jedinečný identifikátor skupiny příkazů; může mít hodnotu NULL k určení standardní skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Úplný seznam všech návratové hodnoty, najdete v části [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) v sadě Windows SDK.  
+ Úplný seznam všech návratové hodnoty, najdete v části [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) způsob, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) způsob, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  Uvolní připojení k propojená položka OLE a zavře, pokud byla otevřena. Nezničí klientské položky.  

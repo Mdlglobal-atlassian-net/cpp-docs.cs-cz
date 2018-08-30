@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32a748c240d8da55765ac5862c9a2f11eafb14ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966498"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201720"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t – třída
 
@@ -41,11 +41,14 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*_Pm*<br/>
+Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*_Pleft* **const** objekt, který *_Pm* členská funkce je volána v.
+*_Pleft*<br/>
+**Const** objekt, který *_Pm* členská funkce je volána v.
 
-*správné* argument, který je právě přiřazen k *_Pm*.
+*doprava*<br/>
+Argument, který je právě přiřazen k *_Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -53,7 +56,7 @@ Přizpůsobitelnou binární funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( **_Pleft** -> \* * Pm) (***vpravo**) **const**.
+Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( *_Pleft*->\*<em>Pm</em>) ( *správné* ) **const**.
 
 ## <a name="example"></a>Příklad
 

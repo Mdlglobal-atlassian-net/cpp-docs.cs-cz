@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214163"
 ---
 # <a name="deque-class"></a>deque – třída
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ dat prvku, který bude uložen do deque.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen do deque.
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti deque. Tento argument je nepovinný a výchozí hodnota je **alokátoru\<typ > ***.*
+*Allocator –*<br/>
+ Typ, který představuje uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti deque. Tento argument je nepovinný a výchozí hodnota je **alokátoru\<typ >**.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-*První* pozice prvního prvku v rozsahu prvků, zkopírovány z argumentu deque.
+*první*<br/>
+ Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze argument deque.
 
-*Poslední* pozice prvního prvku mimo rozsah prvků zkopírovány z argumentu deque.
+*poslední*<br/>
+ Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat ze argument deque.
 
-*Počet* počet kopií prvku vloženého do deque.
+*Počet*<br/>
+ Počet kopií prvku vloženého do deque.
 
-*Val* hodnota prvku vloženého do deque.
+*Val*<br/>
+ Hodnota prvku vloženého do deque.
 
-*IList* initializer_list vloženého do deque.
+*IList*<br/>
+ Objekt initializer_list vloženého do deque.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS* dolní index (nebo číslo pozice) elementu odkazovat deque.
+*POS*<br/>
+ Dolní index (nebo číslo pozice) elementu odkazovat deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -777,7 +785,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Al*|Třída alokátoru, která se má použít s tímto objektem.|
 |*Počet*|Počet prvků v konstruovaný deque.|
 |*Val*|Hodnota prvků v konstruovaný deque.|
-|*Doprava*|Deque –, který je vytvořený deque kopií.|
+|*doprava*|Deque –, který je vytvořený deque kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |* IList.|Objekt initializer_list, které se mají zkopírovat.|
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozici elementu, který má být odebrán z deque.
+*_Where*<br/>
+ Pozice prvku, který chcete odebrat z deque.
 
-*první* pozice prvního prvku odebrán deque.
+*první*<br/>
+ Pozice prvního prvku odebrán deque.
 
-*poslední* pozice bezprostředně za posledním prvkem odebrán deque.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem odebrán deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS* pozice prvku deque má odkazovat.
+*POS*<br/>
+ Pozice prvku deque má odkazovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* novou velikost deque.
+*_Newsize*<br/>
+ Nová velikost deque.
 
-*Val* nové prvky, které mají být přidány do deque – Pokud je nová velikost větší hodnotu, která původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
+*Val*<br/>
+ Hodnota nové prvky, které mají být přidány do deque – Pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* deque poskytující prvky pro záměnu nebo deque, jehož prvky mají vyměnit s těmi deque `left`.
+*doprava*<br/>
+ Deque – poskytující prvky pro záměnu nebo deque, jehož prvky mají vyměnit s těmi deque `left`.
 
-*levé* deque, jehož prvky mají vyměnit s těmi deque *správné*.
+*doleva*<br/>
+ Deque, jehož prvky mají vyměnit s těmi deque *správné*.
 
 ### <a name="example"></a>Příklad
 

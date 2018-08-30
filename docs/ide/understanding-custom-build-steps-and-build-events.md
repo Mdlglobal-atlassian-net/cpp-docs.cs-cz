@@ -1,5 +1,5 @@
 ---
-title: Seznámení s kroky vlastního sestavení a událostí sestavení | Microsoft Docs
+title: Seznámení s kroky vlastního sestavení a událostí sestavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338764"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206292"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Seznámení s kroky vlastního sestavení a s událostmi sestavení
-Z ve vývojovém prostředí Visual C++, existují tři základní způsoby, jak přizpůsobit procesu sestavení:  
+Z vývojového prostředí Visual C++ existují tři základní způsoby, jak přizpůsobit proces sestavení:  
   
  **Vlastní kroky sestavení**  
- Vlastní krok sestavení je pravidlo sestavení spojené s projektem. Vlastní krok sestavení můžete zadat příkazový řádek provést žádné další vstupní nebo výstupní soubory a zobrazit zprávu. Další informace najdete v tématu [postupy: Přidání vlastního kroku sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
+ Vlastní krok sestavení je pravidlo sestavení přidružené k projektu. Vlastní krok sestavení můžete zadat příkazový řádek ke spuštění jakékoli další vstupní nebo výstupní soubory a napište zprávu zobrazit. Další informace najdete v tématu [postupy: Přidání vlastní krok sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
   
  **Vlastní sestavovací nástroje**  
- Vlastní sestavovací nástroje je pravidlo sestavení přidružený jeden nebo více souborů. Vlastní krok sestavení může předat vstupní soubory nástroji vlastní sestavení, jehož výsledkem je jeden nebo více výstupních souborů. Například soubory nápovědy v aplikaci MFC jsou vytvořeny pomocí vlastní sestavovací nástroje. Další informace najdete v tématu [postupy: Přidání vlastního nástroje sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) a [zadání nástroje sestavení vlastní](../ide/specifying-custom-build-tools.md).  
+ Pro vlastní nástroj sestavení je pravidlo sestavení přidružené k jedné nebo více souborů. Vlastní krok sestavení můžete předat vstupních souborů pro vlastní nástroj sestavení, což vede k jedné nebo více výstupních souborů. Například soubory nápovědy v aplikacích MFC jsou vybaveny pro vlastní nástroj sestavení. Další informace najdete v tématu [postupy: Přidání Build Tools vlastní do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) a [zadání Custom Build Tools](../ide/specifying-custom-build-tools.md).  
   
  **Události sestavení**  
- Události sestavení umožňují přizpůsobit sestavení projektu. Existují tři události sestavení: *před sestavením*, *před propojením*, a *po sestavení*. Události sestavení umožňuje určit akci na konkrétní čas v procesu sestavení. Můžete například využít událost sestavení pro registraci soubor s **regsvr32.exe** po dokončení sestavení projektu. Další informace najdete v tématu [určení událostí sestavení](../ide/specifying-build-events.md).  
+ Události sestavení umožňují přizpůsobit sestavení projektu. Existují tři události sestavení: *před sestavením*, *před propojením*, a *po sestavení*. Události sestavení umožňuje určit akci na určitou dobu v procesu sestavení. Můžete například použít událost sestavení zaregistrovat soubor s **regsvr32.exe** po dokončení sestavení projektu. Další informace najdete v tématu [určení událostí sestavení](../ide/specifying-build-events.md).  
   
- [Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md) vám může pomoct zajistit, aby kroky vlastního sestavení a události sestavení fungovaly podle očekávání.  
+ [Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md) vám může pomoct zajistit, aby vaše vlastní kroky sestavení a události sestavení fungovaly podle očekávání.  
   
- Formát výstupu vlastního kroku sestavení nebo události sestavení můžete také rozšířit použitelnost nástroj. Další informace najdete v tématu [Formátovaní výstupu vlastního kroku sestavení nebo události sestavení](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
+ Formát výstupu vlastního kroku sestavení nebo události sestavení můžete také zlepšují použitelnost nástroje. Další informace najdete v tématu [Formátovaní výstupu vlastního kroku sestavení nebo události sestavení](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
- Události sestavení a vlastní sestavení kroky spustit v následujícím pořadí spolu s jinými kroky sestavení:  
+ Události sestavení a vlastní kroky v uvedeném pořadí společně s další kroky sestavení spustit sestavení:  
   
-1.  Události před sestavením  
+1.  Událost před sestavením  
   
-2.  Vlastní nástroje na jednotlivé soubory sestavení  
+2.  Nástroj Custom build na jednotlivé soubory  
   
 3.  MIDL  
   
@@ -58,19 +58,19 @@ Z ve vývojovém prostředí Visual C++, existují tři základní způsoby, jak
   
 6.  událost před propojením  
   
-7.  Linkeru nebo Librarian (případně)  
+7.  Propojovací program nebo Librarian (podle potřeby)  
   
 8.  Nástroj manifest  
   
-9. BSCMake  
+9. Nástroje BSCMake  
   
-10. Vlastní krok sestavení v projektu  
+10. Vlastní krok sestavení na projektu  
   
-11. Události po sestavení  
+11. Událost po sestavení  
   
- `custom build step on the project` a `post-build event` spuštěny postupně po jiných sestavení zpracovává dokončit.  
+ `custom build step on the project` a `post-build event` spustit postupně po všech ostatních vytvoření zpracovává dokončit.  
   
 ## <a name="see-also"></a>Viz také  
  [Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Běžné makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)   
- [Dialogové okno nástroje sestavení pořadí](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)   
+ [Dialogové okno pořadí sestavení nástroje](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

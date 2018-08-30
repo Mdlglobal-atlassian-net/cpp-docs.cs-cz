@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464719"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212518"
 ---
 # <a name="cwindowdc-class"></a>Cwindowdc – třída
 Odvozené od `CDC`.  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  Okno, jehož klientské oblasti bude mít přístup k objektu kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Konstruktor zavolá funkci Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ Konstruktor zavolá funkci Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).  
   
  Výjimky (typu `CResourceException`) je vyvolána, pokud Windows `GetWindowDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   

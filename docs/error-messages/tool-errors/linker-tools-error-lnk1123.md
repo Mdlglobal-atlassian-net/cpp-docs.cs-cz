@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1123 | Microsoft Docs
+title: Chyba Linkerů LNK1123 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,37 +15,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206785"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Chyba linkerů LNK1123
 
-> Chyba při převodu do COFF: neplatný nebo poškozený soubor
+> Při převodu na COFF došlo k chybě: soubor je neplatný nebo poškozený
 
-Vstupní soubory musí mít formát běžné objekt souboru formátu (COFF). Pokud vstupní soubor není COFF, linkeru automaticky pokusí převést objekty OMF 32-bit do COFF, nebo se spouští CVTRES. EXE převést soubory prostředků. Tato zpráva znamená, že linkeru nebylo možné převést soubor. To může dojít také při použití nekompatibilní verze souboru CVTRES. EXE z jiné instalace sady Visual Studio, Windows Development Kit nebo rozhraní .NET Framework.
+Vstupní soubory musí mít formát Common Object File Format (COFF). Pokud vstupní soubor není COFF, linker automaticky pokusí převést objekty omf – 32-bit na COFF nebo spouští CVTRES. Soubor EXE pro převod souborů prostředků. Tato zpráva znamená, že má linker nelze převést soubor. To může dojít také při použití nekompatibilní verze CVTRES. Soubor EXE z jiné instalace sady Visual Studio, sada Windows nebo .NET Framework.
 
 > [!NOTE]
-> Pokud používáte starší verze sady Visual Studio, nemusí být podporována automatický převod.
+> Pokud používáte starší verzi sady Visual Studio, nemusí být podporované automatického převodu.
 
-## <a name="to-fix-the-problem"></a>Vyřešte problém
+## <a name="to-fix-the-problem"></a>Chcete-li vyřešit tento problém
 
-- Použijte pro všechny aktualizace service Pack a aktualizace pro vaši verzi sady Visual Studio. To je obzvláště důležité pro Visual Studio 2010.
+- Použijte všechny aktualizace service Pack a aktualizace pro vaši verzi sady Visual Studio. To je obzvláště důležité pro sadu Visual Studio 2010.
 
-- Opakujte sestavení s přírůstkové propojování zakázáno. Na řádku nabídek zvolte **projektu**, **vlastnosti**. V **stránky vlastností** dialogové okno, rozbalte seznam **vlastnosti konfigurace**, **Linkeru**. Změňte hodnotu **Povolit přírůstkové propojování** k **ne**.
+- Vyzkoušejte vytváření s přírůstkovým propojením zakázán. V panelu nabídky zvolte **projektu**, **vlastnosti**. V **stránky vlastností** dialogového okna rozbalte **vlastnosti konfigurace**, **Linkeru**. Změňte hodnotu vlastnosti **Povolit přírůstkové propojení** k **ne**.
 
-- Ověřte, že verze nástroje CVTRES. EXE nalezen nejprve vaše proměnná prostředí PATH odpovídá verzi nástroje pro sestavení nebo verzi sady nástrojů platformy použitou vaším projektem.
+- Ověřte, že verze CVTRES. Najít soubor EXE nejprve ve vaší proměnné prostředí PATH odpovídá verzi nástroje pro sestavení nebo verze sady nástrojů platformy použitou vaším projektem.
 
-- Zkuste vypnout možnost vložení manifestu. Na řádku nabídek zvolte **projektu**, **vlastnosti**. V **stránky vlastností** dialogové okno, rozbalte seznam **vlastnosti konfigurace**, **Nástroj Manifest**, **vstup a výstup**. Změňte hodnotu **vložení manifestu** k **ne**.
+- Vypněte možnost Vložit Manifest. V panelu nabídky zvolte **projektu**, **vlastnosti**. V **stránky vlastností** dialogového okna rozbalte **vlastnosti konfigurace**, **Nástroj Manifest**, **vstupní a výstupní**. Změňte hodnotu vlastnosti **vložit Manifest** k **ne**.
 
-- Ujistěte se, že je platný typ souboru. Například se ujistěte, že objekt OMF je 32bitová verze a nebyl 16 bitů. Další informace najdete v tématu [. Soubory obj jako vstup Linkeru](../../build/reference/dot-obj-files-as-linker-input.md) a [PE formátu](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Ujistěte se, že je platný typ souboru. Například Ujistěte se, že objekt omf – je 32bitová verze a 16-bit. Další informace najdete v tématu [. Soubory obj jako vstup Linkeru](../../build/reference/dot-obj-files-as-linker-input.md) a [formátu PE](/windows/desktop/Debug/pe-format).
 
-- Ujistěte se, že soubor není poškozen. Obnovit, v případě potřeby.
+- Ujistěte se, že soubor není poškozen. Sestavení, v případě potřeby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Soubory .Obj jako vstup linkeru](../../build/reference/dot-obj-files-as-linker-input.md)  
 [EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)  

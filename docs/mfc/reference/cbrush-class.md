@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336631"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215732"
 ---
 # <a name="cbrush-class"></a>Cbrush – třída
 Zapouzdřuje štětec rozhraní GDI systému Windows grafiky zařízení.  
@@ -62,14 +62,14 @@ class CBrush : public CGdiObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializuje štětce styl, barvu a vzoru určenému v [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializuje štětce styl, barvu a vzoru určenému v [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializuje štětcem pomocí vzoru určené bitmap nezávislých na zařízení (DIB).|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|Inicializuje se zadanému vzoru šrafované a barvou štětce.|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|Inicializuje štětcem pomocí vzoru určené rastrový obrázek.|  
 |[CBrush::CreateSolidBrush](#createsolidbrush)|Inicializuje zadaný plnou barvou štětce.|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Vytvoří štětec, který je výchozí barva systému.|  
 |[CBrush::FromHandle](#fromhandle)|Vrací ukazatel na `CBrush` objektu, když je zadaný popisovač Windows `HBRUSH` objektu.|  
-|[CBrush::GetLogBrush](#getlogbrush)|Získá [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Získá [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -131,7 +131,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Pokud použijete konstruktor bez argumentů, musí inicializovat výsledný `CBrush` objekt s [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), nebo [CreateDIBPatternBrush](#createdibpatternbrush). Pokud použijete jeden z konstruktorů, které přebírá argumenty, pak žádné další inicializace je nezbytné. Konstruktory s argumenty může vyvolat výjimku, pokud nedojde k chybám, když bude vždy úspěšné konstruktor bez argumentů.  
   
- Konstruktor s jedním [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru sestaví štětec určenou barvou. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.  
+ Konstruktor s jedním [COLORREF](/windows/desktop/gdi/colorref) parametru sestaví štětec určenou barvou. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.  
   
  Konstruktor se dvěma parametry vytvoří štětce šrafování. *NIndex* parametr určuje index šrafované vzor. *CrColor* parametr určuje barvu.  
   
@@ -141,7 +141,7 @@ explicit CBrush(CBitmap* pBitmap);
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- Inicializuje stopy s styl, barvu a vzoru určenému v [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury.  
+ Inicializuje stopy s styl, barvu a vzoru určenému v [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>Parametry  
  *lpLogBrush*  
- Odkazuje [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) strukturu, která obsahuje informace o stopy.  
+ Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturu, která obsahuje informace o stopy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
@@ -208,11 +208,11 @@ BOOL CreateDIBPatternBrush(
   
  Informace o používání následujících funkcí Windows najdete v tématu Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (Tato funkce slouží pouze pro kompatibilitu s aplikace napsané pro verzích Windows starších než 3.0; použijte `CreateDIBPatternBrushPt` funkce.)  
+- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (Tato funkce slouží pouze pro kompatibilitu s aplikace napsané pro verzích Windows starších než 3.0; použijte `CreateDIBPatternBrushPt` funkce.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (Tato funkce by měla sloužit pro aplikace založené na Win32.)  
+- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (Tato funkce by měla sloužit pro aplikace založené na Win32.)  
   
-- [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
@@ -243,7 +243,7 @@ BOOL CreateHatchBrush(
 - Svislé HS_VERTICAL šrafování  
   
  *crColor*  
- Určuje barvu popředí štětce jako barva RGB (barva šrafování). Zobrazit [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) v sadě Windows SDK pro další informace.  
+ Určuje barvu popředí štětce jako barva RGB (barva šrafování). Zobrazit [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK pro další informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -277,7 +277,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  Štětce vytvořené pomocí monochromatický rastrový obrázek (1 barevné roviny 1 bitů na pixel) je vykreslen aktuální barvy textu a pozadí. Obrazových bodů reprezentované bit nastaven na hodnotu 0 jsou vykreslovány pomocí aktuální barvu textu. Obrazové body reprezentované bit nastaven na hodnotu 1, jsou vykreslovány aktuální barvou pozadí.  
   
- Informace o používání [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), Windows fungovat, naleznete v sadě Windows SDK.  
+ Informace o používání [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), Windows fungovat, naleznete v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
@@ -291,7 +291,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>Parametry  
  *crColor*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktura, která určuje barvu štětce. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.  
+ A [COLORREF](/windows/desktop/gdi/colorref) struktura, která určuje barvu štětce. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Určuje index barev. Tato hodnota odpovídá barva použitá k vykreslení jeden z elementů 21 okna. Zobrazit [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) v sadě Windows SDK pro seznam hodnot.  
+ Určuje index barev. Tato hodnota odpovídá barva použitá k vykreslení jeden z elementů 21 okna. Zobrazit [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) v sadě Windows SDK pro seznam hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -343,7 +343,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="remarks"></a>Poznámky  
  Pokud `CBrush` objekt už není připojen ke zpracování, dočasný `CBrush` objekt se vytvoří a připojí. Tento dočasný `CBrush` objektu je platná pouze až do příštího aplikace má čas nečinnosti v jeho smyčkou událostí. V tuto chvíli se odstraní všechny dočasné grafických objektů. Jinými slovy dočasný objekt platí pouze při zpracování zprávy jedno okno.  
   
- Další informace o použití grafických objektů najdete v tématu [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v tématu [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CBrush::CBrush](#cbrush).  
@@ -357,7 +357,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>Parametry  
  *pLogBrush*  
- Odkazuje [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) strukturu, která obsahuje informace o stopy.  
+ Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturu, která obsahuje informace o stopy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud je funkce úspěšná, a *pLogBrush* je platný ukazatel, vrácená hodnota je počet bajtů uložených do vyrovnávací paměti.  
@@ -387,7 +387,7 @@ operator HBRUSH() const;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je operátor přetypování, která podporuje přímému použití objektu HBRUSH.  
   
- Další informace o použití grafických objektů najdete v tématu [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v tématu [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

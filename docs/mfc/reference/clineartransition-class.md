@@ -1,5 +1,5 @@
 ---
-title: Třída CLinearTransition | Microsoft Docs
+title: Clineartransition – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040883"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211738"
 ---
-# <a name="clineartransition-class"></a>CLinearTransition – třída
-Zapouzdří lineárního přechodu.  
+# <a name="clineartransition-class"></a>Clineartransition – třída
+Zapouzdřuje lineární přechod.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,13 +46,13 @@ class CLinearTransition : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|Vytvoří objekt lineárního přechodu a inicializuje se doba trvání a konečná hodnota.|  
+|[CLinearTransition::CLinearTransition](#clineartransition)|Vytvoří objekt lineární přechod a inicializuje ji s doba trvání a konečná hodnota.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CLinearTransition::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CLinearTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -62,20 +62,20 @@ class CLinearTransition : public CBaseTransition;
 |[CLinearTransition::m_duration](#m_duration)|Doba trvání přechodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během lineárního přechodu hodnota proměnné animace přechází lineárně od počáteční hodnoty do zadaného konečná hodnota. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během lineárního přechodu je hodnotu proměnné animace přechází lineárně od počáteční hodnoty do zadaného konečnou hodnotu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
- [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
+ [Clineartransition –](../../mfc/reference/clineartransition-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- Vytvoří objekt lineárního přechodu a inicializuje se doba trvání a konečná hodnota.  
+ Vytvoří objekt lineární přechod a inicializuje ji s doba trvání a konečná hodnota.  
   
 ```  
 CLinearTransition(
@@ -91,7 +91,7 @@ CLinearTransition(
  Hodnota proměnné animace na konci přechodu.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
  Hodnota proměnné animace na konci přechodu.  

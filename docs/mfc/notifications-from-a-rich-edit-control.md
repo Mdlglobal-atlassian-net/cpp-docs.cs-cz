@@ -1,5 +1,5 @@
 ---
-title: Oznámení z s formátováním ovládacích prvků pro úpravy | Microsoft Docs
+title: Oznámení z bohaté ovládacích prvků pro úpravy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928728093ff6e2150578c4ba48f2d8081620a48d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a64abf4312460384ddfa78fa2220cfb88bf664c7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931141"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195068"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Oznámení z ovládacích prvků pro úpravy s formátováním
-Sestava ovládacích prvků pro úpravy s formátováním ovlivňující událostí zprávy oznámení ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Jsou může zpracovat nadřazeného okna nebo pomocí reflexe zpráv pomocí bohaté upravit vlastní ovládací prvek. Ovládací prvky Rich edit podporovat všechny zprávy s oznámením použít s ovládacími prvky pro úpravy, jakož i několik dalších ty. Můžete určit, jaké zprávy s oznámením ovládacího prvku RichEdit odešle jeho nadřazeného okna nastavením "události maska."  
+Oznamovací zprávy ovládacích prvků pro úpravy události ovlivňující bohaté sestavy ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Mohou být zpracovány nadřazené okno nebo pomocí reflexe zprávy podle získáte bohaté upravte samotný ovládací prvek. Bohaté ovládacích prvcích pro úpravy podporují všechny zprávy s oznámením použít s ovládacími prvky pro úpravy, jakož i několik další značky. Můžete určit, jaké zprávy s oznámením ovládacího prvku odešle nezašle nadřazenému oknu nastavením jeho "masky události."  
   
- Pokud chcete nastavit maska událostí pro ovládací prvek pro úpravy s formátováním, použijte [seteventmask –](../mfc/reference/cricheditctrl-class.md#seteventmask) – členská funkce. Můžete načíst aktuální masku událostí pro úpravy s formátováním ovládacího prvku s použitím [geteventmask –](../mfc/reference/cricheditctrl-class.md#geteventmask) – členská funkce.  
+ Chcete-li nastavení masky události pro ovládací prvek pro úpravy s formátováním, použijte [seteventmask –](../mfc/reference/cricheditctrl-class.md#seteventmask) členskou funkci. Můžete načíst aktuální masky události pro úpravy s formátováním ovládacího prvku s použitím [geteventmask –](../mfc/reference/cricheditctrl-class.md#geteventmask) členskou funkci.  
   
- V následujících odstavcích seznamu několik upozornění a jejich použití:  
+ Následující odstavce seznamu několik upozornění a jejich použití:  
   
--   Zpracování oznámení EN_MSGFILTER EN_MSGFILTER umožňuje třídu, buď prvku RichEdit nebo jeho nadřazené okno, filtrovat všechny klávesnici a myš vstupu pro ovládací prvek. Obslužná rutina může zabránit zpracovává zprávy klávesnici nebo myš nebo zprávu můžete změnit úpravou zadaný [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) struktury.  
+-   EN_MSGFILTER zpracování oznámení EN_MSGFILTER třídu, buď ovládací prvek RTF a umožňuje nezašle nadřazenému oknu, filtrovat všechny klávesnice a myši do ovládacího prvku. Obslužná rutina může zabránit zpracovává zprávy klávesnice nebo myši nebo zprávu můžete změnit úpravou zadaný [MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter) struktury.  
   
--   EN_PROTECTED zpracování zpráv oznámení EN_PROTECTED zjistit, kdy se uživatel pokusí o chráněný textový upravit. Rozsah text označit jako chráněný, můžete nastavit účinek chráněné znak. Další informace najdete v tématu [formátování znaků v ovládacích prvcích upravit bohaté](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   EN_PROTECTED zpracovávat zprávy oznámení EN_PROTECTED zjistit, kdy se uživatel pokusí o chráněný textový upravit. K označení rozsah textu jako chráněný, můžete nastavit efekt chráněné znak. Další informace najdete v tématu [formátování znaků v ovládacích prvcích upravit bohaté](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   EN_DROPFILES můžete povolit uživatelům vyřadit soubory v ovládacím prvku RichEdit zpracováním EN_DROPFILES oznámení. Zadaný [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) struktura obsahuje informace o souborech probíhá vyřazování.  
+-   EN_DROPFILES můžete povolit uživateli vkládají soubory do ovládacího prvku pomocí zpracování zprávy oznámení EN_DROPFILES. Zadaný [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles) struktura obsahuje informace o souborech probíhá vyřazování.  
   
--   EN_SELCHANGE aplikace může rozpoznat, kdy aktuální výběr změní zpracováním EN_SELCHANGE oznámení. Určuje, oznámení [selchange –](http://msdn.microsoft.com/library/windows/desktop/bb787952) struktura obsahující informace o nový výběr.  
+-   EN_SELCHANGE aplikace může rozpoznat, kdy se zpracováním zprávy oznámení EN_SELCHANGE změní aktuální výběr. Oznámení určuje [selchange –](/windows/desktop/api/richedit/ns-richedit-_selchange) struktura obsahující informace o nový výběr.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   

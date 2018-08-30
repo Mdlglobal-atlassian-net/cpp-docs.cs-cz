@@ -1,5 +1,5 @@
 ---
-title: Běžné problémy s migrací 64-bit Visual C++ | Microsoft Docs
+title: Běžné problémy s migrací 64bitovým kompilátorem jazyka Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,38 +22,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367726"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208155"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Obecné problémy migrace v 64bitovém prostředí Visual C++
 
-Použijete-li vytvářet aplikace na spouštění v operačním systému Windows 64-bit Visual C++, měli byste mít uvědomit následující skutečnosti:  
+Pokud použijete Visual C++ k vytvoření aplikace, které poběží v operačním systému Windows 64-bit, byste měli znát následující problémy:  
   
--   `int` a `long` jsou 32bitové hodnoty v operačních systémech Windows 64-bit. Pro programy, které máte v úmyslu zkompilovat pro 64bitové platformy byste měli být pozor, abyste jim ukazatele na 32-bit proměnné. Ukazatele jsou 64bitové na 64bitových platformách a zkrátit hodnotu ukazatele, chcete-li přiřadit ho k proměnné 32-bit.  
+-   `int` a `long` jsou 32bitové hodnoty v operačních systémech Windows 64-bit. Pro programy, které máte v plánu pro 64bitové platformy by měl být pozor, abyste jim ukazatele na 32bitové proměnné. Ukazatele jsou 64-bit na 64bitové platformy a zkrátit hodnota ukazatele, pokud přiřadíte 32bitové proměnné.  
   
--   `size_t`, `time_t`, a `ptrdiff_t` jsou 64bitové hodnoty v operačních systémech Windows 64-bit.  
+-   `size_t`, `time_t`, a `ptrdiff_t` jsou hodnoty 64bitových operačních systémech Windows 64-bit.  
   
--   `time_t` je hodnota 32-bit v operačních systémech Windows 32-bit v jazyce Visual C++ verze před Visual C++ 2005. `time_t` je nyní 64bitovou celočíselnou hodnotu ve výchozím nastavení. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).  
+-   `time_t` je 32bitová hodnota v operačních systémech Windows 32-bit ve verzích Visual C++ před Visual C++ 2005. `time_t` je teď 64bitovou celočíselnou hodnotu ve výchozím nastavení. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).  
   
-     Byste měli vědět, kde váš kód přebírá `int` hodnotu a zpracovává je jako `size_t` nebo `time_t` hodnotu. Je možné, že číslo může být větší než 32bitové číslo a data budou zkráceny, když je předán zpět do `int` úložiště.  
+     Byste měli vědět, kde váš kód používá `int` hodnotu a zpracovává ji jako `size_t` nebo `time_t` hodnotu. Je možné, že číslo může být větší než 32bitová čísla a data bude zkrácen, pokud je předán zpět do `int` úložiště.  
   
-%X (šestnáctkových `int` formátu) `printf` modifikátor nebude fungovat podle očekávání 64bitová verze operačního systému Windows. Toto pravidlo bude pracovat pouze na první 32 bity hodnoty, který je předán.  
+%X (hexadecimální `int` formátu) `printf` modifikátor nebude fungovat podle očekávání v operačním systému Windows 64-bit. Toto pravidlo bude pracovat pouze s prvních 32 bitů hodnotu, která je předána.  
   
--   Použijte % I32x, chcete-li zobrazit typu 32bitové celočíselné v šestnáctkovém formátu.  
+-   % I32x, chcete-slouží k zobrazení na integrálový typ 32-bit v šestnáctkovém formátu.  
   
--   % I64x použijte k zobrazení typu 64bitové celočíselné v šestnáctkovém formátu.  
+-   % I64x slouží k zobrazení 64bitového celočíselného typu v šestnáctkovém formátu.  
   
--   %P (šestnáctkový formát pro ukazatel) bude fungovat podle očekávání 64bitová verze operačního systému Windows.  
+-   %P (šestnáctkovém formátu pro ukazatel) bude fungovat podle očekávání v operačním systému Windows 64-bit.  
   
 Další informace naleznete v tématu:  
   
 -   [Možnosti kompilátoru](../build/reference/compiler-options.md)  
   
--   [Tipy pro migraci](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [Tipy pro migraci](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>Viz také  
 

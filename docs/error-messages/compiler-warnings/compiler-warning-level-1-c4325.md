@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4325 | Microsoft Docs
+title: Upozornění (úroveň 1) C4325 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277641"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197482"
 ---
-# <a name="compiler-warning-level-1-c4325"></a>C4325 kompilátoru upozornění (úroveň 1)
-**atributy pro standardní oddíl.**   
- ***část* ' ignorovat**  
-  
- Atributy standardní oddílu nesmí změnit. Příklad:  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- To by přepsala `.sdata` standardní oddíl, který používá **krátké** datový typ s **dlouho** datový typ.  
-  
- Standardní oddíly, jejichž atributy nesmí změnit zahrnout,  
-  
--   .data –  
-  
--   .sdata  
-  
--   .BSS  
-  
--   .sbss  
-  
--   .text  
-  
--   .const –  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- Další části lze přidat později.  
-  
-## <a name="see-also"></a>Viz také  
- [section](../../preprocessor/section.md)
+# <a name="compiler-warning-level-1-c4325"></a>Kompilátor upozornění (úroveň 1) C4325
+
+> atributy pro oddíl standard "*části*se ignoruje
+
+## <a name="remarks"></a>Poznámky
+
+Atributy oddíl standard nejde změnit. Příklad:
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+To by přepsala `.sdata` oddíl standard, která používá **krátký** datový typ s **dlouhé** datového typu.
+
+Zahrnují standardní oddíly, jejichž atributy nejde změnit
+
+- .data
+
+- .sdata.
+
+- .BSS
+
+- .sbss
+
+- .text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+Další oddíly mohou být přidány později.
+
+## <a name="see-also"></a>Viz také:
+
+[section](../../preprocessor/section.md)

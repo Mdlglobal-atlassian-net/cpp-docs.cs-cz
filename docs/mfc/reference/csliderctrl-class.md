@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215354"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek posuvník.  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](http://msdn.microsoft.com/library/windows/desktop/bb760147), které jsou popsány v sadě Windows SDK do ovládacího prvku.  
+ Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.  
   
  *Rect*  
- Určuje velikost a umístění v ovládacím prvku posuvník. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Určuje velikost a umístění v ovládacím prvku posuvník. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Určuje nadřazené okno ovládacího prvku posuvník, obvykle `CDialog`. Nesmí být NULL.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](http://msdn.microsoft.com/library/windows/desktop/bb760147), které jsou popsány v sadě Windows SDK do ovládacího prvku.  
+ Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je v místě určeném okna buddy *fLocation*, nebo hodnota NULL, pokud neexistuje žádný asociované okno na tomto místě.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), jak je popsáno v sadě Windows SDK. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), jak je popsáno v sadě Windows SDK. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Načte velikost a umístění ohraničující rámeček pro ovládací prvek posuvník kanálu.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  Délka posuvník v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Načte velikost a umístění ohraničující rámeček pro posuvník (palce) v ovládacím prvku posuvník.  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Ukazatel [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objektu, nebo hodnota NULL, pokud popisy nejsou používány. Pokud v ovládacím prvku posuvník nepoužívá TBS_TOOLTIPS styl, vrácená hodnota je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce vrátí `CToolTipCtrl` objektu namísto popisovač do ovládacího prvku.  
+ Tato členská funkce implementuje chování zprávy Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce vrátí `CToolTipCtrl` objektu namísto popisovač do ovládacího prvku.  
   
- Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) v sadě Windows SDK.  
+ Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Přiřadí časové období jako asociovaného okna pro ovládací prvek posuvník.  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objektu, který byl dříve přiřazen do ovládacího prvku jezdec na tomto místě.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce používá ukazatele na `CWnd` objekty, nikoli úchyty okna pro jeho návratovou hodnotu a parametr.  
+ Tato členská funkce implementuje chování zprávy Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce používá ukazatele na `CWnd` objekty, nikoli úchyty okna pro jeho návratovou hodnotu a parametr.  
   
- Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) v sadě Windows SDK.  
+ Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Nastaví velikost čáry pro ovládací prvek posuvník.  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in] *nLength*|Délka posuvník v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyžaduje, aby ovládací prvek posuvník nastavena na [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) style.  
+ Tato metoda vyžaduje, aby ovládací prvek posuvník nastavena na [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.  
   
- Tato metoda odesílá [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_sliderCtrl`, která je pro přístup k aktuálnímu ovládacímu prvku trackbar. Příklad také definuje proměnnou, `thumbLength`, která je používá k ukládání délka výchozí TrackBar – ovládací prvek thumb součásti. Tyto proměnné se používají v dalším příkladu.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Parametry  
  *Numístění*  
- Hodnota představující umístění, kam chcete-li zobrazit ovládací prvek tooltip. Seznam možných hodnot, zobrazí zpráva Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), jak je popsáno v sadě Windows SDK.  
+ Hodnota představující umístění, kam chcete-li zobrazit ovládací prvek tooltip. Seznam možných hodnot, zobrazí zpráva Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která představuje ovládací prvek tooltip předchozí umístění. Návratová hodnota se rovná jednu z možných hodnot pro *Numístění*.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 TBM_SETTIPSIDE, jak je popsáno v sadě Windows SDK. Ovládacích prvků posuvník, které používají styl TBS_TOOLTIPS zobrazit popisy tlačítek. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 TBM_SETTIPSIDE, jak je popsáno v sadě Windows SDK. Ovládacích prvků posuvník, které používají styl TBS_TOOLTIPS zobrazit popisy tlačítek. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  ToolTip – ovládací prvek přiřadí ovládacím prvku posuvník.  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Ukazatel [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objekt, který obsahuje popisy tlačítek pro použití s ovládacím prvkem posuvníku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), jak je popsáno v sadě Windows SDK. Když se stylem TBS_TOOLTIPS ovládacím prvku posuvník, vytvoří ovládací prvek výchozí popisek, který se zobrazí vedle jezdce, zobrazení aktuální pozice posuvníku. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), jak je popsáno v sadě Windows SDK. Když se stylem TBS_TOOLTIPS ovládacím prvku posuvník, vytvoří ovládací prvek výchozí popisek, který se zobrazí vedle jezdce, zobrazení aktuální pozice posuvníku. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)   

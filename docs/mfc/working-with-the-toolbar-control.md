@@ -1,5 +1,5 @@
 ---
-title: Práce s ovládacím prvkem panel nástrojů | Microsoft Docs
+title: Práce s ovládacím prvkem panel nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202257"
 ---
 # <a name="working-with-the-toolbar-control"></a>Práce s ovládacím prvkem panel nástrojů
-Tento článek vysvětluje, jak se dostanete [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) základní objekt [ctoolbar –](../mfc/reference/ctoolbar-class.md) pro větší kontrolu nad panely nástrojů. To je rozšířená.  
+Tento článek vysvětluje, jak můžete přistupovat [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) základní objekt [ctoolbar –](../mfc/reference/ctoolbar-class.md) mít větší kontrolu nad panely nástrojů. Toto je rozšířená.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Pro přístup k běžného ovládacího prvku panel nástrojů základní vaší ctoolbar – objekt  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Pro přístup k běžný ovládací prvek panelu nástrojů základní ctoolbar – objekt  
   
 1.  Volání [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` Vrátí odkaz na [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu. Odkaz na můžete volat funkce člena třídy ovládacího prvku panel nástrojů.  
+ `GetToolBarCtrl` Vrátí odkaz na [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu. Můžete použít odkaz volat členské funkce třídy ovládacího prvku panel nástrojů.  
   
 > [!CAUTION]
->  Při volání `CToolBarCtrl` **získat** funkce je bezpečné, buďte opatrní při volání **nastavit** funkce. To je rozšířená. Za normálních okolností by neměl potřebujete přístup k podkladové ovládací prvek panelu nástrojů.  
+>  Při volání `CToolBarCtrl` **získat** funkce budou v bezpečí, buďte opatrní při volání **nastavit** funkce. Toto je rozšířená. Obvykle neměli byste potřebovat přístup k podkladové ovládací prvek panelu nástrojů.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Ovládací prvky (běžné ovládací prvky Windows)](../mfc/controls-mfc.md)  
   
@@ -46,11 +46,11 @@ Tento článek vysvětluje, jak se dostanete [CToolBarCtrl](../mfc/reference/cto
   
 -   [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)  
   
--   [Dynamicky Změna velikosti panelu nástrojů](../mfc/docking-and-floating-toolbars.md)  
+-   [Dynamicky změnu velikosti panelu nástrojů](../mfc/docking-and-floating-toolbars.md)  
   
--   [Popisy tlačítek panelu nástrojů](../mfc/toolbar-tool-tips.md)  
+-   [Popisy tlačítek na panelu nástrojů](../mfc/toolbar-tool-tips.md)  
   
--   [Průběžné aktualizace stavového řádku](../mfc/toolbar-tool-tips.md)  
+-   [Aktualizace stavového řádku](../mfc/toolbar-tool-tips.md)  
   
 -   [Zpracování oznámení popisů tlačítek](../mfc/handling-tool-tip-notifications.md)  
   
@@ -64,7 +64,7 @@ Tento článek vysvětluje, jak se dostanete [CToolBarCtrl](../mfc/reference/cto
   
 -   [Ovládací pruhy](../mfc/control-bars.md)  
   
- Obecné informace o použití běžných ovládacích prvků Windows najdete v tématu [běžné ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Obecné informace o použití běžných ovládacích prvků Windows najdete v tématu [běžné ovládací prvky](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Viz také  
  [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)

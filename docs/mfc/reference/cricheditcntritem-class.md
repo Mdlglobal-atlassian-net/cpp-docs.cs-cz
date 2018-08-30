@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17f50f5e4fb8b9330a09d4964aa99fbf01f4b34d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849324"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206968"
 ---
 # <a name="cricheditcntritem-class"></a>Cricheditcntritem – třída
 S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [cricheditdoc –](../../mfc/reference/cricheditdoc-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.  
@@ -84,7 +84,7 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>Parametry  
  *preo*  
- Ukazatel [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* má hodnotu NULL, položka klienta je prázdná.  
+ Ukazatel [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* má hodnotu NULL, položka klienta je prázdná.  
   
  *pContainer*  
  Ukazatel na dokument kontejneru, který bude obsahovat této položky. Pokud *pContainer* má hodnotu NULL, je nutné explicitně volat [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) na tuto položku klienta přidat do dokumentu.  
@@ -92,10 +92,10 @@ CRichEditCntrItem(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce není udělat všechny inicializace technologie OLE.  
   
- Další informace najdete v tématu [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura v sadě Windows SDK.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Voláním této funkce synchronizovat zařízení aspekt [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), to `CRichEditCntrltem` na klíči určenému *Znov*.  
+ Voláním této funkce synchronizovat zařízení aspekt [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), to `CRichEditCntrltem` na klíči určenému *Znov*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,10 +103,10 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>Parametry  
  *Znov*  
- Odkaz [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura, která popisuje položky OLE.  
+ Odkaz [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura, která popisuje položky OLE.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) v sadě Windows SDK.  
+ Další informace najdete v tématu [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC WORDPAD](../../visual-cpp-samples.md)   

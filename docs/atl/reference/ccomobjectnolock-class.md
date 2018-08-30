@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208172"
 ---
 # <a name="ccomobjectnolock-class"></a>Ccomobjectnolock – třída
 Tato třída implementuje `IUnknown` pro neagregovaná objektu, ale nemá není přírůstek počet zámků modulů v konstruktoru.  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Sníží počet odkaz na objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectNoLock` je podobný [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro neagregovaná objekt; však `CComObjectNoLock` nepodporuje počet přírůstek modul zámku v konstruktoru.  
+ `CComObjectNoLock` je podobný [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro neagregovaná objekt; však `CComObjectNoLock` nepodporuje počet přírůstek modul zámku v konstruktoru.  
   
  ATL – používá `CComObjectNoLock` interně pro objekty pro vytváření tříd. Tato třída obecně nebude používat přímo.  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **Typ void\***  
- [in] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom***XXX*`Object`*XXX* konstruktory.  
+ <em>Typ void\*</em>  
+ [in] Tento nepojmenovaný parametr se nepoužívá. Existuje symetrie s jinými `CComXXXObjectXXX` konstruktory.  
   
 ##  <a name="dtor"></a>  Ccomobjectnolock –:: ~ ccomobjectnolock –  
  Destruktor.  

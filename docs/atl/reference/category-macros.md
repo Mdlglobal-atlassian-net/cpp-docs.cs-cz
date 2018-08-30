@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206772"
 ---
 # <a name="category-macros"></a>Makra kategorií
 Tato makra definují kategorie mapy.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL – používá správce kategorií standardní součástí k registraci komponenty kategorií. Pokud správce není k dispozici v systému, když je zaregistrovaný v modulu, registrace úspěšná, ale součást kategorie nebude registrována pro danou třídu.  
   
- Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](http://msdn.microsoft.com/library/windows/desktop/ms694322) v sadě Windows SDK.  
+ Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  Klienty můžete použít informace o kategoriích, které jsou registrovány pro třídu k určení jeho možnosti a požadavky bez nutnosti vytvořit její instanci.  
   
- Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](http://msdn.microsoft.com/library/windows/desktop/ms694322) v sadě Windows SDK.  
+ Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Výběr základní kategorie  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |Jednoduchá vazba dat|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) v sadě Windows SDK pro seznam ukázek.||  
+|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](/windows/desktop/com/internet-aware-objects) v sadě Windows SDK pro seznam ukázek.||  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  Klienty můžete použít informace o kategoriích, které jsou registrovány pro třídu k určení jeho možnosti a požadavky bez nutnosti vytvořit její instanci. Ovládací prvek může například vyžadovat, že kontejner podporuje datovou vazbu. Kontejner můžete zjistit se jeho funkce, které jsou nezbytné pro hostování ovládacího prvku dotazem správce kategorií pro kategorie vyžaduje ovládací prvek. Pokud kontejner nepodporuje požadované funkce, může odmítnout k hostování objektu COM.  
   
- Další informace o kategoriích komponenty, včetně seznamu vzorku, naleznete v tématu [co jsou součástí kategorie a jak fungují](http://msdn.microsoft.com/library/windows/desktop/ms694322) v sadě Windows SDK.  
+ Další informace o kategoriích komponenty, včetně seznamu vzorku, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Výběr základní kategorie  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |Jednoduchá vazba dat|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) v sadě Windows SDK pro seznam ukázek.||  
+|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](/windows/desktop/com/internet-aware-objects) v sadě Windows SDK pro seznam ukázek.||  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

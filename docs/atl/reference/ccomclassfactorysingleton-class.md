@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201152"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Ccomclassfactorysingleton – třída
 Tato třída je odvozena z [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  Všimněte si, že aktuální formu `m_spObj` uvede k zásadní změně z způsob, který `CComClassFactorySingleton` pracovali v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` objekt byl vytvořen ve stejnou dobu jako objekt pro vytváření tříd, během inicializace serveru. V jazyce Visual C++ .NET 2003 je objekt vytvořen laxně, na první požadavek. Tato změna může způsobit chyby v programech, které jsou závislé na dřívější inicializace.  
   
 ## <a name="see-also"></a>Viz také  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [Ccomclassfactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)   
  [Ccomclassfactoryautothread – třída](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   

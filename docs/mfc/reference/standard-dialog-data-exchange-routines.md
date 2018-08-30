@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885972"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198494"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna pro běžné ovládací prvky dialogového okna knihovny MFC.  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
- Když `DDX_Check` se nazývá *hodnotu* je nastavena na aktuální stav ovládací prvek zaškrtávací políčko. Seznam stav možné hodnoty najdete v tématu [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) v sadě Windows SDK.  
+ Když `DDX_Check` se nazývá *hodnotu* je nastavena na aktuální stav ovládací prvek zaškrtávací políčko. Seznam stav možné hodnoty najdete v tématu [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) v sadě Windows SDK.  
   
  Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 až 23|  
 |0|24 do 31.|  
   
- Použití rozhraní Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) načíst hodnotu nebo použijte [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) tak, aby vyplnil hodnotu. Tyto zprávy jsou popsány v sadě Windows SDK.  
+ Použití rozhraní Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) načíst hodnotu nebo použijte [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) tak, aby vyplnil hodnotu. Tyto zprávy jsou popsány v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Když `DDX_IPAddress` je volána, *hodnotu* je buď čtení ze správy IP adres nebo *hodnotu* se zapisují do ovládacího prvku, v závislosti na směru exchange.  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo ovládacího prvku zobrazení objektu, pomocí kterého se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
- Když `DDX_Scroll` se nazývá *hodnotu* je nastavena na aktuální pozici ovládacího prvku thumb. Další informace o hodnoty přidružené k aktuální pozici ovládacího prvku thumb, naleznete v tématu [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) v sadě Windows SDK.  
+ Když `DDX_Scroll` se nazývá *hodnotu* je nastavena na aktuální pozici ovládacího prvku thumb. Další informace o hodnoty přidružené k aktuální pozici ovládacího prvku thumb, naleznete v tématu [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) v sadě Windows SDK.  
   
  Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).  
   

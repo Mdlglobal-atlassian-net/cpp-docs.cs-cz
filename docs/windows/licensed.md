@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b30a9a0e2d959725b5f5d94118493ef833a57579
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e57e0cd60ee1d07f29c3aba5540980cd5f4ae02b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209899"
 ---
 # <a name="licensed"></a>licensed
 
@@ -36,7 +36,7 @@ Označuje, že je licencován objektu COM, ke kterému se vztahuje a musí být 
 
 ## <a name="remarks"></a>Poznámky
 
-**Licenci** C++ atribut má stejné funkce jako [licenci](http://msdn.microsoft.com/library/windows/desktop/aa367070) atribut MIDL.
+**Licenci** C++ atribut má stejné funkce jako [licenci](/windows/desktop/Midl/licensed) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

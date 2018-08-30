@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6025 C | Microsoft Docs
+title: Chyba modulu Runtime R6025 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302023"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220629"
 ---
-# <a name="c-runtime-error-r6025"></a>R6025 Chyba za běhu C
-volání čistý virtuální funkce  
+# <a name="c-runtime-error-r6025"></a>Chyba modulu Runtime R6025 C
+volání čistě virtuální funkce  
   
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má internímu problému. Nejčastější příčinou této chyby je chyb v aplikaci nebo poškozená instalace.  
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Nejčastější příčinou této chyby je chyba v aplikaci nebo poškozená instalace.  
 >   
 >  Zkuste chybu odstranit pomocí tohoto postupu:  
 >   
->  -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
+>  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.  
 > -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.  
   
- **Informace pro programátory v jazyce**  
+ **Informace pro programátory**  
   
- Žádný objekt po vytvoření instance, zpracování volání čistý virtuální funkce.  
+ Žádný objekt po vytvoření instance, pro zpracování volání čistě virtuální funkce.  
   
- Tato chyba je způsobená volání virtuální funkce v abstraktní základní třídu prostřednictvím ukazatele, který byl vytvořený přetypování na typ odvozené třídy, ale je ve skutečnosti ukazatel na základní třídy. Tato situace může nastat, když přetypování z **void\***  na ukazatel na třídu, když **void\***  byl vytvořen během vytváření základní třídy.  
+ Tato chyba je způsobena volání virtuální funkce v abstraktní základní třída přes ukazatel, který je vytvořen pomocí přetypování na typ odvozené třídy, ale je ukazatelem na základní třídu. Tato situace může nastat při přetypování z: **void** <strong>\*</strong> na ukazatel na třídu při **void** <strong>\*</strong> byl vytvořené během procesu vytváření základní třídy.  
   
- Další informace najdete v tématu [podporu společnosti Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) webu.
+ Další informace najdete v tématu [podpory Microsoftu](http://go.microsoft.com/fwlink/p/?linkid=75220) webu.

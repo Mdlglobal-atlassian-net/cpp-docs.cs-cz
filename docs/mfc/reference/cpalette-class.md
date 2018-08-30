@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201100"
 ---
 # <a name="cpalette-class"></a>Cpalette – třída
 Zapouzdřuje barevnou paletu barev Windows.  
@@ -115,12 +115,12 @@ void AnimatePalette(
  Určuje počet položek v palety animovat.  
   
  *lpPaletteColors*  
- Odkazuje na první člen pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury k nahrazení palety identifikovaný *nStartIndex* a *nNumEntries*.  
+ Odkazuje na první člen pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) struktury k nahrazení palety identifikovaný *nStartIndex* a *nNumEntries*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud aplikace zavolá `AnimatePalette`, nemusí se aktualizovat jeho klientské oblasti, protože Windows mapuje nové položky do systémové palety okamžitě.  
   
- `AnimatePalette` Funkce se změní pouze položky s příznakem PC_RESERVED nastavit v odpovídající `palPaletteEntry` člena [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktura, která je připojena k `CPalette` objektu. Zobrazit LOGPALETTE v sadě Windows SDK pro další informace o této struktury.  
+ `AnimatePalette` Funkce se změní pouze položky s příznakem PC_RESERVED nastavit v odpovídající `palPaletteEntry` člena [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struktura, která je připojena k `CPalette` objektu. Zobrazit LOGPALETTE v sadě Windows SDK pro další informace o této struktury.  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  Vytvoří `CPalette` objektu.  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace by měl vytvořit paletu polotónování při režim roztažení kontextu zařízení nastavena na POLOTÓNOVÁNÍ. Logické polotónování palety vrácené [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) členskou funkci pak by měl vybraný a realizovat do kontextu zařízení před [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) nebo [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) funkce je volána.  
+ Aplikace by měl vytvořit paletu polotónování při režim roztažení kontextu zařízení nastavena na POLOTÓNOVÁNÍ. Logické polotónování palety vrácené [CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette) členskou funkci pak by měl vybraný a realizovat do kontextu zařízení před [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) nebo [ StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits) funkce je volána.  
   
  Zobrazit sady Windows SDK pro další informace o `CreateHalftonePalette` a `StretchDIBits`.  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>Parametry  
  *lpLogPalette*  
- Odkazuje [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) strukturu, která obsahuje informace o barvy v logickou paletu.  
+ Odkazuje [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) strukturu, která obsahuje informace o barvy v logickou paletu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  Určuje počet položek v logickou paletu, která se má načíst.  
   
  *lpPaletteColors*  
- Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.  
+ Odkazuje na pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek, které získaných logickou paletu; 0, pokud funkce se nezdařilo.  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je operátor přetypování, která podporuje přímému použití objektu HPALETTE.  
   
- Další informace o použití grafických objektů najdete v článku [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v článku [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Změní velikost logickou paletu připojené k `CPalette` objektu na číslo určené položky *nNumEntries*.  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>Poznámky  
  Pokud aplikace zavolá `ResizePalette` ke zmenšení velikosti palety, jsou položky zbývající změněnou paletě beze změny. Pokud aplikace volá `ResizePalette` zvětšíte paletu doplňková paleta položky jsou nastaveny na černé (červené, zelené a modré hodnoty jsou všechny 0) a jsou nastaveny příznaky pro všechny další položky na hodnotu 0.  
   
- Další informace o rozhraní API Windows `ResizePalette`, naleznete v tématu [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) v sadě Windows SDK.  
+ Další informace o rozhraní API Windows `ResizePalette`, naleznete v tématu [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) v sadě Windows SDK.  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Nastaví RGB – hodnoty barev a příznaky v rozsahu položek v logickou paletu.  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  Určuje počet položek v logickou paletu, která se má nastavit.  
   
  *lpPaletteColors*  
- Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.  
+ Odkazuje na pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nastavit počet položek v logickou paletu; 0, pokud funkce se nezdařilo.  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>Poznámky  
  Pokud je logickou paletu vybrána kontextu zařízení, pokud aplikace volá `SetPaletteEntries`, změny se projeví až do volání aplikace [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Další informace o struktuře Windows `PALETTEENTRY`, naleznete v tématu [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) v sadě Windows SDK.  
+ Další informace o struktuře Windows `PALETTEENTRY`, naleznete v tématu [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC DIBLOOK](../../visual-cpp-samples.md)   

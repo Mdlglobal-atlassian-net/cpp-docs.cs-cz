@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464159"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209339"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Specifické pro Microsoft**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t – (VARIANT &***varSrc***)** sestaví `_variant_t` objekt z kopie `VARIANT` objektu.     Typ varianty se zachová.  
   
--   **_variant_t – (VARIANT\****pVarSrc***)** sestaví `_variant_t` objekt z kopie `VARIANT` objektu.     Typ varianty se zachová.  
+-   **_variant_t – (VARIANT**<strong>\*</strong>*pVarSrc***)** sestaví `_variant_t` objekt z kopie `VARIANT` objektu.     Typ varianty se zachová.  
   
 -   **_variant_t – (_variant_t &***var_t_Src***)** sestaví `_variant_t` objektu z jiného `_variant_t` objektu.     Typ varianty se zachová.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t – (_bstr_t &**`bstrSrc`**)** sestaví `_variant_t` objekt typu VT_BSTR z `_bstr_t` objektu.     Nový `BSTR` je přidělen.  
   
--   **_variant_t – (wchar_t \***  *wstrSrc***)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce Unicode.   Nový `BSTR` je přidělen.  
+-   **_variant_t – (wchar_t** <strong>\*</strong> *wstrSrc***)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce Unicode.   Nový `BSTR` je přidělen.  
   
--   **_variant_t – (char\***`strSrc`**)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce.     Nový `BSTR` je přidělen.  
+-   **_variant_t – (char**<strong>\*</strong>`strSrc`**)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce.     Nový `BSTR` je přidělen.  
   
 -   **_variant_t – (bool**`bSrc`**)** sestaví `_variant_t` objekt typu VT_BOOL z **bool** hodnotu.      
   
--   **_variant_t – (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objekt typu VT_UNKNOWN z ukazatele rozhraní modelu COM .       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
+-   **_variant_t – (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objekt typu VT_UNKNOWN z ukazatele rozhraní modelu COM.       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
   
--   **_variant_t – (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objekt typu VT_DISPATCH z rozhraní modelu COM ukazatel.       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
+-   **_variant_t – (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objektu Zadejte VT_DISPATCH z ukazatele rozhraní modelu COM.       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
   
 -   **_variant_t – (DESÍTKOVÉ &**`decSrc`**)** sestaví `_variant_t` objekt typu VT_DECIMAL z `DECIMAL` hodnotu.      
   

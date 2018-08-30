@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201038"
 ---
 # <a name="ccomcontainedobject-class"></a>Ccomcontainedobject – třída
-Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním objekt vlastníka `IUnknown`.  
+Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) delegováním objekt vlastníka `IUnknown`.  
   
 > [!IMPORTANT]
 >  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Sníží počet odkaz na objekt vlastníka.|  
   
 ## <a name="remarks"></a>Poznámky  
- ATL – používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [ccomcachedtearoffobject –](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním objekt vlastníka `IUnknown`. (Vlastník je buď objekt vnější agregaci, nebo objektu, pro kterou se vytváří odtržených rozhraní). `CComContainedObject` volání `CComObjectRootEx`společnosti `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny děděné přes `Base`.  
+ ATL – používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [ccomcachedtearoffobject –](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) delegováním objekt vlastníka `IUnknown`. (Vlastník je buď objekt vnější agregaci, nebo objektu, pro kterou se vytváří odtržených rozhraní). `CComContainedObject` volání `CComObjectRootEx`společnosti `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny děděné přes `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Base`  

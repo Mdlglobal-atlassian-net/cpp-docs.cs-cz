@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852312"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209984"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL – objekty COM
 Následující ilustrace znázorňuje vztah mezi třídy a rozhraní, které se používají k definování objekt knihovny ATL modelu COM.  
@@ -40,7 +40,7 @@ Následující ilustrace znázorňuje vztah mezi třídy a rozhraní, které se 
   
  Vzhledem k tomu, že klient nebude muset projít vnějšího objektu k interakci s vnitřní objekt, jsou agregovaných objektů obvykle efektivnější. Navíc vnějšího objektu nemá znát funkce agregovaného objektu, vzhledem k tomu, že rozhraní agregovaného objektu je přímo do klienta k dispozici. Ne všechny objekty se ale dají agregovat. Pro objekt agregace je potřeba navrhovat pomocí agregace v úvahu.  
   
- ATL – implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ve dvou fázích:  
+ ATL – implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) ve dvou fázích:  
   
 -   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), nebo [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.  
   

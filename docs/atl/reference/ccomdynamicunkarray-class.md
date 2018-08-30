@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 710dc1929662c5f5358912433be2df605bf87964
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879806"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218178"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray – třída
 Tato třída obsahuje pole z `IUnknown` ukazatele.  
@@ -160,7 +160,7 @@ IUnknown* GetAt(int nIndex);
  Index prvku, který chcete načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní.  
+ Ukazatel [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) rozhraní.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Volejte tuto metodu za účelem získání souborů cookie, přidružené danou `IUnknown` ukazatele.  

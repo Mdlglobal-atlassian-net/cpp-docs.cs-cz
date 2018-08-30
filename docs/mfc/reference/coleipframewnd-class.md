@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ceba9da99585cb9a88b5fa7fa43d10c9fe02836
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849143"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218796"
 ---
 # <a name="coleipframewnd-class"></a>Coleipframewnd – třída
 Základ pro úpravy okna aplikace na místě.  
@@ -80,7 +80,7 @@ COleIPFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) v sadě Windows SDK.  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Rámec volá `OnCreateControlBars` fungovat v případě, že položka aktivuje pro místní úpravy.  

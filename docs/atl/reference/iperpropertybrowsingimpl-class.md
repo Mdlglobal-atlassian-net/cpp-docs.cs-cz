@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c018b5c7ffa8e72ae9ce68fb23799d712a879df8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883102"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206673"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Iperpropertybrowsingimpl – třída
 Tato třída implementuje `IUnknown` a umožňuje klientům přístup k informacím na stránkách vlastností objektu.  
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 |[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|Načte identifikátor CLSID stránky vlastností, které jsou přidružené k dané vlastnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432) rozhraní umožňuje klientům přístup k informacím na stránkách vlastností objektu. Třída `IPerPropertyBrowsingImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
+ [IPerPropertyBrowsing](/windows/desktop/api/ocidl/nn-ocidl-iperpropertybrowsing) rozhraní umožňuje klientům přístup k informacím na stránkách vlastností objektu. Třída `IPerPropertyBrowsingImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
 > [!NOTE]
 >  Pokud používáte Microsoft Access jako aplikace typu kontejner, musíte odvodit třídu z `IPerPropertyBrowsingImpl`. V opačném případě přístup nenačte ovládacího prvku.  
@@ -86,7 +86,7 @@ STDMETHOD(GetDisplayString)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetDisplayString](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) ve Windows SDK.  
   
 ##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings  
  Vyplní jednotlivá pole s nulovou položky.  
@@ -102,7 +102,7 @@ STDMETHOD(GetPredefinedStrings)(
  Implementace ATL [GetPredefinedValue](#getpredefinedvalue) vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetPredefinedStrings](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings) ve Windows SDK.  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
  Načte hodnotu typu VARIANT obsahující hodnotu vlastnosti identifikovaný daný identifikátor DISPID. Hodnota DISPID souvisí s názvem řetězec získaných `GetPredefinedStrings`.  
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedValue)(
 ### <a name="remarks"></a>Poznámky  
  Implementace ATL [GetPredefinedStrings](#getpredefinedstrings) načte žádné odpovídající řetězce.  
   
- Zobrazit [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetPredefinedValue](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue) ve Windows SDK.  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
  Načte identifikátor CLSID stránky vlastností související se zadanou vlastností.  
@@ -134,7 +134,7 @@ STDMETHOD(MapPropertyToPage)(
 ### <a name="remarks"></a>Poznámky  
  Mapy vlastností objektu ATL používá pro získání těchto informací.  
   
- Zobrazit [IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ipropertypageimpl – třída](../../atl/reference/ipropertypageimpl-class.md)   

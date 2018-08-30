@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5912d4bf38824c562055432f125cdc7e75192cc5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aae516aeecd90a46544d1e9e28e1352fc73f6e2c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610804"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221457"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Postupy: Otevření souboru skriptu prostředků v textovém formátu
 
@@ -33,7 +33,7 @@ Může nastat situace, kdy budete chtít zobrazit obsah souboru projektu prostř
 > [!NOTE]
 > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
-Snadno můžete otevřít soubor prostředků v textovém formátu k zobrazení všech prostředků, které obsahuje a globální operacích podporován [textový editor](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
+Snadno můžete otevřít soubor prostředků v textovém formátu k zobrazení všech prostředků, které obsahuje a globální operacích podporován [textový editor](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
 
 > [!NOTE]
 > Editory prostředků nečtou přímo .rc nebo `resource.h` soubory. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a soubor resource.h). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc. Informace o tom, jak zachovat komentáře, naleznete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).

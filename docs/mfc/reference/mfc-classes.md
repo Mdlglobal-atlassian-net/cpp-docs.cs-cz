@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466154"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213189"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation Class (MFC).  
@@ -135,7 +135,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Poskytuje funkce pro pole kontrolní seznam Windows.  
   
  [CClientDC – třída](../../mfc/reference/cclientdc-class.md)  
- Zpracovává volání funkce Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) v době konstrukce a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) v době zničení.  
+ Zpracovává volání funkce Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) v době konstrukce a [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) v době zničení.  
   
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)  
  Základní třída architektury zpráva – mapa knihovny Microsoft Foundation Class.  
@@ -861,7 +861,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Představuje okno rámce poloviční výšky obvykle viděné okolo plovoucích panelů nástrojů.  
   
  [CMonikerFile – třída](../../mfc/reference/cmonikerfile-class.md)  
- Představuje datový proud ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Představuje datový proud ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) s názvem podle [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [CMonthCalCtrl – třída](../../mfc/reference/cmonthcalctrl-class.md)  
  Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
@@ -930,7 +930,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
   
  [COleConvertDialog – třída](../../mfc/reference/coleconvertdialog-class.md)  
- Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) struktura v sadě Windows SDK.  
   
  [COleCurrency – třída](../../mfc/reference/colecurrency-class.md)  
  Zapouzdřuje `CURRENCY` datovým typem automatizace OLE.  
@@ -1173,7 +1173,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.  
   
  [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)  
- Podobně jako Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozici.  
+ Podobně jako Windows [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozici.  
   
  [CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)  
  Poskytuje funkce pro Windows běžný ovládací prvek posuvník.  

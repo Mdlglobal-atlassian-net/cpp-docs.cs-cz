@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337366"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208882"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 Při psaní aplikace, můžete vytvořit samostatný [CWinApp](../../mfc/reference/cwinapp-class.md)-odvozenému objektu. V některých případech můžete chtít získat informace o tomto objektu z mimo `CWinApp`-odvozenému objektu. Nebo pokud potřebujete přístup k jiným objektům globální "Manager".
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Parametr má být předán řídící funkci jako parametru za účelem deklarace funkce v *pfnThreadProc*.  
   
  *nPriority*  
- Požadovaná priorita vlákna. Úplný seznam a popis dostupných priorit naleznete v tématu [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) v sadě Windows SDK.  
+ Požadovaná priorita vlákna. Úplný seznam a popis dostupných priorit naleznete v tématu [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) v sadě Windows SDK.  
   
  *nStackSize*  
  Určuje velikost v bajtech zásobníku pro nové vlákno. Pokud je 0, výchozí velikost zásobníku stejná velikost zásobníku jako u vytvářeného vlákna.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** spuštění vlákna ihned po vytvoření.  
   
  *lpSecurityAttrs*  
- Odkazuje [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje atributy zabezpečení pro vlákno. Pokud má hodnotu NULL, použije se stejné atributy zabezpečení jako u vytvářeného vlákna. Další informace o této struktuře naleznete v tématu Windows SDK.  
+ Odkazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje atributy zabezpečení pro vlákno. Pokud má hodnotu NULL, použije se stejné atributy zabezpečení jako u vytvářeného vlákna. Další informace o této struktuře naleznete v tématu Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořený objekt vlákna, nebo hodnota NULL, pokud dojde k chybě.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  Ukazatel na řetězec obsahující ID prostředku.    
  *lpszType*  
- Ukazatel na typ prostředku. Seznam typů prostředků najdete v tématu [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) v sadě Windows SDK.  
+ Ukazatel na typ prostředku. Seznam typů prostředků najdete v tématu [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) v sadě Windows SDK.  
    
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro modul, který obsahuje prostředek.  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Pokud funkce uspěje, vrácená hodnota je popisovač modulu. Pokud funkce selže, vrácená hodnota je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrátí popisovač, který lze použít v [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) k získání adresy funkce knihovny DLL. `AfxLoadLibrary` je také možné mapovat jiné spustitelných modulů.  
+ Vrátí popisovač, který lze použít v [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) k získání adresy funkce knihovny DLL. `AfxLoadLibrary` je také možné mapovat jiné spustitelných modulů.  
   
  Každý proces udržuje počet odkazů pro každý modul načíst knihovny. Tento počet odkazů je zvýšen pokaždé, když `AfxLoadLibrary` se nazývá a je snížen pokaždé, když `AfxFreeLibrary` je volána. Když počet odkazů dosáhne nuly, modul není mapován z adresního prostoru volajícího procesu a již není platný popisovač.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Parametry  
  *lpWndClass*  
- Ukazatel [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura obsahující informace o třídě okna k registraci. Další informace o této struktuře naleznete v tématu Windows SDK.  
+ Ukazatel [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura obsahující informace o třídě okna k registraci. Další informace o této struktuře naleznete v tématu Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je úspěšně zaregistrovaný třídy; v opačném případě FALSE.  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Parametry  
  *nClassStyle*  
- Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;**) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:  
+ Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;**) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:  
   
 -   Nastaví styl myši CS_DBLCLKS, která odešle dvakrát klikněte na panel zpráv pro proceduru okna při poklepání myši.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Určuje popisovač prostředku kurzoru nainstalovaný v každé okno vytvořené ze třídy okna. Pokud použijete výchozí hodnotu **0**, obdržíte standardní IDC_ARROW kurzoru.  
   
  *hbrBackground*  
- Určuje popisovač pro prostředek štětce nainstalovaný v každé okno vytvořené ze třídy okna. Pokud použijete výchozí hodnotu **0**, budete mít štětec pozadí NULL a okno, ve výchozím nastavení, nikoli vymaže jeho pozadí při zpracování [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Určuje popisovač pro prostředek štětce nainstalovaný v každé okno vytvořené ze třídy okna. Pokud použijete výchozí hodnotu **0**, budete mít štětec pozadí NULL a okno, ve výchozím nastavení, nikoli vymaže jeho pozadí při zpracování [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Určuje popisovač prostředku ikony nainstalovaný v každé okno vytvořené ze třídy okna. Pokud použijete výchozí hodnotu **0**, zobrazí se ikona loga Windows standard, Mávající příznak.  

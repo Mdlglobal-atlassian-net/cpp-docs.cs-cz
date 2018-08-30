@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fff878cfecf6eb39d689c3a17c1eab0ab5c47d4f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1c395a79cc9e0399000278af1a19916c2c83bb10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589196"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209463"
 ---
 # <a name="progid"></a>progid
 
@@ -77,4 +77,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 [IDL – atributy](../windows/idl-attributes.md)  
 [Atributy třídy](../windows/class-attributes.md)  
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Klíč progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)  
+[Klíč progID](/windows/desktop/com/-progid--key)  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217880"
 ---
 # <a name="interfaces-atl"></a>Rozhraní (ATL)
 Rozhraní je způsob, ve kterém objekt zpřístupňuje jeho funkce zvnějšku. V modelu COM rozhraní je tabulka ukazatelů (třeba C++ vtable) na funkce, které jsou implementovány v objektu. V tabulce představuje rozhraní a metody rozhraní jsou funkce, na které odkazuje. Objekt lze vystavit libovolný počet rozhraní jako zvolí.  
@@ -34,5 +34,5 @@ Rozhraní je způsob, ve kterém objekt zpřístupňuje jeho funkce zvnějšku. 
   
 ## <a name="see-also"></a>Viz také  
  [Úvod do modelu COM](../atl/introduction-to-com.md)   
- [Objekty COM a rozhraní](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [Objekty COM a rozhraní](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206889"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Přepsání nastavení za účelem zpracování specifické pro aplikaci doby nečinnosti.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Volá se rozhraním, aby se otevřel dokument ze souboru.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analyzuje jednotlivé parametry a příznaky v příkazovém řádku.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Zachycuje určité zprávy dřív, než dorazí aplikace.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Zpracuje argumenty příkazového řádku a příznaky.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Zachycuje všechny neošetřené výjimky vyvolané z aplikace zprávu a obslužné rutiny příkazů.|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*  
-Ukazatel [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktury.
+Ukazatel [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -912,7 +912,7 @@ Tato členská funkce není rozlišuje velikost písmen, takže jsou řetězce v
 > `GetProfileBinary` přidělí vyrovnávací paměti a vrátí jeho adresu v \* *ppData*. Volající zodpovídá za uvolnění vyrovnávací paměti pomocí **delete []**.
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -953,7 +953,7 @@ Tato členská funkce podporuje šestnáctkovou notaci hodnot v souboru .INI. P�
 Tato členská funkce není rozlišuje velikost písmen, takže jsou řetězce v *lpszSection* a *lpszEntry* parametrů se může lišit v případě.
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -990,7 +990,7 @@ Vrácená hodnota je řetězec z vaší aplikace. Soubor INI nebo *lpszDefault* 
 ### <a name="remarks"></a>Poznámky
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -1073,7 +1073,7 @@ Inicializace aplikace je koncepčně rozdělený do dvou částí: Inicializace 
 Přepsat `InitInstance` inicializovat každou novou instanci vaší aplikace běžící pod Windows. Obvykle je přepsat `InitInstance` konstrukce objektu hlavní okno a nastavit `CWinThread::m_pMainWnd` datový člen tak, aby odkazoval na toto okno. Další informace o přepsání tato členská funkce, najdete v části [CWinApp: třída aplikace](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
 
 ### <a name="example"></a>Příklad
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje název prostředku kurzoru. Můžete použít `CString` pro tento argument.
 
 *nIDResource*  
-ID prostředku kurzoru. Seznam prostředků najdete v tématu [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) v sadě Windows SDK.
+ID prostředku kurzoru. Seznam prostředků najdete v tématu [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1152,7 +1152,7 @@ Popisovač ikony v případě úspěchu; v opačném případě hodnota NULL.
 Můžete použít [LoadStandardIcon](#loadstandardicon) nebo [LoadOEMIcon](#loadoemicon) členskou funkci pro přístup k předdefinované ikony Windows.
 
 > [!NOTE]
-> Tato členská funkce se volá funkce rozhraní Win32 API [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), který může načíst jenom ikona, jehož velikost odpovídá hodnoty metrik systému SM_CXICON a SM_CYICON.
+> Tato členská funkce se volá funkce rozhraní Win32 API [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), který může načíst jenom ikona, jehož velikost odpovídá hodnoty metrik systému SM_CXICON a SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszIconName*  
-Manifestu konstantní identifikátor, který určuje předdefinovanou ikonu Windows. Tyto identifikátory jsou definovány v systému WINDOWS. H. Seznam možných předem definovaných hodnot a jejich popisy najdete v tématu *lpIconName* parametr [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) v sadě Windows SDK.
+Manifestu konstantní identifikátor, který určuje předdefinovanou ikonu Windows. Tyto identifikátory jsou definovány v systému WINDOWS. H. Seznam možných předem definovaných hodnot a jejich popisy najdete v tématu *lpIconName* parametr [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 Název aplikace můžou pocházet z parametr předaný [CWinApp](#cwinapp) konstruktoru, nebo pokud není zadán, na řetězec prostředku s ID AFX_IDS_APP_TITLE. Pokud název aplikace nebyl nalezen v prostředku, pochází z programu. Název souboru EXE.
 
-Globální funkce [afxgetappname –](application-information-and-management.md#afxgetappname). `m_pszAppName` je veřejná proměnná typu **const char\***.
+Globální funkce [afxgetappname –](application-information-and-management.md#afxgetappname). `m_pszAppName` je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu `m_pszAppName`, musí být dynamicky přidělené na haldě. `CWinApp` Volání destruktoru **bezplatné**() se tento ukazatel. Můžete zkusit použít `_tcsdup`funkce knihovny run-time () provedete přidělení. Také uvolněte paměť spojené s aktuálním ukazatele před přiřazením novou hodnotu. Příklad:
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od [m_pszAppName](#m_pszappname), tento název nemůže obsahovat prázdné hodnoty. `m_pszExeName` je veřejná proměnná typu **const char\***.
+Na rozdíl od [m_pszAppName](#m_pszappname), tento název nemůže obsahovat prázdné hodnoty. `m_pszExeName` je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu `m_pszExeName`, musí být dynamicky přidělené na haldě. `CWinApp` Volání destruktoru **bezplatné**() se tento ukazatel. Můžete zkusit použít `_tcsdup`funkce knihovny run-time () provedete přidělení. Také uvolněte paměť spojené s aktuálním ukazatele před přiřazením novou hodnotu. Příklad:
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, inicializuje rozhraní `m_pszHelpFilePath` na název aplikace ". HLP"připojí. Chcete-li změnit název souboru nápovědy, nastavte `m_pszHelpFilePath` tak, aby odkazoval na řetězec, který obsahuje úplný název souboru požadovaného nápovědy. Praktické místo k tomu je v aplikačním [InitInstance](#initinstance) funkce. `m_pszHelpFilePath` je veřejná proměnná typu **const char\***.
+Ve výchozím nastavení, inicializuje rozhraní `m_pszHelpFilePath` na název aplikace ". HLP"připojí. Chcete-li změnit název souboru nápovědy, nastavte `m_pszHelpFilePath` tak, aby odkazoval na řetězec, který obsahuje úplný název souboru požadovaného nápovědy. Praktické místo k tomu je v aplikačním [InitInstance](#initinstance) funkce. `m_pszHelpFilePath` je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu `m_pszHelpFilePath`, musí být dynamicky přidělené na haldě. `CWinApp` Volání destruktoru **bezplatné**() se tento ukazatel. Můžete zkusit použít `_tcsdup`funkce knihovny run-time () provedete přidělení. Také uvolněte paměť spojené s aktuálním ukazatele před přiřazením novou hodnotu. Příklad:
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_pszProfileName` je veřejná proměnná typu **const char\***.
+`m_pszProfileName` je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu `m_pszProfileName`, musí být dynamicky přidělené na haldě. `CWinApp` Volání destruktoru **bezplatné**() se tento ukazatel. Můžete zkusit použít `_tcsdup`funkce knihovny run-time () provedete přidělení. Také uvolněte paměť spojené s aktuálním ukazatele před přiřazením novou hodnotu. Příklad:
@@ -1794,7 +1794,7 @@ Popis příznaky příkazového řádku najdete v tématu [CCommandLineInfo::m_n
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) výchozí implementace provádí klíče akcelerátoru překlad, takže je třeba zavolat `CWinApp::PreTranslateMessage` členské funkce ve vaší verzi přepsané.
+Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) výchozí implementace provádí klíče akcelerátoru překlad, takže je třeba zavolat `CWinApp::PreTranslateMessage` členské funkce ve vaší verzi přepsané.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 Popisovač [DEVNAMES –](../../mfc/reference/devnames-structure.md) strukturu, která identifikuje ovladač, zařízení a výstupní port názvy konkrétní tiskárnu.
 
 *hDevMode*  
-Popisovač [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura, která určuje informace o inicializaci zařízení a prostředí tiskárny.
+Popisovač [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktura, která určuje informace o inicializaci zařízení a prostředí tiskárny.
 
 *bFreeOld*  
 Uvolní dříve vybrané tiskárny.
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
 
 *nCmd*  
-Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) funkce Windows.
+Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) funkce Windows.
 
 ### <a name="remarks"></a>Poznámky
 

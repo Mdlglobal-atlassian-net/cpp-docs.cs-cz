@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8414fb0e3478b5aae906db3e511757d5d7df71d3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203224"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t – extraktory
 **Specifické pro Microsoft**  
@@ -55,11 +55,11 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Poznámky  
   
--   **operátor Interface\***  vrátí zapouzdřený ukazatel rozhraní, což může mít hodnotu NULL.  
+-   **operátor Interface** <strong>\*</strong> vrátí zapouzdřený ukazatel rozhraní, což může mít hodnotu NULL.  
   
 -   **operátor Interface &** vrátí odkaz na zapouzdřený ukazatel rozhraní a vyvolá chybu, pokud ukazatel na hodnotu NULL.  
   
--   **operátor\***  umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.  
+-   **operátor** <strong>\*</strong> umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.  
   
 -   **Operator ->** umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.  
   

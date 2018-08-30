@@ -1,5 +1,5 @@
 ---
-title: Vytvoření ovládacího prvku záhlaví | Microsoft Docs
+title: Vytvoření ovládacího prvku záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 465c880c480f9ccd3a52f6319ee97ed203c3bd74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18517f969dc64b0c1d9a51bcdc67a1655ec82d7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344510"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214006"
 ---
 # <a name="creating-the-header-control"></a>Vytvoření ovládacího prvku záhlaví
-Ovládací prvek záhlaví není přímo k dispozici v editoru dialogových oken (i když můžete přidat ovládací prvek seznamu, který zahrnuje ovládacím prvkem záhlaví).  
+Ovládacího prvku záhlaví není k dispozici přímo v editoru dialogových oken (i když můžete přidat ovládací prvek seznamu, který obsahuje ovládací prvek záhlaví).  
   
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>V dialogovém okně uvést ovládacího prvku záhlaví  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>V dialogovém okně Vložit ovládacím prvkem záhlaví  
   
 1.  Ručně vložit členské proměnné typu [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) ve vlastní třídy dialogového okna.  
   
-2.  V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), vytvoření a nastavení stylů pro `CHeaderCtrl`, umístěte ho a jejich zobrazení.  
+2.  V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), vytvoření a nastavení stylů `CHeaderCtrl`, polohy a zobrazit je.  
   
 3.  Přidání položek do ovládacího prvku záhlaví.  
   
-4.  Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě dialog pro všechna oznámení ovládacího prvku záhlaví zprávy je zapotřebí zpracovat (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)).  
+4.  Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě dialog pro všechna oznámení ovládacího prvku záhlaví zprávy je potřeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Umístění ovládacího prvku záhlaví v zobrazení (není CListView)  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Vložit ovládací prvek záhlaví v zobrazení (nikoli CListView)  
   
-1.  Vložení [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) objekt ve třídě zobrazení.  
+1.  Vložit [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) objekt ve třídě zobrazení.  
   
-2.  Styl, pozice a zobrazit okno ovládacího prvku záhlaví v zobrazení [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) – členská funkce.  
+2.  Styl, pozice a zobrazit okno Ovládací prvek záhlaví v zobrazení [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) členskou funkci.  
   
 3.  Přidání položek do ovládacího prvku záhlaví.  
   
-4.  Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě zobrazení pro všechna oznámení ovládacího prvku záhlaví zprávy je zapotřebí zpracovat (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)).  
+4.  Použití mapování obslužné rutiny funkce ve třídě zobrazení pro všechna oznámení ovládacího prvku záhlaví zprávy v okně Vlastnosti potřeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).  
   
- V obou případech je vytvořen objekt vloženému ovládacímu prvku, když je vytvořen objekt zobrazení nebo dialogové okno. Pak musí volat [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) vytvořit okno pro řízení. Chcete-li umístění ovládacího prvku, volejte [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) k určení počáteční velikost a umístění ovládacího prvku a [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) nastavit požadované místo. Pak přidat položky, jak je popsáno v [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).  
+ V obou případech se vytvoří vloženému ovládacímu prvku objektu při vytvoření objektu zobrazení nebo dialogového okna. Pak je nutné volat [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) vytvořit okno ovládacího prvku. Pro umístění ovládacího prvku, volejte [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) určíte, počáteční velikost a pozice ovládacího prvku a [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) pozice chcete nastavit. Pak přidejte položky, jak je popsáno v [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).  
   
- Další informace najdete v tématu [vytvoření ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK.  
+ Další informace najdete v tématu [vytvoření ovládacího prvku záhlaví](/windows/desktop/Controls/header-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   

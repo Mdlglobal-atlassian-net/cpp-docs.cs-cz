@@ -1,5 +1,5 @@
 ---
-title: Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem | Microsoft Docs
+title: Nastavení ovládacích prvků záhlaví vykreslovaných vlastníkem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345241"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214730"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem
-Můžete definovat jednotlivé položky ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako položky vykreslované uživatelem. Další informace najdete v tématu [ovládací prvky hlavičky Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK.  
+Můžete definovat jednotlivé položky ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) bude vlastníkem vykreslované položky. Další informace najdete v tématu [ovládacích prvků záhlaví Owner-Drawn](/windows/desktop/Controls/header-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   

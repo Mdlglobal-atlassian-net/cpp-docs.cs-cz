@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 691a2adf5269be0047ee6eee474406b036cad200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222592"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Základní informace o generování manifestu pro programy C/C++
-A [manifest](http://msdn.microsoft.com/library/aa375365) je dokument XML, který může být externí soubor XML nebo prostředek vložena do aplikace nebo sestavení. Manifest [izolované aplikace](http://msdn.microsoft.com/library/aa375190) slouží ke správě názvů a verzí sdílená sestavení vedle sebe, pro které aplikace by měla vytvořit vazbu za běhu. Manifest sestavení vedle sebe určuje závislých na názvy, verze, prostředky a jiná sestavení.  
+A [manifest](https://msdn.microsoft.com/library/aa375365) je dokument XML, který může být externí soubor XML nebo prostředek vložena do aplikace nebo sestavení. Manifest [izolované aplikace](/windows/desktop/SbsCs/isolated-applications) slouží ke správě názvů a verzí sdílená sestavení vedle sebe, pro které aplikace by měla vytvořit vazbu za běhu. Manifest sestavení vedle sebe určuje závislých na názvy, verze, prostředky a jiná sestavení.  
   
  Existují dva způsoby vytvoření manifestu izolované aplikace nebo sestavení vedle sebe. Nejprve Autor sestavení můžete ručně vytvořit soubor manifestu následující pravidla a požadavkům na názvy. Případně pokud program pouze závisí na sestavení Visual C++, jako je například CRT, MFC, ATL nebo jiné, pak manifestu mohou být generovány automaticky linkeru.  
   

@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4612 | Microsoft Docs
+title: Upozornění (úroveň 1) C4612 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0983f5d0bb89eaf1daee94468b318557bc83cd05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10a0a5640386f5e5673f39d6c2c76ee18fcc7ba7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210727"
 ---
-# <a name="compiler-warning-level-1-c4612"></a>C4612 kompilátoru upozornění (úroveň 1)
-došlo k chybě v patří název souboru  
-  
- Toto upozornění se zobrazí s **include_alias – #pragma** Pokud název souboru je nesprávný nebo chybí.  
-  
- Argumenty, které mají **include_alias – #pragma** příkaz můžete použít nabídku od (**"***filename***"**) nebo formulář ostré závorky ( **\< ***filename***>**), ale obě musí používat stejnou formuláře.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4612.cpp  
-// compile with: /W1 /LD  
-#pragma include_alias("StandardIO", <stdio.h>) // C4612  
+# <a name="compiler-warning-level-1-c4612"></a>Kompilátor upozornění (úroveň 1) C4612
+
+> Chyba v názvu vloženého souboru
+
+## <a name="remarks"></a>Poznámky
+
+Toto upozornění se zobrazí s **#pragma include_alias** kdy název souboru je nesprávný nebo chybí.
+
+Argumenty, které mají **#pragma include_alias** příkaz můžete použít formuláře uvozovky ("*název souboru*") nebo forma lomené závorky (\<*filename*>), ale obě musí pomocí stejného formuláře.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// C4612.cpp
+// compile with: /W1 /LD
+#pragma include_alias("StandardIO", <stdio.h>) // C4612
 ```

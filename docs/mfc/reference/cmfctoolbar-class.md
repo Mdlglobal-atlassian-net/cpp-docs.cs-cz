@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208555"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 `CMFCToolBar` Vypadá podobně jako třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Ukazatel na nadřazené okno panelu nástrojů.  
   
  [in] *dwStyle*  
- Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439) v sadě Windows SDK pro seznam styly.  
+ Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) v sadě Windows SDK pro seznam styly.  
   
  [in] *nID*  
  Identifikátor podřízené okno panelu nástrojů.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Další styly pro vytvoření objektu panelu vloženému ovládacímu prvku.  
   
  [in] *dwStyle*  
- Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439) seznam vhodné styly.  
+ Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) seznam vhodné styly.  
   
  [in] *rcBorders*  
  A `CRect` objekt, který určuje šířku ohraničení okna nástrojů.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představují aktuální barvu zvýrazněného textu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která představují aktuální barvu zvýrazněného textu.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCToolBar::SetHotTextColor](#sethottextcolor) nastavit novou barvu textu pro tlačítka panelu nástrojů zvýrazněný.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  Hodnota TRUE, pokud panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném řádku; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. V opačném případě se zobrazí rozhraní **zobrazit tlačítka ve dvou řádcích** tlačítko.  
+ [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. V opačném případě se zobrazí rozhraní **zobrazit tlačítka ve dvou řádcích** tlačítko.  
   
  Obvykle není nutné použít tuto metodu. Povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

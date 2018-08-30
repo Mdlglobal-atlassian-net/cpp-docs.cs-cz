@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212101"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
 `CMFCColorBar` Třída představuje dokovací panel ovládacího prvku, který umožňuje vybírat barvy v dokumentu nebo aplikace.  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje velikost buňky v mřížce pruhu barev.|  
 |`m_bShowDocColorsWhenDocked`|Logická hodnota, která určuje, jestli se má zobrazit barvy dokumentu, pokud je ukotven pruhu barev. Další informace najdete v tématu [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
 |`m_bStdColorDlg`|Logická hodnota, která určuje, jestli se má zobrazit dialogové okno Barva standardní systém nebo [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) dialogové okno. Další informace najdete v tématu [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , který ukládá aktuální Automatická barva. Další informace najdete v tématu [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref) , který ukládá aktuální Automatická barva. Další informace najdete v tématu [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
 |`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md) objekt, který přidruží sady RGB barvy s jejich názvy.|  
-|`m_colors`|A [carray –](../../mfc/reference/carray-class.md) z [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnoty, které obsahuje barev, které jsou zobrazeny v ovládacím prvku pruhu barev.|  
-|`m_ColorSelected`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu barvy, který uživatel vybral aktuálně z ovládacího prvku pruhu barev.|  
-|`m_lstDocColors`|A [CList –](../../mfc/reference/clist-class.md) z [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnoty, které obsahuje barvy, které jsou aktuálně používány v dokumentu.|  
+|`m_colors`|A [carray –](../../mfc/reference/carray-class.md) z [COLORREF](/windows/desktop/gdi/colorref) hodnoty, které obsahuje barev, které jsou zobrazeny v ovládacím prvku pruhu barev.|  
+|`m_ColorSelected`|A [COLORREF](/windows/desktop/gdi/colorref) hodnotu barvy, který uživatel vybral aktuálně z ovládacího prvku pruhu barev.|  
+|`m_lstDocColors`|A [CList –](../../mfc/reference/clist-class.md) z [COLORREF](/windows/desktop/gdi/colorref) hodnoty, které obsahuje barvy, které jsou aktuálně používány v dokumentu.|  
 |`m_nCommandID`|Celé číslo bez znaménka, která je Identifikátor příkazu tlačítka barvu.|  
 |`m_nHorzMargin`|Celé číslo, které je vodorovný okraj mezi barvu tlačítka v tabulce barev.|  
 |`m_nHorzOffset`|Celé číslo, které je vodorovný posun do centra bude tlačítko barev. Tato hodnota je důležité, pokud na tomto tlačítku zobrazí text nebo obrázek kromě barvu.|  

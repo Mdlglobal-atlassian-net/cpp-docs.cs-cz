@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221522"
 ---
 # <a name="casyncsocket-class"></a>Casyncsocket – třída
 Představuje Windows Socket – koncový bod komunikace v síti.  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  Při použití soketů knihovny MFC v sekundárních vláken aplikace staticky propojené knihovny MFC, je nutné volat `AfxSocketInit` v každém vlákně, který používá sockets k inicializaci soketu knihovny. Ve výchozím nastavení `AfxSocketInit` je volána pouze v primárním vlákně.  
   
- Další informace najdete v tématu [rozhraní Windows Sockets: použití třídy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) a souvisejících článcích., stejně jako [rozhraní Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Další informace najdete v tématu [rozhraní Windows Sockets: použití třídy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) a souvisejících článcích., stejně jako [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Třídy CObject](../../mfc/reference/cobject-class.md)  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` je **není** bezpečné pro vlákna.  Pokud voláte ho v prostředí s víc vlákny kde ji mohou být volány současně v různých vláknech, je nutné k ochraně každé volání s mutex nebo jiných zámek synchronizace.  
   
- Další informace o streamu a datagram sokety, najdete v článcích [rozhraní Windows Sockets: pozadí](../../mfc/windows-sockets-background.md) a [rozhraní Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md) a [rozhraní Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Další informace o streamu a datagram sokety, najdete v článcích [rozhraní Windows Sockets: pozadí](../../mfc/windows-sockets-background.md) a [rozhraní Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md) a [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  Voláním této členské funkce se odpojit popisovač SOKETU v *m_hSocket* datový člen z `CAsyncSocket` objektu a nastavte *m_hSocket* na hodnotu NULL.  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>Poznámky  
  Pokud nevkládal členské funkce naznačuje, že došlo k chybě, `GetLastError` by měla být volána k načtení příslušné chybový kód. V popisech jednotliví členové funkce pro seznam o příslušné chybové kódy.  
   
- Další informace o chybových kódech naleznete v tématu [rozhraní Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Další informace o chybových kódech naleznete v tématu [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Voláním této členské funkce k získání adresy peer soketu, ke kterému je připojený tento soket.  

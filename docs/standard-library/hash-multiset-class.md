@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210429"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset – třída
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* typ dat prvku, který bude uložen do hash_multiset.
+*Key*<br/>
+ Typ dat prvku, který bude uložen do hash_multiset.
 
-*Vlastnosti* typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je unární predikát mapování hodnoty klíče prvky na celá čísla bez znaménka typu `size_t`. Tento argument je nepovinný a `hash_compare` *< klíč,* **méně ***\<klíč >>* je výchozí hodnota.
+*Osobnostní rysy*<br/>
+ Typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíčové hodnoty unární predikát mapování elementů na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multiset. Tento argument je nepovinný a výchozí hodnota je **alokátoru ***\<klíče >.*
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multiset –. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -145,7 +148,7 @@ Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vklá
 
 Hash_multiset by měl být asociativní kontejner dle výběru, kdy jsou podmínky přiřazení hodnot k jejich klíčům splňuje aplikací. Elementy hash_multiset může být více a slouží jako vlastní klíče řazení, takže klíče nejsou jedinečné. Model pro tento typ struktury je uspořádaný seznam slov, v němž se slova mohou vyskytovat více než jednou. Kdyby více výskytů jednoho slova byl povolen, pak hash_set by byl odpovídající strukturou kontejneru. Pokud jedinečné definice byly připojené jako hodnoty do seznamu jedinečných klíčových slov, hash_map by vhodnou strukturou tato data obsahovat. Pokud místo toho definice nebyly jedinečné, hash_multimap – by zvoleným kontejnerem.
 
-Hash_multiset seřadí sekvence pomocí volání uložené hodnoty hash vlastností objektu typu [value_compare –](#value_compare). Tento uložený objekt může získat přístup k voláním členské funkce [key_comp](#key_comp). Objekt funkce se musí chovat stejně jako objekt třídy `hash_compare` *< klíč,* **méně ***\<klíč >>.* Konkrétně pro všechny hodnoty *klíč* typu `Key`, volání **vlastností**( *klíč*) získá distribuci hodnot typu `size_t`.
+Hash_multiset seřadí sekvence pomocí volání uložené hodnoty hash vlastností objektu typu [value_compare –](#value_compare). Tento uložený objekt může získat přístup k voláním členské funkce [key_comp](#key_comp). Objekt funkce se musí chovat stejně jako objekt třídy `hash_compare<Key, less<Key> >`. Konkrétně pro všechny hodnoty *klíč* typu `Key`, volání `Trait(Key)` získá distribuci hodnot typu `size_t`.
 
 Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát *f*( *x*, *y*) je objekt funkce, který má dva objekty argumentu x a y a návratovou hodnotu true nebo false. Na hash_multiset je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde dva objekty x a y definovány jako ekvivalentní, když oba *f* ( *x*, *y*) a *f*( *y*, *x*) jsou false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíče prvků lze porovnat z hash_multiset.
+*Klíč*<br/>
+ Klíč prvky lze porovnat z hash_multiset.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1017,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1105,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozici elementu, který má být odebrán z hash_multiset –.
+*_Where*<br/>
+ Pozice prvku, který chcete odebrat z hash_multiset.
 
-*první* pozice prvního prvku odebrán z hash_multiset.
+*první*<br/>
+ Pozice prvního prvku odebrán hash_multiset.
 
-*poslední* pozice bezprostředně za posledním prvkem odebírat hash_multiset.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem odebrán hash_multiset.
 
-*klíč* klíč prvky, které mají být odebrány hash_multiset –.
+*Klíč*<br/>
+ Klíč prvky, které mají být odebrány hash_multiset –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1222,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1415,7 +1425,7 @@ hash_multiset(
 |-|-|
 |*Al*|Třída úložiště alokátoru má být použit pro toto `hash_multiset` objekt, kde je použit výchozí `Allocator`.|
 |*Kompozice*|Funkce porovnání typu `const Traits` slouží k seřazení prvků v `hash_multiset`, která má výchozí hodnotu `hash_compare`.|
-|*Doprava*|`hash_multiset` z nich vytvořeného `hash_multiset` je kopií.|
+|*doprava*|`hash_multiset` z nich vytvořeného `hash_multiset` je kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list obsahující prvky, které mají být zkopírovány.|
@@ -1656,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2138,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* hash_multiset argument poskytující prvky pro záměnu s hash_multiset – cíl.
+*doprava*<br/>
+ Hash_multiset – argument poskytující prvky pro záměnu s hash_multiset – cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2213,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 

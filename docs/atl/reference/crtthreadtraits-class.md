@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c182840ed3592a229b8d6c7b98930ade57a18b25
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 676d14b1027cbc9df68e4be26a9a1451a29d8c37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883018"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204309"
 ---
 # <a name="crtthreadtraits-class"></a>Crtthreadtraits – třída
 Tato třída poskytuje funkce vytvoření vlákna CRT. Pokud vlákno použije funkce CRT, použijte tuto třídu.  
@@ -48,7 +48,7 @@ class CRTThreadTraits
 |[CRTThreadTraits::CreateThread](#createthread)|(Statické) Voláním této funkce k vytvoření vlákna, které můžete použít funkce CRT.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro určitý typ vlákna. Vytvoření funkce má stejný podpis a sémantiku jako Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce.  
+ Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro určitý typ vlákna. Vytvoření funkce má stejný podpis a sémantiku jako Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkce.  
   
  Vlastnosti vlákna jsou používány následující třídy:  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Adresa proměnné DWORD, který v případě úspěchu, přijímá ID vlákna nově vytvořeného vlákna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) a získat tak rozšířené informace o chybě.  
+ Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) a získat tak rozšířené informace o chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Další informace o parametrech pro tuto funkci.  
+ Zobrazit [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Další informace o parametrech pro tuto funkci.  
   
  Tato funkce volá [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) k vytvoření vlákna.  
   

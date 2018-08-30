@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200143"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Název|Popis|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktury. Poskytuje přístup k základní vlastnost seznamu parametrů.|
+|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury. Poskytuje přístup k základní vlastnost seznamu parametrů.|
 
 ## <a name="remarks"></a>Poznámky
 
 Seznam vlastností se skládá z `CPropertySheet` objekt a jeden nebo více [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objekty. Seznam vlastností zobrazí rozhraní jako okno se sadou kartu indexy a oblasti, která obsahuje aktuálně vybrané stránky. Uživatel přejde na určitou stránku pomocí příslušné karty.
 
-`CPropertySheet` poskytuje podporu pro rozbalených [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktura zavedená ve Windows 98 a Windows NT 2000. Struktura obsahuje další příznaky a členy, které podporují použití rastrový obrázek pozadí "vodoznak".
+`CPropertySheet` poskytuje podporu pro rozbalených [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktura zavedená ve Windows 98 a Windows NT 2000. Struktura obsahuje další příznaky a členy, které podporují použití rastrový obrázek pozadí "vodoznak".
 
 K těmto novým obrázkům zobrazení automaticky v váš objekt seznamu vlastností, předejte platné hodnoty pro Image rastrového obrázku a palety volání [CPropertySheet::Construct](#construct) nebo [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Voláním této členské funkce, například pokud chcete přidat rastrových o
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Strukturu, jejíž členové uložení vlastnosti [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Strukturu, jejíž členové uložení vlastnosti [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect –*  
-Odkazuje na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
+Odkazuje na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
 
 ### <a name="remarks"></a>Poznámky
 
 Jsou dialogového okna jednotky vyjádřený jako aktuální základní jednotku dialogového okna odvozený od průměrné šířku a výšku znaků v písmo použité pro text dialogového okna. Jedna jednotka na vodorovné čtvrtinu jednotku base šířky dialogového okna a jedna jednotka na svislé je 28 jedné jednotky základní výška dialogového okna.
 
-[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) vrátí informace o velikosti písma systému Windows, můžete ale zadat písmo pro každý seznam vlastností použití stylu DS_SETFONT v souboru definice prostředků. [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) funkce Windows, je popsáno v sadě Windows SDK, používá odpovídající písmo pro toto dialogové okno.
+[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) vrátí informace o velikosti písma systému Windows, můžete ale zadat písmo pro každý seznam vlastností použití stylu DS_SETFONT v souboru definice prostředků. [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) funkce Windows, je popsáno v sadě Windows SDK, používá odpovídající písmo pro toto dialogové okno.
 
 `MapDialogRect` Členskou funkci nahrazuje jednotky dialogového okna v *lprect –* s obrazovky jednotek (v pixelech) tak, že obdélník lze použít k vytvoření dialogového nebo umístit ovládací prvek v poli.
 
@@ -683,9 +683,9 @@ nButton: identifikuje tlačítko, aby se aktivovala. Tento parametr může být 
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) Další informace o zprávě Windows SDK Pressbutton.
+Zobrazit [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) Další informace o zprávě Windows SDK Pressbutton.
 
-Volání `PressButton` nebudou odesílat [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) oznámení ze stránky vlastností rozhraní Framework. Chcete-li/nepošle toto oznámení, zavolejte [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Volání `PressButton` nebudou odesílat [PSN_APPLY](/windows/desktop/Controls/psn-apply) oznámení ze stránky vlastností rozhraní Framework. Chcete-li/nepošle toto oznámení, zavolejte [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Příklad
 

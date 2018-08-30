@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882992"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208579"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase – třída
 Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|Pozice ovládacího prvku, vyjádřená v souřadnicích kontejneru v pixelech.|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|Rozsah ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech) pro konkrétní zobrazení.|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|Fyzická velikost ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech).|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|A `CComDispatchDriver` objekt, který umožňuje načtení a nastavení vlastností kontejneru prostřednictvím `IDispatch` ukazatele.|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|Ukazatel na lokality klienta ovládacího prvku v rámci kontejneru.|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Poskytuje že standardní znamená, že pro uložení advisory připojení mezi datovými objekty dokáží jímky.|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ukazatel na kontejneru [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), nebo [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) ukazatel rozhraní.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ukazatel na kontejneru [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ukazatel rozhraní.|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Poskytuje standardní implementace způsob uložení advisory připojení.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je ovládací prvek oddílové, `~CComControlBase` zničí voláním [destroywindow –](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Pokud je ovládací prvek oddílové, `~CComControlBase` zničí voláním [destroywindow –](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Načte ukazatel na požadované rozhraní.  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>Parametry  
  *ppFont*  
- Ukazatele do kontejneru v okolí [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) rozhraní.  
+ Ukazatele do kontejneru v okolí [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>Parametry  
  *ppFont*  
- Ukazatele do kontejneru v okolí [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) rozhraní odbavení.  
+ Ukazatele do kontejneru v okolí [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) rozhraní odbavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Pokud chcete přidat **Automatická velikost** možnost [uložené vlastnosti](../../atl/reference/stock-properties-atl-control-wizard.md) kartu Průvodce ovládacími prvky ATL, průvodce automaticky vytvoří tomuto datovému členu ve své třídě ovládacího prvku, vytvoří put a metody pro vlastnost get a podporuje [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) automatické zaslání oznámení kontejneru při změně vlastnosti.  
+ Pokud chcete přidat **Automatická velikost** možnost [uložené vlastnosti](../../atl/reference/stock-properties-atl-control-wizard.md) kartu Průvodce ovládacími prvky ATL, průvodce automaticky vytvoří tomuto datovému členu ve své třídě ovládacího prvku, vytvoří put a metody pro vlastnost get a podporuje [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) automatické zaslání oznámení kontejneru při změně vlastnosti.  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  Příznak označující, že `IDataObjectImpl::GetData` a `CComControlBase::GetZoomInfo` by měl nastavit velikost ovládacího prvku z `m_sizeNatural` spíše než z `m_sizeExtent`.  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), nebo [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) rozhraní závisí na hodnotě `m_bWndLess` a `m_bInPlaceSiteEx` příznaky. (Datový člen `m_bNegotiatedWnd` musí být nastavena na PRAVDA pro `m_spInPlaceSite` ukazatel na platný.)  
+ Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) rozhraní závisí na hodnotě `m_bWndLess` a `m_bInPlaceSiteEx` příznaky. (Datový člen `m_bNegotiatedWnd` musí být nastavena na PRAVDA pro `m_spInPlaceSite` ukazatel na platný.)  
   
  Pokud `m_bWndLess` hodnotu FALSE a `m_bInPlaceSiteEx` má hodnotu TRUE, `m_spInPlaceSite` je `IOleInPlaceSiteEx` ukazatel rozhraní. Zobrazit [m_spInPlaceSite](#m_spinplacesite) tabulka znázorňující vztah mezi tyto tři datové členy.  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Tento příznak je vráceno uživatelem [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) a pokud je hodnota TRUE, `SetExtent` upozorní kontejner zobrazení změn. Pokud je tento příznak nastaven, OLEMISC_RECOMPOSEONRESIZE bit ve [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) výčtu by měla být také nastavena.  
+ Tento příznak je vráceno uživatelem [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) a pokud je hodnota TRUE, `SetExtent` upozorní kontejner zobrazení změn. Pokud je tento příznak nastaven, OLEMISC_RECOMPOSEONRESIZE bit ve [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) výčtu by měla být také nastavena.  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  Příznak označující, že ovládací prvek změnila od posledního uložení.  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), nebo [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) rozhraní závisí na hodnotě `m_bWndLess` a [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) příznaky. (Datový člen [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) musí být nastavena na PRAVDA pro [CComControlBase::m_spInPlaceSite](#m_spinplacesite) ukazatel na platný.)  
+ Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) rozhraní závisí na hodnotě `m_bWndLess` a [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) příznaky. (Datový člen [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) musí být nastavena na PRAVDA pro [CComControlBase::m_spInPlaceSite](#m_spinplacesite) ukazatel na platný.)  
   
  Pokud `m_bWndLess` má hodnotu TRUE, `m_spInPlaceSite` je `IOleInPlaceSiteWindowless` ukazatel rozhraní. Zobrazit [CComControlBase::m_spInPlaceSite](#m_spinplacesite) tabulka znázorňující dokončení vztah mezi tyto datové členy.  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  Velikost můžete převést na pixelech se globální funkce [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+ Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Datový objekt je ovládací prvek, který se můžou přenášet data a, který implementuje [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), jejíž metody zadejte střední formátu a přenos dat.  
+ Datový objekt je ovládací prvek, který se můžou přenášet data a, který implementuje [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), jejíž metody zadejte střední formátu a přenos dat.  
   
- Rozhraní `m_spDataAdviseHolder` implementuje [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) a [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) rozhraní.  
+ Rozhraní `m_spDataAdviseHolder` implementuje [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) a [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) rozhraní.  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- Ukazatel na kontejneru [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), nebo [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) ukazatel rozhraní.  
+ Ukazatel na kontejneru [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ukazatel rozhraní.  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.  
   
- Rozhraní `m_spOleAdviseHolder` implementuje [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) a [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) rozhraní.  
+ Rozhraní `m_spOleAdviseHolder` implementuje [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) a [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) rozhraní.  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  Potlačí tuto metodu za účelem vykreslení ovládacího prvku.  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>Parametry  
  *advf*  
- Pomocné příznaky, které určují, jak volání [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) tvoří. Hodnoty jsou od [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) výčtu.  
+ Pomocné příznaky, které určují, jak volání [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) tvoří. Hodnoty jsou od [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `SendOnViewChange` volání [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). Pouze hodnota *index* aktuálně podporovány se -1, což znamená, že celé zobrazení je relevantní.  
+ `SendOnViewChange` volání [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). Pouze hodnota *index* aktuálně podporovány se -1, což znamená, že celé zobrazení je relevantní.  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  Nastaví nebo odebere fokusu klávesnice do nebo z ovládacího prvku.  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  Vrátí hodnotu TRUE, pokud ovládací prvek úspěšně získá fokus; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- U ovládacího prvku v okně, funkce rozhraní Windows API [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) je volána. Pro ovládací prvek bez oken [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) je volána. Prostřednictvím tohoto volání bez oken ovládací prvek získá fokus klávesnice a můžou reagovat na zprávy okna.  
+ U ovládacího prvku v okně, funkce rozhraní Windows API [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) je volána. Pro ovládací prvek bez oken [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) je volána. Prostřednictvím tohoto volání bez oken ovládací prvek získá fokus klávesnice a můžou reagovat na zprávy okna.  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  Nastaví datový člen `m_bRequiresSave` s hodnotou v *bDirty*.  

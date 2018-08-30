@@ -1,5 +1,5 @@
 ---
-title: Štítků ovládacích prvků strom úpravy | Microsoft Docs
+title: Štítků ovládacích prvků strom úpravy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d665ae37bfc843fc2ab0f24fe4489b76935e62d2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7f9ba5360ddce81061bf73839e1700fed57c9fa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210400"
 ---
 # <a name="tree-control-label-editing"></a>Úpravy štítků ovládacích prvků strom
-Uživatele můžete upravit přímo popisky položek v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) má **TVS_EDITLABELS** stylu. Uživatel začne úpravy klepnutím na popisek položky, který je aktivní. Aplikace začne úpravy pomocí [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) – členská funkce. Ovládací prvek stromu odešle oznámení při úpravě začne a kdy je zrušena nebo byla dokončena. Po dokončení úprav jste zodpovědní za aktualizace popisek položky, podle potřeby.  
+Uživatel může upravovat přímo popisky položek ovládacího prvku stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), který má **TVS_EDITLABELS** style. Uživatel začne upravovat po kliknutí popisek položky, která má fokus. Aplikace se začne upravovat pomocí [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) členskou funkci. Ovládací prvek stromu odesílá oznámení při úpravě začíná a kdy je zrušen nebo dokončení. Když po dokončení úprav, zodpovídáte za aktualizuje popisek položky v případě potřeby.  
   
- Když úpravy štítků začne, odešle ovládacím prvkem strom [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) oznámení. Zpracováním toto oznámení, můžete povolit úpravy některé popisků a zamezení úprav ostatní. Vrácení 0 umožňuje úpravy, a vrátí nenulovou nebude.  
+ Úpravy štítků zahájení, odesílá se ovládacím prvkem strom [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) zprávy oznámení. Zpracováním toto oznámení, můžete povolit úpravu některé popisky a úpravami ostatních. Vrátí 0 umožňuje úpravy a vrací nenulovou hodnotu vypne.  
   
- Když úpravy štítků je zrušena nebo byla dokončena, odešle ovládacím prvkem strom [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) oznámení. *LParam* parametr je adresa [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. **Položky** člen [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktura označuje položku, která obsahuje upravený text. Jste zodpovědní za aktualizaci popisek položky v případě potřeby však možná po ověření upravená řetězec. *PszText* členem `TV_ITEM` je 0, pokud úpravy je zrušeno.  
+ Při úpravách popisek je zrušena nebo dokončeno, odešle ovládacím prvkem strom [TVN_ENDLABELEDIT](/windows/desktop/Controls/tvn-endlabeledit) zprávy oznámení. *LParam* parametr je adresa [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) struktury. **Položky** člen je [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) struktura, která identifikuje položku a zahrnuje upraveného textu. Zodpovídáte za aktualizuje popisek položky v případě potřeby se možná po ověření upravený řetězec. *PszText* člen `TV_ITEM` je 0, pokud se zruší úpravy.  
   
- Během úpravy štítků, obvykle v reakci [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) oznámení, můžete získat ukazatel do ovládacího prvku úprav používá pro úpravy štítků pomocí [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) člena funkce. Textové pole můžete volat [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) – členská funkce a omezit tak velikost může uživatel zadat text nebo podtřídy ovládacího prvku úprav zachytí a zahodit neplatné znaky. Upozorňujeme však, že textové pole se zobrazí pouze *po* **TVN_BEGINLABELEDIT** se odesílají.  
+ Během úpravy štítků, obvykle v reakci [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) zpráva s oznámením, můžete získat ukazatel na textové pole pro úpravy štítků s použitím [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) člena funkce. Můžete volat textovém poli [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) členské funkce a omezit tak množství může uživatel zadat text nebo podtřídy ovládacího prvku pro úpravy a zachytit a zahodit neplatné znaky. Upozorňujeme, že ovládací prvek pro úpravy se zobrazí pouze *po* **TVN_BEGINLABELEDIT** se odesílají.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   

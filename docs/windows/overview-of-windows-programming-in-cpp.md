@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206714"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -58,7 +58,7 @@ Další informace o všech těchto konceptů, najdete v části [Průvodce unive
 
 ##  <a name="BK_Native"></a> Počítače a serverové aplikace
 
-Seznamte se se základy psaní klientských aplikací Windows pro desktop, najdete v článku [vývoj aplikací pro Windows v jazyce C++](http://msdn.microsoft.com/vstudio//hh304489) a [Úvod do Windows programování v jazyce C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Seznamte se se základy psaní klientských aplikací Windows pro desktop, najdete v článku [vývoj aplikací pro Windows v jazyce C++](https://msdn.microsoft.com/vstudio//hh304489) a [Úvod do Windows programování v jazyce C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
 Ve Windows 10 můžete použít Visual C++ k vytvoření mnoha typů desktopových aplikací:
 

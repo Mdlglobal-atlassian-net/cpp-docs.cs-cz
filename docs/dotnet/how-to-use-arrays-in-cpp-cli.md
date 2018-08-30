@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití polí v jazyce C + +/ CLI | Microsoft Docs'
+title: 'Postupy: používání polí v jazyce C + +/ CLI | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213002"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Postupy: Používání polí v jazyce C++/CLI
-Tento článek popisuje, jak použít pole v jazyce C + +/ CLI.  
+Tento článek popisuje způsob použití pole v jazyce C + +/ CLI.  
   
-## <a name="single-dimension-arrays"></a>Dimenze jednoho pole  
- Následující příklad ukazuje, jak k vytvoření polí jedním dimenze reference, hodnotu a typy nativní ukazatel. Také ukazuje, jak vrátit pole dimenze jedním z funkce a jak předat pole jedním dimenze jako argument funkce.  
+## <a name="single-dimension-arrays"></a>Jednou dimenzí pole  
+ Následující příklad ukazuje, jak vytvořit jednou dimenzí pole odkazu, hodnoty a typy nativní ukazatel. Také ukazuje, jak vrátit pole s jednou dimenzí z funkce a jak předat pole s jednou dimenzí jako argument funkce.  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- Další příklad ukazuje, jak k provedení inicializace agregace na spravovaných polí jedním dimenze.  
+ Další příklad ukazuje, jak provádět agregační inicializace pro spravované pole jednou dimenzí.  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -213,7 +213,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11  
 ```  
   
- Tento příklad ukazuje, jak provádět inicializace agregace na spravované pole s více dimenze:  
+ Tento příklad ukazuje způsob k provedení inicializace agregace na multidimenzionální spravované pole:  
   
 ```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
@@ -258,7 +258,7 @@ int main() {
 ```  
   
 ## <a name="jagged-arrays"></a>Vícenásobná pole  
- V této části ukazuje, jak vytvořit jeden dimenze polí spravovaných polí odkaz, hodnotu a typy nativní ukazatel. Také ukazuje, jak vrátit pole jedním dimenze spravovaných polí z funkce a jak předat pole jedním dimenze jako argument funkce.  
+ Tato část ukazuje, jak vytvořit jednou dimenzí polí spravovaných polí odkaz, hodnoty a typy nativní ukazatel. Také ukazuje, jak vrátit pole s jednou dimenzí spravovaných polí z funkce a jak předat pole s jednou dimenzí jako argument funkce.  
   
 ```cpp  
 // mcppv2_array_of_arrays.cpp  
@@ -355,7 +355,7 @@ IntArray[1] = 11
 41  
 ```  
   
- Následující příklad ukazuje, jak provést inicializace agregace s Vícenásobná pole.  
+ Následující příklad ukazuje, jak provádět agregační inicializace pomocí vícenásobného pole.  
   
 ```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
@@ -461,7 +461,7 @@ MyClass0[1] = 1
 ```  
   
 ## <a name="managed-arrays-as-template-type-parameters"></a>Spravovaných polí jako parametrů typů šablon  
- Tento příklad ukazuje, jak používat spravovaného pole jako parametr pro šablonu:  
+ Tento příklad ukazuje, jak používat spravovaného pole jako parametr do šablony:  
   
 ```cpp  
 // mcppv2_template_type_params.cpp  
@@ -490,7 +490,7 @@ Return Code: 0
 ```  
   
 ## <a name="typedefs-for-managed-arrays"></a>Definice TypeDef pro spravovaná pole  
- Tento příklad ukazuje, jak provádět typedef pro spravovaná pole:  
+ Tento příklad ukazuje, jak vytvořit definice typu pro spravované pole:  
   
 ```cpp  
 // mcppv2_typedef_arrays.cpp  
@@ -505,10 +505,10 @@ int main() {
 }  
 ```  
   
-## <a name="sorting-arrays"></a>Řazení polí  
- Na rozdíl od standardní pole v jazyce C++ jsou spravovaná pole implicitně odvozeny od základní třídu pole ze kterého dědí společné chování. Příkladem je `Sort` metodu, která slouží k seřazení položek v žádné pole.  
+## <a name="sorting-arrays"></a>Pole třídění  
+ Na rozdíl od standardní pole jazyka C++ jsou spravovaná pole implicitně odvozené ze základní třídy pole ze kterého dědí společné chování. Příkladem je `Sort` metodu, která slouží k seřazení položky v libovolné pole.  
   
- Pro pole, které obsahují základní vnitřní typy, můžete zavolat `Sort` metoda. Kritéria řazení můžete přepsat a takový postup je požadovaná při řazení pro pole komplexních typů. V takovém případě musí implementovat typ elementu pole [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) metoda.  
+ Pro pole, které obsahují základní vnitřní typy, můžete volat `Sort` metody. Můžete přepsat kritéria řazení a takový postup je povinný při řazení pro pole komplexních typů. V takovém případě musí implementovat typ prvku pole [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.  
   
 ```cpp  
 // array_sort.cpp  
@@ -524,9 +524,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Řazení polí s použitím vlastních kritérií  
- Řadit pole, které obsahují základní vnitřní typy, stačí zavolat `Array::Sort` metoda. Však k řazení pole, které obsahují komplexních typů nebo přepsat výchozí kritéria řazení přepsat [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) metoda.  
+ Můžete seřadit pole, které obsahují základní vnitřní typy, stačí zavolat `Array::Sort` metody. Však k řazení pole, které obsahují komplexních typů nebo chcete přepsat výchozí kritéria řazení, přepište [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) metody.  
   
- V následujícím příkladu, s názvem strukturou `Element` je odvozený od <xref:System.IComparable>a poskytovat <xref:System.IComparable.CompareTo%2A> metoda, která používá průměr dvě celá čísla jako kritérium řazení.  
+ V následujícím příkladu, s názvem struktury `Element` je odvozen z <xref:System.IComparable>a zadejte do něj zapisovat <xref:System.IComparable.CompareTo%2A> metodu, která používá průměr dvou celých čísel jako kritérium řazení.  
   
 ```cpp  
 using namespace System;  
@@ -571,7 +571,7 @@ int main() {
 ```  
   
 ## <a name="array-covariance"></a>Kovariance polí  
- Zadaný referenční třída D, který má přímý nebo nepřímý základní třídy B, pole typu D lze přiřadit k proměnné pole typu b.  
+ Zadaný odkaz na třídu D, která má přímou nebo nepřímou základní třídy B, pole typu D lze přiřadit k proměnné pole typu b.  
   
 ```cpp  
 // clr_array_covariance.cpp  
@@ -584,9 +584,9 @@ int main() {
 }  
 ```  
   
- Přiřazení na element pole musí být přiřazení kompatibilní s typem dynamické pole. Přiřazení na element pole, která má nekompatibilní typ způsobí, že `System::ArrayTypeMismatchException` vyvolání.  
+ Přiřazení na element pole musí být přiřazení kompatibilní s typem dynamická pole. Způsobí, že přiřazení k elementu pole, který má nekompatibilní typ `System::ArrayTypeMismatchException` vyvolání.  
   
- Kovariance polí se nevztahuje na pole Hodnota typu třídy. Například pole Int32 nelze převést na objekt ^ pole, ani s použitím zabalení.  
+ Kovariance polí neplatí pro pole typu hodnota třídy. Například pole Int32 nelze převést na objekt ^ pole, dokonce ani pomocí uzavřeného určení.  
   
 ```cpp  
 // clr_array_covariance2.cpp  

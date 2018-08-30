@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337167"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197436"
 ---
 # <a name="cinternetsession-class"></a>Cinternetsession – třída
 
@@ -237,7 +237,7 @@ Další informace o asynchronních operací, najdete v článku [první kroky In
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Tato členská funkce implementuje chování funkce Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování funkce Win32 [InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea), jak je popsáno v sadě Windows SDK.
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ Proměnná, určení velikosti *pstrCookieData* vyrovnávací paměti. Pokud fun
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Pokud volání selže, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) a zjistěte příčinu chyby. Platí následující hodnoty Chyba:
+V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Pokud volání selže, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) a zjistěte příčinu chyby. Platí následující hodnoty Chyba:
 
 - ERROR_NO_MORE_ITEMS neexistuje žádný soubor cookie pro zadanou adresu URL a všech jejích nadřazených tříd.
 
@@ -476,7 +476,7 @@ Nejprve je třeba volat [EnableStatusCallback](#enablestatuscallback) výhod sta
 |INTERNET_STATUS_RESPONSE_RECEIVED|Úspěšně obdržel odpověď ze serveru. *LpvStatusInformation* parametr hodnotu NULL.|
 |INTERNET_STATUS_CLOSING_CONNECTION|Probíhá ukončování připojení k serveru. *LpvStatusInformation* parametr hodnotu NULL.|
 |INTERNET_STATUS_CONNECTION_CLOSED|Připojení k serveru se úspěšně zavřelo. *LpvStatusInformation* parametr hodnotu NULL.|
-|INTERNET_STATUS_HANDLE_CREATED|Používá funkce rozhraní Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) k označení, že byl vytvořen nový popisovač. Volání rozhraní Win32 funkce aplikací díky tomu [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) z jiného vlákna, pokud připojení trvá moc dlouho. Další informace o těchto funkcích naleznete v tématu Windows SDKfor.|
+|INTERNET_STATUS_HANDLE_CREATED|Používá funkce rozhraní Win32 API [InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta) k označení, že byl vytvořen nový popisovač. Volání rozhraní Win32 funkce aplikací díky tomu [InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle) z jiného vlákna, pokud připojení trvá moc dlouho. Další informace o těchto funkcích naleznete v tématu Windows SDKfor.|
 |INTERNET_STATUS_HANDLE_CLOSING|Tato hodnota popisovač úspěšně ukončil.|
 
 Potlačí tuto členskou funkci tak, aby vyžadovala některé akce před spuštěním rutiny stav zpětného volání.
@@ -589,7 +589,7 @@ V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), jak je popsáno v sadě Windows SDK.
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>Parametry
 
 *dwOption*  
-Internet možnost nastavit. Zobrazit [možnost příznaky](http://msdn.microsoft.com/library/windows/desktop/aa385328) ve Windows SDKfor seznam dostupných možností.
+Internet možnost nastavit. Zobrazit [možnost příznaky](/windows/desktop/WinInet/option-flags) ve Windows SDKfor seznam dostupných možností.
 
 *lpBuffer.*  
 Vyrovnávací paměť, která obsahuje nastavení možnosti.
@@ -632,7 +632,7 @@ Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nasta
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
 
 ## <a name="see-also"></a>Viz také
 

@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215250"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Určuje, zda v podokně úloh zabalí slova v popiscích.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Určuje, zda v podokně úloh zabalí slova v úlohách.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Přepíše [CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Přepíše [CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Volá se rozhraním, když uživatel klikne na položku v podokně úloh.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,8 +293,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Volá se rozhraním, když uživatel klikne na tlačítko Domů navigace|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Přepíše [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Přepíše [CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Přepíše [CDockablePane::PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Přepíše [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Odebere všechny skupiny na zadanou stránku.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Odebere všechny stránky v podokně úloh s výjimkou výchozí stránka (první).|  
@@ -302,8 +302,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Odebere skupinu.|  
 |[CMFCTasksPane::RemovePage](#removepage)|Odebere zadanou stránku z podokna úloh.|  
 |[CMFCTasksPane::RemoveTask](#removetask)|Úlohu se odebere ze skupiny úloh.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Přepíše [CDockablePane::SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Přepíše [CDockablePane::Serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Přepíše [CDockablePane::SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Přepíše [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktivuje zadaný stránky v podokně úloh.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Nastaví název záhlaví podokna úloh.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Nastaví výšku popisek skupiny.|  

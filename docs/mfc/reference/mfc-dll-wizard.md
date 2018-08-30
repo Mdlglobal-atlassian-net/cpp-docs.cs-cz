@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216484"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL – průvodce knihovnou
 Když použijete Průvodce MFC DLL pro vytvoření projektu knihovny MFC DLL, získáte funkční aplikaci starter s integrovanými funkcemi, při kompilaci, implementuje základní funkce [DLL](../../build/dlls-in-visual-cpp.md). Výchozí program knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc) a soubor projektu (.vcxproj). Kód generovaný v těchto souborech starter je založena na knihovně MFC. Podrobnější informace naleznete v souboru Readme.txt, který je generován pro váš projekt v sadě Visual Studio a [třídy a funkce generované průvodcem knihovnou MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,7 @@ Když použijete Průvodce MFC DLL pro vytvoření projektu knihovny MFC DLL, z�
  [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
  [Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
+ [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementace rozhraní](../../ide/implementing-an-interface-visual-cpp.md)   

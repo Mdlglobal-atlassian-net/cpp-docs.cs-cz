@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202392"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog – třída
 
@@ -837,7 +837,7 @@ Výchozí implementace vrátí hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) dříve, než vrátí hodnotu S_OK.
+Tato metoda volá [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) dříve, než vrátí hodnotu S_OK.
 
 Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
 
@@ -1619,7 +1619,7 @@ Hodnoty pro *wParam* a *lParam* závisí na konkrétní generovanou zprávu. Je 
 |TDN_CREATED|Nepoužívá se.|Nepoužívá se.|
 |TDN_NAVIGATED|Nepoužívá se.|Nepoužívá se.|
 |TDN_BUTTON_CLICKED|Příkazové tlačítko ovládací prvek ID.|Nepoužívá se.|
-|TDN_HYPERLINK_CLICKED|Nepoužívá se.|A [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751) strukturu, která obsahuje odkaz.|
+|TDN_HYPERLINK_CLICKED|Nepoužívá se.|A [LPCWSTR](/windows/desktop/WinProg/windows-data-types) strukturu, která obsahuje odkaz.|
 |TDN_TIMER|Doba v milisekundách, protože `CTaskDialog` byl vytvořen nebo byl resetován časovač.|Nepoužívá se.|
 |TDN_DESTROYED|Nepoužívá se.|Nepoužívá se.|
 |TDN_RADIO_BUTTON_CLICKED|ID přepínač tlačítko.|Nepoužívá se.|

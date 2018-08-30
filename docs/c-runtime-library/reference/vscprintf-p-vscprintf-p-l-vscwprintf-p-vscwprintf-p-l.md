@@ -1,5 +1,5 @@
 ---
-title: _vscprintf_p –, _vscprintf_p_l –, _vscwprintf_p –, _vscwprintf_p_l – | Microsoft Docs
+title: _vscprintf_p – _vscprintf_p_l –, _vscwprintf_p – _vscwprintf_p_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,16 +51,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412902"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200291"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
-Vrátí počet znaků v řetězci formátovaný pomocí ukazatel na seznam argumentů, s možností určit pořadí, ve kterém se používají argumenty.
+Vrátí počet znaků v formátovaný řetězec pomocí ukazatele na seznam argumentů, s možností určit pořadí, ve kterém jsou argumenty použity.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,22 +100,22 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_vscprintf_p –** vrátí počet znaků, které by vytvořilo Pokud řetězec odkazoval na seznam argumentů, bylo tiskem nebo posílat do souboru nebo vyrovnávací paměti, pomocí zadané formátování kódy. Hodnota vrácená nezahrnuje ukončující znak hodnoty null. **_vscwprintf_p –** provádí stejnou funkci pro široké znaky.
+**_vscprintf_p –** vrátí počet znaků, které by být generovány Pokud řetězec odkazovala na seznam argumentů byl tisku nebo odeslání do souboru nebo vyrovnávací paměti, pomocí zadané formátování kódů. Vrácená hodnota nezahrnuje ukončující znak null. **_vscwprintf_p –** provádí stejnou funkci pro široké znaky.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce se liší od **_vscprintf –** a **_vscwprintf –** pouze v tomto podporují možnost určit pořadí, ve kterém se používají argumenty. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Tyto funkce se liší od **_vscprintf –** a **_vscwprintf –** pouze v tom, že podporují možnost určit pořadí, ve kterém jsou argumenty použity. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
 
-Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 > [!IMPORTANT]
-> Ujistěte se, že pokud *formát* je řetězec definovaný uživatelem, je ukončen hodnotu null a má správný počet a typ parametry. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Ujistěte se, že pokud *formátu* je uživatelem definovaný řetězec, je null byl ukončen a má správný počet a typ parametrů. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vsctprintf_p –**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
 |**_vsctprintf_p_l –**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
@@ -127,13 +127,13 @@ Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina nep
 |**_vscprintf_p –**, **_vscprintf_p_l –**|\<stdio.h>|
 |**_vscwprintf_p –**, **_vscwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [vsprintf –](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l](scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)<br/>

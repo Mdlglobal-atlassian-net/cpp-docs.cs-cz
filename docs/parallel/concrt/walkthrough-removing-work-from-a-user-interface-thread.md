@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612100"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211417"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 Tento dokument popisuje způsob použití Concurrency Runtime pro přesun práce, která se provádí pomocí vlákna uživatelského rozhraní (UI) v aplikaci Microsoft Foundation Classes (MFC) pracovní vlákno. Tento dokument také ukazuje, jak zlepšit výkon operace s delším průběhem výkresu.  
@@ -40,7 +40,7 @@ Tento dokument popisuje způsob použití Concurrency Runtime pro přesun práce
   
 -   [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)  
   
- Doporučujeme také, že chápete základy vývoje aplikací knihovny MFC a rozhraní GDI + před zahájením tohoto návodu. Další informace o rozhraní MFC naleznete v tématu [desktopových aplikací knihovny MFC](../../mfc/mfc-desktop-applications.md). Další informace o rozhraní GDI + najdete v tématu [rozhraní GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ Doporučujeme také, že chápete základy vývoje aplikací knihovny MFC a rozhraní GDI + před zahájením tohoto návodu. Další informace o rozhraní MFC naleznete v tématu [desktopových aplikací knihovny MFC](../../mfc/mfc-desktop-applications.md). Další informace o rozhraní GDI + najdete v tématu [rozhraní GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Oddíly  
  Tento návod obsahuje následující části:  

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 1d04f918c9c92c2de8ff6b654a8a0d4ee43c2130
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196022"
 ---
 # <a name="file-handling-and-io-ccli"></a>Práce se soubory a vstupně-výstupní operace (C++/CLI)
 Ukazuje různé operace se soubory pomocí rozhraní .NET Framework.  
@@ -337,6 +337,6 @@ int main()
 ## <a name="see-also"></a>Viz také   
  [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Souborová služba a Stream I/o](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+ [Souborová služba a Stream I/o](https://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
 
  [System.IO – obor názvů](https://msdn.microsoft.com/library/system.io.aspx)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207625"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
 Poskytuje funkce pro Windows více dokumentů (MDI) interface podřízené okno, spolu se členy pro správu okna.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *lpszClassName*  
- Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. By měl mít hodnotu NULL pro standardní `CMDIChildWnd`.  
+ Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. By měl mít hodnotu NULL pro standardní `CMDIChildWnd`.  
   
  *lpszWindowName*  
  Odkazuje na řetězec znaků zakončené znakem null představující název okna. Používá jako text záhlaví.  

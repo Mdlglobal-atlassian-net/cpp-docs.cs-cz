@@ -1,5 +1,5 @@
 ---
-title: Výchozí signály | Microsoft Docs
+title: Výchozí signály | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4295c0fbd0542ad6c7c819b6ef7024b2384304d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204447"
 ---
 # <a name="default-signals"></a>Výchozí signály
-**ANSI 4.7.1.1** Pokud ekvivalent **signál (***sig***, sig_dfl –)** není proveden před volání obslužnou rutinu signál blokování signál, se provádí  
+**ANSI 4.7.1.1** Pokud ekvivalent **signál (**<em>sig</em>**, SIG_DFL)** není spuštěn před voláním popisovače signálu, blokování signál, který je provést  
   
  Jakmile je program spuštěn, jsou signály nastaveny na výchozí stav.  
   

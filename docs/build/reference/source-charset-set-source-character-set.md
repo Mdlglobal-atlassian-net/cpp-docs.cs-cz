@@ -1,5 +1,5 @@
 ---
-title: -Zdroj-charset (sada zdroj znaková sada) | Microsoft Docs
+title: -Zdroj-charset (nastavení zdrojové znakové sady) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f010eb0f0b83dbc41ebeff624033e59d582535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 722586f3a629535c5ea70c26e5172e6bc7ecb418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213077"
 ---
-# <a name="source-charset-set-source-character-set"></a>/Source-Charset (nastavit zdroj znaková sada)
-Umožňuje zadat zdroj znakovou sadu pro vaše spustitelný soubor.  
+# <a name="source-charset-set-source-character-set"></a>/ Source-Charset (nastavení zdrojové znakové sady)
+Umožňuje určit zdrojové znakové sady pro spustitelný soubor.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +36,19 @@ Umožňuje zadat zdroj znakovou sadu pro vaše spustitelný soubor.
   
 ## <a name="arguments"></a>Arguments  
  **IANA_name**  
- Název znakové IANA definované sady.  
+ Název sady znaků definice IANA.  
   
  **CPID**  
- Identifikátor kódu stránky jako s desetinným číslem.  
+ Identifikátor kódu stránky jako desítkové číslo.  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete použít **/source-charset** možnost zadat rozšířené zdrojová znaková sada použít zdrojové soubory obsahují znaky, které nejsou reprezentovány ve znakové sadě základní zdroj. Znaková sada zdroj je kódování použité k interpretaci zdrojový text vašeho programu do interního vyjádření používá jako vstup pro předběžného zpracování fáze před kompilace. Interního vyjádření je potom převedou do znaková sada spuštění pro uložení řetězce a znak hodnot ve spustitelném souboru. Můžete použít buď IANA nebo ISO znaková sada název nebo tečku (.), za nímž následuje identifikátor 3 až 5 číslic desetinných kódu stránky zadat znakovou sadu. Seznam podporovaných identifikátory kódu stránky a znaková sada názvy, najdete v části [kódu stránky identifikátory](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
+ Můžete použít **/Source-Charset** můžete zadat rozšířené zdrojové znakové nastaveno pro použití při zdrojové soubory obsahují znaky, které nejsou reprezentovány v základní zdrojové znakové sady. Zdrojová znaková sada je kódování použité k interpretaci text zdrojového programu do vnitřní reprezentaci používá jako vstup do fáze předběžného zpracování před kompilací. Vnitřní reprezentaci je pak převedeno do znakové sady spuštění pro ukládání hodnot řetězců a znaků ve spustitelném souboru. Můžete použít buď IANA nebo ISO znaková sada název nebo tečku (.), za nímž následuje identifikátor číslice 3 až 5 desítkový kód stránky zadat znakovou sadu. Seznam podporovaných identifikátory znakových stránek a znakové sady názvy, naleznete v tématu [identifikátory znakových stránek](/windows/desktop/Intl/code-page-identifiers).  
   
- Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů kódování jak zjistit, pokud zdrojový soubor ve formátu Unicode kódovaného například UTF-16 nebo UTF-8. Pokud se nenajde žádné značky pořadí bajtů, předpokládá zdrojový soubor je kódované pomocí aktuální stránku kód uživatele, pokud nezadáte znaková sada stránku název nebo kódu pomocí **/source-charset** možnost. Visual Studio můžete uložit vašeho zdrojového kódu C++ pomocí některé z několika kódování znaků. Další informace o zdroje a provádění znakových sadách najdete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci k jazyk.  
+ Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů k určení, zda zdrojový soubor je v zakódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud se nenajde žádné značky pořadí bajtů, předpokládá zdrojový soubor je kódovaný pomocí aktuální znakové stránce uživatele, pokud znaková sada s použitím názvu nebo kódu stránky **/Source-Charset** možnost. Visual Studio umožňuje uložit zdrojovém kódu jazyka C++ pomocí některého z několika kódování znaků. Další informace o znakové sady spuštění a zdrojová najdete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka.  
   
- Znaková sada zdroje, které zadáte musí být mapována 7 rozšířené znaky ASCII stejné body kódu ve znakové sadě, nebo jsou pravděpodobností mnoho chyb kompilace. Váš zdroj znakovou sadu musí být také lze mapovat na rozšířenou sadu Kódovat pomocí znakové sady UTF-8 znaků Unicode. Znaky, které nejsou kódovat ve formátu UTF-8 jsou reprezentované pomocí substitute konkrétní implementace. Kompilátor Microsoft používá otazník pro tyto znaky.  
+ Zdrojová znaková sada, kterou zadáte musí být namapovaný 7bitových znaků ASCII na stejné body kódu ve znakové sadě nebo mnoho chyb kompilace jsou za ní nejpravděpodobněji následují. Vaše zdrojové znakové sady musí být také lze mapovat na rozšířené znak Unicode UTF-8 nastavuje kódovat. Znaky, které nejsou kódovat v kódování UTF-8 jsou reprezentovány náhradou specifický pro implementaci. Kompilátor společnosti Microsoft používá otazník pro tyto znaky.  
   
- Pokud chcete nastavit zdroj znakovou sadu a znaková sada spuštění na UTF-8, můžete použít **/utf-8** – možnost kompilátoru jako zástupce. Je ekvivalentní **/source-charset:utf-8 /execution-charset:utf-8** na příkazovém řádku. Některý z těchto možností také umožňuje **/validate-charset** možnost ve výchozím nastavení.  
+ Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF-8, můžete použít **/UTF-8** – možnost kompilátoru jako zástupce. Je ekvivalentní se zadáním **/source-charset:utf – 8 /execution-charset:utf – 8** na příkazovém řádku. Některé z těchto možností také umožňuje **/Validate-Charset** možnost ve výchozím nastavení.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
@@ -56,13 +56,13 @@ Umožňuje zadat zdroj znakovou sadu pro vaše spustitelný soubor.
   
 2.  Rozbalte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku** složky.  
   
-3.  V **pokročilé možnosti**, přidejte **/source-charset** možnost a zadejte upřednostňované kódování.  
+3.  V **rozšířené možnosti**, přidejte **/Source-Charset** možnosti a určete upřednostňované kódování.  
   
 4.  Zvolte **OK** uložte provedené změny.  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [/Execution-Charset (nastavit provádění znaková sada)](../../build/reference/execution-charset-set-execution-character-set.md)   
- [/UTF-8 (nastavit zdroj a spustitelný soubor znakových sad na UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
+ [/ Execution-Charset (nastavení znakové sady spuštění)](../../build/reference/execution-charset-set-execution-character-set.md)   
+ [/ UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
  [/validate-charset (ověření kompatibilních znaků)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

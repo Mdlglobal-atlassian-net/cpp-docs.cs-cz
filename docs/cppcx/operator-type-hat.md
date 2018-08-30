@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0bca9d1f60820b7ceeba633eead0aa9e572be5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208084"
 ---
 # <a name="operator-type"></a>Type^ – operátor
-Umožňuje převod z [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) k `Platform::Type`.  
+Umožňuje převod z [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) k `Platform::Type`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -26,10 +26,10 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName)
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `Platform::Type` když [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
+ Vrátí `Platform::Type` když [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
 ### <a name="remarks"></a>Poznámky  
- `TypeName` je struktura prostředí Windows Runtime jazykově neutrální představující informace o typu. [Platform::type –](../cppcx/platform-type-class.md) je specifická pro C++ a nelze předat jako napříč binárním rozhraním aplikace (ABI). Tady je jedno použití `TypeName`v [Navigovat](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) funkce:  
+ `TypeName` je struktura prostředí Windows Runtime jazykově neutrální představující informace o typu. [Platform::type –](../cppcx/platform-type-class.md) je specifická pro C++ a nelze předat jako napříč binárním rozhraním aplikace (ABI). Tady je jedno použití `TypeName`v [Navigovat](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) funkce:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

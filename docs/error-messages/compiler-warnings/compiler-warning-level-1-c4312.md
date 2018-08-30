@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4312 | Microsoft Docs
+title: Upozornění (úroveň 1) C4312 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18039e44a5616330c66603e448bcafd6d18ff7aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b30d020532935c925b1ecab25d17cd43a7e8663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205899"
 ---
-# <a name="compiler-warning-level-1-c4312"></a>C4312 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4312"></a>Kompilátor upozornění (úroveň 1) C4312
 'operation': převod z 'type1' na 'type2' větší velikosti  
   
- Toto upozornění zjistí pokus o přiřadit hodnotu 32-bit 64-bit ukazatel typu, například přetypování 32bitové `int` nebo `long` na 64-bit ukazatel.  
+ Toto upozornění zjistí pokus o přiřadí hodnotu 32 bitů 64bitového ukazatele typu, například přetypování 32-bit `int` nebo `long` na 64bitový ukazatel.  
   
- To může být konverzi nezabezpečený i pro ukazatele hodnot, které odpovídají v 32bitová verze, když dojde k rozšíření přihlášení. Pokud záporné 32bitové celé číslo je přiřazen k 64-bit ukazatel typu, rozšíření přihlašovací způsobí, že hodnota ukazatele odkazovat na adresu paměti liší od hodnoty na celé číslo.  
+ To může být potenciálně nebezpečný převod i pro ukazatel hodnot, které odpovídají v 32 bitů, pokud dojde k rozšířením znaménka. Pokud negativní 32bitové celé číslo je přiřazený k typu 64bitového ukazatele, rozšířením znaménka způsobí, že hodnota ukazatele odkazují na adresu paměti liší od hodnoty na celé číslo.  
   
- Pro 64bitové kompilace cíle pouze se objeví toto upozornění. Další informace najdete v tématu [pravidla pro používání ukazatele](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Jenom se objeví toto upozornění pro kompilaci 64-bit cíle. Další informace najdete v tématu [pravidla pro používání ukazatele](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
- Následující příklad kódu vytvoří C4312 při kompilaci pro 64bitové cíle:  
+ Následující příklad kódu generuje C4312 při kompilaci pro 64bitové cíle:  
   
 ```  
 // C4312.cpp  

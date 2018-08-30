@@ -1,5 +1,5 @@
 ---
-title: Typy SBCS a MBCS dat | Microsoft Docs
+title: Typy SBCS a MBCS dat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,29 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205257"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Datové typy SBCS a MBCS
 
-Všechny rutiny běhové knihovny Microsoft MBCS, která zpracovává jenom jeden vícebajtových znaků nebo jeden bajt vícebajtových znaků očekává `unsigned int` argument (kde 0x00 < = hodnota znaku < = 0xFFFF a 0x00 < = hodnota bajtu < = 0xFF). Rutiny MBCS, která zpracovává vícebajtové bajtů nebo znaků v kontextu řetězec očekává řetězec vícebajtových znaků tak, aby být reprezentován jako `unsigned char` ukazatel.
+Všechny rutiny knihovny run-time Microsoft MBCS, která zpracovává jenom jeden vícebajtový znak nebo jeden bajt vícebajtového znaku očekává, že `unsigned int` argument (kde 0x00 < = hodnota znaku < = 0xFFFF a 0x00 < = bajtovou hodnotou < = 0xFF). Rutiny znakové sady MBCS, která zpracovává vícebajtové bajtů nebo znaků v kontextu řetězec vícebajtového znakového řetězce, aby se dala vyjádřit jako očekává, že `unsigned char` ukazatele.
 
 > [!CAUTION]
-> Každý bajt vícebajtových znaků, které mohou být v 8-bit reprezentována **char**. Ale jednobajtové znak SBCS nebo MBCS typu **char** s hodnotou vyšší než 0x7F je záporná. Když se takový znak přímo na převést **int** nebo **dlouho**, výsledek je rozšířeny kompilátorem a proto přispět neočekávané výsledky.
+> Každý bajt vícebajtového znaku je možné znázornit na 8-bit **char**. Ale jednobajtový znak SBCS nebo MBCS typu **char** s hodnotou větší než 0x7F jsou negativní. Pokud takový znak je převeden přímo do **int** nebo **dlouhé**, výsledek je rozšířen o znaménko kompilátorem a proto může vést k neočekávaným výsledkům.
 
-Proto je nejlepší představují bajt vícebajtových znaků jako 8-bit `unsigned char`. Nebo, abyste se vyhnuli záporný výsledek, jednoduše převést znakovou typu **char** k `unsigned char` před jeho převodem **int** nebo **dlouho**.
+Proto je nejvhodnější pro reprezentaci bajt vícebajtového znaku jako 8-bit `unsigned char`. Nebo se pokud chcete vyhnout záporný výsledek, jednoduše převést jednobajtový znak typu **char** do `unsigned char` před převodem na **int** nebo **dlouhé**.
 
-Protože některé SBCS zpracování řetězců funkce proveďte (se znaménkem) **char\***  upozornění o neshodě typů parametrů, dojde při **_MBCS** je definována. Abyste tomu předešli, upozornění, uvedené v pořadí podle efektivitu třemi způsoby:
+Protože některé SBCS zpracování řetězců funkce vzít (se znaménkem) **char** <strong>\*</strong> parametry, způsobí upozornění kompilátoru Neshoda typů při **_MBCS** je definice. Abyste tomu předešli, upozornění, uvedeny v pořadí podle efektivitu třemi způsoby:
 
-1. Použijte v Tchar – bezpečnost typů vložených funkcí. H. Toto je výchozí chování.
+1. Funkce TCHAR vložené typově bezpečný. H. Toto je výchozí chování.
 
-1. Použitím přímého makra v Tchar –. H definováním **_MB_MAP_DIRECT** na příkazovém řádku. Pokud to uděláte, musíte ručně spárovat typy. To je nejrychlejší způsob, ale není bezpečnost typů.
+1. Pomocí přímého makra v TCHAR. H definováním **_MB_MAP_DIRECT** na příkazovém řádku. Pokud to uděláte, musíte ručně odpovídají typům. Toto je nejrychlejší způsob, ale není typově bezpečný.
 
-1. Pomocí funkce zajišťující bezpečnost typů staticky propojené knihovny v Tchar –. H. Uděláte to tak, definujte konstantu **_NO_INLINING** na příkazovém řádku. Toto je metoda nejpomalejší, ale nejvíce bezpečnost typů.
+1. Funkce TCHAR staticky propojené knihovny typově bezpečné. H. Uděláte to tak, definujte konstantu **_NO_INLINING** na příkazovém řádku. Toto je metoda nejpomalejší ale nejvíce typově bezpečné.
 
 ## <a name="see-also"></a>Viz také
 

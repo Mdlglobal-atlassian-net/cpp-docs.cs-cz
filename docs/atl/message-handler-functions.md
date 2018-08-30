@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6440ad59218f4c69eb3421176ebdfdc7a36e9531
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963969"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218830"
 ---
 # <a name="message-handler-functions"></a>Funkce obslužných rutin zpráv
 Knihovna ATL poskytuje tři typy funkce obslužné rutiny zpráv:  
@@ -42,5 +42,5 @@ Knihovna ATL poskytuje tři typy funkce obslužné rutiny zpráv:
 ## <a name="see-also"></a>Viz také  
  [Implementace okna](../atl/implementing-a-window.md)   
  [Mapy zpráv](../atl/message-maps-atl.md)   
- [WM_NOTIFY –](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY –](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

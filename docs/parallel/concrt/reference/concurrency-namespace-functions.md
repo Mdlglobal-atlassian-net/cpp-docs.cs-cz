@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219576"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkce oboru názvů Concurrency
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  `IResourceManager` Rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
- Několik následných volání této metody vrátí stejnou instanci správce prostředků. Každé volání metody zvýší odkaz počet v Resource Manageru a musí mít odpovídající volání [IResourceManager::Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metodu, když váš Plánovač dokončí komunikaci se správcem prostředků.  
+ Několik následných volání této metody vrátí stejnou instanci správce prostředků. Každé volání metody zvýší odkaz počet v Resource Manageru a musí mít odpovídající volání [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metodu, když váš Plánovač dokončí komunikaci se správcem prostředků.  
   
  [unsupported_os –](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulem Runtime souběžnost.  
   
 ##  <a name="create_task"></a>  create_task –  
- Vytvoří PPL [úloh](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.  
+ Vytvoří PPL [úloh](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.  
   
 ```
 template<typename T>

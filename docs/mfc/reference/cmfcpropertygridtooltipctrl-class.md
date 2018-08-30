@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCPropertyGridToolTipCtrl | Microsoft Docs
+title: Cmfcpropertygridtooltipctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211962"
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl – třída
-Implementuje a popisku řídit, která [CMFCPropertyGridCtrl třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá zobrazíte popisy tlačítek.  
+# <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl – třída
+Ovládací prvek implementuje popisek, který [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá k zobrazení popisů tlačítek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,32 +61,32 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Vytvoří okna pro ovládací prvek popis tlačítka.|  
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deaktivuje a skryje ovládacího prvku popisek.|  
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Vrátí poslední pozice ovládacího prvku tooltip souřadnice.|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Skryje ovládacího prvku popisek.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit zprávy oken, než jsou odeslány do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce systému Windows. (Přepisuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Nastaví mezery mezi text popisku a ohraničení popisku okna.|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Zobrazí ovládací prvek popis tlačítka.|  
+|[CMFCPropertyGridToolTipCtrl::Create](#create)|Vytvoří okno pro ovládací prvek tooltip.|  
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deaktivuje a skryje ovládací prvek tooltip.|  
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Vrátí souřadnice poslední pozice ovládacího prvku tooltip.|  
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|ToolTip – ovládací prvek skryje.|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Nastaví mezery mezi text popisku a ohraničení okna popisu.|  
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Zobrazí ovládací prvek tooltip.|  
   
 ## <a name="remarks"></a>Poznámky  
- Popisy tlačítek se zobrazují, když umístění ukazatele myši na název vlastnosti. [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) třída zobrazí popisek tak, aby se uživatel snadno čitelné. Obvykle je určena pozici popisek pozice ukazatele. Pomocí této třídy popis se zobrazí nad název vlastnosti a podobné fyzické vlastnosti rozšíření, tak, aby název vlastnosti plně.  
+ Popisy tlačítek se zobrazí při umístění ukazatele myši na název vlastnosti. [Cmfcpropertygridtooltipctrl –](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) třída zobrazí popis tlačítka tak, aby se snadno čitelné uživatelem. Pozici popisku je obvykle určeno pozici ukazatele. Pomocí této třídy, popisek se zobrazí nad název vlastnosti a podobá rozšíření fyzické vlastnosti tak, aby název vlastnosti není plně viditelný.  
   
- MFC automaticky vytvoří tento ovládací prvek a používá ho [CMFCPropertyGridCtrl třída](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ Automaticky vytvoří tento ovládací prvek MFC a používá ho v [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCPropertyGridToolTipCtrl` třídy a postupy: zobrazení ovládacího prvku popisek.  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCPropertyGridToolTipCtrl` třídy a jak zobrazit ovládací prvek tooltip.  
   
  [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
+ [Cmfcpropertygridtooltipctrl –](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridtooltipctrl.h  
@@ -99,60 +99,60 @@ CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
 ##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
- Vytvoří okna pro ovládací prvek popis tlačítka.  
+ Vytvoří okno pro ovládací prvek tooltip.  
   
 ```  
 BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
+ [in] *pWndParent*  
  Ukazatel do nadřazeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud byl úspěšně vytvořen okna; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud v okně se úspěšně vytvořil; v opačném případě hodnota FALSE.  
   
 ##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
- Deaktivuje a skryje ovládacího prvku popisek.  
+ Deaktivuje a skryje ovládací prvek tooltip.  
   
 ```  
 void Deactivate();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví poslední pozice a text na prázdné hodnoty, tak, aby budoucí volá, aby se [CMFCPropertyGridToolTipCtrl::Track](#track) zobrazí popisek.  
+ Tato metoda nastaví poslední pozice a text na prázdné hodnoty, tak, že budoucí volání [CMFCPropertyGridToolTipCtrl::Track](#track) zobrazit v popisu.  
   
 ##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
- Vrátí poslední pozice ovládacího prvku tooltip souřadnice.  
+ Vrátí souřadnice poslední pozice ovládacího prvku tooltip.  
   
 ```  
 void GetLastRect(CRect& rect) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *Rect –*  
- Obsahuje poslední pozice ovládacího prvku popisek.  
+ [out] *rect*  
+ Obsahuje poslední pozice ovládacího prvku tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
- Skryje ovládacího prvku popisek.  
+ ToolTip – ovládací prvek skryje.  
   
 ```  
 void Hide();
 ```  
   
 ##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
- Nastaví mezery mezi text popisku a ohraničení popisku okna.  
+ Nastaví mezery mezi text popisku a ohraničení okna popisu.  
   
 ```  
 void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nTextMargin*  
- Určuje mezery mezi ovládací prvek text popisku a ohraničení popisku okna. Výchozí hodnota je 10 pixelů.  
+ [in] *nTextMargin*  
+ Určuje mezery mezi text ovládacího prvku popisku a ohraničení okna popisu. Výchozí hodnota je 10 pixelů.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
- Zobrazí ovládací prvek popis tlačítka.  
+ Zobrazí ovládací prvek tooltip.  
   
 ```  
 void Track(
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
  Určuje umístění a velikost ovládacího prvku tooltip.  
   
- [v] *strText*  
- Určuje text, který se zobrazí v popisu.  
+ [in] *strText*  
+ Určuje text zobrazený v popisku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zobrazí ovládací prvek popisek v umístění a velikost určeného *Rect –*. Pokud od posledního volání této metody se nezměnily pozici, velikost a text, tato metoda nemá žádný vliv.  
+ Tato metoda zobrazí ToolTip – ovládací prvek na pozici a velikost určená *rect*. Pokud umístění, velikost a text nebyly změněny od poslední chvíle, kdy byla tato metoda volána, tato metoda nemá žádný vliv.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

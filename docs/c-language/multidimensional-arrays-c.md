@@ -1,5 +1,5 @@
 ---
-title: Multidimenzionální Arrays (C) | Microsoft Docs
+title: Multidimenzionální Arrays (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214716"
 ---
 # <a name="multidimensional-arrays-c"></a>Vícerozměrná pole (C)
 Výraz dolního indexu může mít také více dolních indexů následovně:  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1 ***[*** Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota adresy konečné ukazatele na pole zadejte (viz následující příklady).  
+ Výrazy dolního indexu se přiřazují zleva doprava. Úplně vlevo výraz dolního indexu *expression1* **[** *expression2* **]**, je vyhodnocen jako první. Adresa, která je výsledkem přidání *expression1* a *expression2* tvoří výraz ukazatele; potom *expression3* se přidá k tomuto výrazu ukazatele a vytvoří nový výraz ukazatele, a tak dále, dokud se přidala posledního výrazu dolního indexu. Operátor dereference (<strong>\*</strong>) se použije po vyhodnocení posledního výrazu dolního indexu, pokud poslední ukazatel hodnotu typ pole (Další příklady naleznete níže).  
   
  Výrazy s více dolními indexy odkazují na prvky „vícerozměrných polí“. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole.  
   

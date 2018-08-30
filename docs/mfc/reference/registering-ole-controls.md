@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196550"
 ---
 # <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 Ovládací prvky OLE, jako u jiných objektů serveru OLE je přístupný další aplikace používající OLE. Tím se dosahuje registrace knihovny typů a tříd ovládacího prvku.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.  
   
-     Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.  
+     Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.  
   
 > [!NOTE]
 >  V MFC – verze před MFC 4.2 **int** *nRegFlags* parametr byl parametr typu BOOL *bInsertable*, který povolené nebo zakázané ovládací prvek, který má být vložen z Insert Dialogové okno objektu.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Nenulové, pokud byl zaregistrován třídě ovládacího prvku; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- To umožňuje používat kontejnery, které jsou OLE-control ovládacího prvku. `AfxOleRegisterControlClass` aktualizace registru s názvem ovládacího prvku a umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](http://msdn.microsoft.com/library/windows/desktop/ms681917) v sadě Windows SDK.  
+ To umožňuje používat kontejnery, které jsou OLE-control ovládacího prvku. `AfxOleRegisterControlClass` aktualizace registru s názvem ovládacího prvku a umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](/windows/desktop/ProcThread/about-processes-and-threads) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Nenulové, pokud byl zaregistrován třídě ovládacího prvku; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- To umožňuje používat kontejnery, které jsou OLE-control na stránce vlastností. `AfxOleRegisterPropertyPageClass` aktualizace registru s názvem stránky vlastností a jeho umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](http://msdn.microsoft.com/library/windows/desktop/ms681917) v sadě Windows SDK.  
+ To umožňuje používat kontejnery, které jsou OLE-control na stránce vlastností. `AfxOleRegisterPropertyPageClass` aktualizace registru s názvem stránky vlastností a jeho umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](/windows/desktop/ProcThread/about-processes-and-threads) v sadě Windows SDK.  
   
 ### <a name="requirements"></a>Požadavky  
   **Hlavička** afxctl.h  

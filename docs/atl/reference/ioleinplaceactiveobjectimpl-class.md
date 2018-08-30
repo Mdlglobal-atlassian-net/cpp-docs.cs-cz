@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213320"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Ioleinplaceactiveobjectimpl – třída
 Tato třída poskytuje metody pro pomoc komunikace mezi ovládací prvek na místě a jeho kontejneru.  
@@ -66,7 +66,7 @@ class IOleInPlaceActiveObjectImpl
   
   
 ## <a name="remarks"></a>Poznámky  
- [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) rozhraní pomáhá zajistit komunikaci mezi ovládací prvek na místě a jeho kontejneru; například komunikaci aktivní stav ovládacího prvku a kontejner a informuje ovládací prvek potřebuje pro změnu velikosti samotný. Třída `IOleInPlaceActiveObjectImpl` poskytuje výchozí implementaci třídy `IOleInPlaceActiveObject` a podporuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
+ [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) rozhraní pomáhá zajistit komunikaci mezi ovládací prvek na místě a jeho kontejneru; například komunikaci aktivní stav ovládacího prvku a kontejner a informuje ovládací prvek potřebuje pro změnu velikosti samotný. Třída `IOleInPlaceActiveObjectImpl` poskytuje výchozí implementaci třídy `IOleInPlaceActiveObject` a podporuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
  **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) ve Windows SDK.  
+ Zobrazit [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) ve Windows SDK.  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Umožňuje nemodálních dialogových oken.  
@@ -102,7 +102,7 @@ HRESULT EnableModeless(BOOL fEnable);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) ve Windows SDK.  
+ Zobrazit [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) ve Windows SDK.  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Kontejner volá tuto funkci chcete-li získat popisovač okna ovládacího prvku.  
@@ -114,7 +114,7 @@ HRESULT GetWindow(HWND* phwnd);
 ### <a name="remarks"></a>Poznámky  
  S ovládacím prvkem, který je bez oken, i když je aktuálně oddílové nebudou fungovat některé kontejnery. V implementaci ATL Pokud `CComControl::m_bWasOnceWindowless` datový člen je hodnota TRUE, vrátí příslušná funkce E_FAIL. Jinak, pokud \* *phwnd* nemá hodnotu NULL, `GetWindow` přiřadí *phwnd* na datový člen třídy ovládacího prvku `m_hWnd` a vrátí hodnotu S_OK.  
   
- Zobrazit [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) ve Windows SDK.  
+ Zobrazit [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) ve Windows SDK.  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.  
@@ -127,7 +127,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) ve Windows SDK.  
+ Zobrazit [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) ve Windows SDK.  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno rámce nejvyšší úrovně kontejneru.  
@@ -140,7 +140,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) ve Windows SDK.  
+ Zobrazit [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) ve Windows SDK.  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Informuje o ovládacím prvku, které že potřebuje ke změně velikosti jeho okrajů.  
@@ -156,7 +156,7 @@ HRESULT ResizeBorder(
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) ve Windows SDK.  
+ Zobrazit [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) ve Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Zpracovává zprávy nabídky přístupové klíče z kontejneru.  
@@ -173,9 +173,9 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
  S_FALSE, je-li zprávy nebyl přeložen.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) ve Windows SDK.  
+ Zobrazit [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [CComControl – třída](../../atl/reference/ccomcontrol-class.md)  
- [Rozhraní – ovládací prvky ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)  
+ [Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)  
  [Přehled tříd](../../atl/atl-class-overview.md)

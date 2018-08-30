@@ -1,5 +1,5 @@
 ---
-title: strtok –, _strtok_l –, wcstok –, _wcstok_l –, _mbstok –, _mbstok_l – | Microsoft Docs
+title: strtok – _strtok_l –, wcstok –, _wcstok_l –, _mbstok –, _mbstok_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451794"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210870"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
-Vyhledá na další token v řetězci, pomocí aktuální národní prostředí nebo zadaný národní prostředí, který se předává v. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [strtok_s –, _strtok_s_l –, wcstok_s –, _wcstok_s_l –, _mbstok_s –, _mbstok_s_l –](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
+Vyhledá další token v řetězci pomocí aktuálního národního prostředí nebo zadaného národního prostředí, které je předáno. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [strtok_s – _strtok_s_l –, wcstok_s –, _wcstok_s_l –, _mbstok_s –, _mbstok_s_l –](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok –** a **_mbstok_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok –** a **_mbstok_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,36 +93,36 @@ unsigned char *_mbstok(
 
 ### <a name="parameters"></a>Parametry
 
-*strToken*<br/>
+*tokenu %{strtoken/*<br/>
 Řetězec obsahující token nebo tokeny.
 
 *strDelimit*<br/>
 Sada oddělovacích znaků.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na další token nalezen v *strToken*. Vracejí **NULL** při nebyly nalezeny žádné další tokeny. Každé volání upraví *strToken* nahrazením znak hodnoty null pro první oddělovač, který se nachází po vrácený token.
+Vrací ukazatel na další token v parametru *tokenu %{strtoken/*. Vrátí **NULL** když nejsou nalezeny žádné další tokeny. Každé volání upraví parametr *tokenu %{strtoken/* nahrazením znaku null prvního oddělovače, ke které dojde po vráceném tokenu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strtok –** funkce vyhledá na další token v *strToken*. Sadu znaků *strDelimit* Určuje možné oddělovače token, který má být nalezena v *strToken* v aktuálním volání. **wcstok –** a **_mbstok –** jsou široká charakterová a vícebajtových znaků verze **strtok –**. Argumenty a vrací hodnotu **wcstok –** jsou široká charakterová řetězce; u **_mbstok –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+**Strtok –** funkce vyhledá další token v *tokenu %{strtoken/*. Sady znaků v *strDelimit* Určuje možné oddělovače tokenu, který má být vyhledána v *tokenu %{strtoken/* při aktuálním volání. **wcstok –** a **_mbstok –** jsou širokoznaké a vícebajtové verze **strtok –**. Argumenty a vrácené hodnoty **wcstok –** jsou širokoznaké řetězce **_mbstok –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
 
 > [!IMPORTANT]
-> Tyto funkce zpoplatněná potenciální hrozbu způsobené problém přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti problémy jsou často metodu systému útoku, výsledkem bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce se vám účtovat potenciální ohrožení způsobené problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti jsou častou metodou útoku na systém. Výsledkem je negarantované zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Při prvním volání **strtok –**, funkce Přeskočí úvodní oddělovače a vrací ukazatel na první token v *strToken*, ukončení token s znak hodnoty null. Další tokeny, lze zjistit mimo zbytek *strToken* řadou volání **strtok –**. Každé volání **strtok –** upraví *strToken* vložením znak hodnoty null po **tokenu** vrácený toto volání. Ke čtení na další token z *strToken*, volání **strtok –** s **NULL** hodnota *strToken* argument. **NULL** *strToken* argument příčiny **strtok –** pro vyhledávání na další token v upravenou *strToken*. *StrDelimit* argument může trvat libovolná hodnota od jednoho volání na další, tak, aby sada oddělovače se může lišit.
+Při prvním volání **strtok –**, funkce Přeskočí úvodní oddělovače a vrátí ukazatel na první token v *tokenu %{strtoken/*, ukončí token znakem null. Další tokeny lze zjistit ze zbytku parametru *tokenu %{strtoken/* řadou volání **strtok –**. Každé volání **strtok –** upraví *tokenu %{strtoken/* vložením znaku null za **token** vrácený tímto voláním. Přečíst další token z *tokenu %{strtoken/*, volání **strtok –** s **NULL** hodnota *tokenu %{strtoken/* argument. **NULL** *tokenu %{strtoken/* způsobí, že argument **strtok –** k vyhledání další token v upraveném *tokenu %{strtoken/*. *StrDelimit* argument přijímá jakoukoli hodnotu z jednoho volání na další tak, aby se sada oddělovačů může lišit.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Jednotlivé funkce používá statické proměnné místním k analýze řetězec do tokenů. Více vláken tedy můžete volat současně tyto funkce bez nežádoucí účinky. Ale v rámci jedním vláknem, prokládání volání na jednu z těchto funkcí je velmi pravděpodobné vytvořit poškození dat a nepřesné výsledky. Při analýze různé řetězce, dokončete před zahájením analyzovat další analýza jeden řetězec. Také znát potenciální nebezpečí při volání jednu z těchto funkcí z v rámci smyčku, kde je volán jinou funkci. Pokud jiné funkce skončí pomocí jedné z těchto funkcí, bude výsledek prokládaná posloupnost volání, aktivuje poškození dat.
+> Každá funkce používá statická proměnná místního vlákna k analýze řetězec do tokenů. Proto více vláken může současně volání těchto funkcí bez nežádoucí účinky. Nicméně v jednom vlákně, prokládání volání jedné z těchto funkcí je velmi pravděpodobné vytvářejí poškození dat a jejich výsledky. Při analýze různých řetězců, dokončete parsování jeden řetězec před zahájením k další analýze. Navíc být vědomi potenciální nebezpečí při volání jedné z těchto funkcí z v rámci smyčky, kde je volán jiné funkci. Pokud jiná funkce končí pomocí jedné z těchto funkcí, budou výsledkem prokládané posloupnost volání, aktivuje poškození dat.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok –**|**strtok –**|**_mbstok –**|**wcstok –**|
 |**_tcstok –**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
@@ -135,7 +135,7 @@ Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastav
 |**wcstok –**|\<String.h > nebo \<wchar.h >|
 |**_mbstok –**, **_mbstok_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -183,7 +183,7 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

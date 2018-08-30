@@ -1,5 +1,5 @@
 ---
-title: Nastavení klávesové zkratky | Microsoft Docs
+title: Nastavení klávesové zkratky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379642"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219394"
 ---
 # <a name="setting-a-hot-key"></a>Nastavení klávesové zkratky
-Aplikace můžete použít informace poskytované klávesové zkratky ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) ovládacího prvku v jednom ze dvou způsobů:  
+Aplikace můžete použít klávesovou zkratku na základě informací poskytnutých ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) ovládacího prvku v jednom ze dvou způsobů:  
   
--   Nastavit globální klávesové zkratky pro aktivaci okno nonchild odesláním [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) zpráva do okna chcete aktivovat.  
+-   Nastavení globální klávesové zkratky pro aktivaci okno nonchild odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávu do okna aktivaci.  
   
--   Nastavení klávesové zkratky specifické pro vlákno voláním funkce systému Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+-   Nastavení klávesové zkratky specifické pro vlákno voláním funkce Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

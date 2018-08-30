@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196204"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C++)
 **Specifické pro Microsoft**  
@@ -56,7 +56,7 @@ struct llist_t {
  Ukazateli `vpBuffer` je přiřazena adresa paměti, která je přidělena v programu později. Propojený seznam je přemístěn vzhledem k hodnotě `vpBuffer`.  
   
 > [!NOTE]
->  Zachování identifikátorů obsahujících ukazatele lze dosáhnout také pomocí [soubory mapované paměti](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Zachování identifikátorů obsahujících ukazatele lze dosáhnout také pomocí [soubory mapované paměti](/windows/desktop/Memory/file-mapping).  
   
  Při dereferenci ukazatele základní třídy musí být základ buď explicitně zadán, nebo implicitně znám prostřednictvím deklarace.  
   

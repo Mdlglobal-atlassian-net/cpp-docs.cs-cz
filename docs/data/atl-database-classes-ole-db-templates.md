@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337882"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218985"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu rozhraní modelu COM, které poskytují jednotný přístup k datům v rozličnými zdroji informací a formátů.  OLE DB je oficiálně zastaralé; Tato dokumentace je pro vývojáře, kteří jsou zachování starší verze kódu. Nové aplikace měla použít pro připojení ke zdrojům dat SQL ODBC.
@@ -46,4 +46,4 @@ Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu r
  [Vytvoření zprostředkovatele OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [Reference šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Reference šablon zprostředkovatele OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB – Ukázky šablon](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB – Ukázky šablon](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

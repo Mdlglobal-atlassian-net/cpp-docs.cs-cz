@@ -1,5 +1,5 @@
 ---
-title: _spawn, _wspawn – funkce | Microsoft Docs
+title: _spawn, _wspawn – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -55,15 +55,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201260"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn – funkce
-Každý z `_spawn` funkce vytvoří a spustí nový proces:  
+Každá z `_spawn` funkcí vytvoří a spustí nový proces:  
   
 |||  
 |-|-|  
@@ -72,22 +72,22 @@ Každý z `_spawn` funkce vytvoří a spustí nový proces:
 |[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|  
 |[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|  
   
- Písmen na konci názvu funkce určit variaci.  
+ Písmen na konci názvu funkce určit variantu.  
   
  `e`  
- `envp`, pole ukazatelů pro nastavení prostředí, je předán nový proces.  
+ `envp`, pole ukazatelů do nastavení prostředí, je předán do nového procesu.  
   
  `l`  
- Argumenty příkazového řádku jsou funkci `_spawn` předány jednotlivě. Tato přípona se obvykle používá, když počet parametrů pro nový proces se označuje předem.  
+ Argumenty příkazového řádku jsou funkci `_spawn` předány jednotlivě. Tato přípona se obvykle používá, pokud je počet parametrů nového procesu předem známý.  
   
  `p`  
  Proměnná prostředí `PATH` slouží k vyhledání souboru, který chcete spustit.  
   
  `v`  
- `argv`, pole ukazatelů pro argumenty příkazového řádku, je předán `_spawn` funkce. Tato přípona se obvykle používá, když počet parametrů pro nový proces je proměnná.  
+ `argv`, pole ukazatelů do argumentů příkazového řádku je předán `_spawn` funkce. Tato přípona se obvykle používá, když je počet parametrů nového procesu proměnná.  
   
 ## <a name="remarks"></a>Poznámky  
- `_spawn` Funkce každý vytvoření a provedení nový proces. Budou automaticky zpracovávat argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používán. `_wspawn` Funkce jsou široká charakterová verzích `_spawn` funkce; nezpracuje řetězců vícebajtových znaků. Jinak `_wspawn` funkce chovají stejně jako na jejich `_spawn` svými protějšky.  
+ `_spawn` Funkce každá vytvoření a spuštění nového procesu. Jsou automaticky zpracovává argumenty vícebajtových řetězců znaků podle potřeby, rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která aktuálně používán. `_wspawn` Funkce jsou širokoznaké verze `_spawn` funkce; že nezpracovávají vícebajtové znakové řetězce. V opačném případě `_wspawn` funkce se chovají stejně jako jejich `_spawn` protějšky.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -102,61 +102,61 @@ Každý z `_spawn` funkce vytvoří a spustí nový proces:
 |`_tspawnvp`|`_spawnvp`|`_spawnvp`|`_wspawnvp`|  
 |`_tspawnvpe`|`_spawnvpe`|`_spawnvpe`|`_wspawnvpe`|  
   
- Dostatek paměti musí být k dispozici pro načítání a provádění nový proces. `mode` Argument určuje akci provedenou volající proces před a během `_spawn`. Následující hodnoty pro `mode` jsou definovány v Process.h:  
+ Dostatek paměti musí být k dispozici pro načtení a spuštění nového procesu. `mode` Argument určuje akci provedenou na základě volajícího procesu před a během `_spawn`. Následující hodnoty pro `mode` jsou definovány v Process.h:  
   
  `_P_OVERLAY`  
- Překryvy a volání zpracovat nový proces, zničení volajícího procesu (stejné jako ovlivňuje `_exec` volání).  
+ Překrytí a volání zpracovat nový proces ničení volajícího procesu (stejný vliv jako `_exec` volání).  
   
  `_P_WAIT`  
- Pozastaví volající vlákno až do dokončení provádění nový proces (synchronní `_spawn`).  
+ Pozastaví volající vlákno, dokud se nedokončí spuštění nového procesu (synchronní `_spawn`).  
   
  `_P_NOWAIT` Nebo `_P_NOWAITO`  
- Bude pokračovat v provádění volající proces souběžně nový proces (asynchronní `_spawn`).  
+ Pokračuje v provádění volající proces současně nový proces (asynchronní `_spawn`).  
   
  `_P_DETACH`  
- Bude pokračovat v provádění procesu volání. Nový proces běží na pozadí se žádný přístup do konzole nebo klávesnice. Volání `_cwait` proti nový proces nezdaří (asynchronní `_spawn`).  
+ Pokračuje v provádění procesu volání. Nový proces běží na pozadí bez přístupu konzoly nebo klávesnice. Volání `_cwait` proti nový proces selže (asynchronní `_spawn`).  
   
- `cmdname` Argument určuje soubor, který se spustí jako nový proces a můžete určit úplnou cestu (z kořene), část cesty (z aktuálního pracovního adresáře) nebo pouze název souboru. Pokud `cmdname` nemá příponu názvu souboru nebo nekončí tečkou (.), `_spawn` funkce poprvé pokusí .com příponu názvu souboru a pak příponu názvu souboru .exe, .bat příponu názvu souboru a nakonec .cmd příponu názvu souboru.  
+ `cmdname` Argument určuje soubor, který je spuštěn jako nový proces a můžete zadat úplnou cestu (z kořenového adresáře), část cesty (z aktuálního pracovního adresáře) nebo pouze název souboru. Pokud `cmdname` nemá příponu názvu souboru nebo nekončí tečkou (.), `_spawn` funkce poprvé pokusí příponu názvu souboru .com a poté příponu názvu souboru .exe, .bat příponu názvu souboru a nakonec příponu názvu souboru .cmd.  
   
- Pokud `cmdname` má příponu názvu souboru, pouze zda se používá rozšíření. Pokud `cmdname` končí tečkou, `_spawn` volání hledá `cmdname` s bez přípony názvu souboru. `_spawnlp`, `_spawnlpe`, `_spawnvp`, A `_spawnvpe` funkce Hledat `cmdname` (pomocí stejné postupy) v adresářích určeného `PATH` proměnné prostředí.  
+ Pokud `cmdname` má příponu názvu souboru, pouze že se používá rozšíření. Pokud `cmdname` končí tečkou, `_spawn` volání vyhledá `cmdname` bez přípony názvu souboru. `_spawnlp`, `_spawnlpe`, `_spawnvp`, A `_spawnvpe` funkce hledání `cmdname` (s použitím stejné postupy) v adresářích určených `PATH` proměnné prostředí.  
   
- Pokud `cmdname` obsahuje specifikátor jednotky nebo všechny lomítka (tj. Pokud se jedná o relativní cestu), `_spawn` volání vyhledá jenom zadaný soubor; žádná cesta hledání probíhá.  
+ Pokud `cmdname` obsahuje specifikátor jednotky nebo jakákoli lomítka (tj. Pokud se jedná o relativní cestu), `_spawn` volání vyhledá pouze zadaný soubor; žádná cesta hledání se provádí.  
   
- V minulosti, některé z těchto funkcí sady `errno` na nulové na úspěšné provedení; je ponechat aktuální chování `errno` nezměněné v případě úspěchu podle standardu C. Pokud potřebujete emulují staré chování, nastavte `errno` na nulu bezprostředně před volání těchto funkcí.  
+ V minulosti, některé z těchto funkcí sady `errno` na nulovou na úspěšné provedení; aktuální chování je ponechat `errno` zůstanou v případě úspěchu, jak je uvedeno ve standardu C. Pokud potřebujete emulovat staré chování, nastavte `errno` na nulu bezprostředně před volání těchto funkcí.  
   
 > [!NOTE]
->  Chcete-li zajistit správné překrytí inicializace a ukončování, nepoužívejte `setjmp` nebo `longjmp` funkce zadejte nebo tyto rutiny překrytí.  
+>  Aby se zajistilo správné překrytí inicializace a ukončování, nepoužívejte `setjmp` nebo `longjmp` funkce a zadejte skript nebo ponechte rutiny překrytí.  
   
-## <a name="arguments-for-the-spawned-process"></a>Argumenty pro proces spuštěný  
- Předání argumentů do nový proces, předáte jednoho nebo víc ukazatelů řetězce znaků jako argumentů `_spawn` volání. Tyto řetězce znaků představují seznam argumentů pro proces spuštěný. Celková délka řetězce, které tvoří seznam argumentů pro nový proces nesmí překročit 1024 bajtů. Ukončovací znak hodnoty null (\0) pro každý řetězec není zahrnutí do počtu, ale místo znaků (automaticky vložit do samostatné argumenty) jsou zahrnuty.  
+## <a name="arguments-for-the-spawned-process"></a>Argumenty pro nové kopie procesu  
+ Předání argumentů do nového procesu, poskytují jednoho nebo víc ukazatelů na řetězce znaků jako argumenty v `_spawn` volání. Tyto řetězce znaků tvoří seznam argumentů pro spuštěný proces. Celková délka řetězce, které tvoří seznamu argumentů nového procesu nesmí překročit 1024 bajtů. Ukončující znak null ('\0') pro každý řetězec není v tomto počtu zahrnut, ale znaky mezery (automaticky vložit do samostatné argumenty) jsou zahrnuty.  
   
 > [!NOTE]
 >  Mezery vložené do řetězců mohou způsobit neočekávané chování, například výsledkem předání řetězce `_spawn` funkci `"hi there"` bude nový proces, který získá dva argumenty `"hi"` a `"there"`. Proces selže, pokud bylo záměrem, aby nový proces otevřel soubor s názvem "hi there". Tomu lze zabránit citováním řetězce: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Nepředávejte funkci `_spawn` vstup uživatele bez explicitní kontroly jeho obsahu. `_spawn` bude mít za následek volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) , mějte na paměti tato nekvalifikované cesta názvy může vést k potenciální ohrožení zabezpečení.  
+>  Nepředávejte funkci `_spawn` vstup uživatele bez explicitní kontroly jeho obsahu. `_spawn` Výsledkem bude volání [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) myslete že neúplné názvy cest mohou vést k potenciálním zranitelnostem zabezpečení.  
   
- Argument ukazatele můžete předat jako samostatné argumenty (v `_spawnl`, `_spawnle`, `_spawnlp`, a `_spawnlpe`) nebo jako pole ukazatele (v `_spawnv`, `_spawnve`, `_spawnvp`, a `_spawnvpe`). Musíte zadat alespoň jeden argument, `arg0` nebo `argv`[0], k proces spuštěný. Podle konvence tento argument je název aplikace, jako by ji zadejte na příkazovém řádku. Jinou hodnotu nevytváří k chybě.  
+ Můžete předat argument ukazatele jako samostatné argumenty (v `_spawnl`, `_spawnle`, `_spawnlp`, a `_spawnlpe`) nebo jako pole ukazatelů (v `_spawnv`, `_spawnve`, `_spawnvp`, a `_spawnvpe`). Je nutné předat aspoň jeden argument, `arg0` nebo `argv`[0], do nové kopie procesu. Podle konvence tento argument je název aplikace, jako by ji zadejte na příkazovém řádku. Různé hodnota nevyvolá chybu.  
   
- `_spawnl`, `_spawnle`, `_spawnlp`, A `_spawnlpe` volání jsou obvykle používány v případech, kde je předem známo počet argumentů. `arg0` Argument je obvykle ukazatel na `cmdname`. Argumenty `arg1` prostřednictvím `argn` jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Následující `argn`, musí existovat **NULL** ukazatel na konec seznamu argumentů.  
+ `_spawnl`, `_spawnle`, `_spawnlp`, A `_spawnlpe` volání se obvykle používají v případech, kde je počet argumentů, které předem známý. `arg0` Argument je obvykle ukazatel na `cmdname`. Argumenty `arg1` prostřednictvím `argn` jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Následující `argn`, musí existovat **NULL** ukazatel k označení konce seznamu argumentů.  
   
- `_spawnv`, `_spawnve`, `_spawnvp`, A `_spawnvpe` volání jsou užitečné, když je proměnný počet argumentů pro nový proces. Ukazatelé na argumenty jsou předány jako pole, `argv` *.* Argument `argv`[0] je obvykle ukazatel na cestu v reálném režimu nebo název programu v chráněném režimu, a `argv`[1] prostřednictvím `argv`[`n`] jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Argument `argv`[`n` + 1] musí být **NULL** ukazatel na konec seznamu argumentů.  
+ `_spawnv`, `_spawnve`, `_spawnvp`, A `_spawnvpe` volání jsou užitečné, když je proměnný počet argumentů novému procesu. Ukazatelé na argumenty jsou předány jako pole, `argv` *.* Argument `argv`[0] je obvykle ukazatel na cestu v reálném režimu nebo na název programu v chráněném režimu, a `argv`[1] až `argv`[`n`] jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Argument `argv`[`n` + 1] musí být **NULL** ukazatel k označení konce seznamu argumentů.  
   
-## <a name="environment-of-the-spawned-process"></a>Prostředí proces spuštěný  
- Soubory, které jsou při otevření `_spawn` volání zůstaly otevřené v novém procesu. V `_spawnl`, `_spawnlp`, `_spawnv`, a `_spawnvp` volání, nový proces dědí prostředí volajícího procesu. Můžete použít `_spawnle`, `_spawnlpe`, `_spawnve`, a `_spawnvpe` volání změnit prostředí pro nový proces předávání seznam nastavení prostředí prostřednictvím `envp` argument. Argument `envp` je pole znak ukazatele každý prvek (s výjimkou poslední element), které odkazuje na řetězec ukončené hodnotou null definování proměnné prostředí. Takové řetězec obvykle má tento formulář `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je řetězcovou hodnotu, na kterou je nastavena tuto proměnnou. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední elementu `envp` pole by měla být **NULL**. Když `envp` sám o sobě představuje **NULL**, proces spuštěný dědí nastavení prostředí nadřazeného procesu.  
+## <a name="environment-of-the-spawned-process"></a>Prostředí vytvořeném podřízeném procesu  
+ Při otevření souborů, které jsou `_spawn` je uskutečněn hovor, zůstanou otevřené v novém procesu. V `_spawnl`, `_spawnlp`, `_spawnv`, a `_spawnvp` volání, nový proces zdědí prostředí volajícího procesu. Můžete použít `_spawnle`, `_spawnlpe`, `_spawnve`, a `_spawnvpe` změní prostředí nového procesu tím, že předáte seznam nastavení prostředí prostřednictvím volání `envp` argument. Argument `envp` je pole ukazatelů na znaky, kde každý prvek (s výjimkou posledního prvku) odkazuje na null ukončující řetězec definující proměnnou prostředí. Takový řetězec má obvykle tvar `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je hodnota řetězce, do které tato proměnná nastavena. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední prvek `envp` pole by měla být **NULL**. Když `envp` sám o sobě **NULL**, spuštěný proces zdědí nastavení prostředí z nadřazeného procesu.  
   
- `_spawn` Funkce můžete předat všechny informace o otevřených souborů, včetně překladu režim, nový proces. Tyto informace je předán v reálném režimu prostřednictvím `C_FILE_INFO` položky v prostředí. Kód spuštění normálně zpracuje tuto položku a odstraní ji z prostředí. Ale pokud `_spawn` funkce vytvoří proces jiný C, tato položka zůstane v prostředí. Tisk v prostředí zobrazí grafiky znaků v řetězci definice pro tuto položku, protože informace o prostředí, je předaná binárního formátu v reálném režimu. By neměl mít žádný vliv na běžný provoz. V chráněném režimu informace o prostředí je předán v textové podobě a proto nejsou žádné grafické znaky.  
+ `_spawn` Funkce můžete předat všechny informace o otevřených souborů, včetně režimu překladu novému procesu. Tyto informace je předána v reálném režimu prostřednictvím `C_FILE_INFO` položky v prostředí. Spouštěcí kód obvykle zpracovává tuto položku a odstraní ji z prostředí. Nicméně pokud `_spawn` funkce vytvoří proces jazyka C, tato položka zůstane v prostředí. Tisk prostředí zobrazí grafické znaky v řetězci definice pro tuto položku, protože informace o prostředí v reálném režimu předána v binárním formátu. By neměl mít žádný vliv na běžný provoz. Informace o prostředí v chráněném režimu, se předává v textové podobě a proto neobsahuje žádné grafické znaky.  
   
- Musíte explicitně flush (pomocí `fflush` nebo `_flushall`) nebo zavřete jakýkoli proud před voláním `_spawn` funkce.  
+ Je nutné provést explicitní vyprázdnění (pomocí `fflush` nebo `_flushall`) nebo všechny proudy zavřít před voláním `_spawn` funkce.  
   
- Nové procesů vytvořených službou volání `_spawn` rutiny nezachováte signál nastavení. Místo toho proces spuštěný obnoví na výchozí nastavení signál.  
+ Nových procesů vytvořených pomocí volání `_spawn` rutiny Nezachovávat hodnotu nastavení signálu. Místo toho spuštěný proces resetuje na výchozí hodnotu nastavení signálu.  
   
-## <a name="redirecting-output"></a>Přesměrování výstupu  
- Při volání `_spawn` z knihovny DLL nebo aplikace pro grafické uživatelské rozhraní a chcete přesměrujte výstup do kanálu, máte dvě možnosti:  
+## <a name="redirecting-output"></a>Přesměrovat výstup  
+ Pokud voláte `_spawn` z knihovny DLL nebo aplikace s grafickým uživatelským rozhraním a chcete přesměrovat výstup do kanálu, máte dvě možnosti:  
   
--   Použít rozhraní API Win32 k vytvoření kanálu, pak zavolají [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944), nastavte hodnoty popisovač ve struktuře spuštění a volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425).  
+-   Použít rozhraní API systému Win32 k vytvoření kanálu, potom zavolejte [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), nastavte popisovač hodnoty ve struktuře spuštění a volání [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).  
   
--   Volání [_popen –, _wpopen –](../c-runtime-library/reference/popen-wpopen.md) kterého bude kanál a vyvolání aplikace pomocí **cmd.exe /c** (nebo **command.exe /c**).  
+-   Volání [_popen – _wpopen –](../c-runtime-library/reference/popen-wpopen.md) který vytvoří kanál a vyvolání aplikace pomocí **cmd.exe /c** (nebo **command.exe /c**).  
   
 ## <a name="example"></a>Příklad  
   
@@ -246,9 +246,9 @@ from SPAWN!
  [Přerušení](../c-runtime-library/reference/abort.md)   
  [AtExit](../c-runtime-library/reference/atexit.md)   
  [_exec, _wexec – funkce](../c-runtime-library/exec-wexec-functions.md)   
- [ukončení, _exit –, _exit –](../c-runtime-library/reference/exit-exit-exit.md)   
+ [ukončit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
  [_flushall –](../c-runtime-library/reference/flushall.md)   
- [_getmbcp –](../c-runtime-library/reference/getmbcp.md)   
+ [_getmbcp](../c-runtime-library/reference/getmbcp.md)   
  [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
  [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

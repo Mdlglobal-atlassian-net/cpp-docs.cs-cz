@@ -1,5 +1,5 @@
 ---
-title: ATL – body připojení | Microsoft Docs
+title: ATL – body připojení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354665"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202917"
 ---
 # <a name="atl-connection-points"></a>ATL – body připojení
-Objekt umožňující připojení je ten, který podporuje odchozí rozhraní. Odchozí rozhraní umožňuje objekt ke komunikaci s klientem. Objekt umožňující připojení odchozích rozhraní, zpřístupní bod připojení. Každý odchozí rozhraní je implementováno klientem na objektu s názvem jímky.  
+Objekt umožňující připojení k je ten, který podporuje odchozí rozhraní. Odchozí rozhraní umožňuje objektu ke komunikaci s klientem. Pro každé rozhraní odchozí zpřístupňuje umožňující připojení k objektu spojovacího bodu. Každý odchozí rozhraní je implementováno klienta v objektu s názvem jímky.  
   
  ![Body připojení](../atl/media/vc2zw31.gif "vc2zw31")  
   
- Každý bod připojení podporuje [IConnectionPoint –](http://msdn.microsoft.com/library/windows/desktop/ms694318) rozhraní. Objekt umožňující připojení zveřejňuje jeho body připojení klienta prostřednictvím [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) rozhraní.  
+ Každý bod připojení podporuje [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) rozhraní. Objekt umožňující připojení k zpřístupňuje jeho spojovací body do klienta prostřednictvím [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) rozhraní.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [ATL – třídy bodu připojení](../atl/atl-connection-point-classes.md)  
- Stručně popisuje třídy ATL, které podporují body připojení.  
+ Stručně popisuje ATL – třídy, které podporují spojovací body.  
   
  [Přidání bodů připojení objektu](../atl/adding-connection-points-to-an-object.md)  
- Popisuje postup použít k přidání body připojení k objektu.  
+ Popisuje postup pro přidání bodů připojení objektu.  
   
  [ATL – příklad bodu připojení](../atl/atl-connection-point-example.md)  
  Poskytuje příklad deklarování bod připojení.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
+ Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)

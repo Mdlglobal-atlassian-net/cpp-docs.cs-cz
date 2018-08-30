@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214466"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 Události sestavení je příkaz, který provádí MSBuild v určité fázi v procesu sestavení. *Před sestavením* před začátkem sestavování dojde k události; *před propojením* před spuštěním kroku odkazu; dojde k události a *po sestavení* výskytu události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že nastane přidružené sestavení. Například událost před propojením nedojde, pokud krok propojení se nespustí.  
   
  Všech událostí tři sestavení je reprezentován ve skupině definice příkazu elementu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který je zobrazí, když **MSBuild** provádí události sestavení. Každý element je volitelný a pokud chcete zadat více než jednou stejného elementu, posledního výskytu přednost.  
   
- Volitelně *použít v sestavení* – element (`<`* sestavení – událost ***UseInBuild**`>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.  
+ Volitelně *použít v sestavení* – element (`<`*události sestavení*`UseInBuild>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.  
   
  V následující tabulce jsou uvedeny jednotlivých prvků XML události sestavení:  
   

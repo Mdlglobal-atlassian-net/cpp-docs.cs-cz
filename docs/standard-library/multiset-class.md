@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220972"
 ---
 # <a name="multiset-class"></a>multiset – třída
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* typ dat prvku, který bude uložen do multisady.
+*Key*<br/>
+ Typ dat prvku, který bude uložen do multisady.
 
-*Porovnání* typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků klíče řazení pro určení jejich relativního pořadí v multisadě. Binární predikát **méně**\<Key > je výchozí hodnota.
+*Compare*<br/>
+ Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v multisadě. Binární predikát **méně**\<Key > je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je **alokátoru ***\<klíče >.*
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíče prvků lze porovnat z multisady.
+*Klíč*<br/>
+ Klíč prvky lze porovnat z multisady.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozici elementu, který má být odebrán.
+*kde*<br/>
+ Pozice prvku, který má být odebrán.
 
-*První* pozice prvního prvku odeberou.
+*první*<br/>
+ Pozice prvního prvku, který má být odebrán.
 
-*Poslední* pozice bezprostředně za posledním prvkem, která se má odebrat.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Klíč* hodnota klíče prvků, které mají být odebrány.
+*Key*<br/>
+ Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* k porovnání s klíči řazení prvek z multiset vyhledávaná hodnota klíče.
+*Klíč*<br/>
+ Hodnota klíče k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1575,7 +1586,7 @@ multiset (
 |-|-|
 |*Al*|Třída úložiště alokátoru má být použit pro tento objekt multiset – výchozí nastavení je `Allocator`.|
 |*Kompozice*|Funkce porovnání typu `const Compare` používají k seřazení prvků v multisadě, kde je použit výchozí `Compare`.|
-|*Doprava*|Multiset je vytvořený multiset kopií.|
+|*doprava*|Multiset je vytvořený multiset kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* multiset argument poskytující prvky pro záměnu s multiset cíl.
+*doprava*<br/>
+ Třída multiset argument poskytující prvky pro záměnu s multiset cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2307,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Nastavení > Členové](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<Nastavení > Členové](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Kontejnery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606837"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206458"
 ---
 # <a name="event--c-component-extensions"></a>event (rozšíření komponent C++)
 
@@ -85,7 +85,7 @@ Můžete použít **operátory +=** a **operator-=** přidávat a odebírat udá
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [události (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Další informace najdete v tématu [události (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Pokud chcete přidat a pak odebrat obslužnou rutinu události, je nutné uložit, který je vrácen operace přidání struktury EventRegistrationToken. V operaci odebrání pak musíte použít uložené struktura EventRegistrationToken k identifikaci obslužná rutina události, která se má odebrat.
 

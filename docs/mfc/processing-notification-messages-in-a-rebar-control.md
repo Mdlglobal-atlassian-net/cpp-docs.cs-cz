@@ -1,5 +1,5 @@
 ---
-title: Zpracování zpráv s oznámením v ovládacím prvku matrice | Microsoft Docs
+title: Zpracování zpráv s oznámením v ovládacím prvku matrice | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dce09e84e9a2b5262d05847746f819a122ec36c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208972"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Zpracování zpráv s oznámením v ovládacím prvku matrice
-V nadřazené třídě ovládacího prvku matrice, vytvořit `OnChildNotify` funkce obslužná rutina s příkazem přepínač pro libovolný matrice – ovládací prvek (`CReBarCtrl`) chcete zpracování zpráv s oznámením. Oznámení se odesílají do nadřazeného okna, když uživatel nastavuje tažením objekty v ovládacím prvku matrice změny rozložení pruhy matrice, odstraní pásmech z ovládacího prvku matrice a tak dále.  
+V nadřazené třídě ovládacího prvku matrice, vytvořte `OnChildNotify` funkci obslužné rutiny pomocí příkazu switch pro libovolný matrice – ovládací prvek (`CReBarCtrl`) zpracování zpráv s oznámením. Oznámení se posílají nadřazenému oknu, když uživatel přetáhne objekty nad ovládacím prvkem matrice, změny rozložení pruhy matrice, odstraní pásmech z ovládacího prvku matrice a tak dále.  
   
- Objekt ovládacího prvku matrice může odeslat následující zprávy oznámení:  
+ Objekt ovládacího prvku matrice může odeslat následující upozornění:  
   
--   RBN_AUTOSIZE poslal ovládacím prvkem matrice (vytvořeny s styl RBS_AUTOSIZE) Pokud matrice automaticky mění velikost.  
+-   RBN_AUTOSIZE odesílaných ovládacím prvkem matrice (vytvořenou pomocí stylu RBS_AUTOSIZE) Pokud matrice automaticky změní velikost sebe sama.  
   
--   RBN_BEGINDRAG odesílá ovládacím prvkem matrice, když uživatel zahájí přetahování pásmo.  
+-   RBN_BEGINDRAG odesílaných ovládacího prvku rebar, když uživatel zahájí přetahování pásmo.  
   
--   RBN_CHILDSIZE odesílá ovládacím prvkem matrice při změně velikosti vzdálené podřízeného okna.  
+-   RBN_CHILDSIZE odesílaných ovládacím prvkem matrice při změně velikosti podřízeného okna.  
   
--   RBN_DELETEDBAND odesílá ovládacím prvkem matrice po odstranění pásmo.  
+-   RBN_DELETEDBAND odesílaných ovládacím prvkem matrice po odstranění svazku.  
   
--   RBN_DELETINGBAND odesílá ovládacím prvkem matrice po pásmo má být odstraněn.  
+-   RBN_DELETINGBAND odesílaných ovládacím prvkem matrice pásmo se neodstraní.  
   
--   RBN_ENDDRAG odesílá ovládacím prvkem matrice, když uživatel přestane přetahování pásmo.  
+-   RBN_ENDDRAG odesílaných ovládacího prvku rebar, když uživatel přestane přetahovat pásmo.  
   
--   RBN_GETOBJECT poslal ovládacím prvkem matrice (vytvořeny s styl RBS_REGISTERDROP) Pokud je objekt přetažen přes vzdálené správy v ovládacím prvku.  
+-   RBN_GETOBJECT odesílaných ovládacím prvkem matrice (vytvořenou pomocí stylu RBS_REGISTERDROP) když je objekt přetažen přes vzdálené správy v rámci ovládacího prvku.  
   
--   RBN_HEIGHTCHANGE odesílá ovládacím prvkem matrice, pokud došlo ke změně jeho výšku.  
+-   RBN_HEIGHTCHANGE odesílaných ovládacího prvku rebar, když došlo ke změně jeho výška.  
   
--   RBN_LAYOUTCHANGED odesílá ovládacím prvkem matrice, když uživatel změní rozložení ovládacího prvku pásma.  
+-   RBN_LAYOUTCHANGED odesílaných ovládacího prvku rebar, když uživatel změní rozložení pásem ovládacího prvku.  
   
- Další informace o těchto oznámeních naleznete v tématu [matrice – ovládací prvek odkazu](http://msdn.microsoft.com/library/windows/desktop/bb774375) ve Windows SDK.  
+ Další informace o těchto oznámeních najdete v tématu [matrice – ovládací prvek odkazu](https://msdn.microsoft.com/library/windows/desktop/bb774375) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)   

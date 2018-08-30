@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216362"
 ---
 # <a name="statements-c"></a>Příkazy (C++)
 Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s objekty manipulováno. Tato část obsahuje:  
@@ -42,7 +42,7 @@ Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s obje
   
     -   [Jump – příkazy](../cpp/jump-statements-cpp.md). Tyto příkazy buď předají řízení na jiné místo ve funkci, nebo vrátí řízení z funkce.  
   
-    -   [Příkazy deklarace](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarace zavádějí do programu název. ([Deklarace a definice](declarations-and-definitions-cpp.md) poskytuje podrobnější informace o deklaracích.)  
+    -   [Příkazy deklarace](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarace zavádějí do programu název. ([Deklarace a definice](declarations-and-definitions-cpp.md) poskytuje podrobnější informace o deklaracích.)  
   
  Informace o příkazy zpracování výjimek naleznete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
   

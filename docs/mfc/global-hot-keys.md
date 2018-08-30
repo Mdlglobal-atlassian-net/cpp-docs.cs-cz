@@ -1,5 +1,5 @@
 ---
-title: Globální klávesové zkratky | Microsoft Docs
+title: Globální klávesové zkratky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2ef1e2135ebd780938fb0ed194a93058fd010f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344227"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209151"
 ---
 # <a name="global-hot-keys"></a>Globální klávesové zkratky
-Globální klávesové zkratky je přidružen konkrétní nonchild období. Umožňuje uživatelům aktivovat v okně libovolná součást systému. Aplikace nastaví globální klávesové zkratky pro konkrétní okno odesláním [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) zpráva, která má toto okno. Například pokud `m_HotKeyCtrl` je [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objektu a `pMainWnd` ukazatel do okna aktivovaná, při stisknutí klávesové zkratky, můžete použít následující kód k přidružení aktivní klíč zadaný v ovládacím prvku s okno na kterou odkazuje `pMainWnd`.  
+Globální klávesové zkratky je přidružen konkrétní nonchild okna. Umožňuje, aby uživatel mohl aktivovat okno z jakékoliv části systému. Aplikace nastaví globální klávesové zkratky pro konkrétní okno odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávy do tohoto okna. Například pokud `m_HotKeyCtrl` je [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objektu a `pMainWnd` je ukazatel do okna a aktivovat, když se stiskne klávesovou zkratku, můžete použít následující kód k přidružení klávesovou zkratku zadaný v ovládacím prvku s v okně odkazované `pMainWnd`.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
   
- Vždy, když uživatel stiskne Globální klávesové zkratky, obdrží určeno okno [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) zprávu, která určuje **SC_HOTKEY** jako typ příkazu. Tato zpráva taky aktivuje okně, které ji přijme. Protože zpráva neobsahuje žádné informace o přesný klávesy, která byla stisknuta, pomocí této metody není povoleno rozlišování mezi různé klávesové zkratky, které může být připojené k okně. Klávesové zkratky zůstává platná do aplikace, která odeslala **WM_SETHOTKEY** ukončí.  
+ Pokaždé, když uživatel stiskne Globální klávesové zkratky, zadané okno přijímá [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) zprávu, která určuje **SC_HOTKEY** jako typ příkazu. Tato zpráva také aktivuje okně, které obdrží. Protože tuto zprávu neobsahuje žádné informace o přesnou klávesy, která byla stisknuta v okamžiku, pomocí této metody není povoleno rozlišování mezi různé klávesové zkratky, které mohou připojit pro stejné okno. Klávesové zkratky zůstane platný až do aplikace, která odeslala **WM_SETHOTKEY** ukončí.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

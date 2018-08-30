@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206394"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ Velikost zásobníku pro nové vlákno, nebo 0.
 Seznam argumentů, které se mají předat nové vlákno, nebo **NULL**.
 
 *Zabezpečení*<br/>
-Ukazatel [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *zabezpečení* je **NULL**, popisovač nelze dědit. Musí být **NULL** pro aplikace Windows 95.
+Ukazatel [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *zabezpečení* je **NULL**, popisovač nelze dědit. Musí být **NULL** pro aplikace Windows 95.
 
 *initflag*<br/>
 Příznaky, které řídí počáteční stav nového vlákna. Nastavte *initflag* 0 spustit okamžitě, nebo k **CREATE_SUSPENDED** k vytvoření vlákna v pozastaveném stavu; použijte [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) ke spuštění vlákna. Nastavte *initflag* k **STACK_SIZE_PARAM_IS_A_RESERVATION** příznak pro použití *stack_size* jako počáteční rezervovat velikost zásobníku v bajtech; Pokud je tento příznak není zadán, *stack_size* Určuje velikost potvrzení změn.
@@ -131,7 +131,7 @@ Je bezpečnější používat **_beginthreadex** než **_beginthread**. Pokud po
 
 Můžete volat [_endthread](endthread-endthreadex.md) nebo **_endthreadex** explicitně k ukončení podprocesu; nicméně **_endthread** nebo **_endthreadex** nazývá automaticky při podproces vrací z rutiny, která je předána jako parametr. Ukončení vlákna s voláním **_endthread** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků, které jsou k vláknu přiděleny.
 
-**_endthread** automaticky uzavře popisovač vlákna, zatímco **_endthreadex** tak není. Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API. Toto chování se liší od rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) rozhraní API.
+**_endthread** automaticky uzavře popisovač vlákna, zatímco **_endthreadex** tak není. Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API. Toto chování se liší od rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) rozhraní API.
 
 > [!NOTE]
 > Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 **ExitThread** rozhraní API, abyste nezabránili systému za běhu z recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

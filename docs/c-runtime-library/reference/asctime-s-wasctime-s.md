@@ -1,5 +1,5 @@
 ---
-title: asctime_s –, _wasctime_s – | Microsoft Docs
+title: asctime_s, _wasctime_s – – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208676"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
-Převést **tm** čas struktura na řetězec znaků. Tyto funkce jsou verze [asctime –, _wasctime –](asctime-wasctime.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převést **tm** čas struktury na řetězec znaků. Tyto funkce jsou verze [asctime, _wasctime – –](asctime-wasctime.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,60 +79,60 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Ukazatel na vyrovnávací paměť pro uložení výsledném řetězci znaků. Tato funkce se předpokládá ukazatel umístění platný paměti s velikostí určeného *numberOfElements*.
+Ukazatel na vyrovnávací paměť pro ukládání výsledek řetězce znaků. Tuto funkci předpokládá ukazatel na platný paměti umístění a velikost určeného *numberOfElements*.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti používané k ukládání výsledků.
 
 *tmSource*<br/>
-Struktura času a data. Tato funkce se předpokládá ukazatel na platnou **struktura** **tm** objektu.
+Struktura času a data. Tato funkce se předpokládá ukazatel na platný **struktura** **tm** objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Pokud dojde k selhání, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, je vrácenou hodnotu chybový kód. Kódy chyb jsou definovány v kód chyby. H. Další informace najdete v tématu [errno – konstanty](../../c-runtime-library/errno-constants.md). V následující tabulce jsou uvedeny skutečné chybové kódy, vrátí všechny chybové stavy.
+Nula v případě úspěchu. Pokud dojde k selhání, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrácená hodnota je chybový kód. Kódy chyb jsou definovány v ERRNO. H. Další informace najdete v tématu [errno – konstanty](../../c-runtime-library/errno-constants.md). Skutečné chybové kódy pro všechny chybové stavy jsou uvedeny v následující tabulce.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |*Vyrovnávací paměti*|*numberOfElements*|*tmSource*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|nedojde ke změně|
-|Není **NULL** (odkazuje na platný paměti)|0|všechny|**EINVAL –**|nedojde ke změně|
-|není **hodnotu NULL.**|0 < velikost < 26|všechny|**EINVAL –**|prázdný řetězec.|
-|není **hodnotu NULL.**|>= 26|**HODNOTU NULL**|**EINVAL –**|prázdný řetězec.|
-|není **hodnotu NULL.**|>= 26|Neplatná doba struktura nebo mimo rozsah hodnoty pro součásti času|**EINVAL –**|prázdný řetězec.|
+|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platný paměti)|0|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL**|0 < velikost < 26|Všechny|**EINVAL**|Prázdný řetězec|
+|Není **NULL**|>= 26|**HODNOTU NULL**|**EINVAL**|Prázdný řetězec|
+|Není **NULL**|>= 26|Neplatný čas struktury nebo je mimo rozsah hodnoty pro součásti času|**EINVAL**|Prázdný řetězec|
 
 > [!NOTE]
-> Chyba podmínky pro **wasctime_s –** jsou podobné **asctime_s –** s tím rozdílem, že omezení velikosti se měří v slova.
+> Chybové stavy pro **wasctime_s –** jsou podobné **asctime_s –** s tím rozdílem, že omezení velikosti se měří ve slovech.
 
 ## <a name="remarks"></a>Poznámky
 
-**Asctime –** funkce převede čas uložené jako struktura na řetězec znaků. *TmSource* hodnota se obvykle získávají z volání **gmtime –** nebo **místní čas**. Obě funkce lze použít k vyplnění **tm** struktury, jak jsou definovány v čase. H.
+**Asctime –** funkce převede čas uložené jako struktury na řetězec znaků. *TmSource* hodnota se obvykle získá z volání **gmtime** nebo **localtime**. Obě funkce je možné k vyplnění **tm** struktury, jak je definováno v čase. H.
 
 |člen timeptr|Hodnota|
 |--------------------|-----------|
 |**tm_hour**|Hodiny od půlnoci (0-23)|
-|**tm_isdst**|Kladné, pokud letní čas je v platnosti; 0, pokud letní čas není platný; záporná, pokud má neznámý stav letní čas. Běhové knihovny jazyka C předpokládá Spojené státy pravidla pro implementaci výpočtu letní čas (DST).|
+|**tm_isdst**|Kladná, pokud je v platnosti; letního času 0, pokud není platná; letního času záporná, pokud stav letní čas není znám. Knihovny run-time jazyka C předpokládá použita pravidla Spojených států pro implementaci výpočtu letního času (DST).|
 |**tm_mday**|Den v měsíci (1-31)|
-|**tm_min**|Počet minut po hodině (0-59)|
-|**tm_mon**|Měsíc (0-11; Ledna = 0)|
-|**tm_sec**|Sekund za minutu (0-59)|
-|**tm_wday**|Den v týdnu (0-6; Neděle = 0)|
-|**tm_yday**|Den v roce (0-365; 1. ledna = 0)|
-|**tm_year**|Rok (aktuálního roku minus 1900)|
+|**tm_min**|Minuty po hodině (0 – 59)|
+|**tm_mon**|Měsíc (0 – 11; Leden = 0)|
+|**tm_sec**|Sekundy po minutě (0 – 59)|
+|**tm_wday**|Den v týdnu (0 – 6; Neděle = 0)|
+|**tm_yday**|Den roku (0-365; 1. ledna = 0)|
+|**tm_year**|Rok (aktuální rok minus 1900)|
 
-Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Najdete v článku [doba, _time32 –, _time64 –](time-time32-time64.md), [_ftime – _ftime32 –, _ftime64 –](ftime-ftime32-ftime64.md), a [localtime_s –, _localtime32_s –, _localtime64_s –](localtime-s-localtime32-s-localtime64-s.md) funkce informace o konfiguraci místní čas a [_tzset –](tzset.md) funkce informace o definování časové pásmo prostředí a globální proměnné.
+Řetězec převedený znak je také upravena podle nastavení místní časové pásmo. Najdete v článku [čas, _time32 –, _time64](time-time32-time64.md), [_ftime _ftime32, _ftime64](ftime-ftime32-ftime64.md), a [localtime_s – _localtime32_s –, _localtime64_s –](localtime-s-localtime32-s-localtime64-s.md) funkce informace o konfiguraci místní čas a [_tzset –](tzset.md) funkce informace o definování prostředí časové pásmo a globální proměnné.
 
-Výsledek řetězec produkovaný **asctime_s –** obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. 24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku a znak hodnoty null zabírají posledních dvou pozic řetězce. Hodnota předaná jako druhý parametr by mělo obsahovat aspoň Tento velký. Pokud je menší, kód chyby, **einval –**, bude vrácen.
+Řetězec výsledek produkovaný **asctime_s –** obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. Se používá 24hodinový formát. Všechna pole mají konstantní šířce. Znak nového řádku a znak null zabírat posledních dvou pozic řetězce. Hodnota předaná v jako druhý parametr by měl mít velké. Pokud je méně, kód chyby **EINVAL**, bude vrácen.
 
-**_wasctime_s –** je verze široká charakterová **asctime_s –**. **_wasctime_s –** a **asctime_s –** chovat jinak shodně.
+**_wasctime_s –** je verze širokého znaku **asctime_s –**. **_wasctime_s –** a **asctime_s –** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mapping"></a>Rutiny mapování obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s –**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -143,13 +143,13 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 
 ## <a name="security"></a>Zabezpečení
 
-Pokud je ukazatel vyrovnávací paměti není **NULL** a ukazatele neodkazuje na platný vyrovnávací paměť, funkce přepíše vše, co je v umístění. To může také způsobit porušení přístupu.
+Pokud ukazatel vyrovnávací paměti není **NULL** a ukazatel neodkazuje na platnou vyrovnávací paměť, funkce přepíše cokoli, co je v umístění. Také to může vést k narušení přístupu.
 
-A [přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795) může dojít, když velikost argument předaná je větší než skutečná velikost vyrovnávací paměti.
+A [přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns) může dojít, pokud je velikost předaného argumentu v větší než skutečná velikost vyrovnávací paměti.
 
 ## <a name="example"></a>Příklad
 
-Tento program umístí systémového času v dlouhých celých čísel **aclock**, překládá do struktury **newtime** a převede jej na řetězec formulář pro výstup, pomocí **asctime_s –** funkce.
+Tento program umístí systémový čas dlouhé celé číslo **aclock**, přeloží ho do struktury **newtime** a poté převádí řetězec formuláře pro výstup, pomocí **asctime_s –** funkce.
 
 ```C
 // crt_asctime_s.c
@@ -183,7 +183,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

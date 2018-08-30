@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203749"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
 Lze volně používat regulární pole stylu C nebo [std::array](../standard-library/array-class-stl.md) v jazyce C + +/ CX programu (i když [std::vector](../standard-library/vector-class.md) je často vhodnější), ale v žádné rozhraní API, který je publikován v metadatech, je nutné převést pole stylu C nebo pro vektorové [Platform::Array](../cppcx/platform-array-class.md) nebo [Platform::writeonlyarray –](../cppcx/platform-writeonlyarray-class.md) typ v závislosti na tom, jak se používá. [Platform::Array](../cppcx/platform-array-class.md) typ není tak účinné ani výkonné jako funkce [std::vector](../standard-library/vector-class.md), takže se v rámci obecných pokynů byste se měli vyhnout použití ve vnitřní kód, který provádí mnoho operací s poli elementy.  
@@ -82,12 +82,12 @@ Lze volně používat regulární pole stylu C nebo [std::array](../standard-lib
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Vyhněte se kopírování dat pomocí ArrayReference  
  V některých scénářích, kde je data předávána napříč ABI do [Platform::Array](../cppcx/platform-array-class.md)a nakonec chcete zpracovávat data v poli ve stylu jazyka C pro účinnost mezi body, můžete použít [Platform::arrayreference –](../cppcx/platform-arrayreference-class.md) Chcete-li se vyhnout operaci kopírování navíc. Při předání [Platform::arrayreference –](../cppcx/platform-arrayreference-class.md) jako argument pro parametr, který přijímá `Platform::Array`, `ArrayReference` se uloží data přímo do pole stylu C, který zadáte. Právě mějte na paměti, který `ArrayReference` nemá žádný zámek na zdrojová data tak, že data se změnily nebo odstranily v jiném vlákně, před dokončením volání, výsledky bude definováno.  
   
- Následující fragment kódu ukazuje, jak kopírovat výsledky [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operace do `Platform::Array` (vzorce) a potom nahraďte `ArrayReference` ke zkopírování dat přímo do pole stylu C:  
+ Následující fragment kódu ukazuje, jak kopírovat výsledky [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operace do `Platform::Array` (vzorce) a potom nahraďte `ArrayReference` ke zkopírování dat přímo do pole stylu C:  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Vyhněte se úniku pole jako vlastnost  
- Obecně byste se měli vyhnout vystavení `Platform::Array` typu jako vlastnost v třídy ref class, protože celého pole se vrátí i v případě, že kód klienta je pouze pokusu o přístup k jeden element. Když budete chtít pořadí kontejner zveřejnit jako vlastnost v public ref class, [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) je lepší volbou. V privátní nebo interní rozhraní API (které nejsou publikovány na metadata), zvažte použití standardní C++ kontejneru jako například [std::vector](../standard-library/vector-class.md).  
+ Obecně byste se měli vyhnout vystavení `Platform::Array` typu jako vlastnost v třídy ref class, protože celého pole se vrátí i v případě, že kód klienta je pouze pokusu o přístup k jeden element. Když budete chtít pořadí kontejner zveřejnit jako vlastnost v public ref class, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) je lepší volbou. V privátní nebo interní rozhraní API (které nejsou publikovány na metadata), zvažte použití standardní C++ kontejneru jako například [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Systém typů](../cppcx/type-system-c-cx.md)   

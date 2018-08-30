@@ -1,5 +1,5 @@
 ---
-title: Stream operace v ovládacích prvcích pro úpravy s formátováním | Microsoft Docs
+title: Stream operací v ovládacích prvcích pro úpravy s formátováním | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66afb05031b302877dfd34f64e6076f882a256d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f418156fb5be4837bc0dbe9b05b3ad26d7ac02dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379922"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196855"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operace s datovými proudy v ovládacích prvcích pro úpravy s formátováním
-Datové proudy můžete použít k přenosu dat do nebo z ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Datový proud je definované [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) strukturu, která určuje vyrovnávací paměť a funkce zpětné volání definované aplikací.  
+Datové proudy můžete použít k přenosu dat do nebo ven z ovládacího prvku ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Datový proud je určené [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) struktura, která určuje vyrovnávací paměti a funkci zpětného volání definované aplikací.  
   
- Načíst data do s formátováním ovládacích prvků pro úpravy (tedy Streamovat data v), použijte [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) – členská funkce. Ovládací prvek opakovaně volá funkci zpětné volání definované aplikací, která přenáší pokaždé, když část dat do vyrovnávací paměti.  
+ Číst data na bohaté ovládacích prvků pro úpravy (tedy Streamovat data v), použijte [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) členskou funkci. Ovládací prvek opakovaně volá funkci zpětného volání definované aplikací, která přenáší část dat do vyrovnávací paměti pokaždé, když.  
   
- Uložit obsah s formátováním ovládacích prvků pro úpravy (tedy Streamovat data out), můžete použít [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) – členská funkce. Ovládací prvek opakovaně zapíše do vyrovnávací paměti a pak zavolá funkci zpětné volání definované aplikací. Funkce zpětného volání pro každé volání, která uloží obsah vyrovnávací paměti.  
+ Chcete-li uložit obsah s formátováním ovládacích prvků pro úpravy (to znamená, že datový proud stream výstupní data), můžete použít [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) členskou funkci. Ovládací prvek opakovaně zapíše do vyrovnávací paměti a potom volá funkci zpětného volání definované aplikací. Pro každé volání funkce zpětného volání obsah uloží do vyrovnávací paměti.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Pomocí Visual C++ pro přidání nové položky šablony | Microsoft Docs
+title: Pomocí Visual C++ pro přidání nové položky šablon | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332813"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197900"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Použití šablon pro přidání nové položky v prostředí Visual C++
-Můžete snadno přidat položky, které jsou společné pro projekty Visual C++ pomocí **přidat novou položku** příkaz. Při použití **přidat novou položku** příkaz, `Add New Item` dialogové okno se seznamem šablon položek, které do projektu přidejte příslušné soubory.  
+Můžete snadno přidat položky, které jsou společné pro projekty Visual C++ s použitím **přidat novou položku** příkazu. Při použití **přidat novou položku** příkazu `Add New Item` dialogové okno se zobrazí seznam šablon položek, které přidejte příslušné soubory do projektu.  
   
- V následující tabulce je abecední seznam šablony Visual C++, přidat novou položku.  
+ V následující tabulce je abecední seznam šablon Visual C++, přidat novou položku.  
   
 |Šablony|Popis|  
 |--------------|-----------------|  
-|Sestavení souboru prostředků (RESX)|Vytvoří soubor obsahující zdroje CLR.|  
-|Soubor rastrový obrázek (BMP)|Vytvoří soubor rastrového obrázku Win32.|  
-|Soubor C++)|Vytvoří C++ zdrojového souboru.|  
-|Diagram tříd (.)|Vytvoří prázdný diagram tříd.|  
-|Sada pravidel analýzy kódu (analýza)|Vytvoří soubor nastavení konfigurace analýzy kódu.|  
+|Soubor zdrojů sestaveni (.resx)|Vytvoří soubor obsahující zdroje CLR.|  
+|Soubor rastrového obrázku (BMP)|Vytvoří soubor rastrového obrázku Win32.|  
+|Soubor C++ (.cpp)|Vytvoří zdrojový soubor jazyka C++.|  
+|Diagram tříd (.cd)|Vytvoří prázdný diagram tříd.|  
+|Sada pravidel analýzy kódu (analýza)|Vytvoří soubor nastavení pro konfiguraci analýzy kódu.|  
 |Konfigurační soubor (app.config)|Vytvoří prázdný konfigurační soubor.|  
-|Třídy součástí|Přidá třídu komponenty pomocí funkce modulu CLR.|  
-|Soubor kurzoru (.)|Vytvoří soubor Win32 kurzoru.|  
-|Zjišťování souborů, statické (.disco)|Vytvoří soubor statického zjišťování, která je dokument XML, který obsahuje odkazy na další zdroje, které popisují webové služby XML, umožňuje programový zjišťování webové služby XML.|  
-|Rámců (.)|Přidá soubor HTML, který je hostitelem více stránek HTML.|  
-|Soubor hlaviček)|Vytvoří soubor hlaviček C++.|  
-|Stránky HTML (*.htm)|Vytvoří prázdný soubor HTML.|  
-|Soubor ikony (.)|Vytvoří soubor ikony Win32.|  
-|Instalační program – třída|Přidá třídu, která dědí z [instalační třídy](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) pomocí funkce modulu CLR.|  
-|Soubor MIDL (.)|Vytvoří soubor rozhraní Definition Language.|  
-|Soubor definice modulu (.def)|Vytvoří soubor definice export knihovny DLL.|  
-|Seznam vlastností (.)|Vytvoří soubor seznamu vlastností Visual C++.|  
-|Registrační skript (.)|Vytvoří soubor skriptu ATL registrace.|  
-|Hlášení (.)|Vytvoří soubor sestavy.|  
-|Soubor zdrojů (.)|Vytvoří zdrojového souboru Win32.|  
-|Soubor šablony prostředků (.rct)|Vytvoří soubor šablony prostředků.|  
+|Komponentní třída|Přidá komponentní třídu pomocí funkce CLR.|  
+|Soubor kurzoru (.cur)|Vytvoří soubor s kurzorem Win32.|  
+|Zpřístupněný soubor statické (.disco)|Vytvoří soubor statického zjišťování, který je dokument XML, který obsahuje odkazy na další prostředky, které popisují webové služby XML, umožňuje programový zjišťování webové služby XML.|  
+|Sada rámců (.htm)|Přidá soubor HTML, který hostuje několik HTML stránek.|  
+|Soubor hlaviček (.h)|Vytvoří soubor hlaviček jazyka C++.|  
+|HTML stránka (.htm)|Vytvoří prázdný soubor HTML.|  
+|Soubor ikony (.ico)|Vytvoří soubor ikony Win32.|  
+|Instalační třída|Přidá třídu, která dědí z [Instalační třída](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) pomocí funkce CLR.|  
+|Soubor MIDL (.idl)|Vytvoří soubor s příponou Interface Definition Language.|  
+|Soubor definice modulu (.def)|Vytvoří definiční soubor exportu DLL.|  
+|Seznam vlastností (.props)|Vytvoří soubor seznamu vlastností Visual C++.|  
+|Registrační skript (.rgs)|Vytvoří soubor knihovny ATL registrace skriptu.|  
+|Sestav (.rdlc)|Vytvoří soubor sestavy.|  
+|Soubor prostředků (.rc)|Vytvoří soubor prostředků Win32.|  
+|Soubor šablony zdrojů (.rct)|Vytvoří soubor prostředků šablony.|  
 |Pás karet (.mfcribbon-ms)|Vytvoří soubor pásu karet.|  
-|Soubor odpovědí serveru (SRF)|Vytvoří soubor odezvy serveru, který se používá s ATL Server.|  
-|Soubor skriptu SQL (.sql)|Vytvoří soubor skriptu SQL. **Poznámka:** této šablony není funkce Professional Edition.|  
-|Šablona stylů (.)|Přidá šablony stylů CSS používá pro bohaté definice stylu HTML.|  
+|Soubor odezvy serveru (.srf)|Vytvoří soubor odezvy serveru používaný serverem ATL.|  
+|Soubor skriptu SQL (.sql)|Vytvoří soubor skriptu SQL. **Poznámka:** Tato šablona není funkcí edice Professional.|  
+|Šablona stylů (.css)|Přidá šablona stylů používaná pro bohaté definice stylů HTML.|  
 |Textový soubor (.txt)|Přidá prázdný textový soubor.|  
-|Uživatelský ovládací prvek|Přidá uživatele ovládacího prvku s použitím funkce modulu CLR.|  
-|Formuláře Windows|Přidá formuláři Windows pomocí funkce modulu CLR.|  
-|Soubor XML (.xml)|Přidá prázdný soubor XML.|  
-|Soubor se schématem XML (.xsd)|Vytvoří soubor, který se používá k definování schématu pro dokumenty XML.|  
-|Soubor XSLT (.)|Vytvoří soubor použitá k transformaci dokumentů XML.|  
+|Uživatelský ovládací prvek|Přidá uživatelský ovládací prvek pomocí funkce CLR.|  
+|Formuláře Windows|Přidá formuláře Windows pomocí funkce CLR.|  
+|Soubor XML (.xml)|Přidá prázdný XML soubor.|  
+|Soubor schématu XML (XSD)|Vytvoří soubor, který se používá k definování schématu pro dokumenty XML.|  
+|Soubor XSLT (.)|Vytvoří soubor používaném k transformaci dokumentů XML.|  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201456"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar – třída
 Panel nástrojů, který se zobrazí, když uživatel stiskne a podrží tlačítko panelu nástrojů nejvyšší úrovně.  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Přepíše `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Poznámky  
  A `CMFCDropDownToolBar` objekt kombinuje vzhled panelu nástrojů s chováním v místní nabídce. Když uživatel stiskne a podrží tlačítko panelu nástrojů v rozevíracím seznamu (viz [cmfcdropdowntoolbarbutton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), zobrazí se rozevírací seznam nástrojů, a může uživatel vybrat tlačítko na panelu nástrojů v rozevíracím seznamu posouvání, aby ji mohl a uvolněním tlačítka myši tlačítko. Když uživatele vybere tlačítko na panelu rozevíracího seznamu, toto tlačítko se zobrazí jako aktuální tlačítko na panelu nástrojů nejvyšší úrovně.  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196708"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 Poskytuje funkce pro ovládací prvky tlačítka Windows.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost BCM_GETIDEALSIZE zprávu, jak je popsáno v [tlačítka](http://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
+ Tato členská funkce emuluje funkčnost BCM_GETIDEALSIZE zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Volejte tuto metodu za účelem získání seznamu obrázků z ovládacího prvku tlačítko.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost BCM_GETIMAGELIST zprávu, jak je popsáno v [tlačítka](http://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
+ Tato členská funkce emuluje funkčnost BCM_GETIMAGELIST zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Načte text poznámky, které jsou přidružené k aktuální ovládací prvek odkazu příkazu.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_COMMANDLINK nebo BS_DEFCOMMANDLINK.  
   
- Tato metoda odesílá [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Získá délku textu pro ovládací prvek odkazu aktuální příkaz.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_COMMANDLINK nebo BS_DEFCOMMANDLINK.  
   
- Tato metoda odesílá [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Načte piktogram přidružené k aktuální tlačítko rozdělení ovládání.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturu s BCSIF_GLYPH příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte glyf z `himlGlyph` členu struktury.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu s BCSIF_GLYPH příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte glyf z `himlGlyph` členu struktury.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Načte [seznamu obrázků](../../mfc/reference/cimagelist-class.md) aktuální ovládací prvek tlačítka rozdělení.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturu s BCSIF_IMAGE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte seznam obrázků z `himlGlyph` členu struktury.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu s BCSIF_IMAGE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte seznam obrázků z `himlGlyph` členu struktury.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Načte parametry, které určují, jak Windows nakreslí aktuální tlačítko rozdělení ovládání.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pInfo*|Ukazatel [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura, která obdrží informace o aktuální tlačítko rozdělení ovládání. Volající zodpovídá za přidělování struktury.|  
+|[out] *pInfo*|Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura, která obdrží informace o aktuální tlačítko rozdělení ovládání. Volající zodpovídá za přidělování struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Tato metoda odesílá [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Načte ohraničující obdélník rozevíracího seznamu součástí aktuální tlačítko rozdělení ovládání.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pSize*|Ukazatel [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
+|[out] *pSize*|Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Po rozbalení ovládacího prvku tlačítko rozdělení může zobrazit rozevírací seznam součást, například ovládací prvek seznamu nebo ovládací prvek stránkování. Tato metoda načte ohraničující obdélník, který obsahuje komponentu rozevíracího seznamu.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturu s BCSIF_SIZE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte z ohraničující obdélník `size` členu struktury.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu s BCSIF_SIZE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte z ohraničující obdélník `size` členu struktury.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Načte styly tlačítko rozdělení, které definují aktuální tlačítko rozdělení ovládání.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.  
+ Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
  Styly tlačítek rozdělení zadejte zarovnání, poměr stran a grafické podobě, pomocí kterého Windows nakreslí ikonu tlačítka rozdělení.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturu s BCSIF_STYLE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte styly tlačítka rozdělení z `uSplitStyle` členu struktury.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu s BCSIF_STYLE příznak a pak odešle, které konstrukce v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v Windows SDK. Po návratu funkce zprávy, tato metoda načte styly tlačítka rozdělení z `uSplitStyle` členu struktury.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Načte stav ovládacího prvku tlačítko.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost BCM_GETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](http://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
+ Tato členská funkce emuluje funkčnost BCM_GETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  Voláním této členské funkce přidružit nový rastrový obrázek na tlačítko.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládací tlačítko rozdělení obsahuje styl BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON a obsahuje tlačítko a rozevírací šipku vpravo. Další informace najdete v tématu [styly](http://msdn.microsoft.com/library/windows/desktop/bb775951). Stav rozevíracího seznamu je obvykle nastavena, když uživatel klepne na šipku rozevíracího seznamu. Pomocí této metody můžete prostřednictvím kódu programu nastavit stav rozevíracího seznamu ovládacího prvku. Na šipku rozevíracího seznamu vykreslením označeno šedou barvou, které označují stav.  
+ Ovládací tlačítko rozdělení obsahuje styl BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON a obsahuje tlačítko a rozevírací šipku vpravo. Další informace najdete v tématu [styly](/windows/desktop/Controls/button-styles). Stav rozevíracího seznamu je obvykle nastavena, když uživatel klepne na šipku rozevíracího seznamu. Pomocí této metody můžete prostřednictvím kódu programu nastavit stav rozevíracího seznamu ovládacího prvku. Na šipku rozevíracího seznamu vykreslením označeno šedou barvou, které označují stav.  
   
- Tato metoda odesílá [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, *m_splitButton*, která je použita k programovému přístupu ke tlačítko rozdělení ovládání. Tato proměnná se používá v následujícím příkladu.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Poznámky  
  Pokud ovládací prvek tlačítka nebo příkaz odkazu vyžaduje zvýšená oprávnění k provedení akce, nastavte ovládací prvek na `elevation required` stavu. Následně Windows zobrazuje ikona štítu řízení uživatelských účtů (UAC) v ovládacím prvku. Další informace najdete v článku "Řízení uživatelských účtů" na [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Tato metoda odesílá [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Voláním této členské funkce přidružit novou ikonu tlačítka.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost BCM_SETIMAGELIST zprávu, jak je popsáno v [tlačítka](http://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
+ Tato členská funkce emuluje funkčnost BCM_SETIMAGELIST zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Nastaví text poznámky k aktuální ovládací prvek odkazu příkazu.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_COMMANDLINK nebo BS_DEFCOMMANDLINK.  
   
- Tato metoda odesílá [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, *m_cmdLink*, která je použít k programovému přístupu ke službě ovládací prvek propojení příkazů. Tato proměnná se používá v následujícím příkladu.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Glyf je fyzická reprezentace znaku v určité písmo. *ChGlyph* parametr se nepoužívá jako šifra, ale místo toho slouží k výběru piktogram ze sady definovaných systémem glyfů. Rozevírací šipku glyfu určený pomocí znaku "6" a vypadá podobně jako znak Unicode ČERNÉ mimo provoz SMĚŘUJÍCÍ TROJÚHELNÍK (U + 25BC).  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura s příznakem BCSIF_GLYPH a `himlGlyph` člena s *chGlyph* parametr a pak odešle struktury v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura s příznakem BCSIF_GLYPH a `himlGlyph` člena s *chGlyph* parametr a pak odešle struktury v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Přidruží [seznamu obrázků](../../mfc/reference/cimagelist-class.md) s aktuální tlačítko rozdělení ovládání.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura s příznakem BCSIF_IMAGE a `himlGlyph` člena s *pSplitImageList* parametr a pak odešle v této struktury [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura s příznakem BCSIF_IMAGE a `himlGlyph` člena s *pSplitImageList* parametr a pak odešle v této struktury [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Určuje parametry, které určují, jak Windows nakreslí aktuální tlačítko rozdělení ovládání.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pInfo*|Ukazatel [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturu, která definuje aktuální tlačítko rozdělení ovládání.|  
+|[in] *pInfo*|Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu, která definuje aktuální tlačítko rozdělení ovládání.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Tato metoda odesílá [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_splitButton`, která je použita k programovému přístupu ke tlačítko rozdělení ovládání.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pSize*|Ukazatel [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
+|[in] *pSize*|Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Po rozbalení ovládacího prvku tlačítko rozdělení může zobrazit rozevírací seznam součást, například ovládací prvek seznamu nebo ovládací prvek stránkování. Tato metoda určuje velikost ohraničující obdélník, který obsahuje komponentu rozevíracího seznamu.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura s příznakem BCSIF_SIZE a `size` člena s *pSize* parametr a potom odešle, které struktury v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura s příznakem BCSIF_SIZE a `size` člena s *pSize* parametr a potom odešle, které struktury v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_splitButton`, která je použita k programovému přístupu ke tlačítko rozdělení ovládání. Tato proměnná se používá v následujícím příkladu.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.|  
+|[in] *uSplitStyle*|Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze používejte pouze s ovládacími prvky, jehož styl tlačítka je BS_SPLITBUTTON nebo BS_DEFSPLITBUTTON.  
   
- Styly tlačítek rozdělení zadejte zarovnání, poměr stran a grafické podobě, pomocí kterého Windows nakreslí ikonu tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.  
+ Styly tlačítek rozdělení zadejte zarovnání, poměr stran a grafické podobě, pomocí kterého Windows nakreslí ikonu tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura s příznakem BCSIF_STYLE a `uSplitStyle` člena s *uSplitStyle* parametr a pak odešle struktury v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura s příznakem BCSIF_STYLE a `uSplitStyle` člena s *uSplitStyle* parametr a pak odešle struktury v [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_splitButton`, která je použita k programovému přístupu ke tlačítko rozdělení ovládání.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost BCM_SETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](http://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
+ Tato členská funkce emuluje funkčnost BCM_SETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   

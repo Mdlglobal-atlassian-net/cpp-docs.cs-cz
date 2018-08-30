@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882260"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219807"
 ---
 # <a name="cstockpropimpl-class"></a>Cstockpropimpl – třída
 Tato třída poskytuje metody pro podporu uložených vlastností hodnoty.  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>Parametry  
  *ppPicture*  
- Proměnná, která přijímá ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
+ Proměnná, která přijímá ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametry  
  *pPicture*  
- Ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
+ Ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametry  
  *pPicture*  
- Ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
+ Ukazatel na vlastnosti obrázku. Zobrazit [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) další podrobnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  

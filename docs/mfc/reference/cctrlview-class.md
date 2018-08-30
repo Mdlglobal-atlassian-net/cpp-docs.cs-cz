@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336329"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210200"
 ---
 # <a name="cctrlview-class"></a>Cctrlview – třída
 Přizpůsobí architekturu document / view pro běžné ovládací prvky, které podporuje Windows 98 a Windows NT verze 3.51 a vyšší.  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Parametry  
  *cs*  
- A [soubor CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) struktury.  
+ A [soubor CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud by měly pokračovat ve vytváření oken; 0 označující selhání.  

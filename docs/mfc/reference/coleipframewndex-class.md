@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217038"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex – třída
 `COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy. Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  Určuje data podle potřeby pro typ nápovědy určené *nCmd*.  
   
  [in] *nCmd*  
- Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) v sadě Windows SDK.  
+ Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
   

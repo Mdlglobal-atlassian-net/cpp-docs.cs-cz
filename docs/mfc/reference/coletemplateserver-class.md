@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465992"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212273"
 ---
 # <a name="coletemplateserver-class"></a>Coletemplateserver – třída
 Používá se pro OLE vizuálních úprav servery, automatizační servery a propojení kontejnerů (aplikace, které podporují odkazy na vložené části).  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  Určuje, zda jednu instanci aplikace může podporovat víc instancí. Při hodnotě TRUE se více instancí aplikace jsou spouštěny pro každý požadavek na vytvoření objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Zruší registraci přidružený dokument šablony.  

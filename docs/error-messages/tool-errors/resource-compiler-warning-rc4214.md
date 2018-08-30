@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru prostředků RC4214 | Microsoft Docs
+title: Upozornění kompilátoru prostředků RC4214 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d7c18a81b2a7cf978ce056672cb318edca700fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319036"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199093"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Upozornění kompilátoru prostředků RC4214
-Znaková stránka není platný: Ignorovat  
+Znakovou stránku, která není platná: ignorováno  
   
- .Rc soubor obsahoval argumentem kódové stránky a codepage zadaný je neplatný. V tématu [IsValidCodePage](http://msdn.microsoft.com/library/windows/desktop/dd318674) Další informace.
+ Soubor .rc obsažené v něm argument znakovou stránku, která a znakovou stránku, která je zadána je neplatný. Zobrazit [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Další informace.

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c29a317ff2d4d8e40d6aca0d6b46ee3ba2fd88
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5082490b9dd2e37090bac747e592b62ce51ac26a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853833"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200899"
 ---
 # <a name="cobarray-class"></a>Cobarray – třída
 Podporuje pole `CObject` ukazatele.  
@@ -158,7 +158,7 @@ INT_PTR Add(CObject* newElement);
 |-----------|---------------------|  
 |[CByteArray –](../../mfc/reference/cbytearray-class.md)|**Přidat INT_PTR (BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**Přidat INT_PTR (DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Přidat INT_PTR (void\***  `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**Přidat INT_PTR (void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**Přidat INT_PTR (LPCTSTR** `newElement` **); throw (cmemoryexception –\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
 |[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**Přidat INT_PTR (UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**Přidat INT_PTR (slovo** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
@@ -516,12 +516,12 @@ void InsertAt(
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cdwordarray –\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void\***  `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cptrarray –\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cstringarray –\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cuintarray –\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cwordarray –\***  `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cdwordarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cptrarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cstringarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cuintarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cwordarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
   
 ### <a name="example"></a>Příklad  
   Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.  
@@ -677,7 +677,7 @@ void SetAt(
 |-----------|---------------------|  
 |[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, BYTE** `newElement` **);**|  
 |[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, DWORD** `newElement` **);**|  
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void\***  `newElement` **);**|  
+|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|  
 |[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|  
 |[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, UINT** `newElement` **);**|  
 |[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|  
@@ -720,7 +720,7 @@ void SetAtGrow(
 |-----------|---------------------|  
 |[CByteArray –](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cdwordarray –](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
-|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void\***  `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
+|[Cptrarray –](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cstringarray –](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cuintarray –](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
 |[Cwordarray –](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|  
@@ -763,7 +763,7 @@ void SetSize(
   
  *NGrowBy* parametr ovlivňuje přidělení vnitřní paměti, zatímco roste pole. Jeho použití nikdy ovlivňuje velikost pole, jak je hlásí `GetSize` a `GetUpperBound`.  
   
- Pokud se zvětšil velikost pole, přiděleny všechny nově **CObject \***  ukazatele jsou nastaveny na hodnotu NULL.  
+ Pokud se zvětšil velikost pole, přiděleny všechny nově **CObject** <strong>\*</strong> ukazatele jsou nastaveny na hodnotu NULL.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::SetSize`.  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209587"
 ---
 # <a name="creating-new-symbols"></a>Vytváření nových symbolů
 
@@ -45,7 +45,7 @@ Když začínáte nový projekt, možná bude vhodné ke zmapování názvy symb
 
 Pokud zadáte název symbolu, který již existuje, zobrazí se okno se zprávou s informacemi o tom, že je již definován symbol s tímto názvem. Nejde definovat dvě nebo víc symbolů se stejným názvem, ale můžete definovat různé symbolů se stejnou číselnou hodnotu. Další informace najdete v tématu [omezení názvu symbolu](../windows/symbol-name-restrictions.md) a [omezení hodnoty symbolu](../windows/symbol-value-restrictions.md).
 
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům zobrazení statických prostředků a přiřazování prostředků řetězců pro vlastnosti.
 
 ## <a name="requirements"></a>Požadavky
 

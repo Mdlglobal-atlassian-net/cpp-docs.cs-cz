@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207389"
 ---
 # <a name="cshellmanager-class"></a>Cshellmanager – třída
 Implementuje několik metod, které vám umožní pracovat s odkazy na seznamy identifikátorů (PIDLs).  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  Název pro dialogové okno.  
   
  [in] *ulFlags*  
- Příznaky určující možnosti pro dialogové okno. Zobrazit [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) podrobný popis.  
+ Příznaky určující možnosti pro dialogové okno. Zobrazit [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) podrobný popis.  
   
  [out] *piFolderImage*  
  Ukazatel na celočíselnou hodnotu, pokud metoda zapíše index bitové kopie vybrané složky.  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  Ukazatel na nový seznam položek, pokud je funkce úspěšná, jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří nový [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) dostatečně velký, aby oba obsahují *pidl1* a *pidl2*. Potom zkopíruje *pidl1* a *pidl2* nového seznamu.  
+ Tato metoda vytvoří nový [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) dostatečně velký, aby oba obsahují *pidl1* a *pidl2*. Potom zkopíruje *pidl1* a *pidl2* nového seznamu.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Zkopíruje seznam položek.  

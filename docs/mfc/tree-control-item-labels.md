@@ -1,5 +1,5 @@
 ---
-title: Popisky položek ovládacího prvku strom | Microsoft Docs
+title: Popisky položek ovládacího prvku strom | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fc207dcff5002262c345b106be99a775ed626b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e016093e2dcde68fcc01691c4877841d648321fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953720"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207461"
 ---
 # <a name="tree-control-item-labels"></a>Popisky položek ovládacího prvku strom
-Text popisku pro položku obvykle zadat, pokud položku přidáte do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` – Členská funkce můžete předat [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktura, která definuje vlastnosti položky, včetně řetězec obsahující text popisku. `InsertItem` má několik přetížení, která může být volána s různé kombinace parametrů.  
+Text popisku položky zadáte obvykle při přidání položky do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Můžete členské funkce předat [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) strukturu, která definuje vlastnosti položky, včetně řetězec obsahující text popisku. `InsertItem` má několik přetížení, které mohou být volány pomocí různých kombinací parametry.  
   
- Ovládací prvek stromu přidělí paměť pro ukládání každou položku; text popisky položek zabírá podstatnou část tuto paměť. Pokud vaše aplikace udržuje kopii řetězce v ovládacím prvku stromu, můžete snížit požadavky na paměť ovládacího prvku tak, že zadáte **LPSTR_TEXTCALLBACK** hodnotu *pszText* členem `TV_ITEM` nebo *lpszItem* parametr neprochází skutečné řetězce do ovládacího prvku strom. Pomocí **LPSTR_TEXTCALLBACK** způsobí, že k získání textu popisku položky z aplikace, vždy, když je položka překreslit ovládacího prvku strom. K získání textu, odešle ovládací prvek stromu [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) zprávy oznámení, která zahrnuje adresu [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. Musí odpovědět, a to nastavením odpovídající členů struktury zahrnuty.  
+ Ovládací prvek stromu přiděluje paměť pro ukládání každé položky; text položky popisky zabírá podstatnou část tuto paměť. Pokud vaše aplikace udržuje kopie řetězce v ovládacím prvku stromu, můžete snížit požadavky na paměť ovládacího prvku tak, že zadáte **LPSTR_TEXTCALLBACK** hodnotu *pszText* člen `TV_ITEM` nebo *lpszItem* parametr místo předávání skutečné řetězce do ovládacího prvku stromu. Pomocí **LPSTR_TEXTCALLBACK** způsobí, že získání textu popisku položky z aplikace vždy, když je položka vyžadovaly překreslení ovládacího prvku stromu. Načíst text, odešle do ovládacího prvku stromu [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) zprávy oznámení, který obsahuje adresu [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) struktury. Musí odpovídat nastavením příslušných členů struktury zahrnuté.  
   
- Ovládací prvek stromu používá paměti přidělené z haldy procesu, který vytváří ovládací prvek stromu. Maximální počet položek v ovládacím prvku stromu podle množství paměti k dispozici v haldě. Každá položka má 64 bajtů.  
+ Ovládací prvek stromu používá paměti přidělené z haldy procesu, který vytvoří ovládací prvek stromu. Maximální počet položek v ovládacím prvku stromu je podle množství paměti v haldě k dispozici. Každá položka má 64 bajtů.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   

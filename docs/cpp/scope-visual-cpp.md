@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460707"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220087"
 ---
 # <a name="scope-c"></a>Rozsah (C++)
 
@@ -41,7 +41,7 @@ Existuje šest druhy rozsahů:
 
 - **Místní rozsah** název deklarované v rámci funkce nebo lambda, včetně názvů parametrů mají místní rozsah. Jsou často označovány jako "místní". Jsou viditelné ze svého bodu deklarace na konec těla funkce nebo výrazu lambda. Místní rozsah je druh rozsahem bloku, která je popsána dále v tomto článku.
 
-- **Třída oboru** názvy členů třídy mají obor třídy, která rozšiřuje v rámci definice třídy bez ohledu na to deklarací. Usnadnění přístupu člena třídy je další kontrolou **veřejné**, **privátní**, a **chráněné** klíčová slova. Veřejné nebo chráněné členy jsou přístupné pouze pomocí operátorů výběru členů (**.** nebo **->**) nebo operátory pointer-to-member (**.\***  nebo **-> \***).
+- **Třída oboru** názvy členů třídy mají obor třídy, která rozšiřuje v rámci definice třídy bez ohledu na to deklarací. Usnadnění přístupu člena třídy je další kontrolou **veřejné**, **privátní**, a **chráněné** klíčová slova. Veřejné nebo chráněné členy jsou přístupné pouze pomocí operátorů výběru členů (**.** nebo **->**) nebo operátory pointer-to-member (**.** <strong>\*</strong> nebo **->** <strong>\*</strong>).
 
 - **Příkaz oboru** názvy deklarované v **pro**, **Pokud**, **při**, nebo **přepnout** příkazu jsou viditelné až do konce blok příkazů.
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Opětovné použití názvů identifikátorů, jak je znázorněno v tomto příkladu, je považováno za špatný styl programování.
 
- Další informace o ukazatelích naleznete v tématu [odvozené typy](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Informace o deklaraci a inicializaci objektů tříd naleznete v tématu [třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md). Informace o používání **nové** a **odstranit** operátorů volného úložiště najdete v tématu [nové a odstranit operátory](new-and-delete-operators.md).
+ Další informace o ukazatelích naleznete v tématu [odvozené typy](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Informace o deklaraci a inicializaci objektů tříd naleznete v tématu [třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md). Informace o používání **nové** a **odstranit** operátorů volného úložiště najdete v tématu [nové a odstranit operátory](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Skrytí názvů s globálním oboru
 

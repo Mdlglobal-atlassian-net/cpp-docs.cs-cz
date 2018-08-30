@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 176dfc9027951f06f55dd04757b9acb7c7d8a2ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199622"
 ---
 # <a name="cgopherconnection-class"></a>Cgopherconnection – třída
 Spravuje připojení k gopher serveru Internet.  
@@ -158,7 +158,7 @@ static CGopherLocator CreateLocator(
  Ukazatel na řetězec selektor k odeslání na gopher serveru za účelem načtení položky. *pstrSelectorString* může mít hodnotu NULL.  
   
  *dwGopherType*  
- Toto nastavení určuje, zda *pstrSelectorString* odkazuje na adresář nebo dokument, a zda je požadavek gopher nebo gopher +. Zobrazte atributy, které pro strukturu [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) v sadě Windows SDK.  
+ Toto nastavení určuje, zda *pstrSelectorString* odkazuje na adresář nebo dokument, a zda je požadavek gopher nebo gopher +. Zobrazte atributy, které pro strukturu [GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) v sadě Windows SDK.  
   
  *pstrLocator*  
  Ukazatel na řetězec, který identifikuje soubor otevřete. Obecně platí, tento řetězec je vrácen z volání [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
@@ -197,7 +197,7 @@ BOOL GetAttribute(
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , která přijímá Typ lokátoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Voláním této členské funkce pro otevření souboru na gopher serveru.  

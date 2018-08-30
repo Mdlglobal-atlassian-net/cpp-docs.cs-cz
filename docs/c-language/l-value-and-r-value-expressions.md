@@ -1,5 +1,5 @@
 ---
-title: L-Value a R-Value výrazy | Microsoft Docs
+title: Výrazy L-Value a R-Value | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208905"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Výrazy hodnot L-Value a R-Value
-Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. Hodnotu l reprezentuje hodnotu "Lokátor" v oblasti úložiště, nebo hodnotu "left" zdání, může se objevit na levé straně znaménkem rovnosti (**=**). L-hodnoty jsou často identifikátory.  
+Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. L hodnota představuje hodnotu oblasti úložiště "lokátoru" nebo "levou" hodnotu, zdání, může se objevit na levé straně znaménka rovnosti (**=**). L-hodnoty jsou často identifikátory.  
   
- Výrazy odkazující na upravitelná umístění se nazývají „upravitelné l-hodnoty“. Upravitelnými l hodnota nemůže mít typ pole, neúplné typ nebo typ s **const** atribut. Struktury a sjednocení jako upravitelnými hodnoty l, nesmí mít žádné členy s **const** atribut. Název identifikátoru označuje umístění úložiště, zatímco hodnota proměnné je hodnota uložená v tomto umístění.  
+ Výrazy odkazující na upravitelná umístění se nazývají „upravitelné l-hodnoty“. Upravitelná l hodnota nemůže mít typ pole, neúplný typ nebo typ s **const** atribut. Struktury a sjednocení bude upravitelná l hodnotami, nesmějí obsahovat žádné členy s **const** atribut. Název identifikátoru označuje umístění úložiště, zatímco hodnota proměnné je hodnota uložená v tomto umístění.  
   
  Identifikátor je upravitelná l-hodnota, odkazuje-li na umístění v paměti a je-li její typ aritmetický, struktura, sjednocení nebo ukazatel. Například pokud je `ptr` ukazatel na oblast úložiště, pak je `*ptr` upravitelná l-hodnota, jež určuje oblast úložiště, na které `ptr` ukazuje.  
   
@@ -35,19 +35,19 @@ Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-h
   
 -   Identifikátor celočíselného typu, typu s plovoucí desetinnou čárkou, typu ukazatele, struktury nebo sjednocení  
   
--   Dolní index (**[]**) výraz, který není vyhodnocen pole  
+-   Index (**[] č.**) výraz, který není vyhodnocen na pole  
   
 -   Výraz výběru členů (**->** nebo **.**)  
   
--   Unární indirection (**\****) výraz, který není odkaz na pole  
+-   Unární indirection (<strong>\**</strong>) výraz, který není odkaz na pole  
   
 -   Výraz l-hodnoty v závorkách  
   
--   A **const** objektu (neupravitelnými l hodnota)  
+-   A **const** objekt (neupravitelná l hodnota)  
   
  Pojem „r-hodnota“ se někdy používá k popisu hodnoty výrazu a pro jeho odlišení od l-hodnoty. Všechny l-hodnoty jsou r-hodnotami, ale ne všechny r-hodnoty jsou l-hodnotami.  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
  Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace.) Tuto funkci znázorňuje následující příklad:  
   
@@ -60,9 +60,9 @@ long l;
 (long) i = l ;          /* Illegal cast */  
 ```  
   
- Výchozí nastavení pro Microsoft C je, že jsou povolené rozšíření Microsoft. Použijte /Za – možnost kompilátoru zakázání tyto rozšíření.  
+ Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Pomocí možnosti kompilátoru /Za pro zákaz těchto rozšíření.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Operandy a výrazy](../c-language/operands-and-expressions.md)

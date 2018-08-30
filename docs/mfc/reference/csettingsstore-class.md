@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849687"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221129"
 ---
 # <a name="csettingsstore-class"></a>Csettingsstore – třída
 Zalomí funkce rozhraní API Windows, poskytuje objektově orientovaného rozhraní, které používáte pro přístup k registru.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Poznámky  
  Pokud *bAdmin* nastavena na hodnotu TRUE, `m_hKey` členská proměnná je nastavena na **HKEY_LOCAL_MACHINE**. Pokud nastavíte *bAdmin* na hodnotu FALSE, `m_hKey` je nastavena na **HKEY_CURRENT_USER**.  
   
- Zabezpečený přístup závisí *bReadOnly* parametru. Pokud *bReadonly* má hodnotu FALSE, nastaví se zabezpečený přístup **KEY_ALL_ACCESS**. Pokud *bReadyOnly* má hodnotu TRUE, přístup k zabezpečení se nastaví na kombinaci **KEY_QUERY_VALUE, KEY_NOTIFY** a **KEY_ENUMERATE_SUB_KEYS**. Další informace o zabezpečení přístupu spolu s registru najdete v tématu [zabezpečení klíče registru a přístupová práva](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Zabezpečený přístup závisí *bReadOnly* parametru. Pokud *bReadonly* má hodnotu FALSE, nastaví se zabezpečený přístup **KEY_ALL_ACCESS**. Pokud *bReadyOnly* má hodnotu TRUE, přístup k zabezpečení se nastaví na kombinaci **KEY_QUERY_VALUE, KEY_NOTIFY** a **KEY_ENUMERATE_SUB_KEYS**. Další informace o zabezpečení přístupu spolu s registru najdete v tématu [zabezpečení klíče registru a přístupová práva](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Destruktor `CSettingsStore` uvolní `m_hKey` automaticky.  
   

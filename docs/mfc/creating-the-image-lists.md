@@ -1,5 +1,5 @@
 ---
-title: Vytváření seznamů obrázků | Microsoft Docs
+title: Vytváření seznamů obrázků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5f5ac8396c32e56e4c0f2f951f45bb33714822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53cf33a551dc95e7ed282b599673f627ff8a7b21
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341522"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220934"
 ---
 # <a name="creating-the-image-lists"></a>Vytváření seznamů obrázků
-Vytváření seznamů obrázků je stejný, ať používáte [CListView](../mfc/reference/clistview-class.md) nebo [CListCtrl](../mfc/reference/clistctrl-class.md).  
+Vytváření seznamů obrázků je stejný, ať už používáte [CListView](../mfc/reference/clistview-class.md) nebo [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  Vytvořením pouze potřebovat bitové kopie seznamy vaše ovládací prvek seznamu obsahuje-li `LVS_ICON` stylu.  
+>  Pouze potřebovat bitové kopie seznamy pokud obsahuje ovládací prvek seznamu `LVS_ICON` style.  
   
- Použití třídy `CImageList` vytvořit jeden nebo více seznamů obrázků (pro plné velikosti ikony, ikony. Malé ikony a stavy). V tématu [CImageList](../mfc/reference/cimagelist-class.md)a zobrazit [seznamy obrázků zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774736) ve Windows SDK.  
+ Použití třídy `CImageList` vytvořit jeden nebo více seznamů obrázků (pro reklamy ikony, malé ikony a stavy). Naleznete v tématu [atributu CImageList](../mfc/reference/cimagelist-class.md)a najdete v článku [seznamy obrázků zobrazení seznamu](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.  
   
- Volání [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) pro každou obraz seznamu; předat ukazatel na příslušné `CImageList` objektu.  
+ Volání [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) pro každý obrázek seznamu; můžete předat ukazatel na příslušné `CImageList` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   

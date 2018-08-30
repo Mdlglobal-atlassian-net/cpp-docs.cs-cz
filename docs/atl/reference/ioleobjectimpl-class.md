@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220900"
 ---
 # <a name="ioleobjectimpl-class"></a>Ioleobjectimpl – třída
 Tato třída implementuje `IUnknown` a je hlavní rozhraní, přes který kontejner komunikuje s ovládacím prvkem.  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|Aktualizuje ovládacího prvku. Implementace knihovny ATL vrátí hodnotu S_OK.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) rozhraní je hlavní rozhraní, přes který kontejner komunikuje s ovládacím prvkem. Třída `IOleObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) rozhraní je hlavní rozhraní, přes který kontejner komunikuje s ovládacím prvkem. Třída `IOleObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
  **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) ve Windows SDK.  
+ Zobrazit [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) ve Windows SDK.  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  Změní stav ovládacího prvku ve spuštění načíst.  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Ukazatelů uchovávat v datovém typu datové členy třídy ovládacího prvku [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) a [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) jsou všeobecně dostupné a datové členy [CComControlBase –:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), a [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) jsou nastaveny na hodnotu FALSE.  
   
- Zobrazit [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) ve Windows SDK.  
+ Zobrazit [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) ve Windows SDK.  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Určuje ovládací prvek pro jeden z jeho výčet akce.  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- Zobrazit [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) ve Windows SDK.  
+ Zobrazit [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) ve Windows SDK.  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Určuje ovládací prvek zahodíte všechny zpět stavu, ve kterém se udržuje.  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Aktivuje ovládací prvek na místě voláním [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Není-li datový člen třídy ovládacího prvku `m_bWindowOnly` má hodnotu TRUE, `DoVerbInPlaceActivate` poprvé pokusí aktivovat ovládací prvek jako ovládací prvek bez oken (možný jenom v případě, že kontejner podporuje [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)). Pokud se to nepodaří, funkce se pokusí aktivovat ovládacího prvku pomocí rozšířených funkcí (možný jenom v případě, že kontejner podporuje [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). Pokud se to nepodaří, funkce se pokusí aktivovat ovládací prvek s žádné rozšířené funkce (možný jenom v případě, že kontejner podporuje [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Pokud je aktivace úspěšná, funkce oznámí kontejneru, že ovládací prvek se aktivoval.  
+ Aktivuje ovládací prvek na místě voláním [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Není-li datový člen třídy ovládacího prvku `m_bWindowOnly` má hodnotu TRUE, `DoVerbInPlaceActivate` poprvé pokusí aktivovat ovládací prvek jako ovládací prvek bez oken (možný jenom v případě, že kontejner podporuje [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Pokud se to nepodaří, funkce se pokusí aktivovat ovládacího prvku pomocí rozšířených funkcí (možný jenom v případě, že kontejner podporuje [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)). Pokud se to nepodaří, funkce se pokusí aktivovat ovládací prvek s žádné rozšířené funkce (možný jenom v případě, že kontejner podporuje [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)). Pokud je aktivace úspěšná, funkce oznámí kontejneru, že ovládací prvek se aktivoval.  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Způsobí, že ovládací prvek bude upravovat otevřené v samostatném okně.  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) ve Windows SDK.  
+ Zobrazit [IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) ve Windows SDK.  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Poskytuje výčet registrované akce (akce) pro tento ovládací prvek voláním `OleRegEnumVerbs`.  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Poznámky  
  Příkazy můžete přidat do souboru .rgs vašeho projektu. Podívejte se například CIRCCTL. RGS v [KR](../../visual-cpp-samples.md) vzorku.  
   
- Zobrazit [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) ve Windows SDK.  
+ Zobrazit [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) ve Windows SDK.  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Umístí ukazatel ovládací prvek – datový člen třídy [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* a zvýší počet odkazů na ukazatel.  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) ve Windows SDK.  
+ Zobrazit [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) ve Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Načte data ze schránky.  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) ve Windows SDK.  
+ Zobrazit [IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) ve Windows SDK.  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Získá velikost zobrazení ovládacího prvku spuštěné v jednotkách HIMETRIC (za jednotku 0,01 milimetru).  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Poznámky  
  Velikost uložená v datovém členovi třídy ovládacího prvku [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
- Zobrazit [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) ve Windows SDK.  
+ Zobrazit [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) ve Windows SDK.  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Vrací ukazatel na informace o registrovaných stavu ovládacího prvku voláním `OleRegGetMiscStatus`.  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Poznámky  
  Informace o stavu zahrnuje chování ovládacího prvku a prezentace dat podporuje. Informace o stavu můžete přidat do souboru .rgs vašeho projektu.  
   
- Zobrazit [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) ve Windows SDK.  
+ Zobrazit [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) ve Windows SDK.  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Načte zástupný název ovládacího prvku.  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) ve Windows SDK.  
+ Zobrazit [IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) ve Windows SDK.  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Vrátí identifikátor třídy ovládacího prvku.  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) ve Windows SDK.  
+ Zobrazit [IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) ve Windows SDK.  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Vrátí název ovládacího prvku typ uživatele voláním `OleRegGetUserType`.  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Poznámky  
  Název Typ uživatele se používá pro zobrazení v prvky uživatelského rozhraní, jako jsou nabídky a dialogových oknech. Můžete změnit název typ uživatele v souboru .rgs vašeho projektu.  
   
- Zobrazit [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) ve Windows SDK.  
+ Zobrazit [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) ve Windows SDK.  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Inicializuje ovládací prvek z vybraného data.  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) ve Windows SDK.  
+ Zobrazit [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) ve Windows SDK.  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Zkontroluje, zda ovládací prvek je aktuální.  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) ve Windows SDK.  
+ Zobrazit [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) ve Windows SDK.  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Volané [DoVerbDiscardUndo](#doverbdiscardundo) po stav vracení zpět se zahodí.  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Poznámky  
  Metoda pak vrátí hodnotu S_OK.  
   
- Zobrazit [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) ve Windows SDK.  
+ Zobrazit [IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) ve Windows SDK.  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Doporučuje barevné schéma do ovládacího prvku aplikace, pokud existuje.  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) ve Windows SDK.  
+ Zobrazit [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) ve Windows SDK.  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Nastaví rozsah, oblasti ovládacího prvku zobrazení.  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  Pokud ovládací prvek třídy datový člen [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) má hodnotu TRUE, `SetExtent` volání `SendOnDataChange` a `SendOnViewChange` upozornit všechny advisory jímky zaregistrovaného držitel doporučení, která má velikost ovládacího prvku změnit.  
   
- Zobrazit [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) ve Windows SDK.  
+ Zobrazit [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) ve Windows SDK.  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Určuje ovládací prvek názvy aplikace typu kontejner a kontejner dokumentů.  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) ve Windows SDK.  
+ Zobrazit [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) ve Windows SDK.  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Co je jeho moniker říká ovládací prvek.  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) ve Windows SDK.  
+ Zobrazit [IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) ve Windows SDK.  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Odstraní advisory připojení uložené ve třídě ovládacího prvku `m_spOleAdviseHolder` datový člen.  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) ve Windows SDK.  
+ Zobrazit [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) ve Windows SDK.  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  Aktualizuje ovládacího prvku.  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  Vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) ve Windows SDK.  
+ Zobrazit [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
- [Rozhraní – ovládací prvky ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Přehled tříd](../../atl/atl-class-overview.md)

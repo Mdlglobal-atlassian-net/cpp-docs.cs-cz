@@ -1,5 +1,5 @@
 ---
-title: Znak klasifikace | Microsoft Docs
+title: Klasifikace znaků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc19fcdab40dd135338949d1c06ec48cbaf1cca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222445"
 ---
 # <a name="character-classification"></a>Klasifikace znaků
 
-Každý z těchto rutin testy zadanou znakovou, široká znaková nebo vícebajtových znaků pro spokojenost podmínku. (Podle definice znaků ASCII nastavit rozsahu od 0 do 127, jsou podmnožinou všech vícebajtových znakových sad. Například japonské katakana obsahuje ASCII jako dobře jako jiné znaky než ASCII.)
+Každá z těchto rutin testuje zadaný jednobajtový znak, široký znak nebo vícebajtový znaků na splnění podmínky. (Podle definice je znaková sada ASCII mezi 0 a 127 podmnožinou všech vícebajtových znakových sad jsou. Například japonská katakana zahrnuje ASCII i další ne ASCII znaky.)
 
- Podmínky testu se nastavení vztahuje **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná.
+ Testovací podmínku jsou ovlivněny nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v.
 
- Obecně tyto rutiny spouštět rychleji, než může zapsat a měl by být favored přes. Například následující kód provede něco pomalejší než volání `isalpha(c)`:
+ Tyto rutiny obvykle provádějí rychleji než testy, které můžete napíšete a musí jim být dána přednost. Například následující kód se provádí pomaleji, než volání `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
     return TRUE;
 ```
 
-## <a name="character-classification-routines"></a>Rutiny klasifikace znaků
+## <a name="character-classification-routines"></a>Rutiny klasifikace znaku
 
-|Rutina|Stav testu znak|
+|Rutina|Znak testovací podmínky|
 |-------------|------------------------------|
-|[isalnum –, iswalnum –, _isalnum_l –, _iswalnum_l –](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md), [_ismbcalnum –, _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumerické|
-|[_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumerické|
-|[isalpha –, iswalpha –, _isalpha_l –, _iswalpha_l –](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md), [_ismbcalnum –, _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Abecedy|
+|[isalnum iswalnum –, _isalnum_l – _iswalnum_l –](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md), [_ismbcalnum – _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumerické znaky|
+|[_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumerické znaky|
+|[isalpha iswalpha –, _isalpha_l – _iswalpha_l –](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md), [_ismbcalnum – _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Abecedy|
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|ASCII|
-|[zjistit, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md), [_ismbcsblank _ismbcsblank_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Prázdný (místo nebo vodorovné karty)|
+|[isblank iswblank, _isblank_l _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md), [_ismbcsblank _ismbcsblank_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Prázdné (mezera nebo horizontální tabelátor)|
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|Ovládací prvek|
-|[iscsym –, iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmeno, podtržítko nebo číslice|
-|[iscsym –, iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmenem nebo podtržítkem|
-|[IsDigit –, iswdigit –, _isdigit_l –, _iswdigit_l –](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md), [_ismbcalnum –, _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Desítková číslice|
-|[isgraph –, iswgraph –, _isgraph_l –, _iswgraph_l –](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md), [_ismbcgraph –, _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Tisknutelná než místa|
-|[islower –, iswlower –, _islower_l –, _iswlower_l –](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md), [_ismbclower –, _ismbclower_l –, _ismbcupper –, _ismbcupper_l –](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Malá|
+|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmeno, znak podtržení nebo číslice|
+|[iscsym – iscsymf –, __iscsym –, \__iswcsym, \__iscsymf, \__iswcsymf _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –](../c-runtime-library/reference/iscsym-functions.md)|Písmeno nebo znak podtržení|
+|[IsDigit iswdigit –, _isdigit_l – _iswdigit_l –](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md), [_ismbcalnum – _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Desítková číslice|
+|[isgraph iswgraph –, _isgraph_l – _iswgraph_l –](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md), [_ismbcgraph – _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Tisknutelný jiný než mezera|
+|[islower iswlower –, _islower_l – _iswlower_l –](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md), [_ismbclower – _ismbclower_l –, _ismbcupper – _ismbcupper_l –](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Malá|
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Hiragana|
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Katakana|
-|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Právní vícebajtových znaků|
-|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Japonsko úrovni 0 vícebajtových znaků|
-|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Japonsko úroveň 1 vícebajtových znaků|
-|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Japonsko úroveň 2 vícebajtových znaků|
-|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Jiné než alfanumerické vícebajtových znaků|
-|[isprint –, iswprint –, _isprint_l –, _iswprint_l –](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md), [_ismbcgraph –, _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Tisknutelná|
-|[ispunct –, iswpunct –, _ispunct_l –, _iswpunct_l –](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md), [_ismbcgraph –, _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Interpunkční znaménka|[System::Char::IsPunctuation](https://msdn.microsoft.com/en-us/library/system.char.ispunctuation.aspx)|
-|[isspace –, iswspace –, _isspace_l –, _iswspace_l –](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md), [_ismbcgraph –, _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Prázdné znaky|[System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)|
-|[Isupper –, iswupper –](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md), [_ismbclower –, _ismbclower_l –, _ismbcupper –, _ismbcupper_l –](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Velká písmena|
-|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|Vlastnost určeného *desc* argument|
+|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Platné vícebajtové znaky|
+|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Vícebajtový znak úrovně Japonsko 0|
+|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Japonsko level 1 vícebajtového znaku|
+|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|Japonsko level 2 vícebajtového znaku|
+|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Neabecední vícebajtové znakové|
+|[isprint iswprint –, _isprint_l – _iswprint_l –](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md), [_ismbcgraph – _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Tisknutelný|
+|[ispunct iswpunct –, _ispunct_l – _iswpunct_l –](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md), [_ismbcgraph – _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Interpunkční znaménka|[System::Char::IsPunctuation](https://msdn.microsoft.com/library/system.char.ispunctuation.aspx)|
+|[isspace iswspace –, _isspace_l – _iswspace_l –](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md), [_ismbcgraph – _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Prázdné znaky|[System::Char::IsWhiteSpace](https://msdn.microsoft.com/library/system.char.iswhitespace.aspx)|
+|[Isupper iswupper –](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md), [_ismbclower – _ismbclower_l –, _ismbcupper – _ismbcupper_l –](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Velká písmena|
+|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|Vlastnost určenou *desc* argument|
 |[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|Šestnáctková číslice|
-|[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Vrátí délku platný vícebajtových znaků; Výsledek bude záviset na **LC_CTYPE –** kategorie nastavení aktuální národní prostředí|
+|[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Vrátí délku platného vícebajtového znaku. Výsledek závisí na **LC_CTYPE** nastavením kategorie aktuálního národního prostředí|
 
 ## <a name="see-also"></a>Viz také
 

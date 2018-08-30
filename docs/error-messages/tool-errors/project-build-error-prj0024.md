@@ -1,7 +1,7 @@
 ---
-title: Chyba sestavení projektu PRJ0024 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0024 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215595"
 ---
 # <a name="project-build-error-prj0024"></a>Chyba sestavení projektu PRJ0024
-Cesta Unicode 'path' nebylo možné přeložit na uživatele ANSI znakovou stránku.  
-  
- ***cesta*** je původní verze Unicode řetězec cesty. Této chybě může dojít v případech, kde je cesta znakové sady Unicode, který nelze převést přímo na ANSI pro aktuální stránku kódu systému.  
-  
- Této chybě může dojít, pokud pracujete s projektem, která byla vyvinuta v systému pomocí znakové stránky, který není ve vašem počítači.  
-  
- Řešením této chyby je aktualizujte cestu k použijte ANSI text nebo k na počítač nainstalujte znakovou stránku a nastavte jej jako výchozí systémové nastavení.
+
+> Cestu kódovanou sadou Unicode '*cesta*se nepodařilo přeložit na uživatelovu ANSI znakovou stránku.
+
+*cesta* je původní verze Unicode řetězec cesty. Této chybě může dojít v případech, ve kterých je cestu kódovanou sadou Unicode, který nelze přeložit přímo na ANSI pro aktuální systémová znaková stránka.
+
+K této chybě může dojít, pokud pracujete s projektem, který byl vyvinut v systému pomocí znakovou stránku, která není ve vašem počítači.
+
+Řešením této chyby je aktualizovat cestu použití ANSI textu nebo k instalaci na znakovou stránku ve vašem počítači a nastavte jej jako výchozí systémové hodnoty.

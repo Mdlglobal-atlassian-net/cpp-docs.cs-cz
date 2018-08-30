@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolBarComboBoxEdit | Microsoft Docs
+title: Cmfctoolbarcomboboxedit – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042505"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195483"
 ---
-# <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit – třída
-Rozhraní používá `CMFCToolBarComboBoxEdit` třídy za účelem vytvoření tlačítka panelu nástrojů, který se chová jako prvek upravitelné pole se seznamem.  
+# <a name="cmfctoolbarcomboboxedit-class"></a>Cmfctoolbarcomboboxedit – třída
+Rozhraní používá `CMFCToolBarComboBoxEdit` třídy za účelem vytvoření tlačítka panelu nástrojů, který se chová jako ovládací prvek upravovat pole se seznamem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,21 +47,21 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 |Název|Popis|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Přeloží zprávy oken, než jsou odeslány do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce systému Windows. (Přepisuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   
 ### <a name="remarks"></a>Poznámky  
- Odvození třídy z `CMFCToolBarComboBoxEdit` třídy pro přizpůsobení jeho operací upravit.  
+ Odvodit třídu z `CMFCToolBarComboBoxEdit` třídy přizpůsobit jeho operace úpravy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CEdit](../../mfc/reference/cedit-class.md)  
+ [Cedit –](../../mfc/reference/cedit-class.md)  
   
- [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)  
+ [Cmfctoolbarcomboboxedit –](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarcomboboxbutton.h  
@@ -74,11 +74,11 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pole se seznamem*  
- Odkaz na [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objekt, který je tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem.  
+ [in] *– pole se seznamem*  
+ Odkaz na [cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objekt, který je tlačítko panelu nástrojů obsahující ovládací prvek pole se seznamem.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarComboBoxEdit` třídy. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarComboBoxEdit` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  
   

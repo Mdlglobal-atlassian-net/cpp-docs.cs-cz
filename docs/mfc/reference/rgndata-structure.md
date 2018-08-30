@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204356"
 ---
 # <a name="rgndata-structure"></a>RGNDATA – struktura
 `RGNDATA` Struktura obsahuje hlavičku a pole obdélníky, které tvoří oblast. Tyto obdélníky, seřazený shora dolů zleva doprava, nemusí být stejné.  
@@ -37,7 +37,7 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Parametry  
  *rdh*  
- Určuje [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) struktury. (Další informace o této struktuře naleznete v tématu Windows SDK.) Členové této struktury zadat typ oblasti (ať už jde obdélníkové nebo lichoběžníkové), počet obdélníky, které tvoří oblast, velikost vyrovnávací paměti, která obsahuje struktury obdélník a tak dále.  
+ Určuje [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) struktury. (Další informace o této struktuře naleznete v tématu Windows SDK.) Členové této struktury zadat typ oblasti (ať už jde obdélníkové nebo lichoběžníkové), počet obdélníky, které tvoří oblast, velikost vyrovnávací paměti, která obsahuje struktury obdélník a tak dále.  
   
  *Vyrovnávací paměti*  
  Určuje libovolné velikosti vyrovnávací paměti, která obsahuje [RECT](../../mfc/reference/rect-structure1.md) struktury, které tvoří oblast.  

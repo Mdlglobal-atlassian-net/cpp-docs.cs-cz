@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1093 | Microsoft Docs
+title: Závažná chyba C1093 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226341"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202023"
 ---
 # <a name="fatal-error-c1093"></a>Závažná chyba C1093
-Volání API "název funkce" se nezdařilo, umístění volání': 'text z run-time.  
+
+> Volání rozhraní API "*název funkce*'se nezdařil'*umístění volání*": "*text z běhu*.  
   
- Volání funkce .NET se nezdařila. ***text ze spuštění*** může nebo nemusí být poskytl COM runtime.  
+Volání funkce .NET se nezdařilo. *Text z běhu* řetězec může nebo nemusí být poskytnuty tímto modulem COM.  
   
- Další informace o systému chybové zprávy naleznete v souboru systému winerror.h a [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+Další informace o systému chybové zprávy naleznete v souboru systému winerror.h a [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

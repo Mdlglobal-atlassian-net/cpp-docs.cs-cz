@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199185"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
@@ -62,7 +62,7 @@ Součet *val* a všechny prvky v zadaném rozsahu pro první funkce šablony, ne
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota zajistí, že bude dobře definovaných výsledek při rozsahu je prázdný, v takovém případě *val* je vrácena. Binární operace nemusí být asociativní ani komutativní. Výsledkem je inicializován na počáteční hodnotu *val* a potom *výsledek*  =  `binary_op` ( *výsledek*, **\*** `Iter`) se počítá interaktivně pomocí rozsahu, kde `Iter` je iterátorem ukazujícím na po sobě jdoucích prvek v rozsahu. Rozsah musí být platná a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převeditelný na **typ** zajistit, že během iterace.
+Počáteční hodnota zajistí, že bude dobře definovaných výsledek při rozsahu je prázdný, v takovém případě *val* je vrácena. Binární operace nemusí být asociativní ani komutativní. Výsledkem je inicializován na počáteční hodnotu *val* a potom *výsledek*  =  `binary_op` ( *výsledek*, <strong>\*</strong> `Iter`) se počítá interaktivně pomocí rozsahu, kde `Iter` je iterátorem ukazujícím na po sobě jdoucích prvek v rozsahu. Rozsah musí být platná a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převeditelný na **typ** zajistit, že během iterace.
 
 ### <a name="example"></a>Příklad
 

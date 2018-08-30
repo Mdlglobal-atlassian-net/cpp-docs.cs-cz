@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852533"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197300"
 ---
 # <a name="event-handling-principles"></a>Principy zpracování událostí
 Společné pro všechny zpracování událostí jsou tři kroky. Budete muset:  
@@ -41,13 +41,13 @@ Společné pro všechny zpracování událostí jsou tři kroky. Budete muset:
   
  Nutnost zdroj události je možné rozdělit do tří kroků:  
   
--   Zadat dotaz na objekt zdroje pro [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   Zadat dotaz na objekt zdroje pro [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
   
--   Volání [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) předávání identifikátor IID rozhraní události, která vás zajímá. Pokud úspěšná, vrátí [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) rozhraní na objekt bodu připojení.  
+-   Volání [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) předávání identifikátor IID rozhraní události, která vás zajímá. Pokud úspěšná, vrátí [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) rozhraní na objekt bodu připojení.  
   
--   Volání [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) předání `IUnknown` z jímky událostí. Pokud úspěšná, vrátí `DWORD` představující připojení souboru cookie.  
+-   Volání [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) předání `IUnknown` z jímky událostí. Pokud úspěšná, vrátí `DWORD` představující připojení souboru cookie.  
   
- Jakmile úspěšně jste se zaregistrovali váš zájem o přijímání událostí, zavolá se podle události vyvolané zdrojový objekt metody rozhraní objektu události. Pokud už nepotřebujete příjem událostí, soubor cookie můžete předat zpět do spojovacího bodu prostřednictvím [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Tím dojde k přerušení připojení mezi zdroje a jímky.  
+ Jakmile úspěšně jste se zaregistrovali váš zájem o přijímání událostí, zavolá se podle události vyvolané zdrojový objekt metody rozhraní objektu události. Pokud už nepotřebujete příjem událostí, soubor cookie můžete předat zpět do spojovacího bodu prostřednictvím [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Tím dojde k přerušení připojení mezi zdroje a jímky.  
   
  Dejte pozor, abyste se vyhnuli odkaz cykly, při zpracování událostí.  
   

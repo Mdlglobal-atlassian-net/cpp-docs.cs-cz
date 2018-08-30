@@ -1,5 +1,5 @@
 ---
-title: CWinThread – třída | Microsoft Docs
+title: CWinThread – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,15 +60,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115b351ccbaf9c8c5cbccb0004d04c53e54351ba
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123056"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213063"
 ---
 # <a name="cwinthread-class"></a>CWinThread – třída
-Představuje vlákno při provádění v rámci aplikace.  
+Představuje vlákno provádění v rámci aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,21 +89,21 @@ class CWinThread : public CCmdTarget
 |Název|Popis|  
 |----------|-----------------|  
 |[CWinThread::CreateThread](#createthread)|Spustí provádění `CWinThread` objektu.|  
-|[CWinThread::ExitInstance](#exitinstance)|Přepsání nastavení za účelem vyčištění po ukončení vaše vlákna.|  
-|[CWinThread::GetMainWnd](#getmainwnd)|Načte ukazatel na hlavní okno pro vlákno.|  
-|[CWinThread::GetThreadPriority](#getthreadpriority)|Získá prioritu aktuální vlákno.|  
-|[CWinThread::InitInstance](#initinstance)|Přepsání nastavení za účelem provede inicializaci instance vlákna.|  
-|[CWinThread::IsIdleMessage](#isidlemessage)|Kontroluje pro speciální zprávy.|  
-|[CWinThread::OnIdle](#onidle)|Přepsání nastavení za účelem provedení zpracování specifické pro vlákno doby nečinnosti.|  
+|[CWinThread::ExitInstance](#exitinstance)|Přepsání nastavení za účelem vyčištění při ukončení vašeho vlákna.|  
+|[CWinThread::GetMainWnd](#getmainwnd)|Načte ukazatel do hlavního okna pro vlákno.|  
+|[CWinThread::GetThreadPriority](#getthreadpriority)|Získá prioritu aktuálního vlákna.|  
+|[CWinThread::InitInstance](#initinstance)|Přepsání nastavení za účelem provedení inicializace instance podprocesu.|  
+|[CWinThread::IsIdleMessage](#isidlemessage)|Kontroly pro speciální zprávy.|  
+|[CWinThread::OnIdle](#onidle)|Přepsání nastavení za účelem zpracování specifické pro vlákno doby nečinnosti.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Odešle zprávu do jiného `CWinThread` objektu.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtry zpráv předtím, než jsou odeslány do funkce Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|  
-|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Zachytí některé zprávy předtím, než nedostanou aplikace.|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Zachycuje určité zprávy dřív, než dorazí aplikace.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Zachycuje všechny neošetřené výjimky vyvolané vlákna zprávu a obslužné rutiny příkazů.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Obsahuje vlákna zpráva smyčky.|  
-|[CWinThread::ResumeThread](#resumethread)|Snižuje a vlákna pozastavit count.|  
-|[CWinThread::Run](#run)|Řídící funkce pro vlákna s zprávy odeslané. Přepsání nastavení za účelem přizpůsobení smyčky výchozí zpráva.|  
-|[CWinThread::SetThreadPriority](#setthreadpriority)|Nastaví prioritu aktuální vlákno.|  
-|[CWinThread::SuspendThread](#suspendthread)|Zvýší a vlákna pozastavit count.|  
+|[CWinThread::PumpMessage](#pumpmessage)|Obsahuje smyčku zpráv vlákna.|  
+|[CWinThread::ResumeThread](#resumethread)|Dekrementuje vlákna pozastaví count.|  
+|[CWinThread::Run](#run)|Řídící funkce pro vlákna s pumpu zpráv. Přepsání nastavení za účelem přizpůsobení výchozí smyčku zpráv.|  
+|[CWinThread::SetThreadPriority](#setthreadpriority)|Nastaví prioritu aktuálního vlákna.|  
+|[CWinThread::SuspendThread](#suspendthread)|Zvýší a vlákna pozastaví count.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -115,29 +115,29 @@ class CWinThread : public CCmdTarget
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinThread::m_bAutoDelete](#m_bautodelete)|Určuje, jestli chcete odstranit objekt v ukončení vlákna.|  
+|[CWinThread::m_bAutoDelete](#m_bautodelete)|Určuje, jestli se má zničit objekt při ukončení vlákna.|  
 |[CWinThread::m_hThread](#m_hthread)|Zpracování pro aktuální vlákno.|  
 |[CWinThread::m_nThreadID](#m_nthreadid)|ID aktuálního vlákna.|  
-|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Ukazatel na hlavní okno aplikace kontejneru, pokud je na místě aktivní server služby OLE.|  
-|[CWinThread::m_pMainWnd](#m_pmainwnd)|Obsahuje ukazatele na hlavní okno aplikace.|  
+|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Ukazatel na hlavní okno aplikace typu kontejner, když OLE server je na místě aktivní.|  
+|[CWinThread::m_pMainWnd](#m_pmainwnd)|Drží ukazatel hlavního okna aplikace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Hlavní vlákno spuštění je obvykle poskytují objektem odvozené z `CWinApp`; `CWinApp` je odvozený od `CWinThread`. Další `CWinThread` objekty povolit více vláken v dané aplikaci.  
+ Hlavní vlákno provádění obvykle poskytuje objektu odvozeného od `CWinApp`; `CWinApp` je odvozen z `CWinThread`. Další `CWinThread` objekty povolit více vláken v rámci dané aplikace.  
   
- Existují dvě obecné typy vláken, `CWinThread` podporuje: vláken uživatelského rozhraní a pracovních vláken. Pracovní vlákna mít žádná zpráva čerpadlo: například vlákno, které provede výpočty pozadí v aplikaci tabulky. Vlákna uživatelského rozhraní mají zprávy odeslané a zpracování zprávy přijaté ze systému. [CWinApp](../../mfc/reference/cwinapp-class.md) a třídy odvozené z něj jsou příklady vlákna uživatelského rozhraní. Jiná vlákna uživatelského rozhraní lze také odvodit přímo z `CWinThread`.  
+ Existují dva hlavní typy vláken, která `CWinThread` podporuje: pracovních vláken a vlákna uživatelského rozhraní. Pracovní vlákna mít žádné pumpu zpráv: například vlákno, které provádí výpočty na pozadí v tabulce aplikace. Vlákna uživatelského rozhraní mají pumpu zpráv a zpracovávat zprávy přijaté ze systému. [CWinApp](../../mfc/reference/cwinapp-class.md) a třídy odvozené z něj jsou příkladem vlákna uživatelského rozhraní. Ostatní vlákna uživatelského rozhraní může být také odvozena přímo z `CWinThread`.  
   
- Objekty třídy `CWinThread` obvykle existovat po dobu trvání vlákno. Pokud chcete-li toto chování změnit, nastavte [m_bAutoDelete](#m_bautodelete) na hodnotu FALSE.  
+ Objekty třídy `CWinThread` obvykle existuje po dobu trvání vlákna. Pokud chcete toto chování změnit, nastavte [m_bAutoDelete](#m_bautodelete) na hodnotu FALSE.  
   
- `CWinThread` Třída je potřeba provést kód a MFC plně bezpečné pro přístup z více vláken. Místní data používá k udržení informace specifické pro vlákno rámcem spravuje `CWinThread` objekty. Z důvodu tuto závislost na `CWinThread` zpracování dat místní, musí být všechny vlákno, které používá MFC vytvořeného rozhraním MFC. Například vlákno vytvořené funkce běhové [_beginthread _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) nelze použít žádné knihovny MFC rozhraní API.  
+ `CWinThread` Třída je nutné vytvářet kód a knihovna MFC plně bezpečným pro vlákno. Thread local data používané rozhraním Udržovat informace specifické pro vlákno je spravován `CWinThread` objekty. Z důvodu této závislosti na `CWinThread` zpracování dat thread local, musí být libovolného vlákna, která používá knihovnu MFC vytvořeného rozhraním MFC. Například vlákno vytvořil funkci run-time [_beginthread _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) nelze použít libovolné rozhraní API knihovny MFC.  
   
- Chcete-li vytvořit vlákno, volejte [AfxBeginThread](application-information-and-management.md#afxbeginthread). Existují dvě formy, v závislosti na tom, zda chcete vlákno pracovníka nebo uživatelského rozhraní. Pokud chcete vlákna uživatelského rozhraní, předat `AfxBeginThread` ukazatel `CRuntimeClass` z vaší `CWinThread`-odvozené třídy. Pokud chcete vytvořit pracovní vlákno, předat `AfxBeginThread` ukazatel na funkci řízení a parametr řídící funkce. Pracovní vlákna a vlákna uživatelského rozhraní můžete zadat volitelné parametry, které změnit prioritu, velikost zásobníku, vytvoření příznaky a atributů zabezpečení. `AfxBeginThread` vrátí ukazatel na nové `CWinThread` objektu.  
+ Chcete-li vytvořit vlákno, volejte [AfxBeginThread](application-information-and-management.md#afxbeginthread). Existují dva typy, v závislosti na tom, zda má být vlákno pracovních procesů nebo uživatelského rozhraní. Pokud chcete, aby vlákno uživatelského rozhraní, předat `AfxBeginThread` ukazatel `CRuntimeClass` z vaší `CWinThread`-odvozené třídy. Pokud chcete vytvořit pracovní vlákno, předat `AfxBeginThread` ukazatel na řídící funkce a parametr řídící funkce. Pracovní vlákna a vlákna uživatelského rozhraní můžete určit volitelné parametry, které mění prioritu, velikost zásobníku, příznaky vytváření a atributy zabezpečení. `AfxBeginThread` vrátí ukazatel na novou `CWinThread` objektu.  
   
- Místo volání `AfxBeginThread`, můžete vytvořit `CWinThread`-odvozené objekt a potom volání `CreateThread`. Tato metoda dvoufázová konstrukce je užitečné, pokud chcete znovu použít `CWinThread` objektu mezi následných vytvoření a ukončení spuštěních přístup z více vláken.  
+ Namísto volání metody `AfxBeginThread`, můžete vytvořit `CWinThread`-odvozené objekt a poté zavolejte `CreateThread`. Tato metoda dvoufázová konstrukce je užitečná, pokud chcete znovu použít `CWinThread` objektu mezi po sobě jdoucích vytváření a ukončení vlákna provádění.  
   
- Další informace o `CWinThread`, najdete v článcích [Multithreading s C++ a MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: vytváření pracovního procesu Vlákna](../../parallel/multithreading-creating-worker-threads.md), a [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Další informace o `CWinThread`, najdete v článcích [Multithreading s C++ a knihovnou MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: vytváření pracovních procesů Vlákna](../../parallel/multithreading-creating-worker-threads.md), a [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -147,7 +147,7 @@ class CWinThread : public CCmdTarget
  **Záhlaví:** afxwin.h  
   
 ##  <a name="createthread"></a>  CWinThread::CreateThread  
- Vytvoří vlákno k provedení v adresním prostoru procesu volání.  
+ Vytvoří vlákno k provedení v rámci adresového prostoru volajícího procesu.  
   
 ```  
 BOOL CreateThread(
@@ -158,23 +158,23 @@ BOOL CreateThread(
   
 ### <a name="parameters"></a>Parametry  
  *dwCreateFlags*  
- Určuje další příznak, který řídí vytváření vlákno. Tento příznak může obsahovat jednu ze dvou hodnot:  
+ Určuje další příznak, který řídí vytvoření vlákna. Tento příznak může obsahovat jednu ze dvou hodnot:  
   
-- CREATE_SUSPENDED začínat vlákno pozastavit započítává jako jeden. CREATE_SUSPENDED Pokud chcete použít k inicializaci dat člena z `CWinThread` objektů, jako například [m_bAutoDelete](#m_bautodelete) nebo žádné členy vaší odvozené třídy, než je vlákno spuštění. Po dokončení vaší inicializace použít [CWinThread::ResumeThread](#resumethread) spustit vlákno spuštěna. Dokud nebude spustit vlákno `CWinThread::ResumeThread` je volána.  
+- CREATE_SUSPENDED spustit vlákno s pozastaveným počtem jedna. CREATE_SUSPENDED použijte, pokud chcete inicializovat všechna data členů objektu `CWinThread` objektů, jako například [m_bAutoDelete](#m_bautodelete) nebo všechny členy odvozené třídy před spuštěním podprocesu. Po dokončení inicializace použít [CWinThread::ResumeThread](#resumethread) spustit vlákno spuštěné. Vlákno nebude spuštěno až do `CWinThread::ResumeThread` je volána.  
   
-- **0** spustit vlákno ihned po vytvoření.  
+- **0** spuštění vlákna ihned po vytvoření.  
   
  *nStackSize*  
- Určuje velikost v bajtech zásobníku pro nové vlákno. Pokud **0**, aby byla stejná jako u primární vlákna procesu výchozí nastavení velikosti zásobníku.  
+ Určuje velikost v bajtech zásobníku pro nové vlákno. Pokud **0**, výchozí velikost zásobníku se stejnou velikostí jako u primární vlákno procesu.  
   
  *lpSecurityAttrs*  
- Odkazuje na [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje atributy zabezpečení pro vlákno.  
+ Odkazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje atributy zabezpečení pro vlákno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové vlákno vytvořeném úspěšně; jinak 0.  
+ Nenulové, pokud je vlákno vytvořeno úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `AfxBeginThread` vytvořit objekt přístup z více vláken a spustit v jednom kroku. Použití `CreateThread` Pokud chcete znovu použít objekt vlákna mezi následných vytváření a ukončení spuštěních přístup z více vláken.  
+ Použití `AfxBeginThread` k vytvoření objektu vlákna a spustit v jednom kroku. Použití `CreateThread` Pokud chcete znovu použít objekt vlákna mezi po sobě jdoucích vytváření a ukončení vlákna provádění.  
   
 ##  <a name="cwinthread"></a>  CWinThread::CWinThread  
  Vytvoří `CWinThread` objektu.  
@@ -184,51 +184,51 @@ CWinThread();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li zahájit provádění vlákna, zavolejte [CreateThread](#createthread) – členská funkce. Obvykle vytvoříte vláken voláním [AfxBeginThread](application-information-and-management.md#afxbeginthread), který zavolá tento konstruktor a `CreateThread`.  
+ Chcete-li zahájit provádění vlákna, zavolejte [CreateThread](#createthread) členskou funkci. Obvykle vytvoříte vlákna voláním [AfxBeginThread](application-information-and-management.md#afxbeginthread), který zavolá tento konstruktor a `CreateThread`.  
   
 ##  <a name="exitinstance"></a>  CWinThread::ExitInstance  
- Voláno rámcem z v rámci zřídka přepsaného [spustit](#run) – členská funkce ukončíte tuto instanci vlákno, nebo pokud volání [InitInstance](#initinstance) selže.  
+ Volá se rozhraním z v rámci zřídka přepsané [spustit](#run) členské funkce ukončila tato instance vlákna, nebo pokud je volání [InitInstance](#initinstance) selže.  
   
 ```  
 virtual int ExitInstance();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukončovací kód vlákna; 0 znamená žádné chyby a hodnoty, které jsou větší než 0 indikují chybu. Tato hodnota může být načten voláním [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+ Ukončovací kód vlákna; 0 nejsou zjištěny žádné chyby a hodnoty větší než 0 udávající chybu. Tuto hodnotu můžete získat voláním [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Poznámky  
- Nevolejte tuto funkci člena z libovolného místa ale uvnitř `Run` – členská funkce. Tato funkce člen se používá pouze v vlákna uživatelského rozhraní.  
+ Nevolejte tuto funkci člena z libovolného místa ale v rámci `Run` členskou funkci. Tato členská funkce se používá jenom v vlákna uživatelského rozhraní.  
   
- Odstraní výchozí implementace této funkce `CWinThread` objektu Pokud [m_bAutoDelete](#m_bautodelete) má hodnotu TRUE. Tato funkce přepsání, pokud chcete provést další čištění po ukončení vaše vlákna. Vaši implementaci `ExitInstance` by měly volat základní třídy verzi, po provedení kódu.  
+ Odstraní výchozí implementaci této funkce `CWinThread` objekt by [m_bAutoDelete](#m_bautodelete) má hodnotu TRUE. Tato funkce přepište, pokud budete chtít provést další vyčištění při ukončení vašeho vlákna. Implementace `ExitInstance` by měly volat základní třídy verzi, po provedení kódu.  
   
 ##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
- Pokud je aplikace serveru OLE, volejte tuto funkci k získání ukazatele na aktivní hlavní okno aplikace místo přímo odkazující na `m_pMainWnd` členem objektu application.  
+ Pokud je vaše aplikace serveru OLE, volání této funkce načtete ukazatel na aktivní hlavní okno aplikace namísto přímo odkazující na `m_pMainWnd` člen objektu aplikace.  
   
 ```  
 virtual CWnd* GetMainWnd();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato funkce vrací ukazatel na jeden ze dvou typů systému windows. Pokud váš přístup z více vláken je součástí OLE server a má objekt, který je na místě aktivní uvnitř aktivní kontejneru, vrátí tato funkce [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) data členem `CWinThread` objektu.  
+ Tato funkce vrací ukazatel na jeden ze dvou typů systému windows. Pokud vašeho vlákna je součástí serveru OLE a má objekt, který je na místě aktivní uvnitř aktivní kontejner, vrátí tato funkce [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) datový člen třídy `CWinThread` objektu.  
   
- Pokud se žádný objekt, který je na místě aktivní do kontejneru, nebo aplikaci není OLE server, vrátí tato funkce [m_pMainWnd](#m_pmainwnd) – datový člen objektu přístup z více vláken.  
+ Pokud není žádný objekt, který je na místě aktivní v rámci kontejneru nebo aplikace není OLE server, vrátí tato funkce [m_pMainWnd](#m_pmainwnd) datový člen objektu vlákna.  
   
 ### <a name="remarks"></a>Poznámky  
- Pro vlákna uživatelského rozhraní, jde o ekvivalent přímo odkazující na `m_pActiveWnd` členem aplikační objekt.  
+ Pro vlákna uživatelského rozhraní, jde o ekvivalent přímo odkazující na `m_pActiveWnd` člen objektu aplikace.  
   
- Pokud vaše aplikace není OLE server, pak volání této funkce je ekvivalentní přímo odkazující na `m_pMainWnd` členem aplikační objekt.  
+ Pokud vaše aplikace není OLE server, pak volání této funkce je ekvivalentní k přímo odkazující na `m_pMainWnd` člen objektu aplikace.  
   
- Přepsání této funkci můžete upravovat výchozí chování.  
+ Tuto funkci chcete změnit výchozí chování přepište.  
   
 ##  <a name="getthreadpriority"></a>  CWinThread::GetThreadPriority  
- Získá aktuální úroveň priority vlákno podprocesu.  
+ Získá aktuální úroveň priority vlákna tohoto vlákna.  
   
 ```  
 int GetThreadPriority();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Aktuální úroveň priority přístup z více vláken v rámci své třídy s prioritou. Hodnota vrácená jednu z těchto, budou seřazeny od nejvyšší prioritou nejnižší:  
+ Aktuální úroveň priority vlákna ve své třídě priorit. Vrácená hodnota bude jeden z těchto možností uvedených od nejvyšší priority po nejnižší:  
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
@@ -244,7 +244,7 @@ int GetThreadPriority();
   
 - THREAD_PRIORITY_IDLE  
   
- Další informace o těchto priorit, najdete v části [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) ve Windows SDK.  
+ Další informace o těchto priorit, naleznete v tématu [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) v sadě Windows SDK.  
   
 ##  <a name="initinstance"></a>  CWinThread::InitInstance  
  `InitInstance` musí být potlačena za účelem inicializace každou novou instanci třídy vlákna uživatelského rozhraní.  
@@ -254,15 +254,15 @@ virtual BOOL InitInstance();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěšného; inicializace jinak 0.  
+ Nenulové, pokud se inicializace je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Obvykle je přepsat `InitInstance` k provádění úloh, které je třeba provést při prvním vytvoření vlákna.  
+ Obvykle je přepsat `InitInstance` k provádění úloh, kterou je potřeba provést při prvním vytvoření vlákna.  
   
- Tato funkce člen se používá pouze v vlákna uživatelského rozhraní. Provést inicializaci z pracovních vláken ve funkci řízení předaný [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
+ Tato členská funkce se používá jenom v vlákna uživatelského rozhraní. Provést inicializaci pracovních vláken v řídící funkce předány [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
   
 ##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
- Přepsání této funkce můžete zachovat `OnIdle` z volána po vygenerování konkrétní zprávy.  
+ Přepsání této funkce můžete zachovat `OnIdle` byla volána po vygenerování konkrétní zprávy.  
   
 ```  
 virtual BOOL IsIdleMessage(MSG* pMsg);
@@ -270,81 +270,81 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
   
 ### <a name="parameters"></a>Parametry  
  *pMsg*  
- Odkazuje na aktuální zprávu zpracovává.  
+ Odkazuje na aktuální zprávu právě zpracovává.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `OnIdle` by měla být volána po zpracování zprávy; jinak hodnota 0.  
+ Nenulovou hodnotu, pokud `OnIdle` by měla být volána po zpracování zprávy; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace nevyvolá `OnIdle` po redundantní myši zprávy a zprávy generované blikat carets.  
+ Výchozí implementace nevolá `OnIdle` po zprávy týkající se myši redundantní a zprávy generované bliká vám kontrolka střížek.  
   
- Pokud byla aplikace vytvořena krátké časovač `OnIdle` bude volána často, způsobuje problémy s výkonem. Chcete-li zvýšit výkon takové aplikace, přepište `IsIdleMessage` do aplikace `CWinApp`-odvozené třídy pro kontrolu zpráv WM_TIMER následujícím způsobem:  
+ Pokud byla aplikace vytvořena krátký časovače `OnIdle` bude volána často způsobuje problémy s výkonem. Kvůli zvýšení výkonu takovou aplikaci prvku se přepsat `IsIdleMessage` v aplikačním `CWinApp`-odvozené třídy se budou kontrolovat zprávy WM_TIMER následujícím způsobem:  
   
  [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- Zpracování WM_TIMER tímto způsobem bude zlepšit výkon aplikací, které používají krátké časovače.  
+ Zpracování WM_TIMER tímto způsobem se zvýší výkon aplikací, které používají krátké časovače.  
   
 ##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
- Určuje, zda `CWinThread` objektu, měla by být automaticky odstraněna při ukončení vlákna.  
+ Určuje, zda `CWinThread` objektu by měla být automaticky odstraněn při ukončení vlákna.  
   
 ```  
 BOOL m_bAutoDelete;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_bAutoDelete` – Datový člen je veřejné proměnné typu BOOL.  
+ `m_bAutoDelete` Datový člen je veřejná proměnná typu BOOL.  
   
- Hodnota `m_bAutoDelete` nemá vliv na tom, jak je základní popisovač podprocesu uzavřený. Popisovač podprocesu je uzavřen, vždy když `CWinThread` objekt zničena.  
+ Hodnota `m_bAutoDelete` neovlivní způsob uzavření podkladového popisovač vlákna. Popisovač vlákna je vždy uzavřen, když `CWinThread` objekt zničen.  
   
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread  
- Zpracování vlákno připojených k tomuto `CWinThread`.  
+ Zpracování připojených k tomuto vláknu `CWinThread`.  
   
 ```  
 HANDLE m_hThread;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_hThread` – Datový člen je veřejné proměnné typu POPISOVAČ. Ho je platná pouze v případě základní vlákno aktuálně existuje.  
+ `m_hThread` Datový člen je veřejná proměnná typu POPISOVAČ. Je platný jenom pokud podkladové vlákno aktuálně existuje.  
   
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID  
- ID podprocesu přiřazené k tomuto `CWinThread`.  
+ ID vlákna připojených k tomuto `CWinThread`.  
   
 ```  
 DWORD m_nThreadID;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_nThreadID` – Datový člen je veřejné proměnné typu DWORD. Ho je platná pouze v případě základní vlákno aktuálně existuje.  
+ `m_nThreadID` Datový člen je veřejná proměnná typu DWORD. Je platný jenom pokud podkladové vlákno aktuálně existuje.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [afxgetthread –](application-information-and-management.md#afxgetthread).  
   
 ##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd  
- Tento člen data použijte k ukládání ukazatele na objekt aktivní okno na vlákno.  
+ Tento datový člen slouží k ukládání ukazatel na objekt aktivní okno vašeho vlákna.  
   
 ```  
 CWnd* m_pActiveWnd;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Knihovny Microsoft Foundation Class automaticky přeruší váš přístup z více vláken, když okno odkazuje `m_pActiveWnd` je uzavřený. Pokud tento přístup z více vláken je primární vlákno pro aplikaci, bude aplikace ukončena. Pokud tento člen dat má hodnotu NULL, aktivní okno pro danou aplikaci `CWinApp` zdědí objektu. `m_pActiveWnd` je veřejné proměnné typu `CWnd*`.  
+ Knihovny Microsoft Foundation Class se automaticky ukončí vaše vlákno, když v okně odkazuje `m_pActiveWnd` je zavřený. Pokud toto vlákno je primární vlákno pro aplikace, aplikace také bude ukončeno. Pokud tomuto datovému členu má hodnotu NULL, aktivní okno pro aplikace `CWinApp` objektu se budou dědit. `m_pActiveWnd` je veřejná proměnná typu `CWnd*`.  
   
- Obvykle tuto proměnnou člen nastavit při přepsání `InitInstance`. V pracovní vlákno je hodnota této – datový člen zděděno od její nadřazené přístup z více vláken.  
+ Obvykle, nastavte tuto proměnnou člena při přepsání `InitInstance`. V pracovním vlákně hodnotu tomuto datovému členu je zděděno z jeho nadřazeného vlákna.  
   
 ##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd  
- Tento člen data použijte k ukládání ukazatele na objekt hlavní okno vašeho vlákna.  
+ Tento datový člen slouží k ukládání ukazatel na objekt hlavního okna vašeho vlákna.  
   
 ```  
 CWnd* m_pMainWnd;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Knihovny Microsoft Foundation Class automaticky přeruší váš přístup z více vláken, když okno odkazuje `m_pMainWnd` je uzavřený. Pokud tento přístup z více vláken je primární vlákno pro aplikaci, bude aplikace ukončena. Pokud tento člen dat má hodnotu NULL, hlavní okno pro danou aplikaci `CWinApp` objektu se použije k určení, kdy ukončit vlákno. `m_pMainWnd` je veřejné proměnné typu `CWnd*`.  
+ Knihovny Microsoft Foundation Class se automaticky ukončí vaše vlákno, když v okně odkazuje `m_pMainWnd` je zavřený. Pokud toto vlákno je primární vlákno pro aplikace, aplikace také bude ukončeno. Pokud tomuto datovému členu má hodnotu NULL, v hlavním okně aplikace `CWinApp` objektu se použije k určení toho, kdy k ukončení vlákna. `m_pMainWnd` je veřejná proměnná typu `CWnd*`.  
   
- Obvykle tuto proměnnou člen nastavit při přepsání `InitInstance`. V pracovní vlákno je hodnota této – datový člen zděděno od její nadřazené přístup z více vláken.  
+ Obvykle, nastavte tuto proměnnou člena při přepsání `InitInstance`. V pracovním vlákně hodnotu tomuto datovému členu je zděděno z jeho nadřazeného vlákna.  
   
 ##  <a name="onidle"></a>  CWinThread::OnIdle  
- Člen funkci k provedení zpracování doby nečinnosti přepište.  
+ Potlačí tuto členskou funkci provádět zpracování doby nečinnosti.  
   
 ```  
 virtual BOOL OnIdle(LONG lCount);
@@ -352,21 +352,21 @@ virtual BOOL OnIdle(LONG lCount);
   
 ### <a name="parameters"></a>Parametry  
  *lCount*  
- Čítač zvýší pokaždé, když `OnIdle` je volána, když se fronta zpráv vlákna je prázdný. Toto je čítač nastaven na 0 pokaždé, když je novou zprávu zpracovat. Můžete použít *lCount* parametr k určení relativních dobu, po vlákno bylo nečinné bez zpracování zprávy.  
+ Čítače se zvýší pokaždé, když `OnIdle` se volá, když vlákna fronta je prázdná. Toto je čítač nastaven na 0 pokaždé, když se zpracovává novou zprávu. Můžete použít *lCount* parametr k určení relativní časový úsek vlákna byl nečinný bez zpracování zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty pro příjem více zpracování doby nečinnosti; 0, pokud je potřeba žádné další zpracování nečinnosti.  
+ Nenulový přijímat další zpracování nečinnosti; 0, pokud je potřeba žádné další zpracování nečinnosti.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnIdle` ve smyčce zpráv výchozí je volána, když fronta zpráv vlákna je prázdný. Pomocí přepsání volání vlastní pozadí úlohy nečinnosti obslužné rutiny.  
+ `OnIdle` ve výchozí smyčku zpráv se volá, když vlákna fronta je prázdná. Přepsání použijte k volání vlastní pozadí úlohy nečinnosti obslužné rutiny.  
   
- `OnIdle` by měl vrátit 0 k označení, že není vyžadováno žádné další zpracování nečinnosti. *LCount* parametr se zvýší pokaždé, když `OnIdle` je volána, když je prázdný fronty zpráv a nastaven na hodnotu 0 pokaždé, když je novou zprávu zpracovat. Vaše různých nečinnosti rutiny založené na tento počet můžete volat.  
+ `OnIdle` by měl vrátit 0, která znamená, že je vyžadováno žádné další zpracování nečinnosti. *LCount* parametr se zvýší pokaždé, když `OnIdle` se volá, když fronta zpráv je prázdný a nastaven na hodnotu 0 pokaždé, když se zpracovává novou zprávu. Můžete volat vaše různých nečinnosti rutiny založené na tento počet.  
   
- Výchozí implementace této funkce člen uvolní dočasné objekty a nepoužívané knihovny z paměti.  
+ Výchozí implementace tato členská funkce uvolnění dočasné objekty a nepoužívané dynamické knihovny z paměti.  
   
- Tato funkce člen se používá pouze v vlákna uživatelského rozhraní.  
+ Tato členská funkce se používá jenom v vlákna uživatelského rozhraní.  
   
- Vzhledem k tomu, že aplikace nemůže zpracovat zprávy, dokud `OnIdle` vrátí, neprovádějte zdlouhavé úlohy v této funkci.  
+ Protože aplikace nemůže zpracovat zprávy do `OnIdle` vrátí, neprovádějte zdlouhavým úlohám v této funkci.  
   
 ##  <a name="operator_handle"></a>  CWinThread::operator POPISOVAČ  
  Načte popisovač `CWinThread` objektu.  
@@ -376,13 +376,13 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu popisovač objektu vlákno; jinak hodnota NULL.  
+ V případě úspěchu popisovač objektu vlákna; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Použijte popisovač přímo volat rozhraní API systému Windows.  
+ Pomocí popisovač přímo volat rozhraní API Windows.  
   
 ##  <a name="postthreadmessage"></a>  CWinThread::PostThreadMessage  
- Volané vlastní zprávu do jiného `CWinThread` objektu.  
+ Jen vytvořit uživatelem definované zprávu do jiného `CWinThread` objektu.  
   
 ```  
 BOOL PostThreadMessage(
@@ -393,25 +393,25 @@ BOOL PostThreadMessage(
   
 ### <a name="parameters"></a>Parametry  
  *message*  
- ID zprávy definovaný uživatelem.  
+ ID uživatelsky definovanou zprávu.  
   
  *wParam*  
- První parametr zprávy.  
+ První parametr message.  
   
  *lParam*  
- Druhý parametr zprávy.  
+ Druhý parametr message.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Odeslané zprávy mapovaný na obslužnou rutinu správné zpráva makra map zpráv on_thread_message –.  
+ Publikovaná zpráva mapováno makra map zpráv ON_THREAD_MESSAGE obslužnou rutinu správné zprávy.  
   
 > [!NOTE]
->  Při volání metody Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) funkce v rámci aplikace MFC zpráv MFC nejsou volány obslužné rutiny. Další informace najdete v článku znalostní báze Knowledge Base, "PRB: MFC zpráva obslužná rutina nebyla volána s PostThreadMessage()" (Q142415).  
+>  Při volání Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) funkce v rámci aplikace knihovny MFC, zpráv knihovny MFC nejsou volány obslužné rutiny. Další informace najdete v článku znalostní báze Knowledge Base, "PRB: MFC zpráva obslužná rutina není volána s PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Přepsání této funkci můžete filtrovat okno zprávy předtím, než jsou odeslány do funkce Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -419,16 +419,16 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="parameters"></a>Parametry  
  *pMsg*  
- Odkazuje na [MSG – struktura](../../mfc/reference/msg-structure1.md) obsahující zprávu zpracovat.  
+ Odkazuje [msg – struktura](../../mfc/reference/msg-structure1.md) obsahující zprávu zpracovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud zpráva byla plně zpracovány v `PreTranslateMessage` a nesmí být další zpracování. Nula, pokud by měl být zpráva zpracována běžným způsobem.  
+ Nenulové, pokud byla v plně zpracování zprávy `PreTranslateMessage` a nemají být dále zpracovány. Nula v případě by měl být zpráva zpracována běžným způsobem.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen se používá pouze v vlákna uživatelského rozhraní.  
+ Tato členská funkce se používá jenom v vlákna uživatelského rozhraní.  
   
 ##  <a name="processmessagefilter"></a>  CWinThread::ProcessMessageFilter  
- Funkce háku rozhraní framework volá tuto funkci člen filtrovat a reagovat na určité zpráv systému Windows.  
+ Funkce háku rozhraní framework volá tato členská funkce k filtrování a reagovat na určité zprávy Windows.  
   
 ```  
 virtual BOOL ProcessMessageFilter(
@@ -437,22 +437,22 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Kód*  
- Určuje kód háku. Tato funkce člen kód používá určit, jak zpracovat *lpMsg.*  
+ *kód*  
+ Určuje kód zavěšení. Tato členská funkce kód používá k určení způsobu zpracování *lpMsg.*  
   
  *lpMsg*  
- Ukazatel na Windows [MSG – struktura](../../mfc/reference/msg-structure1.md).  
+ Ukazatel Windows [msg – struktura](../../mfc/reference/msg-structure1.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je zpráva zpracována; jinak 0.  
+ Nenulové, pokud zpráva se zpracuje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce háku zpracovává události před jejich odesláním do aplikace normální zpráva zpracování.  
+ Funkce háku zpracovává události před jejich odesláním do vaší aplikace normální zpráva o zpracování.  
   
- Pokud přepíšete tato pokročilé funkce, je nutné volat základní třídy verze Udržovat rozhraní framework napojit zpracování.  
+ Pokud přepíšete tento pokročilé funkce, nezapomeňte volat základní třídy verze rozhraní framework udržovat připojení zpracování.  
   
 ##  <a name="processwndprocexception"></a>  CWinThread::ProcessWndProcException  
- Tento člen funkce volá framework vždy, když obslužná rutina nezachytí výjimka vyvolána v jednom z vašeho vlákna zpráva nebo obslužné rutiny příkazů.  
+ Rozhraní volá tuto funkci člena pokaždé, když se obslužná rutina nezachytí výjimku vyvolanou v jednom z vašeho vlákna zprávy nebo obslužné rutiny příkazů.  
   
 ```  
 virtual LRESULT ProcessWndProcException(
@@ -462,72 +462,72 @@ virtual LRESULT ProcessWndProcException(
   
 ### <a name="parameters"></a>Parametry  
  *e*  
- Body k neošetřené výjimce.  
+ Odkazuje na neošetřené výjimce.  
   
  *pMsg*  
- Odkazuje na [MSG – struktura](../../mfc/reference/msg-structure1.md) obsahující informace o zprávě systému windows, která způsobila, že rozhraní framework má být vyvolána výjimka.  
+ Odkazuje [msg – struktura](../../mfc/reference/msg-structure1.md) obsahující informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- -1, pokud se vygeneruje výjimka WM_CREATE; jinak 0.  
+ -1, pokud je vygenerována výjimka WM_CREATE; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Nevolejte tuto funkci člen přímo.  
+ Přímo Nevolejte tuto členskou funkci.  
   
- Výchozí implementace této funkce člen zpracovává pouze výjimky generované z následujících zpráv:  
+ Výchozí implementace tato členská funkce zpracovává pouze výjimky generované z následujících zpráv:  
   
 |Příkaz|Akce|  
 |-------------|------------|  
 |WM_CREATE|Selhání.|  
-|WM_PAINT|Ověření ovlivněných okna, proto další zprávu WM_PAINT brání generován.|  
+|WM_PAINT|Ověření oknu, zamezuje tak další zprávu WM_PAINT nefunkční.|  
   
- Člen funkci zajistit globální zpracování vaše výjimek přepište. Základní funkce volejte jenom v případě, že si přejete zobrazit výchozí chování.  
+ Přepište tato členská funkce poskytnout globální zpracování vašich výjimek. Základní funkce volejte pouze v případě, že si přejete zobrazit výchozí chování.  
   
- Tato funkce člen se používá pouze v vláken, které mají zprávy odeslané.  
+ Tato členská funkce se používá jenom v vlákna, které mají pumpu zpráv.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Obsahuje vlákna zpráva smyčky.  
+ Obsahuje smyčku zpráv vlákna.  
   
 ```  
 virtual BOOL PumpMessage();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `PumpMessage` obsahuje vlákna zpráva smyčky. `PumpMessage` je volána metodou `CWinThread` k čerpadla vlákna zprávy. Můžete volat `PumpMessage` přímo k vynucení zpráv, které mají být zpracovány, nebo můžete přepsat `PumpMessage` změnit jeho výchozí chování.  
+ `PumpMessage` obsahuje smyčku zpráv vlákna. `PumpMessage` je volán `CWinThread` k pumpa zpráv vlákna. Můžete volat `PumpMessage` přímo vynutit zpráv pro zpracování, nebo můžete přepsat `PumpMessage` změnit výchozí chování.  
   
- Volání metody `PumpMessage` přímo a pouze pro pokročilé uživatele se nedoporučuje potlačovat jeho výchozí chování.  
+ Volání `PumpMessage` přímo a přepsání její výchozí chování je doporučeno pouze pro pokročilé uživatele.  
   
 ##  <a name="resumethread"></a>  CWinThread::ResumeThread  
- Voláno k pokračovat v provádění vlákno, které bylo pozastaveno [SuspendThread](#suspendthread) – členská funkce nebo vytvořit s příznakem CREATE_SUSPENDED vlákna.  
+ Volá se, aby pokračovat v provádění vlákna, které bylo pozastaveno [SuspendThread](#suspendthread) členská funkce nebo vlákno s příznakem CREATE_SUSPENDED vytvořili.  
   
 ```  
 DWORD ResumeThread();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vlákno je předchozí pozastavit počet v případě úspěšného; `0xFFFFFFFF` jinak. Pokud návratovou hodnotu nula, aktuální vlákno není pozastaveno. Pokud návratovou hodnotu, vlákno byla pozastavena, ale teď restartování. Všechny návratovou hodnotu větší než jedna znamená vlákno zůstává přerušena.  
+ Vlákno je předchozí pozastavit počet v případě úspěchu; `0xFFFFFFFF` jinak. Pokud vrácená hodnota je nula, aktuální vlákno nebylo pozastaveno. Pokud vrácená hodnota je jedna, vlákno bylo pozastaveno, ale se teď restartuje. Žádné návratová hodnota větší než jedna znamená, že vlákno činnost průvodce zůstává přerušena.  
   
 ### <a name="remarks"></a>Poznámky  
- Pozastavit počet aktuální vlákno se sníží o jedna. Pokud je snížen počet pozastavit na nulu, vlákno obnoví spuštění; v opačném případě vlákno zůstává přerušena.  
+ Pozastaveným počtem aktuální vlákno se sníží o jedna. Pokud je snížen počet pozastavení na nulu, vlákno pokračuje v provádění; v opačném případě vlákno činnost průvodce zůstává přerušena.  
   
 ##  <a name="run"></a>  CWinThread::Run  
- Poskytuje smyčku výchozí zprávu pro vlákna uživatelského rozhraní.  
+ Poskytuje výchozí smyčku zpráv pro vlákna uživatelského rozhraní.  
   
 ```  
 virtual int Run();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Int** hodnotu, která vrátí vlákno. Tato hodnota může být načten voláním [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+ **Int** hodnotu, která je vrácena vlákna. Tuto hodnotu můžete získat voláním [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Poznámky  
- `Run` Získá a odešle zprávu zpráv systému Windows, dokud neobdrží aplikace [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) zprávy. Pokud fronta zpráv vlákna aktuálně obsahuje žádné zprávy `Run` volání `OnIdle` k provedení zpracování doby nečinnosti. Příchozí zprávy přejít na [PreTranslateMessage –](#pretranslatemessage) – členská funkce pro zvláštní zpracování a pak na funkce systému Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) pro překlad standardní klávesnice. Nakonec [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) je volána funkce systému Windows.  
+ `Run` Získá a odesílá zprávy Windows, dokud se aplikace obdrží [WM_QUIT](/windows/desktop/winmsg/wm-quit) zprávy. Pokud fronta zpráv vlákna v současné době obsahuje žádné zprávy `Run` volání `OnIdle` provádět zpracování doby nečinnosti. Příchozí zprávy pokračujte [PreTranslateMessage –](#pretranslatemessage) členskou funkci pro zvláštní zpracování a potom na funkci Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) pro překlad standardní klávesnice. Nakonec [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) je volána funkce Windows.  
   
- `Run` zřídka přepsána, ale můžete ho implementovat zvláštní chování přepsat.  
+ `Run` je přepsána jen zřídka, ale můžete ho implementovat zvláštní chování přepsat.  
   
- Tato funkce člen se používá pouze v vlákna uživatelského rozhraní.  
+ Tato členská funkce se používá jenom v vlákna uživatelského rozhraní.  
   
 ##  <a name="setthreadpriority"></a>  CWinThread::SetThreadPriority  
- Tato funkce se nastaví úroveň priority aktuálního vlákna v rámci své třídy s prioritou.  
+ Tato funkce nastaví prioritu aktuální vlákno v rámci jeho prioritou.  
   
 ```  
 BOOL SetThreadPriority(int nPriority);
@@ -535,7 +535,7 @@ BOOL SetThreadPriority(int nPriority);
   
 ### <a name="parameters"></a>Parametry  
  *nPriority*  
- Určuje novou úroveň priority přístup z více vláken v rámci své třídy s prioritou. Tento parametr musí mít jednu z následujících hodnot, seřazeny od nejvyšší prioritou nejnižší:  
+ Určuje novou úroveň priority vlákna ve své třídě priorit. Tento parametr musí být jedna z následujících hodnot uvedených od nejvyšší priority po nejnižší:  
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
@@ -551,26 +551,26 @@ BOOL SetThreadPriority(int nPriority);
   
 - THREAD_PRIORITY_IDLE  
   
- Další informace o těchto priorit, najdete v části [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) ve Windows SDK.  
+ Další informace o těchto priorit, naleznete v tématu [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud funkce byla úspěšná. jinak 0.  
+ Nenulové, pokud funkce byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Lze volat jen po [CreateThread](#createthread) úspěšně vrátí.  
+ Lze volat pouze po [CreateThread](#createthread) úspěšně vrátí.  
   
 ##  <a name="suspendthread"></a>  CWinThread::SuspendThread  
- Zvýší aktuální počet pozastavit vlákna.  
+ Zvětší aktuální počet pozastavení vlákna.  
   
 ```  
 DWORD SuspendThread();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vlákno je předchozí pozastavit počet v případě úspěšného; `0xFFFFFFFF` jinak.  
+ Vlákno je předchozí pozastavit počet v případě úspěchu; `0xFFFFFFFF` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud žádné vlákno pozastavit počet vyšší než nula, že vlákno není provedena. Vlákno lze obnovit pomocí volání [ResumeThread](#resumethread) – členská funkce.  
+ Pokud žádné vlákno má pozastavit počet vyšší než nula, bylo vlákno se nespustí. Vlákna lze obnovit voláním [ResumeThread](#resumethread) členskou funkci.  
   
 ## <a name="see-also"></a>Viz také  
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)   

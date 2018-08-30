@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965523"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198299"
 ---
 # <a name="valarray-class"></a>valarray – třída
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Func(Type)* objektu funkce použije na každý prvek operand valarray.
+*_Func(Type)*<br/>
+ Objekt funkce, která se použije na každý prvek operand valarray.
 
-*_Func(const Type&)* objektu funkce pro const použije na každý prvek operand valarray.
+*_Func(const Type&)*<br/>
+ Objekt funkce pro const použije na každý prvek operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -141,7 +143,7 @@ Valarray, jehož prvky mají `_Func` element-wise u elementů operand valarray.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí objekt třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, délky [velikost](#size), každý z jehož prvků `I` je **func**((  **\*to**) [ `I`]).
+Členská funkce vrátí objekt třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, délky [velikost](#size), každý z jehož prvky *můžu*je `_Func((*this)[I])`.
 
 ### <a name="example"></a>Příklad
 
@@ -1247,7 +1249,7 @@ Odkaz na prvek nebo její hodnotu na zadaný index nebo podmnožinu zadané.
 
 ### <a name="remarks"></a>Poznámky
 
-Členský operátor je přetížena pro poskytuje několik způsobů, jak vybrat pořadí prvků z těch řídí *\****to**. První skupina operátorů členské pět fungování ve spojení s různými přetížení [operátoru =](#op_eq) (a ostatní operátory přiřazení) umožňuje selektivní nahrazení (dělení) řízené sekvence. Vybrané elementy musí existovat.
+Členský operátor je přetížena pro poskytuje několik způsobů, jak vybrat pořadí prvků z těch řídí  <strong>\*to</strong>. První skupina operátorů členské pět fungování ve spojení s různými přetížení [operátoru =](#op_eq) (a ostatní operátory přiřazení) umožňuje selektivní nahrazení (dělení) řízené sekvence. Vybrané elementy musí existovat.
 
 Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, Chyba za běhu dochází, pokud se pokusíte o přístup k prvku mimo hranice valarray.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
 
@@ -1845,7 +1847,7 @@ valarray(
 *PTR*  
  Ukazatele na hodnoty, které se použijí k inicializaci prvků v valarray.
 
-*Doprava*  
+*doprava*  
  Existující valarray – inicializace nového valarray.
 
 *SliceArray*  

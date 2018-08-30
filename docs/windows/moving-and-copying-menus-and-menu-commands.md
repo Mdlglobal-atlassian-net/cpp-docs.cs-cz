@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc95eef2c3cca678ae291846c2ebe0e5c1e80997
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d7933aeb5b9b12e761c684a1a9b62c4201ef4bdb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609079"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204835"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Přesouvání a kopírování nabídek a příkazů nabídky
 
@@ -54,7 +54,7 @@ Mohou přesunout nebo kopírovat nabídek a příkazů nabídky pomocí přetaho
    > [!NOTE]
    > Můžete také přetáhnout, zkopírujte a vložte jiným nabídkám v jiných oknech nabídky.
 
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům zobrazení statických prostředků a přiřazování prostředků řetězců pro vlastnosti.
 
 ## <a name="requirements"></a>Požadavky
 

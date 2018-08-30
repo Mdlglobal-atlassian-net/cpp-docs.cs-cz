@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850040"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199198"
 ---
 # <a name="cscrollbar-class"></a>Cscrollbar – třída
 Poskytuje funkce pro ovládací prvek posuvníku Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Parametry  
  *pScrollInfo*  
- Ukazatel [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) struktury.  
+ Ukazatel [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Načte informace, které `SCROLLINFO` struktura udržuje o posuvníku.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parametry  
  *lpScrollInfo*  
- Ukazatel [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury. Zobrazit sady Windows SDK pro další informace o této struktury.  
+ Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury. Zobrazit sady Windows SDK pro další informace o této struktury.  
   
  *nMask*  
  Určuje parametry panelu přejděte k načtení. Typické použití SIF_ALL, určí kombinaci možností SIF_PAGE, SIF_POS, SIF_TRACKPOS a SIF_RANGE. Zobrazit `SCROLLINFO` pro další informace o hodnotách nMask.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Poznámky  
  `GetScrollInfo` umožňuje aplikacím používat pozice posuvníku 32-bit.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura obsahuje informace o posuvník, včetně minimální a maximální posouvání pozic, velikost stránky a pozice posuvníku (Flash). Zobrazit `SCROLLINFO` struktura téma v sadě Windows SDK pro další informace o změně výchozího nastavení struktury.  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktura obsahuje informace o posuvník, včetně minimální a maximální posouvání pozic, velikost stránky a pozice posuvníku (Flash). Zobrazit `SCROLLINFO` struktura téma v sadě Windows SDK pro další informace o změně výchozího nastavení struktury.  
   
  Zprávy Windows MFC obslužné rutiny, které označuje pozici posunutí řádku, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) a [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), zadejte umístění dat pouze 16 bitů. `GetScrollInfo` a `SetScrollInfo` poskytují 32 bitů posuvník se data umístění. Díky tomu se může volat aplikaci `GetScrollInfo` při zpracování buď `CWnd::OnHScroll` nebo `CWnd::OnVScroll` získávat data pozici panelu 32-bit posuvníku.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Parametry  
  *lpScrollInfo*  
- Ukazatel [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury.  
+ Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury.  
   
  *bRedraw*  
  Určuje, zda by se měl překreslit posuvníku, tak, aby odrážela nové informace. Pokud *bRedraw* má hodnotu TRUE, překreslení posuvníku. Pokud je FALSE, není překreslení. Ve výchozím nastavení se překreslí posuvníku.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Poznámky  
  Je nutné zadat potřebné hodnoty `SCROLLINFO` struktury parametry, včetně hodnoty příznaku.  
   
- `SCROLLINFO` Struktura obsahuje informace o posuvník, včetně minimální a maximální posouvání pozic, velikost stránky a pozice posuvníku (Flash). Zobrazit [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura téma v sadě Windows SDK pro další informace o změně výchozího nastavení struktury.  
+ `SCROLLINFO` Struktura obsahuje informace o posuvník, včetně minimální a maximální posouvání pozic, velikost stránky a pozice posuvníku (Flash). Zobrazit [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktura téma v sadě Windows SDK pro další informace o změně výchozího nastavení struktury.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

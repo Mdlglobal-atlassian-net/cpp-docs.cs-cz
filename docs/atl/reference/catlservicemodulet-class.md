@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881068"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219407"
 ---
 # <a name="catlservicemodulet-class"></a>Catlservicemodulet – třída
 Tato třída implementuje služby.  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  Volitelné další řetězců, které mají být zapsané do protokolu událostí.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zapíše podrobnosti do protokolu událostí, pomocí funkce [ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679). Pokud žádná služba běží, řetězec je odeslána do konzoly.  
+ Tato metoda zapíše podrobnosti do protokolu událostí, pomocí funkce [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Pokud žádná služba běží, řetězec je odeslána do konzoly.  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  Příznak označující, že je program spuštěn jako služba.  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) struktura obsahuje informace o službě.  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) struktura obsahuje informace o službě.  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  Členské proměnné ukládání struktura informací o stavu pro aktuální službu.  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) struktura obsahuje informace o službě.  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) struktura obsahuje informace o službě.  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  Název služby registrována.  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Parametry  
  *nShowCmd*  
- Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.  
+ Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>Parametry  
  *dwState*  
- Nový stav. Zobrazit [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241) možných hodnot.  
+ Nový stav. Zobrazit [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) možných hodnot.  
   
 ### <a name="remarks"></a>Poznámky  
  Aktualizuje informace o službě stavu Správce řízení služeb. Je volána metodou [catlservicemodulet::Run –](#run), [catlservicemodulet::servicemain –](#servicemain) a jiné metody obslužné rutiny. Stav je také uložen v proměnné člena [CAtlServiceModuleT::m_status](#m_status).  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parametry  
  *nShowCmd*  
- Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.  
+ Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parametry  
  *nShowCmd*  
- Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.  
+ Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí služby návratovou hodnotu.  

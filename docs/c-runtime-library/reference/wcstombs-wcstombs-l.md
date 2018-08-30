@@ -1,5 +1,5 @@
 ---
-title: wcstombs –, _wcstombs_l – | Microsoft Docs
+title: wcstombs – _wcstombs_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217131"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
-Převede posloupnost široké znaky na odpovídající posloupnost více-bajtové znaky. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [wcstombs_s –, _wcstombs_s_l –](wcstombs-s-wcstombs-s-l.md).
+Převede sekvenci širokých znaků na odpovídající sekvence vícebajtových znaků. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [wcstombs_s – _wcstombs_s_l –](wcstombs-s-wcstombs-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,34 +82,34 @@ size_t _wcstombs_l(
 ### <a name="parameters"></a>Parametry
 
 *mbstr*<br/>
-Adresa posloupnost více-bajtové znaky.
+Adresa sekvence vícebajtových znaků.
 
 *wcstr*<br/>
-Adresa posloupnost široké znaky.
+Adresa sekvence širokých znaků.
 
 *Počet*<br/>
-Maximální počet bajtů, které mohou být uloženy ve více-bajtové výstupní řetězec.
+Maximální počet bajtů, které mohou být uloženy ve vícebajtové výstupním řetězci.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wcstombs –** úspěšně převede vícebajtové řetězce, vrátí počet bajtů zapsaných do řetězce vícebajtových výstup, s výjimkou ukončující null (pokud existuje). Pokud *mbstr* argument je **NULL**, **wcstombs –** vrátí požadovaná velikost v bajtech cílový řetězec. Pokud **wcstombs –** zaznamená široká znaková nelze převést na vícebajtových znaků, vrátí hodnotu -1 přetypovat na typ **size_t –** a nastaví **errno** k **eilseq –** .
+Pokud **wcstombs –** úspěšně převede vícebajtový řetězec, vrátí počet bajtů zapsaný do výstupní vícebajtový řetězec, s výjimkou ukončujícího znaku null (pokud existuje). Pokud *mbstr* argument je **NULL**, **wcstombs –** vrací požadovaná velikost v bajtech cílový řetězec. Pokud **wcstombs –** nejde převést na vícebajtový znak, široký znak, zaznamená se vrátí hodnotu -1 přetypován na typ **size_t** a nastaví **errno** k **EILSEQ** .
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcstombs –** funkce převede řetězec široká charakterová, na kterou odkazuje *wcstr* na odpovídající vícebajtových znaků a ukládá výsledky do *mbstr* pole. *Počet* určuje maximální počet bajtů, které mohou být uloženy v řetězci vícebajtové výstup (to znamená, velikost *mbstr*). Obecně platí není znám, kolik bajtů se bude vyžadovat při převodu řetězce široká charakterová. Některé široké znaky bude vyžadovat pouze jeden bajt do výstupního řetězce; jiné vyžadují dva. Pokud existují dva bajty v řetězci vícebajtové výstup pro každý široké znak ve vstupním řetězci (včetně široká znaková null), výsledek záruku.
+**Wcstombs –** funkce převede řetězec širokých znaků, na které odkazuje *wcstr* na odpovídající vícebajtových znaků a ukládá výsledky *mbstr* pole. *Počet* parametr označuje maximální počet bajtů, které mohou být uloženy ve vícebajtové výstupním řetězci (tj, velikost *mbstr*). Obecně platí není znám, kolik bajtů se bude vyžadovat při převodu řetězce širokého znaku. Některé širokých znaků bude vyžadovat jenom jeden bajt ve výstupním řetězci; jiná vyžadují dva. Pokud existují dva bajty v řetězci vícebajtové výstup pro každý široký znak ve vstupním řetězci (včetně širokého znaku null), výsledek je zaručeno, že přizpůsobit.
 
-Pokud **wcstombs –** zaznamená znak hodnoty null široká charakterová (L '\0') před nebo po *počet* dojde, převede ji 0 8bitové a zastaví se. Proto řetězce vícebajtových znaků na *mbstr* je ukončené hodnotou null jenom v případě **wcstombs –** širokého znaku prázdný znak, zaznamená při převodu. Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování **wcstombs –** není definován.
+Pokud **wcstombs –** zaznamená prázdný znak širokého znaku (L '\0') před nebo po *počet* dojde, převede ho 8 bitů 0 a zastaví. Proto vícebajtové znakové řetězce na *mbstr* je zakončený hodnotou null jenom v případě **wcstombs –** během převodu dojde prázdný znak širokého znaku. Pokud sekvence odkazované *wcstr* a *mbstr* překrývají, chování **wcstombs –** není definován.
 
-Pokud *mbstr* argument je **NULL**, **wcstombs –** vrátí požadovaná velikost v bajtech cílový řetězec.
+Pokud *mbstr* argument je **NULL**, **wcstombs –** vrací požadovaná velikost v bajtech cílový řetězec.
 
-**wcstombs –** ověří jeho parametry. Pokud *wcstr* je **NULL**, nebo pokud *počet* je větší než **INT_MAX**, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastaví funkci **errno** k **einval –** a vrátí hodnotu -1.
+**wcstombs –** ověří jeho parametry. Pokud *wcstr* je **NULL**, nebo pokud *počet* je větší než **INT_MAX**, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
 
-**wcstombs –** používá aktuální národní prostředí pro chování všech závislých na národním prostředí; **_wcstombs_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**wcstombs –** používá aktuální národní prostředí pro všechna závislá chování; **_wcstombs_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -118,11 +118,11 @@ V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání nověj
 |**wcstombs –**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program znázorňuje chování **wcstombs –** funkce.
+Tento program ukazuje chování **wcstombs –** funkce.
 
 ```C
 // crt_wcstombs.c
@@ -162,7 +162,7 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

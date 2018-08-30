@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3d045035ad757286b30b4adecf2f04f4dfbfd25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340192"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213707"
 ---
 # <a name="commands-and-tables"></a>Příkazy a tabulky
 Příkazy a tabulky umožňují přístup k sady řádků; To znamená otevřete sady řádků, spusťte příkazy a vytvořit vazbu sloupce. [CCommand](../../data/oledb/ccommand-class.md) a [CTable](../../data/oledb/ctable-class.md) třídy instance objektů příkazu a tabulky, v uvedeném pořadí. Tyto třídy odvozovat z [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) jak je znázorněno na následujícím obrázku.  
@@ -43,7 +43,7 @@ Příkaz a tabulka třídy
   
 -   U zdrojů dat, které podporují příkazy můžete použít `CCommand` namísto třídy. Chcete-li spustit příkaz, zavolejte [otevřít](../../data/oledb/ccommand-open.md) na této třídě. Jako alternativu můžete volat `Prepare` Příprava příkaz, který chcete spustit více než jednou.  
   
-     `CCommand` má tři argumenty šablony: typ přístupového objektu, typ sady řádků a typ výsledku (`CNoMultipleResults`, ve výchozím nastavení, nebo `CMultipleResults`). Pokud zadáte `CMultipleResults`, `CCommand` třídy podporuje `IMultipleResults` rozhraní a zpracovává více sad řádků. [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) příklad ukazuje, jak zpracovat více výsledků.  
+     `CCommand` má tři argumenty šablony: typ přístupového objektu, typ sady řádků a typ výsledku (`CNoMultipleResults`, ve výchozím nastavení, nebo `CMultipleResults`). Pokud zadáte `CMultipleResults`, `CCommand` třídy podporuje `IMultipleResults` rozhraní a zpracovává více sad řádků. [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) příklad ukazuje, jak zpracovat více výsledků.  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

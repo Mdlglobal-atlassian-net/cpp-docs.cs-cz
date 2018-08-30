@@ -1,5 +1,5 @@
 ---
-title: Přidání karet do ovládacího prvku karta | Microsoft Docs
+title: Přidání karet do ovládacího prvku karta | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86032bd3d1ce10221cb5d8094e4ba6de866e1eea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb8caad0b7d1f632a2d97e4ea6bda7c93a2b4d74
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218294"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Přidání karet do ovládacího prvku karta
-Po vytvoření ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), přidat libovolný počet záložek, kolik potřebujete.  
+Po vytvoření ovládacího prvku karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)), přidejte libovolný počet karet podle potřeby.  
   
-### <a name="to-add-a-tab-item"></a>Přidat položku Karta  
+### <a name="to-add-a-tab-item"></a>Chcete-li přidat položka karty  
   
-1.  Příprava [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktury.  
+1.  Příprava [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) struktury.  
   
-2.  Volání [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), předávání strukturu.  
+2.  Volání [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), předejte strukturu.  
   
-3.  Opakujte kroky 1 a 2 pro další karta položky.  
+3.  Opakujte kroky 1 a 2 pro další položky.  
   
- Další informace najdete v tématu [vytvoření ovládacího prvku karta](http://msdn.microsoft.com/library/windows/desktop/bb760550) ve Windows SDK.  
+ Další informace najdete v tématu [vytváření ovládacího prvku karta](/windows/desktop/Controls/tab-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)   

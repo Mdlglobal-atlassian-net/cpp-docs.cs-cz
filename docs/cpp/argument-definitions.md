@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200637"
 ---
 # <a name="argument-definitions"></a>Definice argumentů
 Argumenty v prototypu  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  První argument příkazového řádku je vždy `argv` **[1]** a poslední je `argv` **[** `argc` – 1 **]**.  
   
 > [!NOTE]
->  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv` **[0]** nemusí být spustitelný soubor s názvem; použijte [GetModuleFileName –](http://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.  
+>  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv` **[0]** nemusí být spustitelný soubor s názvem; použijte [GetModuleFileName –](https://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.  
   
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  *envp*  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b09b6c89a6dccd0b1cc78346838b79aacb7e9200
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e7b699f5b6aa023473416b822a94d9b3a91c2b07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594548"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221116"
 ---
 # <a name="lastis"></a>last_is
 
@@ -43,7 +43,7 @@ Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
 
-**Last_is –** C++ atribut má stejné funkce jako [last_is –](http://msdn.microsoft.com/library/windows/desktop/aa367066) atribut MIDL.
+**Last_is –** C++ atribut má stejné funkce jako [last_is –](/windows/desktop/Midl/last-is) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

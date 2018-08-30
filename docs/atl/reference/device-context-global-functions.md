@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881393"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209930"
 ---
 # <a name="device-context-global-functions"></a>Globální funkce kontextu zařízení
 Tato funkce vytvoří kontext zařízení pro dané zařízení.  
@@ -29,7 +29,7 @@ Tato funkce vytvoří kontext zařízení pro dané zařízení.
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Vytvoří kontext zařízení.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Vytvoří kontext zařízení pro zařízení zadané ve [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktury.  
+ Vytvoří kontext zařízení pro zařízení zadané ve [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktury.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);

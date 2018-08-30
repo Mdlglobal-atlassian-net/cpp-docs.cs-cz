@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211634"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Vytváření pracovních vláken v prostředí MFC
 Pracovní vlákno se běžně používá pro zpracování úloh na pozadí, které by neměl muset uživatel čekat pro pokračování v používání aplikace. Úlohy jako přepočet a tisk na pozadí jsou dobrým příkladem pracovních vláken. Toto téma podrobně popisuje kroky potřebné k vytvoření pracovního vlákna. Mezi témata patří:  
@@ -46,13 +46,13 @@ Existují dvě přetížené verze `AfxBeginThread`: ten, který lze vytvořit p
   
 - Parametr, který má být předán řídicí funkci.  
   
-- (Volitelné) Požadovaná priorita vlákna. Výchozí hodnota je normální priorita. Další informace o možných úrovních priority naleznete v tématu [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) v sadě Windows SDK.  
+- (Volitelné) Požadovaná priorita vlákna. Výchozí hodnota je normální priorita. Další informace o možných úrovních priority naleznete v tématu [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) v sadě Windows SDK.  
   
 - (Volitelné) Požadovaná velikost zásobníku pro vlákno. Výchozí hodnota je stejná velikost zásobníku jako u vytvářeného vlákna.  
   
 - (Volitelné) CREATE_SUSPENDED, pokud chcete, aby vlákno vytvořeno v pozastaveném stavu. Výchozí hodnota je 0 nebo normální spuštění vlákna.  
   
-- (Volitelné) Požadované atributy zabezpečení. Výchozí hodnota je stejný přístup jako k nadřazenému vláknu. Další informace o formátu bezpečnostních informací naleznete v tématu [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
+- (Volitelné) Požadované atributy zabezpečení. Výchozí hodnota je stejný přístup jako k nadřazenému vláknu. Další informace o formátu bezpečnostních informací naleznete v tématu [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.  
   
 `AfxBeginThread` vytvoří a inicializuje `CWinThread` objektu, spustí jej a vrátí jeho adresu, takže na něj můžete později odkazovat. Kontroly jsou prováděny v celém procesu zajistit, aby že všechny objekty jsou správně uvolněny by selhat některá část vytvoření.  
   

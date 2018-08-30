@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465325"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214676"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 Knihovny Microsoft Foundation Class poskytuje mnoho diagnostické služby, které usnadňují ladění svých programů jednodušší. Tyto diagnostické služby zahrnují makra a globální funkce, které umožňují sledovat paměti pro vaše programy přidělení, Vypsat obsah objektů za běhu a Tisk zprávy ladění za běhu. Makra a globální funkce pro diagnostické služby jsou seskupené do následujících kategorií:  
@@ -79,8 +79,8 @@ Knihovny Microsoft Foundation Class poskytuje mnoho diagnostické služby, kter�
 |[Afxcheckerror –](#afxcheckerror)|Globální proměnné, které se použily k testování předaný SCODE zobrazíte, pokud se jedná se o chybu a pokud ano, zobrazí odpovídající chybu.|  
 |[Afxcheckmemory –](#afxcheckmemory)|Ověří že integritu všechny aktuálně přidělené paměti.|  
 |[Afxdebugbreak –](#afxdebugbreak)|Způsobí přerušení provádění.|
-|[AfxDump](#cdumpcontext_in_mfc)|Pokud je volána v ladicím programu, vypíše stav objektu během ladění.|  
-|[AfxDump](#afxdump)|Vnitřní funkce, která Vypíše stav objektu během ladění.|
+|[afxDump](#cdumpcontext_in_mfc)|Pokud je volána v ladicím programu, vypíše stav objektu během ladění.|  
+|[afxDump](#afxdump)|Vnitřní funkce, která Vypíše stav objektu během ladění.|
 |[Afxdumpstack –](#afxdumpstack)|Vygenerujte snímek aktuálního zásobníku. Tato funkce je vždy propojovat staticky.|  
 |[Afxenablememoryleakdump –](#afxenablememoryleakdump)|Umožňuje výpis paměti.|  
 |[Afxenablememorytracking –](#afxenablememorytracking)|Zapne sledování zapnutí a vypnutí paměti.|  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Chcete-li úspěšně používat tuto funkci:  
   
--   Soubor IMAGEHLP. Knihovna DLL musí být na vaší cestě. Pokud tuto knihovnu DLL, funkce se zobrazí chybová zpráva. Zobrazit [knihovna obrázků pomáhají](http://msdn.microsoft.com/library/windows/desktop/ms680321) informace o sadě funkce poskytované IMAGEHLP.  
+-   Soubor IMAGEHLP. Knihovna DLL musí být na vaší cestě. Pokud tuto knihovnu DLL, funkce se zobrazí chybová zpráva. Zobrazit [knihovna obrázků pomáhají](/windows/desktop/Debug/image-help-library) informace o sadě funkce poskytované IMAGEHLP.  
   
 -   Moduly, které mají rámce v zásobníku musí obsahovat informace o ladění. Pokud neobsahují informace o ladění, funkce stále generuje trasování zásobníku, ale méně podrobný trasování.  
 ### <a name="requirements"></a>Požadavky  

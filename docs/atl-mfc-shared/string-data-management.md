@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880213"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214344"
 ---
 # <a name="string-data-management"></a>Správa řetězcových dat
 Visual C++ poskytuje několik způsobů, jak spravovat data řetězce:  
@@ -67,7 +67,7 @@ Visual C++ poskytuje několik způsobů, jak spravovat data řetězce:
  A `CString` objektu můžete uložit na INT_MAX (2 147 483 647) znaků. Tchar – datový typ se používá k získání nebo nastavení jednotlivých znaků uvnitř `CString` objektu. Na rozdíl od pole znaků `CString` třída má funkci přidělení paměti integrované. Díky tomu `CString` objekty automaticky růst podle potřeby (to znamená, není nutné se starat o růstu `CString` objekt přizpůsobena delší řetězce).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings a ukazatele const char  
- A `CString` objekt také může sloužit jako literál řetězce ve stylu jazyka C ( `PCXSTR`, což je stejná jako **const char\***  if není v kódování Unicode). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) operátor převodu umožňuje `CString` objekty volně nahradí ukazatelů na znaky ve volání funkce. **CString (LPCWSTR** `pszSrc` **)** konstruktor umožňuje ukazatelů na znaky nahrazení `CString` objekty.  
+ A `CString` objekt také může sloužit jako literál řetězce ve stylu jazyka C ( `PCXSTR`, což je stejná jako **const char** <strong>\*</strong> if není v kódování Unicode). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) operátor převodu umožňuje `CString` objekty volně nahradí ukazatelů na znaky ve volání funkce. **CString (LPCWSTR** `pszSrc` **)** konstruktor umožňuje ukazatelů na znaky nahrazení `CString` objekty.  
   
  Bez pokusu o přeložení `CString` objekty. Pokud provedete dvě `CString` objekty obsahující `Chicago`, například znaky v `Chicago` jsou uložená na dvou místech. (Toto video asi platí pro budoucí verze knihovny MFC, takže by neměla na ní závisí.)  
   

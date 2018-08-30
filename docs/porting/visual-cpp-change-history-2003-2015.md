@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8de399ef4a9bab0a4e3da503d2f63562ee93198
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206168"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -223,7 +223,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
   
 #### <a name="timeh"></a>\<Time.h >  
   
-- **hodiny** v předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce bylo implementováno pomocí rozhraní Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). S touto implementací clock – funkce záleželo na systémový čas a nebyla proto nemusí být monotónní. Clock – funkce má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a je nyní monotónní.  
+- **hodiny** v předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce bylo implementováno pomocí rozhraní Windows API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). S touto implementací clock – funkce záleželo na systémový čas a nebyla proto nemusí být monotónní. Clock – funkce má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a je nyní monotónní.  
   
 - **fstat – a _utime** v předchozích verzích [_stat](../c-runtime-library/reference/stat-functions.md), [fstat –](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), a [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) funkce zpracování letní čas nesprávně. Před Visual Studio 2013 všechny tyto funkce nesprávně upravena časy (běžný čas) jako by byly v letní čas.  
   

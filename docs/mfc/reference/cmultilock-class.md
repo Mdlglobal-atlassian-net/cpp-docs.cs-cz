@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198109"
 ---
 # <a name="cmultilock-class"></a>CMultiLock – třída
 Představuje mechanismus řízení přístupu, který se používá při řízení přístupu k prostředkům ve vícevláknovém programu.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Určuje, zda musí být signalizovány čekalo se všechny objekty ve stejnou dobu před vrácením. Pokud má hodnotu FALSE, `Lock` vrátí při signalizován některý z objektů čekat.  
   
  *dwWakeMask*  
- Určuje další podmínky, které jsou povoleny pro přerušení čekání. Úplný seznam dostupných možností pro tento parametr, naleznete v tématu [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) v sadě Windows SDK.  
+ Určuje další podmínky, které jsou povoleny pro přerušení čekání. Úplný seznam dostupných možností pro tento parametr, naleznete v tématu [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud `Lock` selže, vrátí - 1. V případě úspěchu vrátí jednu z následujících hodnot:  

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++ | Microsoft Docs'
+title: 'Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++ | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 312fef089262c7e21285d1e3a1fb79de65264d7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130370"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215117"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++
-Toto téma popisuje jednu omezující vlastnost vzájemné funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+Toto téma popisuje jeden aspekt vzájemná funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy jazyka #pragma k implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatné soubory. Soubory obsahující pouze nespravovaná funkce nemusí být zkompilovány s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje předávání struktury ze spravované na nespravované funkce, podle hodnoty a podle reference. Protože struktura v tomto příkladu obsahuje pouze jednoduché, vlastní datové typy (viz [přenositelné a Non-přenositelné typy](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), není požadováno žádné speciální zařazování. Zařazování struktur nepřenositelné, jako jsou ty, které obsahují ukazatele, najdete v tématu [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Následující příklad ukazuje předávání struktury ze spravované na nespravované funkci, podle hodnoty a podle reference. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (viz [přenositelné a Non-přenositelné typy](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), není požadováno žádné speciální zařazování. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje předávání struktury z nespravované na spravované funkci, podle hodnoty a podle reference. Protože struktura v tomto příkladu obsahuje pouze jednoduché, vlastní datové typy (viz [přenositelné a Non-přenositelné typy](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), není speciální zařazování je vyžadován. Zařazování struktur nepřenositelné, jako jsou ty, které obsahují ukazatele, najdete v tématu [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Následující příklad ukazuje podle hodnoty a podle reference předávání struktury z nespravované na spravované funkce. Vzhledem k tomu, že struktura v tomto příkladu obsahuje pouze jednoduché, vnitřní datové typy (naleznete v tématu [přenositelné a Non-přenositelné typy](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), žádná speciální zařazování je povinný. Chcete-li zařadit nepřenositelné struktury, jako jsou ty, které obsahují ukazatele, přečtěte si téma [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

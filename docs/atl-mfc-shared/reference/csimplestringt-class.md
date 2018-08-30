@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196658"
 ---
 # <a name="csimplestringt-class"></a>Csimplestringt – třída
 Tato třída reprezentuje `CSimpleStringT` objektu.  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  Další informace o počítání odkazů najdete v následujících článcích:  
   
-- [Správa životnosti objektu prostřednictvím počítání odkazů](http://msdn.microsoft.com/library/windows/desktop/ms687260) ve Windows SDK. 
+- [Správa životnosti objektu prostřednictvím počítání odkazů](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) ve Windows SDK. 
   
-- [Implementace počítání odkazů](http://msdn.microsoft.com/library/windows/desktop/ms693431) ve Windows SDK.
+- [Implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) ve Windows SDK.
   
-- [Pravidla pro správu počty odkazů](http://msdn.microsoft.com/library/windows/desktop/ms692481) ve Windows SDK.  
+- [Pravidla pro správu počty odkazů](/windows/desktop/com/rules-for-managing-reference-counts) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje použití `CSimpleStringT::GetBufferSetLength`.  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  Další informace o počítání odkazů najdete v následujících článcích:  
   
-- [Správa životnosti objektu prostřednictvím počítání odkazů](http://msdn.microsoft.com/library/windows/desktop/ms687260) ve Windows SDK  
+- [Správa životnosti objektu prostřednictvím počítání odkazů](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) ve Windows SDK  
   
-- [Implementace počítání odkazů](http://msdn.microsoft.com/library/windows/desktop/ms693431) ve Windows SDK  
+- [Implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) ve Windows SDK  
   
-- [Pravidla pro správu počty odkazů](http://msdn.microsoft.com/library/windows/desktop/ms692481) ve Windows SDK  
+- [Pravidla pro správu počty odkazů](/windows/desktop/com/rules-for-managing-reference-counts) ve Windows SDK  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje použití `CSimpleStringT::LockBuffer`.  

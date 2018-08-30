@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203127"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 Ovládací prvky ActiveX existující (dříve ovládací prvky OLE) je možné na Internetu bez úprav. Však můžete chtít upravit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, některé další aspekty. Soubor .ocx a všechny podpůrné soubory musí být na cílovém počítači nebo stáhnout přes Internet. Díky tomu velikost kódu a stažení čas, což je důležité. Soubory ke stažení se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit jako bezpečné pro skriptování a jako bezpečné pro inicializaci ovládacího prvku.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Soubor CAB odkazuje `CODEBASE` by měl obsahovat soubor .ocx ovládacího prvku ActiveX a soubor s příponou INF řídit její instalaci. Vytvořte soubor CAB tak, že zadáte název ovládacího prvku souboru a soubor s příponou INF. Nezahrnují závislé knihovny DLL, které mohou již existovat v systému v tomto souboru CAB. Například knihovny DLL MFC jsou zabalené v samostatném souboru CAB a řídící soubor INF.  
   
- Podrobnosti o tom, jak vytvořit soubor CAB najdete v tématu [vytváření souboru CAB](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Podrobnosti o tom, jak vytvořit soubor CAB najdete v tématu [vytváření souboru CAB](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
   
 ### <a name="the-inf-file"></a>Soubor INF  
  Následující příklad, spindial.inf, seznamy podpůrné soubory a informace o verzi potřebné pro knihovny MFC Spindial ovládací prvek. Všimněte si, že umístění knihovny DLL MFC je web společnosti Microsoft. Mfc42.cab je k dispozici a podepsaný microsoftem.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Podepisování kódu  
  Podepisování kódu slouží k identifikaci zdrojový kód a zajistit, že kód nebyl změněn od doby byla podepsána. V závislosti na nastavení zabezpečení prohlížeče uživatelé mohou zobrazit upozornění před stažením kódu. Uživatelé se můžou rozhodnout důvěřovat některé vlastníky certifikát nebo společnosti, ve kterých případu kódu jsou podepsány důvěryhodný, stáhnou se bez upozornění. Chcete-li zabránit manipulaci je digitálně podepsaný kód.  
   
- Zajistěte, aby že konečný kód je podepsaný tak, aby váš ovládací prvek je automaticky stáhnout bez zobrazení zprávy upozornění vztah důvěryhodnosti. Podrobnosti o tom, jak podepsat kód, naleznete v dokumentaci na Authenticode v sadě SDK ActiveX a najdete v tématu [podepsání souboru CAB](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Zajistěte, aby že konečný kód je podepsaný tak, aby váš ovládací prvek je automaticky stáhnout bez zobrazení zprávy upozornění vztah důvěryhodnosti. Podrobnosti o tom, jak podepsat kód, naleznete v dokumentaci na Authenticode v sadě SDK ActiveX a najdete v tématu [podepsání souboru CAB](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
   
  V závislosti na vztahu důvěryhodnosti a Prohlížeč úrovně nastavení zabezpečení může se zobrazit certifikát k identifikaci podpisový osobě nebo firmě. Pokud je úroveň zabezpečení, none nebo vlastník certifikát podepsaný držitelem ovládací prvek je důvěryhodný, certifikát se nezobrazí. Zobrazit [úrovně zabezpečení prohlížeče Internet Explorer a chování ovládacího prvku](#_core_internet_explorer_browser_safety_levels_and_control_behavior) podrobnosti o způsobu nastavení zabezpečení prohlížeče určí, jestli váš ovládací prvek stahován a certifikátu zobrazeného.  
   

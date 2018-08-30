@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 30906b3851357942873e3926151d5a195161a6e5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205180"
 ---
 # <a name="using-cobject"></a>Použití objektů CObject
 [CObject –](../mfc/reference/cobject-class.md) je kořenová základní třída pro většinu z třídy knihovny MFC (Microsoft Foundation). `CObject` Třída obsahuje mnoho užitečných funkcí, které možná budete chtít začlenit do vlastní objekty programu, včetně podpory serializace, run-time třída informace a výstup diagnostiky objektu. Pokud odvodíte třídu od `CObject`, vaše třída může zneužít tyto `CObject` funkce.  
@@ -40,9 +40,9 @@ ms.locfileid: "39027148"
   
 -   [Dynamicky vytvořit objekty](../mfc/dynamic-object-creation.md)  
   
--   [Výpis objektu dat k diagnostickým účelům](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [Výpis objektu dat k diagnostickým účelům](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))  
   
--   Ověření objektu vnitřní stav (viz [MFC ASSERT_VALID a CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   Ověření objektu vnitřní stav (viz [MFC ASSERT_VALID a CObject::AssertValid](https://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
 -   [Třída serializovat sama sebe do trvalého úložiště](../mfc/serialization-in-mfc.md)  
   

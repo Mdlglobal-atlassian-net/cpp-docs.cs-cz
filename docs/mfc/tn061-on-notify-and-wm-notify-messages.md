@@ -1,5 +1,5 @@
 ---
-title: 'TN061: ON_NOTIFY a wm_notify – zprávy | Microsoft Docs'
+title: 'TN061: ON_NOTIFY a wm_notify – zprávy | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -23,35 +23,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b5a6a8d072a0cea9c92b9766fbe3ffa7c84c4f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218782"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY a WM_NOTIFY – zprávy
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.
+> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-Tato technická poznámka obsahuje základní informace o nové wm_notify – zpráva a popisuje doporučené (a nejběžnější) způsob zpracování wm_notify – zprávy ve vaší aplikaci MFC.
+Tato technická poznámka obsahuje základní informace o nové wm_notify – zprávy a popisuje doporučené (a nejběžnější) způsob zpracování wm_notify – zprávy v aplikaci knihovny MFC.
 
-**Zpráv s oznámením v systému Windows 3.x**
+**Zpráv s oznámením v Windows 3.x**
 
-V systému Windows 3.x, ovládací prvky oznámit svých nadřazených složek událostí, jako je například kliknutí myší, změn v obsahu a výběr a vykreslování pozadí ovládacího prvku odesláním zprávy do nadřazené. Jednoduché oznámení se odesílají jako speciální wm_command – zprávy s kódem oznámení (například BN_CLICKED) a ID balí do ovládacího prvku *wParam* a popisovač tohoto ovládacího prvku v *lParam*. Všimněte si, že od *wParam* a *lParam* úplné, neexistuje žádný způsob, jak předat žádná další data jsou – tyto zprávy mohou být pouze jednoduché oznámení. Například v BN_CLICKED oznámení, neexistuje žádný způsob, jak odeslat informace o umístění ukazatele myši při označeného kliknutím na tlačítko.
+Ve Windows 3.x, ovládací prvky oznámit svých nadřazených složek událostí, jako je například kliknutí myší, změny v obsahu a výběr a barvení ovládacích prvků na pozadí odesláním zprávy na nadřazený prvek. Jednoduché oznámení se odesílají jako speciální wm_command – zprávy s kódem oznámení (například BN_CLICKED) a ID zkomprimována do ovládacího prvku *wParam* a popisovač tohoto ovládacího prvku v *lParam*. Všimněte si, že od *wParam* a *lParam* plný, neexistuje žádný způsob, jak předávat žádná další data jsou – tyto zprávy mohou být pouze jednoduché oznámení. Například v oznámení BN_CLICKED neexistuje žádný způsob, jak odesílat informace o umístění kurzoru myši, když došlo ke kliknutí na tlačítko.
 
-Je-li ovládací prvky v systému Windows 3.x muset odeslat zprávu oznámení, která zahrnuje další data, využívají různé speciální zprávy, včetně WM_CTLCOLOR –, WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM a tak dále. Tyto zprávy můžete zobrazí zpět na ovládací prvek, který jim poslali. Další informace najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../mfc/tn062-message-reflection-for-windows-controls.md).
+Když ovládacích prvků ve Windows 3.x muset odeslat zprávu oznámení, která obsahuje další data, používají širokou škálu speciální zprávy, včetně WM_CTLCOLOR – WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM a tak dále. Tyto zprávy můžete projeví zpět do ovládacího prvku, který jim poslali. Další informace najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../mfc/tn062-message-reflection-for-windows-controls.md).
 
-**Zpráv s oznámením v Win32**
+**Zprávy s oznámením v systému Win32**
 
-Pro ovládací prvky, které existovaly v systému Windows 3.1, používá rozhraní API Win32 většinu zprávy oznámení, které byly používány v systému Windows 3.x. Ale Win32 také přidá číslo sofistikované, komplexní ovládacích prvků těm, které jsou podporovány v systému Windows 3.x. Tyto ovládací prvky se často, nutné odeslat další data s jejich zpráv s oznámením. Místo přidávání nové **WM_\***  zprávy pro každé nové oznámení, že potřebuje další data, návrháři rozhraní Win32 API se rozhodnete přidat jenom jednu zprávu, wm_notify –, které můžete předat libovolného počtu dalších dat v standardizovaným způsobem.
+Pro ovládací prvky, které existovaly ve Windows 3.1, rozhraní API systému Win32 používá většina zprávy oznámení, které byly použity ve Windows 3.x. Ale Win32 také přidá počet propracované, komplexní ovládací prvky, které jsou podporovány ve Windows 3.x. Tyto ovládací prvky často, třeba odeslání dalších dat s jejich zpráv s oznámením. Místo přidávání nového **WM_** <strong>\*</strong> zprávy pro každé nové oznámení, který potřebuje další data, návrhářů rozhraní Win32 API se rozhodnete přidat pouze jednu zpráva wm_notify –, který můžete projít žádnou objem dalších dat standardizované způsobem.
 
-Wm_notify – zprávy obsahovat ID ovládacího prvku odesílání zprávy v *wParam* a ukazatel na strukturu v *lParam*. Tato struktura je buď **NMHDR** struktura nebo některé větší struktury, která má **NMHDR** struktura jako první člena. Všimněte si, že od **NMHDR** člen je první, ukazatel na tato struktura slouží jako ukazatel na **NMHDR** nebo jako ukazatel na strukturu větší v závislosti na tom, jak převést.
+Wm_notify – zprávy obsahují ID ovládacího prvku odeslání zprávy *wParam* a ukazatel na strukturu v *lParam*. Tato struktura je buď **NMHDR** struktury nebo některé větší struktury, která má **NMHDR** strukturu jako jeho prvním členem. Všimněte si, že od **NMHDR** člen je první, ukazatel na tuto strukturu může sloužit jako ukazatel na **NMHDR** nebo jako ukazatel na strukturu větší v závislosti na tom, jak jej přetypovat.
 
-Ve většině případů ukazatele bude odkazovat na větší struktury a budete muset vysílat, pokud ji používáte. V pouze několik oznámení, jako je například běžné oznámení (jejichž název začíná **NM_**) a nástroj tip TTN_SHOW a TTN_POP oznámení ovládacího prvku, je **NMHDR** struktura ve skutečnosti používaná.
+Ve většině případů bude ukazatel přejděte na větší struktury a bude potřeba ji přetypujte, když ji použijete. V pouze několika oznámení, jako je například běžné oznámení (jejichž jména začínají **NM_**) a nástroj tip TTN_SHOW a TTN_POP oznámení ovládacího prvku, je **NMHDR** struktura skutečně spotřebujete.
 
-**NMHDR** struktura nebo počátečního člena obsahuje popisovač a ID ovládacího prvku odesílání zprávy a kód oznámení (například TTN_SHOW). Formát **NMHDR** struktura je zobrazena níže:
+**NMHDR** struktury nebo počátečního člena obsahuje popisovač a ID ovládacího prvku odesílání zprávy a oznámení kódu (například TTN_SHOW). Formát **NMHDR** struktury jsou uvedené níže:
 
 ```cpp
 typedef struct tagNMHDR {
@@ -63,7 +63,7 @@ typedef struct tagNMHDR {
 
 Pro zprávu TTN_SHOW **kód** člen by byl nastaven na TTN_SHOW.
 
-Většina oznámení předat větší struktury, která obsahuje ukazatel **NMHDR** struktura jako první člena. Zvažte strukturu používané ovládacího prvku zobrazení seznamu LVN_KEYDOWN oznámení zprávy, která je odeslána při stisknutí klávesy v ovládacím prvku zobrazení seznamu. Ukazatele odkazuje na **LV_KEYDOWN** struktura, která je definována, jak je uvedeno níže:
+Většina oznámení předat větší struktury, který obsahuje ukazatel **NMHDR** strukturu jako jeho prvního člena. Zvažte například struktura používá zpráva s oznámením LVN_KEYDOWN ovládací prvek zobrazení seznamu, který se odešle, když se stiskne klávesa, v ovládacím prvku zobrazení seznamu. Ukazatel odkazuje na **LV_KEYDOWN** struktura, která je definována, jak je znázorněno níže:
 
 ```cpp
 typedef struct tagLV_KEYDOWN {
@@ -73,30 +73,30 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;
 ```
 
-Všimněte si, že od **NMHDR** člen je první v této struktuře, ukazatel jste předaný oznámení lze převést na ukazatel na **NMHDR** nebo odkazy **LV_KEYDOWN** .
+Všimněte si, že od **NMHDR** člen je první v této struktuře, ukazatel se předaný zprávy oznámení může být převeden na ukazatel na **NMHDR** nebo ukazatel na **LV_KEYDOWN** .
 
 **Oznámení společná pro všechny nové ovládací prvky Windows**
 
 Některá oznámení jsou společné pro všechny nové ovládací prvky Windows. Tato oznámení můžete předat ukazatel **NMHDR** struktury.
 
-|Kód oznámení|Odeslat, protože|
+|Kód upozornění|Odeslat, protože|
 |-----------------------|------------------|
-|NM_CLICK –|Uživatel klikl na levé tlačítko myši v ovládacím prvku|
-|NM_DBLCLK –|Uživatel neotevřou levým tlačítkem myši v ovládacím prvku|
-|NM_RCLICK –|Uživatel klikli pravým tlačítkem myši v ovládacím prvku|
-|NM_RDBLCLK –|Uživatel dvakrát kliknete pravým tlačítkem myši v ovládacím prvku|
-|NM_RETURN –|Uživatel stisknutí klávesy ENTER při řízení má vstupu fokusu|
-|NM_SETFOCUS –|Nebyla zadána řízení vstupního fokusu|
-|NM_KILLFOCUS –|Řízení vstupního fokusu ztratil|
-|NM_OUTOFMEMORY –|Ovládací prvek nelze dokončit operaci, protože nebyl k dispozici dostatek paměti k dispozici|
+|NM_CLICK –|Uživatel klikl levým tlačítkem myši v ovládacím prvku|
+|NM_DBLCLK –|Uživatel dvojitému kliknutí levým tlačítkem myši v ovládacím prvku|
+|NM_RCLICK –|Uživatel klikl pravým tlačítkem myši v ovládacím prvku|
+|NM_RDBLCLK –|Uživatel dvojitému kliknutí pravým tlačítkem myši v ovládacím prvku|
+|NM_RETURN –|Uživatel stiskne klávesu ENTER, když ovládací prvek má vstupní fokus|
+|NM_SETFOCUS –|Ovládací prvek se předala vstupní fokus.|
+|NM_KILLFOCUS –|Ovládací prvek ztratil vstupní fokus.|
+|NM_OUTOFMEMORY –|Ovládací prvek nemohl dokončit operaci, protože nebyl k dispozici dostatek paměti k dispozici|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> On_notify –: Zpracování wm_notify – zprávy v aplikacích MFC
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Zpracování wm_notify – zprávy v aplikacích MFC
 
-Funkce `CWnd::OnNotify` zpracovává zprávy s oznámením. Jeho výchozí implementace kontroluje mapy zpráv pro oznámení obslužné rutiny pro volání. Obecně platí, můžete přepsat `OnNotify`. Místo toho zadejte funkci obslužné rutiny a přidejte položku mapy zpráv pro tuto obslužnou rutinu do mapy zpráv nadřazené okno třídy.
+Funkce `CWnd::OnNotify` zpracovává zprávy s oznámením. Jeho výchozí implementace kontroluje mapu zpráv pro obslužné rutiny oznamovacích volat. Obecně platí, které nesmí být přepsána `OnNotify`. Místo toho zadejte funkci obslužné rutiny a přidat položku mapy zpráv pro tuto obslužnou rutinu do mapy zprávu nadřazenému oknu třídy.
 
-ClassWizard prostřednictvím seznamu vlastností ClassWizard, můžete vytvořit položku mapování zpráv ON_NOTIFY a poskytují funkce kostru obslužné rutiny. Další informace týkající se použití ClassWizard pro tuto činnost usnadnit najdete v tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md).
+ClassWizard prostřednictvím ClassWizard seznam vlastností, můžete vytvořit položku mapování zpráv ON_NOTIFY a poskytují funkci kostru obslužné rutiny. Další informace o použití ClassWizard pro lepší pochopení, naleznete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
 
-On_notify – makro map zpráv má následující syntaxi:
+Makra map zpráv ON_NOTIFY má následující syntaxi:
 
 ```cpp
 ON_NOTIFY(wNotifyCode, id, memberFxn)
@@ -104,16 +104,16 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 kde parametry jsou:
 
-*wNotifyCode*  
- Kód pro oznámení zpracovávat, jako je například LVN_KEYDOWN.
+*funkci wNotifyCode*  
+ Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
 *id*  
- Identifikátor podřízený ovládací prvek, pro které je odesláno oznámení.
+ Identifikátor podřízené ovládací prvek, pro které je odesláno oznámení.
 
 *memberFxn*  
- Členská funkce, která se má volat, když toto oznámení se odesílá.
+ Členská funkce se volá, když toto oznámení se posílá.
 
-Členská funkce musí být deklarována s následující prototyp:
+Členská funkce musí být deklarován s následující prototyp:
 
 ```cpp
 afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
@@ -124,12 +124,12 @@ kde parametry jsou:
 *pNotifyStruct*  
  Ukazatel na strukturu oznámení, jak je popsáno výše v části.
 
-*Výsledek*  
- Ukazatel na kód výsledku budete nastavit před vrácením.
+*výsledek*  
+ Ukazatel na kód výsledku bude nastaven před vrácením.
 
 ## <a name="example"></a>Příklad
 
-K určení, že chcete – členská funkce `OnKeydownList1` pro zpracování zprávy LVN_KEYDOWN z `CListCtrl` jehož ID je `IDC_LIST1`, ClassWizard byste použili k mapy zpráv přidat následující:
+Chcete-li určit, který má členská funkce `OnKeydownList1` zpracovává zprávy LVN_KEYDOWN z `CListCtrl` jehož ID je `IDC_LIST1`, ClassWizard byste použili k přidejte následující mapování vaší zprávy:
 
 ```cpp
 ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
@@ -149,17 +149,17 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-Všimněte si, že ClassWizard poskytuje ukazatel správného automaticky. Struktura oznámení můžete přistupovat prostřednictvím buď *pNMHDR* nebo *pLVKeyDow*.
+Mějte na paměti, že ClassWizard poskytuje ukazatel vhodný typ automaticky. Struktura oznámení můžete přistupovat prostřednictvím buď *pNMHDR* nebo *pLVKeyDow*.
 
 ##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE –
 
-Pokud potřebujete ke zpracování stejné wm_notify – zprávy pro sadu ovládacích prvků, můžete použít on_notify_range – místo ON_NOTIFY. Například můžete mít sadu tlačítek, pro které chcete provádět stejné akce pro určité oznámení.
+Pokud je potřeba zpracovat stejné wm_notify – zprávy pro sadu ovládacích prvků, můžete použít ON_NOTIFY_RANGE spíše než ON_NOTIFY. Například může mít sadu tlačítek, u kterého chcete provést stejnou akci pro určité zprávu s oznámením.
 
-Při použití on_notify_range – zadáte souvislý rozsah podřízené identifikátory, pro které chcete zpracovat oznámení zadáním počáteční a koncová podřízené identifikátory rozsahu.
+Když je ON_NOTIFY_RANGE použít, určíte souvislý rozsah podřízené identifikátory, pro které se mají zpracovávat zprávy oznámení určením počáteční a koncové podřízené identifikátory rozsahu.
 
-ClassWizard nezpracovává on_notify_range –; Pokud chcete použít, budete muset upravit mapu zpráva sami sebe.
+ClassWizard nezpracovává ON_NOTIFY_RANGE; ho Pokud chcete použít, budete muset upravit mapu zpráv sami.
 
-Položka mapování zpráv a funkce prototypu pro on_notify_range – jsou následující:
+Položka mapování zpráv a prototyp funkce pro je on_notify_range – jsou následující:
 
 ```cpp
 ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
@@ -167,19 +167,19 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 kde parametry jsou:
 
-*wNotifyCode*  
- Kód pro oznámení zpracovávat, jako je například LVN_KEYDOWN.
+*funkci wNotifyCode*  
+ Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
 *id*  
  První identifikátor v souvislý rozsah identifikátory.
 
 *idLast*  
- Poslední identifikátor v souvislý rozsah identifikátory.
+ Poslední identifikátoru souvislý rozsah identifikátory.
 
 *memberFxn*  
- Členská funkce, která se má volat, když toto oznámení se odesílá.
+ Členská funkce se volá, když toto oznámení se posílá.
 
-Členská funkce musí být deklarována s následující prototyp:
+Členská funkce musí být deklarován s následující prototyp:
 
 ```cpp
 afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
@@ -188,36 +188,36 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 kde parametry jsou:
 
 *id*  
- Identifikátor podřízený ovládací prvek, který odesílá oznámení.
+ Identifikátor podřízeného ovládacího prvku, který poslat oznámení.
 
 *pNotifyStruct*  
  Ukazatel na strukturu oznámení, jak je popsáno výše.
 
-*Výsledek*  
- Ukazatel na kód výsledku budete nastavit před vrácením.
+*výsledek*  
+ Ukazatel na kód výsledku bude nastaven před vrácením.
 
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX –, ON_NOTIFY_EX_RANGE –
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX – ON_NOTIFY_EX_RANGE –
 
-Pokud chcete více než jeden objekt v oznámení směrování pro zpracování zprávy, můžete použít on_notify_ex – (nebo on_notify_ex_range –) namísto ON_NOTIFY (nebo on_notify_range –). Jediným rozdílem mezi **EX** regulární a verze je, že – členská funkce volat pro **EX** vrátí verze **BOOL** určující, zda zpracování zpráv by měly pokračovat. Vrácení **FALSE** z tato funkce umožňuje zpracovávat stejnou zprávu ve více než jeden objekt.
+Pokud chcete více než jeden objekt v směrování pro zpracování zprávy oznámení, můžete použít on_notify_ex – (nebo on_notify_ex_range –) místo ON_NOTIFY (nebo ON_NOTIFY_RANGE). Jediným rozdílem mezi **EX** verzí a regulárních verzí je, že členská funkce volána pro **EX** vrátí verzi **BOOL** , která indikuje, jestli zpracování zpráv by měly pokračovat. Vrací **FALSE** z tato funkce umožňuje zpracovávat stejná zpráva ve více než jeden objekt.
 
-ClassWizard nezpracovává on_notify_ex – nebo on_notify_ex_range –; Pokud chcete použít některou z nich, budete muset upravit mapu zpráva sami sebe.
+ClassWizard nezpracovává on_notify_ex – nebo on_notify_ex_range –; Pokud chcete použít některou z nich, budete muset upravit mapu zpráv sami.
 
-Položka mapování zpráv a funkce prototypu pro on_notify_ex – a on_notify_ex_range – jsou následujícím způsobem. Významy parametry jsou stejné jako jinou hodnotu než**EX** verze.
+Položka mapování zpráv a prototyp funkce on_notify_ex – a on_notify_ex_range – jsou následující. Význam parametry jsou stejné jako u non -**EX** verze.
 
 ```cpp
 ON_NOTIFY_EX(nCode, id, memberFxn)
 ON_NOTIFY_EX_RANGE(wNotifyCode, id, idLast, memberFxn)
 ```
 
-Prototyp pro obě výše je stejný:
+Prototyp pro oba z výše uvedených je stejný:
 
 ```cpp
 afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 ```
 
-V obou případech *id* obsahuje identifikátor podřízený ovládací prvek, který odesílá oznámení.
+V obou případech *id* obsahuje identifikátor podřízené ovládací prvek, který poslat oznámení.
 
-Funkce musí vracet **TRUE** Pokud zpráva oznámení byla úplně zpracována nebo **FALSE** Pokud další objekty směrování příkazů by měl mít možnost zpracování zprávy.
+Vaše funkce musí vracet **TRUE** Pokud zpráva oznámení byla zcela zpracována nebo **FALSE** Pokud ostatní objekty v směrování příkazů by měl mít možnost zpracování zprávy.
 
 ## <a name="see-also"></a>Viz také:
 

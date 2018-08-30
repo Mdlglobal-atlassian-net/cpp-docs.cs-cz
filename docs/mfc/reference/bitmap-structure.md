@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220758"
 ---
 # <a name="bitmap-structure"></a>BITMAP – struktura
 **Rastrový OBRÁZEK** struktury definuje výšku, šířku, formát barev a bitové hodnoty logického rastrového obrázku **.**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Všechna zařízení podporují rastrové obrázky, mít nastavený RC_BITBLT bit RASTERCAPS index [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) členskou funkci.  
   
- Každé zařízení má svůj vlastní jedinečný formát barev. Chcete-li přenášet rastrové obrázky z jednoho zařízení do druhého, použijte [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) a [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funkce Windows.  
+ Každé zařízení má svůj vlastní jedinečný formát barev. Chcete-li přenášet rastrové obrázky z jednoho zařízení do druhého, použijte [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) a [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) funkce Windows.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** wingdi.h  

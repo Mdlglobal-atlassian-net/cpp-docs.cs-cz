@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027869"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206248"
 ---
 # <a name="editing-a-message-handler"></a>Úpravy obslužné rutiny zpráv
 Po definování obslužné rutiny zpráv, můžete přejít na definice členské funkce Přidat nebo upravit kód.  
   
  Můžete přejít k definici funkce člena z [editoru dialogového okna](../../windows/dialog-editor.md), poklepejte na ovládací prvek, pro který je již definován obslužnou rutinu. Přejde souboru, ve kterém je definována obslužné rutiny zpráv vybraný ovládací prvek.  
   
- Můžete přejít k definici funkce člena z [zobrazení tříd](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), dvakrát klikněte na název funkce v zobrazení tříd.  
+ Můžete přejít k definici funkce člena z [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), dvakrát klikněte na název funkce v zobrazení tříd.  
   
 ## <a name="see-also"></a>Viz také  
  [Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)   

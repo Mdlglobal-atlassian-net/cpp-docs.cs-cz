@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338075"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210961"
 ---
 # <a name="carchive-class"></a>CArchive – třída
 Umožňuje uložit složitou síť objektů v trvalém binárním formátu (obvykle úložiště na disku), který bude zachován po odstranění těchto objektů.  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  Musíte použít modul runtime třídu [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě `ReadClass` vyvolá výjimku [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Pokud *pSchema* má hodnotu NULL, schématem uložené třídy může být načten voláním [CArchive::GetObjectSchema](#getobjectschema); v opačném případě **\**** pSchema* bude obsahuje schéma run-time třída, která byla dřív uložená.  
+ Pokud *pSchema* má hodnotu NULL, schématem uložené třídy může být načten voláním [CArchive::GetObjectSchema](#getobjectschema); v opačném případě <strong>\*</strong>  *pSchema* bude obsahovat schéma run-time třída, která byla dřív uložená.  
   
  Můžete použít [SerializeClass](#serializeclass) místo `ReadClass`, která zpracovává čtení i zápis odkazech na třídy rozhraní.  
   

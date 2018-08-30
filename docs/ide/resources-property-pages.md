@@ -1,5 +1,5 @@
 ---
-title: Stránky vlastností prostředků | Microsoft Docs
+title: Stránky vlastností prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4bc63eede971bed0b726c633f0ef7d52793f39ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219465"
 ---
 # <a name="resources-property-pages"></a>Stránky vlastností prostředků
-Další informace o používání kompilátoru prostředků najdete v tématu [pomocí RC (The RC příkazového řádku)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Další informace o používání nástroje resource compiler, naleznete v tématu [pomocí RC (The RC příkazového řádku)](https://msdn.microsoft.com/library/windows/desktop/aa381055).  
   
- Informace o tom, jak získat přístup **prostředky** najdete v části stránky vlastností [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Informace o tom, jak získat přístup **prostředky** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
- K programovému přístupu ke tyto vlastnosti, najdete v části <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
+ Chcete-li programově přístup k těmto vlastnostem, přečtěte si téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)

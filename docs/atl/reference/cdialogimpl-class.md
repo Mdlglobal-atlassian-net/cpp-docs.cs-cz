@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880700"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206638"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl – třída
 Tato třída poskytuje metody pro vytváření modální a nemodální dialogové okno.  
@@ -102,7 +102,7 @@ template <class T,
 |Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|  
 |Pomocí dialogových oken v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|  
 |Průvodce projektem ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Dialogová okna|[Dialogová okna](http://msdn.microsoft.com/library/windows/desktop/ms632588) a dalších tématech v sadě Windows SDK|  
+|Dialogová okna|[Dialogová okna](https://msdn.microsoft.com/library/windows/desktop/ms632588) a dalších tématech v sadě Windows SDK|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Popisovač nadřazenému oknu.  
   
  **Rect – &** *rect*  
- [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění dialogového okna.  
+ [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění dialogového okna.  
   
  *dwInitParam*  
  [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametry  
  *hWndParent*  
- [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.  
+ [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.  
   
  *dwInitParam*  
  [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  

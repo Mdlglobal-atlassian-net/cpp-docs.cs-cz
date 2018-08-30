@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření konzolových aplikací CLR (C + +/ CLI) | Microsoft Docs'
+title: 'Postupy: vytváření konzolových aplikací CLR (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211154"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Postupy: Vytváření konzolových aplikací CLR (C++/CLI)
 Pomocí šablony Konzolová aplikace lze vytvořit projekt konzolové aplikace, který již obsahuje základní odkazy a soubory projektu.  
@@ -30,9 +30,9 @@ Pomocí šablony Konzolová aplikace lze vytvořit projekt konzolové aplikace, 
   
  Projekt vytvořený pomocí šablony Konzolová aplikace automaticky přidá tyto odkazy a soubory:  
   
--   Odkazy na tyto obory názvů v rozhraní .NET Framework:  
+-   Odkazy na tyto obory názvů rozhraní .NET Framework:  
   
-    -   [Systém](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)– obsahuje základní třídy a základní třídy, které definují běžně používá hodnoty a referenční datové typy, události a obslužné rutiny událostí, rozhraní, atributy a zpracování výjimek.  
+    -   [Systém](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)– obsahuje základní třídy a základních tříd, které definují běžně používá hodnoty a odkazové datové typy, události a obslužné rutiny událostí, rozhraní, atributy a zpracování výjimek.  
   
     -   mscorlib – Sestavení knihovny DLL, která podporuje vývoj pomocí rozhraní .NET Framework.  
   
@@ -60,17 +60,17 @@ Pomocí šablony Konzolová aplikace lze vytvořit projekt konzolové aplikace, 
   
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Vytvoření projektu konzolové aplikace modulu CLR  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu**.  
+1.  V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
   
-2.  V **nový projekt** dialogovém **nainstalovaných šablonách**, vyberte **Visual C++** uzlu, vyberte **CLR** uzel a potom vyberte Šablona konzolové aplikace.  
+2.  V **nový projekt** dialogovém okně **nainstalované šablony**, vyberte **Visual C++** uzlu, vyberte **CLR** uzlu a pak vyberte Šablona konzolové aplikace.  
   
 3.  V **název** zadejte jedinečný název pro vaši aplikaci.  
   
      Lze zadat další nastavení projektu a řešení, ale nejsou vyžadovány.  
   
-4.  Vyberte **OK** tlačítko.  
+4.  Zvolte **OK** tlačítko.  
   
 ## <a name="see-also"></a>Viz také  
- [CLR – projekty](../ide/files-created-for-clr-projects.md)   
+ [Projekty CLR](../ide/files-created-for-clr-projects.md)   
 
 

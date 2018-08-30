@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959930"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195812"
 ---
 # <a name="output-file-stream-member-functions"></a>Členské funkce datového proudu výstupního souboru
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-`write` Funkce nezastaví ji po dosažení prázdný znak, takže zapisován struktura úplné třídy. Funkce přebírá dva argumenty: **char** ukazatele a počet znaků k zápisu. Poznámka: vyžaduje přetypování na **char\***  než adresu objektu struktury.
+`write` Funkce nezastaví ji po dosažení prázdný znak, takže zapisován struktura úplné třídy. Funkce přebírá dva argumenty: **char** ukazatele a počet znaků k zápisu. Poznámka: vyžaduje přetypování na **char** <strong>\*</strong> než adresu objektu struktury.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Seekp – a tellp – funkce
 
@@ -114,12 +114,12 @@ K testování chyby při zápisu do datového proudu použijte tyto členské fu
 
 |Funkce|Návratová hodnota|
 |--------------|------------------|
-|[Špatné](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|
-|[Selhání](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Vrátí **true** dojde k neodstranitelné chybě nebo "očekávané" podmínku, třeba Chyba převodu, nebo pokud se nenajde soubor. Zpracování může často pokračovat po volání `clear` s argumentem nula.|
-|[Dobré](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Vrátí **true** Pokud neexistuje žádná chybová podmínka (neobnovitelná nebo jinak) a není nastaven příznak end souboru.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Vrátí **true** ve stavu ukončení souboru.|
-|[Vymazat](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Nastaví stav vnitřní chyba. Pokud je volána pomocí výchozích argumentů, vymaže všechny bity chyby.|
-|[rdstate –](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Vrátí aktuální chybový stav.|
+|[Špatné](basic-ios-class.md#bad)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|
+|[Selhání](basic-ios-class.md#fail)|Vrátí **true** dojde k neodstranitelné chybě nebo "očekávané" podmínku, třeba Chyba převodu, nebo pokud se nenajde soubor. Zpracování může často pokračovat po volání `clear` s argumentem nula.|
+|[Dobré](basic-ios-class.md#good)|Vrátí **true** Pokud neexistuje žádná chybová podmínka (neobnovitelná nebo jinak) a není nastaven příznak end souboru.|
+|[eof](basic-ios-class.md#eof)|Vrátí **true** ve stavu ukončení souboru.|
+|[Vymazat](basic-ios-class.md#clear)|Nastaví stav vnitřní chyba. Pokud je volána pomocí výchozích argumentů, vymaže všechny bity chyby.|
+|[rdstate –] (basic-ios-class.md #rdstate|Vrátí aktuální chybový stav.|
 
 **!** k provedení stejné funkce jako je operátor přetížen `fail` funkce. Proto výraz:
 

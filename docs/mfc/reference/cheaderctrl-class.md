@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211551"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek záhlaví.  
@@ -132,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetOrderArray](#setorderarray)|Nastaví pořadí zleva doprava z položek v ovládacím prvku záhlaví.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ovládací prvek záhlaví je okno, které je obvykle umístěn nad sadu sloupců text nebo čísla. Obsahuje název pro každý sloupec a je možné rozdělit na části. Uživatel můžete přetáhnout oddělovače, které oddělují části nastavte šířku každého sloupce. Pro ilustraci záhlaví ovládacího prvku, naleznete v tématu [ovládacích prvků záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
+ Ovládací prvek záhlaví je okno, které je obvykle umístěn nad sadu sloupců text nebo čísla. Obsahuje název pro každý sloupec a je možné rozdělit na části. Uživatel můžete přetáhnout oddělovače, které oddělují části nastavte šířku každého sloupce. Pro ilustraci záhlaví ovládacího prvku, naleznete v tématu [ovládacích prvků záhlaví](/windows/desktop/Controls/header-controls).  
   
  Tento ovládací prvek (a tedy `CHeaderCtrl` třídy) je dostupná jenom pro programy, které jsou spuštěny pod Windows 95/98 a Windows NT verze 3.51 a vyšší.  
   
@@ -183,7 +183,7 @@ BOOL ClearAllFilters();
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) sloupec hodnotou-1, jak je popsáno v sadě Windows SDK.  
+ Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter) sloupec hodnotou-1, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
@@ -203,7 +203,7 @@ BOOL ClearFilter(int nColumn);
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), jak je popsáno v sadě Windows SDK.  
+ Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
@@ -221,10 +221,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl ovládacího prvku záhlaví. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241) v sadě Windows SDK.  
+ Určuje styl ovládacího prvku záhlaví. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](/windows/desktop/Controls/header-control-styles) v sadě Windows SDK.  
   
  *Rect*  
- Určuje velikost a umístění ovládacího prvku záhlaví. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Určuje velikost a umístění ovládacího prvku záhlaví. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Určuje nadřazené okno ovládacího prvku záhlaví, obvykle `CDialog`. Nesmí být NULL.  
@@ -238,7 +238,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Můžete vytvořit `CHeaderCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a následně zavolat `Create`, což vytvoří ovládací prvek záhlaví a připojí ho k `CHeaderCtrl` objektu.  
   
- Kromě – styly ovládacích prvků záhlaví, můžete použít následující běžné – styly ovládacích prvků k určení, jak ovládací prvek záhlaví umístí a změní velikost sebe sama (viz [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) Další informace):  
+ Kromě – styly ovládacích prvků záhlaví, můžete použít následující běžné – styly ovládacích prvků k určení, jak ovládací prvek záhlaví umístí a změní velikost sebe sama (viz [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) Další informace):  
   
 - CCS_BOTTOM způsobí, že ovládací prvek na pozici sám v dolní části klientské oblasti okna nadřazený a nastaví šířku, která má být stejná jako nadřazená šířku okna.  
   
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Styl záhlaví ovládacího prvku. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241) v sadě Windows SDK. Zobrazit [vytvořit](#create) seznam Další styly.  
+ Styl záhlaví ovládacího prvku. Popis – styly ovládacích prvků záhlaví, naleznete v tématu [– styly ovládacích prvků záhlaví](/windows/desktop/Controls/header-control-styles) v sadě Windows SDK. Zobrazit [vytvořit](#create) seznam Další styly.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -318,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt Pokud úspěšné; jinak hodnota NULL. Vrácený seznam obsahuje pouze jednu image.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu přetáhnout položky záhlaví.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu přetáhnout položky záhlaví.  
   
  `CImageList` Objektu, ke kterému Vrácený ukazatel ukazuje je dočasný objekt a další zpracování doby nečinnosti se odstraní.  
   
@@ -348,7 +348,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametry  
  *lpDrawItemStruct*  
- Ukazatel [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura popisující položku, který se má namalovat.  
+ Ukazatel [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struktura popisující položku, který se má namalovat.  
   
 ### <a name="remarks"></a>Poznámky  
  `itemAction` Člena `DRAWITEMSTRUCT` struktury definuje výkresu akci, která se má provést.  
@@ -374,7 +374,7 @@ BOOL EditFilter(
  Sloupec, který chcete upravit.  
   
  *bDiscardChanges*  
- Hodnotu, která určuje způsob zpracování uživatele uživatele úpravy změny, pokud uživatel Probíhá úprava filtru při [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) je zpráva odeslána.  
+ Hodnotu, která určuje způsob zpracování uživatele uživatele úpravy změny, pokud uživatel Probíhá úprava filtru při [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter) je zpráva odeslána.  
   
  Zadejte hodnotu TRUE pro zrušení změn provedených uživatelem, nebo hodnotu NEPRAVDA tak, aby přijímal změny provedené uživatelem.  
   
@@ -382,7 +382,7 @@ BOOL EditFilter(
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda implementuje chování zprávy Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), jak je popsáno v sadě Windows SDK.  
+ Tato metoda implementuje chování zprávy Win32 [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
@@ -398,7 +398,7 @@ int GetBitmapMargin() const;
  Šířka okraje rastrového obrázku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
@@ -414,7 +414,7 @@ int GetFocusedItem() const;
  Index založený na nule, který má fokus položky záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_headerCtrl`, která je pro přístup k aktuální ovládacího prvku záhlaví. Tato proměnná se používá v následujícím příkladu.  
@@ -437,7 +437,7 @@ CImageList* GetImageList() const;
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), jak je popsáno v sadě Windows SDK. `CImageList` Objektu, ke kterému Vrácený ukazatel ukazuje je dočasný objekt a další zpracování doby nečinnosti se odstraní.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist), jak je popsáno v sadě Windows SDK. `CImageList` Objektu, ke kterému Vrácený ukazatel ukazuje je dočasný objekt a další zpracování doby nečinnosti se odstraní.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
@@ -456,7 +456,7 @@ BOOL GetItem(
  Určuje index založený na nule položka, která má načíst.  
   
  *pHeaderItem*  
- Ukazatel [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktura, která obdrží novou položku. Tato struktura se používá s `InsertItem` a `SetItem` členské funkce. Nastavit žádné příznaky `mask` element Ujistěte se, že hodnoty odpovídajících prvků jsou správně vyplněna po návratu. Pokud `mask` prvek je nastaven na hodnotu nula, hodnot v jiné struktuře elementy nemají smysl.  
+ Ukazatel [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktura, která obdrží novou položku. Tato struktura se používá s `InsertItem` a `SetItem` členské funkce. Nastavit žádné příznaky `mask` element Ujistěte se, že hodnoty odpovídajících prvků jsou správně vyplněna po návratu. Pokud `mask` prvek je nastaven na hodnotu nula, hodnot v jiné struktuře elementy nemají smysl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -490,14 +490,14 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *položky*|Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
-|[out] *lprect –*|Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|  
+|[in] *položky*|Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|  
+|[out] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato funkce je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_headerCtrl`, která je pro přístup k aktuální ovládacího prvku záhlaví. Tato proměnná se používá v následujícím příkladu.  
@@ -523,13 +523,13 @@ BOOL GetItemRect(
  Index založený na nule položky ovládacího prvku záhlaví  
   
  *lprect –*  
- Ukazatel na adresu [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.  
+ Ukazatel na adresu [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda implementuje chování zprávy Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), jak je popsáno v sadě Windows SDK.  
+ Tato metoda implementuje chování zprávy Win32 [HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
  Získá pořadí zleva doprava z položek v ovládacím prvku hlavička.  
@@ -551,7 +551,7 @@ BOOL GetOrderArray(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
@@ -567,15 +567,15 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lprect –*|Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|  
+|[out] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato funkce je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud ovládací prvek záhlaví obsahuje více položek, než je možné současně zobrazit, ovládací prvek lze zobrazit tlačítku přetečení, umožňuje posouvání položek, které nejsou viditelné. Ovládací prvek záhlaví musí mít HDS_OVERFLOW a HDF_SPLITBUTTON stylů se zobrazí tlačítko přetečení. Ohraničující obdélník obklopuje tlačítku přetečení a existuje pouze v případě, že je zobrazeno tlačítko přetečení. Další informace najdete v tématu [– styly ovládacích prvků záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
+ Pokud ovládací prvek záhlaví obsahuje více položek, než je možné současně zobrazit, ovládací prvek lze zobrazit tlačítku přetečení, umožňuje posouvání položek, které nejsou viditelné. Ovládací prvek záhlaví musí mít HDS_OVERFLOW a HDF_SPLITBUTTON stylů se zobrazí tlačítko přetečení. Ohraničující obdélník obklopuje tlačítku přetečení a existuje pouze v případě, že je zobrazeno tlačítko přetečení. Další informace najdete v tématu [– styly ovládacích prvků záhlaví](/windows/desktop/Controls/header-control-styles).  
   
- Tato metoda odesílá [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_headerCtrl`, která je pro přístup k aktuální ovládacího prvku záhlaví. Tato proměnná se používá v následujícím příkladu.  
@@ -598,13 +598,13 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out v] *phdhti*|Ukazatel [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, která určuje bod k testování a přijímá výsledky testu.|  
+|[out v] *phdhti*|Ukazatel [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struktura, která určuje bod k testování a přijímá výsledky testu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index položky záhlaví, pokud existuje, na zadané pozici; jinak -1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [HDM_HITTEST](/windows/desktop/Controls/hdm-hittest) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_headerCtrl`, která je pro přístup k aktuální ovládacího prvku záhlaví. Tato proměnná se používá v následujícím příkladu.  
@@ -630,7 +630,7 @@ int InsertItem(
  Index založený na nule položka, která má být vložen. Pokud je hodnota nula, na začátek ovládacího prvku záhlaví vložení položky. Pokud je hodnota větší než maximální hodnota, na konci ovládacího prvku záhlaví vložení položky.  
   
  *phdi*  
- Ukazatel [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturu, která obsahuje informace o položce, která se má vložit.  
+ Ukazatel [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) strukturu, která obsahuje informace o položce, která se má vložit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index nové položky v případě úspěchu; jinak - 1.  
@@ -647,7 +647,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>Parametry  
  *pHeaderLayout*  
- Ukazatel [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) strukturou, který obsahuje informace, které slouží k nastavení velikosti a pozice ovládacího prvku záhlaví.  
+ Ukazatel [HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout) strukturou, který obsahuje informace, které slouží k nastavení velikosti a pozice ovládacího prvku záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -673,7 +673,7 @@ int OrderToIndex(int nOrder) const;
  Index položky, na základě jeho pořadí v ovládacím prvku záhlaví. Index se počítá zleva doprava, počínaje 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování – makro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
+ Tato členská funkce implementuje chování – makro Win32 [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Nastavuje šířku na okraji rastrový obrázek v ovládacím prvku hlavička.  
@@ -690,13 +690,13 @@ int SetBitmapMargin(int nWidth);
  Šířka okraje rastrového obrázku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- Nastaví interval časového limitu mezi časem atributy filtru Probíhá změna a zveřejňování [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) oznámení.  
+ Nastaví interval časového limitu mezi časem atributy filtru Probíhá změna a zveřejňování [HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange) oznámení.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  Index ovládací prvek filtru právě upravuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
@@ -732,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_headerCtrl`, která je pro přístup k aktuální ovládacího prvku záhlaví. Tato proměnná se používá v následujícím příkladu.  
@@ -763,7 +763,7 @@ int SetHotDivider(int nIndex);
  Index na zvýrazněný oddělovač.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu přetáhnout položky záhlaví.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu přetáhnout položky záhlaví.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
@@ -783,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt dříve přiřadili do ovládacího prvku záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), jak je popsáno v sadě Windows SDK. `CImageList` Objektu, ke kterému Vrácený ukazatel ukazuje je dočasný objekt a další zpracování doby nečinnosti se odstraní.  
+ Tato členská funkce implementuje chování zprávy Win32 [HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist), jak je popsáno v sadě Windows SDK. `CImageList` Objektu, ke kterému Vrácený ukazatel ukazuje je dočasný objekt a další zpracování doby nečinnosti se odstraní.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CHeaderCtrl::GetImageList](#getimagelist).  
@@ -802,7 +802,7 @@ BOOL SetItem(
  Index založený na nule položka, která má být manipulovat.  
   
  *pHeaderItem*  
- Ukazatel [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturu, která obsahuje informace o novou položku.  
+ Ukazatel [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) strukturu, která obsahuje informace o novou položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -830,7 +830,7 @@ BOOL SetOrderArray(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování – makro Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
+ Tato členská funkce implementuje chování – makro Win32 [HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CHeaderCtrl::GetOrderArray](#getorderarray).  

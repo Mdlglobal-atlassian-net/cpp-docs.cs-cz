@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3dc1743b0c0b795d7aaa10a7a47689de2336094
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219189"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Postupy: Aktivace a používání komponent prostředí Windows Runtime s použitím knihovny WRL
 
@@ -46,7 +46,7 @@ Následující kroky použijte `Windows::Foundation::IUriRuntimeClass` rozhraní
 
    Doporučujeme využívat `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.
 
-2. Inicializujte vláken, ve kterém se spustí aplikace. Každá aplikace musí inicializovat jeho vlákna a dělení na vlákna modelu. V tomto příkladu [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) třídy se inicializovat modul Windows Runtime a určuje [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) jako model vláken. `RoInitializeWrapper` Třídy volání `Windows::Foundation::Initialize` při konstrukci, a `Windows::Foundation::Uninitialize` při jeho zničení.
+2. Inicializujte vláken, ve kterém se spustí aplikace. Každá aplikace musí inicializovat jeho vlákna a dělení na vlákna modelu. V tomto příkladu [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) třídy se inicializovat modul Windows Runtime a určuje [RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx) jako model vláken. `RoInitializeWrapper` Třídy volání `Windows::Foundation::Initialize` při konstrukci, a `Windows::Foundation::Uninitialize` při jeho zničení.
 
    [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -76,7 +76,7 @@ Následující kroky použijte `Windows::Foundation::IUriRuntimeClass` rozhraní
 
    [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) funkce načte základní Unicode formu řetězec identifikátoru URI.
+   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx) funkce načte základní Unicode formu řetězec identifikátoru URI.
 
 Tady je úplný příklad:
 

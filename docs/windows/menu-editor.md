@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e877d977e9c8d93619a225f36eab3d3ea2952d84
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 892b1b11d234d25232daeea69caa282cc908ad3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201830"
 ---
 # <a name="menu-editor"></a>Editor nabídek
 
@@ -77,4 +77,4 @@ Win32
 [Editory prostředků](../windows/resource-editors.md)  
 [Identifikátory objektů uživatelského rozhraní a příkazů](../mfc/user-interface-objects-and-command-ids.md)  
 [Nabídky](../mfc/menus-mfc.md)  
-[Nabídky](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
+[Nabídky](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)

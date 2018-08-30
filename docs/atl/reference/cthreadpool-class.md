@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196959"
 ---
 # <a name="cthreadpool-class"></a>Cthreadpool – třída
 Tato třída poskytuje fondu pracovních vláken, které zpracovávají fronty pracovních položek.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Poznámky  
  Vláken ve fondu se vytvoří a zničeno při inicializován, změně velikosti nebo vypnutí fondu. Instance třídy *pracovního procesu* se vytvoří v zásobníku každého pracovního vlákna ve fondu. Každá instance bude live pro životnost vlákna.  
   
- Ihned po vytvoření vlákna *pracovního procesu*:: `Initialize` bude volána na objektu souvisejícího s tímto vláknem. Bezprostředně před ničení vlákna *pracovního procesu*:: `Terminate` , zavolá se. Obě metody musíte souhlasit **void\***  argument. Byla předána hodnota tohoto argumentu do fondu vláken prostřednictvím *pvWorkerParam* parametr [CThreadPool::Initialize](#initialize).  
+ Ihned po vytvoření vlákna *pracovního procesu*::`Initialize` bude volána na objektu souvisejícího s tímto vláknem. Bezprostředně před ničení vlákna *pracovního procesu*::`Terminate` , zavolá se. Obě metody musíte souhlasit **void** <strong>\*</strong> argument. Byla předána hodnota tohoto argumentu do fondu vláken prostřednictvím *pvWorkerParam* parametr [CThreadPool::Initialize](#initialize).  
   
- Pokud nejsou pracovní položky ve vláknech frontu a pracovní proces k dispozici pro práci, pracovní vlákno přetáhne položky fronty a volání `Execute` metodu *pracovního procesu* objektu pro toto vlákno. Tři položky jsou potom předány metodě: položky z fronty, stejné `pvWorkerParam` předán *pracovního procesu*:: `Initialize` a *pracovního procesu*:: `Terminate`a ukazatel [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struktura používaná pro frontu port dokončení vstupně-výstupních operací.  
+ Pokud nejsou pracovní položky ve vláknech frontu a pracovní proces k dispozici pro práci, pracovní vlákno přetáhne položky fronty a volání `Execute` metodu *pracovního procesu* objektu pro toto vlákno. Tři položky jsou potom předány metodě: položky z fronty, stejné `pvWorkerParam` předán *pracovního procesu*:: `Initialize` a *pracovního procesu*:: `Terminate`a ukazatel [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struktura používaná pro frontu port dokončení vstupně-výstupních operací.  
   
  *Pracovního procesu* třída deklaruje typ položky, které bude zařazená do fronty ve fondu vláken poskytuje definice typu, *pracovního procesu*:: `RequestType`. Tento typ musí být schopné přetypování do a z ULONG_PTR.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí. Pokud je zadána žádná hodnota nebo 0, tato metoda použije časový limit nastavený [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odešle žádost o vypnutí na všechna vlákna ve fondu. Pokud vyprší časový limit bude volat tuto metodu [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) v libovolném vlákně, které se neukončil. Tato metoda je volána automaticky z destruktoru třídy.  
+ Tato metoda odešle žádost o vypnutí na všechna vlákna ve fondu. Pokud vyprší časový limit bude volat tuto metodu [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) v libovolném vlákně, které se neukončil. Tato metoda je volána automaticky z destruktoru třídy.  
   
 ## <a name="see-also"></a>Viz také  
  [Ithreadpoolconfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)   

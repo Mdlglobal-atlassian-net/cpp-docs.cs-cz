@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219106"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 `CMDIChildWndEx` Třída poskytuje funkce pro Windows více dokumentů (MDI) interface podřízené okno. Rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tuto třídu, pokud aplikace MDI používá určité třídy MFC.  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Volá se rozhraním, když je nutné roztáhnout rastrový obrázek pro Windows 7 hlavním karta náhled této podřízený formulář MDI.|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Volá se rozhraním, chcete-li aktualizovat název rámce. (Přepíše `CMDIChildWnd::OnUpdateFrameTitle`.)|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Vrátí podokno obsahující časovém okamžiku.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMDIChildWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Přepočítá rozložení okna.|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Zaregistruje podřízený formulář MDI karty hlavního panelu Windows 7.|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Podokno se odebere z dokovací správce.|  

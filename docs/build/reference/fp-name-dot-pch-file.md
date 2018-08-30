@@ -1,5 +1,5 @@
 ---
-title: -Fp (název. Soubor pch) | Microsoft Docs
+title: -Fp (název. Soubor pch) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,50 +25,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376329"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217988"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (název souboru .Pch)
 Poskytuje název cesty pro předkompilované hlavičky místo použití výchozí název cesty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-> **/Fp**_pathname_  
+> **/Fp**<em>cesta</em>  
   
 ## <a name="remarks"></a>Poznámky  
- Pomocí této možnosti se [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) nebo [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) k zadání názvu cesty pro předkompilované hlavičky místo použití výchozí název cesty. Můžete také použít **/Fp** s **/Yc** k určení použití předkompilovaný hlavičkový soubor, který se liší od **/Yc *** filename* argument a z základní název zdrojového souboru.  
+ Tuto možnost použijte spolu s [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) nebo [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) k zadání názvu cesty pro předkompilované hlavičky místo použití výchozí název cesty. Můžete také použít **/FP** s **/Yc** zadat použití předkompilovaného hlavičkového souboru, který se liší od **/Yc**<em>filename</em> argument a Základní název zdrojového souboru.  
   
- Pokud nezadáte rozšíření jako součást s názvem cesty, se předpokládá, že rozšíření .pch. Pokud zadáte adresáři, aniž by název souboru, výchozí název souboru je VC*x*0.pch, kde *x* je hlavní verzi Visual C++ v použití.  
+ Pokud nezadáte rozšíření jako součást názvu cesty, předpokládá se příponou .pch. Pokud chcete zadat adresář bez názvu souboru, výchozí název souboru je VC*x*0.pch, kde *x* je hlavní verze Visual C++ používá.  
   
- Můžete také **/Fp** možnost s **/Yu**.  
+ Můžete také použít **/FP** spolu s možností **/Yu**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **C/C++** složky.  
+2.  Klikněte na tlačítko **C/C++** složky.  
   
-3.  Klikněte **předkompilovaných hlaviček** stránku vlastností.  
+3.  Klikněte na tlačítko **předkompilované hlavičky** stránku vlastností.  
   
-4.  Změnit **předkompilovaný hlavičkový soubor** vlastnost.  
+4.  Upravit **předkompilovaný soubor hlaviček** vlastnost.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.  
   
 ## <a name="example"></a>Příklad  
- Pokud chcete vytvořit předkompilovaný hlavičkový soubor pro ladění verzi vašeho programu a jsou kompilování zdrojového kódu i soubory hlaviček, můžete například zadat příkaz:  
+ Pokud chcete vytvořit předkompilovaný hlavičkový soubor pro ladicí verzi aplikace a kompilujete hlavičkové soubory a zdrojový kód, můžete například zadat příkaz:  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příkaz určuje použití předkompilovaných hlaviček soubor s názvem MYPCH.pch. Kompilátor předpokládá, že má byl zdrojový kód v PROG.cpp předkompilovaných prostřednictvím MYAPP.h a předkompilovaných kódu, které se nachází v MYPCH.pch. Používá obsah MYPCH.pch a zkompiluje zbytek PROG.cpp vytvoření souboru .obj. Výstup tohoto příkladu je soubor s názvem PROG.exe.  
+ Následující příkaz určuje použití předkompilovaného hlavičkového souboru s názvem MYPCH.pch. Kompilátor předpokládá, že zdrojový kód v PROG.cpp obsahuje byla předkompilována prostřednictvím MYAPP.h a že předkompilovaný kód nachází v MYPCH.pch. Používá obsah MYPCH.pch a zkompiluje rest PROG.cpp k vytvoření souboru .obj. Výstup tohoto příkladu je soubor s názvem PROG.exe.  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

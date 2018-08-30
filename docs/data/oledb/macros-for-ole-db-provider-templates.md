@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464630"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209018"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra pro šablony zprostředkovatele OLE DB
 Makra poskytovatele šablony technologie OLE DB nabízejí funkce v následujících kategoriích:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
   
 #### <a name="remarks"></a>Poznámky  
- Toto makro nastaví hodnotu vlastnosti typu `DWORD` na výchozí hodnotu definovanou v ATLDB. H. Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li nastavit [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) a [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) pro vlastnost ve stejnou dobu, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Toto makro nastaví hodnotu vlastnosti typu `DWORD` na výchozí hodnotu definovanou v ATLDB. H. Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li nastavit [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) a [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) pro vlastnost ve stejnou dobu, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Příklad  
  Zobrazit [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
   
  *vt*  
- [in] [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) této vlastnosti položky.  
+ [in] [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) této vlastnosti položky.  
   
  *dwFlags*  
  [in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) hodnotu popisující tuto položku Vlastnosti.  

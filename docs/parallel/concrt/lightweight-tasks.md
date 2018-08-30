@@ -1,5 +1,5 @@
 ---
-title: Prosté úlohy | Microsoft Docs
+title: Prosté úlohy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d602f83cfe2da6bc1506e07720d3ef021ebce04a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8548412436be6e505c0ea08a2991e6948496f592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210281"
 ---
 # <a name="lightweight-tasks"></a>Prosté úlohy
-Tento dokument popisuje roli prosté úlohy v Concurrency Runtime. A *prostých úloh* je úkol, který můžete naplánovat přímo z `concurrency::Scheduler` nebo `concurrency::ScheduleGroup` objektu. Prosté úlohy se podobá funkci, která zadáte na rozhraní API systému Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce. Prosté úlohy proto jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování Concurrency Runtime. Concurrency Runtime samotné používá prosté úlohy k plánování asynchronních agentů a odesílání zpráv mezi asynchronní bloky zpráv.  
+Tento dokument popisuje využití jednoduché úlohy v modulu Runtime souběžnosti. A *lehký úkol* je úloha, kterou naplánujete přímo z `concurrency::Scheduler` nebo `concurrency::ScheduleGroup` objektu. Lehký úkol vypadá podobně jako funkce, které poskytují rozhraní Windows API [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkce. Prosté úlohy proto jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování modulu Runtime souběžnosti. Samotný modul Concurrency Runtime používá k plánování asynchronních agentů a zasílání zpráv mezi asynchronní bloky zpráv jednoduché úlohy.  
   
 > [!TIP]
->  Concurrency Runtime poskytuje výchozí plánovač, a proto není nutné vytvořit ve vaší aplikaci. Protože Plánovač úloh umožňuje optimalizovat výkon aplikací, doporučujeme začínat [paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) Pokud jste nové do Concurrency Runtime.  
+>  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.  
   
- Prosté úlohy provádění menší režii než asynchronních agentů a skupiny úloh. Například modul runtime neinformuje můžete po dokončení prostých úloh. Kromě toho modul runtime nemá catch nebo zpracování výjimek, které jsou vyvolány z prosté úlohy. Další informace o zpracování výjimek a prosté úlohy najdete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
+ Prosté úlohy provést menší nároky na než asynchronní agenti a skupiny úloh. Například modul runtime neinformuje můžete po dokončení lehký úkol. Kromě toho modul runtime nepodporuje catch ani zpracovat výjimky, které jsou vyvolány z lehký úkol. Další informace o zpracování výjimek a jednoduché úlohy, naleznete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- Pro většinu úloh doporučujeme použít robustnější funkce, jako je skupin úloh a paralelní algoritmy vzhledem k tomu, které vám umožní snadno rozdělit složité úlohy na více základní ty. Další informace o skupinách úloh najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Další informace o paralelní algoritmy najdete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).  
+ Pro většinu úloh doporučujeme, že používáte více robustní funkce, jako jsou skupiny úloh a paralelních algoritmů protože umožňují snadněji rozdělit složité úlohy na ty informace o jednodušší. Další informace o skupinách úkolů najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Další informace o paralelních algoritmech naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).  
   
- Chcete-li vytvořit úlohu lightweight, zavolejte [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), nebo [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) metoda. Počkat na dokončení prosté úlohy, počkejte Plánovač nadřazené vypnutí nebo pomocí mechanismus synchronizace, jako například [concurrency::event](../../parallel/concrt/reference/event-class.md) objektu.  
+ Chcete-li vytvořit lehký úkol, zavolejte [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), nebo [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) metody. Čekání na dokončení nenáročné úlohy, počkejte Plánovač nadřazené vypnout nebo pomocí mechanismu synchronizace, jako [concurrency::event](../../parallel/concrt/reference/event-class.md) objektu.  
   
 ## <a name="example"></a>Příklad  
- Příklad, který ukazuje, jak k přizpůsobení stávajícího kódu pro použití prostých úloh, naleznete v části [návod: přizpůsobení stávajícího kódu pro použití prostých úloh](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
+ Příklad, který ukazuje, jak přizpůsobit existující kód používal prostou úlohu, naleznete v tématu [návod: přizpůsobení stávajícího kódu pro použití prostých úloh](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218086"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Postupy: Změna jazyka nebo podmínky prostředku během kopírování
 
 Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.
 
-- Určuje jazyk prostředku přesně to, jazyk prostředku. Toto je používáno [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) vám pomůže identifikovat prostředek, pro který potřebujete. (Ale prostředků může mít rozdíly pro každý jazyk, který nesouvisí se text, například akcelerátory, které může fungovat jenom na použití japonské klávesnice nebo rastrový obrázek, který může být pouze vhodné pro čínštinu lokalizované sestavení atd.)
+- Určuje jazyk prostředku přesně to, jazyk prostředku. Toto je používáno [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) vám pomůže identifikovat prostředek, pro který potřebujete. (Ale prostředků může mít rozdíly pro každý jazyk, který nesouvisí se text, například akcelerátory, které může fungovat jenom na použití japonské klávesnice nebo rastrový obrázek, který může být pouze vhodné pro čínštinu lokalizované sestavení atd.)
 
 - Podmínky prostředku je definovaný symbol, který určuje podmínku, pod kterým se má použít tento konkrétní kopie prostředku.
 

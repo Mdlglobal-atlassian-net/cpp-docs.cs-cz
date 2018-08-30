@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Použití Concurrency Runtime v aplikaci podporou modelu COM | Microsoft Docs'
+title: 'Návod: Použití Concurrency Runtime v aplikaci podporou modelu COM | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd9f665f77ca5ae5311b034ee7afef6241ac489
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692545"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220226"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM
-Tento dokument ukazuje, jak používat Concurrency Runtime v aplikaci, která používá modelu COM (Component Object).  
+Tento dokument popisuje způsob použití Concurrency Runtime v aplikaci, která se používá modelu COM (Component Object).  
   
 ## <a name="prerequisites"></a>Požadavky  
- Přečtěte si následující dokumenty, než začnete Tento názorný postup:  
+ Před zahájením tohoto návodu, přečtěte si následující dokumenty:  
   
 - [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
@@ -36,93 +36,93 @@ Tento dokument ukazuje, jak používat Concurrency Runtime v aplikaci, která po
   
 - [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Další informace o modelu COM, najdete v části [modelu COM (Component Object)](http://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Další informace o modelu COM naleznete v tématu [modelu COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Správa životního cyklu knihovny modelu COM  
- I když použití COM s komponentou Concurrency Runtime řídí stejnými zásadami jako ostatní souběžnosti mechanismus, následující pokyny vám pomohou při používání těchto knihoven společně efektivně.  
+ I když využívání modelu COM s modulem Runtime souběžnost ale řídí stejnými Principy jako ostatní mechanismu pro souběžnost, následující pokyny vám umožňují tyto knihovny společně efektivně používat.  
   
--   Vlákno musí volat [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) předtím, než použije knihovny COM.  
+-   Vlákno musí volat [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) před používá knihovnu COM.  
   
--   Můžete volat vlákno `CoInitializeEx` několikrát, dokud poskytuje stejné argumenty pro každé volání.  
+-   Vlákno může volat `CoInitializeEx` více než jednou za předpokladu, poskytuje stejné argumenty, které mají všechna volání.  
   
--   Pro každé volání `CoInitializeEx`, musíte také zavolat vlákno [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715). Jinými slovy, volá, aby se `CoInitializeEx` a `CoUninitialize` musí vyváženy.  
+-   Pro každé volání `CoInitializeEx`, musíte také zavolat vlákno [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize). Jinými slovy, volání `CoInitializeEx` a `CoUninitialize` musí vyváženy.  
   
--   Přepnutí z objektu apartment jedno vlákno na jiný, vlákno musí zcela bez knihovny COM zavolá `CoInitializeEx` s novým dělení na vlákna specifikace.  
+-   Přejděte z objektu apartment pro jedno vlákno do jiného vlákna musí zcela zdarma knihovny COM před voláním `CoInitializeEx` pomocí nového vlákna specifikace.  
   
- Platí jiné zásady COM při použití modelu COM s komponentou Concurrency Runtime. Například aplikace, která vytvoří objekt single-threaded apartment (STA) a zařazuje do jiného objektu apartment tento objekt musíte taky zadat smyčku zprávu zpracovat příchozí zprávy. Nezapomeňte taky, že zařazování objektů mezi Apartment může snížit výkon.  
+ Další COM zásady platí i při použití modelu COM s modulem Runtime souběžnost. Například aplikace, která vytvoří objekt v jednovláknový apartment (STA) a zařadí tohoto objektu do jiného objektu apartment rovněž nutné poskytnout smyčky zpráv pro zpracování příchozích zpráv. Nezapomeňte taky, že zařazování objektů mezi objekty apartment může snížit výkon.  
   
 ### <a name="using-com-with-the-parallel-patterns-library"></a>Používání modelu COM s knihovnou PPL  
- Při použití modelu COM pomocí součásti v paralelní vzory knihovna PPL (), například skupina úkolů nebo paralelní algoritmus volání `CoInitializeEx` dříve, než použijete knihovny COM během jednotlivých úloh nebo iterace a volání `CoUninitialize` před dokončení každé úlohy nebo iterace . Následující příklad ukazuje, jak spravovat dobu životnosti knihovnu COM s [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objektu.  
+ Při použití modelu COM s komponentou v paralelních vzorů knihovny (PPL), například na skupinu úloh nebo paralelního algoritmu, volání `CoInitializeEx` před použitím knihovny COM během každý úkol nebo iteraci a volání `CoUninitialize` před dokončením každý úkol nebo iterace . Následující příklad ukazuje, jak Správa životního cyklu knihovny modelu COM s [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objektu.  
   
  [!code-cpp[concrt-parallel-scripts#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_1.cpp)]  
   
- Musí se ujistěte, že je správně uvolněno knihovny COM při zrušení úloh nebo paralelní algoritmus, nebo když text úloh vyvolá výjimku. Chcete-li zaručit, že úloha volá `CoUninitialize` předtím, než se bude používat `try-finally` bloku nebo *prostředků pořízení je inicializace* vzoru (RAII). Následující příklad používá `try-finally` bloku na uvolnění knihovny COM, když dokončí úlohu nebo je zrušena, nebo když je vyvolána výjimka.  
+ Ujistěte se, že je správně uvolněn knihovny COM při zrušení úkolu nebo paralelní algoritmus, nebo pokud tělo úkolu vyvolá výjimku. Zaručit, že úloha volání `CoUninitialize` před jejím ukončení použijte `try-finally` bloku nebo *získání prostředků je inicializace* vzorek (RAII). Následující příklad používá `try-finally` bloku knihovny modelu COM uvolnit, když úloha dokončena nebo je zrušena, nebo když dojde k výjimce.  
   
  [!code-cpp[concrt-parallel-scripts#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_2.cpp)]  
   
- Následující příklad používá k definování vzoru RAII `CCoInitializer` třída, která spravuje životnost knihovny COM v daném oboru.  
+ Následující příklad používá vzor RAII pro definování `CCoInitializer` třídu, která spravuje životnost knihovny modelu COM v daném oboru.  
   
  [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]  
   
- Můžete použít `CCoInitializer` třída automaticky uvolnit knihovny COM při ukončení úlohy, následujícím způsobem.  
+ Můžete použít `CCoInitializer` třídy automaticky uvolnění knihovny COM při ukončení úkolu, následujícím způsobem.  
   
  [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]  
   
- Další informace o zrušení v Concurrency Runtime najdete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md).  
+ Další informace o zrušení v modulu Runtime souběžnosti, naleznete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md).  
   
 ### <a name="using-com-with-asynchronous-agents"></a>Používání modelu COM s asynchronními agenty  
 
- Pokud používáte COM s asynchronních agentů, volání `CoInitializeEx` dříve, než použijete knihovny COM v [concurrency::agent::run](reference/agent-class.md#run) metoda pro agenta. Potom zavolejte `CoUninitialize` před `run` metoda vrátí. Nepoužívejte rutiny správy COM v konstruktoru nebo destruktor agenta a přepsat [concurrency::agent::start](reference/agent-class.md#start) nebo [concurrency::agent:: provádí](reference/agent-class.md#done) metody vzhledem k tomu, že jsou tyto metody volá se z jiného vlákna než `run` metoda.  
+ Při použití modelu COM s asynchronními agenty volání `CoInitializeEx` před použitím knihovny modelu COM [concurrency::agent::run](reference/agent-class.md#run) metodu pro agenta. Poté zavolejte `CoUninitialize` před `run` metoda vrátí hodnotu. Nepoužívejte rutiny správy modelu COM v konstruktoru nebo destruktoru vašeho agenta a nesmí být přepsána [concurrency::agent::start](reference/agent-class.md#start) nebo [concurrency::agent:: provádí](reference/agent-class.md#done) metody vzhledem k tomu, že tyto metody jsou volat z jiného vlákna než `run` metody.  
 
   
- Následující příklad ukazuje třídu základní agenta s názvem `CCoAgent`, který spravuje knihovny COM v `run` metoda.  
+ Následující příklad ukazuje základní agenta třídu s názvem `CCoAgent`, která spravuje knihovny modelu COM `run` metody.  
   
  [!code-cpp[concrt-parallel-scripts#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_5.cpp)]  
   
- Úplný příklad je k dispozici dále v tomto návodu.  
+ Kompletní příklad je k dispozici později v tomto názorném postupu.  
   
 ### <a name="using-com-with-lightweight-tasks"></a>Používání modelu COM s prostými úlohami  
- Dokument [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md) popisuje roli prosté úlohy v Concurrency Runtime. Prosté úlohy můžete použít COM, stejně jako s všechny rutiny přístup z více vláken, která je předat do `CreateThread` funkce v rozhraní API systému Windows. To je ukázáno v následujícím příkladu.  
+ Dokument [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md) popisuje využití jednoduché úlohy v modulu Runtime souběžnosti. Můžete použít modelu COM s lehký úkol, stejně jako při použití jakékoli vlákno rutiny, můžete předat `CreateThread` funkce v rozhraní Windows API. To je ukázáno v následujícím příkladu.  
   
  [!code-cpp[concrt-parallel-scripts#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_6.cpp)]  
   
 ## <a name="an-example-of-a-com-enabled-application"></a>Příklad aplikace s podporou modelu COM  
- Tato část uvádí dokončení aplikace podporou modelu COM, která používá `IScriptControl` rozhraní pro spuštění skriptu, který vypočítá z n<sup>tý</sup> Fibonacciho číslo. Tento příklad nejprve volá skript z hlavního vlákna a pak použije PPL a agenty současně volat skript.  
+ Tato část ukazuje kompletní aplikaci podporou modelu COM, který používá `IScriptControl` rozhraní ke spuštění skriptu, který vypočítává n<sup>th</sup> Fibonacciho číslo. V tomto příkladu první volání skriptu z hlavního vlákna a potom použije PPL a agentů k volání skriptu současně.  
   
- Vezměte v úvahu následující podpůrná funkce `RunScriptProcedure`, která volá proceduru `IScriptControl` objektu.  
+ Vezměte v úvahu následující pomocná funkce, `RunScriptProcedure`, která proceduru volá `IScriptControl` objektu.  
   
  [!code-cpp[concrt-parallel-scripts#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_7.cpp)]  
   
- `wmain` Funkce vytvoří `IScriptControl` objektu, přidá kód skriptu k němu, která vypočítá z n<sup>tý</sup> Fibonacciho číslo a poté zavolá `RunScriptProcedure` funkce ke spuštění skriptu.  
+ `wmain` Funkce vytvoří `IScriptControl` objekt, přidá kód skriptu, který vypočítá n<sup>th</sup> Fibonacciho číslo a poté zavolá `RunScriptProcedure` funkce ke spuštění tohoto skriptu.  
   
  [!code-cpp[concrt-parallel-scripts#8](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_8.cpp)]  
   
 ### <a name="calling-the-script-from-the-ppl"></a>Volání skriptu z knihovny PPL  
 
- Následující funkce `ParallelFibonacci`, používá [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus volat skript paralelně. Tato funkce používá `CCoInitializer` třída spravovat dobu životnosti knihovny COM při každé iteraci úlohy.  
+ Následující funkce `ParallelFibonacci`, používá [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus pro volání skriptu paralelně. Tato funkce využívá `CCoInitializer` třídy pro správu životního cyklu knihovny modelu COM při každé iteraci cyklu úkolu.  
 
   
  [!code-cpp[concrt-parallel-scripts#9](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_9.cpp)]  
   
- Použít `ParallelFibonacci` fungovat na příklad, přidejte následující kód, než `wmain` funkce vrátí.  
+ Použít `ParallelFibonacci` pracovat v příkladu, přidejte následující kód před `wmain` vrací funkce.  
   
  [!code-cpp[concrt-parallel-scripts#10](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_10.cpp)]  
   
 ### <a name="calling-the-script-from-an-agent"></a>Volání skriptu z agenta  
- Následující příklad ukazuje `FibonacciScriptAgent` třídy, která volá skript postup výpočetní z n<sup>tý</sup> Fibonacciho číslo. `FibonacciScriptAgent` Třída používá zpráva předávání přijímat z hlavní aplikace, zadejte hodnoty pro funkci skriptu. `run` Metoda spravuje životnost knihovny COM v rámci úlohy.  
+ Následující příklad ukazuje `FibonacciScriptAgent` třída, která volá proceduru skript k výpočtu n<sup>th</sup> Fibonacciho číslo. `FibonacciScriptAgent` Třída používá zprávy předávání pro příjem z hlavního programu, zadejte hodnoty do funkce skriptu. `run` Spravuje životního cyklu knihovny modelu COM v rámci úlohy.  
   
  [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]  
   
- Následující funkce `AgentFibonacci`, vytvoří několik `FibonacciScriptAgent` objekty a používá zpráva předávání odeslat několik vstupní hodnoty k těmto objektům.  
+ Následující funkce `AgentFibonacci`, vytvoří několik `FibonacciScriptAgent` objekty a používá předávání odesílat několik vstupní hodnoty na tyto objekty zprávy.  
   
  [!code-cpp[concrt-parallel-scripts#12](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_12.cpp)]  
   
- Použít `AgentFibonacci` fungovat na příklad, přidejte následující kód, než `wmain` funkce vrátí.  
+ Použít `AgentFibonacci` pracovat v příkladu, přidejte následující kód před `wmain` vrací funkce.  
   
  [!code-cpp[concrt-parallel-scripts#13](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_13.cpp)]  
   
 ### <a name="the-complete-example"></a>Kompletní příklad  
- Následující kód ukazuje dokončení příkladu, který používá paralelní algoritmy a asynchronních agentů k volání procedury skriptu, která vypočítá Fibonacciho čísla.  
+ Následující kód ukazuje úplný příklad, který používá paralelní algoritmy a asynchronních agentů k volání skriptu procedury, která vypočítá Fibonacciho čísla.  
   
  [!code-cpp[concrt-parallel-scripts#14](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_14.cpp)]  
   
@@ -152,9 +152,9 @@ fib(12) = 144
 ```  
   
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `parallel-scripts.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
+ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-scripts.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
   
- **cl.exe /EHsc/Link paralelní scripts.cpp ole32.lib**  
+ **cl.exe/EHsc/Link paralelní scripts.cpp knihovnou ole32.lib**  
   
 ## <a name="see-also"></a>Viz také  
  [Návody k Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   

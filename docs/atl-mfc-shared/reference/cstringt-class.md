@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197930"
 ---
 # <a name="cstringt-class"></a>Cstringt – třída
 Tato třída reprezentuje `CStringT` objektu.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` pokusy o přidělení paměti systému pro nově formátovaný řetězec. Pokud tento pokus selže, je automaticky vyvolána výjimka paměti.  
   
- Každý insert musí mít odpovídající parametr následující *pszFormat* nebo *nFormatID* parametru. V textu zprávy se podporují několik řídicí sekvence pro dynamicky formátování zprávy. Další informace najdete v článku Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funkce v sadě Windows SDK.  
+ Každý insert musí mít odpovídající parametr následující *pszFormat* nebo *nFormatID* parametru. V textu zprávy se podporují několik řídicí sekvence pro dynamicky formátování zprávy. Další informace najdete v článku Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) funkce v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` volání [CStringT::FormatMessage](#formatmessage), která se pokusí přidělení paměti systému pro nově formátovaný řetězec. Pokud tento pokus selže, je automaticky vyvolána výjimka paměti.  
   
- Další informace najdete v článku Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funkce v sadě Windows SDK.  
+ Další informace najdete v článku Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) funkce v sadě Windows SDK.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Formáty řetězce zprávy pomocí Proměnný seznam argumentů.  

@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462115"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222149"
 ---
 # <a name="writing-an-exception-filter"></a>Zápis filtru výjimek
 Výjimku lze zpracovat skokem do úrovně obslužné rutiny výjimky nebo pokračováním provádění. Namísto použití kódu obslužné rutiny výjimky pro zpracování výjimky a předání, můžete použít *filtr* problém odstranit, a potom tak, že vrací hodnotu -1, pokračovat v normálním toku bez vymazání zásobníku.  
   
 > [!NOTE]
->  Při některých výjimkách nelze pokračovat. Pokud *filtr* vyhodnotí na hodnotu -1 pro takovou výjimku, systém vyvolá novou výjimku. Při volání [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), zjistíte, zda výjimka bude pokračovat.  
+>  Při některých výjimkách nelze pokračovat. Pokud *filtr* vyhodnotí na hodnotu -1 pro takovou výjimku, systém vyvolá novou výjimku. Při volání [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), zjistíte, zda výjimka bude pokračovat.  
   
  Například následující kód používá volání funkce v *filtr* výraz: Tato funkce zpracuje problém a poté vrátí hodnotu -1 bude pokračovat normální tok řízení:  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  Je vhodné použít ve volání funkce *filtr* výraz pokaždé, když *filtr* je potřeba provést cokoli složitého. Vyhodnocení výrazu způsobí spuštění funkce, v tomto případě `Eval_Exception`.  
   
- Všimněte si použití [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) k určení výjimky. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception` nejde volat metodu `GetExceptionCode`, ale musí jí předat kód výjimky.  
+ Všimněte si použití [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) k určení výjimky. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception` nejde volat metodu `GetExceptionCode`, ale musí jí předat kód výjimky.  
   
  Tato obslužná rutina předá řízení jiné obslužné rutině, pokud se jedná o výjimku přetečení celého čísla nebo přetečení čísla s plovoucí desetinnou čárkou. Pokud je tomu tak, obslužná rutina zavolá funkci (funkce `ResetVars` je pouze příklad, nejedná se o funkci rozhraní API) pro obnovení některých globálních proměnných. *Příkaz blok-2*, což je v tomto příkladu je prázdný, může nikdy provést, protože `Eval_Exception` nikdy nevrátí EXCEPTION_EXECUTE_HANDLER (1).  
   

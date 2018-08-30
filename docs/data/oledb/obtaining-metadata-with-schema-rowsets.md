@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207839"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 Někdy potřebujete získat informace o poskytovateli, sady řádků, tabulky, sloupce nebo jiné informace o databázi bez nutnosti otevřít v sadě řádků. Data o struktuře databáze s názvem metadat a je možné načíst podle několika způsoby. Jedním ze způsobů je použít sad řádků schématu.  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md) poskytuje podporu omezení třídy. Po vytvoření instance sady řádků schématu volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte.  
   
- Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](http://go.microsoft.com/fwlink/p/?linkid=64681) a vyhledání řádků, který používáte. Například `CColumns` odpovídá [sady řádků sloupců](http://go.microsoft.com/fwlink/p/?linkid=64682); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.  
+ Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) a vyhledání řádků, který používáte. Například `CColumns` odpovídá [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.  
   
  Tak, například pokud chcete omezit tím, že název tabulky, mějte na paměti, že je TABLE_NAME třetí sloupec omezení a poté zavolejte `Open`, zadáním požadovaného názvu tabulky jako třetí parametr omezení, jak je znázorněno v následujícím příkladu.  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Pro odkaz na sadu řádků schématu definiční třídy typů součástí šablony technologie OLE DB (viz [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Další informace o sad řádků schématu technologie OLE DB, včetně sloupců omezení, najdete v části [sad řádků schématu příloha B:](http://go.microsoft.com/fwlink/p/?linkid=64681) v OLE DB programátora odkazu.  
+ Další informace o sad řádků schématu technologie OLE DB, včetně sloupců omezení, najdete v části [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) v OLE DB programátora odkazu.  
   
- Složitější příklady toho, jak pomocí třídy sady řádků schématu, najdete v článku [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) a [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ukázky.  
+ Složitější příklady toho, jak pomocí třídy sady řádků schématu, najdete v článku [CatDB](https://github.com/Microsoft/VCSamples) a [DBViewer](https://github.com/Microsoft/VCSamples) ukázky.  
   
  Informace týkající se podpory zprostředkovatele sady řádků schématu najdete v tématu [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md).  
   

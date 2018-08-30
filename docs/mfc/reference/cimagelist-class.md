@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e6a7a45fc119309ce99640ab74006ae44a05bf
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bed3e80534a651e1e5a3d7228d0746ef8f552a9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208838"
 ---
 # <a name="cimagelist-class"></a>Cimagelist – třída
 Poskytuje funkce pro Windows běžné ovládací prvek seznamu obrázků.  
@@ -260,7 +260,7 @@ CImageList();
 ```  
   
 ##  <a name="copy"></a>  CImageList::Copy  
- Tato členská funkce implementuje chování funkce Win32 [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování funkce Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), jak je popsáno v sadě Windows SDK.  
   
 ```  
 BOOL Copy(
@@ -588,16 +588,16 @@ BOOL DrawEx(
  Umístění, kam chcete-li nakreslit v rámci zadané zařízení.  
   
  *Sz*  
- Velikost část obrázku, nakreslete vzhledem k levého horního rohu obrázku. Zobrazit *dx* a *dy* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) v sadě Windows SDK.  
+ Velikost část obrázku, nakreslete vzhledem k levého horního rohu obrázku. Zobrazit *dx* a *dy* v [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) v sadě Windows SDK.  
   
  *clrBk*  
- Barva pozadí bitové kopie. Zobrazit *rgbBk* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) v sadě Windows SDK.  
+ Barva pozadí bitové kopie. Zobrazit *rgbBk* v [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) v sadě Windows SDK.  
   
  *clrFg*  
- Barva popředí bitové kopie. Zobrazit *rgbFg* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) v sadě Windows SDK.  
+ Barva popředí bitové kopie. Zobrazit *rgbFg* v [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) v sadě Windows SDK.  
   
  *nStyle*  
- Příznak určující styl vykreslování. Zobrazit *fStyle* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) v sadě Windows SDK.  
+ Příznak určující styl vykreslování. Zobrazit *fStyle* v [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -632,7 +632,7 @@ BOOL DrawIndirect(
   
 ### <a name="parameters"></a>Parametry  
  *pimldp*  
- Ukazatel [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) strukturu, která obsahuje informace o operaci příkazu pro vykreslení.  
+ Ukazatel [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) strukturu, která obsahuje informace o operaci příkazu pro vykreslení.  
   
  *primární řadič domény*  
  Ukazatel na kontextu cílového zařízení. Je to nutné odstranit [CDC](../../mfc/reference/cdc-class.md) objektu, jakmile budete hotovi s ním.  
@@ -641,23 +641,23 @@ BOOL DrawIndirect(
  Z nuly vycházející index image, které chcete kreslit.  
   
  *PT*  
- A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.  
+ A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.  
   
  *Sz*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura určující velikost bitové kopie, které chcete kreslit.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura určující velikost bitové kopie, které chcete kreslit.  
   
  *ptOrigin*  
- A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y-zadání levý horní roh kreslení s ohledem na samotný obrázek. Nejsou vykreslit pixelů bitové kopie, které jsou nalevo souřadnice x a nad souřadnice na ose y.  
+ A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y-zadání levý horní roh kreslení s ohledem na samotný obrázek. Nejsou vykreslit pixelů bitové kopie, které jsou nalevo souřadnice x a nad souřadnice na ose y.  
   
  *fStyle*  
  Příznak určující styl vykreslování a volitelně obrázků překrytí. V části poznámky informace na imagi překrytí. Výchozí implementace MFC ILD_NORMAL, kreslení obrázku barvou pozadí pro seznam obrázků. Pokud je barva pozadí CLR_NONE hodnotu, na obrázku je vykreslen transparentně masky.  
   
- Další možné styly jsou popsány v části *fStyle* člena [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Další možné styly jsou popsány v části *fStyle* člena [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struktury.  
   
  *dwRop*  
  Hodnota, která určuje rastrovou operaci kódu. Tyto kódy definovat, jak se budou kombinovat data o barvách pro zdrojového obdélníku barev dat pro cílového obdélníku k dosažení konečnou barvu. Výchozí implementace MFC, SRCCOPY, zkopíruje zdrojového obdélníku přímo do cílového obdélníku. Tento parametr se ignoruje, pokud *fStyle* parametr neobsahuje příznak ILD_ROP.  
   
- Další možné hodnoty jsou popsány v části *dwRop* člena [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Další možné hodnoty jsou popsány v části *dwRop* člena [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struktury.  
   
  *rgbBack*  
  Obrázek barvu pozadí, ve výchozím nastavení CLR_DEFAULT. Tento parametr může být hodnota RGB definovaného aplikací nebo jednu z následujících hodnot:  
@@ -688,7 +688,7 @@ BOOL DrawIndirect(
  Při použití s ILS_APLHA, tento člen obsahuje hodnotu alfa kanálu. Tato hodnota může být od 0 do 255, kde 0 je zcela transparentní a 255 se stane zcela neprůhledný.  
   
  *crEffect*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota používaná pro efekty záře a stínu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnota používaná pro efekty záře a stínu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úspěšně vykreslením obrázku; v opačném případě FALSE.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Poznámky  
  Použijte první verze, pokud chcete vyplnit struktura Win32 sami. Pokud chcete využít výhod jedné nebo více výchozích argumentů knihovny MFC nebo vyhnout Správa strukturu, použijte druhou verzi.  
   
- Překrytí image je obrázek, který je vykreslen na primární image zadanou v této členské funkce pomocí *nvybrán Nobrázek* parametru. Kreslení pomocí masky překrytí [nakreslit](#draw) členské funkce s indexem založen na jedničce masky překrytí určené vlastností [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) – makro.  
+ Překrytí image je obrázek, který je vykreslen na primární image zadanou v této členské funkce pomocí *nvybrán Nobrázek* parametru. Kreslení pomocí masky překrytí [nakreslit](#draw) členské funkce s indexem založen na jedničce masky překrytí určené vlastností [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) – makro.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -729,7 +729,7 @@ HICON ExtractIcon(int nImage);
  Popisovač ikony v případě úspěchu; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda závisí na chování [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) – makro vytvořit ikonu. Odkazovat [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) – makro pro další informace o vytvoření ikony a čištění.  
+ Tato metoda závisí na chování [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) – makro vytvořit ikonu. Odkazovat [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) – makro pro další informace o vytvoření ikony a čištění.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
@@ -798,7 +798,7 @@ static CImageList* PASCAL GetDragImage(
   
 ### <a name="parameters"></a>Parametry  
  *lppoint –*  
- Adresa [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) přetáhněte struktura, která přijímá aktuální pozici.  
+ Adresa [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) přetáhněte struktura, která přijímá aktuální pozici.  
   
  *lpPointHotSpot*  
  Adresa `POINT` struktura, která přijímá posun přetáhnout obrázek umístění přetažení.  
@@ -833,7 +833,7 @@ BOOL GetImageInfo(
  Z nuly vycházející index bitové kopie.  
   
  *pImageInfo*  
- Ukazatel [IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393) struktura, která obdrží informace o imagi. Informace v této struktuře je možné přímo manipulovat s rastrové obrázky pro bitovou kopii.  
+ Ukazatel [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo) struktura, která obdrží informace o imagi. Informace v této struktuře je možné přímo manipulovat s rastrové obrázky pro bitovou kopii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -994,7 +994,7 @@ BOOL SetDragCursorImage(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Vzhledem k tomu, aby nový image používala přetahování funkce během operace přetažení, byste měli použít Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) skrýt skutečné myší po volání funkce `CImageList::SetDragCursorImage`. V opačném případě systém pravděpodobně mají dva ukazatele myši po dobu trvání operace přetažení.  
+ Vzhledem k tomu, aby nový image používala přetahování funkce během operace přetažení, byste měli použít Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) skrýt skutečné myší po volání funkce `CImageList::SetDragCursorImage`. V opačném případě systém pravděpodobně mají dva ukazatele myši po dobu trvání operace přetažení.  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  Voláním této členské funkce resetování počet imagí v `CImageList` objektu.  

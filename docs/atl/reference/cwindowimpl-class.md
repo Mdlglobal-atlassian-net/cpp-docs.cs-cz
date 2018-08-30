@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197198"
 ---
 # <a name="cwindowimpl-class"></a>Cwindowimpl – třída
 Poskytuje metody pro vytváření nebo vytvoření podtřídy časového období.  
@@ -150,22 +150,22 @@ HWND Create(
  [in] Popisovač okna nadřazené nebo vlastníka.  
   
  *Rect*  
- [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.  
+ [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.  
   
  *szWindowName*  
  [in] Určuje název okna. Výchozí hodnota je NULL.  
   
  *dwStyle*  
- [in] Styl okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ [in] Styl okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
   
  *dwExStyle*  
- [in] Styl rozšířené okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ [in] Styl rozšířené okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *MenuOrID*  
  [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.  
   
  *lpCreateParam*  
- [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu popisovač do nově vytvořeného okna. V opačném případě hodnota NULL.  
@@ -207,7 +207,7 @@ LRESULT DefWindowProc();
  Výsledek zpracování zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení `DefWindowProc` volání [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) funkci Win32 k odeslání informací zprávu do okna postupem uvedeným v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Ve výchozím nastavení `DefWindowProc` volání [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) funkci Win32 k odeslání informací zprávu do okna postupem uvedeným v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
  Funkce bez parametrů automaticky načte potřebné parametry z aktuální zprávu.  
   
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Typ okna|Proceduru okna|  
 |--------------------|----------------------|  
-|Okno založené na nové třídy okna, zadaná pomocí [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) – makro.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) funkci Win32.|  
+|Okno založené na nové třídy okna, zadaná pomocí [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) – makro.|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) funkci Win32.|  
 |Okno podle třídy okna, která upravuje existující třídu, zadaná pomocí [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) – makro.|Existující třídu okna proceduru okna.|  
 |Okno rozčleněných do podtříd.|Rozčleněné okno původní proceduru okna.|  
   

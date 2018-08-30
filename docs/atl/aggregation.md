@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847866"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196142"
 ---
 # <a name="aggregation"></a>Agregace
 Existují situace, kdy implementátor objektu chtěli využívat služby nabízené objektem jiného, předem připravené. Kromě toho je vhodné tento druhý objekt jako přirozenou součástí první. COM dosahuje oba z těchto cílů prostřednictvím členství ve skupině a agregaci.  
@@ -31,5 +31,5 @@ Existují situace, kdy implementátor objektu chtěli využívat služby nabíze
   
 ## <a name="see-also"></a>Viz také  
  [Úvod do modelu COM](../atl/introduction-to-com.md)   
- [Opětovné použití objektů](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Opětovné použití objektů](/windows/desktop/com/reusing-objects)
 

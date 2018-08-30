@@ -1,5 +1,5 @@
 ---
-title: Výjimky (C/C++) | Microsoft Docs
+title: Výjimky (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216880"
 ---
 # <a name="exceptions-cc"></a>Výjimky (C/C++)
-Dva kódy výjimek můžete vyvolá, když došlo k selhání:  
+Dva kódy výjimek může být vyvolána, pokud nedojde k selhání:  
   
 -   Pro **LoadLibrary** selhání  
   
@@ -46,11 +46,11 @@ Dva kódy výjimek můžete vyvolá, když došlo k selhání:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Kódy výjimek vyvolána jsou standardní VcppException (error_severity_error –, error_mod_not_found –) a hodnoty VcppException (error_severity_error –, ERROR_PROC_NOT_FOUND). Ukazatel na předá výjimku **DelayLoadInfo** struktury LPDWORD hodnotu, která může načíst **GetExceptionInformation** v [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) Struktura pole ExceptionInformation [0].  
+ Kódy výjimek vyvolána jsou standardní VcppException (error_severity_error –, error_mod_not_found –) a hodnoty VcppException (error_severity_error –, ERROR_PROC_NOT_FOUND). Předává ukazatel na výjimku **DelayLoadInfo** struktury v LPDWORD hodnotu, která je možné načíst podle **GetExceptionInformation** v [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Struktura, ExceptionInformation [0] pole.  
   
- Kromě toho pokud jsou v poli grAttrs nesprávný bits, ERROR_INVALID_PARAMETER je vyvolána výjimka. Tato výjimka se pro všechny úmyslům a účelům závažná.  
+ Kromě toho pokud jsou v poli grAttrs nesprávné bity, ERROR_INVALID_PARAMETER je vyvolána výjimka. Tato výjimka je pro veškeré záměry a úmysly, závažná.  
   
- V tématu [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md) Další informace.  
+ Zobrazit [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md) Další informace.  
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)

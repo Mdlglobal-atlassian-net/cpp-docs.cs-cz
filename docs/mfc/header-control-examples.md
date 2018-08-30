@@ -1,5 +1,5 @@
 ---
-title: Příklady ovládacích prvků záhlaví | Microsoft Docs
+title: Příklady ovládacích prvků záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20cdf22a91f7c144c2bbdb96d6789ca45778994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208111"
 ---
 # <a name="header-control-examples"></a>Příklady ovládacích prvků záhlaví
-Příklady ovládacích prvků záhlaví najdete v tématu [ovládací prvky hlavičky](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK.  
+Příklady ovládacích prvků záhlaví, najdete v článku [ovládacích prvků záhlaví](/windows/desktop/Controls/header-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   

@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205284"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 Poskytuje funkce pro pole se seznamem Windows.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Pokud pole se seznamem nebylo vytvořeno pomocí [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl, řetězec je přidán na konec seznamu. V opačném případě řetězec je vložen do seznamu a seznam je seřazen.  
   
 > [!NOTE]
->  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) v sadě Windows SDK.  
+>  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) v sadě Windows SDK.  
   
  Chcete-li vložit řetězec do určitého umístění v seznamu, použijte [InsertString](#insertstring) členskou funkci.  
   
@@ -493,7 +493,7 @@ int Dir(
  Pokud vrácená hodnota je větší než nebo rovno 0, je index založený na nule poslední název souboru přidán do seznamu. Vrácená hodnota je CB_ERR, pokud dojde k chybě; Vrácená hodnota je CB_ERRSPACE, pokud je k dispozici pro uložení nového řetězce není dostatek místa.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) v sadě Windows SDK.  
+ Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Pokud vrácená hodnota je větší než nebo rovno 0, je index založený na nule odpovídající položka. Je CB_ERR vyhledávání nebylo úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) v sadě Windows SDK.  
+ Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Parametry  
  *pcbi*  
- Ukazatel [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) struktury.  
+ Ukazatel [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Voláním této členské funkce se načíst počet položek v seznamu. část pole se seznamem.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Poznámky  
  Text upozornění je řádku, který se zobrazí v oblasti vstupního ovládacího prvku pole se seznamem. Text upozornění se nezobrazí, dokud uživatel poskytne vstup.  
   
- Tato metoda odesílá [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Voláním této členské funkce k určení, která položka v seznamu je vybrána.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  32bitová hodnota přidružené položky nebo CB_ERR, pokud dojde k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- Lze nastavit hodnotu 32-bit *dwItemData* parametr [setitemdata –](#setitemdata) volání členské funkce. Použití `GetItemDataPtr` členskou funkci, pokud je 32bitová hodnota, která se má načíst ukazatel ( **void\***).  
+ Lze nastavit hodnotu 32-bit *dwItemData* parametr [setitemdata –](#setitemdata) volání členské funkce. Použití `GetItemDataPtr` členskou funkci, pokud je 32bitová hodnota, která se má načíst ukazatel (**void** <strong>\*</strong>).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Načte 32bitovou hodnotu poskytované aplikací přidružených k položce zadané pole se seznamem jako ukazatel ( **void\***).  
+ Načte 32bitovou hodnotu poskytované aplikací přidružených k položce zadané pole se seznamem jako ukazatel (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  Minimální počet viditelných položek v seznamu aktuální rozevíracího seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Načte z nuly vycházející index první viditelné položky v seznamu. část pole se seznamem.  
@@ -939,7 +939,7 @@ int InsertString(
  Na rozdíl od [addstring –](#addstring) členskou funkci `InsertString` členskou funkci nezpůsobí seznam [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl, který se má seřadit.  
   
 > [!NOTE]
->  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) v sadě Windows SDK.  
+>  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Poznámky  
  Text upozornění je řádku, který se zobrazí v oblasti vstupního ovládacího prvku pole se seznamem. Text upozornění se nezobrazí, dokud uživatel poskytne vstup.  
   
- Tato metoda odesílá [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, *m_combobox*, která je použita k programovému přístupu ke prvek pole se seznamem. Tato proměnná se používá v následujícím příkladu.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  Pozice jsou počítány od nuly. Pokud chcete vybrat první znak ovládacího prvku pro úpravy, zadáte počáteční pozici 0. Koncová pozice je pro znak bezprostředně po poslední znak k výběru. Například pokud chcete vybrat první čtyři znaky ovládacích prvků pro úpravy, můžete využít počáteční pozice 0 a koncovou pozici 4.  
   
 > [!NOTE]
->  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) v sadě Windows SDK.  
+>  Tato funkce není podporována Windows `ComboBoxEx` ovládacího prvku. Další informace o tohoto ovládacího prvku, naleznete v tématu [ovládací prvky ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Nastaví hodnotu 32-bit přidruženou k zadané položky pole se seznamem být zadaný ukazatel ( **void\***).  
+ Nastaví hodnotu 32-bit přidruženou k zadané položky pole se seznamem být zadaný ukazatel (**void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, *m_combobox*, která je použita k programovému přístupu ke prvek pole se seznamem. Tato proměnná se používá v následujícím příkladu.  

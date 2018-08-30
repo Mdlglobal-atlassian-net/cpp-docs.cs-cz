@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207959"
 ---
 # <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase – třída
 Představuje součást úprav jazyka HTML.  
@@ -575,7 +575,7 @@ HRESULT ExecCommand(
  ID příkazu, který se spustí. Seznam najdete v tématu [identifikátory příkazů MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  *cmdExecOpt*  
- Na základě hodnot [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) výčtu, které popisují, jak objekt by se měl spustit příkaz.  
+ Na základě hodnot [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) výčtu, které popisují, jak objekt by se měl spustit příkaz.  
   
  *pInVar*  
  Vstupní argumenty.  
@@ -590,7 +590,7 @@ HRESULT ExecCommand(
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda poskytuje funkce pro [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
+ Tato metoda poskytuje funkce pro [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec).  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  Otevře se dialogové okno písmo, chcete-li povolit uživatelům změnit barvu textu, písem a velikost písma aktuálního výběru.  
@@ -838,7 +838,7 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Označuje, zda byl změněn dokumentu. `GetIsDirty` Vrátí hodnotu HRESULT z [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Označuje, zda byl změněn dokumentu. `GetIsDirty` Vrátí hodnotu HRESULT z [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty).  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  Vrátí, zda se pro všechny prvky, které mají zobrazí piktogram `styleFloat` vlastnost.  
@@ -1469,7 +1469,7 @@ long QueryStatus(long cmdID) const;
  ID příkazu. Identifikátory příkazů pocházejí ze skupiny CGID_MSHTML příkazů. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také vyhledat seznam online na [identifikátory příkazů MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) označující stav *cmdID*, nebo 0 při selhání.  
+ Vrátí [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) označující stav *cmdID*, nebo 0 při selhání.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Přepíše ovládací prvek přepínač na aktuální výběr.  

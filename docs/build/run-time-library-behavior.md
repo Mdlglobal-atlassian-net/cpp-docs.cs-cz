@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217289"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Knihovny DLL a chování běhové knihovny jazyka Visual C++  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 Zabalení některé knihovny `DllMain` funkce za vás. Například v běžné knihovny MFC DLL, implementovat `CWinApp` objektu `InitInstance` a `ExitInstance` členské funkce k provedení inicializace a ukončování vyžadované vaší knihovny DLL. Další podrobnosti najdete v tématu [inicializace knihovny DLL MFC regular](#initializing-regular-dlls) oddílu.  
   
 > [!WARNING]
-> Co můžete dělat bezpečně ve vstupní bod knihovny DLL jsou významné omezení. Zobrazit [obecné osvědčené postupy](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) pro konkrétní rozhraní API Windows, které nejsou bezpečné volat v `DllMain`. Pokud potřebujete jakoukoli jinou nejjednodušší inicializace potom udělat inicializační funkce pro knihovnu DLL. Můžete vyžadovat, aby aplikace volat funkci inicializace po `DllMain` má spuštění a před jejich volání dalších funkcí v knihovně DLL.  
+> Co můžete dělat bezpečně ve vstupní bod knihovny DLL jsou významné omezení. Zobrazit [obecné osvědčené postupy](/windows/desktop/Dlls/dynamic-link-library-best-practices) pro konkrétní rozhraní API Windows, které nejsou bezpečné volat v `DllMain`. Pokud potřebujete jakoukoli jinou nejjednodušší inicializace potom udělat inicializační funkce pro knihovnu DLL. Můžete vyžadovat, aby aplikace volat funkci inicializace po `DllMain` má spuštění a před jejich volání dalších funkcí v knihovně DLL.  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 Protože regulární knihovny DLL MFC mají `CWinApp` objektu by měla provádějí své úkoly inicializace a ukončování ve stejném umístění jako aplikace knihovny MFC: ve `InitInstance` a `ExitInstance` členské funkce knihovny DLL `CWinApp`-odvozené Třída. Vzhledem k tomu, že knihovna MFC poskytuje `DllMain` funkce, která je volána metodou `_DllMainCRTStartup` pro `DLL_PROCESS_ATTACH` a `DLL_PROCESS_DETACH`, neměli psát vlastní `DllMain` funkce. Pokud MFC `DllMain` volání funkce `InitInstance` při načtení knihovny DLL a volá `ExitInstance` před uvolněním knihovny DLL.  
   
-Běžné knihovny MFC DLL může udržovat přehled o více vláken voláním [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) a [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) v jeho `InitInstance` funkce. Tyto funkce umožňují knihovny DLL ke sledování dat specifické pro vlákno.  
+Běžné knihovny MFC DLL může udržovat přehled o více vláken voláním [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) a [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) v jeho `InitInstance` funkce. Tyto funkce umožňují knihovny DLL ke sledování dat specifické pro vlákno.  
   
 Ve vaší běžné knihovny MFC DLL, která dynamicky propojuje ke knihovně MFC, pokud používáte žádné MFC OLE, knihovny MFC databáze (nebo rozhraní DAO), nebo soketů knihovny MFC, podporují ladění MFC – rozšiřující knihovny DLL MFCO*verze*D.dll, MFCD*verze*D.dll a MFCN*verze*D.dll (kde *verze* je číslo verze) jsou automaticky propojeny v. Jeden z následujících předdefinovaných inicializační funkce musí zavolat pro každou z těchto knihoven DLL, které používáte ve vaší běžné knihovny MFC DLL `CWinApp::InitInstance`.  
   
@@ -179,14 +179,14 @@ Aplikace, které explicitně musí volat odkaz na rozšiřující knihovny DLL M
   
 Protože knihovny MFCx0.dll je plně inicializován době `DllMain` je volána, můžete přidělit paměť a volání funkcí knihovny MFC v rámci `DllMain` (na rozdíl od 16bitové verze knihovny MFC).  
   
-Rozšiřující knihovny DLL zařídit multithreading pomocí manipulace `DLL_THREAD_ATTACH` a `DLL_THREAD_DETACH` případech v `DllMain` funkce. Tyto případy jsou předány `DllMain` při vlákna, připojení a odpojení z knihovny DLL. Volání [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) při připojování knihovny DLL umožňuje udržovat vlákno indexuje místní úložiště (TLS) pro každé vlákno připojené ke knihovně DLL knihovny DLL.  
+Rozšiřující knihovny DLL zařídit multithreading pomocí manipulace `DLL_THREAD_ATTACH` a `DLL_THREAD_DETACH` případech v `DllMain` funkce. Tyto případy jsou předány `DllMain` při vlákna, připojení a odpojení z knihovny DLL. Volání [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) při připojování knihovny DLL umožňuje udržovat vlákno indexuje místní úložiště (TLS) pro každé vlákno připojené ke knihovně DLL knihovny DLL.  
   
 Všimněte si, že soubor hlaviček Afxdllx.h obsahuje speciální definice pro strukturám používaným v rozšiřující knihovny DLL MFC, jako je například definice `AFX_EXTENSION_MODULE` a `CDynLinkLibrary`. V rozšíření MFC DLL, měli byste zahrnout tento soubor hlavičky.  
   
 > [!NOTE]
 >  Je důležité, že můžete definovat ani nedefinovat některý `_AFX_NO_XXX` makra v souboru Stdafx.h. Tato makra existuje pouze pro účely kontroly, jestli konkrétní Cílová platforma podporuje tuto funkci, nebo ne. Můžete napsat program Zkontrolujte tato makra (například `#ifndef _AFX_NO_OLE_SUPPORT`), ale váš program by nikdy definovat nebo zrušit tato makra.  
   
-Funkce inicializace vzorku, který je součástí zpracovává multithreading [pomocí místního úložného prostoru vlákna v knihovně DLL](http://msdn.microsoft.com/library/windows/desktop/ms686997) v sadě Windows SDK. Všimněte si, že ukázky obsahuje funkci vstupního bodu volá `LibMain`, ale tato funkce by měla název `DllMain` tak, že pracuje s knihovny MFC a C za běhu.  
+Funkce inicializace vzorku, který je součástí zpracovává multithreading [pomocí místního úložného prostoru vlákna v knihovně DLL](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) v sadě Windows SDK. Všimněte si, že ukázky obsahuje funkci vstupního bodu volá `LibMain`, ale tato funkce by měla název `DllMain` tak, že pracuje s knihovny MFC a C za běhu.  
   
 ## <a name="see-also"></a>Viz také  
   

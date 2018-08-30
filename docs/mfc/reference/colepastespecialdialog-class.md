@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213336"
 ---
 # <a name="colepastespecialdialog-class"></a>Colepastespecialdialog – třída
 Používá se pro dialogové okno zvláštní vložení OLE.  
@@ -85,7 +85,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="remarks"></a>Poznámky  
  Vytvoření objektu třídy `COlePasteSpecialDialog` kdy chcete volat dialogovému oknu. Po `COlePasteSpecialDialog` objekt byl vytvořen, můžete použít [AddFormat](#addformat) a [AddStandardFormats](#addstandardformats) členské funkce přidejte formátů schránky do dialogového okna. Můžete také použít [m_ps](#m_ps) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_ps` Struktury je typu OLEUIPASTESPECIAL.  
   
- Další informace najdete v tématu [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktura v sadě Windows SDK.  
   
  Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -157,9 +157,9 @@ void AddFormat(
 ### <a name="remarks"></a>Poznámky  
  Voláním této funkce můžete přidat buď standardní formáty, jako je například CF_TEXT nebo CF_TIFF nebo vlastní formáty, které vaše aplikace má registrovaný v systému. Další informace o vkládání dat objektů do vaší aplikace, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) typ výčtu a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [objekt TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ výčtu a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Výčtový typ v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Výčtový typ v sadě Windows SDK.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Přidá novou položku do seznamu podporovaných formátů schránky.  
@@ -173,7 +173,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
  Formát schránky pro přidání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) struktura obsahující informace o nových odkazů.  
+ [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) struktura obsahující informace o nových odkazů.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Voláním této funkce přidání následujících formátů schránky do seznamu formátů, které vaše aplikace může podporovat v rámci Vložit jinak operace:  
@@ -231,7 +231,7 @@ COlePasteSpecialDialog(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce vytvoří pouze `COlePasteSpecialDialog` objektu. Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
   
- Další informace najdete v tématu [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Výčtový typ v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Výčtový typ v sadě Windows SDK.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Vytvoří novou položku, která byla vybrána v dialogovém okně Vložit jinak.  
@@ -264,7 +264,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) funkce v sadě Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_ps](#m_ps) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
@@ -288,7 +288,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Poznámky  
  Pouze voláním této funkce po [DoModal](#domodal) vrátí IDOK.  
   
- Další informace o aspekt kreslení, najdete v článku [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace o aspekt kreslení, najdete v článku [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Získá metasoubor přidružený k položce vybrané uživatelem.  
@@ -311,7 +311,7 @@ int GetPasteIndex() const;
  Index v poli `OLEUIPASTEENTRY` struktury vybrané uživatelem. Formát, který odpovídá vybraného indexu by měla sloužit při provádění operace vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) struktura v sadě Windows SDK.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Určuje typ výběru uživatele.  
@@ -355,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Poznámky  
  Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)   

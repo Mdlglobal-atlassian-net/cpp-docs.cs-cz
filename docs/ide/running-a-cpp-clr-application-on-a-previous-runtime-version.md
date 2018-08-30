@@ -1,5 +1,5 @@
 ---
-title: Spuštění aplikace C++ - clr v předchozí verzi modulu Runtime | Microsoft Docs
+title: Spuštění aplikace C++ - clr v předchozí verzi modulu Runtime | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,25 +21,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216559"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Spuštění aplikace C++ /clr v předchozí verzi modulu runtime
-Pokud není uvedeno jinak, aplikace C++ rozhraní .NET Framework je sestavena pro běh na běžné verzi modulu runtime (CLR) jazyk, kompilátor použije pro sestavení aplikace. Je však možné .exe aplikace, která je sestavená pro jednu verzi modulu runtime ke spuštění na jakoukoli jinou verzi, která poskytuje požadovanou funkci.  
+Pokud není uvedeno jinak, aplikace v jazyce C++ rozhraní .NET Framework je určený pro spouštět verze společného běhového jazykového (CLR), kterou kompilátor používá k sestavení aplikace. Je však možné, aplikace .exe, pro kterou je vytvořena jedna verze modulu runtime pro spuštění na jakoukoli jinou verzi, která poskytuje požadovanou funkci.  
   
- K tomu, zadejte obsahující informace o verzi modulu runtime v souboru app.config `supportedRuntime` značky.  
+ Chcete-li to provést, zadejte soubor app.config, který obsahuje informace o verzi modulu runtime v `supportedRuntime` značky.  
   
- V době běhu souboru app.config musí mít název ve tvaru *název_souboru.přípona*.config, kde *název_souboru.přípona* je název spustitelného souboru, který spouští aplikaci a musí být ve stejném adresáři jako spustitelný soubor. Například pokud vaše aplikace jmenuje TestApp.exe, soubor app.config by měl jmenovat TestApp.exe.config.  
+ V době běhu souboru app.config musí mít název ve tvaru *název_souboru.přípona*.config, kde *název_souboru.přípona* je název spustitelného souboru, který spouští aplikaci, a musí být ve stejném adresáři jako spustitelný soubor. Například pokud vaše aplikace jmenuje TestApp.exe, soubor app.config by měl jmenovat TestApp.exe.config.  
   
- Pokud zadáte více než jednu verzi modulu runtime a spuštění aplikace na počítači, který má více než jedna verze nainstalované runtime, aplikace použije první verzi, která je zadána v konfiguračním souboru a je nainstalovaná.  
+ Pokud zadáte více než jedna verze modulu runtime a aplikace bude spuštěna na počítači, který má více než jedna verze modulu runtime nainstalovaný, aplikace použije první verzi zadané v konfiguračním souboru a je nainstalovaná.  
   
- Další informace najdete v tématu [postupy: Konfigurace aplikace pro cílové verze rozhraní .NET Framework](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Další informace najdete v tématu [postupy: Konfigurace aplikace pro cílení na určitou verzi rozhraní .NET Framework](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
- Ke spuštění na verze 1.0 nebo 1.1 verzi modulu CLR, aplikace, která je sestavena Visual C++ musí být zkompilovány kompilátoru pomocí [/CLR: initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
+ Ke spuštění na verzi 1.0 nebo 1.1 verzi CLR, aplikace, která je vytvořená ve Visual C++ musí být zkompilován pomocí kompilátoru [/CLR: initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

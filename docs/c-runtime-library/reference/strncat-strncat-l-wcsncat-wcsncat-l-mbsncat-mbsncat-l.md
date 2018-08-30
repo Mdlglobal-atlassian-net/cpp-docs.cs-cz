@@ -1,5 +1,5 @@
 ---
-title: strncat –, _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l – | Microsoft Docs
+title: strncat – _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202865"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat –, _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –
+# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat – _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –
 
-Připojí znaky řetězce. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [strncat_s –, _strncat_s_l, wcsncat_s –, _wcsncat_s_l, _mbsncat_s –, _mbsncat_s_l –](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
+Připojí znaky řetězce. Bezpečnější verze těchto funkcí jsou k dispozici, najdete v článku [strncat_s – _strncat_s_l, wcsncat_s –, _wcsncat_s_l, _mbsncat_s –, _mbsncat_s_l –](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
 
 > [!IMPORTANT]
-> **_mbsncat –** a **_mbsncat_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat –** a **_mbsncat_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -135,43 +135,43 @@ unsigned char *_mbsncat_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Řetězce ukončené hodnotou Null cílový.
+Řetězec cíle zakončený hodnotou Null.
 
 *strSource*<br/>
-Řetězce ukončené hodnotou Null zdroje.
+Řetězec zakončený hodnotou Null zdroje.
 
 *Počet*<br/>
-Počet znaků pro připojení.
+Počet znaků k připojení.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na cílový řetězec. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+Vrací ukazatel na cílový řetězec. Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strncat –** funkce připojí maximálně první *počet* znaků *strSource* k *strDest*. Počáteční znak *strSource* přepíše ukončující znak null *strDest*. Pokud se objeví znak hodnoty null v *strSource* před *počet* znaky jsou připojena, **strncat –** připojí všechny znaky z *strSource*, až do znaku, hodnotu null. Pokud *počet* je větší než délka *strSource*, délka *strSource* slouží místě *počet*. Všechny případy, výsledný řetězec je byla ukončena s znak hodnoty null. Pokud kopírování probíhá mezi řetězce, které se překrývají, chování nedefinovaný.
+**Strncat –** funkce připojí maximálně prvních *počet* znaků *strSource* k *strDest*. Počáteční znak *strSource* přepíše ukončující znak null proměnné *strDest*. Pokud se objeví znak null v *strSource* před *počet* znaky jsou připojeny, **strncat –** připojí všechny znaky z *strSource*, až po znak null. Pokud *počet* je větší než délka *strSource*, délka *strSource* je použito místo *počet*. Ve všech případech je výsledný řetězec je ukončen znakem null. Pokud se kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
 > [!IMPORTANT]
-> **strncat –** nekontroluje dostatek místa v *strDest*; je proto potenciální příčinou přetečení vyrovnávací paměti. Mějte na paměti, *počet* omezuje počet znaků připojí, nejedná se o omezení velikosti *strDest*. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **strncat –** nekontroluje dostatek místa v *strDest*; proto jde o potenciální příčinu přetečení vyrovnávací paměti. Mějte na paměti, která *počet* omezuje počet znaků jsou připojeny; není limit velikosti *strDest*. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**wcsncat –** a **_mbsncat –** jsou široká charakterová a vícebajtových znaků verze **strncat –**. Argumenty řetězce a návratová hodnota **wcsncat –** jsou široká charakterová řetězce; u **_mbsncat –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+**wcsncat –** a **_mbsncat –** jsou širokoznaké a vícebajtové verze **strncat –**. Argumenty řetězce a vrácené hodnoty **wcsncat –** jsou širokoznaké řetězce **_mbsncat –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ tyto funkce mají přetížení šablony. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncat –**|**strncat**|**_mbsnbcat**|**wcsncat –**|
 |**_tcsncat_l –**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** a **_wcsncat_l** mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním **_tcsncat_l –**.
+> **_strncat_l** a **_wcsncat_l** mít žádnou závislost národního prostředí a neměly by být volány přímo. Jsou určeny pro interní použití rozhraním **_tcsncat_l –**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -182,7 +182,7 @@ V jazyce C++ tyto funkce mají přetížení šablony. Další informace najdete
 |**_mbsncat**|\<Mbstring.h >|
 |**_mbsncat_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -231,9 +231,9 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Všimněte si, že **BadAppend** způsobila přetečení vyrovnávací paměti.
+Všimněte si, že **BadAppend** způsobil přetečení vyrovnávací paměti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

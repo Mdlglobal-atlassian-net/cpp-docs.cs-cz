@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210939"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregace a makra objektu pro vytváření tříd
 Tato makra poskytují způsobů řízení agregace a deklarace objekty pro vytváření tříd.  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  Ccomclassfactory – třída  
- Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní.  
+ Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní.  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CComClassFactory` implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní, která obsahuje metody pro vytvoření objektu s konkrétní identifikátorem CLSID, jakož i uzamčení objekt pro vytváření tříd v paměti, abyste mohli rychleji vytvořit nové objekty. `IClassFactory` je nutné implementovat pro každou třídu, která zaregistrujete v systémovém registru a můžete přiřadit identifikátor CLSID.  
+ `CComClassFactory` implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní, která obsahuje metody pro vytvoření objektu s konkrétní identifikátorem CLSID, jakož i uzamčení objekt pro vytváření tříd v paměti, abyste mohli rychleji vytvořit nové objekty. `IClassFactory` je nutné implementovat pro každou třídu, která zaregistrujete v systémovém registru a můžete přiřadit identifikátor CLSID.  
   
  Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete-li přepsat toto výchozí nastavení, zadejte jednu DECLARE_CLASSFACTORY*XXX* makra v definici třídy. Například [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) makro používá zadanou třídu pro objekt pro vytváření tříd:  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  Ccomclassfactory2 – třída  
- Tato třída implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní.  
+ Tato třída implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní.  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *Licence*  
  Třída, která implementuje následující statické funkce:  
   
-- **verifylicensekey – statické BOOL (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **getlicensekey – statické BOOL (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **statické BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>Poznámky  
- `CComClassFactory2` implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, která je rozšířením z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` vytvoření ovládacích prvků objektu prostřednictvím licenci. Třída objekt pro vytváření, provádění na licencovanou počítači může poskytnout za běhu licenční klíč. Tento licenční klíč umožňuje aplikaci k vytvoření instance objektů při úplné počítač licence neexistuje.  
+ `CComClassFactory2` implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní, která je rozšířením z [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` vytvoření ovládacích prvků objektu prostřednictvím licenci. Třída objekt pro vytváření, provádění na licencovanou počítači může poskytnout za běhu licenční klíč. Tento licenční klíč umožňuje aplikaci k vytvoření instance objektů při úplné počítač licence neexistuje.  
   
  Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactory2`, zadejte [DECLARE_CLASSFACTORY2](#declare_classfactory2) makra v definici třídy objektu. Příklad:  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  Ccomclassfactoryautothread – třída  
- Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní a umožňuje objektů bude vytvořena ve více objekty apartment.  
+ Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní a umožňuje objektů bude vytvořena ve více objekty apartment.  
   
 > [!IMPORTANT]
 >  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>Parametry  
  *statusFlags*  
- [in] KTERÉ příznaky. Zobrazit [které](http://msdn.microsoft.com/library/windows/desktop/ms687201) seznam příznaky.  
+ [in] KTERÉ příznaky. Zobrazit [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) seznam příznaky.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

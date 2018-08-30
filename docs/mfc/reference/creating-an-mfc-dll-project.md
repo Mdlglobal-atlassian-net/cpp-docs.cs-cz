@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a5582c81bdc56861a549a2d17cd95ee238975a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5fa06417b93012c7d564a45c4e58f03edf1e2a39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027989"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215675"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Vytvoření projektu knihovny MFC DLL
 Knihovna MFC DLL je binární soubor, který funguje jako sdílená knihovna funkcí, které je možné využívat současně více aplikacemi. Nejjednodušším způsobem vytvoření projektu knihovny MFC je použití Průvodce MFC DLL.  
   
 > [!NOTE]
->  Vzhled funkcí v rozhraní IDE může záviset na aktivních nastaveních nebo edici a mohou lišit od těch popsaných v nápovědě. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Vzhled funkcí v rozhraní IDE může záviset na aktivních nastaveních nebo edici a mohou lišit od těch popsaných v nápovědě. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Vytvoření projektu knihovny DLL MFC pomocí Průvodce MFC DLL  
   
@@ -51,5 +51,5 @@ Knihovna MFC DLL je binární soubor, který funguje jako sdílená knihovna fun
  [Typy projektů Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

@@ -1,5 +1,5 @@
 ---
-title: Používání atributu CTabCtrl | Microsoft Docs
+title: Používání atributu CTabCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383679"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217919"
 ---
 # <a name="using-ctabctrl"></a>Používání atributu CTabCtrl
-"Ovládacího prvku karta" je obdobou rozdělení v poznámkovém bloku nebo s popiskem složky v souboru CAB. Použití ovládacího prvku karta reprezentována třída [CTabCtrl](../mfc/reference/ctabctrl-class.md), chcete-li zobrazit více stránek informace nebo ovládací prvky pro uživatele, jeden po druhém, ve formátu, který naznačuje sdílené nebo logické vztah mezi každé stránce.  
+"Ovládacím prvkem karta" je obdobou oddělovačů poznámkového bloku nebo označené složky v souboru CAB. Použití ovládacího prvku karta, reprezentovaný třídou [atributu CTabCtrl](../mfc/reference/ctabctrl-class.md), chcete-li zobrazit více stránek informace nebo ovládací prvky pro uživatele, postupně, ve formátu, který naznačuje partnera nebo logické vztah mezi každou stránku.  
   
- Další informace o ovládací prvky karet najdete v tématu [ovládací prvky karet](http://msdn.microsoft.com/library/windows/desktop/bb760550) ve Windows SDK.  
+ Další informace o ovládací prvky karet najdete v tématu [ovládací prvky karet](/windows/desktop/Controls/tab-controls) v sadě Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Ovládací prvky karet a seznamy vlastností](../mfc/tab-controls-and-property-sheets.md)  
   

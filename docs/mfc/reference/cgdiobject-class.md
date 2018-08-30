@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338415"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209124"
 ---
 # <a name="cgdiobject-class"></a>Cgdiobject – třída
 Poskytuje základní třídu pro různé druhy grafiky Windows objekty rozhraní GDI systému zařízení, jako je například rastrové obrázky, oblasti, štětce, pera, palety a písma.  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Konstanta určující typ požadovaného skladový objekt. Zobrazit parametr *fnObject* pro [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) v sadě Windows SDK pro popis příslušné hodnoty.  
+ Konstanta určující typ požadovaného skladový objekt. Zobrazit parametr *fnObject* pro [GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) v sadě Windows SDK pro popis příslušné hodnoty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN –](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH –](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[RASTROVÝ OBRÁZEK](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|Nepodporováno|  
   
  Pokud je objekt `CBitmap` objektu, `GetObject` vrátí pouze šířku, výšku a informace o formátu barvy rastrového obrázku. Skutečné službu bits můžete načíst pomocí [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Pokud je objekt `CPalette` objektu, `GetObject` načte slova, která určuje počet položek, které na paletě. Funkce nenačte [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) strukturu, která definuje paletu. Aplikaci můžete získat informace o palety voláním [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Pokud je objekt `CPalette` objektu, `GetObject` načte slova, která určuje počet položek, které na paletě. Funkce nenačte [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) strukturu, která definuje paletu. Aplikaci můžete získat informace o palety voláním [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  Získá typ objektu GDI.  

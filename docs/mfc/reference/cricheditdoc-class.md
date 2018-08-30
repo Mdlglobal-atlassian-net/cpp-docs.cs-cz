@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221798"
 ---
 # <a name="cricheditdoc-class"></a>Cricheditdoc – třída
 S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [cricheditcntritem –](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>Parametry  
  *preo*  
- Ukazatel [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* má hodnotu NULL, nová položka klienta je prázdná.  
+ Ukazatel [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* má hodnotu NULL, nová položka klienta je prázdná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou [cricheditcntritem –](../../mfc/reference/cricheditcntritem-class.md) objekt, který byl přidán do tohoto dokumentu.  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce není udělat všechny inicializace technologie OLE.  
   
- Další informace najdete v tématu [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura v sadě Windows SDK.  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  Voláním této funkce k určení formátu textu pro streamování obsahu RichEdit.  

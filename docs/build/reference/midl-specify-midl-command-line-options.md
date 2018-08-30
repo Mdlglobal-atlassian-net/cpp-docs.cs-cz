@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466201"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222678"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42466201"
  kde:  
   
  `file`  
- Název souboru, který obsahuje [možností příkazového řádku MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Název souboru, který obsahuje [možností příkazového řádku MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).  
   
 ## <a name="remarks"></a>Poznámky  
  Všechny možnosti pro převod souboru IDL do vyrovnávací paměti TLB souboru musí být uvedené v `file`; Možnosti příkazového řádku MIDL nelze zadat na příkazovém řádku linkeru. Pokud není zadán /MIDL, kompilátor MIDL o tom bude vyvolán s pouze název souboru IDL a žádné jiné možnosti.  

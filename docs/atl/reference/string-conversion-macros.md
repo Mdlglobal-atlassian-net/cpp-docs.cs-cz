@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885152"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210052"
 ---
 # <a name="string-conversion-macros"></a>Makra převodu řetězců
 
@@ -38,7 +38,7 @@ Makra převodů řetězec popsaném jsou platné pro knihovny ATL a MFC. Další
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE a makra převodů TEXTMETRIC řetězec
 
-Vytvořte kopii těchto maker [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) nebo [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury a převod řetězců v rámci nové struktury na nový typ řetězec. Makra přidělení paměti na zásobníku pro novou strukturu a vrácen ukazatel na novou strukturu.  
+Vytvořte kopii těchto maker [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) nebo [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktury a převod řetězců v rámci nové struktury na nový typ řetězec. Makra přidělení paměti na zásobníku pro novou strukturu a vrácen ukazatel na novou strukturu.  
   
 ```cpp
 MACRONAME( address_of_structure )

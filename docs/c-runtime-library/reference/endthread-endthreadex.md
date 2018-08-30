@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bed0b93b2c9643a19aa8fd97c0e52da2ba1f8be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198787"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -71,7 +71,7 @@ Můžete volat **_endthread** nebo **_endthreadex** explicitně k ukončení pod
 > [!NOTE]
 > Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API; to zabrání systému za běhu recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
 
-**_endthread** automaticky uzavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread** rozhraní API.) Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API.
+**_endthread** automaticky uzavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread** rozhraní API.) Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API.
 
 Win32, jako jsou **ExitThread** rozhraní API, **_endthreadex** nezavře popisovač vlákna. Proto při použití **_beginthreadex** a **_endthreadex**, je nutné zavřít popisovač vlákna voláním rozhraní Win32 **CloseHandle** rozhraní API.
 

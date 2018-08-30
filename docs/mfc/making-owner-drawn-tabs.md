@@ -1,5 +1,5 @@
 ---
-title: Vytváření karet vykreslovaných vlastníkem | Microsoft Docs
+title: Vytváření karet vykreslovaných vlastníkem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72192bdfb47fecb1588c3a36e402795468d527be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208690"
 ---
 # <a name="making-owner-drawn-tabs"></a>Vytváření karet vykreslovaných vlastníkem
-Můžete definovat jednotlivé položky ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) jako položky vykreslované uživatelem. Další informace najdete v tématu [Owner-Drawn karty](http://msdn.microsoft.com/library/windows/desktop/bb760550) ve Windows SDK.  
+Můžete definovat jednotlivé položky ovládacího prvku karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)) bude vlastníkem vykreslované položky. Další informace najdete v tématu [Owner-Drawn karty](/windows/desktop/Controls/tab-controls) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)   

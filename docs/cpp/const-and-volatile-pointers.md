@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212258"
 ---
 # <a name="const-and-volatile-pointers"></a>Ukazatelé const a volatile
 [Const](../cpp/const-cpp.md) a [volatile](../cpp/volatile-cpp.md) klíčová slova změnit způsob práce s ukazateli. **Const** – klíčové slovo určuje, že ukazatel myši se nemůže modifikovat po inicializaci; ukazatel je chráněn před úpravami.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Předchozí příkaz deklaruje funkci [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), kde dva ze tří argumentů jsou typu ukazatele do **char**. Protože jsou argumenty jsou předány podle odkazu a podle hodnoty, funkce nebude měnit parametry `strDestination` a `strSource` Pokud `strSource` nebyl deklarován jako **const**. Deklarace `strSource` jako **const** volajícímu zajišťuje, že `strSource` nelze volanou funkcí změnit.  
   
 > [!NOTE]
->  Protože existuje standardní převod z *typename* **\*** k **const** *typename* **\***, je platný pro předání argumentu typu `char *` k [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Ale opak není pravdou; Chcete-li odebrat neexistuje žádný implicitní převod **const** atribut z objektu nebo ukazatele.  
+> Protože existuje standardní převod z *typename* <strong>\*</strong> k **const** *typename* <strong>\*</strong>, je platný pro předání argumentu typu `char *` k [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Ale opak není pravdou; Chcete-li odebrat neexistuje žádný implicitní převod **const** atribut z objektu nebo ukazatele.  
   
  A **const** ukazatel daného typu lze přiřadit ukazateli stejného typu. Ukazatel, který ale není **const** nelze přiřadit **const** ukazatele. Následující kód ukazuje správná i nesprávná přiřazení:  
   

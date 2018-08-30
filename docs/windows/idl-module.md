@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220462"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ ID tématu nápovědy HLP nebo CHM souboru.
 ID nápovědy pro tuto knihovnu typů.
 
 *skryté* (volitelné)  
-Parametr, který zabraňuje zobrazení knihovny. Zobrazit [skryté](http://msdn.microsoft.com/library/windows/desktop/aa366861) atribut MIDL pro další informace.
+Parametr, který zabraňuje zobrazení knihovny. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
 *s omezeným přístupem* (volitelné)  
-Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) atribut MIDL pro další informace.
+Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
 *deklarace funkce*  
 Funkce, která budou definovat.
@@ -77,7 +77,7 @@ Funkce, která budou definovat.
 
 **Možnost idl_module** atribut C++ umožňuje zadat vstupní bod v souboru .dll, který umožňuje importovat ze souboru .dll.
 
-**Možnost idl_module** atribut má podobné funkce [modulu](http://msdn.microsoft.com/library/windows/desktop/aa367099) atribut MIDL.
+**Možnost idl_module** atribut má podobné funkce [modulu](/windows/desktop/Midl/module) atribut MIDL.
 
 Všechno můžete exportovat z objektu COM, který můžete exportovat z soubor DLL tak, že vložíte vstupní bod knihovny DLL v bloku knihovny ze souboru IDL.
 

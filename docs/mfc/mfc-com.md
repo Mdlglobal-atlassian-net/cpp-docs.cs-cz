@@ -1,5 +1,5 @@
 ---
-title: MFC COM | Microsoft Docs
+title: MFC COM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,23 +21,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8257631e46a1ebcf5c882d9f87c628c04ccc84f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205646"
 ---
 # <a name="mfc-com"></a>MFC COM
-Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablony Library (ATL) slouží pro programování COM. Témata v této části popisuje podporu pro knihovny MFC pro COM.  
+Podmnožinu knihovny MFC je navržena pro podporu modelu COM, zatímco většina aktivní šablony knihovny (ATL) je určena k programování v modelu. Témata v této části popisuje podporu knihovny MFC pro modelu COM.  
   
- Technologie Active (například ActiveX – ovládací prvky, obsahování pro aktivní dokument, OLE a tak dále) použít k povolení softwarové součásti pro vzájemné interakce v síťovém prostředí, bez ohledu na jazyk, se kterým byly modelu COM (Component Object) vytvořit. Technologie Active slouží k vytvoření aplikace, které běží na ploše nebo Internet. Další informace najdete v části [Úvod do modelu COM](../atl/introduction-to-com.md) nebo [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
+ Aktivní technologie (například ActiveX ovládací prvky, zahrnutí aktivního dokumentu, OLE a tak dále) povolit softwarové komponenty komunikovat mezi sebou v síťovém prostředí, bez ohledu na jazyk, pomocí kterého byly pomocí modelu COM (Component Object) vytvořit. Technologie Active lze použít k vytvoření aplikace, které běží na ploše nebo na Internet. Další informace najdete v části [Úvod do modelu COM](../atl/introduction-to-com.md) nebo [The Component Object Model](/windows/desktop/com/the-component-object-model).  
   
- Technologie Active patří klient i server technologií, včetně následujících:  
+ Aktivní technologie patří klientských i serverových technologií, včetně následujících:  
   
--   [Obsahování pro aktivní dokument](../mfc/active-document-containment.md), podporované ve verzích MFC 4.2 a novější, umožňuje uživatelům zobrazit [aktivní dokumenty](../mfc/active-documents.md) (například soubory aplikace Microsoft Excel nebo Word) a aktivujte rozhraní celého dokumentu nativní aplikace v oblasti celého klientského [kontejner pro aktivní dokument](../mfc/active-document-containers.md) například vazač Microsoft Office nebo aplikace Microsoft Internet Explorer. Kontejnery fungovat jako klienti, když dokumenty jsou poskytovány [servery pro aktivní dokumenty](../mfc/active-document-servers.md). Další informace o použití aktivní dokumenty v internetových aplikací najdete v tématu: [aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md).  
+-   [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md), podporované v MFC – verze 4.2 a novější, umožňuje uživatelům zobrazit [aktivní dokumenty](../mfc/active-documents.md) (jako je například Microsoft Excel nebo Word soubory) a aktivovat celé rozhraní nativní dokumentu. aplikace v celé klientské oblasti [kontejner pro aktivní dokument](../mfc/active-document-containers.md) například modul vazby sady Office Microsoft nebo Microsoft Internet Explorer. Kontejnery fungovat jako klienti, zatímco dokumenty jsou poskytovány [servery pro aktivní dokumenty](../mfc/active-document-servers.md). Další informace o použití aktivní dokumenty v internetových aplikací naleznete v tématu: [aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md).  
   
--   ActiveX – ovládací prvky jsou interaktivní objekty, které mohou být používány kontejnery, jako jsou webu. Další informace pro ovládací prvky ActiveX najdete v tématu:  
+-   Ovládací prvky ActiveX jsou interaktivní objekty, které lze použít v kontejnery, jako jsou webové stránky. Další informace o ovládacích prvků ActiveX naleznete v tématu:  
   
     -   [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)  
   
@@ -45,21 +45,21 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
   
     -   [Přehled: Internet](../mfc/mfc-internet-programming-basics.md)  
   
-    -   [Upgrade existujícího ovládacího prvku ActiveX k použití na Internetu](../mfc/upgrading-an-existing-activex-control.md)  
+    -   [Upgrade existujícího ovládacího prvku ActiveX pro použití na Internetu](../mfc/upgrading-an-existing-activex-control.md)  
   
     -   [Ladění ovládacího prvku ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
 -   Aktivní skriptování řídí chování integrované jeden nebo více ovládacích prvků ActiveX z prohlížeče nebo serveru. Další informace o aktivní skriptování najdete v tématu [technologie Active na Internetu](../mfc/active-technology-on-the-internet.md).  
   
--   [Automatizace](../mfc/automation.md) (dříve označované jako automatizace OLE) umožňuje pro jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo "vystavit" objekty, budou se dá upravit.  
+-   [Automatizace](../mfc/automation.md) (dříve označované jako automatizace OLE) umožňuje pro jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo "vystavit" objekty, lze manipulovat.  
   
-     Automatizované objekt může být místní nebo vzdálené (na jiném počítači přístupné přes síť). Automatizace je k dispozici pro objekty OLE a COM.  
+     Automatizované objekt může být místní nebo vzdálené (na jiném počítači dostupný přes síť). Služba Automation je dostupná pro OLE a modelu COM objekty.  
   
--   Tato část také obsahuje informace o tom, jak psát komponenty modelu COM v MFC, například [spojovací body](../mfc/connection-points.md).  
+-   Tato část také obsahuje informace o tom, jak napsat komponenty modelu COM pomocí knihovny MFC, například v [spojovací body](../mfc/connection-points.md).  
   
- Informace o co stále nese OLE a co se nyní označuje jako technologie active, najdete v tématech na [OLE](../mfc/ole-in-mfc.md).  
+ Diskuzi o co stále nazývá OLE a co se teď nazývá technologie active, naleznete v tématech na [OLE](../mfc/ole-in-mfc.md).  
   
- Navíc najdete v článku znalostní báze Knowledge Base Q248019: postupy: zabránit Server zaneprázdněn dialogové okno pole z zobrazování během náročná COM operace.  
+ Také, najdete v článku znalostní báze Q248019: postupy: zabránit Server zaneprázdněný dialogové okno pole z povolí, nebude během časově náročná COM operace.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)  

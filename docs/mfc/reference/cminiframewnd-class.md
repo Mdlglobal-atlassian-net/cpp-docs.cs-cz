@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201202"
 ---
 # <a name="cminiframewnd-class"></a>Cminiframewnd – třída
 Představuje okno rámce poloviční výšky obvykle viděné okolo plovoucích panelů nástrojů.  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  Určuje rozšířený styl `CMiniFrameWnd` vytváří. Některý [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.  
   
  *lpClassName*  
- Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název registrované s globální [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) funkce nebo názvy předdefinovaných třídy ovládacího prvku. Nesmí být NULL.  
+ Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název registrované s globální [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) funkce nebo názvy předdefinovaných třídy ovládacího prvku. Nesmí být NULL.  
   
  *lpWindowName*  
  Odkazuje na řetězec znaků zakončené znakem null, který obsahuje název okna.  

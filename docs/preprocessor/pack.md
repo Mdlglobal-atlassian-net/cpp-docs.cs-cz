@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465937"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207489"
 ---
 # <a name="pack"></a>pack
 Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.  
@@ -38,7 +38,7 @@ Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
 
 Aby zabalil třídy, je umístit jejích členů přímo po sobě navzájem v paměti, což může znamenat, že některé nebo všechny členy může být zarovnány na hranice menší než výchozí zarovnání Cílová architektura. **balíček** poskytuje řízení na úrovni deklarace dat. Tím se liší od – možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md), které jen poskytuje řízení na úrovni modulu. **Pack** se projeví při prvním **struktura**, **sjednocení**, nebo **třídy** deklarace po direktivy pragma je zobrazena. **balíček** nemá žádný vliv na definice. Volání **pack** sadami žádné argumenty *n* na hodnotu nastavenou v možnosti kompilátoru `/Zp`. Pokud není nastavena možnost kompilátoru, výchozí hodnota je 8.  
   
-Pokud změníte zarovnání struktury, se nesmí používat jako uvidí ke snížení výkonu nebo dokonce i získat generované hardwarové výjimky nezarovnaný přístup, kolik místa v paměti, ale.  Tato výjimka chování lze upravit pomocí [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Pokud změníte zarovnání struktury, se nesmí používat jako uvidí ke snížení výkonu nebo dokonce i získat generované hardwarové výjimky nezarovnaný přístup, kolik místa v paměti, ale.  Tato výjimka chování lze upravit pomocí [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *Zobrazit* (volitelné)  
 Zobrazí aktuální hodnotu bajtu pro balení zarovnání. Hodnota se zobrazí zpráva upozornění.  

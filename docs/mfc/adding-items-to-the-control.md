@@ -1,5 +1,5 @@
 ---
-title: Přidávání položek do ovládacího prvku | Microsoft Docs
+title: Přidávání položek do ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab0c7cb1aebf1675d078aa99941edfd9afdc5a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e9434e93640de190b78e92a1f009a0ad9cbecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214434"
 ---
 # <a name="adding-items-to-the-control"></a>Přidávání položek do ovládacího prvku
-K přidávání položek do ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), volání jednoho z několika verzích [metody InsertItem](../mfc/reference/clistctrl-class.md#insertitem) – členská funkce, v závislosti na tom, jaké informace, které máte. Přebírá jednu verzi [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura, která je připravit. Protože `LV_ITEM` struktura obsahuje mnoho členů, máte větší kontrolu nad atributy ovládacího prvku položky seznamu.  
+Přidání položek do ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), volání jednoho z několika verzí [metody InsertItem](../mfc/reference/clistctrl-class.md#insertitem) členskou funkci, v závislosti na tom, jaké informací, které jsou potřeba. Přijímá jednu verzi [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) struktura, která je připravit. Vzhledem k tomu, `LV_ITEM` struktura obsahuje mnoho členů, budete mít větší kontrolu nad atributy položku ovládacího prvku seznamu.  
   
- Dvě důležité členy (ohledně zobrazení sestavy) `LV_ITEM` struktura jsou `iItem` a `iSubItem` členy. `iItem` Člen je index položky strukturu odkazuje založený na nule a `iSubItem` člen je na základě jeden index podpoložek nebo nula, pokud struktura obsahuje informace o položce. Tyto dva členy můžete určit, na položku, typ a hodnotu podpoložek informace, které se zobrazí, když je ovládací prvek seznamu v zobrazení sestavy. Další informace najdete v tématu [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).  
+ Dva důležité členy (ve vztahu zobrazení sestavy) `LV_ITEM` struktury jsou `iItem` a `iSubItem` členy. `iItem` Člen je z nuly vycházející index položky odkazuje na strukturu a `iSubItem` člen je založen na jedničce index podpoložku nebo nula, pokud struktura obsahuje informace o položce. Se tyto dva členy můžete určit, za položky, typu a hodnoty podřízenou položku informace, které se zobrazí, když je ovládací prvek seznam v zobrazení sestavy. Další informace najdete v tématu [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).  
   
- Další členové zadat text položky, ikona, stav a data položek. "Položky dat" je hodnota definované aplikací přidružené položky zobrazení seznamu. Další informace o `LV_ITEM` struktury najdete v tématu [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).  
+ Další členy zadejte text položky, ikona, stav a data položky. "Položky dat" je hodnota definovaného aplikací přidružených k položce zobrazení seznamu. Další informace o `LV_ITEM` struktury, přečtěte si téma [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).  
   
- Jiné verze `InsertItem` trvat jeden nebo více samostatných hodnoty odpovídající členů `LV_ITEM` struktura, což umožňuje inicializovat pouze členové, které chcete podporovat. Obecně platí ovládacího prvku seznam spravuje úložiště pro položky seznamu, ale můžete ukládat některé z informací v aplikaci místo toho pomocí "položky zpětného volání." Další informace najdete v tématu [položky zpětného volání a maska zpětného volání](../mfc/callback-items-and-the-callback-mask.md) v tomto tématu a [položky zpětného volání a maska zpětného volání](http://msdn.microsoft.com/library/windows/desktop/bb774736) ve Windows SDK.  
+ Další verze `InsertItem` provést jeden nebo více samostatných hodnoty odpovídající členy v `LV_ITEM` struktury, což umožňuje inicializovat pouze ty členy, které chcete podporovat. Obecně platí ovládací prvek seznamu spravuje úložiště pro položky seznamu, ale můžete uložit některé z informací ve vaší aplikaci místo toho pomocí "položky zpětného volání." Další informace najdete v tématu [položky zpětného volání a maska zpětného volání](../mfc/callback-items-and-the-callback-mask.md) v tomto tématu a [položky zpětného volání a maska zpětného volání](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.  
   
- Další informace najdete v tématu [přidání položky zobrazení seznamu a podřízených položek](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
+ Další informace najdete v tématu [přidávání zobrazení seznamu položek a podpoložek](/windows/desktop/Controls/using-list-view-controls).  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   

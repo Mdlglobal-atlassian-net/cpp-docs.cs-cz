@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4735b56d6d15dfe3740c0dad727765e0eb84b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 973501339d05f75414d076cbd22f5dabeb0bec7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208720"
 ---
 # <a name="catlfilemapping-class"></a>Catlfilemapping – třída
 Tato třída reprezentuje soubor mapovaných do paměti, přidání operátor přetypování na metody [catlfilemappingbase –](../../atl/reference/catlfilemappingbase-class.md).  
@@ -47,10 +47,10 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlFileMapping::operator T *](#operator_t_star)|Umožňuje implicitní převod `CAtlFileMapping` objektů `T` **\***.|  
+|[CAtlFileMapping::operator T *](#operator_t_star)|Umožňuje implicitní převod `CAtlFileMapping` objektů `T*`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída přidává operátor přetypování jedné povolit implicitní převod `CAtlFileMapping` objektů `T` **\***. Ostatní členové jsou poskytována v základní třídě, [catlfilemappingbase –](../../atl/reference/catlfilemappingbase-class.md).  
+ Tato třída přidává operátor přetypování jedné povolit implicitní převod `CAtlFileMapping` objektů `T*`. Ostatní členové jsou poskytována v základní třídě, [catlfilemappingbase –](../../atl/reference/catlfilemappingbase-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)  
@@ -61,17 +61,17 @@ class CAtlFileMapping : public CAtlFileMappingBase
  **Záhlaví:** atlfile.h  
   
 ##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *  
- Umožňuje implicitní převod `CAtlFileMapping` objektů `T` **\***.  
+ Umožňuje implicitní převod `CAtlFileMapping` objektů `T*`.  
   
 ```  
 operator T*() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `T` **\*** ukazatel na začátek souboru mapovaných do paměti.  
+ Vrátí `T*` ukazatel na začátek souboru mapovaných do paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) a opětovně interpretuje objekt vrácený ukazatel jako `T` **\*** kde *T* je typ použitý jako šablona parametr této třídy.  
+ Volání [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) a opětovně interpretuje objekt vrácený ukazatel jako `T*` kde *T* je typ použitý jako parametr této třídy šablony.  
   
 ## <a name="see-also"></a>Viz také  
  [Catlfilemappingbase – třída](../../atl/reference/catlfilemappingbase-class.md)   

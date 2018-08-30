@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209081"
 ---
 # <a name="basicstring-class"></a>basic_string – třída
 
@@ -881,7 +881,7 @@ Ukazatel verzi vyvolání řetězce s C-style.  Hodnota ukazatele je neplatná p
 
 ### <a name="remarks"></a>Poznámky
 
-Objekty typu String, které patří do třídy šablon basic_string C++\<char > jsou nutně null byl ukončen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí řetězce stejně jako jakýkoli jiný znak. Je automatického převodu z const **char\***  do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string\< char >**.
+Objekty typu String, které patří do třídy šablon basic_string C++\<char > jsou nutně null byl ukončen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí řetězce stejně jako jakýkoli jiný znak. Je automatického převodu z **const char** <strong>\*</strong> do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string\<char >**.
 
 Vráceného řetězce ve stylu jazyka C se nesmí upravovat, protože to může zneplatnit má ukazatel na řetězec, nebo odstranit, protože řetězec má omezenou životnost a vlastní řetězec třídy.
 
@@ -1652,7 +1652,7 @@ Ukazatel na první prvek pole obsahující řetězce, nebo pro prázdné pole, n
 
 Objekty typu String, které patří do třídy šablon basic_string C++ \<char > jsou nutně null byl ukončen. Návratový typ pro `data` není platný řetězec C, protože žádný znak null získá připojen. Znak null '\0' se používá jako speciální znak v řetězci jazyka C pro označení konce řetězce, ale nemá žádný speciální význam v objektu typu String a může být součástí objektu string stejně jako jakýkoli jiný znak.
 
-Je automatického převodu z const **char\***  do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string \< char >**.
+Je automatického převodu z **const char** <strong>\*</strong> do řetězce, ale řetězec neposkytuje třídy pro automatické převod z řetězce ve stylu jazyka C pro objekty typu **basic_string \<char >**.
 
 Vrácený řetězec neměl by upravovat, protože to může zneplatnit má ukazatel na řetězec, nebo odstranit, protože řetězec má omezenou životnost a vlastní řetězec třídy.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 Typ je synonymum pro `allocator_type::pointer`.
 
-Pro typ `string`, je ekvivalentní **char\***.
+Pro typ `string`, je ekvivalentní **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Příklad
 

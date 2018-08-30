@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853807"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215512"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Cmfctoolbareditboxbutton – třída
 Tlačítka panelu nástrojů obsahující ovládací prvek úprav ( [cedit – třída](../../mfc/reference/cedit-class.md)).  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Určuje, zda se zobrazí ohraničení tlačítka, když uživatel klikne na tlačítko. (Přepíše [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Určuje, zda tlačítka Upravit pole mají bez stromové struktury stylu.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy. (Přepíše [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy. (Přepíše [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno. (Přepíše [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  Ve výchozím nastavení mají tlačítka Upravit pole stylu bez stromové struktury. Použití [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) metodu, která změní plochý vzhled pro vaši aplikaci.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.  
+ Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE, pokud tlačítko zpracovává wm_command – zprávy nebo hodnotu NEPRAVDA označuje, že zpráva musí být zpracovány nadřazeného panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní volá tuto metodu, když je odeslat [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávu nadřazenému oknu.  
+ Rozhraní volá tuto metodu, když je odeslat [wm_command –](/windows/desktop/menurc/wm-command) zprávu nadřazenému oknu.  
   
- Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) zpracováním [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) oznámení. Pro každého textového pole se stejným Identifikátorem příkazu jako tento objekt nastaví jeho textový popisek pro textový popisek tohoto objektu.  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) zpracováním [EN_UPDATE](/windows/desktop/Controls/en-update) oznámení. Pro každého textového pole se stejným Identifikátorem příkazu jako tento objekt nastaví jeho textový popisek pro textový popisek tohoto objektu.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno.  

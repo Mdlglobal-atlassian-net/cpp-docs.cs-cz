@@ -1,5 +1,5 @@
 ---
-title: -REBASE | Microsoft Docs
+title: -REBASE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 686306316e6950ba62ea7c44522b95f4d935be0b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216171"
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -34,15 +34,15 @@ ms.locfileid: "32377086"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tento parametr nastaví základní adresy pro zadané soubory. Editbin – přiřadí nové základní adresy souvislý adresního prostoru podle velikosti jednotlivých souborů zaokrouhleno směrem nahoru na nejbližší 64 KB. Podrobnosti o základní adresy najdete v tématu [základní adresa](../../build/reference/base-base-address.md) (/ základní) – možnost linkeru.  
+ Tato možnost nastaví bázové adresy pro zadané soubory. Editbin – přiřadí nové základní adresy v souvislých adresního prostoru podle velikosti jednotlivých souborů zaokrouhlena nejbližší 64 KB. Podrobnosti o základní adresy najdete v tématu [základní adresa](../../build/reference/base-base-address.md) (/ BASE) – možnost linkeru.  
   
- Zadejte spustitelné soubory a knihovny DLL v programu *soubory* argumentů na příkazový řádek EDITBIN v pořadí, ve kterém jsou založena. Volitelně můžete zadat jednu nebo více *modifikátory*, každé oddělené čárkou (**,**):  
+ Zadejte spustitelné soubory a knihovny DLL v programu *soubory* argument v příkazovém řádku nástroje EDITBIN v pořadí, ve kterém mají být založen. Volitelně můžete zadat jeden nebo více *modifikátory*, každé oddělené čárkou (**,**):  
   
 |Modifikátor|Akce|  
 |--------------|------------|  
-|ZÁKLADNÍ **= *** adresa*|Poskytuje počáteční adresa pro přeřazení základní adresy k souborům. Zadejte *adresu* v desítkový nebo jazyka C zápis. Pokud není zadán základní, je výchozí počáteční základní adresa 0x400000. Pokud je nižší použité, základní musí být zadán, a *adresu* Nastaví konec rozsahu základní adresy.|  
-|BASEFILE|Vytvoří soubor s názvem COFFBASE. Soubory TXT, což je textový soubor ve formátu očekávaném pomocí odkazu a základní možnost.|  
-|DOLŮ|Informuje nástroje EDITBIN přiřazení základní adresy dolů z koncová adresa. Soubory jsou přiřazeny v uvedeném pořadí s první soubor nachází v nejvyšší možné adrese níže konec rozsahu adres. ZÁKLADNÍ musí použít s nižší zajistit dostatečný Adresní prostor pro odvození soubory. K určení adresní prostor vyžaduje zadané soubory, spusťte nástroje EDITBIN s /REBASE na soubory a přidejte 64 KB na zobrazené celkovou velikost.|  
+|**ZÁKLAD =**<em>adresu</em>|Obsahuje počáteční adresu pro opětovné přiřazení základní adresy k souborům. Zadejte *adresu* v desítkovém zápisu nebo v zápisu jazyka. Pokud základ není zadán, je výchozí počáteční základní adresa 0x400000. Pokud dolů je použit, základní musí být zadán, a *adresu* Nastaví konec rozsahu základní adresy.|  
+|**BASEFILE**|Vytvoří soubor s názvem COFFBASE. TXT, který je textový soubor ve formátu očekávaném podle odkazu nebo základní možnosti.|  
+|**DOLŮ**|Říká EDITBIN přiřazení základní adresy směrem dolů od koncových adres. Soubory jsou přiřazeny v uvedeném pořadí s první soubor umístěný v nejvyšší možné adresy dál konci rozsahu adres. ZÁKLADNÍ musí použít s dolů zajistit dostatečný Adresní prostor pro odvození soubory. K určení adresního prostoru vyžadované zadané soubory, spusťte nástroje EDITBIN s /REBASE na souborech a přidejte do zobrazeného celkové velikosti 64 KB.|  
   
 ## <a name="see-also"></a>Viz také  
  [EDITBIN – možnosti](../../build/reference/editbin-options.md)

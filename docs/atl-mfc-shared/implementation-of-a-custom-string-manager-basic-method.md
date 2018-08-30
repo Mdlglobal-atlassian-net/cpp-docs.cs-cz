@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c393489b8b4d0353ae37a21132f66e0618b3b794
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85b087d9a94905291db951e0233ba1c55fa00e6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210141"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace z vlastního správce řetězců (základní způsob)
 Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro data řetězce se má používat zadaný ATL `CAtlStringMgr` třídy, ale poskytnout vlastní paměti rutiny přidělení. Konstruktor pro `CAtlStringMgr` přijímá jeden parametr: ukazatel `IAtlMemMgr` objektu. `IAtlMemMgr` je abstraktní základní třída, která poskytuje obecné rozhraní pro haldu. Použití `IAtlMemMgr` rozhraní, `CAtlStringMgr` přiděluje, znovu alokuje a uvolní paměť pro ukládání dat řetězců. Můžete buď implementovat `IAtlMemMgr` rozhraní sami, nebo použijte jednu z pěti třídy správce paměti poskytované ATL. Správce paměti poskytované ATL jednoduše zabalit existující zařízení přidělení paměti:  
   
 -   [Ccrtheap –](../atl/reference/ccrtheap-class.md) zabalí standardních funkcí haldy CRT ([malloc](../c-runtime-library/reference/malloc.md), [bezplatné](../c-runtime-library/reference/free.md), a [realloc](../c-runtime-library/reference/realloc.md))  
   
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) zabalí zpracování haldy Win32, pomocí [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), a [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) zabalí zpracování haldy Win32, pomocí [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), a [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)  
   
--   [Clocalheap –](../atl/reference/clocalheap-class.md) zabaluje rozhraní API Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), a [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
+-   [Clocalheap –](../atl/reference/clocalheap-class.md) zabaluje rozhraní API Win32: [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), a [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)  
   
--   [Cglobalheap –](../atl/reference/cglobalheap-class.md) zabaluje rozhraní API Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579), a [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+-   [Cglobalheap –](../atl/reference/cglobalheap-class.md) zabaluje rozhraní API Win32: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), a [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
--   [Ccomheap –](../atl/reference/ccomheap-class.md) zabalí rozhraní API modelu COM úloh Allocator: [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), a [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
+-   [Ccomheap –](../atl/reference/ccomheap-class.md) zabalí rozhraní API modelu COM úloh Allocator: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), a [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)  
   
  Pro účely správy paměti řetězce, je nejužitečnější třídy `CWin32Heap` vzhledem k tomu, že umožňuje vytvořit více nezávislých haldy. Například Kdybyste chtěli použít samostatné haldy pouze pro řetězce, může provedete následující:  
   

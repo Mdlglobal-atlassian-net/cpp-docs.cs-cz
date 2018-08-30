@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afe558ad5d17c7c9741a1c211bb838c615c8542
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b83531c1452174403f3ead3c5bd3d1b59b0c7d4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464439"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213446"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při použití třídy úkolu k vytvoření asynchronní operace založené na Windows fondu vláken v aplikaci univerzální modul Runtime Windows (UPW).  
   
- Použití asynchronního programování je klíčovou komponentou v aplikaci modelu Windows Runtime, protože umožňuje aplikace nadále reagovat na vstup uživatele. Dlouho probíhající úlohu můžete spustit bez blokování vlákna uživatelského rozhraní, a zobrazí výsledky úloh později. Můžete také zrušit úlohy a jako úkoly, které běží na pozadí, zobrazí se oznámení o průběhu. Dokument [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) poskytuje přehled asynchronního vzoru, který je k dispozici v jazyce Visual C++ k vytvoření aplikací pro UWP. Tento dokument se naučíte využívat i vytvoření řetězce asynchronní operací modulu Windows Runtime. Tato část popisuje, jak použít typy v ppltasks.h k vytvoření asynchronní operace, které mohou být spotřebovány jiné součásti prostředí Windows Runtime a tom, jak řídit způsob asynchronní práce provádí. Zkuste si také přečíst [vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx) se dozvíte, jak můžete využít třída úlohy pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.  
+ Použití asynchronního programování je klíčovou komponentou v aplikaci modelu Windows Runtime, protože umožňuje aplikace nadále reagovat na vstup uživatele. Dlouho probíhající úlohu můžete spustit bez blokování vlákna uživatelského rozhraní, a zobrazí výsledky úloh později. Můžete také zrušit úlohy a jako úkoly, které běží na pozadí, zobrazí se oznámení o průběhu. Dokument [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) poskytuje přehled asynchronního vzoru, který je k dispozici v jazyce Visual C++ k vytvoření aplikací pro UWP. Tento dokument se naučíte využívat i vytvoření řetězce asynchronní operací modulu Windows Runtime. Tato část popisuje, jak použít typy v ppltasks.h k vytvoření asynchronní operace, které mohou být spotřebovány jiné součásti prostředí Windows Runtime a tom, jak řídit způsob asynchronní práce provádí. Zkuste si také přečíst [vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx) se dozvíte, jak můžete využít třída úlohy pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.  
   
 > [!NOTE]
 >  Můžete použít [knihovny Ppl](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) a [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) v aplikaci UWP. Nelze však použít Plánovač úloh nebo Resource Manageru. Tento dokument popisuje další funkce, které poskytuje PPL, které jsou k dispozici pouze pro aplikace pro UPW a není pro aplikace klasické pracovní plochy.  
@@ -61,16 +61,16 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
   
  Pomocí prostředí Windows Runtime můžete využívat nejlepší funkce různých programovacích jazycích a je zkombinovat do jedné aplikace. Můžete například vytvářet uživatelské rozhraní v jazyce JavaScript a provádění výpočetně náročné aplikace logiky v komponentě C++. Možnost provádět tyto výpočetně náročné operace na pozadí je ale klíčovým faktorem ochraně responzivní uživatelské rozhraní. Vzhledem k tomu, `task` třída je specifická pro C++, je nutné použít rozhraní Windows Runtime pro komunikaci asynchronních operací na jiné součásti (která může být napsán v jiných jazycích než C++). Modul Windows Runtime poskytuje čtyři rozhraní, které můžete použít k reprezentaci asynchronních operací:  
   
- [Windows::Foundation:: iasyncaction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
+ [Windows::Foundation:: iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Představuje asynchronní akci.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Představuje asynchronní akci, která hlásí průběh.  
   
- [:: Iasyncoperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [:: Iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Představuje asynchronní operaci, která vrací výsledek.  
   
- [Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Představuje asynchronní operaci, která vrací výsledek a sestavy pokroku.  
   
  Pojem *akce* znamená, že asynchronní úloha nevytvoří hodnotu (Představte si, že funkce, která vrátí `void`). Pojem *operace* znamená, že asynchronní úloha výsledkem hodnota. Pojem *průběh* znamená, že úloha může hlásit zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a jazyka Visual C++ nabízí svou vlastní způsob, jak vytvořit instance pro použití těchto rozhraní hranice ABI. Pro jazyk Visual C++ poskytuje PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkce. Tato funkce vytvoří prostředí Windows Runtime asynchronní akce nebo operace, která představuje dokončení úlohy. `create_async` Funkce přebírá pracovní funkci (obvykle výraz lambda), vytvoří interně `task` objektu a zabalí, které úlohy v jednom ze čtyř asynchronní rozhraní Windows Runtime.  
@@ -102,7 +102,7 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
  [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]  
   
 ##  <a name="example-component"></a> Příklad: Vytvoření komponenty prostředí Windows Runtime C++ a její použití v jazyce C#  
- Vezměte v úvahu aplikaci, která se používá k definování uživatelského rozhraní a komponenty modulu Windows Runtime C++ provádět operace náročné na výpočetní prostředky XAML a C#. V tomto příkladu vypočítá komponent C++, která čísla v dané oblasti jsou primární. Pro ilustraci rozdíly mezi čtyři asynchronní úloha rozhraní Windows Runtime, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdné řešení** a jeho pojmenování `Primes`. Pak přidejte do řešení **součást prostředí Windows Runtime** projektu a jeho pojmenování `PrimesLibrary`. Přidejte následující kód vygenerovaný soubor hlaviček jazyka C++ (Tento příklad přejmenuje Class1.h Primes.h). Každý `public` metoda definuje jednu ze čtyř asynchronní rozhraní. Vrátí metody, které vrací hodnotu [Windows::Foundation::Collections::IVector\<int >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) objektu. Vytvoření metody, které vykazování průběh `double` hodnoty, které definují procento celkové práce, která byla dokončena.  
+ Vezměte v úvahu aplikaci, která se používá k definování uživatelského rozhraní a komponenty modulu Windows Runtime C++ provádět operace náročné na výpočetní prostředky XAML a C#. V tomto příkladu vypočítá komponent C++, která čísla v dané oblasti jsou primární. Pro ilustraci rozdíly mezi čtyři asynchronní úloha rozhraní Windows Runtime, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdné řešení** a jeho pojmenování `Primes`. Pak přidejte do řešení **součást prostředí Windows Runtime** projektu a jeho pojmenování `PrimesLibrary`. Přidejte následující kód vygenerovaný soubor hlaviček jazyka C++ (Tento příklad přejmenuje Class1.h Primes.h). Každý `public` metoda definuje jednu ze čtyř asynchronní rozhraní. Vrátí metody, které vrací hodnotu [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objektu. Vytvoření metody, které vykazování průběh `double` hodnoty, které definují procento celkové práce, která byla dokončena.  
   
  [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]  
   
@@ -113,7 +113,7 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
   
  [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]  
   
- Každá metoda nejprve provádí ověřování vstupních parametrů musí být nezáporná. Pokud je vstupní hodnota záporná, vyvolá metoda [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Zpracování chyb je vysvětleno dále v této části.  
+ Každá metoda nejprve provádí ověřování vstupních parametrů musí být nezáporná. Pokud je vstupní hodnota záporná, vyvolá metoda [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Zpracování chyb je vysvětleno dále v této části.  
   
  Chcete-li používat tyto metody z aplikace pro UPW, použijte Visual C# **prázdná aplikace (XAML)** šablony přidáte druhý projekt do řešení sady Visual Studio. V tomto příkladu názvy projektu `Primes`. Pak v `Primes` projektu, přidejte odkaz na `PrimesLibrary` projektu.  
   
@@ -127,7 +127,7 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
   
  Tyto metody používají `async` a `await` klíčových slov pro aktualizaci uživatelského rozhraní, po dokončení asynchronní operace. Informace o asynchronním programování v aplikacích pro UPW, naleznete v tématu [asynchronní programování a zřetězení](/windows/uwp/threading-async).  
   
- `getPrimesCancellation` a `cancelGetPrimes` metody spolupracují a umožňují uživateli zrušit operaci. Když uživatel klikne **zrušit** tlačítko, `cancelGetPrimes` volání metody [IAsyncOperationWithProgress\<TResult, TProgress >:: zrušit](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) na zrušení operace. Modulu Runtime souběžnosti, který spravuje podkladová asynchronní operace, vyvolá výjimku, která je zachycena ve Windows Runtime pro komunikaci, že dokončení zrušení typ vnitřní výjimky. Další informace o tomto modelu zrušení naleznete v tématu [zrušení](../../parallel/concrt/cancellation-in-the-ppl.md).  
+ `getPrimesCancellation` a `cancelGetPrimes` metody spolupracují a umožňují uživateli zrušit operaci. Když uživatel klikne **zrušit** tlačítko, `cancelGetPrimes` volání metody [IAsyncOperationWithProgress\<TResult, TProgress >:: zrušit](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) na zrušení operace. Modulu Runtime souběžnosti, který spravuje podkladová asynchronní operace, vyvolá výjimku, která je zachycena ve Windows Runtime pro komunikaci, že dokončení zrušení typ vnitřní výjimky. Další informace o tomto modelu zrušení naleznete v tématu [zrušení](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
 > [!IMPORTANT]
 >  Pokud chcete povolit PPL správně hlášení do prostředí Windows Runtime zrušil operaci, nebude zachytávat tento typ vnitřní výjimky. To znamená, že neměli byste také zachytit všechny výjimky (`catch (...)`). Pokud musíte zachytit všechny výjimky, znovu vyvolá výjimku, k zajištění, že prostředí Windows Runtime můžete dokončit operaci zrušení.  
@@ -136,7 +136,7 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
   
  ![Aplikace Windows Runtime základen](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
- Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
+ Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
 ##  <a name="exethread"></a> Řízení prováděcího vlákna  
  Modul Runtime Windows používá COM model vláken. V tomto modelu objekty jsou hostované v jiné objekty apartment, v závislosti na tom, jak se zpracovávají jejich synchronizaci. Bezpečná pro vlákno objekty jsou hostované v vícevláknového objektu apartment (MTA). Objekty, které musí být přistupováno jedním vláknem a jsou hostované v jednovláknový apartment (STA).  
@@ -165,7 +165,7 @@ Tento dokument popisuje některé z klíčových bodů do vzít v úvahu při po
 >  Nevolejte [Concurrency::Task:: wait](reference/task-class.md#wait) v těle pokračování, které běží v STA. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](reference/task-class.md#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.  
   
 ##  <a name="example-app"></a> Příklad: Řízení provádění v aplikaci Windows Runtime s C++ a XAML  
- Vezměte v úvahu aplikace s C++ XAML, která načte soubor z disku, zjistí nejčastější slova v tomto souboru a potom zobrazí výsledky v uživatelském rozhraní. Pokud chcete vytvořit tuto aplikaci, spustit, v sadě Visual Studio, tak, že vytvoříte **prázdná aplikace (Universal Windows)** projektu a jeho pojmenování `CommonWords`. Do manifestu aplikace, zadejte **knihovna dokumentů** možnost k povolení aplikace pro přístup do složky Dokumenty. Typ souboru Text (TXT) můžete také přidáte do části deklarace manifestu aplikace. Další informace o možnostech a deklaracích aplikace naleznete v tématu [balíčky a nasazení aplikací](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
+ Vezměte v úvahu aplikace s C++ XAML, která načte soubor z disku, zjistí nejčastější slova v tomto souboru a potom zobrazí výsledky v uživatelském rozhraní. Pokud chcete vytvořit tuto aplikaci, spustit, v sadě Visual Studio, tak, že vytvoříte **prázdná aplikace (Universal Windows)** projektu a jeho pojmenování `CommonWords`. Do manifestu aplikace, zadejte **knihovna dokumentů** možnost k povolení aplikace pro přístup do složky Dokumenty. Typ souboru Text (TXT) můžete také přidáte do části deklarace manifestu aplikace. Další informace o možnostech a deklaracích aplikace naleznete v tématu [balíčky a nasazení aplikací](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aktualizace `Grid` prvku v souboru MainPage.xaml zahrnout `ProgressRing` elementu a `TextBlock` elementu. `ProgressRing` Označuje, že operace je v průběhu a `TextBlock` zobrazuje výsledky výpočtu.  
   

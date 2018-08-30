@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196518"
 ---
 # <a name="ccommodule-class"></a>Ccommodule – třída
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parametry  
  *dwClsContext*  
- [in] Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Popis těchto hodnot najdete v tématu [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) v sadě Windows SDK.  
+ [in] Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Popis těchto hodnot najdete v tématu [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) v sadě Windows SDK.  
   
  *dwFlags*  
- [in] Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Popis těchto hodnot najdete v tématu [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) v sadě Windows SDK.  
+ [in] Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Popis těchto hodnot najdete v tématu [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní hodnoty HRESULT.  

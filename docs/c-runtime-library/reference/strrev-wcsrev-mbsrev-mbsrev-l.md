@@ -1,5 +1,5 @@
 ---
-title: _strrev –, _wcsrev –, _mbsrev _mbsrev_l – | Microsoft Docs
+title: _strrev – _wcsrev, _mbsrev _mbsrev_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,19 +56,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415423"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198091"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
-Obrátí znaky řetězce.
+Obrátí znaky v řetězci.
 
 > [!IMPORTANT]
-> **_mbsrev** a **_mbsrev_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsrev** a **_mbsrev_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,32 +90,32 @@ unsigned char *_mbsrev_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Řetězce ukončené hodnotou Null a obrátit.
+*str*<br/>
+Řetězec zakončený hodnotou Null pro obrácení.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na změněna řetězec. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+Vrací ukazatel na upravený řetězec. Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strrev –** funkce obrátí pořadí znaků v *str*. Ukončovací znak hodnoty null zůstává na místě. **_wcsrev –** a **_mbsrev** jsou široká charakterová a vícebajtových znaků verze **_strrev –**. Argumenty a vrací hodnotu **_wcsrev –** jsou široká charakterová řetězce; u **_mbsrev** jsou řetězců vícebajtových znaků. Pro **_mbsrev**, pořadí bajtů v každé vícebajtových znaků v *str* se nezmění. Tyto tři funkce chovají stejně jako jinak.
+**_Strrev –** funkce obrátí pořadí znaků v *str*. Ukončující znak null zůstává na místě. **_wcsrev –** a **_mbsrev** jsou širokoznaké a vícebajtové verze **_strrev –**. Argumenty a vrácené hodnoty **_wcsrev** jsou širokoznaké řetězce **_mbsrev** jsou vícebajtové znakové řetězce. Pro **_mbsrev**, pořadí bajtů v každém vícebajtovém znaku v *str* se nemění. Tyto tři funkce chovají identicky jinak.
 
-**_mbsrev** ověří jeho parametry. Pokud má jedna *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_mbsrev** vrátí **NULL** a nastaví **errno** k **einval –**. **_strrev –** a **_wcsrev –** neověřují jejich parametrů.
+**_mbsrev** ověří jeho parametry. Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_mbsrev** vrátí **NULL** a nastaví **errno** k **EINVAL**. **_strrev –** a **_wcsrev** neověří jejich parametry.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s tím rozdílem, že ty, které nejsou mít **_l** příponu použít aktuální národní prostředí a ty, které mají **_l** příponu, použijte parametr národního prostředí to je Předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí jsou identické, s tím rozdílem, ty, které nemají mít **_l** přípona pomocí aktuálního národního prostředí a ty, které mají **_l** přípona místo toho používá parametr národního prostředí, která Předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít pro útoky systému, protože může dojít k tomu bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce by mohly být vystaveny ohrožení přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti lze použít pro systémové útoky, protože mohou způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsrev –**|**_strrev**|**_mbsrev**|**_wcsrev**|
+|**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
 |**není k dispozici**|**není k dispozici**|**_mbsrev_l**|**není k dispozici**|
 
 ## <a name="requirements"></a>Požadavky
@@ -126,7 +126,7 @@ Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastav
 |**_wcsrev**|\<String.h > nebo \<wchar.h >|
 |**_mbsrev**, **_mbsrev_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +158,7 @@ int main( void )
 The string "Able was I ere I saw Elba" is a palindrome
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

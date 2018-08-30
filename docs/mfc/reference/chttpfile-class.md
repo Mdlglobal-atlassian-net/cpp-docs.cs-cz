@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 422952ae459d6a6e4d9f768eb111c9c01cfbb5d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337457"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219739"
 ---
 # <a name="chttpfile-class"></a>Chttpfile – třída
 Poskytuje funkce pro vyžádání a čtení souborů na HTTP server.  
@@ -130,7 +130,7 @@ BOOL AddRequestHeaders(
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje hlavičku požadavku nebo záhlaví, které mají být přidány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  `AddRequestHeaders` připojí další, uvolněte formát hlavičky obslužná rutina požadavků HTTP. Je určena pro použití sofistikované klienty, kteří potřebují mít podrobnou kontrolu nad přesné požadavku odeslaného do serveru HTTP.  
@@ -197,10 +197,10 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>Parametry  
  *dwFlags*  
- Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) v sadě Windows SDK.  
+ Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) v sadě Windows SDK.  
   
  *lpBuffIn*  
- Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
+ Ukazatel na inicializovali [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
   
  *dwContext*  
  Identifikátor kontextu `CHttpFile` operace. Další informace o tomto parametru najdete v článku poznámky.  
@@ -279,7 +279,7 @@ BOOL QueryInfo(
   
 - Obvykle HTTP_QUERY_FLAG_REQUEST_HEADERS aplikace dotazy hlaviček odpovědí, ale aplikace můžete také zadávat dotazy hlavičky žádosti pomocí tohoto příznaku.  
   
-- HTTP_QUERY_FLAG_SYSTEMTIME pro tyto hlavičky, jehož hodnota je řetězec data a času, například "Poslední upravil běhu," Tento příznak vrací hodnotu hlavičky jako standardním Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která nevyžaduje, aby aplikace analyzovat data. Pokud použijete tento příznak, můžete použít `SYSTEMTIME` přepsání funkce.  
+- HTTP_QUERY_FLAG_SYSTEMTIME pro tyto hlavičky, jehož hodnota je řetězec data a času, například "Poslední upravil běhu," Tento příznak vrací hodnotu hlavičky jako standardním Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která nevyžaduje, aby aplikace analyzovat data. Pokud použijete tento příznak, můžete použít `SYSTEMTIME` přepsání funkce.  
   
 - HTTP_QUERY_FLAG_NUMBER pro tyto hlavičky, jehož hodnota je číslo, například stavový kód, tento příznak vrátí data jako 32bitová čísla.  
   
@@ -301,10 +301,10 @@ BOOL QueryInfo(
  Hodnota indexu. Zobrazit *lpdwIndex*.  
   
  *pSysTime*  
- Ukazatel na Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
+ Ukazatel na Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
@@ -379,7 +379,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
  Odkaz na stavový kód. Stavové kódy indikuje úspěch nebo neúspěch požadované události. Zobrazit **poznámky** pro výběr kódu popis stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  Počet bajtů k odeslání v požadavku.  
   
  *dwFlags*  
- Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) v sadě Windows SDK.  
+ Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) v sadě Windows SDK.  
   
  *dwContext*  
  Identifikátor kontextu `CHttpFile` operace. Další informace o tomto parametru najdete v článku poznámky.  
   
  *lpBuffIn*  
- Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
+ Ukazatel na inicializovali [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
   
  *lpBuffOut*  
  Ukazatele inicializované INTERNET_BUFFERS, který popisuje výstupní vyrovnávací paměť, používá pro operaci.  

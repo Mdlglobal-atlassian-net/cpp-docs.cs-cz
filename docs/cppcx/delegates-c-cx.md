@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222740"
 ---
 # <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
 `delegate` – Klíčové slovo se používá k deklaraci typu odkaz, který je ekvivalentní prostředí Windows Runtime a objektu funkce ve standardním jazyce C++. Deklarace delegáta, která je podobná signatuře funkce; Určuje návratový typ a typy parametrů musí mít jeho zabalené funkce. Toto je uživatelský delegát deklarace:  
@@ -29,7 +29,7 @@ ms.locfileid: "42592770"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Při deklarování delegáty, kteří budou přístupné pro klienty napříč binárním rozhraním aplikace Windows Runtime, použijte [Windows::Foundation:: typedeventhandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Tento delegát má předdefinovaná proxy a zástupných procedur binární soubory, které umožňují využívat klientů Javascript.  
+ Při deklarování delegáty, kteří budou přístupné pro klienty napříč binárním rozhraním aplikace Windows Runtime, použijte [Windows::Foundation:: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Tento delegát má předdefinovaná proxy a zástupných procedur binární soubory, které umožňují využívat klientů Javascript.  
   
 ## <a name="consuming-delegates"></a>Použití delegátů  
  Když vytvoříte aplikaci pro univerzální platformu Windows, můžete často pracují s delegátem jako typu události, která zveřejňuje třídy Windows Runtime. Chcete-li přihlásit odběr události, vytvořit instanci typ delegáta tak, že určíte funkci – nebo lambda –, který odpovídá signatuře delegátu. Potom použijte `+=` operátor pro předání objektu delegáta pro člen události ve třídě. To se označuje jako přihlášení k odběru události. Při instanci třídy"" události je volána funkce, spolu s všechny rutiny, které byly přidány do objektu nebo jiné objekty.  

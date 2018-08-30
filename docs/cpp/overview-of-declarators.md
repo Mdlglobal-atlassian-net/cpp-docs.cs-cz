@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209358"
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory diskutované v [deklarace a definice](declarations-and-definitions-cpp.md), poskytují informace o vlastnostech, jako je například typ nebo třída úložiště. Modifikátory diskutované v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravují deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **Deklarátory pro ukazatele, reference a pole**  
   
- Operátory ukazatelů vložené před název zajistí, že objekt bude ukazatel nebo reference.  **\*** Operátor deklaruje název jako ukazatel; **&** operátor ji deklaruje jako odkaz.  
+ Operátory ukazatelů vložené před název zajistí, že objekt bude ukazatel nebo reference.  <strong>\*</strong> Operátor deklaruje název jako ukazatel; **&** operátor ji deklaruje jako odkaz.  
   
 ```cpp 
 int *i; // declarator is *i  

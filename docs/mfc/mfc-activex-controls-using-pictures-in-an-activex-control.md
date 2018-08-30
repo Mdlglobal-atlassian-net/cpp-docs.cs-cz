@@ -1,5 +1,5 @@
 ---
-title: 'Ovládací prvky MFC ActiveX: Použití obrázků v ovládacím prvku ActiveX | Microsoft Docs'
+title: 'MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,70 +20,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ebe0c28f1f2d6ee2eab81d9de2af3c033ecd484a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199671"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX
-Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládacího prvku ActiveX. Témata zahrnují:  
+Tento článek popisuje běžné typ obrázku a jak implementovat v ovládacím prvku ActiveX. Mezi témata patří:  
   
--   [Přehled vlastností vlastní obrázek](#_core_overview_of_custom_picture_properties)  
+-   [Přehled vlastnosti vlastního obrázku](#_core_overview_of_custom_picture_properties)  
   
--   [Implementace vlastnosti vlastní obrázek ve vašem ovládacím prvku ActiveX](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
+-   [Implementace vlastnosti vlastní obrázek v ovládacím prvku ActiveX](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
   
--   [Přidání do projektu ovládací prvek](#_core_additions_to_your_control_project)  
+-   [Přidání do projektu ovládacího prvku](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a> Přehled vlastností vlastní obrázek  
- Typ obrázku je jedním ze skupiny typů, které jsou společné pro některé ovládací prvky ActiveX. Typ obrázku zpracovává metasoubory, rastrové obrázky nebo ikon a umožní uživateli zadat obrázek, který se má zobrazit v ovládacím prvku ActiveX. Vlastní vlastnosti obrázku jsou implementovány pomocí objektu obrázku a Get/Set funkce, které umožňují přístup uživatelů řízení vlastnosti obrázek. Ovládací prvek uživatelé přístup k vlastní vlastnosti obrázek pomocí stock stránka vlastností obrázku.  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Přehled vlastnosti vlastního obrázku  
+ Typ obrázku je součástí skupiny typů, které jsou společné pro některé ovládací prvky ActiveX. Typ obrázku zpracovává metasoubory, rastrové obrázky a ikony a umožňuje uživateli zadat obrázek, který se má zobrazit v ovládacím prvku ActiveX. Vlastní vlastnosti obrázku jsou implementovány pomocí objektu obrázek a funkce Get/Set, které umožňují řízení přístupu uživatelů k vlastnosti obrázku. Ovládací prvek uživatelé přístup k vlastní vlastnost obrázek pomocí akcie stránka vlastností obrázku.  
   
- Kromě standardní typ obrázku jsou také písma a barev typy k dispozici. Další informace o použití standardní typ písma v vaše ovládací prvek ActiveX, najdete v článku [MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md).  
+ Kromě standardní typ obrázku, písma a barvy typy jsou také k dispozici. Další informace o použití standardní typ písma v ovládacím prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md).  
   
- Třídy ovládacích prvků ActiveX poskytují několik komponent, které můžete použít k implementaci vlastnost obrázků v ovládacím prvku. Tyto součásti zahrnují:  
+ Třídy ovládacích prvků ActiveX poskytují několik komponent, které můžete použít k implementaci vlastnost obrázek v ovládacím prvku. Mezi tyto komponenty patří:  
   
--   [CPictureHolder](../mfc/reference/cpictureholder-class.md) třídy.  
+-   [Cpictureholder –](../mfc/reference/cpictureholder-class.md) třídy.  
   
-     Tato třída poskytuje snadný přístup k objektu obrázku a funkce pro položku, zobrazí vlastnost vlastní obrázek.  
+     Tato třída poskytuje snadný přístup k objektu obrázek a funkce pro položky zobrazí ve vlastní vlastnosti obrázku.  
   
--   Podpora pro vlastnosti typu **LPPICTUREDISP**, implementovaná pomocí funkce Get/Set.  
+-   Podpora pro vlastnosti typu **LPPICTUREDISP**, implementovaný pomocí funkce Get/Set.  
   
-     Pomocí zobrazení tříd rychle přidáte vlastní vlastnosti a vlastnosti, která podporuje typ obrázku. Další informace o přidání vlastností ovládacího prvku ActiveX s zobrazení tříd, najdete v článku [MFC – ovládací prvky ActiveX: vlastnosti](../mfc/mfc-activex-controls-properties.md).  
+     Pomocí zobrazení tříd můžete rychle přidat vlastní vlastnost nebo vlastnosti, která podporuje typ obrázku. Další informace o přidání vlastnosti ovládacích prvků ActiveX pomocí zobrazení tříd, najdete v článku [knihovny MFC – ovládací prvky ActiveX: vlastnosti](../mfc/mfc-activex-controls-properties.md).  
   
--   Stránky vlastností, které pracují se vlastnosti nebo vlastnosti Obrázek ovládacího prvku.  
+-   Stránky vlastností, která zpracovává ovládacího prvku obrázek vlastnost nebo vlastnosti.  
   
-     Tato stránka vlastností je součástí skupiny stránek uložených vlastností, které jsou k dispozici pro ovládací prvky ActiveX. Další informace o stránky vlastností ovládacího prvku ActiveX, najdete v článku [MFC – ovládací prvky ActiveX: použití Stock stránky vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+     Tuto stránku vlastností je součástí skupiny stránky uložených vlastností, které jsou k dispozici pro ovládací prvky ActiveX. Další informace na stránkách vlastností ovládacího prvku ActiveX, najdete v článku [knihovny MFC – ovládací prvky ActiveX: pomocí stránky vlastností akcií](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementace vlastnosti vlastní obrázek ve vašem ovládacím prvku ActiveX  
- Po dokončení kroků uvedených v této části můžete ovládací prvek zobrazit obrázky vybrali jeho uživatelem. Uživatel může změnit zobrazeného obrázku pomocí stránku vlastností, která ukazuje na aktuální obrázku a má tlačítko Procházet, která umožňuje uživatelům vyberte jiný obrázky.  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementace vlastnosti vlastní obrázek v ovládacím prvku ActiveX  
+ Po dokončení kroků uvedených v této části ovládací prvek mohl zobrazit obrázky, kterou uživatel zvolí. Uživatel může změnit zobrazeného obrázku pomocí stránky vlastností, která zobrazuje aktuální obrázek a obsahuje tlačítko Procházet, který umožňuje uživateli vybrat různé obrázky.  
   
- Vlastní vlastnost obrázek se implementuje pomocí procesu podobná použít k implementaci ostatní vlastnosti hlavním rozdílem, že vlastní vlastnost musí podporovat typ obrázku. Protože je nutné vykreslit položku vlastnost obrázek ovládací prvek ActiveX, musí být počet přidání a úpravy provedeny pro vlastnost předtím, než může být plně implementováno.  
+ Vlastní vlastnost obrázek se implementuje pomocí procesu podobný použít k implementaci dalších vlastností, hlavním rozdílem, že se vlastnost vlastní musí podporovat typ obrázku. Protože je nutné vykreslit položku vlastnost obrázek v ovládacím prvku ActiveX, počet dodatků a změn třeba vlastnosti předtím, než může být plně implementovány.  
   
- Chcete-li implementovat vlastní vlastnosti obrázku, musíte udělat následující:  
+ K implementaci vlastní vlastnosti obrázku, postupujte takto:  
   
--   [Přidejte do projektu řízení kód](#_core_additions_to_your_control_project).  
+-   [Přidejte kód do ovládacího prvku projektu](#_core_additions_to_your_control_project).  
   
-     Standardní obrázek vlastnost ID stránky, člena typu `CPictureHolder`a vlastní vlastnost typu **LPPICTUREDISP** s Get/Set, musí být přidaný implementace.  
+     Standardní obrázek vlastnost ID stránky, datový člen typu `CPictureHolder`a vlastní vlastnost typu **LPPICTUREDISP** s Get/Set musí být přidán implementace.  
   
--   [Upravit několik funkce ve třídě ovládacího](#_core_modifications_to_your_control_project).  
+-   [Upravit několik funkcí ve třídě ovládacího prvku](#_core_modifications_to_your_control_project).  
   
-     Tyto změny budou provedeny několik funkcí, které jsou zodpovědní za vykreslování ovládacího prvku ActiveX.  
+     Tyto změny bude proveden několik funkcí, které jsou zodpovědné za vykreslování ovládacího prvku ActiveX.  
   
-##  <a name="_core_additions_to_your_control_project"></a> Přidání do projektu ovládací prvek  
- Přidat ID stránky vlastností pro standardní stránku vlastností obrázku, vložte následující řádek po begin_proppageids – makro v řídicím souboru implementace (. CPP):  
+##  <a name="_core_additions_to_your_control_project"></a> Přidání do projektu ovládacího prvku  
+ Chcete-li přidat ID stránky vlastností pro standardní stránku vlastností obrázek, vložíte následující řádek po BEGIN_PROPPAGEIDS – makro v souboru implementace ovládacího prvku (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Musíte také zvýšit počet parametru begin_proppageids – makro o jednu. To ukazuje následující řádek:  
+ Jednou, musíte zvýšit počet parametr vaše BEGIN_PROPPAGEIDS – makro. To ukazuje následující řádek:  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
- Chcete-li přidat `CPictureHolder` – datový člen třídy ovládacího prvku, vložte následující řádek chráněné části deklarace třídy ovládacího prvku v záhlaví souboru ovládacího prvku (. H):  
+ Chcete-li přidat `CPictureHolder` datový člen třídy ovládací prvek vložíte následující řádek chráněné části deklarace třídy ovládacího prvku v souboru záhlaví ovládacího prvku (. H):  
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Není nutné pojmenovat datový člen *m_pic*; postačí libovolný název.  
+ Není nutné pojmenovat datový člen *m_pic*; bude stačit libovolný název.  
   
  V dalším kroku přidejte vlastní vlastnost, která podporuje typ obrázku:  
   
@@ -93,67 +93,67 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
   
 2.  V zobrazení tříd rozbalte uzel knihovny ovládacího prvku.  
   
-3.  Klikněte pravým tlačítkem na uzel rozhraní pro vlastní ovládací prvek (druhého uzlu uzlu knihovny) a místní nabídce.  
+3.  Klikněte pravým tlačítkem na uzel rozhraní pro ovládací prvek (druhý uzel uzlu knihovny) otevřete místní nabídku.  
   
-4.  V místní nabídce vyberte příkaz **přidat** a potom **přidat vlastnost**.  
+4.  V místní nabídce zvolte **přidat** a potom **přidat vlastnost**.  
   
-5.  V **název vlastnosti** zadejte název vlastnosti. Například účely, `ControlPicture` se používá v tomto postupu.  
+5.  V **název vlastnosti** zadejte název vlastnosti. Například účely `ControlPicture` se používá v tomto postupu.  
   
-6.  V **typ vlastnosti** vyberte **IPictureDisp\***  pro typ vlastnosti.  
+6.  V **typ vlastnosti** vyberte **IPictureDisp** <strong>\*</strong> pro tento typ vlastnosti.  
   
-7.  Pro **typem implementace**, klikněte na tlačítko **metody Get/Set**.  
+7.  Pro **typ implementace**, klikněte na tlačítko **metody Get/Set**.  
   
 8.  Zadejte jedinečné názvy pro získání a nastavení funkce nebo přijměte výchozí názvy. (V tomto příkladu výchozí názvy `GetControlPicture` a `SetControlPicture` se používají.)  
   
 9. Klikněte na tlačítko **Dokončit**.  
   
- Průvodce přidáním vlastnosti přidá následující kód mezi poznámky mapy odesílání v hlavičce ovládací prvek (. H) soubor:  
+ Průvodce přidáním vlastnosti přidá následující kód mezi komentáře mapy odbavení v záhlaví ovládacího prvku (. H) file:  
   
  [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
   
- Kromě toho následující kód byl vložen do mapy odesílání implementace ovládacího prvku (. Soubor CPP):  
+ Kromě toho mapy odbavení implementace ovládacího prvku vložila následující kód (. Soubor CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
   
- Průvodce přidáním vlastnosti také přidá následující funkce dva se zakázaným inzerováním v řídicím souboru implementace:  
+ Průvodce přidáním vlastnosti také přidá následující dva zástupné procedury funkcí v souboru implementace ovládacího prvku:  
   
  [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
   
 > [!NOTE]
->  Názvy třídy a funkce řízení může lišit od příkladu nahoře.  
+>  Názvy třídy a funkce ovládacího prvku mohou lišit od výše uvedený příklad.  
   
-###  <a name="_core_modifications_to_your_control_project"></a> Úpravy řízení projektu  
- Po provedení potřebné dodatky do projektu ovládací prvek, budete muset upravit několik funkcí, které ovlivňují vykreslování ovládacího prvku ActiveX. Tyto funkce `OnResetState`, `OnDraw`, a funkce Get/Set vlastní vlastnosti obrázku, jsou umístěné v řídicím souboru implementace. (Všimněte si, že v tomto příkladu třída ovládacích prvků se nazývá `CSampleCtrl`, `CPictureHolder` – datový člen nazývá *m_pic*, a název vlastnosti vlastní obrázek je `ControlPicture`.)  
+###  <a name="_core_modifications_to_your_control_project"></a> Úpravy do projektu ovládacího prvku  
+ Po provedení potřebné dodatky k řízení projektu, budete muset upravit několik funkcí, které mají vliv vykreslování ovládacího prvku ActiveX. Tyto funkce `OnResetState`, `OnDraw`, a funkce Get/Set vlastní vlastnosti obrázku, jsou umístěny v souboru implementace ovládacího prvku. (Všimněte si, že v tomto příkladu třída ovládacího prvku se nazývá `CSampleCtrl`, `CPictureHolder` se nazývá datový člen *m_pic*, a název vlastnosti vlastního obrázku je `ControlPicture`.)  
   
- V ovládacím prvku `OnResetState` fungovat, přidejte následující řádek volitelné po volání `COleControl::OnResetState`:  
+ V ovládacím prvku `OnResetState` funkci, přidejte následující volitelné řádek po volání `COleControl::OnResetState`:  
   
  [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
   
- Toto nastaví obrázek ovládacího prvku do prázdné obrázku.  
+ Tím se nastaví obrázek ovládacího prvku obrázku prázdná.  
   
- Kreslení obrázku správně, ujistěte se, volání [CPictureHolder::Render](../mfc/reference/cpictureholder-class.md#render) v ovládacím prvku `OnDraw` funkce. Upravte funkce tak, aby připomínaly v následujícím příkladu:  
+ Chcete-li nakreslit obrázek správně, ujistěte se, volání [CPictureHolder::Render](../mfc/reference/cpictureholder-class.md#render) v ovládacím prvku `OnDraw` funkce. Upravte funkce vypadat podobně jako v následujícím příkladu:  
   
  [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
   
- Ve funkci Get vlastní obrázek ovládacího prvku přidejte následující řádek:  
+ Ve funkci Get vlastnosti vlastní obrázek ovládacího prvku přidejte následující řádek:  
   
  [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
   
- Ve funkci Set ovládacího prvku vlastní vlastnosti obrázku přidejte následující řádky:  
+ Ve funkci Set vlastnosti vlastní obrázek ovládacího prvku přidejte následující řádky:  
   
  [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
   
- Vlastnost Obrázek musí být provedeny trvalé, tak, aby v době běhu se zobrazí informace o přidaných v době návrhu. Přidejte následující řádek na `COleControl`-odvozené třídy `DoPropExchange` funkce:  
+ Vlastnost obrázek se musí provádět trvalé tak, aby se zobrazí informace o přidaných v době návrhu v době běhu. Přidejte následující řádek, který `COleControl`-odvozené třídy `DoPropExchange` funkce:  
   
  [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
   
 > [!NOTE]
->  Názvy třídy a funkce se může lišit od příkladu nahoře.  
+>  Názvy třídy a funkce se mohou lišit od výše uvedený příklad.  
   
- Po dokončení změny znovu sestavte projekt začlenění nové funkce vlastní obrázek vlastnosti a k otestování nové vlastnosti použít testovací kontejneru. V tématu [testování vlastností a událostí pomocí Test kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup kontejner testů.  
+ Po dokončení změny znovu sestavte projekt nové funkce vlastnost vlastní obrázek začlenění a používání kontejner testu otestovat novou vlastnost. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Ovládací prvky MFC ActiveX: Použití písem](../mfc/mfc-activex-controls-using-fonts.md)   
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)   
+ [MFC – ovládací prvky ActiveX: Použití písem](../mfc/mfc-activex-controls-using-fonts.md)   
  [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)
 

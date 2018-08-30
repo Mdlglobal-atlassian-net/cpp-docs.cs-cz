@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: a68d39746097bcc345e0b5e09bfbf1d419192b2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465993"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199317"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 Poskytuje funkce ovládání prvku WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.  
@@ -268,14 +268,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|Volá se, než dojde k navigaci v daném prohlížeči WebBrowser (na buď okno nebo pro element frameset).|  
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Volá se, aby se aplikaci oznámilo, změnil povolený stav příkazu webového prohlížeče.|  
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Volá se, aby se aplikaci oznámilo, že dokument bylo dosaženo stavu READYSTATE_COMPLETE.|  
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281), což upozorňuje na aktivní objekt v místní, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.|  
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), což upozorňuje na aktivní objekt v místní, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.|  
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Volá se, aby se aplikaci oznámilo, začíná navigační operace.|  
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|Volá se, když operace navigace dokončení, zastavení nebo se nezdařilo.|  
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|Volá se, k povolení nebo zakázání nemodálních dialogových oken, pokud kontejner vytvoří nebo odstraní modální dialogové okno.|  
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Volá se na hostiteli aplikace Internet Explorer nebo MSHTML povolí hostitelské nahrazuje aplikaci Internet Explorer nebo MSHTML na datový objekt.|  
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.|  
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.|  
 |[CHtmlView::OnFullScreen](#onfullscreen)|Volá se při změně vlastnosti FullScreen.|  
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Voláno rozhraním aplikace Internet Explorer nebo MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Voláno rozhraním aplikace Internet Explorer nebo MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CHtmlView::OnGetExternal](#ongetexternal)|Volané aplikace Internet Explorer nebo MSHTML k získání hostitele `IDispatch` rozhraní.|  
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|Načte možností uživatelského rozhraní v aplikaci Internet Explorer nebo MSHTML hostitele.|  
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Vrátí klíč registru, ve které aplikace Internet Explorer nebo MSHTML ukládá uživatelských předvoleb.|  
@@ -287,7 +287,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|Volá se, aby se aplikaci oznámilo, že probíhá operace nástroje download byl aktualizován.|  
 |[CHtmlView::OnPropertyChange](#onpropertychange)|Volá se, aby se aplikaci oznámilo, [PutProperty](#putproperty) změnila hodnotu vlastnosti.|  
 |[CHtmlView::OnQuit](#onquit)|Volá se, aby se aplikaci oznámilo, aplikace Internet Explorer je připravené ukončení. (Týká se pouze Internet Explorer)|  
-|[CHtmlView::OnResizeBorder](#onresizeborder)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.|  
+|[CHtmlView::OnResizeBorder](#onresizeborder)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.|  
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|Volá se z aplikace Internet Explorer nebo MSHTML aplikace, když se chystá zobrazit kontextovou nabídku.|  
 |[CHtmlView::OnShowUI](#onshowui)|Volá se před Internet Explorer nebo MSHTML zobrazí jeho nabídek a panelů nástrojů.|  
 |[CHtmlView::OnStatusBar](#onstatusbar)|Volá se při změně vlastnosti StatusBar.|  
@@ -295,7 +295,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|Volá se při změně vlastnosti TheaterMode.|  
 |[CHtmlView::OnTitleChange](#ontitlechange)|Volá se, aby upozornění aplikace, pokud se název dokumentu v ovládacím prvku WebBrowser stane dostupná nebo změny.|  
 |[CHtmlView::OnToolBar](#ontoolbar)|Volá se při změně vlastnosti ToolBar.|  
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) nebo [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.|  
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.|  
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|Voláno rozhraním aplikace Internet Explorer nebo MSHTML povolit hostitele příležitost změnit adresu URL načíst.|  
 |[CHtmlView::OnUpdateUI](#onupdateui)|Upozorňuje hostitele, stav příkazu se změnila.|  
 |[CHtmlView::OnVisible](#onvisible)|Volá se, když by okna pro ovládací prvek WebBrowser zobrazené/skryté.|  
@@ -393,7 +393,7 @@ virtual BOOL Create(
  Určuje atributy stylu okna. Ve výchozím nastavení jsou nastavené styly WS_VISIBLE a WS_CHILD Windows.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.  
   
  *pParentWnd*  
  Ukazatel na nadřazené okno ovládacího prvku.  
@@ -455,10 +455,10 @@ HRESULT ExecFormsCommand(
  Ukazatel `VARIANT` strukturu pro příjem výstup příkazu. Může mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) v sadě Windows SDK.  
+ Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- `ExecFormsCommand` implementuje chování [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) metody.  
+ `ExecFormsCommand` implementuje chování [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) metody.  
   
 ##  <a name="execwb"></a>  CHtmlView::ExecWB  
  Voláním této členské funkce ke spuštění příkazu v WebBrowser nebo Internet Explorer.  
@@ -987,7 +987,7 @@ void Navigate2(
   
 ### <a name="parameters"></a>Parametry  
  *pIDL*  
- Ukazatel [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) struktury.  
+ Ukazatel [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struktury.  
   
  *dwFlags*  
  Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.  
@@ -1144,7 +1144,7 @@ virtual HRESULT OnFilterDataObject(
   
 ### <a name="parameters"></a>Parametry  
  *pDataObject*  
- Adresa [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) rozhraní poskytnutých aplikace Internet Explorer nebo MSHTML aplikace.  
+ Adresa [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) rozhraní poskytnutých aplikace Internet Explorer nebo MSHTML aplikace.  
   
  *ppDataObject*  
  Adresa, která přijímá `IDataObject` ukazatel rozhraní, získáte ho od hostitele. Obsah tohoto parametru by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.  
@@ -1156,7 +1156,7 @@ virtual HRESULT OnFilterDataObject(
  Přepsat `OnFilterDataObject` reagovat `FilterDataObject` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) v sadě Windows SDK pro další informace.  
   
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate  
- Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.  
+ Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.  
   
 ```  
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1194,7 +1194,7 @@ virtual HRESULT OnGetDropTarget(
   
 ### <a name="parameters"></a>Parametry  
  *pDropTarget*  
- [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) aplikace Internet Explorer nebo MSHTML navrhuje použití.  
+ [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) aplikace Internet Explorer nebo MSHTML navrhuje použití.  
   
  *ppDropTarget*  
  Adresa `IDropTarget` , který přijímá `IDropTarget` ukazatel rozhraní, které jsou hostiteli chce poskytovat.  
@@ -1250,7 +1250,7 @@ virtual HRESULT OnGetOptionKeyPath(
   
 ### <a name="parameters"></a>Parametry  
  *pchKey*  
- Adresa `LPOLESTR` , který přijímá řetězec podklíče registru, kde hostitele ukládá jeho výchozí možnosti. Tento podklíč bude pod klíčem HKEY_CURRENT_USER. Přidělení paměti pomocí [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727). Volající aplikace je zodpovědná za uvolnění paměti pomocí [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722). Tento parametr by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.  
+ Adresa `LPOLESTR` , který přijímá řetězec podklíče registru, kde hostitele ukládá jeho výchozí možnosti. Tento podklíč bude pod klíčem HKEY_CURRENT_USER. Přidělení paměti pomocí [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). Volající aplikace je zodpovědná za uvolnění paměti pomocí [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Tento parametr by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.  
   
  *dwReserved*  
  Vyhrazeno pro budoucí použití. Není v současné době nepoužívá.  
@@ -1387,7 +1387,7 @@ virtual void OnQuit();
 ```  
   
 ##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder  
- Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.  
+ Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.  
   
 ```  
 virtual HRESULT OnResizeBorder(
@@ -1404,7 +1404,7 @@ virtual HRESULT OnResizeBorder(
  Ukazatel na rozhraní pro objekt okna rámce nebo dokumentu došlo ke změně jehož ohraničení.  
   
  *fFrameWindow*  
- Hodnota TRUE, pokud je okno rámce volání [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053); jinak hodnota FALSE.  
+ Hodnota TRUE, pokud je okno rámce volání [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder); jinak hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.  
@@ -1431,7 +1431,7 @@ virtual HRESULT OnShowContextMenu(
  Souřadnice obrazovky pro nabídku.  
   
  *pcmdtReserved*  
- [Iolecommandtarget –](http://msdn.microsoft.com/library/windows/desktop/ms683797) rozhraní sloužící k dotazování stavu příkazu a spusťte příkazy v tomto objektu.  
+ [Iolecommandtarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) rozhraní sloužící k dotazování stavu příkazu a spusťte příkazy v tomto objektu.  
   
  *pdispReserved*  
  Rozhraní IDispatch objektu na souřadnice obrazovky. To umožňuje k rozlišení konkrétní objekty k zajištění konkrétnější kontextu hostitele.  
@@ -1459,16 +1459,16 @@ virtual HRESULT OnShowUI(
  Vyhrazeno pro budoucí použití.  
   
  *pActiveObject*  
- [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) rozhraní aktuálně aktivního objektu.  
+ [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) rozhraní aktuálně aktivního objektu.  
   
  *pCommandTarget*  
- [Iolecommandtarget –](http://msdn.microsoft.com/library/windows/desktop/ms683797) rozhraní objektu.  
+ [Iolecommandtarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) rozhraní objektu.  
   
  *pFrame*  
- [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) rozhraní objektu. To je potřeba nabídek a panelů nástrojů.  
+ [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) rozhraní objektu. To je potřeba nabídek a panelů nástrojů.  
   
  *pDoc*  
- [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) rozhraní pro objekt. To je potřeba pro panely nástrojů.  
+ [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) rozhraní pro objekt. To je potřeba pro panely nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Zobrazit [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) v sadě Windows SDK pro seznam hodnot.  
@@ -1535,7 +1535,7 @@ virtual void OnToolBar(BOOL bToolBar);
  Nenulové, pokud je zobrazen panel nástrojů aplikace Internet Explorer nebo jinak nulová.  
   
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator  
- Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) nebo [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.  
+ Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.  
   
 ```  
 virtual HRESULT OnTranslateAccelerator(
@@ -1692,10 +1692,10 @@ HRESULT QueryFormsCommand(
  Ukazatel na hodnotu určující, zda příkaz (identifikovaný *dwCommandID*) je zaškrtnuté políčko. Při hodnotě TRUE je příkaz podporovány. v opačném případě FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) v sadě Windows SDK.  
+ Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- `QueryFormsCommand` implementuje chování [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metody.  
+ `QueryFormsCommand` implementuje chování [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) metody.  
   
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB  
  Voláním této členské funkce k dotazování stavu příkazu.  
@@ -1706,13 +1706,13 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
 ### <a name="parameters"></a>Parametry  
  *cmdID*  
- [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) hodnotu příkazu, pro který volající potřebuje informace o stavu.  
+ [OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid) hodnotu příkazu, pro který volající potřebuje informace o stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Adresa [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) hodnotu, která přijímá stav příkazu.  
+ Adresa [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) hodnotu, která přijímá stav příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
- `QueryStatusWB` implementuje chování [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metody.  
+ `QueryStatusWB` implementuje chování [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) metody.  
   
  Platí pro aplikaci Internet Explorer a WebBrowser.  
   

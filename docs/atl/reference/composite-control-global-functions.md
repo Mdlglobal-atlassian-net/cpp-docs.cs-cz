@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882429"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203713"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 Tyto funkce poskytují podporu pro vytváření dialogových oken a pro vytváření, hostování a licencování ovládacích prvků ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.  
   
  *lpTemplateName*  
- [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
+ [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
   
  *hWndParent*  
  [in] Identifikuje okna, který vlastní dialogové okno.  
   
  *lpDialogProc*  
- [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Další informace o úpravách skripty prostředků najdete v tématu [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](http://msdn.microsoft.com/library/windows/desktop/aa380902) v rámci sady Windows SDK *: SDK Tools*.  
+ Další informace o úpravách skripty prostředků najdete v tématu [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](/windows/desktop/menurc/common-control-parameters) v rámci sady Windows SDK *: SDK Tools*.  
   
- Další informace v dialogových oknech v Obecné [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) v sadě Windows SDK.  
+ Další informace v dialogových oknech v Obecné [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) a [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) v sadě Windows SDK.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Vytvoří nemodální dialogové okno z uživatelem zadané šablony dialogového okna.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.  
   
  *lpTemplateName*  
- [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
+ [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
   
  *hWndParent*  
  [in] Identifikuje okna, který vlastní dialogové okno.  
   
  *lpDialogProc*  
- [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Poznámky  
  Dialogové okno může obsahovat ovládací prvky ActiveX.  
   
- Zobrazit [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) ve Windows SDK.  
+ Zobrazit [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) a [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) ve Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Nenulové, pokud inicializaci řídicího hostitelského kódu byla úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nebo [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), jak je popsáno v sadě Windows SDK.  
+ Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nebo [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), jak je popsáno v sadě Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  Call AtlAxWinTerm  
  Tato funkce zruší inicializaci ATL řídicího hostitelského kódu při zrušení registrace **"AtlAxWin80"** a **"AtlAxWinLic80"** tříd oken.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Vždy vrátí hodnotu TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Jednoduše volá tuto funkci [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) jak je popsáno v sadě Windows SDK.  
+ Jednoduše volá tuto funkci [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) jak je popsáno v sadě Windows SDK.  
   
  Voláním této funkce Vyčištění po všechny existující hostitele windows nejsou zničeny, pokud jste volali [AtlAxWinInit](#atlaxwininit) a už nebude potřeba vytvořit hostitele windows. Pokud není voláním této funkce, třídy okna se odregistrovat automaticky při ukončení procesu.  
   

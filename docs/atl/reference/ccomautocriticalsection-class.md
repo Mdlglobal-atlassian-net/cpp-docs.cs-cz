@@ -1,5 +1,5 @@
 ---
-title: Třída CComAutoCriticalSection | Microsoft Docs
+title: Ccomautocriticalsection – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef8cc6fe14dc2c636b02ce2002787a74b12b5528
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217897"
 ---
-# <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection – třída
-`CComAutoCriticalSection` poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
+# <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection – třída
+`CComAutoCriticalSection` poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,18 +41,18 @@ class CComAutoCriticalSection : public CComCriticalSection
 |Název|Popis|  
 |----------|-----------------|  
 |[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Konstruktor|  
-|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Destruktor.|  
+|[Ccomautocriticalsection –:: ~ ccomautocriticalsection –](#dtor)|Destruktor.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComAutoCriticalSection` je podobná třída [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), s výjimkou `CComAutoCriticalSection` automaticky inicializuje objekt kritická sekce v konstruktoru.  
+ `CComAutoCriticalSection` je podobný třídě [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md), s výjimkou `CComAutoCriticalSection` automaticky inicializuje objekt kritický oddíl v konstruktoru.  
   
- Obvykle použijete, `CComAutoCriticalSection` prostřednictvím `typedef` název [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Tento název odkazuje `CComAutoCriticalSection` při [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) je používán.  
+ Obvykle použijete `CComAutoCriticalSection` prostřednictvím `typedef` název [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Tento název se odkazuje `CComAutoCriticalSection` při [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) je používán.  
 
   
- `Init` a `Term` metody z [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) nejsou k dispozici při použití této třídy.  
+ `Init` a `Term` metody ze [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md) nejsou k dispozici při použití této třídy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
+ [Ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md)  
   
  `CComAutoCriticalSection`  
   
@@ -67,9 +67,9 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volá funkci Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), který inicializuje objekt kritická sekce.  
+ Volá funkci Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), který inicializuje objekt kritický oddíl.  
   
-##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>  Ccomautocriticalsection –:: ~ ccomautocriticalsection –  
  Destruktor.  
   
 ```
@@ -77,9 +77,9 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání destruktoru [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), což uvolní všechny prostředky systému používané objektem kritická sekce.  
+ Volání destruktoru [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), což uvolní všechny systémové prostředky používané tímto objektem kritický oddíl.  
   
 ## <a name="see-also"></a>Viz také  
- [CComFakeCriticalSection – třída](../../atl/reference/ccomfakecriticalsection-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Ccomfakecriticalsection – třída](../../atl/reference/ccomfakecriticalsection-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)

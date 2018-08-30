@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601586"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214849"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ Označuje, že vlastnost podporuje datové vazby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Umožňujících vazbu** C++ atribut má stejné funkce jako [umožňujících vazbu](http://msdn.microsoft.com/library/windows/desktop/aa366738) atribut MIDL. Lze ji použít v vlastnosti definované [propget](../windows/propget.md), [propput](../windows/propput.md), nebo [propputref](../windows/propputref.md) atributy, nebo můžete ručně definovat metodu s možností vazby.
+**Umožňujících vazbu** C++ atribut má stejné funkce jako [umožňujících vazbu](/windows/desktop/Midl/bindable) atribut MIDL. Lze ji použít v vlastnosti definované [propget](../windows/propget.md), [propput](../windows/propput.md), nebo [propputref](../windows/propputref.md) atributy, nebo můžete ručně definovat metodu s možností vazby.
 
 Následující ukázky knihovny MFC ukazují použití **umožňujících vazbu**:
 
-- [Ukázky ovládacích prvků: Ovládací prvky ActiveX založené na knihovně MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Ukázky ovládacích prvků: Ovládací prvky ActiveX založené na knihovně MFC](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [KR ukázka: Ovládací prvek ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [KR ukázka: Ovládací prvek ActiveX](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [Ukázka TESTHELP: Ovládací prvek ActiveX s popisy tlačítek a Nápověda](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [Ukázka TESTHELP: Ovládací prvek ActiveX s popisy tlačítek a Nápověda](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>Příklad
 

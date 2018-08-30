@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195741"
 ---
 # <a name="ctokenprivileges-class"></a>Ctokenprivileges – třída
 Tato třída představuje obálku pro `TOKEN_PRIVILEGES` struktury.  
@@ -79,13 +79,13 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operátor přiřazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows.  
+ [Přístupový token](/windows/desktop/SecAuthZ/access-tokens) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows.  
   
- Přístupový token se používá k popisu různých zabezpečení oprávněních udělených jednotlivým uživatelům. Oprávnění se skládá z 64bitové číslo volá místně jedinečný identifikátor ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) a řetězce popisovače.  
+ Přístupový token se používá k popisu různých zabezpečení oprávněních udělených jednotlivým uživatelům. Oprávnění se skládá z 64bitové číslo volá místně jedinečný identifikátor ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) a řetězce popisovače.  
   
- `CTokenPrivileges` Třídy tvoří obálku pro [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktury a obsahuje 0 nebo více oprávnění. Oprávnění se dají přidat, odstraněné nebo dotaz pomocí metody zadané třídy.  
+ `CTokenPrivileges` Třídy tvoří obálku pro [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury a obsahuje 0 nebo více oprávnění. Oprávnění se dají přidat, odstraněné nebo dotaz pomocí metody zadané třídy.  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  Při hodnotě true je oprávnění povoleno. Pokud má hodnotu false, oprávnění je zakázaná.  
   
  *rPrivileges*  
- Odkaz [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktury. Oprávnění a atributy jsou zkopírovány z této struktury a přidán do `CTokenPrivileges` objektu.  
+ Odkaz [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury. Oprávnění a atributy jsou zkopírovány z této struktury a přidán do `CTokenPrivileges` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První formulář této metody vrátí hodnotu true, pokud oprávnění se úspěšně přidají, false v opačném případě.  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `CTokenPrivileges` Objektu, který chcete přiřadit nový objekt.  
   
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktura přiřazena novému `CTokenPrivileges` objektu.  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktura přiřazena novému `CTokenPrivileges` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  `CTokenPrivileges` Objektu je volitelně možné vytvořit `TOKEN_PRIVILEGES` struktury nebo dříve definované `CTokenPrivileges` objektu.  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>Parametry  
  *pPrivileges*  
- Ukazatel na pole [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) objekty. `CLUIDArray` definice typu je definován jako `CAtlArray<LUID> CLUIDArray`.  
+ Ukazatel na pole [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) objekty. `CLUIDArray` definice typu je definován jako `CAtlArray<LUID> CLUIDArray`.  
   
  *pAttributes*  
  Ukazatel na pole objektů typu DWORD. Pokud je tento parametr vynechán nebo mít hodnotu NULL, nejsou načíst atributy. `CAttributes` definice typu je definován jako `CAtlArray <DWORD> CAttributes`.  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktury.  
+ Vrací ukazatel [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury.  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Načte atribut přidružený název dané oprávnění.  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>Parametry  
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktura přiřadit `CTokenPrivileges` objektu.  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktura přiřadit `CTokenPrivileges` objektu.  
   
  *Zarovnání indirekce RHS*  
  `CTokenPrivileges` Objektu, který chcete přiřadit k objektu.  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Přetypování na ukazatel na hodnotu [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktury.  
+ Přetypování na ukazatel na hodnotu [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

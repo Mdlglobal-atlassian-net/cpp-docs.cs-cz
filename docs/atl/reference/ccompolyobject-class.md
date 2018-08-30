@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206369"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject – třída
 Tato třída implementuje `IUnknown` agregované nebo neagregovaná objektu.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Delegáti `IUnknown` volání vnější neznámá nebo, pokud objekt je agregován do `IUnknown` objektu, pokud není agregovaný objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComPolyObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) agregované nebo neagregovaná objektu.  
+ `CComPolyObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) agregované nebo neagregovaná objektu.  
   
  Pokud instance `CComPolyObject` se vytvoří hodnota vnější Neznámá je zaškrtnuté políčko. Pokud má hodnotu NULL, `IUnknown` je implementován pro neagregovaná objektu. Pokud není NULL, vnější Neznámá `IUnknown` je implementován pro agregovaného objektu.  
   

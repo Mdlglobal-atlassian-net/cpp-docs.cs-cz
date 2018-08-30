@@ -1,5 +1,5 @@
 ---
-title: '&lt;Souhrn&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Souhrn&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322286"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199080"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;Souhrn&gt; (Visual C++)
-\<Souhrnné > značka slouží k popisu typu nebo typ člena. Použití [ \<Poznámky >](../ide/remarks-visual-cpp.md) přidat další informace o popis typu.  
+\<Summary > Značka by měla sloužit k popisu typu nebo člena typu. Použití [ \<remarks >](../ide/remarks-visual-cpp.md) přidat doplňující informace pro popis typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,10 +36,10 @@ ms.locfileid: "33322286"
   
 #### <a name="parameters"></a>Parametry  
  `description`  
- Souhrn objektu.  
+ Přehled objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Text pro \<souhrnné > značky je jediný zdroj informací o typu v IntelliSense a se také zobrazuje na [Prohlížeč objektů](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) a v sestavě webové komentář kódu.  
+ Text \<summary > značku je jediný zdroj informací o typu v IntelliSense a zobrazí se také v [Prohlížeč objektů](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) a v sestavě webového kódu komentář.  
   
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   

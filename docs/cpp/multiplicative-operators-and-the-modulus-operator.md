@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408356"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209725"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikativní operátory a operátor numerického zbytku
 ## <a name="syntax"></a>Syntaxe  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Poznámky  
  Operátory násobení jsou:  
   
--   Násobení (**\****)  
+-   Násobení (<strong>\**</strong>)  
   
 -   Dělení (**/**)  
   
--   Modulo (zbytek po dělení) (`%`)  
+-   Modulo (zbytek po dělení) (**%**)  
   
  Tyto binární operátory mají asociativitu zleva doprava.  
   
- Operátory násobení vezmou operandy aritmetických typů. Operátor numerického zbytku (`%`) má přísnější požadavky v tom, že jeho operandy musí být celočíselného typu. (Chcete-li získat zbytek po dělení s pohyblivou čárkou, použijte funkci run-time [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Převody uvedené v [standardní převody](standard-conversions.md) jsou použity na operandy a výsledek je určen převedeným typem.  
+ Operátory násobení vezmou operandy aritmetických typů. Operátor numerického zbytku (**%**) má přísnější požadavky v tom, že jeho operandy musí být celočíselného typu. (Chcete-li získat zbytek po dělení s pohyblivou čárkou, použijte funkci run-time [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Převody uvedené v [standardní převody](standard-conversions.md) jsou použity na operandy a výsledek je určen převedeným typem.  
   
  Operátor násobení dává výsledek vynásobení prvního operandu druhým.  
   

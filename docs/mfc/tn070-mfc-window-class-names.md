@@ -1,5 +1,5 @@
 ---
-title: 'TN070: MFC – názvy tříd oken | Microsoft Docs'
+title: 'TN070: MFC – názvy tříd oken | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385349"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220845"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: MFC – názvy tříd oken
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.  
+>  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.  
   
- MFC windows použijte název dynamicky vytvořené třídy, která zobrazuje funkce okna. MFC – třída vygeneruje názvy vyhledaných dynamicky okna s rámečkem, zobrazení a místní windows vytvořeného pomocí aplikace. Dialogová okna a vyprodukované aplikace MFC – ovládací prvky mají Windows zadaný název pro třídu okna nejistá.  
+ MFC windows použijte název dynamicky vytvořené třídy, která zohledňuje, funkce v okně. Knihovny MFC generuje názvy tříd dynamicky pro okna s rámečkem, zobrazení a automaticky otevírané okno windows vytvářené aplikace. Dialogová okna a ovládací prvky vytvořené metodou aplikace knihovny MFC mají Windows zadaný název třídy okna dotyčný.  
   
- Můžete nahradit název dynamicky zadané třídy pomocí registrace třídě okna a jeho použití přepsání [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Názvy tříd MFC zadané zařadit do jedné z těchto dvou:  
+ Název dynamicky zadané třídy můžete nahradit pomocí registrace vlastní třídu okna a jeho použití v přepsání [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Jejich názvy tříd knihovny MFC zadaný zařadit do jedné z těchto dvou tvarů následující:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- Šestnáctkových číslic, které nahrazují `%x` znaky jsou vyplněno z dat z [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury. MFC používá tato technika tak, aby více třídy C++ vyžadující identické **WNDCLASS** struktury můžete sdílet stejnou třídu registrované okno. Na rozdíl od většiny jednoduché aplikace Win32 MFC aplikací mít jenom jeden **WNDPROC**, takže můžete snadno sdílet **WNDCLASS** struktury ušetříte čas a paměti. Nahraditelné hodnoty `%x` znaky uvedené výše jsou následující:  
+ Šestnáctkových číslic, které nahrazují `%x` znaky jsou vyplněna z dat z [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury. Knihovna MFC používá tuto techniku tak, aby více tříd jazyka C++ vyžaduje identické **WNDCLASS** struktury můžete sdílet stejnou třídu registrované oken. Na rozdíl od většiny jednoduchých aplikací Win32, aplikace knihovny MFC mít pouze jeden **WNDPROC**, takže můžete snadno sdílet **WNDCLASS** struktury ušetříte čas a paměti. Hodnoty pro nahraditelné `%x` znaky uvedené výše jsou následující:  
   
 - **WNDCLASS.hInstance**  
   

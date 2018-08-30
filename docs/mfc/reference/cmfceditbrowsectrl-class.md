@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222365"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
 `CMFCEditBrowseCtrl` Třída podporuje textové pole procházení, což je upravitelné textové pole, který volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Překreslí aktuální textové pole procházení.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Volá se rozhraním, chcete-li nakreslit tlačítko Procházet.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Volá se rozhraním, když byl zadán neplatný název souboru v textovém poli.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Nastaví vlastní obrázek pro tlačítko Procházet.|  
   
 ## <a name="remarks"></a>Poznámky  

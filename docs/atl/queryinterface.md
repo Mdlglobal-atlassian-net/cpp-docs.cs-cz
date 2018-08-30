@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953418"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208186"
 ---
 # <a name="queryinterface"></a>QueryInterface
-I když jsou mechanismy, které můžete vyjádřit objekt staticky (dříve, než je vytvořena instance) poskytuje funkce, je použít základní mechanismus COM `IUnknown` metodu s názvem [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+I když jsou mechanismy, které můžete vyjádřit objekt staticky (dříve, než je vytvořena instance) poskytuje funkce, je použít základní mechanismus COM `IUnknown` metodu s názvem [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  Každé rozhraní je odvozena od `IUnknown`, takže každý rozhraní obsahuje implementace `QueryInterface`. Bez ohledu na implementaci tato metoda dotazuje objektu pomocí identifikátor IID rozhraní, ke kterému volající požaduje ukazatel. Pokud objekt podporuje rozhraní, `QueryInterface` při volání také načte ukazatel rozhraní, `AddRef`. V opačném případě vrátí kód chyby: E_NOINTERFACE.  
   
@@ -34,5 +34,5 @@ I když jsou mechanismy, které můžete vyjádřit objekt staticky (dříve, ne
   
 ## <a name="see-also"></a>Viz také  
  [Úvod do modelu COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navigace v objektu](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface: Navigace v objektu](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

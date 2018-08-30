@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205477"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Vyřazování typů a členů (C + +/ CX)
-V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenty a spotřebiteli pomocí [zastaralé](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) je atribut podporovaný. Využití rozhraní API, ke kterému tento atribut používá, dostanete zprávu upozornění kompilace, která označuje, že rozhraní API je zastaralé a také doporučuje alternativní rozhraní API pro použití. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.  
+V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenty a spotřebiteli pomocí [zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) je atribut podporovaný. Využití rozhraní API, ke kterému tento atribut používá, dostanete zprávu upozornění kompilace, která označuje, že rozhraní API je zastaralé a také doporučuje alternativní rozhraní API pro použití. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.  
   
 > [!CAUTION]
->  [Zastaralé](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atribut lze použít pouze s typy Windows Runtime. Standardní C++ tříd a členů, použijte [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
+>  [Zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) atribut lze použít pouze s typy Windows Runtime. Standardní C++ tříd a členů, použijte [__declspec(deprecated)](../cpp/deprecated-cpp.md).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak přestat používat vaše vlastní veřejné rozhraní API – například v součásti prostředí Windows Runtime. Druhý operátor typu [Windows: Foundation:: Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) Určuje, jestli je rozhraní API je zastaralé nebo odebrán. Aktuálně pouze DeprecationType::Deprecated hodnota nepodporuje. Třetí parametr v atributu určuje, [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) pro kterou platí atribut.  
+ Následující příklad ukazuje, jak přestat používat vaše vlastní veřejné rozhraní API – například v součásti prostředí Windows Runtime. Druhý operátor typu [Windows: Foundation:: Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) Určuje, jestli je rozhraní API je zastaralé nebo odebrán. Aktuálně pouze DeprecationType::Deprecated hodnota nepodporuje. Třetí parametr v atributu určuje, [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) pro kterou platí atribut.  
   
 ```  
   

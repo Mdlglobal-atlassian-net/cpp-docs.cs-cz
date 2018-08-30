@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465030"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218025"
 ---
 # <a name="csid-class"></a>CSID – třída
 Tato třída představuje obálku pro `SID` strukturu (security identifier).  
@@ -105,7 +105,7 @@ class CSid
   
  Aplikace by neměla změnit `SID` struktura přímo, ale místo toho použijte metody poskytované v této obálkové třídy. Viz také [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), a [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  Vrátí LPCTSTR odkazující na název účtu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Pokud žádný název účtu pro `SID` najdete, `AccountName` vrátí prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Dojde k také pro identifikátory zabezpečení bez odpovídající názvu účtu, jako je například přihlášení `SID` identifikující přihlašovací relace.  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  Vrátí `LPCTSTR` odkazující na doménu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Pokud žádný název účtu pro `SID` najdete, `Domain` vrátí název domény jako prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Dojde k také pro identifikátory zabezpečení bez odpovídající názvu účtu, jako je například přihlášení `SID` identifikující přihlašovací relace.  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) v sadě Windows SDK pro další podrobnosti.  
+ Zobrazit [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) v sadě Windows SDK pro další podrobnosti.  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  Vrátí délku objektu `CSid` objektu.  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `SID` struktura jako řetězec ve formátu vhodném pro zobrazení, úložiště nebo přenos. Ekvivalentní [funkce ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
+ Vrátí `SID` struktura jako řetězec ve formátu vhodném pro zobrazení, úložiště nebo přenos. Ekvivalentní [funkce ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Vrátí popis stavu `CSid` objektu.  

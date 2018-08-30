@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214490"
 ---
 # <a name="colechangeicondialog-class"></a>Colechangeicondialog – třída
 Používá se pro dialogové okno změny ikony OLE.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Poznámky  
  Vytvoření objektu třídy `COleChangeIconDialog` kdy chcete volat dialogovému oknu. Po `COleChangeIconDialog` objekt byl vytvořen, můžete použít [m_ci](#m_ci) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_ci` Struktury je typu OLEUICHANGEICON. Další informace o použití této třídy dialogového okna, najdete v článku [DoModal](#domodal) členskou funkci.  
   
- Další informace najdete v tématu [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.  
   
  Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
   
- Další informace najdete v tématu [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Voláním této funkce můžete změnit ikonu představující položku byla vybrána v dialogovém okně po [DoModal](#domodal) vrátí IDOK.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) funkce v sadě Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_ci](#m_ci) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Poznámky  
  Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Coledialog – třída](../../mfc/reference/coledialog-class.md)   

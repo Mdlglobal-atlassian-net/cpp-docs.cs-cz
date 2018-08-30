@@ -1,5 +1,5 @@
 ---
-title: -TSAWARE (vytvořit aplikace podporující terminálového serveru) | Microsoft Docs
+title: -TSAWARE (Vytvoření aplikace s terminálového serveru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e386c9024ea7736adb2766488c1c51c80ff7177b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9caf6c9a47a667b57220b6bf577080d3548e94e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198547"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 ```  
@@ -34,36 +34,36 @@ ms.locfileid: "32379130"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Možnost/TSAWARE nastaví příznak v poli IMAGE_OPTIONAL_HEADER DllCharacteristics v nepovinné hlavičkové bitové kopie programu. Pokud je nastavený tento příznak, nebude terminálového serveru provádět určité změny aplikace.  
+ Parametr/TSAWARE nastaví příznak v poli IMAGE_OPTIONAL_HEADER dllcharacteristics v nepovinné hlavičce bitové kopie programu. Pokud je tento příznak nastaven, neprovede Terminálový Server určité změny aplikace.  
   
- Pokud aplikace není Terminálový Server využívající (také označované jako starší verze aplikace), provede terminálového serveru určité změny starší verze aplikace, aby byla správně fungovat v prostředí s více uživateli. Terminálový Server například vytvoří virtuální složka systému Windows, tak, aby každý uživatel získá složka systému Windows místo získávání adresáře systému Windows. To umožňuje uživatelům přístup k vlastní soubory INI. Kromě toho terminálového serveru provádí některé úpravy registru pro starší verze aplikace. Tyto úpravy pomalé načítání starší verze aplikace na terminálového serveru.  
+ Pokud aplikace není terminálového serveru Terminal (označované také jako starší verze aplikace), provede Terminálový Server určité změny starší verze aplikace, aby byla správně pracovat v prostředí. Terminálový Server například vytvoří virtuální složka Windows tak, aby každý uživatel získá složku Windows místo získávání adresáře v systému Windows. To poskytuje uživatelům přístup k vlastní soubory INI. Kromě toho Terminálový Server provede některé změny v registru pro starší verze aplikace. Tyto úpravy pomalé načítání starší verze aplikace v terminálového serveru.  
   
- Pokud aplikace využívající terminálového serveru, musí, ani spoléhají na soubory INI ani zapisovat **HKEY_CURRENT_USER** registru během instalace.  
+ Pokud aplikaci terminál terminálového serveru, musí, ani využívají soubory INI ani zapisovat **HKEY_CURRENT_USER** registru během instalace.  
   
- Pokud používáte/TSAWARE a aplikace bude používat soubory INI, soubory budou sdílet všechny uživatele systému. Pokud tak je přijatelné, stále můžete propojit vaší aplikace pomocí/TSAWARE; v opačném případě budete muset použít /TSAWARE:NO.  
+ Pokud používáte parametr/TSAWARE a vaše aplikace stále používá soubory INI, budou všichni uživatelé systému sdílet soubory. Pokud je to přijatelné, můžete stále propojit aplikaci se parametr/TSAWARE; jinak budete muset použít podporu.  
   
- Možnost/TSAWARE je povolená ve výchozím nastavení pro systém Windows a konzolové aplikace. V tématu [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) a [/VERSION](../../build/reference/version-version-information.md) informace.  
+ Parametr/TSAWARE je povolené ve výchozím nastavení pro Windows a konzolových aplikací. Zobrazit [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) a [/Version](../../build/reference/version-version-information.md) informace.  
   
- / TSAWARE není platný pro ovladače, ovladače VxD a knihovny DLL.  
+ / TSAWARE není platný pro ovladače, ovladače VxD nebo knihovny DLL.  
   
- Pokud aplikace bylo propojeno s/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) se zobrazí informace o tom.  
+ Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) se zobrazí informace o tom.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **Linkeru** složky.  
+2.  Klikněte na tlačítko **Linkeru** složky.  
   
-3.  Klikněte **systému** stránku vlastností.  
+3.  Klikněte na tlačítko **systému** stránku vlastností.  
   
-4.  Změnit **terminálového serveru** vlastnost.  
+4.  Upravit **terminálového serveru** vlastnost.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
  [Možnosti linkeru](../../build/reference/linker-options.md)   
- [Ukládání informace o uživateli](http://msdn.microsoft.com/library/aa383452)   
- [Starší verze aplikace v prostředí Terminálové služby](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+ [Ukládání informací specifických pro uživatele](/windows/desktop/TermServ/storing-user-specific-information)   
+ [Starší verze aplikace v prostředí Terminálové služby](https://msdn.microsoft.com/library/aa382957.aspx)

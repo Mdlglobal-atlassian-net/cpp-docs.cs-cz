@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218680"
 ---
 # <a name="cbasepane-class"></a>Cbasepane – třída
 Základní třída pro všechna podokna v knihovně MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` Tuto metodu nelze použít.|  
 |`CBasePane::OnUpdateCmdUI`|Interně.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Vrátí podokno obsahující časovém okamžiku.|  
-|`CBasePane::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CBasePane::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Tuto metodu nelze použít.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Zruší registraci na stavového řádku a odebere ze seznamu ve Správci ukotvení.|  
 |[CBasePane::SaveState](#savestate)|Uloží stav v podokně do registru.|  
@@ -1388,7 +1388,7 @@ virtual HDWP MoveWindow(
  Popisovač pro strukturu pozice odložené okna, nebo hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud předáte hodnotu NULL, jako *hdwp* parametru, tato metoda obvykle přesouvá okno. Pokud předáte popisovač, tato metoda provádí přesun odložené okna. Popisovač lze získat voláním [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) nebo uložením na návratový typ předchozí volání této metody.  
+ Pokud předáte hodnotu NULL, jako *hdwp* parametru, tato metoda obvykle přesouvá okno. Pokud předáte popisovač, tato metoda provádí přesun odložené okna. Popisovač lze získat voláním [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) nebo uložením na návratový typ předchozí volání této metody.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Volá se rozhraním po změně nadřazené v podokně.  

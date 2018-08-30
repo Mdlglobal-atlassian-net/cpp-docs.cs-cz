@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218045"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL a volné zařazování vláken
 Stránka ATL Průvodce jednoduchým objektem na atributy poskytuje možnost, která umožňuje vaší třídy k agregaci volné zařazování vláken (FTM).  
   
- Průvodce vygeneruje kód, který vytvoří instanci volné zařazování vláken v `FinalConstruct` a vydání této instance v `FinalRelease`. Makro COM_INTERFACE_ENTRY_AGGREGATE se automaticky přidá do mapy modelu COM a zkontrolujte, že `QueryInterface` žádosti o [rozhraní IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) jsou zpracovávány volné zařazování vláken.  
+ Průvodce vygeneruje kód, který vytvoří instanci volné zařazování vláken v `FinalConstruct` a vydání této instance v `FinalRelease`. Makro COM_INTERFACE_ENTRY_AGGREGATE se automaticky přidá do mapy modelu COM a zkontrolujte, že `QueryInterface` žádosti o [rozhraní IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) jsou zpracovávány volné zařazování vláken.  
   
  Volné zařazování vláken, umožňuje přímý přístup k rozhraní na objekt z libovolného vlákna ve stejném procesu, urychluje volání mezi objektu apartment. Tato možnost je určená pro třídy, které používají obě modelu vláken.  
   
@@ -36,8 +36,8 @@ Stránka ATL Průvodce jednoduchým objektem na atributy poskytuje možnost, kte
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [Rozhraní IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Kdy použít tabulky globálního rozhraní](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Proces serveru potíže s vlákny](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [Rozhraní IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [Kdy použít tabulky globálního rozhraní](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [Proces serveru potíže s vlákny](/windows/desktop/com/in-process-server-threading-issues)
 

@@ -1,5 +1,5 @@
 ---
-title: Vytváření rozhraní modelu COM (Visual C++) | Microsoft Docs
+title: Vytváření rozhraní modelu COM (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194961"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Vytváření rozhraní modelu COM (Visual C++)
-Visual C++ poskytuje průvodci a šablony k vytváření projektů, které používají rozhraní a odesílající rozhraní COM – objekty a třídy automatizace.  
+Průvodci a šablony, pokud chcete vytvářet projekty, které používají rozhraní COM a odesílající rozhraní pro objekty COM a automatizační třídy poskytuje jazyk Visual C++.  
   
- Tito průvodci můžete provádět následující tři běžné úkoly:  
+ Tito průvodci můžete provádět následující tři běžné úlohy:  
   
 -   [Přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md)  
   
-     Přidání podpory knihovny ATL do aplikace MFC po vytvoření projektu knihovny MFC pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md) a pak spustit **přidat podporu knihovny ATL a MFC** kód průvodce. Tato podpora se vztahuje pouze na jednoduché objekty modelu COM, přidat do spustitelného souboru knihovny MFC nebo projektu knihovny DLL. Tyto objekty knihovny ATL může mít více rozhraní.  
+     Přidat podporu ATL do MFC aplikace po vytvoření projektu knihovny MFC pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md) a následné spuštění **přidání podpory knihovny ATL do MFC** Průvodce kódem. Tato podpora se vztahuje pouze na jednoduché objekty modelu COM, přidat do spustitelného souboru knihovny MFC ani do projektu knihovny DLL. Tyto objekty knihovny ATL může mít více rozhraní.  
   
 -   [Vytvoření ovládacího prvku ActiveX prostředí MFC](../mfc/reference/creating-an-mfc-activex-control.md)  
   
-     Otevřete [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md) vytvoření ovládacího prvku ActiveX s odesílajícím rozhraním a mapou události definované v souboru IDL a třída ovládacích prvků v uvedeném pořadí.  
+     Otevřít [Průvodce ovládacím prvkem MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md) vytvoření ovládacího prvku ActiveX dispinterface a mapu událostí definovaných v souboru IDL a třídu ovládacího prvku, v uvedeném pořadí.  
   
 -   [Přidání ovládacího prvku ATL](../atl/reference/adding-an-atl-control.md)  
   
-     Použít kombinaci [ATL – Průvodce projektem](../atl/reference/atl-project-wizard.md) a [Průvodce ovládacím prvkem ATL](../atl/reference/atl-control-wizard.md) k vytvoření ovládacího prvku ActiveX knihovny ATL.  
+     Pomocí kombinace [Průvodce projektem ATL](../atl/reference/atl-project-wizard.md) a [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md) vytvořit ovládací prvek ActiveX knihovny ATL.  
   
-     Můžete také přidat ovládacího prvku knihovny ATL do projektu knihovny MFC, do které jste přidali podpory knihovny ATL, jak bylo popsáno výše. Kromě toho pokud vyberete **ovládací prvek ATL** v **přidat třídu** dialogové okno a ještě nepřidali podpory knihovny ATL do projektu MFC, Visual Studio zobrazí dialogové okno potvrzení přidání podpory knihovny ATL do vaší MFC projektu.  
+     Můžete také přidat ovládacího prvku ATL do projektu knihovny MFC, do které jste přidali podporu ATL, jak je popsáno výše. Kromě toho pokud vyberete **ovládací prvek ATL** v **přidat třídu** dialogové okno kde ještě nepřidali podporu ATL do projektu knihovny MFC, Visual Studio zobrazí dialogové okno pro potvrzení přidání podpory knihovny ATL do vaší Projekt knihovny MFC.  
   
-     Tento průvodce generuje IDL zdroje a mapa COM v třídách projektu.  
+     Tento průvodce vygeneruje zdroj IDL a mapy modelu COM ve třídách projektu.  
   
- Jakmile máte projektu knihovny ATL otevřít, [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno poskytuje volba Další průvodci a šablony do projektu přidejte COM – rozhraní. Následující průvodci umožňují vytvořit jeden nebo více rozhraní pro objekt:  
+ Jakmile máte projekt knihovny ATL, otevřít, [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno umožňuje volbu Další průvodci a šablony pro přidání rozhraní modelu COM do vašeho projektu. Následující průvodci vám umožňují vytvořit jeden nebo více rozhraní pro objekt:  
   
 -   [Průvodce komponentami ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
   
@@ -54,10 +54,10 @@ Visual C++ poskytuje průvodci a šablony k vytváření projektů, které použ
   
 -   [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md)  
   
- Kromě toho můžete implementovat nové rozhraní ovládacího prvku COM pravým tlačítkem myši na ovládací prvek třídy objektu v zobrazení tříd a kliknutím na [implementovat rozhraní](../ide/implement-interface-wizard.md).  
+ Kromě toho můžete implementovat nové rozhraní ovládacího prvku COM tak, že kliknete pravým tlačítkem objekt třídy ovládacího prvku v zobrazení tříd a kliknete [implementovat rozhraní](../ide/implement-interface-wizard.md).  
   
 > [!NOTE]
->  Visual Studio neposkytuje průvodce přidat rozhraní do projektu. Můžete přidat do projektu knihovny ATL nebo na rozhraní [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) přidáním jednoduchého objektu pomocí [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md). Můžete také otevřít souboru projektu a vytvořit rozhraní zadáním:  
+>  Visual Studio neposkytuje průvodce můžete přidat rozhraní do projektu. Můžete přidat rozhraní do projektu knihovny ATL nebo do [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) tak Přidání jednoduchého objektu pomocí [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md). Můžete také otevřít soubor .idl projektu a vytvořte rozhraní tak, že zadáte:  
   
 ```  
 interface IMyInterface {  
@@ -65,20 +65,20 @@ interface IMyInterface {
   
 ```  
   
- V tématu [implementace rozhraní](../ide/implementing-an-interface-visual-cpp.md) a [přidávání objektů a ovládacích prvků do projektu knihovny ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Další informace.  
+ Zobrazit [implementace rozhraní](../ide/implementing-an-interface-visual-cpp.md) a [přidání objektů a ovládacích prvků do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Další informace.  
   
- Visual C++ poskytuje několik způsobů zobrazení a [úpravy rozhraní modelu COM](../ide/editing-a-com-interface.md) definovaných v projektech. [Třídy zobrazení](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zobrazí ikony pro všechny rozhraní a odesílající rozhraní definované v souboru IDL v projektu jazyka C++.  
+ Visual C++ poskytuje několik způsobů, jak zobrazit a [úpravy rozhraní modelu COM](../ide/editing-a-com-interface.md) definované pro vaše projekty. [Zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zobrazuje ikony pro jakékoli rozhraní nebo dispinterface definované v souboru IDL v projektu jazyka C++.  
   
- Zobrazení tříd pro třídy objektů na základě ATL COM, přečte COM mapy ve třídě ATL zobrazíte vztah mezi třídou ATL a všechny rozhraní, které implementuje.  
+ Zobrazení tříd pro objekt třídy založený na knihovně ATL COM, přečte mapy modelu COM v ATL – třídy zobrazíte vztah mezi ATL – třídy a rozhraní, které implementuje.  
   
- V zobrazení tříd a jeho místní nabídky můžete pracovat s rozhraními takto:  
+ V zobrazení tříd a jeho místní nabídky můžete pracovat s rozhraním následujícím způsobem:  
   
--   Přidáte objekty knihovny ATL do aplikace založené na MFC.  
+-   Přidáte objekty knihovny ATL do aplikace založené na knihovně MFC.  
   
 -   Přidejte metody, vlastnosti a události.  
   
--   Dvojitým kliknutím na položku přejít přímo na kódu rozhraní položky.  
+-   Dvojitým kliknutím na položku přejít přímo do kódu rozhraní položky.  
   
 ## <a name="see-also"></a>Viz také  
- [Tvorba běžných projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)

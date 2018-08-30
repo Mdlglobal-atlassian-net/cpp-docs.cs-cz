@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464857"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215528"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 **Specifické pro Microsoft**  
@@ -90,7 +90,7 @@ Pořadí provádění obslužné rutiny ukončení
 ## <a name="abnormal-termination"></a>Abnormální ukončení  
  Ukončení **try-finally** pomocí příkazu [longjmp](../c-runtime-library/reference/longjmp.md) funkci run-time je považován za abnormální ukončení. Není povoleno přejít do **__try** příkazu, ale právní přejít mimo něj. Všechny **__finally** příkazy, které jsou aktivní mezi bodem odeslání (normální ukončení **__try** bloku) a cíl ( **__except** block, který zpracovává výjimku) musí být spuštěn. Tomu se říká místní uvolnění.  
   
- Pokud **zkuste** bloku je předčasně ukončen z jakéhokoli důvodu, včetně skok mimo blok, systém provádí přidružené **nakonec** bloku jako součást procesu odvíjení zásobníku. V takových případech [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) vrací funkce **true** -li volána zevnitř **nakonec** blokovat; v opačném případě vrátí **false**.  
+ Pokud **zkuste** bloku je předčasně ukončen z jakéhokoli důvodu, včetně skok mimo blok, systém provádí přidružené **nakonec** bloku jako součást procesu odvíjení zásobníku. V takových případech [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) vrací funkce **true** -li volána zevnitř **nakonec** blokovat; v opačném případě vrátí **false**.  
   
  Obslužné rutiny ukončení není volána, pokud proces je ukončen průběhu provádění příkazu **try-finally** příkazu.  
   
@@ -100,4 +100,4 @@ Pořadí provádění obslužné rutiny ukončení
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
- [Syntaxe obslužné rutiny ukončení](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Syntaxe obslužné rutiny ukončení](/windows/desktop/Debug/termination-handler-syntax)

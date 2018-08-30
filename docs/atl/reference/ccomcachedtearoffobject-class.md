@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203868"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Ccomcachedtearoffobject – třída
-Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro rozhraní s odnímatelnými nabídkami.  
+Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` objekt odvozený od vaší třídy odtržených (třída `contained`).|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComCachedTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro rozhraní s odnímatelnými nabídkami. Tato třída se liší od `CComTearOffObject` v tom, že `CComCachedTearOffObject` má vlastní `IUnknown`, nezávisle na objekt vlastníka `IUnknown` (vlastníkem je objekt, pro kterou odtrhnout se vytváří). `CComCachedTearOffObject` udržuje svůj vlastní odkaz na počet jeho `IUnknown` a odstraní sama po jeho počet odkazů je nula. Ale pokud dotaz pro některý z jeho odtržených rozhraní, počet odkazů vlastníka objektu `IUnknown` se zvýší.  
+ `CComCachedTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami. Tato třída se liší od `CComTearOffObject` v tom, že `CComCachedTearOffObject` má vlastní `IUnknown`, nezávisle na objekt vlastníka `IUnknown` (vlastníkem je objekt, pro kterou odtrhnout se vytváří). `CComCachedTearOffObject` udržuje svůj vlastní odkaz na počet jeho `IUnknown` a odstraní sama po jeho počet odkazů je nula. Ale pokud dotaz pro některý z jeho odtržených rozhraní, počet odkazů vlastníka objektu `IUnknown` se zvýší.  
   
  Pokud `CComCachedTearOffObject` implementace odtrhnout je již vytvořena instance a odtržených rozhraní se dotazují pro znovu stejný objektů `CComCachedTearOffObject` objekt již byl použit. Naopak, pokud je implementováno rozhraní s odnímatelnými nabídkami `CComTearOffObject` je znovu dotazován na prostřednictvím objektu vlastníka jiného `CComTearOffObject` bude vytvořena instance.  
   

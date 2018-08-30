@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885637"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195332"
 ---
 # <a name="cworkerthread-class"></a>Cworkerthread – třída
 Tato třída vytvoří pracovní vlákno nebo použije existující předplatné, čeká na jeden nebo více jádra manipulačních bodů objektu a provede funkci zadaného klienta v případě jednoho z úchytů signalizován.  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Když se odebere popisovač [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána při přidruženého objektu, který byl předán [AddHandle](#addhandle). Pokud se toto volání se nezdaří, `CWorkerThread` zavolá Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) funkce na popisovač.  
+ Když se odebere popisovač [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána při přidruženého objektu, který byl předán [AddHandle](#addhandle). Pokud se toto volání se nezdaří, `CWorkerThread` zavolá Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) funkce na popisovač.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Volejte tuto metodu pro ukončení pracovního vlákna.  

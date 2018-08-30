@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197610"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox – třída
 `CMFCFontComboBox` Třída vytvoří ovládací prvek pole se seznamem, který obsahuje seznam písem.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Volá se rozhraním, chcete-li nakreslit zadanou položku v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Načte informace o aktuálně vybraného písma.|  
 |`CMFCFontComboBox::MeasureItem`|Volá se rozhraním informovat Windows rozměry pole se seznamem v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Vybere písmo, která odpovídá zadaným kritériím v poli se seznamem písma.|  
 |[CMFCFontComboBox::Setup](#setup)|Inicializuje seznam položek v poli se seznamem písma.|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  Určuje název písma.  
   
  [in] *nCharSet*  
- Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud položka v poli se seznamem písma odpovídá určené písmo popis objektu nebo název písma a charset; v opačném případě hodnota FALSE.  

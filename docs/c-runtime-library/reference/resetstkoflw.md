@@ -1,5 +1,5 @@
 ---
-title: _resetstkoflw – | Microsoft Docs
+title: _resetstkoflw | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,19 +34,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08779311cc6a2ff0df622d69cf94ced07e67e9e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207573"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
-Obnoví z přetečení zásobníku.
+Zotavuje z přetečení zásobníku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,55 +56,55 @@ int _resetstkoflw( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nenulové hodnoty, pokud funkci úspěšné, nula. Pokud se nezdaří.
+Nenulové, pokud je funkce úspěšná, nula, pokud se nezdaří.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Resetstkoflw –** funkce obnoví z podmínku přetečení zásobníku, povolení programu pokračovat místo selhání s chybou závažné výjimce. Pokud **_resetstkoflw –** funkce není volána, neobsahuje žádné stránky ochrana po předchozí výjimku. Přetečení při příštím se zásobníku, nejsou vůbec žádné výjimky a proces ukončí bez upozornění.
+**_Resetstkoflw** funkce obnoví ze stavu přetečení zásobníku, což programu pokračovat místo selhání se závažnou chybou výjimky. Pokud **_resetstkoflw** funkce není volána, nejsou žádné ochranné stránky po předchozí výjimce. Příště, že je stack overflow, nejsou vůbec žádné výjimky a proces skončí bez varování.
 
-Pokud způsobí, že vlákno v aplikaci **EXCEPTION_STACK_OVERFLOW** výjimky, vlákno opustil jeho zásobníku v poškozeného stavu. Tím se liší od dalších výjimkách, jako **EXCEPTION_ACCESS_VIOLATION** nebo **EXCEPTION_INT_DIVIDE_BY_ZERO**, kde není poškozený zásobníku. V zásobníku nastavena na hodnotu nahodile malé při prvním načtení programu. V zásobníku se pak zvětšování na vyžádání, aby vyhovovaly vlákno. Tato možnost je implementovaná umístěním stránky s přístupem PAGE_GUARD na konci aktuální zásobníku. Další informace najdete v tématu [vytváření stránek ochrana](http://msdn.microsoft.com/library/windows/desktop/aa366549).
+Pokud vlákno v aplikaci způsobí, že **EXCEPTION_STACK_OVERFLOW** výjimky, vlákno opustí svůj zásobník v poškozeném stavu. To se liší od jiných výjimek, jako **EXCEPTION_ACCESS_VIOLATION** nebo **EXCEPTION_INT_DIVIDE_BY_ZERO**, kde zásobník není poškozen. Zásobník je nastaven na libovolně malou hodnotu při prvním načtení programu. Zásobník pak roste na požádání, aby vyhověl potřebám vlákna. Toto je implementováno umístěním stránky s přístupem PAGE_GUARD na konec aktuálního zásobníku. Další informace najdete v tématu [vytváření ochranné stránky](/windows/desktop/Memory/creating-guard-pages).
 
-Když kód způsobí ukazatel zásobníku tak, aby odkazoval na adresu na této stránce, dojde k výjimce a systému provádí následující tři věci:
+Pokud kód způsobí, že ukazatel zásobníku tak, aby odkazoval na adresu na této stránce, dojde k výjimce a systém provede následující tři věci:
 
-- Odebere PAGE_GUARD ochranu na stránce ochrana tak, aby vlákno může číst a zapisovat data do paměti.
+- Odebere ochranu PAGE_GUARD na ochranné stránce tak, aby vlákno může číst a zapisovat data do paměti.
 
-- Přiděluje nový ochranu stránky, který je umístěn jednu stránku níže poslední.
+- Přidělí novou ochrannou stránku, která je umístěna jednu stránku za poslední stránkou.
 
-- Opakovaně pokyn, vyvolá výjimku.
+- Znovu spustí operaci, která způsobila výjimku.
 
-Tímto způsobem můžete systém zvětšete velikost zásobníku pro vlákno automaticky. Každé vlákno v procesu má zásobník maximální velikost. Velikost zásobníku nastavena v době kompilace pomocí [/STACK (přidělení zásobníku)](../../build/reference/stack-stack-allocations.md), nebo [velikost zásobníku](../../build/reference/stacksize.md) – příkaz souboru .def pro projekt.
+Tímto způsobem může systém zvětšit velikost zásobníku pro vlákno automaticky. Každé vlákno v procesu má maximální velikost zásobníku. Velikost zásobníku je nastavena v době kompilace [/Stack (přidělení zásobníku)](../../build/reference/stack-stack-allocations.md), nebo [STACKSIZE](../../build/reference/stacksize.md) – příkaz souboru .def projektu.
 
-Při překročení této maximální velikost zásobníku systému provádí následující tři věci:
+Při překročení maximální velikosti zásobníku systém provede následující tři věci:
 
-- Odebere PAGE_GUARD ochranu na stránce ochrana, jak se popisuje výš.
+- Odebere ochranu PAGE_GUARD na ochranné stránce, jak je uvedeno výše.
 
-- Pokusí se přidělit novou stránku ochrana pod poslední. Ale to nezdaří, protože byla překročena maximální velikost zásobníku.
+- Pokusí se o přidělení nové stránky guard pod poslední z nich. Ale to se nezdaří, protože byla překročena maximální velikost zásobníku.
 
-- Vyvolá výjimku, tak, aby vlákno může zpracovat v bloku výjimky.
+- Vyvolá výjimku, takže ji vlákno může zpracovat v bloku výjimky.
 
-Všimněte si, že v tomto bodě zásobníku už má ochranu stránku. Při příštím, program zvětšování zásobníku úplně za účelem, kde by měla být na stránce ochrana, program zapíše přesahuje za konec zásobníku a způsobí, že porušení přístupu.
+Všimněte si, že v tomto okamžiku zásobník již nemá ochrannou stránku. Při příštím, že program roste zásobník až na konec, kde by měla být ochranná stránka, program zapíše za konec zásobníku a způsobí narušení přístupu.
 
-Volání **_resetstkoflw –** obnovit ochranná stránka vždy, když obnovení probíhá po výjimce přetečení zásobníku. Tuto funkci lze volat z hlavní část **__except** bloku nebo mimo **__except** bloku. Nicméně existují určitá omezení na Pokud se má použít. **_resetstkoflw –** nikdy by měla být volána z:
+Volání **_resetstkoflw** k obnovení ochranné stránky při každém provedení obnovení po výjimce přetečení zásobníku. Tuto funkci lze volat z hlavní **__except** bloku nebo mimo ně **__except** bloku. Existují však některá omezení, kdy by mělo být používáno. **_resetstkoflw** by měl být nikdy volán z::
 
 - Výraz filtru.
 
 - Funkce filtru.
 
-- Funkci nazvanou z funkce filtru.
+- Funkce volána z funkce filtru.
 
 - A **catch** bloku.
 
 - A **__finally** bloku.
 
-V těchto bodech v zásobníku ještě není dostatečně oddělen.
+V těchto bodech zásobník ještě není dostatečně oddělen.
 
-Výjimky přetečení zásobníku se generují jako strukturovaný výjimky, není výjimky jazyka C++, takže **_resetstkoflw –** není užitečné v běžný **catch** blokovat, protože nezachytí výjimce přetečení zásobníku. Ale pokud [_set_se_translator –](set-se-translator.md) slouží k implementaci překladač strukturovaného výjimek, který vyvolá výjimky jazyka C++ (jako v druhém příkladu), catch výsledků výjimce přetečení zásobníku v C++ výjimka, která může být zpracována podle jazyka C++ blok.
+Výjimky přetečení zásobníku jsou generovány jako strukturované výjimky, ne výjimky jazyka C++, takže **_resetstkoflw** není k ničemu v běžném **catch** blokovat, protože nezachytí výjimku přetečení zásobníku. Nicméně pokud [_set_se_translator](set-se-translator.md) slouží k implementaci překladače strukturovaných výjimek, který vyvolá výjimky jazyka C++ (viz druhý příklad), catch výsledků výjimky přetečení zásobníku v výjimky jazyka C++, které mohou být zpracovány C++ blok.
 
-Není bezpečné volat **_resetstkoflw –** v bloku catch C++, který je dostupný z výjimka vyvolaná objektem funkce překladač strukturovaného výjimek. V takovém případě není uvolněno místo zásobníku a ukazatel zásobníku není resetovat, dokud mimo blok catch, i když destruktory mít byla volána pro všechny objekty zničitelné před blok catch. Tuto funkci nelze volat, dokud uvolněn zásobníku a ukazatel zásobníku byl obnoven. Proto by měla být volána pouze po ukončení blok catch. V bloku catch třeba použít jako málo místa zásobníku nejdříve, protože k přetečení zásobníku, který se nachází v bloku catch, který je sám Probíhá pokus o obnovení z předchozí přetečení zásobníku není použitelná pro obnovení a může způsobit, že program přestal reagovat, jako přetečení v aktivační události bloku catch výjimku samotné používá stejnou catch – blok.
+Není bezpečné volat **_resetstkoflw** v bloku catch jazyka C++, který je dosažen z výjimky vyvolané funkcí překladače strukturované výjimky. V takovém případě není uvolněn prostor v zásobníku a ukazatel na zásobník není vynulován, dokud mimo blok catch, přestože destruktory byly volány pro zničitelné objekty před blokem catch. Tato funkce by neměl volána, dokud není uvolněno místo v zásobníku a ukazatel zásobníku se resetovalo. Proto by měla být volána jedině po ukončení bloku catch. Jako málo místa zásobníku, co možná byste měli použít ve blok catch, protože přetečení zásobníku, ke které dochází v bloku catch, který je sám pokouší o obnovení z předchozí přetečení zásobníku se nedá vrátit zpátky a může způsobit, že program přestane reagovat jako přetečení v aktivační události blok catch výjimky, že samotné je zpracována stejným blok catch.
 
-Existují situace, kdy **_resetstkoflw –** může selhat, i když použijete na správné místo, například v rámci **__except** bloku. Pokud i po unwinding zásobníku, není pořád dostatek místa zbývající ke spuštění **_resetstkoflw –** bez psaní na poslední stránku v zásobníku **_resetstkoflw –** nepodaří obnovit na poslední stránku Zásobník jako ochranná stránka a vrátí hodnotu 0, udávající neúspěch. Proto bezpečné používání této funkce by měly obsahovat kontrola návratovou hodnotu místo za předpokladu, že je bezpečné použití zásobníku.
+Existují situace, kdy **_resetstkoflw** může selhat, i když se používá na správném místě, například v rámci **__except** bloku. Pokud ani po uvolnění zásobníku, není stále dostatek místa k provedení **_resetstkoflw** bez zápisu do poslední stránky zásobníku, **_resetstkoflw** nezdaří obnovit poslední stránku zásobníku jako ochrannou stránku a vrátí hodnotu 0 označující selhání. Proto bezpečné používání této funkce by měly zahrnovat kontrolu návratové hodnoty místo za předpokladu, že zásobník je bezpečné používat.
 
-Strukturované zpracování výjimek nezachytí **STATUS_STACK_OVERFLOW** výjimky, když je aplikace kompilovat s **/CLR** (najdete v části [kompilaci/CLR (Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).
+Strukturované zpracování výjimek nezachytí **STATUS_STACK_OVERFLOW** výjimka při kompilaci aplikace s **/CLR** (viz  [ /CLR (Common Language Runtime kompilace)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -112,13 +112,13 @@ Strukturované zpracování výjimek nezachytí **STATUS_STACK_OVERFLOW** výjim
 |-------------|---------------------|
 |**_resetstkoflw**|\<malloc.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 **Knihovny:** všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití doporučené **_resetstkoflw –** funkce.
+Následující příklad ukazuje doporučené použití **_resetstkoflw** funkce.
 
 ```C
 // crt_resetstkoflw.c
@@ -187,15 +187,15 @@ int main(int ac)
 }
 ```
 
-Ukázka výstupu bez argumentů program:
+Ukázkový výstup bez argumentů programu:
 
 ```Output
 loop #1
 ```
 
-Aplikace přestane reagovat bez provedení další iterací.
+Program přestane reagovat bez provedení dalších iterací.
 
-Pomocí programu argumenty:
+S argumenty programu:
 
 ```Output
 loop #1
@@ -222,7 +222,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje použití doporučené **_resetstkoflw –** v programu kde strukturovaných výjimky jsou převedeny na výjimky jazyka C++.
+Následující příklad ukazuje doporučené použití **_resetstkoflw** v programu, kde jsou strukturované výjimky převedeny na výjimky jazyka C++.
 
 ### <a name="code"></a>Kód
 
@@ -312,6 +312,6 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_alloca](alloca.md)<br/>

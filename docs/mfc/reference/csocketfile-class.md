@@ -1,5 +1,5 @@
 ---
-title: Třída CSocketFile | Microsoft Docs
+title: Csocketfile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: c4c74d1ab89c45b7871cf0b4fa0d8a6350bc1425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121726"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209634"
 ---
-# <a name="csocketfile-class"></a>CSocketFile – třída
-A `CFile` objekt používaný pro odesílání a příjmu dat přes síť pomocí rozhraní Windows Sockets.  
+# <a name="csocketfile-class"></a>Csocketfile – třída
+A `CFile` objektu se používá pro odesílání a přijímání dat přes síť prostřednictvím rozhraní Windows Sockets.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,25 +43,25 @@ class CSocketFile : public CFile
 |[CSocketFile::CSocketFile](#csocketfile)|Vytvoří `CSocketFile` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete připojit `CSocketFile` do objektu `CSocket` objekt pro tento účel. Také můžete a obvykle, připojte `CSocketFile` do objektu `CArchive` objekt zjednodušení odesílat a přijímat data pomocí MFC serializace.  
+ Můžete připojit `CSocketFile` do objektu `CSocket` objekt pro tento účel. Můžete také a obvykle, připojte `CSocketFile` do objektu `CArchive` objekt ke zjednodušení odesílání a přijímání dat pomocí knihovny MFC serializace.  
   
- K serializaci dat (Odeslat), můžete ji vložit do archivu, který volá `CSocketFile` členské funkce zapsat data do `CSocket` objektu. K deserializaci (přijímat) data, rozbalte z archivu. To způsobí, že archivu volat `CSocketFile` členské funkce Číst data z `CSocket` objektu.  
+ K serializaci dat (Odeslat), můžete ho vložit do archivu, která volá `CSocketFile` členské funkce k zápisu dat `CSocket` objektu. K deserializaci (přijímání) data, rozbalte z archivu. To způsobí, že archivní úrovně do volání `CSocketFile` členské funkce pro čtení dat z `CSocket` objektu.  
   
 > [!TIP]
->  Kromě použití `CSocketFile` podle postupu popsaného tady, můžete ho jako objekt samostatného souboru, stejně jako v `CFile`, jeho základní třída. Můžete také použít `CSocketFile` s všechny funkce na základě archivu serializace MFC. Protože `CSocketFile` nepodporuje všechny `CFile`je funkce, některé výchozí MFC serializovat funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně z `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojený k `CSocketFile` pomocí `CEditView::SerializeRaw`; použít `CEditView::Serialize` místo. `SerializeRaw` Funkce očekává objektu soubor do mají funkce, jako například `Seek`, že `CSocketFile` nemá.  
+>  Kromě použití `CSocketFile` podle postupu popsaného tady, můžete ho jako objekt do samostatného souboru, stejně jako u `CFile`, její základní třídy. Můžete také použít `CSocketFile` s žádné funkce na základě archivu serializace knihovny MFC. Protože `CSocketFile` nepodporuje všechny `CFile`je funkce, některé výchozí knihovny MFC serializovat funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojen k `CSocketFile` pomocí `CEditView::SerializeRaw`; použijte `CEditView::Serialize` místo. `SerializeRaw` Funkce očekává, že soubor objektu má funkce, jako například `Seek`, který `CSocketFile` nemá.  
   
- Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy `CSocket::Receive` zadá smyčku (podle `PumpMessages(FD_READ)`) čekání na požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ po žádná data ke čtení, dojde k zablokování aplikace. Pokud se nikdy jiné FD_READ, aplikace přestane komunikaci přes soketu.  
+ Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy `CSocket::Receive` přejde do smyčky (podle `PumpMessages(FD_READ)`) čekající na požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ když nejsou žádná data ke čtení, dojde k zablokování aplikace. Pokud obdržíte nikdy jiného FD_READ, že aplikace přestane komunikaci přes soket.  
   
- Tento problém můžete vyřešit následujícím způsobem. V `OnReceive` metoda třídy soketů, volání `CAsyncSocket::IOCtl(FIONREAD, ...)` před voláním `Serialize` metoda třídě zpráv při čtení ze soketu očekávaná data překračuje velikost jednoho paketu protokolu TCP (jednotka MTU střední sítě obvykle alespoň 1096 bajtů). Pokud velikost dostupné dat je menší než je potřeba, počkejte všechna data a přijímat pouze spusťte operace čtení.  
+ Tento problém lze vyřešit následovně. V `OnReceive` metoda třídy soketů, volání `CAsyncSocket::IOCtl(FIONREAD, ...)` před voláním `Serialize` metody třídy zpráv při očekávaná data ke čtení ze soketu překračuje velikost jednoho TCP paketu (MTU jednotky média sítě obvykle alespoň 1096 bajtů). Pokud velikost dostupných dat je menší než je potřeba, počkejte všechna data na přijmout a teprve potom začne operace čtení.  
   
- V následujícím příkladu `m_dwExpected` je přibližný počet bajtů, které uživatel očekává. Předpokládá se, že deklarujete ho jinde v kódu.  
+ V následujícím příkladu `m_dwExpected` je přibližný počet bajtů, které uživatel očekává. Předpokládá se, že se deklaruje jinde ve vašem kódu.  
   
  [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]  
   
- Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), a také [rozhraní API systému Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Další informace najdete v tématu [Windows Sockets v prostředí MFC](../../mfc/windows-sockets-in-mfc.md), [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md), stejně jako [rozhraní Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [Cfile –](../../mfc/reference/cfile-class.md)  
   
@@ -81,25 +81,25 @@ explicit CSocketFile(
   
 ### <a name="parameters"></a>Parametry  
  *pSocket*  
- Připojit k soketu `CSocketFile` objektu.  
+ Připojení k soketu `CSocketFile` objektu.  
   
  *bArchiveCompatible*  
- Určuje, zda je objekt souboru pro použití s `CArchive` objektu. Pass FALSE, pouze pokud chcete použít `CSocketFile` objektu samostatné způsobem jako samostatný `CFile` objekt s některými omezeními. Tento příznak změny jak `CArchive` objekt připojený k `CSocketFile` objekt spravuje vyrovnávací paměti pro čtení.  
+ Určuje, zda je objekt souboru pro použití se službou `CArchive` objektu. Předejte hodnotu FALSE, pouze v případě, že chcete použít `CSocketFile` objektu v podobě samostatné, stejně jako samostatná `CFile` objektu s některými omezeními. Tento příznak změní způsob, jakým `CArchive` objekt připojen k `CSocketFile` objekt spravuje vyrovnávací paměti pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
- Destruktoru objektu zrušíte sám sebe z objektu soketu při objekt ocitne mimo rozsah, nebo je odstranit.  
+ Destruktor objektu zruší přidružení samotné z objekt soketu při dostane mimo rozsah nebo odstranění objektu.  
   
 > [!NOTE]
->  A `CSocketFile` lze také použít jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr má hodnotu TRUE. To určuje, že objekt souboru je pro použití s archivu. Chcete-li použít objekt souboru bez archiv, předat hodnotu FALSE v *bArchiveCompatible* parametr.  
+>  A `CSocketFile` slouží také jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr má hodnotu TRUE. Určuje, že objekt souboru je pro použití s archivu. Pokud chcete použít soubor objektu bez archiv, předejte hodnotu FALSE, v *bArchiveCompatible* parametru.  
   
- V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "vzájemné zablokování." Dojde k zablokování, když přijímající a odesílající sokety čekají na sobě navzájem, nebo pro běžné prostředků. Tato situace může nastat, pokud `CArchive` objekt pracoval s `CSocketFile` způsob, jak v případě `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží menší počet bajtů, než je požadováno, na konci souboru byl dosažen.  
+ V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "zablokování." K zablokování dochází tehdy, když čekají na přiřazení a odesílající sokety na sobě navzájem, nebo pro běžné zdroje. Tato situace může nastat, pokud `CArchive` objektu ve spolupráci s `CSocketFile` tak, jak to funguje se službou `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží méně bajtů než je požadováno, na konci souboru se dosáhlo.  
   
- S `CSocketFile`, ale data jsou zprávy založené; vyrovnávací paměti může obsahovat více zpráv, tak přijímá menší než počet bajtů neznamená konec souboru. Aplikace v tomto případě neblokuje což se může stát s `CFile`, a můžete pokračovat, dokud vyrovnávací paměť je prázdná čtení zpráv z vyrovnávací paměti. [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) funkce je užitečná pro sledování stavu do archivu vyrovnávací paměti v tomto případě.  
+ S `CSocketFile`, ale data jsou zprávy na základě; vyrovnávací paměti může obsahovat více zpráv, tak přijímá méně než počet bajtů neznamená konec souboru. Aplikace není v tomto případě blokování, jak se může stát, že se `CFile`, a můžete pokračovat, přečte zprávy z vyrovnávací paměti, dokud vyrovnávací paměť je prázdná. [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) funkce je užitečná pro sledování stavu archivu vyrovnávací paměti v takovém případě.  
   
- Další informace o použití `CSocketFile`, najdete v článcích [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md) a [Windows Sockets: příklad z Sockets pomocí archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
+ Další informace týkající se použití `CSocketFile`, najdete v článcích [rozhraní Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md) a [rozhraní Windows Sockets: příklad z Sockets pomocí archivy](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Cfile – třída](../../mfc/reference/cfile-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CAsyncSocket – třída](../../mfc/reference/casyncsocket-class.md)   
+ [Casyncsocket – třída](../../mfc/reference/casyncsocket-class.md)   
  [CSocket – třída](../../mfc/reference/csocket-class.md)

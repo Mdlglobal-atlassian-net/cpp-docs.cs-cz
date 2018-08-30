@@ -1,5 +1,5 @@
 ---
-title: C3099 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3099 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27059beb1cb587b9060da8c5cc5702ea966422f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249752"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211992"
 ---
-# <a name="compiler-error-c3099"></a>C3099 chyby kompilátoru
-'– klíčové slovo': použijte [System::AttributeUsageAttribute] pro spravované atributy; použití [Windows::Foundation::Metadata::AttributeUsageAttribute] WinRT atributů  
+# <a name="compiler-error-c3099"></a>Chyba kompilátoru C3099
+! – klíčové slovo': použijte [System::AttributeUsageAttribute] pro spravované atributy; Použijte [Windows::Foundation::Metadata::AttributeUsageAttribute] pro atributy WinRT  
   
- Použití <xref:System.AttributeUsageAttribute> deklarovat **/CLR** atributy. Použití `Windows::Foundation::Metadata::AttributeUsageAttribute` deklarovat prostředí Windows Runtime atributy.  
+ Použití <xref:System.AttributeUsageAttribute> deklarovat **/CLR** atributy. Použití `Windows::Foundation::Metadata::AttributeUsageAttribute` deklarovat atributy modulu Windows Runtime.  
   
- Další informace o atributech/CLR najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md). Podporovaných atributů v prostředí Windows Runtime, najdete v části [Windows.Foundation.Metadata obor názvů](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
+ Další informace o atributech/CLR naleznete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md). Podporované atributy v prostředí Windows Runtime naleznete v tématu [Windows.Foundation.Metadata obor názvů](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
   
 ## <a name="example"></a>Příklad  
- Následující ukázka generuje C3099 a ukazuje, jak ji odstranit.  
+ Následující ukázka generuje C3099 a ukazuje, jak ho opravit.  
   
 ```  
 // C3099.cpp  

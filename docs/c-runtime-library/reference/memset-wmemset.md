@@ -1,5 +1,5 @@
 ---
-title: memset –, wmemset – | Microsoft Docs
+title: memset wmemset – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202007"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
-Nastaví vyrovnávací paměti je zadaný znak.
+Nastaví vyrovnávací paměť je zadaný znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,24 +63,24 @@ wchar_t *wmemset(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
+*cíl*<br/>
 Ukazatel na cílový.
 
 *c*<br/>
-Znak, který má nastavit.
+Znak k nastavení.
 
 *Počet*<br/>
 Počet znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota *cíle*.
+Hodnota *dest*.
 
 ## <a name="remarks"></a>Poznámky
 
-Nastaví první *počet* znaků *cíle* znaku *c*.
+Nastavuje první *počet* znaků *dest* znak *c*.
 
-**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je dostatek místa pro nejméně *počet* znaků. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je dostatek volného místa pro nejméně *počet* znaků. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,11 +89,11 @@ Nastaví první *počet* znaků *cíle* znaku *c*.
 |**memset**|\<Memory.h > nebo \<string.h >|
 |**wmemset**|\<wchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -151,7 +151,7 @@ Before: This is a test of the wmemset function
 After:  **** is a test of the wmemset function
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

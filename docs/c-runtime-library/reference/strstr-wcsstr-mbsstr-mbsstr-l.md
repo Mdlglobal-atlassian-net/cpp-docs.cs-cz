@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: cf7e7e009d1f56d71e8f1b26a2e0eeefb8855492
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181091"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214084"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Vrací ukazatel na první výskyt řetězce vyhledávání v řetězci.
@@ -143,7 +143,7 @@ Vrací ukazatel na první výskyt *strSearch* v *str*, nebo hodnota NULL, pokud 
 `strstr` Funkce vrátí ukazatel na první výskyt *strSearch* v *str*. Hledání nezahrnuje ukončovací znaky null. `wcsstr` je širokoznaká verze `strstr` a `_mbsstr` je vícebajtová znaková verze. Argumenty a vrácené hodnoty `wcsstr` jsou širokoznaké řetězce `_mbsstr` jsou vícebajtové znakové řetězce. `_mbsstr` ověří jeho parametry. Pokud *str* nebo *strSearch* má hodnotu NULL, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, `_mbsstr` nastaví `errno` EINVAL a vrátí hodnotu 0. `strstr` a `wcsstr` neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
 
 > [!IMPORTANT]
-> Tyto funkce může mít za následek hrozeb od problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti lze použít k útokům systému, protože umožňují spuštění libovolného kódu, což může způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Tyto funkce může mít za následek hrozeb od problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti lze použít k útokům systému, protože umožňují spuštění libovolného kódu, což může způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než **Const**. _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++, definujte symbol _CONST_RETURN.
 

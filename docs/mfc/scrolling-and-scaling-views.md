@@ -1,5 +1,5 @@
 ---
-title: Posouvání a změna měřítka zobrazení | Microsoft Docs
+title: Posouvání a změna měřítka zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9758c63562a19d6b9e458fd434108a92bbc8576
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89a899c7604f3342564a315ba704fc2fcd31ec36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379265"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206935"
 ---
 # <a name="scrolling-and-scaling-views"></a>Posouvání a změna měřítka zobrazení
-MFC podporuje zobrazení, která přejděte a zobrazení, které jsou automaticky škálovat na velikost rámec okna, který je zobrazí. Třída `CScrollView` podporuje oba typy zobrazení.  
+MFC podporuje zobrazení, která posuňte zobrazení a zobrazení, které se automaticky upraví tak velikost okna rámce, který zobrazí je. Třída `CScrollView` podporuje oba typy zobrazení.  
   
- Další informace o posouvání a změna měřítka najdete v tématu třídy [CScrollView](../mfc/reference/cscrollview-class.md) v *odkaz knihovny MFC*. Posouvání příklad najdete v tématu [Scribble ukázka](../visual-cpp-samples.md).  
+ Další informace o posouvání a změna měřítka, naleznete v tématu třídy [cscrollview –](../mfc/reference/cscrollview-class.md) v *odkaz knihovny MFC*. Posouvání příklad naleznete v tématu [ukázky Scribble](../visual-cpp-samples.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   Posouvání zobrazení  
   
 -   Změna měřítka zobrazení  
   
--   [Souřadnice zobrazení](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [Zobrazení souřadnic](/windows/desktop/gdi/window-coordinate-system)  
   
 ##  <a name="_core_scrolling_a_view"></a> Posouvání zobrazení  
- Často je větší než velikost, kterou můžete zobrazit jeho zobrazení velikost dokumentu. To může dojít, protože data dokumentu zvyšuje nebo uživatel zmenší okno zobrazení, kterou. V takových případech musí podporovat zobrazení posouvání.  
+ Často velikosti dokumentu je větší než velikost, kterou můžete zobrazit jeho zobrazení. To může nastat, protože data dokumentu zvyšuje nebo uživatel zmenší okno rámce zobrazení. V takovém případě musí podporovat zobrazení posouvání.  
   
- Všechna zobrazení dokáže zpracovat zprávy posuvníku v jeho `OnHScroll` a `OnVScroll` členské funkce. Můžete buď zpracování implementace posuvníku zpráv v tyto funkce, díky všechnu práci sami nebo můžete použít `CScrollView` třídy pro zpracování posouvání za vás.  
+ Všechna zobrazení dokáže zpracovávat zprávy posuvníku v jeho `OnHScroll` a `OnVScroll` členské funkce. Můžete buď implementovat posuvníku zpráva zpracování těchto funkcí, stačí to sami, nebo můžete použít `CScrollView` třídy pro zpracování posouvání za vás.  
   
  `CScrollView` provede následující akce:  
   
--   Spravuje mapování režimy a velikosti oken a zobrazení  
+-   Spravuje mapování režimů a velikosti oken a zobrazení  
   
--   Posouvá automaticky v odpovědi na zprávy posuvníku  
+-   Posune automaticky v reakci na posuvníku zprávy  
   
- Kolik můžete zadat posun "stránky" (když uživatel klikne na posuvníku hřídel) a "řádek" (když uživatel klikne na posouvací šipky). Naplánujte tyto hodnoty tak, aby vyhovovala povaha zobrazení. Například můžete chtít posuňte se v přírůstcích po 1 pixel pro zobrazení grafiky, ale v přírůstcích po založené na výšku řádku textu dokumentů.  
+ Kolik můžete zadat posun "stránky" (když uživatel klikne na posuvníku šachty) a "řádek" (když uživatel klikne v posouvací šipky). Tyto hodnoty tak, aby odpovídala povahu zobrazení plánu. Můžete například chtít přejděte v přírůstcích po 1 pixelu pro grafické zobrazení, ale v přírůstcích po podle výšky řádku v textové dokumenty.  
   
 ##  <a name="_core_scaling_a_view"></a> Změna měřítka zobrazení  
- Pokud chcete, aby zobrazení automaticky přizpůsobit velikost okna jeho rámečku, můžete použít `CScrollView` pro škálování místo posouvání. Logické zobrazení je roztažen tak nebo zmenšit, přesně podle okna klientské oblasti. Škálovat. zobrazení nemá žádné posuvníky.  
+ Pokud chcete zobrazit automaticky přizpůsobit velikost okna rámce, můžete použít `CScrollView` pro škálování místo posouvání. Logické zobrazení je vyčerpávat nebo zmenšit přesně podle klientské oblasti okna. Dokončeno škálování zobrazení nemá žádné posuvníky.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití zobrazení](../mfc/using-views.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211894"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView – třída
 Poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  Určuje atributy stylu okna. Ve výchozím nastavení jsou nastavené styly WS_VISIBLE a WS_CHILD Windows.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.  
   
  *pParentWnd*  
  Ukazatel na nadřazené okno ovládacího prvku.  

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339238"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216285"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 Rozšiřuje funkce [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okna rámce Windows rozhraní více dokumentů (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Volá se rozhraním, když je aktivován, který má přemístitelný panel nabídky.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Volá se rozhraním, aby aktualizace v nabídce. (Přepíše `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Vrátí ukotvené podokno, která obsahuje zadaný bod.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows.  (Přepíše `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows.  (Přepíše `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Volá se rozhraním, aby přepočítat rozložení okna rámce. (Přepíše [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Zruší registraci podokno a odstraní ji z dokovací správce.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Uloží aktuální rozložení skupin s kartami MDI a seznamu dřív otevřených dokumentů.|  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Tlačítko panelu nástrojů.  
   
  [out] *pTI*  
- Ukazatel [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury.  
+ Ukazatel [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud aplikace vyplní *pTI* parametru. Výchozí implementace vrací hodnotu FALSE.  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  Určuje data podle potřeby pro typ nápovědy určené *nCmd*.  
   
  [in] *nCmd*  
- Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) v sadě Windows SDK.  
+ Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

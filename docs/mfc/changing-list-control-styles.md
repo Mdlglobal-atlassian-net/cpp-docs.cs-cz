@@ -1,5 +1,5 @@
 ---
-title: Změna stylů ovládacího prvku seznam | Microsoft Docs
+title: Změna stylů ovládacího prvku seznam | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d54d22106742cab8d1cdfe9c32adc0a98fb41b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197991"
 ---
 # <a name="changing-list-control-styles"></a>Změna stylů ovládacího prvku seznam
-Můžete změnit styl okna ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) kdykoli po jejím vytvoření. Změnou styl okna změníte typ zobrazení, které používá ovládacího prvku. Například emulovat v Exploreru, může zadáte položky nabídky nebo tlačítka panelu nástrojů pro přepínání mezi různá zobrazení ovládacího prvku: zobrazení ikon, zobrazení seznamu a tak dále.  
+Můžete změnit styl okna ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) kdykoli po jeho vytvoření. Změnou stylu okna změníte typ zobrazení, které používá ovládací prvek. Například pro emulaci Explorer, je může zadat položky nabídky nebo tlačítka panelu nástrojů pro přepínání mezi různá zobrazení ovládacího prvku: zobrazení ikon, zobrazení seznamu a tak dále.  
   
- Například pokud uživatel vybere vaší položky nabídky, můžete dokonce vytvářet volání [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) načíst aktuální styl ovládacího prvku a pak zavolají [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) resetovat styl. Další informace najdete v tématu [ovládací prvky zobrazení pomocí seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774736) ve Windows SDK.  
+ Například když uživatel vybere položku nabídky, které může uskutečnit volání [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) načíst aktuální styl ovládacího prvku a poté zavolejte [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) resetovat styl. Další informace najdete v tématu [ovládací prvky zobrazení pomocí seznamu](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.  
   
- Styly k dispozici jsou uvedeny v [vytvořit](../mfc/reference/clistctrl-class.md#create). Styly **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, a **LVS_REPORT** určit čtyři seznamy řízení.  
+ K dispozici styly jsou uvedeny v [vytvořit](../mfc/reference/clistctrl-class.md#create). Styly **jen**, **LVS_SMALLICON**, **LVS_LIST**, a **LVS_REPORT** určit čtyři seznamy ovládacího prvku.  
   
 ## <a name="extended-styles"></a>Rozšířené styly  
- Kromě standardní styly pro ovládací prvek seznamu je jinou sadu, označuje jako rozšířené styly. Tyto styly popsané v [rozšířené styly zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774732) ve Windows SDK poskytují řadu užitečných funkcí, které přizpůsobují chování ovládacího prvku seznam. Pokud chcete implementovat chování určité styl (například hover výběr), ujistěte se, volání [CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), předávání styl potřebné. Následující příklad ukazuje volání funkce:  
+ Kromě standardních stylů pro ovládací prvek seznamu je další sady, jen rozšířené styly. Tyto styly podrobněji [rozšířené styly zobrazení seznamu](/windows/desktop/Controls/extended-list-view-styles) v sadě Windows SDK poskytují celou řadu užitečných funkcí, které přizpůsobit chování ovládacího prvku seznamu. K implementaci chování stylu (například výběr při přechodu myší), ujistěte se, volání [CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), předání potřebných style. Následující příklad ukazuje volání funkce:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]  
   
 > [!NOTE]
->  Pro výběr hover pracovat, je také nutné mít buď **LVS_EX_ONECLICKACTIVATE** nebo **LVS_EX_TWOCLICKACTIVATE** zapnutý.  
+>  Pro výběr při najetí myší na práci, musíte také mít **LVS_EX_ONECLICKACTIVATE** nebo **LVS_EX_TWOCLICKACTIVATE** zapnuté.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   

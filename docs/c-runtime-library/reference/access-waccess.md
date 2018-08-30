@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209600"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -96,7 +96,7 @@ Při použití s soubory, **_přístupový** funkce určuje, jestli určený sou
 |04|jen pro čtení|
 |06|Čtení a zápis|
 
-Tato funkce pouze ověří, zda souborů a adresářů jsou jen pro čtení nebo Ne, nekontroluje nastavení zabezpečení systému souborů. K tomu budete potřebovat přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](http://msdn.microsoft.com/library/windows/desktop/aa374909). Třídy knihovny ATL existuje tuto funkčnost; Zobrazit [caccesstoken – třída](../../atl/reference/caccesstoken-class.md).
+Tato funkce pouze ověří, zda souborů a adresářů jsou jen pro čtení nebo Ne, nekontroluje nastavení zabezpečení systému souborů. K tomu budete potřebovat přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens). Třídy knihovny ATL existuje tuto funkčnost; Zobrazit [caccesstoken – třída](../../atl/reference/caccesstoken-class.md).
 
 **_waccess –** je verze širokého znaku **_přístupový**; *cesta* argument **_waccess –** je širokoznaký řetězec. **_waccess –** a **_přístupový** se jinak chovají stejně.
 

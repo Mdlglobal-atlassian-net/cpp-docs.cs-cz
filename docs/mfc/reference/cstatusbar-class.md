@@ -1,5 +1,5 @@
 ---
-title: Cstatusbar – třída | Microsoft Docs
+title: Cstatusbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 97dc5a05575021e7f2783190ff99e0cb390987bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210448"
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar – třída
-Ovládací prvek panel s řádek podokna výstup textu nebo "indikátory."  
+Ovládací panel s řádkem podoken textového výstupu nebo "ukazatelů".  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,52 +74,52 @@ class CStatusBar : public CControlBar
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStatusBar::CommandToIndex](#commandtoindex)|Získá index pro ID dané indikátoru.|  
-|[CStatusBar::Create](#create)|Vytvoří stavový řádek, připojí se k `CStatusBar` objektu a nastaví počáteční výšku písma a panelu.|  
+|[CStatusBar::CommandToIndex](#commandtoindex)|Získá index pro ID daného indikátoru.|  
+|[CStatusBar::Create](#create)|Vytvoří stavového řádku, připojí se k `CStatusBar` objekt a nastaví počáteční výška písma a panelem.|  
 |[CStatusBar::CreateEx](#createex)|Vytvoří `CStatusBar` objekt s další styly pro vložený `CStatusBarCtrl` objektu.|  
-|[CStatusBar::DrawItem](#drawitem)|Volá se při visual aspektů změny ovládací prvek panelu stavu vykreslování vlastníka.|  
-|[CStatusBar::GetItemID](#getitemid)|Získá ID indikátor pro daného indexu.|  
-|[CStatusBar::GetItemRect](#getitemrect)|Získá zobrazení rámeček pro daného indexu.|  
-|[CStatusBar::GetPaneInfo](#getpaneinfo)|Získá ID indikátoru, stylu a tloušťky pro daného indexu.|  
-|[CStatusBar::GetPaneStyle](#getpanestyle)|Získá styl indikátoru pro daného indexu.|  
-|[CStatusBar::GetPaneText](#getpanetext)|Získá text indikátoru pro daného indexu.|  
-|[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Umožňuje přímý přístup k podkladové běžného ovládacího prvku.|  
+|[CStatusBar::DrawItem](#drawitem)|Volá se při úpravě vizuálního aspektu stav vykreslené vlastníkem panel ovládacího prvku změní.|  
+|[CStatusBar::GetItemID](#getitemid)|Získá ukazatel ID pro daný index.|  
+|[CStatusBar::GetItemRect](#getitemrect)|Získá zobrazení rámeček pro daný index.|  
+|[CStatusBar::GetPaneInfo](#getpaneinfo)|Získá ID ukazatele, styl a šířku pro daný index.|  
+|[CStatusBar::GetPaneStyle](#getpanestyle)|Získá styl indikátoru pro daný index.|  
+|[CStatusBar::GetPaneText](#getpanetext)|Získá text indikátoru pro daný index.|  
+|[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Umožňuje přímý přístup k podkladové běžný ovládací prvek.|  
 |[CStatusBar::SetIndicators](#setindicators)|Nastaví ID indikátoru.|  
-|[CStatusBar::SetPaneInfo](#setpaneinfo)|Nastaví ID indikátoru, stylu a tloušťky pro daného indexu.|  
-|[CStatusBar::SetPaneStyle](#setpanestyle)|Nastaví styl indikátoru pro daného indexu.|  
-|[CStatusBar::SetPaneText](#setpanetext)|Nastaví ukazatele text pro daného indexu.|  
+|[CStatusBar::SetPaneInfo](#setpaneinfo)|Nastaví ID ukazatele, styl a šířku pro daný index.|  
+|[CStatusBar::SetPaneStyle](#setpanestyle)|Nastaví styl indikátoru pro daný index.|  
+|[CStatusBar::SetPaneText](#setpanetext)|Nastaví text indikátoru pro daný index.|  
   
 ## <a name="remarks"></a>Poznámky  
- Podokna výstup se běžně používají, jako řádky zprávy a jako indikátory stavu. Mezi příklady patří řádky zprávu nápovědy nabídky, které stručně popisují příkaz vybrané nabídky a indikátory, které se zobrazí stav SCROLL LOCK NUMLOCK a jiných klíčů.  
+ Výstupní podokna běžně slouží jako zprávy řádky a indikátory stavu. Mezi příklady patří řádky zprávu nápovědy nabídky, která stručně popisují příkaz vybrané nabídky a indikátory, které zobrazují stav SCROLL LOCK, NUM LOCK a další klíče.  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), členské funkce nové MFC 4.0, můžete využít podporu Windows běžné ovládacího prvku pro stavovém řádku přizpůsobení a další funkce. `CStatusBar` Členské funkce získáte většinu funkcí běžných ovládacích prvků Windows; ale při volání `GetStatusBarCtrl`, můžete udělit stavové řádky i více společných vlastností stavového řádku systému Windows 95/98. Při volání `GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu. V tématu [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) pro další informace o návrhu panely nástrojů použití běžných ovládacích prvků Windows. Další obecné informace o běžných ovládacích prvcích najdete v tématu [běžné ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb775493) ve Windows SDK.  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), členské funkce nové knihovny MFC 4.0, vám umožní využít výhod podpory Windows běžné ovládacího prvku pro stavového řádku vlastního nastavení a další funkce. `CStatusBar` Členské funkce vám poskytnou většinu funkcí běžných ovládacích prvků Windows; ale při volání `GetStatusBarCtrl`, které poskytnete stavové řádky i více vlastností stavového řádku Windows 95/98. Při volání `GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu. Zobrazit [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) pro další informace o navrhování panely nástrojů, použití běžných ovládacích prvků Windows. Další obecné informace o běžných ovládacích prvků naleznete v tématu [běžné ovládací prvky](/windows/desktop/Controls/common-controls-intro) v sadě Windows SDK.  
   
- Rozhraní framework ukládá informace o indikátor pole s krajní levé ukazatele na pozici 0. Při vytváření stavového řádku použijete pole řetězce ID, která přidruží odpovídající indikátory rozhraní. Potom můžete řetězec ID nebo index pro přístup k slouží jako ukazatel.  
+ Rozhraní framework ukládá ukazatel informace v poli s nejvíce vlevo ukazatel na pozici 0. Při vytváření stavového řádku, použijte pole ID, které rozhraní přidruží odpovídající ukazatele řetězce. Pak můžete pomocí ID řetězce nebo indexu přístup indikátor.  
   
- Standardně je první indikátoru "elastické": zabírají stavového řádku délku, která nepoužívá jiné ukazatele podokna tak, aby ostatní podokna zarovnaný doprava.  
+ Standardně je první indikátor "elastické": trvá až délka stavového řádku nepoužívá jiná podokna indikátor tak, aby jiná podokna jsou zarovnaná vpravo.  
   
- Při vytváření stavového řádku, postupujte podle těchto kroků:  
+ Chcete-li vytvořit stavového řádku, postupujte takto:  
   
 1.  Vytvořit `CStatusBar` objektu.  
   
-2.  Volání [vytvořit](#create) (nebo [CreateEx](#createex)) funkce vytváření stavového řádku okna a jeho k připojení `CStatusBar` objektu.  
+2.  Volání [vytvořit](#create) (nebo [CreateEx](#createex)) funkci pro vytváření stavového řádku okna a připojte ji k `CStatusBar` objektu.  
   
-3.  Volání [SetIndicators](#setindicators) a řetězec ID přidružit každý ukazatel.  
+3.  Volání [SetIndicators](#setindicators) přidružit každý indikátor Identifikátoru řetězce.  
   
- Existují tři způsoby, jak aktualizovat textu v panelu stavového řádku:  
+ Existují tři způsoby, jak aktualizovat textu panelu stavového řádku:  
   
-1.  Volání [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) aktualizace textu v podokně pouze 0.  
+1.  Volání [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) k aktualizaci textu v podokně pouze 0.  
   
-2.  Volání [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) v rutině on_update_command_ui – stavový řádek.  
+2.  Volání [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) v obslužné rutině ON_UPDATE_COMMAND_UI stavový řádek.  
   
-3.  Volání [SetPaneText](#setpanetext) aktualizovat text pro všechny podokně.  
+3.  Volání [SetPaneText](#setpanetext) k aktualizaci textu pro všechna podokna.  
   
- Volání [SetPaneStyle](#setpanestyle) aktualizovat styl panelu stavového řádku.  
+ Volání [SetPaneStyle](#setpanestyle) k aktualizaci stylu panelu stavového řádku.  
   
- Další informace o používání `CStatusBar`, najdete v článku [stav implementace řádku v prostředí MFC](../../mfc/status-bar-implementation-in-mfc.md) a [Technická poznámka 31: ovládací pruhy](../../mfc/tn031-control-bars.md).  
+ Další informace o používání `CStatusBar`, najdete v článku [stav panelu implementace v prostředí MFC](../../mfc/status-bar-implementation-in-mfc.md) a [Technická poznámka 31: ovládací pruhy](../../mfc/tn031-control-bars.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -141,16 +141,16 @@ int CommandToIndex(UINT nIDFind) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIDFind*  
- Řetězec ID indikátoru, jejichž index je mají být načteny.  
+ ID řetězce indikátoru, jejíž index se má být načtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index indikátoru, pokud bylo úspěšné; -1, pokud nebylo úspěšné.  
+ Index indikátoru v případě úspěchu; -1, pokud nebylo úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Index prvního indikátoru je 0.  
+ Index první indikátor je 0.  
   
 ##  <a name="create"></a>  CStatusBar::Create  
- Stavový řádek (podřízeného okna) vytvoří a přidruží ji s `CStatusBar` objektu.  
+ Vytvoří stavového řádku (podřízené okno) a přidruží ji k `CStatusBar` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -161,28 +161,28 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objektu, jehož okno systému Windows je nadřazená stavový řádek.  
+ Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, jehož okno Windows je nadřazeného člena stavový řádek.  
   
  *dwStyle*  
- Styl stavového řádku. Kromě standardní Windows [styly](../../mfc/reference/styles-used-by-mfc.md#window-styles), jsou podporovány tyto styly.  
+ Styl stavového řádku. Kromě standardní Windows [styly](../../mfc/reference/styles-used-by-mfc.md#window-styles), tyto styly jsou podporovány.  
   
-- CBRS_TOP ovládacích pruhů je v horní části oken s rámečkem.  
+- CBRS_TOP ovládací panel je v horní části okna rámce.  
   
-- Ovládací prvek CBRS_BOTTOM řádek je v dolní části oken s rámečkem.  
+- CBRS_BOTTOM ovládací panel je v dolní části okna rámce.  
   
-- CBRS_NOALIGN ovládacích pruhů není změnit jejich umístění při změně velikosti nadřazeného objektu.  
+- Při změně velikosti nadřazené není přemístí CBRS_NOALIGN ovládací panel.  
   
  *nID*  
- ID podřízeného okna panelu nástrojů  
+ ID podřízené okno panelu nástrojů  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Také nastaví počáteční písma a stav výška panelu na výchozí hodnotu.  
+ Také nastaví počáteční písmo a nastaví stav Výška pruhu na výchozí hodnotu.  
   
 ##  <a name="createex"></a>  CStatusBar::CreateEx  
- Volání této funkce na stavovém řádku (podřízeného okna) vytvořte a přidružte ji s `CStatusBar` objektu.  
+ Voláním této funkce vytváření stavového řádku (podřízené okno) a přidružte jej k `CStatusBar` objektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -194,40 +194,40 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objektu, jehož okno systému Windows je nadřazená stavový řádek.  
+ Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, jehož okno Windows je nadřazeného člena stavový řádek.  
   
  *dwCtrlStyle*  
- Další styly pro vytvoření vložený [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objektu. Určuje výchozí stavového řádku bez úchyt pro změnu velikosti nebo popisek podporovat. Styly řádku stavu podporovány jsou:  
+ Další styly pro vytvoření vložený [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objektu. Určuje výchozí stavový řádek bez úchyt pro změnu velikosti nebo popisek podporovat. Stav panelu Styly podporovány jsou:  
   
-- SBARS_SIZEGRIP ovládacího prvku panel stav zahrnuje úchyt na pravém konci stavový řádek. Úchyt je podobná velikosti ohraničení; je obdélníkovou oblast, která může uživatel klikněte a přetáhněte ke změně velikosti nadřazeného okna.  
+- SBARS_SIZEGRIP ovládací prvek panelu stavu zahrnuje úchyt na pravém konci stavový řádek. Úchyt pro změnu velikosti je podobná velikosti ohraničení; je obdélníkovou oblast, která uživatel může klikněte a přetáhněte pro změnu velikosti nadřazeného okna.  
   
-- SBT_TOOLTIPS stavový řádek podporuje popisy tlačítek.  
+- SBT_TOOLTIPS stavový řádek podporuje zobrazení popisů tlačítek.  
   
- Podrobnosti na tyto styly najdete v tématu [nastavení pro třídu CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
+ Podrobnosti o těchto stylů, najdete v části [nastavení pro třídu CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
  *dwStyle*  
- Styl panelu stavu. Výchozí hodnota určuje vytvořený viditelné stavového řádku v dolní části okna rámce. Použít libovolnou kombinaci stavový řádek – styly ovládacích prvků uvedených v [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Tento parametr by měla obsahovat však vždy ws_child – a ws_visible – styly.  
+ Styl stavového řádku. Výchozí hodnota určuje, že se v dolní části okna rámce vytvořen viditelný stavový řádek. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Nicméně tento parametr by měla vždycky obsahovat WS_CHILD a WS_VISIBLE styly.  
   
  *nID*  
- ID podřízené oken na stavovém řádku.  
+ ID podřízeného okna. stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce také nastaví počáteční písmo a nastaví stav výška panelu na výchozí hodnotu.  
+ Tato funkce také nastaví počáteční písmo a nastaví stav Výška pruhu na výchozí hodnotu.  
   
- Použití `CreateEx`, místo [vytvořit](#create), pokud se určité styly musí být k dispozici při vytváření ovládacích prvků panelu embedded stavu. Například nastavit *dwCtrlStyle* k SBT_TOOLTIPS zobrazíte popisy tlačítek v objektu panelu stavu.  
+ Použití `CreateEx`, namísto [vytvořit](#create), při určitých stylů musí být k dispozici při vytváření ovládacích prvků panelu vložený stav. Například nastavte *dwCtrlStyle* k SBT_TOOLTIPS zobrazit popisy tlačítek v objektu panelu stavu.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
- Vytvoří `CStatusBar` objekt, vytvoří výchozí písmo stavového řádku v případě potřeby a nastaví výchozí hodnoty vlastnosti písma.  
+ Vytvoří `CStatusBar` objekt, vytvoří výchozí písmo stavového řádku v případě potřeby a nastaví na výchozí hodnoty vlastnosti font.  
   
 ```  
 CStatusBar();
 ```  
   
 ##  <a name="drawitem"></a>  CStatusBar::DrawItem  
- Tato funkce člen je voláno rámcem při visual aspektů panelu změny vykreslovaných vlastníkem stavu.  
+ Tato členská funkce se volá se rozhraním při úpravě vizuálního aspektu panelu vykreslovaných vlastníkem stav se změní.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -235,13 +235,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametry  
  *lpDrawItemStruct*  
- Ukazatel [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura, která obsahuje informace o typu kreslení vyžaduje.  
+ Ukazatel [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturu, která obsahuje informace o typu kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
- `itemAction` Členem `DRAWITEMSTRUCT` struktura definuje kreslení akci, která má být provedena. Člen funkci implementovat kreslení pro kreslení vlastníka přepsat `CStatusBar` objektu. Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před ukončení této funkce člen.  
+ `itemAction` Člena `DRAWITEMSTRUCT` struktury definuje výkresu akci, která se má provést. Přepsat tato členská funkce implementovat kreslení pro vykreslené vlastníkem `CStatusBar` objektu. Aplikace by měl obnovit všechny grafiky zařízení rozhraní GDI systému objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před ukončením tato členská funkce.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- Vrátí ID indikátoru určeného *nIndex*.  
+ Vrátí ID indikátor určené *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -249,13 +249,13 @@ UINT GetItemID(int nIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index indikátoru, jejíž ID je mají být načteny.  
+ Index indikátor, jejichž ID se má být načtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID indikátoru určeného *nIndex*.  
+ ID indikátor určené *nIndex*.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- Zkopíruje souřadnice ukazatele určeného *nIndex* do struktury, na kterou odkazuje *lprect –*.  
+ Zkopíruje souřadnic ukazatele určené *nIndex* do struktury, na které odkazuje *lprect –*.  
   
 ```  
 void GetItemRect(
@@ -265,16 +265,16 @@ void GetItemRect(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index indikátoru, jejichž obdélníku souřadnice jsou uváděny mají být načteny.  
+ Index ukazatel, jehož souřadnice obdélník se mají načíst.  
   
  *lprect –*  
- Odkazuje na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který se zobrazí souřadnice ukazatele určeného *nIndex*.  
+ Odkazuje na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který bude příjemcem souřadnic ukazatele určené *nIndex*.  
   
 ### <a name="remarks"></a>Poznámky  
- Souřadnice jsou uváděny v pixelech relativně k levém horním rohu na stavovém řádku.  
+ Souřadnice jsou uváděny v pixelech vzhledem k levého horního rohu stavového řádku.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- Nastaví *nID*, *nStyle*, a *cxWidth* ID, styl a šířka podokně indikátoru v umístění, které *nIndex*.  
+ Nastaví *nID*, *nStyle*, a *cxWidth* ID, styl a šířka v podokně ukazatel v místě určeném *nIndex*.  
   
 ```  
 void GetPaneInfo(
@@ -286,19 +286,19 @@ void GetPaneInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně, jejichž informace je možné načíst.  
+ Index v podokně, jehož informace má být načtena.  
   
  *nID*  
- Odkaz na UINT, který je nastavený na ID v podokně.  
+ Odkaz na UINT, která je nastavena na ID v podokně.  
   
  *nStyle*  
- Odkaz na UINT, který je nastavený na styl podokna.  
+ Odkaz na UINT, který je nastaven styl panelu.  
   
  *cxWidth*  
- Odkaz na celé číslo, které je nastaven na šířku podokna.  
+ Odkaz na celé číslo, které je nastavena na šířku panelu.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
- Volání této funkce člen načíst styl panelu stavového řádku.  
+ Voláním této členské funkce k načtení styl stavového řádku stavového řádku.  
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
@@ -306,18 +306,18 @@ UINT GetPaneStyle(int nIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně, jehož styl je mají být načteny.  
+ Index v podokně, jehož styl má být načtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Styl panelu stavového řádku určeného *nIndex*.  
+ Styl panelu stavového řádku určené *nIndex*.  
   
 ### <a name="remarks"></a>Poznámky  
- Podokně styl určuje, jak se zobrazuje v podokně.  
+ Do podokna styl určuje, jak se zobrazí v podokně.  
   
- Seznam stylů, které jsou k dispozici pro stavové řádky najdete v tématu [vytvořit](#create).  
+ Seznam styly, které jsou k dispozici pro stavové řádky najdete v tématu [vytvořit](#create).  
   
 ##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
- Volání této funkce člen k načtení textu, který se zobrazí v podokně stavového řádku.  
+ Voláním této členské funkce k načtení textu, který se zobrazí panelu stavového řádku.  
   
 ```  
 CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rString) const;  
@@ -325,19 +325,19 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně, jejíž text je mají být načteny.  
+ Index v podokně, jejichž text je se má načíst.  
   
  *rString*  
- Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje text, který má být načtena.  
+ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje text, který se má načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CString` objekt obsahující text v podokně.  
+ A `CString` objekt, který obsahuje text v podokně.  
   
 ### <a name="remarks"></a>Poznámky  
- Druhý formulář člen funkce výplněmi `CString` objekt s textový řetězec.  
+ Tedy o druhou podobu této členské funkce výplně `CString` objekt s text řetězce.  
   
 ##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
- Tato funkce člen umožňuje přímý přístup k podkladové běžného ovládacího prvku.  
+ Tato členská funkce umožňuje přímý přístup k podkladové běžný ovládací prvek.  
   
 ```  
 CStatusBarCtrl& GetStatusBarCtrl() const;  
@@ -347,12 +347,12 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Obsahuje odkaz na [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `GetStatusBarCtrl` chcete využít výhod funkce Windows ovládacího prvku běžné stavového řádku a chcete využít výhod podpory [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) poskytuje pro přizpůsobení stavového řádku. Například pomocí běžného ovládacího prvku, můžete určit styl, který zahrnuje úchyt na stavovém řádku, nebo můžete určit styl tak, aby měl stavového řádku se zobrazí v horní části okna nadřazené klientské oblasti.  
+ Použití `GetStatusBarCtrl` využít funkce Windows stavový řádek běžný ovládací prvek a chcete využít výhod podpory [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) poskytuje pro přizpůsobení na stavovém řádku. Například pomocí běžný ovládací prvek můžete zadat styl, který obsahuje úchyt pro změnu velikosti ve stavovém řádku nebo můžete určit styl mít stavový řádek zobrazí v horní části klientské oblasti okna nadřazené.  
   
- Další obecné informace o běžných ovládacích prvcích najdete v tématu [běžné ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb775493) ve Windows SDK.  
+ Další obecné informace o běžných ovládacích prvků naleznete v tématu [běžné ovládací prvky](/windows/desktop/Controls/common-controls-intro) v sadě Windows SDK.  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- Nastaví ID pro každý ukazatel na hodnotu zadanou pomocí odpovídající element pole *lpIDArray*, načte řetězec prostředku zadaného parametrem jednotlivých ID a nastaví ukazatele text na řetězec.  
+ Nastaví ID každé ukazatel na hodnotu zadanou pomocí odpovídající prvek pole *lpIDArray*, načte řetězec prostředku zadaného parametrem každé ID a nastaví text ukazatele na řetězec.  
   
 ```  
 BOOL SetIndicators(
@@ -365,13 +365,13 @@ BOOL SetIndicators(
  Ukazatel na pole ID.  
   
  *nIDCount*  
- Počet prvků v poli, na kterou odkazuje *lpIDArray*.  
+ Počet prvků v poli odkazované *lpIDArray*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
- Nastaví zadaný indikátor podokně na nové ID, styl a šířku.  
+ Nastaví podokno zadaný ukazatel na nové ID, styl a šířku.  
   
 ```  
 void SetPaneInfo(
@@ -383,32 +383,32 @@ void SetPaneInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně indikátoru, jehož styl má být nastavena.  
+ Index v podokně ukazatel, jehož styl, je možné nastavit.  
   
  *nID*  
- Nové ID pro podokně indikátoru.  
+ Nové ID pro podokno indikátoru.  
   
  *nStyle*  
  Nový styl indikátoru podokna.  
   
  *cxWidth*  
- Nové šířka pro podokně indikátoru.  
+ Novou šířku pro podokno indikátoru.  
   
 ### <a name="remarks"></a>Poznámky  
- Podporovány jsou následující styly ukazatele:  
+ Podporují se tyto styly indikátoru:  
   
-- Ne SBPS_NOBORDERS 3D ohraničení podokně.  
+- Bez SBPS_NOBORDERS 3D ohraničení okolo panelu.  
   
-- SBPS_POPOUT Reverse ohraničení tak, aby text "POP."  
+- SBPS_POPOUT Reverse ohraničení, která se tak, aby text "vyskočí."  
   
 - Proveďte SBPS_DISABLED není kreslení textu.  
   
-- Podokno SBPS_STRETCH Stretch k vyplnění nevyužité místo. Tento styl může mít pouze jeden podokně na stavovém řádku.  
+- Podokno SBPS_STRETCH roztáhnout tak, aby vyplnil nevyužité místo. Tento styl může mít jenom jedno podokno na stavovém řádku.  
   
-- Ne SBPS_NORMAL stretch, ohraničení nebo rozbalení.  
+- Ne SBPS_NORMAL roztáhnout, ohraničení nebo rozbalení.  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
- Volání této funkce člen nastavit styl panelu stavového řádku.  
+ Voláním této členské funkce, chcete-li nastavit styl stavového řádku stavového řádku.  
   
 ```  
 void SetPaneStyle(
@@ -418,18 +418,18 @@ void SetPaneStyle(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně, jehož styl má být nastavena.  
+ Index v podokně, jehož styl, je možné nastavit.  
   
  *nStyle*  
- Styl v podokně, jehož styl má být nastavena.  
+ Styl stavového, jehož styl, je možné nastavit.  
   
 ### <a name="remarks"></a>Poznámky  
- Podokně styl určuje, jak se zobrazuje v podokně.  
+ Do podokna styl určuje, jak se zobrazí v podokně.  
   
- Seznam stylů, které jsou k dispozici pro stavové řádky najdete v tématu [SetPaneInfo](#setpaneinfo).  
+ Seznam styly, které jsou k dispozici pro stavové řádky najdete v tématu [SetPaneInfo](#setpaneinfo).  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Volání této funkce člen nastavit podokně text na text, na kterou odkazuje *lpszNewText*.  
+ Voláním této členské funkce se nastavit text podokna na řetězec, který ukazuje *lpszNewText*.  
   
 ```  
 BOOL SetPaneText(
@@ -440,19 +440,19 @@ BOOL SetPaneText(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index v podokně, jejíž text je možné nastavit.  
+ Index v podokně, jejichž text je nastavit.  
   
  *lpszNewText*  
- Ukazatel na nový text podokně.  
+ Ukazatel na nové podokno textu.  
   
  *bUpdate*  
- V případě hodnoty TRUE, v podokně zneplatněna po nastavení textu.  
+ Při hodnotě TRUE se v podokně zneplatněna po nastavení text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Po zavolání metody `SetPaneText`, je nutné přidat obslužnou rutinu aktualizace uživatelského rozhraní pro zobrazení nového textu ve stavovém řádku.  
+ Po zavolání `SetPaneText`, je nutné přidat obslužnou rutinu aktualizace uživatelského rozhraní pro zobrazení nového textu ve stavovém řádku.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
@@ -462,9 +462,9 @@ BOOL SetPaneText(
  [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC CTRLBARS](../../visual-cpp-samples.md)   
- [Ukázka DLGCBR32 MFC](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)   
+ [Ukázka DLGCBR32 knihovny MFC](../../visual-cpp-samples.md)   
  [Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CStatusBarCtrl – třída](../../mfc/reference/cstatusbarctrl-class.md)   
+ [Cstatusbarctrl – třída](../../mfc/reference/cstatusbarctrl-class.md)   
  [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)

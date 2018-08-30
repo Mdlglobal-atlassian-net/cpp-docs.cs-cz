@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e6991d7ca545eef671720a38907088dc6a534d1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216805"
 ---
 # <a name="cfontholder-class"></a>Cfontholder – třída
 Implementuje vlastnost běžného písma a zapouzdřuje funkce objektu písma Windows a `IFont` rozhraní.  
@@ -171,7 +171,7 @@ void InitializeFont(
   
 ### <a name="parameters"></a>Parametry  
  *pFontDesc*  
- Ukazatel na strukturu popis písma ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), která určuje charakteristiky písma.  
+ Ukazatel na strukturu popis písma ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)), která určuje charakteristiky písma.  
   
  *pFontDispAmbient*  
  Ukazatel na kontejneru okolí Font – vlastnost  
@@ -199,7 +199,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
   
 ### <a name="parameters"></a>Parametry  
  *lptm*  
- Ukazatel [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktura, která bude dostávat informace.  
+ Ukazatel [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktura, která bude dostávat informace.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Tato funkce odpojí `CFontHolder` objekt z jeho `IFont` rozhraní.  

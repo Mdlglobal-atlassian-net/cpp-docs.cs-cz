@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336823"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204566"
 ---
 # <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE
 Jeden funkční ovládací prvky OLE je vlastnost trvalost (nebo serializace), který umožňuje ovládacího prvku OLE pro čtení nebo zápis hodnot vlastností do a ze souboru nebo datového proudu. Aplikace typu kontejner pro slouží k ukládání hodnot vlastností ovládacího prvku i po aplikace byl zničen ovládacího prvku serializace. Hodnoty vlastností ovládacího prvku OLE pak může číst ze souboru nebo datový proud při novou instanci ovládacího prvku proběhne později.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Blok paměti obsahující skutečná binární data.  
   
- Všimněte si, že `PX_Blob` přidělí paměť v Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) rozhraní API, při načítání vlastností typ objektu BLOB. Zodpovídáte za uvolnění tuto paměť. Proto by měly volat destruktor ovládacího prvku [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) jakékoli vlastnosti typu BLOB až obslužné rutiny pro uvolnění paměti přidělené do ovládacího prvku.  
+ Všimněte si, že `PX_Blob` přidělí paměť v Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) rozhraní API, při načítání vlastností typ objektu BLOB. Zodpovídáte za uvolnění tuto paměť. Proto by měly volat destruktor ovládacího prvku [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) jakékoli vlastnosti typu BLOB až obslužné rutiny pro uvolnění paměti přidělené do ovládacího prvku.  
   
 ##  <a name="px_bool"></a>  Px_bool –  
  Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu BOOL.  

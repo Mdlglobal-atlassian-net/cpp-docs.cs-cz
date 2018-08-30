@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592079"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211094"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
 > [!WARNING]
-> Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++. Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++. Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Informace o přidávání prostředků do C + +/ CLI projekty, najdete v [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
@@ -53,7 +53,7 @@ Popisuje editory prostředků k dispozici v sadě Visual Studio, typy prostředk
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Obsahuje odkazy na dokumentaci jazyka Visual C++.
 
-[Představení sady Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Představení sady Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Popisuje úplnou sadu nástrojů pro vývoj, které všechny používat stejné integrované vývojové prostředí (IDE), což jim umožní sdílení nástrojů a usnadňuje vytváření řešení jazyků.
 
 [Kontaktujte nás](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ Obsahuje odkazy na informace o používání sady dokumentace, kontaktovat podpo
 ## <a name="see-also"></a>Viz také
 
 [Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)  
-[Nabídky a ostatní prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

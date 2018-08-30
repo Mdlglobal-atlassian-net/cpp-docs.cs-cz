@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201119"
 ---
 # <a name="general-mbcs-programming-advice"></a>Obecné rady k programování se znakovou sadou MBCS
 Použijte následující tipy:  
@@ -41,7 +41,7 @@ Použijte následující tipy:
   
 -   Buďte opatrní při výběru písma pro vaši aplikaci, protože se některá písma nejsou k dispozici na všech systémech.  
   
--   Při výběru písma pro dialogová okna, použijte [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) místo Serif MS sítě SAN nebo Helvetica. Před vytvořením dialogové okno se nahradí MS Shell Dlg s použitím správného písma v systému. Použití MS Shell Dlg zajistí, že všechny změny v operačním systému se toto písmo budou automaticky dostupné. (MFC nahradí MS Shell Dlg DEFAULT_GUI_FONT nebo systémové písmo na Windows 95, Windows 98 a Windows NT 4 vzhledem k tomu, že tyto systémy nezpracuje MS Shell Dlg správně.)  
+-   Při výběru písma pro dialogová okna, použijte [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) místo Serif MS sítě SAN nebo Helvetica. Před vytvořením dialogové okno se nahradí MS Shell Dlg s použitím správného písma v systému. Použití MS Shell Dlg zajistí, že všechny změny v operačním systému se toto písmo budou automaticky dostupné. (MFC nahradí MS Shell Dlg DEFAULT_GUI_FONT nebo systémové písmo na Windows 95, Windows 98 a Windows NT 4 vzhledem k tomu, že tyto systémy nezpracuje MS Shell Dlg správně.)  
   
 -   Při návrhu aplikace, rozhodněte, které řetězce může být lokalizována. Pokud máte pochybnosti, se předpokládá, že bude lokalizovaný libovolný daný řetězec. V důsledku toho Nekombinujte řetězce, které může být lokalizována s těmi, které nelze.  
   

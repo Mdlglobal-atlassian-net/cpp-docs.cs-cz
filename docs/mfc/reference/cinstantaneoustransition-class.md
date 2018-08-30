@@ -1,5 +1,5 @@
 ---
-title: Třída CInstantaneousTransition | Microsoft Docs
+title: Cinstantaneoustransition – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209211"
 ---
-# <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition – třída
-Zapouzdří okamžitou přechodu.  
+# <a name="cinstantaneoustransition-class"></a>Cinstantaneoustransition – třída
+Zapouzdřuje okamžitý přechod.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ class CInstantaneousTransition : public CBaseTransition;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Vytvoří objekt přechod a inicializuje jeho konečná hodnota.|  
+|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Vytvoří objekt přechodu a inicializuje jeho konečnou hodnotu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CInstantaneousTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -59,20 +59,20 @@ class CInstantaneousTransition : public CBaseTransition;
 |[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Během okamžitou přechodu hodnota proměnné animace změny okamžitě od aktuální hodnoty zadané konečná hodnota. Trvání tento přechod je vždy nula. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
+ Během okamžitý přechod hodnotu proměnné animace změní okamžitě aktuální hodnotu na zadaný konečnou hodnotu. Doba trvání tohoto přechodu je vždycky nula. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ [Cbasetransition –](../../mfc/reference/cbasetransition-class.md)  
   
- [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
+ [Cinstantaneoustransition –](../../mfc/reference/cinstantaneoustransition-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
- Vytvoří objekt přechod a inicializuje jeho konečná hodnota.  
+ Vytvoří objekt přechodu a inicializuje jeho konečnou hodnotu.  
   
 ```  
 CInstantaneousTransition(DOUBLE dblFinalValue);
@@ -83,7 +83,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  Hodnota proměnné animace na konci přechodu.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
+ Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.  
   
 ```  
 virtual BOOL Create(
@@ -93,11 +93,11 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
+ Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.  
 
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
  Hodnota proměnné animace na konci přechodu.  

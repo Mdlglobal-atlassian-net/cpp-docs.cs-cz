@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464902"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212218"
 ---
 # <a name="preprocessor-directives"></a>Preprocesor – direktivy
 
 Direktivy preprocesoru, jako například `#define` a `#ifdef`, se obvykle používají ke snadnému sestavení v různých pracovních prostředích a snadné změně zdrojových programů. Směrnice ve zdrojovém souboru říkají preprocesoru, že má provést konkrétní akce. Preprocesor může například nahradit tokeny v textu, vložit obsah z jiných souborů do zdrojového souboru nebo potlačit kompilaci části souboru odebráním úseků textu. Řádky preprocesoru jsou rozpoznány a provedeny před rozšířením makra. Proto pokud se makro rozšíří na něco, co vypadá jako příkaz preprocesoru, tento příkaz není rozpoznáván preprocesorem.
 
-Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru, s tím rozdílem, že Řídící sekvence nejsou podporovány. Znaková sada použitá v rámci příkazu preprocesoru je stejná jako [znaková sada spuštění](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznává také negativní hodnoty znaků.
+Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru, s tím rozdílem, že Řídící sekvence nejsou podporovány. Znaková sada použitá v rámci příkazu preprocesoru je stejná jako [znaková sada spuštění](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznává také negativní hodnoty znaků.
 
 Preprocesor rozpoznává následující direktivy:
 
@@ -37,7 +37,7 @@ Preprocesor rozpoznává následující direktivy:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Znak čísla (**#**) musí být první nemezerový znak na řádku, který obsahuje směrnici; mezerové znaky mohou objevit mezi znakem čísla a prvním písmenem směrnice. Některé direktivy zahrnují argumenty nebo hodnoty. Jakýkoli text, který následuje direktivu (s výjimkou argumentu nebo hodnotu, která je součástí této direktivy) musí být předcházen oddělovač jednořádkový komentář (**//**) nebo uzavřen mezi oddělovače komentáře ( __/ \*\*/__).   Řádky obsahující pokyny preprocesoru lze navázat tak, že bezprostředně před značku konec řádku zpětným lomítkem (**\\**).
+Znak čísla (**#**) musí být první nemezerový znak na řádku, který obsahuje směrnici; mezerové znaky mohou objevit mezi znakem čísla a prvním písmenem směrnice. Některé direktivy zahrnují argumenty nebo hodnoty. Jakýkoli text, který následuje direktivu (s výjimkou argumentu nebo hodnotu, která je součástí této direktivy) musí být předcházen oddělovač jednořádkový komentář (**//**) nebo uzavřen mezi oddělovače komentáře ( __/ \*\*/__). Řádky obsahující pokyny preprocesoru lze navázat tak, že bezprostředně před značku konec řádku zpětným lomítkem (**\\**).
 
 Direktivy preprocesoru může vyskytovat kdekoli ve zdrojovém souboru, ale se vztahují pouze na zbývající část zdrojového souboru.
 

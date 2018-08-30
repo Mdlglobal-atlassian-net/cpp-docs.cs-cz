@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 03a47ea35740a7e5d019e4c932ec879f18e0714e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204023"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 Podobně jako Windows `POINT` struktury.  
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 ## <a name="remarks"></a>Poznámky  
  Zahrnuje také členské funkce pro manipulaci s `CPoint` a [bodu](../../mfc/reference/point-structure1.md) struktury.  
   
- A `CPoint` objektu lze použít všude, kde `POINT` struktura se používá. Operátory, které pracují s "velikost" této třídy buď přijměte [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktur, protože zaměnitelné.  
+ A `CPoint` objektu lze použít všude, kde `POINT` struktura se používá. Operátory, které pracují s "velikost" této třídy buď přijměte [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktur, protože zaměnitelné.  
   
 > [!NOTE]
 >  Tato třída je odvozena z `tagPOINT` struktury. (Název `tagPOINT` je název ne tak často používaná pro `POINT` struktura.) To znamená, že datové členy `POINT` strukturu, `x` a `y`, jsou dostupné datové členy `CPoint`.  
@@ -103,7 +103,7 @@ CPoint(LPARAM dwPoint) throw();
  [BOD](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` určující hodnoty použité k inicializaci `CPoint`.  
   
  *initSize*  
- [VELIKOST](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.  
+ [VELIKOST](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.  
   
  *dwPoint*  
  Nastaví `x` člen pro nižší řád slova *dwPoint* a `y` člena na vyšší řád slova *dwPoint*.  
@@ -158,7 +158,7 @@ void Offset(SIZE size) throw();
  Určuje dobu ( [bodu](../../mfc/reference/point-structure1.md) nebo `CPoint`) pro posun `CPoint`.  
   
  *Velikost*  
- Určuje dobu ( [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.  
+ Určuje dobu ( [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -207,7 +207,7 @@ void operator+=(POINT point) throw();
   
 ### <a name="parameters"></a>Parametry  
  *Velikost*  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
  *Bod*  
  Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
@@ -232,7 +232,7 @@ void operator-=(POINT point) throw();
   
 ### <a name="parameters"></a>Parametry  
  *Velikost*  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
  *Bod*  
  Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
@@ -258,7 +258,7 @@ CRect operator+(const RECT* lpRect) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *Velikost*  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
  *Bod*  
  Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
@@ -292,7 +292,7 @@ CPoint operator-() const throw();
  A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
   
  *Velikost*  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
  *lprect –*  
  Ukazatel [RECT](../../mfc/reference/rect-structure1.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.  

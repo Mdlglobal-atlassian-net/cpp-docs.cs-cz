@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339303"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219016"
 ---
 # <a name="ccolordialog-class"></a>Ccolordialog – třída
 Umožňuje zahrnout do vaší aplikace dialogové okno Výběr barvy.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  K vytvoření `CColorDialog` objektu, použijte poskytnutý konstruktor nebo odvozovat nové třídy a použít vlastní vlastního konstruktoru.  
   
- Jakmile byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [m_cc](#m_cc) struktura inicializace hodnot ovládacích prvků v dialogovém okně. *M_cc* struktury je typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Jakmile byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [m_cc](#m_cc) struktura inicializace hodnot ovládacích prvků v dialogovém okně. *M_cc* struktury je typu [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Po inicializaci ovládací prvky dialogových oken, zavolejte `DoModal` členské funkce k zobrazení dialogového okna a umožnit uživateli vybrat barvu. `DoModal` Vrátí uživatele výběru buď v dialogovém okně tlačítko OK (IDOK) nebo zrušit (IDCANCEL).  
   
  Pokud `DoModal` vrátí IDOK, můžete použít jednu z `CColorDialog`pro členské funkce načtete informace o vstup uživatele.  
   
- Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě.  
+ Můžete použít Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě.  
   
  `CColorDialog` využívá COMMDLG. Soubor knihovny DLL, která se dodává s Windows verze 3.1 nebo novější.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  Výchozí výběr barvy. Pokud není zadána žádná hodnota, výchozí hodnota je RGB(0,0,0) (černá).  
   
  *dwFlags*  
- Sada příznaků, které funkce a vzhled dialogového okna přizpůsobit. Další informace najdete v tématu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) struktura v sadě Windows SDK.  
+ Sada příznaků, které funkce a vzhled dialogového okna přizpůsobit. Další informace najdete v tématu [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) struktura v sadě Windows SDK.  
   
  *pParentWnd*  
  Ukazatel na okno nadřazené nebo vlastník dialogových oken.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě.  
   
  IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje informace o RGB barva vybraná v dialogovém okně barev.  
+ A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která obsahuje informace o RGB barva vybraná v dialogovém okně barev.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Strukturu typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), ukládat obsahující vlastnosti a hodnoty dialogového okna.  
+ Strukturu typu [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), ukládat obsahující vlastnosti a hodnoty dialogového okna.  
   
 ```  
 CHOOSECOLOR m_cc;  

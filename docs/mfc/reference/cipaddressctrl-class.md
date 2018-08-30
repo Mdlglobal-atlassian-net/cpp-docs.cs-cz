@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338029"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222335"
 ---
 # <a name="cipaddressctrl-class"></a>Cipaddressctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek adresy IP.  
@@ -76,7 +76,7 @@ class CIPAddressCtrl : public CWnd
   
  Tento ovládací prvek (a tedy `CIPAddressCtrl` třídy) je dostupná jenom pro programy spuštěné v rámci aplikace Microsoft Internet Explorer 4.0 nebo novější. Také budou k dispozici v budoucích verzích Windows a Windows NT.  
   
- Další obecné informace o ovládací prvek adresy IP, naleznete v tématu [IP adresu řídí](http://msdn.microsoft.com/library/windows/desktop/bb761372) v sadě Windows SDK.  
+ Další obecné informace o ovládací prvek adresy IP, naleznete v tématu [IP adresu řídí](/windows/desktop/Controls/ip-address-controls) v sadě Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Třídy CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  Vytvoří ovládací prvek adresy IP a připojí ho k `CIPAddressCtrl` objektu.  
@@ -120,10 +120,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
+ Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
   
  *Rect*  
- Odkaz na ovládací prvek adresy IP velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Odkaz na ovládací prvek adresy IP velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Ukazatel IP adresu nadřazené okno ovládacího prvku. Nesmí být NULL.  
@@ -157,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
+ Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -210,7 +210,7 @@ int GetAddress(DWORD& dwAddress);
  Počet neprázdných polí ve správě IP adres.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.  
   
 |Pole|Služba BITS obsahující hodnotu pole|  
 |-----------|-------------------------------------|  
@@ -230,7 +230,7 @@ BOOL IsBlank() const;
  Nenulové, pokud všechna pole ovládací prvek adresy IP jsou prázdná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Nastaví hodnoty adres pro všechny čtyři pole ve správě IP adres.  
@@ -262,7 +262,7 @@ void SetAddress(DWORD dwAddress);
  Hodnota DWORD, který obsahuje novou IP adresu. Zobrazit **poznámky** pro tabulku, která ukazuje, jak je vyplněné hodnoty DWORD.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.  
   
 |Pole|Služba BITS obsahující hodnotu pole|  
 |-----------|-------------------------------------|  
@@ -283,7 +283,7 @@ void SetFieldFocus(WORD nField);
  Index založený na nule pole, na kterou by měl nastavit fokus. Pokud je tato hodnota větší než počet polí, je nastaven fokus na první prázdné pole. Pokud všechna pole jsou prázdná, je nastaven fokus na první pole.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Nastaví rozsah v zadaném poli ve správě IP adres.  
@@ -306,7 +306,7 @@ void SetFieldRange(
  Odkaz na celé číslo, které přijímají horní limit počtu určené pole v tomto ovládacím prvku IP adresu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), jak je popsáno v sadě Windows SDK. Použít dva parametry *nLower* a *nUpper*, pro indikaci horní a dolní mez pole, nikoli *wRange* parametr používaný s touto zprávou Win32.  
+ Tato členská funkce implementuje chování zprávy Win32 [IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange), jak je popsáno v sadě Windows SDK. Použít dva parametry *nLower* a *nUpper*, pro indikaci horní a dolní mez pole, nikoli *wRange* parametr používaný s touto zprávou Win32.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   

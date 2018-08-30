@@ -1,5 +1,5 @@
 ---
-title: _get_osfhandle – | Microsoft Docs
+title: _get_osfhandle – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/29/2018
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215695"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
-Načte popisovač souboru operačního systému, který je přidružen popisovač zadaný soubor.
+Načte popisovač souboru operačního systému, který je spojen s popisovačem zadaného souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,15 +57,15 @@ intptr_t _get_osfhandle(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Existující popisovače souborů.
+Existující popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **ebadf –**, označující neplatný popisovač souboru. Abyste se vyhnuli upozornění kompilátoru při výsledek se používá v rutiny, které očekávají popisovač souboru Win32, vysílat **zpracování** typu.
+Vrátí popisovač souboru operačního systému, pokud *fd* je platný. V opačném případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **EBADF**, určující neplatný popisovač souboru. Aby se zabránilo upozornění kompilátoru při použití vráceného výsledku v rutin, které očekávají popisovač souboru Win32, přetypujte ji na **zpracování** typu.
 
 ## <a name="remarks"></a>Poznámky
 
-Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získávají pomocí **_get_osfhandle –**, volání [_close –](close.md) na popisovače souborů *fd*. Nevolejte **funkce CloseHandle** na návratovou hodnotu této funkce. Je vlastníkem základní popisovač souboru *fd* popisovače souborů a při zavření [_close –](close.md) se volá na *fd*. Pokud je vlastníkem popisovače souborů **souboru \***  datového proudu, pak volání [fclose –](fclose-fcloseall.md) na který **soubor \***  datový proud se zavře popisovač souboru a základní popisovač souboru operačního systému. V takovém případě Nevolejte [_close –](close.md) na popisovače souborů.
+Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá **_get_osfhandle –**, volání [_Zavřít](close.md) na popisovač souboru *fd*. Nevolejte **CloseHandle** na návratový typ této funkce. Vlastní podkladové popisovač souboru operačního systému *fd* popisovač souboru a je uzavřen, když [_Zavřít](close.md) je volán na *fd*. Pokud popisovač souboru je vlastněna `FILE *` datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat `FILE *` datový proud se zavře popisovače souborů a podkladové popisovač souboru operačního systému. V takovém případě Nevolejte [_Zavřít](close.md) na popisovač souboru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,7 +73,7 @@ Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá
 |-------------|---------------------|
 |**_get_osfhandle**|\<IO.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

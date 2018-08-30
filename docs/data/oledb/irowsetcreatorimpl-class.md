@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c828708a088c8fe31075a8fe8504f3a1f8c14b4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337094"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222036"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl – třída
 Provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
@@ -61,13 +61,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
   
 |||  
 |-|-|  
-|[Setsite –](#setsite)|Nastaví lokalitu, která obsahuje objektu sady řádků.|  
+|[SetSite](#setsite)|Nastaví lokalitu, která obsahuje objektu sady řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.  
+ Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.  
 
 ## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
-Nastaví lokalitu, která obsahuje objektu sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
+Nastaví lokalitu, která obsahuje objektu sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).  
   
 ### <a name="syntax"></a>Syntaxe  
   

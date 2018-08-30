@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4953 | Microsoft Docs
+title: Upozornění (úroveň 1) C4953 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af5a16ebbf7851eceb2f2cd355f953b14c4bd38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e53808d4ad97bad4eccdf81b0a863277f8f7796
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194629"
 ---
-# <a name="compiler-warning-level-1-c4953"></a>C4953 kompilátoru upozornění (úroveň 1)
-Po profil, který data nebyla shromážděna, data profilu nepoužívá upraven Inlinee 'function'.  
-  
- Při použití [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilátor zjistil vstupní modul, který byl překompilovat po `/LTCG:PGINSTRUMENT` a má funkci (***funkce***) byl upraven, a kde se spouští identifikovaných existujícího testu funkce jako kandidáta na vložené. Ale v důsledku o nutnosti rekompilace modulu, funkce už bude kandidátem na vložené.  
-  
- Toto upozornění je informační. Toto upozornění vyřešíte spuštěním `/LTCG:PGINSTRUMENT`, znovu všechny testovací běží a spusťte `/LTCG:PGOPTIMIZE`.  
-  
- Toto upozornění se zobrazí se chyba nahrazený, pokud `/LTCG:PGOPTIMIZE` byly použity.
+# <a name="compiler-warning-level-1-c4953"></a>Kompilátor upozornění (úroveň 1) C4953
+
+> Inlinee "*funkce*' byl upraven od shromáždění dat profilu data profilu se nepoužívá
+
+Při použití [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilátor zjistil vstupní modul, který byl znovu zkompilovat po `/LTCG:PGINSTRUMENT` a má funkci (*funkce*), který byl upraven a kde existující testovací běhy identifikované fungovat jako kandidátem pro vkládání. Ale v důsledku z rekompilace modulu, funkce nebude kandidátem pro vkládání.
+
+Toto upozornění je informační. Pokud chcete vyřešit toto upozornění, spusťte `/LTCG:PGINSTRUMENT`, znovu všech testů běží a spusťte `/LTCG:PGOPTIMIZE`.
+
+Toto upozornění by měl být nahrazen chybu, pokud `/LTCG:PGOPTIMIZE` nepoužilo.

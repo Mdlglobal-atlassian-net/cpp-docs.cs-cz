@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 095d0d74fe5ff6eb30866b619e201a029b754d38
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202173"
 ---
 # <a name="ca2wex-class"></a>Ca2wex – třída
 Tato třída se používá makra převodu řetězců CA2TEX, CA2CTEX, CT2WEX a CT2CWEX a definice typedef CA2W.  
@@ -110,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  Textový řetězec, který má být převeden.  
   
  *nCodePage*  
- Znaková stránka používá k provedení převodu. Viz diskuze parametr stránky kód pro funkci Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) další podrobnosti.  
+ Znaková stránka používá k provedení převodu. Viz diskuze parametr stránky kód pro funkci Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) další podrobnosti.  
   
 ### <a name="remarks"></a>Poznámky  
  Přidělí vyrovnávací paměti používané při překladu.  

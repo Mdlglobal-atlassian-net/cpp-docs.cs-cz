@@ -1,5 +1,5 @@
 ---
-title: Přidávání sloupců do ovládacího prvku (zobrazení sestavy) | Microsoft Docs
+title: Přidávání sloupců do ovládacího prvku (zobrazení sestavy) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 975d65119ba0ae24b236d96cbe67e73b70be6bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3e81de52856d67760ffe58f29e4c39ac79213c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221941"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Přidávání sloupců do ovládacího prvku (zobrazení sestavy)
 > [!NOTE]
 >  Následující postup platí pro buď [CListView](../mfc/reference/clistview-class.md) nebo [CListCtrl](../mfc/reference/clistctrl-class.md) objektu.  
   
- Když je ovládací prvek seznamu v zobrazení sestavy, jsou zobrazeny sloupce, poskytuje metodu pro uspořádání různých podřízených položek každé položky ovládací prvek seznamu. Tato organizace je implementováno s souvislosti mezi sloupci v ovládacím prvku seznamu a přidružené podpoložek položky ovládací prvek seznamu. Další informace o podřízených položek najdete v tématu [přidávání položek do ovládacího prvku](../mfc/adding-items-to-the-control.md). Zobrazení podrobností v systému Windows 95 a Průzkumníka Windows 98 poskytuje příklad ovládacího prvku seznam v zobrazení sestavy. První sloupec obsahuje složka, soubor ikony a popisky. Ostatních sloupců seznamu velikost souboru, typu souboru, datum poslední změny a tak dále.  
+ Když ovládací prvek seznamu je v zobrazení sestav, zobrazí se sloupce, poskytuje způsob uspořádání různé podpoložek každou položku seznamu ovládacího prvku. Tato organizace implementuje pomocí shoda mezi sloupci v ovládacím prvku seznamu a přidružené subitem položku ovládacího prvku seznamu. Další informace o podřízené položky, naleznete v tématu [přidávání položek do ovládacího prvku](../mfc/adding-items-to-the-control.md). Příklad seznamu ovládacího prvku v zobrazení sestavy je k dispozici v zobrazení Podrobnosti ve Windows 95 a Windows 98 Explorer. První sloupec uvádí složka, soubor ikony a popisky. Ostatní sloupce seznamu velikost souboru, typ souboru, datum poslední změny a tak dále.  
   
- I když sloupce lze přidat do ovládacího prvku seznam kdykoli, sloupce, které jsou viditelné pouze v případě, že má ovládací prvek `LVS_REPORT` bit stylu zapnuté.  
+ I když sloupce lze přidat do ovládacího prvku seznam v okamžiku, sloupce, které jsou viditelné pouze v případě, že je ovládací prvek `LVS_REPORT` styl bit zapnutý.  
   
- Každý sloupec má položku přidružená záhlaví (najdete v části [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) objekt, který označuje sloupci a umožňuje uživatelům měnit velikost sloupce.  
+ Položka přidružená záhlaví má každý sloupec (naleznete v tématu [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) objekt, který označuje sloupec a umožňuje uživatelům změnit velikost sloupce.  
   
- Pokud vaše ovládací prvek seznamu podporuje zobrazení sestavy, budete muset přidat sloupec pro každý možné podpoložek v položce seznamu ovládacího prvku. Příprava přidat sloupec [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) struktury a pak provedením volání [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Po přidání nezbytné sloupců (někdy označované jako položky hlavičky), můžete změnit jejich pořadí pomocí členských funkcí a styly patřící do ovládacího prvku záhlaví embedded. Další informace najdete v tématu [pořadí položek v ovládacím prvku záhlaví](../mfc/ordering-items-in-the-header-control.md).  
+ Pokud váš ovládací prvek seznamu podporuje zobrazení sestav, budete muset přidat sloupec pro každou možné podřízenou položku v položce seznamu ovládacího prvku. Přidání sloupce při přípravě [LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) strukturu a pak provedením volání do [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Po přidání potřebných sloupců (někdy označované jako položky záhlaví), můžete změnit jejich pomocí členské funkce a stylů, které patří do ovládacího prvku vloženého záhlaví. Další informace najdete v tématu [objednávání položek v ovládacím prvku záhlaví](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  Pokud ovládacího prvku seznam je vytvořen s **LVS_NOCOLUMNHEADER** styl, pokusy o sloupce k vložení budou ignorovány.  
+>  Pokud ovládací prvek seznamu se vytvoří s **LVS_NOCOLUMNHEADER** styl, jakýkoliv pokus o vložení sloupců se bude ignorovat.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   

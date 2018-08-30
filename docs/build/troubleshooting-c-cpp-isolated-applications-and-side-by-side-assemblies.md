@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218666"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
 Načítají se aplikace v jazyce C/C++ může selhat, pokud nelze najít závislé knihovny. Tento článek popisuje některé běžné důvody, proč se aplikace v jazyce C/C++ nepodaří načíst, a navrhne kroky k vyřešení problémů.  
@@ -46,14 +46,14 @@ Načítají se aplikace v jazyce C/C++ může selhat, pokud nelze najít závisl
   
 3.  Pokud vaše aplikace závisí na sestavení vedle sebe a manifest není k dispozici, budete muset zajistit, aby linker generuje manifest pro váš projekt. Zaškrtnutím možnosti linkeru **generovat manifest** v **vlastnosti projektu** dialogové okno pro projekt.  
   
-4.  Pokud je manifest vložený do binárního souboru, ujistěte se, že je pro tento typ binárního souboru správné ID RT_MANIFEST. Další informace o jaký Identifikátor prostředku použít, najdete v části [sestavení vedle sebe jako prostředek (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Pokud manifest v samostatném souboru, otevřete ho v textovém editoru nebo editoru XML. Další informace o manifestů a pravidla pro nasazení najdete v tématu [manifesty](http://msdn.microsoft.com/library/aa375365).  
+4.  Pokud je manifest vložený do binárního souboru, ujistěte se, že je pro tento typ binárního souboru správné ID RT_MANIFEST. Další informace o jaký Identifikátor prostředku použít, najdete v části [sestavení vedle sebe jako prostředek (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Pokud manifest v samostatném souboru, otevřete ho v textovém editoru nebo editoru XML. Další informace o manifestů a pravidla pro nasazení najdete v tématu [manifesty](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Pokud je manifest vložený a samostatný soubor manifestu, zavaděč operačního systému používá vloženého manifestu a ignoruje samostatný soubor. Windows XP, je však opak true – samostatný soubor manifestu se používá a je ignorován vloženého manifestu.  
   
-5.  Doporučujeme Vložit manifest v každou knihovnu DLL, protože externí manifestů jsou ignorovány, pokud ale načtení knihovny DLL `LoadLibrary` volání. Další informace najdete v tématu [sestavení manifesty](http://msdn.microsoft.com/library/aa374219).  
+5.  Doporučujeme Vložit manifest v každou knihovnu DLL, protože externí manifestů jsou ignorovány, pokud ale načtení knihovny DLL `LoadLibrary` volání. Další informace najdete v tématu [sestavení manifesty](/windows/desktop/SbsCs/assembly-manifests).  
   
-6.  Zkontrolujte, že všechna sestavení, které jsou uvedené v manifestu jsou správně nainstalovány v počítači. Každé sestavení je určená v manifestu jeho název, číslo verze a architektura procesoru. Pokud vaše aplikace závisí na sestavení vedle sebe, zkontrolujte, že tato sestavení jsou správně nainstalovány v počítači tak, aby na zavaděči operačního systému najdete, jak je popsáno v [pořadí hledání sestavení](http://msdn.microsoft.com/library/aa374224). Mějte na paměti, že 64bitových sestavení nelze načíst v 32bitové procesy a se nedá spustit na 32bitové operační systémy.  
+6.  Zkontrolujte, že všechna sestavení, které jsou uvedené v manifestu jsou správně nainstalovány v počítači. Každé sestavení je určená v manifestu jeho název, číslo verze a architektura procesoru. Pokud vaše aplikace závisí na sestavení vedle sebe, zkontrolujte, že tato sestavení jsou správně nainstalovány v počítači tak, aby na zavaděči operačního systému najdete, jak je popsáno v [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence). Mějte na paměti, že 64bitových sestavení nelze načíst v 32bitové procesy a se nedá spustit na 32bitové operační systémy.  
   
 ## <a name="example"></a>Příklad  
  Předpokládejme, že máme aplikaci appl.exe, která je vytvořená pomocí jazyka Visual C++. Manifest aplikace buď je vložený v appl.exe RT_MANIFEST, která má ID roven 1, nebo se ukládá jako samostatný soubor appl.exe.manifest binární prostředek. Obsah manifestu vypadá takto:  
@@ -82,7 +82,7 @@ Načítají se aplikace v jazyce C/C++ může selhat, pokud nelze najít závisl
 </assembly>  
 ```  
   
- Můžete také použít sestavení vedle sebe [konfiguračních souborů vydavatele](http://msdn.microsoft.com/library/aa375682)– označované také jako zásady souborů – globálně přesměrování aplikace a sestavení místo jiné verze stejného použít jednu verzi sestavení vedle sebe sestavení. Zásady můžete vyhledat ve složce %WINDIR%\WinSxS\Policies\ sdílené sestavení. Tady je příklad souboru zásad:  
+ Můžete také použít sestavení vedle sebe [konfiguračních souborů vydavatele](/windows/desktop/SbsCs/publisher-configuration-files)– označované také jako zásady souborů – globálně přesměrování aplikace a sestavení místo jiné verze stejného použít jednu verzi sestavení vedle sebe sestavení. Zásady můžete vyhledat ve složce %WINDIR%\WinSxS\Policies\ sdílené sestavení. Tady je příklad souboru zásad:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -106,7 +106,7 @@ Načítají se aplikace v jazyce C/C++ může selhat, pokud nelze najít závisl
   
 2.  Zkuste otevřít \\< assemblyName\>\ složky ve složce, která obsahuje appl.exe, a pokud \\< assemblyName\>\ existuje, pokusí načíst soubor manifestu, který má název \<assemblyName >. manifest z této složky. Pokud je manifest nalezen, zavaděč načte sestavení ze \\< assemblyName\>\ složky. Pokud sestavení není nalezen, zatížení se nezdaří.  
   
- Další informace o jak zavaděč hledá závislá sestavení naleznete v tématu [pořadí hledání sestavení](http://msdn.microsoft.com/library/aa374224). Pokud zavaděč nepodaří najít závislé sestavení jako soukromé sestavení, zatížení se nezdaří a zobrazí se zpráva "systém nemůže spustit určený program". Chcete-li vyřešit tuto chybu, ujistěte se, že závislé sestavení – a knihovny DLL, které jsou součástí je – jsou nainstalovány v počítači jako privátní nebo sdílené sestavení.  
+ Další informace o jak zavaděč hledá závislá sestavení naleznete v tématu [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence). Pokud zavaděč nepodaří najít závislé sestavení jako soukromé sestavení, zatížení se nezdaří a zobrazí se zpráva "systém nemůže spustit určený program". Chcete-li vyřešit tuto chybu, ujistěte se, že závislé sestavení – a knihovny DLL, které jsou součástí je – jsou nainstalovány v počítači jako privátní nebo sdílené sestavení.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncept izolovaných aplikací a sestavení vedle sebe](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

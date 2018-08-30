@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966547"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201748"
 ---
 # <a name="moneyget-class"></a>money_get – třída
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+ Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*InputIterator* typ iterátoru, ze kterého funkce get čtou svůj vstup.
+*InputIterator*<br/>
+ Typ iterátoru, ze kterého funkce get čtou svůj vstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující začátek sekvence má být převeden.
+*první*<br/>
+ Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední* vstupní iterátor adresující konec sekvence má být převeden.
+*poslední*<br/>
+ Vstupní iterátor adresující konec sekvence má být převeden.
 
-*Intl* logická hodnota určující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+*Intl*<br/>
+ Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*Iosbase* formátu příznak, který se při nastavení znamená, že symbol měny je volitelné; v opačném případě je povinný.
+*iosbase*<br/>
+ Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav* nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda operace proběhla úspěšně nebo ne.
+*Stav*<br/>
+ Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda operace proběhla úspěšně nebo ne.
 
-*Val* ukládání pořadí převedený řetězec.
+*Val*<br/>
+ Řetězec převedený pořadí ukládání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující začátek sekvence má být převeden.
+*první*<br/>
+ Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední* vstupní iterátor adresující konec sekvence má být převeden.
+*poslední*<br/>
+ Vstupní iterátor adresující konec sekvence má být převeden.
 
-*Intl* logická hodnota určující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+*Intl*<br/>
+ Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*Iosbase* formátu příznak, který se při nastavení znamená, že symbol měny je volitelné; v opačném případě je povinný
+*iosbase*<br/>
+ Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
 
-*Stav* nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
+*Stav*<br/>
+ Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*Val* ukládání pořadí převedený řetězec.
+*Val*<br/>
+ Řetězec převedený pořadí ukládání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+ Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -294,7 +309,7 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
-Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(**_ *** odolný systém souborů*).
+Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="string_type"></a>  money_get::STRING_TYPE
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220503"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC – ovládací prvky ActiveX: Optimalizace
 Tento článek popisuje postupy, které vám umožní optimalizovat vaše ovládací prvky ActiveX pro zajištění lepšího výkonu.  
@@ -53,7 +53,7 @@ Tento článek popisuje postupy, které vám umožní optimalizovat vaše ovlád
 |**Myš ukazatel oznámení, pokud je neaktivní** zaškrtávací políčko|Vyberte|[Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Optimalizované vykreslení kódu** zaškrtávací políčko|Vyberte|[Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)|  
   
- Podrobné informace o členské funkce, které implementují tyto optimalizace najdete v tématu [COleControl](../mfc/reference/colecontrol-class.md). Členské funkce jsou seřazeny podle použití, jako například [bez oken operace](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) a [neaktivní ukazatele funkce zpracování](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Podrobné informace o členské funkce, které implementují tyto optimalizace najdete v tématu [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Další informace naleznete v tématu:  
   

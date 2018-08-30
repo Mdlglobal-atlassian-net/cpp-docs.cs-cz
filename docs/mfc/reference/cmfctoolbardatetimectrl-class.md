@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220431"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Cmfctoolbardatetimectrl – třída
 Tlačítka panelu nástrojů obsahující ovládací prvek pro výběr data a času.  
@@ -96,10 +96,10 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Vrací ukazatel na prvek Výběr data a času.|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Načte popisovač okna, která souvisí s tlačítka panelu nástrojů. (Přepíše [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Získá ve vybraném čase z ovládacího prvku pro výběr data a času a vloží jej do zadaného [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Získá ve vybraném čase z ovládacího prvku pro výběr data a času a vloží jej do zadaného [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Vrátí hodnotu ve vybraném čase z na tlačítko ovládacího prvku pro výběr času, který má ID zadaného příkazu.|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Určuje, zda se zobrazí ohraničení tlačítka, když uživatel vybere tlačítko. (Přepíše [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy. (Přepíše [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy. (Přepíše [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno. (Přepíše [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -250,7 +250,7 @@ virtual HWND GetHwnd();
  Přepíše tuto metodu [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) metody.  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- Získá ve vybraném čase z přidružené datum a čas ovládací prvek pro výběr a umístí jej v zadané [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura  
+ Získá ve vybraném čase z přidružené datum a čas ovládací prvek pro výběr a umístí jej v zadané [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -263,13 +263,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
   
  [out] *pTimeDest*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
+ Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V první přetížení nenulové, pokud čas je úspěšně zapsána do [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objektu; jinak 0. V druhé a třetí přetížení, vrácená hodnota je typu DWORD, který je roven dwFlag člena, která byla nastavena v [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) struktury.  
+ V první přetížení nenulové, pokud čas je úspěšně zapsána do [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objektu; jinak 0. V druhé a třetí přetížení, vrácená hodnota je typu DWORD, který je roven dwFlag člena, která byla nastavena v [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastaví metodu [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) struktury člena dwFlags označující, zda nástroj pro výběr data a času je nastavena na datum a čas. Pokud je hodnota GDT_NONE, ovládacího prvku nastavená na `no date` stav a používá DTS_SHOWNONE styl. Pokud je vrácená hodnota GDT_VALID, systémového času úspěšně uloženy v cílovém umístění.  
+ Nastaví metodu [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) struktury člena dwFlags označující, zda nástroj pro výběr data a času je nastavena na datum a čas. Pokud je hodnota GDT_NONE, ovládacího prvku nastavená na `no date` stav a používá DTS_SHOWNONE styl. Pokud je vrácená hodnota GDT_VALID, systémového času úspěšně uloženy v cílovém umístění.  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  Vrátí čas vybraných uživatelem z na tlačítko ovládacího prvku pro výběr času, který má ID zadaného příkazu.  
@@ -296,7 +296,7 @@ static DWORD GetTimeAll(
  V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
   
  [out] *pTimeDest*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
+ Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud rozhraní framework nemůže najít odpovídající Identifikátor příkazu tlačítka panelu nástrojů *uiCmd*, vrácená hodnota je nula v první přetížení a GDT_NONE v dalšími přetíženími. Pokud je nalezen tlačítka panelu nástrojů, vrácená hodnota je stejná jako návratová hodnota z volání [CMFCToolBarDateTimeCtrl::GetTime](#gettime) na toto tlačítko. Návratová hodnota nula nebo GDT_NONE může dojít, když tlačítko nenajde, což znamená, že volání `GetTime` nevrátil platné datum nějakého jiného důvodu.  
@@ -318,7 +318,7 @@ virtual BOOL HaveHotBorder() const;
  Tato metoda vrátí nenulovou hodnotu, pokud je ovládací prvek viditelný.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.  
+ Určuje, zda tlačítko zpracovává [wm_command –](/windows/desktop/menurc/wm-command) zprávy.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -332,9 +332,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Hodnota TRUE, pokud tlačítko zpracovává wm_command – zprávy nebo hodnotu NEPRAVDA označuje, že zprávy by měl být zpracovány nadřazeného panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní volá tuto metodu, když je odeslat [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávu nadřazenému oknu.  
+ Rozhraní volá tuto metodu, když je odeslat [wm_command –](/windows/desktop/menurc/wm-command) zprávu nadřazenému oknu.  
   
- Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) zpracováním [dtn_datetimechange –](http://msdn.microsoft.com/library/windows/desktop/bb761737) oznámení. Čas vnitřního stavu aktualizací a aktualizuje vlastnosti času všech `CMFCToolBarDateTimeCtrl` objektů se stejným Apple ID.  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) zpracováním [dtn_datetimechange –](/windows/desktop/Controls/dtn-datetimechange) oznámení. Čas vnitřního stavu aktualizací a aktualizuje vlastnosti času všech `CMFCToolBarDateTimeCtrl` objektů se stejným Apple ID.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno.  
@@ -502,7 +502,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
  V první verzi odkaz na [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
  [in] *pTimeNew*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+ Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -535,7 +535,7 @@ static BOOL SetTimeAll(
  V první verzi [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
  [in] *pTimeNew*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+ Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  

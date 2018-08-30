@@ -1,5 +1,5 @@
 ---
-title: Deklarátory abstraktu jazyka C | Microsoft Docs
+title: Deklarátory abstraktu jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc89682a6d092bd5291551f01d9d592d64fdff85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9ca44dbc484749cc10a59fec0b91d096921827
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381818"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214529"
 ---
 # <a name="c-abstract-declarators"></a>Deklarátory abstraktu jazyka C
-Abstraktní deklarátor je deklarátor bez identifikátoru, sestávající z jednoho nebo více ukazatelů, polí nebo modifikátorů funkce. Modifikátor ukazatele (**\***) vždy předchází identifikátor v deklarátor; pole (**[]**) a funkce ( **()** ) modifikátory použijte identifikátor. Když toto víte, můžete určit, kde by se identifikátor v abstraktním deklarátoru měl objevit a interpretovat tento deklarátor odpovídajícím způsobem. V tématu [interpretace více složité Deklarátory](../c-language/interpreting-more-complex-declarators.md) Další informace a příklady složitých deklarátorů. Obecný `typedef` slouží ke zjednodušení deklarátorů. V tématu [Typedef – deklarace](../c-language/typedef-declarations.md).  
+Abstraktní deklarátor je deklarátor bez identifikátoru, sestávající z jednoho nebo více ukazatelů, polí nebo modifikátorů funkce. Modifikátor ukazatele (<strong>\*</strong>) vždy v deklarátoru předchází identifikátor pole (**[] č.**) a funkce ( **()** ) následují tento identifikátor modifikátory. Když toto víte, můžete určit, kde by se identifikátor v abstraktním deklarátoru měl objevit a interpretovat tento deklarátor odpovídajícím způsobem. Zobrazit [interpretace složitých Deklarátorů](../c-language/interpreting-more-complex-declarators.md) pro další informace a příklady složitých deklarátorů. Obecný `typedef` slouží ke zjednodušení deklarátorů. Zobrazit [deklarace Typedef](../c-language/typedef-declarations.md).  
   
  Abstraktní deklarátory mohou být složité. Závorky ve složitých abstraktních deklarátorech určují konkrétní interpretaci, stejně jako je tomu u komplexních deklarátorů v deklaracích.  
   
@@ -52,7 +52,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  Abstraktní deklarátor skládající se z sadu závorky, **()**, není povolena, protože je nejednoznačný. Není možné určit, zda implicitní identifikátor patří do závorek (v tomto případě je to nezměněný typ) nebo před závorky (v tomto případě je to typ funkce).  
+>  Abstraktní deklarátor sestávající ze sady prázdných závorek, **()**, není povolená, protože není jednoznačný. Není možné určit, zda implicitní identifikátor patří do závorek (v tomto případě je to nezměněný typ) nebo před závorky (v tomto případě je to typ funkce).  
   
 ## <a name="see-also"></a>Viz také  
  [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb3e12853d384f433674331342541b7e69241d4a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f4725013d11eb27e4c6669403942cf171032ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340485"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220071"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW – třída
-Umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (podkladová struktura).  
-  
+
+Umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (podkladová struktura).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Oba požadavku, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce dat, ale `CDynamicStringAccessor` vyžádá data řetězce Unicode.  
-  
- `CDynamicStringAccessorW` dědí `GetString` a `SetString` z `CDynamicStringAccessor`. Při použití těchto metod v `CDynamicStringAccessorW` objektu, ***BaseType*** je **WCHAR**.  
-  
-## <a name="requirements"></a>Požadavky  
- **Hlavička**: také atldbcli.h  
-  
-## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor – třída](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor – třída](../../data/oledb/cmanualaccessor-class.md)   
- [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessor – třída](../../data/oledb/cdynamicstringaccessor-class.md)
+typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Oba požadavku, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce dat, ale `CDynamicStringAccessor` vyžádá data řetězce Unicode.
+
+`CDynamicStringAccessorW` dědí `GetString` a `SetString` z `CDynamicStringAccessor`. Při použití těchto metod v `CDynamicStringAccessorW` objektu, `BaseType` je **WCHAR**.
+
+## <a name="requirements"></a>Požadavky
+
+**Hlavička**: také atldbcli.h
+
+## <a name="see-also"></a>Viz také
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor – třída](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor – třída](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor – třída](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

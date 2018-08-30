@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f816e4fd83439b528e6f2ab92212c763d769bed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217152"
 ---
 # <a name="coblist-class"></a>Coblist – třída
 fSupports seřazené seznam nejedinečných `CObject` ukazatele přístupné sekvenčně nebo podle hodnoty ukazatele.  
@@ -160,8 +160,8 @@ void AddHead(CObList* pNewList);
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE AddHead (void\***  `newElement` **);**<br /><br /> **void AddHead (cptrlist –\***  `pNewList` **);**|  
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE AddHead (const CString &** `newElement` **);**<br /><br /> **POZICE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList\***  `pNewList` **);**|  
+|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (cptrlist –** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE AddHead (const CString &** `newElement` **);**<br /><br /> **POZICE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="remarks"></a>Poznámky  
  Seznam může být prázdný před provedením operace.  
@@ -204,8 +204,8 @@ void AddTail(CObList* pNewList);
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Addtail – pozice (void\***  `newElement` **);**<br /><br /> **addtail – void (cptrlist –\***  `pNewList` **);**|  
-|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Addtail – pozice (const CString &** `newElement` **);**<br /><br /> **Addtail – pozice (LPCTSTR** `newElement` **);**<br /><br /> **addtail – void (CStringList\***  `pNewList` **);**|  
+|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Addtail – pozice (void** <strong>\*</strong> `newElement` **);**<br /><br /> **addtail – void (cptrlist –** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList –](../../mfc/reference/cstringlist-class.md)|**Addtail – pozice (const CString &** `newElement` **);**<br /><br /> **Addtail – pozice (LPCTSTR** `newElement` **);**<br /><br /> **addtail – void (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="example"></a>Příklad  
   Zobrazit [CObList::CObList](#coblist) seznam `CAge` třídy.  
@@ -276,7 +276,7 @@ POSITION Find(
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Hledání pozice (void\***  `searchValue` **, pozice** `startAfter` **= NULL) const;**|  
+|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**Hledání pozice (void** <strong>\*</strong> `searchValue` **, pozice** `startAfter` **= NULL) const;**|  
 |[CStringList –](../../mfc/reference/cstringlist-class.md)|**Hledání pozice (LPCTSTR** `searchValue` **, pozice** `startAfter` **= NULL) const;**|  
   
 ### <a name="example"></a>Příklad  
@@ -598,7 +598,7 @@ POSITION InsertAfter(
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, void\***  `newElement` **);**|  
+|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE InsertAfter (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertAfter (pozice** *pozice* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -642,7 +642,7 @@ POSITION InsertBefore(
   
 |Třída|Členská funkce|  
 |-----------|---------------------|  
-|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, void\***  `newElement` **);**|  
+|[Cptrlist –](../../mfc/reference/cptrlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList –](../../mfc/reference/cstringlist-class.md)|**POZICE InsertBefore (pozice** *pozice* **, const CString &** `newElement` **);**<br /><br /> **POZICE InsertBefore (pozice** *pozice* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="example"></a>Příklad  

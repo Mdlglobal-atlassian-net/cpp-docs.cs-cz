@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204420"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ Následující tabulka uvádí dostupné možnosti pro sestavu režimu nebo rež
 
 |Režim sestavy|Soubor sestavy|**_CrtDbgReport**, **_crtdbgreportw –** chování|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Nelze použít|Zapíše zprávu s použitím Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) rozhraní API.|
-|**_CRTDBG_MODE_WNDW**|Nelze použít|Volání Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) rozhraní API k vytvoření okna zprávy pro zobrazení zprávy spolu s **přerušit**, **opakujte**, a **Ignorovat** tlačítka. Pokud uživatel klikne **přerušit**, **_CrtDbgReport** nebo **_CrtDbgReport** ihned přeruší. Pokud uživatel klikne **opakujte**, vrátí hodnotu 1. Pokud uživatel klikne **Ignorovat**, provádění pokračuje a **_CrtDbgReport** a **_crtdbgreportw –** vrátí 0. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu má často za následek "nedefinované chování".|
+|**_CRTDBG_MODE_DEBUG**|Nelze použít|Zapíše zprávu s použitím Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) rozhraní API.|
+|**_CRTDBG_MODE_WNDW**|Nelze použít|Volání Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) rozhraní API k vytvoření okna zprávy pro zobrazení zprávy spolu s **přerušit**, **opakujte**, a **Ignorovat** tlačítka. Pokud uživatel klikne **přerušit**, **_CrtDbgReport** nebo **_CrtDbgReport** ihned přeruší. Pokud uživatel klikne **opakujte**, vrátí hodnotu 1. Pokud uživatel klikne **Ignorovat**, provádění pokračuje a **_CrtDbgReport** a **_crtdbgreportw –** vrátí 0. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu má často za následek "nedefinované chování".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Zapíše zprávu do uživatelem zadané **zpracování**, pomocí Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) rozhraní API a neověřuje platnost popisovače souboru; aplikace je zodpovědná za otevření souboru sestavy a předání platný soubor Obslužná rutina.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Zapíše zprávu do **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Zapíše zprávu do **stdout**.|

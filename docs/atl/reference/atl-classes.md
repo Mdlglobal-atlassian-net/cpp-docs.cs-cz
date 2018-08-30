@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881289"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204187"
 ---
 # <a name="atl-classes-and-structs"></a>ATL – třídy a struktury
 Aktivní šablony knihovny (ATL) obsahuje následující třídy a struktury. Určité třídy podle kategorie najdete v tématu [přehled třídy ATL](../../atl/atl-class-overview.md).  
@@ -71,20 +71,20 @@ Aktivní šablony knihovny (ATL) obsahuje následující třídy a struktury. Ur
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|Tato třída poskytuje metody pro práci s okno hostování ovládacího prvku ActiveX.|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Tato třída poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX a také zahrnuje podporu pro hostování licencované ovládací prvky ActiveX.|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Tato třída implementuje `IBindStatusCallback` rozhraní.|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro agregovaného objektu.|atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro agregovaného objektu.|atlcom.h|  
 |[Ccomallocator –](../../atl/reference/ccomallocator-class.md)|Tato třída poskytuje metody pro správu paměti používá rutiny COM paměti.|atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|Tato třída poskytuje podporu pro správu v souboru EXE modulu ve fondu vláken typu apartment.|atlbase.h|  
 |[Ccomautocriticalsection –](../../atl/reference/ccomautocriticalsection-class.md)|Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.|atlcore.h|  
 |[Ccomautothreadmodule –](../../atl/reference/ccomautothreadmodule-class.md)|Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL moduly](../../atl/atl-module-classes.md) další podrobnosti.|atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|Tato třída představuje obálku pro datových typů BSTR.|atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro rozhraní s odnímatelnými nabídkami.|atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní.|atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Tato třída implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní.|atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní a umožňuje objektů bude vytvořena ve více objekty apartment.|atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami.|atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní.|atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Tato třída implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní.|atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní a umožňuje objektů bude vytvořena ve více objekty apartment.|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|Tato třída je odvozena z [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.|atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|Tato třída poskytuje metody pro vytvoření instance třídy a získání jeho vlastnosti.|atlcom.h|  
 |[Ccomcompositecontrol –](../../atl/reference/ccomcompositecontrol-class.md)|Tato třída poskytuje metody potřebnou k implementaci složeného ovládacího prvku.|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním objekt vlastníka `IUnknown`.|atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) delegováním objekt vlastníka `IUnknown`.|atlcom.h|  
 |[Ccomcontrol –](../../atl/reference/ccomcontrol-class.md)|Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.|atlctl.h|  
 |[Ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md)|Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.|atlcore.h|  
@@ -208,20 +208,20 @@ Aktivní šablony knihovny (ATL) obsahuje následující třídy a struktury. Ur
 |[Ioleobjectimpl –](../../atl/reference/ioleobjectimpl-class.md)|Tato třída implementuje `IUnknown` a je hlavní rozhraní, přes který kontejner komunikuje s ovládacím prvkem.|atlctl.h|  
 |[Iperpropertybrowsingimpl –](../../atl/reference/iperpropertybrowsingimpl-class.md)|Tato třída implementuje `IUnknown` a umožňuje klientům přístup k informacím na stránkách vlastností objektu.|atlctl.h|  
 |[Ipersistpropertybagimpl –](../../atl/reference/ipersistpropertybagimpl-class.md)|Tato třída implementuje `IUnknown` a umožňuje uložit do kontejneru objektů klientem poskytnutý její vlastnosti.|atlcom.h|  
-|[Ipersiststorageimpl –](../../atl/reference/ipersiststorageimpl-class.md)|Tato třída implementuje [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) rozhraní.|atlcom.h|  
-|[Ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) rozhraní.|atlcom.h|  
-|[Ipointerinactiveimpl –](../../atl/reference/ipointerinactiveimpl-class.md)|Tato třída implementuje `IUnknown` a [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) metody rozhraní.|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Tato třída zveřejňuje [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní jako odchozí rozhraní umožňující připojení k objektu.|atlctl.h|  
+|[Ipersiststorageimpl –](../../atl/reference/ipersiststorageimpl-class.md)|Tato třída implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) rozhraní.|atlcom.h|  
+|[Ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) rozhraní.|atlcom.h|  
+|[Ipointerinactiveimpl –](../../atl/reference/ipointerinactiveimpl-class.md)|Tato třída implementuje `IUnknown` a [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) metody rozhraní.|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Tato třída zveřejňuje [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní jako odchozí rozhraní umožňující připojení k objektu.|atlctl.h|  
 |[Ipropertypage2impl –](../../atl/reference/ipropertypage2impl-class.md)|Tato třída implementuje `IUnknown` a zdědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md).|atlctl.h|  
-|[Ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) rozhraní.|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Tato třída poskytuje výchozí implementaci třídy [iprovideclassinfo –](http://msdn.microsoft.com/library/windows/desktop/ms687303) a [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.|atlcom.h|  
+|[Ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) rozhraní.|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Tato třída poskytuje výchozí implementaci třídy [iprovideclassinfo –](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) a [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) metody.|atlcom.h|  
 |[Iquickactivateimpl –](../../atl/reference/iquickactivateimpl-class.md)|Tato třída kombinuje Inicializace řízení kontejnerů do jednoho volání.|atlctl.h|  
-|[Irunnableobjectimpl –](../../atl/reference/irunnableobjectimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) rozhraní.|atlctl.h|  
+|[Irunnableobjectimpl –](../../atl/reference/irunnableobjectimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) rozhraní.|atlctl.h|  
 |[Iserviceproviderimpl –](../../atl/reference/iserviceproviderimpl-class.md)|Tato třída poskytuje výchozí implementaci třídy `IServiceProvider` rozhraní.|atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) rozhraní.|atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) rozhraní.|atlcom.h|  
 |[Isupporterrorinfoimpl –](../../atl/reference/isupporterrorinfoimpl-class.md)|Tato třída poskytuje výchozí implementaci třídy `ISupportErrorInfo Interface` rozhraní a lze je použít, když pouze jedno rozhraní vygeneruje chyby na objekt.|atlcom.h|  
 |[IThreadPoolConfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)|Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.|atlutil.h|  
-|[Iviewobjecteximpl –](../../atl/reference/iviewobjecteximpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), a [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375) rozhraní.|atlctl.h|  
+|[Iviewobjecteximpl –](../../atl/reference/iviewobjecteximpl-class.md)|Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), a [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) rozhraní.|atlctl.h|  
 |[IWorkerThreadClient – rozhraní](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` představuje rozhraní implementované klienty [cworkerthread –](../../atl/reference/cworkerthread-class.md) třídy.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Tato třída poskytuje obálky pro `CreateWindow` a `CreateWindowEx`.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Tato třída argument adaptér umožňuje buď `RECT` ukazatele nebo odkazy, které se mají předat funkci, která je implementovaná jako ukazatele.|atlwin.h|  

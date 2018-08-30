@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222805"
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
 
 Visual C++ obsahuje širokou škálu materiál, který můžete použít atributy ve svých programech. Atributy, novou funkci v jazyce Visual C++ jsou navržené pro zjednodušení programování v modelu COM a rozhraní .NET Framework common language runtime vývoje. Pokud zahrnete atributy ve zdrojových souborech, kompilátor spolupracuje s poskytovatele dynamické knihovny (DLL), vložte kód nebo upravit kód v souborech generované objektů. Existují atributy, které pomáhají při vytváření souborů .idl, rozhraní, knihovny typů a dalších prvků modelu COM. Atributy jsou podporovány v integrovaném vývojovém prostředí (IDE) podle průvodce a v okně Vlastnosti.
 
-Zatímco atributy eliminují některý podrobné psaní kódu, které jsou potřebné pro zápis objektů modelu COM, je nutné na pozadí v [COM Základy](http://msdn.microsoft.com/library/windows/desktop/ms694363) nejlépe jejich použití.
+Zatímco atributy eliminují některý podrobné psaní kódu, které jsou potřebné pro zápis objektů modelu COM, je nutné na pozadí v [COM Základy](/windows/desktop/com/the-component-object-model) nejlépe jejich použití.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

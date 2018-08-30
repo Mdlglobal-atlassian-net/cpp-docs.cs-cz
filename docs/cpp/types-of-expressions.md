@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9d823b74762c4b35f25fd2daa94b5fc7c0ce32
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0827aa34a0812281b3aa4f70b78a14a0336b8921
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204719"
 ---
 # <a name="types-of-expressions"></a>Typy výrazů
 Výrazy jazyka C++ jsou rozděleny do několika kategorií:  
@@ -36,7 +36,7 @@ Výrazy jazyka C++ jsou rozděleny do několika kategorií:
   
 -   [Výrazy konstant](../cpp/cpp-constant-expressions.md). Konstantní výrazy jsou vytvářena konstantní údajů.  
   
--   [Výrazy s explicitními převody typu](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explicitní převody typu, nebo "přetypování", můžete použít ve výrazech.  
+-   [Výrazy s explicitními převody typu](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explicitní převody typu, nebo "přetypování", můžete použít ve výrazech.  
   
 -   [Výrazy s operátory pointer-to-member](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

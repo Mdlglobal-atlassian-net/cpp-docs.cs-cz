@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849680"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212427"
 ---
 # <a name="coleconvertdialog-class"></a>Coleconvertdialog – třída
-Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
+Další informace najdete v tématu [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) struktura v sadě Windows SDK.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
   
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) a [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktury.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) a [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) struktury.  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Tato funkce se volá po vrácení úspěšně z [DoModal](#domodal)– buď k převodu nebo aktivovat objekt typu [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) funkce v sadě Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_cv](#m_cv) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.  
   
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Voláním této funkce určete, jestli se uživatel rozhodl zobrazení vybrané položky jako ikona.  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.  
   
- Další informace o aspekt kreslení, najdete v článku [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) datové struktury v sadě Windows SDK.  
+ Další informace o aspekt kreslení, najdete v článku [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) datové struktury v sadě Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Voláním této funkce se získat popisovač pro tento metasoubor obsahující ikonickým aspekt vybranou položku.  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>Poznámky  
  Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Coledialog – třída](../../mfc/reference/coledialog-class.md)   

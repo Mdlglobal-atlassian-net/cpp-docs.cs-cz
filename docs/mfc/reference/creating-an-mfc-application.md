@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026988"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207334"
 ---
 # <a name="creating-an-mfc-application"></a>Vytvoření aplikace MFC
 Aplikace knihovny MFC je spustitelná aplikace pro Windows, který je založen na knihovny Microsoft Foundation Class (MFC). Nejjednodušším způsobem vytvoření aplikace knihovny MFC je použití Průvodce aplikací knihovny MFC.  
@@ -59,8 +59,8 @@ Aplikace knihovny MFC je spustitelná aplikace pro Windows, který je založen n
  Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Příprava ladění: Visual C++ Windows aplikací](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Příprava ladění: Visual C++ Windows aplikací](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

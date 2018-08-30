@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207638"
 ---
 # <a name="csplitbutton-class"></a>Csplitbutton – třída
 `CSplitButton` Třída představuje ovládací tlačítko rozdělení. Tlačítko rozdělení ovládání provede výchozí chování, když uživatel klikne na hlavní část tlačítka a zobrazí rozevírací nabídky po kliknutí tlačítko šipky rozevíracího seznamu.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Zpracovává BCN_DROPDOWN oznámení, že systém odešle, když uživatel klepne na šipku rozevíracího seznamu aktuálního ovládacího prvku tlačítko rozdělení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSplitButton` Je třída odvozena z [CButton](../../mfc/reference/cbutton-class.md) třídy. Tlačítko rozdělení ovládání je ovládací prvek tlačítko, jehož styl je BS_SPLITBUTTON. Vlastní nabídky se zobrazí po kliknutí na šipku rozevíracího seznamu. Další informace najdete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON [styly](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ `CSplitButton` Je třída odvozena z [CButton](../../mfc/reference/cbutton-class.md) třídy. Tlačítko rozdělení ovládání je ovládací prvek tlačítko, jehož styl je BS_SPLITBUTTON. Vlastní nabídky se zobrazí po kliknutí na šipku rozevíracího seznamu. Další informace najdete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON [styly](/windows/desktop/Controls/button-styles).  
   
  Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a zobrazí se podnabídky (3).  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parametr|Popis|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [styly](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
+|[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
 |[in] *pParentWnd*|Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  
 |[in] *nID*|ID ovládacího prvku.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Ukazatel [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) strukturu, která obsahuje informace o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
-|[out] *pResult*|(Není používána a není vrácena žádná hodnota.) Návratová hodnota [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
+|[in] *pNMHDR*|Ukazatel [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) strukturu, která obsahuje informace o [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) oznámení.|  
+|[out] *pResult*|(Není používána a není vrácena žádná hodnota.) Návratová hodnota [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) oznámení.|  
   
 ### <a name="remarks"></a>Poznámky  
  Když uživatel klikne na rozevírací šipku na ovládací tlačítko rozdělení, systém odešle oznámení BCN_DROPDOWN zpráva, která `OnDropDown` metoda obslužné rutiny. Ale `CSplitButton` objekt nepředává BCN_DROPDOWN oznámení do ovládacího prvku, který obsahuje tlačítko rozdělení ovládání. V důsledku toho nemůže podporovat nadřazeného ovládacího prvku vlastní akce v reakci na oznámení.  

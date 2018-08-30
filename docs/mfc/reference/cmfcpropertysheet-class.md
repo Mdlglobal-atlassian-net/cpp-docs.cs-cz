@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207475"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
 `CMFCPropertySheet` Třída podporuje seznam vlastností, kde každou stránku vlastností označuje symbolem karty stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položka seznamu.  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicializuje vzhled ovládacího prvku aktuální seznam vlastností.|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Volá se rozhraním, když je povolena stránka vlastností.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Volá se rozhraním, chcete-li nakreslit vlastní vlastnosti záhlaví stránky.|  
-|`CMFCPropertySheet::OnInitDialog`|Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Přepíše [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|`CMFCPropertySheet::OnInitDialog`|Zpracovává [nezavěsíte](/windows/desktop/dlgbox/wm-initdialog) zprávy. (Přepíše [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Volá se rozhraním odebrání ovládacím prvkem strom stránky vlastností.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Odebrání uzlu z ovládacího prvku stromu.|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Stránky vlastností se odebere ze seznamu vlastností.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Určuje seznam imagí, které se používají v ovládacím prvku navigačního podokna aplikace Outlook.|  

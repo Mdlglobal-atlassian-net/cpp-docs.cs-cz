@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221098"
 ---
 # <a name="ccomallocator-class"></a>Ccomallocator – třída
 Tato třída poskytuje metody pro správu paměti používá rutiny COM paměti.  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud není k dispozici dostatek paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Přidělí paměť. Zobrazit [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) další podrobnosti.  
+ Přidělí paměť. Zobrazit [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) další podrobnosti.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Voláním této funkce statických zdarma přidělené paměti.  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  Ukazatel do přidělené paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní přidělené paměti. Zobrazit [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) další podrobnosti.  
+ Uvolní přidělené paměti. Zobrazit [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) další podrobnosti.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Voláním této funkce statické přidělení paměti.  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud je nedostatek paměti  
   
 ### <a name="remarks"></a>Poznámky  
- Změní velikost přidělené paměti. Zobrazit [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) další podrobnosti.  
+ Změní velikost přidělené paměti. Zobrazit [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) další podrobnosti.  
   
 ## <a name="see-also"></a>Viz také  
  [Ccomheapptr – třída](../../atl/reference/ccomheapptr-class.md)   

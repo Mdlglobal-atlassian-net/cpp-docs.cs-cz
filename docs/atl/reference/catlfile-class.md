@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220646"
 ---
 # <a name="catlfile-class"></a>Catlfile – třída
 Tato třída poskytuje rozhraní API pro zpracování souborů dynamického zajišťování obálku Windows.  
@@ -132,7 +132,7 @@ HRESULT Create(
  Název souboru  
   
  *dwDesiredAccess*  
- Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) v sadě Windows SDK.  
+ Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) v sadě Windows SDK.  
   
  *dwShareMode*  
  Režim sdílené složky. Zobrazit *dwShareMode* v `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) vytvořit nebo otevřít soubor.  
+ Volání [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) vytvořit nebo otevřít soubor.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Voláním této metody lze vymazat vyrovnávací paměť pro soubor a způsobit, že všechna data ve vyrovnávací paměti k zápisu do souboru.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) Vyprázdnit data ve vyrovnávací paměti do souboru.  
+ Volání [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) Vyprázdnit data ve vyrovnávací paměti do souboru.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Volejte tuto metodu za účelem získání výsledků překrytá operace na souboru.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Parametry  
  *pOverlapped*  
- Překryté struktury. Zobrazit *lpOverlapped* v [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) v sadě Windows SDK.  
+ Překryté struktury. Zobrazit *lpOverlapped* v [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) v sadě Windows SDK.  
   
  *dwBytesTransferred*  
  Počet bajtů přenesených. Zobrazit *lpNumberOfBytesTransferred* v `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) k získání požadovaných výsledků překrytá operace na souboru.  
+ Volání [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) k získání požadovaných výsledků překrytá operace na souboru.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Voláním této metody k získání aktuální ukazatel pozice v souboru.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) zobrazíte aktuální ukazatel pozice v souboru.  
+ Volání [funkce SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) zobrazíte aktuální ukazatel pozice v souboru.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Volejte tuto metodu za účelem získání velikost v bajtech souboru.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) získáte velikost v bajtech souboru.  
+ Volání [funkce GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) získáte velikost v bajtech souboru.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Volejte tuto metodu za účelem uzamčení oblasti v souboru, který má bránit dalším procesům v přístupu k nim.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) k uzamčení oblasti v souboru. Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy. Můžeš více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Po odemknutí oblast pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která dříve byla uzamčena. `LockRange` nesloučí sousední oblasti; Pokud jsou dvě oblasti uzamčené vedle sebe, musí každý odemknout samostatně.  
+ Volání [LockFile](/windows/desktop/api/fileapi/nf-fileapi-lockfile) k uzamčení oblasti v souboru. Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy. Můžeš více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Po odemknutí oblast pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která dříve byla uzamčena. `LockRange` nesloučí sousední oblasti; Pokud jsou dvě oblasti uzamčené vedle sebe, musí každý odemknout samostatně.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Ukazatel `CAtlTransactionManager` objektu.  
@@ -293,16 +293,16 @@ HRESULT Read(
  Počet přečtených bajtů.  
   
  *pOverlapped*  
- Překryté struktury. Zobrazit *lpOverlapped* v [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) v sadě Windows SDK.  
+ Překryté struktury. Zobrazit *lpOverlapped* v [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) v sadě Windows SDK.  
   
  *pfnCompletionRoutine*  
- Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) v sadě Windows SDK.  
+ Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [readfileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-readfileex) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- První tři formuláře volání [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), poslední [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) číst data ze souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
+ První tři formuláře volání [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), poslední [readfileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-readfileex) číst data ze souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Voláním této metody lze přesunout ukazatel na soubor souboru.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) přesunout ukazatel souboru.  
+ Volání [funkce SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) přesunout ukazatel souboru.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Voláním této metody lze nastavit velikost souboru.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) a [funkce SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) nastavit velikost souboru. Při návratu je ukazatel na soubor umístěn na konci souboru.  
+ Volání [funkce SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) a [funkce SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) nastavit velikost souboru. Při návratu je ukazatel na soubor umístěn na konci souboru.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Volejte tuto metodu za účelem odemknout oblasti souboru.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) k odemknutí oblasti souboru.  
+ Volání [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) k odemknutí oblasti souboru.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Volání této metody zapsat data do souboru začínající na pozici ukazatele souboru.  
@@ -392,10 +392,10 @@ HRESULT Write(
  Počet bajtů, které mají být přeneseny z vyrovnávací paměti.  
   
  *pOverlapped*  
- Překryté struktury. Zobrazit *lpOverlapped* v [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) v sadě Windows SDK.  
+ Překryté struktury. Zobrazit *lpOverlapped* v [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) v sadě Windows SDK.  
   
  *pfnCompletionRoutine*  
- Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) v sadě Windows SDK.  
+ Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [writefileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-writefileex) v sadě Windows SDK.  
   
  *pnBytesWritten*  
  Zapsaných bajtů.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- První tři formuláře volání [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), poslední volání [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) k zápisu dat do souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
+ První tři formuláře volání [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), poslední volání [writefileex spuštěná](/windows/desktop/api/fileapi/nf-fileapi-writefileex) k zápisu dat do souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
   
 ## <a name="see-also"></a>Viz také  
  [Výběr ukázky](../../visual-cpp-samples.md)   

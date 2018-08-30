@@ -1,5 +1,5 @@
 ---
-title: Výběr položek ovládacího prvku strom | Microsoft Docs
+title: Výběr položek ovládacího prvku strom | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fd6632a44dd4806b8f13683b50cad76b5eebe27a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212578"
 ---
 # <a name="tree-control-item-selection"></a>Výběr položek ovládacího prvku strom
-Při výběru změní z jednu položku na jiný, ovládacím prvkem strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) a [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) zpráv s oznámením. Obě oznámení zahrnují hodnotu, která určuje, zda změna výsledku kliknutí myši nebo stisknutí klávesy. Oznámení také obsahují informace o položce, který je získání výběru a položku, je ztráty výběr. Tyto informace slouží k nastavení atributů položky, které závisí na stavu výběru položky. Vrácení **TRUE** v reakci na `TVN_SELCHANGING` brání výběr z změna; vrácení **FALSE** umožňuje změnu.  
+Při změně výběru z jedné položky na jiný, ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) a [TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) zpráv s oznámením. Obě oznámení zahrnují hodnotu, která určuje, zda změna je výsledkem kliknutí myší nebo stisknutí klávesy. Oznámení také zahrnovat informace o položce, která získává na výběr a položku, která je ztráta výběr. Tyto informace slouží k nastavení atributů položky, které závisí na stavu výběru položky. Vrací **TRUE** v reakci na `TVN_SELCHANGING` brání výběr změny; vrácení **FALSE** umožňuje změnu.  
   
- Aplikace můžete změnit výběr voláním [selectitem –](../mfc/reference/ctreectrl-class.md#selectitem) – členská funkce.  
+ Aplikace můžete změnit výběr voláním [selectitem –](../mfc/reference/ctreectrl-class.md#selectitem) členskou funkci.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   

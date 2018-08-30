@@ -1,5 +1,5 @@
 ---
-title: Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování | Microsoft Docs
+title: Porovnání Concurrency Runtime s jinými modely souběžného zpracování | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,89 +14,89 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207208"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování
-Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurrency Runtime a další technologie. Podle porozumět tomu, jak výhody Concurrency Runtime porovnávají výhody jinými programovací modely, můžete vybrat technologie, která nejlépe splňuje požadavky aplikací.  
+Tento dokument popisuje rozdíly mezi funkcemi a programovacích modelů Concurrency Runtime a dalších technologií. Když porozumíte tomu, jak porovnat výhody modulu Runtime souběžnosti výhod jiných programovacích modelů, můžete vybrat technologie, která nejlépe vyhovuje požadavkům vašich aplikací.  
   
- Pokud aktuálně používáte jiný programovací model, například Windows fondu vláken nebo OpenMP, nejsou v situacích, kde může být vhodné pro migraci do Concurrency Runtime. Například v tématu [migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) popisuje, kdy může být vhodné pro migraci z OpenMP do Concurrency Runtime. Ale pokud budete spokojeni s výkonem aplikací a aktuální podporu ladění, není migrace nutná.  
+ Pokud aktuálně používáte jiný programovací model, jako je například Windows fondu vláken nebo OpenMP, existují situace, kde může být vhodné k migraci do modulu Runtime souběžnosti. Například téma [migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) popisuje, kdy může být vhodné k migraci z OpenMP do Concurrency Runtime. Nicméně pokud jste spokojeni s výkonem aplikace a aktuální podporu ladění, není migrace nutná.  
   
- Funkce a výhody produktivitu Concurrency Runtime můžete použít tak, aby doplňovala existující aplikace, který používá jiný model souběžnosti. Concurrency Runtime nemůže zaručit, Vyrovnávání zatížení při víc plánovače úloh pokouší o stejné výpočetní prostředky. Ale při zatížení se nepřekrývají, tento efekt je minimální.  
+ Funkce a produktivity výhody modulu Runtime souběžnosti můžete doplňují existující aplikaci, která používá jiný model souběžnosti. Modulu Runtime souběžnosti nemůže zaručit, Vyrovnávání zatížení při více plánovačích úkolů soutěžit o stejnou výpočetní prostředky. Ale když úlohy se nepřekrývají, tento efekt je minimální.  
   
 ##  <a name="top"></a> Oddíly  
   
--   [Porovnání preemptivní plánování pro spolupráci plánování](#models)  
+-   [Porovnání Preemptive plánování k plánování spolupráce](#models)  
   
--   [Porovnání modelu Concurrency Runtime s rozhraním API systému Windows](#winapi)  
+-   [Porovnání Concurrency Runtime s Windows API](#winapi)  
   
 -   [Porovnání modelu Concurrency Runtime s OpenMP](#openmp)  
   
-##  <a name="models"></a> Porovnání preemptivní plánování pro spolupráci plánování  
- Preemptivní modelu a spolupráce plánování modely dvěma způsoby běžné povolit více úkolů sdílet výpočetní prostředky, například procesory nebo hardwaru vláken.  
+##  <a name="models"></a> Porovnání Preemptive plánování k plánování spolupráce  
+ Preemptive modelu a kooperativní plánování modely jsou dvě běžné způsoby povolení více úkolů ke sdílení výpočetní prostředky, například procesory nebo hardwarových vláken.  
   
-### <a name="preemptive-and-cooperative-scheduling"></a>Preemptivní a spolupráci plánování  
- *Preemptivní plánování* kruhového dotazování, na základě priority mechanismus, který dává každý úkol výhradní přístup k výpočetnímu prostředku v daném časovém období a dojde k přepnutí do jiná úloha. Preemptivní plánování je běžné v multitasking operační systémy, třeba Windows *. Plánování spolupráci* mechanismus, který poskytuje každý úkol výhradní přístup k výpočetních prostředků, dokud na dokončení úlohy nebo úlohu poskytuje přístup k prostředku. Concurrency Runtime používá k dosažení maximální využití prostředků zpracování spolupráci plánování spolu s plánovači preemptivní operačního systému.  
+### <a name="preemptive-and-cooperative-scheduling"></a>Plánování preemptive a spolupráce  
+ *Preemptive plánování* je kruhové dotazování, na základě priority mechanismus, který poskytuje každý úkol výhradní přístup k výpočetnímu prostředku pro zadané časové období a pak přepne na jiné úlohy. Preemptive plánování je běžné v multitaskingu operační systémy jako Windows *. Plánování spolupráce* virtuálních sítí je mechanismus, která poskytuje každý úkol výhradní přístup k výpočetnímu prostředku, dokud neskončí úloha nebo dokud se úloha provede jeho přístup k prostředku. Modul Concurrency Runtime používá k dosažení maximální využití prostředků zpracování kooperativní plánování spolu s plánovači preemptive operačního systému.  
   
-### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Rozdíly mezi preemptivní a spolupráci plánovače  
- Preemptivní plánovače se snaží poskytnout více vláken rovna přístup k výpočetních prostředků, která zajistí, že každé vlákno umožňuje průběh. Na počítačích, které mají mnoho výpočetních prostředků zajištění správného přístup stane méně problematické; zajistíte efektivní využití prostředků stane však více problematické.  
+### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Rozdíly mezi plánovači Preemptive a spolupráce  
+ Preemptive plánovače se snaží poskytnout více vláken rovnocenný přístup k výpočetní prostředky k zajištění, že každé vlákno díky průběh. Na počítačích, které mají mnoho výpočetních prostředků zajištění spravedlivého přístupu bude méně problematické; zajištění efektivního využití prostředků bude však více problematické.  
   
- Scheduler preemptivní režimu jádra vyžaduje kód aplikace, který závisí na operačním systému k rozhodnutí pro plánování. Naopak umožňuje spolupráci plánovače uživatelského režimu kódu aplikace, aby vlastní plánovací rozhodnutí. Vzhledem k tomu spolupráci plánování umožňuje mnoho plánování rozhodnutí, která má být provedeno aplikací, snižuje mnohem režie, která souvisí se režimu jádra synchronizací. Spolupráci scheduler odkládat obvykle údaje plánovací rozhodnutí s jádrem operačního systému, když nemá žádné další kroky při plánování. Spolupráci scheduler odkládat údaje také Plánovač operačního systému při blokování operace, které informace se předávají do jádra, ale není operace oznamovat Plánovač uživatelského režimu.  
+ Plánovačem preemptivní režimu jádra vyžaduje kód aplikace, který závisí na operačním systému pro plánování rozhodování. Naopak kooperativní Plánovač uživatelského režimu umožňuje kódu aplikace pro vlastní plánování rozhodování. Protože plánování spolupráce umožňuje mnoho plánování rozhodnutí o aplikací, snižuje většinu zatížení, který je přidružený k synchronizaci režimu jádra. Spolupráce Plánovač obvykle odloží plánovací rozhodnutí do jádra operačního systému, když nemá žádná práce k naplánování. Spolupráce Plánovač se také odloží plánovač operačního systému při blokující operace, které jsou předávány do jádra, ale operace se předávají Plánovač uživatelského režimu.  
   
-### <a name="cooperative-scheduling-and-efficiency"></a>Plánování spolupráci a efektivity  
- Preemptivní plánovačem je rovna všechnu práci, který má stejnou úrovní priority. Preemptivní scheduler plánuje obvykle vláken v pořadí, ve kterém jsou vytvořeny. Preemptivní scheduler navíc poskytuje každé vlákno časovém intervalu způsobem kruhového dotazování na základě priority přístup z více vláken. I když tento mechanismus nabízí rovnosti (každých vlákno umožňuje postup směrem vpřed), obsahuje některé náklady efektivitu. Například mnoho algoritmy náročné na výpočetní nevyžadují rovnosti. Místo toho je důležité, aby související úkoly dokončí v nejméně celkovou dobu. Plánování spolupráci umožňuje aplikaci efektivněji plánování práce. Představte si třeba aplikace, která má velký počet vláken. Plánování vláken, které nesdílí prostředky spuštěny současně, můžete snížit režijní náklady na synchronizaci a tím zvýšit efektivitu. Jiné efektivní způsob, jak naplánovat úlohy je spuštění kanálů úloh (kde každý úkol funguje na výstup předchozí) na stejném procesoru tak, aby vstupní u každé fáze kanálu je již načten do mezipaměti.  
+### <a name="cooperative-scheduling-and-efficiency"></a>Plánování spolupráce a efektivity  
+ Do preemptive plánovače rovná veškerou práci, která má stejnou prioritu. Preemptive scheduler plánuje obvykle vlákna v pořadí, ve kterém jsou vytvořeny. Preemptive Plánovač navíc poskytuje každé vlákno časovém intervalu způsobem kruhové dotazování na základě priority vlákna. I když tento mechanismus nabízí rovnost (každé vlákno provede postup směrem vpřed), obsahuje některé poplatků efektivitu. Například mnoho algoritmů intenzivními nevyžadují rovnost. Místo toho je důležité, že v nejméně celkový čas dokončit související úlohy. Plánování spolupráce umožňuje aplikaci efektivněji plánování práce. Zvažte například aplikaci, která má mnoho vláken. Plánování vláken, které nesdílí prostředky, jak souběžně spustit můžete snížit režijní náklady na synchronizaci a tím zvýšit efektivitu. Další efektivní způsob, jak plánovat úlohy je spuštění kanálů úloh (kde každý úkol zpracovává výstupního předchozím histogramem) na stejném procesoru tak, aby se vstupem každá fáze kanálu je již načteno do mezipaměti.  
   
-### <a name="using-preemptive-and-cooperative-scheduling-together"></a>Pomocí preemptivní a spolupráci plánování společně  
- Plánování spolupráci všechny plánování problémy nevyřeší. Úlohy, které zisk poměrně na jiné úlohy, například můžete využívat všechny dostupné výpočetní prostředky a zabránit dalších úloh v průběhu provádění. Concurrency Runtime používá efektivitu výhod spolupráci plánování aby doplňovala záruky rovnosti preemptivní plánování. Ve výchozím nastavení poskytuje Concurrency Runtime spolupráci plánovače, který používá algoritmus krádež pracovní pro efektivní distribuci pracovní mezi výpočetní prostředky. Plánovač Concurrency Runtime však také závisí na preemptivní Plánovač operačního systému poměrně distribuovat prostředky mezi aplikacemi. Můžete také vytvořit vlastní plánovače a zásady plánovače ve svých aplikacích k vytvoření jemně odstupňovanou kontrolu nad provádění vlákna.  
+### <a name="using-preemptive-and-cooperative-scheduling-together"></a>Pomocí plánování společně Preemptive a spolupráce  
+ Plánování spolupráce se nevyřeší všechny problémy s plánováním. Například úkoly, které neposkytují poměrně jiných úloh můžete využívat všech dostupných výpočetních prostředcích a zabránit vidět pokrok jiných úloh. Modulu Runtime souběžnosti využívá výhody efektivita plánování spolupráce zaměřujete záruky rovnost preemptive plánování. Ve výchozím nastavení poskytuje modulu Runtime souběžnosti plánovače spolupráce, který používá algoritmus přebírající práci pro efektivní distribuci práce mezi výpočetní prostředky. Plánovač Concurrency Runtime však také závisí na preemptive Plánovač operační systém poměrně distribuovat prostředky mezi aplikacemi. Můžete také vytvořit vlastní plánovače a zásady plánovače ve svých aplikacích k vytvoření přesnou kontrolu nad provádění vlákna.  
   
  [[Horní](#top)]  
   
-##  <a name="winapi"></a> Porovnání modelu Concurrency Runtime s rozhraním API systému Windows  
- Microsoft Windows rozhraní, která je obvykle označována jako rozhraní API systému Windows (a dříve označované jako Win32), poskytuje programovací model, který umožňuje souběžnosti v aplikacích. Concurrency Runtime založený na rozhraní API systému Windows k poskytování dalších programovací modely, které nejsou k dispozici prostřednictvím příslušný operační systém.  
+##  <a name="winapi"></a> Porovnání Concurrency Runtime s Windows API  
+ Microsoft Windows rozhraní, který je obvykle označuje jako rozhraní API Windows (dříve označované jako Win32), poskytuje programovací model, který umožňuje souběžnosti ve svých aplikacích. Modulu Runtime souběžnosti je založena na rozhraní Windows API pro poskytnutí dalších programovacích modelů, které nejsou k dispozici od základního operačního systému.  
   
- Concurrency Runtime založený na rozhraní API systému Windows modelu vláken pro paralelní práci. Také používá rozhraní API systému Windows Správa paměti a úložiště thread-local mechanismy. V systému Windows 7 a Windows Server 2008 R2 využívá podporu rozhraní API systému Windows pro které lze uživatele plánovat vláken a počítačů, které mají víc než 64 vláken hardwaru. Concurrency Runtime rozšiřuje možnosti rozhraní API systému Windows poskytnutím plánovače úloh spolupráci a algoritmus krádež pracovní maximalizovat využití výpočetních prostředků a povolením více souběžných scheduler instancí.  
+ Modulu Runtime souběžnosti je založena na modelu vlákno rozhraní Windows API a provádí paralelní práci. Také používá rozhraní Windows API Správa paměti a úložiště thread-local se mechanismy. Ve Windows 7 a Windows Server 2008 R2 používá podpora rozhraní Windows API pro uživatele plánovatelná vlákna a počítačů, které mají více než 64 hardwarových vláken. Modulu Runtime souběžnosti rozšiřuje rozhraní Windows API model poskytnutím plánovače úloh spolupráce a algoritmus přebírající práci maximalizovat využití výpočetních prostředků a tím, že umožňuje víc souběžných Plánovač instancí.  
    
 ### <a name="programming-languages"></a>Programovací jazyky  
- Rozhraní API systému Windows používá programovací jazyk C ke zveřejnění programovací model. Concurrency Runtime poskytuje programovací rozhraní C++, který využívá nejnovější funkce v jazyce C++. Například lambda funkce poskytují mechanismus stručného, bezpečnost typů pro definování paralelní pracovních funkcí. Další informace o nejnovější funkce C++, které používá Concurrency Runtime najdete v tématu [přehled](../../parallel/concrt/asynchronous-message-blocks.md).  
+ Rozhraní API Windows programovací jazyk C používá k vystavení programovacího modelu. Modul Concurrency Runtime poskytuje programovací rozhraní C++, který využívá nejnovější funkce v jazyce C++. Například lambda funkce poskytují mechanismus stručné, bezpečnost typů pro definování funkcí paralelní práci. Další informace o nejnovější funkce C++, které používá modulu Runtime souběžnosti, naleznete v tématu [přehled](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-### <a name="threads-and-thread-pools"></a>Vláken a fondy vláken  
- Mechanismus centrální souběžnost v rozhraní API systému Windows je vlákno. Obvykle se používá [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce vytvořit vláken. I když jsou poměrně snadné vytváření a používání vláken, operační systém přiděluje významné množství času a další prostředky spravovat. Kromě toho Přestože se každý podproces záruku, že pro příjem ve stejnou dobu provádění jako jiné vlákno se stejnou úrovní priority, přidruženého režie potřeba, abyste vytvořili dostatečně velké úlohy. Pro menší nebo podrobnějšího úlohy může zatížení, který je přidružen souběžnosti převáží nad Výhodou spuštění úlohy paralelně.  
+### <a name="threads-and-thread-pools"></a>Vlákna a fondy vláken  
+ Mechanismus centrálního souběžnost v rozhraní Windows API je vlákno. Obvykle se používá [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkce k vytvoření vlákna. I když vlákna je poměrně snadné ho vytvořit a používat, operační systém přiděluje značné množství času a další zdroje informací a spravovat je. Kromě toho i když je zaručeno, že každý podproces přijímat ve stejnou dobu spuštění jako jakékoli jiné vlákno na stejné úrovni priority, přidružené režie potřeba, abyste vytvořili dostatečně velké úlohy. Pro menší nebo další detailnější úkoly můžete zátěž související se souběžností převažují nad výhodou spouštění úloh paralelně.  
   
- Fondy vláken jsou jeden způsob, jak snížit náklady na správu přístup z více vláken. Fondy vlastní vláken a implementace fondu vláken, která poskytuje rozhraní API systému Windows, jak povolit malé pracovních položek pro efektivní spuštění paralelně. Fond vláken Windows udržuje pracovních položek ve frontě použity first-in. Každé pracovní položky je spuštěn v pořadí, ve kterém byl přidán do fondu.  
+ Fondy vláken jsou jedním ze způsobů, abyste snížili náklady na správu vlákna. Fondy vlastních vláken a implementace fondu vláken, které poskytuje rozhraní API Windows i povolit malé pracovní položky pro efektivní spuštění paralelně. Fondu vláken Windows udržuje pracovních položek do fronty FIFO (FIFO) first-in. Každé pracovní položky se spustí v pořadí, ve kterém byl přidán do fondu.  
   
- Concurrency Runtime implementuje algoritmus krádež pracovní rozšířit FIFO plánování mechanismus. Algoritmus přesune úlohy, které ještě nebyly spustili vláken, které dostatek pracovních položek. I když algoritmus krádež pracovní můžou vyrovnávat zatížení, může také způsobit přeuspořádat pracovní položky. Tento způsob proces může způsobit pracovní položky pro spuštění v jiném pořadí, než byla odeslána. To je užitečné s rekurzivní algoritmů, kde je lepší šance, že data je sdílen novější úlohy než mezi starší. Získávání nové položky, které chcete spustit jako první znamená méně Neúspěšné přístupy do mezipaměti a které by mohly mít méně chyb stránek.  
+ Modulu Runtime souběžnosti implementuje algoritmus přebírající práci rozšířit FIFO plánovacím mechanismem. Algoritmus přesune do vlákna, které běží mimo pracovní položky úlohy, které ještě nebyly spuštěny. I když algoritmus přebírající práci můžete vyrovnávat zatížení, může také způsobit přeuspořádat pracovní položky. Tento způsob proces může způsobit, že pracovní položky ke spuštění v jiném pořadí, než byla odeslána. To je užitečné s rekurzivní algoritmy, ve kterých je lepší šance, že data se sdílejí mezi úkoly novější než mezi starší. Získání nové položky, které chcete spustit jako první znamená menší počet nezdařených přístupů k mezipaměti a pravděpodobně méně chyb stránky.  
   
- Z pohledu operačního systému je krádež pracovní nekalé. Ale pokud aplikace implementuje algoritmus nebo úloha pro spuštění paralelně, rovné zacházení s dílčí úkoly vždy nezáleží. Co vás je, jak rychle celkové úkol dokončí. Jiné algoritmy FIFO je vhodné plánování strategie.  
+ Z pohledu operačního systému je krádež pracovní nekalé. Nicméně pokud aplikace implementuje algoritmus nebo spuštění paralelní úlohy, rovnost mezi dílčí úkoly vždy nezáleží. Co důležité je, jak rychle dokončení jedné úlohy. Další algoritmy FIFO je vhodné plánování strategie.  
   
 ### <a name="behavior-on-various-operating-systems"></a>Chování v různých operačních systémech  
- V systému Windows XP a Windows Vista aplikace, které používají Concurrency Runtime chovají podobně, s tím rozdílem, že haldy výkon je vyšší, v systému Windows Vista.  
+ Na Windows XP a Windows Vista aplikace, které používají modulu Runtime souběžnosti se chovají podobně, s tím rozdílem, že haldy se výkon v systému Windows Vista.  
   
- Ve Windows 7 a Windows Server 2008 R2 podporuje operační systém další souběžnosti a škálovatelnost. Například tyto operační systémy podporují počítačů, které mají víc než 64 vláken hardwaru. Existující aplikace, která používá rozhraní API systému Windows musíte změnit a využít těchto nových funkcí. Aplikace, která používá Concurrency Runtime automaticky však používá tyto funkce a nevyžaduje změny.  
+ Ve Windows 7 a Windows Server 2008 R2 operační systém dále podporuje souběžnost a škálovatelnost. Například tyto operační systémy podporovat počítače, které mají více než 64 hardwarových vláken. Abyste mohli využívat tyto nové funkce musí být upravena existující aplikaci, která používá rozhraní Windows API. Ale aplikace, která automaticky používá Concurrency Runtime používá tyto funkce a nevyžaduje změny.  
   
- [Base.User mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [Base.User mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[Horní](#top)]  
   
 ##  <a name="openmp"></a> Porovnání modelu Concurrency Runtime s OpenMP  
- Concurrency Runtime umožňuje celou řadu programovacích modelů. Tyto modely můžou překrývat nebo doplňují modely další knihovny. Tato část porovná Concurrency Runtime s [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
+ Modul Concurrency Runtime umožňuje širokou škálu programovacích modelů. Tyto modely mohou překrývat nebo doplňují modely další knihovny. Tato část porovnává Concurrency Runtime s [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
- Programovací model OpenMP je určené o otevřený standard a je dobře definovaný vazby na Fortran a C/C++ programovací jazyky. Jsou vhodné pro paralelní algoritmy, které jsou iterativní; OpenMP verze 2.0 a 2.5 To znamená že provádět paralelní iterace přes pole dat. OpenMP je nejúčinnější, když stupně paralelního zpracování je předem určit a odpovídá dostupných prostředků systému. OpenMP model se zejména dobrý shodu vysoce výkonné výpočty, kde jsou velmi velké výpočetní problémy distribuovány na zpracování prostředků do jednoho počítače. V tomto scénáři je známý hardwarového prostředí a vývojář přiměřeně očekávat výhradní přístup k výpočetních prostředků, když se spustí algoritmus.  
+ OpenMP – programovací model je definován otevřený standard a nemá jasně definované vazby pro programovací jazyky až po Fortran a jazyka C/C++. Jsou vhodné pro paralelní algoritmy, které jsou iterativní; OpenMP verze 2.0 nebo 2.5 To znamená provádějí paralelní iterace nad určitým polem data. OpenMP – je nejúčinnější, když stupeň paralelismu předem určit a odpovídá prostředcích k dispozici v systému. OpenMP – model je zvlášť vhodné shoda pro vysokovýkonné výpočetní prostředí, ve kterých se velmi rozsáhlých výpočetních problémech distribuují napříč zpracování zdrojů do jednoho počítače. V tomto scénáři se označuje hardwarového prostředí a vývojáři můžou očekávat rozumně exkluzivní přístup k výpočetní prostředky, když se zpracovává algoritmu.  
   
- Ale jiné, méně omezené výpočetních prostředí nemusí být funkční odpovídající OpenMP. Například jsou obtížné implementovat pomocí OpenMP rekurzivní problémy (například algoritmus quicksort nebo vyhledávání stromu dat). Concurrency Runtime doplňuje tím, že poskytuje možnosti OpenMP [Parallel Library vzory](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) a [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md). Na rozdíl od OpenMP poskytuje Concurrency Runtime dynamické plánovače, který přizpůsobí dostupné prostředky a upraví stupně paralelního zpracování mění úlohy.  
+ Ale jiné, méně omezené výpočetních prostředí nemusí být dobré nalezena shoda s OpenMP. Rekurzivní problémy (např. algoritmus quicksort nebo hledání tak stromy dat.) jsou například obtížné implementovat pomocí OpenMP. Modulu Runtime souběžnosti doplňuje funkce OpenMP tím, že poskytuje [knihovny Ppl](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) a [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md). Na rozdíl od OpenMP poskytuje modulu Runtime souběžnosti dynamické plánovače, která se přizpůsobí dostupné prostředky a upravuje stupeň paralelismu úloh změnit.  
   
- Mnoho funkcí v Concurrency Runtime lze rozšířit. Můžete také kombinovat stávajících funkcí, chcete-li vytvořit nové. Protože OpenMP závisí na direktivy kompilátoru, nelze snadno rozšířit.  
+ Mnoho funkcí v modulu Runtime souběžnosti je možné rozšířit. Můžete také kombinovat existující funkce k vytvoření nové značky. Protože OpenMP závisí na direktivy kompilátoru, nelze snadno rozšířit.  
   
- Další informace o tom, porovná Concurrency Runtime OpenMP a jak migrovat existující kód OpenMP na využití modulu Concurrency Runtime, najdete v části [migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md).  
+ Další informace o tom, porovná Concurrency Runtime OpenMP a jak migrovat existující kód OpenMP na využití modulu Runtime souběžnosti, naleznete v tématu [migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md).  
   
  [[Horní](#top)]  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)     
  [Přehled](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
+ [Knihovna Ppl (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)   
  [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

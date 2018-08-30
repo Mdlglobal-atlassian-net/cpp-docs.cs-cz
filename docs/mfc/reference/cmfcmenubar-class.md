@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465955"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196379"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar – třída
 Panel nabídek, který implementuje dokování.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Používejte tuto funkci místo [CMFCMenuBar::Create](#create) Pokud chcete určit styly kromě styl panelu nástrojů. Některé často používané další styly jsou TBSTYLE_TRANSPARENT a CBRS_TOP.  
   
- Seznam dalších stylů, najdete v části [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439), [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498), a [běžné styly oken](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Seznam dalších stylů, najdete v části [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles), [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles), a [běžné styly oken](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCMenuBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpLogFont*  
- Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) strukturu, která definuje písmem, které chcete nastavit.  
+ Ukazatel [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) strukturu, která definuje písmem, které chcete nastavit.  
   
  [in] *bHorz*  
  Hodnota TRUE, pokud chcete, aby *lpLogFont* parametru má být použit pro svislá písma, FALSE, pokud chcete použít pro vodorovnou písma.  

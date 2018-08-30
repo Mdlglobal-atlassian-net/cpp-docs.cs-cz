@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596533"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214618"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchangePointer
 **Specifické pro Microsoft**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>Poznámky  
  `_InterlockedCompareExchangePointer` provádí atomické porovnání `Destination` se zabývat `Comparand` adresu. Pokud `Destination` adresa je rovna `Comparand` adresu, `Exchange` adresa je uložen v adrese `Destination`. V opačném případě je provedena žádná operace.  
   
- `_InterlockedCompareExchangePointer` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkce.  
+ `_InterlockedCompareExchangePointer` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) funkce.  
   
  Příklad použití `_InterlockedCompareExchangePointer`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   

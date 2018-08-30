@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465106"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196587"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|Načte aktuální šířka a výška ohraničení tlačítka panelu nástrojů v pixelech.|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|Načte barevné schéma aktuálního ovládacího prvku panel nástrojů.|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|Načte seznam obrázků, která používá ovládacím prvku panel nástrojů pro zobrazení zakázána tlačítka.|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro ovládací prvek panelu nástrojů.|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Načte [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) rozhraní pro ovládací prvek panelu nástrojů.|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|Načte rozšířené styly pro ovládací prvek panelu nástrojů.|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|Načte seznam obrázků, které ovládacím prvku panel nástrojů používá pro zobrazení "horkými" tlačítek. Tlačítko hot-li přesunut ukazatel myši je nad ním.|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|Načte index aktivní položky v panelu nástrojů.|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|Nastaví identifikátor příkazu k odeslání nadřazenému oknu při stisknutí tlačítka zadané.|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|Nastaví barevné schéma aktuálního ovládacího prvku panel nástrojů.|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|Zobrazit zakázané tlačítka nastaví seznam obrázků, který bude používat ovládací prvek panelu nástrojů.|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Nastaví příznaky ve funkci Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), který se používá k nakreslení textu v zadané obdélník formátovaný podle nastavení příznaků.|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Nastaví příznaky ve funkci Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), který se používá k nakreslení textu v zadané obdélník formátovaný podle nastavení příznaků.|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Nastaví rozšířené styly pro ovládací prvek panelu nástrojů.|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Nastaví seznam obrázků, který ovládací prvek panelu nástrojů použije k zobrazení "horkými" tlačítek.|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Nastaví aktivní položky v panelu nástrojů.|  
@@ -386,7 +386,7 @@ int AddBitmap(
  Z nuly vycházející index první novou image, v případě úspěchu; jinak - 1.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete použít rozhraní Windows API [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) mapování barev před přidáním rastrového obrázku panelu nástrojů. Pokud předáte ukazatel `CBitMap` objektu, musíte zajistit, že rastrového obrázku není zničen až po zničení panelu nástrojů.  
+ Můžete použít rozhraní Windows API [CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap) mapování barev před přidáním rastrového obrázku panelu nástrojů. Pokud předáte ukazatel `CBitMap` objektu, musíte zajistit, že rastrového obrázku není zničen až po zničení panelu nástrojů.  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  Přidá jednu nebo více tlačítek do ovládacího prvku toolbar.  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>Poznámky  
  Pokud tato metoda je úspěšná, zobrazí systém zadané bitové kopie v určeného tlačítka.  
   
- Tato metoda odesílá [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu se změní velikost rastrového obrázku pro **uložit soubor** rastrový obrázek pro tlačítko **o** tlačítko.  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v části **poznámky**.  
   
  *Rect*  
- Volitelně určuje velikost a umístění ovládacího prvku toolbar. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Volitelně určuje velikost a umístění ovládacího prvku toolbar. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Určuje nadřazené okno ovládacího prvku panel nástrojů. Nesmí být NULL.  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED jen zřídka  
   
- Zobrazit [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro popis styly oken.  
+ Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro popis styly oken.  
   
- Volitelně můžete použít kombinaci [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498), jak je popsáno v sadě Windows SDK.  
+ Volitelně můžete použít kombinaci [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles), jak je popsáno v sadě Windows SDK.  
   
- Použijte kombinaci toolbar – styly ovládacího prvku nebo tlačítka sami. Styly jsou popsané v tématu [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439) v sadě Windows SDK.  
+ Použijte kombinaci toolbar – styly ovládacího prvku nebo tlačítka sami. Styly jsou popsané v tématu [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) v sadě Windows SDK.  
   
  Chcete-li použít rozšířené toolbar – styly, zavolejte [SetExtendedStyle](#setextendedstyle) po zavolání `Create`. Chcete-li vytvořit panel nástrojů s rozšířené styly oken, zavolejte [CToolBarCtrl::CreateEx](#createex) místo `Create`.  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v **poznámky** část [vytvořit](#create).  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**. `CreateEx` Vytvoří ovládací prvek s rozšířené styly Windows určené *dwExStyle*. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` nastavit tyto styly jako TBSTYLE_EX_DRAWDDARROWS. Další informace najdete v tématu styly podle [nástrojů Rozšířené styly](http://msdn.microsoft.com/library/windows/desktop/bb760430) v sadě Windows SDK.  
+ Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**. `CreateEx` Vytvoří ovládací prvek s rozšířené styly Windows určené *dwExStyle*. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` nastavit tyto styly jako TBSTYLE_EX_DRAWDDARROWS. Další informace najdete v tématu styly podle [nástrojů Rozšířené styly](/windows/desktop/Controls/toolbar-extended-styles) v sadě Windows SDK.  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  Vytvoří `CToolBarCtrl` objektu.  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  Pokud nenulovou hodnotu, zvýraznění ukotvení je povolená. Pokud je nula, zvýraznění ukotvení je zakázaná.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  Načte index rastrový obrázek přidružený k tlačítku na panelu nástrojů.  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  Vrátí index rastrového obrázku v případě úspěchu nebo nula, jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementuje funkce [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) v sadě Windows SDK.  
+ Implementuje funkce [TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) v sadě Windows SDK.  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  Načte příznaky rastrového obrázku panelu nástrojů.  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  Identifikátor tlačítka.  
   
  *ptbbi*  
- Ukazatel [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) struktura, která obdrží informace o tlačítku.  
+ Ukazatel [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) struktura, která obdrží informace o tlačítku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule tlačítko, v případě úspěchu; v opačném případě hodnota-1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  Získá velikost tlačítka panelu nástrojů.  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  A [CString](../../atl-mfc-shared/using-cstring.md) , který obsahuje zobrazovaný text od určeného tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  Načte barevné schéma aktuálního ovládacího prvku panel nástrojů.  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Ukazatel [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktura, která obdrží informace o barvě schéma. Po návratu tato metoda popisuje strukturu barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
+|[out] *lpColorScheme*|Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která obdrží informace o barvě schéma. Po návratu tato metoda popisuje strukturu barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
 Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  Načte seznam obrázků, která používá ovládacím prvku panel nástrojů pro zobrazení zakázána tlačítka.  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu, nebo hodnota NULL, pokud je nastaven žádný seznam zakázaných image.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), jak je popsáno v sadě Windows SDK. Implementace MFC `GetDisabledImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko Image místo popisovač seznamu obrázků.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist), jak je popsáno v sadě Windows SDK. Implementace MFC `GetDisabledImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko Image místo popisovač seznamu obrázků.  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro ovládací prvek panelu nástrojů.  
+ Načte [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) rozhraní pro ovládací prvek panelu nástrojů.  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppDropTarget*  
- Ukazatel [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) ukazatel rozhraní. Pokud dojde k chybě, ukazatel s hodnotou NULL je umístěn v této adrese.  
+ Ukazatel [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) ukazatel rozhraní. Pokud dojde k chybě, ukazatel s hodnotou NULL je umístěn v této adrese.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrací hodnotu HRESULT označující úspěch nebo selhání operace.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETOBJECT](/windows/desktop/Controls/tb-getobject), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  Načte rozšířené styly pro ovládací prvek panelu nástrojů.  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- DWORD, který představuje rozšířené styly aktuálně používané pro ovládací prvek panelu nástrojů. Seznam stylů, najdete v části [nástrojů Rozšířené styly](http://msdn.microsoft.com/library/windows/desktop/bb760430), v sadě Windows SDK.  
+ DWORD, který představuje rozšířené styly aktuálně používané pro ovládací prvek panelu nástrojů. Seznam stylů, najdete v části [nástrojů Rozšířené styly](/windows/desktop/Controls/toolbar-extended-styles), v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  Načte seznam obrázků, které ovládacím prvku panel nástrojů používá pro zobrazení "horkými" tlačítek. Tlačítko hot-li přesunut ukazatel myši je nad ním.  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu, nebo hodnota NULL, pokud je nastaven žádný seznam zakázaných image.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), jak je popsáno v sadě Windows SDK. Tlačítko hot-li přesunut ukazatel myši je nad ním.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist), jak je popsáno v sadě Windows SDK. Tlačítko hot-li přesunut ukazatel myši je nad ním.  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  Načte index aktivní položky v panelu nástrojů.  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  Index založený na nule aktivní položky v panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  Načte seznam obrázků, který se používá ovládacím prvku panel nástrojů pro zobrazení tlačítka ve svém výchozím stavu.  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu, nebo hodnota NULL, pokud je nastavena žádná seznamu obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  Načte aktuální značky vložení panelu nástrojů.  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>Parametry  
  *ptbim*  
- Ukazatel [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) struktura, která přijímá značky vložení.  
+ Ukazatel [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) struktura, která přijímá značky vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  Načte barvu použitou k vykreslení značky vložení panelu nástrojů.  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  COLORREF hodnotu, která obsahuje aktuální barvu značky vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  Načte ohraničující obdélník tlačítka v ovládacím prvku panel nástrojů.  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  Tlačítko, pro které chcete načíst informace o index založený na nule.  
   
  *lprect –*  
- Adresa [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijme souřadnice ohraničujícího rámečku.  
+ Adresa [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijme souřadnice ohraničujícího rámečku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>Parametry  
  *pSize*  
- Ukazatel [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá velikost položek.  
+ Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá velikost položek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  Získá maximální počet řádků text zobrazený na tlačítku pro panel nástrojů.  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>Parametry  
  *ptbm*  
- Ukazatel [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) struktury `CToolBarCtrl` objektu.  
+ Ukazatel [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) struktury `CToolBarCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  Načte vodorovné a svislé výplně aktuální ovládací prvek panelu nástrojů.  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_GETPADDING](/windows/desktop/Controls/tb-getpadding) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  Načte seznam obrázků, které aktuální ovládací prvek panelu nástrojů používá k reprezentaci ve stavu při stisknutí tlačítka.  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který obsahuje seznam obrázků pro aktuální ovládací prvek, nebo hodnota NULL, pokud žádný takový seznam obrázků je nastavena.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  Načte ohraničující obdélník pro tlačítko toolbar zadané.  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  Identifikátor tlačítka.  
   
  *lprect –*  
- Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.  
+ Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETRECT](/windows/desktop/Controls/tb-getrect), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  Získá počet řádků tlačítek aktuálně zobrazený ovládacím prvkem panel nástrojů.  
@@ -1158,7 +1158,7 @@ int GetString(
  Délka řetězce v případě úspěchu, -1, pokud není.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_GETSTRING](/windows/desktop/Controls/tb-getstring), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  Získá styly aktuálně použité na ovládací prvek panelu nástrojů.  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota DWORD obsahující kombinaci [– styly ovládacího prvku panel nástrojů](http://msdn.microsoft.com/library/windows/desktop/bb760439), jak je popsáno v sadě Windows SDK.  
+ Hodnota DWORD obsahující kombinaci [– styly ovládacího prvku panel nástrojů](/windows/desktop/Controls/toolbar-control-and-button-styles), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  Načte popisovač nástroj ovládacím prvkem popis tlačítka, pokud existuje, spojené s ovládacím prvkem panel nástrojů.  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppt*  
- Ukazatel na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje souřadnici x pozice v `x` člen a souřadnici y o shodě testování v `y` člena. Souřadnice jsou vzhledem ke klientské oblasti panelu nástrojů.  
+ Ukazatel na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje souřadnici x pozice v `x` člen a souřadnici y o shodě testování v `y` člena. Souřadnice jsou vzhledem ke klientské oblasti panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Celočíselná hodnota označující umístění bodu na panelu nástrojů. Pokud je hodnota nula nebo kladnou hodnotu, tato vrácená hodnota je index založený na nule nonseparator položky, ve kterém bod nachází.  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  Pokud je návratová hodnota záporná, je bod neleží v tlačítku. Absolutní hodnota vrácená hodnota je index položky oddělovače nebo nejbližší nonseparator položky.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_HITTEST](/windows/desktop/Controls/tb-hittest), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  Skryje nebo zobrazí určeného tlačítka v ovládacím prvku panel nástrojů.  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>Parametry  
  *ppt*  
- Ukazatel [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti panelu nástrojů.  
+ Ukazatel [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která obsahuje průchodů testů koordinuje vzhledem ke klientské oblasti panelu nástrojů.  
   
  *ptbim*  
- Ukazatel [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) struktura, která přijímá informace značky vložení.  
+ Ukazatel [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) struktura, která přijímá informace značky vložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  Určuje, jestli je zaškrtnuté políčko určeného tlačítka v ovládacím prvku panel nástrojů.  
@@ -1415,7 +1415,7 @@ void LoadImages(
  Program popisovač instance do volající aplikace. Tento parametr může být HINST_COMMCTRL načíst seznam standardní bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  Znak akcelerátoru mapuje na tlačítko panelu nástrojů.  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  Nenulové, pokud je úspěšná. jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  Nastaví stav zvýraznění dané tlačítka v ovládacím prvku panel nástrojů.  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  Přesune tlačítko z jeden index do jiného.  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  Stiskne nebo uvolní určeného tlačítka v ovládacím prvku panel nástrojů.  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete změnit více než jeden stav tlačítka, zvažte možnost volání [SetState](#setstate) místo.  
   
- Tato metoda odesílá [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  Nahradí existující rastrový obrázek v ovládacím prvku panel nástrojů aktuální nový rastrový obrázek.  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Ukazatel [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484) struktura, která popisuje rastrový obrázek, které mají být nahrazeny a nový rastrový obrázek.|  
+|[in] *pReplaceBitmap*|Ukazatel [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) struktura, která popisuje rastrový obrázek, které mají být nahrazeny a nový rastrový obrázek.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu nahradí rastrový obrázek pro standardní panel nástrojů různé rastrový obrázek.  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  Předchozí nastavení ukotvení. Pokud je zvýraznění bylo povoleno, tato hodnota je nenulový. Pokud je zvýraznění nebylo povoleno, tato hodnota je nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda implementuje chování zprávy Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), jak je popsáno v sadě Windows SDK.  
+ Tato metoda implementuje chování zprávy Win32 [TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  Nastaví velikost skutečné rastrovými obrázky mají být přidány do ovládacího prvku toolbar.  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  Identifikátor tlačítka.  
   
  *ptbbi*  
- Ukazatel [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) struktura, která obdrží informace o tlačítku.  
+ Ukazatel [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) struktura, která obdrží informace o tlačítku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), jak je popsáno v sadě Windows SDK.  
+ Členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  Nastaví velikost tlačítek v ovládacím prvku panel nástrojů.  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  Nastaví, které se pošlou nadřazenému oknu, když se stiskne tlačítko zadaný identifikátor příkazu.  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Ukazatel [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktura, která popisuje barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
+|[in] *lpColorScheme*|Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která popisuje barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nemá žádný vliv, pokud je nastavena vizuální motiv Windows Vista.  
   
- Tato metoda odesílá [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu nastaví barevné schéma pro aktuální ovládací prvek panelu nástrojů. Příklad kódu díky levém a horním okraji červené tlačítko každý nástroj a doprava a dolním okrajem modrá. Když uživatel stiskne tlačítko, modře red okraje na tlačítko a jeho okrajů modré červenou.  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt, který dřív používal ovládacím prvkem panel nástrojů pro zobrazení zakázána tlačítko obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), jak je popsáno v sadě Windows SDK. Implementace MFC `SetDisabledImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko zakázané Image místo popisovač seznamu obrázků.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist), jak je popsáno v sadě Windows SDK. Implementace MFC `SetDisabledImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko zakázané Image místo popisovač seznamu obrázků.  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Nastaví příznaky ve funkci Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), který se používá k nakreslení textu v zadané obdélník formátovaný podle nastavení příznaků.  
+ Nastaví příznaky ve funkci Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), který se používá k nakreslení textu v zadané obdélník formátovaný podle nastavení příznaků.  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>Parametry  
  *dwMask*  
- Kombinace jedné nebo více příznaků DT_ zadaný ve funkci Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), určující, které bity v *dwDTFlags* se použije při vykreslování textu.  
+ Kombinace jedné nebo více příznaků DT_ zadaný ve funkci Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), určující, které bity v *dwDTFlags* se použije při vykreslování textu.  
   
  *dwDTFlags*  
  Kombinace jedné nebo více příznaků DT_ zadaný ve funkci Win32 `DrawText`, které označují, jak bude vykreslen text tlačítka. Tato hodnota je předán `DrawText` při vykreslení text tlačítka.  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  Označí příznakem DWORD obsahující předchozí vykreslování textu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), jak je popsáno v sadě Windows SDK. Tato členská funkce nastaví příznaky ve funkci Win32 `DrawText`, které kreslení textu v zadané obdélníku, formátovaný podle nastavení příznaků.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags), jak je popsáno v sadě Windows SDK. Tato členská funkce nastaví příznaky ve funkci Win32 `DrawText`, které kreslení textu v zadané obdélníku, formátovaný podle nastavení příznaků.  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  Nastaví rozšířené styly pro ovládací prvek panelu nástrojů.  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  Zadejte novou hodnotu rozšířené styly. Tento parametr může být kombinací nástrojů Rozšířené styly.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- DWORD, který představuje předchozí rozšířené styly. Seznam stylů, najdete v části [nástrojů Rozšířené styly](http://msdn.microsoft.com/library/windows/desktop/bb760430), v sadě Windows SDK.  
+ DWORD, který představuje předchozí rozšířené styly. Seznam stylů, najdete v části [nástrojů Rozšířené styly](/windows/desktop/Controls/toolbar-extended-styles), v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  Nastaví seznam obrázků, který ovládací prvek panelu nástrojů použije k zobrazení "horkými" tlačítek.  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt, který byl dříve využívaných ovládacím prvkem panel nástrojů pro zobrazení aktivní tlačítko obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist), jak je popsáno v sadě Windows SDK.  
   
  Implementace MFC `SetHotImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko aktivní Image místo popisovač seznamu obrázků. Tlačítko hot-li přesunut ukazatel myši je nad ním.  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  Index předchozí položka horké, nebo -1, pokud se žádná aktivní položky.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  Nastaví seznam obrázků, bude použito panelu nástrojů zobrazovat tlačítka, která jsou ve svém výchozím stavu.  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt, který byl dříve využívaných ovládacím prvkem panel nástrojů pro zobrazení obrázků tlačítko ve svém výchozím stavu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist), jak je popsáno v sadě Windows SDK.  
   
  Implementace MFC `SetImageList` používá `CImageList` objekt, který obsahuje ovládací prvek panelu nástrojů tlačítko Image místo popisovač seznamu obrázků.  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>Parametry  
  *ptbim*  
- Ukazatel [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) strukturu, která obsahuje značky vložení.  
+ Ukazatel [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) strukturu, která obsahuje značky vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  Nastaví barvu použitou k vykreslení značky vložení panelu nástrojů.  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  COLORREF hodnotu, která obsahuje na předchozí barvu značky vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  Nastaví maximální počet řádků text zobrazený na tlačítku pro panel nástrojů.  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>Parametry  
  *ptbm*  
- Ukazatel [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) struktury `CToolBarCtrl` objektu.  
+ Ukazatel [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) struktury `CToolBarCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  Nastaví nadřazenému oknu pro ovládací prvek panelu nástrojů.  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  DWORD, jejichž dolní slovo, obsahuje hodnotu předchozí vodorovné výplně a jejichž vysoký Wordu obsahuje hodnotu předchozí svislé výplně. Výplň hodnoty se měří v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_SETPADDING](/windows/desktop/Controls/tb-setpadding) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu nastaví vodorovný a svislý odsazení aktuálního ovládacího prvku panel nástrojů do 20 pixelů.  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) , která obsahuje předchozí seznam obrázků pro aktuální ovládací prvek, nebo hodnota NULL, pokud byl nastaven žádný takový seznam obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu nastaví seznamu při stisknutí obrázku být stejný jako výchozí seznam obrázků.  
@@ -2011,7 +2011,7 @@ void SetRows(
  Určuje, jestli se má použít další řádky nebo méně řádků, pokud panelu nelze změnit velikost na požadovaný počet řádků.  
   
  *lprect –*  
- Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat nové ohraničující obdélník panelu nástrojů.  
+ Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat nové ohraničující obdélník panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud panelu nástrojů nelze změnit velikost samotného na požadované číslo nebo řádky, se změní velikost sebe sama buď nejbližší větší nebo další menší platnou velikost, závisí na hodnotě *bLarger*. Pokud *bLarger* má hodnotu TRUE, bude větší než požadovaný nový počet řádků. Pokud *bLarger* má hodnotu FALSE, bude menší než požadovaný nový počet řádků.  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Hodnota DWORD obsahující kombinaci [– styly ovládacího prvku panel nástrojů](http://msdn.microsoft.com/library/windows/desktop/bb760439), jak je popsáno v sadě Windows SDK.  
+ Hodnota DWORD obsahující kombinaci [– styly ovládacího prvku panel nástrojů](/windows/desktop/Controls/toolbar-control-and-button-styles), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  Přidruží ovládacím prvkem popis tlačítka nástroj s ovládacím prvkem panel nástrojů.  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Návratová hodnota se nepoužívá.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465) zprávu, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) zprávu, jak je popsáno v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)   

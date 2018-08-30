@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ea64180a9f7abf37f379e3e8feccc4ee41fd44
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850193"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200651"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton – třída
 Typ tlačítka panelu nástrojů, který se při kliknutí chová jako běžné tlačítko. Otevře však rozevírací seznam nástrojů ( [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskne a podrží tlačítko panelu nástrojů.  
@@ -90,7 +90,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Určuje, zda je momentálně otevřený rozevírací seznam nástrojů.|  
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Určuje, zda tlačítko lze zobrazit pomocí rozšířených ohraničení. (Přepíše [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|Volá se rozhraním pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy. (Přepíše `CMCToolBarButton::OnCancelMode`.)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Volá se rozhraním pro zpracování [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) zprávy. (Přepíše `CMCToolBarButton::OnCancelMode`.)|  
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši. (Přepíše [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Volá se rozhraním, když uživatel uvolní tlačítko myši. (Přepíše [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  

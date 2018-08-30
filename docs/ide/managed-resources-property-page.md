@@ -1,5 +1,5 @@
 ---
-title: Spravované stránku vlastností zdroje | Microsoft Docs
+title: Spravovat stránky vlastností prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340356"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215498"
 ---
 # <a name="managed-resources-property-page"></a>Stránka vlastností spravovaných zdrojů
-Umožňuje nastavení pro kompilátor prostředků.  
+Povolí nastavení pro kompilátor prostředků.  
   
- **Spravované prostředky** vlastnost stránka obsahuje následující vlastnosti:  
+ **Spravovaných prostředků** stránka vlastností obsahuje následující vlastnosti:  
   
  **Logický název prostředku**  
- Určuje, *logický název* generovaného pomocného zdrojového souboru. Logický název je název sloužící k načtení zdroje. Pokud není zadán žádný logický název, název souboru prostředků (RESX) se používá jako logický název.  
+ Určuje, *logický název* z vygenerované přechodového souboru .resources. Logický název je název používaný k načtení prostředku. Pokud není zadán žádný logický název, název souboru prostředku (RESX) se používá jako logický název.  
   
  **Název výstupního souboru**  
- Určuje název souboru závěrečný výstup, který souboru prostředků (RESX) přispívá k.  
+ Určuje název konečného výstupního souboru, jež přispívají k souboru prostředku (RESX).  
   
- **Výchozí místní prostředky**  
- Určuje, zda soubor dané .resx přispívá výchozí prostředky nebo satelitní .dll.  
+ **Výchozí lokalizované prostředky**  
+ Určuje, zda soubor daného .resx přispívá do výchozích prostředků nebo satelitní knihovna .dll.  
   
- Informace o tom, jak získat přístup **spravované prostředky** stránce vlastností, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Informace o tom, jak získat přístup **spravovaných prostředků** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Pomocí RC (RC příkazového řádku)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Pomocí RC (RC příkazového řádku)](https://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](../build/reference/assemblyresource-embed-a-managed-resource.md)

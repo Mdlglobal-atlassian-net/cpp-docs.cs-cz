@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203589"
 ---
 # <a name="boxing-ccx"></a>Zabalení (C + +/ CX)
-*Zabalení* proměnné typu hodnoty jako například zahrnuje [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– nebo základní skalární typ. například `int`– v referenční třídě při proměnná je předána metodě, která přebírá [ Platform::Object ^](../cppcx/platform-object-class.md) jako jeho typ vstupu.  
+*Zabalení* proměnné typu hodnoty jako například zahrnuje [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– nebo základní skalární typ. například `int`– v referenční třídě při proměnná je předána metodě, která přebírá [ Platform::Object ^](../cppcx/platform-object-class.md) jako jeho typ vstupu.  
   
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Předání typu hodnoty na objekt ^ parametr  
  I když není nutné explicitně pole proměnnou umožní předat parametr metody typu [Platform::Object ^](../cppcx/platform-object-class.md), třeba při načtení hodnoty, které byly dříve zabalená explicitně přetypovat zpět do původního typu.  

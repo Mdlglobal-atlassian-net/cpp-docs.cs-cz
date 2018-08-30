@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217664"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Vytváření aplikací MFC ve stylu webového prohlížeče
 Webovou aplikaci ve stylu prohlížeče můžete přístup k informacím z Internetu (například HTML nebo aktivní dokumenty) nebo intranet, stejně jako složky v místním systému souborů a v síti. Odvozené třídy zobrazení vaší aplikace z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektivně provedete webový prohlížeč pro aplikaci tím, že poskytuje zobrazení pomocí ovládacího prvku WebBrowser.  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázky knihovny MFC MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Ukázky knihovny MFC MFCIE](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [Průvodce aplikací MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
  [Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

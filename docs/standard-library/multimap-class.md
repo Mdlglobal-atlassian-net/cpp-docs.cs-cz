@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220105"
 ---
 # <a name="multimap-class"></a>multimap – třída
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* datový typ klíče, který bude uložen v objektu multimap.
+*Key*<br/>
+ Datový typ klíče, který se uloží v objektu multimap.
 
-*Typ* typ dat prvku, který bude uložen v objektu multimap.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen do objektu multimap.
 
-*Vlastnosti* typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků klíče řazení pro určení jejich relativního pořadí v objektu multimap. Binární predikát `less<Key>` je výchozí hodnota.
+*Osobnostní rysy*<br/>
+ Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu multimap. Binární predikát `less<Key>` je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti na mapě. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
-`const_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` * \< * **const Key**, **Typ *** >*. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+`const_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
 
-Ke zrušení `const_iterator` `cIter` odkazující na prvek v objektu multimap, použijte **->** operátor.
+Ke zrušení `const_iterator` *cIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter`  ->  **první**, což je totéž jako (\* `cIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter`  ->  **druhý**, což je totéž jako (\* `cIter`). **druhý**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter->first`, což je totéž jako `(*cIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter->second`, což je totéž jako `(*cIter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Typ `const_reverse_iterator` hodnotu prvku nelze změnit a použít k iteraci v rámci objektu multimap, v opačném pořadí.
 
-`const_reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` * \< * **const Key**, **Typ *** >*. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+`const_reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
 
-Ke zrušení `const_reverse_iterator` `crIter` odkazující na prvek v objektu multimap, použijte **->** operátor.
+Ke zrušení `const_reverse_iterator` *crIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `crIter`  ->  **první**, což je totéž jako (\* `crIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `crIter`  ->  **druhý**, což je totéž jako (\* `crIter`). **první**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `crIter->first`, což je totéž jako `(*crIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `crIter->second`, což je totéž jako `(*crIter).first`.
 
 ### <a name="example"></a>Příklad
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč prvky, které mají být odpovídat z objektu multimap.
+*Klíč*<br/>
+ Klíč prvky, které mají být odpovídat z objektu multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozici elementu, který má být odebrán.
+*kde*<br/>
+ Pozice prvku, který má být odebrán.
 
-*První* pozice prvního prvku odeberou.
+*první*<br/>
+ Pozice prvního prvku, který má být odebrán.
 
-*Poslední* pozice bezprostředně za posledním prvkem, která se má odebrat.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Klíč* klíč prvky, které mají být odebrány.
+*Key*<br/>
+ Klíč prvky, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* k porovnání s klíči řazení prvek z objektu multimap vyhledávaná hodnota klíče.
+*Klíč*<br/>
+ Hodnota klíče k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-`iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` * \< * **const Key**, **Typ *** >*. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+`iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
 
-Ke zrušení **iterátoru** `Iter` odkazující na prvek v objektu multimap, použijte `->` operátor.
+Ke zrušení `iterator` *Iter* odkazující na prvek v objektu multimap, použijte **->** operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter`  ->  **první**, což je totéž jako (\* `Iter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `Iter`  ->  **druhý**, což je totéž jako (\* `Iter`). **druhý**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter->first`, což je totéž jako `(*Iter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `Iter->second`, což je totéž jako `(*Iter).second`.
 
 Typ `iterator` lze použít ke změně hodnoty prvku.
 
@@ -1378,7 +1389,7 @@ Vrátí objekt funkce, která používá multimap řazení jeho prvků.
 
 Uložený objekt definuje členskou funkci
 
-**BOOL – operátor**( **const Key &** *x*, **const Key &** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 který vrátí hodnotu true, pokud *x* výhradně předchází *y* v pořadí řazení.
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1663,7 +1675,7 @@ multimap(
 |-|-|
 |*Al*|Třída úložiště alokátoru pro použití s tímto objektem multimap, kterou je standardně třída Allocator.|
 |*Kompozice*|Funkce porovnání typu `constTraits` používají k seřazení prvků v objektu map, kde je použit výchozí `Traits`.|
-|*Doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
+|*doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Typ `reverse_iterator` se používá k iteraci v rámci objektu multimap, v opačném pořadí.
 
-`reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair` * \< * **const Key**, **Typ *** >*. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+`reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
 
-Ke zrušení `reverse_iterator` `rIter` odkazující na prvek v objektu multimap, použijte -> – operátor.
+Ke zrušení `reverse_iterator` *rIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `rIter`  ->  **první**, což je totéž jako (\* `rIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `rIter`  ->  **druhý**, což je totéž jako (\* `rIter`). **první**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `rIter->first`, což je totéž jako `(*rIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `rIter->second`, což je totéž jako `(*rIter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap `left`.
+*doprava*<br/>
+ Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap `left`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*Klíč*<br/>
+ Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Mapa > Členové](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Mapa > Členové](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Kontejnery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

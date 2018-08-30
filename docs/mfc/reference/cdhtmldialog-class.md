@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339459"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206080"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 Slouží k vytváření dialogových oken používající HTML namísto zdrojů dialogového okna k provedení jejich uživatelské rozhraní.  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Načte požadované vlastnosti zadaný ovládací prvek ActiveX.|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Načte Uniform Resource Locator (URL) přidružené k aktuální dokument.|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Načte rozhraní IHTMLDocument2 u aktuálně načtené dokumentu HTML.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CDHtmlDialog::GetElement](#getelement)|Získá rozhraní na prvek jazyka HTML.|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|Načte `innerHTML` vlastnost elementu HTML.|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|Načte požadované rozhraní ukazatel z prvku HTML.|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  Standardní HRESULT. Pokud je úspěšná, vrátí hodnotu S_OK.  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
+ Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).  
   
 ```  
 STDMETHOD(GetDropTarget)(

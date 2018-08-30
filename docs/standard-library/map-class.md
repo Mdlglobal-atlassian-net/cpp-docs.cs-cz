@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027742"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218630"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč* datový typ klíče, který bude uložen v objektu map.
+*Key*<br/>
+ Datový typ klíče, který se uloží v objektu map.
 
-*Typ* typ dat prvku, který bude uložen v objektu map.
+*Typ*<br/>
+ Typ dat prvku, který bude uložen v objektu map.
 
-*Vlastnosti* typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` je výchozí hodnota.
+*Osobnostní rysy*<br/>
+ Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte std::less <> predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti na mapě. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
+*Allocator –*<br/>
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* hodnota klíče prvků lze porovnat z mapy.
+*Klíč*<br/>
+ Hodnota klíče prvků lze porovnat z mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s klíči řazení prvek z mapy vyhledaly.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozici elementu, který má být odebrán.
+*kde*<br/>
+ Pozice prvku, který má být odebrán.
 
-*První* pozice prvního prvku odeberou.
+*první*<br/>
+ Pozice prvního prvku, který má být odebrán.
 
-*Poslední* pozice bezprostředně za posledním prvkem, která se má odebrat.
+*poslední*<br/>
+ Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Klíč* hodnota klíče prvků, které mají být odebrány.
+*Key*<br/>
+ Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* k porovnání s klíči řazení prvek z mapy vyhledávaná hodnota klíče.
+*Klíč*<br/>
+ Hodnota klíče k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-`iterator` Určené bodů mapy pro prvky, které jsou objekty [value_type](#value_type), která je typu `pair` * \< * **constKey**, * *Typ *** >*, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
+Iterátor určené bodů mapy pro prvky, které jsou objekty [value_type](#value_type), která je typu `pair<const Key, Type>`, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
 
-Ke zrušení **iterátoru** `Iter` odkazující na prvek v objektu map, použijte `->` operátor.
+Ke zrušení iterátor *Iter* odkazující na prvek v objektu map, použijte `->` operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter`  ->  **první**, což je totéž jako (\* `Iter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `Iter`  ->  **druhý**, což je totéž jako (\* `Iter`). **druhý**.
+Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter->first`, což je totéž jako `(*Iter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `Iter->second`, což je totéž jako `(*Iter).second`.
 
 ### <a name="example"></a>Příklad
 
@@ -1587,7 +1598,7 @@ Vrátí objekt funkce, která používá mapování k seřazení jeho prvky.
 
 Uložený objekt definuje členskou funkci
 
-**BOOL – operátor**( **constKey &**`left`, **const Key &**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 který vrátí **true** Pokud `left` předchází a není rovno `right` v pořadí řazení.
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s klíči řazení prvek z mapy vyhledaly.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1806,7 +1818,7 @@ map(
 |Parametr|Popis|
 |*Al*|Třída úložiště alokátoru pro tento objekt map, kde je použit výchozí `Allocator`.|
 |*Kompozice*|Funkce porovnání typu `const Traits` používají k seřazení prvků v objektu map, kde je použit výchozí `hash_compare`.|
-|*Doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
+|*doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list, ze kterého mají být zkopírovány prvky.|
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Typ `reverse_iterator` hodnotu prvku nelze změnit a použít k iteraci v rámci mapy v opačném pořadí.
 
-`reverse_iterator` Určené bodů mapy pro prvky, které jsou objekty [value_type](#value_type), která je typu `pair` * \< * **constKey**, * *Typ *** >*, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
+`reverse_iterator` Určené bodů mapy pro prvky, které jsou objekty [value_type](#value_type), která je typu `pair<const Key, Type>`, jehož první člen je klíčem k elementu a jejichž druhé člen je namapované datum drží elementu.
 
-Ke zrušení `reverse_iterator` `rIter` odkazující na prvek v objektu map, použijte `->` operátor.
+Ke zrušení `reverse_iterator` *rIter* odkazující na prvek v objektu map, použijte `->` operátor.
 
 Chcete-li přistupovat k hodnotě klíče pro element, použijte `rIter`  ->  **první**, což je totéž jako (\* `rIter`). **první**. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `rIter`  ->  **druhý**, což je totéž jako (\* `rIter`). **první**.
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* mapy argument poskytující prvky pro záměnu s cílová mapa.
+*doprava*<br/>
+ Argument mapy poskytující prvky pro záměnu s cílová mapa.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klíč* klíčová hodnota argumentu, který se má porovnat s hodnotou klíče řazení prvek z mapy vyhledaly.
+*Klíč*<br/>
+ Hodnota klíče argumentu k porovnání s hodnotou klíče řazení prvek z mapy být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Mapa > Členové](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Mapa > Členové](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Kontejnery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

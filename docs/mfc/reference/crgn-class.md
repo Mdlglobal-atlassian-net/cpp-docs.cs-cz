@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204877"
 ---
 # <a name="crgn-class"></a>Crgn – třída
 Zapouzdřuje oblast rozhraní GDI systému Windows grafiky zařízení.  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je operátor přetypování, která podporuje přímému použití objektu HRGN.  
   
- Další informace o použití grafických objektů najdete v článku [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v článku [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Kontroluje, zda bodu *x* a *y* je v oblasti uložené v `CRgn` objektu.  

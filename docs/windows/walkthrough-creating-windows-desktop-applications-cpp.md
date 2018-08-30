@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590291"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204735"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
 
@@ -219,7 +219,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    }
    ```
 
-   Tato funkce vrátí `HWND`, což je popisovač okna. Popisovač je něco jako ukazatel, který používá Windows ke sledování otevřená okna. Další informace najdete v tématu [datové typy Windows](https://msdn.microsoft.com/library/windows/desktop/aa383751).
+   Tato funkce vrátí `HWND`, což je popisovač okna. Popisovač je něco jako ukazatel, který používá Windows ke sledování otevřená okna. Další informace najdete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. V tuto chvíli se v okně vytvořil, ale musíme říct Windows, aby byla viditelná. Je to, čemu tento kód:
 
@@ -340,9 +340,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
 1. Povolit `WndProc` funkce pro zpracování zprávy, které aplikace obdrží, implementovat příkaz switch.
 
-   Je důležité zpráv pro zpracování [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213) zprávy. Aplikace obdrží tuto zprávu při část zobrazeného okna musí být aktualizovány. Tato událost může dojít, když uživatel přesune časové období před okno a poté přesunut ho znovu. Vaše aplikace nebude vědět, pokud dojde k událostem takto; pouze Windows ví, takže se zobrazí oznámení s `WM_PAINT`. Při prvním zobrazení okna musí být aktualizovány všechny jeho.
+   Je důležité zpráv pro zpracování [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy. Aplikace obdrží tuto zprávu při část zobrazeného okna musí být aktualizovány. Tato událost může dojít, když uživatel přesune časové období před okno a poté přesunut ho znovu. Vaše aplikace nebude vědět, pokud dojde k událostem takto; pouze Windows ví, takže se zobrazí oznámení s `WM_PAINT`. Při prvním zobrazení okna musí být aktualizovány všechny jeho.
 
-   Pro zpracování `WM_PAINT` zprávy, první volání [BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362), následně zpracovat veškerou logiku pro vykreslení textu, tlačítek a dalších ovládacích prvků v okně a následně zavolat [EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598). V této aplikaci logika mezi zahajovacím a ukončovacím voláním se zobrazí řetězec "Hello, plochu Windows!" v okně. V následujícím kódu, Všimněte si, [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133) funkce slouží k zobrazení řetězce.
+   Pro zpracování `WM_PAINT` zprávy, první volání [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), následně zpracovat veškerou logiku pro vykreslení textu, tlačítek a dalších ovládacích prvků v okně a následně zavolat [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). V této aplikaci logika mezi zahajovacím a ukončovacím voláním se zobrazí řetězec "Hello, plochu Windows!" v okně. V následujícím kódu, Všimněte si, [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkce slouží k zobrazení řetězce.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
    `HDC` v tomto kódu je popisovač kontextu zařízení, což je datová struktura, která používá Windows umožňují aplikaci komunikovat s grafický podsystém. `BeginPaint` a `EndPaint` funkce zajišťují, že vaše aplikace chová jako dobrý občany a nepoužívá kontext zařízení pro delší, než je potřeba. To pomáhá zajistit, že grafický podsystém je k dispozici pro použití jiné aplikace.
 
-1. Aplikace obvykle zpracovává mnoho jiných zpráv, například [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) při prvním vytvoření okna a [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) při zavření okna. Následující kód ukazuje základní, ale dokončení `WndProc` funkce.
+1. Aplikace obvykle zpracovává mnoho jiných zpráv, například [WM_CREATE](/windows/desktop/winmsg/wm-create) při prvním vytvoření okna a [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) při zavření okna. Následující kód ukazuje základní, ale dokončení `WndProc` funkce.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

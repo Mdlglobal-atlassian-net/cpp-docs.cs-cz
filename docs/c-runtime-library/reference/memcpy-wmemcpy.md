@@ -1,5 +1,5 @@
 ---
-title: memcpy wmemcpy – | Microsoft Docs
+title: memcpy wmemcpy – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9880bdbc608933a1b6cfffe3473a9b07f0252ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f75aa6a32277fda0796fe2433062f5062fdd47eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196076"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
-Počet bajtů kopie mezi vyrovnávací paměti. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [memcpy_s –, wmemcpy_s –](memcpy-s-wmemcpy-s.md).
+Kopie bajtů mezi vyrovnávací paměti. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [memcpy_s – wmemcpy_s –](memcpy-s-wmemcpy-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,32 +61,32 @@ wchar_t *wmemcpy(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
+*cíl*<br/>
 Vyrovnávací paměť nového.
 
 *src*<br/>
 Zkopírovat z vyrovnávací paměti.
 
 *Počet*<br/>
-Počet znaků pro kopírování.
+Počet znaků, které mají kopírovat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota *cíle*.
+Hodnota *dest*.
 
 ## <a name="remarks"></a>Poznámky
 
-**memcpy –** kopie *počet* bajtů z *src* k *cíle*; **wmemcpy –** kopie *počet* široké znaky (dva bajty). Pokud zdrojové a cílové překrývají, chování **memcpy** není definován. Použití **memmove –** pro zpracování překrývající se oblasti.
+**memcpy** kopie *počet* bajtů z *src* k *dest*; **wmemcpy –** kopie *počet* široké znaky (dva bajty). Pokud zdroj a cíl překrývají, chování **memcpy** není definován. Použití **memmove** zpracování překrývající se oblasti.
 
 > [!IMPORTANT]
-> Ujistěte se, že cílová vyrovnávací paměť je stejný velké nebo větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Ujistěte se, že cílová vyrovnávací paměť je stejný velké nebo větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Protože mnoho přetečení vyrovnávací paměti a proto potenciální zneužití zabezpečení, byla trasovali nesprávné využití od **memcpy**, tato funkce je uveden mezi "zakázaného" funkce pomocí životního cyklu SDL (Security Development).  Můžete pozorovat, že některé třídy knihovny VC ++ nadále používat **memcpy**.  Kromě toho může zjistíte, že optimalizace kompilátoru VC ++ někdy vysílá volání **memcpy**.  Produkt Visual C++ vyvinutý v souladu s v rámci procesu SDL, a proto využití této funkce zakázaného úzce vyhodnocení.  V případě knihovny pomocí jeho, volání byl pečlivě kontrolovány zajistit, že přetečení vyrovnávací paměti nebudou povolena, prostřednictvím těchto volání.  V případě kompilátoru, někdy určité vzorce kódu jsou rozpoznána jako identické vzor **memcpy**a proto jsou nahrazeny volání funkce.  V takových případech použití **memcpy** není žádné další bezpečné než původní pokyny by byl; jednoduše k volání optimalizaci výkonu byly optimalizovány **memcpy** funkce.  Stejně jako použití "bezpečnou" funkcí CRT nezaručuje zabezpečení (se právě znesnadňuje nebezpečnou) použití "zakázaného" funkce nezaručuje nebezpečí (vyžadují jenom větší kontroly k zajištění bezpečnosti).
+> Protože tolik přetečení vyrovnávací paměti a proto potenciální zneužití zabezpečení, byla trasovali nesprávné použití **memcpy**, tato funkce je uvedena mezi "zakázané" funkce pomocí Security Development Lifecycle (SDL).  Podívat se, že některé třídy knihovny VC ++ nadále používat **memcpy**.  Kromě toho a podívat se, že Optimalizátor kompilátoru VC ++ někdy vydává volání **memcpy**.  Produkt Visual C++ je vytvořena v souladu s procesu SDL a proto používání této zakázané funkce úzce vyhodnocení.  V případě knihovny využít, volání bylo pečlivě kontrolovány zajistit, že přetečení vyrovnávací paměti nebudou povolena, prostřednictvím těchto volání.  V případě kompilátor, někdy určitých vzorů v kódu jsou rozpoznány jako stejný jako vzor **memcpy**a proto se nahradí volání funkce.  V takových případech použití **memcpy** je více nebezpečné než původní pokyny by byl; stačí k volání optimalizace výkonu byly optimalizovány **memcpy** funkce.  Stejně jako použití funkcí CRT "bezpečné" nezaručuje bezpečnosti (se právě snížili šanci, může být potenciálně nebezpečný) použijte "zakázané" funkce nezaručuje nebezpečí (pouze vyžadují větší kontroly k zajištění bezpečnosti).
 >
-> Protože **memcpy** využití podle VC ++ kompilátoru a knihovny má proto pečlivě kontrolovány, tyto volání jsou povolena v rámci kód, který je kompatibilní s SDL jinak.  **memcpy –** volání zavedená ve zdrojovém kódu aplikace jsou kompatibilní s procesu SDL, pouze pokud byl revidován využívající odborníky na zabezpečení.
+> Protože **memcpy** využití ze strany VC ++ kompilátor a knihovny se pečlivě proto kontrolovány, tato volání jsou povoleny v rámci kódu, který je jinak v souladu s SDL.  **memcpy** volání zavedené ve zdrojovém kódu aplikace jsou kompatibilní s SDL pouze v případě, které používají revidovaný odborníky na zabezpečení.
 
-**Memcpy** a **wmemcpy –** funkce pouze přestanou Pokud konstanta **_CRT_SECURE_DEPRECATE_MEMORY** je definovaná před příkazem zahrnutí v pořadí funkce jako zastaralé, například v následujícím příkladu:
+**Memcpy** a **wmemcpy –** funkce se nepoužívají pouze pokud konstanty **_CRT_SECURE_DEPRECATE_MEMORY** je definovaná před příkazem zahrnutí v pořadí Funkce zastaralé, například v následujícím příkladu:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -104,16 +104,16 @@ or
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memcpy –**|\<Memory.h > nebo \<string.h >|
+|**memcpy**|\<Memory.h > nebo \<string.h >|
 |**wmemcpy**|\<wchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-V tématu [memmove –](memmove-wmemmove.md) pro ukázkové použití **memcpy**.
+Zobrazit [memmove](memmove-wmemmove.md) ukázku toho, jak používat **memcpy**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

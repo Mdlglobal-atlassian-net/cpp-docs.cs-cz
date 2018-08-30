@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1da24273decbee296bfa19a5c8306cb0512e3fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b4c5dad276db338b5efa0d15786b090779fcf41a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207502"
 ---
 # <a name="coleserveritem-class"></a>Coleserveritem – třída
 Poskytuje rozhraní serveru pro položky OLE.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
   
 -   Přetáhněte Windows 95/98 zpoždění je uložen v mezipaměti verzi Windows. INI.  
   
- Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) v sadě Windows SDK.  
+ Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) v sadě Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  Voláním této funkce tak, aby vyplnil zadaný [coledatasource –](../../mfc/reference/coledatasource-class.md) objekt se všechna data, která má být zkopírováno do schránky. Pokud jste volali [CopyToClipboard](#copytoclipboard) (stejná data by přenáší taky, pokud jste volá se, [metody DoDragDrop](#dodragdrop)).  
@@ -329,14 +329,14 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>Parametry  
  *lpStgMedium*  
- Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat data CF_EMBEDSOURCE pro položky OLE.  
+ Ukazatel [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura, která bude přijímat data CF_EMBEDSOURCE pro položky OLE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento formát obsahuje nativní datové položky. Jste implementovali `Serialize` členské funkce pro tuto funkci fungovala správně.  
   
  Výsledkem je potom možné přidat ke zdroji dat s využitím [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Tato funkce je volána automaticky [COleServerItem::OnGetClipboardData](#ongetclipboarddata).  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) v sadě Windows SDK.  
   
 ##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  Voláním této funkce a získat tak název položky.  
@@ -360,7 +360,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>Parametry  
  *lpStgMedium*  
- Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat data CF_LINKSOURCE pro položky OLE.  
+ Ukazatel [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura, která bude přijímat data CF_LINKSOURCE pro položky OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -370,7 +370,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  Výsledkem je potom možné přidat k datovému zdroji prostřednictvím [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Tato funkce je volána automaticky [OnGetClipboardData](#ongetclipboarddata).  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) v sadě Windows SDK.  
   
 ##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  Voláním této funkce získání dat CF_OBJECTDESCRIPTOR pro položky OLE.  
@@ -390,12 +390,12 @@ void GetObjectDescriptorData(
  Velikost položky OLE. Může mít hodnotu NULL.  
   
  *lpStgMedium*  
- Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat data CF_OBJECTDESCRIPTOR pro položky OLE.  
+ Ukazatel [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura, která bude přijímat data CF_OBJECTDESCRIPTOR pro položky OLE.  
   
 ### <a name="remarks"></a>Poznámky  
  Informace se zkopíruje do `STGMEDIUM` struktura odkazované *lpStgMedium*. Tento formát obsahuje informace potřebné pro dialogové okno zvláštní vložení.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) v sadě Windows SDK.  
   
 ##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  Voláním této funkce, pokud je připojený položky OLE.  
@@ -476,14 +476,14 @@ virtual void OnDoVerb(LONG iVerb);
 |- 2|Upravit položky v samostatném okně.|OLEIVERB_OPEN|  
 |- 3|Skrytí položky|OLEIVERB_HIDE|  
   
- Hodnota-1 je obvykle alias pro jinou operací. Pokud otevřete úpravy se nepodporují, -2 má stejný účinek jako hodnotu -1. Další hodnoty, najdete v části [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) v sadě Windows SDK.  
+ Hodnota-1 je obvykle alias pro jinou operací. Pokud otevřete úpravy se nepodporují, -2 má stejný účinek jako hodnotu -1. Další hodnoty, najdete v části [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Kontejner aplikace vytvořené pomocí knihovny Microsoft Foundation Class, tato funkce je volána, když [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate) členskou funkci k odpovídající položce `COleClientItem` objektu je volána. Výchozí implementace volá [viditelnost](#onshow) členskou funkci, pokud je zadán primárního operaci nebo OLEIVERB_SHOW, [při otevření](#onopen) Pokud sekundární operaci nebo OLEIVERB_OPEN není zadána, a [skrytí. ](#onhide) případného OLEIVERB_HIDE. Výchozí implementace volá `OnShow` Pokud *iVerb* není jedním z výše uvedených příkazů.  
   
  Tato funkce přepište, pokud položka není uveden primární požadavek. Například pokud položka je záznam zvuku a jeho primární požadavek je přehrávání, můžete nemusí zobrazit se serverová aplikace mohla přehrát.  
   
- Další informace najdete v tématu [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) v sadě Windows SDK.  
+ Další informace najdete v tématu [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) v sadě Windows SDK.  
   
 ##  <a name="ondraw"></a>  COleServerItem::OnDraw  
  Volá se rozhraním, aby vykreslení položky OLE do metasouboru.  
@@ -631,7 +631,7 @@ virtual BOOL OnInitFromData(
 ### <a name="remarks"></a>Poznámky  
  Pokud *bCreation* má hodnotu TRUE, tato funkce je volána, pokud kontejner implementuje vložit nový objekt na základě aktuálního výběru. Vybraná data se používá při vytváření nové položky OLE. Například když vyberete oblast buněk v tabulce programu a následným použitím Vložit nový objekt k vytvoření grafu na základě hodnot ve vybraném rozsahu. Výchozí implementace nemá žádný účinek. Tuto funkci můžete vybírat z těch, které nabízí přijatelný formát přepsat *pDataObject* a inicializovat na základě dat poskytuje položky OLE. To je moderní overridable.  
   
- Další informace najdete v tématu [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) v sadě Windows SDK.  
+ Další informace najdete v tématu [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) v sadě Windows SDK.  
   
 ##  <a name="onopen"></a>  COleServerItem::OnOpen  
  Volá se rozhraním, aby se zobrazila položka OLE v samostatné instanci serverové aplikace, nikoli na místě.  
@@ -645,7 +645,7 @@ virtual void OnOpen();
   
  Tato funkce přepište, pokud chcete provést zvláštní zpracování při otevření položky OLE. Toto je častý zejména s propojené položky, ve kterém chcete nastavit výběr na odkazu při otevření.  
   
- Další informace najdete v tématu [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) v sadě Windows SDK.  
+ Další informace najdete v tématu [IOleClientSite::OnShowWindow](/windows/desktop/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) v sadě Windows SDK.  
   
 ##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  Volá se rozhraním, chcete-li zjistit, jestli nějaké propojené položky v aktuálním dokumentu serveru jsou zastaralé.  
@@ -671,10 +671,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *lpStgMedium*  
- Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém má být vrácena data.  
+ Odkazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury, ve kterém má být vrácena data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -686,7 +686,7 @@ virtual BOOL OnRenderData(
   
  To je moderní overridable. Tato funkce se vaše data v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud vaše data je malý a pevnou velikost, má přednost před `OnRenderGlobalData`. Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`.  
   
- Další informace najdete v tématu [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), a [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), a [objekt TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) v sadě Windows SDK.  
   
 ##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  Volá se rozhraním, k načtení dat v zadaném formátu souboru po paměťovému médiu.  
@@ -699,7 +699,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *pFile*  
  Odkazuje `CFile` objektu, ve kterém se data mají být vykresleny.  
@@ -712,7 +712,7 @@ virtual BOOL OnRenderFileData(
   
  To je moderní overridable. Tato funkce se vaše data v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložných, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata).  
   
- Další informace najdete v tématu [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
 ##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  Volá se rozhraním, k načtení dat v zadaném formátu po globální paměti zadaná paměťovému médiu.  
@@ -725,7 +725,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *phGlobal*  
  Odkazuje na popisovač do globální paměti, ve kterém má být vrácena data. Pokud byla přidělena žádná paměť, tento parametr může mít hodnotu NULL.  
@@ -740,7 +740,7 @@ virtual BOOL OnRenderGlobalData(
   
  To je moderní overridable. Tato funkce se vaše data v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložných, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata).  
   
- Další informace najdete v tématu [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) v sadě Windows SDK.  
   
 ##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  Volá se rozhraním, chcete-li určit paletu barev, která se použije při úpravách položky OLE.  
@@ -751,15 +751,15 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
 ### <a name="parameters"></a>Parametry  
  *lpLogPalette*  
- Ukazatel Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktury.  
+ Ukazatel Windows [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se používá paletu barev; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace typu kontejner vytvořené pomocí knihovny Microsoft Foundation Class, tato funkce je volána, když [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) funkce k odpovídající položce `COleClientItem` objektu je volána. Výchozí implementace vrací hodnotu FALSE. Tato funkce přepište, pokud chcete použít doporučené paletu. Serverová aplikace není nutné používat navrhované palety.  
+ Aplikace typu kontejner vytvořené pomocí knihovny Microsoft Foundation Class, tato funkce je volána, když [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) funkce k odpovídající položce `COleClientItem` objektu je volána. Výchozí implementace vrací hodnotu FALSE. Tato funkce přepište, pokud chcete použít doporučené paletu. Serverová aplikace není nutné používat navrhované palety.  
   
- Další informace najdete v tématu [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) v sadě Windows SDK.  
+ Další informace najdete v tématu [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) v sadě Windows SDK.  
   
 ##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  Volá se rozhraním, aby se nahradit data položky OLE se zadanými daty.  
@@ -773,10 +773,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Ukazatel [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát data.  
+ Ukazatel [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát data.  
   
  *lpStgMedium*  
- Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém jsou data uložená.  
+ Ukazatel [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury, ve kterém jsou data uložená.  
   
  *bRelease*  
  Označuje, kdo je vlastníkem úložiště média po dokončení volání funkce. Volající rozhodne, kdo je zodpovědná za uvolnění prostředků přidělených jménem paměťovému médiu. Volající toho dosahuje tím, že nastavíte *bRelease*. Pokud *bRelease* je nenulová, položka serveru převezme vlastnictví, uvolnění médium po dokončení jeho použití. Když *bRelease* je 0, že volajícímu zůstane vlastnictví a položka serveru můžete použít paměťovému médiu pouze po dobu trvání volání.  
@@ -785,11 +785,11 @@ virtual BOOL OnSetData(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Položka serveru nepřijímá vlastnictví dat, dokud ji má byly úspěšně načteny. To znamená nebere v vlastnictví Pokud vrátí hodnotu 0. Pokud zdroj dat trvá vlastnictví, takže paměťovému médiu voláním [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) funkce.  
+ Položka serveru nepřijímá vlastnictví dat, dokud ji má byly úspěšně načteny. To znamená nebere v vlastnictví Pokud vrátí hodnotu 0. Pokud zdroj dat trvá vlastnictví, takže paměťovému médiu voláním [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) funkce.  
   
  Výchozí implementace nemá žádný účinek. Přepsání této funkce můžete nahradit data položky OLE se zadanými daty. To je moderní overridable.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), a [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), a [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) v sadě Windows SDK.  
   
 ##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  Volá se rozhraním zjistit položky OLE, kolik místa je k dispozici v dokumentu kontejneru.  

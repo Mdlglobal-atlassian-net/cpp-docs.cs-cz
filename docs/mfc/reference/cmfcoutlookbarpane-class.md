@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201473"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  Aktuální barva textu jako hodnota barvy RGB.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [CMFCOutlookBarPane::SetTextColor](#settextcolor) nastavit aktuální barva textu (pravidelné a vybrané) panel aplikace Outlook. Výchozí barva textu lze získat voláním [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) funkce s indexem COLOR_WINDOW.  
+ Použití [CMFCOutlookBarPane::SetTextColor](#settextcolor) nastavit aktuální barva textu (pravidelné a vybrané) panel aplikace Outlook. Výchozí barva textu lze získat voláním [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) funkce s indexem COLOR_WINDOW.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Určuje, jestli je obrázek pozadí pro podokno panelu aplikace Outlook se nenačetly.  

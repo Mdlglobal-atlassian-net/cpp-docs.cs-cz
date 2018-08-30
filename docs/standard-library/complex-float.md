@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954002"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221340"
 ---
 # <a name="complexltfloatgt"></a>komplexní&lt;plovoucí desetinnou čárkou&gt;
 
-Popisuje objekt, který ukládá seřazená dvojice objektů typu **float **** nejprve představující skutečný součástí komplexní čísla a druhý představující imaginární části.
+Popisuje objekt, který ukládá seřazená dvojice objektů typu **float**, nejprve představující skutečný součástí komplexní čísla a druhý představující imaginární části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* hodnotu typu **float** pro skutečné součástí komplexní čísla při konstrukci.
+*_RealVal*<br/>
+Hodnota typu **float** pro skutečné součástí komplexní čísla při konstrukci.
 
-*_ImagVal* hodnotu typu **float** imaginární části komplexního čísla při konstrukci.
+*_ImagVal*<br/>
+Hodnota typu **float** imaginární části komplexního čísla při konstrukci.
 
-*complexNum* komplexního čísla typu **double** nebo typu **long double** jehož reálné a imaginární části se používají k inicializaci komplexního čísla typu **float**vytváří.
+*complexNum*<br/>
+Komplexní čísla typu **double** nebo typu **long double** jehož reálné a imaginární části se používají k inicializaci komplexního čísla typu **float** vytváří.
 
 ## <a name="return-value"></a>Návratová hodnota
 

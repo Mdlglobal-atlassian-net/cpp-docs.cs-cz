@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6019f2bb3d425b8ebfa4c49c3b6623d331fa5534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964155"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212565"
 ---
 # <a name="binaryfunction-struct"></a>binary_function – struktura
 
@@ -41,11 +41,9 @@ struct binary_function {
 
 Struktura šablony slouží jako základ pro třídy, které definují členské funkce ve tvaru:
 
-**result_type operator()**( **constfirst_argument_type &**,
+> *result_type* ** operator() (const ** <em>first_argument_type</em>**& const** <em>second_argument_type</em>**&) const**
 
-**Const second_argument_type &** ) **const**
-
-Všechny tyto binární funkce mohou odkazovat na jejich první argument typu jako `first_argument_type`, zadejte jejich druhý argument jako `second_argument_type`a jejich návratový typ jako ***result_type***.
+Všechny tyto binární funkce mohou odkazovat na jejich první argument typu jako *first_argument_type*, zadejte jejich druhý argument jako *second_argument_type*a jejich návratový typ jako *result_type* .
 
 ## <a name="example"></a>Příklad
 

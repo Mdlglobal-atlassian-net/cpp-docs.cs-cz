@@ -1,5 +1,5 @@
 ---
-title: Koncepty nasazení | Microsoft Docs
+title: Koncepty nasazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16f135011f7b67debdf51f6ddbde00a79d130602
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34257059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199688"
 ---
 # <a name="deployment-concepts"></a>Koncepty nasazení
 
-Tato část popisuje hlavní aspekty pro nasazení aplikací C++.
+Tato část popisuje hlavní aspekty pro nasazení aplikací v jazyce C++.
 
-## <a name="windows-installer-deployment-in-c"></a>Instalační služba systému Windows v jazyce C++
+## <a name="windows-installer-deployment-in-c"></a>Nasazení Instalační služby systému Windows v jazyce C++
 
-Projekty Visual C++ se obvykle používají tradiční nastavení Instalační služby systému Windows pro nasazení. Příprava nasazení Instalační služby systému Windows, balíček aplikace do souboru setup.exe a distribuovat spolu s instalační balíček (.msi). Uživatelé pak spusťte setup.exe pro instalaci aplikace.
+Projekty Visual C++ obvykle používat tradiční instalace Instalační služby systému Windows pro nasazení. Příprava nasazení Instalační služby systému Windows, balíček aplikace do souboru setup.exe a distribuovat tento soubor, společně s balíčkem aplikace Instalační služby (MSI). Uživatelé pak spusťte setup.exe pro instalaci vaší aplikace.
 
-Balíček aplikace přidáním projektu instalace do řešení; Když vytvořen, vytvoří instalační program a instalační program soubory balíčku, které můžete distribuovat uživatelům. Další informace najdete v tématu [volba metody nasazení](../ide/choosing-a-deployment-method.md).
+Zabalení aplikace tak, že přidáte do svého řešení; projektu instalace Při sestavování, vytvoří instalační program a instalační program soubory balíčku, které můžete distribuovat uživatelům. Další informace najdete v tématu [volba metody nasazení](../ide/choosing-a-deployment-method.md).
 
-## <a name="library-dependencies"></a>Závislosti knihovny
+## <a name="library-dependencies"></a>Závislé položky knihoven
 
-Když aplikace C/C++ je sestaven pomocí funkce poskytované službou knihovny jazyka Visual C++, stane závisí na přítomnost tyto knihovny za běhu. Aby aplikace spuštěna musí s ní staticky nebo dynamicky, nezbytné knihoven Visual C++. Pokud aplikace dynamicky odkazy knihovnu Visual C++, potom při spuštění této knihovny musí být přítomen, mohou být načteny. Na druhé straně Pokud aplikace staticky odkazuje na knihovnu Visual C++, pak nemusí odpovídající knihovny DLL, aby byly v počítači uživatele. Statické propojení, má však některé nepříznivé vlivy, např. zvýšení velikosti souborů aplikace a provádění údržby potenciálně obtížnější. Další informace najdete v tématu [výhody použití knihoven DLL](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls).
+Při vytváření aplikace v jazyce C/C++ pomocí funkce poskytované službou knihoven Visual C++, bude závislá na přítomnost tyto knihovny za běhu. V pořadí pro spuštění aplikace je třeba propojit, staticky nebo dynamicky, potřebné knihovny Visual C++. Pokud aplikace dynamicky odkazy na knihovny Visual C++, pak při spuštění této knihovny musí být k dispozici, je možné načíst. Na druhé straně Pokud aplikace staticky odkazuje na knihovny Visual C++, pak nemusí odpovídající knihovny DLL, aby byly v počítači uživatele. Statické propojení, ale má některé negativní důsledky, jako je například zvýšení velikosti souborů aplikace a provádění údržby potenciálně obtížnější. Další informace najdete v tématu [výhody použití knihoven DLL](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls).
 
-## <a name="packaging-and-redistributing"></a>Balení a redistribuce
+## <a name="packaging-and-redistributing"></a>Balení a opětovná distribuce
 
-Knihoven Visual C++ jsou obsaženy jako knihovny DLL a všechny potřebné knihovny pro C/C++ aplikace jsou nainstalované Visual Studio v počítači pro vývojáře. Ale pokud nasazujete aplikaci pro uživatele, není ale ve většině případů vyžadovat, aby instalaci sady Visual Studio, aby bylo možné aplikaci spustit. Je důležité, abyste mohli distribuovat pouze části Visual C++, které vyžaduje správné fungování aplikace.
+Knihovny Visual C++ jsou dodávány jako knihovny DLL a nainstalují všechny potřebné knihovny pro aplikace C/C++ pomocí sady Visual Studio na počítači pro vývojáře. Ale při nasazení aplikace pro vaše uživatele, není ale ve většině případů tak, aby vyžadovala je instalace sady Visual Studio, aby bylo možné aplikaci spustit. Je důležité moct dál distribuovat pouze ty části sady Visual C++, které vyžaduje pro správné spuštění vaší aplikace.
 
-Další informace o balení a redistribuce najdete v následujících tématech:
+Další informace o vytváření balíčků a opětovná distribuce naleznete v následujících tématech:
 
 - [Určení, které knihovny DLL je třeba redistribuovat](../ide/determining-which-dlls-to-redistribute.md).
 
 - [Volba metody nasazení](../ide/choosing-a-deployment-method.md).
 
-- [Universal CRT nasazení](universal-crt-deployment.md).
+- [Nasazení Universal CRT](universal-crt-deployment.md).
 
-Příklady nasazení a návrhy o řešení potíží najdete v tématu:
+Příklady nasazení a návrhy řešení potíží najdete v tématu:
 
 - [Příklady nasazení](../ide/deployment-examples.md).
 
-- [Řešení potíží s C/C++ izolované aplikace a souběžně sdílená sestavení](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
+- [Řešení potíží s C/C++ izolované aplikace a sestavení vedle sebe](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Principy závislostí v aplikacích Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Instalační služba systému Windows](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+- [Nasazení Instalační služby systému Windows](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464522"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204125"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl – třída
 Poskytuje implementaci pro sad řádků schématu.  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
  *pUnkOuter*  
- [in] Vnější [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro agregaci, jinak hodnota NULL.  
+ [in] Vnější [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro agregaci, jinak hodnota NULL.  
   
  *cRestrictions –*  
  [in] Počet omezení použitých na sady řádků schématu.  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  Implementaci této funkce vyžaduje, aby uživatel mít schéma mapování ve třídě relace. Pomocí informací o schématu mapování, pak odpovědí s polem identifikátory GUID pro schémata v objektu map. Reprezentuje schémata podporována zprostředkovatelem.  
 
 ## <a name="see-also"></a>Viz také  
- [Členové IDBSchemaRowsetImpl – třída](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Členové IDBSchemaRowsetImpl – třída](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

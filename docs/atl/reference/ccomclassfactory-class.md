@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880021"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205209"
 ---
 # <a name="ccomclassfactory-class"></a>Ccomclassfactory – třída
-Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní.  
+Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|Zamkne objekt pro vytváření tříd v paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComClassFactory` implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní, která obsahuje metody pro vytvoření objektu s konkrétní identifikátorem CLSID, jakož i uzamčení objekt pro vytváření tříd v paměti, abyste mohli rychleji vytvořit nové objekty. `IClassFactory` je nutné implementovat pro každou třídu, která zaregistrujete v systémovém registru a můžete přiřadit identifikátor CLSID.  
+ `CComClassFactory` implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) rozhraní, která obsahuje metody pro vytvoření objektu s konkrétní identifikátorem CLSID, jakož i uzamčení objekt pro vytváření tříd v paměti, abyste mohli rychleji vytvořit nové objekty. `IClassFactory` je nutné implementovat pro každou třídu, která zaregistrujete v systémovém registru a můžete přiřadit identifikátor CLSID.  
   
  Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete-li přepsat toto výchozí nastavení, zadejte jeden z `DECLARE_CLASSFACTORY` *XXX* makra v definici třídy. Například [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) makro používá zadanou třídu pro objekt pro vytváření tříd:  
   

@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851655"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217586"
 ---
 # <a name="coleserverdoc-class"></a>Coleserverdoc – třída
 Základní třída pro dokumenty OLE na serveru.  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Načte ukazatel na základní [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) rozhraní.  
+ Načte ukazatel na základní [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite) rozhraní.  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Přepsání této funkce můžete vytvořit nový `CDocObjectServer` položky a vrácen ukazatel na ni.  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace volá `CDocument::OnCloseDocument`.  
   
- Další informace a další hodnoty, najdete v článku [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) v sadě Windows SDK.  
+ Další informace a další hodnoty, najdete v článku [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) v sadě Windows SDK.  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Volá se rozhraním, když uživatel deaktivuje položku vložený nebo připojený, který je aktuálně v místě aktivní.  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce změní velikost a upraví panely nástrojů a další prvky uživatelského rozhraní v souladu s novou velikost okna.  
   
- Další informace najdete v tématu [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) v sadě Windows SDK.  
+ Další informace najdete v tématu [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) v sadě Windows SDK.  
   
  To je moderní overridable.  
   

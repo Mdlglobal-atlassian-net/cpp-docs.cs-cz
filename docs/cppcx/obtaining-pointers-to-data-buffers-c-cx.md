@@ -9,22 +9,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212502"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
-V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.  
+V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.  
   
- Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.  
+ Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.  
   
  ![C&#43; &#43; kód přímo přístup k datům pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- Následující metoda přijímá [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.  
+ Následující metoda přijímá [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.  
   
 ```  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209322"
 ---
 # <a name="cdebugreporthook-class"></a>Cdebugreporthook – třída
 Tato třída slouží k odesílání sestav ladění k pojmenovanému kanálu.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Poznámky  
  Vytvoření instance této třídy v sestavení ladění, služby nebo aplikace zasílání zpráv o ladění k pojmenovanému kanálu. Ladění sestavy jsou generovány pomocí volání [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) nebo pomocí obálku pro tuto funkci, jako [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) a [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) makra.  
   
- Použití této třídy můžete interaktivně ladění součástí, které běží neinteraktivním přístupu [okno stanice](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Použití této třídy můžete interaktivně ladění součástí, které běží neinteraktivním přístupu [okno stanice](/windows/desktop/winstation/window-stations).  
   
  Všimněte si, že se odesílají zprávy ladění pomocí základního kontextu zabezpečení vlákna. Zosobnění je dočasně zakázat, aby ladění sestavy můžete zobrazit v situacích, kde zosobnění uživatelů s nízkým oprávněním probíhat, například ve webových aplikacích.  
   

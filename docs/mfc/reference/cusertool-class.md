@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202973"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
 Uživatelský nástroj je položka nabídky, která spustí externí aplikaci. **Nástroje** karty **vlastní** dialogové okno ( [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatelské nástroje a zadejte název, příkaz, argumenty, a Počáteční adresář pro každý nástroj uživatele.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Nenulové, pokud se příkaz provedl úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ke spuštění příkazu přidružený uživatelský nástroj. Pokud příkaz je prázdný nebo pokud selže funkce [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) selže.  
+ Volání [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) ke spuštění příkazu přidružený uživatelský nástroj. Pokud příkaz je prázdný nebo pokud selže funkce [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) selže.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Načte výchozí ikonu pro uživatelský nástroj.  

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200385"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42464623"
 ```  
   
  BOOT_APPLICATION  
- Aplikace, která běží v prostředí spouštění Windows. Další informace o spouštěcích aplikacích najdete v tématu [o BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Aplikace, která běží v prostředí spouštění Windows. Další informace o spouštěcích aplikacích najdete v tématu [o BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  KONZOLY  
  Aplikace znakového režimu systému Win32. Operační systém poskytuje konzolu pro konzolové aplikace. Pokud `main` nebo `wmain` je definována pro nativní kód `int main(array<String ^> ^)` je definována pro spravovaný kód, nebo zcela sestavení aplikace s použitím `/clr:safe`, KONZOLA je výchozí hodnota.  

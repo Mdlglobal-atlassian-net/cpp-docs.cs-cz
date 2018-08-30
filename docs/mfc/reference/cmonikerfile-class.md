@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853644"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212114"
 ---
 # <a name="cmonikerfile-class"></a>Cmonikerfile – třída
-Představuje datový proud ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Představuje datový proud ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) s názvem podle [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` nelze použít k vytvoření vazby na jinou hodnotu než datového proudu. Pokud chcete vytvořit vazbu na úložiště nebo objekt, je nutné použít `IMoniker` rozhraní přímo.  
   
- Další informace o datových proudů a zástupných názvů najdete v tématu [colestreamfile –](../../mfc/reference/colestreamfile-class.md) v *odkaz knihovny MFC* a [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) a [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705) v Windows SDK.  
+ Další informace o datových proudů a zástupných názvů najdete v tématu [colestreamfile –](../../mfc/reference/colestreamfile-class.md) v *odkaz knihovny MFC* a [IStream](/windows/desktop/api/objidl/nn-objidl-istream) a [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) v Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Třídy CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  Ukazatel na soubor výjimku. V případě chyby bude nastavena na příčinu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel do kontextu vazby [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) má být svázána s Pokud úspěšné; jinak hodnota NULL. Pokud instance byla otevřena s `IBindHost` rozhraní, kontextu vazby je načten z `IBindHost`. Pokud není žádný `IBindHost` rozhraní nebo rozhraní se nepodařilo vrátit kontext vazby, kontextu vazby je vytvořen. Popis [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) rozhraní, naleznete v sadě Windows SDK.  
+ Ukazatel do kontextu vazby [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) má být svázána s Pokud úspěšné; jinak hodnota NULL. Pokud instance byla otevřena s `IBindHost` rozhraní, kontextu vazby je načten z `IBindHost`. Pokud není žádný `IBindHost` rozhraní nebo rozhraní se nepodařilo vrátit kontext vazby, kontextu vazby je vytvořen. Popis [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) rozhraní, naleznete v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Kontext vazby je objekt, který obsahuje informace o operaci konkrétní zástupný název vazby. Můžete přepsat tuto funkci pro poskytnutí kontextu vlastní vazby.  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na aktuální moniker rozhraní ( [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Ukazatel na aktuální moniker rozhraní ( [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker)).  
   
 ### <a name="remarks"></a>Poznámky  
- Protože `CMonikerFile` není rozhraní, vrácený ukazatel se nezvyšuje počet odkazů (prostřednictvím [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), a monikeru je uvolněna při `CMonikerFile` uvolnění objektu. Pokud chcete opřete se o monikeru nebo uvolnění sami, je nutné `AddRef` ho.  
+ Protože `CMonikerFile` není rozhraní, vrácený ukazatel se nezvyšuje počet odkazů (prostřednictvím [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), a monikeru je uvolněna při `CMonikerFile` uvolnění objektu. Pokud chcete opřete se o monikeru nebo uvolnění sami, je nutné `AddRef` ho.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  Voláním této členské funkce pro otevření objektu souboru nebo moniker.  
