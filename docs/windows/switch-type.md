@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200123"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -43,9 +43,9 @@ Typ přepínače může být typ integer, znak, logická hodnota nebo výčet.
 
 ## <a name="remarks"></a>Poznámky
 
-**Switch_type –** C++ atribut má stejné funkce jako [switch_type –](http://msdn.microsoft.com/library/windows/desktop/aa367276) atribut MIDL.
+**Switch_type –** C++ atribut má stejné funkce jako [switch_type –](/windows/desktop/Midl/switch-type) atribut MIDL.
 
-Atributy C++ nepodporuje [zapouzdřené sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa367119) jsou podporovány pouze v následujícím tvaru:
+Atributy C++ nepodporuje [zapouzdřené sjednocení](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated sjednocení](/windows/desktop/Midl/nonencapsulated-unions) jsou podporovány pouze v následujícím tvaru:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp

@@ -1,5 +1,5 @@
 ---
-title: Stránka vlastností webových odkazů | Microsoft Docs
+title: Stránka vlastností webových odkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,31 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ff661394bd3b1ea9d01e8c1e1c29f747135f7aa8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194372"
 ---
 # <a name="web-references-property-page"></a>Stránka vlastností webových odkazů
-**Webové odkazy** stránka vlastností určuje, jak se budou generovat proxy třída XML webové služby. Pokud přidáte odkaz na projekt se budou generovat třídu XML webové služby serveru proxy. V tématu [přidat odkaz na Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) Další informace.  
+**Webové odkazy** stránku vlastností určuje, jak budou generovány třídu proxy XML webové služby. Pokud chcete přidat webový odkaz na váš projekt se vygeneruje třídu proxy XML webové služby. Zobrazit [přidat webový odkaz](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) Další informace.  
   
- **Webové odkazy** vlastnost stránka obsahuje následující vlastnosti:  
+ **Webové odkazy** stránka vlastností obsahuje následující vlastnosti:  
   
  **Výstupní soubor**  
- Název souboru obsahuje třídu proxy XML webové služby.  
+ Název souboru obsahujícího třídu proxy XML webové služby.  
   
- **Potlačit úvodní nápis při spouštění**  
- Nezobrazovat Banner informující o pro Web Services Description Language Tool (Wsdl.exe).  
+ **Potlačit úvodní nápis**  
+ Nejsou zobrazeny na banner pro Web Services Description Language Tool (Wsdl.exe).  
   
- **obor názvů**  
- Určuje název generovaného webového proxy serveru.  
+ **Namespace**  
+ Určuje název vygenerovaný webový proxy server.  
   
  **Další odkazy**  
  Určuje další knihovny DLL odkazuje proxy knihovny DLL.  
   
- Informace o tom, jak získat přístup **webový odkaz** stránce vlastností, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+ Informace o tom, jak získat přístup **webový odkaz** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)

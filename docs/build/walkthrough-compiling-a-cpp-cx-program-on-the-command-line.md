@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67d30ce301ec1a0b8952b780f52a5627e90df38
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bc4e6dbf3023256a6a0db556c02e08453bb1a730
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464921"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194272"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilace a C + +/ CX Program na příkazovém řádku
-Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
+Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
   
  V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které obsahují bez prvků uživatelského rozhraní.)  
   

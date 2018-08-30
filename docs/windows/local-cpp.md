@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a19e58e68b7f03269c002072859c2410a38c397b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203319"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -36,7 +36,7 @@ Při použití v záhlaví rozhraní, můžete pomocí kompilátoru MIDL jako ge
 
 ## <a name="remarks"></a>Poznámky
 
-**Místní** C++ atribut má stejné funkce jako [místní](http://msdn.microsoft.com/library/windows/desktop/aa367071) atribut MIDL.
+**Místní** C++ atribut má stejné funkce jako [místní](/windows/desktop/Midl/local) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 

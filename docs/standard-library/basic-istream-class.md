@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200025"
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-Každá extrahovat pole a převést na číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). [získat](#get)( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Tady **InIt** je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **dlouhé**,**unsigned long**, nebo **void \***  podle potřeby.
+Každá extrahovat pole a převést na číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). [získat](#get)( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Tady **InIt** je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **dlouhé**, **unsigned long**, nebo **void** <strong>\*</strong> podle potřeby.
 
 Pokud se převedená hodnota nemůže být reprezentovaný jako typ `val`, volání funkce [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě funkce vrací  **\*to**.
 

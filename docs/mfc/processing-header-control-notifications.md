@@ -1,5 +1,5 @@
 ---
-title: Zpracování oznámení ovládacího prvku záhlaví | Microsoft Docs
+title: Zpracování oznámení ovládacího prvku záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0fe657089c33679cf8d18f95268a70335804c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539e7411dcc47be17bb10a5322e30a524679ca8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348888"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194208"
 ---
 # <a name="processing-header-control-notifications"></a>Zpracování oznámení ovládacího prvku záhlaví
-Ve třídě zobrazení nebo dialogové okno Vlastnosti okno použít k vytvoření [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkce obslužná rutina s příkazem přepínač pro všechny prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) zpráv s oznámením chcete zpracování (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)). Oznámení se odesílají do nadřazeného okna, když uživatel klikne na tlačítko nebo poklikáním položky záhlaví, drags a dělicí mezi položkami a tak dále.  
+Ve třídě zobrazení nebo dialogovém okně, použijte okno Vlastnosti k vytvoření [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkci obslužné rutiny pomocí příkazu switch pro jakékoli záhlaví ovládacího prvku ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) chcete zpráv s oznámením zpracování (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)). Oznámení se posílají nadřazenému oknu, když uživatel klepne nebo dvakrát klikne položky záhlaví, drags a oddělovač mezi položkami a tak dále.  
   
- Související s ovládacím prvkem záhlaví zprávy oznámení jsou uvedeny v [odkaz ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775239) ve Windows SDK.  
+ Upozornění související s ovládacím prvkem záhlaví jsou uvedeny v [záhlaví ovládacího prvku odkazu](https://msdn.microsoft.com/library/windows/desktop/bb775239) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   

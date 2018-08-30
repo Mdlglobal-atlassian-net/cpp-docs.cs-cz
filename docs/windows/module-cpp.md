@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200215"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ Název bloku knihovny.
 Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Je nutné načíst *uuid* bloku knihovny, které vám pomůžou s použitím identifikátoru **__uuidof (** *NázevKnihovny* **)**.
 
 *lcid*  
-Parametr lokalizace. Zobrazit [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Další informace.
+Parametr lokalizace. Zobrazit [lcid](/windows/desktop/Midl/lcid) Další informace.
 
 *ovládací prvek* (volitelné)  
 Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
@@ -82,7 +82,7 @@ Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
 Určuje knihovnu typů.
 
 *helpstringdll –* (volitelné)  
-Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](http://msdn.microsoft.com/library/windows/desktop/aa366860) pro další informace.
+Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](/windows/desktop/Midl/helpstringdll) pro další informace.
 
 *HelpFile –* (volitelné)  
 Název **pomáhají** soubor pro knihovnu typů.
@@ -94,10 +94,10 @@ Název **pomáhají** soubor pro knihovnu typů.
 Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.
 
 *skryté* (volitelné)  
-Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](http://msdn.microsoft.com/library/windows/desktop/aa366861) atribut MIDL pro další informace.
+Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
 *s omezeným přístupem* (volitelné)  
-Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) atribut MIDL pro další informace.
+Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
 *vlastní* (volitelné)  
 Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
@@ -124,15 +124,15 @@ Pokud tento atribut se používá v rámci projektu, který používá knihovny 
 
 - `type` = **knihovny DLL**
 
-   [Catldllmodulet –](../atl/reference/catldllmodulet-class.md) slouží jako základní třídu a standardní knihovny DLL vstupní body požadované pro COM server. Tyto vstupní body jsou [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), a [ DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [Catldllmodulet –](../atl/reference/catldllmodulet-class.md) slouží jako základní třídu a standardní knihovny DLL vstupní body požadované pro COM server. Tyto vstupní body jsou [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **soubor EXE**
 
-   [Catlexemodulet –](../atl/reference/catlexemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [Catlexemodulet –](../atl/reference/catlexemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **Služba**
 
-   [Catlservicemodulet –](../atl/reference/catlservicemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [Catlservicemodulet –](../atl/reference/catlservicemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **Tento parametr zadán**
 
@@ -193,7 +193,7 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 [Samostatné atributy](../windows/stand-alone-attributes.md)  
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[Knihovna](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[Knihovna](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

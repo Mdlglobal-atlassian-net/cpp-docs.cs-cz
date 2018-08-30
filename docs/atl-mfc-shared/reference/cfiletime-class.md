@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202600"
 ---
 # <a name="cfiletime-class"></a>Cfiletime – třída
 Tato třída poskytuje metody pro správu přidružené k souboru hodnoty data a času.  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |Den|Hodina \* 24|  
 |Týden|Den \* 7|  
   
- **Poznámka:** všechny systémy souborů lze zaznamenat vytvoření a čas posledního přístupu a ne všechny systémy souborů je zaznamenat stejným způsobem. Vytvořte například v systému souborů FAT Windows NT, čas s rozlišením 10 milisekund, čas zápisu rozlišením 2 sekundy a čas přístupu s rozlišením 1 den (data access). V systému souborů NTFS čas přístupu s rozlišením 1 hodina. Kromě toho FAT zaznamenává časy na disku v místním čase, ale systém souborů NTFS zaznamenává ve standardu UTC, časy na disku. Další informace najdete v tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
+ **Poznámka:** všechny systémy souborů lze zaznamenat vytvoření a čas posledního přístupu a ne všechny systémy souborů je zaznamenat stejným způsobem. Vytvořte například v systému souborů FAT Windows NT, čas s rozlišením 10 milisekund, čas zápisu rozlišením 2 sekundy a čas přístupu s rozlišením 1 den (data access). V systému souborů NTFS čas přístupu s rozlišením 1 hodina. Kromě toho FAT zaznamenává časy na disku v místním čase, ale systém souborů NTFS zaznamenává ve standardu UTC, časy na disku. Další informace najdete v tématu [časy](/windows/desktop/SysInfo/file-times).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>Parametry  
  *FT*  
- A [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.  
+ A [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.  
   
  *nTime*  
  Datum a čas vyjádřený jako hodnotu 64-bit.  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ## <a name="see-also"></a>Viz také  
- [FILETIME –](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME –](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [Cfiletimespan – třída](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

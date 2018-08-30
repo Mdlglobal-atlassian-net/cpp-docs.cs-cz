@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881526"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194421"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Cfirepropnotifyevent – třída
 Tato třída poskytuje metody pro oznámení kontejneru jímky týkající se změny vlastností ovládacího prvku.  
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
  **Záhlaví:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Oznámí všechny připojené [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní (v každém bodě připojení objektu), která je změněna vlastnost zadaného objektu.  
+ Oznámí všechny připojené [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní (v každém bodě připojení objektu), která je změněna vlastnost zadaného objektu.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  Tato funkce je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Oznámí všechny připojené [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní (v každém bodě připojení objektu), které se zadaný objekt vlastnost se má změnit.  
+ Oznámí všechny připojené [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní (v každém bodě připojení objektu), které se zadaný objekt vlastnost se má změnit.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);

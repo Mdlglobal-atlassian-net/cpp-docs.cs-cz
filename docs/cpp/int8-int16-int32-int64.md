@@ -24,55 +24,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1be48b2e6972ca3a291ab57dbcb1976e6a56d87
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194248"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Jazyk Microsoft C/C++ obsahuje podporu pro celočíselné typy s velikostí. Je možné deklarovat 8, 16, 32- a 64bitové celočíselné proměnné pomocí **__int *** n* zadejte specifikátor, kde *n* je 8, 16, 32 nebo 64.  
-  
- Následující příklad deklaruje jednu proměnnou pro každý z těchto celočíselných typů s velikostí:  
-  
-```cpp 
-__int8 nSmall;      // Declares 8-bit integer  
-__int16 nMedium;    // Declares 16-bit integer  
-__int32 nLarge;     // Declares 32-bit integer  
-__int64 nHuge;      // Declares 64-bit integer  
-```  
-  
- Typy **__int8**, **__int16**, a **__int32** jsou synonyma pro typy ANSI stejné velikosti a jsou užitečné pro psaní přenositelného kódu, který se chová stejně jako na různých platformách. **__Int8** datový typ je synonymum pro typ **char**, **__int16** je synonymem typu **krátký**, a **__int32**  je synonymem typu **int**. **__Int64** typ je synonymum pro typ **long long**.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, že __int*xx* parametr bude povýšen na **int**:  
-  
-```cpp 
-// sized_int_types.cpp  
-  
-#include <stdio.h>  
-  
-void func(int i) {  
-    printf_s("%s\n", __FUNCTION__);  
-}  
-  
-int main()  
-{  
-    __int8 i8 = 100;  
-    func(i8);   // no void func(__int8 i8) function  
-                // __int8 will be promoted to int  
-}  
-```  
-  
-```Output  
-func  
-```  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [klíčová slova](../cpp/keywords-cpp.md)   
- [Základní typy](../cpp/fundamental-types-cpp.md)   
- [Rozsahy datových typů](../cpp/data-type-ranges.md)
+
+**Specifické pro Microsoft**
+
+Jazyk Microsoft C/C++ obsahuje podporu pro celočíselné typy s velikostí. Je možné deklarovat 8, 16, 32- a 64bitové celočíselné proměnné pomocí **__int**<em>n</em> zadejte specifikátor, kde *n* je 8, 16, 32 nebo 64.
+
+Následující příklad deklaruje jednu proměnnou pro každý z těchto celočíselných typů s velikostí:
+
+```cpp
+__int8 nSmall;      // Declares 8-bit integer
+__int16 nMedium;    // Declares 16-bit integer
+__int32 nLarge;     // Declares 32-bit integer
+__int64 nHuge;      // Declares 64-bit integer
+```
+
+Typy **__int8**, **__int16**, a **__int32** jsou synonyma pro typy ANSI stejné velikosti a jsou užitečné pro psaní přenositelného kódu, který se chová stejně jako na různých platformách. **__Int8** datový typ je synonymum pro typ **char**, **__int16** je synonymem typu **krátký**, a **__int32**  je synonymem typu **int**. **__Int64** typ je synonymum pro typ **long long**.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, že __int*xx* parametr bude povýšen na **int**:
+
+```cpp
+// sized_int_types.cpp
+
+#include <stdio.h>
+
+void func(int i) {
+    printf_s("%s\n", __FUNCTION__);
+}
+
+int main()
+{
+    __int8 i8 = 100;
+    func(i8);   // no void func(__int8 i8) function
+                // __int8 will be promoted to int
+}
+```
+
+```Output
+func
+```
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Základní typy](../cpp/fundamental-types-cpp.md)<br/>
+[Rozsahy datových typů](../cpp/data-type-ranges.md)<br/>

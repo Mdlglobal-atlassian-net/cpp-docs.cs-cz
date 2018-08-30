@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cb0b50170de0ba5a5c38c1850369092d8453445a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884034"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203197"
 ---
 # <a name="csocketaddr-class"></a>Csocketaddr – třída
 Tato třída poskytuje metody pro převod názvy hostitelů na hostitelské adresy podporující formáty IPv4 a IPV6.  
@@ -60,7 +60,7 @@ class CSocketAddr
 ## <a name="remarks"></a>Poznámky  
  Tato třída poskytuje verzi protokolu IP, že bez přístupu pro vyhledávání síťových adres pro použití se službou Windows sockets – funkce rozhraní API a obálky soketu v knihovnách.  
   
- Členové této třídy, které se používají k vyhledání síťové adresy používat funkce rozhraní Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Členové této třídy, které se používají k vyhledání síťové adresy používat funkce rozhraní Win32 API [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo).  
   
  Tato třída podporuje obě adresy IPv4 andIPv6 sítě.  
   
@@ -124,7 +124,7 @@ int FindAddr(
  Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametr název hostitele může být ve formátu IPv4 nebo IPv6. Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
+ Parametr název hostitele může být ve formátu IPv4 nebo IPv6. Tato metoda volá funkci Win32 API [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) k provedení převodu.  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  Volání této metody k převodu názvu hostitele IPv4 adresa hostitele.  
@@ -154,7 +154,7 @@ int FindINET4Addr(
  Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
+ Tato metoda volá funkci Win32 API [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) k provedení převodu.  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Voláním této metody lze převést název hostitele IPv6 adresa hostitele.  
@@ -184,7 +184,7 @@ int FindINET6Addr(
  Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
+ Tato metoda volá funkci Win32 API [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) k provedení převodu.  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  Voláním této metody vrátí ukazatel na konkrétní element v `addrinfo` seznamu.  
@@ -195,7 +195,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Odkaz na konkrétní elementu v [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) seznamu.  
+ Odkaz na konkrétní elementu v [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrací ukazatel `addrinfo` struktura odkazuje *nIndex* v propojeném seznamu, který obsahuje odpověď informace o hostiteli.  

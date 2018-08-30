@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196217"
 ---
 # <a name="coleinsertdialog-class"></a>Coleinsertdialog – třída
 Používá se pro dialogové okno vložení objektu OLE.  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  Generované průvodcem kontejneru kódu aplikace používá tuto třídu.  
   
- Další informace najdete v tématu [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struktura v sadě Windows SDK.  
   
  Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -184,7 +184,7 @@ INT_PTR
   
 -   IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
--   IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) funkce v sadě Windows SDK.  
+-   IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIInsertObject](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_io](#m_io) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  Vrátí CLSID asociované s vybranou položkou.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  Voláním této funkce k určení, pokud se uživatel rozhodl zobrazení vybrané položky jako ikona.  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce pouze tehdy, pokud [DoModal](#domodal) vrátí IDOK.  
   
- Další informace o aspekt kreslení, naleznete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) datové struktury v sadě Windows SDK.  
+ Další informace o aspekt kreslení, naleznete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) datové struktury v sadě Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  Voláním této funkce se získat popisovač pro tento metasoubor obsahující ikonickým aspekt vybranou položku.  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>Poznámky  
  Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)   

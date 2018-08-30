@@ -1,5 +1,5 @@
 ---
-title: _fgetchar –, _fgetwchar – | Microsoft Docs
+title: _fgetchar _fgetwchar – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194315"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
-Přečte znak z **stdin –**.
+Přečte znak z **stdin**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fgetchar –** vrátí znak přečíst jako **int** , nebo může vracet **EOF** udávajících chyba nebo konec souboru. **_ *** fgetwchar –** vrátí, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí **weof –** udávajících chyba nebo konec souboru. Pro obě funkce použijte **feof –** nebo **ferror –** rozlišit mezi chybu a podmínku end souboru.
+**\_fgetchar –** vrátí znak čtený jako **int** nebo vrátí `EOF` k označení chyby nebo konce souboru. **\_fgetwchar –** vrátí, jako [wint_t](../../c-runtime-library/standard-types.md), široký znak, který odpovídá znaku číst nebo vrátí `WEOF` k označení chyby nebo konce souboru. Pro obě funkce použijte **feof** nebo **ferror** k rozlišení mezi chybou a podmínkou end souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce číst jeden znak z **stdin –**. Funkce pak zvýší přidružený soubor ukazatele (je-li definována) tak, aby odkazoval na další znak. Pokud datový proud je na konci souboru, je nastavit koncové souboru indikátor pro datový proud.
+Tyto funkce přečtou jeden znak z **stdin**. Funkce potom zvýší přidružený ukazatel na soubor (je-li definován) tak, aby odkazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
 
-**_fgetchar –** je ekvivalentní `fgetc( stdin )`. Je také ekvivalentní **getchar**, ale implementována pouze jako funkci, nikoli jako funkce a makra. **_fgetwchar –** je verze široká charakterová **_fgetchar –**.
+**_fgetchar** je ekvivalentní `fgetc( stdin )`. Je také ekvivalentní **getchar**, ale implementována pouze jako funkce, nikoli jako funkce a makro. **_fgetwchar –** je verze širokého znaku **_fgetchar**.
 
 Tyto funkce nejsou kompatibilní se standardem ANSI.
 
@@ -85,7 +85,7 @@ Tyto funkce nejsou kompatibilní se standardem ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –**stdin –**, **stdout**, a **stderr**– musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,8 +125,8 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

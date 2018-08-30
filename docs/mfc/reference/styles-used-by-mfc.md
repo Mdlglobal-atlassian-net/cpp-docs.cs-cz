@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199918"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC  
   
@@ -308,7 +308,7 @@ Následující pole se seznamem styly jsou k dispozici v knihovně MFC. Další 
   
 ## <a name="edit-styles"></a>  Styly pro úpravy  
   
-Upravit styly platí pro [cedit – třída](../../mfc/reference/cedit-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravy – styly ovládacích prvků ve Windows najdete v tématu [upravit styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Upravit styly platí pro [cedit – třída](../../mfc/reference/cedit-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravy – styly ovládacích prvků ve Windows najdete v tématu [upravit styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Tyto styly oken zpráv jsou k dispozici.
   
 ## <a name="scroll-bar-styles"></a> Styly posuvníku  
   
-Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscrollbar-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o posuvník – styly ovládacích prvků ve Windows najdete v tématu [styly posuvníku panelu ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscrollbar-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o posuvník – styly ovládacích prvků ve Windows najdete v tématu [styly posuvníku panelu ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscroll
   
 ## <a name="static-styles"></a> Statické styly  
   
-Statické styly platí pro [cstatic – třída](../../mfc/reference/cstatic-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statický ovládací prvek ve Windows najdete v tématu [statické styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Statické styly platí pro [cstatic – třída](../../mfc/reference/cstatic-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statický ovládací prvek ve Windows najdete v tématu [statické styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-clas
 |WS_EX_CONTEXTHELP|Zahrnuje otazník v záhlaví okna. Pokud uživatel na tento otazník klikne, změní se kurzor na ukazatel s otazníkem. Pokud uživatel pak klikne na podřízené okno, obdrží zprávu WM_HELP.|  
 |WS_EX_CONTROLPARENT|Umožňuje uživateli přecházet mezi okny podřízenými okna pomocí klávesy TAB.|  
 |WS_EX_DLGMODALFRAME|Určí okno s dvojitým ohraničení, která může (volitelně) vytvořeno se záhlavím při zadání příznak stylu WS_CAPTION v *dwStyle* parametru.|  
-|WS_EX_LAYERED|Okno je [vrstveným oknem](http://msdn.microsoft.com/library/ms632599.aspx#layered). Tento styl nelze použít, pokud má okno [třídy stylu](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC nebo CS_CLASSDC. Microsoft Windows 8, ale podporuje styl WS_EX_LAYERED pro podřízená okna, ve kterém předchozí verze Windows podporují se pouze pro okna nejvyšší úrovně.|  
+|WS_EX_LAYERED|Okno je [vrstveným oknem](/windows/desktop/winmsg/window-features). Tento styl nelze použít, pokud má okno [třídy stylu](/windows/desktop/winmsg/about-window-classes) CS_OWNDC nebo CS_CLASSDC. Microsoft Windows 8, ale podporuje styl WS_EX_LAYERED pro podřízená okna, ve kterém předchozí verze Windows podporují se pouze pro okna nejvyšší úrovně.|  
 |WS_EX_LEFT|Poskytuje okno Obecné vlastnosti zarovnání vlevo. Toto nastavení je výchozí.|  
 |WS_EX_LEFTSCROLLBAR|Umístí svislý posuvník nalevo od klientské oblasti.|  
 |WS_EX_LTRREADING|Zobrazí text okna zleva doprava použití vlastností pořadí čtení. Toto nastavení je výchozí.|  
@@ -524,14 +524,14 @@ Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-clas
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Styly tlačítek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Styly oken – pole se seznamem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Upravit styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Upravit styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Styly oken (Windows) seznamu](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox – funkce (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[posuvník – styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Styly statický ovládací prvek (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[posuvník – styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Styly statický ovládací prvek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Rozšířené styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0bc5adbb62e70a012d9dff4f9a390a46476aaa36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336254"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200253"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO – struktura
 `BITMAPINFO` Struktury definuje rozměry a informace o barvě pro Windows device independent bitmap (DIB).  
@@ -37,10 +37,10 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>Parametry  
  *bmiHeader*  
- Určuje [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) strukturu, která obsahuje informace o dimenzích a formát barvy rastrového obrázku nezávislých na zařízení.  
+ Určuje [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) strukturu, která obsahuje informace o dimenzích a formát barvy rastrového obrázku nezávislých na zařízení.  
   
  *bmiColors*  
- Určuje pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) nebo DWORD datové typy, které definují barvy rastrového obrázku nastaven.  
+ Určuje pole [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) nebo DWORD datové typy, které definují barvy rastrového obrázku nastaven.  
   
 ## <a name="remarks"></a>Poznámky  
  Bitmap nezávislých na zařízení se skládá ze dvou samostatných částí: `BITMAPINFO` struktura, která popisuje dimenze a barvy rastrového obrázku a pole bajtů, které určují pixely rastrového obrázku nastaven. Bity v pole jsou zkomprimována společně, ale každý řádek kontroly musí být doplněny nulami skončí **dlouhé** hranic. Při pozitivní výšku rastrového obrázku pochází z levého dolního rohu. Pokud je záporné, původ levém horním rohu.  
@@ -49,11 +49,11 @@ typedef struct tagBITMAPINFO {
   
  Další informace o `BITMAPINFO` struktury a vhodné hodnoty pro členy programu `BITMAPINFOHEADER` a `RGBQUAD` struktury, naleznete v následujících tématech v dokumentaci Windows SDK.  
   
-- [Bitmapinfo – struktura](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
+- [Bitmapinfo – struktura](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)  
   
-- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struktura  
+- [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) struktura  
   
-- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktura  
+- [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktura  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** wingdi.h  
@@ -61,6 +61,6 @@ typedef struct tagBITMAPINFO {
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBrush::CreateDIBPatternBrush](../../mfc/reference/cbrush-class.md#createdibpatternbrush)   
- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)   
- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)
+ [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)   
+ [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)
 

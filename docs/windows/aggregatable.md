@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595239"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200565"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Parametr označuje, kdy se dají agregovat objektu COM:
 
 ## <a name="remarks"></a>Poznámky
 
-**Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.
+**Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](/windows/desktop/Midl/aggregatable) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.
 
 Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.
 
@@ -97,4 +97,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 [IDL – atributy](../windows/idl-attributes.md)  
 [Atributy třídy](../windows/class-attributes.md)  
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Agregace](/windows/desktop/com/aggregation)  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b41404c3f003d8f4d87ca98888f004c08c9721
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194176"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Úpravy maker WINVER a _WIN32_WINNT
 
@@ -63,7 +63,7 @@ Pokud nevidíte všechny tyto verze Windows uvedené v kopii souboru SDKDDKVer.h
   
 Toto makro můžete také definovat pomocí `/D` – možnost kompilátoru. Další informace najdete v tématu [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md).  
   
-Další informace o význam těchto maker naleznete v tématu [pomocí hlavičky Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Další informace o význam těchto maker naleznete v tématu [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers).  
   
 ## <a name="see-also"></a>Viz také  
 

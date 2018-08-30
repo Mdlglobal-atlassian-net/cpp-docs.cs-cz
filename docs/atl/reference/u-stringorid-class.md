@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886164"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196394"
 ---
 # <a name="ustringorid-class"></a>_U_stringorid – třída
 Tato třída argument adaptér umožňuje názvy prostředků (LPCTSTRs) nebo ID prostředků (uvedený), které se mají předat funkci bez nutnosti volajícího k převodu na řetězec za použití makra MAKEINTRESOURCE ID.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identifikátor URI.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída slouží k implementaci obálky pro správu prostředků Windows API, jako [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), a [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkce, které přijímají LPCTSTR argument, který může být název prostředku nebo ID.  
+ Tato třída slouží k implementaci obálky pro správu prostředků Windows API, jako [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), a [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funkce, které přijímají LPCTSTR argument, který může být název prostředku nebo ID.  
   
  Třída definuje dvě přetížení konstruktoru: přijímá jeden LPCTSTR argument a druhý UINT argument. UINT argument je převeden na typ prostředku, který je kompatibilní s funkcí správy prostředků Windows – makro MAKEINTRESOURCE a výsledek uložený v single – datový člen třídy, [m_lpstr](#_u_stringorid__m_lpstr). Argument pro konstruktor LPCTSTR ukládána přímo bez převodu.  
   

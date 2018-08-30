@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883372"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196044"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra  
  Tato makra zadejte rozhraní objektu do jeho mapy modelu COM, tak, aby k nim může přistupovat pomocí `QueryInterface`. Pořadí položek v objektu map COM je rozhraní pořadí bude sloužit k odpovídající IID během `QueryInterface`.  
@@ -48,7 +48,7 @@ ms.locfileid: "37883372"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), s tím rozdílem, že dotazování pro libovolný identifikátor IID výsledkem předávání dotaz tak, aby *punk*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), kromě případu, kdy *punk* má hodnotu NULL, automaticky vytvoří agregace popsaného *clsid*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Stejné jako [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), s tím rozdílem, že dotazování pro libovolný identifikátor IID výsledkem předávání dotaz tak, aby *punk*a pokud *punk* má hodnotu NULL, se automaticky vytvoří agregace popsaného *clsid*.|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Způsobí, že program k volání [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Způsobí, že program k volání [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Ukládá data specifická pro rozhraní pro každou instanci.|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Zpřístupňuje odtržených rozhraní.|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Zpracovává mapu COM základní třídy tuto položku v objektu map COM dosáhne zpracování.|  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- Způsobí, že program k volání [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.  
+ Způsobí, že program k volání [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

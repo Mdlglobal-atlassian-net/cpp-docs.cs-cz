@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196187"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 Poskytuje funkce pro ovládací prvek panelu průběhu běžné Windows.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci stylesdescribed okno v [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK, kromě následujících průběhu – styly ovládacího prvku do ovládacího prvku:  
+ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci stylesdescribed okno v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK, kromě následujících průběhu – styly ovládacího prvku do ovládacího prvku:  
   
 - Pbs_vertical – zobrazí informace o průběhu svisle, shora dolů. Bez tento příznak ovládací prvek indikátoru průběhu zobrazí ve vodorovném směru, zleva doprava.  
   
 - Pbs_smooth – zobrazí postupné, technologie smooth vyplníte ovládací prvek indikátoru průběhu. Bez tohoto příznaku ovládací prvek vyplní bloky.  
   
  *Rect*  
- Určuje ovládací prvek indikátoru průběhu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Vzhledem k tomu, ovládací prvek musí být podřízené okno, zadaných souřadnic jsou vzhledem ke klientské oblasti *pParentWnd*.  
+ Určuje ovládací prvek indikátoru průběhu velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Vzhledem k tomu, ovládací prvek musí být podřízené okno, zadaných souřadnic jsou vzhledem ke klientské oblasti *pParentWnd*.  
   
  *pParentWnd*  
  Určuje průběhu nadřazené okno ovládacího prvku, obvykle `CDialog`. Nesmí být NULL.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
   
  *Rect*  
- Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
+ Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
  Ukazatel na okno, který je nadřazeného ovládacího prvku.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva aktuální indikátor průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu nebo CLR_DEFAULT, pokud je barva řádku indikátoru průběhu výchozí barvy.  
+ Barva aktuální indikátor průběhu, vyjádřené [COLORREF](/windows/desktop/gdi/colorref) hodnotu nebo CLR_DEFAULT, pokud je barva řádku indikátoru průběhu výchozí barvy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Získá barvu pozadí aktuální indikátor průběhu.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva pozadí aktuální indikátor průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu.  
+ Barva pozadí aktuální indikátor průběhu, vyjádřené [COLORREF](/windows/desktop/gdi/colorref) hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Načte aktuální pozici indikátor průběhu.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|Pozastaveno|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_progressCtrl`, která je použita k programovému přístupu ke ovládací prvek indikátoru průběhu. Tato proměnná se používá v následujícím příkladu.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Poznámky  
  Krok přírůstek je rozsah, pomocí kterého volání [CProgressCtrl::StepIt](#stepit) zvyšuje aktuální pozici indikátor průběhu.  
   
- Tato metoda odesílá [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_progressCtrl`, která je použita k programovému přístupu ke ovládací prvek indikátoru průběhu. Tato proměnná se používá v následujícím příkladu.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje novou barvu indikátoru průběhu. Zadejte CLR_DEFAULT způsobit indikátor průběhu používat výchozí barvy.|  
+|[in] *clrBar*|A [COLORREF](/windows/desktop/gdi/colorref) hodnota, která určuje novou barvu indikátoru průběhu. Zadejte CLR_DEFAULT způsobit indikátor průběhu používat výchozí barvy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-Na předchozí barvu indikátoru průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu nebo CLR_DEFAULT, pokud je Barva Indikátor průběhu výchozí barvy.  
+Na předchozí barvu indikátoru průběhu, vyjádřené [COLORREF](/windows/desktop/gdi/colorref) hodnotu nebo CLR_DEFAULT, pokud je Barva Indikátor průběhu výchozí barvy.  
   
 ### <a name="remarks"></a>Poznámky  
 
 `SetBarColor` Metoda nastaví průběhu barva pouze tehdy, pokud Windows Vista [motiv](/windows/desktop/Controls/visual-styles-overview) není platná.  
   
- Tato metoda odesílá [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_progressCtrl`, která je použita k programovému přístupu ke ovládací prvek indikátoru průběhu. Tato proměnná se používá v následujícím příkladu.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  COLORREF hodnotu, která určuje novou barvou pozadí. Zadejte hodnotu CLR_DEFAULT používat výchozí barva pozadí pro indikátor průběhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která předchozí barvu pozadí nebo CLR_DEFAULT, pokud je barva pozadí výchozí barvy.  
+ [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která předchozí barvu pozadí nebo CLR_DEFAULT, pokud je barva pozadí výchozí barvy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Poznámky  
  Když je zapnutý režim marquee, je animovaný indikátor průběhu a posouvání, jako je přihlašování marquee celé obrazovky.  
   
- Tato metoda odesílá [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_progressCtrl`, která je použita k programovému přístupu ke ovládací prvek indikátoru průběhu. Tato proměnná se používá v následujícím příkladu.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  Předchozí stav aktuální ovládací prvek indikátoru průběhu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_progressCtrl`, která je použita k programovému přístupu ke ovládací prvek indikátoru průběhu. Tato proměnná se používá v následujícím příkladu.  

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337010"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195849"
 ---
 # <a name="cbitmap-class"></a>Cbitmap – třída
 Zapouzdřuje bitmapy rozhraní GDI systému Windows grafiky zařízení a poskytuje členské funkce pro manipulaci s rastrového obrázku.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Poznámky  
  I když pro zobrazovací zařízení nelze přímo vybrat rastrový obrázek, lze ji použít jako aktuální rastrový obrázek pro kontext zařízení paměti pomocí [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) a zkopírován do kontextu libovolné kompatibilní zařízení s použitím [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) funkce. ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) funkce můžete zkopírovat rastrový obrázek pro aktuální štětec přímo do kontextu zařízení zobrazení.)  
   
- Pokud `BITMAP` struktury na které odkazují *lpBitmap* parametru byla vyplněna pomocí `GetObject` bity rastrového obrázku nejsou zadané funkce, a rastrového obrázku není inicializován. Inicializace rastrový obrázek, může aplikace používat funkce, jako [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) bude kopírováno bity rastrový obrázek identifikovaný první parametr `CGdiObject::GetObject` do bitmapy vytvořil `CreateBitmapIndirect`.  
+ Pokud `BITMAP` struktury na které odkazují *lpBitmap* parametru byla vyplněna pomocí `GetObject` bity rastrového obrázku nejsou zadané funkce, a rastrového obrázku není inicializován. Inicializace rastrový obrázek, může aplikace používat funkce, jako [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) bude kopírováno bity rastrový obrázek identifikovaný první parametr `CGdiObject::GetObject` do bitmapy vytvořil `CreateBitmapIndirect`.  
   
  Po dokončení se `CBitmap` objekt vytvořený pomocí `CreateBitmapIndirect` funkci, nejprve vybrat rastrový obrázek mimo kontext zařízení a pak odstranit `CBitmap` objektu.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `LoadMappedBitmap` provede mapování barev používaných v glyfech tlačítko.  
   
- Informace o vytváření mapované rastrový obrázek, podívat se na funkci Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktura v sadě Windows SDK.  
+ Informace o vytváření mapované rastrový obrázek, podívat se na funkci Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) struktura v sadě Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Načte předdefinované rastrový obrázek používá Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je operátor přetypování, která podporuje používání s přímým přístupem `HBITMAP` objektu.  
   
- Další informace o použití grafických objektů najdete v tématu [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
+ Další informace o použití grafických objektů najdete v tématu [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Nastaví bity rastrový obrázek bitové hodnoty poskytnuté *lpBits*.  

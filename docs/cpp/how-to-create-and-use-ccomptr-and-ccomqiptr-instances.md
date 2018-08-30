@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3cfdbff4d63197ca37976d5dcc242ac7b8ab8410
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407953"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194129"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Postupy: Vytváření a používání instancí objektů CComPtr a CComQIPtr
-V klasickém programování Windows jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji řečeno, jako serverů modelu COM). Mnoho součásti operačního systému Windows jsou implementovány jako serverů modelu COM a knihovny v tomto formuláři zadejte velkého počtu přispěvatelů. Informace o základy modelu COM naleznete v tématu [modelu COM (Component Object)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
+V klasickém programování Windows jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji řečeno, jako serverů modelu COM). Mnoho součásti operačního systému Windows jsou implementovány jako serverů modelu COM a knihovny v tomto formuláři zadejte velkého počtu přispěvatelů. Informace o základy modelu COM naleznete v tématu [modelu COM (Component Object)](https://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
  Při vytváření instance objektu modelu COM (Component Object), ukládání ukazatel rozhraní inteligentním ukazatelem modelu COM, který provádí pomocí volání pro počítání odkazů `AddRef` a `Release` v destruktoru. Pokud používáte aktivní šablony knihovny (ATL) nebo třídy knihovny MFC (Microsoft Foundation), použijte `CComPtr` inteligentního ukazatele. Pokud nepoužíváte knihovny ATL nebo MFC, použijte `_com_ptr_t`. Protože neexistuje žádný COM ekvivalentní `std::unique_ptr`, použijte tyto inteligentní ukazatele pro jednoho vlastníka a vlastník více scénářů. Obě `CComPtr` a `ComQIPtr` podporu přesunout operací, které mají odkazy na r-hodnoty.  
   

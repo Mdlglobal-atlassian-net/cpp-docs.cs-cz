@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202852"
 ---
 # <a name="colecontrolsite-class"></a>Colecontrolsite – třída
 Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Rozměry ovládacího prvku lokality.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato podpora je hlavním prostředkem, podle kterého vloženému ovládacímu prvku ActiveX získává informace o umístění a rozsah jeho web pro zobrazení, jeho monikeru, jeho uživatelské rozhraní, jeho vlastnosti prostředí a dalších prostředků poskytované svého kontejneru. `COleControlSite` plně implementuje [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho je implementováno rozhraní IDispatch (poskytují podporu pro vlastnosti prostředí a jímky událostí).  
+ Tato podpora je hlavním prostředkem, podle kterého vloženému ovládacímu prvku ActiveX získává informace o umístění a rozsah jeho web pro zobrazení, jeho monikeru, jeho uživatelské rozhraní, jeho vlastnosti prostředí a dalších prostředků poskytované svého kontejneru. `COleControlSite` plně implementuje [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho je implementováno rozhraní IDispatch (poskytují podporu pro vlastnosti prostředí a jímky událostí).  
   
  Chcete-li vytvořit pomocí webu ovládacího prvku ActiveX `COleControlSite`, odvoďte třídu z `COleControlSite`. Ve vaší `CWnd`-přepsat v odvozené třídě kontejneru (například vašem dialogovém okně) `CWnd::CreateControlSite` funkce.  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce volá přímo prostřednictvím ovládacího prvku `IOleObject` rozhraní provedla Zadaná operace. Pokud je vyvolána výjimka v důsledku volání funkce, vrátí se kód chyby HRESULT.  
   
- Další informace najdete v tématu [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) v sadě Windows SDK.  
+ Další informace najdete v tématu [Funkce IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) v sadě Windows SDK.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Umožňuje data sourcing pro ovládací prvek webu.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tyto informace jsou uloženy v [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) struktury.  
+ Tyto informace jsou uloženy v [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) struktury.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Obsahuje soubor cookie je spojovací bod z jímky událostí ovládacího prvku.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)v sadě Windows SDK.  
+ Další informace najdete v tématu [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)v sadě Windows SDK.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Obsahuje [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) souboru cookie.  
+ Obsahuje [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) souboru cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Obsahuje [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) rozhraní ovládacího prvku.  
+ Obsahuje [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) rozhraní ovládacího prvku.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Obsahuje `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) rozhraní ovládacího prvku.  
+ Obsahuje `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) rozhraní ovládacího prvku.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Obsahuje `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) rozhraní ovládacího prvku.  
+ Obsahuje `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) rozhraní ovládacího prvku.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Styly přidávané z aktuální styly oken.  
   
  *nFlags*  
- Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se změní styly, jinak nula.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Poznámky  
  Stock vlastnosti Enabled ovládacího prvku budou upraveny tak, aby odpovídaly nastavení WS_DISABLED. Uložených vlastností styl ohraničení ovládacího prvku budou upraveny tak, aby odpovídaly nastavení požadovaná pro WS_BORDER. Další styly použijí přímo na popisovač okna ovládacího prvku, pokud je k dispozici.  
   
- Upraví okno Styly ovládacího prvku. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
+ Upraví okno Styly ovládacího prvku. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
   
  Pokud *nFlags* nenulové, `ModifyStyle` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Rozšířené styly přidávané z aktuální styly oken.  
   
  *nFlags*  
- Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se změní styly, jinak nula.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Poznámky  
  Stock vlastnosti Appearance ovládacího prvku budou upraveny tak, aby odpovídaly nastavení WS_EX_CLIENTEDGE. Všechny ostatní rozšířené styly oken se použijí přímo na popisovač okna ovládacího prvku, pokud je k dispozici.  
   
- Upraví okno Rozšířené styly ovládacího prvku objektu lokality. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
+ Upraví okno Rozšířené styly ovládacího prvku objektu lokality. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
   
  Pokud *nFlags* nenulové, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Nové výšku okna.  
   
  *nFlags*  
- Určuje okno pro změnu velikosti a polohování příznaky. Možné hodnoty najdete v části poznámky [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) v sadě Windows SDK.  
+ Určuje okno pro změnu velikosti a polohování příznaky. Možné hodnoty najdete v části poznámky [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulovou hodnotu v případě úspěchu, jinak hodnotu nula.  
