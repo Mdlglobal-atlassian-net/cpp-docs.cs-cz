@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850219"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216456"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit – třída
 Implementuje ovládací prvek úprav, který se nachází na panel pásu karet.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Ukazatel do nadřazeného okna `CMFCRibbonEdit` objektu.  
   
  [in] *dwEditStyle*  
- Určuje styl do textového pole. Styly oken uvedených v části poznámky s můžete kombinovat [styly ovládacího prvku pro úpravy](http://msdn.microsoft.com/library/windows/desktop/bb775464) , které jsou popsány v sadě Windows SDK.  
+ Určuje styl do textového pole. Styly oken uvedených v části poznámky s můžete kombinovat [styly ovládacího prvku pro úpravy](/windows/desktop/Controls/edit-control-styles) , které jsou popsány v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nové textové pole, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** pro zarovnání doprava  
   
- Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Načte šířka v pixelech, o [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda překreslí zobrazovací obdélník pro `CMFCRibbonEdit` nepřímo zavoláním [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) Flags RDW_INVALIDATE RDW_ERASE a RDW_UPDATENOW nastavit.  
+ Tato metoda překreslí zobrazovací obdélník pro `CMFCRibbonEdit` nepřímo zavoláním [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) Flags RDW_INVALIDATE RDW_ERASE a RDW_UPDATENOW nastavit.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Nastaví data pro usnadnění pro [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT pro zarovnání doprava  
   
- Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Nastavuje šířku do textového pole u [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.  
