@@ -1,7 +1,7 @@
 ---
 title: Cmfcbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217506"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352713"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 `CMFCButton` Třídy přidá funkce, které [CButton](../../mfc/reference/cbutton-class.md) třídy, jako je například zarovnání textu tlačítka, kombinaci textu a obrázku, výběr kurzoru a zadání popisku tlačítka.  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Označuje, zda chcete-li nakreslit obdélník kolem tlačítka.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Označuje, zda zvýraznění BS_CHECKBOX – vizuální styl tlačítka, když se ukazatelem přejde nad ním.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Určuje, jestli se má zobrazit obrázek na pravé straně tlačítka.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Označuje, zda tlačítko je transparentní.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Určuje zarovnání textu tlačítka.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Určuje, jestli se má použít motivy Windows XP.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Označuje, zda chcete-li nakreslit obdélník kolem tlačítka.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Určuje styl tlačítka, jako je například bez okrajů, bez stromové struktury, středníkem ploché nebo 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|V případě hodnoty TRUE umožňuje zakázané tlačítko vykreslit jako šedě.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Označuje, zda zvýraznění BS_CHECKBOX – vizuální styl tlačítka, když se ukazatelem přejde nad ním.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Označuje, zda reagovat na události tlačítka.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Určuje, jestli se má zobrazit obrázek na pravé straně tlačítka.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Označuje, zda bitová kopie je nad tlačítko.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Označuje, zda tlačítko je transparentní.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Určuje, zda klikněte na poslední událost byla poklepání.|
   
 ## <a name="remarks"></a>Poznámky  
  Jiné typy tlačítek jsou odvozeny z `CMFCButton` třídy, jako [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) třídy, která podporuje hypertextové odkazy, a `CMFCColorButton` třídy, která podporuje dialogové okno Výběr barvy.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud odpovídá aktuální motiv Windows; styl ohraničení tlačítka v opačném případě hodnota FALSE.  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Určuje, jestli se má při vykreslování na tlačítko použít motivy Windows XP.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Označuje, zda chcete-li nakreslit obdélník kolem tlačítka.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Nastavte `m_bDrawFocus` členský určíte, že bude rozhraní nakreslit obdélník kolem textu tlačítka a obrázků, je-li na tlačítko získá fokus na hodnotu TRUE.  
   
  `CMFCButton` Konstruktor inicializuje tohoto člena na hodnotu TRUE.  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+V případě hodnoty TRUE umožňuje zakázané tlačítko vykreslit jako šedě.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Označuje, zda zvýraznění BS_CHECKBOX – vizuální styl tlačítka, když se ukazatelem přejde nad ním.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Poznámky  
  Nastavte `m_bHighlightChecked` člena na hodnotu TRUE, chcete-li určit, že rozhraní framework vyzdvihne BS_CHECKBOX – vizuální styl tlačítka po umístění ukazatele myši nad ním.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Označuje, zda reagovat na události tlačítka.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Určuje, jestli se má zobrazit obrázek na pravé straně tlačítka.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Označuje, zda bitová kopie je nad tlačítko.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Poznámky  
  Nastavte `m_bRightImage` člena na hodnotu TRUE, chcete-li určit, že rozhraní se zobrazí obrázek na tlačítko napravo od popisku tlačítka.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Zarovná text tlačítka na pravé straně tlačítka.|  
   
  `CMFCButton` Konstruktor inicializuje tento člen pro ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Určuje, zda klikněte na poslední událost byla poklepání. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Určuje styl tlačítka, jako je například bez okrajů, bez stromové struktury, středníkem ploché nebo 3D.  
   
