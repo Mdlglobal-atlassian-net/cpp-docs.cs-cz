@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
-ms.translationtype: HT
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205419"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Ukončení vláken v prostředí MFC
 Dvě běžné situace způsobí ukončení vlákna: existuje řídící funkce nebo vláknu není povoleno dokončení. Pokud textový procesor používá vlákno pro tisk na pozadí, řídící funkce by jej měla ukončit normálně Pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale vlákno tisku na pozadí musí být předčasně ukončeno. Toto téma vysvětluje, jak implementovat obě situace a jak získat ukončovací kód vlákna poté, co se jeho ukončení.  
@@ -43,7 +43,7 @@ Dvě běžné situace způsobí ukončení vlákna: existuje řídící funkce n
  
 U pracovního vlákna je normální ukončení vlákna jednoduché: Ukončí řídící funkci a vrátí hodnotu, která označuje důvod ukončení. Můžete použít buď [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkce nebo **vrátit** příkazu. Obvykle 0 znamená úspěšné dokončení, ale to je jenom na vás.  
   
-Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostřednictvím vlákna uživatelského rozhraní volejte [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) v sadě Windows SDK. Jediným parametrem, který `PostQuitMessage` přijímá, je ukončovací kód vlákna. Jako u pracovních vláken 0 obvykle znamená úspěšné dokončení.  
+Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostřednictvím vlákna uživatelského rozhraní volejte [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) v sadě Windows SDK. Jediným parametrem, který `PostQuitMessage` přijímá, je ukončovací kód vlákna. Jako u pracovních vláken 0 obvykle znamená úspěšné dokončení.  
   
 ##  <a name="_core_premature_thread_termination"></a> Předčasné ukončení vlákna  
  
@@ -53,7 +53,7 @@ Předčasné ukončení vlákna je téměř stejně jednoduché: volání [AfxEn
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Získání ukončovacího kódu vlákna  
  
-Chcete-li získat ukončovací kód pracovního procesu nebo vlákna uživatelského rozhraní, zavolejte [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) funkce. Informace o této funkci najdete v tématu Windows SDK. Tato funkce přijímá zpracovávané vlákno (uložené v `m_hThread` datový člen `CWinThread` objekty) a adresu typu DWORD.  
+Chcete-li získat ukončovací kód pracovního procesu nebo vlákna uživatelského rozhraní, zavolejte [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) funkce. Informace o této funkci najdete v tématu Windows SDK. Tato funkce přijímá zpracovávané vlákno (uložené v `m_hThread` datový člen `CWinThread` objekty) a adresu typu DWORD.  
   
 Pokud je vlákno stále aktivní, `GetExitCodeThread` umístí STILL_ACTIVE zadaná adresa DWORD; v opačném případě ukončovací kód je umístěn v této adrese.  
   
@@ -70,4 +70,4 @@ Některé z metod umožňuje zjistit, proč `CWinThread` byl ukončen objekt.
 [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)
