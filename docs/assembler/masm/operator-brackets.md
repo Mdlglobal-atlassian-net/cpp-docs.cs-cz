@@ -1,7 +1,7 @@
 ---
-title: operátor závorky | Microsoft Docs
+title: závorky operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2b5034acf447b9d1524cfbabcafac5deb0966d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7c4d25b41ffbc527f4736bfaa33de2066ce676db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057523"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676122"
 ---
-# <a name="operator-"></a>Operátor \[\]  
+# <a name="operator-"></a>– Operátor \[\]
 
-Vrátí *expression1* plus \[ *Výraz2*\].  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-expression1 [expression2]  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+Vrátí *expression1* plus \[ *expression2*\].
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 [expression2]
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

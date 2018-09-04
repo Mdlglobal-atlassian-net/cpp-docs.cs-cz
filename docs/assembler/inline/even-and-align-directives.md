@@ -1,7 +1,7 @@
 ---
-title: Direktivy EVEN a ALIGN | Microsoft Docs
+title: Direktivy EVEN a ALIGN | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -21,18 +21,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43425a4038ffb140eeaa0a9d111a39fc5c11ff0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 06a1007c50e3490e5b14e4da886494557be0d37e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057952"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688298"
 ---
 # <a name="even-and-align-directives"></a>Direktivy EVEN a ALIGN
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- I když vloženého assembleru nepodporuje většina MASM direktivy, podporuje `EVEN` a **ALIGN**. Tyto direktivy put **NOP** (žádná operace) pokyny v kódu sestavení tak, aby zarovnat popisky na konkrétní hranice. Díky tomu operace načtení instrukce efektivnější pro některé procesory.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+I když vložený assembler nepodporuje většina direktivy MASM, podporuje `EVEN` a **ZAROVNAT**. Umístěte směrnic **NOP** (žádná operace) podle pokynů v kódu sestavení podle potřeby pro zarovnání popisků na určité hranice. Díky tomu operace načtení instrukce efektivnější pro některé procesory.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688225"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek animace.  
@@ -193,7 +193,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci okna a podle – styly ovládacích prvků animace [– styly ovládacích prvků animace](/windows/desktop/Controls/animation-control-styles) v sadě Windows SDK.  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677824"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -76,7 +76,7 @@ Ve Windows 10 můžete použít Visual C++ k vytvoření mnoha typů desktopový
 
 - Služby systému Windows. Další informace najdete v tématu [Úvod do aplikace služby Windows](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-Jazyk Visual C++ umožňuje zabalit téměř jakoukoli vlastní vysoce výkonnou funkcionalitu do Win32 DLL knihoven nebo do knihoven DLL modelu COM, které mohou být zpracovány C++ aplikacemi nebo aplikacemi, které byly napsány v jiných jazycích, například v jazyce C# nebo Visual Basic. Další informace o WIn32 DLL knihovnách naleznete v tématu [knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md). Další informace o vývoji COM najdete v tématu [modelu COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).
+Jazyk Visual C++ umožňuje zabalit téměř jakoukoli vlastní vysoce výkonnou funkcionalitu do Win32 DLL knihoven nebo do knihoven DLL modelu COM, které mohou být zpracovány C++ aplikacemi nebo aplikacemi, které byly napsány v jiných jazycích, například v jazyce C# nebo Visual Basic. Další informace o WIn32 DLL knihovnách naleznete v tématu [knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md). Další informace o vývoji COM najdete v tématu [modelu COM (Component Object)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="games"></a>Hry
 

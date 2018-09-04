@@ -1,7 +1,7 @@
 ---
-title: WORD | Microsoft Docs
+title: WORD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ce8ed64d8cbb9e840c3457cfb621297e9474607
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 50cb0f9748d5c6d1bdae07b5671c79c6794a371c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687757"
 ---
 # <a name="word"></a>WORD
-Přiděluje a volitelně inicializuje slova (2 bajtů) úložiště pro každou `initializer`. Můžete také použít jako specifikátor typu kdekoli je právní typu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] WORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)   
- [SWORD –](../../assembler/masm/sword.md)   
- [DW](../../assembler/masm/dw.md)
+
+Přiděluje a volitelně inicializuje slova (2 bajtů) úložiště pro každou `initializer`. Slouží také jako specifikátor typu kdekoli typ je platný.
+
+## <a name="syntax"></a>Syntaxe
+
+> [[*název*]] slovo *inicializátor* [[, *inicializátor*]]...
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[SWORD](../../assembler/masm/sword.md)<br/>
+[DW](../../assembler/masm/dw.md)<br/>

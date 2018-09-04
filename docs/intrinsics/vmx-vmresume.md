@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bcd86606ef1d8e874abf2c7ad5f57ebf6deeed
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9a2d898a6aad20788c0d77b42f3ca6107af5e9c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466318"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678604"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 **Specifické pro Microsoft**  
@@ -47,7 +47,7 @@ unsigned char __vmx_vmresume(
 ## <a name="remarks"></a>Poznámky  
  Aplikace může provádět operace, která virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo `__vmx_vmresume` funkce. `__vmx_vmlaunch` Funkci lze použít pouze s VMCS, jehož stav spuštění je `Clear`a `__vmx_vmresume` funkci lze použít pouze s VMCS, jehož stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a pak použít `__vmx_vmlaunch` funkce pro první operace virtuálního počítače zadejte a `__vmx_vmresume` funkce pro následné zadejte virtuální počítač operace.  
   
- `__vmx_vmresume` Funkce je ekvivalentní volání `VMRESUME` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, vyhledejte dokument PDF "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__vmx_vmresume` Funkce je ekvivalentní volání `VMRESUME` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, vyhledejte dokument PDF "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

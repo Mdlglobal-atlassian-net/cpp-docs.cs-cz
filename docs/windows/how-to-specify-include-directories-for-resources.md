@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220595"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676429"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Postupy: Určení adresářů souborů k zahrnutí pro prostředky
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220595"
 
 2. V **stránky vlastností** dialogové okno, klikněte na tlačítko **prostředky** uzlu v levém podokně, pak zadejte další adresáře include **další adresáře souborů k zahrnutí** Vlastnost.
 
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Walkthrough: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide. 
 
 ## <a name="requirements"></a>Požadavky
 

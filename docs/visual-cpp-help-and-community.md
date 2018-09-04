@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676542"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ – nápověda a komunita
 
@@ -27,14 +27,14 @@ Tady je způsob pro získání informací o tom, jak psát C++ kódu a použití
 
 |Název|Popis|
 |-----------|-----------------|
-|[Ukázky kódu vývojáře](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Obsahuje příklad ke stažení kódu od Microsoftu a komunity uživatelů.|
+|[Ukázky kódu vývojáře](https://code.msdn.microsoft.com/)|Obsahuje příklad ke stažení kódu od Microsoftu a komunity uživatelů.|
 
 ## <a name="product-documentation"></a>Dokumentace k produktům
 
 |Název|Popis|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Obsahuje odkaz a rámcové dokumentaci o jazyce Visual C++. Část knihovny MSDN.|
-|[Středisko pro vývojáře Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Obsahuje informace o tom, jak pomocí jazyka C++ a další jazyky můžete vyvíjet aplikace pro Windows 8. Obsah pro jazyk C++ se jako součást Centra pro vývojáře systému Windows nachází pod uzlem Dokumenty > Referenční příručka jazyka.|
+|[Středisko pro vývojáře Windows](https://developer.microsoft.com/en-us/windows/)|Obsahuje informace o tom, jak pomocí jazyka C++ a další jazyky můžete vyvíjet aplikace pro Windows 8. Obsah pro jazyk C++ se jako součást Centra pro vývojáře systému Windows nachází pod uzlem Dokumenty > Referenční příručka jazyka.|
 
 ### <a name="online-and-offline-documentation"></a>Dokumentace ke službě online a Offline
 
@@ -48,7 +48,7 @@ Mnoho částí dokumentace jsou také k dispozici ve formátu PDF. Tato sekce ma
 
 |Název|Popis|
 |-----------|-----------------|
-|[Blog týmu Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Obsahuje příspěvky na různá témata od specialistů na produktového týmu Visual C++.|
-|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Obsahuje videorozhovory a přednášek. K vyhledání obsahu C++, použijte vyhledávací pole na domovské stránce webu Channel 9.|
-|[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Obsahuje články a novinky o službě Visual Studio a související vývojářské nástroje.|
-|[Fóra na webu MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Kde můžete posílat otázky a získejte odpovědi od Microsoftu a od odborníků v komunitě oficiální fór společnosti Microsoft. Použijte vyhledávací pole na domovskou stránku fór najít na fórech, které se konkrétně týkají C++.|
+|[Blog týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Obsahuje příspěvky na různá témata od specialistů na produktového týmu Visual C++.|
+|[Channel 9](https://channel9.msdn.com/)|Obsahuje videorozhovory a přednášek. K vyhledání obsahu C++, použijte vyhledávací pole na domovské stránce webu Channel 9.|
+|[Visual Studio](https://visualstudio.microsoft.com/)|Obsahuje články a novinky o službě Visual Studio a související vývojářské nástroje.|
+|[Fóra na webu MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) a [komunity vývojářů](https://developercommunity.visualstudio.com)|Oficiální web fór společnosti Microsoft ve kterém můžete posílat otázky o jazyce C++ a získejte odpovědi od Microsoftu a od odborníků v komunitě.|

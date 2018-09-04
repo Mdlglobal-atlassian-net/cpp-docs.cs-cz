@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 84ea10c87e463e797b4c35b1f94843228c4cb063
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403036"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681499"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů shared_ptr
 Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ určený pro scénáře, ve kterých musí více než jeden vlastník spravovat dobu života objektu v paměti. Po inicializaci typu `shared_ptr` jej lze zkopírovat, předat hodnotou argumentům funkce nebo přiřadit dalším instancím typu `shared_ptr`. Všechny tyto instance ukazují na stejný objekt a sdílejí přístup k jednomu „řídicímu bloku“, který zvyšuje a snižuje počet odkazů, kdykoli je nová instance typu `shared_ptr` přidána, dostane se mimo rozsah nebo je obnovena. Když počet odkazů dosáhne nuly, řídicí blok odstraní prostředky paměti a sám sebe.  
   
  Následující obrázek znázorňuje několik instancí typu `shared_ptr`, které odkazují na jedno umístění v paměti.  
   
- [![Sdílený ukazatel](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Sdílený ukazatel](../cpp/media/shared_ptr.png "shared_ptr")]  
   
 ## <a name="example"></a>Příklad  
  Kdykoli je to možné, použijte [make_shared](../standard-library/memory-functions.md#make_shared) funkci, která vytvoří `shared_ptr` kdy je prostředek paměti vytvořen poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání pro přidělení paměti řídicímu bloku a prostředku a tím snižuje zatížení při jejich konstrukci. Pokud funkci `make_shared` nepoužijete, je pro vytvoření objektu před jeho předáním konstruktoru typu `shared_ptr` nutné použít explicitní nový výraz. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.  

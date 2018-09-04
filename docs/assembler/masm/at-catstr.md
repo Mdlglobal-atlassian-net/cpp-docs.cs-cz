@@ -1,7 +1,7 @@
 ---
-title: '@CatStr | Microsoft Docs'
+title: '@CatStr | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 684bf387811b0569856ef96806c33a0ffb283390
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a8b6b1a8cdc5f76f7cb55fa2ff3d506da1b340f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692944"
 ---
 # <a name="catstr"></a>@CatStr
-Makro funkce, která zřetězí nejméně jeden řetězec. Vrátí řetězec.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-@CatStr( string1 [[, string2...]] )  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)
+
+Funkce – makro, který zřetězí jeden nebo více řetězců. Vrátí řetězec.
+
+## <a name="syntax"></a>Syntaxe
+
+> @CatStr(řetězec1 [[, řetězec2...]])
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>

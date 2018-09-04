@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214918"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680756"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 `CNetAddressCtrl` Třída reprezentuje ovládacího prvku síťové adresy, které můžete použít k zadání a ověření formátu protokolu IPv4, IPv6 a pojmenovaných adres DNS.  
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitová kombinace (nebo) rozšířené stylů pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
+|[in] *dwExStyle*|Bitová kombinace (nebo) rozšířené stylů pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|  
 |[in] *dwStyle*|Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [upravit styly](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
 |[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
 |[in] *pParentWnd*|Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  

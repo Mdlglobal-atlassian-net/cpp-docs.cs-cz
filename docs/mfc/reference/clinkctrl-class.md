@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201001"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690418"
 ---
 # <a name="clinkctrl-class"></a>Clinkctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek SysLink.  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  Ukazatel na řetězec ukončit nulou, který obsahuje označené text k zobrazení. Další informace najdete v části "Značek a odkaz přístup" v tématu [prvky SysLink přehled](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku odkaz. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku odkaz. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl ovládacího prvku odkaz. Použijte libovolnou kombinaci – styly ovládacího prvku. Další informace najdete v tématu [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK.  

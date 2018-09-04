@@ -1,7 +1,7 @@
 ---
-title: CATSTR – | Microsoft Docs
+title: CATSTR | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d0fbe41d81671b509eef6d0724fd8a4b6880484
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 975d3a0776a6b2228dedba54cbd47a18d363921b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689377"
 ---
 # <a name="catstr"></a>CATSTR
-Zřetězí textu položky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name CATSTR [[textitem1 [[, textitem2]] ...]]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Každá položka text může být řetězcový literál konstanta před sebou `%`, nebo řetězec vrácený makro funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Zřetězí textové položky.
+
+## <a name="syntax"></a>Syntaxe
+
+> Pojmenujte CATSTR [[textitem1 [[, textitem2]]...]]
+
+## <a name="remarks"></a>Poznámky
+
+Každá položka text může být řetězcový literál, konstanta předcházet párový příkaz `%`, nebo řetězec vrácený funkcí makra.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

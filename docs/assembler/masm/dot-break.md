@@ -1,7 +1,7 @@
 ---
-title: . ROZDĚLIT | Microsoft Docs
+title: . PŘERUŠIT | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2f921452d46546bd8ed48b87bf053aaf64dc8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4d9521c9771452d435a93248afd0e968e4cce734
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051553"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691950"
 ---
 # <a name="break"></a>.BREAK
-Generuje kód do ukončit [. Při](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokovat Pokud *podmínku* hodnotu true.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.BREAK [[.IF condition]]   
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Generuje kód ukončení [. ZATÍMCO](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokovat, pokud *podmínku* má hodnotu true.
+
+## <a name="syntax"></a>Syntaxe
+
+> . PŘERUŠIT [[. Podmínka IF]]
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

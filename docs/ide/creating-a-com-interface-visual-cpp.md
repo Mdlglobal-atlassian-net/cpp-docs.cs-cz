@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683310"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Vytváření rozhraní modelu COM (Visual C++)
 Průvodci a šablony, pokud chcete vytvářet projekty, které používají rozhraní COM a odesílající rozhraní pro objekty COM a automatizační třídy poskytuje jazyk Visual C++.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Zobrazit [implementace rozhraní](../ide/implementing-an-interface-visual-cpp.md) a [přidání objektů a ovládacích prvků do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Další informace.  
   
- Visual C++ poskytuje několik způsobů, jak zobrazit a [úpravy rozhraní modelu COM](../ide/editing-a-com-interface.md) definované pro vaše projekty. [Zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zobrazuje ikony pro jakékoli rozhraní nebo dispinterface definované v souboru IDL v projektu jazyka C++.  
+ Visual C++ poskytuje několik způsobů, jak zobrazit a [úpravy rozhraní modelu COM](../ide/editing-a-com-interface.md) definované pro vaše projekty. [Zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code) zobrazuje ikony pro jakékoli rozhraní nebo dispinterface definované v souboru IDL v projektu jazyka C++.  
   
  Zobrazení tříd pro objekt třídy založený na knihovně ATL COM, přečte mapy modelu COM v ATL – třídy zobrazíte vztah mezi ATL – třídy a rozhraní, které implementuje.  
   

@@ -1,7 +1,7 @@
 ---
-title: SKUPINY | Microsoft Docs
+title: SKUPINY | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9fff8cb22db7ae47219e9a49f6fc7ff544f835b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8acb6fd17866117937c702c7a4d14f8f1075960e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050308"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692132"
 ---
 # <a name="group"></a>GROUP
-Přidat zadaný *segmenty* do skupiny nazvané *název*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name GROUP segment [[, segment]]...  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Přidat zadaný *segmenty* do skupiny nazvané *název*.
+
+## <a name="syntax"></a>Syntaxe
+
+> segment název skupiny [[, segment]]...
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

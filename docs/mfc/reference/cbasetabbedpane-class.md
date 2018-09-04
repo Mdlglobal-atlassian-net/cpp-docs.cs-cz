@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690431"
 ---
 # <a name="cbasetabbedpane-class"></a>Cbasetabbedpane – třída
 Rozšiřuje funkce [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) pro podporu vytváření oken s kartami.  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Přepočítá rozložení informace o podokně. (Přepíše [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Podokno se odebere z podokna s kartami.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Používat interně během serializace.|  
-|`CBaseTabbedPane::Serialize`|(Přepíše [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Přepíše [CDockablePane::Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Používat interně během serializace.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Určuje, zda s kartami ovládací panel zničí automaticky.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Přepíná mezi zobrazí ukotvené podokno a v režimu automatického skrytí. (Přepíše [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

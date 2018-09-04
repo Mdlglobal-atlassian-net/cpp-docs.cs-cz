@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684596"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 Toto téma popisuje problémy, které vznikají při kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace). **/ CLR** umožňuje moduly Visual C++ pro vyvolání a vyvolat z .NET sestavení při zachování kompatibility s nespravovanými moduly. Zobrazit [smíšený (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  Jakmile se projekt zkompiluje a spustí v sadě Visual Studio 2010 měli vytvořit nové konfigurace projektu pro **/CLR** spíše než změnit výchozí konfigurace. **/ CLR** není kompatibilní s možnostmi kompilátoru a umožňuje vytvářet samostatné konfigurace sestavení projektu jako nativní nebo spravovaný. Když **/CLR** výběru v poli dialogové okno vlastností stránky, nastavení projektu není kompatibilní s **/CLR** jsou zakázány (a pokud nebudou automaticky obnovovat neaktivní možnosti   **/CLR** je následně nevybrané).  
   
 ### <a name="create-new-project-configurations"></a>Vytvořit nové konfigurace projektu  
- Můžete použít **Kopírovat nastavení z** možnost [nový projekt dialogové okno Konfigurace](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be) pro vytvoření konfigurace projektu na základě vaší stávající nastavení projektu. Proveďte jednou pro konfiguraci ladění a jednou pro konfiguraci vydané verze. Následné změny mohou být použijí se **/CLR** – pouze konkrétní konfigurace uživatele zůstanou nedotčena původní konfigurace projektu.  
+ Můžete použít **Kopírovat nastavení z** možnost **nový projekt dialogové okno Konfigurace** (**sestavení** > **nástrojeConfigurationManager**  >  **Aktivní konfigurace řešení** > **nový**) pro vytvoření konfigurace projektu na základě vaší stávající nastavení projektu. Proveďte jednou pro konfiguraci ladění a jednou pro konfiguraci vydané verze. Následné změny mohou být použijí se **/CLR** – pouze konkrétní konfigurace uživatele zůstanou nedotčena původní konfigurace projektu.  
   
  Projekty, které používají vlastní pravidla sestavení může vyžadovat pozornost.  
   

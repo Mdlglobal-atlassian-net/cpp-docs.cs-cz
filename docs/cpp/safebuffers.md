@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685073"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Specifické pro Microsoft**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **/GS** – možnost kompilátoru způsobí, že kompilátor testuje přetečení vyrovnávací paměti vložením kontrol zabezpečení do zásobníku. Typy datových struktur způsobilých ke kontrolám zabezpečení jsou popsány v [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md). Další informace o detekci přetečení vyrovnávací paměti naleznete v tématu [kompilátoru kontroly zabezpečení podrobně](http://go.microsoft.com/fwlink/p/?linkid=7260) na webové stránce MSDN.  
+ **/GS** – možnost kompilátoru způsobí, že kompilátor testuje přetečení vyrovnávací paměti vložením kontrol zabezpečení do zásobníku. Typy datových struktur způsobilých ke kontrolám zabezpečení jsou popsány v [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md). Další informace o detekci přetečení vyrovnávací paměti naleznete v tématu [funkce zabezpečení v MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Zabezpečení funkce před přetečením vyrovnávací paměti může být určeno expertní ruční revizí kódu nebo externí analýzou. V takovém případě lze potlačit kontroly zabezpečení pro funkci s použitím **__declspec(safebuffers) oznamujete** – klíčové slovo k deklaraci funkce.  
   

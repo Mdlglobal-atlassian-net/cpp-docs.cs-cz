@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201523"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687713"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex – třída
 Poskytnutím podpory pro seznamy obrázků rozšiřuje ovládací prvek pole se seznamem.  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Styl ovládacího prvku pole se seznamem. Zobrazit [vytvořit](#create) seznam styly.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objekt, který obsahuje obrázky dříve používané v `CComboBoxEx` ovládacího prvku. Hodnota NULL, pokud byl dříve nastaven žádný seznam obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce implementuje funkce zprávy [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), jak je popsáno v sadě Windows SDK. Pokud změníte Výška ovládacích prvků pro výchozí úpravy, zavolejte funkci Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) pro změnu velikosti ovládacího prvku po zavolání `SetImageList`, nebo by se nezobrazil správně.  
+ Tato členská funkce implementuje funkce zprávy [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), jak je popsáno v sadě Windows SDK. Pokud změníte Výška ovládacích prvků pro výchozí úpravy, zavolejte funkci Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) pro změnu velikosti ovládacího prvku po zavolání `SetImageList`, nebo by se nezobrazil správně.  
   
  `CImageList` Objekt odkazovaný návratovou hodnotou je dočasný objekt a je zničen při nečinnosti příště zpracování.  
   

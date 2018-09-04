@@ -1,7 +1,7 @@
 ---
-title: . DOSSEG – | Microsoft Docs
+title: . DOSSEG | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3817cfe98758faf86ea87d74e02657598c3e806b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 33ee0b0b049ece65786c4d4857c2e082a067fee4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693229"
 ---
 # <a name="dosseg"></a>.DOSSEG
-Řadí segmenty podle konvence segment MS-DOS: kód nejprve pak segmentuje není v DGROUP a pak v DGROUP segmentuje.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.DOSSEG  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Segmentů v DGROUP podle tomto pořadí: segmenty není v BSS nebo zásobníku, pak BSS segmentů a nakonec segmenty zásobníku. Používá se především pro zajištění podpory CodeView v samostatné programy MASM. Stejné jako [dosseg –](../../assembler/masm/dosseg.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Seřadí segmentů podle úmluvy segmentu zástupného kódu MS-DOS: kód nejprve pak segmenty nejsou v DGROUP a potom segmenty v DGROUP.
+
+## <a name="syntax"></a>Syntaxe
+
+> .DOSSEG
+
+## <a name="remarks"></a>Poznámky
+
+Toto pořadí podle segmentů v DGROUP: segmenty nejsou v BSS nebo zásobníku, pak BSS segmentů a nakonec zásobníku segmentů. Používá se především pro zajištění podpory CodeView v programech samostatného MASM. Stejné jako [DOSSEG](../../assembler/masm/dosseg.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

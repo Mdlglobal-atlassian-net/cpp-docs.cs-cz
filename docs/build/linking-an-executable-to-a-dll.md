@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e72cc680036d2c7e3737e5512c73115e29562018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692212"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL  
   
@@ -76,7 +76,7 @@ Tady jsou dvě nebezpečí explicitní propojení zajímat:
   
 -   Pokud má knihovna DLL `DllMain` funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, která se nazývá `LoadLibrary`. Funkce vstupního bodu není volána, pokud knihovna DLL již připojena k procesu z důvodu předchozího volání `LoadLibrary` , který má určitá bez odpovídajícího volání `FreeLibrary` funkce. Explicitní propojení může způsobit potíže, pokud používá knihovnu DLL `DllMain` funkce, která se pro každý podproces procesu provést inicializaci, protože vláken, která již existuje. při `LoadLibrary` (nebo `AfxLoadLibrary`) se nazývá nejsou inicializovány.  
   
--   Pokud knihovna DLL deklaruje statický rozsah dat jako `__declspec(thread)`, pokud explicitně propojený může způsobit chybu ochrany. Po načtení knihovny DLL voláním `LoadLibrary`, způsobí chybu ochrany pokaždé, když se kód odkazuje na tato data. (Statický rozsah data obsahují globální a místní statických položek.) Proto při vytváření knihovny DLL si místní úložiště vláken nepoužívejte nebo knihovny DLL uživatele informují o potenciálních problémech dynamicky načítání knihovny DLL. Další informace najdete v tématu [dynamická knihovna (Windows SDK) v místním úložišti vláken](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Pokud knihovna DLL deklaruje statický rozsah dat jako `__declspec(thread)`, pokud explicitně propojený může způsobit chybu ochrany. Po načtení knihovny DLL voláním `LoadLibrary`, způsobí chybu ochrany pokaždé, když se kód odkazuje na tato data. (Statický rozsah data obsahují globální a místní statických položek.) Proto při vytváření knihovny DLL si místní úložiště vláken nepoužívejte nebo knihovny DLL uživatele informují o potenciálních problémech dynamicky načítání knihovny DLL. Další informace najdete v tématu [dynamická knihovna (Windows SDK) v místním úložišti vláken](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library).  
   
 <a name="linking-implicitly"></a>  
   

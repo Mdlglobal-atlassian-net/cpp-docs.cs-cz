@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683675"
 ---
 # <a name="clr-integration-ccx"></a>Integrace modulu CLR (C + +/ CX)
 Některé typy Windows Runtime přijímat zvláštní zpracování v jazyce C + +/ CX a jazyky, které jsou založené na common language runtime (CLR). Tento článek popisuje, jak několika typy v jednom jazyce mapují na jiný jazyk. Například modul CLR mapuje Windows.Foundation.IVector rozhraní System.Collections.IList, Windows.Foundation.IMap rozhraní System.Collections.IDictionary a tak dále. Obdobně C + +/ CX speciálně mapuje typy, jako jsou Platform::Delegate – a Platform::String.  
@@ -22,7 +22,7 @@ Některé typy Windows Runtime přijímat zvláštní zpracování v jazyce C + 
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Mapování modulu Windows Runtime pro C + +/ CX  
  Když C + +/ CX přečte soubor metadat (.winmd) pro Windows, kompilátor automaticky mapují běžné obory názvů Windows Runtime a typy pro C + +/ CX obory názvů a typů. Například číselný typ Windows Runtime `UInt32` automaticky se namapuje na `default::uint32`.  
   
- C + +/ CX mapuje několik dalších typů modulu Windows Runtime na **platformy** oboru názvů. Například **Windows::Foundation –** popisovače HSTRING, který reprezentuje textový řetězec Unicode jen pro čtení, je namapována na C + +/ CX `Platform::String` třídy. Při operaci Windows Runtime vrátí chybu HRESULT, je namapována na C + +/ CX `Platform::Exception`. Další informace najdete v tématu [předdefinovaných typů](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + +/ CX mapuje několik dalších typů modulu Windows Runtime na **platformy** oboru názvů. Například **Windows::Foundation –** popisovače HSTRING, který reprezentuje textový řetězec Unicode jen pro čtení, je namapována na C + +/ CX `Platform::String` třídy. Při operaci Windows Runtime vrátí chybu HRESULT, je namapována na C + +/ CX `Platform::Exception`.   
   
  C + +/ CX také mapuje určité typy v oborech názvů Windows Runtime k vylepšení typu funkce. Pro tyto typy, C + +/ CX poskytuje pomocné rutiny konstruktorů a metod, které jsou specifické pro C++ a nejsou k dispozici v souboru .winmd standardní tohoto typu.  
   

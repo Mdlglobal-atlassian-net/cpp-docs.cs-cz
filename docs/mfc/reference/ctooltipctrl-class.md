@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684804"
 ---
 # <a name="ctooltipctrl-class"></a>Ctooltipctrl – třída
 Zapouzdřuje funkce ovládacího prvku"nástroj tip," malého vyskakovacího okna, která zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  Určuje styl ovládacím prvkem popis tlačítka nástroj. Zobrazit **poznámky** část [vytvořit](#create) Další informace.  
   
  *dwStyleEx*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná jinak 0.  

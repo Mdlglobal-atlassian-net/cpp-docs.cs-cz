@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683749"
 ---
 # <a name="cbasepane-class"></a>Cbasepane – třída
 Základní třída pro všechna podokna v knihovně MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` Tuto metodu nelze použít.|  
 |`CBasePane::OnUpdateCmdUI`|Interně.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Vrátí podokno obsahující časovém okamžiku.|  
-|`CBasePane::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CBasePane::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Tuto metodu nelze použít.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Zruší registraci na stavového řádku a odebere ze seznamu ve Správci ukotvení.|  
 |[CBasePane::SaveState](#savestate)|Uloží stav v podokně do registru.|  

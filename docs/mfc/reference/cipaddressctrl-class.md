@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679175"
 ---
 # <a name="cipaddressctrl-class"></a>Cipaddressctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek adresy IP.  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
+ Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro seznam windows styly.  
   
  *Rect*  
  Odkaz na ovládací prvek adresy IP velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
- Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro seznam windows styly.  
+ Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro seznam windows styly.  
   
  *Rect*  
  Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  

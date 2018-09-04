@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb826c89106358c338230d46dc8743e1ee4d60f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200449"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684488"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -144,7 +144,7 @@ Asynchronní a paralelní algoritmy, které jsou spouštěny na CPU.
 [C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Masivně paralelní algoritmy, které jsou spouštěny na GPU.
 
-[Knihovna prostředí runtime Windows (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
+[Knihovna prostředí runtime Windows (WRL)](windows/windows-runtime-cpp-template-library-wrl.md)<br/>
 Univerzální aplikace pro platformu Windows (UPW) a komponenty.
 
 [.NET – programování s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

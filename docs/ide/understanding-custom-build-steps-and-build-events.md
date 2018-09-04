@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678082"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Seznámení s kroky vlastního sestavení a s událostmi sestavení
 Z vývojového prostředí Visual C++ existují tři základní způsoby, jak přizpůsobit proces sestavení:  
@@ -73,4 +73,3 @@ Z vývojového prostředí Visual C++ existují tři základní způsoby, jak p�
 ## <a name="see-also"></a>Viz také  
  [Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)   
- [Dialogové okno pořadí sestavení nástroje](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

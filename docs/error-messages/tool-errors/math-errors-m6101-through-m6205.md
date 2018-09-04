@@ -1,5 +1,5 @@
 ---
-title: Matematické chyby M6101 až M6205 | Microsoft Docs
+title: Matematické chyby M6101 až M6205 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980facfddffb9a7c55854e05e42e7e7c5ec4c889
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f4796b7c3d6cdc4a44326d9b4db388a12ce5a3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683496"
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Matematické chyby M6101 až M6205
 
-Tato část se odkaz na generované knihovna runtime s plovoucí desetinnou čárkou matematické chyby.
+Tato část se odkaz na chyby generované s plovoucí desetinnou čárkou matematické knihovny modulu runtime.
 
-Můžete najít další pomoc chyby a upozornění ve fórech veřejné společnosti Microsoft. Můžete vyhledat chyby nebo upozornění číslo na [komunity vývojářů](https://go.microsoft.com/fwlink/p/?linkid=820594) lokality. [Jazyka Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) fórum je pro dotazy a v diskusích o syntaxi jazyka C++ a MSVC kompilátoru. [Visual C++ Obecné](http://go.microsoft.com/fwlink/p/?linkid=158194) fórum je pro dotazy týkající se Visual C++, které nejsou popsané v dalších fóra. Vyhledejte chyby a upozornění, kde můžete klást otázky na [Stack Overflow](http://stackoverflow.com/) najít řešení.
+Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Můžete vyhledat chyby nebo číslo upozornění na [komunity vývojářů](https://developercommunity.visualstudio.com) lokality. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) je fórum pro otázky týkající se jazyka Visual C++, které nejsou popsány na jiných fórech. Můžete také vyhledat chyby a upozornění a Ptejte se na [Stack Overflow](http://stackoverflow.com/) najít řešení.
 
-Odkazy na další nápovědu a komunitní zdroje naleznete v tématu [Visual C++ Nápověda a komunita](../../visual-cpp-help-and-community.md).
+Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../visual-cpp-help-and-community.md).

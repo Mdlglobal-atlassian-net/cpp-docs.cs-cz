@@ -1,7 +1,7 @@
 ---
-title: operátor LOWWORD | Microsoft Docs
+title: operátor LOWWORD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243c929fc0b8d7e003fa2543213eb58b028578bf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: af2582bb109645cbe0c0133c90b962e16db92572
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056350"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680115"
 ---
 # <a name="operator-lowword"></a>operátor LOWWORD
-Vrátí nízkou 16 bitů *výraz*. Výrazy MASM jsou 64bitové hodnoty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-LOWWORD expression  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí nízké 16 bitů *výraz*. Výrazy MASM jsou hodnoty 64-bit.
+
+## <a name="syntax"></a>Syntaxe
+
+> LOWWORD výraz
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

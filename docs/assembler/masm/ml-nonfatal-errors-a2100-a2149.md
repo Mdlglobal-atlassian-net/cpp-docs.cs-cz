@@ -1,7 +1,7 @@
 ---
-title: Méně závažné chyby nástroje ML A2100 – A2149 | Microsoft Docs
+title: Méně závažné chyby nástroje ML A2100 – A2149 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358f465b89fbd13499afef30d6fe3175029fee19
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 34ad8a29e2b15b62d3e695f7b65da8b3c6b61fe8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684334"
 ---
 # <a name="ml-nonfatal-errors-a2100-a2149"></a>Méně závažné chyby nástroje ML A2100–A2149
-Další informace o méně závažné chyby nástroje ML najdete v tématu [ML – chybové zprávy](../../assembler/masm/ml-error-messages.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Méně závažné chyby ML](../../assembler/masm/ml-nonfatal-errors.md)
+
+Další informace o závažné chyby nástroje ML najdete v tématu [ML – chybové zprávy](../../assembler/masm/ml-error-messages.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Méně závažné chyby ML](../../assembler/masm/ml-nonfatal-errors.md)<br/>

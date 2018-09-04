@@ -1,5 +1,5 @@
 ---
-title: -GS (Kontrola zabezpečení vyrovnávací paměti) | Microsoft Docs
+title: -GS (Kontrola zabezpečení vyrovnávací paměti) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379481"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678389"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (kontrola zabezpečení vyrovnávací paměti)  
   
@@ -43,21 +43,21 @@ Rozpozná některá přetečení vyrovnávací paměti, která přepisují návr
   
 ## <a name="remarks"></a>Poznámky  
   
-**/GS** ve výchozím nastavení zapnutý. Pokud očekáváte, vaše aplikace měla žádné ohrožení zabezpečení, použijte **/GS-**. Další informace o **/GS**, najdete v části [kompilátoru zabezpečení kontroluje v hloubka](http://go.microsoft.com/fwlink/p/?linkid=7260). Další informace o potlačení detekce přetečení vyrovnávací paměti najdete v tématu [safebuffers](../../cpp/safebuffers.md).  
+**/GS** ve výchozím nastavení zapnutá. Pokud očekáváte, že vaše aplikace mít žádná bezpečnostní rizika, použijte **/GS-**. Další informace o detekci přetečení vyrovnávací paměti, naleznete v tématu [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Kontroly zabezpečení  
   
-Pro funkce, u kterých kompilátor rozpozná možnost problémů přetečení vyrovnávací paměti, přidělí místo v zásobníku před návratovou adresou. Na funkce, položka je načtená přidělené místo *soubor cookie zabezpečení* je jednou počítaný na načtení modulu. Při ukončení funkce a během rozbalování rámce v 64bitových operačních systémech je zavolána pomocná funkce, která zjišťuje, zda se hodnota souboru cookie nezměnila. Jiná hodnota naznačuje, že mohlo dojít k přepsání zásobníku. Je-li zjištěna jiná hodnota, proces se ukončí.  
+Pro funkce, u kterých kompilátor rozpozná možnost problémů přetečení vyrovnávací paměti, přidělí místo v zásobníku před návratovou adresou. Vstupu do funkce přiděleného místa načten *soubor cookie zabezpečení* , který je vypočten jednou při načtení modulu. Při ukončení funkce a během rozbalování rámce v 64bitových operačních systémech je zavolána pomocná funkce, která zjišťuje, zda se hodnota souboru cookie nezměnila. Jiná hodnota naznačuje, že mohlo dojít k přepsání zásobníku. Je-li zjištěna jiná hodnota, proces se ukončí.  
   
 ## <a name="gs-buffers"></a>Vyrovnávací paměti GS  
   
-Přetečení vyrovnávací paměti zabezpečení kontrola se provádí na *vyrovnávací paměti GS*. Vyrovnávací paměť GS může být jedna z následujících:  
+Kontroly zabezpečení přetečení vyrovnávací paměti se provádí na *vyrovnávací paměť GS*. Vyrovnávací paměť GS může být jedna z následujících:  
   
 -   Pole, které je větší než čtyři bajty, má více než dva prvky a má typ prvků, který není typem ukazatele.  
   
 -   Datová struktura, jejíž velikost je více než 8 bajtů a která neobsahuje žádné ukazatele.  
   
--   Vyrovnávací paměti přidělené pomocí [_alloca –](../../c-runtime-library/reference/alloca.md) funkce.  
+-   Vyrovnávací paměť přidělaná pomocí [_alloca](../../c-runtime-library/reference/alloca.md) funkce.  
   
 -   Libovolná třída nebo struktura obsahující vyrovnávací paměť GS.  
   
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>Inicializace souboru cookie zabezpečení  
   
-**/GS** – možnost kompilátoru vyžaduje, že soubor cookie zabezpečení inicializovat před spuštěním jakékoli funkce, která používá soubor cookie. Soubor cookie zabezpečení musí být inicializován okamžitě při vstupu do EXE nebo DLL. To se provádí automaticky Pokud použijete výchozí VCRuntime vstupní body: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, nebo _DllMainCRTStartup. Pokud chcete použít alternativní vstupní bod, je třeba ručně inicializovat soubor cookie zabezpečení voláním [__security_init_cookie –](../../c-runtime-library/reference/security-init-cookie.md).  
+**/GS** – možnost kompilátoru vyžaduje, že soubor cookie zabezpečení inicializovat před spuštěním jakékoli funkce používající soubor cookie. Soubor cookie zabezpečení musí být inicializován při vstupu do souboru EXE nebo DLL okamžitě. Pokud se to automaticky použít výchozí VCRuntime vstupní body: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, nebo _DllMainCRTStartup. Používáte-li alternativní vstupní bod, soubor cookie zabezpečení musí inicializovat ručně zavoláním [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
   
 ## <a name="what-is-protected"></a>Chráněné položky  
   
@@ -94,11 +94,11 @@ struct { int a; int b; };
   
 -   Ohrožené parametry funkce.  
   
-Na všech platformách **/GS** pokouší rozpoznat přetečení vyrovnávací paměti do zpáteční adresu. Přetečení vyrovnávací paměti lze snadněji zneužít na platformách jako x86 a x64, které využívají konvence volání ukládající návratovou adresu volání funkce do zásobníku.  
+Na všech platformách **/GS** pokusí rozpoznat přetečení vyrovnávací paměti na návratovou adresu. Přetečení vyrovnávací paměti lze snadněji zneužít na platformách jako x86 a x64, které využívají konvence volání ukládající návratovou adresu volání funkce do zásobníku.  
   
 Pokud na platformě x86 funkce používá obslužnou rutinu výjimky, kompilátor pro ochranu adresy rutiny zavede soubor cookie zabezpečení. Soubor cookie je kontrolován během odvíjení rámce.  
   
-**/GS** chrání *citlivé parametry* které jsou předávány do funkce. Ohroženým parametrem je ukazatel, odkaz C++, struktura jazyka C (typ C++ POD) obsahující ukazatel či vyrovnávací paměť GS.  
+**/GS** chrání *ohrožených parametrů* , které jsou předávány do funkce. Ohroženým parametrem je ukazatel, odkaz C++, struktura jazyka C (typ C++ POD) obsahující ukazatel či vyrovnávací paměť GS.  
   
 Ohrožený parametr je přidělen před souborem cookie nebo lokálními proměnnými. Přetečení vyrovnávací paměti může tyto parametry přepsat. Kód ve funkci, která tyto parametry používá, by mohl způsobit útok dříve, než funkce vrátí hodnotu a je provedena bezpečnostní kontrola. Aby bylo nebezpečí minimalizováno, kompilátor během prologu funkce vytváří kopii ohrožených parametrů a vkládá je pod oblast úložiště pro jakoukoli vyrovnávací paměť.  
   
@@ -106,11 +106,11 @@ Kompilátor nevytváří kopie ohrožených parametrů v následujících situac
   
 -   Funkce, které neobsahují vyrovnávací paměť GS.  
   
--   Optimalizace ([/O možnosti](../../build/reference/o-options-optimize-code.md)) nejsou povoleny.  
+-   Optimalizace ([možnosti /O](../../build/reference/o-options-optimize-code.md)) nejsou povoleny.  
   
 -   Funkce se proměnným seznamem argumentů (...).  
   
--   Funkce, které jsou označené [holé](../../cpp/naked-cpp.md).  
+-   Funkce, které jsou označené [naked](../../cpp/naked-cpp.md).  
   
 -   Funkce obsahující jako první příkaz vložený kód sestavení.  
   
@@ -118,25 +118,25 @@ Kompilátor nevytváří kopie ohrožených parametrů v následujících situac
   
 ## <a name="what-is-not-protected"></a>Nechráněné položky  
   
-**/GS** – možnost kompilátoru nechrání před útoky na zabezpečení všechny přetečení vyrovnávací paměti. Obsahuje-li například objekt vyrovnávací paměť a tabulku vtable, přetečení vyrovnávací paměti by mohlo tabulku vtable poškodit.  
+**/GS** – možnost kompilátoru neposkytuje ochranu proti útokům na zabezpečení všech přetečení vyrovnávací paměti. Obsahuje-li například objekt vyrovnávací paměť a tabulku vtable, přetečení vyrovnávací paměti by mohlo tabulku vtable poškodit.  
   
-I když používáte **/GS**, vždy se pokusí napsat zabezpečený kód, který nemá žádné přetečení vyrovnávací paměti.  
+I když používáte **/GS**, vždy snažte psát bezpečný kód, který nemá žádné přetečení vyrovnávací paměti.  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Nastavení této možnosti kompilátoru v sadě Visual Studio  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt a pak klikněte na tlačítko **vlastnosti**.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti**.  
   
      Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
   
-2.  V **stránky vlastností** dialogové okno, klikněte **C/C++** složky.  
+2.  V **stránky vlastností** dialogové okno, klikněte na tlačítko **C/C++** složky.  
   
-3.  Klikněte **generování kódu** stránku vlastností.  
+3.  Klikněte na tlačítko **generování kódu** stránku vlastností.  
   
-4.  Změnit **kontrola zabezpečení vyrovnávací paměti** vlastnost.  
+4.  Upravit **kontrola zabezpečení vyrovnávací paměti** vlastnost.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>.  
   
 ## <a name="example"></a>Příklad  
   

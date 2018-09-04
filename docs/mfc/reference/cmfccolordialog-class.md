@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680607"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog – třída
 `CMFCColorDialog` Třída představuje dialogové okno Výběr barvy.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Vrátí aktuální vybraná barva.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Vrátí hodnotu barvy palety.|  
-|`CMFCColorDialog::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Z palety systému je odvozena barevnou paletu.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Nastaví aktuální vybraná barva.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Nastavuje barvu nejvíce odpovídá zadané hodnoty RGB.|  

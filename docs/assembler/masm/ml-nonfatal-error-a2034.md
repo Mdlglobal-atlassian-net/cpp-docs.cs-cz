@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2034 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2034 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddaec88f92ff37042aaa651f977a93f0940e4579
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9169146d5554004570df4d901631996a2f85c99d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682108"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>Méně závažná chyba nástroje ML A2034
-**musí být v segmentu bloku**  
-  
- Mimo blok segment nebyl nalezen jednu z těchto možností:  
-  
--   Instrukce  
-  
--   Definice popisek  
-  
--   A [THIS](../../assembler/masm/operator-this.md) – operátor  
-  
--   A [ $ ](../../assembler/masm/dollar.md) – operátor  
-  
--   Definice procedury  
-  
--   [ALIGN](../../assembler/masm/align-masm.md) – direktiva  
-  
--   [ORG](../../assembler/masm/org.md) – direktiva  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**musí být v bloku segmentu**
+
+Mimo blok segment nebyl nalezen jeden z následujících akcí:
+
+- Instrukce
+
+- Definice popisků
+
+- A [THIS](../../assembler/masm/operator-this.md) – operátor
+
+- A [ $ ](../../assembler/masm/dollar.md) – operátor
+
+- Definice procedury
+
+- [ZAROVNAT](../../assembler/masm/align-masm.md) – direktiva
+
+- [Organizace](../../assembler/masm/org.md) – direktiva
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

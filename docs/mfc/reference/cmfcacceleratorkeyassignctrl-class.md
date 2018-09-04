@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f42be291628a1d301309adbb48dd13211cd7857
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6adb289759e2050a67f9284e2763c44461c38c0d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210320"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683525"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Cmfcacceleratorkeyassignctrl – třída
 `CMFCAcceleratorKeyAssignCtrl` Třída rozšiřuje [cedit – třída](../../mfc/reference/cedit-class.md) k podpoře dalších systémových tlačítek, jako například ALT, SHIFT a CONTROL.  
@@ -59,7 +59,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Načte `ACCEL` strukturu pro stisknuto klávesovou zkratku `CMFCAcceleratorKeyAssignCtrl` objektu.|  
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Určuje, zda byla definována klávesovou zkratku.|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Obnoví klávesovou zkratku.|  
   
 ## <a name="remarks"></a>Poznámky  

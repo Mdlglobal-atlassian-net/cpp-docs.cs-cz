@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689229"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 `CMFCToolBar` Vypadá podobně jako třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  Hodnota TRUE, pokud panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném řádku; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. V opačném případě se zobrazí rozhraní **zobrazit tlačítka ve dvou řádcích** tlačítko.  
+ [CMFCCustomizeButton::CreatePopupMenu](internal-classes.md) metoda volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. V opačném případě se zobrazí rozhraní **zobrazit tlačítka ve dvou řádcích** tlačítko.  
   
  Obvykle není nutné použít tuto metodu. Povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

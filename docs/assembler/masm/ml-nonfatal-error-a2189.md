@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2189 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2189 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df636f66ffe30aacc709b603a3d8e98e0f860371
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3d564166e770f263b12dbc383ba500ceb51af29e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676685"
 ---
 # <a name="ml-nonfatal-error-a2189"></a>Méně závažná chyba nástroje ML A2189
-**Neplatná kombinace s segment zarovnání**  
-  
- Zarovnání určeného **ALIGN** nebo `EVEN` – direktiva byla větší než aktuální segment zarovnání podle specifikace **SEGMENT** – direktiva.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Neplatná kombinace s segmentu zarovnání**
+
+Zarovnání určené **ZAROVNAT** nebo `EVEN` – direktiva byla větší než aktuální segment zarovnání podle specifikace **SEGMENTU** – direktiva.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

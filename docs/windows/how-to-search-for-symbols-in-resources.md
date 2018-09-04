@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215979"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683169"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Postupy: Vyhledávání symbolů v prostředcích
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215979"
 
 1. Z **upravit** nabídce zvolte **najít Symbol**.
 
-2. V [dialogového okna Najít Symbol](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)v **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít (například ID_ACCEL1).
+2. V [dialogového okna Najít Symbol](/visualstudio/ide/go-to)v **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít (například ID_ACCEL1).
 
    > [!TIP]
-   > Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) pro hledání, je nutné použít [najít v souborech – příkaz](/visualstudio/ide/reference/find-command) z **upravit** nabídky místo **najít Symbol**příkazu. Chcete-li regulární výrazy, musíte mít **použití: regulární výrazy** zaškrtnuto políčko v [dialogové okno hledání](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Pak kliknete tlačítko se šipkou vpravo na pravé straně **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.
+   > Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) pro hledání, je nutné použít [najít v souborech – příkaz](/visualstudio/ide/reference/find-command) z **upravit** nabídky místo **najít Symbol**příkazu. Chcete-li regulární výrazy, musíte mít **použití: regulární výrazy** zaškrtnuto políčko v [dialogové okno hledání](/visualstudio/ide/finding-and-replacing-text). Pak kliknete tlačítko se šipkou vpravo na pravé straně **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.
 
 3. Vyberte některou z **najít** možnosti.
 

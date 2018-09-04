@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680192"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 Poskytuje index do [tiled_extent](tiled-extent-class.md) objektu. Tato třída obsahuje vlastnosti pro přístup k prvkům vzhledem k místnímu původu bloku a ke globálnímu původu. Další informace o prostorech vedle sebe, naleznete v tématu [pomocí dlaždice](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[Barrier – konstanta](#tiled_index__barrier)|Úložiště [tile_barrier](tile-barrier-class.md) objekt představující překážku v aktuálním bloku vláken.|  
 |||  
-|[– globální konstanta](#tiled_index__global)|Úložiště [index](index-class.md) řádu 1, 2 nebo 3, který představuje globální index v [mřížky](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objektu.|  
+|[– globální konstanta](#tiled_index__global)|Úložiště [index](index-class.md) řádu 1, 2 nebo 3, který představuje globální index v objektu mřížky.|  
 |[lokální konstanta](#tiled_index__local)|Úložiště `index` řádu 1, 2 nebo 3, který představuje relativní index v rámci aktuální dlaždice objektu [tiled_extent](tiled-extent-class.md) objektu.|  
 |[RANK – konstanta](#tiled_index__rank)|Udržuje řád objektu `tiled_index` objektu.|  
 |[Tile – konstanta](#tiled_index__tile)|Úložiště `index` řádu 1, 2 nebo 3, který představuje souřadnice aktuální dlaždice objektu `tiled_extent` objektu.|  

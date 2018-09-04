@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683349"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++
 Visual C++ 6.0 poskytuje ovládací prvky ActiveX, které můžete použít v aplikacích, které je pak znovu distribuovat. Tyto ovládací prvky jsou již zahrnuty v jazyce Visual C++. Podle licenční smlouvy pro Visual C++ 6.0 je možné znovu distribuovat tyto ovládací prvky s aplikace vyvinuté v jazyce Visual C++.  
@@ -43,8 +43,6 @@ Visual C++ 6.0 poskytuje ovládací prvky ActiveX, které můžete použít v ap
 -   Stdole2.tlb  
   
  Pokud tyto knihovny DLL nejsou k dispozici v cílovém systému, musíte je aktualizovat pomocí předepsané mechanismus pro aktualizaci odpovídající operační systém. Můžete stáhnout nejnovější aktualizace service Pack pro operační systémy Windows z [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
-  
- Pokud vaše aplikace používá jednu z ovládací prvky ActiveX, které se připojí k databázi, musíte mít Microsoft Data Access Components (MDAC) nainstalované v cílovém systému. Další informace najdete v tématu [Redistribuce pomocných souborů databáze](../ide/redistributing-database-support-files.md).  
   
  Při použití ovládacího prvku ActiveX, který se připojuje k databázi, je také potřeba replikovat název zdroje dat na cílovém počítači. Můžete to lze provést prostřednictvím kódu programu pomocí funkce, jako `ConfigDSN`.  
   

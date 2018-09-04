@@ -1,7 +1,7 @@
 ---
-title: POPCONTEXT – | Microsoft Docs
+title: POPCONTEXT | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb33ef4415dc6c60f675aa72c6fea9deb69c287
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 40263316747030baeba703c78c2d8fc9abccd504
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691075"
 ---
 # <a name="popcontext"></a>POPCONTEXT
-Obnoví část nebo všechny aktuální `context` (ukládaná [pushcontext –](../../assembler/masm/pushcontext.md) – direktiva). `context` Může být **ASSUMES**, `RADIX`, **výpis**, **procesoru**, nebo **všechny**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-POPCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Obnoví část nebo všechny aktuální `context` (uložil [PUSHCONTEXT](../../assembler/masm/pushcontext.md) – direktiva). `context` Může být **PŘEDPOKLÁDÁ**, `RADIX`, **výpis**, **procesoru**, nebo **všechny**.
+
+## <a name="syntax"></a>Syntaxe
+
+> POPCONTEXT kontextu
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

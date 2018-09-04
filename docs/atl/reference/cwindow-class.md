@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678659"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 Tato třída poskytuje metody pro práci s časového období.  
@@ -547,10 +547,10 @@ HWND Create(
  [in] Určuje název okna. Výchozí hodnota je NULL.  
   
  *dwStyle*  
- [in] Styl okna. Je zadaná že výchozí hodnota je 0, to znamená žádný styl. Seznam možných hodnot najdete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ [in] Styl okna. Je zadaná že výchozí hodnota je 0, to znamená žádný styl. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.  
   
  *dwExStyle*  
- [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu je zadán. Seznam možných hodnot najdete v tématu [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu je zadán. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *MenuOrID*  
  [in] Proměnné typu [_u_menuorid –](../../atl/reference/u-menuorid-class.md) určující popisovač nabídky nebo identifikátor okna. Výchozí hodnota je 0U.  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>Poznámky  
  `CWindow::rcDefault` je definován jako `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.  
   
- Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro další informace.  
+ Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro další informace.  
   
  **Poznámka:** Pokud se použije jako hodnota 0 *MenuOrID* parametru, musí být zadán jako 0U (výchozí hodnota), aby chybu kompilátoru.  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  Inicializuje [m_hWnd](#m_hwnd) člen *hWnd*, která ve výchozím nastavení má hodnotu NULL.  
   
 > [!NOTE]
-> `CWindow::CWindow` nevytváří žádné okno. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), a [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (všechny z nich odvozovat `CWindow`) poskytuje metodu pro vytvoření okně nebo dialogovém okně pole, která je poté přiřazují `CWindow::m_hWnd`. Můžete také použít [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkci Win32.  
+> `CWindow::CWindow` nevytváří žádné okno. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), a [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (všechny z nich odvozovat `CWindow`) poskytuje metodu pro vytvoření okně nebo dialogovém okně pole, která je poté přiřazují `CWindow::m_hWnd`. Můžete také použít [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funkci Win32.  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  Aktualizuje zadaný strukturu více pozice okna pro určené okno.  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [destroywindow –](https://msdn.microsoft.com/library/windows/desktop/ms632682) ve Windows SDK.  
+ Zobrazit [destroywindow –](/windows/desktop/api/winuser/nf-winuser-destroywindow) ve Windows SDK.  
   
  To nezničí `CWindow` samotného objektu.  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) ve Windows SDK.  
+ Zobrazit [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) ve Windows SDK.  
   
 > [!NOTE]
 >  Chcete-li napsat kód, který je kompatibilní s 32bitové a 64bitové verze Windows, použijte [CWindow::GetWindowLongPtr](#getwindowlongptr).  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) ve Windows SDK.  
+ Zobrazit [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) ve Windows SDK.  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  Nastaví fokus klávesnice do ovládacího prvku v dialogovém okně.  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in] Určuje styly oken, které budou přidány během úpravy stylu.  
   
  *nFlags*  
- [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud jsou upraveny styly oken; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkce ve Windows SDKfor informace o dostupném časovém intervalu styly.  
+ Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funkce ve Windows SDKfor informace o dostupném časovém intervalu styly.  
   
  Pokud *nFlags* nenulové, `ModifyStyle` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in] Určuje rozšířené styly, které budou přidány během úprav stylu.  
   
  *nFlags*  
- [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud jsou změněny rozšířené styly oken; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce ve Windows SDKfor informace o dostupných rozšířené styly.  
+ Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce ve Windows SDKfor informace o dostupných rozšířené styly.  
   
  Pokud *nFlags* nenulové, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) ve Windows SDK.  
+ Zobrazit [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) ve Windows SDK.  
   
 > [!NOTE]
 >  Chcete-li napsat kód, který je kompatibilní s 32bitové a 64bitové verze Windows, použijte [CWindow::SetWindowLongPtr](#setwindowlongptr).  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) ve Windows SDK.  
+ Zobrazit [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) ve Windows SDK.  
   
  Druhou verzi tato metoda používá [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nastavit novou pozici, šířku a výšku okna.  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) ve Windows SDK.  
+ Zobrazit [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) ve Windows SDK.  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  Zobrazí blikající kurzor o systému.  

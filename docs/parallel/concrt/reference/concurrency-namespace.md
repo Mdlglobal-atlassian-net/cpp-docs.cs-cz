@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211314"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681182"
 ---
 # <a name="concurrency-namespace"></a>concurrency – obor názvů
 `Concurrency` Obor názvů obsahuje třídy a funkce, které umožňují přístup k modulu Concurrency Runtime, souběžnému programovacímu rámci pro jazyk C++. Další informace najdete v tématu [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).  
@@ -47,12 +47,6 @@ namespace concurrency;
 ```  
   
 ## <a name="members"></a>Členové  
-  
-### <a name="namespaces"></a>Jmenné prostory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Concurrency::Extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -135,7 +129,7 @@ namespace concurrency;
 |[structured_task_group – třída](structured-task-group-class.md)|`structured_task_group` Třída reprezentuje kolekci vysoce strukturovaná paralelní práce. Můžete fronty jednotlivých paralelních úloh `structured_task_group` pomocí `task_handle` objekty a počkat na jejich dokončení nebo zrušení skupiny úloh před dokončením provádění, která ukončí všechny úkoly, které nebyly začal spuštění.|  
 |[target_block – třída](target-block-class.md)|`target_block` Třída je abstraktní základní třídu, která poskytuje funkce pro správu základní odkaz a kontroly chyb pro cíl pouze blokuje.|  
 |[task – třída (Concurrency Runtime)](task-class.md)|Knihovna paralelních vzorů (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze provádět asynchronně a současně další úkoly a paralelní práci vytvořeno paralelní algoritmy v modulu Runtime souběžnosti. Vygeneruje výsledek typu `_ResultType` při úspěšném dokončení. Úkoly typu `task<void>` nevyrábějí žádný výsledek. Úkol lze počkat a zrušit jej nezávisle na jiných úkolech. Je možné také skládání s ostatními úlohami pokračování (`then`) a spojení (`when_all`) a možnost výběru (`when_any`) vzory.|  
-|[task_canceled – třída](task-canceled-class.md)|Tato třída popisuje výjimku vyvolanou vrstvou úkolů PPL, aby bylo možné zrušit aktuální úlohu. Je také vyvolané `get()` metodu na [úloh](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f), případě zrušené úlohy.|  
+|[task_canceled – třída](task-canceled-class.md)|Tato třída popisuje výjimku vyvolanou vrstvou úkolů PPL, aby bylo možné zrušit aktuální úlohu. Je také vyvolané `get()` metodu na [úloh](task-class.md), případě zrušené úlohy.|  
 |[task_completion_event – třída](task-completion-event-class.md)|`task_completion_event` Třída umožňuje zpoždění spuštění úlohy, dokud není splněna podmínka, nebo spuštění úlohy jako odpověď na vnější události.|  
 |[task_continuation_context – třída](task-continuation-context-class.md)|`task_continuation_context` Třída umožňuje určit, kde byste chtěli pokračování má být proveden. Je vhodné použít tuto třídu z aplikace pro UPW. Pro aplikace Windows Runtime je kontext pokračování úlohy určován v modulu runtime a nelze jej konfigurovat.|  
 |[task_group – třída](task-group-class.md)|`task_group` Třída reprezentuje kolekci paralelní práce, které mohou čekat nebo bylo zrušeno.|  
@@ -194,7 +188,7 @@ namespace concurrency;
 |[asend – funkce](concurrency-namespace-functions.md#asend)|Přetíženo. Operace asynchronního odeslání, která plánuje úlohy rozšíření dat na cílový blok.|  
 |[cancel_current_task Function](concurrency-namespace-functions.md#cancel_current_task)|Zruší právě prováděnou úlohu. Tuto funkci lze volat z těla úkolu k přerušení provádění daného úkolu a způsobí, že vstoupí `canceled` stavu.<br /><br /> Není podporovaný scénář pro volání této funkce, pokud nejste v těle `task`. To způsobí nedefinované chování, jako je například zhroucení nebo zablokování aplikace.|  
 |[create_async – funkce](concurrency-namespace-functions.md#create_async)|Vytvoří asynchronní konstrukt Windows Runtime založený na uživatelem zadaný výraz lambda nebo funkce objektu. Návratový typ `create_async` je buď `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`, nebo `IAsyncOperationWithProgress<TResult, TProgress>^` založené na signatuře lambdy předané metodě.|  
-|[create_task – funkce](concurrency-namespace-functions.md#create_task)|Přetíženo. Vytvoří PPL [úloh](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.|  
+|[create_task – funkce](concurrency-namespace-functions.md#create_task)|Přetíženo. Vytvoří PPL [úloh](task-class.md) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.|  
 |[Createresourcemanager – funkce](concurrency-namespace-functions.md#createresourcemanager)|Vrátí rozhraní, které představuje instanci singletonu ze Správce prostředků modulu Runtime souběžnosti. Správce prostředků zodpovídá za přiřazení zdrojů plánovačům, které chtějí vzájemně spolupracovat.|  
 |[Disabletracing – funkce](concurrency-namespace-functions.md#disabletracing)|Zakáže trasování v modulu Runtime souběžnosti. Tato funkce je zastaralá, protože je ve výchozím nastavení neregistrovaná trasování událostí pro Windows.|  
 |[Enabletracing – funkce](concurrency-namespace-functions.md#enabletracing)|Umožňuje trasování v modulu Runtime souběžnosti. Tato funkce je zastaralá, protože trasování událostí pro Windows je teď ve výchozím.|  

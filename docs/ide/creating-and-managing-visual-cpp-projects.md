@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f56ee748738cd67199348c93272a9cd2ed564e2c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222240"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685696"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Vytváření a spravování projektů Visual C++ založené na MSBuild
 Nástroj MSBuild je systém nativní sestavení jazyka Visual C++ a je obvykle že nejlepší vytvořit systém pro aplikace UWP, jakož i desktopových aplikací, které používají knihovny MFC nebo ATL. Nástroj MSBuild je úzce integrovaná s Visual Studio IDE a systém projektu, ale můžete ho použít také z příkazového řádku. Spouští se v sadě Visual Studio 2017, Visual C++ podporuje [CMake a jiných systémů než MSBuild prostřednictvím funkce Otevřít složku](non-msbuild-projects.md).
@@ -67,9 +67,6 @@ Můžete vytvářet projekty Visual C++ výběrem **souboru &#124; nový &#124; 
 ## <a name="related-sections"></a>Související oddíly  
  [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
  Obsahuje odkazy na témata popisující vytváření vaší aplikace z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.  
-  
- [Referenční dokumentace jazyka Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Obsahuje odkazy na témata popisující jazyk C a C++, knihovny poskytované aplikaci Visual C++, rozšířený objektový model Visual C++ a MASM (Microsoft Macro Assembler).  
   
 ## <a name="see-also"></a>Viz také  
  [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

@@ -1,7 +1,7 @@
 ---
-title: ZÁZNAM (MASM) | Microsoft Docs
+title: ZÁZNAM (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e726053a9146cf88ed4e84045118d19b7094ed37
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d08f4abbdaba59969c85bd0e9907e80014033b4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687157"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
-Deklaruje typu záznamu, který se skládá z zadaná pole. *Název pole* názvy v poli *šířka* určuje počet bitů, a *výraz* poskytuje počáteční hodnoty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   recordname RECORD fieldname:width [[= expression]]   
-[[, fieldname:width [[= expression]]]]...  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Deklaruje typ záznamu skládající se z zadaná pole. *fieldname* názvy polí, *šířka* určuje počet bitů, a *výraz* poskytuje počáteční hodnoty.
+
+## <a name="syntax"></a>Syntaxe
+
+> *Název_záznamu* záznam *fieldname*:*šířka* [[= *výraz*]] [[, *fieldname*:*šířku* [[= *výraz*]]]]...
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

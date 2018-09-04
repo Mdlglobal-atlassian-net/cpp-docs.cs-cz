@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207295"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687639"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Přidání členské proměnné (Visual C++)
-Členské proměnné můžete přidat do třídy pomocí zobrazení tříd. Členské proměnné může být buď pro [výměny dat a ověřování dat](../mfc/dialog-data-exchange-and-validation.md), nebo mohou být obecné. Průvodce data členské proměnné je speciálně navržen pro relevantní informace a použít ho ke vkládání prvků ve zdrojových souborech na příslušných místech. Můžete přidat členskou proměnnou z [editoru dialogového okna](../windows/dialog-editor.md) v [zobrazení prostředků](../windows/resource-view-window.md), nebo z [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+Členské proměnné můžete přidat do třídy pomocí zobrazení tříd. Členské proměnné může být buď pro [výměny dat a ověřování dat](../mfc/dialog-data-exchange-and-validation.md), nebo mohou být obecné. Průvodce data členské proměnné je speciálně navržen pro relevantní informace a použít ho ke vkládání prvků ve zdrojových souborech na příslušných místech. Můžete přidat členskou proměnnou z [editoru dialogového okna](../windows/dialog-editor.md) v [zobrazení prostředků](../windows/resource-view-window.md), nebo z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Při navrhování a implementace dialogového okna, může pro vás výhodnější používat dialogové okno editor k přidávání ovládacích prvků dialogového okna pole a potom implementovat ovládací prvky členské proměnné.  
@@ -49,7 +49,7 @@ ms.locfileid: "43207295"
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Přidání členské proměnné ze zobrazení tříd pomocí Průvodce přidáním členské proměnné  
   
-1.  V [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), rozbalte uzel projektu pro zobrazení tříd v projektu.  
+1.  V [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), rozbalte uzel projektu pro zobrazení tříd v projektu.  
   
 2.  Klikněte pravým tlačítkem na třídu, ke kterému chcete přidat proměnnou.  
   

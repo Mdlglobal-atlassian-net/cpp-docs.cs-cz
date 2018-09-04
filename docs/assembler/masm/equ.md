@@ -1,7 +1,7 @@
 ---
-title: ROVNO | Microsoft Docs
+title: EQU | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7678cac4c480934fe9f6dd9816e636481c2d64
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 37509a39d2247649c2971932f402a18f3ac667d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050747"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681304"
 ---
 # <a name="equ"></a>EQU
-První směrnice přiřadí číselná hodnota *výraz* k *název*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      name EQU expression  
-name EQU <text>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- *Název* nelze jej předefinovat později.  
-  
- Druhý direktivy přiřadí zadaný *text* k *název*. *Název* může být přiřazen jiné *text* později. V tématu [textequ –](../../assembler/masm/textequ.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+První směrnice přiřadí číselnou hodnotu *výraz* k *název*.
+
+## <a name="syntax"></a>Syntaxe
+
+> *název* EQU *výraz*
+
+> *název* EQU \< *text*>
+
+## <a name="remarks"></a>Poznámky
+
+*Název* později se nedá předefinovat.
+
+Druhý direktiv přiřadí zadaný *text* k *název*. *Název* je možné přiřadit jinou *text* později. Zobrazit [TEXTEQU](../../assembler/masm/textequ.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

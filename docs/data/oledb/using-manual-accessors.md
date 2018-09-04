@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213825"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679984"
 ---
 # <a name="using-manual-accessors"></a>Použití ručních přístupových objektů
 Existují čtyři kroky, které při zpracování Neznámý příkaz:  
@@ -53,7 +53,7 @@ Existují čtyři kroky, které při zpracování Neznámý příkaz:
   
 6.  Volání `GetNextResult` k určení, zda jsou k dispozici více sad řádků. Opakujte kroky 2 až 5.  
   
- Příklad ruční přistupujícího objektu, najdete v části `CDBListView::CallProcedure` v [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) vzorku.  
+ Příklad ruční přistupujícího objektu, najdete v části `CDBListView::CallProcedure` v [DBVIEWER](https://github.com/Microsoft/VCSamples) vzorku.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)

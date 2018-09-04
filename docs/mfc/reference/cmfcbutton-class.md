@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690872"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 `CMFCButton` Třídy přidá funkce, které [CButton](../../mfc/reference/cbutton-class.md) třídy, jako je například zarovnání textu tlačítka, kombinaci textu a obrázku, výběr kurzoru a zadání popisku tlačítka.  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Určuje, zda tlačítko je tlačítko přepínače.|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Určuje, zda styl ohraničení tlačítka odpovídá aktuální motiv Windows.|  
 |`CMFCButton::OnDrawParentBackground`|Nakreslí pozadí nadřazeného objektu tlačítka v určené oblasti. (Přepíše [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Nastaví tlačítko pro režim automatické opakování.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Nastaví obrázek pro tlačítko zaškrtnuto.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Nastaví barvu pozadí textu tlačítka.|  

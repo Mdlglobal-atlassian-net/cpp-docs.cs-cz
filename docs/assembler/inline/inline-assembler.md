@@ -1,7 +1,7 @@
 ---
 title: Vložený Assembler | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,47 +18,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 277ba0aab4f2e756fcf9b5eb1f3a9765b8da3a7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465009"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683447"
 ---
 # <a name="inline-assembler"></a>Vložený assembler
-**Specifické pro Microsoft**  
-  
- Jazyk sestavení slouží různým účelům, například zvýšení rychlosti programu, snížení požadavků na paměť a ovládání hardwaru. Inline assembler můžete použít pro vložení instrukcí sestavení jazyka přímo do zdrojových programů v jazyce C a C++ bez nutnosti dodatečných kroků sestavení a propojení. Inline assembler je integrován v kompilátoru, takže nepotřebujete používat samostatný kompilátor, jako například Microsoft Macro Assembler (MASM).  
-  
+
+**Specifické pro Microsoft**
+
+Jazyk sestavení slouží různým účelům, například zvýšení rychlosti programu, snížení požadavků na paměť a ovládání hardwaru. Inline assembler můžete použít pro vložení instrukcí sestavení jazyka přímo do zdrojových programů v jazyce C a C++ bez nutnosti dodatečných kroků sestavení a propojení. Inline assembler je integrován v kompilátoru, takže nepotřebujete používat samostatný kompilátor, jako například Microsoft Macro Assembler (MASM).
+
 > [!NOTE]
->  Programy s kódem inline assembleru nejsou plně přenosné na jiné hardwarové platformy. Pokud navrhujete s ohledem na přenositelnost, vyhněte se použití inline assembleru.  
-  
- Vložené sestavení není podporován ARM a x64 procesory.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:  
-  
--   [Přehled inline assembleru](../../assembler/inline/inline-assembler-overview.md)  
-  
--   [Výhody inline assembleru](../../assembler/inline/advantages-of-inline-assembly.md)  
-  
--   [__asm](../../assembler/inline/asm.md)  
-  
--   [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)  
-  
--   [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)  
-  
--   [Použití a zachování registrů ve vloženém sestavení](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)  
-  
--   [Přechod na popisky ve vloženém sestavení](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)  
-  
--   [Volání funkcí jazyka C ve vloženém sestavení](../../assembler/inline/calling-c-functions-in-inline-assembly.md)  
-  
--   [Volání funkcí jazyka C++ ve vloženém sestavení](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)  
-  
--   [Definování bloků __asm jako maker v jazyce C](../../assembler/inline/defining-asm-blocks-as-c-macros.md)  
-  
--   [Optimalizace vloženého sestavení](../../assembler/inline/optimizing-inline-assembly.md)  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní prvky kompilátoru a jazyk sestavení](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
- [Referenční dokumentace jazyka C++](../../cpp/cpp-language-reference.md)
+>  Programy s kódem inline assembleru nejsou plně přenosné na jiné hardwarové platformy. Pokud navrhujete s ohledem na přenositelnost, vyhněte se použití inline assembleru.
+
+Vložené sestavení není podporován ARM a x64 procesory.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:
+
+- [Přehled inline assembleru](../../assembler/inline/inline-assembler-overview.md)
+
+- [Výhody inline assembleru](../../assembler/inline/advantages-of-inline-assembly.md)
+
+- [__asm](../../assembler/inline/asm.md)
+
+- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+- [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+- [Použití a zachování registrů ve vloženém sestavení](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)
+
+- [Přechod na popisky ve vloženém sestavení](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)
+
+- [Volání funkcí jazyka C ve vloženém sestavení](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
+
+- [Volání funkcí jazyka C++ ve vloženém sestavení](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)
+
+- [Definování bloků __asm jako maker v jazyce C](../../assembler/inline/defining-asm-blocks-as-c-macros.md)
+
+- [Optimalizace vloženého sestavení](../../assembler/inline/optimizing-inline-assembly.md)
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Vnitřní funkce kompilátoru a jazyk sestavení](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
+[Referenční dokumentace jazyka C++](../../cpp/cpp-language-reference.md)<br/>

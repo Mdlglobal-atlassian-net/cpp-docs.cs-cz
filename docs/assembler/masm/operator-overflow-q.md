@@ -1,7 +1,7 @@
 ---
-title: OVERFLOW? – operátor | Microsoft Docs
+title: OVERFLOW? – operátor | Dokumenty Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aee81eb229fa54b20b6ea9b50685cabf688ac68
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fe21109db3c03b50c2dec824572628a6f86a733
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679002"
 ---
 # <a name="operator-overflow"></a>OVERFLOW? – operátor
-Stav příznak přetečení. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-OVERFLOW?  
-  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Stav příznaku přetečení. Použít pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. ZATÍMCO](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) a ostatní porty blokuje vyhodnocen v době běhu, ne v okamžiku sestavení.
+
+## <a name="syntax"></a>Syntaxe
+
+> OVERFLOW?
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2119 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2119 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ea8bc44a44447e84601167d58d5434dc37aade
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c1034c91f6eebd240c746c881284bed2baf5e618
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686896"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Méně závažná chyba nástroje ML A2119
-**je třeba zadat typ jazyk**  
-  
- Definice procedury nebo prototypu nebyl zadaný typ jazyka.  
-  
- Typ jazyka musí být deklarován v každé definice procedury nebo prototyp, pokud není zadán výchozí typ jazyka. Výchozí jazyk typ se nastavuje pomocí buď [. MODEL](../../assembler/masm/dot-model.md) – direktiva, **možnost jazyk**, nebo parametry příkazového řádku ML **/Gc** nebo **/Gd**.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**musí být zadán typ jazyka**
+
+Definice procedury nebo prototypu Listener was not given typ jazyka.
+
+Typ jazyka musí být deklarována v definici procedury nebo prototypu, pokud není zadán typ výchozího jazyka. Výchozí typ jazyka se nastavuje pomocí buď [. MODEL](../../assembler/masm/dot-model.md) směrnice, **možnost LANG**, nebo parametrů příkazového řádku ML **/GC –** nebo **/Gd**.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

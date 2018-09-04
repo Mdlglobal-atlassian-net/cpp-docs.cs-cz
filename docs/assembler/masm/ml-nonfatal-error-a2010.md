@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2010 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2010 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11e9398e0ac629a4b4d8b5602f7b11650fff00d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 99d7d90142f0415347e52f4386de8338697d8d79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055597"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684925"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>Méně závažná chyba nástroje ML A2010
-**Neplatný typ výrazu**  
-  
- Operand pro [THIS](../../assembler/masm/operator-this.md) nebo [PTR](../../assembler/masm/operator-ptr.md) nebyl platný typ výrazu.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Neplatný typ výrazu**
+
+Operand [THIS](../../assembler/masm/operator-this.md) nebo [PTR](../../assembler/masm/operator-ptr.md) nebyl platný typ výrazu.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

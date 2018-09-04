@@ -1,7 +1,7 @@
 ---
-title: DB | Microsoft Docs
+title: DB | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d3ced7397769d78ea979a52f3106e2764e54a6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 229e92a8ab3b057a96dfdf05c715c0216bb5f6fe
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052177"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688939"
 ---
 # <a name="db"></a>DB
-Přiděluje a volitelně inicializuje bajt úložiště pro každou `initializer`. `DB` je synonymum z [BAJTŮ](../../assembler/masm/byte-masm.md)  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] DB initializer [[, initializer]] ...  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Můžete také použít jako specifikátor typu kdekoli je právní typu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)   
- [DB](../../assembler/masm/db.md)   
- [SBYTE –](../../assembler/masm/sbyte-masm.md)
+
+Přiděluje a volitelně inicializuje bajtů úložiště pro každou `initializer`. `DB` je synonymum pro [BAJTŮ](../../assembler/masm/byte-masm.md)
+
+## <a name="syntax"></a>Syntaxe
+
+> [[název]] Inicializátor DB [[, inicializátor]]...
+
+## <a name="remarks"></a>Poznámky
+
+Slouží také jako specifikátor typu kdekoli typ je platný.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>
+[SBYTE –](../../assembler/masm/sbyte-masm.md)<br/>

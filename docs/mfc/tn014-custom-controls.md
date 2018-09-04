@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693585"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 
@@ -122,7 +122,7 @@ Většina Typickým příkladem samoobslužné výkresu tlačítko je tlačítko
 
 Někdy budete chtít změnit funkce objektu, který již existuje. V předchozích příkladech je nutné k přizpůsobení ovládacích prvků, než byly vytvořeny. Dynamické vytváření podtříd umožňuje přizpůsobit ovládací prvek, který již byl vytvořen.
 
-Vytváření podtříd je termín Windows pro nahrazení [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) okna s přizpůsobeným `WndProc` a volání starého `WndProc` pro výchozí funkce.
+Vytváření podtříd je termín Windows pro nahrazení <xref:System.Windows.Forms.Control.WndProc%2A> okna s přizpůsobeným `WndProc` a volání starého `WndProc` pro výchozí funkce.
 
 To třeba nezaměňovat s odvození třídy jazyka C++. Pro objasnění, podmínky C++ *základní třída* a *odvozené třídy* jsou podobná *supertřídě* a *podtřídy* v Windows objektový model. Odvození C++ s vytváření podtříd knihovny MFC a Windows jsou funkčně podobné, s výjimkou C++ nepodporuje dynamické vytváření podtříd.
 

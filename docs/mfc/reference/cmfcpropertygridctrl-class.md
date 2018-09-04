@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205092"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680650"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Cmfcpropertygridctrl – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Určuje, zda rozhraní překreslí název a hodnota sloupce aktuální ovládací prvek mřížky vlastností, když uživatel změní velikost sloupců.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Označuje, zda je vzhled ovládacího prvku mřížky vlastností ve stylu, které používá VS .NET.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Určuje způsob zobrazení upravené vlastnosti.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Odebere všechny objekty vlastnosti z ovládacího prvku mřížky vlastností.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Obnoví původní hodnoty všech vlastností.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Nastaví nebo obnoví abecedním režim.|  

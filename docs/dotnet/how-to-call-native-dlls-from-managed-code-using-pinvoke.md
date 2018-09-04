@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681278"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke
 Funkce, které jsou implementovány v nespravovaných knihoven DLL lze volat ze spravovaného kódu pomocí vyvolání platformy (nespravovaného) funkce. Pokud není k dispozici zdrojový kód pro knihovnu DLL, P/Invoke je jedinou možností pro spolupráci. Ale na rozdíl od jiných jazyků .NET, Visual C++ poskytuje alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu používá Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkce načtete aktuální rozlišení obrazovky v pixelech.  
+ Následující příklad kódu používá Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkce načtete aktuální rozlišení obrazovky v pixelech.  
   
  Pro funkce, které používají jenom vnitřní typy jako argumenty a návratové hodnoty žádná další práce je nutná. Jiné datové typy, jako je například ukazatele na funkce, polí a struktur, vyžadují další atributy, aby zařazování správná data.  
   

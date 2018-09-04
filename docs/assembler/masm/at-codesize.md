@@ -1,7 +1,7 @@
 ---
-title: '@CodeSize | Microsoft Docs'
+title: '@CodeSize | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fc47441079e05acc7a053cd5af78b5b5a096e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2fd953b996a7b8edf8362ba633cad280930d8a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049135"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677518"
 ---
 # <a name="codesize"></a>@CodeSize
-0 pro **velmi malé**, **malé**, **COMPACT**, a **ploché** modely a 1 pro **střední**,  **VELKÉ**, a **HUGE** modely (číselný označení rovnosti).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-@CodeSize  
-  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)
+
+0 pro **TINY**, **malé**, **COMPACT**, a **PLOCHÝ** modely a 1 pro **střední**,  **VELKÉ**, a **HUGE** modely (číselné odpovídá).
+
+## <a name="syntax"></a>Syntaxe
+
+> @CodeSize
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>

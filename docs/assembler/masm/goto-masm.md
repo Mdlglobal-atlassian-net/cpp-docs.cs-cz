@@ -1,7 +1,7 @@
 ---
-title: GOTO – PŘÍKAZ (MASM) | Microsoft Docs
+title: PŘÍKAZ GOTO (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691249"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-Přenosy sestavení na řádek označený **: *** macrolabel*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **GOTO** je povoleny pouze uvnitř [makro](../../assembler/masm/macro.md), [pro](../../assembler/masm/for-masm.md), [forc –](../../assembler/masm/forc.md), [opakovat](../../assembler/masm/repeat.md), a **při**bloky. Popisek musí být pouze – direktiva na řádku a musí předcházet úvodní dvojtečkou.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Přenese sestavení na řádek označený **:**_macrolabel_.
+
+## <a name="syntax"></a>Syntaxe
+
+> **Příkaz GOTO** *macrolabel*
+
+## <a name="remarks"></a>Poznámky
+
+**Příkaz GOTO** smí obsahovat pouze uvnitř [– makro](macro.md), [pro](for-masm.md), [FORC](forc.md), [OPAKUJTE](repeat.md), a [při](while-masm.md)bloky. *Macrolabel* cíl musí být pouze – direktiva v řádku a musí být předcházen přední dvojtečka.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

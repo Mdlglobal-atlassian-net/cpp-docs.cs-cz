@@ -1,5 +1,5 @@
 ---
-title: __security_init_cookie – | Microsoft Docs
+title: __security_init_cookie | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678954"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -53,11 +53,11 @@ void __security_init_cookie(void);
 
 ## <a name="remarks"></a>Poznámky
 
-Soubor cookie globálního zabezpečení se používá k ochraně přetečení vyrovnávací paměti v kódu kompilovat s [/GS (Kontrola zabezpečení vyrovnávací paměti)](../../build/reference/gs-buffer-security-check.md) a v kódu, který používá výjimek. Na položku do funkce přetečení chráněný soubor cookie je uvést v zásobníku a při ukončení hodnota v zásobníku se porovná se globální souboru cookie. Případný rozdíl mezi nimi označuje, že došlo k přetečení vyrovnávací paměti a způsobí okamžité ukončení programu.
+Soubor cookie globálního zabezpečení se používá pro ochranu přetečení vyrovnávací paměti v kódu zkompilovaném pomocí [/GS (Kontrola zabezpečení vyrovnávací paměti)](../../build/reference/gs-buffer-security-check.md) a v kódu, který používá zpracování výjimek. Při vstupu do funkce chráněné přetečení souboru cookie, který je vložen do zásobníku a při ukončení, je hodnota v zásobníku porovnána s globálním souborem cookie. Případný rozdíl mezi nimi označuje, že došlo k přetečení vyrovnávací paměti a dojde k okamžitému ukončení programu.
 
-Za normálních okolností **__security_init_cookie –** volá CRT při inicializaci. Pokud vyřazení inicializace CRT – například pokud použijete [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu – musí zavolat **__security_init_cookie –** sami. Pokud **__security_init_cookie –** není volán, na globální soubor cookie zabezpečení je nastaveno na výchozí hodnotu a dojde k narušení ochrany přetečení vyrovnávací paměti. Protože útočník může zneužít tuto výchozí hodnotu souboru cookie do jaké míry kontroly přetečení vyrovnávací paměti, doporučujeme vždy volat **__security_init_cookie –** když definujete vlastní vstupní bod.
+Za normálních okolností **__security_init_cookie** je volán CRT při inicializaci. Pokud vynecháte inicializace CRT – například, pokud používáte [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu – musí zavolat **__security_init_cookie** sami. Pokud **__security_init_cookie** není volána, globální soubor cookie zabezpečení je nastavena na výchozí hodnotu a dojde k narušení ochranu přetečení vyrovnávací paměti. Vzhledem k tomu, že útočník může zneužít tuto výchozí hodnotu souboru cookie pro kyberzločince kontroly přetečení vyrovnávací paměti, doporučujeme vždy volat **__security_init_cookie** při definování vlastní vstupní bod.
 
-Volání **__security_init_cookie –** je nutné provést před kteroukoli chráněné přetečení funkce se zadá; v opačném případě bude zjištěn přetečení nesprávné vyrovnávací paměti. Další informace najdete v tématu [C Runtime chyba R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Volání **__security_init_cookie** nutné provést před kteroukoli chráněný proti přetečení zadání funkce; v opačném případě se zjistil přetečení vyrovnávací paměti nesprávné. Další informace najdete v tématu [C Runtime chyba R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Příklad
 
@@ -69,8 +69,8 @@ Podívejte se na příklady v [C Runtime chyba R6035](../../error-messages/tool-
 |-------------|---------------------|
 |**__security_init_cookie**|\<Process.h >|
 
-**__security_init_cookie –** je rozšíření Microsoft pro standardní běhové knihovny. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** je rozšířením společnosti Microsoft pro standardní knihovny C Runtime. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Podrobněji kontroly zabezpečení kompilátoru](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>
+[Středisko Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)

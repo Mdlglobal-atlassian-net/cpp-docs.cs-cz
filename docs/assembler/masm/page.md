@@ -1,7 +1,7 @@
 ---
-title: STRÁNKA | Microsoft Docs
+title: STRÁNKA | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692477"
 ---
 # <a name="page"></a>PAGE
-První – direktiva nastaví řádku *délka* a znak *šířka* výpisu je program. Pokud jsou zadány žádné argumenty, vygeneruje zalomení stránky. Druhý – direktiva zvýší číslo oddílu a obnoví číslo stránky na 1.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+První – direktiva nastaví řádek *délka* a znak *šířka* seznamu programu. Pokud nejsou zadány žádné argumenty, vygeneruje zalomení stránky. Druhá direktiva zvýší číslo oddílu a nastaví číslo stránky na 1.
+
+## <a name="syntax"></a>Syntaxe
+
+> STRÁNKA [[*délka*]] [[, *šířka*]]<br/><br/>
+> STRÁNKA +
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

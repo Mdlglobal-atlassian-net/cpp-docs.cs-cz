@@ -1,7 +1,7 @@
 ---
-title: operátor &amp; &amp; (prostředí runtime MASM) | Microsoft Docs
+title: operátor &amp; &amp; (prostředí runtime MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f4ac43c44a6ae1760b134d1eb78bae45f0bbdea
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 69b93f78fc40066829056e57f840898a00a9b67b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056223"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682433"
 ---
 # <a name="operator-ampamp-masm-run-time"></a>operátor &amp; &amp; (prostředí runtime MASM)
-Logické **a**. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 && expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Logické **a**. Použít pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. ZATÍMCO](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) a ostatní porty blokuje vyhodnocen v době běhu, ne v okamžiku sestavení.
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 & & expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685149"
 ---
 # <a name="manifest-resources"></a>Manifest prostředků
 
@@ -45,9 +45,9 @@ Prostředky manifestu jsou soubory formátu XML, které popisují závislosti, k
 
 Pro aplikace Windows XP nebo Windows Vista prostředku manifestu nejen Určuje, že aplikace používat nejnovější verzi Windows běžných ovládacích prvků (verze 6.0, jak je znázorněno výše), ale také podporuje [ovládací prvek Syslink](/windows/desktop/Controls/syslink-overview).
 
-K zobrazení verze a typ informací obsažených v manifestu prostředek, můžete otevřít soubor v prohlížeči XML, nebo v sadě Visual Studio [textový Editor](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Další informace najdete v tématu [otevření prostředku manifestu v editoru sady Visual Studio Text](../windows/how-to-open-a-manifest-resource.md).
+K zobrazení verze a typ informací obsažených v manifestu prostředek, můžete otevřít soubor v prohlížeči XML nebo textovém editoru sady Visual Studio. Další informace najdete v tématu [otevření prostředku manifestu v editoru sady Visual Studio Text](../windows/how-to-open-a-manifest-resource.md).
 
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Walkthrough: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
 ## <a name="limitations"></a>Omezení
 

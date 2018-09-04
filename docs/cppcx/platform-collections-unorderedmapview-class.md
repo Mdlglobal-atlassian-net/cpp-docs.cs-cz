@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684006"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 Představuje zobrazení jen pro čtení *mapy*, což je kolekce párů klíč hodnota.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Typ poskytující objekt funkce, který může porovnat dva klíče hodnoty na rovnost. Ve výchozím nastavení [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Poznámky  
- UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, který je předán napříč binárním rozhraním aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) rozhraní, který je předán napříč binárním rozhraním aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Členové  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Typename UnorderedMapView.  
   
  `H`  
- Objekt funkce, která se dá hodnotu hash pro klíč. Výchozí hodnota je [std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) pro typy, které `std::hash` podporuje.  
+ Objekt funkce, která se dá hodnotu hash pro klíč. Výchozí hodnota je [std::hash\<K >](../standard-library/hash-class.md) pro typy, které `std::hash` podporuje.  
   
  `P`  
  Typ poskytující objekt funkce, který může porovnat dva klíče pro určení jejich rovnosti. Výchozí hodnota je [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>Viz také  
  [Platform::Collections – Namespace](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

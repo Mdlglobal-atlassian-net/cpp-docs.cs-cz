@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679461"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane – třída
 Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Určuje, zda jsou umístěny v horní nebo dolní části podokna karty.|  
 |[CDockablePane::IsTracked](#istracked)|Určuje, zda podokno je přetažen uživatelem.|  
 |[CDockablePane::IsVisible](#isvisible)|Určuje, zda se zobrazuje aktuální podokno.|  
-|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Interně.|  
+|[CDockablePane::LoadState](#loadstate)|Interně.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním při změně nadřazené podokno. (Přepíše [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Volá se rozhraním, když s plovoucí desetinnou čárkou dokovací panel ukotvené v okně s rámečkem.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Volá se rozhraním, když nadřazené v podokně se chystá změna. (Přepíše [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Pokud je v režimu skrýt podokno ukotvitelné a `IsHideInAutoHideMode` vrátí hodnotu TRUE, stav viditelnosti závisí na stav viditelnosti související automaticky skrývat panel nástrojů.  
   
  Pokud není ukotvitelné podokno v režimu automaticky skrývat, je určen stav viditelnosti [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) metody.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState  
+Pouze pro interní použití. Další podrobnosti najdete ve zdrojovém kódu ve složce VC\atlmfc\src\mfc instalace Visual Studia.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Určuje, zda je zakázáno automatické skrývání animace dvojice v podokně ukotvit.  
   

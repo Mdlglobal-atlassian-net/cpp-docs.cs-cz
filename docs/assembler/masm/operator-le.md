@@ -1,7 +1,7 @@
 ---
-title: operátor LE | Microsoft Docs
+title: LE – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c77a86d8249a7d2a050b1628d21d20fd3f7dafc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ce5a9bbade469e9ea1f9b4769f9575c75624f82f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691157"
 ---
 # <a name="operator-le"></a>operátor LE
-Vrátí hodnotu true (-1) Pokud *expression1* je menší než nebo rovno *Výraz2*, nebo pokud není, vrátí hodnotu false (0).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 LE expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí hodnotu true (-1) Pokud *expression1* je menší než nebo rovna hodnotě *expression2*, nebo pokud není, vrátí hodnotu false (0).
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 LE expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

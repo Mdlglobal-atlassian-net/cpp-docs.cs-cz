@@ -1,7 +1,7 @@
 ---
-title: .FARDATA? | Microsoft Docs
+title: .FARDATA? | Dokumenty Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55c859356aa3c4f4a1c07cd7902b75dacd8afcf4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 28e6f26459a6c1513969c6f1d51e070f672b2647
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683142"
 ---
 # <a name="fardata"></a>.FARDATA?
-Při použití s [. MODEL](../../assembler/masm/dot-model.md), spustí segment úplně data pro neinicializovaného data (název segmentu FAR_BSS nebo *název*).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.FARDATA? [[name]]  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Při použití s [. MODEL](../../assembler/masm/dot-model.md), spustí úplně datový segment pro neinicializovaná data (název segmentu FAR_BSS nebo *název*).
+
+## <a name="syntax"></a>Syntaxe
+
+> .FARDATA? [[název]]
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

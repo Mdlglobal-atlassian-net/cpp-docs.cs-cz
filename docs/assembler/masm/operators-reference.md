@@ -1,7 +1,7 @@
 ---
-title: Referenční dokumentace k operátorům MASM | Microsoft Docs
+title: Referenční dokumentace k operátorům MASM | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -15,86 +15,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00391f7ceaf95038c5c52db396e60cbec234099
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688173"
 ---
 # <a name="masm-operators-reference"></a>Referenční dokumentace k operátorům MASM
 
-## <a name="arithmetic"></a>Aritmetické operace  
-  
-||||  
-|-|-|-|  
-|[*](../../assembler/masm/operator-multiply.md)|[+](../../assembler/masm/operator-add.md)|[-](../../assembler/masm/operator-subtract-2.md)|  
-|[.](../../assembler/masm/operator-dot.md)|[/](../../assembler/masm/operator-subtract-1.md)|[&#91;&#93;](../../assembler/masm/operator-brackets.md)|  
-|[MOD](../../assembler/masm/operator-mod.md)|||  
-  
-## <a name="control-flow"></a>Tok řízení  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm.md)|[\!=](../../assembler/masm/operator-not-equal-masm.md)|[&](../../assembler/masm/operator-logical-and-masm.md)|  
-|[&&](../../assembler/masm/operator-logical-and-masm-run-time.md)|[<](../../assembler/masm/operator-less-than-masm-run-time.md)|[\<=](../../assembler/masm/operator-less-or-equal-masm-run-time.md)|  
-|[==](../../assembler/masm/operator-equal-masm-run-time.md)|[>](../../assembler/masm/operator-greater-than-masm-run-time.md)|[>=](../../assembler/masm/operator-greater-or-equal-masm-run-time.md)|  
-|[&#124;&#124;](../../assembler/masm/operator-logical-or.md)|||  
-  
-## <a name="logical-and-shift"></a>Logické a posunutí  
-  
-||||  
-|-|-|-|  
-|[A](../../assembler/masm/operator-and.md)|[NENÍ](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
-|[SHL –](../../assembler/masm/operator-shl.md)|[SHR –](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
-  
-## <a name="macro"></a>– Makro  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm-run-time.md)|[%](../../assembler/masm/operator-percent.md)|[&](../../assembler/masm/operator-bitwise-and.md)|  
-|[;;](../../assembler/masm/operator-semicolons.md)|[<>](../../assembler/masm/operator-literal.md)||  
-  
-## <a name="miscellaneous"></a>Různé  
-  
-||||  
-|-|-|-|  
-|[' '](../../assembler/masm/operator-single-quote.md)|[" "](../../assembler/masm/operator-double-quote.md)|[:](../../assembler/masm/operator-colon.md)|  
-|[::](../../assembler/masm/operator-semicolons.md)|[;](../../assembler/masm/operator-semicolon.md)|[CARRY?](../../assembler/masm/operator-carry-q.md)|  
-|[DUP](../../assembler/masm/operator-dup.md)|[OVERFLOW?](../../assembler/masm/operator-overflow-q.md)|[PARITY?](../../assembler/masm/operator-parity-q.md)|  
-|[SIGN?](../../assembler/masm/operator-sign-q.md)|[NULA?](../../assembler/masm/operator-zero-q.md)||  
-  
-## <a name="record"></a>Záznam  
-  
-|||  
-|-|-|  
-|[MASKA](../../assembler/masm/operator-mask.md)|[ŠÍŘKA](../../assembler/masm/operator-width.md)|  
-  
-## <a name="relational"></a>Relační  
-  
-||||  
-|-|-|-|  
-|[EQ](../../assembler/masm/operator-eq.md)|[GE](../../assembler/masm/operator-ge.md)|[GT](../../assembler/masm/operator-gt.md)|  
-|[LE](../../assembler/masm/operator-le.md)|[LT](../../assembler/masm/operator-lt.md)|[NE](../../assembler/masm/operator-ne.md)|  
-  
-## <a name="segment"></a>Segment  
-  
-|||  
-|-|-|  
-|[:](../../assembler/masm/operator-colon.md)|[IMAGEREL](../../assembler/masm/operator-imagerel.md)|  
-|[LROFFSET](../../assembler/masm/operator-lroffset.md)|[POSUNUTÍ](../../assembler/masm/operator-offset.md)|  
-|[SECTIONREL –](../../assembler/masm/operator-sectionrel.md)|[SEG](../../assembler/masm/operator-seg.md)|  
-  
-## <a name="type"></a>Typ  
-  
-||||  
-|-|-|-|  
-|[HIGH](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
-|[DÉLKA](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[NÍZKÁ](../../assembler/masm/operator-low.md)|  
-|[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
-|[PTR](../../assembler/masm/operator-ptr.md)|[KRÁTKÝ](../../assembler/masm/operator-short.md)|[VELIKOST](../../assembler/masm/operator-size.md)|  
-|[SIZEOF –](../../assembler/masm/operator-sizeof.md)|[TO](../../assembler/masm/operator-this.md)|[TYP](../../assembler/masm/operator-type.md)|  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="arithmetic"></a>Aritmetické operace
 
-[Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)
+||||
+|-|-|-|
+|[* (vynásobit)](operator-multiply.md)|[+ (Přidat)](operator-add.md)|[-(odečíst nebo negovat)](operator-subtract-2.md)|
+|[. (pole)](operator-dot.md)|[/ (dělení)](operator-subtract-1.md)|[&#91;&#93;(index)](operator-brackets.md)|
+|[MOD (zbytek)](operator-mod.md)|||
+
+## <a name="control-flow"></a>Tok řízení
+
+||||
+|-|-|-|
+|[! (prostředí runtime logický operátor not)](operator-logical-not-masm-run-time.md)|[! = (nerovná runtime)](operator-not-equal-masm.md)|[&#124;&#124;(logický modul runtime nebo)](operator-logical-or.md)|
+|[& & (logický modul runtime a)](operator-logical-and-masm-run-time.md)|[< (prostředí runtime menší než)](operator-less-than-masm-run-time.md)|[\<= (prostředí runtime menší nebo rovno)](operator-less-or-equal-masm-run-time.md)|
+|[== (prostředí runtime rovno)](operator-equal-masm-run-time.md)|[> (větší než runtime)](operator-greater-than-masm-run-time.md)|[> = (prostředí runtime větší nebo rovno)](operator-greater-or-equal-masm-run-time.md)|
+|[& (bitový modulu runtime a)](operator-bitwise-and.md)|||
+|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (test přetečení runtime)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
+|[SIGN? (test přihlašování runtime)](operator-sign-q.md)|[NULA? (prostředí runtime nula test)](operator-zero-q.md)||
+
+## <a name="logical-and-shift"></a>Logické a Shift
+
+||||
+|-|-|-|
+|[A (bitový a)](operator-and.md)|[Ne (bitový operátor not)](operator-not.md)|[OR (bitový nebo)](operator-or.md)|
+|[Shl – (shift bits vlevo)](operator-shl.md)|[Shr – (shift bits vpravo)](operator-shr.md)|[XOR (bitový exkluzivní nebo)](operator-xor.md)|
+
+## <a name="macro"></a>– Makro
+
+||||
+|-|-|-|
+|[! (znakový literál)](operator-logical-not-masm.md)|[% (nakládání jako text)](operator-percent.md)||
+|[;; (považovat komentář)](operator-semicolons.md)|[&lt; &gt; (považovat za jeden literál)](operator-literal.md)|[& & (Nahraďte hodnotu parametru)](operator-logical-and-masm.md)|
+
+## <a name="miscellaneous"></a>Různé
+
+||||
+|-|-|-|
+|["" (zpracovávat jako řetězec)](operator-single-quote.md)|["" (zpracovávat jako řetězec)](operator-double-quote.md)||
+|: (místní Popisek definice)|:: (registrovat segmentu a posunu)|:: (globální Popisek definice)|
+|[; (považovat komentář)](operator-semicolon.md)|[DUP (při opakovaném deklarace)](operator-dup.md)||
+
+## <a name="record"></a>Záznam
+
+|||
+|-|-|
+|[MASKA (získat záznam nebo pole bitová maska)](operator-mask.md)|[Šířka (získat šířku záznam nebo pole)](operator-width.md)|
+
+## <a name="relational"></a>Relační
+
+||||
+|-|-|-|
+|[EQ (rovná)](operator-eq.md)|[GE (větší nebo rovno)](operator-ge.md)|[GT (větší než)](operator-gt.md)|
+|[LE (menší nebo rovno)](operator-le.md)|[LT (menší než)](operator-lt.md)|[NE (není rovno)](operator-ne.md)|
+
+## <a name="segment"></a>Segment
+
+|||
+|-|-|
+|[: (segmentovat přepsání)](operator-colon.md)|:: (registrovat segmentu a posunu)|
+|[IMAGEREL (image relativním posunem)](operator-imagerel.md)|[LROFFSET (zavaděč přeložit posunu)](operator-lroffset.md)|
+|[POSUN (relativním posunem segmentu)](operator-offset.md)|[SECTIONREL (relativním posunem část)](operator-sectionrel.md)|
+|[SEG (get segmentu)](operator-seg.md)||
+
+## <a name="type"></a>Typ
+
+||||
+|-|-|-|
+|[Vysoká (8 bitů nejnižší 16 bitů)](operator-high.md)|[HIGH32 (32 bitů 64 bitů)](operator-high32.md)|[HIGHWORD (16 bitů nejnižší 32 bitů)](operator-highword.md)|
+|[Délka (počet prvků v poli)](operator-length.md)|[LENGTHOF (počet prvků v poli)](operator-lengthof.md)|[Nízká (8 bitech)](operator-low.md)|
+|[LOW32 (nedostatek 32 bitů)](operator-low32.md)|[LOWWORD (nízké 16 bitů)](operator-lowword.md)|[OPATTR (informace o typu argumentu get)](operator-opattr.md)|
+|[PTR (ukazatel na nebo jako typ)](operator-ptr.md)|[SHORT (krátký popis značky)](operator-short.md)|[VELIKOST (velikost typu nebo proměnné)](operator-size.md)|
+|[SIZEOF (velikost typu nebo proměnné)](operator-sizeof.md)|[Toto (aktuální umístění)](operator-this.md)|[Typ (typ výrazu get)](operator-type.md)|
+|[. Typ (informace o typu argumentu get)](operator-dot-type.md)|||
+
+## <a name="see-also"></a>Viz také:
+
+[Microsoft Macro Assembler – referenční dokumentace](microsoft-macro-assembler-reference.md)<br/>

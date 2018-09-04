@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6510f7f3bd9a88f4b938d2646bad6750fe310def
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688744"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Spuštění aplikace C++ /clr v předchozí verzi modulu runtime
 Pokud není uvedeno jinak, aplikace v jazyce C++ rozhraní .NET Framework je určený pro spouštět verze společného běhového jazykového (CLR), kterou kompilátor používá k sestavení aplikace. Je však možné, aplikace .exe, pro kterou je vytvořena jedna verze modulu runtime pro spuštění na jakoukoli jinou verzi, která poskytuje požadovanou funkci.  
@@ -36,10 +36,6 @@ Pokud není uvedeno jinak, aplikace v jazyce C++ rozhraní .NET Framework je ur�
  V době běhu souboru app.config musí mít název ve tvaru *název_souboru.přípona*.config, kde *název_souboru.přípona* je název spustitelného souboru, který spouští aplikaci, a musí být ve stejném adresáři jako spustitelný soubor. Například pokud vaše aplikace jmenuje TestApp.exe, soubor app.config by měl jmenovat TestApp.exe.config.  
   
  Pokud zadáte více než jedna verze modulu runtime a aplikace bude spuštěna na počítači, který má více než jedna verze modulu runtime nainstalovaný, aplikace použije první verzi zadané v konfiguračním souboru a je nainstalovaná.  
-  
- Další informace najdete v tématu [postupy: Konfigurace aplikace pro cílení na určitou verzi rozhraní .NET Framework](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
-  
- Ke spuštění na verzi 1.0 nebo 1.1 verzi CLR, aplikace, která je vytvořená ve Visual C++ musí být zkompilován pomocí kompilátoru [/CLR: initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

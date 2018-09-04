@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676982"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 Umožňuje aplikací a komponent, pokud chcete používat funkce z common language runtime (CLR).  
@@ -68,9 +68,7 @@ Umožňuje aplikací a komponent, pokud chcete používat funkce z common langua
  Před Visual C++ 2005 **/clr:noAssembly** požadované **/LD**. **/LD** je teď implicitní při zadání **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Umožňuje aplikaci Visual C++ pro spuštění v modulu CLR verze 1. Pokud používáte **initialAppDomain**, pak může se zobrazit některé z problémů, které jsou popsány v [chyb: AppDomainUnloaded výjimka při použití spravovaná rozšíření pro Visual C++ součásti](http://go.microsoft.com/fwlink/p/?linkid=169465) na webu společnosti Microsoft Web podpory.  
-  
- Aplikace, která je zkompilován s použitím **initialAppDomain** by se nemělo používat aplikaci, která používá ASP.NET, protože není podporovaná ve verzi 1 modulu CLR.  
+ Umožňuje aplikaci Visual C++ pro spuštění v modulu CLR verze 1.  Aplikace, která je zkompilován s použitím **initialAppDomain** by se nemělo používat aplikaci, která používá ASP.NET, protože není podporovaná ve verzi 1 modulu CLR.  
   
  **nostdlib**  
  Dává pokyn kompilátoru ignorovat výchozí adresář \clr. Kompilátor generuje chyby, pokud jsou včetně více verzí knihovny DLL jako například System.dll. Tato možnost umožňuje zadat konkrétní verzi rozhraní framework pro použití během kompilace.  

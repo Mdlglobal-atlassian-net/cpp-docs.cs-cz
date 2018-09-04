@@ -1,7 +1,7 @@
 ---
-title: . POKUD | Microsoft Docs
+title: . POKUD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ab0e2fc510b4be8c5a9a8c0c3d0fb1c4347f0b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f7bd5ba5821b4dcfb2d088e31816f50540445018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691541"
 ---
 # <a name="if"></a>.IF
-Generuje kód, který testuje `condition1` (například AX > 7) a spustí *příkazy* při splnění této podmínky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   .IF condition1   
-statements  
-[[.ELSEIF condition2   
-   statements]]  
-[[.ELSE  
-   statements]]  
-.ENDIF  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud [. ELSE](../../assembler/masm/dot-else.md) způsobem, jeho příkazy jsou provést, pokud byl původní podmínku hodnotu false. Všimněte si, že v době běhu vyhodnocení podmínek.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Generuje kód, který testuje `condition1` (například AX > 7) a spustí *příkazy* při splnění této podmínky.
+
+## <a name="syntax"></a>Syntaxe
+
+> . Pokud condition1<br/>
+> příkazy<br/>
+> [[. ELSEIF condition2<br/>
+> příkazy]]<br/>
+> [[. ELSE<br/>
+> příkazy]]<br/>
+> .ENDIF
+
+## <a name="remarks"></a>Poznámky
+
+Pokud [. OSTATNÍ](../../assembler/masm/dot-else.md) způsobem, jeho příkazy se spustí, pokud byl původní podmínky hodnotu false. Všimněte si, že podmínky se vyhodnocují v době běhu.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

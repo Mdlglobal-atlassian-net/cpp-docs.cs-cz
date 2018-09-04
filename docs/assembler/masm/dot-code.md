@@ -1,7 +1,7 @@
 ---
-title: . KÓD | Microsoft Docs
+title: . KÓD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59e376fc9c10ab8891b02e4da334341ae0534b73
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ff2d66cfc79e84c8c4c7cf92e117c9ac8c84a555
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682484"
 ---
 # <a name="code"></a>.CODE
-Při použití s [. MODEL](../../assembler/masm/dot-model.md), označuje začátek segmentu kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-.CODE [[name]]  
-```  
-  
-#### <a name="parameters"></a>Parametry  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`name`|Volitelný parametr, který určuje název segment kódu. Výchozí název je _TEXT – pro malý, malý, zkomprimovat a dvojrozměrném [modely](../../assembler/masm/dot-model.md). Výchozí název je *modulename*_TEXT – pro ostatní modely.|  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)   
- [.DATA](../../assembler/masm/dot-data.md)
+
+Při použití s [. MODEL](../../assembler/masm/dot-model.md), označuje začátek segmentu kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+> . KÓD [[název]]
+
+#### <a name="parameters"></a>Parametry
+
+|Parametr|Popis|
+|---------------|-----------------|
+|`name`|Volitelný parametr, který určuje název segmentu kódu. Výchozí název je _TEXT pro malý, malý, zkomprimovat a paušální [modely](../../assembler/masm/dot-model.md). Výchozí název je *modulename*_TEXT pro ostatní modely.|
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[.DATA](../../assembler/masm/dot-data.md)<br/>

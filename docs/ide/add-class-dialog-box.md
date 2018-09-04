@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9d4e90ace469614d6d422e0b75445eae5696bc26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200317"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681599"
 ---
 # <a name="add-class-dialog-box"></a>Dialogové okno Přidat třídu
 **Přidat třídu** dialogové okno obsahuje šablony, které vám umožní:  
@@ -32,7 +32,7 @@ ms.locfileid: "43200317"
   
 -   Automaticky vytvořte novou třídu do projektu přidejte příslušné soubory a zdrojový kód.  
   
- Můžete přistupovat **přidat třídu** dialogové **projektu** nabídce **Průzkumníka řešení**, nebo [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Můžete přistupovat **přidat třídu** dialogové **projektu** nabídce **Průzkumníka řešení**, nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Při pokusu přidat třídu, která není vhodné pro aktuální projekt, zobrazí se chybová zpráva. Klikněte na tlačítko **OK** se vrátíte **přidat třídu** dialogové okno.  

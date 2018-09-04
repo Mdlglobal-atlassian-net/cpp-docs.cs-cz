@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465408"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685542"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
-Tento návod ukazuje, jak změnit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje pásu karet Office 2007 a na Windows 7 Scenic pásu karet. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233) na webové stránce MSDN.
+Tento návod ukazuje, jak změnit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje pásu karet Office 2007 a na Windows 7 Scenic pásu karet. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](/windows/desktop/uxguide/cmd-ribbons).
 
 Tento názorný postup upravuje classic vzorek Scribble 1.0 MFC, který vám umožní používat myš kreslit čáry. Tato část návodu ukazuje, jak upravit ukázky Scribble tak, aby zobrazil panel pásu karet. [Část 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) přidá další tlačítka na panel pásu karet.
 

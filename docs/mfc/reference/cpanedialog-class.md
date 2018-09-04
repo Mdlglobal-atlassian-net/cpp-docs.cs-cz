@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213147"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682324"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog – třída
 `CPaneDialog` Podporuje nemodální ukotvitelné dialogové třídy.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávy. (Předefinuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) zprávy. (Předefinuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) zprávy. (Předefinuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Volá se rozhraním, chcete-li aktualizovat pole dialogovém okně. (Přepíše [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Volá se rozhraním, chcete-li aktualizovat pole dialogovém okně. (Přepíše [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|  
 |`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) zprávy. (Předefinuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Určuje šablonu pro dialogové okno, které je kontejnerem ovládacího prvku OLE.|  
   

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196587"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686082"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED jen zřídka  
   
- Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro popis styly oken.  
+ Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro popis styly oken.  
   
  Volitelně můžete použít kombinaci [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles), jak je popsáno v sadě Windows SDK.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl ovládacího prvku toolbar. Panely nástrojů musí mít vždy WS_CHILD style. Kromě toho můžete zadat libovolnou kombinaci toolbar – styly a styly oken, jak je popsáno v **poznámky** část [vytvořit](#create).  

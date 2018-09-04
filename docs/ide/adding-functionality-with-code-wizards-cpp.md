@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebda52eaa4deab6ddf8535da9b4c5a94a2cbc77b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213133"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679402"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Mezi tyto úlohy patří vytváření nových tříd, přidává nové členské funkce a proměnné a přidání automatizace metody a vlastnosti. Průvodci kódem jsou navržené tak, aby šlo dělat tyto věci.  
@@ -56,7 +56,7 @@ Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Me
   
 -   V **Průzkumníka řešení**, pravým tlačítkem myši na libovolné složky a kliknutím na **přidat** ze zástupce nabídky vám umožní přidávat nové nebo existující soubory, další složky, položky, tříd, prostředky a webové odkazy na projekt.  
   
--   Z [okno Zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), že kliknete pravým tlačítkem na příslušný uzel a kliknutím na **přidat** ze zástupce v nabídce vám umožní přidávat funkce, proměnné, třídy, vlastnosti, metody, události, rozhraní, body připojení, nebo jiný kód do vašeho projektu.  
+-   Z [okno Zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), že kliknete pravým tlačítkem na příslušný uzel a kliknutím na **přidat** ze zástupce v nabídce vám umožní přidávat funkce, proměnné, třídy, vlastnosti, metody, události, rozhraní, body připojení, nebo jiný kód do vašeho projektu.  
   
     > [!NOTE]
     >  Visual Studio neposkytuje průvodce můžete přidat rozhraní do projektu. Můžete přidat rozhraní do projektu knihovny ATL nebo do [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) tak Přidání jednoduchého objektu pomocí [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md). Můžete také otevřít soubor .idl projektu a vytvořte rozhraní tak, že zadáte:  

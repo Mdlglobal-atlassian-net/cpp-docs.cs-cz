@@ -1,7 +1,7 @@
 ---
-title: DT | Microsoft Docs
+title: DT | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c945276154f77003557539737adc5bafda351a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 243911e42d9c41de7ddf7d8778b27e0526cdd355
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055551"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679445"
 ---
 # <a name="dt"></a>DT
-Přiděluje a volitelně inicializuje 10 bajtů úložiště pro každou `initializer`. Můžete také použít jako specifikátor typu kdekoli je právní typu. `DT` je synonymum z [tbyte –](../../assembler/masm/tbyte.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[[name]] DT initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Přiděluje a volitelně inicializuje 10 bajtů úložiště pro každou `initializer`. Slouží také jako specifikátor typu kdekoli typ je platný. `DT` je synonymum pro [TBYTE](../../assembler/masm/tbyte.md).
+
+## <a name="syntax"></a>Syntaxe
+
+> [[název]] Inicializátor DT [[, inicializátor]]...
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

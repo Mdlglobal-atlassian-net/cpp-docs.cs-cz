@@ -1,7 +1,7 @@
 ---
-title: . SAVEREG | Microsoft Docs
+title: . SAVEREG | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50b7a91efd7069e148222d3e3da44178974d6ba
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e7010664cd2e80841d9e35d8fcf72d195cecf796
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055203"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688986"
 ---
 # <a name="savereg"></a>.SAVEREG
-Generuje buď `UWOP_SAVE_NONVOL` nebo `UWOP_SAVE_NONVOL_FAR` unwind položku kódu pro zadaný registr (`reg`) a posunutí (`offset`) pomocí aktuální posun prologu. MASM vybere nejúčinnější kódování.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-.SAVEREG reg, offset  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- . SAVEREG umožňuje uživatelům ml64.exe zadejte, jak funkce rámce unwinds a je povoleno pouze v rámci prologu, která rozšiřuje z [PROC](../../assembler/masm/proc.md) deklarace rámce k [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) – direktiva. Tyto direktivy nevydávají kódu; generují pouze `.xdata` a `.pdata`. . SAVEREG musí předcházet pokyny, které ve skutečnosti implementovat akce, jež mají být oddělen. Je dobrým zvykem direktivy unwind a kód, který se mají unwind v makru k zajištění dohody jej.  
-  
- Další informace najdete v tématu [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Generuje buď `UWOP_SAVE_NONVOL` nebo `UWOP_SAVE_NONVOL_FAR` unwind položku kódu pro zadaný registr (`reg`) a posun (`offset`) použitím aktuální posun prologu. MASM zvolí nejúčinnější kódování.
+
+## <a name="syntax"></a>Syntaxe
+
+> . Posun SAVEREG registru
+
+## <a name="remarks"></a>Poznámky
+
+. SAVEREG umožňuje uživatelům ml64.exe k určení, jak funkce rámce unwinds a je povolený jenom v rámci prologu, který se táhne od [PROC](../../assembler/masm/proc.md) prohlášení rámce [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) směrnice. Tyto direktivy negeneruje kód; pouze generovat `.xdata` a `.pdata`. . SAVEREG by měl předcházet pokyny, které ve skutečnosti implementovat akce, jež mají být oddělen. To je dobrý postup při zabalení direktivy unwind a kódu, které jsou určeny k unwind v makru zajistit smlouvy.
+
+Další informace najdete v tématu [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

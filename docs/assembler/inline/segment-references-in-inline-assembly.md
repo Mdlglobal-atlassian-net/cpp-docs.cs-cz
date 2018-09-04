@@ -1,7 +1,7 @@
 ---
-title: Segment odkazů ve vloženém sestavení | Microsoft Docs
+title: Segment odkazů v sestavení inline Assemblerem | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,18 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7add95852f751ed29dad8e0ba9577abd55fabaf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 792dda60407928aaf4a7d3fec2a61c0018b8b35a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051473"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676386"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Odkazy na segmenty ve vloženém sestavení
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Musí odkazovat na segmenty registrace, nikoli podle názvu (segment name `_TEXT` je neplatná, například). Segment přepsání musí explicitně, používat rejstříku jako ES: [BX].  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+Musíte odkazovat na segmentů podle registru, nikoli podle názvu (název segmentu `_TEXT` je neplatný, například). Přepsání segmentu používaly registru explicitně, stejně jako v ES: [mx].
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

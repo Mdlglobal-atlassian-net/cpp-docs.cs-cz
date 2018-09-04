@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2133 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2133 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f240ed6f2e8330017e56334dfcc41be478537c7b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0df094f5e7135ffb3b9a5f09383e03e411755de3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678063"
 ---
 # <a name="ml-nonfatal-error-a2133"></a>Méně závažná chyba nástroje ML A2133
-**Přepsat INVOKE hodnotu registru**  
-  
- Rejstřík byl předán jako argument procedury, ale kód generované [INVOKE](../../assembler/masm/invoke.md) předat další argumenty zničen obsah registru.  
-  
- Zaregistruje AX, AL, AH, EAX, Directx, DL, Diffie-Hellman a EDX lze assembleru provést převod dat.  
-  
- Použijte jiný registrace.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Přepsat INVOKE hodnoty registru**
+
+Registru byl předán jako argument procedury, ale kód generovaných [INVOKE](../../assembler/masm/invoke.md) předání dalších argumentů zničen obsah do registru.
+
+AX, AL, AH, EAX, DX, bude používat, Diffie-Hellman a EDX registrů lze assembler k provedení převodu data.
+
+Použijte jiný registr.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

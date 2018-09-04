@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b82299db31a7452a05cdfe709221facda09c3615
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217456"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676072"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Isupporterrorinfoimpl – třída
 Tato třída poskytuje výchozí implementaci třídy [ISupportErrorInfo rozhraní](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) a můžou používat, když pouze jedno rozhraní vygeneruje chyby na objekt.  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.  
   
- Pokud *nNumThreads* je nula, [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  
+ Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  

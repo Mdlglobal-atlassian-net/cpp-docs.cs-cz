@@ -1,7 +1,7 @@
 ---
-title: PŘI (MASM) | Microsoft Docs
+title: PŘI (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174872d6be33441159aa326d207a79804233a8e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 91d79c6b2ad3db2dfa9fd7ddf9105afc21c92f2b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053464"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685454"
 ---
 # <a name="while-masm"></a>WHILE (MASM)
-Opakuje sestavení bloku `statements` tak dlouho, dokud *výraz* zůstává hodnotu true.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   WHILE expression  
-statements  
-ENDM  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Sestavení bloku se opakuje *příkazy* tak dlouho, dokud *výraz* nemění.
+
+## <a name="syntax"></a>Syntaxe
+
+> ZATÍMCO *výraz*<br/>
+> *Příkazy*<br/>
+> ENDM
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

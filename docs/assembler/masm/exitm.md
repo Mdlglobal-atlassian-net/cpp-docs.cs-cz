@@ -1,7 +1,7 @@
 ---
-title: EXITM – | Microsoft Docs
+title: EXITM | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046e4a6eea3e34f028fc00dceefbaf9668d2dd2b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 33d6d4eccab3ecc4d02e821606fd721b6e1ba6ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686521"
 ---
 # <a name="exitm"></a>EXITM
-Ukončí rozšíření aktuální opakovat nebo makro bloku a začne sestavení další příkaz mimo blok.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-EXITM [[textitem]]   
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ve funkci makro *textitem* je vrácena hodnota.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Rozbalení aktuálního bloku opakovat nebo makro se ukončí a zahájí sestavení dalšímu příkazu mimo blok.
+
+## <a name="syntax"></a>Syntaxe
+
+> EXITM [[textitem]]
+
+## <a name="remarks"></a>Poznámky
+
+Ve funkci – makro *textitem* je vrácená hodnota.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

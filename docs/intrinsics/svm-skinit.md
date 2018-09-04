@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687282"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Specifické pro Microsoft**  
@@ -48,7 +48,7 @@ void __svm_skinit(
   
  `SLB` Parametr určuje fyzickou adresu 64 kB blok paměti volá *zabezpečení Block zavaděč* (SLB). Nástroj SLB obsahuje program s názvem zabezpečené zavaděč, který vytvoří prostředí operačního systému počítač a následně načte zabezpečení jádra.  
   
- Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
+ Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

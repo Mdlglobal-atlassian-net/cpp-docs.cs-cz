@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219725"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681734"
 ---
 # <a name="single-inheritance"></a>Jedna dědičnost
 V „jednoduché dědičnosti“, tedy v běžné formě dědičnosti, mají třídy pouze jednu základní třídu. Vezměte v úvahu vztah znázorněný na následujícím obrázku.  
@@ -63,7 +63,7 @@ Ukázka orientovaného acyklického grafu
  Ve výše uvedeném diagramu nazývaném „orientovaný acyklický graf“ (také „DAG“) jsou některé třídy základními třídami více než jedné odvozené třídy. Opačně to však neplatí: každá odvozená třída má pouze jednu přímou základní třídu. Graf na obrázku znázorňuje strukturu „jednoduché dědičnosti“.  
   
 > [!NOTE]
->  Orientované acyklické grafy se nepoužívají pouze pro jednoduchou dědičnost. Používají se také ke znázornění grafů vícenásobné dědičnosti. Toto téma je obsaženo v [vícenásobná dědičnost](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Orientované acyklické grafy se nepoužívají pouze pro jednoduchou dědičnost. Používají se také ke znázornění grafů vícenásobné dědičnosti.  
   
  V dědičnosti obsahuje odvozená třída členy základní třídy a nové, přidané členy. Díky tomu mohou odvozené třídy odkazovat na členy základní třídy (pokud tyto členy nebyly v odvozené třídě předefinovány). Pokud byly členy v odvozené třídě předefinovány, lze se na členy v přímých nebo nepřímých základních třídách odkazovat pomocí operátoru vyhodnocení oboru (`::`). Podívejte se například:  
   

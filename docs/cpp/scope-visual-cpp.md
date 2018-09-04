@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679694"
 ---
 # <a name="scope-c"></a>Rozsah (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Opětovné použití názvů identifikátorů, jak je znázorněno v tomto příkladu, je považováno za špatný styl programování.
 
- Další informace o ukazatelích naleznete v tématu [odvozené typy](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Informace o deklaraci a inicializaci objektů tříd naleznete v tématu [třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md). Informace o používání **nové** a **odstranit** operátorů volného úložiště najdete v tématu [nové a odstranit operátory](new-and-delete-operators.md).
+Informace o deklaraci a inicializaci objektů tříd naleznete v tématu [třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md). Informace o používání **nové** a **odstranit** operátorů volného úložiště najdete v tématu [nové a odstranit operátory](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Skrytí názvů s globálním oboru
 

@@ -1,5 +1,5 @@
 ---
-title: -DEBUGTYPE (Možnosti ladicích informací) | Microsoft Docs
+title: -DEBUGTYPE (Možnosti ladicích informací) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66868f7648d20b890f3c1e8c40802d77e3af4544
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce4db4403f034a5795237393a8f1465fdf31982b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375367"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681078"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (možnosti ladicích informací)
-Možnost /DEBUGTYPE Určuje typy ladicí informace generované možnost/Debug.  
+Možnost /DEBUGTYPE Určuje typ ladicích informací generovaných možnost/Debug.  
   
 ```  
 /DEBUGTYPE:[CV | PDATA | FIXUP]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ODCHYLKA NÁKLADŮ  
- Informuje linkeru pro vydávání informace o ladění pro symboly, čísla řádků a další informace o kompilace objektu v souboru PDB. Ve výchozím nastavení, tato možnost je povolená při **/DEBUG** je zadán a **/DEBUGTYPE** není zadán.  
+ CV  
+ Přikáže linkeru, aby vygenerovat ladicí informace pro symboly, čísla řádků a další informace o kompilaci objektu do souboru PDB. Ve výchozím nastavení, je tato možnost povolena při **/DEBUG** určena a **/DEBUGTYPE** není zadán.  
   
  PDATA  
- Informuje linkeru pro přidání položek .pdata a .xdata na informace o datový proud ladění do souboru PDB. Ve výchozím nastavení, tato možnost je povolená při jak **/DEBUG** a **/Driver** možnosti nejsou zadány. Pokud **/DEBUGTYPE:PDATA** je zadán samostatně, linkeru automaticky zahrne symboly v souboru PDB ladění. Pokud **/DEBUGTYPE:PDATA oprava** není zadaný, linkeru nezahrnuje symboly v souboru PDB ladění.  
+ Přikáže linkeru, aby přidat .pdata a .xdata záznamy do datového proudu informace o ladění do souboru PDB. Ve výchozím nastavení, je tato možnost povolena při i **/DEBUG** a **Driver/Driver** jsou zadány možnosti. Pokud **/DEBUGTYPE:PDATA** určena samostatně, linker automaticky zahrne do souboru PDB symboly ladění. Pokud **/DEBUGTYPE:PDATA, oprava** není zadán, linker nezahrnuje ladění symbolů do souboru PDB.  
   
  OPRAVA  
- Informuje linkeru pro přidání položky tabulky přemístění do informace o datový proud ladění do souboru PDB. Ve výchozím nastavení, tato možnost je povolená při jak **/DEBUG** a **/PROFILE** možnosti nejsou zadány. Pokud **/DEBUGTYPE:FIXUP** nebo **/DEBUGTYPE:FIXUP PDATA** není zadaný, linkeru nezahrnuje symboly v souboru PDB ladění.  
+ Přikáže linkeru, aby přidat položky tabulky přemístění do datového proudu informace o ladění do souboru PDB. Ve výchozím nastavení, je tato možnost povolena při i **/DEBUG** a **/PROFILE** jsou zadány možnosti. Pokud **/DEBUGTYPE:FIXUP** nebo **/DEBUGTYPE:FIXUP PDATA** není zadán, linker nezahrnuje ladění symbolů do souboru PDB.  
   
- Argumenty pro **/DEBUGTYPE** mohou být kombinovány v libovolném pořadí, oddělte je čárkami. **/DEBUGTYPE** možnost a její argumenty nejsou velká a malá písmena.  
+ Argumenty, které mají **/DEBUGTYPE** lze kombinovat v libovolném pořadí tak, že je oddělíte čárkou. **/DEBUGTYPE** možnost a její argumenty nejsou velká a malá písmena.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití **/DEBUGTYPE** možnost zadat zahrnutí přemístění dat nebo .pdata a .xdata záhlaví informace o tabulce v datovém proudu ladění. To způsobí, že linkeru informace o uživatelském režimu kód, který se zobrazí v ladicí program jádra po pozastavení v režimu jádra kódu. Chcete zpřístupnit symboly pro ladění při **oprava** je zadán, zahrnují **odchylka nákladů** argument.  
+ Použití **/DEBUGTYPE** můžete zadat zahrnutí přemístění dat nebo .pdata a .xdata informace v záhlaví tabulky v datovém proudu ladění. To způsobí, že linkeru, aby zahrnul informace o kódu v uživatelském režimu, který se zobrazí v ladicím programu jádra po přerušení v kódu režimu jádra. Aby symboly pro ladění k dispozici při **opravy** je zadán, zahrnují **CV** argument.  
   
- Ladění kódu v uživatelském režimu, což je typické pro aplikace, **/DEBUGTYPE** není vyžadována možnost. Ve výchozím nastavení, přepínače kompilátoru, které určují ladění výstupu ([/Z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) emitování všechny informace potřebné pomocí sady Visual Studio ladicího programu. Použití **/DEBUGTYPE:PDATA** nebo **/DEBUGTYPE:CV, PDATA, oprava** ladit kód, který kombinuje uživatelského režimu a režimu jádra součásti, jako je například konfigurace aplikace pro ovladač zařízení. Další informace o ladicí programy režimu jádra najdete v tématu [ladicích nástrojů pro systém Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
+ Chcete-li ladit kód v uživatelském režimu, což je typické pro aplikace, **/DEBUGTYPE** možnost není potřebná. Ve výchozím nastavení, přepínače kompilátoru určující ladění výstupu ([/Z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) vygenerovat všechny informace potřebné pomocí sady Visual Studio debugger. Použití **/DEBUGTYPE:PDATA** nebo **chyby, PDATA, oprava** ladit kód, který kombinuje uživatelského režimu a režimu jádra součásti, jako je například konfigurace aplikace pro ovladače zařízení. Další informace o režimu jádra ladicích programů, naleznete v tématu [ladění nástroje pro Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)  
   
 ## <a name="see-also"></a>Viz také  
- [/ DEBUG (Generovat ladicí informace)](../../build/reference/debug-generate-debug-info.md)   
- [/ DRIVER (ovladač režimu jádra systému Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
+ [/ DEBUG (generování ladicích informací)](../../build/reference/debug-generate-debug-info.md)   
+ [/ DRIVER (ovladač režimu jádra Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
  [/ PROFILE (Profiler nástrojů výkonu)](../../build/reference/profile-performance-tools-profiler.md)   
- [Nástroje pro ladění pro Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)
+ [Ladicí nástroje pro Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

@@ -1,7 +1,7 @@
 ---
-title: Závažná chyba nástroje ML A1016 | Microsoft Docs
+title: Závažná chyba nástroje ML A1016 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a597f738d00e73c28141f1c1d9dc8c463110bdb9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 056e4f96c42e1a100b2aab623cba31f709f270a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683782"
 ---
 # <a name="ml-fatal-error-a1016"></a>Závažná chyba nástroje ML A1016
-**Chyba interní assembleru**  
-  
- MASM ovladače, názvem ML.exe, vygeneruje chybu systému.  
-  
- Poznámka: v případech chyby a upozornění Microsoft Corporation. Technické podpory je k dispozici na [ http://support.microsoft.com/ ](http://support.microsoft.com/).  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Došlo k chybě vnitřní assembleru**
+
+Ovladač MASM nazývaný ML.exe, vygeneruje chybu systému.
+
+Mějte na paměti okolností chyby a upozornění Microsoft Corporation. Product Support Services je k dispozici na [ http://support.microsoft.com/ ](http://support.microsoft.com/).
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

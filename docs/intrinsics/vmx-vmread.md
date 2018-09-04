@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466106"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677377"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Specifické pro Microsoft**  
@@ -54,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|Operace selhala, aniž by k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- `__vmx_vmread` Funkce je ekvivalentní volání `VMREAD` strojové instrukce. Hodnota `Field` parametr je kódovaný pole index, který je popsán v dokumentaci k Intel. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality a pak naleznete v dodatku C tohoto dokumentu .  
+ `__vmx_vmread` Funkce je ekvivalentní volání `VMREAD` strojové instrukce. Hodnota `Field` parametr je kódovaný pole index, který je popsán v dokumentaci k Intel. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality a pak naleznete v dodatku C tohoto dokumentu .  
   
 ## <a name="requirements"></a>Požadavky  
   

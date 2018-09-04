@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90a9cdaf5d0b99e2ad746655f67e3ab9a68aad1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688396"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
 Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly odesílajícími požadavky HTTP GET a POST na webovou službu v Universal Windows Platform (UPW ) aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete použít úlohu stahování jako součást posloupnosti úkolů. Úloha stažení můžete také odpovídat při práci se zruší.  
@@ -33,7 +33,7 @@ Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/previous-versions/
   
  Tento dokument nejprve ukazuje, jak vytvořit `HttpRequest` a její podpůrnou třídy. Následně ukazuje, jak použít tuto třídu v rámci aplikace pro UPW, která používá C++ a XAML.  
   
- Úplný příklad používající `HttpReader` třídy popsané v tomto dokumentu najdete v článku [vývoj optimalizace cesty mapy Bing, aplikace Windows Store v jazyce JavaScript a C++](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Další příklad, který používá `IXMLHTTPRequest2` ale úkoly, naleznete v tématu [rychlý start: připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+Příklad, který používá `IXMLHTTPRequest2` ale úkoly, naleznete v tématu [rychlý start: připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` jsou rozhraní, které doporučujeme pro použití v aplikaci UWP. Tento příklad pro použití v desktopové aplikaci můžete také přizpůsobit.  
@@ -121,6 +121,6 @@ Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/previous-versions/
  [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)   
  [Asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Rychlý start: Připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [Rychlý start: Připojení pomocí XML požadavku protokolu HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))   
  [Task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event – třída](../../parallel/concrt/reference/task-completion-event-class.md)

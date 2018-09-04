@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683574"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager – třída
 Implementuje základní funkce, které řídí dokovací rozložení v rámci hlavního okna.  
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [smart manager dokovací](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Ukazatel na smart manager ukotvení.  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Načte ukazatel smart manager ukotvení.  

@@ -1,7 +1,7 @@
 ---
-title: Chybové zprávy nástroje ML | Microsoft Docs
+title: Chybové zprávy nástroje ML | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,48 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc2ae6388ad11a411850d03de421d2f6820fc03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 836daf438fa5a7f4c797b5b15ffab89720a7af98
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675962"
 ---
 # <a name="ml-error-messages"></a>Chybové zprávy nástroje ML
-Chybové zprávy generované komponentami MASM spadají do tří kategorií:  
-  
--   **Závažné chyby.** Ty naznačují k závažnému problému, který zabrání dokončení jeho normální proces nástroj.  
-  
--   **Méně závažné chyby.** Tento nástroj může dokončit zpracování. Pokud ano, není pravděpodobné, že je ta, kterou chcete její výsledek.  
-  
--   **Upozornění.** Tyto zprávy určují podmínky, které mohou zabránit načítání výsledků, které chcete.  
-  
- Všechny chybové zprávy mít tento tvar:  
-  
-```  
-  
-Utility: Filename (Line) : [Error_type} (Code): Message_text  
-```  
-  
- kde:  
-  
- `Utility`  
- Program, který odeslal zprávu chyby.  
-  
- *Název souboru*  
- Soubor, který obsahuje stav chyby generování.  
-  
- *řádek*  
- Přibližná řádku, kde existuje chybový stav.  
-  
- *Error_type –*  
- Závažná chyba, chyby nebo upozornění.  
-  
- *Kód*  
- Kód chyby jedinečný 5 nebo 6číslic.  
-  
- `Message_text`  
- Popis krátký a obecné chybový stav.  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)
+
+Chybové zprávy generované komponentami MASM spadají do tří kategorií:
+
+- **Závažné chyby.** Tyto zprávy značí závažný problém, který zabrání dokončení jeho normální proces nástroj.
+
+- **Méně závažné chyby.** Nástroj může dokončit jeho proces. Pokud ano, není výsledek bude ten, který chcete.
+
+- **Upozornění.** Tyto zprávy určují podmínky, které můžou bránit získání požadovaných výsledků.
+
+Všechny chybové zprávy následující podobu:
+
+> *Nástroj*: *Filename* (*řádku*): {*error_type –*} (*kód*): *Message_text*
+
+kde:
+
+*Nástroj*<br/>
+Program, který odeslal zprávu chyby.
+
+*Název souboru*<br/>
+Soubor, který obsahuje podmínku chyby generování.
+
+*Řádek*<br/>
+Přibližná řádku, kde existenci chybového stavu.
+
+*Error_type –*<br/>
+Závažná chyba, chyba nebo upozornění.
+
+*Kód*<br/>
+Kód chyby jedinečný 5 nebo 6číslice.
+
+*Message_text*<br/>
+Popis krátký a obecné chybového stavu.
+
+## <a name="see-also"></a>Viz také:
+
+[Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: ZAROVNAT (MASM) | Microsoft Docs
+title: ZAROVNÁNÍ (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66a9e29b99786cd83d8994ed2da77ac2f3e48ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 52d539cba3f6e00b76b36c1793f383d0615263c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32048745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691664"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
-Zarovnává další proměnná nebo instrukcí na bajtů, které je násobkem `number`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-ALIGN [[  
-number  
-]]  
-  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Zarovná další proměnné nebo instrukce na bajtů, které je násobkem *číslo*.
+
+## <a name="syntax"></a>Syntaxe
+
+> ZAROVNAT [[*číslo*]]
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

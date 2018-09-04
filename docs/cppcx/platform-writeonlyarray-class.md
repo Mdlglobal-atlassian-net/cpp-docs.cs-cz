@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680922"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::writeonlyarray – třída
 Představuje jednorozměrné pole, která slouží jako vstupní parametr, pokud volající předá pole pro metodu tak, aby vyplnil.  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](/windows/desktop/com/structure-of-com-error-codes).  
   
   
 ## <a name="see-also"></a>Viz také  

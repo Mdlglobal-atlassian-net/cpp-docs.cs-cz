@@ -1,7 +1,7 @@
 ---
-title: Operátory (MASM) | Microsoft Docs
+title: Operátory (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dda3210dcc7ee9c8971ad279054e7c4c29b5308
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5b43080018c1193321887cd2e79b06e79d10bab8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053051"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686754"
 ---
 # <a name="operators-masm"></a>Operátory (MASM)
-Další informace o operátory v jazyce assembleru maker Microsoft najdete v tématu [referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Další informace o operátory v jazyce assembleru maker Microsoft najdete v tématu [referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

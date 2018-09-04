@@ -1,7 +1,7 @@
 ---
 title: Funkce oboru názvů Concurrency::Direct3D (AMP) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/31/2018
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -11,6 +11,7 @@ f1_keywords:
 - amp/Concurrency::direct3d::d3d_access_unlock
 - amp/Concurrency::direct3d::firstbithigh
 - amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::get_device
 - amp/Concurrency::direct3d::imax
 - amp/Concurrency::direct3d::is_timeout_disabled
 - amp/Concurrency::direct3d::mad
@@ -28,20 +29,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a1a4bcc194f2d762e48144be2c2bdb84376ed31b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682165"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce oboru názvů Concurrency::Direct3D (AMP)
 ||||  
 |-|-|-|  
 |[Abs](#abs)|[Stažení](#clamp)|[countbits –](#countbits)|
-|[create_accelerator_view](#create_accelerator_view)|||
-|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh –](#firstbithigh)|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
+|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh –](#firstbithigh)|  
+|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|[get_device –](#get_device)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[MAD –](#mad)|[make_array](#make_array)|[šumu](#noise)|  
 |[RADIANS](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|  
@@ -236,10 +237,24 @@ IUnknown *get_buffer(
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní IUnknown odpovídající vyrovnávací paměti rozhraní Direct3D podkládající pole.  
-  
+
+## <a name="a-namegetdevice-getdevice"></a><a name="get_device"> get_device –
+Získejte rozhraní zařízení D3D accelerator_view základní.
+
+```
+IUnknown* get_device(const accelerator_view Av);
+```
+
+### <a name="parameters"></a>Parametry
+`Av` Accelerator_view rozhraní D3D, pro které je vráceno základní rozhraní D3D zařízení.
+
+
+### <a name="return-value"></a>Návratová hodnota
+`IUnknown` Ukazatele na rozhraní zařízení D3D základní accelerator_view.
+
 ##  <a name="imax"></a>  Imax –  
  Určí maximální číselnou hodnotu argumentů  
-  
+
 ```  
 inline int imax(
     int _X,  

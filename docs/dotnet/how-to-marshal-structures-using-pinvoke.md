@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689507"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
 Tento dokument popisuje, jak nativní funkce, které přijímají struktury stylu jazyka C lze volat z spravovaných funkcí pomocí pomocí deklarace P/Invoke. Přestože doporučujeme používat funkce zprostředkovatele komunikace C++ místo P/Invoke vzhledem k tomu, že P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná implementovat, pokud nespravovaná rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, P/Invoke je jedinou možností. V opačném případě najdete v následujících dokumentech:  
@@ -34,7 +34,7 @@ Tento dokument popisuje, jak nativní funkce, které přijímají struktury styl
   
  Ve výchozím nastavení nativní a spravovaná struktury jsou stanoveny odlišně v paměti, úspěšném předání struktury přes hranice spravovaného a nespravovaného vyžaduje další kroky k zachování integrity dat.  
   
- Tento dokument popisuje kroky potřebné k definování spravované ekvivalenty nativních struktur a jak výsledné struktury mohou být předány nespravované funkci. Tento dokument předpokládá, že jednoduchá struktury – ty, které neobsahují řetězce nebo ukazatelů, se používají. Informace o interoperabilitě nepřenositelné najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke nemůže mít nepřenositelné typy jako návratovou hodnotu. Přenositelné typy zabírají stejné množství spravovaného a nespravovaného kódu. Další informace najdete v tématu [přenositelné a Non-přenositelné typy](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Tento dokument popisuje kroky potřebné k definování spravované ekvivalenty nativních struktur a jak výsledné struktury mohou být předány nespravované funkci. Tento dokument předpokládá, že jednoduchá struktury – ty, které neobsahují řetězce nebo ukazatelů, se používají. Informace o interoperabilitě nepřenositelné najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke nemůže mít nepřenositelné typy jako návratovou hodnotu. Přenositelné typy zabírají stejné množství spravovaného a nespravovaného kódu. Další informace najdete v tématu [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Zařazování jednoduchý, blittable struktury přes hranice spravovaného a nespravovaného nejprve vyžaduje definovat spravovaná verze nativní struktury. Tyto struktury mohou mít libovolný platný název. není žádný vztah mezi nativní a spravovaná verze dvě struktury než jejich data rozložení. Proto je důležité, že spravovaná verze obsahuje pole, která budou mít stejné velikosti a ve stejném pořadí jako původní verze. (Neexistuje žádný mechanismus pro zajištění, že spravovaný a nativní verze struktury jsou ekvivalentní, takže nekompatibilita není zřejmé, až do spuštění. Zodpovídá programátor Ujistěte se, že dvě struktury se stejné rozvržení data.)  
   

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b80ae92671b2ee78cd2f48e9a35958c89232e4e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216572"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683038"
 ---
 # <a name="hstringreference-class"></a>HStringReference – třída
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Poznámky
 
-Doba života běhu záložní vyrovnávací paměti v novém HSTRING není spravována modulu Windows Runtime. Volající alokuje zdrojový řetězec v zásobníku přidělení haldy a odstranilo nebezpečí nevracení paměti. Volající také musí zajistit, že zdrojový řetězec se nezmění po celou dobu životnosti připojených HSTRING. Další informace najdete v tématu [WindowsCreateStringReference funkce](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
+Doba života běhu záložní vyrovnávací paměti v novém HSTRING není spravována modulu Windows Runtime. Volající alokuje zdrojový řetězec v zásobníku přidělení haldy a odstranilo nebezpečí nevracení paměti. Volající také musí zajistit, že zdrojový řetězec se nezmění po celou dobu životnosti připojených HSTRING. Další informace najdete v tématu [WindowsCreateStringReference funkce](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference).
 
 ## <a name="members"></a>Členové
 

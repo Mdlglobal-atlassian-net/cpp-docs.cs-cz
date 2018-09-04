@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211759"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692445"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003Mapování obslužných rutin Windows na objekty
 Tato poznámka popisuje MFC rutin, které podporují mapování Windows objekt popisovače objektů jazyka C++.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Díky tomu položky v mapování trvalé přiřazení *myWnd* a *hWnd*. Volání `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na *myWnd*. Když *myWnd* je odstraněn, destruktor automaticky zničí *hWnd* voláním Windows [destroywindow –](https://msdn.microsoft.com/library/windows/desktop/ms632682) funkce. Pokud to není žádoucí, *hWnd* musí být odpojen od *myWnd* před *myWnd* zničen (obvykle při ukončení oboru, ve kterém *myWnd*byl definován). `Detach` Metoda to dělá.  
+ Díky tomu položky v mapování trvalé přiřazení *myWnd* a *hWnd*. Volání `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na *myWnd*. Když *myWnd* je odstraněn, destruktor automaticky zničí *hWnd* voláním Windows [destroywindow –](/windows/desktop/api/winuser/nf-winuser-destroywindow) funkce. Pokud to není žádoucí, *hWnd* musí být odpojen od *myWnd* před *myWnd* zničen (obvykle při ukončení oboru, ve kterém *myWnd*byl definován). `Detach` Metoda to dělá.  
   
 ```  
 myWnd.Detach();

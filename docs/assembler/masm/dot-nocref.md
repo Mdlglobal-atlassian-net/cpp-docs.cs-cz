@@ -1,7 +1,7 @@
 ---
-title: . NOCREF | Microsoft Docs
+title: . NOCREF | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee936ebbbd2136f14fecf51bfe0b7d69c61a476
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9ad9e4d84d8d49b4d1b5c71cc695031da9cd878e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679997"
 ---
 # <a name="nocref"></a>.NOCREF
-Potlačí seznam symbolů v souboru symbol tabulky a prohlížeče.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.NOCREF [[name[[, name]]...]]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud jsou zadané názvy, jsou potlačovány pouze názvy daným. Stejné jako [. XCREF](../../assembler/masm/dot-xcref.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Potlačí seznam symbolů v souboru tabulky a prohlížeči symbolů.
+
+## <a name="syntax"></a>Syntaxe
+
+> . NOCREF [[název [[, název]]...]]
+
+## <a name="remarks"></a>Poznámky
+
+Pokud jsou zadané názvy, jsou potlačeny křestní jména. Stejné jako [. XCREF](../../assembler/masm/dot-xcref.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

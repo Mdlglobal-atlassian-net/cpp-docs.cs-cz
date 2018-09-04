@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9fe1bcce5290d7e977dc423f146bb3a5b66d484
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216081"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690171"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap – třída
 `concurrent_unordered_multimap` Třídy je kontejner bezpečné souběžnosti, který řídí různé délky sekvence elementů typu `std::pair<const K, _Element_type>`. Sekvence je reprezentována způsobem, který umožňuje bezpečné na souběžnosti, přístup k prvkům, přístup k iterátoru a operace procházení iterátoru připojit.  
@@ -305,7 +305,7 @@ std::pair<const_iterator,
  Hodnota klíče pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [pár](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) kde první prvek je iterace na začátek a druhý prvek je iterátor na konec rozsahu.  
+ A [pár](../../../standard-library/pair-structure.md) kde první prvek je iterace na začátek a druhý prvek je iterátor na konec rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
  Je možné pro souběžné operace vložení způsobit další klíče má být vložen iterátoru počáteční a koncový iterátor.  

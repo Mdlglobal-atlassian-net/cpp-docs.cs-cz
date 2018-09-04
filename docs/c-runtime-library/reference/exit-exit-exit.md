@@ -1,5 +1,5 @@
 ---
-title: ukončení, _exit –, _exit – | Microsoft Docs
+title: Konec, _Exit, _exit | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/02/2018
 ms.technology:
@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678151"
 ---
-# <a name="exit-exit-exit"></a>ukončení, _exit –, _exit –
+# <a name="exit-exit-exit"></a>ukončit, _Exit, _exit
 
-Ukončí proces volání. **Ukončete** funkce ukončí ho po vyčištění; **_exit –** a **_exit –** okamžitě ho ukončit.
+Ukončí volající proces. **Ukončit** funkce skončí po vyčištění **_exit** a **_Exit** ukončit okamžitě.
 
 > [!NOTE]
-> Vypnout aplikaci pomocí univerzální platformu Windows (UWP), s výjimkou testování nebo ladění scénáře nepoužívejte tuto metodu. Zavřete aplikaci ve Store způsoby programový nebo uživatelského rozhraní nejsou povolené podle požadavků [Microsoft Store zásady](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životního cyklu aplikace pro UPW](/windows/uwp/launch-resume/app-lifecycle). Další informace o aplikacích pro Windows 10 najdete v tématu [postupy, příručky pro aplikace pro Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
+> Nepoužívejte tuto metodu k vypnutí aplikace univerzální platformy Windows (UPW), s výjimkou testování nebo ladění scénářů. Zavření aplikace pro Store způsoby programátorské nebo uživatelské rozhraní nejsou povoleny podle [zásady Microsoft Store](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životního cyklu aplikace pro UPW](/windows/uwp/launch-resume/app-lifecycle). Další informace o aplikacích pro Windows 10 najdete v tématu [postupy příručky pro aplikace pro Windows 10](https://developer.microsoft.com/en-us/windows/apps).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,22 +74,22 @@ void _exit(
 
 ## <a name="remarks"></a>Poznámky
 
-**Ukončete**, **_exit –** a **_exit –** funkce ukončit proces volání. **Ukončete** funkce volá destruktory pro místní objekty, pak zavolá – v pořadí last-in-first-out (LIFO) – funkce, které jsou registrovány **atexit** a **_onexit –** a pak vyprázdnění všech vyrovnávací paměti souboru předtím, než ho ukončí proces. **_Exit –** a **_exit –** funkce ukončit proces bez zničení objektů místní nebo zpracování **atexit** nebo **_onexit –** funkce a bez vyprázdnění vyrovnávací paměti datového proudu.
+**Ukončit**, **_Exit** a **_exit** funkce ukončí volající proces. **Ukončit** volá funkci pro místní objekty, pak zavolá – v pořadí last-in-first-out (LIFO) – funkce, které jsou registrovány **atexit** a **_onexit**a potom vyprázdní všechny vyrovnávací paměti souborů než proces ukončí. **_Exit** a **_exit** funkce ukončit bez zničení objektů thread local nebo zpracování **atexit** nebo **_onexit**funkce a bez vyprazdňování vyrovnávací paměti datového proudu.
 
-I když **ukončete**, **_exit –** a **_exit –** volání nevrátí hodnotu, hodnotu v *stav* je k dispozici pro hostitelské prostředí nebo čeká se na volání procesu, pokud takové existuje, po ukončení procesu. Obvykle se nastaví volajícího *stav* hodnotu na 0, budou znamenat normální ukončovací nebo na jinou hodnotu indikující chybu. *Stav* hodnota je k dispozici pro operační systém dávkovém příkazu **ERRORLEVEL** a je reprezentované pomocí jedné z dvě konstanty: **exit_success –**, která reprezentuje hodnotu 0 nebo **exit_failure –**, která představuje hodnotu 1.
+I když **ukončit**, **_Exit** a **_exit** volání nesmí vracet hodnotu, hodnota v *stav* je k dispozici do hostitelského prostředí nebo čeká volajícího procesu, pokud nějaký existuje – po ukončení procesu. Obvykle, nastaví volajícího *stav* hodnotu 0 udávající normální ukončení nebo na jinou hodnotu udávající chybu. *Stav* hodnota není k dispozici k příkazu batch operačního systému **ERRORLEVEL** a je reprezentována jednou ze dvou konstant: **EXIT_SUCCESS**, která představuje hodnotu 0 nebo **EXIT_FAILURE**, která představuje hodnotu 1.
 
-**Ukončete**, **_exit –**, **_exit –**, **quick_exit**, **_cexit –**, a **_c_exit –** funkce chovat následujícím způsobem.
+**Ukončit**, **_Exit**, **_exit**, **quick_exit**, **_cexit –**, a **_c_exit –** funkce se chovají následovně.
 
 |Funkce|Popis|
 |--------------|-----------------|
-|**Ukončení**|Provede dokončení procedury ukončení knihovna jazyka C, ukončí proces a poskytuje zadaný stavový kód na hostitelském prostředí.|
-|**_Exit**|Provede minimální postupy ukončení knihovna jazyka C, ukončí proces a poskytuje zadaný stavový kód na hostitelském prostředí.|
-|**_exit**|Provede minimální postupy ukončení knihovna jazyka C, ukončí proces a poskytuje zadaný stavový kód na hostitelském prostředí.|
-|**quick_exit**|Provede rychlé postupy ukončení knihovna jazyka C, ukončí proces a poskytuje zadaný stavový kód, který má hostitelské prostředí.|
-|**_cexit**|Provádí kompletní C knihovny ukončení postupy a vrátí volajícímu. Nelze ukončit proces.|
-|**_c_exit**|Provede minimální C knihovny ukončení postupy a vrátí volajícímu. Nelze ukončit proces.|
+|**ukončení**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
+|**_Exit**|Provádí minimální postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
+|**_exit**|Provádí minimální postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
+|**quick_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a poskytuje zadaným stavovým kódem do hostitelského prostředí.|
+|**_cexit**|Provádí kompletní postupy ukončení knihovny jazyka C a vrátí řízení volajícímu. Nelze ukončit proces.|
+|**_c_exit**|Provádí minimální postupy ukončení knihovny jazyka C a vrátí řízení volajícímu. Nelze ukončit proces.|
 
-Při volání **ukončete**, **_exit –** nebo **_exit –** funkce, nejsou volána destruktory pro dočasné nebo automatické objekty, které existují v čase volání. Automatické objekt je nestatické místní objekt definovaný ve funkci. Dočasný objekt je objekt, který byl vytvořený v kompilátoru, jako je například hodnotu vrácenou z volání funkce. Zrušení automatického objekt před voláním **ukončete**, **_exit –**, nebo **_exit –**, explicitní volání destruktoru objektu, jak je vidět tady:
+Při volání **ukončit**, **_Exit** nebo **_exit** funkce, nejsou volány destruktory dočasných nebo automatických objektů, které existují v okamžiku volání. Automatický objekt je definován ve funkci nestatická místní objekt. Dočasný objekt je objekt, který je vytvořen kompilátorem, jako je například hodnota vrácená volání funkce. Chcete-li zničit automatický objekt před voláním **ukončit**, **_Exit**, nebo **_exit**, explicitně zavolejte destruktor objektu, jak je znázorněno zde:
 
 ```cpp
 void last_fn() {}
@@ -100,15 +100,15 @@ void last_fn() {}
 }
 ```
 
-Nepoužívejte **DLL_PROCESS_ATTACH** volat **ukončete** z **DllMain**. Chcete-li ukončit **DLLMain** fungovat, vrátí **FALSE** z **DLL_PROCESS_ATTACH**.
+Nepoužívejte **DLL_PROCESS_ATTACH** volat **ukončit** z **DllMain**. Pro ukončení **DLLMain** fungovat, vraťte **FALSE** z **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**Ukončete**, **_exit –**, **_exit –**|\<Process.h > nebo \<stdlib.h >|
+|**Ukončete**, **_Exit**, **_exit**|\<Process.h > nebo \<stdlib.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,7 +125,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>

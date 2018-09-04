@@ -1,7 +1,7 @@
 ---
-title: Použití jazyka C nebo C++ symboly v blocích __asm | Microsoft Docs
+title: Použití jazyka C nebo C++ symboly v blocích __asm | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746614de653649747bf20ae4c223e5687ee53f5c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ba8426e2a7ae1152a41fafa0c239498801c6e4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049424"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678890"
 ---
 # <a name="using-c-or-c-symbols-in-asm-blocks"></a>Používání symbolů jazyka C nebo C++ v blocích __asm
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- `__asm` Bloku mohou odkazovat na žádné symbol jazyka C nebo C++ v oboru, kde se zobrazí bloku. (C a C++ symboly jsou názvy proměnných, názvy funkcí a popisky; které je, názvy, které nejsou symbolický konstanty nebo `enum` členy. Nelze volat C++ členské funkce.)  
-  
- Několik omezení se vztahují na používání symbolů jazyka C a C++:  
-  
--   Každý příkaz jazyka sestavení může obsahovat pouze jednu C nebo C++ symbol. Více symbolů se mohou objevit v stejné pokyn sestavení pouze s **délka**, **typ**, a **velikost** výrazy.  
-  
--   Funkce, kterou se odkazuje v `__asm` bloku musí být deklarován (deklaraci) dříve v programu. Jinak, kompilátor nerozlišuje mezi názvy funkcí a popisky ve `__asm` bloku.  
-  
--   `__asm` Bloku nelze použít všechny symboly C nebo C++ s píše stejně jako MASM vyhrazená slova (bez ohledu na případ). MASM vyhrazená slova obsahují instrukce názvy, například **PUSH** a zaregistrujte názvy, například serveru.  
-  
--   Značky struktury a sjednocení nejsou rozpoznány v `__asm` bloky.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+`__asm` Bloku mohou odkazovat na jakýkoli symbol jazyka C nebo C++ v oboru, ve kterém se zobrazí bloku. (Symboly C a C++ jsou názvy proměnných, funkce názvy a popisky, které je, názvy, které nejsou Symbolické konstanty nebo `enum` členy. Nelze volat C++ členské funkce.)
+
+Používání symbolů jazyka C a C++ platí několik omezení:
+
+- Každý příkaz symbolického jazyka může obsahovat pouze jeden C nebo C++ symbol. Více symbolů se může objevit v stejné instrukci sestavení jenom s **délka**, **typ**, a **velikost** výrazy.
+
+- Funkce odkazované v `__asm` bloku musí být deklarovány dříve v programu (prototypem). V opačném případě kompilátor nelze rozlišit názvy a popisky v `__asm` bloku.
+
+- `__asm` Block nemůže používat žádné symboly jazyka C nebo C++ se stejnou pravopis MASM vyhrazená slova (bez ohledu na malá). MASM vyhrazená slova instrukcí názvy patří například **PUSH** a názvy, například SI zaregistrujte.
+
+- Značky struktury a sjednocení nejsou rozpoznány v `__asm` bloky.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

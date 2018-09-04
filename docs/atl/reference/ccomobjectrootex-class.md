@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219170"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684790"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx – třída
 Tato třída poskytuje metody pro zpracování správy referenční počet objektů pro neagregovaná a agregované objekty.  
@@ -279,7 +279,7 @@ IUnknown*
  Pokud objekt je agregován, ukazatel na vnější Neznámá je uložen v `m_pOuterUnknown`. Pokud objekt není agregovaný, počet odkazů přistupuje `AddRef` a `Release` je uložen v [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Pro každou třídu uvedené v [mapu objektu](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), tato funkce je volána při inicializaci modulu, a znovu když je ukončen.  
+ Pro každou třídu uvedené v mapě objektů, tato funkce je volána při inicializaci modulu, a znovu když je ukončen.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

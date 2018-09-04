@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691983"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementace rozhraní (Visual C++)
 Implementovat rozhraní, musí vytvoříte projekt knihovny ATL modelu COM aplikace nebo jako aplikace knihovny MFC, která obsahuje podporu ATL. Můžete použít [Průvodce projektem ATL](../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt ATL do aplikace knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.  
@@ -46,7 +46,7 @@ Implementovat rozhraní, musí vytvoříte projekt knihovny ATL modelu COM aplik
 4.  V zobrazení tříd, rozbalte objektu základních tříd a rozhraní uzel zobrazíte rozhraní jste implementovali a potom rozbalte uzel rozhraní zobrazíte jeho dostupné vlastnosti, metody a události.  
   
     > [!NOTE]
-    >  Můžete také použít [prohlížeče objektů](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) prozkoumat členy rozhraní.  
+    >  Můžete také použít [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code) prozkoumat členy rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření rozhraní modelu COM](../ide/creating-a-com-interface-visual-cpp.md)   

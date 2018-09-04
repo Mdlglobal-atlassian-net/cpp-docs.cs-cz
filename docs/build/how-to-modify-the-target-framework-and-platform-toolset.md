@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eef4c0e7e32b85e26fbdc6adb7a2ebd26850b2ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464626"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691732"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 Můžete změnit nastavení projektu Visual C++ pro cílení na různé verze rozhraní .NET Framework a jiné sady nástrojů platformy. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Můžete změnit cílovou sadu nástrojů platformy úpravou vlastností projektu. Cílové rozhraní Framework lze změnit úpravou souboru projektu (.vcxproj). Nemusíte udržovat samostatnou kód základní pro každý cíl kompilace.  
@@ -34,7 +34,7 @@ Můžete změnit nastavení projektu Visual C++ pro cílení na různé verze ro
 > [!NOTE]
 >  Chcete-li změnit sadu nástrojů cílové platformy, musíte mít přidružené verze sady Visual Studio nebo Windows Platform SDK nainstalovány. Například pro zaměření na platformu Itanium se **Windows7.1SDK** sada nástrojů platformy, musíte mít [Microsoft Windows SDK pro Windows 7 a rozhraní .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) nainstalované, ale můžete použít jinou kompatibilní verzi sady Visual Studio k provedení vývojové práce, za předpokladu, že se zaměříte správnou Framework verze a platformy sadu nástrojů.  
   
- Můžete rozšířit cílovou platformu další tak, že vytvoříte vlastní sady nástrojů platformy. Další informace najdete v tématu [cílení na více verzí v nativním C++](http://go.microsoft.com/fwlink/p/?linkid=196619) na blogu Visual C++.  
+ Můžete rozšířit cílovou platformu další tak, že vytvoříte vlastní sady nástrojů platformy. Další informace najdete v tématu [cílení na více verzí v nativním C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) na blogu Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Chcete-li změnit cílový rámec  
   

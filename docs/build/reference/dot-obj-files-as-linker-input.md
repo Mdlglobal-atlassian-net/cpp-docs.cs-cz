@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691748"
 ---
 # <a name="obj-files-as-linker-input"></a>Soubory .Obj jako vstup linkeru
 
@@ -38,7 +38,7 @@ Společnost Microsoft poskytuje úplný popis běžný formát souborů objektu.
 
 Od verze Visual Studio 2005, kompilátor jazyka Microsoft Visual C++ podporuje znaky znakové sady Unicode v identifikátorech definované ISO/IEC C a C++ standardy. Předchozí verze kompilátoru podporovány v identifikátorech pouze znaky ASCII. Pro podporu kódování Unicode v názvy funkcí, tříd a statické, kompilátoru a propojovacího programu je používat kódování Unicode UTF-8 symbolů COFF v souborech .obj. Kódování UTF-8 je upwardly kompatibilní s kódováním ASCII, které se používají v předchozích verzích sady Visual Studio.
 
-Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organizace.
+Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](http://www.unicode.org/) organizace.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -46,5 +46,5 @@ Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódov�
 [Možnosti linkeru](../../build/reference/linker-options.md)  
 [Podpora pro Unicode](../../text/support-for-unicode.md)  
 [Podpora kódování Unicode v kompilátoru a linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode standard](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Unicode standard](http://www.unicode.org/)  
 [Formátu PE](/windows/desktop/Debug/pe-format)  

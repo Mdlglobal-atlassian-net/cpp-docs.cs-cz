@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678404"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|Volá se při změně velikost klientské oblasti okna Prohlížeč schránky.|
 |[CWnd::OnSizing](#onsizing)|Označuje, že uživatel je změna velikosti obdélníku.|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Volat z správce tisku pokaždé, když je přidán či odebrán z fronty správce tisku úlohu.|
-|[CWnd::OnStyleChanged](#onstylechanged)|Označuje, že [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkce Windows změnil jeden nebo více stylů okna.|
-|[CWnd::OnStyleChanging](#onstylechanging)|Označuje, že [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkce Windows se chystá změna jeden nebo více stylů okna.|
+|[CWnd::OnStyleChanged](#onstylechanged)|Označuje, že [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkce Windows změnil jeden nebo více stylů okna.|
+|[CWnd::OnStyleChanging](#onstylechanging)|Označuje, že [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkce Windows se chystá změna jeden nebo více stylů okna.|
 |[CWnd::OnSysChar](#onsyschar)|Volá se při stisknutí klávesy se přeloží na znak systému.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Volá se pro všem oknům nejvyšší úrovně, když dojde ke změně v nastavení systémových barev.|
 |[CWnd::OnSysCommand](#onsyscommand)|Volá se, když uživatel vybere příkaz z nabídky ovládací prvek nebo když uživatel vybere tlačítko Maximalizovat nebo minimalizovat.|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|Volá se po každé interval určený u [SetTimer](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Zpracovat jeden vstup z dotykového ovládání Windows.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Proces vstupy od dotyku Windows.|
-|[CWnd::OnUniChar](#onunichar)|Volá se, když se stiskne klávesa. To znamená, že má aktuální okno fokus klávesnice a [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy je přeložen [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) funkce.|
+|[CWnd::OnUniChar](#onunichar)|Volá se, když se stiskne klávesa. To znamená, že má aktuální okno fokus klávesnice a [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy je přeložen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) funkce.|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Volá se při zlikvidování rozevírací nabídka nebo podnabídka.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Volá se, aby ke změně stavu uživatelského rozhraní (UI) pro určené okno a všech jeho podřízených oken.|
 |[CWnd::OnUserChanged](#onuserchanged)|Volá se, až se uživatel přihlásí nebo vypnout.|
@@ -2244,7 +2244,7 @@ Obrazec blikající kurzor o může být řádek nebo blok.
 
 Parametry *nWidth* a *nHeight* zadejte blikající kurzor na šířku a výšku (v logických jednotkách); přesné šířku a výšku (v pixelech) závisí na režimu mapování.
 
-Okraj okna šířky nebo výšky v systému je možné načíst podle [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkce Windows s SM_CXBORDER a SM_CYBORDER indexů. Pomocí okna ohraničení šířka nebo výška zajistí, že blikající kurzor bude zobrazovat na zobrazení s vysokým rozlišením.
+Okraj okna šířky nebo výšky v systému je možné načíst podle [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkce Windows s SM_CXBORDER a SM_CYBORDER indexů. Pomocí okna ohraničení šířka nebo výška zajistí, že blikající kurzor bude zobrazovat na zobrazení s vysokým rozlišením.
 
 `CreateGrayCaret` Členskou funkci automaticky zničí předchozí blikající kurzor o tvar, pokud existuje, bez ohledu na to, které okno Vlastní blikající kurzor. Po vytvoření je zpočátku skrytá blikajícího kurzoru. Chcete-li zobrazit blikající kurzor, [ShowCaret](#showcaret) musí být členská funkce volána.
 
@@ -2278,7 +2278,7 @@ Obrazec blikající kurzor o může být řádek nebo bloku.
 
 Parametry *nWidth* a *nHeight* zadejte blikající kurzor na šířku a výšku (v logických jednotkách); přesné šířku a výšku (v pixelech) závisí na režimu mapování.
 
-Okraj okna šířky nebo výšky v systému je možné načíst podle [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkce Windows s SM_CXBORDER a SM_CYBORDER indexů. Pomocí okna ohraničení šířka nebo výška zajistí, že blikající kurzor bude zobrazovat na zobrazení s vysokým rozlišením.
+Okraj okna šířky nebo výšky v systému je možné načíst podle [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkce Windows s SM_CXBORDER a SM_CYBORDER indexů. Pomocí okna ohraničení šířka nebo výška zajistí, že blikající kurzor bude zobrazovat na zobrazení s vysokým rozlišením.
 
 `CreateSolidCaret` Členskou funkci automaticky zničí předchozí blikající kurzor o tvar, pokud existuje, bez ohledu na to, které okno Vlastní blikající kurzor. Po vytvoření je zpočátku skrytá blikajícího kurzoru. Chcete-li zobrazit blikající kurzor, [ShowCaret](#showcaret) musí být členská funkce volána.
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Poznámky
 
-Pro windows na úrovni standard a ovládacích prvků, včetně ovládacích prvků ActiveX; stačí podpory Active Accessibility výchozí knihovny MFC Nicméně pokud vaše `CWnd`-odvozená třída obsahuje nonwindowed prvky uživatelského rozhraní, knihovna MFC má vědět o nich. V takovém případě je nutné přepsat odpovídající [Active Accessibility členské funkce](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74) ve své třídě a je nutné volat `EnableActiveAccessibility` v konstruktoru třídy.
+Pro windows na úrovni standard a ovládacích prvků, včetně ovládacích prvků ActiveX; stačí podpory Active Accessibility výchozí knihovny MFC Nicméně pokud vaše `CWnd`-odvozená třída obsahuje nonwindowed prvky uživatelského rozhraní, knihovna MFC má vědět o nich. V takovém případě je nutné přepsat odpovídající [Active Accessibility členské funkce](/windows/desktop/winauto/sdk-components) ve své třídě a je nutné volat `EnableActiveAccessibility` v konstruktoru třídy.
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ Výchozí atributy jsou přiřazeny ke kontextu zobrazení pokaždé, když nač
 
 `GetWindowDC` je určena pro použití pro speciální vykreslování efektů v rámci `CWnd` neklientské oblasti. Kreslení v neklientské oblasti jakékoli okno se nedoporučuje.
 
-[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkce Windows je možné načíst dimenzí z různých částí neklientské oblasti, jako je například záhlaví, nabídky a posuvníky.
+[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkce Windows je možné načíst dimenzí z různých částí neklientské oblasti, jako je například záhlaví, nabídky a posuvníky.
 
 Po dokončení vykreslení obsahu [ReleaseDC](#releasedc) členská funkce se musí volat uvolnění kontextu zobrazení. Selhání uvolnění kontextu zobrazení vážně ovlivní Malování požadoval aplikací z důvodu omezení počtu kontexty zařízení, které je možné otevřít ve stejnou dobu.
 
@@ -5441,7 +5441,7 @@ Určuje, zda má členská funkce zpracovala danou zprávu. Je nenulová, pokud 
 
 Když `IsDialogMessage` funkce zpracování zprávy, se kontroluje klávesnice zprávy a převede je do výběrové příkazy pro příslušné dialogové okno. Například klávesu TAB vybere další ovládací prvek nebo skupinu ovládacích prvků a vybere klávesu šipka dolů na další ovládací prvek ve skupině.
 
-Nesmí předat zprávu zpracovat `IsDialogMessage` k [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) nebo [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcí Windows, protože již byla zpracována.
+Nesmí předat zprávu zpracovat `IsDialogMessage` k [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) nebo [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcí Windows, protože již byla zpracována.
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ Nenulové, pokud se úspěšně změnil styl; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR (&#124;) – operátor. Najdete v tématech [styly oken](https://msdn.microsoft.com/library/windows/desktop/ms632600) a [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.
+Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR (&#124;) – operátor. Najdete v tématech [styly oken](https://msdn.microsoft.com/library/windows/desktop/ms632600) a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.
 
-Pokud *nFlags* nenulové, `ModifyStyle` volá rozhraní Windows API funkci [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) a překreslí okna tím, že zkombinujete *nFlags* s následující čtyři předvolby příznaky:
+Pokud *nFlags* nenulové, `ModifyStyle` volá rozhraní Windows API funkci [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) a překreslí okna tím, že zkombinujete *nFlags* s následující čtyři předvolby příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -5787,9 +5787,9 @@ Nenulové, pokud se úspěšně změnil styl; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR (&#124;) – operátor. Najdete v tématech [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v této příručce a [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK pro informace o dostupných rozšířené styly
+Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR (&#124;) – operátor. Najdete v tématech [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v této příručce a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK pro informace o dostupných rozšířené styly
 
-Pokud *nFlags* nenulové, `ModifyStyleEx` volá rozhraní Windows API funkci [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) a překreslí okna tím, že zkombinujete *nFlags* s následující čtyři předvolby příznaky:
+Pokud *nFlags* nenulové, `ModifyStyleEx` volá rozhraní Windows API funkci [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) a překreslí okna tím, že zkombinujete *nFlags* s následující čtyři předvolby příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -8113,7 +8113,7 @@ Nenulové, pokud je povoleno posouvání kolečka myši; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nejsou přepsány, `OnMouseWheel` volá výchozí [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows automaticky směruje zprávy ovládací prvek nebo podřízená okna, které má fokus. Funkci Win32 [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) šíří zprávy řetězem nadřazeného okna, které zpracovává je.
+Pokud nejsou přepsány, `OnMouseWheel` volá výchozí [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows automaticky směruje zprávy ovládací prvek nebo podřízená okna, které má fokus. Funkci Win32 [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) šíří zprávy řetězem nadřazeného okna, které zpracovává je.
 
 *ZDelta* parametr je násobkem WHEEL_DELTA, jež je nastavena na 120. Tato hodnota je prahová hodnota pro akci mají být provedeny, a jedna taková akce (například posouvací vpřed o jeden stupeň) se budou objevovat pro každý rozdílový.
 
@@ -9464,7 +9464,7 @@ Toto volání je pouze k informačním účelům.
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-Rozhraní volá tuto funkci člena po [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkce změnila jeden nebo více stylů okna.
+Rozhraní volá tuto funkci člena po [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkce změnila jeden nebo více stylů okna.
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ Odkazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms6326
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-Tato členská funkce volá framework při [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkcí je změnit jedno nebo více stylů okna.
+Tato členská funkce volá framework při [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkcí je změnit jedno nebo více stylů okna.
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ Určuje identifikátor časovače.
 
 ### <a name="remarks"></a>Poznámky
 
-[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows odešle [WM_TIMER](/windows/desktop/winmsg/wm-timer) zprávy, když žádné zprávy ve frontě zpráv aplikace.
+[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows odešle [WM_TIMER](/windows/desktop/winmsg/wm-timer) zprávy, když žádné zprávy ve frontě zpráv aplikace.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.
@@ -9960,7 +9960,7 @@ Hodnota TRUE, pokud aplikační procesy Windows touch vstupy; v opačném příp
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-Rozhraní volá tato členská funkce, když se stiskne klávesa. To znamená, že má aktuální okno fokus klávesnice a [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy je přeložen [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) funkce.
+Rozhraní volá tato členská funkce, když se stiskne klávesa. To znamená, že má aktuální okno fokus klávesnice a [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy je přeložen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) funkce.
 
 ```
 afx_msg void OnUniChar(
@@ -10207,7 +10207,7 @@ Tato metoda přijímá [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/desktop/dwm/wm-dwm
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-Rozhraní volá tuto funkci člena, velikost, umístění a Z pořadí se při změně v důsledku volání [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) členská funkce nebo jiné funkce Správa oken.
+Rozhraní volá tuto funkci člena, velikost, umístění a Z pořadí se při změně v důsledku volání [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) členská funkce nebo jiné funkce Správa oken.
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ Výchozí implementace odešle [WM_SIZE](/windows/desktop/winmsg/wm-size) a [WM_
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-Rozhraní volá tuto funkci člena, když velikost, umístění a Z pořadí je změnit v důsledku volání [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) členská funkce nebo jiné funkce Správa oken.
+Rozhraní volá tuto funkci člena, když velikost, umístění a Z pořadí je změnit v důsledku volání [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) členská funkce nebo jiné funkce Správa oken.
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10602,7 +10602,7 @@ Tato členská funkce přepsání umožňuje dynamické vytváření podtříd o
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows.
+Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ Tato funkce je podobný [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-s
 
 Pokud [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) a [SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) nejsou zadané, `ScrollWindowEx` členskou funkci nedojde k zneplatnění oblasti, která je přechod ze. Pokud některý z těchto příznaků je nastavena, `ScrollWindowEx` zruší platnost této oblasti. V oblasti není aktualizován, dokud volání aplikace [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) členskou funkci, volání [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) členská funkce (určení [RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow) nebo [ RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)), nebo zkopíruje [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy z fronty aplikace.
 
-Pokud má okno [WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679) styl, vrácený oblasti určené *prgnUpdate* a *lpRectUpdate* představují oblasti celkem roloval okna, které musí aktualizovat, včetně všechny oblasti v podřízených oken, které je nutné aktualizovat.
+Pokud má okno [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) styl, vrácený oblasti určené *prgnUpdate* a *lpRectUpdate* představují oblasti celkem roloval okna, které musí aktualizovat, včetně všechny oblasti v podřízených oken, které je nutné aktualizovat.
 
 Pokud [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) označen příznakem, Windows nebudou správně aktualizovat obrazovku Pokud posunul součástí podřízené okno. Součást roloval podřízené okno, které leží mimo zdrojového obdélníku smazání a aktivním správně v jeho nové místo. Použití [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) funkce Windows k přesunutí podřízených oken, které se nenacházejí zcela v rámci *lpRectScroll* obdélník. Kurzor přemístí, pokud je nastavený příznak SW_SCROLLCHILDREN a obdélník blikající kurzor o protíná obdélník posuvníku.
 
@@ -11497,7 +11497,7 @@ Ukazatel na COLORREF hodnotu, která určuje průhlednost barevný kód má být
 Alfa používají k popisu krytí okně vrstvami. Další informace najdete v tématu `SourceConstantAlpha` člena [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struktury. Když *bAlpha* je 0, v okně je dokonale transparentní. Když *bAlpha* je 255, v okně je skrytá.
 
 *dwFlags*  
-Určuje akci, kterou chcete provést. Tento parametr může být jeden nebo více z následujících hodnot. Seznam možných hodnot najdete v tématu [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540).
+Určuje akci, kterou chcete provést. Tento parametr může být jeden nebo více z následujících hodnot. Seznam možných hodnot najdete v tématu [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -11505,7 +11505,7 @@ Nenulové, pokud funkce uspěje; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540), jak je popsáno v sadě Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 

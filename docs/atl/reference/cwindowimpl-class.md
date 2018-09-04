@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197198"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678625"
 ---
 # <a name="cwindowimpl-class"></a>Cwindowimpl – třída
 Poskytuje metody pro vytváření nebo vytvoření podtřídy časového období.  
@@ -156,16 +156,16 @@ HWND Create(
  [in] Určuje název okna. Výchozí hodnota je NULL.  
   
  *dwStyle*  
- [in] Styl okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ [in] Styl okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.  
   
  *dwExStyle*  
- [in] Styl rozšířené okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ [in] Styl rozšířené okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *MenuOrID*  
  [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.  
   
  *lpCreateParam*  
- [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu popisovač do nově vytvořeného okna. V opačném případě hodnota NULL.  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Typ okna|Proceduru okna|  
 |--------------------|----------------------|  
-|Okno založené na nové třídy okna, zadaná pomocí [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) – makro.|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) funkci Win32.|  
+|Okno založené na nové třídy okna, zadaná pomocí [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) – makro.|[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) funkci Win32.|  
 |Okno podle třídy okna, která upravuje existující třídu, zadaná pomocí [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) – makro.|Existující třídu okna proceduru okna.|  
 |Okno rozčleněných do podtříd.|Rozčleněné okno původní proceduru okna.|  
   

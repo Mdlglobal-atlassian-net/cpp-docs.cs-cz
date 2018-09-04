@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691189"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
 > [!WARNING]
-> Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++. Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++. Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/).
 >
 > Informace o přidávání prostředků do C + +/ CLI projekty, najdete v [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
@@ -52,9 +52,6 @@ Popisuje editory prostředků k dispozici v sadě Visual Studio, typy prostředk
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Obsahuje odkazy na dokumentaci jazyka Visual C++.
-
-[Představení sady Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Popisuje úplnou sadu nástrojů pro vývoj, které všechny používat stejné integrované vývojové prostředí (IDE), což jim umožní sdílení nástrojů a usnadňuje vytváření řešení jazyků.
 
 [Kontaktujte nás](/visualstudio/ide/talk-to-us)  
 Obsahuje odkazy na informace o používání sady dokumentace, kontaktovat podporu produktů a použití funkce pro usnadnění přístupu.

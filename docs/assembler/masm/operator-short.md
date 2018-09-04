@@ -1,7 +1,7 @@
 ---
-title: SHORT – operátor | Microsoft Docs
+title: SHORT – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f307482e602759c688ebca120a46efce7624a25
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 13ea2b0d7333bcdabc42e59ac3f3d4e4a24a0af3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056324"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686233"
 ---
 # <a name="operator-short"></a>SHORT – operátor
-Nastaví typ *popisek* na krátké. Všechny přeskočí *popisek* musí být krátký (v rozsahu -128 bajtů + 127 z přechod pokyn k *popisek*).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-SHORT label  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Nastaví typ *popisek* na krátké. Všechny skoky na *popisek* musí být krátký (v rozsahu -128 bajtů + 127 z jump pokyn k *popisek*).
+
+## <a name="syntax"></a>Syntaxe
+
+> KRÁTKÝ popis
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

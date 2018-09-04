@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2054 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2054 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a9c754cdd1ea33c004f5dea431829bea5532cd0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 026699a1ce41681fc10a7fbc37a76b86c7caef4c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688241"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>Méně závažná chyba nástroje ML A2054
-**Vynutit Chyba: hodnota není rovno 0**  
-  
- Podmíněné error – direktiva [. ERRNZ](../../assembler/masm/dot-errnz.md) byl použit ke generování této chyby.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Vynucené Chyba: hodnota není roven 0**
+
+Podmíněné error – direktiva [. ERRNZ](../../assembler/masm/dot-errnz.md) se použil k vygenerování této chyby.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

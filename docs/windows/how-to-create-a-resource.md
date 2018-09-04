@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679790"
 ---
 # <a name="how-to-create-a-resource"></a>Postupy: Vytvoření prostředku
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221017"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Chcete-li vytvořit nový prostředek v zobrazení tříd
 
-1. V [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na vaší třídy a zvolte **přidat**, pak klikněte na tlačítko **přidat prostředek** z místní nabídky.
+1. V [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na vaší třídy a zvolte **přidat**, pak klikněte na tlačítko **přidat prostředek** z místní nabídky.
 
 2. V [přidat prostředek – dialogové okno](../windows/add-resource-dialog-box.md), vyberte typ prostředku, které chcete přidat do projektu.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db05d1b19a67fc54a148d407fd90992a6d37c4c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25ec172fb38fb3b200086c5f9317ccd8e5e54281
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213584"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691477"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf –&gt;
 
@@ -45,7 +45,7 @@ Zahrnout standardní hlavička iostreams \<streambuf – > k definování šablo
 
 |Třída|Popis|
 |-|-|
-|[basic_streambuf – třída](https://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Třída šablony popisuje abstraktní základní třída pro odvození vyrovnávací paměť datového proudu, který řídí přenosu prvky do a z konkrétní reprezentace datového proudu.|
+|[basic_streambuf – třída](basic-streambuf-class.md)|Třída šablony popisuje abstraktní základní třída pro odvození vyrovnávací paměť datového proudu, který řídí přenosu prvky do a z konkrétní reprezentace datového proudu.|
 
 ## <a name="see-also"></a>Viz také:
 

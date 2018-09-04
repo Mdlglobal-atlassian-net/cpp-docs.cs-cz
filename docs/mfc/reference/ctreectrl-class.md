@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210248"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679244"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 Poskytuje funkce pro ovládací prvek zobrazení stromové struktury běžné Windows.  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.  
+ Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.  
   
  *Rect*  
  Určuje velikost a umístění ovládací prvek zobrazení stromové struktury. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.  
+ Určuje styl ovládacího prvku zobrazení stromu. Použít styly oken, je popsáno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)a libovolnou kombinaci [stromové zobrazení – styly ovládacích prvků](/windows/desktop/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.  
   
  *Rect*  
  Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683362"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloudové a webové programování v jazyku Visual C++
 
@@ -62,7 +62,7 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
 
    Poskytuje nativní rozhraní modelu COM, můžete použít v aplikacích pro Windows Runtime nebo aplikace klasické pracovní plochy Windows k připojení k Internetu přes protokol HTTP a vydávání příkazů GET, PUT a jiných příkazů protokolu HTTP. Další informace najdete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 
    Rozhraní Windows API, které můžete použít v aplikacích klasické pracovní plochy Windows k připojení k Internetu.
 

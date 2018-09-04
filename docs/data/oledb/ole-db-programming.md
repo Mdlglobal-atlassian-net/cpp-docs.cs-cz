@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5d5804a7437dabd688abab04ebdd50a79decbaaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677206"
 ---
 # <a name="ole-db-programming"></a>OLE DB – programování
 Microsoft OLE DB je starou technologií; pro nové aplikace je požadovaná data přístup k rozhraní API pro propojené servery SQL. Všechny nové aplikace by měl použití rozhraní ODBC. Aktuální zprostředkovatel OLE DB pro SQL Server je SQLNCLI11. KNIHOVNY DLL. Zprostředkovatel se stále dodává v SQL serveru 2016. Tato dokumentace je určená pro vývojáře, kteří jsou udržování existujících aplikací, které už používají OLE DB.
@@ -40,7 +40,7 @@ Microsoft OLE DB je starou technologií; pro nové aplikace je požadovaná data
 |Třídy šablon technologie OLE DB a makra|[Referenční dokumentace k šablonám OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atributy příjemce technologie OLE DB|[Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)|  
 |Rozhraní technologie OLE DB|[Referenční informace pro programátory OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (v sadě Windows SDK)|  
-|Ukázky šablon technologie OLE DB|[OLE DB – Ukázky šablon](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Ukázky šablon technologie OLE DB|[OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples)| 
 |Přístup k datům programování přehled (Visual C++)|[Programování přístupu k datům](../../data/data-access-programming-mfc-atl.md)|  
 |Koncepční témata ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 

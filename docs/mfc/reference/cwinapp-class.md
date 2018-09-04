@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206889"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688542"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Přepsání nastavení za účelem zpracování specifické pro aplikaci doby nečinnosti.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Volá se rozhraním, aby se otevřel dokument ze souboru.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analyzuje jednotlivé parametry a příznaky v příkazovém řádku.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Zachycuje určité zprávy dřív, než dorazí aplikace.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Zpracuje argumenty příkazového řádku a příznaky.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Zachycuje všechny neošetřené výjimky vyvolané z aplikace zprávu a obslužné rutiny příkazů.|
@@ -1794,7 +1794,7 @@ Popis příznaky příkazového řádku najdete v tématu [CCommandLineInfo::m_n
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) výchozí implementace provádí klíče akcelerátoru překlad, takže je třeba zavolat `CWinApp::PreTranslateMessage` členské funkce ve vaší verzi přepsané.
+Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) výchozí implementace provádí klíče akcelerátoru překlad, takže je třeba zavolat `CWinApp::PreTranslateMessage` členské funkce ve vaší verzi přepsané.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

@@ -1,7 +1,7 @@
 ---
-title: Volání funkcí jazyka C++ ve vloženém sestavení | Microsoft Docs
+title: Volání funkcí jazyka C++ ve vloženém sestavení | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678941"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Volání funkcí jazyka C++ v sestavení inline assemblerem
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- `__asm` Bloku volat pouze globální C++ funkce, které nejsou přetížený. Při volání přetížené globální funkce C++ nebo členské funkce C++, vydá k chybě.  
-  
- Můžete také volat jakékoli funkce deklarovat s **extern "C"** propojení. To umožňuje `__asm` bloku v rámci programu C++ pro volání funkcí knihovny jazyka C, protože všechny soubory standardní hlavičku deklarovat funkce knihovny tak, aby měl **extern "C"** propojení.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Vkládaný assembler](../../assembler/inline/inline-assembler.md)
+
+**Specifické pro Microsoft**
+
+`__asm` Bloku může volat pouze globální funkcí jazyka C++, které nejsou přetíženy. Při volání přetížené funkce C++ globální nebo členské funkce C++, kompilátor vyvolá chybu.
+
+Můžete také volat jakékoli funkce deklarované s **extern "C"** propojení. To umožňuje `__asm` blok v rámci programu v jazyce C++ pro volání funkce knihovny jazyka C, protože všechny soubory standardní hlavičku deklarace funkcí knihovny, které mají mít **extern "C"** propojení.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218420"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687583"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -72,7 +72,7 @@ Povolené typy jsou:
 
 - Veřejný výčet tříd
 
-Mapa je v podstatě obálka pro [std::map](../standard-library/map-class.md). Je konkrétní implementaci C++ [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předány přes veřejné rozhraní Windows Runtime. Pokud se pokusíte použít `Platform::Collections::Map` zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Chybu můžete vyřešit změnou typu parametr nebo návratovou hodnotu pro [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Mapa je v podstatě obálka pro [std::map](../standard-library/map-class.md). Je konkrétní implementaci C++ [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předány přes veřejné rozhraní Windows Runtime. Pokud se pokusíte použít `Platform::Collections::Map` zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Chybu můžete vyřešit změnou typu parametr nebo návratovou hodnotu pro [Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 

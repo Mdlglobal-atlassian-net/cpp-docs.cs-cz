@@ -1,7 +1,7 @@
 ---
-title: Optimalizace vloženého sestavení | Microsoft Docs
+title: Optimalizace vloženého sestavení | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,18 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c494594e3b7c541487f34fd33359b0e31f73dd61
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 49660bdc6d2eb84e6e1bbaeb5ebf0d57e484e9e1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687873"
 ---
 # <a name="optimizing-inline-assembly"></a>Optimalizace sestavení inline assemblerem
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Přítomnost `__asm` bloku ve funkci ovlivňuje optimalizace několika způsoby. Nejprve není kompilátor zkuste k optimalizaci `__asm` blokovat sám sebe. Zápis v jazyce sestavení je přesně můžete získat. Druhý, přítomnost `__asm` bloku ovlivňuje zaregistrovat proměnné úložiště. Kompilátor zabraňuje enregistering proměnné napříč `__asm` blokování, pokud by byla změněna registrace obsah pomocí `__asm` bloku. Nakonec některé další funkce celou optimalizace nebude mít vliv zahrnutí jazyk sestavení ve funkci.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Vkládaný assembler](../../assembler/inline/inline-assembler.md)
+
+**Specifické pro Microsoft**
+
+Přítomnost `__asm` bloku ve funkci má vliv optimalizace několika způsoby. Nejprve kompilátor nebude pokusu o optimalizaci `__asm` blokovat samotný. Zápis v jazyku sestavení je přesně se zobrazí. Druhý, přítomnost `__asm` bloku ovlivňuje zaregistrovat proměnné úložiště. Kompilátor se vyhnete enregistering proměnné napříč `__asm` blokovat, pokud by se změní obsah do registru `__asm` bloku. Nakonec ovlivní Některé další funkce celou optimalizace zahrnutí jazyk sestavení ve funkci.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617f4703b72ff2a077a20b61fe17851144672ef7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687295"
 ---
 # <a name="default-atl-project-configurations"></a>Výchozí konfigurace projektu ATL
 Průvodce projektem ATL ve výchozím nastavení vytvoří dvě konfigurace projektu:  
@@ -35,6 +35,6 @@ Průvodce projektem ATL ve výchozím nastavení vytvoří dvě konfigurace proj
 ## <a name="see-also"></a>Viz také  
  [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)   
- [Dialogové okno nástroje Configuration Manager](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Dialogové okno nástroje Configuration Manager](/visualstudio/ide/understanding-build-configurations)   
  [Kompilace a sestavení](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340560"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676833"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problémy s návrhem technologie OLE DB
 Před zahájením aplikaci OLE DB, je třeba zvážit následující problémy:  
@@ -39,15 +39,9 @@ Před zahájením aplikaci OLE DB, je třeba zvážit následující problémy:
  **Máte starší kód pomocí jiné technologie přístup data (ADO, ODBC a DAO)?**  
  Je to možné kombinace technologií (jako jsou komponenty technologie OLE DB pomocí komponenty ADO a migrace kód rozhraní ODBC do technologie OLE DB), zahrnující všechny situace je nad rámec dokumentace k Visual C++. Řada článků pokrývajících různé scénáře jsou však k dispozici na následujících webech Microsoftu:  
   
--   [Nápovědu a podporu Microsoftu](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Nápovědu a podporu Microsoftu](https://support.microsoft.com/)  
   
--   [Přehled technické články k přístupu k datům společnosti Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Středisko řešení sady Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Hledat na webu Microsoft.com](http://search.microsoft.com/)  
-  
- Při vyhledávání, zadejte kombinace klíčových slov, která nejlépe vyhovuje vaší situaci; Příklad: Pokud jste používali objektů ADO pomocí zprostředkovatele OLE DB, zkuste logického hledání s **ADO a "OLE DB"**. Pokud jste chtěli migrovat starší rozhraní DAO kód k rozhraní ODBC, vyberte "všech slov" a zadejte řetězce, jako například **migrace DAO**.  
+-   [Přehled technické články k přístupu k datům společnosti Microsoft](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   

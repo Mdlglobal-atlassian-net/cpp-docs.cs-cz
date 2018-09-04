@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2038 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2038 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae76352325e098cb4951982d0aa778fa0b0e0d0d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 92de20e9eb2c9a5666758ecc1e11901e75e67556
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680307"
 ---
 # <a name="ml-nonfatal-error-a2038"></a>Méně závažná chyba nástroje ML A2038
-**chybí operand operátoru – makro**  
-  
- Assembleru našel se konec seznam parametrů makro ihned po [!](../../assembler/masm/operator-logical-not-masm-run-time.md) nebo [ % ](../../assembler/masm/operator-percent.md) operátor.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**chybí operand operátoru – makro**
+
+Assembler nalezen konec seznamu parametrů je makro ihned po [!](../../assembler/masm/operator-logical-not-masm-run-time.md) nebo [ % ](../../assembler/masm/operator-percent.md) operátor.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

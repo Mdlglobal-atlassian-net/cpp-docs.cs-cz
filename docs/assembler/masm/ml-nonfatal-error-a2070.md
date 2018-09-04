@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2070 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2070 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e0b92f47e7b533ff84c4b27748de835ba9ef5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3217408a86741f97c92213ccf7370ddf734604aa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053542"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677932"
 ---
 # <a name="ml-nonfatal-error-a2070"></a>Méně závažná chyba nástroje ML A2070
-**operandy neplatný instrukcí**  
-  
- Jeden nebo více operandy nebyly platné pokyny, pomocí kterého byly zadány.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Neplatná instrukce operandy**
+
+Jeden nebo více operandů nebyly platné pokyny, které byly zadány.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

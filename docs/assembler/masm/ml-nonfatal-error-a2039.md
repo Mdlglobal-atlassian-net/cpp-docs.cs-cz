@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2039 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2039 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab04ad28754aab16c76c899b3eb588b7f59720c8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f51b1f9fcd114e1db6f8f1e3d8d0f1c5ad1989cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687427"
 ---
 # <a name="ml-nonfatal-error-a2039"></a>Méně závažná chyba nástroje ML A2039
-**řádek je příliš dlouhý**  
-  
- Zdrojový soubor řádku překročil limit 512 znaků.  
-  
- Pokud jsou více fyzických řádků zřetězen s znak pokračování řádku (\), je výsledný logické řádku stále maximálně 512 znaků.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**řádek je příliš dlouhý**
+
+Řádku zdrojového souboru překročil limit 512 znaků.
+
+Pokud více fyzických řádků jsou zřetězeny znakem pokračování řádku (\), je výsledný logického řádku stále omezena na 512 znaků.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

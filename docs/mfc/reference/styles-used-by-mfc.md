@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199918"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689318"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC  
   
@@ -219,7 +219,7 @@ Použijte následující příznaky styl k určení okno nebo ovládací prvek v
   
 ## <a name="button-styles"></a> Styly tlačítek  
   
-Styly tlačítek platí pro [CButton – třída](../../mfc/reference/cbutton-class.md) zkontrolujte objekty, jako je například přepínačů, polí a tlačítek. Určuje kombinaci styly *dwStyle* parametr [CButton::Create](../../mfc/reference/cbutton-class.md#create). Další informace o styly ve Windows najdete v tématu [styly tlačítek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Styly tlačítek platí pro [CButton – třída](../../mfc/reference/cbutton-class.md) zkontrolujte objekty, jako je například přepínačů, polí a tlačítek. Určuje kombinaci styly *dwStyle* parametr [CButton::Create](../../mfc/reference/cbutton-class.md#create). Další informace o styly ve Windows najdete v tématu [styly tlačítek (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Typy tlačítek  
   
@@ -288,7 +288,7 @@ V následující tabulce jsou uvedeny další možnosti, které můžete použí
   
 ## <a name="combo-box-styles"></a>  Pole se seznamem stylů  
   
-Následující pole se seznamem styly jsou k dispozici v knihovně MFC. Další informace o stylech pole se seznamem ve Windows najdete v tématu [– pole se seznamem styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+Následující pole se seznamem styly jsou k dispozici v knihovně MFC. Další informace o stylech pole se seznamem ve Windows najdete v tématu [– pole se seznamem styly oken (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ Následující pole se seznamem styly jsou k dispozici v knihovně MFC. Další 
   
 ## <a name="edit-styles"></a>  Styly pro úpravy  
   
-Upravit styly platí pro [cedit – třída](../../mfc/reference/cedit-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravy – styly ovládacích prvků ve Windows najdete v tématu [upravit styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Upravit styly platí pro [cedit – třída](../../mfc/reference/cedit-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravy – styly ovládacích prvků ve Windows najdete v tématu [upravit styly ovládacího prvku (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Styly oken s rámečkem platí pro [CFrameWnd – třída](../../mfc/reference/c
   
 ## <a name="list-box-styles"></a> Styly seznamů  
   
-Styly seznamů platí pro [clistbox – třída](../../mfc/reference/clistbox-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Další informace o seznamu styly ve Windows najdete v tématu [seznamu styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Styly seznamů platí pro [clistbox – třída](../../mfc/reference/clistbox-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Další informace o seznamu styly ve Windows najdete v tématu [seznamu styly oken (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Styly seznamů platí pro [clistbox – třída](../../mfc/reference/clistbox-cl
   
 ##<a name="message-box-styles"></a>  Styly oken zpráv  
   
-Styly oken zpráv použít pro [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) položky. Určuje kombinaci styly *nTyp* parametr `AfxMessageBox`. Další informace o styly oken zpráv ve Windows najdete v tématu [MessageBox – funkce (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Styly oken zpráv použít pro [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) položky. Určuje kombinaci styly *nTyp* parametr `AfxMessageBox`. Další informace o styly oken zpráv ve Windows najdete v tématu [MessageBox – funkce (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Tyto styly oken zpráv jsou k dispozici.  
   
@@ -403,7 +403,7 @@ Tyto styly oken zpráv jsou k dispozici.
   
 ## <a name="scroll-bar-styles"></a> Styly posuvníku  
   
-Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscrollbar-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o posuvník – styly ovládacích prvků ve Windows najdete v tématu [styly posuvníku panelu ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscrollbar-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o posuvník – styly ovládacích prvků ve Windows najdete v tématu [styly posuvníku panelu ovládacího prvku (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Styly posuvníku platí pro [cscrollbar – třída](../../mfc/reference/cscroll
   
 ## <a name="static-styles"></a> Statické styly  
   
-Statické styly platí pro [cstatic – třída](../../mfc/reference/cstatic-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statický ovládací prvek ve Windows najdete v tématu [statické styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Statické styly platí pro [cstatic – třída](../../mfc/reference/cstatic-class.md) objekty. Určuje kombinaci styly *dwStyle* parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statický ovládací prvek ve Windows najdete v tématu [statické styly ovládacího prvku (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-class.md) objekty.
   
 ## <a name="extended-window-styles"></a> Rozšířené styly oken  
   
-Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-class.md) objekty. Určuje kombinaci styly *dwExStyle* parametr [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o rozšířené styly oken ve Windows najdete v tématu [rozšířené styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-class.md) objekty. Určuje kombinaci styly *dwExStyle* parametr [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o rozšířené styly oken ve Windows najdete v tématu [rozšířené styly oken (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Styl|Popis|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-clas
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Styly tlačítek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Styly oken – pole se seznamem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Upravit styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Styly oken (Windows) seznamu](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[MessageBox – funkce (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[posuvník – styly ovládacího prvku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Styly statický ovládací prvek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Styly tlačítek (Windows)](/windows/desktop/Controls/button-styles)  
+[Styly oken – pole se seznamem (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Upravit styly ovládacího prvku (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Styly oken (Windows) seznamu](/windows/desktop/Controls/list-box-styles) 
+[MessageBox – funkce (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[posuvník – styly ovládacího prvku (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Styly statický ovládací prvek (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Rozšířené styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Rozšířené styly oken (Windows)](/windows/desktop/winmsg/extended-window-styles)  

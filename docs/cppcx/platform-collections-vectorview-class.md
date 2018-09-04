@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584103"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690604"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections:: vectorview – třída
 Představuje sekvenční kolekce objektů, které mohou být přístupné samostatně podle indexu zobrazení jen pro čtení. Typ jednotlivých objektů v kolekci je určen parametrem šablony.  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  Určuje binární predikát pro testování rovnosti s hodnotami typu `T`. Výchozí hodnota je `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Poznámky  
- `VectorView` Implementuje třída [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) rozhraní a podpora pro iterátorů standardní knihovny šablon.  
+ `VectorView` Implementuje třída [Windows::Foundation::Collections::IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) rozhraní a podpora pro iterátorů standardní knihovny šablon.  
   
 ### <a name="members"></a>Členové  
   

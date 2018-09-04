@@ -1,7 +1,7 @@
 ---
-title: POKUD (MASM) | Microsoft Docs
+title: IF (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76bf63b917a65a5a41fd261cfc861a77b0f0d16f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ca0cce834924f7fc147b1ef301d5bd345dfd2973
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685304"
 ---
 # <a name="if-masm"></a>IF (MASM)
-Uděluje sestavením *ifstatements* Pokud *expression1* hodnotu true (nenulové) nebo *elseifstatements* Pokud *expression1* hodnotu false (0) a *Výraz2* hodnotu true.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   IF expression1  
-ifstatements  
-[[ELSEIF expression2  
-   elseifstatements]]  
-[[ELSE  
-   elsestatements]]  
-ENDIF  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Následující direktivy mohou nahradit [ElseIf –](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **elseifdef –**, **ELSEIFDIF**, **ELSEIFDIFI** , **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, a **elseifndef –** . Volitelně sestaví *elsestatements* Pokud předchozí výraz je hodnota false. Všimněte si, že výrazy jsou vyhodnocovány v době sestavení.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Uděluje sestavení *ifstatements* Pokud *expression1* hodnotu true (nenulovou) nebo *elseifstatements* Pokud *expression1* má hodnotu false (0) a *expression2* má hodnotu true.
+
+## <a name="syntax"></a>Syntaxe
+
+> Pokud *expression1*<br/>
+> *ifstatements*<br/>
+> [[ELSEIF *expression2*<br/>
+> *elseifstatements*]]<br/>
+> [[ELSE<br/>
+> *elsestatements*]]<br/>
+> ENDIF
+
+## <a name="remarks"></a>Poznámky
+
+Může být následující direktivy nahrazeno [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI** , **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, a **ELSEIFNDEF** . Volitelně můžete sestaví *elsestatements* Pokud předchozí výraz je nepravdivý. Všimněte si, že výrazy jsou vyhodnocovány v době sestavení.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

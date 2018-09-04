@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Microsoft Docs
+title: ALIAS (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691059"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-**ALIAS** – direktiva vytvoří alternativní název pro funkci.  To umožňuje vytvořit více názvů pro funkci nebo knihovny, které umožňují linkeru (LINK.exe) pro mapování staré funkce na novou funkci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `actual-name`  
- Skutečný název funkce nebo procedury.  Lomené závorky jsou povinné.  
-  
- `alias`  
- Název alternativní nebo alias.  Lomené závorky jsou povinné.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+**ALIAS** direktiva vytvoří alternativní název funkce.  To umožňuje vytvářet více názvů pro funkce, nebo knihovny, které umožňují linker (LINK.exe) pro mapování staré funkce na novou funkci.
+
+## <a name="syntax"></a>Syntaxe
+
+> ALIAS \< *alias*> = \< *skutečný název*>
+
+#### <a name="parameters"></a>Parametry
+
+*skutečný název*<br/>
+Skutečný název funkce nebo procedury.  Lomené závorky jsou povinné.
+
+*Alias*<br/>
+Název alternativu nebo alias.  Lomené závorky jsou povinné.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

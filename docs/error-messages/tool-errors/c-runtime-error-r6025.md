@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220629"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680552"
 ---
 # <a name="c-runtime-error-r6025"></a>Chyba modulu Runtime R6025 C
 volání čistě virtuální funkce  
@@ -41,4 +41,3 @@ volání čistě virtuální funkce
   
  Tato chyba je způsobena volání virtuální funkce v abstraktní základní třída přes ukazatel, který je vytvořen pomocí přetypování na typ odvozené třídy, ale je ukazatelem na základní třídu. Tato situace může nastat při přetypování z: **void** <strong>\*</strong> na ukazatel na třídu při **void** <strong>\*</strong> byl vytvořené během procesu vytváření základní třídy.  
   
- Další informace najdete v tématu [podpory Microsoftu](http://go.microsoft.com/fwlink/p/?linkid=75220) webu.

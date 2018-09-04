@@ -1,7 +1,7 @@
 ---
-title: operátor IMAGEREL | Microsoft Docs
+title: IMAGEREL – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691405"
 ---
 # <a name="operator-imagerel"></a>operátor IMAGEREL
-Vrátí obrázek relativní posun `expression`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Výsledná hodnota se často označuje jako RVA nebo relativní virtuální adresy.  
-  
- Imagerel – je dostupný jenom s emisí COFF objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí image relativní posun `expression`.
+
+## <a name="syntax"></a>Syntaxe
+
+> Výraz IMAGEREL
+
+## <a name="remarks"></a>Poznámky
+
+Výsledná hodnota se často označuje jako adresa RVA nebo relativní virtuální adresu.
+
+IMAGEREL je k dispozici pouze s emisí objektu souboru COFF.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

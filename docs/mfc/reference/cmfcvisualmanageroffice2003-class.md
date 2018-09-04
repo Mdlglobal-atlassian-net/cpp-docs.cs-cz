@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677973"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Cmfcvisualmanageroffice2003 – třída
 `CMFCVisualManagerOffice2003` Poskytuje vzhled aplikace Microsoft Office 2003 aplikace.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Rámec volá tuto metodu při kreslení zvýrazněný přizpůsobení rychlé tlačítka nabídky. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Rozhraní volá tuto metodu při kreslení zvýrazněný příkaz. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Rozhraní volá tuto funkci při změně systémových barev. (Přepíše `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Určuje, zda má být použito globální motiv Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Určuje, jestli má správce vzhledu jako globální motiv.|  
   
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Rozhraní volá tuto metodu v rámci zpracování WM_SYSCOLORCHANGE zprávy. Přepsáním této metody v odvozené vizuálního správce, pokud chcete spustit vlastní kód při změně barev ve vaší aplikaci.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

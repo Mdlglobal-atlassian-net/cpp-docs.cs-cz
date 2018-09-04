@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213659"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678095"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement – třída
 `CMFCRibbonBaseElement` Třída je základní třída pro všechny elementy, které můžete přidat [pás](../../mfc/reference/cmfcribbonbar-class.md). Příklady prvků pásu karet pás karet tlačítka, zaškrtávací políčka a pásu karet se seznamem.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Ukazatel do nadřazeného okna pro prvek pásu karet, byla-li metoda úspěšná; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- V okně nadřazený prvek pásu karet je [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md) nebo [cmfcribbonpanelmenubar –](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ V okně nadřazený prvek pásu karet je [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md) nebo [cmfcribbonpanelmenubar –](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Načte ukazatel na prvek pásu karet, pokud uživatel je momentálně stiskne.  

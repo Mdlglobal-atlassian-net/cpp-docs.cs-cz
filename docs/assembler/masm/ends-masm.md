@@ -1,7 +1,7 @@
 ---
-title: ELEMENTY END (MASM) | Microsoft Docs
+title: ZAKONČENÍ (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c8712ef0c5820e91f3050d6ea1ed5fa861550a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a198a3577769699ddae4a320429844ef7d46f3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050282"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692918"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
-Označuje konec segmentu, struktury nebo sjednocení *název* dříve spuštěno s [SEGMENT](../../assembler/masm/segment.md), [struktura](../../assembler/masm/struct-masm.md), [– typ UNION](../../assembler/masm/union.md), nebo zjednodušené segment Direktiva.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name ENDS  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Označuje konec segmentu, struktury nebo sjednocení *název* dříve začal s [SEGMENTU](../../assembler/masm/segment.md), [struktura](../../assembler/masm/struct-masm.md), [SJEDNOCENÍ](../../assembler/masm/union.md), nebo zjednodušené segmentu směrnice.
+
+## <a name="syntax"></a>Syntaxe
+
+> název má KONCOVKU
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

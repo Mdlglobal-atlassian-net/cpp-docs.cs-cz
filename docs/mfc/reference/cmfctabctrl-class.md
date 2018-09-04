@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199843"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680101"
 ---
 # <a name="cmfctabctrl-class"></a>Cmfctabctrl – třída
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Volá se rozhraním, když je kurzor nejprve přetáhnout do okna ovládacího prvku karta.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Po přesunutí v okně cíl přetažení myší, volá se rozhraním při operaci přetažení. (Přepíše [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Zobrazí místní nabídka okna s kartami, počká, až uživatel vybere na kartě a je vybraná karta na aktivní kartě.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Přepočítá rozložení vnitřní ovládací prvek karty. (Přepíše [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Aktuální karta ovládacím prvkem karta nastaví jako aktivní karty ve skupině karta rozhraní více dokumentů.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje na kartě. (Přepíše [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  

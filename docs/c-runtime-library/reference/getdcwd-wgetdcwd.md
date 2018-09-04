@@ -1,5 +1,5 @@
 ---
-title: _getdcwd –, _wgetdcwd – | Microsoft Docs
+title: _getdcwd – _wgetdcwd – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,16 +43,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ccc526b196982402ca3b795276df8c790ad35a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404246"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689712"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
-Získá úplnou cestu aktuálního pracovního adresáře na určené jednotce.
+Získá celou cestu aktuálního pracovního adresáře na zadané jednotce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,38 +71,38 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotka*<br/>
-Kladné celé číslo, které určuje jednotku, která (0 = výchozí jednotce, 1 = A, 2 = B a tak dále).
+*Jednotky*<br/>
+Nezáporné celé číslo, které určuje jednotku (0 = výchozí jednotka, 1 = A, 2 = B a tak dále).
 
-Pokud má určená jednotka není k dispozici, nebo typ jednotky (například vyměnitelné, pevné, disku CD-ROM, RAM disku nebo síťové jednotky) nelze určit, obslužné rutiny neplatný parametr, který je popsaný v [ověření parametru](../../c-runtime-library/parameter-validation.md), je vyvolat.
+Pokud zadaná jednotka není k dispozici, nebo druh jednotky (například vyměnitelný, pevný, CD-ROM, RAM disk nebo síťová jednotka) nelze určit obslužnou rutinu neplatného parametru, která je popsána v [Parameter Validation](../../c-runtime-library/parameter-validation.md), je vyvolat.
 
 *Vyrovnávací paměti*<br/>
-Umístění úložiště pro danou cestu nebo **NULL**.
+Umístění úložiště pro cestu, nebo **NULL**.
 
-Pokud **NULL** není zadaný, tato funkce přiděluje vyrovnávací paměti alespoň *maxlen* velikost pomocí **malloc –** a vrátí hodnotu, která **_getdcwd –** je ukazatel na přidělené vyrovnávací paměti. Vyrovnávací paměť může být uvolněno voláním **volné** a předání ukazatele.
+Pokud **NULL** není zadána, tato funkce přidělí vyrovnávací paměť alespoň *maxlen* velikost pomocí **malloc**a návratová hodnota **_getdcwd –** je ukazatel do přidělené vyrovnávací paměti. Vyrovnávací paměť lze uvolnit voláním **bezplatné** a jeho předáním ukazateli.
 
 *MAXLEN*<br/>
-Nenulové hodnoty kladné celé číslo, které určuje maximální délku cesty, ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
+Nenulové kladné celé číslo, které určuje maximální délku cesty ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
 
-Pokud *maxlen* není větší než nula, obslužné rutiny neplatný parametr, který je popsaný v [ověření parametru](../../c-runtime-library/parameter-validation.md), je vyvolána.
+Pokud *maxlen* není větší než nula, obslužnou rutinu neplatného parametru, která je popsána v [Parameter Validation](../../c-runtime-library/parameter-validation.md), je vyvolána.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který představuje úplnou cestu aktuálního pracovního adresáře na určené jednotce, nebo **NULL**, což označuje chybu.
+Ukazatel na řetězec, který představuje úplnou cestu aktuálního pracovního adresáře na zadané jednotce nebo **NULL**, což znamená chybu.
 
-Pokud *vyrovnávací paměti* je zadán jako **NULL** a není dostatek paměti k přidělení *maxlen* znaků, dojde k chybě a **errno** je Nastavte na **enomem –**. Délka cesty, která obsahuje ukončující znak hodnoty null, překročí-li *maxlen*, dojde k chybě a **errno** je nastaven na **erange –**. Další informace o tyto kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud *vyrovnávací paměti* je zadán jako **NULL** a není dostatek paměti k přidělení *maxlen* znaky, dojde k chybě a **errno** je Nastavte na **ENOMEM**. Délka cesty, která zahrnuje ukončující znak null, překročí-li *maxlen*, dojde k chybě a **errno** je nastavena na **ERANGE**. Další informace o těchto chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Getdcwd –** funkce získá úplnou cestu aktuálního pracovního adresáře na určené jednotce a ukládá je v *vyrovnávací paměti*. Pokud aktuální pracovní adresář se nastaví na kořen, řetězec končí zpětné lomítko (\\). Pokud aktuální pracovní adresář je nastavena do jiného adresáře než je kořenový adresář, ukončí řetězec s názvem adresáře a nikoli s lomítkem.
+**_Getdcwd –** funkce získá celou cestu aktuálního pracovního adresáře na zadané jednotce a ukládá ji do *vyrovnávací paměti*. Pokud je aktuální pracovní adresář nastaven na kořen, řetězec končí zpětným lomítkem (\\). Pokud aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec skončí názvem adresáře, nikoli zpětným lomítkem.
 
-**_wgetdcwd –** je verze široká charakterová **_getdcwd –** a jeho *vyrovnávací paměti* parametr a návratové hodnoty jsou široká charakterová řetězce. V opačném **_wgetdcwd –** a **_getdcwd –** chovají stejně jako.
+**_wgetdcwd –** je verze širokého znaku **_getdcwd –** a jeho *vyrovnávací paměti* parametr a návratová hodnota jsou širokoznaké řetězce. V opačném případě **_wgetdcwd –** a **_getdcwd –** chovají identicky.
 
-Tato funkce je bezpečné pro přístup z více vláken, i když závisí na **GetFullPathName**, který je sám není bezpečné pro přístup z více vláken. Ale porušení zabezpečení vlákna Pokud vícevláknové aplikace volá obě tato funkce a **GetFullPathName**. Další informace, přejděte na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) a poté vyhledejte **GetFullPathName**.
+Tato funkce je bezpečná pro vlákno, přestože je závislá na **GetFullPathName**, což je samotný není bezpečná pro vlákno. Však můžete porušit bezpečnost vlákna, pokud vaše aplikace s více vlákny volá tuto funkci a [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Verze této funkce, který má **jazyka _nolock** přípona se chová stejně tuto funkci s tím rozdílem, že není bezpečné pro přístup z více vláken a není chráněn z narušení jiná vlákna. Další informace najdete v tématu [_getdcwd_nolock –, _wgetdcwd_nolock –](getdcwd-nolock-wgetdcwd-nolock.md).
+Verze této funkce, která má **_nolock** přípona chová stejně jako na tuto funkci s tím rozdílem, že není bezpečné pro vlákna a není chráněna před rušením jinými vlákny. Další informace najdete v tématu [_getdcwd_nolock – _wgetdcwd_nolock –](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Když **_DEBUG –** a **_crtdbg_map_alloc –** jsou definovány, volání **_getdcwd –** a **_wgetdcwd –** jsou nahrazovány volání **_getdcwd_dbg –** a **_wgetdcwd_dbg –** tak, že ladíte přidělení paměti. Další informace najdete v tématu[_getdcwd_dbg –, _wgetdcwd_dbg –](getdcwd-dbg-wgetdcwd-dbg.md).
+Když **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, volání **_getdcwd –** a **_wgetdcwd –** jsou nahrazena voláními **_getdcwd_dbg –** a **_wgetdcwd_dbg –** tak, aby můžete ladit přidělování paměti. Další informace najdete v tématu[_getdcwd_dbg – _wgetdcwd_dbg –](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -117,13 +117,13 @@ Když **_DEBUG –** a **_crtdbg_map_alloc –** jsou definovány, volání **_g
 |**_getdcwd**|\<Direct.h >|
 |**_wgetdcwd**|\<Direct.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad v [_getdrive –](getdrive.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

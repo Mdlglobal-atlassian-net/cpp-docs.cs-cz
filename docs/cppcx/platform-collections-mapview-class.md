@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605468"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689468"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview – třída
 Představuje zobrazení jen pro čtení *mapy*, což je kolekce párů klíč hodnota.  
@@ -51,7 +51,7 @@ ref class MapView sealed;
  Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků klíče řazení pro určení jejich relativního pořadí v MapView. Ve výchozím nastavení [std::less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Poznámky  
- MapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, který je předán napříč binárním rozhraním aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ MapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) rozhraní, který je předán napříč binárním rozhraním aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Členové  
   

@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200873"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688140"
 ---
 # <a name="cpagerctrl-class"></a>Cpagerctrl – třída
 `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.  
@@ -183,7 +183,7 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
+|[in] *dwExStyle*|Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|  
 |[in] *dwStyle*|Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|  
 |[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
 |[in] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  

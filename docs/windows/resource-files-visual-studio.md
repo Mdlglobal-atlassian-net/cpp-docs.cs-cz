@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678368"
 ---
 # <a name="resource-files-visual-studio"></a>Zdrojové soubory (Visual Studio)
 
 > [!NOTE]
-> Tento materiál se vztahuje na aplikace klasické pracovní plochy Windows. Informace o prostředcích v aplikacích pro univerzální platformu Windows, naleznete v tématu [definování prostředků aplikace](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Tento materiál se vztahuje na aplikace klasické pracovní plochy Windows. Informace o prostředcích v aplikacích pro univerzální platformu Windows, naleznete v tématu [definování prostředků aplikace](/windows/uwp/app-resources/).
 >
 > Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 >

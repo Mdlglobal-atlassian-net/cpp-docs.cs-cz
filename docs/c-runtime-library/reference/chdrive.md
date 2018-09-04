@@ -1,5 +1,5 @@
 ---
-title: _chdrive – | Microsoft Docs
+title: _chdrive – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,19 +34,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684320"
 ---
 # <a name="chdrive"></a>_chdrive
 
-Změní aktuální pracovní jednotce.
+Změní aktuální pracovní jednotku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,20 +58,20 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotka*<br/>
-Celé číslo od 1 do 26, který určuje aktuální pracovní jednotky (1 = A, 2 = B a tak dále).
+*Jednotky*<br/>
+Celé číslo od 1 až 26, který určuje aktuální pracovní jednotku (1 = A, 2 = B a tak dále).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula (0), pokud aktuální pracovní jednotky se úspěšně; změnila. jinak hodnota -1.
+Nula (0), pokud aktuální pracovní jednotka byla změněna úspěšně; jinak -1.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *jednotky* není v rozsahu od 1 do 26, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_chdrive –** funkce vrátí hodnotu -1, **errno** je nastaven na **eacces –**, a **_doserrno –** je nastaven na  **ERROR_INVALID_DRIVE**.
+Pokud *jednotky* není v rozsahu 1 až 26, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_chdrive –** funkce vrátí hodnotu -1, **errno** je nastavena na **EACCES**, a **_doserrno** je nastavena na  **ERROR_INVALID_DRIVE**.
 
-**_Chdrive –** funkce není bezpečné pro přístup z více vláken protože závisí na **SetCurrentDirectory** funkce, které je samo není bezpečné pro přístup z více vláken. Chcete-li použít **_chdrive –** bezpečně vícevláknové aplikace, je nutné zadat vlastní synchronizace vláken. Další informace, přejděte na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) a poté vyhledejte **SetCurrentDirectory**.
+**_Chdrive –** funkce není bezpečná pro vlákno protože závisí **SetCurrentDirectory** funkce, která sama o sobě není bezpečná pro vlákno. Chcete-li použít **_chdrive –** bezpečně ve vícevláknové aplikaci, je nutné zadat vlastní synchronizaci vláken. Další informace najdete v tématu [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
 
-**_Chdrive –** funkce se změní pouze aktuální pracovní jednotce.  **_chdir –** změní aktuální pracovní adresář.
+**_Chdrive –** funkce se změní pouze aktuální pracovní jednotku;  **_chdir –** změní aktuální pracovní adresář.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -85,7 +85,7 @@ Další informace najdete v tématu [kompatibility](../../c-runtime-library/comp
 
 Podívejte se na příklad pro [_getdrive –](getdrive.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

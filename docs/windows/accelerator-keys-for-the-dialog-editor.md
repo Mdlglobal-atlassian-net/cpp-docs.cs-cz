@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2908c4976a388bddb609726ca3a46db32096e99c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5abfe45cc2f6e73dfe3c7bd8d38a0c783a15e05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685629"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Klávesy akcelerátoru pro editor dialogového okna
 
 V následující tabulce jsou výchozí klávesy akcelerátoru pro editor dialogového okna příkazy. Chcete-li změnit klávesové zkratky, klikněte na tlačítko **možnosti** na **nástroje** nabídky, klikněte na tlačítko **klávesnice** v části **prostředí** složky. Další informace najdete v tématu [určení a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Příkaz|klíče|Popis|
 |-------------|----------|-----------------|

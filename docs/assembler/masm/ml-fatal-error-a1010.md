@@ -1,7 +1,7 @@
 ---
-title: Závažná chyba nástroje ML A1010 | Microsoft Docs
+title: Závažná chyba nástroje ML A1010 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676294"
 ---
 # <a name="ml-fatal-error-a1010"></a>Závažná chyba nástroje ML A1010
-**neodpovídající bloku vnoření:**  
-  
- Začátku bloku nemá odpovídající end nebo koncový blok neměl odpovídající začátku. Může být zahrnuta jednu z těchto možností:  
-  
--   Direktivu vysoké úrovně, jako [. Pokud](../../assembler/masm/dot-if.md), [. OPAKUJTE](../../assembler/masm/dot-repeat.md), nebo [. Při](../../assembler/masm/dot-while.md).  
-  
--   Direktiva podmíněného sestavení jako [Pokud](../../assembler/masm/if-masm.md), [opakovat](../../assembler/masm/repeat.md), nebo **při**.  
-  
--   Definice struktury nebo sjednocení.  
-  
--   Definice procedury.  
-  
--   Definice segmentu.  
-  
--   A [popcontext –](../../assembler/masm/popcontext.md) – direktiva.  
-  
--   Podmíněné sestavení direktivy, například [ELSE](../../assembler/masm/else-masm.md), [ElseIf –](../../assembler/masm/elseif-masm.md), nebo **ENDIF** bez odpovídající [Pokud](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**vnoření bezkonkurenční blok:**
+
+Začátek bloku neměl odpovídajícího end nebo koncový blok nemá odpovídající začátku. Možné zahrnutí jednu z následujících akcí:
+
+- Direktivu vysoké úrovně, jako [. Pokud](../../assembler/masm/dot-if.md), [. OPAKUJTE](../../assembler/masm/dot-repeat.md), nebo [. ZATÍMCO](../../assembler/masm/dot-while.md).
+
+- Direktivy podmíněné sestavení jako [IF](../../assembler/masm/if-masm.md), [OPAKUJTE](../../assembler/masm/repeat.md), nebo **při**.
+
+- Definici struktury nebo sjednocení.
+
+- Definice procedury.
+
+- Definice segmentu.
+
+- A [POPCONTEXT](../../assembler/masm/popcontext.md) směrnice.
+
+- Podmíněné sestavení direktiv, například [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), nebo **ENDIF** bez odpovídajícího [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

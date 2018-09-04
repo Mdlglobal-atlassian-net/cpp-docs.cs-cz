@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689555"
 ---
 # <a name="cwinthread-class"></a>CWinThread – třída
 Představuje vlákno provádění v rámci aplikace.  
@@ -96,10 +96,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|Kontroly pro speciální zprávy.|  
 |[CWinThread::OnIdle](#onidle)|Přepsání nastavení za účelem zpracování specifické pro vlákno doby nečinnosti.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Odešle zprávu do jiného `CWinThread` objektu.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy před odesláním do funkce Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Zachycuje určité zprávy dřív, než dorazí aplikace.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Zachycuje všechny neošetřené výjimky vyvolané vlákna zprávu a obslužné rutiny příkazů.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Obsahuje smyčku zpráv vlákna.|  
+|[CWinThread::PumpMessage](#pumpmessage)|obsahuje smyčku zpráv vlákna.|  
 |[CWinThread::ResumeThread](#resumethread)|Dekrementuje vlákna pozastaví count.|  
 |[CWinThread::Run](#run)|Řídící funkce pro vlákna s pumpu zpráv. Přepsání nastavení za účelem přizpůsobení výchozí smyčku zpráv.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Nastaví prioritu aktuálního vlákna.|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  Při volání Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) funkce v rámci aplikace knihovny MFC, zpráv knihovny MFC nejsou volány obslužné rutiny. Další informace najdete v článku znalostní báze Knowledge Base, "PRB: MFC zpráva obslužná rutina není volána s PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Přepsání této funkce filtru okno zprávy před odesláním do funkce Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -485,7 +485,7 @@ virtual LRESULT ProcessWndProcException(
  Tato členská funkce se používá jenom v vlákna, které mají pumpu zpráv.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Obsahuje smyčku zpráv vlákna.  
+ obsahuje smyčku zpráv vlákna.  
   
 ```  
 virtual BOOL PumpMessage();
@@ -520,7 +520,7 @@ virtual int Run();
  **Int** hodnotu, která je vrácena vlákna. Tuto hodnotu můžete získat voláním [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Poznámky  
- `Run` Získá a odesílá zprávy Windows, dokud se aplikace obdrží [WM_QUIT](/windows/desktop/winmsg/wm-quit) zprávy. Pokud fronta zpráv vlákna v současné době obsahuje žádné zprávy `Run` volání `OnIdle` provádět zpracování doby nečinnosti. Příchozí zprávy pokračujte [PreTranslateMessage –](#pretranslatemessage) členskou funkci pro zvláštní zpracování a potom na funkci Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) pro překlad standardní klávesnice. Nakonec [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) je volána funkce Windows.  
+ `Run` Získá a odesílá zprávy Windows, dokud se aplikace obdrží [WM_QUIT](/windows/desktop/winmsg/wm-quit) zprávy. Pokud fronta zpráv vlákna v současné době obsahuje žádné zprávy `Run` volání `OnIdle` provádět zpracování doby nečinnosti. Příchozí zprávy pokračujte [PreTranslateMessage –](#pretranslatemessage) členskou funkci pro zvláštní zpracování a potom na funkci Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) pro překlad standardní klávesnice. Nakonec [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) je volána funkce Windows.  
   
  `Run` je přepsána jen zřídka, ale můžete ho implementovat zvláštní chování přepsat.  
   

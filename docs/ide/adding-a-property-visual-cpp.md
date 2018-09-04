@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212792"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685323"
 ---
 # <a name="adding-a-property-visual-c"></a>Přidání vlastnosti (Visual C++)
 Můžete použít [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md) přidání metody do rozhraní ve vašem projektu.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Přidání vlastnosti do objektu  
   
-1.  V [zobrazení tříd](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na název rozhraní, ke kterému chcete přidat vlastnost.  
+1.  V [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název rozhraní, ke kterému chcete přidat vlastnost.  
   
     > [!NOTE]
     >  Můžete také přidat vlastnosti do odesílacích rozhraních, která pokud je projekt s atributy, jsou vnořené uvnitř uzlu knihovny.  

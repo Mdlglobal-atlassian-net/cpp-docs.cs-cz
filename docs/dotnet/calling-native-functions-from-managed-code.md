@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195685"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678447"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 Modul common language runtime poskytuje platformu vyvolání služby nebo PInvoke, což umožňuje spravovat kód volat funkce jazyka C v nativní propojenými dynamickými knihovnami (DLL). Stejné zařazování dat se používá také u interoperabilita modelů COM s modulem runtime a pro mechanismus "Prostě to funguje" nebo IJW.  
@@ -35,8 +35,6 @@ Modul common language runtime poskytuje platformu vyvolání služby nebo PInvok
 -   [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Bližší pohled na vyvolání platformy](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  Příklady v tomto oddíle ukazují jak `PInvoke` lze použít. `PInvoke` můžete zjednodušit vlastní zařazování dat, protože poskytnete zařazovací informace deklarativně v atributech namísto v ručně psaném kódu.  
   

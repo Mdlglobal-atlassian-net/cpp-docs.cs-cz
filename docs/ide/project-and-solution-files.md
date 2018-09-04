@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 282fd41602b70f743926b0fe5322346e9cdfd3fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bf7d4f2b62ba62d520dcf84fced1dd7e7893755
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676995"
 ---
 # <a name="project-and-solution-files"></a>Soubory projektu a řešení
 Následující soubory jsou vytvořeny při vytvoření projektu v sadě Visual Studio. Používají se ke správě souborů projektu v řešení.  
@@ -40,7 +40,7 @@ Následující soubory jsou vytvořeny při vytvoření projektu v sadě Visual 
 |*Název_projektu*SDF|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Databáze procházení* souboru. Podporuje vyhledávání a navigace funkce, jako **Goto definice**, **najít všechny odkazy**, a **zobrazení tříd**. Je generována pomocí analýzy soubory hlaviček.|  
 |*Název_projektu.* vcxproj.filters|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Filtry* souboru. Určuje umístění souboru, který je přidán do řešení. Například soubor hlaviček je umístěn **hlavičkové soubory** uzlu.|  
 |*Název_projektu.* vcxproj.user|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Uživatele migrace* souboru. Po migraci oznámení projekt ze sady Visual Studio 2008, tento soubor obsahuje informace, které se převedl ze všech souborů.|  
-|*Název_projektu*IDL|*Projname*|Zdroj|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacího prvku. Tento soubor se používá ve Visual C++ generovat knihovnu typů. Vygenerovaný knihovna poskytuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace najdete v tématu [soubor Interface Definition (IDL)](https://msdn.microsoft.com/library/windows/desktop/aa378712) v sadě Windows SDK.|  
+|*Název_projektu*IDL|*Projname*|Zdroj|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacího prvku. Tento soubor se používá ve Visual C++ generovat knihovnu typů. Vygenerovaný knihovna poskytuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|  
 |Readme.txt|*Projname*|Projekt|*Čtěte* souboru. Je generována pomocí Průvodce aplikací a popisuje soubory v projektu.|  
   
 ## <a name="see-also"></a>Viz také  

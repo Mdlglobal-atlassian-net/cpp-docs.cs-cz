@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679549"
 ---
 # <a name="strings-ccx"></a>Řetězce (C + +/ CX)
 Představuje text v modulu Windows Runtime v jazyce C + +/ CX podle [Platform::String – třída](../cppcx/platform-string-class.md). Použití `Platform::String Class` při předání řetězce vpřed a zpět v metodách Windows Runtime tříd, nebo jsou při interakci s ostatními součástmi modulu Windows Runtime hranice binární rozhraní (ABI) aplikace. `Platform::String Class` Poskytuje metody pro několik běžných operace s řetězci, ale to není navržena jako plně funkční řetězec třídy. V modulu jazyka C++, použijte standardní řetězec typy C++ [wstring](../standard-library/basic-string-class.md) žádné významné text zpracování, a pak převod je konečný výsledek do [Platform::String ^](../cppcx/platform-string-class.md) předtím, než ji předáte do nebo z veřejné rozhraní. Je snadné a efektivní pro převod mezi `wstring` nebo `wchar_t*` a `Platform::String`.  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Vestavěné typy](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

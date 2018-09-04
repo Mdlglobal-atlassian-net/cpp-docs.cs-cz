@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afa5d7e3297cd77d1c5d8362d005bd2a48aee4d5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201925"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690194"
 ---
 # <a name="c-attributes-reference"></a>Referenční dokumentace k atributům C++
 
@@ -47,9 +47,3 @@ Obsahuje odkazy na všechny atribut referenční témata.
 
 [Programování s atributy](../windows/attributed-programming-concepts.md)  
 Poskytuje koncepční přehled atributy.
-
-[Referenční informace](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
-Obsahuje odkazy na témata popisující jazyk C a C++, knihovny poskytované aplikaci Visual C++, rozšířený objektový model Visual C++ a MASM (Microsoft Macro Assembler).
-
-[Visual C++ – ukázky](../visual-cpp-samples.md)  
-Obsahuje odkazy na vzorový kód, který ukazuje možnosti aplikace Visual C++ a podporovaných knihoven a technologií.

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691832"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM
 Tento dokument popisuje způsob použití Concurrency Runtime v aplikaci, která se používá modelu COM (Component Object).  
@@ -36,7 +36,7 @@ Tento dokument popisuje způsob použití Concurrency Runtime v aplikaci, která
   
 - [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Další informace o modelu COM naleznete v tématu [modelu COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Další informace o modelu COM naleznete v tématu [modelu COM (Component Object)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Správa životního cyklu knihovny modelu COM  
  I když využívání modelu COM s modulem Runtime souběžnost ale řídí stejnými Principy jako ostatní mechanismu pro souběžnost, následující pokyny vám umožňují tyto knihovny společně efektivně používat.  

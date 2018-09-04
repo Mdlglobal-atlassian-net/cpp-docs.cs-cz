@@ -1,7 +1,7 @@
 ---
-title: operátor OPATTR | Microsoft Docs
+title: operátor OPATTR | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60cff972deb70536bc570c26894b6877bce21cec
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5e9d22726ce13e8022445b15ae9a0577363fc04d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057536"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686003"
 ---
 # <a name="operator-opattr"></a>operátor OPATTR
-Vrátí slovo definování režimu a rozsah *výraz*. Nižší bajt je stejný jako bajtů vrácený [. TYP](../../assembler/masm/operator-dot-type.md). Vysoká bajtů obsahuje další informace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-OPATTR expression  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí slova definování režimu a rozsah *výraz*. Nižší bajt je stejný jako bajtů vrácených [. TYP](../../assembler/masm/operator-dot-type.md). Vyšší bajt obsahuje další informace.
+
+## <a name="syntax"></a>Syntaxe
+
+> OPATTR výraz
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

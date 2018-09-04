@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688569"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 Tyto funkce podporují text kódování a dekódování.
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  Ukazatel na proměnnou, která obsahuje délku v bajtech *szDest*. Pokud funkce uspěje, proměnná přijímá počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, proměnné obdrží má požadovanou délku v bajtech vyrovnávací paměti.  
   
  [in] *dwFlags*  
- Příznaky popisující, jak se má provést převod. Zobrazit [ATLSMTP_QPENCODE příznaky](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
+ ATLSMTP_QPENCODE příznaky popisující, jak se má provést převod.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  

@@ -1,7 +1,7 @@
 ---
-title: . ZÁSOBNÍK | Microsoft Docs
+title: . ZÁSOBNÍK | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab47677da8db2afca73a078b110300a017e7c8d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95e8d69903fabf60fdb5bc04d90452bdad163a19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676233"
 ---
 # <a name="stack"></a>.STACK
-Při použití s [. MODEL](../../assembler/masm/dot-model.md), definuje segment zásobníku (s názvem segmentu zásobníku). Volitelné `size` určuje počet bajtů pro zásobníku (výchozí nastavení 1 024 jednotek). `.STACK` – Direktiva automaticky zavře příkaz zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.STACK [[size]]  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Při použití s [. MODEL](../../assembler/masm/dot-model.md), definuje segment zásobníku (s názvem segmentu STACK). Volitelný `size` určuje počet bajtů zásobníku (výchozí nastavení 1 024 jednotek). `.STACK` – Direktiva příkaz zásobníku automaticky zavře.
+
+## <a name="syntax"></a>Syntaxe
+
+> . ZÁSOBNÍKU [[velikost]]
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

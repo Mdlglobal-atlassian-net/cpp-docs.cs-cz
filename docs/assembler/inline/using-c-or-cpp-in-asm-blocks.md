@@ -1,7 +1,7 @@
 ---
-title: Použití jazyka C nebo C++ v blocích __asm | Microsoft Docs
+title: Použití jazyka C nebo C++ v blocích __asm | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,47 +24,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120940"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687096"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Použití jazyka C nebo C++ v blocích __asm
 
-** Microsoft konkrétní **
+** Specifické pro Microsoft **
 
-Protože vloženého sestavení pokynů můžete kombinovat s příkazy jazyka C nebo C++, můžou odkazují na proměnné jazyka C nebo C++ podle názvu a používat mnoho dalších prvků tyto jazyky.
+Protože pokyny vložené sestavení lze kombinovat s příkazy jazyka C nebo C++, mohou odkazovat na proměnné jazyka C nebo C++ podle názvu a použít mnoho prvků z těchto jazyků.
 
-`__asm` Bloku můžete použít následující prvky jazyka:
+`__asm` Blok můžete použít následující prvky jazyka:
 
-- Symboly, včetně popisků a názvy proměnné a funkcí
+- Symboly, včetně popisků a názvů proměnných a funkcí
 
-- Konstanty, včetně symbolický konstanty a `enum` členy
+- Konstanty, včetně Symbolické konstanty a `enum` členy
 
 - Makra a preprocesor – direktivy
 
-- Komentáře (obě __/ \* \* /__ a __//__ )
+- Komentáře (obojí __/ \* \* /__ a __//__ )
 
-- Zadejte názvy (kdekoli typu MASM by právní)
+- Zadejte jména (všude, kde typ MASM bude právní)
 
-- `typedef` názvy, které se obvykle používá s operátory, jako **PTR** a **typu** nebo k určení členů struktury nebo sjednocení
+- `typedef` názvy, které se obecně používají s operátory, jako **PTR** a **typ** nebo chcete-li určit členy struktury nebo sjednocení
 
-V rámci `__asm` blok, můžete zadat celočíselné konstanty zápis v jazyce C nebo assembleru základ – zápis (0x100 a 100 h ekvivalentní, jsou například). To umožňuje definovat (pomocí `#define`) konstanta v jazyce C a použít ho v části C nebo C++ a sestavení programu. Můžete také zadat konstanty v osmičková tak, že před jejich s 0. Například 0777 určuje osmičková konstanta.
+V rámci `__asm` blok, můžete určit celočíselné konstanty s zápis v jazyce C nebo zápis základ číselné soustavy assembler (0x100 a 100 h jsou ekvivalentní, například). To vám umožňuje definovat (pomocí `#define`) konstanta v jazyce C a používat ho v části programu jazyka C nebo C++ a sestavení. Můžete také určit konstanty v osmičkové před s 0. Například 0777 určuje osmičkové konstanty.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
 - [Používání operátorů v blocích __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [Použití jazyka C nebo C++ Symbols_in blocích __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Pomocí jazyka C nebo C++ Symbols_in bloků __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Přístup k datům jazyka C nebo C++ v blocích __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
 - [Zápis funkcí s vloženým sestavením](../../assembler/inline/writing-functions-with-inline-assembly.md)
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vkládaný assembler](../../assembler/inline/inline-assembler.md)
+[Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682853"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Volá se rozhraním, když je skryta nebo zobrazena podokna v okně okna s minirámcem.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Vrátí podokno, pokud obsahuje uživatelem zadané bodu uvnitř okno s minirámcem.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Překreslí všechna okna s minirámcem.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Volá se rozhraním odebrat neplatnými podoken.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Podokno se odebere z okna s minirámcem.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Výška v pixelech okno s minirámcem.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem určení výška okno s minirámcem. Ve výchozím nastavení výška nastavena na SM_CYSMCAPTION. Další informace najdete v tématu [GetSystemMetrics funkce](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Volejte tuto metodu za účelem určení výška okno s minirámcem. Ve výchozím nastavení výška nastavena na SM_CYSMCAPTION. Další informace najdete v tématu [GetSystemMetrics funkce](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Vypočítá ohraničující obdélník titulek okna minirámcem.  

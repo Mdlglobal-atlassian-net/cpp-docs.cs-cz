@@ -1,7 +1,7 @@
 ---
-title: operátor &amp; &amp; (MASM) | Microsoft Docs
+title: Nahrazení – (operátor MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,25 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e285e5b691b2fdd24216a1156e8fe3708afe23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a5af8bbb4f01e31493ebeb73c425b1ace031ddf1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683467"
 ---
-# <a name="operator-ampamp-masm"></a>operátor &amp; &amp; (MASM)
-Nahradí `parameter` s odpovídající hodnotou argumentu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-&  
-parameter  
-&  
-  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+# <a name="substitution-operator-masm"></a>Nahrazení – (operátor MASM)
+
+Nahradí *parametr* s odpovídající hodnotou argumentu.
+
+## <a name="syntax"></a>Syntaxe
+
+> &*Parametr*&
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207920"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681037"
 ---
 # <a name="ltfilesystemgt"></a>&lt;systém souborů&gt;
 
@@ -128,7 +128,8 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 |Název|Popis|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) a určuje chování, pokud cílový soubor už existuje.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
 |[directory_options –](../standard-library/filesystem-enumerations.md#directory_options)|Výčet, který určuje možnosti pro adresář iterátory.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Výčet pro typy souborů.|
 |[oprávnění](../standard-library/filesystem-enumerations.md#perms)|Typ bitové masky využít k předání možnosti oprávnění a oprávnění|

@@ -1,7 +1,7 @@
 ---
-title: Typ a velikost proměnných ve vloženém sestavení | Microsoft Docs
+title: Typ a velikost proměnných ve vloženém sestavení | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -25,39 +25,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3466158c507e618e701df5aed35db7e5814abe52
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3defb0b11a55258aa0a7d8c050d5a59bb6b8eb5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050582"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683619"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Typ a velikost proměnných ve vloženém sestavení
-**Konkrétní Microsoft**  
-  
- **Délka**, **velikost**, a **typ** operátory mají omezenou význam ve vloženém sestavení. Nelze je použít na všech s `DUP` – operátor (protože nelze definovat data pomocí direktivy MASM nebo operátory). Ale můžete je použít k vyhledání velikost jazyka C nebo C++ proměnné nebo typy:  
-  
--   **Délka** operátor může vrátit počet elementů v matici. Vrátí hodnotu 1 pro proměnné jiné pole.  
-  
--   **Velikost** operátor může vrátit velikost proměnné jazyka C nebo C++. Proměnnou velikost je produkt jeho **délka** a **typu**.  
-  
--   **Typ** operátor může vrátit velikost jazyka C nebo C++ typu nebo proměnné. Pokud je proměnná pole, **typ** vrátí velikost jednoho prvku pole.  
-  
- Například, pokud má 8 element program `int` pole,  
-  
-```  
-int arr[8];  
-```  
-  
- Následující výrazy jazyka C a sestavení yield velikost `arr` a jejích elementů.  
-  
-|__asm|C|Velikost|  
-|-------------|-------|----------|  
-|**Délka** směrování žádostí na aplikace|`sizeof`(arr)/`sizeof`(arr[0])|8|  
-|**VELIKOST** směrování žádostí na aplikace|`sizeof`(arr)|32|  
-|**TYP** směrování žádostí na aplikace|`sizeof`(arr[0])|4|  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+**Délka**, **velikost**, a **typ** operátory mají omezenou význam ve vloženém sestavení. Nelze je použít na všech s `DUP` – operátor (protože nelze definovat data pomocí direktivy MASM nebo operátory). Ale můžete je použít k vyhledání velikost proměnné jazyka C nebo C++ nebo typy:
+
+- **Délka** operátor může vrátit počet prvků v poli. Vrátí hodnotu 1 pro proměnné bez pole.
+
+- **Velikost** operátor může vrátit velikost proměnné jazyka C nebo C++. Velikost proměnné je produkt jeho **délka** a **typ**.
+
+- **Typ** operátor může vrátit velikost typu jazyka C nebo C++ nebo proměnné. Pokud je pole, proměnná **typ** vrátí velikost položky jediný prvek pole.
+
+Například, pokud program neobsahuje 8 element **int** pole,
+
+```cpp
+int arr[8];
+```
+
+Následující C a sestavení výrazy yield velikost `arr` a jeho elementy.
+
+|__asm|C|Velikost|
+|-------------|-------|----------|
+|**Délka** směrování žádostí na aplikace|`sizeof`(arr)/`sizeof`(arr[0])|8|
+|**VELIKOST** směrování žádostí na aplikace|`sizeof`(arr)|32|
+|**TYP** směrování žádostí na aplikace|`sizeof`(arr[0])|4|
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

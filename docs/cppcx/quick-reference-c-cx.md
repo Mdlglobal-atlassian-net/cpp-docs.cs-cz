@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608330"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692585"
 ---
 # <a name="quick-reference-ccx"></a>Stručná referenční dokumentace (C + +/ CX)
-Modul Windows Runtime podporuje aplikace univerzální platformy Windows (UPW), které provést pouze v prostředí pro důvěryhodného operačního systému, použít oprávnění funkce, typy dat a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C + +/ CX zjednodušují psaní aplikací pro Windows Runtime. Tento článek je Stručná referenční příručka; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md) a [přípony komponent pro platformy běhového prostředí](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Modul Windows Runtime podporuje aplikace univerzální platformy Windows (UPW), které provést pouze v prostředí pro důvěryhodného operačního systému, použít oprávnění funkce, typy dat a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C + +/ CX zjednodušují psaní aplikací pro Windows Runtime. Tento článek je Stručná referenční příručka; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md).  
   
  Při sestavování v příkazovém řádku použít **/ZW** – možnost kompilátoru k sestavení aplikace pro UPW nebo součásti prostředí Windows Runtime. Pro přístup k prostředí Windows Runtime deklarace, které jsou definovány v souborech modulu Windows Runtime metadata (.winmd), zadejte `#using` směrnice nebo **/FU** – možnost kompilátoru. Když vytvoříte projekt pro aplikace pro UPW, Visual Studio ve výchozím nastavení nastaví tyto možnosti a přidá odkazy na všechny knihovny Windows Runtime.  
   
@@ -42,7 +42,7 @@ Modul Windows Runtime podporuje aplikace univerzální platformy Windows (UPW), 
 |Odkaz|Odkaz na objekt (`&`):<br /><br /> *T* `&` *identifikátor*|Sledovací odkaz (`%`):<br /><br /> *T* `%` *identifikátor*|Pouze Windows Runtime, které typy mohou být deklarovány pomocí sledování odkazovat modifikátor. Členy objektu jsou přístupné pomocí tečka (`.`) – operátor přístupu členů třídy.<br /><br /> Sledovací odkaz znamená "odkaz na objekt prostředí Windows Runtime, který je automaticky počítáno referenčně." Přesněji řečeno sledovací odkaz deklaruje, že by měl kompilátor vložení kódu automaticky spravovat počet odkazů na objekt a objekt odstranit, pokud počet odkazů dosáhne nuly.|  
 |Dynamický typ deklarace|`new`|`ref new`|Objekt prostředí Windows Runtime přiděluje a poté vrátí popisovač do tohoto objektu.|  
 |Správa životního cyklu objektu|`delete` *identifikátor*<br /><br /> `delete[]`  *identifikátor*|(Vyvolá destruktor.)|Doba platnosti je určena počítání odkazů. Volání delete vyvolá destruktor, ale samotné neuvolní paměti.|  
-|Deklarace pole|*Identifikátor T* `[]`<br /><br /> `std::array` *identifikátor*|`Array<` *T* `^>^` *identifikátor* `(` *velikost* `)`<br /><br /> -nebo-<br /><br /> `WriteOnlyArray<` *T* `^>` *identifikátor* `(` *velikost*  `)`|Deklaruje jednorozměrné pole upravitelné nebo jen pro zápis typu T ^. Pole samotného je také počítáním referencí objekt, který musí být deklarovány pomocí modifikátoru popisovač objektu.<br /><br /> (Používat záhlaví třída šablony, který je v deklarace pole `Platform` oboru názvů.)|  
+|Deklarace pole|*Identifikátor T* `[]`<br /><br /> `std::array` *identifikátor*|`Array<` *T* `^>^` *identifikátor* `(` *velikost* `)`<br /><br /> -nebo-<br /><br /> `WriteOnlyArray<` *T* `^>` *identifikátor* `(` *velikost* `)`|Deklaruje jednorozměrné pole upravitelné nebo jen pro zápis typu T ^. Pole samotného je také počítáním referencí objekt, který musí být deklarovány pomocí modifikátoru popisovač objektu.<br /><br /> (Používat záhlaví třída šablony, který je v deklarace pole `Platform` oboru názvů.)|  
 |Deklarace třídy|`class`  *identifikátor* `{}`<br /><br /> `struct`  *Identifikátor* `{}`|`ref class`  *Identifikátor* `{}`<br /><br /> `ref struct`  *Identifikátor* `{}`|Deklaruje třídu modulu runtime, který má výchozí přístupnost private.<br /><br /> Deklaruje třídu modulu runtime, který má výchozí přístupnost public.|  
 |Deklarace struktury|`struct`  *Identifikátor* `{}`<br /><br /> (to znamená, obyčejná stará Data strukturovat (POD))|`value class`  *Identifikátor* `{}`<br /><br /> `value struct`  *Identifikátor* `{}`|Deklaruje strukturu POD, který má výchozí přístupnost private.<br /><br /> Hodnotová třída může být reprezentovaná v metadatech Windows, ale nemůže být standardní třídy jazyka C++.<br /><br /> Deklaruje strukturu POD, který má výchozí přístupnost public.<br /><br /> Hodnota strukturu může být reprezentovaná v metadatech Windows, ale nemůže být standardní struktury C++.|  
 |Deklarace rozhraní|abstraktní třída, která obsahuje pouze čistě virtuální funkce.|`interface class`  *Identifikátor* `{}`<br /><br /> `interface struct`  *Identifikátor* `{}`|Deklaruje rozhraní, která má výchozí přístupnost private.<br /><br /> Deklaruje rozhraní, která má výchozí přístupnost public.|  

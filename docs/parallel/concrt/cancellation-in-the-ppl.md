@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690446"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 Tento dokument popisuje roli zrušení v knihovna paralelních vzorů (PPL), jak zrušení paralelně prováděných úloh a jak určit, kdy zrušení paralelně prováděných úloh.  
@@ -150,7 +150,7 @@ Tento dokument popisuje roli zrušení v knihovna paralelních vzorů (PPL), jak
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Tokeny zrušení a skládání úloh  
 
- [Souběžnosti:: hypertextový odkaz "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all –](reference/concurrency-namespace-functions.md#when_all) a [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcí můžete vytvořit více úkolů k implementaci běžných vzorů. Tato část popisuje, jak tyto funkce pracují s tokeny zrušení.  
+ [Concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) a [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcí můžete vytvořit více úkolů k implementaci běžných vzorů. Tato část popisuje, jak tyto funkce pracují s tokeny zrušení.  
   
  Když zadáte token zrušení pro buď `when_all` a `when_any` fungovala, že funkce zruší pouze v případě, že je zrušen token zrušení, nebo když jeden účastník úkoly skončí ve zrušeném stavu nebo vyvolá výjimku.  
   

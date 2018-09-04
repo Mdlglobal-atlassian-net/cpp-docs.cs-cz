@@ -1,7 +1,7 @@
 ---
-title: Závažná chyba nástroje ML A1008 | Microsoft Docs
+title: Závažná chyba nástroje ML A1008 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b312e03740059866bfbf447f962538c499eb46
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ec709823856e17c90d4af2a06262b30c966f39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691935"
 ---
 # <a name="ml-fatal-error-a1008"></a>Závažná chyba nástroje ML A1008
-**vnoření neodpovídající – makro**  
-  
- Buď makro nebyl ukončen před koncem souboru nebo ukončující – direktiva [endm –](../../assembler/masm/endm.md) byl nalezen mimo blok makro.  
-  
- Jednou z příčin této chyby je vynechání tečky před [. OPAKUJTE](../../assembler/masm/dot-repeat.md) nebo [. Při](../../assembler/masm/dot-while.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**vnoření bezkonkurenční – makro**
+
+Buď makro nebyl ukončen před koncem souboru nebo direktivě ukončující [ENDM](../../assembler/masm/endm.md) byl nalezen mimo blok – makro.
+
+Jednou z příčin této chyby je vynechání tečka před [. OPAKUJTE](../../assembler/masm/dot-repeat.md) nebo [. ZATÍMCO](../../assembler/masm/dot-while.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

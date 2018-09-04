@@ -1,5 +1,5 @@
 ---
-title: -Qvec-report (úroveň sestav automatickou vektorizací) | Microsoft Docs
+title: -Qvec-report (úroveň sestav automatickou vektorizací) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85f9d1c63f41b28982018bbe4507ff6bf87158fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685850"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Úroveň sestavy s automatickou vektorizací)
-Povolí funkci vytváření sestav kompilátoru [automatickou vektorizací](../../parallel/auto-parallelization-and-auto-vectorization.md) a určuje úroveň informační zprávy pro výstup během kompilace.  
+Povolí funkci vykazování sady kompilátor [automatický Vektorizér](../../parallel/auto-parallelization-and-auto-vectorization.md) a určuje úroveň pro výstup informačních zpráv během kompilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,22 +30,22 @@ Povolí funkci vytváření sestav kompilátoru [automatickou vektorizací](../.
   
 ## <a name="remarks"></a>Poznámky  
  **/ Qvec-report: 1**  
- Výstupy informační zpráva smyčky, které jsou vectorized for.  
+ Vypíše informační zpráva pro smyčky, které jsou vektorizována.  
   
- **/ Qvec-sestavy: 2**  
- Výstupy informační zpráva smyčky, které jsou vectorized a cykly, které nejsou vectorized společně s kód důvodu.  
+ **/ Qvec-report: 2**  
+ Vypíše informační zpráva pro smyčky, které jsou vektorizovaná a smyček, které nejsou společně s kód důvodu vektorizována.  
   
- Informace o kódech důvod a zpráv najdete v tématu [nástrojů pro vektorizaci a paralelní zpracování zprávy](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Informace o kódech příčiny a zprávy najdete v tématu [zprávy nástrojů pro vektorizaci a](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
-### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Nastavení možnosti kompilátoru /Qvec-report v sadě Visual Studio  
+### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Nastavení parametru kompilátoru /Qvec-report v sadě Visual Studio  
   
-1.  V **Průzkumníku řešení**, otevřete místní nabídky projektu a zvolte **vlastnosti**.  
+1.  V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**.  
   
-2.  V **stránky vlastností** dialogovém **C/C++**, vyberte **příkazového řádku**.  
+2.  V **stránky vlastností** dialogovém okně **C/C++** vyberte **příkazového řádku**.  
   
 3.  V **další možnosti** zadejte `/Qvec-report:1` nebo `/Qvec-report:2`.  
   
-### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Nastavení možnosti kompilátoru /Qvec-report prostřednictvím kódu programu  
+### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Nastavení parametru kompilátoru /Qvec-report prostřednictvím kódu programu  
   
 -   Použijte tento příklad kódu v <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
@@ -53,4 +53,4 @@ Povolí funkci vytváření sestav kompilátoru [automatickou vektorizací](../.
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Paralelní programování v nativním kódu](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

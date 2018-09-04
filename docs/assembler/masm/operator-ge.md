@@ -1,7 +1,7 @@
 ---
-title: operátor GE | Microsoft Docs
+title: GE – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99ef77272c6f3242c0f5359f1625496da9ba3fb0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e494e7eb36173d77a8fc0cd16015f97c4c756e34
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692345"
 ---
 # <a name="operator-ge"></a>operátor GE
-Vrátí hodnotu true (-1) Pokud *expression1* je větší než nebo rovno *Výraz2*, nebo pokud není, vrátí hodnotu false (0).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 GE expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí hodnotu true (-1) Pokud *expression1* je větší než nebo rovna hodnotě *expression2*, nebo pokud není, vrátí hodnotu false (0).
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 GE expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

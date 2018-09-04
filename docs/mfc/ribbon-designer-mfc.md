@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683012"
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
-Návrhář pásu karet umožňuje vytvořit a upravit pásy karet v aplikacích MFC. Pás karet je prvek uživatelského rozhraní (UI), který umožňuje uspořádat příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných kartách v pruhu v horní části okna. Pás karet nahrazuje nabídky a panely nástrojů. Pás karet může výrazně zlepšit použitelnost aplikace. Další informace najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233). Následující ilustrace znázorňuje pás karet.  
+Návrhář pásu karet umožňuje vytvořit a upravit pásy karet v aplikacích MFC. Pás karet je prvek uživatelského rozhraní (UI), který umožňuje uspořádat příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných kartách v pruhu v horní části okna. Pás karet nahrazuje nabídky a panely nástrojů. Pás karet může výrazně zlepšit použitelnost aplikace. Další informace najdete v tématu [pásů karet](/windows/desktop/uxguide/cmd-ribbons). Následující ilustrace znázorňuje pás karet.  
   
  ![Ovládací prvek prostředku pásu karet MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   

@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2008 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2008 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50f7329f698d23f875a29bc316067c39e8d1b8c1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 774cf4c2a51bf084fb63e572cc99b0c8e3cba26f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055216"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679372"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Méně závažná chyba nástroje ML A2008
-**Chyba syntaxe:**  
-  
- Token do aktuálního umístění způsobila chybu syntaxe.  
-  
- Mohlo dojít jednu z těchto možností:  
-  
--   Předpona tečkou byl přidán do nebo vynechaný direktivu.  
-  
--   Vyhrazené slovo (například **C** nebo **velikost**) byla použita jako identifikátor.  
-  
--   Byl použit instrukce, které nebyly k dispozici s aktuálním výběrem procesoru nebo koprocesor.  
-  
--   Operátor porovnání runtime (například `==`) byl použit v příkazu podmíněného sestavení místo relační operátor (například [EQ](../../assembler/masm/operator-eq.md)).  
-  
--   Pokyn nebo – direktiva byla zadána příliš málo operandy.  
-  
--   Zastaralá direktiva byl použit.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Chyba syntaxe:**
+
+Token na aktuální pozici způsobila chybu syntaxe.
+
+Jednu z následujících mohlo dojít:
+
+- Předponu tečkou byl přidán do nebo na direktivu vynechat.
+
+- Vyhrazené slovo (například **C** nebo **velikost**) byl použit jako identifikátor.
+
+- Instrukce, která nebyla k dispozici pomocí aktuálního výběru procesoru nebo koprocesoru použil.
+
+- Operátor porovnání za běhu (například `==`) byla použita ve výrazu podmíněné sestavení namísto relační operátor (například [EQ](../../assembler/masm/operator-eq.md)).
+
+- Instrukci nebo direktivě byl zadán nedostatečný počet operandů.
+
+- Zastaralá direktiva byl použit.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

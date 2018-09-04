@@ -1,7 +1,7 @@
 ---
-title: Direktivy assembleru ARM | Microsoft Docs
+title: Direktivy assembleru ARM | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,103 +12,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 282d8bbd55bec8053961c709eb3733a65972b187
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053298"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693110"
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
-Ve většině případů assembleru Microsoft ARM používá jazyk sestavení ARM, která je popsána v kapitole 7 [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Ale implementace Microsoft direktiv některé sestavení se liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.  
-  
-## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementace Microsoft direktiv sestavení ARM  
- OBLASTI  
- Assembleru Microsoft ARM podporuje tyto atributy oblasti: ZAROVNAT, kód, CODEALIGN, DATA, NOINIT, jen pro čtení, READWRITE, Flash, ARM.  
-  
- Všechny kromě Flash a ARM fungovat, jak je uvedeno v [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
-  
- V assembleru Microsoft ARM Flash označuje, že část kódu obsahuje kód, Flash a je výchozí pro části kódu.  ARM znamená, že oddíl obsahuje kód ARM.  
-  
- ATTR  
- Není podporováno.  
-  
- CODE16  
- Není podporována, protože předpokládají pre-UAL jezdec syntaxi, což není povoleno assembleru Microsoft ARM.  Místo toho použijte JEZDEC – direktiva společně s syntaxe protokolování přístupu uživatele.  
-  
- BĚŽNÉ  
- Specifikace zarovnání pro běžné oblast není podporována.  
-  
- DCDO  
- Není podporováno.  
-  
- ROZLIŠUJÍCÍ NÁZEV, QN SN  
- Specifikace typu nebo dráhy na alias registrace není podporována.  
-  
- POLOŽKA  
- Není podporováno.  
-  
- EQU  
- Specifikace typu pro definovaný symbol není podporována.  
-  
- EXPORT a globální  
- ```  
-EXPORTsym {[type]}  
-```  
-  
- `sym` je symbol pro export.  `[type]`, pokud jsou zadané, může být buď `[DATA]` indikující, zda je symbol ukazuje na data nebo `[FUNC]` indikující, zda je symbol ukazuje na kódu.  
-  
- GLOBÁLNÍ je synonymum pro EXPORT.  
-  
- EXPORTAS  
- Není podporováno.  
-  
- RÁMCE  
- Není podporováno.  
-  
- Funkce a PROC  
- I když syntaxe sestavení podporuje specifikaci vlastní konvence volání na postupech tak, že uvedete registrů, které jsou volající uložit a ty, které jsou volaný ukládání, assembleru Microsoft ARM přijímá syntaxe, ale ignoruje seznamy registrace.  Informace o ladění, která je vytvořena pomocí assembleru podporuje pouze výchozí konvenci volání.  
-  
- IMPORT a EXTERN  
- ```  
-IMPORT sym{, WEAK alias{, TYPE t}}  
-```  
-  
- `sym` je název symbol, který má být importován.  
-  
- Pokud SLABÉ `alias` není zadaný, značí to, `sym` je slabé externí. Pokud je nalezena žádná definice pro něj v době spojení, pak všechny odkazy na jeho místo navázat na `alias`.  
-  
- Pokud typ `t` se `t` označuje linkeru mají pokusit o tom, jak vyřešit `sym`.  Tyto hodnoty pro `t` je možné:   
-1 – neprovádět knihovny Hledat `sym`  
-2 – knihovna hledání pro `sym`  
-3 –`sym` je alias `alias` (výchozí)  
-  
- EXTERN je synonymum pro IMPORT, vyjma toho, že `sym` importu pouze v případě, že existují odkazy na ni v aktuální sestavení.  
-  
- MACRO  
- Použití proměnné pro uložení kód podmínku makra není podporováno. Výchozí hodnoty pro makra, které parametry nejsou podporovány.  
-  
- NOFP  
- Není podporováno.  
-  
- OPT, TTL, SUBT  
- Není podporována, protože assembleru Microsoft ARM nevytváří seznamy.  
-  
- PRESERVE8  
- Není podporováno.  
-  
- RELOC  
- `RELOC n` může používat pouze instrukce nebo direktivu definice data. Neexistuje žádné "anonymní symbol", může být přemístění.  
-  
- VYŽADOVAT  
- Není podporováno.  
-  
- REQUIRE8  
- Není podporováno.  
-  
- THUMBX  
- Není podporováno, protože assembleru Microsoft ARM nepodporuje sada instrukcí 2EE jezdce.  
-  
-## <a name="see-also"></a>Viz také  
- [Reference k příkazovému řádku assembleru ARM](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [Diagnostické zprávy assembleru ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+
+Ve většině případů assembler Microsoft ARM používá assembleru ARM, která je popsána v [kompilátoru ARM armasm referenční příručka](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html). Implementace Microsoft některé direktivy sestavení se však liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.
+
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementace Microsoft direktivy sestavení ARM
+
+`AREA`<br/>
+Assembler Microsoft ARM podporuje tyto `AREA` atributy: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
+
+Všechny s výjimkou `THUMB` a `ARM` fungovat, jak je uvedeno v [kompilátoru ARM armasm referenční příručka](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+
+V assembler Microsoft ARM `THUMB` znamená, že `CODE` oddíl obsahuje kód pro Thumb a je pro výchozí `CODE` oddíly.  `ARM` Označuje, že oddíl obsahuje kód pro ARM.
+
+`ATTR`<br/>
+Není podporováno.
+
+`CODE16`<br/>
+Není podporována, protože zahrnuje pre-UAL Thumb syntaxi, což není povoleno assembler Microsoft ARM.  Použití `THUMB` direktiv místo toho spolu s syntaxe protokolování přístupu uživatele.
+
+`COMMON`<br/>
+Specifikace zarovnání pro běžné oblasti nepodporuje.
+
+`DCDO`<br/>
+Není podporováno.
+
+`DN`, `QN`, `SN`<br/>
+Specifikace typu nebo lane na register alias není podporována.
+
+`ENTRY`<br/>
+Není podporováno.
+
+`EQU`<br/>
+Specifikace typu pro definovaný symbol není podporována.
+
+`EXPORT` a `GLOBAL`
+
+> **EXPORT** <em>sym</em>{**[**<em>typ</em>**]**}
+
+*Sym* je symbol, nelze exportovat.  [*typ*], je-li zadána, může být buď `[DATA]` k označení, že symbol odkazuje na data nebo `[FUNC]` k označení, že symbol odkazuje na kód.
+
+`GLOBAL` je synonymum pro `EXPORT`.
+
+`EXPORTAS`<br/>
+Není podporováno.
+
+`FRAME`<br/>
+Není podporováno.
+
+`FUNCTION` a `PROC`<br/>
+I když syntaxe sestavení podporuje specifikaci vlastní konvence volání na postupech uvedením registrů, které jsou volající uložit a ty, které jsou volaný ukládání, assembler Microsoft ARM přijímá syntaxi ale ignoruje seznamy registru.  Informace o ladění, který je vytvořen assembler podporuje pouze výchozí konvenci volání.
+
+`IMPORT` a `EXTERN`
+
+> **IMPORT** *sym*{**, SLABÉ** *alias*{**, typ** *t*}}
+
+*Sym* je název symbolu, které se mají naimportovat.
+
+Pokud `WEAK` *alias* není zadán, znamená, že *sym* je slabý externí. Pokud je nalezena žádná definice pro něj v době spojení, pak všechny odkazy na něj svázat místo toho *alias*.
+
+Pokud `TYPE` *t* není zadán, pak *t* Určuje, jak by měl pokusit vyřešit linker *sym*.  Tyto hodnoty pro *t* jsou možné:<br/>
+1 – nebude provádět vyhledávání knihovny *symbolů*<br/>
+2 – hledání knihovny pro *symbolů*<br/>
+3 –*sym* je alias pro *alias* (výchozí)
+
+`EXTERN` je synonymum pro `IMPORT`, s tím rozdílem, že *sym* je importován pouze v případě, že existují odkazy na něj v aktuálním sestavení.
+
+`MACRO`<br/>
+Použití proměnnou pro uchování stavu kódu makra není podporováno. Výchozí hodnoty pro makra, které parametry nejsou podporovány.
+
+`NOFP`<br/>
+Není podporováno.
+
+`OPT`, `TTL`, `SUBT`<br/>
+Není podporována, protože výsledkem assembler Microsoft ARM není výpisy.
+
+`PRESERVE8`<br/>
+Není podporováno.
+
+`RELOC`<br/>
+`RELOC n` může následovat pouze instrukce nebo direktivě definice data. Neexistuje žádná "anonymní symbol", který může být přemístění.
+
+`REQUIRE`<br/>
+Není podporováno.
+
+`REQUIRE8`<br/>
+Není podporováno.
+
+`THUMBX`<br/>
+Není podporováno, protože assembler Microsoft ARM nepodporuje instrukční sadu Thumb-2EE.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace pro použití nástroje assembleru ARM v příkazovém řádku](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[Diagnostické zprávy assembleru ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>

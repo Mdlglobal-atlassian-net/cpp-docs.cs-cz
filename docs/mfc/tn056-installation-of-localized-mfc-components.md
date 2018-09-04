@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4618efd8ad79a4f9b27bd3845aec20c5264788b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f9c157dee9e1c8b604822d81fb87e2aef25ef97c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194518"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682281"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: Instalace lokalizovaných komponent knihovny MFC
 Tato technická Poznámka, která popsána instalace lokalizovaných komponent knihovny MFC, je nyní zastaralá.  
   
- **Zobrazit**[nasazování aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4) pro další **informace o redistribuci aplikací v jazyce Visual C++. Viz také** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) Další informace o lokalizaci aplikací knihovny MFC.  
+ **Zobrazit** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) Další informace o lokalizaci aplikací knihovny MFC.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

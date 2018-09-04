@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692286"
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 Knihovna paralelních vzorů (PPL) zahrnuje několik kontejnery a objekty, které poskytují bezpečné pro vlákna přístup k jejich prvky.  
@@ -186,14 +186,14 @@ Knihovna paralelních vzorů (PPL) zahrnuje několik kontejnery a objekty, kter�
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[Operator ++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Přejde k další položky ve frontě. Tento operátor je přetížena pro poskytují sémantiku přírůstek před a po přírůstku.|  
-|[Operator *](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Získá odkaz na aktuální položku.|  
-|[Operator ->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Načte ukazatel na aktuální položku.|  
+|`operator++`|Přejde k další položky ve frontě. Tento operátor je přetížena pro poskytují sémantiku přírůstek před a po přírůstku.|  
+|`operator*`|Získá odkaz na aktuální položku.|  
+|`operator->`|Načte ukazatel na aktuální položku.|  
   
  [[Horní](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map – třída  
- [Hypertextový odkaz "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) je třída Třída asociativní kontejner, který, stejně jako [std::unordered_map](../../standard-library/unordered-map-class.md) třídy, řídí různé délky sekvence elementů typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Neuspořádanou mapu můžete představit jako slovník, který můžete přidat dvojici klíče a hodnoty do nebo vyhledat hodnotu podle klíče. Tato třída je užitečná, když máte více vláken nebo úloh, které mají přístup k sdílené kontejner souběžně, vložte do ní nebo ji aktualizovat.  
+ [Concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) třídy je třída asociativní kontejner, který, stejně jako [std::unordered_map](../../standard-library/unordered-map-class.md) třídy, řídí různé délky sekvence elementů typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Neuspořádanou mapu můžete představit jako slovník, který můžete přidat dvojici klíče a hodnoty do nebo vyhledat hodnotu podle klíče. Tato třída je užitečná, když máte více vláken nebo úloh, které mají přístup k sdílené kontejner souběžně, vložte do ní nebo ji aktualizovat.  
   
  Následující příklad ukazuje základní strukturu pro používání `concurrent_unordered_map`. V tomto příkladu vloží klávesy znaku v rozsahu ["a", "i"]. Protože neurčená pořadí operací, je také neurčeném konečnou hodnotu pro každý klíč. Je však bezpečné paralelní provádění vložení.  
   

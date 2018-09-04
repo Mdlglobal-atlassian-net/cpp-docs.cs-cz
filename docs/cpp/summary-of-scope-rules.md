@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195028"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676921"
 ---
 # <a name="summary-of-scope-rules"></a>Souhrn pravidel rozsahu
 Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkci, musí být funkce jednoznačná vzhledem k počtu a typu parametrů. Pokud název zůstává jednoznačným, [přístup ke členu](../cpp/member-access-control-cpp.md) pravidla se použijí.  
   
 ## <a name="constructor-initializers"></a>Inicializátory konstruktoru  
- Inicializátory konstruktoru (popsané v [inicializace základů a členů](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) jsou vyhodnoceny v rozsahu vnějšího bloku konstruktoru, pro které jsou určeny. Proto může používat názvy parametrů konstruktoru.  
+ [Inicializátory konstruktoru](constructors-cpp.md#member_init_list) jsou vyhodnoceny v rozsahu vnějšího bloku konstruktoru, pro které jsou určeny. Proto může používat názvy parametrů konstruktoru.  
   
 ## <a name="global-names"></a>Globální názvy  
  Název objektu, funkce nebo enumerátoru je globální, pokud je zaveden mimo jakoukoli funkci nebo třídu nebo je umístěn za předponu globálního unárního operátoru oboru (`::`) a není-li použit ve spojení s některým z těchto binárních operátorů:  

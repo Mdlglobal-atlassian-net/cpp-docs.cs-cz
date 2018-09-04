@@ -1,7 +1,7 @@
 ---
-title: operátor CARRY? | Microsoft Docs
+title: operátor CARRY? | Dokumenty Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 079b3390790c9c2a38baf77ab9dab07afcd20213
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 237360c1b86aa8135102c1b060f7997c88d66ce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680390"
 ---
 # <a name="operator-carry"></a>operátor CARRY?
-Stav carry příznak. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-CARRY?  
-  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Stav příznaku carry. Použít pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. ZATÍMCO](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) a ostatní porty blokuje vyhodnocen v době běhu, ne v okamžiku sestavení.
+
+## <a name="syntax"></a>Syntaxe
+
+> CARRY?
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

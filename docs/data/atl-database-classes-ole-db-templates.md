@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6df13353b61347455cc5d707f099086429d46f6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677866"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu rozhraní modelu COM, které poskytují jednotný přístup k datům v rozličnými zdroji informací a formátů.  OLE DB je oficiálně zastaralé; Tato dokumentace je pro vývojáře, kteří jsou zachování starší verze kódu. Nové aplikace měla použít pro připojení ke zdrojům dat SQL ODBC.
@@ -39,11 +39,11 @@ Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu r
   
  Všimněte si, že knihovna MFC obsahuje jednu třídu, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), který zobrazuje záznamy databáze v ovládacích prvcích. Zobrazení je připojený přímo k zobrazení formuláře `CRowset` který zobrazuje pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna.  
   
- Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [Příručka programátora technologie OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
+ Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření příjemce technologie OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Vytvoření zprostředkovatele OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [Reference šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Reference šablon zprostředkovatele OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB – Ukázky šablon](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples)

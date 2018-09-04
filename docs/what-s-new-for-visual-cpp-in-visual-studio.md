@@ -9,16 +9,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680536"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
-Visual Studio 2017 přináší řadu vylepšení a oprav prostředí Visual C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte [co je nového v sadě Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=834481).
+Visual Studio 2017 přináší řadu vylepšení a oprav prostředí Visual C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte [co je nového v sadě Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio).
 
 <!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 

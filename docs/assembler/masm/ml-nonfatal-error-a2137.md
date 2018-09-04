@@ -1,7 +1,7 @@
 ---
-title: Méně závažná chyba nástroje ML A2137 | Microsoft Docs
+title: Závažná méně závažná chyba nástroje ML A2137 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0566458a868d1463a59566840090a853b442f80d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16d09737bda1b29f8f47f46d0053cbe14fc286ca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691336"
 ---
 # <a name="ml-nonfatal-error-a2137"></a>Méně závažná chyba nástroje ML A2137
-**příliš málo argumentů pro INVOKE**  
-  
- Počet argumentů předaných, pomocí [INVOKE](../../assembler/masm/invoke.md) – direktiva byla menší než číslo zadané v prototypu pro proceduru volaná požadované parametry.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**příliš málo argumentů pro volání**
+
+Počet argumentů předaný pomocí [INVOKE](../../assembler/masm/invoke.md) – direktiva byla menší než počet požadovaných parametrů zadán v prototypu volané procedury.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

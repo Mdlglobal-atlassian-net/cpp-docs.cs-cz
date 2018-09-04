@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690572"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy souborů vytvořených pro projekty Visual C++
 Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visual C++ pro klasické desktopové aplikace. Skutečné soubory zahrnuté ve vašem projektu závisí na typu projektu a možnostech, které jste vybrali při používání průvodce.  
@@ -73,7 +73,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visua
 |. HxC|Projekt|Projekt soubor nápovědy.|  
 |.ico|Prostředek|Rastrový obrázek ikony.|  
 |IDB|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojovými soubory a definice tříd, které je možné použít kompilátor během minimálního opětovného sestavení a přírůstková kompilace. Použití [/Fd](../build/reference/fd-program-database-file-name.md) – možnost kompilátoru zadat název souboru IDB. Zobrazit [/Gm (povolení minimálního opětovného sestavení)](../build/reference/gm-enable-minimal-rebuild.md) Další informace.|  
-|IDL|Kompilace|Soubor definice jazyka rozhraní. Zobrazit [soubor Interface Definition (IDL)](https://msdn.microsoft.com/library/windows/desktop/aa378712) v sadě Windows SDK pro další informace.|  
+|IDL|Kompilace|Soubor definice jazyka rozhraní. Zobrazit [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK pro další informace.|  
 |.ilk|Propojení|Soubor přírůstkové propojení. Zobrazit [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) Další informace.|  
 |.map|Propojení|Textový soubor obsahující informace linkeru. Použití [/Fm](../build/reference/fm-name-mapfile.md) pojmenovat soubor mapování – možnost kompilátoru. Zobrazit [/MAP](../build/reference/map-generate-mapfile.md) Další informace.|  
 |.mfcribbon ms|Prostředek|Soubor prostředků, která obsahuje kód XML, který definuje tlačítka, ovládací prvky a atributy pásu karet. Další informace najdete v tématu [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -81,7 +81,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visua
 |.pch|Ladit|Soubor předkompilované hlavičky.|  
 |.rc, .rc2|Prostředek|[Soubory skriptu prostředků](../windows/working-with-resource-files.md) pro generování prostředků.|  
 |.SBR|Kompilace|Zprostředkující soubor zdrojového prohlížeče. Vstupní soubor pro [BSCMAKE](../build/reference/bscmake-options.md).|  
-|.sln|Řešení|[Řešení](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7) souboru.|  
+|.sln|Řešení|[Řešení](/visualstudio/ide/solutions-and-projects-in-visual-studio) souboru.|  
 |.suo|Řešení|Soubor možností řešení.|  
 |.txt|Prostředek|Textový soubor, obvykle v souboru "readme".|  
 |.Vap|Projekt|Soubor projektu Visual Studio Analyzer.|  

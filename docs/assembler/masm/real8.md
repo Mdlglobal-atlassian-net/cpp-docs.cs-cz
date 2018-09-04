@@ -1,7 +1,7 @@
 ---
-title: REAL8 – | Microsoft Docs
+title: REAL8 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19613b2ae5e5c45509a2424569c765342e1233e8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dfd151f36de52509ac17883b0a43dbde45e6caf3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688446"
 ---
 # <a name="real8"></a>REAL8
-Přiděluje a volitelně inicializuje číslo s plovoucí desetinnou čárkou dvojitou přesností (8 bajtů) pro každou *inicializátoru*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-name REAL8 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Přiděluje a volitelně inicializuje číslo s plovoucí desetinnou čárkou dvojitou přesností (8 bajtů) pro každý *inicializátor*.
+
+## <a name="syntax"></a>Syntaxe
+
+> Název REAL8 inicializátor [[, inicializátor]]...
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

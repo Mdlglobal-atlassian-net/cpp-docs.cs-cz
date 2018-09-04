@@ -1,7 +1,7 @@
 ---
-title: Direktivy a operátory ve vloženém sestavení dat | Microsoft Docs
+title: Direktivy a operátory ve vloženém sestavení dat | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -23,18 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd3bc686cc8cee1a02e9df936f80f542bec26bd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6aff2f4c5ce5e7f5592aa9ec707d002c57f0eac0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051382"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678734"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>Direktivy a operátory dat ve vloženém sestavení
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- I když `__asm` bloku odkazovat jazyka C nebo C++ datové typy a objekty, ho nelze definovat datové objekty s direktivy MASM nebo operátory. Konkrétně, nemůžete použít direktivy definice **DB**, `DW`, **DD**, `DQ`, `DT`, a `DF`, nebo operátory `DUP` nebo  **TO**. MASM struktury a záznamy jsou také k dispozici. Vložený assembler nepřijímá direktivy `STRUC`, `RECORD`, **šířka**, nebo **maska**.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+I když `__asm` bloku může odkazovat na datové typy jazyka C nebo C++ a objekty, ho nelze definovat datové objekty s MASM direktivy a operátory. Konkrétně byste měli nejde použít direktivy definice **DB**, `DW`, **DD**, `DQ`, `DT`, a `DF`, nebo operátory `DUP` nebo  **TO**. Není k dispozici jsou taky MASM struktury a záznamy. Vložený assembler nepřijme direktivy `STRUC`, `RECORD`, **šířka**, nebo **maska**.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

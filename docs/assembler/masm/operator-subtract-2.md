@@ -1,7 +1,7 @@
 ---
-title: operátor -2 | Microsoft Docs
+title: Operator - | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -19,22 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1969484a4a27652f00b45adce33ce8edb7b3af
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2c388770032d8caff3aaf261e534beb19aa8ccf2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057578"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677178"
 ---
-# <a name="operator--"></a>-– operátor
-Vrátí *expression1* minus *Výraz2*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 - expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+# <a name="operator--"></a>Operator-
+
+Vrátí *expression1* minus *expression2*. Druhý operátor obrátí znaménko *výraz*.
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 - expression2
+
+> -*Výraz*
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

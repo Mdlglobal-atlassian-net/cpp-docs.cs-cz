@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ef60fc542b38c7619ce7b65cc7f39db79ed1b228
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596997"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679021"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException – třída
 Reprezentuje chyby modelu COM., ke kterým dochází při spuštění aplikace. COMException je základní třídou pro sadu předdefinovaných, standardní výjimky.  
@@ -113,7 +113,7 @@ public:property int HResult {    int get();}
  Hodnota HRESULT, která určuje chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](/windows/desktop/com/structure-of-com-error-codes).  
 
 ## <a name="message"></a> Vlastnost COMException::Message
 Zpráva popisující výjimku.  

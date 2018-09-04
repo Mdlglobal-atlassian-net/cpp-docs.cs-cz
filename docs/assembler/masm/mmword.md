@@ -1,7 +1,7 @@
 ---
-title: MMWORD – | Microsoft Docs
+title: MMWORD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054777"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679231"
 ---
 # <a name="mmword"></a>MMWORD
-Použít pro operandy multimédií 64-bit s pokyny k MMX a SSE (XMM).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `MMWORD` je typu.  Před mmword – který se přidává do MASM ekvivalentní funkce by bylo dosaženo pomocí:  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Při i pokyny pracovat na 64-bit operandy `QWORD` je typem pro 64bitové znaménka a `MMWORD` je typem pro hodnotu 64-bit multimédií.  
-  
- `MMWORD` reprezentuje stejného typu jako [__m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Použít 64-bit multimediální operandů s instrukce MMX a SSE (XMM).
+
+## <a name="syntax"></a>Syntaxe
+
+> MMWORD
+
+## <a name="remarks"></a>Poznámky
+
+`MMWORD` je typem.  Před MMWORD přidávaný do MASM ekvivalentní funkce by bylo dosaženo pomocí:
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Obě pokyny práci na 64-bit operandy `QWORD` je typem pro 64bitová celá čísla bez znaménka a `MMWORD` je typ hodnoty multimediální 64-bit.
+
+`MMWORD` slouží k reprezentaci stejného typu jako [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Příklad
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

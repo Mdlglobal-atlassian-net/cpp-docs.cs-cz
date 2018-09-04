@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196187"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690149"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 Poskytuje funkce pro ovládací prvek panelu průběhu běžné Windows.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci stylesdescribed okno v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK, kromě následujících průběhu – styly ovládacího prvku do ovládacího prvku:  
+ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci stylesdescribed okno v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK, kromě následujících průběhu – styly ovládacího prvku do ovládacího prvku:  
   
 - Pbs_vertical – zobrazí informace o průběhu svisle, shora dolů. Bez tento příznak ovládací prvek indikátoru průběhu zobrazí ve vodorovném směru, zleva doprava.  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ Určuje ovládací prvek indikátoru průběhu stylu. Použít libovolnou kombinaci styly oken, které jsou popsané v [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.  
   
  *Rect*  
  Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  

@@ -1,7 +1,7 @@
 ---
-title: . LISTALL | Microsoft Docs
+title: . LISTALL | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525f7af2b4b0fe7dce2e4adacfa8b01f862c46bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e5fa0f90abeaae6b0b24ec780de7108bec58dd66
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057287"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691172"
 ---
 # <a name="listall"></a>.LISTALL
-Spustí se výpis všech příkazů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.LISTALL  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ekvivalentem kombinace [. SEZNAM](../../assembler/masm/dot-list.md), [. UŽIVATELEPOKUD](../../assembler/masm/dot-listif.md), a [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Spustí se seznam všech příkazů.
+
+## <a name="syntax"></a>Syntaxe
+
+> .LISTALL
+
+## <a name="remarks"></a>Poznámky
+
+Ekvivalentem kombinace [. SEZNAM](../../assembler/masm/dot-list.md), [. UŽIVATELEPOKUD](../../assembler/masm/dot-listif.md), a [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

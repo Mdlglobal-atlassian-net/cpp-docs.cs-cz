@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f7667d7da8d8e9cd7ef38cb01d0f03b0da82e3
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0b6d5099e90e4a4bf83874fe8e761280bc277830
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688114"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (sada výchozích závislé zatížení příznaků)
 
@@ -39,17 +39,17 @@ Nastaví výchozí příznaky zatížení použít, pokud `LoadLibrary` slouží
 
 |||
 |-|-|
-*loadflags*|Volitelná hodnota "C" stylu 16bitové celé číslo v desítkové, osmičkové s počáteční nulou nebo šestnáctkové s úvodní `0x`, který určuje příznaky závislé zatížení chcete použít pro všechny [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) volání. Výchozí hodnota je 0.
+*loadflags*|Volitelná hodnota "C" stylu 16bitové celé číslo v desítkové, osmičkové s počáteční nulou nebo šestnáctkové s úvodní `0x`, který určuje příznaky závislé zatížení chcete použít pro všechny [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) volání. Výchozí hodnota je 0.
 
 ## <a name="remarks"></a>Poznámky
 
 Tato možnost je nového v sadě Visual Studio 2017 a platí jenom pro aplikace běžící na Windows 10 RS1 a novějších verzích. Tato možnost je ignorována jinými operačními systémy, na kterých běží aplikace.
 
-Na podporovaných operačních systémech, tato možnost nemá vliv změny volání `LoadLibrary("dependent.dll")` na ekvivalent `LoadLibraryEx("dependent.dll", 0, loadflags)`. Volání [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091) to neovlivní. Tato možnost se nevztahuje rekurzivně na načtení aplikací pro knihovny DLL.
+Na podporovaných operačních systémech, tato možnost nemá vliv změny volání `LoadLibrary("dependent.dll")` na ekvivalent `LoadLibraryEx("dependent.dll", 0, loadflags)`. Volání [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) to neovlivní. Tato možnost se nevztahuje rekurzivně na načtení aplikací pro knihovny DLL.
 
 Tento příznak je možné zabránit DLL výsadbě útoky. Například, pokud aplikace používá `LoadLibrary` načíst závislá knihovna DLL, může útočník plánu knihovnu DLL se stejným názvem ve vyhledávací cesta používaná systémem `LoadLibrary`, jako je například aktuální adresář, který může být zaregistrované před adresáře systému-li nouzový režim hledání knihovny DLL je zakázané. Nouzový režim hledání knihovny DLL umístí aktuální adresář uživatele později v pořadí hledání a je povolená ve výchozím nastavení systému Windows XP SP2 a novější verze. Další informace najdete v tématu [pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
-Pokud zadáte možnost propojení `/DEPENDENTLOADFLAG:0xA00` (hodnota kombinované příznaky `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), pak i v případě, že v počítači uživatele je zakázána Nouzový režim hledání knihovny DLL, je omezený na chráněných adresářů, které jsou pro útočníka obtížnější cesta hledání knihoven DLL Změňte. Informace o příznaky, které jsou k dispozici a jejich symbolické a číselné hodnoty, najdete v článku *dwFlags* popis parametru v [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091).
+Pokud zadáte možnost propojení `/DEPENDENTLOADFLAG:0xA00` (hodnota kombinované příznaky `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), pak i v případě, že v počítači uživatele je zakázána Nouzový režim hledání knihovny DLL, je omezený na chráněných adresářů, které jsou pro útočníka obtížnější cesta hledání knihoven DLL Změňte. Informace o příznaky, které jsou k dispozici a jejich symbolické a číselné hodnoty, najdete v článku *dwFlags* popis parametru v [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Nastavení parametru linkeru DEPENDENTLOADFLAG ve vývojovém prostředí sady Visual Studio
 
@@ -69,6 +69,5 @@ Pokud zadáte možnost propojení `/DEPENDENTLOADFLAG:0xA00` (hodnota kombinovan
 - [Možnosti linkeru](linker-options.md)
 - [Jak implicitní propojení s knihovnou DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Určit, kterou propojovací metodu použít](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)
+- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)

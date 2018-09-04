@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT – | Microsoft Docs
+title: PUSHCONTEXT | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677425"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Uloží část nebo všechny aktuální `context`: registr segmentu předpokládá základ – hodnota, výpis a cref příznaky nebo procesoru/koprocesor hodnoty. `context` Může být **ASSUMES**, `RADIX`, **výpis**, **procesoru**, nebo **všechny**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Uloží část nebo všechny aktuální `context`: předpokládá registr segmentu, hodnotu základ číselné soustavy, výpisu a cref příznaky nebo procesoru/koprocesoru hodnoty. `context` Může být **PŘEDPOKLÁDÁ**, `RADIX`, **výpis**, **procesoru**, nebo **všechny**.
+
+## <a name="syntax"></a>Syntaxe
+
+> PUSHCONTEXT kontextu
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

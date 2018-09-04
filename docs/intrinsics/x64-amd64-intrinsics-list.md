@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f966491603ad1fda04bef34181ebb4937df6a65e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680409"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) – seznam vnitřních objektů
 
@@ -32,13 +32,13 @@ Informace o jednotlivých vnitřních objektech naleznete v následujících m
 
 - [Vnitřní funkce Průvodce Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Pomocí vyhledávacího pole najít konkrétní vnitřní funkce.
 
-- [Příručky pro Intel 64 a IA-32 architektury softwaru pro vývojáře](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Příručky pro Intel 64 a IA-32 architektury softwaru pro vývojáře](https://software.intel.com/articles/intel-sdm)
 
-- [Dokumentace k rozšíření sadu instrukcí architektury Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Dokumentace k rozšíření sadu instrukcí architektury Intel](https://software.intel.com/isa-extensions)
 
-- [Úvod do Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Úvod do Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [Příručky pro vývojáře AMD, příručky a dokumenty ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Příručky pro vývojáře AMD, příručky a dokumenty ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 Následující tabulka uvádí vnitřní objekty dostupné na x64 procesory. Technologie sloupec uvádí vyžaduje podporu sada instrukcí. Použití [__cpuid](../intrinsics/cpuid-cpuidex.md) vnitřní určit podporu instrukční sada v době běhu. Pokud dvě položky jsou v jednom řádku, představují různé vstupní body pro vnitřní stejné. [1] značí, že vnitřní objekt je k dispozici pouze u procesorů AMD. [2] značí, že vnitřní objekt je k dispozici pouze na procesorech Intel. [3] značí, že prototyp je makro. Záhlaví, vyžaduje se pro prototyp funkce je uveden v záhlaví sloupce. Hlaviček intrin.h zahrnuje immintrin.h i ammintrin.h pro zjednodušení.
 

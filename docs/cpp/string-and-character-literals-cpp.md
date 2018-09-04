@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688757"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězců a znaků a nabízí způsobů, jak vyjádřit jednu hodnotu literálu každý z těchto typů. Ve zdrojovém kódu express obsah vaší znakové a řetězcové literály pomocí znakové sady. Univerzální názvy znaků a řídicích znaků umožňují express libovolný řetězec za použití pouze základní zdrojové znakové sady. Nezpracovaný Textový literál vám umožní předcházet pomocí řídicí znaky a je možné vyjádřit všech typů řetězcových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět další konstrukci nebo převod kroky.  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Literály nezpracovaných řetězců (C ++ 11)  
- Nezpracovaný Textový literál je pole zakončené znakem null – znak typu –, která obsahuje libovolný grafický znak včetně dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků a v řetězcích HTML a XML. Příklady najdete v následujícím článku: [Bjarne Stroustrup – nejčastější dotazy o C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Nezpracovaný Textový literál je pole zakončené znakem null – znak typu –, která obsahuje libovolný grafický znak včetně dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků a v řetězcích HTML a XML. Příklady najdete v následujícím článku: [Bjarne Stroustrup – nejčastější dotazy o C ++ 11](http://www.stroustrup.com/C++11FAQ.html).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

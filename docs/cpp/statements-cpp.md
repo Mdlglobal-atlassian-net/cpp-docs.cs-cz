@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216362"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685802"
 ---
 # <a name="statements-c"></a>Příkazy (C++)
 Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s objekty manipulováno. Tato část obsahuje:  
@@ -42,7 +42,7 @@ Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s obje
   
     -   [Jump – příkazy](../cpp/jump-statements-cpp.md). Tyto příkazy buď předají řízení na jiné místo ve funkci, nebo vrátí řízení z funkce.  
   
-    -   [Příkazy deklarace](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarace zavádějí do programu název. ([Deklarace a definice](declarations-and-definitions-cpp.md) poskytuje podrobnější informace o deklaracích.)  
+    -   [Příkazy deklarace](declarations-and-definitions-cpp.md). Deklarace zavádějí do programu název.  
   
  Informace o příkazy zpracování výjimek naleznete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
   

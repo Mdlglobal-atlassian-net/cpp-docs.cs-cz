@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c2e8a69cf7f118af8753ebcb9e0e150c8dfc0859
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220785"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687310"
 ---
 # <a name="standard-conversions"></a>Standardní převody
-Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody jsou označovány jako „standardní převody“. (Další informace o typech, standardních typů a odvozených typech naleznete v tématu [typy](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody jsou označovány jako *standardní převody*.  
   
  Tato část popisuje následující standardní převody:  
   
@@ -210,7 +210,7 @@ Graf dědičnosti pro ilustraci usnadnění základní třídy
 ||Chráněno|Ano|  
 ||Public|Ano|  
   
- Druhý případ, ve kterém lze převést ukazatel na třídu na ukazatel na základní třídu je při použití explicitní převod typu. (Viz [výrazy s převody explicitních typů](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) pro další informace o převodu explicitního typu.)  
+ Druhý případ, ve kterém lze převést ukazatel na třídu na ukazatel na základní třídu je při použití explicitní převod typu. (Viz [operátor převodu explicitního typu](explicit-type-conversion-operator-parens.md) pro další informace o převodu explicitního typu.)  
   
  Výsledek takového převodu je ukazatel na "podobjekt," část objektu, který je zcela popsal základní třídy.  
   
@@ -249,7 +249,7 @@ int main()
  Ukazatel na funkci lze převést na typ `void *`, pokud typ `void *` je příliš velká pro tento ukazatel.  
   
 ### <a name="pointer-to-void"></a>Ukazatel na typ void  
- Ukazatele na typ **void** lze převést na ukazatele na libovolný typ, ale pouze pomocí přetypování explicitního typu (na rozdíl od v jazyce C). (Viz [výrazy s převody explicitních typů](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Další informace o převodech typů.) Ukazatel na libovolný typ může být implicitně převést na ukazatel na typ **void**. Ukazatel na neúplný objekt typu lze převést na ukazatel na **void** (implicitně) a zpět (explicitně). Výsledek takového převodu je roven hodnotě původního ukazatele. Objekt je považován za neúplný, pokud je deklarovaný, ale není k dispozici dostatek informací, na základě kterých lze určit jeho velikost nebo základní třídu.  
+ Ukazatele na typ **void** lze převést na ukazatele na libovolný typ, ale pouze pomocí přetypování explicitního typu (na rozdíl od v jazyce C). Ukazatel na libovolný typ může být implicitně převést na ukazatel na typ **void**. Ukazatel na neúplný objekt typu lze převést na ukazatel na **void** (implicitně) a zpět (explicitně). Výsledek takového převodu je roven hodnotě původního ukazatele. Objekt je považován za neúplný, pokud je deklarovaný, ale není k dispozici dostatek informací, na základě kterých lze určit jeho velikost nebo základní třídu.  
   
  Ukazatel na libovolný objekt, který není **const** nebo **volatile** lze implicitně převést na ukazatel typu `void *`.  
   

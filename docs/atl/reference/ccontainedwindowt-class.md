@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690943"
 ---
 # <a name="ccontainedwindowt-class"></a>Ccontainedwindowt – třída
 Tato třída implementuje oken obsažených v rámci jiného objektu.  
@@ -220,16 +220,16 @@ HWND Create(
  [in] Určuje název okna. Výchozí hodnota je NULL.  
   
  *dwStyle*  
- [in] Styl okna. Výchozí hodnota je WS_CHILD &#124; WS_VISIBLE. Seznam možných hodnot najdete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ [in] Styl okna. Výchozí hodnota je WS_CHILD &#124; WS_VISIBLE. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.  
   
  *dwExStyle*  
- [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu. Seznam možných hodnot najdete v tématu [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *MenuOrID*  
  [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.  
   
  *lpCreateParam*  
- [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu popisovač do nově vytvořeného okna. v opačném případě hodnota NULL.  

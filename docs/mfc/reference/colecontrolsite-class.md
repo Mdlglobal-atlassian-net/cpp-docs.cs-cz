@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678006"
 ---
 # <a name="colecontrolsite-class"></a>Colecontrolsite – třída
 Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Styly přidávané z aktuální styly oken.  
   
  *nFlags*  
- Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se změní styly, jinak nula.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Poznámky  
  Stock vlastnosti Enabled ovládacího prvku budou upraveny tak, aby odpovídaly nastavení WS_DISABLED. Uložených vlastností styl ohraničení ovládacího prvku budou upraveny tak, aby odpovídaly nastavení požadovaná pro WS_BORDER. Další styly použijí přímo na popisovač okna ovládacího prvku, pokud je k dispozici.  
   
- Upraví okno Styly ovládacího prvku. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
+ Upraví okno Styly ovládacího prvku. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
   
  Pokud *nFlags* nenulové, `ModifyStyle` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Rozšířené styly přidávané z aktuální styly oken.  
   
  *nFlags*  
- Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkce v sadě Windows SDK.  
+ Okno umístění příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se změní styly, jinak nula.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Poznámky  
  Stock vlastnosti Appearance ovládacího prvku budou upraveny tak, aby odpovídaly nastavení WS_EX_CLIENTEDGE. Všechny ostatní rozšířené styly oken se použijí přímo na popisovač okna ovládacího prvku, pokud je k dispozici.  
   
- Upraví okno Rozšířené styly ovládacího prvku objektu lokality. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
+ Upraví okno Rozšířené styly ovládacího prvku objektu lokality. Styly, které chcete přidat nebo odebrat je možné kombinovat s použitím bitový operátor OR ( &#124; ) – operátor. Zobrazit [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce v sadě Windows SDK pro informace o stylech dostupném časovém intervalu.  
   
  Pokud *nFlags* nenulové, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`, nebo ho překreslí okna tím, že zkombinujete *nFlags* následující čtyři Flags:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Nové výšku okna.  
   
  *nFlags*  
- Určuje okno pro změnu velikosti a polohování příznaky. Možné hodnoty najdete v části poznámky [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) v sadě Windows SDK.  
+ Určuje okno pro změnu velikosti a polohování příznaky. Možné hodnoty najdete v části poznámky [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulovou hodnotu v případě úspěchu, jinak hodnotu nula.  

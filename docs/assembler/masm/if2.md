@@ -1,7 +1,7 @@
 ---
-title: IF2 – | Microsoft Docs
+title: IF2 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89108a115a01539f3a9ecd24d928c763a9ef0b3e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5550aea60af15f338639a70eec6f3ca36444fbbb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692518"
 ---
 # <a name="if2"></a>IF2
-**Pokud** bloku je vyhodnocován v každé sestavení průchodu, pokud **možnost: SETIF2** je **TRUE**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-IF2   
-expression  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- V tématu [Pokud](../../assembler/masm/if-masm.md) pro úplnou syntaxi.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+**Pokud** bloku je vyhodnocen pro každý průchod sestavení Pokud **možnost: SETIF2** je **TRUE**.
+
+## <a name="syntax"></a>Syntaxe
+
+> IF2 *výraz*
+
+## <a name="remarks"></a>Poznámky
+
+Zobrazit [IF](../../assembler/masm/if-masm.md) pro úplnou syntaxi.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

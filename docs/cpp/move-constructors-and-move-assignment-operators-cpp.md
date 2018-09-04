@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec9dd48a8e46bfb7d65901fdcc0a3f682139cfd6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204984"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676400"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 Toto téma popisuje, jak zapisovat *konstruktor přesunu* a operátor přiřazení přesunu pro třídu jazyka C++. Konstruktor přesunu umožňuje prostředků, které vlastní objektem r-hodnoty k přesunutí do lvalue bez kopírování. Další informace o sémantice pohybu naleznete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>Viz také:  
  [Deklarátor odkazu hodnoty r: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Nástroje > přesunout](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [std::Move](../standard-library/utility-functions.md#move)

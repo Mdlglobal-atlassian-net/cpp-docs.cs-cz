@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6cb76b2802b1f582621e3e0bacb565a974894d75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693342"
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 
@@ -78,7 +78,8 @@ Tento článek obsahuje informace o zabezpečení nástroje a postupy. Jejich po
 -   Zabezpečení  
   
 ## <a name="windows-application-verifier"></a>Ověřovatel aplikací Windows  
- Ověřovatel aplikací (nástroj AppVerifier) pomáhá identifikovat možné problémy kompatibility, stabilitu a zabezpečení aplikace.  
+ [Ověřovatel aplikací (nástroj AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
+) pomáhá identifikovat možné problémy kompatibility, stabilitu a zabezpečení aplikace.  
   
  Nástroj AppVerifier sleduje, jak aplikace používá operační systém. Sleduje systém souborů, registry, paměť a rozhraní API, zatímco aplikace běží a doporučuje zdrojový kód opravy problémů, které nalezl.  
   
@@ -89,8 +90,6 @@ Tento článek obsahuje informace o zabezpečení nástroje a postupy. Jejich po
 -   Prozkoumejte aplikace pro problémy související s pamětí.  
 
 -   Identifikujte potenciální problémy se zabezpečením v aplikaci.  
-  
- Nástroj AppVerifier je součástí sady Application Compatibility Toolkit, který je k dispozici [kompatibilita aplikací](http://go.microsoft.com/fwlink/p/?linkid=91277) na webu TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Uživatelské účty Windows  

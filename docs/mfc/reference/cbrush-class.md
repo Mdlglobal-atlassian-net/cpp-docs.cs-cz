@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689104"
 ---
 # <a name="cbrush-class"></a>Cbrush – třída
 Zapouzdřuje štětec rozhraní GDI systému Windows grafiky zařízení.  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Určuje index barev. Tato hodnota odpovídá barva použitá k vykreslení jeden z elementů 21 okna. Zobrazit [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) v sadě Windows SDK pro seznam hodnot.  
+ Určuje index barev. Tato hodnota odpovídá barva použitá k vykreslení jeden z elementů 21 okna. Zobrazit [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) v sadě Windows SDK pro seznam hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  

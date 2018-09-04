@@ -1,7 +1,7 @@
 ---
-title: COMM – | Microsoft Docs
+title: POTVRD | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,39 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df6c729ab130a7ff38d7f7cf83224e7425e7dba
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 87bf6d91de052d7ecaf637100b455e66819c748b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690029"
 ---
 # <a name="comm"></a>COMM
 
-Vytvoří místní proměnné s atributy určené v *definice*.
+Vytvoří místní proměnnou s atributy určené v *definice*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **Comm –** *definice* [, *definice*]...
+> **POTVRD** *definice* [, *definice*]...
 
 ## <a name="remarks"></a>Poznámky
 
-Místní proměnné jsou přidělena linkeru a nelze ho inicializovat. To znamená, že nemůže záviset na umístění nebo pořadí těchto proměnných.
+Místní proměnné se přiděluje pomocí linkeru a nelze inicializovat. To znamená, že nemohou záviset na umístění nebo pořadí těchto proměnných.
 
 Každý *definice* má následující formát:
 
-[*langtype*] [**NEAR** &#124; **DÁLNÉHO**] _popisek_**:**_typ_[**:**_počet_]
+[*langtype*] [**NEAR** &#124; **FAR**] _popisek_**:**_typ_[**:**_počet_]
 
-Volitelné *langtype* nastaví konvence pojmenování pro název, který následuje dále. Přepíše jakékoli jazyk, který **. MODEL** – direktiva. Volitelné **NEAR** nebo **DÁLNÉHO** přepsat na aktuální model paměti. *Popisek* je název proměnné. *Typ* může být jakékoli specifikátor typu ([BAJTŮ](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)a tak dále) nebo celé číslo určující počet bajtů. Volitelné *počet* určuje počet elementů v objektu deklarované dat; výchozí hodnota je jedna.
+Volitelný *langtype* nastaví zásady vytváření názvů pro název, který následuje. Přepíše libovolný jazyk určený **. MODEL** směrnice. Volitelný **NEAR** nebo **FAR** přepsat aktuální model paměti. *Popisek* je název proměnné. *Typ* může být libovolný typ specifikátor ([BAJTŮ](../../assembler/masm/byte-masm.md), [slovo](../../assembler/masm/word.md), a tak dále) nebo celé číslo určující počet bajtů. Volitelný *počet* určuje počet prvků v objektu deklarovanému datovému; výchozí hodnota je jeden.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad vytvoří pole 512 BAJTŮ elementů:
+Tento příklad vytvoří pole prvků 512 BAJTŮ:
 
-```masm
+```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

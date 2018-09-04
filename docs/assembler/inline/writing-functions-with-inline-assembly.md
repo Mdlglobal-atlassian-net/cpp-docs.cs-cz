@@ -1,7 +1,7 @@
 ---
-title: Zápis funkcí s vloženým sestavením | Microsoft Docs
+title: Zápis funkcí s vloženým sestavením | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,75 +17,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6c6c5b064dfc7d156d4de424e1ab69d74140f90
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c8b2694d2dc5781a6ef521abdc97e98c928be92c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680825"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Zápis funkcí s vloženým sestavením
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Pokud píšete funkce s kódu vnořeného sestavení, je snadné předání argumentů funkce a vrácení hodnoty z něj. Následující příklady porovnat funkce nejprve napsané pro samostatné assembleru a pak přepsaná pro vložený assembler. Volaná funkce `power2`, obdrží dva parametry, první parametr vynásobí 2 exponentem druhý parametr. Napsané pro samostatné assembleru, funkce může vypadat například takto:  
-  
-```  
-; POWER.ASM  
-; Compute the power of an integer  
-;  
-       PUBLIC _power2  
-_TEXT SEGMENT WORD PUBLIC 'CODE'  
-_power2 PROC  
-  
-        push ebp        ; Save EBP  
-        mov ebp, esp    ; Move ESP into EBP so we can refer  
-                        ;   to arguments on the stack  
-        mov eax, [ebp+4] ; Get first argument  
-        mov ecx, [ebp+6] ; Get second argument  
-        shl eax, cl     ; EAX = EAX * ( 2 ^ CL )  
-        pop ebp         ; Restore EBP  
-        ret             ; Return with sum in EAX  
-  
-_power2 ENDP  
-_TEXT   ENDS  
-        END  
-```  
-  
- Vzhledem k tomu, že je napsán pro samostatné assembleru, vyžaduje funkci samostatného zdrojového souboru a sestavení a odkaz kroky. C a C++ argumenty funkce se obvykle předávají v zásobníku, takže tato verze `power2` funkce přistupuje k její argumenty podle jejich umístění v zásobníku. (Všimněte si, že **modelu** – direktiva, k dispozici v MASM a některé další kompletující, taky umožňuje přístup k argumenty zásobníku a místní zásobníku proměnné podle názvu.)  
-  
-## <a name="example"></a>Příklad  
- Zapíše tento program `power2` funkce s kódu vnořeného sestavení:  
-  
-```  
-// Power2_inline_asm.c  
-// compile with: /EHsc  
-// processor: x86  
-  
-#include <stdio.h>  
-  
-int power2( int num, int power );  
-  
-int main( void )  
-{  
-    printf_s( "3 times 2 to the power of 5 is %d\n", \  
-              power2( 3, 5) );  
-}  
-int power2( int num, int power )  
-{  
-   __asm  
-   {  
-      mov eax, num    ; Get first argument  
-      mov ecx, power  ; Get second argument  
-      shl eax, cl     ; EAX = EAX * ( 2 to the power of CL )  
-   }  
-   // Return with result in EAX  
-}  
-```  
-  
- Vložené verzi `power2` funkce odkazuje na její argumenty podle názvu a zobrazí se ve stejném souboru zdroj jako zbytek programu. Tato verze taky vyžaduje méně pokyny sestavení.  
-  
- Protože verze vložené `power2` neprovede a C `return` příkaz způsobí neškodné upozornění Pokud zkompilujete na úrovni upozornění 2 nebo vyšší. Funkce vrátí hodnotu, ale kompilátor nelze zjistit, který neexistuje `return` příkaz. Můžete použít [#pragma – upozornění](../../preprocessor/warning.md) zakázat generování toto upozornění.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+Při zápisu funkce s vložený kód sestavení, je snadné předávat argumenty funkci a vrátí hodnotu z něj. Následující příklady porovnávají funkce nejprve napsané pro službu používat samostatný kompilátor, poté přepsána pro vložený assembler. Volaná funkce `power2`, přijímá dva parametry, vynásobení prvního parametru 2 k elektrické energie druhý parametr. Napsané pro používat samostatný kompilátor, funkce může vypadat takto:
+
+```asm
+; POWER.ASM
+; Compute the power of an integer
+;
+       PUBLIC _power2
+_TEXT SEGMENT WORD PUBLIC 'CODE'
+_power2 PROC
+
+        push ebp        ; Save EBP
+        mov ebp, esp    ; Move ESP into EBP so we can refer
+                        ;   to arguments on the stack
+        mov eax, [ebp+4] ; Get first argument
+        mov ecx, [ebp+6] ; Get second argument
+        shl eax, cl     ; EAX = EAX * ( 2 ^ CL )
+        pop ebp         ; Restore EBP
+        ret             ; Return with sum in EAX
+
+_power2 ENDP
+_TEXT   ENDS
+        END
+```
+
+Protože je určené pro používat samostatný kompilátor, vyžaduje funkci samostatného zdrojového souboru a sestavení a propojení kroky. Argumenty funkce jazyka C a C++ jsou obvykle předány v zásobníku, takže tato verze `power2` funkce přistupuje k jeho argumentů podle pozice v zásobníku. (Všimněte si, že **modelu** směrnice, které jsou k dispozici v MASM a některé další montážního podniku, taky umožňuje přístup k místní zásobník proměnné a argumenty zásobníku podle názvu.)
+
+## <a name="example"></a>Příklad
+
+Tento program zapíše `power2` funkce pomocí vloženého kódu sestavení:
+
+```cpp
+// Power2_inline_asm.c
+// compile with: /EHsc
+// processor: x86
+
+#include <stdio.h>
+
+int power2( int num, int power );
+
+int main( void )
+{
+    printf_s( "3 times 2 to the power of 5 is %d\n", \
+              power2( 3, 5) );
+}
+int power2( int num, int power )
+{
+   __asm
+   {
+      mov eax, num    ; Get first argument
+      mov ecx, power  ; Get second argument
+      shl eax, cl     ; EAX = EAX * ( 2 to the power of CL )
+   }
+   // Return with result in EAX
+}
+```
+
+Vložené verzi `power2` funkce odkazuje argumenty podle názvu a zobrazí se ve stejném zdrojovém souboru jako zbytek programu. Tato verze také vyžaduje méně pokyny k sestavení.
+
+Protože verze vložené `power2` neprovede C `return` příkazu, to způsobí, že se neškodné upozornění Pokud kompilujete na úroveň upozornění 2 nebo vyšší. Funkce vrátí hodnotu, ale kompilátor nemůže určit, které chybí `return` příkazu. Můžete použít [varování #pragma](../../preprocessor/warning.md) zakázat generování toto upozornění.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

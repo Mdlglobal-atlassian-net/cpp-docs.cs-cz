@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677721"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce – nasazení pro aplikace Visual C++
 Visual Studio poskytuje dvě různé technologie pro nasazení aplikací pro Windows: nasazení ClickOnce nebo [Instalační služby systému Windows](/windows/desktop/Msi/windows-installer-portal) nasazení.  
@@ -53,7 +53,6 @@ Visual Studio poskytuje dvě různé technologie pro nasazení aplikací pro Win
  [MakeCert.exe (nástroj pro vytvoření certifikátu)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Nasazení aplikací, služeb a komponent](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Nasazení Instalační služby systému Windows](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce – zabezpečení a nasazení](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Vytváření balíčků Bootstrapperu](/visualstudio/deployment/creating-bootstrapper-packages)   
  [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

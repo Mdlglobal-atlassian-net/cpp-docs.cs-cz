@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197991"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676764"
 ---
 # <a name="changing-list-control-styles"></a>Změna stylů ovládacího prvku seznam
 Můžete změnit styl okna ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) kdykoli po jeho vytvoření. Změnou stylu okna změníte typ zobrazení, které používá ovládací prvek. Například pro emulaci Explorer, je může zadat položky nabídky nebo tlačítka panelu nástrojů pro přepínání mezi různá zobrazení ovládacího prvku: zobrazení ikon, zobrazení seznamu a tak dále.  
   
- Například když uživatel vybere položku nabídky, které může uskutečnit volání [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) načíst aktuální styl ovládacího prvku a poté zavolejte [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) resetovat styl. Další informace najdete v tématu [ovládací prvky zobrazení pomocí seznamu](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.  
+ Například když uživatel vybere položku nabídky, které může uskutečnit volání [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) načíst aktuální styl ovládacího prvku a poté zavolejte [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) resetovat styl. Další informace najdete v tématu [ovládací prvky zobrazení pomocí seznamu](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.  
   
  K dispozici styly jsou uvedeny v [vytvořit](../mfc/reference/clistctrl-class.md#create). Styly **jen**, **LVS_SMALLICON**, **LVS_LIST**, a **LVS_REPORT** určit čtyři seznamy ovládacího prvku.  
   

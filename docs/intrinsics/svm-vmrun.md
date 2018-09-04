@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4711238c45955ee7067e3e418212bcdb0fae09ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679803"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Specifické pro Microsoft**  
@@ -46,7 +46,7 @@ void __svm_vmrun(
 ## <a name="remarks"></a>Poznámky  
  `__svm_vmrun` Funkce používá minimální množství informací VMCB zahájíte spuštěním kódu hosta virtuálního počítače. Použití [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) fungovat, pokud potřebujete další informace pro zpracování složitých přerušení nebo přepněte do jiného typu Host.  
   
- `__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování systému" dokument s číslem 24593, revize 3.11 nebo novější, na [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
+ `__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování systému" dokument s číslem 24593, revize 3.11 nebo novější, na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

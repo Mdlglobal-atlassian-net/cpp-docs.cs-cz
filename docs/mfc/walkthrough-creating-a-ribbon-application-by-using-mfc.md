@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: db5fac0bc8900d15968639e8ed3909417353d596
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210694"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690744"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvořit aplikaci, která má ve výchozím nastavení pás karet. Na pásu karet můžete pak rozšířit tak, že přidáte **vlastní** kategorie pásu karet, který má **Oblíbené položky** pásu karet panelu a následně přidáním některých často používaných funkcí na panel.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použije **obecným vývojovým nastavením**. Používáte-li jiná nastavení, některé prvky uživatelského rozhraní (UI), na které se následující instrukce odkazují, nemusí být zobrazeny. Informace o tom, jak změnit nastavení, najdete v části [jak: Reset Your Settings](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použije **obecným vývojovým nastavením**. Používáte-li jiná nastavení, některé prvky uživatelského rozhraní (UI), na které se následující instrukce odkazují, nemusí být zobrazeny.  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Vytvoření aplikace MFC obsahující pás karet  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b552417af72b24cddae9055d436a56f771c48743
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d95e8d7a5b50d3ab039667e49ac46df332b8ac42
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683898"
 ---
 # <a name="cmfcpropertypage-class"></a>Cmfcpropertypage – třída
 `CMFCPropertyPage` Třídy podporuje zobrazení místních nabídek na stránce vlastností.  
@@ -50,7 +50,7 @@ class CMFCPropertyPage : public CPropertyPage
 |`CMFCPropertyPage::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
 |`CMFCPropertyPage::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
 |`CMFCPropertyPage::OnSetActive`|Tato členská funkce je voláno rozhraním při stránky je vybrán uživatelem a stane aktivní stránkou. (Přepíše [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. Další informace a syntaxe využívající metody, naleznete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CPropertyPage::PreTranslateMessage`.)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. Další informace a syntaxe využívající metody, naleznete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CPropertyPage::PreTranslateMessage`.)|  
   
 ## <a name="remarks"></a>Poznámky  
  `CMFCPropertyPage` Třída představuje jednotlivé stránky seznamu vlastností, jinak známé jako dialogové okno Karta.  

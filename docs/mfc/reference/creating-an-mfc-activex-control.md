@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198685"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687143"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Vytvoření ovládacího prvku ActiveX knihovny MFC
 Programy ovládacího prvku ActiveX jsou modulární programy určené k nadřazené aplikaci poskytnout konkrétní typ funkce. Můžete například vytvořit ovládacích prvcích jako tlačítko pro použití v dialogovém okně nebo nástrojů pro použití na webové stránce.  
@@ -49,5 +49,5 @@ Programy ovládacího prvku ActiveX jsou modulární programy určené k nadřaz
 ## <a name="see-also"></a>Viz také  
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
- [Nasazení aplikací](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

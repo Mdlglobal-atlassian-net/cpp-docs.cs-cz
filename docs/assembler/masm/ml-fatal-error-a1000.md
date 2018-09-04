@@ -1,7 +1,7 @@
 ---
-title: Závažná chyba nástroje ML A1000 | Microsoft Docs
+title: Závažná chyba nástroje ML A1000 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6fe8013fa36063031aba9bfc3dc02de40b092
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2ecd72e749be8ff4325e644376e312206756d1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691447"
 ---
 # <a name="ml-fatal-error-a1000"></a>Závažná chyba nástroje ML A1000
-**Nelze otevřít soubor: název souboru**  
-  
- Assembleru nemohl otevřít zdroj, zahrnují nebo výstupního souboru.  
-  
- Jedním z těchto může být na příčina:  
-  
--   Soubor neexistuje.  
-  
--   Soubor je používán jiným procesem.  
-  
--   Název souboru není platný.  
-  
--   Soubor jen pro čtení se název výstupního souboru již existuje.  
-  
--   Aktuální jednotka je plná.  
-  
--   Aktuální adresář je kořenový adresář a je plný.  
-  
--   Zařízení nelze zapisovat.  
-  
--   Jednotka není připravena.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**Nelze otevřít soubor: název souboru**
+
+Assembler nemohl otevřít zdroj zahrňte nebo výstupního souboru.
+
+Jednu z následujících může být důvod:
+
+- Soubor neexistuje.
+
+- Soubor je používán jiným procesem.
+
+- Název souboru není platný.
+
+- Soubor jen pro čtení se název výstupního souboru již existuje.
+
+- Aktuální jednotka je plná.
+
+- Aktuální adresář je kořenový adresář a je plný.
+
+- Zařízení nejde zapisovat.
+
+- Jednotka není připravena.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

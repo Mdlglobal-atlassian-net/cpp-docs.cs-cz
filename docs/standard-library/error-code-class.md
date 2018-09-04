@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221569"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690544"
 ---
 # <a name="errorcode-class"></a>error_code – třída
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 První konstruktor uloží nulová hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Druhý konstruktor ukládá *val* jako hodnota kódu chyby a ukazatel na [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Druhý konstruktor ukládá *val* jako hodnota kódu chyby a ukazatel na [error_category](../standard-library/error-category-class.md).
 
 Třetí konstruktor ukládá `(value_type)_Errcode` jako hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::Operator&lt;
 
-Testuje, zda [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) objekt je menší než `error_code` objekt předaný k porovnání.
+Testuje, zda `error_code` objekt je menší než `error_code` objekt předaný k porovnání.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::Operator =
 
-Přiřadí novou hodnotu výčtu [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) objektu.
+Přiřadí novou hodnotu výčtu `error_code` objektu.
 
 ```cpp
 template <class _Enum>

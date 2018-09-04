@@ -1,7 +1,7 @@
 ---
-title: MÍSTNÍ (MASM) | Microsoft Docs
+title: MÍSTNÍ (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed9926d23f2e1e8636f31a6f586609ae22d38acd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e8105bc8168ce28d468a1378c5cf7889907a7c9f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053568"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685060"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
-V první – direktiva v rámci makra **místní** definuje popisky, které jsou jedinečné pro každou instanci makro.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      LOCAL localname [[, localname]]...  
-LOCAL label [[ [count ] ]] [[:type]] [[, label [[ [count] ]] [[type]]]]...  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- V druhé – direktiva v rámci postupu definice (**PROC**), **místní** vytvoří na základě zásobníku proměnné, které existují po dobu trvání procesu. *Popisek* může být jednoduché proměnné nebo pole obsahující *počet* elementy.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+V první direktivě v rámci makra **místní** definuje popisky, které jsou jedinečné pro každou instanci makra.
+
+## <a name="syntax"></a>Syntaxe
+
+> MÍSTNÍ *localname* [[, *localname*]]...
+
+> MÍSTNÍ *popisek* [[[*počet*]]] [[:*typ*]] [[, *popisek* [[[*počet*]]] [[ *typ*]]]]...
+
+## <a name="remarks"></a>Poznámky
+
+V druhém – direktiva v definici procedury (**PROC**), **místní** vytvoří proměnné založené na zásobníku, která existuje po dobu trvání procesu. *Popisek* může být jednoduchá proměnná nebo pole obsahující *počet* elementy.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

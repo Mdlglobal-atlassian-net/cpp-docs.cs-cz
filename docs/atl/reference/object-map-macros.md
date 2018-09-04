@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0786ada9a9548fa4e3517cb74fe37e5b7f244be2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4810113158673002f20e36b7b17e93df6e68c3e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218645"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679036"
 ---
 # <a name="object-map-macros"></a>Makra Map objektů
 Tato makra definují objekt map a položky.  
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in] Popis objektu třídy.  
   
 ### <a name="remarks"></a>Poznámky  
- ATL zadá do mapy objektu prostřednictvím tento popis [OBJECT_ENTRY](https://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) – makro.  
+ ATL zadá do mapy objektu prostřednictvím tento popis [OBJECT_ENTRY_AUTO](#object_entry_auto) – makro.  
   
  Implementuje DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` funkci, kterou můžete použít k přepsání [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.  
 

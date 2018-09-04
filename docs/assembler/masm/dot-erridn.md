@@ -1,7 +1,7 @@
 ---
-title: . ERRIDN] | Microsoft Docs
+title: . ERRIDN] | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6948baa498cccb9f89eb030978b18363cfdddd6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5fd21d6a17052cd30c8ad1ef3f35e0c7282da332
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050851"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685788"
 ---
 # <a name="erridn"></a>. ERRIDN]
-Pokud tyto položky jsou identické, vygeneruje se chyba.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.ERRIDN[[I]] <textitem1>, <textitem2> [[, message]]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud **I** je zadána porovnání se malá a velká písmena.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Pokud tyto položky jsou identické, dojde k chybě.
+
+## <a name="syntax"></a>Syntaxe
+
+> . ERRIDN [[I]] <textitem1>, <textitem2> [[, zprávy]]
+
+## <a name="remarks"></a>Poznámky
+
+Pokud **můžu** je zadaný, porovnání velká a malá písmena.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

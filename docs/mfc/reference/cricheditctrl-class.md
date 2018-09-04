@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215788"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678494"
 ---
 # <a name="cricheditctrl-class"></a>Cricheditctrl – třída
 Poskytuje funkce pro ovládací prvek RichEdit.  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP – textové pole v obsahovat pořadí procházení.  
   
- Další informace o styly oken, naleznete v tématu [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) v sadě Windows SDK.  
+ Další informace o styly oken, naleznete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl textové pole. Použít kombinaci styly oken, které jsou uvedeny v **poznámky** část [vytvořit](#create) a [styly ovládacího prvku pro úpravy](/windows/desktop/Controls/edit-control-styles), které jsou popsány v sadě Windows SDK.  

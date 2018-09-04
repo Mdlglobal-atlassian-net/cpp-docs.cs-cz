@@ -1,7 +1,7 @@
 ---
-title: Intel&#39;sada instrukcí MMX s | Microsoft Docs
+title: Intel&#39;sada instrukcí MMX s | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -14,18 +14,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c054c1236fbbc74cfc45834f05aa2be08faa07f6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95f3cb57fc5c046057a5efa568ce930f13ca3256
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050734"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688350"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;s sada instrukcí MMX
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Kompilátor Visual C++ umožňuje používat instrukcí MMX (multimédií rozšíření) společnosti Intel nastavit v vloženého assembleru. MMX pokyny jsou také podporovány zpětný překlad ladicí program. Kompilátor vygeneruje upozornění, pokud funkce obsahuje MMX pokyny, ale neobsahuje EMMS instrukce pro prázdný multimédií stavu. Další informace najdete v článku na webu společnosti Intel.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+Kompilátor Visual C++ umožňuje použít nastavení v vložený assembler instrukce MMX (multimediální rozšíření) společnosti Intel. Instrukce MMX také podporují zpětný překlad ladicího programu. Kompilátor generuje upozornění, pokud funkce obsahuje instrukce MMX, ale neobsahuje instrukci EMMS. na prázdnou multimediální stavu. Další informace najdete v článku na webu společnosti Intel.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

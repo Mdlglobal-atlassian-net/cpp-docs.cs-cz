@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211962"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676777"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl – třída
 Ovládací prvek implementuje popisek, který [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá k zobrazení popisů tlačítek.  
@@ -65,7 +65,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deaktivuje a skryje ovládací prvek tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Vrátí souřadnice poslední pozice ovládacího prvku tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|ToolTip – ovládací prvek skryje.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Nastaví mezery mezi text popisku a ohraničení okna popisu.|  
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|Zobrazí ovládací prvek tooltip.|  
   

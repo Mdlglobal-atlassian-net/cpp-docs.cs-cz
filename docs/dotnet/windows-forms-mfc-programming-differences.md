@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195449"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690859"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Rozdíly v programování mezi prostředími Windows Forms a MFC
 Témata v [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) popisovat podporu knihovny MFC pro Windows Forms. Pokud nejste obeznámeni s rozhraní .NET Framework nebo programování knihovny MFC, toto téma obsahuje základní informace o programování rozdíly mezi nimi.  
@@ -65,5 +65,4 @@ Témata v [použití uživatelského ovládacího prvku Windows Form v prostřed
      Knihovna MFC má příkaz Aktualizovat mechanismus. Proto je zodpovědný za stavy prvků UI (například povolování nebo zakazování položka nabídky nebo nástroj tlačítko a zkontrolovat stavy) aktivní zobrazení nebo dokument. Windows Forms nemá žádný ekvivalent mechanismus příkazu update.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Windows Forms názorné postupy](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

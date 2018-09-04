@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678797"
 ---
 # <a name="preprocessor-directives"></a>Preprocesor – direktivy
 
 Direktivy preprocesoru, jako například `#define` a `#ifdef`, se obvykle používají ke snadnému sestavení v různých pracovních prostředích a snadné změně zdrojových programů. Směrnice ve zdrojovém souboru říkají preprocesoru, že má provést konkrétní akce. Preprocesor může například nahradit tokeny v textu, vložit obsah z jiných souborů do zdrojového souboru nebo potlačit kompilaci části souboru odebráním úseků textu. Řádky preprocesoru jsou rozpoznány a provedeny před rozšířením makra. Proto pokud se makro rozšíří na něco, co vypadá jako příkaz preprocesoru, tento příkaz není rozpoznáván preprocesorem.
 
-Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru, s tím rozdílem, že Řídící sekvence nejsou podporovány. Znaková sada použitá v rámci příkazu preprocesoru je stejná jako [znaková sada spuštění](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznává také negativní hodnoty znaků.
+Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru, s tím rozdílem, že Řídící sekvence nejsou podporovány. Znaková sada použitá v rámci příkazu preprocesoru je stejná jako znaková sada spuštění. Preprocesor rozpoznává také negativní hodnoty znaků.
 
 Preprocesor rozpoznává následující direktivy:
 

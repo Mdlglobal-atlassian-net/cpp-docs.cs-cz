@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c12c29fcee310e8bd1d484743b754a830541d7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a26bae54e267dfa46b0ec8e6770b3643cc0b7ebb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681769"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 Zapouzdřuje `CURRENCY` datovým typem automatizace OLE.  
@@ -133,7 +133,7 @@ COleCurrency(
   
 - Konstrukce COleCurrency() `COleCurrency` objekt je inicializován na hodnotu 0 (nula).  
   
-- COleCurrency (`cySrc`) sestaví `COleCurrency` objektu z [měny](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) hodnotu.  
+- COleCurrency (`cySrc`) sestaví `COleCurrency` objektu z [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) hodnotu.  
   
 - COleCurrency (`curSrc`) sestaví `COleCurrency` objekt z existující `COleCurrency` objektu. Nový objekt je stejného stavu jako zdrojový objekt.  
   
@@ -141,7 +141,7 @@ COleCurrency(
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "objekt ze zadané číselné součásti. Pokud absolutní hodnota zlomkové části je větší než 10 000 operací, je vhodné úpravy provedené s jednotkami. Všimněte si, že jsou určeny jednotky a desetinná část dlouhé hodnoty se znaménkem.  
   
- Další informace najdete v tématu [měny](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklady ukazují účinky konstruktory parametr nula a dvěma parametr:  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- Základní [měny](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) strukturu pro to `COleCurrency` objektu.  
+ Základní [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) strukturu pro to `COleCurrency` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
   
 > [!CAUTION]
 >  Změna hodnoty v `CURRENCY` struktura přistupuje vrácený touto funkcí ukazatel se změní hodnota tohoto `COleCurrency` objektu. Nezmění stav této `COleCurrency` objektu.  
   
- Další informace najdete v tématu [měny](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) položku v sadě Windows SDK.  
+ Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) položku v sadě Windows SDK.  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  Typ tomuto datovému členu je výčtového typu `CurrencyStatus`, který je definován v rámci `COleCurrency` třídy.  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **operátor = (** *varSrc* **)** Pokud převod `VARIANT` hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) do měny ( `VT_CY`) je úspěšné, převedená hodnota se zkopíruje do tohoto `COleCurrency` objektu a jeho stav je nastaven na platný. Pokud neproběhne úspěšně, převod hodnoty `COleCurrency` objektu je nastavena na 0 a její stav na neplatný.  
   
- Další informace najdete v tématu [měny](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  

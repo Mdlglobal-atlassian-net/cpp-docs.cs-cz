@@ -1,5 +1,5 @@
 ---
-title: -Qpar-report (úroveň sestav automatickou vektorizací) | Microsoft Docs
+title: -Qpar-report (úroveň sestav automatický Paralelizér) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376011"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681692"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (úroveň sestav s automatickou vektorizací)
-Povolí funkci vytváření sestav v kompilátoru [automatickou vektorizací](../../parallel/auto-parallelization-and-auto-vectorization.md) a určuje úroveň informační zprávy pro výstup během kompilace.  
+Povolí funkci vykazování sady kompilátoru [automatický Paralelizér](../../parallel/auto-parallelization-and-auto-vectorization.md) a určuje úroveň pro výstup informačních zpráv během kompilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,22 +30,22 @@ Povolí funkci vytváření sestav v kompilátoru [automatickou vektorizací](..
   
 ## <a name="remarks"></a>Poznámky  
  **/ Qpar-report: 1**  
- Výstupy informační zpráva smyčky, které jsou paralelizovaná málo for.  
+ Vypíše informační zpráva pro smyčky, které jsou paralelizována.  
   
- **/ Qpar-sestavy: 2**  
- Výstupy informační zpráva pro cykly, které jsou paralelizovaná málo a také pro cykly, které nejsou paralelizovaná málo společně s kód důvodu.  
+ **/ Qpar-report: 2**  
+ Vypíše informační zpráva pro smyčky, které jsou paralelizovaná a také pro smyčky, které nejsou společně s kód důvodu paralelizována.  
   
- Zprávy jsou hlášeny stdout. Pokud žádné informační zprávy nahlásí, pak buď kód obsahuje žádné smyčky nebo úroveň sestav nebyl nastaven na smyčky sestavy, které nejsou paralelizovaná málo. Další informace o kódech důvod a zpráv najdete v tématu [nástrojů pro vektorizaci a paralelní zpracování zprávy](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Zprávy se hlásí do stdout. Pokud jsou hlášeny žádné informační zprávy, pak buď kód obsahuje žádnému zacyklení, nebo zadané úrovni vytváření sestav nebyla nastavena do smyčky sestavy, které nejsou paralelizována. Další informace o kódech příčiny a zprávy v tématu [zprávy nástrojů pro vektorizaci a](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
-### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Nastavení možnosti kompilátoru /Qpar-report v sadě Visual Studio  
+### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Nastavení parametru kompilátoru /Qpar-report v sadě Visual Studio  
   
-1.  V **Průzkumníku řešení**, otevřete místní nabídky projektu a zvolte **vlastnosti**.  
+1.  V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**.  
   
-2.  V **stránky vlastností** dialogovém **C/C++**, vyberte **příkazového řádku**.  
+2.  V **stránky vlastností** dialogovém okně **C/C++** vyberte **příkazového řádku**.  
   
 3.  V **další možnosti** zadejte `/Qpar-report:1` nebo `/Qpar-report:2`.  
   
-### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Nastavení možnosti kompilátoru /Qpar-report prostřednictvím kódu programu  
+### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Nastavení parametru kompilátoru /Qpar-report prostřednictvím kódu programu  
   
 -   Použijte tento příklad kódu v <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
@@ -53,4 +53,4 @@ Povolí funkci vytváření sestav v kompilátoru [automatickou vektorizací](..
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Paralelní programování v nativním kódu](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -1,7 +1,7 @@
 ---
-title: XOR – operátor | Microsoft Docs
+title: XOR – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81b05f46f9be6bb84b7f853121d9d6129f33969
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4bf250821f2a04e5b1099f2f33dfe28c3ff916d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677771"
 ---
 # <a name="operator-xor"></a>XOR – operátor
-Vrátí výsledek bitové **XOR** operace *expression1* a *Výraz2*.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 XOR expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí výsledek bitovou **XOR** operace pro *expression1* a *expression2*.
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 XOR expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>

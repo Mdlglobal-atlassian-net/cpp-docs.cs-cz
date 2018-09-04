@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d762aef0dd48f3eac8eaeeddee558c4f237b29f
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677454"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 `AFX_GLOBAL_DATA` Struktura obsahuje pole a metody, které se používají ke správě rozhraní nebo upravit vzhled a chování aplikace.  
@@ -118,7 +118,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Zaregistruje zadanou třídu okna knihovny MFC.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Uvolní rozhraní, které získali prostřednictvím GetITaskbarList a GetITaskbarList3 metody.|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Znovu inicializuje ukazatele interních funkcí, které přístup k metodám, které podporují Windows [motivů a stylů](/windows/desktop/Controls/visual-styles-overview).|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) metody.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Vytvoří zadané logické písma.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Vytvoří a inicializuje objekt prostředí položky z názvu analýzy.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reintializes logické písma, které se používají v rámci rozhraní.|  
@@ -371,7 +371,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>Parametry   
  [in] *nColor*  
- Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
+ Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota barvy RGB elementu zadaného uživatelského rozhraní. Další informace najdete v části poznámky.  
@@ -381,7 +381,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="see-also"></a>Viz také  
 
- [GetSysColor – funkce](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [GetSysColor – funkce](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
  [COLORREF](/windows/desktop/gdi/colorref)   
  [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
@@ -697,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Název třídy okna k registraci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném případě [prostředků výjimka](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném případě [prostředků výjimka](exception-processing.md#afxthrowresourceexception).  
   
 ### <a name="remarks"></a>Poznámky  
  Vrácená hodnota je seznam oddělit středníkem *lpszClassNamePrefix* parametr řetězce a reprezentace šestnáctkového textu zpracovává aktuální instance aplikace; aplikace kurzor, který je na šipku kurzor, jehož identifikátor je IDC_ARROW; a štětec pozadí. Další informace o registrace tříd oken MFC naleznete v tématu [afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -721,7 +721,7 @@ BOOL Resume();
  Tato metoda je volána, když obdrží rozhraní [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) zprávy.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.  
+Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) metody.  
   
   
 ```  
@@ -750,7 +750,7 @@ BOOL SetLayeredAttrib(
  
 ### <a name="see-also"></a>Viz také   
  [COLORREF](/windows/desktop/gdi/colorref)   
- [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Vytvoří zadané logické písma.  

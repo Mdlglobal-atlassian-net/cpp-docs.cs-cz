@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216285"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678811"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 Rozšiřuje funkce [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okna rámce Windows rozhraní více dokumentů (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Volá se rozhraním, když je aktivován, který má přemístitelný panel nabídky.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Volá se rozhraním, aby aktualizace v nabídce. (Přepíše `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Vrátí ukotvené podokno, která obsahuje zadaný bod.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows.  (Přepíše `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows.  (Přepíše `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Volá se rozhraním, aby přepočítat rozložení okna rámce. (Přepíše [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Zruší registraci podokno a odstraní ji z dokovací správce.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Uloží aktuální rozložení skupin s kartami MDI a seznamu dřív otevřených dokumentů.|  

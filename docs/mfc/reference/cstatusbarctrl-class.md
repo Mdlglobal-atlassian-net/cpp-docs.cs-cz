@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221353"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677742"
 ---
 # <a name="cstatusbarctrl-class"></a>Cstatusbarctrl – třída
 Poskytuje funkce pro Windows běžné stav panelu ovládacího prvku.  
@@ -171,7 +171,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl ovládacího prvku panelu stavu. Použít libovolnou kombinaci stavového řádku – styly ovládacích prvků, které jsou uvedeny v [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD style. Měl by obsahovat také WS_VISIBLE style.  

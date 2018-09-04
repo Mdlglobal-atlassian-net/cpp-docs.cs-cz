@@ -1,7 +1,7 @@
 ---
-title: operátor LT | Microsoft Docs
+title: LT – operátor | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce31c838d8920fef95c80f2a4eb9954468bc3d8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: de4702139148ae4448200b4fbb510803283daf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688718"
 ---
 # <a name="operator-lt"></a>operátor LT
-Vrátí hodnotu true (-1) Pokud *expression1* je menší než *Výraz2*, nebo pokud není, vrátí hodnotu false (0).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 LT expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+
+Vrátí hodnotu true (-1) Pokud *expression1* je menší než *expression2*, nebo pokud není, vrátí hodnotu false (0).
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 LT expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>
