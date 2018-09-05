@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219380"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677666"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) urychluje provádění kódu jazyka C++ využitím hardwaru paralelizovaného pro data, jako jsou grafický procesor (GPU) na samostatné grafické kartě. S použitím jazyka C++ AMP, vám umožní kódování algoritmy vícerozměrnými daty tak, aby provádění bude urychleno pomocí paralelismu na heterogenním hardwaru. Model programování C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, rozložení a knihovnu matematických funkcí. Rozšíření jazyka C++ AMP můžete řídit, jak jsou data přenášena z procesoru do GPU a zpět, takže můžete zlepšit výkon.  
@@ -464,7 +464,7 @@ C++ AMP obsahuje grafickou knihovnu, která je navržena pro urychlené programo
   
 - [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md): poskytuje přístup jen pro zápis pro všechny textury.  
   
-- [Krátká vektorová knihovna](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): definuje sadu typů krátkých vektorů o délce 2, 3 a 4, které jsou založeny na **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).  
+- Knihovna krátkých vektorů: Definuje sadu typů krátkých vektorů o délce 2, 3 a 4, které jsou založeny na **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplikace Universal Windows Platform (UWP)  
  
@@ -496,7 +496,7 @@ Vizualizátor souběžnosti zahrnuje podporu pro analýzu výkonu kódu jazyka C
   
 - [Kanály (Zobrazení vláken)](/visualstudio/profiling/channels-threads-view)  
   
-- [Analýza kódu C++ AMP pomocí Vizualizéru souběžnosti](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [Analýza kódu C++ AMP pomocí Vizualizéru souběžnosti](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>Doporučení k výkonu  
  

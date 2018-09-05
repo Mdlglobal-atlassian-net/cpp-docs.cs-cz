@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 299ade4aa557a40331fb983f645aa2764c3bf9d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679769"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarátor odkazu hodnoty r: &amp;&amp;
 Obsahuje odkaz na výraz rvalue.  
@@ -60,7 +60,7 @@ int main()
   
  Před Visual C++ 2010, každý volání **operátor +** přiděluje a vrací nový dočasný `string` objektu (rvalue). **Operator +** nedokáže připojit jeden řetězec k druhému, protože neví, zda jsou zdrojové řetězce lvalue nebo rvalue. Pokud jsou zdrojové řetězce obou hodnotami lvalues, mohou být odkazovány kdekoli v programu a nesmí být proto změněny. Pomocí odkazů rvalue **operátor +** můžete upravit tak, aby převzal rvalues, které nelze odkazovat kdekoli v programu. Proto **operátor +** může nyní přidat jeden řetězec do druhého. To může výrazně snížit počet přidělení dynamické paměti, která `string` třídy musí provádět. Další informace o `string` najdete v tématu [basic_string – třída](../standard-library/basic-string-class.md).  
   
- Přesunutí sémantik také pomáhá, když kompilátor nemůže vrátit hodnotu optimalizace (RVO) nebo s názvem vrátit hodnotu optimalizace (NRVO). V těchto případech kompilátor volá konstruktor přesunu, pokud jej definuje typ. Další informace o vrácení pojmenované optimalizace hodnot najdete v tématu [vrácení pojmenované optimalizace hodnot v aplikaci Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
+ Přesunutí sémantik také pomáhá, když kompilátor nemůže vrátit hodnotu optimalizace (RVO) nebo s názvem vrátit hodnotu optimalizace (NRVO). V těchto případech kompilátor volá konstruktor přesunu, pokud jej definuje typ. Další informace o vrácení pojmenované optimalizace hodnot najdete v tématu [vrácení pojmenované optimalizace hodnot v aplikaci Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).  
   
  Chcete-li lépe pochopili sémantiku přesunutí, zvažte příklad vložení elementu do `vector` objektu. Pokud kapacitu `vector` je překročena `vector` objektu musí znovu přidělit paměti její elementy a každý element zkopírovat do jiného umístění v paměti a uvolnila prostor pro vložený element. Když operace vložení zkopíruje element, vytvoří nový prvek, volá konstruktor ke kopírování dat z předchozí ho elementu do nového a potom zničí předchozí prvek. Přesunutí sémantik umožňuje přesunout objekty přímo bez nutnosti provádět náročné přidělení paměti a operace kopírování.  
   

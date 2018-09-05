@@ -75,7 +75,6 @@
 ## [Redistribuce souborů Visual C++](redistributing-visual-cpp-files.md)
 ### [Redistribuce součástí s použitím modulů sloučení](redistributing-components-by-using-merge-modules.md)
 ### [Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++](redistributing-visual-cpp-activex-controls.md)
-### [Redistribuce podpůrných souborů databáze](redistributing-database-support-files.md)
 ### [Redistribuce knihovny MFC](redistributing-the-mfc-library.md)
 ### [Redistribuce aplikace ATL](redistributing-an-atl-application.md)
 ## [Příklady nasazení](deployment-examples.md)

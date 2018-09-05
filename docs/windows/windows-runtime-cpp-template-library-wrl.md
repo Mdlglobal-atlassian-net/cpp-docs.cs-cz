@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211701"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684821"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
@@ -157,5 +157,5 @@ A `WeakRef` objekt obvykle představuje objekt, jehož existence je řízena vn�
 |-|-|
 |[Nejdůležitější rozhraní API podle kategorie](../windows/key-wrl-apis-by-category.md)|Zvýrazní primární typy knihovna šablon C++ Windows Runtime, funkcemi a makry.|
 |[Referenční informace](../windows/wrl-reference.md)|Obsahuje referenční informace pro knihovna šablon C++ Windows Runtime.|
-|[Stručná referenční příručka (Windows Runtime a Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|
-|[Použití součástí prostředí Windows Runtime v jazyce Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Ukazuje, jak použít C + +/ CX pro vytvoření základní komponenty prostředí Windows Runtime.|
+|[Stručná referenční příručka (Windows Runtime a Visual C++)](../cppcx/quick-reference-c-cx.md)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|
+|[Použití součástí prostředí Windows Runtime v jazyce Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak použít C + +/ CX pro vytvoření základní komponenty prostředí Windows Runtime.|
