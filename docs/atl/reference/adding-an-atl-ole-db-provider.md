@@ -1,5 +1,5 @@
 ---
-title: Přidání zprostředkovatele OLE DB ATL | Microsoft Docs
+title: Přidání zprostředkovatele ATL OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7627323a947f9b2265845ec0ff3ce8cd24858a92
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d41e4895d3a26225bb2c34e688df9619414c339
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357555"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765704"
 ---
-# <a name="adding-an-atl-ole-db-provider"></a>Přidání zprostředkovatele OLE DB knihovny ATL
-Tento průvodce slouží k přidání zprostředkovatele OLE DB knihovny ATL do projektu. Zprostředkovatele ATL OLE DB se skládá z zdroj dat, relaci, příkaz a třídy sady řádků. Projekt musí být vytvořen jako aplikace ATL COM.  
-  
-### <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Chcete-li přidat zprostředkovatele OLE DB knihovny ATL do projektu  
-  
-1.  V zobrazení tříd klikněte pravým tlačítkem na projekt. V místní nabídce klikněte na tlačítko **přidat** a pak klikněte na **přidat třídu**.  
-  
-2.  Ve složce Visual C++, dvakrát klikněte **ATL zprostředkovatele technologie OLE DB** ikonu nebo vyberte ho a klikněte na tlačítko **otevřete**.  
-  
-     Otevře se Průvodce poskytovatele ATL technologie OLE DB.  
-  
-3.  Definujte nastavení, jak je popsáno v [ATL OLE DB Provider Wizard](../../atl/reference/atl-ole-db-provider-wizard.md).  
-  
-4.  Klikněte na tlačítko **Dokončit** zavřete průvodce, který vloží nově vytvořený kód zprostředkovatele OLE DB ve vašem projektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
+# <a name="adding-an-atl-ole-db-provider"></a>Přidání zprostředkovatele ATL OLE DB
+
+Tohoto průvodce použijte k přidání zprostředkovatele ATL OLE DB do projektu. Zprostředkovatele ATL OLE DB se skládá ze zdroje dat, relace, příkaz a třídy sady řádků. Projekt musí být vytvořen jako knihovny ATL modelu COM aplikace.
+
+### <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Přidání zprostředkovatele ATL OLE DB do projektu
+
+1. V zobrazení tříd klikněte pravým tlačítkem na projekt. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
+
+2. Ve složce Visual C++, dvakrát klikněte **ATL OLE DB Provider** ikonu nebo ho vyberte a klikněte na tlačítko **otevřít**.
+
+     Otevře se Průvodce zprostředkovatelem ATL OLE DB.
+
+3. Definujte nastavení, jak je popsáno v [Průvodce zprostředkovatelem ATL OLE DB](../../atl/reference/atl-ole-db-provider-wizard.md).
+
+4. Klikněte na tlačítko **Dokončit** zavřete průvodce, který se vloží nově vytvořený kód zprostředkovatele OLE DB ve vašem projektu.
+
+## <a name="see-also"></a>Viz také
+
+[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

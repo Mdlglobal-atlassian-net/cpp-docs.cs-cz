@@ -17,39 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879899"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767101"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Ccomautodeletecriticalsection – třída
-Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `CComAutoDeleteCriticalSection` je odvozena od třídy [ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md). Ale `CComAutoDeleteCriticalSection` přepsání [termín](ccomsafedeletecriticalsection-class.md#term) metodu **privátní** přístup, který vynutí interní paměť vyčištění každý pouze pokud dostanou mimo rozsah nebo jsou explicitně odstranit z instance této třídy paměť.  
+```
 
-  
- Tato třída představuje žádné další metody v její základní třídě. Zobrazit [ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md) a [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md) Další informace o kritický oddíl pomocné třídy.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md)  
-  
- [Ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md)  
-  
- `CComAutoDeleteCriticalSection`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcore.h  
-  
-## <a name="see-also"></a>Viz také  
- [Ccomsafedeletecriticalsection – třída](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
- [Ccomautocriticalsection – třída](../../atl/reference/ccomcriticalsection-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+## <a name="remarks"></a>Poznámky
+
+`CComAutoDeleteCriticalSection` je odvozena od třídy [ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md). Ale `CComAutoDeleteCriticalSection` přepsání [termín](ccomsafedeletecriticalsection-class.md#term) metodu **privátní** přístup, který vynutí interní paměť vyčištění každý pouze pokud dostanou mimo rozsah nebo jsou explicitně odstranit z instance této třídy paměť.  
+
+Tato třída představuje žádné další metody v její základní třídě. Zobrazit [ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md) a [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md) Další informace o kritický oddíl pomocné třídy.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md)
+
+[Ccomsafedeletecriticalsection –](../../atl/reference/ccomsafedeletecriticalsection-class.md)
+
+`CComAutoDeleteCriticalSection`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcore.h
+
+## <a name="see-also"></a>Viz také
+
+[Ccomsafedeletecriticalsection – třída](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
+[Ccomautocriticalsection – třída](../../atl/reference/ccomcriticalsection-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

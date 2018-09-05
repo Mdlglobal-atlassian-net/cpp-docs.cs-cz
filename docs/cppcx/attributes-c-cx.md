@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 491b3cabd8003664a34543d8bb7a640759bd50ee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207402"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765018"
 ---
 # <a name="attributes-ccx"></a>Atributy (C + +/ CX)
 Atribut je zvláštním druhem třídy ref class, která můžou před do hranatých závorek pro typy Windows Runtime a metody k určení určitého chování, k vytvoření metadat. Několik předdefinovaných atributů, například [Windows::Foundation::Metadata::WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)– se běžně používají v jazyce C + +/ CX kódu. Tento příklad ukazuje, jak je atribut aplikován na třídu:  

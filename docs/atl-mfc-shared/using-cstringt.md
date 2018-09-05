@@ -1,5 +1,5 @@
 ---
-title: Pomocí CStringT | Microsoft Docs
+title: Cstringt – použití | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca6046035d14dfb8efff51e7a9aa445a318b8ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354878"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766188"
 ---
-# <a name="using-cstringt"></a>Pomocí CStringT
-Témata v této části popisují programování pomocí třídy šablony [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
- Popisuje správu paměti s `CStringT`, třídu šablony, které se používá k manipulaci s proměnlivou délkou znakových řetězců.  
-  
- [Export tříd řetězců pomocí CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
- Vysvětluje, jak exportovat z knihovny DLL pomocí šablony třídy <> CStringT třídě řetězec.  
-  
-## <a name="reference"></a>Odkaz  
- [Třída CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
- Poskytuje referenční informace o sdílený `CStringT` třídy.  
-  
-## <a name="see-also"></a>Viz také  
- [Řetězce (ATL a MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+# <a name="using-cstringt"></a>Cstringt – použití
+
+Témata v této části popisují programování pomocí třídy šablony [CStringT](../atl-mfc-shared/reference/cstringt-class.md).
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+Tento článek popisuje správu paměti s `CStringT`, šablony třídy používá k manipulaci s řetězci proměnné délky znaků.
+
+[Export tříd řetězců pomocí CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+Vysvětluje, jak exportovat vlastní řetězcové třídy z knihovny DLL pomocí CStringT <> šablony třídy.
+
+## <a name="reference"></a>Odkaz
+
+[Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md).  
+Poskytuje referenční informace o sdílený `CStringT` třídy.
+
+## <a name="see-also"></a>Viz také
+
+[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

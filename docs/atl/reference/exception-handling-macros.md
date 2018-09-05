@@ -1,5 +1,5 @@
 ---
-title: Zpracování makra výjimek | Microsoft Docs
+title: Makra pro zpracování výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b503e36dfe04eaa3180809033187957ff8d970a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358974"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766812"
 ---
 # <a name="exception-handling-macros"></a>Makra zpracování výjimek
-Tyto makra poskytuje podporu pro zpracování výjimek.  
-  
-|||  
-|-|-|  
-|[_ATLCATCH](#_atlcatch)|Příkazy se budou zpracovávat chyby, ke kterým dochází v přidruženém `_ATLTRY`.|  
-|[_ATLCATCHALL](#_atlcatchall)|Příkazy se budou zpracovávat chyby, ke kterým dochází v přidruženém `_ATLTRY`.|  
-|[_ATLTRY](#_atltry)|Označí chráněného kódu části, kde pravděpodobně dojde k chybě.|  
-  
+
+Tato makra poskytovat podporu pro zpracování výjimek.
+
+|||
+|-|-|
+|[_ATLCATCH](#_atlcatch)|Příkazů pro zpracování chyb, ke kterým dochází v přidruženém `_ATLTRY`.|
+|[_ATLCATCHALL](#_atlcatchall)|Příkazů pro zpracování chyb, ke kterým dochází v přidruženém `_ATLTRY`.|
+|[_ATLTRY](#_atltry)|Označí strážených kód části, kde může případně dojít k chybě.|
+
 ## <a name="requirements"></a>Požadavky:
+
 **Záhlaví:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH  
- Příkazy se budou zpracovávat chyby, ke kterým dochází v přidruženém `_ATLTRY`.  
-  
+##  <a name="_atlcatch"></a>  _ATLCATCH
+
+Příkazů pro zpracování chyb, ke kterým dochází v přidruženém `_ATLTRY`.
+
 ```
 _ATLCATCH(e)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *e*  
- Výjimka k zachycení.  
-  
-### <a name="remarks"></a>Poznámky  
- Používá ve spojení s `_ATLTRY`. Přeloží na C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) pro zpracování daný typ výjimky jazyka C++.  
-  
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
- Příkazy se budou zpracovávat chyby, ke kterým dochází v přidruženém `_ATLTRY`.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*e*  
+Výjimka pro zachycení.
+
+### <a name="remarks"></a>Poznámky
+
+Použít ve spojení s `_ATLTRY`. Přeloží na C++ [catch (catlexception – e)](../../cpp/try-throw-and-catch-statements-cpp.md) pro zpracování daného typu výjimky jazyka C++.
+
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+
+Příkazů pro zpracování chyb, ke kterým dochází v přidruženém `_ATLTRY`.
+
 ```
 _ATLCATCHALL
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Používá ve spojení s `_ATLTRY`. Přeloží na C++ [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) pro zpracování všech typů výjimky jazyka C++.  
-  
-##  <a name="_atltry"></a>  _ATLTRY  
- Označí chráněného kódu části, kde pravděpodobně dojde k chybě.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Použít ve spojení s `_ATLTRY`. Přeloží na C++ [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) pro zpracování všech druhů výjimky jazyka C++.
+
+##  <a name="_atltry"></a>  _ATLTRY
+
+Označí strážených kód části, kde může případně dojít k chybě.
+
 ```
 _ATLTRY
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Používá ve spojení s [_ATLCATCH](#_atlcatch) nebo [_ATLCATCHALL](#_atlcatchall). Přeloží na C++ symbol [zkuste](../../cpp/try-throw-and-catch-statements-cpp.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Makra](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Použít ve spojení s [_ATLCATCH](#_atlcatch) nebo [_ATLCATCHALL](#_atlcatchall). Přeloží na symbolu C++ [zkuste](../../cpp/try-throw-and-catch-statements-cpp.md).
+
+## <a name="see-also"></a>Viz také
+
+[Makra](../../atl/reference/atl-macros.md)

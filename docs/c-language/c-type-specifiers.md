@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197225"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764261"
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
@@ -29,18 +29,18 @@ Specifikátory typu v deklaracích definování typu deklarace proměnné nebo f
 ## <a name="syntax"></a>Syntaxe
 
 *Specifikátor typu*:  
-&nbsp;&nbsp;**Typ void**  
-&nbsp;&nbsp;**Char**  
-&nbsp;&nbsp;**krátké**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**Long**  
-&nbsp;&nbsp;**plovoucí desetinnou čárkou**  
-&nbsp;&nbsp;**Double**  
-&nbsp;&nbsp;**podepsané**  
-&nbsp;&nbsp;**bez znaménka**  
-&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*  
-&nbsp;&nbsp;*enum – specifikátor*  
-&nbsp;&nbsp;*Název TypeDef*  
+&nbsp;&nbsp;&nbsp;&nbsp;**Typ void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**krátké**  
+&nbsp;&nbsp;&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Long**  
+&nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Double**  
+&nbsp;&nbsp;&nbsp;&nbsp;**podepsané**  
+&nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**  
+&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*  
+&nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*  
+&nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*  
 
 **Podepsané char**, **znaménkem**, **podepsané krátká celočíselná**, a **podepsané long int** typy, společně s jejich **bez znaménka**  protějšky a **výčtu**, se nazývají *integrální* typy. **Float**, **double**, a **long double** specifikátory typu jsou označovány jako *s plovoucí desetinnou čárkou* nebo *splovoucídesetinnoučárkou* typy. Můžete použít libovolný typ s plovoucí desetinnou čárkou nebo celočíselné specifikátor v deklaraci proměnné nebo funkce. Pokud *specifikátor typu* není k dispozici v deklaraci, je slov za **int**.
 

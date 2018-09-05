@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205477"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764407"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Vyřazování typů a členů (C + +/ CX)
 V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenty a spotřebiteli pomocí [zastaralé](/uwp/api/windows.foundation.metadata.deprecatedattribute) je atribut podporovaný. Využití rozhraní API, ke kterému tento atribut používá, dostanete zprávu upozornění kompilace, která označuje, že rozhraní API je zastaralé a také doporučuje alternativní rozhraní API pro použití. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.  

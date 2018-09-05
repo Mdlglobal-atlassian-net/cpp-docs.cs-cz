@@ -1,5 +1,5 @@
 ---
-title: Duální rozhraní a knihovna ATL | Microsoft Docs
+title: Duální rozhraní a ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9212662d419f5750d6a8037b73a58fd58c4c858f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355043"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765132"
 ---
-# <a name="dual-interfaces-and-atl"></a>Duální rozhraní a knihovny ATL
-Duální rozhraní, které umožňuje přístup k jako dispinterface metody nebo metody vtable její metody. Tato část popisuje některé funkce duální rozhraní z hlediska ATL.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Implementace duálního rozhraní](../atl/implementing-a-dual-interface.md)  
- Popisuje třídy a průvodců podílejících se na provádění duální rozhraní.  
-  
- [Více duálních rozhraní](../atl/multiple-dual-interfaces.md)  
- Popisuje, jak vystavit více duální rozhraní na jednoho objektu.  
-  
- [Nonextensible – atribut](../atl/nonextensible-attribute.md)  
- Popisuje použití **nonextensible –** atribut na vaše definice rozhraní.  
-  
- [Duální rozhraní a události](../atl/dual-interfaces-and-events.md)  
- Popisuje důvody návrhu není provedení události rozhraní duální rozhraní.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../atl/active-template-library-atl-concepts.md)
+# <a name="dual-interfaces-and-atl"></a>Duální rozhraní a ATL
+
+Duální rozhraní umožňuje její metody přístupný jako dispinterface metody nebo jako metody vtable. Tento oddíl popisuje některé funkce z hlediska ATL duální rozhraní.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Implementace duálního rozhraní](../atl/implementing-a-dual-interface.md)  
+Tento článek popisuje třídy a průvodců součástí implementace duálního rozhraní.
+
+[Více duálních rozhraní](../atl/multiple-dual-interfaces.md)  
+Popisuje, jak vystavit více duálních rozhraní u jednoho objektu.
+
+[Nonextensible – atribut](../atl/nonextensible-attribute.md)  
+Popisuje použití **nerozšiřitelnou kategorii** atribut na vaše definice rozhraní.
+
+[Duální rozhraní a události](../atl/dual-interfaces-and-events.md)  
+Tento článek popisuje důvody návrh události rozhraní duální rozhraní se nedá postupovat.
+
+## <a name="related-sections"></a>Související oddíly
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../atl/active-template-library-atl-concepts.md)
 

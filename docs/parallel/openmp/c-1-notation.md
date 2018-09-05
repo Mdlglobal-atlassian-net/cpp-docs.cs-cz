@@ -1,5 +1,5 @@
 ---
-title: C.1 zápis | Microsoft Docs
+title: C.1 zápis | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39e8610524e20aa99ea316d62f36b512700e377e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686812"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766149"
 ---
 # <a name="c1-notation"></a>C.1 Zápis
-Gramatika pravidla obsahovat název pro jiný terminál, následovaným dvojtečkou, následuje nahrazení alternativy na samostatné řádky.  
-  
- Syntaktické výrazu termopt označuje, že je termín volitelné v rámci nahrazení.  
-  
- Syntaktické výraz *termín*optseq je ekvivalentní *termín seq*opt s následující další pravidla:  
-  
- *termín seq* :  
-  
- *Termín*  
-  
- *termín seq termín*  
-  
- *termín seq* , *termín*
+Gramatika pravidla jsou založená na názvu bez terminal, za nímž následuje dvojtečka, následovaný nahrazení alternativy na samostatných řádcích.
+
+Syntaktické výraz<sub>optimalizované</sub> znamená, že je výraz nepovinný v nahrazení.
+
+Syntaktické výraz *termín*<sub>optseq</sub> je ekvivalentní *termín seq*<sub>optimalizované</sub> s následující další pravidla:
+
+*termín seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Termín*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termín seq* *termín*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termín seq* **,** *termín*

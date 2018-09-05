@@ -1,7 +1,7 @@
 ---
-title: Textové literály jazyka C | Microsoft Docs
+title: Textové literály jazyka C | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/31/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,39 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303ad83c5e366f32a99a501a58b168ef25adbb42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87b8ce4c8270b8f0d22c2396358e8e1118a4bbd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382780"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765037"
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
-"Řetězcový literál" je posloupnost znaků ze zdrojové znakové sady uzavřené v uvozovkách (**""**). Textové literály slouží k reprezentaci posloupnost znaků, které, dohromady, tvoří řetězce ukončené hodnotou null. Je třeba vždy předponu celou textové literály písmenem **L**.  
-  
-## <a name="syntax"></a>Syntaxe  
- *řetězcový literál*:  
- **"** *s – znak pořadí* opt **"**  
-  
- **L"** *s – znak pořadí* opt **"**  
-  
- *s – znak pořadí*:  
- *s – znak*  
-  
- *s – znak pořadí s – znak*  
-  
- *s char*:  
- nastavit kteréhokoli člena znak zdroje, s výjimkou dvojité uvozovky ("), zpětné lomítko (\\), nebo znak nového řádku  
-  
- *řídicí sekvence*  
-  
- Následující příklad je jednoduchý řetězcový literál:  
-  
-```  
-char *amessage = "This is a string literal.";  
-```  
-  
- Všechny kódy, které jsou uvedené v vyhnuli [řídicí sekvence](../c-language/escape-sequences.md) tabulky jsou platné v textové literály. Chcete-li představují uvozovky v řetězcový literál, použijte řídicí sekvence  **\\"**. Jednoduché uvozovky (**'**) může být reprezentován bez řídicí sekvence. Zpětné lomítko (**\\**) musí být sledována s druhé zpětné lomítko (**\\\\**) při zobrazí v řetězci. Na konci řádku se zobrazí zpětné lomítko, je vždy interpretovat jako znak pokračování řádku.  
-  
-## <a name="see-also"></a>Viz také  
- [Elementy jazyka C](../c-language/elements-of-c.md)
+
+"Textový literál" je posloupnost znaků ze zdrojové znakové sady uzavřený do dvojitých uvozovek (**""**). Řetězcové literály se používají k vyjádření posloupnost znaků, které, dohromady, tvoří řetězec zakončený hodnotou null. Musíte vždy přidat předponu literály širokých řetězců s písmenem **L**.
+
+## <a name="syntax"></a>Syntaxe
+
+*řetězcový literál*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **"**  
+&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s – znak sekvence*<sub>optimalizované</sub> **"**
+
+*s – znak sekvence*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*  
+&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
+
+*s char*:  
+&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku  
+&nbsp;&nbsp;&nbsp;&nbsp;*řídicí sekvence*
+
+## <a name="remarks"></a>Poznámky
+
+Následující příklad je jednoduchý řetězcový literál:
+
+```C
+char *amessage = "This is a string literal.";
+```
+
+Všechny kódy řídicí [řídicí sekvence](../c-language/escape-sequences.md) tabulky jsou platné u řetězcových literálů. K reprezentaci dvojité uvozovky v řetězcovém literálu, použijte sekvenci escape  **\\"**. Jednoduché uvozovky (**"**) můžou být vyjádřeny bez řídicí sekvence. Zpětné lomítko (**\\**) musí být následován se druhé zpětné lomítko (**\\\\**) Pokud je zobrazeno v rámci řetězce. Když se objeví zpětné lomítko na konci řádku, je vždy interpretován jako znak pro pokračování řádku.
+
+## <a name="see-also"></a>Viz také
+
+[Elementy jazyka C](../c-language/elements-of-c.md)  

@@ -1,5 +1,5 @@
 ---
-title: ATL – dialogové okno Průvodce | Microsoft Docs
+title: Průvodce dialogem ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2d78f0a41edca44f8841d701cc87975c551466
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358003"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767709"
 ---
-# <a name="atl-dialog-wizard"></a>Dialogové okno Průvodce knihovny ATL
-Tento průvodce vloží do projektu objekt dialogového okna knihovny ATL odvozený od [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Dialogové okno odvozené z `CAxDialogImpl` může hostovat ovládací prvky ActiveX.  
-  
- Průvodce vytvoří prostředek dialogové okno s výchozí **OK** a **zrušit** tlačítka. Můžete upravit prostředku dialogového okna a přidat ovládací prvky ActiveX pomocí [editoru dialogového okna](../../windows/dialog-editor.md) v zobrazení zdrojů.  
-  
- Průvodce vloží do soubor hlaviček [mapy zpráv](../../atl/message-maps-atl.md) a deklarace pro zpracování výchozí položku události. V tématu [implementace dialogové okno](../../atl/implementing-a-dialog-box.md) Další informace o dialogových oken ATL.  
-  
- **Krátký název**  
- Nastaví zkrácený název pro objekt knihovny ATL dialogové okno. Poskytnutý název určuje název třídy a (sada a .h) názvy souborů, pokud nezměníte tato pole samostatně.  
-  
- `Class`  
- Nastaví název třídy, který se má vytvořit. Tento název je založen na názvu poskytují v **krátký název**, předcházet "C", typická předpona pro název třídy.  
-  
- **soubor h**  
- Nastaví název hlavičky souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu poskytují v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby nebo připojit k existující soubor deklaraci třídy. Pokud zvolíte existující soubor, průvodce jej neuloží do vybraného umístění dokud klikněte na tlačítko **Dokončit** v průvodci.  
-  
- Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být deklaraci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.  
-  
- **souboru**  
- Nastaví název souboru implementace pro nový objekt třídu. Ve výchozím nastavení, tento název je založen na názvu poskytují v **krátký název**. Klikněte na tlačítko se třemi tečkami uložíte soubor do umístění podle vaší volby. Soubor se neuloží do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.  
-  
- Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být implementaci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogové okno knihovny ATL](../../atl/reference/adding-an-atl-dialog-box.md)
+# <a name="atl-dialog-wizard"></a>Průvodce dialogem ATL
+
+Tento průvodce vloží do projektu ATL objekt dialogového okna, odvozený z [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Dialogové okno odvozené od `CAxDialogImpl` může být hostitelem ovládacích prvků ActiveX.
+
+Průvodce vytvoří prostředek dialogového okna s výchozí **OK** a **zrušit** tlačítka. Můžete upravit prostředku dialogového okna a přidání ovládacích prvků ActiveX pomocí [editoru dialogového okna](../../windows/dialog-editor.md) v okně zobrazení prostředků.
+
+Průvodce se vloží do hlavičky souboru [mapu zpráv](../../atl/message-maps-atl.md) a deklarace pro výchozí zpracování události kliknutí. Zobrazit [implementace dialogového okna](../../atl/implementing-a-dialog-box.md) Další informace o dialogová okna ATL.
+
+**Krátký název**  
+Nastaví zkrácený název objektu ATL dialogového okna. Název, který poskytnete Určuje název třídy a souboru (.cpp a .h) názvy, pokud nezměníte těchto polí samostatně.
+
+`Class`  
+Nastaví název třídy, který se má vytvořit. Tento název je založen na názvu je zadat v **krátký název**, předchází "C", typická předpona pro název třídy.
+
+**soubor .h**  
+Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
+
+Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
+
+**soubor .cpp**  
+Nastaví název implementačního souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **krátký název**. Klikněte na tlačítko se třemi tečkami se uložit název souboru do umístění podle vašeho výběru. Soubor se neukládá do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.
+
+Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
+
+## <a name="see-also"></a>Viz také
+
+[Dialogového okna ATL](../../atl/reference/adding-an-atl-dialog-box.md)
 

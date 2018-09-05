@@ -18,20 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b953b7e7a2f67aa3b17d5bb5fd020706d4c98e3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e129ec4df6738086d111742adc4b3c0ffd226c40
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953379"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765795"
 ---
 # <a name="data-transfer-classes"></a>Třídy přenosu dat
-Následující třídy podporují různé typy přenosu dat:  
-  
--   [Idataobjectimpl –](../atl/reference/idataobjectimpl-class.md) podporuje jednotné přenos dat pomocí standardní formáty načíst a nastavit data. Oznámení změn popisovače dat tím, že spravuje připojení radit jímky.  
-  
--   [Cbindstatuscallback –](../atl/reference/cbindstatuscallback-class.md) umožňuje asynchronní moniker odesílat a přijímat informace o přenos asynchronní dat do a z objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)
+
+Následující třídy podporují různé typy přenosu dat:
+
+- [Idataobjectimpl –](../atl/reference/idataobjectimpl-class.md) podporuje jednotné přenos dat pomocí standardní formáty načíst a nastavit data. Oznámení změn popisovače dat tím, že spravuje připojení radit jímky.
+
+- [Cbindstatuscallback –](../atl/reference/cbindstatuscallback-class.md) umožňuje asynchronní moniker odesílat a přijímat informace o přenos asynchronní dat do a z objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: TypeDef – deklarace | Microsoft Docs
+title: TypeDef – deklarace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,156 +16,144 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391649"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765782"
 ---
 # <a name="typedef-declarations"></a>Typedef – deklarace
-Deklarace definice typedef je deklaraci s typedef jako třídy úložiště. Nový typ se změní deklarátor. Typedef – deklarace můžete použít k vytvoření kratší nebo smysluplnější názvů pro typy už definované C nebo pro typy, které mají deklarován. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.  
-  
- Deklaraci typedef interpretována stejným způsobem jako proměnné nebo funkce deklarace, ale identifikátor, namísto za předpokladu, že v typu zadaném pomocí deklarace, se změní na synonymum pro typ.  
-  
-## <a name="syntax"></a>Syntaxe  
- `declaration`:  
- *specifikátory deklarace init deklarátor list* opt **;**  
-  
- *specifikátory deklarace*:  
- *specifikátor třídy úložiště specifikátory deklarace* opt  
-  
- *Specifikátor typu deklarace – specifikátory* opt  
-  
- *Kvalifikátor typu deklarace – specifikátory* opt  
-  
- *specifikátor třídy úložiště*:  
- `typedef`  
-  
- *Specifikátor typu*:  
- **void**  
-  
- **char**  
-  
- **short**  
-  
- **int**  
-  
- **long**  
-  
- **float**  
-  
- **double**  
-  
- **Podepsané**  
-  
- **Bez znaménka**  
-  
- *struct-or-union-specifier*  
-  
- *enum – specifikátor*  
-  
- *typedef-name*  
-  
- *TypeDef – název*:  
- *Identifikátor*  
-  
- Všimněte si, že deklaraci typedef nevytvoří typy. Vytvoří synonyma pro existující typy nebo názvy pro typy, které může být určen jinými způsoby. Pokud je jako specifikátor typu použit název typedef, lze spojovat s určitým specifikátory typu, ale jiné ne. Zahrnout přijatelné modifikátory **const** a `volatile`.  
-  
- Názvy typu TypeDef sdílet s obyčejnou identifikátory obor názvů (viz [obory názvů](../c-language/name-spaces.md) Další informace). Program tedy může mít název typedef a identifikátor místního oboru se stejným názvem. Příklad:  
-  
-```  
-typedef char FlagType;  
-  
-int main()  
-{  
-}  
-  
-int myproc( int )  
-{  
-    int FlagType;  
-}  
-```  
-  
- Při deklarování identifikátoru místního oboru se stejným názvem jako typedef nebo při deklarování členu struktury nebo sjednocení ve stejném oboru nebo ve vnitřním oboru musí být určen specifikátor typu. Tento příklad ukazuje tato omezení:  
-  
-```  
-typedef char FlagType;  
-const FlagType x;  
-```  
-  
- Pro opětovné použití názvu `FlagType` pro identifikátor, člen struktury nebo člen sjednocení musí být určen typ:  
-  
-```  
-const int FlagType;  /* Type specifier required */  
-```  
-  
- Nestačí říct  
-  
-```  
-const FlagType;      /* Incomplete specification */  
-```  
-  
- protože `FlagType` se považuje za část typu, nikoli identifikátor, který je znovu deklarován. Tato deklarace je neplatnou jako  
-  
-```  
-int;  /* Illegal declaration */  
-```  
-  
- Pomocí typedef je možné deklarovat jakýkoli typ, včetně ukazatele, funkce a typů polí. Je možné deklarovat název typedef pro ukazatel na typ struktury nebo sjednocení před definováním typu struktury nebo sjednocení, pokud má definice stejnou viditelnost jako deklarace.  
-  
- Názvy typu TypeDef můžete použít ke zlepšení čitelnosti kódu. Všechny tři následující prohlášení o `signal` zadejte přesně stejného typu, nejprve bez provedení použití všechny názvy typu typedef.  
-  
-```  
-typedef void fv( int ), (*pfv)( int );  /* typedef declarations */  
-  
-void ( *signal( int, void (*) (int)) ) ( int );  
-fv *signal( int, fv * );   /* Uses typedef type */  
-pfv signal( int, pfv );    /* Uses typedef type */  
-```  
-  
-## <a name="examples"></a>Příklady  
- Následující příklady ilustrují typedef – deklarace:  
-  
-```  
-typedef int WHOLE; /* Declares WHOLE to be a synonym for int */  
-```  
-  
- Všimněte si, že `WHOLE` může být použit v deklarace proměnné, jako `WHOLE i;` nebo `const WHOLE i;`. Ale deklaraci `long WHOLE i;` by byla neplatná.  
-  
-```  
-typedef struct club   
-{  
-    char name[30];  
-    int size, year;  
-} GROUP;  
-```  
-  
- Tento příkaz deklaruje `GROUP` jako typ struktura se tři členy. Od značku struktura `club`, je zadána také, název typedef (`GROUP`) nebo struktura značky lze použít v deklaracích. Je nutné použít struct – klíčové slovo se značky a struct – klíčové slovo nelze použít s názvem typedef.  
-  
-```  
-typedef GROUP *PG; /* Uses the previous typedef name   
-                      to declare a pointer            */  
-```  
-  
- Typ `PG` je deklarován jako ukazatel `GROUP` typu, který naopak je definována jako typ struktury.  
-  
-```  
-typedef void DRAWF( int, int );  
-```  
-  
- Tento příklad poskytuje typ `DRAWF` pro funkci vrácení žádná hodnota a přepnutím dva argumenty int. To znamená, například která deklaraci  
-  
-```  
-DRAWF box;   
-```  
-  
- je ekvivalentní deklaraci  
-  
-```  
-void box( int, int );  
-```  
-  
-## <a name="see-also"></a>Viz také  
+Deklarace typedef je deklarace pomocí direktivy typedef jako třídy úložiště. Deklarátor stane nového typu. TypeDef – deklarace můžete použít k vytvoření kratších nebo výstižnějších názvů pro typy, které jsou již definovány pomocí jazyka C nebo pro typy, které je deklarován. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.
 
+Deklarace typedef je interpretován stejným způsobem jako proměnnou nebo deklarace funkce, ale tento identifikátor, ne za předpokladu, že zadaný typ deklarací, je synonymum pro typ.
 
+## <a name="syntax"></a>Syntaxe
+
+*deklarace*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace init-declarator-list*<sub>optimalizované</sub> **;**
+
+*specifikátory deklarace*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace Storage-class-specifier*<sub>optimalizované</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu specifikátory deklarace*<sub>optimalizované</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu specifikátory deklarace*<sub>optimalizované</sub>
+
+*Storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**
+
+*Specifikátor typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**krátké**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Long**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
+
+*Název typedef*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
+
+Všimněte si, že deklarace typedef nevytváří žádné typy. Vytvoří synonyma pro existující typy nebo názvy pro typy, které by mohl být specifikován jinými způsoby. Pokud název typedef slouží jako specifikátoru typu, dá se kombinovat s určitým specifikátory typu, ale ne pro jiné. Zahrnout přijatelné modifikátory **const** a `volatile`.
+
+Názvy typu TypeDef sdílí obor názvů s běžnými identifikátory (viz [obory názvů](../c-language/name-spaces.md) Další informace). Program tedy může mít název typedef a identifikátor místního oboru se stejným názvem. Příklad:
+
+```C
+typedef char FlagType;
+
+int main()
+{
+}
+
+int myproc( int )
+{
+    int FlagType;
+}
+```
+
+Při deklarování identifikátoru místního oboru se stejným názvem jako typedef nebo při deklarování členu struktury nebo sjednocení ve stejném oboru nebo ve vnitřním oboru musí být určen specifikátor typu. Tento příklad znázorňuje tato omezení:
+
+```C
+typedef char FlagType;
+const FlagType x;
+```
+
+Pro opětovné použití názvu `FlagType` pro identifikátor, člen struktury nebo člen sjednocení musí být určen typ:
+
+```C
+const int FlagType;  /* Type specifier required */
+```
+
+Nestačí říct
+
+```C
+const FlagType;      /* Incomplete specification */
+```
+
+protože `FlagType` se považuje za část typu, nikoli identifikátor, který je znovu deklarován. Tato deklarace je neplatnou jako
+
+```C
+int;  /* Illegal declaration */
+```
+
+Pomocí typedef je možné deklarovat jakýkoli typ, včetně ukazatele, funkce a typů polí. Je možné deklarovat název typedef pro ukazatel na typ struktury nebo sjednocení před definováním typu struktury nebo sjednocení, pokud má definice stejnou viditelnost jako deklarace.
+
+Názvy typu TypeDef je možné pro lepší čitelnost kódu. Všechny tři následující deklarace `signal` zadejte přesně stejného typu, nejprve bez provedení užívání žádné názvy typu typedef.
+
+```C
+typedef void fv( int ), (*pfv)( int );  /* typedef declarations */
+
+void ( *signal( int, void (*) (int)) ) ( int );
+fv *signal( int, fv * );   /* Uses typedef type */
+pfv signal( int, pfv );    /* Uses typedef type */
+```
+
+## <a name="examples"></a>Příklady
+Následující příklady znázorňují TypeDef – deklarace:
+
+```C
+typedef int WHOLE; /* Declares WHOLE to be a synonym for int */
+```
+
+Všimněte si, že `WHOLE` by se teď dá v deklaraci proměnné, jako `WHOLE i;` nebo `const WHOLE i;`. Však deklarace `long WHOLE i;` by byla neplatná.
+
+```C
+typedef struct club
+{
+    char name[30];
+    int size, year;
+} GROUP;
+```
+
+Tento příkaz deklaruje `GROUP` jako typ struktury pomocí tří členů. Od značku struktury `club`, je také zadán, název typedef (`GROUP`) nebo značku struktury lze použít v deklaracích. Je nutné použít klíčové slovo struct se značkou a struct – klíčové slovo nelze použít s názvem typedef.
+
+```C
+typedef GROUP *PG; /* Uses the previous typedef name
+                      to declare a pointer            */
+```
+
+Typ `PG` je deklarována jako ukazatel `GROUP` typ, který zase je definována jako typ struktury.
+
+```C
+typedef void DRAWF( int, int );
+```
+
+Tento příklad poskytuje typ `DRAWF` pro funkci nevracející žádnou hodnotu a přijímající dva celočíselné argumenty. To znamená, například, že deklarace
+
+```C
+DRAWF box;
+```
+
+je ekvivalentem deklarace
+
+```C
+void box( int, int );
+```
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace a typy](../c-language/declarations-and-types.md)

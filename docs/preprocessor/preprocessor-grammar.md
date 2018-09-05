@@ -1,7 +1,7 @@
 ---
 title: Gramatika preprocesoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465568"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766113"
 ---
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
-**#define***identifikátor* *řetězci tokenu*optimalizované    
-  
-*#* **definování***identifikátor*[**(** *identifikátor*optimalizované **,** *...*  **,** *identifikátor*optimalizované **)**] *řetězci tokenu*optimalizované    
-  
-**definovaný (***identifikátor* **)**   
-  
-**definované***identifikátor*   
-  
-`#include` **"***path-spec***"**  
-  
-`#include` **\<***Path-spec***>**  
-  
-**#line***sekvence číslic***"** *filename* **"** optimalizované      
-  
-*#* **undef***identifikátor*   
-  
-**#error***řetězci tokenu*   
-  
-**#pragma***řetězci tokenu*   
-  
-*Podmíněné* :  
-*část IF části elif*optimalizované*část else*optimalizované*řádek endif*  
-  
-*část IF* :  
-*if-linetext*  
-  
-*řádek IF* :  
-**#if***konstantního výrazu.*  
-  
-**#ifdef***identifikátor*  
-  
-**#ifndef***identifikátor*  
-  
-*části elif* :  
-*text řádku elif*  
-  
-*části elif text řádku elif*  
-  
-*řádek elif* :  
-**#elif***konstantního výrazu.*  
-  
-*části else* :  
-*else-linetext*  
-  
-*řádek else* :  
-`#else`  
-  
-*řádek endif* :  
-`#endif`  
-  
-*sekvence číslic* :  
-*číslice*  
-  
-*sekvence číslic číslice*  
-  
-*číslice* : jeden z  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*řetězcový token* :  
-Řetězec tokenů  
-  
-*token* :  
-*Klíčové slovo*  
-  
-*identifikátor*  
-  
-*Konstanty*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*Název souboru* :  
-Název souboru právní operačního systému  
-  
-*Path-spec* :  
-Cesta k souboru právní  
-  
-*text* :  
-Libovolná sekvence textu  
-  
+
+*ovládací prvek řádku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifikátor* *řetězci tokenu*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifikátor</em>**(** *identifikátor*<sub>optimalizované</sub> **,** ... **,** *identifikátor*<sub>optimalizované</sub> **)** *řetězci tokenu*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekvence číslic***"** *filename* **"**<sub>optimalizované  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *řetězci tokenu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *řetězci tokenu*
+
+*konstantní výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definovaný (** *identifikátor* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definované** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Další konstantní výraz
+
+*Podmíněné* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*část IF* *části elif*<sub>optimalizované</sub> *část else*<sub>optimalizované</sub> *řádek endif*
+
+*část IF* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*řádek IF* *text*
+
+*řádek IF* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *konstantního výrazu.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifikátor*
+
+*části elif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*řádek elif* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*části elif* *řádku elif* *text*
+
+*řádek elif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *konstantního výrazu.*
+
+*části else* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*řádek else* *text*
+
+*řádek else* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*řádek endif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*sekvence číslic* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
+
+*číslice* : jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*řetězcový token* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Řetězec tokenů
+
+*token* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Klíčové slovo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*– Operátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*interpunkci*
+
+*Název souboru* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Název souboru právní operačního systému
+
+*Path-spec* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Cesta k souboru právní
+
+*text* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Libovolná sekvence textu
+
 > [!NOTE]
-> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++*: `constant`, `constant` - *výraz* , *identifikátor*, *– klíčové slovo*, `operator`, a `punctuator`.  
-  
-## <a name="see-also"></a>Viz také  
- 
+> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++*: *konstantní*, *konstantního výrazu.* , *identifikátor*, *– klíčové slovo*, *operátor*, a *interpunkci*.
+
+## <a name="see-also"></a>Viz také
+
 [Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

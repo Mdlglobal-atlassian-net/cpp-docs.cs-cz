@@ -1,5 +1,5 @@
 ---
-title: Uložené vlastnosti, ATL řízení Průvodce | Microsoft Docs
+title: Uložené vlastnosti, ATL ovládacích prvků Průvodce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358896"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767462"
 ---
-# <a name="stock-properties-atl-control-wizard"></a>Uložené vlastnosti, Průvodce ovládacím prvkem knihovny ATL
-Tato stránka průvodce identifikuje uložené vlastnosti podporované pro ovládací prvek. Ve výchozím nastavení nejsou označeny žádné vlastnosti.  
-  
- **Nepodporuje se**  
- Označuje dostupné vlastnosti, které nejsou aktuálně podporovány pro ovládací prvek.  
-  
- **Podporované**  
- Určuje vlastnosti, které jsou aktuálně podporovány pro ovládací prvek.  
-  
-|Tlačítko přenosu|Popis|  
-|---------------------|-----------------|  
-|**>**|Přidá **podporované** název vlastnosti, které jsou aktuálně vybraného v seznamu **nepodporuje** seznamu.|  
-|**>>**|Přidá do **podporované** všechny názvy vlastností k dispozici v seznamu **nepodporuje** seznamu.|  
-|**<**|Odebere název vlastnosti v aktuálně vybranou **podporované** seznamu.|  
-|**<<**|Odebere všechny názvy vlastnosti v **podporované** seznamu.|  
-  
-## <a name="see-also"></a>Viz také  
- [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
+# <a name="stock-properties-atl-control-wizard"></a>Uložené vlastnosti, Průvodce ovládacím prvkem ATL
+
+Tato stránka průvodce identifikuje uložených vlastností pro ovládací prvek podporována. Ve výchozím nastavení nejsou označeny žádné vlastnosti.
+
+**Nepodporuje se**  
+Označuje dostupné vlastnosti, které nejsou aktuálně podporovány pro ovládací prvek.
+
+**Podporované**  
+Určuje vlastnosti, které jsou aktuálně podporovány pro ovládací prvek.
+
+|Tlačítka převodu|Popis|
+|---------------------|-----------------|
+|**>**|Přidá **podporované** vlastnost název aktuálně vybraného v seznamu **nepodporuje** seznamu.|
+|**>>**|Přidá **podporované** všechny názvy vlastností k dispozici v seznamu **nepodporuje** seznamu.|
+|**<**|Odstraní aktuálně vybrané v název vlastnosti **podporované** seznamu.|
+|**<<**|Odebere všechny názvy vlastností, které jsou teď uvedená v **podporované** seznamu.|
+
+## <a name="see-also"></a>Viz také
+
+[Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
 

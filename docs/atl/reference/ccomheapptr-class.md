@@ -18,65 +18,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764826"
 ---
 # <a name="ccomheapptr-class"></a>Ccomheapptr – třída
-Třída inteligentní ukazatel pro správu haldy ukazatele.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Třída inteligentní ukazatel pro správu haldy ukazatele.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<typename T>  
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Typ objektu ukládaly na haldě.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Konstruktor|  
-  
-## <a name="remarks"></a>Poznámky  
- `CComHeapPtr` je odvozen od `CHeapPtr`, ale používá [ccomallocator –](../../atl/reference/ccomallocator-class.md) přidělení paměti pomocí modelu COM, rutin. Zobrazit [cheapptr –](../../atl/reference/cheapptr-class.md) a [cheapptrbase –](../../atl/reference/cheapptrbase-class.md) pro metody, které jsou k dispozici.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)  
-  
- [Cheapptr –](../../atl/reference/cheapptr-class.md)  
-  
- `CComHeapPtr`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
-  
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
- Konstruktor  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Typ objektu ukládaly na haldě.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Konstruktor|
+
+## <a name="remarks"></a>Poznámky
+
+`CComHeapPtr` je odvozen od `CHeapPtr`, ale používá [ccomallocator –](../../atl/reference/ccomallocator-class.md) přidělení paměti pomocí modelu COM, rutin. Zobrazit [cheapptr –](../../atl/reference/cheapptr-class.md) a [cheapptrbase –](../../atl/reference/cheapptrbase-class.md) pro metody, které jsou k dispozici.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)
+
+[Cheapptr –](../../atl/reference/cheapptr-class.md)
+
+`CComHeapPtr`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h
+
+##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+
+Konstruktor
+
 ```
 CComHeapPtr() throw();
 explicit CComHeapPtr(T* pData) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pData*  
- Existující objekt `CComHeapPtr`.  
-  
-### <a name="remarks"></a>Poznámky  
- Ukazatel haldy lze vytvořit volitelně pomocí existující `CComHeapPtr` objektu. Pokud ano, nové `CComHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.  
-  
-## <a name="see-also"></a>Viz také  
- [Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
- [Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
- [Ccomallocator – třída](../../atl/reference/ccomallocator-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pData*  
+Existující objekt `CComHeapPtr`.
+
+### <a name="remarks"></a>Poznámky
+
+Ukazatel haldy lze vytvořit volitelně pomocí existující `CComHeapPtr` objektu. Pokud ano, nové `CComHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.
+
+## <a name="see-also"></a>Viz také
+
+[Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
+[Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
+[Ccomallocator – třída](../../atl/reference/ccomallocator-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

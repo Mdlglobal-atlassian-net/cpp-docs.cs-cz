@@ -19,73 +19,84 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882621"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767992"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Csimplemapequalhelperfalse – třída
-Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimplemap-class.md) třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimplemap-class.md) třídy.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class TKey, class TVal>  
 class CSimpleMapEqualHelperFalse
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statické) Testuje dva klíče pro rovnost.|  
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statické) Vrátí hodnotu false.|  
-  
-## <a name="remarks"></a>Poznámky  
- Tato třída vlastností je dodatek k `CSimpleMap` třídy. Poskytuje metodu pro porovnání dvou elementů obsažených v `CSimpleMap` objektu, konkrétně dvě hodnoty prvků nebo dvě klíčové prvky.  
-  
- Porovnání hodnoty vždy vrátí hodnotu false a kromě toho bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. V situacích, kde není dostatečně definovány test rovnosti, tato třída umožňuje mapování obsahující dvojice klíč/hodnota pro většinu metod správně fungovat, ale selhání způsobem jasně definovaných pro metody, které jsou závislé na porovnání, jako [csimplemap –:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlsimpcoll.h  
-  
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
- Testuje dva klíče pro rovnost.  
-  
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statické) Testuje dva klíče pro rovnost.|
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statické) Vrátí hodnotu false.|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída vlastností je dodatek k `CSimpleMap` třídy. Poskytuje metodu pro porovnání dvou elementů obsažených v `CSimpleMap` objektu, konkrétně dvě hodnoty prvků nebo dvě klíčové prvky.
+
+Porovnání hodnoty vždy vrátí hodnotu false a kromě toho bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. V situacích, kde není dostatečně definovány test rovnosti, tato třída umožňuje mapování obsahující dvojice klíč/hodnota pro většinu metod správně fungovat, ale selhání způsobem jasně definovaných pro metody, které jsou závislé na porovnání, jako [csimplemap –:: FindVal](../../atl/reference/csimplemap-class.md#findval).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlsimpcoll.h
+
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+
+Testuje dva klíče pro rovnost.
+
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *k1*  
- První klíč.  
-  
- *k2*  
- Druhý klíč.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí true, pokud klíče jsou stejné, jinak hodnota false.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda volá [csimplearrayequalhelper –](../../atl/reference/csimplearrayequalhelper-class.md).  
-  
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue  
- Vrátí hodnotu false.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*k1*  
+První klíč.
+
+*k2*  
+Druhý klíč.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí true, pokud klíče jsou stejné, jinak hodnota false.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda volá [csimplearrayequalhelper –](../../atl/reference/csimplearrayequalhelper-class.md).
+
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+
+Vrátí hodnotu false.
+
 ```
 static bool IsEqualValue(const TVal&, const TVal&);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu false.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. Účelem `CSimpleMapEqualHelperFalse::IsEqualValue` metodou je vynutit metod pomocí porovnávání selhání způsobem jasně definované při rovnosti testy nebyly definovány odpovídajícím způsobem.  
-  
-## <a name="see-also"></a>Viz také  
- [Csimplemapequalhelper – třída](../../atl/reference/csimplemapequalhelper-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu false.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. Účelem `CSimpleMapEqualHelperFalse::IsEqualValue` metodou je vynutit metod pomocí porovnávání selhání způsobem jasně definované při rovnosti testy nebyly definovány odpovídajícím způsobem.
+
+## <a name="see-also"></a>Viz také
+
+[Csimplemapequalhelper – třída](../../atl/reference/csimplemapequalhelper-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

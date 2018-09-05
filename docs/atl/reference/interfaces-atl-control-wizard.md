@@ -1,5 +1,5 @@
 ---
-title: Rozhraní, Průvodce ovládacím prvkem ATL | Microsoft Docs
+title: Rozhraní, Průvodce ovládacím prvkem ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745e8ee1074af6b4126a2123acafdc821906d24c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362349"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766558"
 ---
-# <a name="interfaces-atl-control-wizard"></a>Rozhraní, Průvodce ovládacím prvkem knihovny ATL
-Tato stránka průvodce identifikovaná rozhraní, která podporuje ovládací prvek. Ve výchozím nastavení nejsou podporované rozhraní obvykle používaných většina kontejneru.  
-  
+# <a name="interfaces-atl-control-wizard"></a>Rozhraní, Průvodce ovládacím prvkem ATL
+
+Tato stránka průvodce jsou identifikovaná rozhraní, které ovládací prvek podporuje. Podporované rozhraní jsou ve výchozím nastavení se obvykle používají ve většině kontejnery.
+
 > [!NOTE]
->  Pokud jste vybrali **minimální ovládací prvek** na [možnosti](../../atl/reference/options-atl-control-wizard.md) kartě, nezobrazí žádné rozhraní ve výchozím nastavení **podporované** pole se seznamem.  
-  
- **Nepodporuje se**  
- Označuje k dispozici rozhraní, které nejsou aktuálně podporovány pro ovládací prvek.  
-  
- **Podporované**  
- Označuje rozhraní, které jsou aktuálně podporovány pro ovládací prvek.  
-  
-|Tlačítko přenosu|Popis|  
-|---------------------|-----------------|  
-|**>**|Přidá **podporované** název rozhraní aktuálně vybraného v seznamu **nepodporuje** seznamu.|  
-|**>>**|Přidá do **podporované** názvy všech rozhraní k dispozici v seznamu **nepodporuje** seznamu.|  
-|**<**|Odebere aktuálně vybraný v název rozhraní **podporované** seznamu.|  
-|**<<**|Odebere všechny názvy rozhraní **podporované** seznamu.|  
-  
-## <a name="see-also"></a>Viz také  
- [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
+>  Pokud jste vybrali **minimální ovládací prvek** na [možnosti](../../atl/reference/options-atl-control-wizard.md) kartu, ve výchozím nastavení se nezobrazí žádné rozhraní **podporované** pole se seznamem.
+
+**Nepodporuje se**  
+Označuje k dispozici rozhraní, které nejsou aktuálně podporovány pro ovládací prvek.
+
+**Podporované**  
+Označuje rozhraní, které jsou aktuálně podporovány pro ovládací prvek.
+
+|Tlačítka převodu|Popis|
+|---------------------|-----------------|
+|**>**|Přidá **podporované** rozhraní název aktuálně vybraného v seznamu **nepodporuje** seznamu.|
+|**>>**|Přidá do **podporované** názvy všech rozhraní k dispozici v seznamu **nepodporuje** seznamu.|
+|**<**|Odebere aktuálně vybrané v název rozhraní **podporované** seznamu.|
+|**<<**|Odebere všechny názvy teď uvedená v rozhraní **podporované** seznamu.|
+
+## <a name="see-also"></a>Viz také
+
+[Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
 

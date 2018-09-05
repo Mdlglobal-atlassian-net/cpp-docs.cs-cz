@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592549"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764439"
 ---
 # <a name="interfaces-ccx"></a>Rozhraní (C + +/ CX)
 I když třídy ref class. může dědit z maximálně jeden konkrétní základní třídy, může implementovat libovolný počet tříd rozhraní. Třída rozhraní (nebo interface struct) samotné mohou dědit (nebo vyžadují) více rozhraní třídy, mohou přetížit její členské funkce a může mít parametry typu.  

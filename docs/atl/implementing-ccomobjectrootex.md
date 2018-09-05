@@ -1,5 +1,5 @@
 ---
-title: Implementace CComObjectRootEx | Microsoft Docs
+title: Implementace CComObjectRootEx | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c62e7589b9b300ceaa2886760bf2c3d85550ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fefc7c3ed9177fb756e6298b54121a638ac8e253
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356531"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767475"
 ---
 # <a name="implementing-ccomobjectrootex"></a>Implementace CComObjectRootEx
-[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) je nezbytné; všechny objekty knihovny ATL musí mít jednu instanci `CComObjectRootEx` nebo [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) v jejich dědičnosti. `CComObjectRootEx` poskytuje výchozí `QueryInterface` mechanismus podle položek mapování COM.  
-  
- Prostřednictvím jeho mapu modelu COM se rozhraní objektu zveřejňují pro klienta, když se klient dotazuje rozhraní. Dotaz se provádí prostřednictvím `CComObjectRootEx::InternalQueryInterface`. `InternalQueryInterface` Zpracovává jenom rozhraní v tabulce COM mapy.  
-  
- Rozhraní můžete zadat do tabulky mapování COM s [COM_INTERFACE_ENTRY](reference/com-interface-entry-macros.md#com_interface_entry) makro nebo jednoho z jeho variant. Například následující kód zadá rozhraní `IDispatch`, `IBeeper`, a `ISupportErrorInfo` do tabulky mapování COM:  
-  
- [!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]  
-  
-## <a name="see-also"></a>Viz také  
- [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)   
- [Makra map COM](../atl/reference/com-map-macros.md)
+
+[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) je nezbytné; všechny objekty knihovny ATL musí mít jednu instanci `CComObjectRootEx` nebo [ccomobjectroot –](../atl/reference/ccomobjectroot-class.md) v jejich dědičnosti. `CComObjectRootEx` poskytuje výchozí hodnotu `QueryInterface` mechanismus podle položek mapování modelu COM.
+
+Prostřednictvím jeho mapy modelu COM jsou vystaveny rozhraní objektu klientovi při klient se dotáže rozhraní. Dotaz se provádí prostřednictvím `CComObjectRootEx::InternalQueryInterface`. `InternalQueryInterface` zpracovává pouze v tabulce mapy modelu COM rozhraní.
+
+Rozhraní můžete zadat do tabulky mapování modelu COM s [COM_INTERFACE_ENTRY](reference/com-interface-entry-macros.md#com_interface_entry) – makro nebo jeden z jeho variant. Například následující kód zadá rozhraní `IDispatch`, `IBeeper`, a `ISupportErrorInfo` do tabulky mapování modelu COM:
+
+[!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]
+
+## <a name="see-also"></a>Viz také
+
+[Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)   
+[Makra map COM](../atl/reference/com-map-macros.md)
 

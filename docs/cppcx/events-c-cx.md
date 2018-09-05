@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606373"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767575"
 ---
 # <a name="events-ccx"></a>Události (C + +/ CX)
 Windows Runtime lze deklarovat typ (který je, publikování) události a kódem klientské pod stejnou komponentou nebo v jiných součástech mohou přihlásit k odběru těchto událostí tím, že přidružíte volání metody *obslužné rutiny událostí* s událostí. Více obslužných rutin událostí lze přidružit jednu událost. Při publikování objektu vyvolá událost, dojde k vyvolání všech obslužných rutin událostí. Tímto způsobem můžete provádět odběratelská třídy jakýkoli vlastní akce je vhodné, když vydavatele vyvolává událost. Událost má typ delegáta, který určuje signatura, kterou musí mít všechny obslužné rutiny událostí k události registrovat.  

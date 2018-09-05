@@ -17,85 +17,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a6211ac26a31b1ec01fdd2ad0579e4d9b52038
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223384"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767413"
 ---
 # <a name="ccomenum-class"></a>Ccomenum – třída
-Tato třída definuje objekt enumerátoru modelu COM na základě pole.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída definuje objekt enumerátoru modelu COM na základě pole.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class Base,
     const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
- T,
+T,
     Copy>,
- public CComObjectRootEx<ThreadModel>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *základ*  
- Enumerátor rozhraní modelu COM. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad. 
-  
- *piid*  
- Ukazatel na Identifikátor rozhraní rozhraní enumerátor.  
-  
- *T*  
- Typ položky, které jsou vystavené rozhraní enumerátor.  
-  
- *kopírování*  
- Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).  
-  
- *ThreadModel*  
- Model vláken třídy. Tento parametr výchozí hodnota je globální objektový model vláken použitých v projektu.  
-  
-## <a name="remarks"></a>Poznámky  
- `CComEnum` definuje objekt enumerátoru modelu COM na základě pole. Tato třída je obdobou [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) který implementuje enumerátor podle kontejneru standardní knihovny C++. Typické postupy použití této třídy jsou popsány níže. Další informace najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).  
-  
-## <a name="to-use-this-class"></a>Chcete-li použít tuto třídu:  
-  
-- **Definice TypeDef** specializace této třídy.  
-  
--   Použití **typedef** jako argument šablony ve specializaci `CComObject`.  
-  
--   Vytvoření instance `CComObject` specializace.  
-  
--   Inicializovat objekt enumerator voláním [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).  
-  
--   Vrátí enumerátor rozhraní do klienta.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `CComObjectRootBase`  
-  
- `Base`  
-  
- [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)  
-  
- [Ccomenumimpl –](../../atl/reference/ccomenumimpl-class.md)  
-  
- `CComEnum`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcom  
-  
-## <a name="example"></a>Příklad  
- Kód níže obsahuje opakovaně použitelné funkce pro vytváření a inicializaci objekt enumerátoru.  
-  
- [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  
-  
- Tuto funkci je možné implementovat `_NewEnum` vlastnost kolekce rozhraní, jak je znázorněno níže:  
-  
- [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]  
-  
- Tento kód vytvoří **typedef** pro `CComEnum` , která zveřejní vektor varianty prostřednictvím `IEnumVariant` rozhraní. `CVariantArrayCollection` Třídy jednoduše specializuje `CreateEnumerator` pro práci s enumerátor objekty tohoto typu a předá nezbytné argumenty.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../../atl/atl-class-overview.md)   
- [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
- [Ccomenumimpl – třída](../../atl/reference/ccomenumimpl-class.md)   
- [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)
+public CComObjectRootEx<ThreadModel>
+```
+
+#### <a name="parameters"></a>Parametry
+
+*základ*  
+Enumerátor rozhraní modelu COM. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
+
+*piid*  
+Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
+
+*T*  
+Typ položky, které jsou vystavené rozhraní enumerátor.
+
+*kopírování*  
+Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
+
+*ThreadModel*  
+Model vláken třídy. Tento parametr výchozí hodnota je globální objektový model vláken použitých v projektu.
+
+## <a name="remarks"></a>Poznámky
+
+`CComEnum` definuje objekt enumerátoru modelu COM na základě pole. Tato třída je obdobou [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) který implementuje enumerátor podle kontejneru standardní knihovny C++. Typické postupy použití této třídy jsou popsány níže. Další informace najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).
+
+## <a name="to-use-this-class"></a>Chcete-li použít tuto třídu:
+
+- **Definice TypeDef** specializace této třídy.
+
+- Použití **typedef** jako argument šablony ve specializaci `CComObject`.
+
+- Vytvoření instance `CComObject` specializace.
+
+- Inicializovat objekt enumerator voláním [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).
+
+- Vrátí enumerátor rozhraní do klienta.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`CComObjectRootBase`
+
+`Base`
+
+[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+
+[Ccomenumimpl –](../../atl/reference/ccomenumimpl-class.md)
+
+`CComEnum`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcom
+
+## <a name="example"></a>Příklad
+
+Kód níže obsahuje opakovaně použitelné funkce pro vytváření a inicializaci objekt enumerátoru.
+
+[!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
+
+Tuto funkci je možné implementovat `_NewEnum` vlastnost kolekce rozhraní, jak je znázorněno níže:
+
+[!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
+
+Tento kód vytvoří **typedef** pro `CComEnum` , která zveřejní vektor varianty prostřednictvím `IEnumVariant` rozhraní. `CVariantArrayCollection` Třídy jednoduše specializuje `CreateEnumerator` pro práci s enumerátor objekty tohoto typu a předá nezbytné argumenty.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../atl/atl-class-overview.md)   
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[Ccomenumimpl – třída](../../atl/reference/ccomenumimpl-class.md)   
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)

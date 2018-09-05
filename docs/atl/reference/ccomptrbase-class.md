@@ -27,126 +27,140 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae23f641becea5a7bdb47eefbdee59e18c2f27a4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205592"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766584"
 ---
 # <a name="ccomptrbase-class"></a>Ccomptrbase – třída
-Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny založené na modelu COM. paměti.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny založené na modelu COM. paměti.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class T>  
 class CComPtrBase
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Typ objektu, který může odkazovat inteligentního ukazatele.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Ccomptrbase –:: ~ ccomptrbase –](#dtor)|Destruktor.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComPtrBase::Advise](#advise)|Volejte tuto metodu za účelem vytvoření připojení mezi `CComPtrBase`na bod připojení a jímkou klienta.|  
-|[CComPtrBase::Attach](#attach)|Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.|  
-|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Volejte tuto metodu za účelem vytvoření objektu třídy přidružené k zadaným ID třídy nebo ID programu.|  
-|[CComPtrBase::CopyTo](#copyto)|Voláním této metody lze zkopírovat `CComPtrBase` ukazatel na jiné proměnné ukazatele.|  
-|[CComPtrBase::Detach](#detach)|Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.|  
-|[CComPtrBase::IsEqualObject](#isequalobject)|Voláním této metody zkontrolujte, zda zadaný `IUnknown` odkazuje na stejný objekt přidružený k `CComPtrBase` objektu.|  
-|[CComPtrBase::QueryInterface](#queryinterface)|Voláním této metody vrátí ukazatel na zadané rozhraní.|  
-|[CComPtrBase::Release](#release)|Volejte tuto metodu za účelem uvolnění rozhraní.|  
-|[CComPtrBase::SetSite](#setsite)|Volejte tuto metodu za účelem nastavíte lokalitu `CComPtrBase` objektu `IUnknown` nadřazeného objektu.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComPtrBase::operator T *](#operator_t_star)|Operátor přetypování.|  
-|[CComPtrBase::operator!](#operator_not)|Operátor NOT.|  
-|[CComPtrBase::operator &](#operator_amp)|& – Operátor.|  
-|[CComPtrBase::operator *](#operator_star)|Operátor \*.|  
-|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Větší-než operátor.|  
-|[CComPtrBase::operator ==](#operator_eq_eq)|Operátor rovnosti.|  
-|[CComPtrBase::operator ->](#operator_ptr)|Operátor ukazatele na členy.|  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComPtrBase::p](#p)|Členské proměnné ukazatele data.|  
-  
-## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje základ pro jiné inteligentních ukazatelů, které používají rutiny správy paměti modelu COM, jako například [CComQIPtr](../../atl/reference/ccomqiptr-class.md) a [CComPtr](../../atl/reference/ccomptr-class.md). Odvozené třídy přidat svoje vlastní konstruktory a operátory, ale závisí na metody poskytované `CComPtrBase`.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcomcli.h  
-  
-##  <a name="advise"></a>  CComPtrBase::Advise  
- Volejte tuto metodu za účelem vytvoření připojení mezi `CComPtrBase`na bod připojení a jímkou klienta.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Typ objektu, který může odkazovat inteligentního ukazatele.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[Ccomptrbase –:: ~ ccomptrbase –](#dtor)|Destruktor.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CComPtrBase::Advise](#advise)|Volejte tuto metodu za účelem vytvoření připojení mezi `CComPtrBase`na bod připojení a jímkou klienta.|
+|[CComPtrBase::Attach](#attach)|Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Volejte tuto metodu za účelem vytvoření objektu třídy přidružené k zadaným ID třídy nebo ID programu.|
+|[CComPtrBase::CopyTo](#copyto)|Voláním této metody lze zkopírovat `CComPtrBase` ukazatel na jiné proměnné ukazatele.|
+|[CComPtrBase::Detach](#detach)|Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.|
+|[CComPtrBase::IsEqualObject](#isequalobject)|Voláním této metody zkontrolujte, zda zadaný `IUnknown` odkazuje na stejný objekt přidružený k `CComPtrBase` objektu.|
+|[CComPtrBase::QueryInterface](#queryinterface)|Voláním této metody vrátí ukazatel na zadané rozhraní.|
+|[CComPtrBase::Release](#release)|Volejte tuto metodu za účelem uvolnění rozhraní.|
+|[CComPtrBase::SetSite](#setsite)|Volejte tuto metodu za účelem nastavíte lokalitu `CComPtrBase` objektu `IUnknown` nadřazeného objektu.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CComPtrBase::operator T *](#operator_t_star)|Operátor přetypování.|
+|[CComPtrBase::operator!](#operator_not)|Operátor NOT.|
+|[CComPtrBase::operator &](#operator_amp)|& – Operátor.|
+|[CComPtrBase::operator *](#operator_star)|Operátor \*.|
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Větší-než operátor.|
+|[CComPtrBase::operator ==](#operator_eq_eq)|Operátor rovnosti.|
+|[CComPtrBase::operator ->](#operator_ptr)|Operátor ukazatele na členy.|
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[CComPtrBase::p](#p)|Členské proměnné ukazatele data.|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída poskytuje základ pro jiné inteligentních ukazatelů, které používají rutiny správy paměti modelu COM, jako například [CComQIPtr](../../atl/reference/ccomqiptr-class.md) a [CComPtr](../../atl/reference/ccomptr-class.md). Odvozené třídy přidat svoje vlastní konstruktory a operátory, ale závisí na metody poskytované `CComPtrBase`.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcomcli.h
+
+##  <a name="advise"></a>  CComPtrBase::Advise
+
+Volejte tuto metodu za účelem vytvoření připojení mezi `CComPtrBase`na bod připojení a jímkou klienta.
+
 ```
 HRESULT Advise(
     IUnknown* pUnk,
     const IID& iid,
     LPDWORD pdw) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pUnk*  
- Ukazatel na straně klienta `IUnknown`.  
-  
- *identifikátor IID*  
- Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.  
-  
- *pdw*  
- Ukazatel na soubor cookie, který jednoznačně identifikuje připojení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [AtlAdvise](connection-point-global-functions.md#atladvise) Další informace.  
-  
-##  <a name="attach"></a>  CComPtrBase::Attach  
- Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pUnk*  
+Ukazatel na straně klienta `IUnknown`.
+
+*identifikátor IID*  
+Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
+
+*pdw*  
+Ukazatel na soubor cookie, který jednoznačně identifikuje připojení.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [AtlAdvise](connection-point-global-functions.md#atladvise) Další informace.
+
+##  <a name="attach"></a>  CComPtrBase::Attach
+
+Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.
+
 ```
 void Attach(T* p2) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *P2*  
- `CComPtrBase` Objektu bude převzít vlastnictví tohoto ukazatele.  
-  
-### <a name="remarks"></a>Poznámky  
- `Attach` volání [CComPtrBase::Release](#release) pro existující [CComPtrBase::p](#p) členskou proměnnou a pak přiřadí *p2* k `CComPtrBase::p`. Když `CComPtrBase` objekt převezme vlastnictví ukazatele, automaticky zavolá `Release` na ukazatel, který se odstraní ukazatel a všechny přidělené dat, pokud počet odkazů na objekt přejde na hodnotu 0.  
-  
-##  <a name="dtor"></a>  Ccomptrbase –:: ~ ccomptrbase –  
- Destruktor.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*P2*  
+`CComPtrBase` Objektu bude převzít vlastnictví tohoto ukazatele.
+
+### <a name="remarks"></a>Poznámky
+
+`Attach` volání [CComPtrBase::Release](#release) pro existující [CComPtrBase::p](#p) členskou proměnnou a pak přiřadí *p2* k `CComPtrBase::p`. Když `CComPtrBase` objekt převezme vlastnictví ukazatele, automaticky zavolá `Release` na ukazatel, který se odstraní ukazatel a všechny přidělené dat, pokud počet odkazů na objekt přejde na hodnotu 0.
+
+##  <a name="dtor"></a>  Ccomptrbase –:: ~ ccomptrbase –
+
+Destruktor.
+
 ```
 ~CComPtrBase() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Uvolní rozhraní, na které odkazuje `CComPtrBase`.  
-  
-##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance  
- Volejte tuto metodu za účelem vytvoření objektu třídy přidružené k zadaným ID třídy nebo ID programu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Uvolní rozhraní, na které odkazuje `CComPtrBase`.
+
+##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
+
+Volejte tuto metodu za účelem vytvoření objektu třídy přidružené k zadaným ID třídy nebo ID programu.
+
 ```
 HRESULT CoCreateInstance(  
     LPCOLESTR szProgID,
@@ -157,218 +171,260 @@ HRESULT CoCreateInstance(
     REFCLSID rclsid,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *szProgID*  
- Ukazatel na identifikátor ProgID, použít k obnovení identifikátor CLSID.  
-  
- *pUnkOuter*  
- Pokud má hodnotu NULL, označuje, že se objekt vytváří jako součást agregace. Pokud není NULL, je ukazatel na agregovaný objekt `IUnknown` rozhraní (řízení `IUnknown`).  
-  
- *dwClsContext*  
- Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt.  
-  
- *rclsid*  
- CLSID asociované s daty a kód, který se použije k vytvoření objektu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu, nebo REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING nebo E_NOINTERFACE při selhání. Zobrazit [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) a [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) popis těchto chyb.  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud první forma metoda je volána, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) slouží k obnovení identifikátor CLSID. Obě formy poté zavolejte [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
-  
- V sestavení ladění, dojde k chybě kontrolního výrazu Pokud [CComPtrBase::p](#p) není shodný s hodnotou NULL.  
-  
-##  <a name="copyto"></a>  CComPtrBase::CopyTo  
- Voláním této metody lze zkopírovat `CComPtrBase` ukazatel na jiné proměnné ukazatele.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*szProgID*  
+Ukazatel na identifikátor ProgID, použít k obnovení identifikátor CLSID.
+
+*pUnkOuter*  
+Pokud má hodnotu NULL, označuje, že se objekt vytváří jako součást agregace. Pokud není NULL, je ukazatel na agregovaný objekt `IUnknown` rozhraní (řízení `IUnknown`).
+
+*dwClsContext*  
+Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt.
+
+*rclsid*  
+CLSID asociované s daty a kód, který se použije k vytvoření objektu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu, nebo REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING nebo E_NOINTERFACE při selhání. Zobrazit [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) a [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) popis těchto chyb.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud první forma metoda je volána, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) slouží k obnovení identifikátor CLSID. Obě formy poté zavolejte [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+
+V sestavení ladění, dojde k chybě kontrolního výrazu Pokud [CComPtrBase::p](#p) není shodný s hodnotou NULL.
+
+##  <a name="copyto"></a>  CComPtrBase::CopyTo
+
+Voláním této metody lze zkopírovat `CComPtrBase` ukazatel na jiné proměnné ukazatele.
+
 ```
 HRESULT CopyTo(T** ppT) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *ppT*  
- Adresa proměnné, které se zobrazí `CComPtrBase` ukazatele.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu, E_POINTER při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Kopie `CComPtrBase` ukazatel na *ppT*. Spolehněte se na odkaz [CComPtrBase::p](#p) členské proměnné se zvýší.  
-  
- Chybu HRESULT bude vrácen v případě *ppT* je rovna hodnotě NULL. V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *ppT* je rovna hodnotě NULL.  
-  
-##  <a name="detach"></a>  CComPtrBase::Detach  
- Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*ppT*  
+Adresa proměnné, které se zobrazí `CComPtrBase` ukazatele.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu, E_POINTER při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Kopie `CComPtrBase` ukazatel na *ppT*. Spolehněte se na odkaz [CComPtrBase::p](#p) členské proměnné se zvýší.
+
+Chybu HRESULT bude vrácen v případě *ppT* je rovna hodnotě NULL. V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *ppT* je rovna hodnotě NULL.
+
+##  <a name="detach"></a>  CComPtrBase::Detach
+
+Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.
+
 ```
 T* Detach() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí kopii ukazatele.  
-  
-### <a name="remarks"></a>Poznámky  
- Uvolní vlastnictví ukazatele, nastaví [CComPtrBase::p](#p) data členskou proměnnou na hodnotu NULL a vrátí kopii ukazatele.  
-  
-##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject  
- Voláním této metody zkontrolujte, zda zadaný `IUnknown` odkazuje na stejný objekt přidružený k `CComPtrBase` objektu.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí kopii ukazatele.
+
+### <a name="remarks"></a>Poznámky
+
+Uvolní vlastnictví ukazatele, nastaví [CComPtrBase::p](#p) data členskou proměnnou na hodnotu NULL a vrátí kopii ukazatele.
+
+##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject
+
+Voláním této metody zkontrolujte, zda zadaný `IUnknown` odkazuje na stejný objekt přidružený k `CComPtrBase` objektu.
+
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pOther*  
- `IUnknown *` k porovnání.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí true, pokud jsou objekty shodné, false, jinak.  
-  
-##  <a name="operator_not"></a>  CComPtrBase::operator!  
- Operátor NOT.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pOther*  
+`IUnknown *` k porovnání.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí true, pokud jsou objekty shodné, false, jinak.
+
+##  <a name="operator_not"></a>  CComPtrBase::operator!
+
+Operátor NOT.
+
 ```
 bool operator!() const throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true, pokud `CComHeapPtr` ukazatel je rovna hodnotě NULL, hodnotu false v opačném případě.  
-  
-##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;  
- & – Operátor.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu true, pokud `CComHeapPtr` ukazatel je rovna hodnotě NULL, hodnotu false v opačném případě.
+
+##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;
+
+& – Operátor.
+
 ```
 T** operator&() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí adresu objektu, na které odkazují `CComPtrBase` objektu.  
-  
-##  <a name="operator_star"></a>  CComPtrBase::operator \*  
- Operátor \*.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí adresu objektu, na které odkazují `CComPtrBase` objektu.
+
+##  <a name="operator_star"></a>  CComPtrBase::operator \*
+
+Operátor \*.
+
 ```
 T& operator*() const throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu [CComPtrBase::p](#p); to znamená, ukazatel na objekt, který odkazuje `CComPtrBase` objektu.  
-  
- Pokud ladicí sestavení, dojde k chybě kontrolního výrazu Pokud [CComPtrBase::p](#p) není shodný s hodnotou NULL.  
-  
-##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==  
- Operátor rovnosti.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu [CComPtrBase::p](#p); to znamená, ukazatel na objekt, který odkazuje `CComPtrBase` objektu.
+
+Pokud ladicí sestavení, dojde k chybě kontrolního výrazu Pokud [CComPtrBase::p](#p) není shodný s hodnotou NULL.
+
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==
+
+Operátor rovnosti.
+
 ```
 bool operator== (T* pT) const throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *PT*  
- Ukazatel na objekt.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true, pokud `CComPtrBase` a *pT* odkazovat na stejný objekt false v opačném případě.  
-  
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;  
+```
 
- Operátor pointer-to-member.  
-  
+### <a name="parameters"></a>Parametry
+
+*PT*  
+Ukazatel na objekt.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu true, pokud `CComPtrBase` a *pT* odkazovat na stejný objekt false v opačném případě.
+
+##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+
+Operátor pointer-to-member.
+
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu [CComPtrBase::p](#p) data členské proměnné.  
-  
-### <a name="remarks"></a>Poznámky  
- Operátor volání metody ve třídě, na které odkazují `CComPtrBase` objektu. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud `CComPtrBase` datový člen odkazuje na hodnotu NULL.  
-  
-##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;  
- Větší-než operátor.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu [CComPtrBase::p](#p) data členské proměnné.
+
+### <a name="remarks"></a>Poznámky
+
+Operátor volání metody ve třídě, na které odkazují `CComPtrBase` objektu. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud `CComPtrBase` datový člen odkazuje na hodnotu NULL.
+
+##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;
+
+Větší-než operátor.
+
 ```
 bool operator<(T* pT) const throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *PT*  
- Ukazatel na objekt.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu PRAVDA, pokud ukazatel spravuje aktuální objekt je menší než ukazatel, ke kterému je porovnávána.  
-  
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
- Operátor přetypování.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*PT*  
+Ukazatel na objekt.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu PRAVDA, pokud ukazatel spravuje aktuální objekt je menší než ukazatel, ke kterému je porovnávána.
+
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*
+
+Operátor přetypování.
+
 ```  
 operator T*() const throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Vrací ukazatel na objekt typu dat definovanému v šabloně třídy.  
-  
-##  <a name="p"></a>  CComPtrBase::p  
- Členské proměnné ukazatele data.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Vrací ukazatel na objekt typu dat definovanému v šabloně třídy.
+
+##  <a name="p"></a>  CComPtrBase::p
+
+Členské proměnné ukazatele data.
+
 ```
 T* p;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tato členská proměnná uchovává informace o ukazatel.  
-  
-##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface  
- Voláním této metody vrátí ukazatel na zadané rozhraní.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tato členská proměnná uchovává informace o ukazatel.
+
+##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface
+
+Voláním této metody vrátí ukazatel na zadané rozhraní.
+
 ```
 template <class Q> HRESULT QueryInterface(Q
 ** pp) const throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Q*  
- Typ objektu, jehož ukazatel rozhraní je povinný.  
-  
- *str*  
- Adresa výstupní proměnné, která přijímá ukazatel požadované rozhraní.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo E_NOINTERFACE při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda volá [IUnknown::QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
-  
- V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *pp* není shodný s hodnotou NULL.  
-  
-##  <a name="release"></a>  CComPtrBase::Release  
- Volejte tuto metodu za účelem uvolnění rozhraní.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Q*  
+Typ objektu, jehož ukazatel rozhraní je povinný.
+
+*str*  
+Adresa výstupní proměnné, která přijímá ukazatel požadované rozhraní.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo E_NOINTERFACE při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda volá [IUnknown::QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+
+V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *pp* není shodný s hodnotou NULL.
+
+##  <a name="release"></a>  CComPtrBase::Release
+
+Volejte tuto metodu za účelem uvolnění rozhraní.
+
 ```
 void Release() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Se uvolní rozhraní, a [CComPtrBase::p](#p) nastaven na hodnotu NULL.  
-  
-##  <a name="setsite"></a>  CComPtrBase::SetSite  
- Volejte tuto metodu za účelem nastavíte lokalitu `CComPtrBase` objektu `IUnknown` nadřazeného objektu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Se uvolní rozhraní, a [CComPtrBase::p](#p) nastaven na hodnotu NULL.
+
+##  <a name="setsite"></a>  CComPtrBase::SetSite
+
+Volejte tuto metodu za účelem nastavíte lokalitu `CComPtrBase` objektu `IUnknown` nadřazeného objektu.
+
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *punkParent*  
- Ukazatel `IUnknown` rozhraní nadřazeného prvku.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda volá [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*punkParent*  
+Ukazatel `IUnknown` rozhraní nadřazeného prvku.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda volá [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../atl/atl-class-overview.md)

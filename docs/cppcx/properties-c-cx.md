@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600852"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764303"
 ---
 # <a name="properties-ccx"></a>Vlastnosti (C + +/ CX)
 Veřejné datové typy Windows Runtime vystavit jako vlastnosti. Klientský kód přistupuje k vlastnosti stejně jako veřejné datamember. Vlastnost interně, je implementovaný jako blok, který obsahuje metodu přístupového objektu get nebo metodu přístupového objektu set. Pomocí přístupových metod lze provádět další akce před nebo po načtení hodnoty, například může vyvolat událost nebo provádět kontroly ověřování.  

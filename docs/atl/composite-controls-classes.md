@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964194"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765878"
 ---
 # <a name="composite-controls-classes"></a>Třídy složených ovládacích prvků
-Následující třída poskytuje podporu pro vytváření složených prvků  
-  
--   [Ccomcompositecontrol –](../atl/reference/ccomcompositecontrol-class.md) ovládací prvky ActiveX, které jsou odvozeny z `CComCompositeControl` hostovaných standardní dialogové okno. Tyto typy ovládacích prvků se nazývají složených ovládacích prvků, protože budou mít možnost si hostují jiné ovládací prvky (nativní ovládací prvky Windows a ovládací prvky ActiveX).  
-  
-## <a name="related-articles"></a>Související články  
- [Principy vytváření složených prvků](../atl/atl-composite-control-fundamentals.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)   
- [Makra složených ovládacích prvků](../atl/reference/composite-control-macros.md)   
- [Globální funkce složených ovládacích prvků](../atl/reference/composite-control-global-functions.md)
+
+Následující třída poskytuje podporu pro vytváření složených prvků
+
+- [Ccomcompositecontrol –](../atl/reference/ccomcompositecontrol-class.md) ovládací prvky ActiveX, které jsou odvozeny z `CComCompositeControl` hostovaných standardní dialogové okno. Tyto typy ovládacích prvků se nazývají složených ovládacích prvků, protože budou mít možnost si hostují jiné ovládací prvky (nativní ovládací prvky Windows a ovládací prvky ActiveX).
+
+## <a name="related-articles"></a>Související články
+
+[Principy vytváření složených prvků](../atl/atl-composite-control-fundamentals.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)   
+[Makra složených ovládacích prvků](../atl/reference/composite-control-macros.md)   
+[Globální funkce složených ovládacích prvků](../atl/reference/composite-control-global-functions.md)
 

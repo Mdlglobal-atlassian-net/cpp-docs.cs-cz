@@ -117,11 +117,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465322"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764872"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 Poskytuje funkce pro Windows rozhraní jednoho dokumentu (SDI) překrytého nebo místního okna rámce, spolu se členy pro správu okna.  

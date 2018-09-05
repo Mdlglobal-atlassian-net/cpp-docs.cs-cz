@@ -1,5 +1,5 @@
 ---
-title: Třída IAtlAutoThreadModule | Microsoft Docs
+title: Iatlautothreadmodule – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8793c3bf1bceae03f08293dec2144e749505f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5d92eb693a73aff20ff8869be4412574a15cbe
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764358"
 ---
-# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule – třída
-Tato třída reprezentuje rozhraní pro `CreateInstance` metoda.  
-  
+# <a name="iatlautothreadmodule-class"></a>Iatlautothreadmodule – třída
+
+Tato třída reprezentuje rozhraní pro `CreateInstance` metoda.
+
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 __interface IAtlAutoThreadModule
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Třída [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) je odvozena z `IAtlAutoThreadModule`, používá k zajištění kód pro vytvoření objektu a načítání ukazatele rozhraní.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+```
+
+## <a name="remarks"></a>Poznámky
+
+Třída [catlautothreadmodulet –](../../atl/reference/catlautothreadmodulet-class.md) je odvozena z `IAtlAutoThreadModule`, použije se k poskytnutí ověřovacího kódu pro vytvoření objektu a načítání ukazatel rozhraní.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../atl/atl-class-overview.md)

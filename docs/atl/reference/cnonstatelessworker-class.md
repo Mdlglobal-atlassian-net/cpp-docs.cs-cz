@@ -1,5 +1,5 @@
 ---
-title: Třída CNonStatelessWorker | Microsoft Docs
+title: Cnonstatelessworker – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,103 +21,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359604"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765119"
 ---
-# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker – třída
-Přijímá požadavky od fondu vláken a předává je na objekt pracovního procesu, který je vytvořen a zničen v každé žádosti.  
-  
+# <a name="cnonstatelessworker-class"></a>Cnonstatelessworker – třída
+
+Přijímá požadavky od fondu vláken a předává je do objektu pracovního procesu, který je vytvořeno a zničeno při každém požadavku.
+
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class Worker>  
 class CNonStatelessWorker
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *Pracovního procesu*  
- Třídu pracovní vlákno, odpovídají [pracovní archetype](../../atl/reference/worker-archetype.md) vhodný pro zpracování požadavků ve frontě na [CThreadPool](../../atl/reference/cthreadpool-class.md).  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CNonStatelessWorker::RequestType](#requesttype)|Implementace [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CNonStatelessWorker::Execute](#execute)|Implementace [WorkerArchetype::Execute](worker-archetype.md#execute).|  
-|[CNonStatelessWorker::Initialize](#initialize)|Implementace [WorkerArchetype::Initialize](worker-archetype.md#initialize).|  
-|[CNonStatelessWorker::Terminate](#terminate)|Implementace [WorkerArchetype::Terminate](worker-archetype.md#terminate).|  
-  
-## <a name="remarks"></a>Poznámky  
- Tato třída je jednoduchý pracovní vlákno pro použití s [CThreadPool](../../atl/reference/cthreadpool-class.md). Tato třída neposkytuje žádné možnosti zpracování požadavků své vlastní. Místo toho se vytvoří jedna instance *pracovní* každý požadavek a deleguje implementace její metody do této instance.  
-  
- Výhodou Tato třída je, že nabízí pohodlný způsob, jak změnit stav modelu pro existující třídy pracovní vlákno. `CThreadPool` vytvoří jeden pracovní dobu jeho existence vlákno, takže pokud pracovní třída obsahuje stav, se bude obsahovat napříč více žádostí. Pomocí třídy v jednoduše zabalení `CNonStatelessWorker` šablony před jeho s použitím `CThreadPool`, doba platnosti pracovního procesu a stát, že obsahuje, je omezený na jednu žádost.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlutil.h  
-  
-##  <a name="execute"></a>  CNonStatelessWorker::Execute  
- Implementace [WorkerArchetype::Execute](worker-archetype.md#execute).  
+```
 
-  
+#### <a name="parameters"></a>Parametry
+
+*Pracovního procesu*  
+Třída pracovní vlákno odpovídají [archetyp pracovního procesu](../../atl/reference/worker-archetype.md) vhodný pro zpracování požadavků ve frontě na [cthreadpool –](../../atl/reference/cthreadpool-class.md).
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|[CNonStatelessWorker::RequestType](#requesttype)|Provádění [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CNonStatelessWorker::Execute](#execute)|Provádění [WorkerArchetype::Execute](worker-archetype.md#execute).|
+|[CNonStatelessWorker::Initialize](#initialize)|Provádění [WorkerArchetype::Initialize](worker-archetype.md#initialize).|
+|[CNonStatelessWorker::Terminate](#terminate)|Provádění [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída je jednoduchý pracovní vlákno pro použití s [cthreadpool –](../../atl/reference/cthreadpool-class.md). Tato třída neposkytuje žádné možnosti zpracování požadavků své vlastní. Místo toho vytvoří jedna instance *pracovního procesu* každý požadavek a delegátů implementace metody do této instance.
+
+Výhodou této třídy je, že poskytuje pohodlný způsob, jak změnit model stavu pro existující třídy, vlákna pracovního procesu. `CThreadPool` vytvoří jeden pracovní proces pro životnost vlákna, takže pokud pracovník třída obsahuje stav, se bude obsahovat mezi více požadavků. Jednoduše obalením třídy v `CNonStatelessWorker` šablony před jeho s použitím `CThreadPool`, dobu života pracovního procesu a stav obsahuje, jsou omezená na jednu žádost.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlutil.h
+
+##  <a name="execute"></a>  CNonStatelessWorker::Execute
+
+Provádění [WorkerArchetype::Execute](worker-archetype.md#execute).  
+
 ```
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří instanci *pracovní* třídy v zásobníku a volání [inicializovat](worker-archetype.md#initialize) na tento objekt. Pokud se inicializace úspěšné, tato metoda také volá [Execute](worker-archetype.md#execute) a [ukončit](worker-archetype.md#terminate) na stejný objekt.  
+```
 
-  
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
- Implementace [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
-  
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vytvoří instanci *pracovního procesu* třídu v zásobníku a volání [inicializovat](worker-archetype.md#initialize) k tomuto objektu. Pokud se inicializace je úspěšný, tato metoda také zavolá [Execute](worker-archetype.md#execute) a [Terminate](worker-archetype.md#terminate) na stejný objekt.  
+
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+
+Provádění [WorkerArchetype::Initialize](worker-archetype.md#initialize).
+
 ```
 BOOL Initialize(void* /* pvParam */) throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu TRUE.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato třída neprovádí žádné inicializace `Initialize`.  
-  
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
- Implementace [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vždy vrátí hodnotu TRUE.
+
+### <a name="remarks"></a>Poznámky
+
+Tato třída udělat všechny inicializace `Initialize`.
+
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+
+Provádění [WorkerArchetype::RequestType](worker-archetype.md#requesttype).
+
 ```
 typedef Worker::RequestType RequestType;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tato třída zpracovává jako třída používaná pro stejný typ pracovní položky *pracovní* parametr šablony. V tématu [CNonStatelessWorker přehled](../../atl/reference/cnonstatelessworker-class.md) podrobnosti.  
-  
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
- Implementace [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tato třída zpracovává stejný typ pracovní položky jako třída použitá pro *pracovního procesu* parametr šablony. Zobrazit [cnonstatelessworker – přehled](../../atl/reference/cnonstatelessworker-class.md) podrobnosti.
+
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+
+Provádění [WorkerArchetype::Terminate](worker-archetype.md#terminate).
+
 ```
 void Terminate(void* /* pvParam */) throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tato třída neprovádí žádné čištění `Terminate`.  
-  
-## <a name="see-also"></a>Viz také  
- [CThreadPool – třída](../../atl/reference/cthreadpool-class.md)   
- [Archetype pracovního procesu](../../atl/reference/worker-archetype.md)   
- [Třídy](../../atl/reference/atl-classes.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tato třída není nutné vyčištění `Terminate`.
+
+## <a name="see-also"></a>Viz také
+
+[Cthreadpool – třída](../../atl/reference/cthreadpool-class.md)   
+[Archetyp pracovního procesu](../../atl/reference/worker-archetype.md)   
+[Třídy](../../atl/reference/atl-classes.md)

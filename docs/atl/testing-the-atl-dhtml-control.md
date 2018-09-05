@@ -1,5 +1,5 @@
 ---
-title: Testování ovládací prvek ATL DHTML | Microsoft Docs
+title: Testování ovládacího prvku ATL DHTML | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b523b981a58f577a3e98925899b32c0e9e69e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be4bb44455fb97a61cb4af608667bd5c05f2756a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361863"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766289"
 ---
-# <a name="testing-the-atl-dhtml-control"></a>Testování ovládací prvek DHTML knihovny ATL
-Po vytvoření projektu můžete sestavit a testování ukázkové ovládacího prvku. Předtím, než to uděláte, použijte zobrazení tříd a Průzkumník řešení zkontrolujte projekt. Elementy projektu jsou popsány podrobněji na [identifikace prvky jazyka DHTML řízení projektu](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
-  
-#### <a name="to-build-and-test-the-atl-dhtml-control"></a>Pro sestavení a otestování ovládací prvek DHTML knihovny ATL  
-  
-1.  Sestavte projekt. Z **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
-  
-2.  Po dokončení sestavení, otevřete – kontejner testů. V tématu [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup – kontejner testů.  
-  
-3.  V testu kontejneru z **upravit** nabídky, klikněte na tlačítko **vložit nový ovládací prvek**.  
-  
-4.  V **vložit ovládací prvek** dialogovém okně vyberte vlastního ovládacího prvku pole se seznamem. Pamatujte si, že se jeho název je založen na krátký název, kterou jste uvedli v Průvodci ATL ovládacího prvku. Click **OK**.  
-  
-5.  Zkontrolujte ovládacího prvku. Všimněte si, že má posuvníku. Ke změně velikosti ovládacího prvku posuvník aktivovat použijte obslužných rutin ovládacího prvku.  
-  
-6.  Testování ovládacího prvku tlačítka. Barva pozadí se změní na barvu uvedené tlačítko.  
-  
-7.  Zavřete – kontejner testů.  
-  
- Zkuste [úprava ovládací prvek DHTML](../atl/modifying-the-atl-dhtml-control.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
+# <a name="testing-the-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML
+
+Po vytvoření projektu můžete vytvářet a testovat Ukázka ovládacího prvku. Než to uděláte, můžete zobrazení tříd a okně Průzkumník řešení zkontrolujte projekt. Prvky projektu jsou popsány podrobněji v [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+
+#### <a name="to-build-and-test-the-atl-dhtml-control"></a>Pro vytváření a testování ovládacího prvku ATL DHTML
+
+1. Sestavte projekt. Z **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+
+2. Po dokončení sestavení, otevřete kontejner testu. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
+
+3. V kontejneru testů z **upravit** nabídky, klikněte na tlačítko **vložte nový ovládací prvek**.
+
+4. V **vložit ovládací prvek** dialogové okno Vyberte ovládací prvek pole se seznamem. Mějte na paměti, jeho název je založen na krátký název, který jste určili v Průvodce ovládacími prvky ATL. Klikněte na tlačítko **OK**.
+
+5. Prozkoumejte ovládacího prvku. Všimněte si, že má posuvníku. Použijte úchyty ovládacího prvku pro změnu velikosti ovládacího prvku aktivovat posuvník.
+
+6. Testování ovládacího prvku tlačítka. Barva pozadí změní barvu indikován tlačítka.
+
+7. Zavřete kontejner testu.
+
+Zkuste [úpravy ovládací prvek DHTML](../atl/modifying-the-atl-dhtml-control.md).
+
+## <a name="see-also"></a>Viz také
+
+[Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
 

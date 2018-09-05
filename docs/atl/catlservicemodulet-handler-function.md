@@ -1,5 +1,5 @@
 ---
-title: Funkce CAtlServiceModuleT::Handler | Microsoft Docs
+title: Catlservicemodulet::Handler – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c0386cd17e7a33628790520e356c706f9743b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbc7c74e0fd6fdd34ba9a0c386c028469113c88e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354991"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767078"
 ---
-# <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler – funkce
-`CAtlServiceModuleT::Handler` je rutina, která volá správce řízení služeb (SCM) pro načtení stav služby a pojmenujte ho různé pokyny (například zastavení nebo pozastavení). SCM předá kód operace na `Handler` označující, co má provést službu. Výchozí generovaný ATL služba zpracovává jenom pokyn zastavit. Pokud správce SCM úspěšně projde zastavení pokyn, službu informuje správce SCM, program se chystá ukončit. Pak zavolá službu `PostThreadMessage` ukončete zprávu na sebe sama. To ukončí smyčce zpráv a služby se nakonec zavřete.  
-  
- Pro zpracování další pokyny, budete muset změnit `m_status` – datový člen v inicializovat `CAtlServiceModuleT` konstruktor. Tento člen data informuje správce SCM tlačítek, která se povolit, pokud služba je vybraný v ovládacím panelu služby aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [Služby](../atl/atl-services.md)   
- [CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
+# <a name="catlservicemodulethandler-function"></a>Catlservicemodulet::Handler – funkce
+
+`CAtlServiceModuleT::Handler` je rutina, která volá správce řízení služeb (SCM) načíst stav služby a přiřaďte jí různé pokyny (jako je zastavení nebo pozastavení). SCM předá operační kód na `Handler` k označení toho, co služba dělat. Výchozí generovaný ATL služba zpracovává pouze instrukce stop. V případě úspěšného SCM instrukce stop, říká službě SCM, program se chystá ukončit. Pak zavolá služba `PostThreadMessage` pro zprávy o ukončení na sebe sama. To ukončí smyčku zpráv a služby se nakonec zavře.
+
+Pro zpracování další pokyny, budete muset změnit `m_status` inicializovat datový člen v `CAtlServiceModuleT` konstruktoru. Tento datový člen říká SCM tlačítek, která umožňuje při výběru služby v ovládacím panelu služby aplikace.
+
+## <a name="see-also"></a>Viz také
+
+[Služby](../atl/atl-services.md)   
+[Catlservicemodulet::Handler –](../atl/reference/catlservicemodulet-class.md#handler)
 
