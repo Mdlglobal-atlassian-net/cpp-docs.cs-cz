@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677845"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 Tyto funkce poskytují podporu pro vytváření dialogových oken a pro vytváření, hostování a licencování ovládacích prvků ActiveX.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Nenulové, pokud inicializaci řídicího hostitelského kódu byla úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nebo [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), jak je popsáno v sadě Windows SDK.  
+ Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nebo [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), jak je popsáno v sadě Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  Call AtlAxWinTerm  
  Tato funkce zruší inicializaci ATL řídicího hostitelského kódu při zrušení registrace **"AtlAxWin80"** a **"AtlAxWinLic80"** tříd oken.  

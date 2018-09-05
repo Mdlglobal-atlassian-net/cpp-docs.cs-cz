@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677785"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkce oboru názvů Concurrency
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  `IResourceManager` Rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
- Několik následných volání této metody vrátí stejnou instanci správce prostředků. Každé volání metody zvýší odkaz počet v Resource Manageru a musí mít odpovídající volání [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metodu, když váš Plánovač dokončí komunikaci se správcem prostředků.  
+ Několik následných volání této metody vrátí stejnou instanci správce prostředků. Každé volání metody zvýší odkaz počet v Resource Manageru a musí mít odpovídající volání [IResourceManager::Release](iresourcemanager-structure.md) metodu, když váš Plánovač dokončí komunikaci se správcem prostředků.  
   
  [unsupported_os –](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulem Runtime souběžnost.  
   
 ##  <a name="create_task"></a>  create_task –  
- Vytvoří PPL [úloh](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.  
+ Vytvoří PPL [úloh](task-class.md) objektu. `create_task` lze použít kdekoli by jste použili úkol konstruktoru. Je určen hlavně pro pohodlí, protože umožňuje používat `auto` – klíčové slovo při vytváření úloh.  
   
 ```
 template<typename T>
