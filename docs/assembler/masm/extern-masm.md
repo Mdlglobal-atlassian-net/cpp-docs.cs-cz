@@ -1,7 +1,7 @@
 ---
-title: EXTERN (MASM) | Microsoft Docs
+title: EXTERN (MASM) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7528ea78270e4976ed3b926e83fe4f9977148498
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0a9008e8c1153c0a9b06530b14e661436f7e62a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693667"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
-Určuje jeden nebo více externí proměnné, popisky nebo symboly názvem *název* s jiným typem `type`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-   EXTERN [[langtype]] name [[(altid)]] :  
-type [[, [[langtype]] name [[(altid)]] :type]]...  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `type` Může být [ABS](../../assembler/masm/operator-abs.md), který importuje *název* jako konstanta. Stejné jako [extrn –](../../assembler/masm/extrn.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Určuje jeden nebo více externích proměnných, popisky nebo symboly volá *název* jehož typ je *typ*.
+
+## <a name="syntax"></a>Syntaxe
+
+> EXTERN [[*langtype*]] *název* [[(*altid*)]]: *typ* [[, [[*langtype*]]  *název* [[(*altid*)]]: *typ*]]...
+
+## <a name="remarks"></a>Poznámky
+
+*Typ* může být [ABS](../../assembler/masm/operator-abs.md), který importuje *název* jako konstanta. Stejné jako [EXTRN](../../assembler/masm/extrn.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

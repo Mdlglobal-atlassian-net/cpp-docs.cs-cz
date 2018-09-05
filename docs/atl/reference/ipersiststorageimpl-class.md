@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693713"
 ---
 # <a name="ipersiststorageimpl-class"></a>Ipersiststorageimpl – třída
 Tato třída implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) rozhraní.  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Poznámky  
  `IPersistStorageImpl` implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) rozhraní, která umožňuje klientovi požadavek, aby objekt zatížení a uložte trvalá data pomocí úložiště.  
   
- Implementaci této třídy vyžaduje třídu `T` provést implementaci `IPersistStreamInit` rozhraní, které jsou k dispozici prostřednictvím `QueryInterface`. Obvykle to znamená, že třída `T` by měl být odvozen z [ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md), zadejte položku pro `IPersistStreamInit` v [mapy modelu COM.](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)a použít [mapování](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) k popisu třídy trvalá data.  
+ Implementaci této třídy vyžaduje třídu `T` provést implementaci `IPersistStreamInit` rozhraní, které jsou k dispozici prostřednictvím `QueryInterface`. Obvykle to znamená, že třída `T` by měl být odvozen z [ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md), zadejte položku pro `IPersistStreamInit` v [mapy modelu COM.](com-map-macros.md)a použít [mapování](property-map-macros.md) k popisu třídy trvalá data.  
   
  **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   

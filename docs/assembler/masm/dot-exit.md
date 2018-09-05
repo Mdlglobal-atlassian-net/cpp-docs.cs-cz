@@ -1,7 +1,7 @@
 ---
-title: . UKONČENÍ | Microsoft Docs
+title: . KONEC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eade5df90a385c790587ee8d292703939d6f4d3a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02c60bfcb80a70779a54c8f3b194fdcf68408d17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053724"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693307"
 ---
 # <a name="exit"></a>.EXIT
-Generuje kód ukončení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-.EXIT [[expression]]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Vrátí volitelné *výraz* do prostředí.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+
+Generuje kód ukončení.
+
+## <a name="syntax"></a>Syntaxe
+
+> . UKONČENÍ [[výrazu]]
+
+## <a name="remarks"></a>Poznámky
+
+Vrátí volitelné *výraz* prostředí.
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: Závažná chyba nástroje ML A1007 | Microsoft Docs
+title: Závažná chyba nástroje ML A1007 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b883fad01943cd8cff71b3da9dee66407ccc93
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 539ab431510d5dc721e6531c11069a87e27c287a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055726"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693598"
 ---
 # <a name="ml-fatal-error-a1007"></a>Závažná chyba nástroje ML A1007
-**úroveň vnoření příliš hluboké**  
-  
- Assembleru dosáhla svého limitu vnoření. Limit je 20 úrovně, pokud není uvedeno jinak jinak.  
-  
- Jedním z těchto byl vnořeny příliš hluboko:  
-  
--   Direktivu vysoké úrovně, jako [. Pokud](../../assembler/masm/dot-if.md), [. OPAKUJTE](../../assembler/masm/dot-repeat.md), nebo [. Při](../../assembler/masm/dot-while.md).  
-  
--   Struktura definice.  
-  
--   Direktivu podmíněného sestavení.  
-  
--   Definice procedury.  
-  
--   A [pushcontext –](../../assembler/masm/pushcontext.md) – direktiva (limit je 10).  
-  
--   Definice segmentu.  
-  
--   Vložené soubory.  
-  
--   Makro.  
-  
-## <a name="see-also"></a>Viz také  
- [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)
+
+**úroveň vnoření příliš hluboké**
+
+Assembler dosáhla svého limitu vnořování. Limit je 20 úrovně není uvedeno jinak.
+
+Byl jeden z následujících akcí jsou vnořené moc hluboko:
+
+- Direktivu vysoké úrovně, jako [. Pokud](../../assembler/masm/dot-if.md), [. OPAKUJTE](../../assembler/masm/dot-repeat.md), nebo [. ZATÍMCO](../../assembler/masm/dot-while.md).
+
+- Definice struktury.
+
+- Direktivy podmíněné sestavení.
+
+- Definice procedury.
+
+- A [PUSHCONTEXT](../../assembler/masm/pushcontext.md) – direktiva (limit je 10).
+
+- Definice segmentu.
+
+- Soubor zahrnutí.
+
+- Makra.
+
+## <a name="see-also"></a>Viz také:
+
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>

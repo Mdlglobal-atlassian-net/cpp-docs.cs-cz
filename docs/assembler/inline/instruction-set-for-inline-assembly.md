@@ -1,7 +1,7 @@
 ---
-title: Nastavit instrukcí pro vložené sestavení | Microsoft Docs
+title: Sadu instrukcí pro vložené sestavení | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693992"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Sada instrukcí pro vložené sestavení
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Visual C++ compiler podporuje operační všechny kódy prostřednictvím Pentium 4 a AMD Athlon. Další pokyny podporován procesorem cíl lze vytvořit pomocí [_emit – pseudoinstrukce](../../assembler/inline/emit-pseudoinstruction.md).  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Specifické pro Microsoft**
+
+Kompilátor Visual C++ podporuje všechny operační kódy prostřednictvím procesor Pentium 4 a AMD Athlon. Další pokyny, které podporuje cílový procesor se dají vytvářet pomocí [_emit – pseudoinstrukce](../../assembler/inline/emit-pseudoinstruction.md).
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

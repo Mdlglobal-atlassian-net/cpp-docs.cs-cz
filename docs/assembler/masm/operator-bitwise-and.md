@@ -1,7 +1,7 @@
 ---
-title: operátor &amp; | Microsoft Docs
+title: operátor &amp; | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -19,22 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a6a0b3188fcbbaf17036c88f6efa3e757ef65c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 03d8425b1ad0a2407e523a3b4039401d45442e8e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057081"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693450"
 ---
-# <a name="operator-amp"></a>Operátor &amp;
-Bitový **a**. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression1 & expression2  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+# <a name="operator-amp"></a>– Operátor &amp;
+
+Bitový operátor **a**. Použít pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. ZATÍMCO](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) a ostatní porty blokuje vyhodnocen v době běhu, ne v okamžiku sestavení.
+
+## <a name="syntax"></a>Syntaxe
+
+> Expression1 & expression2
+
+## <a name="see-also"></a>Viz také:
+
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>
