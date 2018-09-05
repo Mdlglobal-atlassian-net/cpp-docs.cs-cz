@@ -1,5 +1,5 @@
 ---
-title: Vrátí Statement (C) | Microsoft Docs
+title: Vrátí Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bd1f1a9f441a8c4b5e2cf9418653a6a0544380e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391204"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759080"
 ---
 # <a name="return-statement-c"></a>return – příkaz (C)
-`return` Příkaz ukončí provádění funkce a vrátí ovládací prvek volání funkce. Provádění pokračuje ve volání funkce okamžiku hned po volání. A `return` příkaz můžete také vrátit hodnotu volání funkce. V tématu [návratového typu](../c-language/return-type.md) Další informace.  
+`return` Příkaz ukončí provádění funkce a vrátí řízení volající funkci. Provádění pokračuje ve volání funkce v okamžiku, ihned po volání. A `return` příkaz může také vracet hodnotu volající funkci. Zobrazit [návratový typ](../c-language/return-type.md) Další informace.  
   
-## <a name="syntax"></a>Syntaxe  
- *příkaz přechod*:  
- **Vrátí***výraz* opt **;**   
+## <a name="syntax"></a>Syntaxe
+
+*příkaz-skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Vrátí** *výraz*<sub>optimalizované</sub> **;**
+
+Hodnota *výraz*, pokud jsou k dispozici, je vrácena volající funkci. Pokud *výraz* je tento parametr vynechán, návratová hodnota funkce není definován. Výraz, pokud jsou k dispozici, je vyhodnocen a poté převeden na typ vrácené funkcí. Pokud funkce byla deklarována s návratovým typem `void`, `return` příkazu, který obsahuje výraz vygeneruje upozornění a tento výraz není vyhodnocen.  
   
- Hodnota *výraz*, pokud existuje, je vrácen do volání funkce. Pokud *výraz* je tento parametr vynechán, návratovou hodnotu funkce není definován. Výraz, pokud existuje, je vyhodnocena a pak převést na typ vrácený funkcí. Pokud funkce byla deklarována s návratovým typem `void`, `return` příkazu, který obsahuje výraz generuje upozornění a výraz, nebude hodnocen.  
+Pokud ne `return` příkazu se zobrazí v definici funkce, ovládací prvek automaticky vrátí k volání funkce po provedení posledního prohlášení o volané funkce. V tomto případě je definován na návratový typ volané funkce. Pokud vrácená hodnota není vyžadována, deklarujte funkci mít `void` návratový typ; v opačném případě výchozí hodnota je návratový typ `int`.  
   
- Pokud žádné `return` příkazu se zobrazí v definici funkce řízení automaticky vrátí k funkci volání po provedení posledního prohlášení o volaná funkce. V takovém případě návratová hodnota volaná funkce není definován. Pokud návratovou hodnotu není potřeba, deklarovat funkci tak, aby měl `void` návratový typ; jinak, výchozí návratový typ je `int`.  
+Mnoho programátorů použít závorky k uzavření *výraz* argument `return` příkazu. C nevyžaduje závorky.  
   
- Závorky lze použít mnoho programátorů na uzavřete *výraz* argument `return` příkaz. C nevyžaduje závorkách.  
-  
- Tento příklad ukazuje `return` příkaz:  
+Tento příklad ukazuje, `return` – příkaz:  
   
 ```  
 #include <limits.h>  
@@ -68,13 +69,13 @@ void draw( int i, long long ll )
   
 ```  
   
- V tomto příkladu `main` funkce volá dvě funkce: `sq` a `draw`. `sq` Funkce vrátí hodnotu `x * x` k `main`, kde je přiřazen návratovou hodnotu `y`. Závorky návratový výrazu v `sq` , jsou vyhodnoceny jako součást výrazu a nejsou požadována příkaz return. Vzhledem k tomu, že je návratový výraz vyhodnocen předtím, než je převést na typ návratové `sq` vynutí typ výrazu, který má být návratový typ s přetypování, aby zabránil přetečení možné celé číslo, které může vést k neočekávaným výsledkům. `draw` Funkce je deklarován jako `void` funkce. Vytiskne hodnoty jeho parametrů a poté prázdný příkaz return končí funkce a nevrací hodnotu. Pokus o přiřazení návratová hodnota `draw` by způsobilo diagnostické zprávy, která se vydává. `main` Funkce vrátí hodnotu `x` v operačním systému.  
+V tomto příkladu `main` funkce volá dvě funkce: `sq` a `draw`. `sq` Funkce vrátí hodnotu `x * x` k `main`, kde návratová hodnota je přiřazená `y`. Závorky kolem vrácený výraz v `sq` jsou vyhodnoceny jako součást výrazu a nejsou požadována návratový příkaz. Protože vrácený výraz je vyhodnocen, než je převedena na typ vrácené hodnoty, `sq` vynutí typ výrazu jako návratový typ pomocí přetypování zabránil přetečení celého čísla je to možné, což by mohlo vést k neočekávaným výsledkům. `draw` Není funkce deklarována jako `void` funkce. Vypíše hodnoty jeho parametrů a poté prázdný příkaz return ukončení funkce a nevrací hodnotu. Pokus o přiřazení návratová hodnota `draw` by způsobilo diagnostickou zprávu vystavování. `main` Funkce vrátí hodnotu `x` v operačním systému.  
   
- Výstup tohoto příkladu vypadá takto:  
+Výstup v příkladu vypadá takto:  
   
 ```Output  
 i = 2147483647, ll = 4611686014132420609  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Příkazy](../c-language/statements-c.md)
+[Příkazy](../c-language/statements-c.md)

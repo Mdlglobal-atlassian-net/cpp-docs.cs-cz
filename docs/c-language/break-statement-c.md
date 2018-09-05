@@ -1,5 +1,5 @@
 ---
-title: Rozdělit Statement (C) | Microsoft Docs
+title: přerušit Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 194e4c836f0423e20bb747cc6c3b06645c38a5fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aeec33d61f21c34e52d582ebc3c0ef7313bb511f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381347"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755031"
 ---
 # <a name="break-statement-c"></a>break – příkaz (C)
 Příkaz `break` ukončí spouštění nejbližšího nadřazeného příkazu `do`, `for`, `switch` nebo `while`, v němž se vyskytuje. Řízení je předáno příkazu, který následuje ukončený příkaz.  
   
-## <a name="syntax"></a>Syntaxe  
- *příkaz přechod*:  
- `break;`  
+## <a name="syntax"></a>Syntaxe
+
+*příkaz-skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Konec;**
   
- Příkaz `break` se často používá k ukončení zpracování konkrétního případu v příkazu `switch`. Absence nadřazeného iterativního příkazu nebo příkazu `switch` způsobí chybu.  
+Příkaz `break` se často používá k ukončení zpracování konkrétního případu v příkazu `switch`. Absence nadřazeného iterativního příkazu nebo příkazu `switch` způsobí chybu.  
   
- V rámci vnořených příkazů příkaz `break` ukončí pouze příkaz `do`, `for`, `switch` nebo `while`, který jej bezprostředně obklopuje. Pomocí příkazu `return` nebo `goto` lze převést řízení jinam mimo vnořenou strukturu.  
+V rámci vnořených příkazů příkaz `break` ukončí pouze příkaz `do`, `for`, `switch` nebo `while`, který jej bezprostředně obklopuje. Pomocí příkazu `return` nebo `goto` lze převést řízení jinam mimo vnořenou strukturu.  
   
- Následující příklad znázorňuje příkaz `break`:  
+Následující příklad znázorňuje příkaz `break`:  
   
 ```  
 #include <stdio.h>  
@@ -52,4 +53,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [break – příkaz](../cpp/break-statement-cpp.md)
+[break – příkaz](../cpp/break-statement-cpp.md)

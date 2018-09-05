@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593996"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761378"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::invalidargumentexception – třída
 Vyvolána, když jeden z argumentů, poskytnutý metodě není platný.  

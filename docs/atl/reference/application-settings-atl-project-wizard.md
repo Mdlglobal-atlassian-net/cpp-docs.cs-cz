@@ -1,5 +1,5 @@
 ---
-title: Nastavení aplikace, ATL projektu průvodce | Microsoft Docs
+title: Nastavení aplikace, knihovny ATL projektu průvodce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fbf95451834e5f8c41e8b6d7e5af7a9746bb85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357402"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756883"
 ---
-# <a name="application-settings-atl-project-wizard"></a>Nastavení aplikace, Průvodce projektem knihovny ATL
-Použití **nastavení aplikace** stránce Průvodce projektu knihovny ATL návrhu a přidávat do nového projektu knihovny ATL základní funkce.  
-  
-## <a name="server-type"></a>Typ serveru  
- Vyberte jednu ze tří typů serveru:  
-  
- **Dynamická knihovna (DLL)**  
- Vyberte, chcete-li vytvořit server v procesu.  
-  
- **Spustitelný soubor (EXE)**  
- Vyberte, chcete-li vytvořit místní server mimo proces. Tato možnost není povolena podpora MFC nebo modelu COM + 1.0. Neumožňuje sloučení proxy/stub kódu.  
-  
- **Služba (EXE)**  
- Vyberte, chcete-li vytvořit aplikaci systému Windows, která běží na pozadí při spuštění systému Windows. Tato možnost není povolena podpora MFC nebo modelu COM + 1.0 nebo nepovoluje slučování proxy/stub kódu.  
-  
-## <a name="additional-options"></a>Další možnosti  
-  
+# <a name="application-settings-atl-project-wizard"></a>Nastavení aplikace, Průvodce projektem ATL
+
+Použití **nastavení aplikace** stránky Průvodce projektem ATL pro návrh a přidat do nového projektu ATL základní funkce.
+
+## <a name="server-type"></a>Typ serveru
+
+Vyberte jednu ze tří typů serveru:
+
+**Dynamická knihovna (DLL)**  
+Vyberte vytvoření serveru v rámci procesu.
+
+**Spustitelný soubor (EXE)**  
+Vyberte pro vytvoření místního serveru mimo proces. Tato možnost není povolena podpora knihovny MFC nebo knihovny modelu COM + 1.0. Nepovoluje se sloučení kódu proxy/zástupné procedury.
+
+**Služby (EXE)**  
+Vyberte vytvořit aplikaci Windows, která běží na pozadí při spuštění Windows. Tuto možnost nelze povolit podporu pro knihovny MFC nebo knihovny modelu COM + 1.0 nebo neumožňuje sloučení kódu proxy/zástupné procedury.
+
+## <a name="additional-options"></a>Další možnosti
+
 > [!NOTE]
->  Všechny další možnosti jsou dostupné pro pouze projektů knihovny DLL.  
-  
- **Povolit slučování proxy/stub kódu**  
- Vyberte **Povolit slučování proxy/stub kódu** zaškrtávací políčko pro vaše pohodlí při zařazování rozhraní je vyžadován. Tuto možnost umístí proxy a stub kód generovaný MIDL ve stejné spustitelného souboru jako server.  
-  
- **Podpora MFC**  
- Vyberte, chcete-li určit, že objektu tvoří Podpora MFC. Tato možnost váš projekt odkazuje na knihovny MFC tak, aby vám přístup k libovolnému třídy a funkce, které obsahují.  
-  
- **Podpora COM + 1.0**  
- Vyberte, chcete-li změnit nastavení sestavení projektu tak, aby mohl podporovat komponenty modelu COM + 1.0. Kromě standardní seznamu knihoven průvodce přidá comsvcs.lib knihovny specifické komponenty modelu COM + 1.0  
-  
- Kromě toho mtxex.dll zpoždění načíst v hostitelském systému, pokud je aplikace spuštěna.  
-  
--   **Podpora registrátora součást** Pokud projektu knihovny ATL obsahuje podporu pro komponenty modelu COM + 1.0, můžete nastavit tuto možnost. Registrátor komponent umožňuje vaší objekt modelu COM + 1.0, který chcete získat seznam součástí, zaregistrovat součásti nebo zrušit registraci součásti (jednotlivě nebo všechny najednou).  
-  
-## <a name="see-also"></a>Viz také  
- [Průvodce projektem knihovny ATL](../../atl/reference/atl-project-wizard.md)   
- [Vytvoření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)   
- [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
+>  Všechny další možnosti jsou k dispozici pro pouze projekty knihovny DLL.
+
+**Sloučení kódu proxy/zástupné procedury**  
+Vyberte **sloučení kódu proxy/zástupné procedury** zaškrtávací políčko v zájmu usnadnění práce při zařazování rozhraní je povinný. Tato možnost umístí MIDL generovaný proxy a zástupných procedur kód v rámci stejného spustitelného souboru jako server.
+
+**Podpora knihovny MFC**  
+Vyberte, chcete-li určit, že váš objekt zahrnuje podporu knihovny MFC. Tato možnost propojí vaše projekty pro knihovny MFC, které můžete přístup k některé z třídy a funkce, které obsahují.
+
+**Podpora COM + 1.0**  
+Vyberte, chcete-li změnit nastavení projektu sestavení pro podporu komponenty modelu COM + 1.0. Kromě standardní seznamu knihoven průvodce přidá comsvcs.lib knihovny specifické pro komponenty modelu COM + 1.0
+
+Kromě toho knihovna mtxex.dll zpožděné načtení v hostitelském systému, když je aplikace spuštěna.
+
+- **Podpora registrátora komponent** Pokud váš projekt knihovny ATL obsahuje podporu pro komponenty modelu COM + 1.0, můžete nastavit tuto možnost. Registrátora komponent umožňuje váš objekt modelu COM + 1.0 mohl získat seznam součástí, zaregistrovat součásti nebo zrušit registraci součásti (jednotlivě nebo celou najednou).
+
+## <a name="see-also"></a>Viz také
+
+[Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)   
+[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)   
+[Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

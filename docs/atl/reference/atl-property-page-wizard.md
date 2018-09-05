@@ -1,5 +1,5 @@
 ---
-title: Stránka průvodce vlastností knihovny ATL | Microsoft Docs
+title: Průvodce stránkou vlastností ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,54 +17,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760380"
 ---
-# <a name="atl-property-page-wizard"></a>Stránka průvodce vlastností knihovny ATL
-Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC s podpory knihovny ATL. Stránku vlastností knihovny ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) jeden nebo více objektů COM.  
-  
-## <a name="remarks"></a>Poznámky  
- Počínaje verzí Visual Studio 2008, registrace skript vytvořený tímto průvodcem bude registrovat jeho komponenty COM v **HKEY_CURRENT_USER** místo **HKEY_LOCAL_MACHINE**. Chcete-li toto chování změnit, nastavte **zaregistrovat součást pro všechny uživatele** možnost ATL průvodce.  
-  
-## <a name="names"></a>Názvy  
- Zadejte názvy objektů, rozhraní a třídy, který se má přidat do projektu. S výjimkou **krátký název**, všechny ostatní pole můžete upravovat nezávisle. Pokud změníte text pro **krátký název**, změny se projeví v názvech všechna ostatní pole na této stránce. Pokud změníte **třída typu Coclass** název v oddílu modelu COM, změna se odrazí v **typ** a **ProgID** polí. Toto chování je navržená tak, aby bylo možné všechny názvy snadno identifikovat jako vývoje stránky vlastností.  
-  
+# <a name="atl-property-page-wizard"></a>Průvodce stránkou vlastností ATL
+
+Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC pomocí podpory knihovny ATL. Stránky vlastností ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) z jednoho nebo více objektů COM.
+
+## <a name="remarks"></a>Poznámky
+
+Od verze Visual Studio 2008, registrace skriptu vytvářených Tento průvodce zaregistruje jeho komponenty modelu COM v **HKEY_CURRENT_USER** místo **HKEY_LOCAL_MACHINE**. Chcete-li toto chování změnit, nastavte **registrace komponenty pro všechny uživatele** možnost ATL průvodce.
+
+## <a name="names"></a>Názvy
+
+Zadejte názvy objektů, rozhraní a třídy, které se přidají do vašeho projektu. S výjimkou **krátký název**, všechna ostatní pole lze nezávisle upravovat. Pokud se změní text pro **krátký název**, změny se projeví v názvech všechna ostatní pole na této stránce. Pokud změníte **Coclass** název v oddílu modelu COM, tato změna se projeví v **typ** a **ProgID** polí. Toto chování je navržené tak, aby všechny názvy jednoduše rozpoznatelným názvem za vás při vývoji stránky vlastností.
+
 > [!NOTE]
->  **Třída typu coclass** upravovat pouze neoznačené atributy projektů. Pokud váš projekt s atributy, nelze upravovat **třída typu Coclass**.  
-  
-### <a name="c"></a>C++  
- Poskytuje informace o třídě C++ vytvořené implementovat objekt.  
-  
-|||  
-|-|-|  
-|Termín|Definice|  
-|**Krátký název**|Nastaví zkrácený název objektu. Určuje název, který zadáte, třídy a **třída typu Coclass** názvy souboru (**sada** a **.h**) názvy, **typ** název a  **ProgID**, pokud nezměníte tato pole jednotlivě.|  
-|**soubor h**|Nastaví název hlavičky souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který zadáte v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby nebo připojit k existující soubor deklaraci třídy. Pokud vyberete existující soubor, průvodce jej neuloží do vybraného umístění dokud klikněte na tlačítko **Dokončit** v průvodci.<br /><br /> Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být deklaraci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.|  
-|**– Třída**|Nastaví název třídy, která implementuje objekt. Tento název je založen na název, který zadáte v **krátký název**, předcházet "C", typická předpona pro název třídy.|  
-|**souboru**|Nastaví název souboru implementace pro nový objekt třídu. Ve výchozím nastavení, tento název je založen na název, který zadáte v **krátký název**. Klikněte na tlačítko se třemi tečkami uložíte soubor do umístění podle vaší volby. Soubor se neuloží do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.<br /><br /> Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být implementaci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.|  
-|**S atributy**|Označuje, zda objekt používá atributy. Pokud přidáváte objekt do projektu knihovny ATL, je vybraná tato možnost a nelze ji změnit, to znamená, můžete přidat pouze s atributy objektů do projektu vytvořeného s podporou atribut.<br /><br /> Objekt s atributy můžete přidat pouze do projektu knihovny ATL, který používá atributy. Pokud vyberete tuto možnost pro projekt ATL, který nemá atribut podporovat, Průvodce zobrazí výzvu k určení, zda chcete přidat podporu atributů do projektu.<br /><br /> Ve výchozím nastavení, všechny objekty, přidejte po nastavení této možnosti jsou označeny jako s atributy (je zaškrtnuté políčko). Toto políčko Přidat objekt, který nepoužívá atributy.<br /><br /> V tématu [nastavení aplikace, Průvodce projektem ATL](../../atl/reference/application-settings-atl-project-wizard.md) a [základní mechanismy atributů](../../windows/basic-mechanics-of-attributes.md) Další informace.|  
-  
-### <a name="com"></a>Model COM  
- Poskytuje informace o funkci COM pro objekt.  
-  
- **Třída typu coclass**  
- Nastaví název třídy komponenta, která obsahuje seznam podporovaných objektem rozhraní.  
-  
+>  **Coclass** lze upravit pouze bez atributové projektů. Pokud váš projekt s atributy, nelze upravovat **Coclass**.
+
+### <a name="c"></a>C++
+
+Poskytuje informace pro třídy C++ vytvořený pro implementaci objektu.
+
+|||
+|-|-|
+|Termín|Definice|
+|**Krátký název**|Nastaví zkrácený název pro objekt. Určuje název, který zadáte, třídy a **Coclass** pojmenuje soubor (**.cpp** a **.h**) názvy, **typ** názvem a  **ProgID**, pokud nezměníte těchto polí samostatně.|
+|**soubor .h**|Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud vyberete existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.<br /><br /> Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.|
+|**Třída**|Nastaví název třídy, která implementuje objekt. Tento název je založen na název, který jste zadali v **krátký název**, předchází "C", typická předpona pro název třídy.|
+|**soubor .cpp**|Nastaví název implementačního souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami se uložit název souboru do umístění podle vašeho výběru. Soubor se neukládá do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.<br /><br /> Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.|
+|**S atributy**|Označuje, zda objekt používá atributy. Pokud přidáváte objektu do projektu knihovny ATL, je vybraná tato možnost a nelze ji změnit, to znamená, můžete přidat pouze s atributy objektů do projektu vytvořeného s podporou atribut.<br /><br /> Objekt s atributy lze přidat pouze do projektu ATL používající atributy. Pokud vyberete tuto možnost pro projekty ATL, který nemá atribut podporují, Průvodce zobrazí výzvu k určení, zda chcete přidat do projektu podporu atributů.<br /><br /> Ve výchozím nastavení, všechny objekty, přidejte po nastavení této možnosti jsou označeny jako s přidělenými atributy (zaškrtnuto zaškrtávací políčko). Toto políčko Přidat objekt, který nepoužívá atributy.<br /><br /> Zobrazit [nastavení aplikace, Průvodce projektem ATL](../../atl/reference/application-settings-atl-project-wizard.md) a [základní mechanismy atributů](../../windows/basic-mechanics-of-attributes.md) Další informace.|
+
+### <a name="com"></a>Model COM
+
+Poskytuje informace o funkcích, které modelu COM pro objekt.
+
+**Coclass**  
+Nastaví název třídy komponenty, který obsahuje seznam podporovaných v objektu rozhraní.
+
 > [!NOTE]
->  Pokud vytváříte váš projekt pomocí atributů, nebo pokud jste uvedli na této stránce průvodce, že stránka vlastností používá atributy, tuto možnost nelze změnit, protože knihovna ATL nezahrnuje `coclass` atribut.  
-  
- **Typ**  
- Nastaví popis objektu, který se zobrazí v registru  
-  
- **ProgID**  
- Nastaví název, který můžete použít kontejnery místo CLSID objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti Průvodce stránky vlastností knihovny ATL](../../atl/reference/options-atl-property-page-wizard.md)   
- [Řetězce, Průvodce stránky vlastností knihovny ATL](../../atl/reference/strings-atl-property-page-wizard.md)   
- [Příklad: Implementace stránky vlastností](../../atl/example-implementing-a-property-page.md)
+>  Pokud vytváříte projekt pomocí atributů nebo pokud na této stránce průvodce určujete, že na stránce vlastností používá atributy, tuto možnost nelze změnit, protože nezahrnuje ATL `coclass` atribut.
+
+**Typ**  
+Nastaví popis objektu, který se zobrazí v registru
+
+**ProgID**  
+Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti Průvodce stránkou vlastností ATL](../../atl/reference/options-atl-property-page-wizard.md)   
+[Řetězce, Průvodce stránkou vlastností ATL](../../atl/reference/strings-atl-property-page-wizard.md)   
+[Příklad: Implementace stránky vlastností](../../atl/example-implementing-a-property-page.md)
 

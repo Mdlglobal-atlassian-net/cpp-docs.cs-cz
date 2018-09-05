@@ -1,5 +1,5 @@
 ---
-title: Při Statement (C) | Microsoft Docs
+title: zatímco Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6814df9d81674e37f4364330e7801399cb4c763
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389914"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763237"
 ---
 # <a name="while-statement-c"></a>while – příkaz (C)
-`while` Příkaz umožňuje opakujte příkaz, dokud zadaného výrazu se změní na hodnotu false.  
+
+`while` Příkaz umožňuje opakujte příkaz, dokud nebude NEPRAVDA zadaným výrazem.  
   
-## <a name="syntax"></a>Syntaxe  
- *příkaz iterace*:  
- **Při (***výraz***)***– příkaz*   
+## <a name="syntax"></a>Syntaxe
+
+*příkaz iterace*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**zatímco (***výraz***)***– příkaz*
   
- *Výraz* musí mít typ aritmetické nebo ukazatel. Provádění pokračuje následujícím způsobem:  
+*Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:  
   
-1.  *Výraz* vyhodnotí.  
+1. *Výraz* vyhodnocena.  
   
-2.  Pokud *výraz* je zpočátku false text `while` nikdy spustit příkaz, a předá řízení z `while` příkaz, který má další příkaz v programu.  
-  
-     Pokud *výraz* je true (nenulové hodnoty), provede se tělo příkazu a tento proces se opakuje od kroku 1.  
-  
- `while` Příkaz můžete také při ukončení **zalomení**, `goto`, nebo `return` v rámci příkaz provede se tělo. Použití **pokračovat** příkaz Ukončit iterace bez ukončení `while` smyčky. **Pokračovat** příkaz předá řízení do další iterace `while` příkaz.  
-  
- Zde je příklad příkazu `while`:  
-  
-```  
-while ( i >= 0 )   
-{  
-    string1[i] = string2[i];  
-    i--;  
-}  
-```  
-  
- Tento příklad zkopíruje znaky z `string2` k `string1`. Pokud `i` je větší než nebo rovno 0, `string2[i]` je přiřazena k `string1[i]` a `i` se odečte. Když `i` dosáhne nebo klesne pod 0, provádění `while` ukončuje příkaz.  
-  
-## <a name="see-also"></a>Viz také  
- [while – příkaz (C++)](../cpp/while-statement-cpp.md)
+2. Pokud *výraz* je počáteční hodnota false, text `while` příkazu není nikdy proveden a ovládání přejde z `while` příkaz dalšímu příkazu v programu.
+
+   Pokud *výraz* je true (nenulový), provede se tělo příkazu a proces se opakuje, počínaje krokem 1.
+
+`while` Příkaz může také skončit při **přerušení**, `goto`, nebo `return` v rámci příkaz provede se tělo. Použití **pokračovat** příkaz k ukončení iterace bez ukončení `while` smyčky. **Pokračovat** příkaz předá řízení následující iteraci `while` příkazu.
+
+Zde je příklad příkazu `while`:
+
+```C
+while ( i >= 0 )
+{
+    string1[i] = string2[i];
+    i--;
+}
+```
+
+Tento příklad zkopíruje znaky z `string2` k `string1`. Pokud `i` je větší než nebo rovno 0, `string2[i]` přiřazen `string1[i]` a `i` se odečte. Když `i` dosáhne nebo klesne pod 0, provádění `while` příkaz ukončí.
+
+## <a name="see-also"></a>Viz také
+
+[while – příkaz (C++)](../cpp/while-statement-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Implementace okno (ATL) | Microsoft Docs
+title: Implementace okna (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f3e2663fa2e8c39bbd8b618d279a49b7eb29233
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8712f5ab169838e94aa743a29dd4b73e5b0979f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357010"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762753"
 ---
-# <a name="implementing-a-window"></a>Implementace okno
-Třída [CWindowImpl](../atl/reference/cwindowimpl-class.md) umožňuje implementovat okno a zpracování jeho zprávy. Zpráva blokováním v ATL je založena na mapy zpráv. Tato část vysvětluje:  
-  
--   Postup [přidejte obslužné rutiny zpráv](../atl/adding-an-atl-message-handler.md) do ovládacího prvku.  
-  
--   Co [zprávy mapy](../atl/message-maps-atl.md) jsou a jejich použití.  
-  
--   Syntaxe [funkce obslužných rutin zpráv](../atl/message-handler-functions.md).  
-  
--   Postup [implementovat okno s CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy oken](../atl/atl-window-classes.md)
+# <a name="implementing-a-window"></a>Implementace okna
+
+Třída [CWindowImpl](../atl/reference/cwindowimpl-class.md) umožňuje implementovat okna a zpracovávat zprávy. Zpráva zpracování v ATL je založená na mapy zpráv. Tato část vysvětluje:
+
+- Jak [přidat obslužné rutiny zpráv](../atl/adding-an-atl-message-handler.md) do ovládacího prvku.
+
+- Co [zprávy maps](../atl/message-maps-atl.md) jsou a způsob jejich použití.
+
+- Syntaxe pro [funkce obslužné rutiny zpráv](../atl/message-handler-functions.md).
+
+- Jak [implementace okna pomocí CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).
+
+## <a name="see-also"></a>Viz také
+
+[Třídy oken](../atl/atl-window-classes.md)
 

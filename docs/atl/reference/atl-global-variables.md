@@ -1,5 +1,5 @@
 ---
-title: Globální proměnné ATL | Microsoft Docs
+title: Globální proměnné ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/06/2017
 ms.technology:
@@ -17,29 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4664c99eb49b57f258be399c042fa14b60bbecdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55844390b872cb0d94ff991ab79b8519388d009f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356476"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762457"
 ---
-# <a name="atl-global-variables"></a>Globální proměnné knihovny ATL
+# <a name="atl-global-variables"></a>Globální proměnné ATL
 
-## <a name="patlmodule"></a>_pAtlModule  
+## <a name="patlmodule"></a>_pAtlModule
+
 Globální proměnné ukládání ukazatel na aktuální modul.  
 
 ```cpp  
 __declspec(selectany) CAtlModule * _pAtlModule  
 ```  
-### <a name="remarks"></a>Poznámky  
-Metody pro tuto globální proměnná slouží k zajištění funkcí (nyní neplatné) třídy CComModule součástí Visual C++ verze 6.0.
+### <a name="remarks"></a>Poznámky
 
-### <a name="example"></a>Příklad  
+Metody v této globální proměnné lze použít k zajištění funkcí (teď zastaralé) třídy ccommodule – k dispozici v aplikaci Visual C++ 6.0.
+
+### <a name="example"></a>Příklad
 
 ```cpp  
 LONG lLocks = _pAtlModule->GetLockCount();  
 ```  
-### <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
+### <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h  
 

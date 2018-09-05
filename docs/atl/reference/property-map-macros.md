@@ -21,173 +21,199 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ba1b79e7e8deb3997af58a2b0917e7e03347953
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882517"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758089"
 ---
 # <a name="property-map-macros"></a>Makra Map vlastností
-Tato makra definují mapy vlastností a položek.  
-  
-|||  
-|-|-|  
-|[BEGIN_PROP_MAP](#begin_prop_map)|Označuje začátek toho mapy vlastností knihovny ATL.|  
-|[PROP_DATA_ENTRY](#prop_data_entry)|Určuje rozsah nebo rozměry ovládacího prvku ActiveX.|  
-|[PROP_ENTRY_TYPE](#prop_entry_type)|Popis vlastnosti DISPID a vlastnost stránky vlastností CLSID zadá do mapy vlastností.|  
-|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Popis vlastnosti, vlastnost DISPID, stránka vlastností CLSID, zadá a `IDispatch` IID do mapy vlastností.|  
-|[PROP_PAGE](#prop_page)|Zadá identifikátor CLSID stránky vlastností do objektu map vlastností.|  
+
+Tato makra definují mapy vlastností a položek.
+
+|||
+|-|-|
+|[BEGIN_PROP_MAP](#begin_prop_map)|Označuje začátek toho mapy vlastností knihovny ATL.|
+|[PROP_DATA_ENTRY](#prop_data_entry)|Určuje rozsah nebo rozměry ovládacího prvku ActiveX.|
+|[PROP_ENTRY_TYPE](#prop_entry_type)|Popis vlastnosti DISPID a vlastnost stránky vlastností CLSID zadá do mapy vlastností.|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Popis vlastnosti, vlastnost DISPID, stránka vlastností CLSID, zadá a `IDispatch` IID do mapy vlastností.|
+|[PROP_PAGE](#prop_page)|Zadá identifikátor CLSID stránky vlastností do objektu map vlastností.|
 |[END_PROP_MAP](#end_prop_map)|Označuje konec mapování vlastností knihovny ATL.|  
 
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcom  
-   
-##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
- Označuje začátek toho mapy vlastností objektu.  
-  
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcom
+
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP
+
+Označuje začátek toho mapy vlastností objektu.
+
 ```
 BEGIN_PROP_MAP(theClass)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *theClass*  
- [in] Určuje třídu obsahující mapy vlastností.  
-  
-### <a name="remarks"></a>Poznámky  
- Mapy vlastností ukládá popisy vlastností, vlastnost dispID, stránka vlastností CLSID, a `IDispatch` IID. Třídy [iperpropertybrowsingimpl –](../../atl/reference/iperpropertybrowsingimpl-class.md), [ipersistpropertybagimpl –](../../atl/reference/ipersistpropertybagimpl-class.md), [ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md), a [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)použijte mapu vlastnosti načíst a nastavit tyto informace.  
-  
- Při vytváření objektu s Průvodce projektem ATL průvodce vytvoří mapu prázdnou vlastností tak, že zadáte BEGIN_PROP_MAP, za nímž následuje [END_PROP_MAP](#end_prop_map).  
-  
- BEGIN_PROP_MAP nelze uložit mimo rozsah (to znamená, dimenzí) vlastnosti mapy, protože objekt pomocí vlastnosti mapy nemusí mít uživatelské rozhraní, měl by mít žádné míry. Pokud je objekt ovládacího prvku ActiveX s uživatelským rozhraním, má rozsah. V takovém případě je nutné zadat [PROP_DATA_ENTRY](#prop_data_entry) mapě vlastnost slouží k poskytování rozsahu.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
-  
-##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
- Určuje rozsah nebo rozměry ovládacího prvku ActiveX.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*theClass*  
+[in] Určuje třídu obsahující mapy vlastností.
+
+### <a name="remarks"></a>Poznámky
+
+Mapy vlastností ukládá popisy vlastností, vlastnost dispID, stránka vlastností CLSID, a `IDispatch` IID. Třídy [iperpropertybrowsingimpl –](../../atl/reference/iperpropertybrowsingimpl-class.md), [ipersistpropertybagimpl –](../../atl/reference/ipersistpropertybagimpl-class.md), [ipersiststreaminitimpl –](../../atl/reference/ipersiststreaminitimpl-class.md), a [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)použijte mapu vlastnosti načíst a nastavit tyto informace.
+
+Při vytváření objektu s Průvodce projektem ATL průvodce vytvoří mapu prázdnou vlastností tak, že zadáte BEGIN_PROP_MAP, za nímž následuje [END_PROP_MAP](#end_prop_map).
+
+BEGIN_PROP_MAP nelze uložit mimo rozsah (to znamená, dimenzí) vlastnosti mapy, protože objekt pomocí vlastnosti mapy nemusí mít uživatelské rozhraní, měl by mít žádné míry. Pokud je objekt ovládacího prvku ActiveX s uživatelským rozhraním, má rozsah. V takovém případě je nutné zadat [PROP_DATA_ENTRY](#prop_data_entry) mapě vlastnost slouží k poskytování rozsahu.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
+
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY
+
+Určuje rozsah nebo rozměry ovládacího prvku ActiveX.
+
 ```
 PROP_DATA_ENTRY( szDesc, member, vt)
-```    
-  
-### <a name="parameters"></a>Parametry  
- *szDesc*  
- [in] Vlastnost popis.  
-  
- *Člen*  
- [in] Datový člen obsahující míry; například `m_sizeExtent`.  
-  
- *vt*  
- [in] Určuje typ varianty vlastnosti.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto makro způsobí, že zadaný datový člen natrvalo.  
-  
- Při vytváření ovládacího prvku ActiveX Průvodce vloží toto makro za makra map vlastností [BEGIN_PROP_MAP](#begin_prop_map) a před makra map vlastností [END_PROP_MAP](#end_prop_map).  
-  
-### <a name="example"></a>Příklad  
- V následujícím příkladu, rozsah objektu (`m_sizeExtent`) se jako trvalý.  
-  
- [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]  
-  
- [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
-  
-##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
- Pomocí tohoto makra zadejte popis, vlastnost DISPID a vlastnost stránky vlastností CLSID do mapy vlastností objektu.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*szDesc*  
+[in] Vlastnost popis.
+
+*Člen*  
+[in] Datový člen obsahující míry; například `m_sizeExtent`.
+
+*vt*  
+[in] Určuje typ varianty vlastnosti.
+
+### <a name="remarks"></a>Poznámky
+
+Toto makro způsobí, že zadaný datový člen natrvalo.
+
+Při vytváření ovládacího prvku ActiveX Průvodce vloží toto makro za makra map vlastností [BEGIN_PROP_MAP](#begin_prop_map) a před makra map vlastností [END_PROP_MAP](#end_prop_map).
+
+### <a name="example"></a>Příklad
+
+V následujícím příkladu, rozsah objektu (`m_sizeExtent`) se jako trvalý.
+
+[!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]
+
+[!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
+
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE
+
+Pomocí tohoto makra zadejte popis, vlastnost DISPID a vlastnost stránky vlastností CLSID do mapy vlastností objektu.
+
 ```
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *szDesc*  
- [in] Vlastnost popis.  
-  
- *identifikátor DISPID*  
- [in] Vlastnosti DISPID.  
-  
- *identifikátor CLSID*  
- [in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.  
-  
- *vt*  
- [in] Typ vlastnosti.  
-  
-### <a name="remarks"></a>Poznámky  
- Makra PROP_ENTRY byl nezabezpečené a zastaralé funkce. To bylo nahrazeno tématem PROP_ENTRY_TYPE.  
-  
- [BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.  
-  
-### <a name="example"></a>Příklad  
- Podívejte se na příklad pro [BEGIN_PROP_MAP](#begin_prop_map).  
-  
-##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
- Podobně jako [PROP_ENTRY_TYPE](#prop_entry_type), ale můžete určit konkrétní IID, pokud objekt podporuje více duálních rozhraní.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*szDesc*  
+[in] Vlastnost popis.
+
+*identifikátor DISPID*  
+[in] Vlastnosti DISPID.
+
+*identifikátor CLSID*  
+[in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.
+
+*vt*  
+[in] Typ vlastnosti.
+
+### <a name="remarks"></a>Poznámky
+
+Makra PROP_ENTRY byl nezabezpečené a zastaralé funkce. To bylo nahrazeno tématem PROP_ENTRY_TYPE.
+
+[BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.
+
+### <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [BEGIN_PROP_MAP](#begin_prop_map).
+
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
+
+Podobně jako [PROP_ENTRY_TYPE](#prop_entry_type), ale můžete určit konkrétní IID, pokud objekt podporuje více duálních rozhraní.
+
 ```
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
-```    
-  
-### <a name="parameters"></a>Parametry  
- *szDesc*  
- [in] Vlastnost popis.  
-  
- *identifikátor DISPID*  
- [in] Vlastnosti DISPID.  
-  
- *identifikátor CLSID*  
- [in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.  
-  
- *iidDispatch*  
- [in] Identifikátor IID definující vlastnost duální rozhraní.  
-  
- *vt*  
- [in] Typ vlastnosti.  
-  
-### <a name="remarks"></a>Poznámky  
- Makra PROP_ENTRY_EX byl nezabezpečené a zastaralé funkce. To bylo nahrazeno tématem PROP_ENTRY_TYPE_EX.  
-  
- [BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.  
-  
-### <a name="example"></a>Příklad  
- Následující příklad skupiny položky pro `IMyDual1` za nímž následuje záznam pro `IMyDual2`. Seskupení podle duální rozhraní pomůže zvýšit výkon.  
-  
- [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
-  
-##  <a name="prop_page"></a>  PROP_PAGE  
- Použijte toto makro zadat identifikátor CLSID stránky vlastností do mapy vlastností objektu.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*szDesc*  
+[in] Vlastnost popis.
+
+*identifikátor DISPID*  
+[in] Vlastnosti DISPID.
+
+*identifikátor CLSID*  
+[in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.
+
+*iidDispatch*  
+[in] Identifikátor IID definující vlastnost duální rozhraní.
+
+*vt*  
+[in] Typ vlastnosti.
+
+### <a name="remarks"></a>Poznámky
+
+Makra PROP_ENTRY_EX byl nezabezpečené a zastaralé funkce. To bylo nahrazeno tématem PROP_ENTRY_TYPE_EX.
+
+[BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.
+
+### <a name="example"></a>Příklad
+
+Následující příklad skupiny položky pro `IMyDual1` za nímž následuje záznam pro `IMyDual2`. Seskupení podle duální rozhraní pomůže zvýšit výkon.
+
+[!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]
+
+##  <a name="prop_page"></a>  PROP_PAGE
+
+Použijte toto makro zadat identifikátor CLSID stránky vlastností do mapy vlastností objektu.
+
 ```
 PROP_PAGE(clsid)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *identifikátor CLSID*  
- [in] Identifikátor CLSID stránky vlastností.  
-  
-### <a name="remarks"></a>Poznámky  
- Je podobný PROP_PAGE [PROP_ENTRY_TYPE](#prop_entry_type), ale nevyžaduje, aby vlastnost Popis nebo DISPID.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*identifikátor CLSID*  
+[in] Identifikátor CLSID stránky vlastností.
+
+### <a name="remarks"></a>Poznámky
+
+Je podobný PROP_PAGE [PROP_ENTRY_TYPE](#prop_entry_type), ale nevyžaduje, aby vlastnost Popis nebo DISPID.
+
 > [!NOTE]
->  Pokud jste už zadali CLSID s PROP_ENTRY_TYPE nebo [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), není potřeba provést další položka se PROP_PAGE.  
-  
- [BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
-  
-##  <a name="end_prop_map"></a>  END_PROP_MAP  
- Označuje konec mapy vlastností objektu.  
-  
+>  Pokud jste už zadali CLSID s PROP_ENTRY_TYPE nebo [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), není potřeba provést další položka se PROP_PAGE.
+
+[BEGIN_PROP_MAP](#begin_prop_map) – makro označuje začátek toho mapy vlastností; [END_PROP_MAP](#end_prop_map) – makro označuje konec.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
+
+##  <a name="end_prop_map"></a>  END_PROP_MAP
+
+Označuje konec mapy vlastností objektu.
+
 ```
 END_PROP_MAP()
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Při vytváření objektu s Průvodce projektem ATL průvodce vytvoří mapu prázdnou vlastností tak, že zadáte [BEGIN_PROP_MAP](#begin_prop_map) za nímž následuje END_PROP_MAP.  
-  
-### <a name="example"></a>Příklad  
- Podívejte se na příklad pro [BEGIN_PROP_MAP](#begin_prop_map).  
-  
-## <a name="see-also"></a>Viz také  
- [Makra](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Při vytváření objektu s Průvodce projektem ATL průvodce vytvoří mapu prázdnou vlastností tak, že zadáte [BEGIN_PROP_MAP](#begin_prop_map) za nímž následuje END_PROP_MAP.
+
+### <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [BEGIN_PROP_MAP](#begin_prop_map).
+
+## <a name="see-also"></a>Viz také
+
+[Makra](../../atl/reference/atl-macros.md)

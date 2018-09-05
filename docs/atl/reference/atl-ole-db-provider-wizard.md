@@ -1,5 +1,5 @@
 ---
-title: Průvodce zprostředkovatele OLE DB ATL | Microsoft Docs
+title: Průvodce zprostředkovatelem ATL OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,65 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357477"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762976"
 ---
-# <a name="atl-ole-db-provider-wizard"></a>Průvodce zprostředkovatele OLE DB knihovny ATL
-Tento průvodce vytvoří třídy, které tvoří zprostředkovatele OLE DB.  
-  
-## <a name="remarks"></a>Poznámky  
- Počínaje verzí Visual Studio 2008, registrace skript vytvořený tímto průvodcem bude registrovat jeho komponenty COM v **HKEY_CURRENT_USER** místo **HKEY_LOCAL_MACHINE**. Chcete-li toto chování změnit, nastavte **zaregistrovat součást pro všechny uživatele** možnost ATL průvodce.  
-  
- Následující tabulka popisuje možnosti Průvodce zprostředkovatele OLE DB ATL:  
-  
- **Krátký název**  
- Zadejte krátký název zprostředkovatele, který má být vytvořen. Upravit pole v Průvodci se automaticky vyplní podle co zadáte zde. Pokud chcete, můžete upravit další pole názvů.  
-  
- **Třída typu coclass**  
- Název coclass. Název identifikátoru ProgID se změní na shodovat s tímto názvem.  
-  
- **S atributy**  
- Tato možnost určuje, zda má průvodce vytvořit pomocí atributů nebo deklarací šablon třídy zprostředkovatele. Když vyberete tuto možnost, používá průvodce atributy namísto deklarace šablon (Toto je výchozí možnost, pokud jste vytvořili projekt s atributy). Když zrušíte zaškrtnutí tohoto políčka, používá průvodce deklarace šablon namísto atributů (Toto je výchozí možnost, pokud jste vytvořili projekt s atributy).  
-  
- Pokud vyberete tuto možnost, při vytváření projektu bez s atributy, Průvodce vás upozorní, že projekt bude převeden do projektu s atributy a zobrazí dotaz, zda chcete-li pokračovat, nebo ne.  
-  
- **ProgID**  
- ProgID nebo programový identifikátor je textový řetězec, který vaše aplikace může použít místo identifikátor GUID. ProgID Název má formulář *Projectname.Coclassname*.  
-  
- **Verze**  
- Číslo verze poskytovatele. Výchozí hodnota je 1.  
-  
- **Třída zdroje dat**  
- Název třídy zdroje dat formuláře C*Shortname*zdroje.  
-  
- **Zdroj dat souboru h**  
- Soubor hlaviček pro datové třídy zdroje. Můžete upravit název tohoto souboru nebo vyberte existující soubor hlavičky.  
-  
- **Relace – třída**  
- Název třídy relace formuláře C*Shortname*relace.  
-  
- **Soubor h relace**  
- Soubor hlaviček pro třídu relace. Můžete upravit název tohoto souboru nebo vyberte existující soubor hlavičky.  
-  
- **Příkaz – třída**  
- Název třídy příkazu formuláře C*Shortname*příkaz.  
-  
- **Příkaz .h soubor**  
- Soubor hlaviček pro třídu příkazu. Tento název nelze upravit a závisí na název souboru záhlaví řádků.  
-  
- **Třídy sady řádků**  
- Název třídy sady řádků formuláře C*Shortname*sady řádků.  
-  
- **Soubor h sady řádků**  
- Soubor hlaviček pro třídu sady řádků. Můžete upravit název tohoto souboru nebo vyberte existující soubor hlavičky.  
-  
- **Sada řádků souboru**  
- Soubor implementace poskytovatele. Můžete upravit název tohoto souboru nebo vyberte existující soubor implementace.  
-  
-## <a name="see-also"></a>Viz také  
- [Zprostředkovatel OLE DB knihovny ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
+# <a name="atl-ole-db-provider-wizard"></a>Průvodce zprostředkovatelem ATL OLE DB
+
+Tento průvodce vytvoří třídy, které tvoří zprostředkovatele OLE DB.
+
+## <a name="remarks"></a>Poznámky
+
+Od verze Visual Studio 2008, registrace skriptu vytvářených Tento průvodce zaregistruje jeho komponenty modelu COM v **HKEY_CURRENT_USER** místo **HKEY_LOCAL_MACHINE**. Chcete-li toto chování změnit, nastavte **registrace komponenty pro všechny uživatele** možnost ATL průvodce.
+
+Následující tabulka popisuje možnosti pro Průvodce zprostředkovatelem ATL OLE DB:
+
+**Krátký název**  
+Zadejte krátký název zprostředkovatele, který se má vytvořit. Upravit pole v Průvodci se automaticky vyplní podle vás zadejte sem. Pokud chcete, můžete upravit ostatní.
+
+**Coclass**  
+Název třídy typu coclass. Název ProgID se změní tak, aby odpovídaly tento název.
+
+**S atributy**  
+Tato možnost určuje, zda má průvodce vytvořit pomocí atributů nebo deklarací šablony třídy zprostředkovatele. Když vyberete tuto možnost, Průvodce místo deklarací šablony (Toto je výchozí možnost, pokud jste vytvořili projekt s atributy) používá atributy. Když zrušíte zaškrtnutí tohoto políčka, používá Průvodce místo atributů (Toto je výchozí možnost, pokud jste vytvořili projekt bez atributů) deklarace šablony.
+
+Pokud vyberete tuto možnost, při vytváření projektu bez atributů, Průvodce zobrazí upozornění, že projekt bude převeden do projektu s atributy a zeptá, jestli se má pokračovat nebo ne.
+
+**ProgID**  
+ProgID, neboli programový identifikátor, je textový řetězec, který vaše aplikace může používat místo identifikátoru GUID. Název ProgID má tvar *Projectname.Coclassname*.
+
+**Verze**  
+Číslo verze vašeho zprostředkovatele. Výchozí hodnota je 1.
+
+**Třída zdroje dat**  
+Název třídy zdroje dat formuláře C*Shortname*zdroje.
+
+**Soubor .h zdroje dat**  
+Hlavičkový soubor pro třídu zdroje data. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+**Třída relace**  
+Název třídy relace ve formátu jazyka C*Shortname*relace.
+
+**Soubor .h relace**  
+Hlavičkový soubor pro třídu relace. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+**Třídy příkazů**  
+Název třídy příkazu ve formátu jazyka C*Shortname*příkazu.
+
+**Soubor .h příkazů**  
+Hlavičkový soubor pro třídu příkazu. Tento název nejde upravit a závisí na názvu hlavičkového souboru sady řádků.
+
+**Třídy sady řádků**  
+Název třídy sady řádků ve formátu jazyka C*Shortname*sady řádků.
+
+**Soubor .h sady řádků**  
+Hlavičkový soubor pro třídu sady řádků. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+**Soubor .cpp sady řádků**  
+Implementační soubor zprostředkovatele. Můžete upravit tento název souboru nebo vybrat existující implementační soubor.
+
+## <a name="see-also"></a>Viz také
+
+[Zprostředkovatel knihovny ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
 

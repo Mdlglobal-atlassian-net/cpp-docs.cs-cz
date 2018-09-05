@@ -1,7 +1,7 @@
 ---
-title: Třídy úložiště jazyka C | Microsoft Docs
+title: Třídy úložiště jazyka C | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/31/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -19,49 +19,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 089f2298cac21ac9fff0d25a76e9393cddb84bba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386067"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754979"
 ---
 # <a name="c-storage-classes"></a>Třídy úložiště jazyka C
-"Třídy úložiště" proměnné určuje, zda položka má životnost "globální" nebo "místní". C volá tyto dvě životnosti "statická" a "automatické". Položka s globální životnost existuje a má hodnotu v průběhu provádění tohoto programu. Všechny funkce mají globální životnosti.  
-  
- Automatické proměnné nebo proměnné s místní životnosti jsou přiděleny nové úložiště, každý ovládací prvek čas provádění předá do bloku ve kterém jsou definovány. Při provádění vrátí, proměnné už mít smysl hodnoty.  
-  
- C poskytuje následující specifikátory třídy úložiště:  
-  
-## <a name="syntax"></a>Syntaxe  
- *specifikátor třídy úložiště*:  
- **auto**  
-  
- **Registrace**  
-  
- **static**  
-  
- **extern**  
-  
- **Definice TypeDef**  
-  
- **__declspec** ( *rozšířené decl – modifikátor seq* ) / * specifické pro Microsoft \*/  
-  
- S výjimkou `__declspec`, můžete použít pouze jednu *specifikátor třídy úložiště* v *deklarace specifikátor* v deklaraci. Pokud se žádné určení třídy úložiště, vytvořte deklarace v rámci bloku automaticky objektů.  
-  
- Položky deklarovat s **automaticky** nebo **zaregistrovat** specifikátor mít místní životnosti. Položky deklarovat s **statické** nebo `extern` specifikátor mají globální životnosti.  
-  
- Vzhledem k tomu `typedef` a `__declspec` se sémanticky liší od jiných čtyři *specifikátor třídy úložiště* terminály, jsou popsány samostatně. Konkrétní informace o `typedef`, najdete v části [Typedef – deklarace](../c-language/typedef-declarations.md). Konkrétní informace o `__declspec`, najdete v části [rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).  
-  
- Umístění deklarace proměnné a funkce v rámci zdrojové soubory ovlivní také třídy úložiště a viditelnosti. Deklarace mimo všechny definice funkcí se říká, že se zobrazí na "externí úrovni". Deklarace v rámci definice funkcí se zobrazí na "interní úrovni".  
-  
- Přesný význam jednotlivých specifikátor třídy úložiště závisí na dva faktory:  
-  
--   Určuje, zda se zobrazí deklarace na externí nebo interní úrovni  
-  
--   Jestli je položka jejich deklarováním proměnné nebo funkce  
-  
- [Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují *specifikátor třídy úložiště* terminály v každý typ deklarace a vysvětlují, použije se výchozí chování při *specifikátor třídy úložiště* je vynechaný proměnné. [Specifikátory třídy úložiště s deklaracemi funkce](../c-language/storage-class-specifiers-with-function-declarations.md) popisuje specifikátory třídy úložiště použít s funkcí.  
-  
+
+"Třídy úložiště" proměnné a určuje, zda položka má "globální" nebo "místní" doba života. C volá tyto dva životnosti "statická" a "automatické". Položka s globální životností existuje a má hodnotu v průběhu provádění programu. Všechny funkce mají globální životnost.
+
+Automatické proměnné nebo proměnné s místní životnost, jsou přiděleny nové úložiště předá každý ovládací prvek v době provádění do bloku ve které jsou definovány. Při spuštění se vrátí, proměnné již smysluplné hodnoty.
+
+Jazyk C poskytuje následující specifikátory třídy úložiště:
+
+## <a name="syntax"></a>Syntaxe
+
+*Storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Automaticky**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Registrace**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
+
+S výjimkou `__declspec`, lze použít pouze jednu *storage-class-specifier* v *Specifikátor deklarace* v deklaraci. Pokud je provedeno bez specifikace paměťové třídy, vytvořte deklarace v rámci bloku automatických objektů.
+
+Položky deklarované s **automaticky** nebo **zaregistrovat** specifikátor mají místní životnost. Položky deklarované s **statické** nebo `extern` specifikátor mají globální životnost.
+
+Protože `typedef` a `__declspec` jsou sémanticky rozdílné z těchto čtyř *storage-class-specifier* terminály, jsou popsána samostatně. Podrobnější informace o `typedef`, naleznete v tématu [deklarace Typedef](../c-language/typedef-declarations.md). Podrobnější informace o `__declspec`, naleznete v tématu [rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).
+
+Umístění deklarace proměnných a funkcí v rámci zdrojové soubory ovlivní také třídu úložiště a viditelnost. Deklarace mimo všechny definice funkcí se říká, že se vyskytují na úrovni "vnější úrovni." Deklarace v rámci definice funkce se zobrazí na "vnitřní úrovni."
+
+Přesné význam jednotlivých – specifikátor třídy úložiště závisí na dva faktory:
+
+- Určuje, zda se zobrazí deklarace na externí nebo interní úrovni
+
+- Určuje, zda je položka deklarované proměnné nebo funkce
+
+[Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují *storage-class-specifier* terminály v každý druh deklarace a výchozí chování při *storage-class-specifier* je vynecháno z proměnné. [Specifikátory třídy úložiště s deklaracemi funkce](../c-language/storage-class-specifiers-with-function-declarations.md) popisuje specifikátory třídy úložiště použít s funkcemi.
+
 ## <a name="see-also"></a>Viz také  
- [Deklarace a typy](../c-language/declarations-and-types.md)
+
+[Deklarace a typy](../c-language/declarations-and-types.md)  

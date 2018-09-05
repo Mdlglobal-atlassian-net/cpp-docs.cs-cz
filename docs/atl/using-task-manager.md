@@ -1,5 +1,5 @@
 ---
-title: Pomocí programu Správce úloh | Microsoft Docs
+title: Pomocí Správce úloh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d5018667101312355e7e7263c18ce723690d88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2236f6f7c343f5555ae31ad20ac0d79b6c9279d9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361027"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754732"
 ---
-# <a name="using-task-manager"></a>Pomocí programu Správce úloh
-Jedním z nejjednodušší způsobů, jak ladit služby je prostřednictvím Správce úloh. Když je služba spuštěná, spusťte Správce úloh a klikněte na **procesy** kartě. Klikněte pravým tlačítkem na název souboru EXE se a pak klikněte na **ladění**. Spustí se Visual C++, které jsou připojené k této spuštěných procesů. Nyní, klikněte na tlačítko **rozdělit** na **ladění** nabídku vám umožní nastavit zarážky v kódu. Klikněte na tlačítko **spustit** spustit na vybrané zarážky.  
-  
-## <a name="see-also"></a>Viz také  
- [Tipy pro ladění](../atl/debugging-tips.md)
+# <a name="using-task-manager"></a>Pomocí Správce úloh
+
+Jedním z nejjednodušších způsobů ladění služby je pomocí Správce úloh. Zatímco je služba spuštěna, spusťte Správce úloh a klikněte na tlačítko **procesy** kartu. Klikněte pravým tlačítkem na název souboru EXE a pak klikněte na tlačítko **ladění**. Tím se spustí Visual C++, které jsou připojené k této spuštěnému procesu. Nyní, klikněte na tlačítko **přerušit** na **ladění** nabídky, aby bylo možné nastavit zarážky v kódu. Klikněte na tlačítko **spustit** k vybrané zarážky.
+
+## <a name="see-also"></a>Viz také
+
+[Tipy pro ladění](../atl/debugging-tips.md)
 

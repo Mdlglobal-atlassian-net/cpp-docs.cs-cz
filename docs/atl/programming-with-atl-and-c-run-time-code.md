@@ -1,5 +1,5 @@
 ---
-title: Programování s kódu ATL a C Run-Time | Microsoft Docs
+title: Programování s použitím knihovny ATL a C za běhu kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c44b62410b7098d1d672ac859285c7d06b27ab77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 506dc7179db367d4683a180d6148a07e9f2916ee
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355872"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755135"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programování s použitím knihovny ATL a běhového kódu jazyka C
-Tato část popisuje výhody použití knihoven C Run-Time (CRT) s statické nebo dynamické propojení.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Výhody a nevýhody metody použité k připojení k CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
- Shrnuje výhody a kompromisy zahrnutých v propojení staticky CRT nebo propojení dynamicky.  
-  
- [Propojení projektu ATL s knihovnami CRT](../atl/linking-to-the-crt-in-your-atl-project.md)  
- Popisuje nastavení projektu a možnosti linkeru pro propojení s CRT; také poskytuje podrobné informace o propojení s CRT jak ovlivňuje bitové kopie programu.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
-  
- [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)  
- Obsahuje podrobné informace o tom, jak funguje kód VCRuntime a CRT spuštění.  
-  
- [Běhové knihovny jazyka C](../c-runtime-library/crt-library-features.md)  
- Popisuje různé soubory .lib, které tvoří běhové knihovny jazyka C a uvádí jejich možnosti přidružené kompilátoru a preprocesor – direktivy.  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../atl/active-template-library-atl-concepts.md)
+
+Tato část popisuje výhody pomocí statické nebo dynamické propojování knihoven Run-Time C (CRT).
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Výhody a nevýhody metody použité k připojení k CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+Shrnuje výhody a nevýhody účastnící se připojení k CRT staticky nebo dynamicky propojení.
+
+[Propojení projektu ATL s knihovnami CRT](../atl/linking-to-the-crt-in-your-atl-project.md)  
+Tento článek popisuje nastavení projektu a možnosti propojovacího programu pro připojení k CRT; také poskytuje podrobné informace o připojení k CRT vliv bitové kopie programu.
+
+## <a name="related-sections"></a>Související oddíly
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+
+[Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)  
+Obsahuje podrobné informace o tom, jak funguje spouštěcí kód VCRuntime a CRT.
+
+[Knihovny Run-Time jazyka C](../c-runtime-library/crt-library-features.md)  
+Tento článek popisuje různé soubory LIB, které tvoří běhové knihovny jazyka C a uvádí jejich možnosti přidružené kompilátoru a direktivy preprocesoru.
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../atl/active-template-library-atl-concepts.md)
 

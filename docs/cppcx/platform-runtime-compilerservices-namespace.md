@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602509"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755484"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime:: CompilerServices – Namespace
 Tento obor názvů je určena pouze pro interní použití a není určena pro použití pro vývoj.  

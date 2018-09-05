@@ -18,102 +18,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4437d06a7308505c2338f37deea1126fcb0605
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884828"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752906"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr – třída
-Třída inteligentní ukazatel pro správu ukazatele rozhraní modelu COM.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Třída inteligentní ukazatel pro správu ukazatele rozhraní modelu COM.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class T, const IID* piid= &__uuidof(T)>  
 class CComQIPtr: public CComPtr<T>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Rozhraní modelu COM zadání typu ukazatel na Uložit.  
-  
- *piid*  
- Ukazatel na IID *T*.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComQIPtr::CComQIPtr](#ccomqiptr)|Konstruktor|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CComQIPtr::operator =](#operator_eq)|Přiřadí ukazatel na ukazatel člen.|  
-  
-## <a name="remarks"></a>Poznámky  
- ATL – používá `CComQIPtr` a [CComPtr](../../atl/reference/ccomptr-class.md) ke správě ukazatele rozhraní modelu COM, které jsou odvozeny z [ccomptrbase –](../../atl/reference/ccomptrbase-class.md). Obě třídy provést automatické pomocí volání pro počítání odkazů `AddRef` a `Release`. Přetížené operátory zpracování operací ukazatele.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
-  
- [CComPtr](../../atl/reference/ccomptr-class.md)  
-  
- `CComQIPtr`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcomcli.h  
-  
-##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr  
- Konstruktor  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Rozhraní modelu COM zadání typu ukazatel na Uložit.
+
+*piid*  
+Ukazatel na IID *T*.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CComQIPtr::CComQIPtr](#ccomqiptr)|Konstruktor|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CComQIPtr::operator =](#operator_eq)|Přiřadí ukazatel na ukazatel člen.|
+
+## <a name="remarks"></a>Poznámky
+
+ATL – používá `CComQIPtr` a [CComPtr](../../atl/reference/ccomptr-class.md) ke správě ukazatele rozhraní modelu COM, které jsou odvozeny z [ccomptrbase –](../../atl/reference/ccomptrbase-class.md). Obě třídy provést automatické pomocí volání pro počítání odkazů `AddRef` a `Release`. Přetížené operátory zpracování operací ukazatele.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
+
+[CComPtr](../../atl/reference/ccomptr-class.md)
+
+`CComQIPtr`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcomcli.h
+
+##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr
+
+Konstruktor
+
 ```
 CComQIPtr() throw();
 CComQIPtr(T* lp) throw();
 CComQIPtr(IUnknown* lp) throw();
 CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *LP*  
- Použít k inicializaci ukazatele rozhraní.  
-  
- *T*  
- Rozhraní modelu COM.  
-  
- *piid*  
- Ukazatel na IID *T*.  
-  
-##  <a name="operator_eq"></a>  CComQIPtr::operator =  
- Operátor přiřazení.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*LP*  
+Použít k inicializaci ukazatele rozhraní.
+
+*T*  
+Rozhraní modelu COM.
+
+*piid*  
+Ukazatel na IID *T*.
+
+##  <a name="operator_eq"></a>  CComQIPtr::operator =
+
+Operátor přiřazení.
+
 ```
 T* operator= (T* lp) throw();
 T* operator= (const CComQIPtr<T, piid>& lp) throw();
 T* operator= (IUnknown* lp) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *LP*  
- Použít k inicializaci ukazatele rozhraní.  
-  
- *T*  
- Rozhraní modelu COM.  
-  
- *piid*  
- Ukazatel na IID *T*.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na aktualizovaný `CComQIPtr` objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
- [CComQIPtr::CComQIPtr](#ccomqiptr)   
- [Ccomptrbase – třída](../../atl/reference/ccomptrbase-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)   
- [CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*LP*  
+Použít k inicializaci ukazatele rozhraní.
+
+*T*  
+Rozhraní modelu COM.
+
+*piid*  
+Ukazatel na IID *T*.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrací ukazatel na aktualizovaný `CComQIPtr` objektu.
+
+## <a name="see-also"></a>Viz také
+
+[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
+[CComQIPtr::CComQIPtr](#ccomqiptr)   
+[Ccomptrbase – třída](../../atl/reference/ccomptrbase-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)   
+[CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)

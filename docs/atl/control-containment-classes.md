@@ -16,27 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54da05cb71114f455b24d18004049b2fa91b2a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c2fb505fd48aac41e49fcbe459fa0bc9c9a579f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959336"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756905"
 ---
 # <a name="control-containment-classes"></a>Třídy kontejnerů ovládacích prvků
-Následující třídy poskytují podporu členství ve skupině pro hostování ovládacích prvků:  
-  
--   [Caxwindow –](../atl/reference/caxwindow-class.md) poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX.  
-  
--   [Caxwindow2t –](../atl/reference/caxwindow2t-class.md) poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX a také zahrnuje podporu pro hostování licencované ovládací prvky ActiveX.  
-  
--   [Iaxwinambientdispatch –](../atl/reference/iaxwinambientdispatch-interface.md) volání metod na tomto rozhraní pro nastavení vlastnosti prostředí, které je k dispozici hostovaného ovládacího prvku.  
-  
--   [Iaxwinhostwindow –](../atl/reference/iaxwinhostwindow-interface.md) volání metod na tomto rozhraní pro vytvoření a/nebo připojení ke objekt hostitele ovládacího prvku nebo pro získání rozhraní z hostovaného ovládacího prvku.  
-  
-## <a name="related-articles"></a>Související články  
- [Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL](../atl/atl-control-containment-faq.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)
+
+Následující třídy poskytují podporu členství ve skupině pro hostování ovládacích prvků:
+
+- [Caxwindow –](../atl/reference/caxwindow-class.md) poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX.
+
+- [Caxwindow2t –](../atl/reference/caxwindow2t-class.md) poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX a také zahrnuje podporu pro hostování licencované ovládací prvky ActiveX.
+
+- [Iaxwinambientdispatch –](../atl/reference/iaxwinambientdispatch-interface.md) volání metod na tomto rozhraní pro nastavení vlastnosti prostředí, které je k dispozici hostovaného ovládacího prvku.
+
+- [Iaxwinhostwindow –](../atl/reference/iaxwinhostwindow-interface.md) volání metod na tomto rozhraní pro vytvoření a/nebo připojení ke objekt hostitele ovládacího prvku nebo pro získání rozhraní z hostovaného ovládacího prvku.
+
+## <a name="related-articles"></a>Související články
+
+[Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL](../atl/atl-control-containment-faq.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)
 

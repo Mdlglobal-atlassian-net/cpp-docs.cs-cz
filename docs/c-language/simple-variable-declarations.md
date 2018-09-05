@@ -1,5 +1,5 @@
 ---
-title: Deklarace jednoduchých proměnných | Microsoft Docs
+title: Deklarace jednoduchých proměnných | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,53 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbda7ff9a22a42ce4a6b8c3de10d0d6f0d03f77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7216a4a470b6293a31d6f364626188e41351b5cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389764"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763136"
 ---
 # <a name="simple-variable-declarations"></a>Deklarace jednoduchých proměnných
-Prohlášení o jednoduché proměnné nejjednodušší forma přímé deklarátor, určuje název a typ proměnné. Určuje také třídy úložiště proměnné a datového typu.  
-  
- Třídy úložiště nebo typy (nebo obě) je nutné, deklarace proměnných. Proměnné bez typu (například `var;`) generovat upozornění.  
-  
-## <a name="syntax"></a>Syntaxe  
- `declarator`:  
- *ukazatel* opt  
-  
- *deklarátor přímo*  
-  
- *deklarátor přímo*:  
- *Identifikátor*  
-  
- *identifikátor*:  
- *nečíselným*  
-  
- *identifikátor nečíselným*  
-  
- *identifikátor číslice*  
-  
- Pro aritmetické, struktury, sjednocení, výčty a void typy a pro typy reprezentována `typedef` názvy, jednoduché deklarátory můžete použít v deklaraci, protože specifikátor typu poskytuje zadáním informace. Ukazatele, pole a typy funkce vyžadují složitější deklarátory.  
-  
- Můžete použít seznam identifikátorů oddělených čárkami (**,**) k určení několika proměnných ve stejné deklaraci. Všechny proměnné definované v deklaraci mají stejné základní typ. Příklad:  
-  
-```  
-int x, y;        /* Declares two simple variables of type int */  
-int const z = 1; /* Declares a constant value of type int */  
-```  
-  
- Proměnné `x` a `y` mohou být uloženy jakoukoli hodnotu v sadě definované `int` typu pro konkrétní implementaci. Jednoduchého objektu `z` je inicializován na hodnotu 1 a není změn.  
-  
- Pokud deklaraci `z` byla Neinicializovaný statické proměnné nebo byla v rozsahu souboru získá má počáteční hodnotu 0 a by tato hodnota byla unmodifiable.  
-  
-```  
-unsigned long reply, flag; /* Declares two variables  
-                              named reply and flag     */  
-```  
-  
- V tomto příkladu obě proměnné, `reply` a `flag`, mají `unsigned long` zadejte a podržením nepodepsané celočíselné hodnoty.  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)
+
+Deklarace jednoduchých proměnné, nejjednodušší forma deklarátoru s přímým přístupem, určuje typ a název proměnné. Také určuje třídu úložiště proměnné a datové typy.
+
+Třídy úložiště nebo typy (nebo obojí) se vyžadují v deklaracích proměnných. Netypová proměnné (jako například `var;`) generovat upozornění.
+
+## <a name="syntax"></a>Syntaxe
+
+*deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+
+*přímé declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
+
+*identifikátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *číslice*
+
+Aritmetický, struktura, sjednocení, výčty a void typy a typy reprezentována `typedef` názvy, jednoduché deklarátory můžete použít v deklaraci, protože specifikátor typu poskytuje psaní informace. Ukazatel, pole a typy funkce vyžadují složitějších deklarátorů.
+
+Můžete použít seznam identifikátorů oddělených čárkami (**,**) k určení několika proměnných ve stejné deklaraci. Všechny proměnné definované v deklaraci mají stejné základního typu. Příklad:
+
+```C
+int x, y;        /* Declares two simple variables of type int */
+int const z = 1; /* Declares a constant value of type int */
+```
+
+Proměnné `x` a `y` můžou obsahovat libovolnou hodnotu do množiny definované `int` typ pro danou implementaci. Jednoduchý objekt `z` je inicializován na hodnotu 1 a není možné upravit.
+
+Pokud deklarace `z` byla pro neinicializovaného statická proměnná nebo byla v rozsahu souboru, získá počáteční hodnotu 0 a tato hodnota by neupravitelných.
+
+```C
+unsigned long reply, flag; /* Declares two variables
+                              named reply and flag     */
+```
+
+V tomto příkladu, proměnných, `reply` a `flag`, mají `unsigned long` zadejte a podržte nepodepsaných integrálních hodnot.
+
+## <a name="see-also"></a>Viz také
+
+[Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

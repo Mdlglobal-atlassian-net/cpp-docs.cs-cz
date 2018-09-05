@@ -1,5 +1,5 @@
 ---
-title: Určení optimalizace kompilátoru pro projekt knihovny ATL | Microsoft Docs
+title: Zadání optimalizace kompilátoru pro projekt knihovny ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0060437613bcdd6281ce5cceb112f5fd7f470bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361967"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763552"
 ---
-# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Určení optimalizace kompilátoru pro projekt knihovny ATL
-Ve výchozím nastavení [Průvodce ovládacím prvkem ATL](../../atl/reference/atl-control-wizard.md) generuje nové třídy s makro ATL_NO_VTABLE takto:  
-  
+# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Zadání optimalizace kompilátoru pro projekt knihovny ATL
+
+Ve výchozím nastavení [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md) generuje nové třídy s makro ATL_NO_VTABLE následujícím způsobem:
+
 ```  
 class ATL_NO_VTABLE CProjName  
 {  
- ...  
+...  
 };  
-```  
-  
- ATL potom definuje _ATL_NO_VTABLE takto:  
-  
+```
+
+ATL – potom definuje _ATL_NO_VTABLE následujícím způsobem:
+
 ```  
 #ifdef _ATL_DISABLE_NO_VTABLE  
- #define ATL_NO_VTABLE  
+#define ATL_NO_VTABLE  
 #else  
- #define ATL_NO_VTABLE __declspec(novtable)  
+#define ATL_NO_VTABLE __declspec(novtable)  
 #endif  
-```  
-  
- Pokud nedefinujete _ATL_DISABLE_NO_VTABLE, makro ATL_NO_VTABLE se rozšíří do `declspec(novtable)`. Pomocí `declspec(novtable)`v třídě deklarace zabrání ukazatel vtable inicializaci v konstruktoru třídy a destruktor. Při sestavování projektu linkeru eliminuje vtable a všechny funkce, na které odkazuje vtable.  
-  
- Použijte ATL_NO_VTABLE a proto `declspec(novtable)`, pouze pro základní třídy, které nejsou přímo vytvořitelné. Nesmí používat `declspec(novtable)` s většinou odvozených tříd v projektu, protože tato třída (obvykle [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), nebo [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inicializuje ukazatel vtable pro váš projekt.  
-  
- Nelze volat virtuální funkce z konstruktoru objektu, který používá `declspec(novtable)`. Měli byste přejít těchto volání [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) metoda.  
+```
 
-  
- Pokud si nejste jistí, jestli byste měli používat `declspec(novtable)` modifikátor, makro ATL_NO_VTABLE můžete odebrat z jakékoli definice třídy, nebo ji můžete globálně zakázat zadáním  
-  
+Pokud nedefinujete _ATL_DISABLE_NO_VTABLE, ATL_NO_VTABLE makro rozšíří do `declspec(novtable)`. Pomocí `declspec(novtable)`ve třídě deklarace zabraňuje ukazatel vtable během inicializace v konstruktoru třídy a destruktor. Při sestavování projektu linkeru eliminuje tabulku vtable a všechny funkce, na které odkazuje tabulku vtable.
+
+Je nutné použít ATL_NO_VTABLE a proto `declspec(novtable)`, pouze základní třídy, které nejsou vytvořitelné přímo. Nesmí používat `declspec(novtable)` s nejvíce odvozenému třídu ve vašem projektu, protože tato třída (obvykle [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), nebo [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inicializuje ukazatel vtable pro váš projekt.
+
+Virtuální funkce nesmějí volat z konstruktoru objektu, který používá `declspec(novtable)`. Měli byste přejít těchto volání [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) metody.  
+
+Pokud si nejste jisti, zda byste měli použít `declspec(novtable)` modifikátor, makro ATL_NO_VTABLE můžete odebrat z jakékoli definice třídy, nebo ho globálně zakázat zadáním
+
 ```  
 #define _ATL_DISABLE_NO_VTABLE  
-```  
-  
- v souboru stdafx před všechny ostatní ATL hlavičkových souborů jsou zahrnuty.  
-  
-## <a name="see-also"></a>Viz také  
- [Průvodce projektem knihovny ATL](../../atl/reference/atl-project-wizard.md)   
- [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
- [Tvorba běžných projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Základy ATL COM – objekty](../../atl/fundamentals-of-atl-com-objects.md)   
- [novtable](../../cpp/novtable.md)   
- [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
+```
+
+Ve stdafx.h před všechny ostatní knihovny ATL hlavičkové soubory jsou zahrnuty.
+
+## <a name="see-also"></a>Viz také
+
+[Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)   
+[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
+[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[novtable](../../cpp/novtable.md)   
+[Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

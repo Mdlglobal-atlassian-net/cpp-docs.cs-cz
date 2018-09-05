@@ -26,120 +26,141 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035d59d71dc7166b12b6e894803645aacda83887
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218695"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755096"
 ---
 # <a name="irunnableobjectimpl-class"></a>Irunnableobjectimpl – třída
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) rozhraní.  
-  
+
+Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) rozhraní.
+
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class T>  
 class IRunnableObjectImpl
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `IRunnableObjectImpl`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Vrátí identifikátor CLSID ovládacího prvku spuštěné. Implementace knihovny ATL nastaví identifikátor CLSID GUID_NULL a vrátí e_unexpected, je.|  
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Určuje, zda je spuštěn ovládacího prvku. Implementace knihovny ATL vrátí hodnotu TRUE.|  
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Zamkne ovládacího prvku do stavu spuštěno. Implementace knihovny ATL vrátí hodnotu S_OK.|  
-|[IRunnableObjectImpl::Run](#run)|Vynutí spuštění ovládacího prvku. Implementace knihovny ATL vrátí hodnotu S_OK.|  
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Určuje, který je vložený ovládacího prvku. Implementace knihovny ATL vrátí hodnotu S_OK.|  
-  
-## <a name="remarks"></a>Poznámky  
- [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) rozhraní umožňuje kontejneru, chcete-li zjistit, zda je spuštěna ovládacího prvku, vynutit jeho spuštění, nebo uzamčení do stavu spuštěno. Třída `IRunnableObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
-  
- **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `IRunnableObject`  
-  
- `IRunnableObjectImpl`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlctl.h  
-  
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
- Vrátí identifikátor CLSID ovládacího prvku spuštěné.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Vaše třída odvozena od `IRunnableObjectImpl`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Vrátí identifikátor CLSID ovládacího prvku spuštěné. Implementace knihovny ATL nastaví identifikátor CLSID GUID_NULL a vrátí e_unexpected, je.|
+|[IRunnableObjectImpl::IsRunning](#isrunning)|Určuje, zda je spuštěn ovládacího prvku. Implementace knihovny ATL vrátí hodnotu TRUE.|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Zamkne ovládacího prvku do stavu spuštěno. Implementace knihovny ATL vrátí hodnotu S_OK.|
+|[IRunnableObjectImpl::Run](#run)|Vynutí spuštění ovládacího prvku. Implementace knihovny ATL vrátí hodnotu S_OK.|
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Určuje, který je vložený ovládacího prvku. Implementace knihovny ATL vrátí hodnotu S_OK.|
+
+## <a name="remarks"></a>Poznámky
+
+[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) rozhraní umožňuje kontejneru, chcete-li zjistit, zda je spuštěna ovládacího prvku, vynutit jeho spuštění, nebo uzamčení do stavu spuštěno. Třída `IRunnableObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+
+**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`IRunnableObject`
+
+`IRunnableObjectImpl`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlctl.h
+
+##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+
+Vrátí identifikátor CLSID ovládacího prvku spuštěné.
+
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Implementace sady ATL \* *lpClsid* GUID_NULL a vrátí e_unexpected, je.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) ve Windows SDK.  
-  
-##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
- Určuje, zda je spuštěn ovládacího prvku.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Implementace sady ATL \* *lpClsid* GUID_NULL a vrátí e_unexpected, je.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) ve Windows SDK.
+
+##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
+
+Určuje, zda je spuštěn ovládacího prvku.
+
 ```
 virtual BOOL IsRunning();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Implementace knihovny ATL vrátí hodnotu TRUE.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) ve Windows SDK.  
-  
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
- Zamkne ovládacího prvku do stavu spuštěno.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Implementace knihovny ATL vrátí hodnotu TRUE.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) ve Windows SDK.
+
+##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+
+Zamkne ovládacího prvku do stavu spuštěno.
+
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Implementace knihovny ATL vrátí hodnotu S_OK.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) ve Windows SDK.  
-  
-##  <a name="run"></a>  IRunnableObjectImpl::Run  
- Vynutí spuštění ovládacího prvku.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Implementace knihovny ATL vrátí hodnotu S_OK.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) ve Windows SDK.
+
+##  <a name="run"></a>  IRunnableObjectImpl::Run
+
+Vynutí spuštění ovládacího prvku.
+
 ```
 HRESULT Run(LPBINDCTX lpbc);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Implementace knihovny ATL vrátí hodnotu S_OK.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) ve Windows SDK.  
-  
-##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
- Určuje, který je vložený ovládacího prvku.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Implementace knihovny ATL vrátí hodnotu S_OK.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) ve Windows SDK.
+
+##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
+
+Určuje, který je vložený ovládacího prvku.
+
 ```
 HRESULT SetContainedObject(BOOL fContained);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Implementace knihovny ATL vrátí hodnotu S_OK.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) ve Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
- [Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Implementace knihovny ATL vrátí hodnotu S_OK.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) ve Windows SDK.
+
+## <a name="see-also"></a>Viz také
+
+[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

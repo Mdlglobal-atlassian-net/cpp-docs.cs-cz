@@ -1,5 +1,5 @@
 ---
-title: Dělení na vlákna modely a kritické oddíly třídy (ATL) | Microsoft Docs
+title: Práce s vlákny modely a třídy kritických oddílů (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37172c0080664f496bdf5d5c7c0ebecbd8f77898
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b87fdac5220ede47f1acf19088e952fde408a413
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359915"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755954"
 ---
-# <a name="threading-models-and-critical-sections-classes"></a>Dělení na vlákna modely a kritické oddíly třídy
-Následující třídy definují dělení na vlákna modelu a kritická sekce:  
-  
--   [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md) implementuje server COM ve fondu vláken, apartment model.  
-  
--   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md) poskytuje metody pro implementaci serveru COM ve fondu vláken, apartment model.  
-  
--   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md) poskytuje metody vláken pro zvyšování a dekrementace proměnné. Poskytuje kritická sekce.  
-  
--   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md) poskytuje metody vláken pro zvyšování a dekrementace proměnné. Neposkytuje kritická sekce.  
-  
--   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md) poskytuje metody pro zvyšování a dekrementace proměnné. Neposkytuje kritická sekce.  
-  
--   [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) určuje příslušné třídy modelu vláken pro třídu jednoho objektu.  
-  
--   [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel) určuje příslušnou třídu modelu vláken pro objekt, který je globálně dostupnou.  
-  
--   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md) obsahuje metody pro získání a uvolněním kritická sekce. Kritická sekce je automaticky inicializován.  
-  
--   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md) obsahuje metody pro získání a uvolněním kritická sekce. Kritická sekce musí být explicitně inicializován.  
-  
--   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md) zrcadlí metody v `CComCriticalSection` bez zadání kritická sekce. Metody v `CComFakeCriticalSection` nic nestane.  
-  
--   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) poskytuje funkce vytváření CRT vlákna. Tuto třídu používejte, pokud vlákno používat funkce CRT.  
-  
--   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) poskytuje funkce vytváření vlákna systému Windows. Tuto třídu používejte, pokud vlákno nebude používat funkce CRT.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+# <a name="threading-models-and-critical-sections-classes"></a>Práce s vlákny modely a třídy kritických oddílů
+
+Následující třídy definují práce s vlákny modelu a kritický oddíl:
+
+- [Catlautothreadmodule –](../atl/reference/catlautothreadmodule-class.md) implementuje ve fondu vláken, apartment model modelu COM serveru.
+
+- [Catlautothreadmodulet –](../atl/reference/catlautothreadmodulet-class.md) poskytuje metody pro implementaci serveru ve fondu vláken, apartment model modelu COM.
+
+- [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md) poskytuje bezpečným pro vlákno metody pro zvyšování a dekrementace proměnné. Obsahuje kritickou sekci.
+
+- [Ccommultithreadmodelnocs –](../atl/reference/ccommultithreadmodelnocs-class.md) poskytuje bezpečným pro vlákno metody pro zvyšování a dekrementace proměnné. Neposkytuje kritický oddíl.
+
+- [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md) poskytuje metody pro zvyšování a dekrementace proměnné. Neposkytuje kritický oddíl.
+
+- [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) určuje příslušné třídy modelu vláken pro jeden objekt třídy.
+
+- [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel) určuje příslušné třídy modelu vláken pro objekt, který je globálně dostupná.
+
+- [Ccomautocriticalsection –](../atl/reference/ccomautocriticalsection-class.md) obsahuje metody pro získání a uvolnění kritický oddíl. Kritický oddíl je automaticky inicializován.
+
+- [Ccomautocriticalsection –](../atl/reference/ccomcriticalsection-class.md) obsahuje metody pro získání a uvolnění kritický oddíl. Kritický oddíl musí být explicitně inicializován.
+
+- [Ccomfakecriticalsection –](../atl/reference/ccomfakecriticalsection-class.md) zrcadlí metody v `CComCriticalSection` bez zadání kritický oddíl. Metody v `CComFakeCriticalSection` Neprovádět žádnou akci.
+
+- [Crtthreadtraits –](../atl/reference/crtthreadtraits-class.md) poskytuje funkce vytvoření vlákna CRT. Pokud vlákno použije funkce CRT, použijte tuto třídu.
+
+- [Win32threadtraits –](../atl/reference/win32threadtraits-class.md) poskytuje funkce pro vytváření pro Windows vlákno. Pokud vlákno nebude používat funkce CRT, použijte tuto třídu.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)
 

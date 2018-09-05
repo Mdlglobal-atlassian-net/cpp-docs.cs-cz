@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581180"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759398"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::UIntPtr – hodnotová třída
 Představuje ukazatele bez znaménka, jejíž velikost je vhodné pro platformu (32bitová nebo 64bitová verze).  

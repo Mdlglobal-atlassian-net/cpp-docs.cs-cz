@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 92076ac919664fb8ebf6a01513b9382ade52f2a5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598294"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754117"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a cykly slov (C + +/ CX)
 V systému libovolný typ, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, že jeden objekt odkazuje na druhý objekt, druhý objekt, který odkazuje na třetí objekt a tak dále až do některých konečného objektu odkazuje zpět na první objekt. V cyklu nelze odstranit objekty správně při nulový počet odkazů na jeden objekt. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::weakreference – třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metodu, která vrátí hodnotu null, pokud objekt již existuje nebo vyvolává [Platform::InvalidCastException –](../cppcx/platform-invalidcastexception-class.md) Pokud objekt je aktivní, ale není typu `T`.  

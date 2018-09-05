@@ -1,5 +1,5 @@
 ---
-title: ATL – podpora pro ovládací prvky jazyka DHTML | Microsoft Docs
+title: ATL – podpora ovládacích prvků DHTML | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57fc841ba2eb3473ccb866df7333ebd24583d40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5144a11f0b035822e6f729692569e5e861c44dcc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355519"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758307"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL – podpora pro ovládací prvky DHTML
-Pomocí knihovny ATL, můžete vytvořit ovládacího prvku funkci Dynamic HTML (DHTML). Ovládací prvek ATL DHTML:  
-  
--   Hostuje ovládacího prvku WebBrowser.  
-  
--   Určuje, že pomocí jazyka HTML, uživatelské rozhraní (UI) DHTML ovládacího prvku.  
-  
--   Přístup k objektu WebBrowser a její metody prostřednictvím svého rozhraní [rozhraní IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx).  
-  
--   Spravuje komunikace mezi kódem C++ a HTML.  
-  
- Ovládací prvek DHTML je podobná jiné ATL řízení, s výjimkou ovládací prvek DHTML zahrnuje další odesílání rozhraní. Podívejte se na obrázek v [identifikace prvky jazyka DHTML řízení projektu](../atl/identifying-the-elements-of-the-dhtml-control-project.md) ilustraci rozhraní součástí DHTML výchozí projekt.  
-  
- Ovládací prvek ATL DHTML můžete zobrazit v prohlížeči či jiné kontejneru, například kontejner testů ovládacích prvků ActiveX.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Identifikace prvků projektu správy zdrojového kódu DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
- Popisuje prvky jazyka DHTML řízení projektu.  
-  
- [Volání kódu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)  
- Poskytuje příklad volání C++ – kód z ovládací prvek DHTML.  
-  
- [Vytváření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
- Jsou uvedené kroky pro vytvoření ovládacího prvku DHTML.  
-  
- [Testování ovládacího prvku ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
- Ukazuje, jak pro sestavení a otestování počáteční projekt ovládací prvek DHTML.  
-  
- [Změna ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
- Popisuje postup pro přidání do ovládacího prvku některé funkce.  
-  
- [Testování ovládacího prvku změněna ATL jazyka DHTML](../atl/testing-the-modified-atl-dhtml-control.md)  
- Ukazuje, jak pro sestavení a otestování přidání funkce ovládacího prvku.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.
+
+Pomocí knihovny ATL, můžete vytvořit ovládací prvek s funkcí Dynamic HTML (DHTML). Ovládacího prvku ATL DHTML:
+
+- Hostuje ovládací prvek WebBrowser.
+
+- Určuje, v jazyce HTML, uživatelské rozhraní (UI) ovládací prvek DHTML.
+
+- Prostřednictvím rozhraní, nemá přístup k objektu WebBrowser a její metody [rozhraní IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx).
+
+- Spravuje komunikace mezi kódem C++ a HTML.
+
+Ovládací prvek DHTML je podobně jako všechny ostatní ovládací prvek ATL, s výjimkou ovládací prvek DHTML zahrnuje další odesílající rozhraní. Podívejte se na obrázek v [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) ilustraci rozhraní poskytovaných v projektu DHTML výchozí.
+
+Ovládacího prvku ATL DHTML můžete zobrazit v prohlížeči nebo jiném kontejneru, jako je například kontejner testů ovládacích prvků ActiveX.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Identifikace prvků projektu správy zdrojového kódu DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+Popisuje prvky DHTML řízení projektu.
+
+[Volání kódu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+Poskytuje příklad volání kódu C++ z DHTML ovládacího prvku.
+
+[Vytváření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
+Seznam kroků pro vytvoření ovládacího prvku DHTML.
+
+[Testování ovládacího prvku ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
+Ukazuje, jak vytvářet a testovat počáteční projekt ovládací prvek DHTML.
+
+[Změna ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
+Ukazuje, jak přidat některé funkce do ovládacího prvku.
+
+[Testování ovládacího prvku ATL DHTML upravený](../atl/testing-the-modified-atl-dhtml-control.md)  
+Ukazuje, jak vytvářet a testovat přidané funkce ovládacího prvku.
+
+## <a name="related-sections"></a>Související oddíly
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 

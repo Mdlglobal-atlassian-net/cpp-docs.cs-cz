@@ -1,5 +1,5 @@
 ---
-title: Zobrazení kontrolních výrazů | Microsoft Docs
+title: Zobrazení kontrolních výrazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9133d2fadfa4158eef9755fff7e0d2a62478966
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ff7b9b29808e310be2d5568add64a0294bc67e7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354276"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762379"
 ---
-# <a name="displaying-assertions"></a>Zobrazení kontrolní výrazy
-Pokud klient pro připojení ke službě se zobrazí přestane reagovat, může služba prohlašovanou a zobrazí okno se zprávou, není možné zobrazit. Můžete to ověřit pomocí ladicí program Visual C++ pro ladění kódu (viz [pomocí Správce úloh](../atl/using-task-manager.md) nahoře v této části).  
-  
- Pokud zjistíte, že služby zobrazit okno se zprávou, která se nezobrazí, můžete chtít nastavit **povolit služby interakcí s plochou** možnost před použitím služby znovu. Tato možnost je spuštění parametr, který umožňuje zprávami zobrazuje službu tak, aby se na ploše. Pokud chcete nastavit tuto možnost, otevřete aplikaci ovládacím panelu služby, vyberte službu, klikněte na **spuštění**a pak vyberte **povolit služby interakcí s plochou** možnost.  
-  
-## <a name="see-also"></a>Viz také  
- [Tipy pro ladění](../atl/debugging-tips.md)
+# <a name="displaying-assertions"></a>Zobrazení kontrolních výrazů
+
+Pokud klient připojený k vaší službě se zobrazí přestane reagovat, může služba posuzovat a zobrazí okno se zprávou, která se vám nedaří zobrazit. Můžete to ověřit pomocí ladicího programu Visual C++ na ladění vašeho kódu (viz [pomocí Správce úloh](../atl/using-task-manager.md) výše v této části).
+
+Pokud zjistíte, že vaše služba se zobrazuje okno se zprávou, která nelze zobrazit, můžete nastavit **povolit službu interakcí s plochou** možnost před použitím služby znovu. Tato možnost je parametr spuštění, která umožňuje všechny okna se zprávou zobrazí ve službě a zobrazí v klientských počítačích. Nastavení této možnosti, otevřete aplikaci ovládacím panelu služby, vyberte službu, klikněte na tlačítko **spuštění**a pak vyberte **povolit službu interakcí s plochou** možnost.
+
+## <a name="see-also"></a>Viz také
+
+[Tipy pro ladění](../atl/debugging-tips.md)
 

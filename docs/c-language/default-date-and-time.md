@@ -1,5 +1,5 @@
 ---
-title: Výchozí datum a čas | Microsoft Docs
+title: Výchozí datum a čas | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382738"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752152"
 ---
 # <a name="default-date-and-time"></a>Výchozí datum a čas
-**ANSI 3.8.8** definice pro _DATE\_ a _TIME\_ , v uvedeném pořadí, datum a čas posunutí nejsou k dispozici  
+
+**ANSI 3.8.8** definice `__DATE__` a `__TIME__` Pokud, v uvedeném pořadí, datum a čas překladu nejsou k dispozici  
   
- Pokud operační systém neposkytuje datum a čas posunutí, výchozí hodnoty pro _DATE\_ a _TIME\_ jsou `May 03 1957` a `17:00:00"`.  
+Když operační systém neposkytuje datum a čas překladu, výchozí hodnoty pro `__DATE__` a `__TIME__` jsou `May 03 1957` a `17:00:00`.  
   
-## <a name="see-also"></a>Viz také  
- [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)
+## <a name="see-also"></a>Viz také
+
+[Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

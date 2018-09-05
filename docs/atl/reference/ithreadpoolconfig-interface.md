@@ -21,115 +21,135 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f23e46f2ef8de61e6dccc16a24e8c4bcfaa8f2e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677081"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754615"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Ithreadpoolconfig – rozhraní
-Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.  
-  
+
+Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.
+
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 __interface
     __declspec(uuid("B1F64757-6E88-4fa2-8886-7848B0D7E660")) IThreadPoolConfig : public IUnknown
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[GetSize](#getsize)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|  
-|[GetTimeout](#gettimeout)|Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|  
-|[SetSize](#setsize)|Voláním této metody nastavte počet vláken ve fondu.|  
-|[SetTimeout](#settimeout)|Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|  
-  
-## <a name="remarks"></a>Poznámky  
- Toto rozhraní je implementováno [cthreadpool –](../../atl/reference/cthreadpool-class.md).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlutil.h  
-  
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Volejte tuto metodu za účelem získání počet vláken ve fondu.  
-  
+```
+
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[GetSize](#getsize)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|
+|[GetTimeout](#gettimeout)|Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|
+|[SetSize](#setsize)|Voláním této metody nastavte počet vláken ve fondu.|
+|[SetTimeout](#settimeout)|Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|
+
+## <a name="remarks"></a>Poznámky
+
+Toto rozhraní je implementováno [cthreadpool –](../../atl/reference/cthreadpool-class.md).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlutil.h
+
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+
+Volejte tuto metodu za účelem získání počet vláken ve fondu.
+
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pnNumThreads*  
- [out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
-  
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pnNumThreads*  
+[out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
+
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+
+Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pdwMaxWait*  
- [out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="example"></a>Příklad  
- Zobrazit [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
- Voláním této metody nastavte počet vláken ve fondu.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pdwMaxWait*  
+[out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="example"></a>Příklad
+
+Zobrazit [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+
+Voláním této metody nastavte počet vláken ve fondu.
+
 ```
 STDMETHOD(SetSize)int nNumThreads);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nNumThreads*  
- Požadovaný počet vláken ve fondu.  
-  
- Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.  
-  
- Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="example"></a>Příklad  
- Zobrazit [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nNumThreads*  
+Požadovaný počet vláken ve fondu.
+
+Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
+
+Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="example"></a>Příklad
+
+Zobrazit [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+
+Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dwMaxWait*  
- Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="example"></a>Příklad  
- Zobrazit [IThreadPoolConfig::GetSize](#getsize).  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../atl/reference/atl-classes.md)   
- [CThreadPool – třída](../../atl/reference/cthreadpool-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*dwMaxWait*  
+Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="example"></a>Příklad
+
+Zobrazit [IThreadPoolConfig::GetSize](#getsize).
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../atl/reference/atl-classes.md)   
+[CThreadPool – třída](../../atl/reference/cthreadpool-class.md)

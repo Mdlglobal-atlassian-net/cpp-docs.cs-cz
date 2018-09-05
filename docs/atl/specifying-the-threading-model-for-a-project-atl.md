@@ -1,5 +1,5 @@
 ---
-title: Určení modelu vláken pro projekt (ATL) | Microsoft Docs
+title: Určení modelu vláken pro projekt (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f807aa82a62fb703430ace5bc6be516e08ca9dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8a37a3ec730b727f6e214aafad1a4acc65b1dc3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359633"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760026"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Určení modelu vláken pro projekt (ATL)
-Chcete-li určit model vláken projektu knihovny ATL k dispozici jsou následující makra:  
-  
-|– Makro|Pokyny k používání|  
-|-----------|--------------------------|  
-|_ATL_SINGLE_THREADED –|Určete, zda všechny vaše objektů, které používají jeden model vláken.|  
-|_ATL_APARTMENT_THREADED –|Určete, zda jeden nebo více objektů použít dělení objektu apartment.|  
-|_ATL_FREE_THREADED –|Zadejte, pokud jeden nebo více objektům používat volné nebo neutrální dělení na vlákna. Existující kód může obsahovat odkazy na ekvivalentní makro [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|  
-  
- Pokud nejsou definovány žádné z těchto makra pro svůj projekt, _atl_free_threaded – bude platit.  
-  
- Makra ovlivnit výkon následujícím způsobem:  
-  
--   Určení makra, která odpovídá k objektům v projektu může zlepšit výkon běhu.  
-  
--   Určení vyšší úroveň makro, například pokud zadejte _atl_apartment_threaded – v případě, že všechny vaše objekty jsou jednotlivé zřetězený, budou mírně snížit výkon běhu.  
-  
--   Zadání nižší úrovni makra, například pokud zadáte _atl_single_threaded – Pokud jeden nebo více objektům použijte dělení objektu apartment nebo volných vláken, může způsobit selhání v době běhu aplikace.  
-  
- V tématu [možnosti, ATL Simple Object Wizard](../atl/reference/options-atl-simple-object-wizard.md) popis dělení na vlákna modely k dispozici pro objekt knihovny ATL.  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../atl/active-template-library-atl-concepts.md)
+
+K určení modelu vláken projektu ATL k dispozici jsou následující makra:
+
+|– Makro|Pokyny k použití|
+|-----------|--------------------------|
+|_ATL_SINGLE_THREADED|Určete, zda všechny objekty používat jeden model vláken.|
+|_ATL_APARTMENT_THREADED|Určete, zda jeden nebo více objektů použít podprocesový model apartment.|
+|_ATL_FREE_THREADED|Určete, zda jeden nebo více objektů pomocí bezplatné nebo neutrální dělení na vlákna. Stávajícího kódu mohou obsahovat odkazy na ekvivalentní – makro [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
+
+Pokud není definován žádný z těchto maker pro váš projekt, _ATL_FREE_THREADED, nebudou platit.
+
+Makra ovlivnit výkon za běhu následujícím způsobem:
+
+- Určení makra, které odpovídá k objektům ve vašem projektu může zlepšit výkon za běhu.
+
+- Určení vyšší úroveň makra, například při zadání _ATL_APARTMENT_THREADED, když všechny objekty jsou jeden zřetězený, budou mírně snížit výkon za běhu.
+
+- Určení nižší úroveň makra, například pokud zadáte _ATL_SINGLE_THREADED, pokud jeden nebo více objektů použijte podprocesový model apartment nebo volných vláken, může způsobit selhání za běhu aplikace.
+
+Zobrazit [možnosti, Průvodce jednoduchý objekt knihovny ATL](../atl/reference/options-atl-simple-object-wizard.md) popis práce s vlákny modely k dispozici pro objekt knihovny ATL.
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../atl/active-template-library-atl-concepts.md)
 

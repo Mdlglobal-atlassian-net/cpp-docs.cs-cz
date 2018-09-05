@@ -1,5 +1,5 @@
 ---
-title: Služby ATL | Microsoft Docs
+title: Služby ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,43 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db13b443e605168389f0a9bc767ba29a75d4234d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4875c4844b97e3715c3804f83f4fa3e863eb53bc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354789"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761027"
 ---
 # <a name="atl-services"></a>ATL Services
-K vytvoření objektu ATL COM tak, aby běžel v službě, jednoduše služby (EXE) vyberte ze seznamu možností serveru v Průvodci projektu knihovny ATL. Průvodce potom vytvoří třídy odvozené od `CAtlServiceModuleT` tuto službu implementovat.  
-  
- Když je objekt knihovny ATL COM sestavena jako služba, bude registrovat jenom jako místní server, a nebude se zobrazovat v seznamu služeb v Ovládacích panelech. Je to proto, že je snazší ladění služby jako místní server než jako služba. Ji nainstalovat jako službu, spusťte na příkazovém řádku následující:  
-  
- `YourEXE``.exe /Service`  
-  
- Ho odinstalovat, spusťte následující:  
-  
- `YourEXE``.exe /UnregServer`  
-  
- První čtyři témata v této části popisují akce, ke kterým došlo během provádění `CAtlServiceModuleT` členské funkce. Tato témata se zobrazí ve stejném pořadí jako funkce se běžně označují jako. Pokud chcete zlepšit pochopení těchto témat, je vhodné použít zdrojový kód je vygenerovat průvodcem ATL projektu jako odkaz. Tato první čtyři témata jsou:  
-  
 
--   [Funkce CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)  
-  
--   [Funkce CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)  
-  
--   [Funkce CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)  
-  
--   [Funkce CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)  
-  
- Poslední tři témata popisují koncepty související s vývojem služby:  
-  
--   [Položky registru](../atl/registry-entries.md) pro služby ATL  
-  
--   [DCOMCNFG](../atl/dcomcnfg.md)  
-  
--   [Ladění tipy](../atl/debugging-tips.md) pro služby ATL  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../atl/active-template-library-atl-concepts.md)
+Chcete-li vytvořit objekt knihovny ATL modelu COM, tak, aby běžel ve službě, stačí vyberte služby (EXE) ze seznamu možností serveru v Průvodci vytvořením projektu ATL. Průvodce potom vytvoří třídu odvozenou z `CAtlServiceModuleT` pro implementaci této služby.
+
+Při vytváření objektu knihovny ATL modelu COM jako služba, se zaregistruje pouze jako místní server, a nebude se zobrazovat v seznamu služeb v Ovládacích panelech. Toto je vzhledem k tomu je snazší ladění služby jako místní server než jako služba. Ho Pokud chcete nainstalovat jako službu, spusťte na příkazovém řádku následující:
+
+`YourEXE``.exe /Service`
+
+Chcete-li ho odinstalovat, spusťte následující příkaz:
+
+`YourEXE``.exe /UnregServer`
+
+První čtyři témata v této části popisují akce, které nastanou během provádění `CAtlServiceModuleT` členské funkce. Tato témata se zobrazí ve stejném pořadí jako funkce se běžně označují jako. Pokud chcete zlepšit pochopíte z těchto témat, je vhodné použít zdrojový kód vygenerovaný Průvodce projektem ATL jako odkaz. Tato první čtyři témata jsou:
+
+- [Catlservicemodulet::Start – funkce](../atl/reference/catlservicemodulet-class.md#start)
+
+- [Catlservicemodulet::servicemain – funkce](../atl/reference/catlservicemodulet-class.md#servicemain)
+
+- [Catlservicemodulet::Run – funkce](../atl/reference/catlservicemodulet-class.md#run)
+
+- [Catlservicemodulet::Handler – funkce](../atl/reference/catlservicemodulet-class.md#handler)
+
+Poslední tři témata se zabývají koncepty související s vývojem služby:
+
+- [Položky registru](../atl/registry-entries.md) služby ATL
+
+- [DCOMCNFG](../atl/dcomcnfg.md)
+
+- [Tipy pro ladění](../atl/debugging-tips.md) služby ATL
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../atl/active-template-library-atl-concepts.md)
 

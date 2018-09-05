@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216436"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752323"
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 Poskytuje běžné chování pro referenční třídy a struktury ref v aplikacích pro Windows Runtime. Všechny třídy ref class a instance struktury ref jsou implicitně převést na Platform::Object ^ a jeho virtuální metodu ToString lze přepsat.  

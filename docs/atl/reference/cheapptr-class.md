@@ -20,140 +20,163 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c66f274ab2302689afdeda195c735d7a6e5069
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884490"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762077"
 ---
 # <a name="cheapptr-class"></a>Cheapptr – třída
-Třída inteligentní ukazatel pro správu haldy ukazatele.  
-  
+
+Třída inteligentní ukazatel pro správu haldy ukazatele.
+
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<typename T, class Allocator=CCRTAllocator>  
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Typ objektu ukládaly na haldě.  
-  
- *Allocator –*  
- Třída přidělení paměti pro použití.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CHeapPtr::CHeapPtr](#cheapptr)|Konstruktor|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CHeapPtr::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení paměti v haldě pro uložení objektů.|  
-|[CHeapPtr::Reallocate](#reallocate)|Voláním této metody lze znovu přidělit paměti v haldě.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CHeapPtr::operator =](#operator_eq)|Operátor přiřazení.|  
-  
-## <a name="remarks"></a>Poznámky  
- `CHeapPtr` je odvozen z [cheapptrbase –](../../atl/reference/cheapptrbase-class.md) a ve výchozím nastavení používá rutiny CRT (v [ccrtallocator –](../../atl/reference/ccrtallocator-class.md)) k přidělují a uvolňují paměť. Třída [cheapptrlist –](../../atl/reference/cheapptrlist-class.md) slouží k vytvoření seznamu haldy ukazatelů. Viz také [ccomheapptr –](../../atl/reference/ccomheapptr-class.md), který používá COM rutiny přidělení paměti.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)  
-  
- `CHeapPtr`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcore.h  
-  
-##  <a name="allocate"></a>  CHeapPtr::Allocate  
- Volejte tuto metodu za účelem přidělení paměti v haldě pro uložení objektů.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Typ objektu ukládaly na haldě.
+
+*Allocator –*  
+Třída přidělení paměti pro použití.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CHeapPtr::CHeapPtr](#cheapptr)|Konstruktor|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CHeapPtr::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení paměti v haldě pro uložení objektů.|
+|[CHeapPtr::Reallocate](#reallocate)|Voláním této metody lze znovu přidělit paměti v haldě.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CHeapPtr::operator =](#operator_eq)|Operátor přiřazení.|
+
+## <a name="remarks"></a>Poznámky
+
+`CHeapPtr` je odvozen z [cheapptrbase –](../../atl/reference/cheapptrbase-class.md) a ve výchozím nastavení používá rutiny CRT (v [ccrtallocator –](../../atl/reference/ccrtallocator-class.md)) k přidělují a uvolňují paměť. Třída [cheapptrlist –](../../atl/reference/cheapptrlist-class.md) slouží k vytvoření seznamu haldy ukazatelů. Viz také [ccomheapptr –](../../atl/reference/ccomheapptr-class.md), který používá COM rutiny přidělení paměti.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)
+
+`CHeapPtr`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcore.h
+
+##  <a name="allocate"></a>  CHeapPtr::Allocate
+
+Volejte tuto metodu za účelem přidělení paměti v haldě pro uložení objektů.
+
 ```
 bool Allocate(size_t nElements = 1) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nElements*  
- Počet prvků, které slouží k výpočtu velikosti paměti k přidělení. Výchozí hodnota je 1.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu PRAVDA, pokud je paměť byla úspěšně přidělena false při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Allocator rutiny umožňují rezervovat dostatek paměti v haldě k uložení *nElement* objekty typu definovaného v konstruktoru.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
-  
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr  
- Konstruktor  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nElements*  
+Počet prvků, které slouží k výpočtu velikosti paměti k přidělení. Výchozí hodnota je 1.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu PRAVDA, pokud je paměť byla úspěšně přidělena false při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Allocator rutiny umožňují rezervovat dostatek paměti v haldě k uložení *nElement* objekty typu definovaného v konstruktoru.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
+
+##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+
+Konstruktor
+
 ```
 CHeapPtr() throw();
 explicit CHeapPtr(T* p) throw();
 CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *p*  
- Stávajícího ukazatele haldy nebo `CHeapPtr`.  
-  
-### <a name="remarks"></a>Poznámky  
- Ukazatel na haldu lze vytvořit volitelně pomocí stávajícího ukazatele, nebo `CHeapPtr` objektu. Pokud ano, nové `CHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
-  
-##  <a name="operator_eq"></a>  CHeapPtr::operator =  
- Operátor přiřazení.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*p*  
+Stávajícího ukazatele haldy nebo `CHeapPtr`.
+
+### <a name="remarks"></a>Poznámky
+
+Ukazatel na haldu lze vytvořit volitelně pomocí stávajícího ukazatele, nebo `CHeapPtr` objektu. Pokud ano, nové `CHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
+
+##  <a name="operator_eq"></a>  CHeapPtr::operator =
+
+Operátor přiřazení.
+
 ```
 CHeapPtr<T, Allocator>& operator=(
     CHeapPtr<T, Allocator>& p) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *p*  
- Existující objekt `CHeapPtr`.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí odkaz na aktualizovaný `CHeapPtr`.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
-  
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate  
- Voláním této metody lze znovu přidělit paměti v haldě.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*p*  
+Existující objekt `CHeapPtr`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí odkaz na aktualizovaný `CHeapPtr`.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
+
+##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+
+Voláním této metody lze znovu přidělit paměti v haldě.
+
 ```
 bool Reallocate(size_t nElements) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nElements*  
- Nový počet prvků, které slouží k výpočtu velikosti paměti k přidělení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu PRAVDA, pokud je paměť byla úspěšně přidělena false při selhání.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
- [Ccrtallocator – třída](../../atl/reference/ccrtallocator-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*nElements*  
+Nový počet prvků, které slouží k výpočtu velikosti paměti k přidělení.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu PRAVDA, pokud je paměť byla úspěšně přidělena false při selhání.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
+[Ccrtallocator – třída](../../atl/reference/ccrtallocator-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

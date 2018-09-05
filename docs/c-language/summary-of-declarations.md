@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a391ee0ee21925c59e5a95cb060f9897b3ef223c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e63fae717fc3e5c223ad512b5cd2eae82160431
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214863"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754634"
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 
@@ -37,11 +37,11 @@ ms.locfileid: "43214863"
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
 
 *Init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor***=***inicializátor*  / \* pro skalární inicializace     \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor***=***inicializátor*  / \* pro skalární inicializace \*/
 
 *Storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Automaticky**<br/>
@@ -115,7 +115,8 @@ ms.locfileid: "43214863"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
 
 *struct – nebo – sjednocení specifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}** *struktury nebo sjednocení identifikátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
 
 *Struktura nebo sjednocení*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>

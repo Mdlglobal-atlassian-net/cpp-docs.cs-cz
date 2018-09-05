@@ -1,5 +1,5 @@
 ---
-title: Třída CAutoPtrArray | Microsoft Docs
+title: Cautoptrarray – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b99fe8fde475453c9e6dc0b524a6b1b94821bf75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85cd1a9a50d57ececb2d12dca8faa6dc914972f5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358948"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763029"
 ---
-# <a name="cautoptrarray-class"></a>CAutoPtrArray – třída
-Tato třída poskytuje metody, které jsou užitečné při vytváření pole chytré ukazatele.  
-  
+# <a name="cautoptrarray-class"></a>Cautoptrarray – třída
+
+Tato třída poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.
+
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `E`  
- Typ ukazatele.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Konstruktor|  
-  
-## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje konstruktor a je odvozena z metody [CAtlArray](../../atl/reference/catlarray-class.md) a [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) a usnadňuje vytvoření třídy objektu kolekce ukládání chytré ukazatele.  
-  
- Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `CAtlArray`  
-  
- `CAutoPtrArray`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcoll.h  
-  
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray  
- Konstruktor  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+`E`  
+Typ ukazatele.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Konstruktor|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída poskytuje konstruktor a je odvozena z metody [catlarray –](../../atl/reference/catlarray-class.md) a [cautoptrelementtraits –](../../atl/reference/cautoptrelementtraits-class.md) pro vytvoření objektu třídy kolekce ukládání inteligentní ukazatele.
+
+Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`CAtlArray`
+
+`CAutoPtrArray`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcoll.h
+
+##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+
+Konstruktor
+
 ```
 CAutoPtrArray() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Inicializuje pole chytré ukazatele.  
-  
-## <a name="see-also"></a>Viz také  
- [CAtlArray – třída](../../atl/reference/catlarray-class.md)   
- [CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
- [CAutoPtrList – třída](../../atl/reference/cautoptrlist-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Inicializuje pole inteligentního ukazatele.
+
+## <a name="see-also"></a>Viz také
+
+[Catlarray – třída](../../atl/reference/catlarray-class.md)   
+[Cautoptrelementtraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
+[Cautoptrlist – třída](../../atl/reference/cautoptrlist-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

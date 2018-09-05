@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203589"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751975"
 ---
 # <a name="boxing-ccx"></a>Zabalení (C + +/ CX)
 *Zabalení* proměnné typu hodnoty jako například zahrnuje [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– nebo základní skalární typ. například `int`– v referenční třídě při proměnná je předána metodě, která přebírá [ Platform::Object ^](../cppcx/platform-object-class.md) jako jeho typ vstupu.  

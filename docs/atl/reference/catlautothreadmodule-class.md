@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlAutoThreadModule | Microsoft Docs
+title: Catlautothreadmodule – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c89d142254909591ebd01bfa859be5488cbfaf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356615"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763653"
 ---
-# <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule – třída
-Tato třída implementuje server COM ve fondu vláken, apartment model.  
-  
+# <a name="catlautothreadmodule-class"></a>Catlautothreadmodule – třída
+
+Tato třída implementuje ve fondu vláken, apartment model modelu COM serveru.
+
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `CAtlAutoThreadModule` odvozená z [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) a implementuje server COM ve fondu vláken, apartment model. `CAtlAutoThreadModule` používá [CComApartment](../../atl/reference/ccomapartment-class.md) ke správě izolovaný prostor pro každé vlákno v modulu.  
-  
- Je nutné použít [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu k určení [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako objekt pro vytváření tříd. Měli byste pak přidat jednu instanci třídy odvozené od `CAtlAutoThreadModuleT` například `CAtlAutoThreadModule`. Příklad:  
-  
- `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`  
-  
+```
+
+## <a name="remarks"></a>Poznámky
+
+`CAtlAutoThreadModule` je odvozen od [catlautothreadmodulet –](../../atl/reference/catlautothreadmodulet-class.md) a implementuje ve fondu vláken, apartment model modelu COM serveru. `CAtlAutoThreadModule` používá [ccomapartment –](../../atl/reference/ccomapartment-class.md) ke správě typu apartment pro každé vlákno v modulu.
+
+Je nutné použít [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu k určení [ccomclassfactoryautothread –](../../atl/reference/ccomclassfactoryautothread-class.md) jako objekt pro vytváření tříd. Měli byste pak přidat jednu instanci třídy odvozené z `CAtlAutoThreadModuleT` například `CAtlAutoThreadModule`. Příklad:
+
+`CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
+
 > [!NOTE]
->  Nahradí tato třída zastaralá [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) třídy.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `IAtlAutoThreadModule`  
-  
- [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)  
-  
- `CAtlAutoThreadModule`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
-  
-## <a name="see-also"></a>Viz také  
- [CAtlAutoThreadModuleT – třída](../../atl/reference/catlautothreadmodulet-class.md)   
- [IAtlAutoThreadModule – třída](../../atl/reference/iatlautothreadmodule-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
- [Třídy modulů](../../atl/atl-module-classes.md)
+>  Nahradí tato třída zastaralá [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) třídy.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`IAtlAutoThreadModule`
+
+[Catlautothreadmodulet –](../../atl/reference/catlautothreadmodulet-class.md)
+
+`CAtlAutoThreadModule`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h
+
+## <a name="see-also"></a>Viz také
+
+[Catlautothreadmodulet – třída](../../atl/reference/catlautothreadmodulet-class.md)   
+[Iatlautothreadmodule – třída](../../atl/reference/iatlautothreadmodule-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)   
+[Třídy modulů](../../atl/atl-module-classes.md)

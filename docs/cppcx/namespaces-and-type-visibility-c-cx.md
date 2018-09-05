@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219518"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758791"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 Obor názvů je standardní C++ konstrukci pro seskupení typů, které mají související funkce a pro předcházení kolizi názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, že všechny veřejné typy Windows Runtime, včetně těch, které ve svém vlastním kódu, musí být deklarovány v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarovány v globálním oboru nebo vnořit do jiné třídy způsobí chybu kompilace.  

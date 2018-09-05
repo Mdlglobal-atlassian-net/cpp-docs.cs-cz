@@ -1,5 +1,5 @@
 ---
-title: přepínač Statement (C) | Microsoft Docs
+title: Přepnout Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,110 +16,89 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fab1f385556346ff81f89e94d20c5f416ff67b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71fa5ae717963d8ab2afc0b290bb42a3de72c0b6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392156"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760354"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C)
-`switch` a **případ** příkazy Nápověda ovládacího prvku složité podmíněného větvení operace a. `switch` Příkaz předá řízení příkaz v jeho textu.  
+`switch` a **případ** příkazy nápovědy komplexní větvení a podmíněného operace u ovládacího prvku. `switch` Příkaz přenese ovládací prvek v rámci svého těla příkazu.  
   
-## <a name="syntax"></a>Syntaxe  
- *Výběr příkaz*:  
- **přepínače (** *výraz* **)** *– příkaz*  
+## <a name="syntax"></a>Syntaxe
+
+*příkaz výběru*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*  
   
- *příkaz s popiskem*:  
- **případ***konstantní výraz***:***– příkaz*   
+*příkaz s popiskem*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**případ***konstantní výraz***:***– příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:***– příkaz*  
   
- **Výchozí:***– příkaz*   
+Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* odpovídá hodnotě **přepnout (** *výraz* **)**. `switch` Výraz může obsahovat libovolný počet **případ** instancí, ale žádné dvě konstanty velikosti písmen v rámci stejného `switch` může obsahovat stejnou hodnotu. Spuštění těla příkazu začíná u příkazu, vybrané a pokračuje až do konce subjektu, nebo dokud **přerušení** příkaz předává řízení mimo tělo.  
   
- Ovládací prvek předává do příkazu, jehož **případ** *konstantní výraz* odpovídá hodnotě **přepínače (** *výraz* **)**. `switch` Výraz může obsahovat libovolný počet **případ** instance, ale žádné dvě konstanty případu v téže `switch` příkaz může mít stejnou hodnotu. Provádění těla příkazu začíná na vybraný příkaz a pokračuje až do konce text, nebo dokud **zalomení** příkaz přenosy ovládacího prvku z textu.  
-  
- Použití `switch` příkaz obvykle vypadá nějak takto:  
-  
- `switch` ( *výraz* )  
-  
- **{**  
-  
- *Deklarace*  
-  
- .  
-  
- .  
-  
- .  
-  
- **případ** *konstantní výraz* **:**  
-  
- *příkazy provést, pokud se rovná výraz*  
-  
- *Hodnota výrazu – konstanta*  
-  
- .  
-  
- .  
-  
- .  
-  
- **Rozdělit;**  
-  
- **Výchozí hodnota:**  
-  
- *příkazy provést, pokud výraz se nerovná*  
-  
- *jakýkoli případu konstanta – výraz*  
-  
- **}**  
-  
- Můžete použít **zalomení** příkaz k ukončení zpracování konkrétní případu v rámci `switch` příkaz a větve na konec `switch` příkaz. Bez **zalomení**, program nadále další případě provádění příkazy, dokud **zalomení** nebo je dosaženo konce příkaz. V některých situacích může být žádoucí tento pokračování.  
-  
- **Výchozí** je spustit příkaz, pokud žádné **případ** *konstantní výraz* se rovná hodnotě **přepínače (**  *výraz* **)**. Pokud **výchozí** příkaz je vynechán a ne **případ** je nalezena shoda, žádné příkazy v `switch` provedení textu. Může být maximálně jedna **výchozí** příkaz. **Výchozí** příkaz nemusí pocházet na konci; může vyskytovat kdekoli v textu `switch` příkaz. A **případ** nebo **výchozí** popisek může být použit pouze uvnitř `switch` příkaz.  
-  
- Typ `switch` *výraz* a **případ** *konstantní výraz* musí být celočíselné. Hodnota jednotlivých **případ** *konstantní výraz* musí být jedinečný v rámci těla příkazu.  
-  
- **Případ** a **výchozí** popisky `switch` těla příkazu jsou důležitá pouze v počátečním testu, který určuje, kde začít provádění do těla příkazu. Mohou být vnořené příkazy přepínače. Všechny statické proměnné se inicializují před spuštěním do jakéhokoli `switch` příkazy.  
-  
+Použití `switch` příkaz obvykle vypadá nějak takto:  
+
+**Přepnout** ( *výraz* )  
+**{**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklarace*  
+&nbsp;&nbsp;&nbsp;&nbsp;/\* . . . \*/  
+&nbsp;&nbsp;&nbsp;&nbsp;**případ** *konstantní výraz* **:**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* příkazy se spustí, pokud výraz rovná \*/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Hodnota tohoto výrazu – konstanta \*/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Konec;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí hodnota:**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* příkazy se spustí, pokud výraz není rovno \*/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* libovolný výraz case – konstanta \*/  
+**}**
+
+Můžete použít **přerušení** příkaz k ukončení zpracování konkrétního případu v `switch` příkazu a do větve na konec objektu `switch` příkazu. Bez **přerušení**, program bude pokračovat na další případ provádění příkazů, dokud **přerušení** nebo je dosažen konec příkazu. V některých případech může být žádoucí tento pokračování.
+
+**Výchozí** Pokud ne, je proveden příkaz **případ** *konstantní výraz* rovná hodnotě **přepnout (**  *výraz* **)**. Pokud **výchozí** příkazu je vynechán a ne **případ** shoda nenajde, žádný z příkazů v `switch` provádějí textu. Může existovat maximálně jeden **výchozí** příkazu. **Výchozí** příkaz se nemusí nacházet na konci; může vyskytovat kdekoli v těle `switch` příkazu. A **případ** nebo **výchozí** popisek může být použito pouze uvnitř `switch` příkazu.
+
+Typ `switch` *výraz* a **případ** *konstantní výraz* musí být integrálního typu. Hodnota každého **případ** *konstantní výraz* musí být jedinečný v rámci těla příkazu.
+
+**Případ** a **výchozí** popisky `switch` tělo s příkazy významných je pouze v počátečním testu, která určuje, kde spuštění do těla příkazu. Mohou být vnořené příkazy přepínače. Všechny statické proměnné jsou inicializovány před provedením do libovolného `switch` příkazy.
+
 > [!NOTE]
->  Deklarace můžete se zobrazí v první pozice tvořící složený příkaz `switch` textu, ale inicializacích součástí deklarací se neprovádí. `switch` Příkaz přenáší přímo do spustitelného souboru příkazu v textu, obejitím řádky, které obsahují inicializacích ovládací prvek.  
+> Deklarace mohou objevit v čele složený příkaz tvořící `switch` textu, ale inicializace součástí deklarace se neprovádí. `switch` Příkaz předá řízení přímo v těle obcházení řádky, které obsahují inicializace byl spustitelný příkaz.
+
+Následující příklady znázorňují `switch` příkazy:
+
+```C
+switch( c )
+{
+    case 'A':
+        capa++;
+    case 'a':
+        lettera++;
+    default :
+        total++;
+}
+```
+
+Všechny tři příkazy nástroje `switch` textu v tomto příkladu jsou spouštěny, pokud `c` rovná `'A'` od **přerušení** před následující případ se nezobrazí příkaz. Spuštění ovládací prvek bude převeden na prvním příkazem (`capa++;`) a bude pokračovat v pořadí, postupujte podle zbývajících kroků textu. Pokud `c` rovná `'a'`, `lettera` a `total` jsou zvětšeny. Pouze `total` se zvýší, pokud `c` není roven `'A'` nebo `'a'`.
+
+```C
+switch( i )
+{
+    case -1:
+        n++;
+        break;
+    case 0 :
+        z++;
+        break;
+    case 1 :
+        p++;
+        break;
+}
+```
+
+V tomto příkladu **přerušení** příkaz následuje každý příkaz `switch` textu. **Přerušení** příkaz vynutí východ z těla příkazu po provedení jednoho příkazu. Pokud `i` je roven -1, pouze `n` se zvýší. **Přerušení** příkazem `n++;` způsobí, že řízení provádění předat mimo tělo příkazu, vynechání zbývající příkazy. Podobně pokud `i` se rovná 0, pouze `z` se zvýší; Pokud `i` je rovno 1 pouze `p` se zvýší. Finální **přerušení** příkaz není nezbytně nutné, protože řízení se předá z textu na konci složeného příkazu, ale je součástí pro zajištění konzistence.  
   
- Následující příklady ilustrují `switch` příkazy:  
+Jeden příkaz může obsahovat více **případ** popisky, jako v následujícím příkladu:  
   
-```  
-switch( c )   
-{  
-    case 'A':  
-        capa++;  
-    case 'a':  
-        lettera++;  
-    default :  
-        total++;  
-}  
-```  
-  
- Všechny tři prohlášení o `switch` textu v tomto příkladu jsou provést, pokud `c` rovná `'A'` od **zalomení** příkaz nezobrazí před následující případ. Řízení provádění se přenese na prvním příkazem (`capa++;`) a pokračuje v pořadí procházení zbývající části textu. Pokud `c` rovná `'a'`, `lettera` a `total` se zvýší. Pouze `total` se zvýší, pokud `c` se nerovná `'A'` nebo `'a'`.  
-  
-```  
-switch( i )   
-{  
-    case -1:  
-        n++;  
-        break;  
-    case 0 :  
-        z++;  
-        break;  
-    case 1 :  
-        p++;  
-        break;  
-}  
-```  
-  
- V tomto příkladu **zalomení** příkaz následuje každý příkaz `switch` textu. **Zalomení** příkaz vynutí ukončení z textu příkaz po provedení jeden příkaz. Pokud `i` je rovno -1, pouze `n` se zvýší. **Zalomení** následující příkaz `n++;` způsobí, že řízení provádění předat mimo těla příkazu, obcházení zbývající příkazy. Podobně pokud `i` rovná 0, pouze `z` se zvýší; Pokud `i` se rovná 1, pouze `p` se zvýší. Konečné **zalomení** příkaz není nezbytně nutné, protože ovládací prvek předává z textu na konci složené příkaz, ale je zahrnuté pro konzistence.  
-  
- Jediný příkaz přenášet více **případ** štítků, jak ukazuje následující příklad:  
-  
-```  
+```C
 case 'a' :  
 case 'b' :  
 case 'c' :  
@@ -128,15 +107,16 @@ case 'e' :
 case 'f' :  hexcvt(c);  
 ```  
   
- V tomto příkladu Pokud *konstantní výraz* rovná jakékoli písmeno mezi `'a'` a `'f'`, `hexcvt` funkce je volána.  
+V tomto příkladu Pokud *konstantní výraz* rovná žádné písmeno mezi `'a'` a `'f'`, `hexcvt` funkce je volána.  
   
- **Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Microsoft C neomezuje počet případů hodnot v `switch` příkaz. Číslo je omezena pouze dostupné paměti. ANSI C vyžaduje alespoň 257 případu popisky povolené v `switch` příkaz.  
+Microsoft C neomezuje počet případových hodnoty v `switch` příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v `switch` příkazu.  
   
- Výchozí nastavení pro Microsoft C je, že jsou povolené rozšíření Microsoft. Použijte /Za – možnost kompilátoru zakázání tyto rozšíření.  
+Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Pomocí možnosti kompilátoru /Za pro zákaz těchto rozšíření.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
- [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Viz také
+
+[switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Přidání body připojení k objektu | Microsoft Docs
+title: Přidání bodů připojení objektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,60 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71f9d136ccdeded02303894195c7b8126acafd9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356589"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762545"
 ---
-# <a name="adding-connection-points-to-an-object"></a>Přidání body připojení k objektu
-[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md) ukazuje postup vytvoření ovládacího prvku s podporou pro spojovací body, přidat události a implementovat spojovacího bodu. ATL implementuje spojovací body se [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) třídy.  
-  
- Pokud chcete implementovat spojovací bod, máte dvě možnosti:  
-  
--   Implementujte vlastní odchozí zdroj události přidáním bod připojení ovládací prvek nebo objekt.  
-  
--   Znovu použít bod připojení rozhraní definované v jiné knihovny typů.  
-  
- V obou případech používá Průvodce implementací bodu připojení knihovny typů ke své práci.  
-  
-### <a name="to-add-a-connection-point-to-a-control-or-object"></a>Chcete-li přidat bod připojení na ovládací prvek nebo objekt  
-  
-1.  Definování dispinterface v bloku knihovny .idl souboru. Pokud jste povolili podporu pro spojovací body, když jste vytvořili ovládacího prvku pomocí Průvodce ovládacím prvkem ATL, bude dispinterface již vytvořen. Pokud jste nepovolili podporu pro spojovací body při vytvoření ovládacího prvku, je třeba ručně přidat dispinterface do souboru IDL. Následuje příklad odesílajícím rozhraním. Odchozí rozhraní nejsou nemusí být odesílání rozhraní ale skriptování například VBScript a JScript WDS, takže tento příklad používá dva odesílající rozhraní:  
-  
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
-  
-     Pomocí nástroje buď uuidgen.exe nebo guidgen.exe generovat identifikátor GUID.  
-  
-2.  Přidat dispinterface jako `[default,source]` rozhraní v třída typu coclass pro objekt v souboru projektu. Znovu, pokud jste povolili podporu pro spojovací body při vytvoření ovládacího prvku, Průvodce ovládacím prvkem ATL se vytvoří `[default,source`] položku. Ruční přidání této položky, přidejte řádek tučným písmem:  
-  
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
-  
-     Naleznete v souboru .idl v [str](../visual-cpp-samples.md) ATL ukázka příkladu.  
-  
-3.  Pomocí zobrazení tříd přidejte metody a vlastnosti události rozhraní. Klikněte pravým tlačítkem na třídu v zobrazení tříd, přejděte na **přidat** na místní nabídky a klikněte na **přidat bod připojení**.  
-  
-4.  V **zdroje rozhraní** pole se seznamem z Průvodce implementací bodu připojení, vyberte **rozhraní projektu**. Pokud zvolíte rozhraní pro řízení a stiskněte klávesu **OK**, které budete:  
-  
-    -   Generovat soubor hlaviček pomocí třídy proxy událostí, který implementuje kód, který bude provádět odchozí volání pro událost.  
-  
-    -   Přidejte záznam do bodu mapy připojení.  
-  
-     Zobrazí se také seznam všech knihoven typů ve vašem počítači. Byste měli používat jenom jednu z těchto knihoven typů k definování spojovací bod, pokud chcete implementovat přesný stejné odchozí rozhraní v jiné knihovny typů nalezena.  
-  
-### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Chcete-li znovu použít rozhraní bodu připojení definované v jiné knihovny typů  
-  
-1.  V zobrazení tříd, klikněte pravým tlačítkem na třídu, která implementuje **BEGIN_COM_MAP** makro, přejděte na příkaz **přidat** na místní nabídky a klikněte na **přidat bod připojení**.  
-  
-2.  V průvodce implementací bodu připojení vyberte knihovny typů a rozhraní v knihovně typů a klikněte na tlačítko **přidat**.  
-  
-3.  Upravte soubor .idl buď:  
-  
-    -   Zkopírujte dispinterface ze souboru .idl pro objekt, jehož zdroj události se používá.  
-  
-    -   Použití **importlib –** instrukcí na této knihovny typů.  
-  
-## <a name="see-also"></a>Viz také  
- [Spojovací bod](../atl/atl-connection-points.md)
+# <a name="adding-connection-points-to-an-object"></a>Přidání bodů připojení objektu
+
+[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md) ukazuje, jak vytvořit ovládací prvek s podporou pro spojovací body, přidejte události a implementovat bod připojení. Implementuje ATL – body připojení [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) třídy.
+
+Implementace bodu připojení, máte dvě možnosti:
+
+- Implementujte vlastní odchozí zdroj události, tak, že přidáte ovládací prvek nebo objektu spojovacího bodu.
+
+- Znovu použít bod připojení rozhraní definované v jiné knihovny typů.
+
+Průvodce implementací bodu připojení v obou případech se používá knihovnu typů ke své práci.
+
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>Chcete-li přidat bod připojení na ovládací prvek nebo objekt
+
+1. Definování dispinterface v bloku knihovny ze souboru IDL. Pokud je povolena podpora pro spojovací body při tvorbě ovládacího prvku pomocí Průvodce ovládacími prvky ATL, dispinterface už vytvořili. Pokud jste nepovolili podporu pro spojovací body při tvorbě ovládacího prvku, je třeba ručně přidat dispinterface do souboru IDL. Následuje příklad dispinterface. Odchozí rozhraní nejsou musí být odesílajících rozhraních, ale mnoho skriptovacích jazyků, jako jsou VBScript a JScript vyžadují, proto tento příklad používá dva odesílající rozhraní:
+
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+
+     Pomocí nástroje uuidgen.exe nebo guidgen.exe generování identifikátoru GUID.
+
+2. Přidat dispinterface jako `[default,source]` rozhraní v konstruktoru coclass pro objekt v souboru IDL projektu. Znovu, pokud je povolena podpora pro spojovací body při tvorbě ovládacího prvku, Průvodce ovládacím prvkem ATL vytvoří `[default,source`] položka. Chcete-li ručně přidat tuto položku, přidejte řádek tučně:
+
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+
+     Soubor .idl [KR](../visual-cpp-samples.md) ukázky knihovny ATL pro příklad.
+
+3. Zobrazení tříd můžete přidat vlastnosti a metody pro rozhraní události. Klikněte pravým tlačítkem na třídu v zobrazení tříd, přejděte na **přidat** na místní nabídku a klikněte na **přidat bod připojení**.
+
+4. V **rozhraní zdroje** seznam nebo Průvodce implementací bodu připojení, vyberte pole **rozhraních projektu**. Pokud se rozhodnete rozhraní pro řízení a stisknutím klávesy **OK**, bude:
+
+   - Generovat soubor hlaviček s proxy třída události, která implementuje kód, který bude provádět odchozích volání pro událost.
+
+   - Přidáte položku do mapy bodu připojení.
+
+     Zobrazí se také seznam všech knihoven typů ve vašem počítači. Byste měli používat jenom jednu z těchto jiných knihovnách typů k definování spojovací bod, pokud chcete implementovat přesně stejné odchozí rozhraní v jiné knihovny typů.
+
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Pro opětovné použití rozhraní bodu připojení definovaný v jiné knihovny typů
+
+1. V zobrazení tříd klikněte pravým tlačítkem na třídu, která implementuje **BEGIN_COM_MAP** – makro, přejděte na příkaz **přidat** na místní nabídku a klikněte na **přidat bod připojení**.
+
+2. V průvodce implementací bodu připojení, vyberte knihovnu typů a rozhraní v knihovně typů a klikněte na tlačítko **přidat**.
+
+3. Upravte soubor .idl buď:
+
+   - Zkopírujte dispinterface v souboru IDL pro objekt, jehož zdroje událostí se používá.
+
+   - Použití **importlib** instrukce na tuto knihovnu typů.
+
+## <a name="see-also"></a>Viz také
+
+[Spojovací bod](../atl/atl-connection-points.md)
 

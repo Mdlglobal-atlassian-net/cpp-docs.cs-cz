@@ -1,5 +1,5 @@
 ---
-title: Definice funkcí jazyka C | Microsoft Docs
+title: Definice funkcí jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,94 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389940"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757679"
 ---
 # <a name="c-function-definitions"></a>Definice funkcí jazyka C
-Definice funkce určuje název funkce, typy a počet parametrů, které lze přijímat a její návratový typ. Definice funkce také obsahuje tělo funkce s deklarací o jeho místní proměnné a příkazy, které určují, jaké funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
- *translation-unit*:  
- *external-declaration*  
-  
- *translation-unit external-declaration*  
-  
- *externí deklarace*: /\* povoleny pouze v oboru externí (soubor) \*/  
- *definice funkce*  
-  
- `declaration`  
-  
- *definice funkce*: /\* deklarátor tady je deklarátor – funkce \*/  
- *specifikátory deklarace* vyjádřit výslovný*atribut seq* opt*deklarátor deklarace list* opt*složené – příkaz*  
-  
- /\* *atribut seq* je specifické pro Microsoft * /  
-  
- Prototyp parametry jsou:  
-  
- *specifikátory deklarace*:  
- *specifikátor třídy úložiště specifikátory deklarace* opt  
-  
- *Specifikátor typu deklarace – specifikátory* opt  
-  
- *Kvalifikátor typu deklarace – specifikátory* opt  
-  
- *seznam prohlášení*:  
- *deklarace*  
-  
- *seznam prohlášení deklarace*  
-  
- `declarator`:  
- *ukazatel* opt*přímo deklarátor*  
-  
- *deklarátor přímo*: /\* deklarátor – funkce \*/  
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl \*/  
-  
- *deklarátor přímo***(***seznam identifikátorů* opt **)** / * deklarátor zastaralé stylu \*/  
-  
- Seznam parametrů v definici používá tuto syntaxi:  
-  
- *Seznam parametrů typu*: /\* seznam parametrů \*/  
- *parameter-list*  
-  
- *Seznam parametrů* **,...**  
-  
- *Seznam parametrů*:  
- *parameter-declaration*  
-  
- *Seznam parametrů* **,***deklarace parametru*  
-  
- *deklarace parametru*:  
- *deklarátor specifikátory deklarace*  
-  
- *specifikátory deklarace abstraktní deklarátor* opt  
-  
- Seznam parametrů v definici funkce starého používá tuto syntaxi:  
-  
- *Seznam identifikátorů*: /\* používán funkce zastaralé stylu definice a deklarace \*/  
- *Identifikátor*  
-  
- *Seznam identifikátorů* **,***identifikátor*  
-  
- Tady je syntax pro tělo funkce:  
-  
- *příkaz složené*: /\* tělo funkce \*/  
- **{**`declaration`-*seznamu* opt*seznam příkazů* opt **}**  
-  
- Jsou pouze specifikátory třídy úložiště, které můžete upravit deklaraci funkce `extern` a **statické**. `extern` Specifikátor označuje, že funkce lze odkazovat z jiných souborů; to znamená, že je název funkce exportován do linkeru. **Statické** specifikátor označuje, že funkci nelze na něj odkazovat z jiných souborů; to znamená, není název exportované sadou linkeru. Pokud neexistuje žádná třída úložiště se zobrazí v definici funkce `extern` se předpokládá. Funkce je v každém případě vždy viditelné z definice bodu na konec souboru.  
-  
- Volitelné *specifikátory deklarace* a povinné `declarator` společně zadat návratový typ funkce a název. `declarator` Je kombinací identifikátor, který názvy funkce a závorek název funkce. Volitelné *atribut seq* nonterminal je Microsoft specifické funkce, které jsou definované v [atributy funkce](../c-language/function-attributes.md).  
-  
- *Přímo deklarátor* (v `declarator` syntaxe) určuje název funkce definovaný a identifikátory její parametry. Pokud *přímo deklarátor* zahrnuje *seznam parametrů typu*, seznamu určuje typy všechny parametry. Takové deklarátor slouží také jako prototyp funkce pro pozdější volání funkce.  
-  
- A `declaration` v *seznam prohlášení* ve funkci nesmí obsahovat definice *specifikátor třídy úložiště* jiné než **zaregistrovat**. *Specifikátor typu* v *specifikátory deklarace* pouze, pokud lze vynechat syntaxe **zaregistrovat** třídy úložiště je zadán pro hodnotu `int` typu.  
-  
- *Složené příkaz* tělo funkce obsahující místní deklarace proměnných a odkazy na deklarované externě položky a příkazy.  
-  
- V částech [atributy funkce](../c-language/function-attributes.md), [třídy úložiště](../c-language/storage-class.md), [návratového typu](../c-language/return-type.md), [parametry](../c-language/parameters.md), a [tělo funkce](../c-language/function-body.md) součástí definice funkce podrobně popisují.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce](../c-language/functions-c.md)
+Definice funkce určuje název funkce, typy a počet parametrů, které se očekává, že pro příjem a její typ vrácené hodnoty. Definice funkce také obsahuje tělo funkce s deklarací své místní proměnné a příkazy, které určují, co funkce dělá.
+
+## <a name="syntax"></a>Syntaxe
+
+*translation-unit*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jednotka překladu* *externí deklarace*
+
+*externí deklarace*: /\* povolený jenom v oboru externí (soubor) \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*
+
+*definice funkce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*<sub>optimalizované</sub> *sekvence atributů*<sub>optimalizované</sub> *deklarátor* *seznam deklarací*  <sub>optimalizované</sub> *compound-statement*
+
+/\* *sekvence atributů* je specifické pro Microsoft \*/
+
+Prototyp parametry jsou:
+
+*specifikátory deklarace*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+
+*seznam deklarací*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam deklarací* *deklarace*
+
+*deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+
+*přímé declarator*: /\* deklarátorem funkce \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl       \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor     \*/
+
+Seznam parametrů v definici používá tuto syntaxi:
+
+*Seznam parametrů typu*: /\* seznam parametrů \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,...**
+
+*Seznam parametrů*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,***deklarace parametru* 
+
+*deklarace parametru*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *deklarátorů*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *abstraktní deklarátor*<sub>optimalizované</sub>
+
+Seznam parametrů v definici funkce starého typu používá tuto syntaxi:
+
+*Seznam identifikátorů*: /\* používané funkce zastaralé definice a deklarace \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,***identifikátor* 
+
+Syntaxe pro tělo funkce je:
+
+*compound-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam deklarací*<sub>optimalizované</sub> *seznamu příkazů*<sub>optimalizované</sub> **}**
+
+Jsou pouze specifikátory třídy úložiště, které můžete upravit deklaraci funkce **extern** a **statické**. **Extern** specifikátor znamená, že funkci můžete odkazovat z jiných souborů; to znamená, název funkce se exportují do propojovacího programu. **Statické** specifikátor znamená, že funkce se nedá odkazovat z jiných souborů; to znamená, že název neexportoval linkerem. Pokud žádnou třídu úložiště se zobrazí v definici funkce **extern** se předpokládá, že. V každém případě je vždy viditelná z místa definice na konec souboru.
+
+Volitelný *specifikátory deklarace* a povinná *deklarátor* definujte návratový typ funkce a název. *Deklarátor* je kombinací identifikátoru s názvem funkce a závorek za název funkce. Volitelný *sekvence atributů* nonterminal specifické pro společnost Microsoft je funkce definované v [atributy funkce](../c-language/function-attributes.md).
+
+*Direct-declarator* (v *deklarátor* syntaxi) určuje název funkce je definována a identifikátory ze svých parametrů. Pokud *direct-declarator* zahrnuje *seznam parametrů typu*, seznamu určuje typy všech parametrů. Takové deklarátorem slouží taky jako prototyp funkce pro pozdější volání funkce.
+
+A *deklarace* v *seznam deklarací* ve funkci nemůže obsahovat definice *storage-class-specifier* jiné než **zaregistrovat**. *Specifikátor typu* v *specifikátory deklarace* syntaxe lze vynechat jenom v případě **zaregistrovat** třídu úložiště je určená pro hodnotu **int** typu.
+
+*Compound-statement* je tělo funkce obsahující deklarace místních proměnných, odkazy na externě deklarovaná položky a příkazy.
+
+V částech [atributy funkce](../c-language/function-attributes.md), [třídu úložiště](../c-language/storage-class.md), [návratový typ](../c-language/return-type.md), [parametry](../c-language/parameters.md), a [tělo funkce](../c-language/function-body.md) součástí definice funkce podrobně popisují.
+
+## <a name="see-also"></a>Viz také
+[Funkce](../c-language/functions-c.md)

@@ -21,106 +21,121 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219035"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752024"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl – třída
-Tato třída poskytuje metody umožňující objekt ke komunikaci se svou lokalitou.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída poskytuje metody umožňující objekt ke komunikaci se svou lokalitou.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class T>
     class ATL_NO_VTABLE IObjectWithSiteImpl :
     public IObjectWithSite
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `IObjectWithSiteImpl`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[IObjectWithSiteImpl::GetSite](#getsite)|Dotazy webu pro ukazatel rozhraní.|  
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|  
-|[IObjectWithSiteImpl::SetSite](#setsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Spravuje lokality `IUnknown` ukazatele.|  
-  
-## <a name="remarks"></a>Poznámky  
- [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) rozhraní umožňuje komunikaci se svou lokalitou. Třída `IObjectWithSiteImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
-  
- `IObjectWithSiteImpl` Určuje dvěma způsoby. První volání klienta `SetSite`, předávání lokality `IUnknown` ukazatele. Tento ukazatel je uložen v rámci objektu a později se dají získat pomocí volání `GetSite`.  
-  
- Obvykle jsou odvozeny z vaší třídy `IObjectWithSiteImpl` při vytváření objektu, který není ovládací prvek. Pro ovládací prvky, odvodit třídu z [ioleobjectimpl –](../../atl/reference/ioleobjectimpl-class.md), která navíc poskytuje ukazatel webu. Vaše třída není odvozena od obou `IObjectWithSiteImpl` a `IOleObjectImpl`.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `IObjectWithSite`  
-  
- `IObjectWithSiteImpl`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcom  
-  
-##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
- Dotazy webu pro ukazatel rozhraní identifikovaný `riid`.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Vaše třída odvozena od `IObjectWithSiteImpl`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[IObjectWithSiteImpl::GetSite](#getsite)|Dotazy webu pro ukazatel rozhraní.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Spravuje lokality `IUnknown` ukazatele.|
+
+## <a name="remarks"></a>Poznámky
+
+[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) rozhraní umožňuje komunikaci se svou lokalitou. Třída `IObjectWithSiteImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+
+`IObjectWithSiteImpl` Určuje dvěma způsoby. První volání klienta `SetSite`, předávání lokality `IUnknown` ukazatele. Tento ukazatel je uložen v rámci objektu a později se dají získat pomocí volání `GetSite`.
+
+Obvykle jsou odvozeny z vaší třídy `IObjectWithSiteImpl` při vytváření objektu, který není ovládací prvek. Pro ovládací prvky, odvodit třídu z [ioleobjectimpl –](../../atl/reference/ioleobjectimpl-class.md), která navíc poskytuje ukazatel webu. Vaše třída není odvozena od obou `IObjectWithSiteImpl` a `IOleObjectImpl`.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`IObjectWithSite`
+
+`IObjectWithSiteImpl`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcom
+
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
+
+Dotazy webu pro ukazatel rozhraní identifikovaný `riid`.
+
 ```
 STDMETHOD(GetSite)(
     REFIID riid,
     void** ppvSite);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud lokalita podporuje toto rozhraní, je vrácený ukazatel přes `ppvSite`. V opačném případě `ppvSite` nastaven na hodnotu NULL.  
-  
- Zobrazit [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) ve Windows SDK.  
-  
-##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
- Spravuje lokality `IUnknown` ukazatele.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Pokud lokalita podporuje toto rozhraní, je vrácený ukazatel přes `ppvSite`. V opačném případě `ppvSite` nastaven na hodnotu NULL.
+
+Zobrazit [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) ve Windows SDK.
+
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
+
+Spravuje lokality `IUnknown` ukazatele.
+
 ```
 CComPtr<IUnknown> m_spUnkSite;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- `m_spUnkSite` nejprve obdrží tento ukazatel přímo pomocí volání [setsite –](#setsite).  
-  
-##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
- Poskytuje objekt lokality `IUnknown` ukazatele.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+`m_spUnkSite` nejprve obdrží tento ukazatel přímo pomocí volání [setsite –](#setsite).
+
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
+
+Poskytuje objekt lokality `IUnknown` ukazatele.
+
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pUnkSite*  
- [in] Ukazatel `IUnknown` ukazatel rozhraní webu správy tohoto objektu. Pokud má hodnotu NULL, objekt by měly volat `IUnknown::Release` na žádné existující lokality v tomto okamžiku objekt už zná jeho lokality.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK.  
-  
-##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
- Poskytuje objekt lokality `IUnknown` ukazatele.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pUnkSite*  
+[in] Ukazatel `IUnknown` ukazatel rozhraní webu správy tohoto objektu. Pokud má hodnotu NULL, objekt by měly volat `IUnknown::Release` na žádné existující lokality v tomto okamžiku objekt už zná jeho lokality.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK.
+
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
+
+Poskytuje objekt lokality `IUnknown` ukazatele.
+
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) ve Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) ve Windows SDK.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../atl/atl-class-overview.md)

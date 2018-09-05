@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960401"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762522"
 ---
 # <a name="registry-support-classes"></a>Třídy podporující registr
-Následující třída poskytuje podporu registru:  
-  
--   [Cregkey –](../atl/reference/cregkey-class.md) obsahuje metody pro práci s hodnotami v systémovém registru.  
-  
-## <a name="related-articles"></a>Související články  
- [Komponenta knihovny ATL registru (Registrar)](../atl/atl-registry-component-registrar.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)   
- [Makra registru](../atl/reference/registry-macros.md)
+
+Následující třída poskytuje podporu registru:
+
+- [Cregkey –](../atl/reference/cregkey-class.md) obsahuje metody pro práci s hodnotami v systémovém registru.
+
+## <a name="related-articles"></a>Související články
+
+[Komponenta knihovny ATL registru (Registrar)](../atl/atl-registry-component-registrar.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)   
+[Makra registru](../atl/reference/registry-macros.md)
 

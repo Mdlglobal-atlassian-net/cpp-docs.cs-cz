@@ -25,124 +25,143 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ed0ca185d7806c12ce089589ce4fad7a26e61
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202613"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761966"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Ipersiststreaminitimpl – třída
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) rozhraní.  
-  
+
+Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) rozhraní.
+
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class T>  
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `IPersistStreamInitImpl`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[IPersistStreamInitImpl::GetClassID](#getclassid)|Načte identifikátor CLSID objektu.|  
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Získá velikost streamu potřebné k uložení dat tohoto objektu. Implementace knihovny ATL vrátí E_NOTIMPL.|  
-|[IPersistStreamInitImpl::InitNew](#initnew)|Inicializuje nově vytvořený objekt.|  
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|Kontroluje, zda data objektu se změnila od posledního uložení.|  
-|[IPersistStreamInitImpl::Load](#load)|Načte vlastnosti objektu ze zadaného datového proudu.|  
-|[IPersistStreamInitImpl::Save](#save)|Uloží vlastností objektu do zadaného datového proudu.|  
-  
-## <a name="remarks"></a>Poznámky  
- [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) rozhraní umožňuje klientovi vyžadovat, aby váš objekt načte a uloží jeho trvalá data do jednoho datového proudu. Třída `IPersistStreamInitImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
-  
- **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `IPersistStreamInit`  
-  
- `IPersistStreamInitImpl`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcom  
-  
-##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
- Načte identifikátor CLSID objektu.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Vaše třída odvozena od `IPersistStreamInitImpl`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[IPersistStreamInitImpl::GetClassID](#getclassid)|Načte identifikátor CLSID objektu.|
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Získá velikost streamu potřebné k uložení dat tohoto objektu. Implementace knihovny ATL vrátí E_NOTIMPL.|
+|[IPersistStreamInitImpl::InitNew](#initnew)|Inicializuje nově vytvořený objekt.|
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|Kontroluje, zda data objektu se změnila od posledního uložení.|
+|[IPersistStreamInitImpl::Load](#load)|Načte vlastnosti objektu ze zadaného datového proudu.|
+|[IPersistStreamInitImpl::Save](#save)|Uloží vlastností objektu do zadaného datového proudu.|
+
+## <a name="remarks"></a>Poznámky
+
+[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) rozhraní umožňuje klientovi vyžadovat, aby váš objekt načte a uloží jeho trvalá data do jednoho datového proudu. Třída `IPersistStreamInitImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+
+**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`IPersistStreamInit`
+
+`IPersistStreamInitImpl`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcom
+
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID
+
+Načte identifikátor CLSID objektu.
+
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) ve Windows SDK.  
-  
-##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
- Získá velikost streamu potřebné k uložení dat tohoto objektu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) ve Windows SDK.
+
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax
+
+Získá velikost streamu potřebné k uložení dat tohoto objektu.
+
 ```
 STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí E_NOTIMPL.  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) ve Windows SDK.  
-  
-##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
- Inicializuje nově vytvořený objekt.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí E_NOTIMPL.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) ve Windows SDK.
+
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
+
+Inicializuje nově vytvořený objekt.
+
 ```
 STDMETHOD(InitNew)();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) ve Windows SDK.  
-  
-##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
- Kontroluje, zda data objektu se změnila od posledního uložení.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) ve Windows SDK.
+
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
+
+Kontroluje, zda data objektu se změnila od posledního uložení.
+
 ```
 STDMETHOD(IsDirty)();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) ve Windows SDK.  
-  
-##  <a name="load"></a>  IPersistStreamInitImpl::Load  
- Načte vlastnosti objektu ze zadaného datového proudu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) ve Windows SDK.
+
+##  <a name="load"></a>  IPersistStreamInitImpl::Load
+
+Načte vlastnosti objektu ze zadaného datového proudu.
+
 ```
 STDMETHOD(Load)(LPSTREAM pStm);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Mapy vlastností objektu ATL používá pro načtení těchto informací.  
-  
- Zobrazit [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) ve Windows SDK.  
-  
-##  <a name="save"></a>  IPersistStreamInitImpl::Save  
- Uloží vlastností objektu do zadaného datového proudu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Mapy vlastností objektu ATL používá pro načtení těchto informací.
+
+Zobrazit [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) ve Windows SDK.
+
+##  <a name="save"></a>  IPersistStreamInitImpl::Save
+
+Uloží vlastností objektu do zadaného datového proudu.
+
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Mapy vlastností objektu ATL používá k ukládání příslušných informací.  
-  
- Zobrazit [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) ve Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
- [Úložiště a datové proudy](/windows/desktop/Stg/storages-and-streams)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Mapy vlastností objektu ATL používá k ukládání příslušných informací.
+
+Zobrazit [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) ve Windows SDK.
+
+## <a name="see-also"></a>Viz také
+
+[Úložiště a datové proudy](/windows/desktop/Stg/storages-and-streams)   
+[Přehled tříd](../../atl/atl-class-overview.md)

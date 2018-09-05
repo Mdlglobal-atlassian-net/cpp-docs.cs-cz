@@ -1,5 +1,5 @@
 ---
-title: Identifikátory jazyka C | Microsoft Docs
+title: Identifikátory jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cca0381392a1f7c2f227c3296597dc3c614ae0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 910e5cb8686130a08976d63f4cc54512da2494a1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388666"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751641"
 ---
 # <a name="c-identifiers"></a>Identifikátory jazyka C
-"Identifikátory" nebo "symboly" jsou názvy, které zadáte pro proměnné, typy, funkce a popisky v programu. Identifikátor názvy se musí lišit v pravopis a případ z jakékoli klíčová slova. Klíčová slova (C nebo Microsoft) nelze použít jako identifikátory; jsou rezervovány pro speciální použití. Identifikátor vytvoříte tak, že zadáte v deklaraci proměnné, typ nebo funkci. V tomto příkladu `result` je identifikátor proměnné celé číslo, a `main` a `printf` jsou názvy identifikátor pro funkce.  
+"Identifikátory" nebo "symboly" jsou názvy proměnných, typy, funkce a popisky ve svém programu, které zadáte. Názvy identifikátorů se musí lišit v tvar a pád z klíčová slova. Klíčová slova (C nebo Microsoft) nejde použít jako identifikátory; ty jsou vyhrazené pro zvláštní použití. Vytvořit identifikátor zadáním v deklaraci proměnné, typ nebo funkce. V tomto příkladu `result` je identifikátor proměnná typu integer a `main` a `printf` jsou názvy identifikátorů pro funkce.  
   
 ```  
 #include <stdio.h>  
@@ -41,35 +41,33 @@ int main()
 }  
 ```  
   
- Po deklarovat, můžete v novější příkazy programu identifikátor k odkazování na přidružené hodnoty.  
+Po deklaraci, můžete v pozdější příkazy programu identifikátor pro odkazování na související hodnota.  
   
- Zvláštní druh identifikátor, s názvem příkaz štítku, mohou být používány `goto` příkazy. (Deklarace jsou popsané v [deklarace a typy](../c-language/declarations-and-types.md) příkaz popisky jsou popsané v [goto a příkazy s popiskem](../c-language/goto-and-labeled-statements-c.md).)  
+Zvláštní druh identifikátoru, volá příkaz popisek, lze použít v `goto` příkazy. (Deklarace jsou popsány v [deklarace a typy](../c-language/declarations-and-types.md) popisků příkazů jsou popsány v [příkaz goto a příkazy s popiskem](../c-language/goto-and-labeled-statements-c.md).)  
   
-## <a name="syntax"></a>Syntaxe  
- *identifikátor*:  
- *nečíselným*  
+## <a name="syntax"></a>Syntaxe
+
+*identifikátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *číslice*
+
+*nenumerickému*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ b c d e f g h můžu j k l mn o p q r s t u v w, x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H MŮŽU J K L MN O P Q R S T U V W, X Y Z**
+
+*číslice*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
   
- *identifikátor nečíselným*  
+První znak název identifikátoru musí být `nondigit` (to znamená, první znak musí být podtržítkem nebo velké nebo malé písmeno). ANSI umožňuje šest důležité znaky v názvu identifikátor externí a 31 pro názvy identifikátorů vnitřní (uvnitř funkce). Externí identifikátory (těch, které jsou deklarovány v globálním oboru nebo s třídou úložiště deklarovány `extern`) můžou stát terčem další omezení názvů, protože tyto identifikátory musí zpracovat jiným softwarem, jako je například linkers.  
   
- *identifikátor číslice*  
+**Specifické pro Microsoft**  
   
- `nondigit`: jeden z  
- **_ b c d e f g h i j k l m n o p q r s t u v w x, y z**  
+Přestože ANSI umožňuje 6 významných znaků v názvech externí identifikátor a 31 pro názvy identifikátorů vnitřní (uvnitř funkce), kompilátor Microsoft C umožňuje 247 znaků v názvu identifikátor interní nebo externí. Pokud nejste obeznámeni s kompatibility ANSI, můžete změnit toto výchozí nastavení na hodnotu menší nebo větší pomocí /H (omezit délku externích názvů) možnost.  
   
- **B C D E F G H I J K L M N O P Q R S T U V W X Y Z**  
+**Specifické pro END Microsoft**  
   
- `digit`: jeden z  
- **0 1 2 3 4 5 6 7 8 9**  
-  
- Název identifikátoru první znak musí být `nondigit` (tedy první znak musí být podtržítko nebo velké nebo malé písmeno). ANSI umožňuje šesti důležité znaky v názvu externí identifikátor a 31 pro názvy identifikátorů interní (v rámci funkce). Externí identifikátory (těch, které jsou deklarované v globálním oboru nebo deklarovat s třídy úložiště `extern`) mohou podléhat další omezení pro pojmenovávání, protože tyto identifikátory zpracování další software, jako je například linkers.  
-  
- **Konkrétní Microsoft**  
-  
- I když ANSI umožňuje 6 důležité znaky v názvech externí identifikátor a 31 pro názvy identifikátorů interní (v rámci funkce), umožňuje kompilátoru Microsoft C 247 znaků v název interních nebo externích identifikátoru. Pokud nejste s kompatibilitou ANSI dotyčné, můžete změnit toto výchozí nastavení na menší nebo větší číslo, pomocí /H (omezit délku externích názvů) možnost.  
-  
- **Konkrétní Microsoft END**  
-  
- Kompilátor jazyka C považuje velká a malá písmena být jedinečných znaků. Tato funkce volána "písmen" umožňuje vytváření různých identifikátorů, které mají stejnou pravopis ale odlišným případů pro jeden nebo více znaků. Každý z následujících identifikátorů je například jedinečný:  
+Kompilátor jazyka C považuje velká a malá písmena být jedinečných znaků. Tato funkce volá "písmen" umožňuje vytvářet různé identifikátory, které mají stejné kontroly pravopisu ale různých případech pro jeden nebo více písmeny. Například každá z následujících identifikátorů je jedinečný:  
   
 ```  
 add  
@@ -78,13 +76,13 @@ Add
 aDD  
 ```  
   
- **Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Nevybírejte názvy pro identifikátory, které začínají s dvěma podtržítka nebo podtržítkem, za nímž následuje velké písmeno. ANSI C – standard umožňuje identifikátor názvy, které začínají tyto kombinace znaků, které budou rezervovány pro použití kompilátoru. Identifikátory s oborem úrovni souboru by neměl taky pojmenovaný s podtržítkem a malé písmeno jako první dvě písmena. Identifikátor názvy, které začínají tyto znaky jsou také vyhrazené. Podle konvence společnost Microsoft používá podtržítkem a velké písmeno zahájíte makro názvy a dvojité podtržítka pro názvy – klíčové slovo specifické pro společnost Microsoft. Všechny konfliktům pojmenování, vyberte vždy identifikátor názvy, které nemají na začátku jedno nebo dvě podtržítka nebo názvy, které začínají podtržítkem následuje velké písmeno.  
+Nesmí být zvolen názvy identifikátorů začínajících dvěma podtržítky nebo podtržítkem, za nímž následuje velké písmeno. Standard ANSI C umožňuje názvy identifikátorů, které začínají tyto kombinace znaků, které budou rezervovány pro použití kompilátoru. Identifikátory s rozsahem souboru úrovni nesmí mít jako první dvě písmena názvy také s podtržítkem a malé písmeno. Názvy identifikátorů, které začínají tyto znaky jsou také vyhrazené. Podle konvence společnost Microsoft používá symbol podtržítka a velkého písmene zahájíte názvy maker a dvou podtržítek pro názvy klíčových slov specifických pro společnost Microsoft. Aby se zabránilo konfliktům pojmenování, vždy vyberte názvy identifikátorů, které nezačínají jednu nebo dvě podtržítka nebo názvy začínající podtržítkem, za nímž následuje velké písmeno.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
- Následují příklady platný identifikátorů, které odpovídají omezení pro pojmenovávání ANSI nebo Microsoft:  
+Následují příklady platné identifikátory, které odpovídají omezení názvů ANSI nebo Microsoft:  
   
 ```  
 j  
@@ -95,17 +93,17 @@ skip12
 LastNum  
 ```  
   
- **Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- I když identifikátory ve zdrojových souborech se ve výchozím nastavení rozlišují malá a velká písmena, symboly v objektu soubory nejsou. Microsoft C zpracovává identifikátory v rámci kompilace jednotky jako malá a velká písmena.  
+I když identifikátory ve zdrojových souborech se ve výchozím nastavení rozlišují malá a velká písmena, symboly v souborech objektů nejsou. Microsoft C zpracovává identifikátory v rámci kompilační jednotky jako malá a velká písmena.  
   
- Microsoft linkeru je malá a velká písmena. Je nutné zadat všechny identifikátory konzistentně podle případu.  
+Propojovací program společnosti Microsoft je velká a malá písmena. Je nutné zadat všechny identifikátory konzistentně podle případ.  
   
- "Znaková sada zdroje" je sada právní znaků, které se mohou objevit ve zdrojových souborech. Pro Microsoft C zdrojová sada je standardní znaková sada ASCII. Zdroj znakovou sadu a znaková sada spuštění obsahují znaky ASCII, použít jako řídicí sekvence. V tématu [konstanty znaků](../c-language/c-character-constants.md) informace o provádění znakové sady.  
+"Zdrojová znaková sada" je sada platných znaků, které se mohou objevit ve zdrojových souborech. Zdrojová sada pro Microsoft C je standardně znaková sada ASCII. Zdrojová znaková sada a spouštěcí znaková sada obsahuje znaky ASCII, použít jako řídící sekvence. Zobrazit [znakové konstanty](../c-language/c-character-constants.md) informace o provedení znakové sady.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
- Identifikátor má "obor", který označuje oblast, ve kterém se ví programu a "propojení", která určuje, zda se stejným názvem v jiném oboru odkazuje na stejný identifikátor. Tato témata jsou vysvětlené v [doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md).  
+Má identifikátor "rozsah", což je oblast, ve kterém se označuje programu a "propojení", která určuje, zda se stejným názvem v jiném oboru odkazuje na stejný identifikátor. Tato témata jsou vysvětlené v [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Elementy jazyka C](../c-language/elements-of-c.md)
+[Elementy jazyka C](../c-language/elements-of-c.md)

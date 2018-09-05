@@ -1,5 +1,5 @@
 ---
-title: Souhrn textových literálů | Microsoft Docs
+title: Souhrn řetězcových literálů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab516edc5cb30d777eb42cc96e2932e526f20772
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385816"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762740"
 ---
 # <a name="summary-of-string-literals"></a>Souhrn textových literálů
-*řetězcový literál*:  
- **'** *s – znak pořadí* opt **.**  
+
+*řetězcový literál*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **.**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s – znak sekvence*sub > optimalizované</sub> **.**  
   
- **L "** *s – znak pořadí* opt **.**  
+*s – znak sekvence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*  
   
- *s – znak pořadí*:  
- *s – znak*  
-  
- *s – znak pořadí s – znak*  
-  
- *s char*:  
- nastavit kteréhokoli člena znak zdroje, s výjimkou značky dvojité uvozovky ("), zpětné lomítko (\\), nebo znak nového řádku *řídicí sekvence*  
-  
-## <a name="see-also"></a>Viz také  
- [Gramatika slov](../c-language/lexical-grammar.md)
+*s char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě značkou dvojité uvozovky ("), zpětného lomítka (\\), nebo sekvence escape znaků nového řádku  
+
+## <a name="see-also"></a>Viz také
+
+[Gramatika slov](../c-language/lexical-grammar.md)

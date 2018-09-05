@@ -1,5 +1,5 @@
 ---
-title: Řetězce (ATL – MFC) | Microsoft Docs
+title: Řetězce (ATL-MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,30 +31,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5ebcd038c7526edca7de4756bf3f5562f361b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355477"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752772"
 ---
-# <a name="strings-atlmfc"></a>Řetězce (ATL a MFC)
-Téměř všechny programy pracovat s řetězcovými daty. Visual C++ poskytuje několik způsobů, jak spravovat data tento řetězec.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [CStringT – použití](../atl-mfc-shared/using-cstringt.md)  
- Popisuje programování pomocí třídy šablony CStringT.  
-  
- [CString – použití](../atl-mfc-shared/using-cstring.md)  
- Popisuje programování pomocí CString, výchozí implementaci CStringT.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Přehled CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Poskytuje referenční informace o sdílený `CStringT` třídy.  
-  
- [MFC – koncepce](../mfc/mfc-concepts.md)  
- Obsahuje témata koncepční a založený na úlohách, které vám pomůže programu pomocí knihovny MFC.  
-  
-## <a name="see-also"></a>Viz také  
- [ATL a MFC sdílené třídy](../atl-mfc-shared/atl-mfc-shared-classes.md)
+# <a name="strings-atlmfc"></a>Řetězce (ATL/MFC)
+
+Téměř všechny programy pracovat s řetězcovými daty. Visual C++ poskytuje několik způsobů, jak spravovat data tohoto řetězce.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[CStringT – použití](../atl-mfc-shared/using-cstringt.md)  
+Popisuje programování pomocí třídy šablony CStringT.
+
+[CString – použití](../atl-mfc-shared/using-cstring.md)  
+Popisuje programování pomocí CString, výchozí implementace CStringT.
+
+## <a name="related-sections"></a>Související oddíly
+
+[Cstringt – přehled](../atl-mfc-shared/reference/cstringt-class.md)  
+Poskytuje referenční informace o sdílený `CStringT` třídy.
+
+[MFC – koncepce](../mfc/mfc-concepts.md)  
+Obsahuje rámcové a úlohově zaměřená témata, které vám pomůžou programovat pomocí knihovny MFC.
+
+## <a name="see-also"></a>Viz také
+
+[Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

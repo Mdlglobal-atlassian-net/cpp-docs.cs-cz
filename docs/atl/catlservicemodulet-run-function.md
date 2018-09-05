@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9009b9f3853b0cf7c5cd0be52c2f1902459d80a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d9f1be2c862775c76bbaad36f84c871eff5a38d5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209258"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759619"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet::Run – funkce
-`Run` obsahuje volání do `PreMessageLoop`, `RunMessageLoop`, a `PostMessageLoop`. Po volání, `PreMessageLoop` nejprve ukládá ID služby vlákna. Služba bude používat toto ID zavřete samotné odesláním WM_QUIT zprávu pomocí funkce rozhraní Win32 API [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946).  
-  
- `PreMessageLoop` pak zavolá `InitializeSecurity`. Ve výchozím nastavení `InitializeSecurity` volání [CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) popisovači zabezpečení nastaven na hodnotu NULL, což znamená, že každý uživatel má přístup k objektu.  
-  
- Pokud nechcete, aby službě a zadejte vlastní zabezpečení, mají přednost před `PreMessageLoop` a Nevolejte `InitializeSecurity`, a modelu COM poté určí nastavení zabezpečení z registru. Je pohodlný způsob, jak nakonfigurovat nastavení registru [DCOMCNFG](../atl/dcomcnfg.md) nástroj prodiskutována později v této části.  
-  
- Po zabezpečení není zadána, objekt je registrován s modelem COM tak, aby noví klienti můžou připojit k programu. A konečně program informuje správce řízení služeb (SCM), že je spuštěný a program přejde do smyčky zpráv. Program zůstane spuštěný, dokud se odešle zprávy o ukončení při vypnutí služby.  
-  
-## <a name="see-also"></a>Viz také  
- [Služby](../atl/atl-services.md)   
- [Csecuritydesc – třída](../atl/reference/csecuritydesc-class.md)   
- [CSID – třída](../atl/reference/csid-class.md)   
- [Cdacl – třída](../atl/reference/cdacl-class.md)   
- [Catlservicemodulet::Run –](../atl/reference/catlservicemodulet-class.md#run)
+
+`Run` obsahuje volání do `PreMessageLoop`, `RunMessageLoop`, a `PostMessageLoop`. Po volání, `PreMessageLoop` nejprve ukládá ID služby vlákna. Služba bude používat toto ID zavřete samotné odesláním WM_QUIT zprávu pomocí funkce rozhraní Win32 API [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946).
+
+`PreMessageLoop` pak zavolá `InitializeSecurity`. Ve výchozím nastavení `InitializeSecurity` volání [CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) popisovači zabezpečení nastaven na hodnotu NULL, což znamená, že každý uživatel má přístup k objektu.
+
+Pokud nechcete, aby službě a zadejte vlastní zabezpečení, mají přednost před `PreMessageLoop` a Nevolejte `InitializeSecurity`, a modelu COM poté určí nastavení zabezpečení z registru. Je pohodlný způsob, jak nakonfigurovat nastavení registru [DCOMCNFG](../atl/dcomcnfg.md) nástroj prodiskutována později v této části.
+
+Po zabezpečení není zadána, objekt je registrován s modelem COM tak, aby noví klienti můžou připojit k programu. A konečně program informuje správce řízení služeb (SCM), že je spuštěný a program přejde do smyčky zpráv. Program zůstane spuštěný, dokud se odešle zprávy o ukončení při vypnutí služby.
+
+## <a name="see-also"></a>Viz také
+
+[Služby](../atl/atl-services.md)   
+[Csecuritydesc – třída](../atl/reference/csecuritydesc-class.md)   
+[CSID – třída](../atl/reference/csid-class.md)   
+[Cdacl – třída](../atl/reference/cdacl-class.md)   
+[Catlservicemodulet::Run –](../atl/reference/catlservicemodulet-class.md#run)
 

@@ -1,5 +1,5 @@
 ---
-title: Operátory přípony | Microsoft Docs
+title: Operátory přípony | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 338e518d1939cb6ea32aaf200c54b6c352287561
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384382"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760260"
 ---
 # <a name="postfix-operators"></a>Operátory přípony
-Operátory operátory mít nejvyšší prioritu (tightest vazba) při vyhodnocení výrazu.  
-  
-## <a name="syntax"></a>Syntaxe  
- *operátory výraz*:  
- *primární – výraz*  
-  
- *operátory výraz***[***výraz***]**   
-  
- *operátory výraz***(***seznam argumentů výraz* opt **)**   
-  
- *operátory výraz***.**   *Identifikátor*  
-  
- *operátory výraz***->***identifikátor*   
-  
- *operátory – výraz*  **++**  
-  
- *operátory – výraz*  **--**  
-  
- Operátory v této úrovni přednost jsou dolní indexy pole, volání funkce, členové struktury a sjednocení a přípony přírůstek a operátory snížení.  
-  
-## <a name="see-also"></a>Viz také  
- [Operátory jazyka C](../c-language/c-operators.md)
+Příponové operátory mají nejvyšší prioritu (tightest vazby) ve vyhodnocení výrazu.  
+
+## <a name="syntax"></a>Syntaxe
+
+*výraz přípony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primární – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***[***výraz***]** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***(***argument-expression-list*<sub>optimalizované</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***.**   *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***->***identifikátor* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **--**
+
+V této úrovni priority operátorů jsou subscripty pole, volání funkce, struktury a unie členy a zvýšení příponového operátora a operátory snížení.
+
+## <a name="see-also"></a>Viz také
+
+[Operátory jazyka C](../c-language/c-operators.md)

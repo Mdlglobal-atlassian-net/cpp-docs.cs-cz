@@ -1,5 +1,5 @@
 ---
-title: Deklarace sjednocení | Microsoft Docs
+title: Deklarace sjednocení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d8c52752c1e05cb3c9f2b18a827fb493ba503ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b87f3a12de35cb7e7a57c901d65e8df51814fe3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391175"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763403"
 ---
 # <a name="union-declarations"></a>Deklarace sjednocení
-"Union prohlášení" Určuje sadu hodnot proměnných a volitelně značku pojmenování sjednocení. Hodnoty proměnné se nazývají "členové" sjednocení a může mít různé typy. Sjednocení se podobá "variantní záznamy" v dalších jazycích.  
+"Deklarace sjednocení" Určuje sadu hodnot proměnných a volitelně také názvy sjednocení značku. Hodnoty proměnné se nazývají "členy" unie a mohou mít různé typy. Sjednocení jsou podobná "variantní záznamy" v jiných jazycích.  
   
-## <a name="syntax"></a>Syntaxe  
- *Struktura nebo sjednocení specifikátor*:  
- *Struktura nebo sjednocení identifikátor* opt **{** *seznam struktura prohlášení* **}**  
+## <a name="syntax"></a>Syntaxe
+
+*struct – nebo – sjednocení specifikátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*  
   
- *identifikátor struktura nebo sjednocení*  
+*Struktura nebo sjednocení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**  
   
- *Struktura nebo sjednocení*:  
- **struct**  
+*struct-declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace struktury*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+
+Sjednocení obsah je definován jako
   
- **sjednocení**  
+*struct-declaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list***;**   
   
- *seznam struktura prohlášení*:  
- *Struktura – deklarace*  
+*specifier-qualifier-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
   
- *seznam struktura prohlášení struktura – deklarace*  
+*Struktura declarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor – struktura*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list***,***deklarátor – struktura* 
   
- Je definován union obsahu  
+Proměnná s **sjednocení** typ ukládá jedna z hodnot fronty definovaných podle tohoto typu. Deklarace struktury a sjednocení se řídí stejnými pravidly. Sjednocení může mít také bitová pole.  
   
- *Struktura deklarace*:  
- *specifikátor. kvalifikátor seznamu struktura – deklarátor seznamu***;**  
+Členové sjednocení nemůže mít nekompletní typ, zadejte `void`, nebo typ funkce. Proto členů nemůže být instancí třídy sjednocení, ale může být ukazatele na typ sjednocení, které jsou deklarované.  
   
- *specifier-qualifier-list*:  
- *Specifikátor typu specifikátor kvalifikátor list* opt  
-  
- *Kvalifikátor typu specifikátor kvalifikátor list* opt  
-  
- *Struktura – deklarátor seznamu*:  
- *deklarátor – struktura*  
-  
- *Struktura – deklarátor seznamu***,***deklarátor – struktura*   
-  
- Proměnná s **sjednocení** typ ukládá jednu z hodnot fronty definovaných podle typu. Stejná pravidla řídí struktury a sjednocení deklarace. Sjednocení může mít také bit pole.  
-  
- Členové sjednocení nemůže mít typ nekompletní, zadejte `void`, nebo typ funkce. Členy proto nemůže být instanci sjednocení ale může být ukazatelé na typ union se deklarovat.  
-  
- Deklarace typu union je pouze šablony. Paměti není vyhrazena, dokud je deklarovaná proměnnou.  
+Deklarace typu sjednocení je pouze šablony. Dokud je proměnná deklarována není vyhrazena paměť.  
   
 > [!NOTE]
->  Pokud je deklarovaná spojení dvou typů a jedna hodnota je uložena, ale sjednocení přistupuje s jiným typem, nespolehlivé výsledky. Například spojení **float** a `int` je deklarován. A **float** hodnota je uložena, ale tento program později přistupuje k hodnotě jako `int`. V takové situaci by hodnota závisí na interní úložiště **float** hodnoty. Celočíselná hodnota, nebudou spolehlivé.  
+> Pokud je deklarována jako spojení dva typy a jedna hodnota je uložena, ale sjednocení je přistupováno pomocí jiného typu, nespolehlivé výsledky. Například spojení **float** a `int` je deklarována. A **float** hodnota je uložena, ale program později přistupuje k hodnotě jako `int`. V takové situaci, hodnota bude trvat, závisí na vnitřní **float** hodnoty. Celočíselná hodnota nemusí být spolehlivé.  
   
-## <a name="examples"></a>Příklady  
- Následují příklady sjednocení:  
+## <a name="examples"></a>Příklady
+
+Následují příklady sjednocení:  
   
-```  
+```C
 union sign   /* A definition and a declaration */  
 {  
     int svar;  
@@ -77,9 +74,9 @@ union sign   /* A definition and a declaration */
 } number;  
 ```  
   
- Tento příklad definuje union proměnná s `sign` zadejte a deklaruje proměnné s názvem `number` , má dva členy: `svar`, znaménkem, a `uvar`, celé číslo bez znaménka. Toto prohlášení umožňuje aktuální hodnota `number` ukládaly jako přihlášeni nebo hodnotu bez znaménka. Značka přidružené tomuto typu union je `sign`.  
-  
-```  
+Tento příklad definuje proměnné sjednocení s `sign` zadejte a deklaruje proměnnou s názvem `number` , který má dva členy: `svar`, celé číslo se znaménkem, a `uvar`, celé číslo bez znaménka. Tato deklarace umožňuje aktuální hodnotu `number` ukládaly jako podepsaný nebo hodnoty bez znaménka. Příznak přidružený k tomuto typu sjednocení je `sign`.  
+
+```C
 union               /* Defines a two-dimensional */  
 {                   /*  array named screen */  
     struct      
@@ -89,15 +86,15 @@ union               /* Defines a two-dimensional */
     } window1;  
     int screenval;  
 } screen[25][80];  
-```  
+```
+
+`screen` Pole obsahuje 2 000 prvků. Každý prvek pole se jednotlivé sjednocení se dvěma členy: `window1` a `screenval`. `window1` Členů je struktura se dvěma členy bitových polí `icon` a `color`. `screenval` Člen je `int`. V daném okamžiku každý sjednocení prvek udržuje `int` reprezentována `screenval` nebo struktura reprezentována `window1`.  
   
- `screen` Pole obsahuje 2 000 prvků. Každý element pole je jednotlivých – typ union s dva členy: `window1` a `screenval`. `window1` Člen je struktura s dva členy pole bit `icon` a `color`. `screenval` Člen `int`. V každém okamžiku každý union prvek obsahuje buď `int` reprezentována `screenval` nebo struktura reprezentována `window1`.  
+**Specifické pro Microsoft**  
   
- **Konkrétní Microsoft**  
+Vnořené sjednocení mohou být deklarovány anonymně, když jsou členy jiné struktury nebo sjednocení. Toto je příklad nameless sjednocení:  
   
- Vnořené sjednocení lze deklarovat anonymně, když jsou členy jiné struktura nebo union. Jedná se o příklad nameless unie:  
-  
-```  
+```C
 struct str  
 {  
     int a, b;  
@@ -115,9 +112,9 @@ struct str
 my_str.l == 0L;  /* A reference to a field in the my_str union */  
 ```  
   
- Sjednocení jsou často vnořené ve strukturu, která obsahuje pole, udělíte typ dat ve sjednocení konkrétní kdykoli. Toto je příklad deklarace pro takové spojení:  
+Sjednocení jsou často vnořené struktury, která obsahuje pole poskytující typu dat obsažených v sjednocení v určitém čase. Toto je příklad deklarace pro taková sjednocení:  
   
-```  
+```C
 struct x  
 {  
     int type_tag;  
@@ -129,9 +126,9 @@ struct x
 }  
 ```  
   
- V tématu [členové struktury a sjednocení](../c-language/structure-and-union-members.md) informace o odkazování na sjednocení.  
+Zobrazit [členy struktury a sjednocení](../c-language/structure-and-union-members.md) informace o odkazování na sjednocení.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)
+[Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

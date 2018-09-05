@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec74810503fa86d6b5d102aa0fd1ca34b4fef1c6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589100"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751267"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException – třída
 Vyvolána, když přetypování nebo explicitního převodu je neplatný.  

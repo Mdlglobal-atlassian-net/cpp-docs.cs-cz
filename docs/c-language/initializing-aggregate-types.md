@@ -1,5 +1,5 @@
 ---
-title: Inicializace typů agregace | Microsoft Docs
+title: Inicializace typů agregace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,146 +18,148 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12ece1767c73e94551072532bfde6b36650bca9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391675"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757946"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializace typů agregace
-Typ "aggregate" je struktury, sjednocení nebo typ pole. Pokud typ agregace obsahuje členy typů agregace, použít pravidla inicializace rekurzivně.  
-  
-## <a name="syntax"></a>Syntaxe  
- *Inicializátor*:  
- **{***inicializátoru seznamu***}** / * pro inicializace agregace \*/  
-  
- **{***inicializátoru seznamu***,}**  
-  
- *inicializátoru seznamu*:  
- *Inicializátor*  
-  
- *inicializátoru seznamu***,***inicializátoru*  
-  
- *Inicializátoru seznamu* je seznam inicializátory oddělených čárkami. Každý inicializátoru v seznamu je buď konstantní výraz nebo seznam inicializátor. Proto mohou být vnořené inicializační seznamy. Tento formulář je užitečné pro inicializaci agregační členy agregační typu, jak je znázorněno v příkladech v této části. Ale pokud inicializátoru pro automatické identifikátor jeden výraz, se nemusí být konstantní výraz; jenom musí mít příslušného typu pro přiřazení k identifikátoru.  
-  
- Pro každý inicializátoru seznamu hodnot konstantní výrazy přiřazená, v pořadí, na odpovídající členy agregační proměnné.  
-  
- Pokud *inicializátoru seznamu* má méně hodnoty než typ agregace, zbývající členy nebo elementy typu agregace jsou inicializovány na hodnotu 0. Počáteční hodnota Automatické identifikátoru inicializovat není explicitně není definován. Pokud *inicializátoru seznamu* má více hodnot než typ agregace, dojde k chybě. Tato pravidla vztahují na všechny seznamy inicializátoru vložená a také na agregace jako celek.  
-  
- Do struktury inicializátoru je výraz stejného typu nebo seznam inicializátory jeho členů uzavřený do složených závorek (**{}**). Nepojmenované bit pole členů nejsou inicializovány.  
-  
- Při inicializaci sjednocení *inicializátoru seznamu* musí být jediný konstantní výraz. První člen sjednocení přiřazena hodnota konstantní výraz.  
-  
- Pokud pole má neznámý velikost, počet inicializátory Určuje velikost pole a její typ se změní na dokončení. Neexistuje žádný způsob, chcete-li určit opakování inicializátoru v jazyce C nebo k chybě při inicializaci element uprostřed pole bez zadání také všechny předchozí hodnoty. Pokud potřebujete tuto operaci v programu, zápisu rutiny v jazyce sestavení.  
-  
- Všimněte si, že počet inicializátory můžete nastavit velikost pole:  
-  
-```  
-int x[ ] = { 0, 1, 2 }  
-```  
-  
- Pokud zadáte velikost a poskytnout nesprávný počet inicializátory, ale kompilátor vygeneruje chybu.  
-  
- **Konkrétní Microsoft**  
-  
- Maximální velikost pole je definována **size_t –**. Definované v záhlaví souboru STDDEF. H, **size_t –** je `unsigned int` s rozsahem 0x00000000 k 0x7CFFFFFF.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="examples"></a>Příklady  
- Tento příklad ukazuje inicializátory pro pole.  
-  
-```  
-int P[4][3] =   
-{  
-    { 1, 1, 1 },  
-    { 2, 2, 2 },  
-    { 3, 3, 3,},  
-    { 4, 4, 4,},  
-};  
-```  
-  
- Tento příkaz deklaruje `P` jako čtyři tři pole a inicializuje prvky jeho první řádek na 1, elementy její druhý řádek na 2, a tak dále prostřednictvím čtvrtý řádek. Všimněte si, že seznam inicializátoru řádků třetí a čtvrtý obsahuje čárkami po poslední konstantní výraz. Poslední inicializátoru seznamu (`{4, 4, 4,},`) je také oddělený čárkou. Tyto další čárkami jsou povolené, ale nejsou požadována; pouze čárkami, které oddělují konstantní výrazy od sebe navzájem a ty, které oddělení jeden seznam inicializátoru z jiné, je potřeba.  
-  
- Pokud agregační člen má žádný seznam inicializátoru vložená, hodnoty jednoduše přiřazená, v pořadí, pro každého člena subaggregate. Proto je ekvivalentní následující inicializace v předchozím příkladu:  
-  
-```  
-int P[4][3] =   
-{  
-   1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4  
-};  
-```  
-  
- Složené závorky může zobrazit i kolem jednotlivých inicializátory v seznamu a pomohou Upřesnit v předchozím příkladu.  
-  
- Při inicializaci agregační proměnnou, musí být použít složené závorky a inicializátoru uvádí správně. Následující příklad ilustruje kompilátoru výklad složené závorky podrobněji:  
-  
-```  
-typedef struct   
-{  
-    int n1, n2, n3;  
-} triplet;  
-  
-triplet nlist[2][3] =   
-{  
-    { {  1, 2, 3 }, {  4, 5, 6 }, {  7, 8, 9 } },  /* Row 1 */  
-    { { 10,11,12 }, { 13,14,15 }, { 16,17,18 } }   /* Row 2 */  
-};  
-```  
-  
- V tomto příkladu `nlist` je deklarován jako pole 2 3 struktur, každá struktura má tři členy. Řádek 1 inicializace přiřadí první řádek hodnot `nlist`, a to takto:  
-  
-1.  První levé závorky na řádku 1 signály kompilátor této inicializace první agregační členem `nlist` (tedy `nlist[0]`) je začátku.  
-  
-2.  Druhý levé závorky označuje, že inicializace první agregační členem `nlist[0]` (to znamená, struktura v `nlist[0][0]`) je začátku.  
-  
-3.  První pravé složené závorce končí inicializace struktury `nlist[0][0]`; další levé závorky spustí inicializace `nlist[0][1]`.  
-  
-4.  Tento proces pokračuje v až do konce řádku, které končí pravé složené závorce správné inicializace `nlist[0]`.  
-  
- Řádek 2 přiřadí hodnoty do druhého řádku `nlist` podobným způsobem. Všimněte si, že vnější sady složené závorky obklopuje inicializátory v řádcích 1 a 2 jsou povinné. Následující konstrukce, která vynechá vnější složených závorek, způsobí chybu:  
-  
-```  
-triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */  
-{  
-     {  1, 2, 3 },{  4, 5, 6 },{  7, 8, 9 },   /* Line 1 */  
-     { 10,11,12 },{ 13,14,15 },{ 16,17,18 }    /* Line 2 */  
-};  
-```  
-  
- V této konstrukce spustí první levé závorky na řádku 1 inicializace `nlist[0]`, což je pole tři struktury. Hodnoty 1, 2 a 3 přiřazené k tři členy první struktury. Po inicializaci (po hodnotě 3) došlo k další pravé složené závorce `nlist[0]` dokončení, a dva zbývající struktury v poli tři struktura není inicializován automaticky na hodnotu 0. Podobně `{ 4,5,6 }` inicializuje první struktury v druhém řádku `nlist`. Zbývající dvě struktury `nlist[1]` jsou nastavena na hodnotu 0. Když kompilátor narazí další inicializátoru seznamu ( `{ 7,8,9 }` ), pokusí se inicializovat `nlist[2]`. Vzhledem k tomu `nlist` má pouze dva řádky, výsledkem bude chyba, tento pokus.  
-  
- V této další příklad tří `int` členy `x` inicializovány na 1, 2 a 3, v uvedeném pořadí.  
-  
-```  
-struct list   
-{  
-    int i, j, k;  
-    float m[2][3];  
-} x = {  
-        1,  
-        2,  
-        3,  
-       {4.0, 4.0, 4.0}  
-      };  
-```  
-  
- V `list` struktura výše, tři prvky v prvním řádku `m` jsou inicializovány 4.0; elementy zbývající řádku `m` jsou inicializovány 0,0 ve výchozím nastavení.  
-  
-```  
-union  
-{  
-    char x[2][3];  
-    int i, j, k;  
-} y = { {  
-            {'1'},  
-            {'4'}   
-        }  
-      };  
-```  
-  
- Proměnnou union `y`, v tomto příkladu je inicializován. První prvek sjednocení je pole, tak, aby inicializátoru inicializátoru agregační. V seznamu inicializátoru `{'1'}` přiřazuje hodnoty na první řádek pole. Vzhledem k tomu, že v seznamu se zobrazí pouze jednu hodnotu, je inicializováno element v první sloupec znak `1`, a zbývající dva elementy v řádku není inicializován na hodnotu 0 ve výchozím nastavení. Podobně první prvek druhého řádku `x` je inicializováno znak `4`, a zbývající dva elementy v řádku není inicializován na hodnotu 0.  
-  
-## <a name="see-also"></a>Viz také  
- [Inicializace](../c-language/initialization.md)
+
+*Agregační* je typ struktury, sjednocení nebo typ pole. Pokud agregační typ obsahuje členy agregačních typů, inicializace pravidla se vztahují rekurzivně.
+
+## <a name="syntax"></a>Syntaxe
+
+*Inicializátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***}** / * pro inicializace agregace     \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***,}** 
+
+*seznam inicializátorů*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Inicializátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů***,***inicializátor* 
+
+*Seznam inicializátorů* je seznam inicializátorů oddělený čárkami. Každý inicializátor v seznamu je konstantní výraz nebo seznamem inicializátorů. Proto mohou být vnořené seznamy inicializátorů. Tento formulář je užitečné pro inicializace agregace členů agregační typ, jak ukazují příklady v této části. Ale pokud inicializátor pro automatickému identifikátoru je jediný výraz, se nemusí být konstantní výraz; pouze musí mít příslušného typu pro přiřazení k identifikátoru.
+
+Pro každý seznam inicializátorů hodnoty konstantní výrazy jsou přiřazeny, v pořadí, odpovídající členů agregační proměnné.
+
+Pokud *seznam inicializátorů* má menší počet hodnot, než požadovaný typ agregace, zbývající členy nebo prvky požadovaný typ agregace jsou inicializovány na hodnotu 0. Počáteční hodnota automatickému identifikátoru nebyly explicitně inicializovány není definována. Pokud *seznam inicializátorů* má více hodnot než agregační typ, dojde k chybě. Tato pravidla vztahují každý inicializátor vložený seznam, stejně jako agregace jako celek.
+
+Inicializátor struktura je výraz stejného typu nebo seznam inicializátorů jeho členů uzavřený do složených závorek (**{}**). Nepojmenované členy bitových polí nejsou inicializovány.
+
+Při inicializaci sjednocení *seznam inicializátorů* musí být jediný konstantní výraz. Hodnota konstantní výraz je přiřazena první člen sjednocení.
+
+Pokud pole má neznámou velikost, počet inicializátory Určuje velikost pole a jeho typ je dokončen. Neexistuje žádný způsob k určení opakování inicializátor v jazyce C nebo inicializace element uprostřed pole bez zadání také všechny předchozí hodnoty. Pokud potřebujete tuto operaci ve svém programu, psát v jazyce sestavení rutiny.
+
+Všimněte si, že počet inicializátory můžete nastavit velikost pole:
+
+```C
+int x[ ] = { 0, 1, 2 }
+```
+
+Pokud zadáte velikost a poskytnout chybný počet inicializátory, však kompilátor vygeneruje chybu.
+
+**Specifické pro Microsoft**
+
+Maximální velikost pole je definované **size_t**. Definovaný v souboru hlaviček STDDEF. H, **size_t** je `unsigned int` s rozsahem 0x00000000 k 0x7CFFFFFF.
+
+**Specifické pro END Microsoft**
+
+## <a name="examples"></a>Příklady
+
+Tento příklad ukazuje Incializátory pole.
+
+```C
+int P[4][3] =
+{
+    { 1, 1, 1 },
+    { 2, 2, 2 },
+    { 3, 3, 3,},
+    { 4, 4, 4,},
+};
+```
+
+Tento příkaz deklaruje `P` jako čtyři tři pole a inicializuje prvky jeho prvního řádku na 1, prvky jeho druhého řádku na 2, a tak dále až čtvrtý řádek. Všimněte si, že v seznamu inicializátorů třetí a čtvrtý řádek obsahuje čárkami po poslední konstantní výraz. Poslední seznam inicializátorů (`{4, 4, 4,},`) také následuje čárka. Tyto dodatečné čárky jsou povolené, ale nejsou vyžadovány; pouze čárkami, které oddělují konstantní výrazy z mezi sebou a ty, které oddělují jeden seznam inicializátorů z jiného, jsou potřeba.
+
+Pokud agregační člen nemá žádný vložený inicializátor seznamu, hodnoty jsou pouze přiřazeny, v pořadí, pro každého člena subaggregate. Inicializace v předchozím příkladu je tedy ekvivalentní následujícímu zápisu:
+
+```C
+int P[4][3] =
+{
+   1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4
+};
+```
+
+Složené závorky se může zobrazit i po jednotlivých inicializátory v seznamu a by pomohou vyjasnit výše uvedený příklad.
+
+Když inicializujete proměnnou agregace, musíte použít složené závorky a seznamy inicializátorů správně. Následující příklad ukazuje kompilátoru interpretaci složených závorek podrobněji:
+
+```C
+typedef struct
+{
+    int n1, n2, n3;
+} triplet;
+
+triplet nlist[2][3] =
+{
+    { {  1, 2, 3 }, {  4, 5, 6 }, {  7, 8, 9 } },  /* Row 1 */
+    { { 10,11,12 }, { 13,14,15 }, { 16,17,18 } }   /* Row 2 */
+};
+```
+
+V tomto příkladu `nlist` je deklarován jako 2 3 pole struktur, každá struktura s tři členy. Řádek 1 inicializace přiřadí první řádek hodnot `nlist`, následujícím způsobem:
+
+1.  První levou složenou závorku na řádek 1 signalizuje kompilátoru, že inicializace prvního člena agregační `nlist` (to znamená `nlist[0]`) je začátek.
+
+2.  Druhý levou složenou závorku označuje, že inicializace prvního člena agregační `nlist[0]` (to znamená, že struktura v `nlist[0][0]`) je začátek.
+
+3.  Inicializace struktury končí první pravou složenou závorku `nlist[0][0]`; další levou složenou závorku spuštění inicializace `nlist[0][1]`.
+
+4.  Proces bude pokračovat až do konce řádku, kde končí pravou složenou závorku správné inicializace `nlist[0]`.
+
+Řádek 2 přiřadí hodnoty do druhého řádku `nlist` podobným způsobem. Všimněte si, že se vyžadují vnější sady složené závorky uzavírající inicializátory řádky 1 a 2. Následující konstrukce, která vynechává vnější závorky, způsobí chybu:
+
+```C
+triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
+{
+     {  1, 2, 3 },{  4, 5, 6 },{  7, 8, 9 },   /* Line 1 */
+     { 10,11,12 },{ 13,14,15 },{ 16,17,18 }    /* Line 2 */
+};
+```
+
+V této konstrukce spustí první levou složenou závorku na řádek 1 inicializace `nlist[0]`, což je pole tři konstrukcí. Hodnoty 1, 2 a 3 jsou přiřazeny k tři členy struktury první. Pokud je další pravou složenou závorku (po hodnotu 3) došlo k chybě inicializace `nlist[0]` se dokončí, a dvě zbývající struktury struktura tři pole jsou automaticky inicializovány na hodnotu 0. Obdobně `{ 4,5,6 }` inicializuje první struktury, ve druhém řádku `nlist`. Zbývající dvě struktury `nlist[1]` jsou nastaveny na hodnotu 0. Když kompilátor narazí na další seznam inicializátorů ( `{ 7,8,9 }` ), pokusí se inicializovat `nlist[2]`. Protože `nlist` má pouze dva řádky, tento pokus způsobí chybu.
+
+V tomto dalším příkladu tři `int` členy `x` jsou inicializovány na hodnotu 1, 2 a 3, v uvedeném pořadí.
+
+```C
+struct list
+{
+    int i, j, k;
+    float m[2][3];
+} x = {
+        1,
+        2,
+        3,
+       {4.0, 4.0, 4.0}
+      };
+```
+
+V `list` strukturu výše, tři prvky v prvním řádku `m` jsou inicializovány na hodnotu 4.0; prvky řádku zbývající `m` jsou ve výchozím nastavení inicializována na hodnotu 0,0.
+
+```C
+union
+{
+    char x[2][3];
+    int i, j, k;
+} y = { {
+            {'1'},
+            {'4'}
+        }
+      };
+```
+
+Proměnné sjednocení `y`, v tomto příkladu je inicializován. První prvek sjednocení je pole, takže inicializátoru je souhrnných inicializátorů. Seznam inicializátorů `{'1'}` přiřadí hodnoty na první řádek pole. Vzhledem k tomu, že v seznamu se zobrazí pouze jedna hodnota, elementu v prvním sloupci je inicializován na znak `1`, a zbývající dva prvky v řádku jsou ve výchozím nastavení inicializována na hodnotu 0. Podobně, první prvek druhého řádku `x` je inicializován na znak `4`, a zbývající dva prvky v řádku jsou inicializovány na hodnotu 0.
+
+## <a name="see-also"></a>Viz také
+
+[Inicializace](../c-language/initialization.md)

@@ -1,5 +1,5 @@
 ---
-title: Testování ovládací prvek DHTML upravené ATL | Microsoft Docs
+title: Testování ovládacího prvku ATL DHTML upravené | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b140788cd409aa5a11f93689e96fa40c1a167dfe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9730f8ef9bfc89d65ffb89ddbbfe67ce247138e9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360342"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755592"
 ---
-# <a name="testing-the-modified-atl-dhtml-control"></a>Testování ovládacího prvku upravené ATL jazyka DHTML
-Vyzkoušejte nový ovládací prvek a zkontrolujte, jak funguje teď.  
-  
-#### <a name="to-build-and-test-the-modified-control"></a>Pro sestavení a otestování upravené ovládacího prvku  
-  
-1.  Znovu sestavte projekt a otevřete jej v testu kontejneru. V tématu [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup – kontejner testů.  
-  
-     Změnit velikost ovládacího prvku a zobrazit všechny tlačítek, které jste přidali.  
-  
-2.  Zkontrolujte dvě tlačítka, které jste vložili změnou kódu HTML. Každé tlačítko nenese popisek, který jste určili v [úprava ovládací prvek DHTML ATL](../atl/modifying-the-atl-dhtml-control.md): **aktualizovat** a **HelloHTML**.  
-  
-3.  Otestujte dvě nová tlačítka, které chcete zobrazit, jak pracují.  
-  
- Nyní otestujte metody, které nejsou součástí uživatelského rozhraní.  
-  
-1.  Zvýrazněte ovládacího prvku, tak se aktivuje ohraničení.  
-  
-2.  Na **řízení** nabídky, klikněte na tlačítko **vyvolání metody**.  
-  
- Metody v seznamu s názvem bez přípony **název metody** jsou metody, které můžete volat kontejneru: `MethodInvoked` a `GoToURL`. Všechny ostatní metody jsou řízeny uživatelského rozhraní.  
-  
-1.  Vyberte metodu invoke a klikněte na tlačítko `Invoke` zobrazit okno se zprávou metody nebo přejděte na www.microsoft.com.  
-  
-2.  V **vyvolání metody** dialogové okno, klikněte na tlačítko **Zavřít**.  
-  
- Další informace o různých elementy a soubory, které tvoří ovládací prvek ATL DHTML najdete v tématu [identifikace prvky jazyka DHTML řízení projektu](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
+# <a name="testing-the-modified-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML upravené
+
+Vyzkoušejte si nového ovládacího prvku abyste viděli, jak funguje teď.
+
+#### <a name="to-build-and-test-the-modified-control"></a>Pro vytváření a testování upravený ovládací prvek
+
+1. Znovu sestavte projekt a otevřete ho v kontejneru testů. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
+
+     Změnit velikost ovládacího prvku a zobrazit všechny tlačítek, které jste přidali.
+
+2. Zkontrolujte dvě tlačítka, které jste vložili změnou kódu HTML. Každé tlačítko nese popisek, který jste určili v [úprav ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **aktualizovat** a **HelloHTML**.
+
+3. Testování dvě nová tlačítka, které chcete zobrazit, jak fungují.
+
+Teď otestujte metody, které nejsou součástí uživatelského rozhraní.
+
+1. Zvýrazněte ovládacího prvku, tak se aktivuje ohraničení.
+
+2. Na **ovládací prvek** nabídky, klikněte na tlačítko **vyvolání metody**.
+
+Metody v seznamu s názvem **název metody** jsou metody, které můžete volat kontejneru: `MethodInvoked` a `GoToURL`. Všechny ostatní metody se řídí uživatelské rozhraní.
+
+1. Vyberte metodu invoke a klikněte na tlačítko `Invoke` zobrazit okno se zprávou metody nebo přejděte na www.microsoft.com.
+
+2. V **vyvolání metody** dialogové okno, klikněte na tlačítko **Zavřít**.
+
+Další informace o různých prvků a soubory, které tvoří ovládacího prvku ATL DHTML, naleznete v tématu [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+
+## <a name="see-also"></a>Viz také
+
+[Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
 

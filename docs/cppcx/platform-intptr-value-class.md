@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612126"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758827"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr – hodnotová třída
 Představuje podepsaný ukazatel nebo popisovač a jejichž velikost se liší podle platformy (32bitová nebo 64bitová verze).  

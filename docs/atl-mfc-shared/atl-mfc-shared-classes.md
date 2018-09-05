@@ -1,5 +1,5 @@
 ---
-title: ATL – MFC sdílené třídy | Microsoft Docs
+title: Sdílené třídy ATL-MFC | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -31,26 +31,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3517e193effd88e1ebc9afb66268dcb60ba6932
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357197"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761810"
 ---
 # <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
-Tyto třídy nástroje můžete použít v žádné nativní projektu C++ bez nutnosti jakékoli MFC DLL.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Třídy sdílena mezi MFC a knihovny ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
- Obsahuje odkazy na třídy sdílena mezi MFC a ATL.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Referenční dokumentace Active Template Library (ATL)](../atl/atl-com-desktop-components.md)  
- Poskytuje referenční materiál pro knihovny serveru ATL, sadu na základě šablon C++ třídy, které zjednodušují programování COM – objekty.  
-  
- [Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)  
- Poskytuje referenční materiál pro knihovny MFC sadu tříd v tom, že představují aplikační, což je rozhraní aplikace napsané pro rozhraní API systému Windows.  
-  
- [Ladění](/visualstudio/debugger/debugging-in-visual-studio)  
- Obsahuje odkazy na používání ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložené procedury.
+
+Tyto třídy nástroje je možné v každém nativní projektu C++ nevyžaduje žádné knihovny MFC DLL.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Třídy sdílené mezi MFC a ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+Obsahuje odkazy na třídy sdílené mezi MFC a ATL.
+
+## <a name="related-sections"></a>Související oddíly
+
+[Odkaz na aktivní šablony knihovny (ATL)](../atl/atl-com-desktop-components.md)  
+Poskytuje referenční materiál pro knihovnu ATL sady založené na šablonách třídy jazyka C++, které zjednodušují programování objektů modelu COM.
+
+[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)  
+Poskytuje referenční materiál pro knihovnu MFC, sadu tříd v, které tvoří aplikační architekturu, což je rozhraní napsané pro rozhraní API Windows.
+
+[Ladění](/visualstudio/debugger/debugging-in-visual-studio)  
+Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.

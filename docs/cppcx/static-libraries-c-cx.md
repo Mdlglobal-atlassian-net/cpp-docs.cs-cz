@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5bb69b65d78b6369d872fd6f953f6ddde382c21b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602286"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759441"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C + +/ CX)
 Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows (UPW) může obsahovat kód jazyka C++ podle standardu ISO, včetně typů STL a volání rozhraní API Win32, které nejsou vyloučeny z aplikace platformy Windows Runtime. Statická knihovna spotřebovává součásti prostředí Windows Runtime a může vytvářet komponenty prostředí Windows Runtime s určitými omezeními.  

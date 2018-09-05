@@ -17,33 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2832b9866145d9af510302c8c6d327972205495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 93d30c1af67159c04546076a07c78fbaec9cbb91
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952965"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762316"
 ---
 # <a name="ccomobjectroot-class"></a>Ccomobjectroot – třída
-Tato definice typu z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) je založena na výchozí model serveru vláken.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato definice typu z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) je založena na výchozí model serveru vláken.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `CComObjectRoot` je `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) založena na výchozí model serveru vláken. Proto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) bude odkazovat buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
-  
- `CComObjectRootEx` zpracovává správy referenční počet objektů pro neagregovaná a agregované objekty. Obsahuje referenční počet objektů, pokud objekt není agregovaný a drží ukazatel vnější neznámá, pokud je agregovaný objekt. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a odstranění k ochraně vnější objekt před odstraněním vydáním vnitřní rozhraní nebo vnitřní objekt.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlcom  
-  
-## <a name="see-also"></a>Viz také  
- [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
- [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)   
- [CComObject – třída](../../atl/reference/ccomobject-class.md)   
- [CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+## <a name="remarks"></a>Poznámky
+
+`CComObjectRoot` je `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) založena na výchozí model serveru vláken. Proto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) bude odkazovat buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).
+
+`CComObjectRootEx` zpracovává správy referenční počet objektů pro neagregovaná a agregované objekty. Obsahuje referenční počet objektů, pokud objekt není agregovaný a drží ukazatel vnější neznámá, pokud je agregovaný objekt. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a odstranění k ochraně vnější objekt před odstraněním vydáním vnitřní rozhraní nebo vnitřní objekt.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlcom
+
+## <a name="see-also"></a>Viz také
+
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
+[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)   
+[CComObject – třída](../../atl/reference/ccomobject-class.md)   
+[CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

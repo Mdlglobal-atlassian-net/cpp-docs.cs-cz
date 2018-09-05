@@ -16,30 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 50a174f4ee85b84451673b56139b9968c796464f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222547"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761833"
 ---
 # <a name="introduction-to-com-and-atl"></a>Úvod do modelu COM a knihovny ATL
-Tato část obsahuje stručný úvod do modelu COM a knihovny ATL.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Úvod do modelu COM](../atl/introduction-to-com.md)  
- Poskytuje přehled o součást objektu modelu (COM) základní koncepty, včetně rozhraní, `IUnknown`, počítání odkazů `QueryInterface`, zařazování a agregaci.  
-  
- [Úvod do ATL](../atl/introduction-to-atl.md)  
- Tento článek popisuje, stručně, co aktivní šablony knihovny (ATL) je navržená pro šablony knihoven a knihovny ATL čísla verzí. Obsahuje doporučení k výběru mezi ATL a MFC.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Component Object Model](/windows/desktop/com/the-component-object-model)  
- Sada Windows SDK materiálu modelu COM.  
-  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.  
-  
- [Přehled třídy ATL](../atl/atl-class-overview.md)  
- Poskytuje referenční informace a odkazy na ATL – třídy.
+
+Tato část obsahuje stručný úvod do modelu COM a knihovny ATL.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Úvod do modelu COM](../atl/introduction-to-com.md)  
+Poskytuje přehled o součást objektu modelu (COM) základní koncepty, včetně rozhraní, `IUnknown`, počítání odkazů `QueryInterface`, zařazování a agregaci.
+
+[Úvod do ATL](../atl/introduction-to-atl.md)  
+Tento článek popisuje, stručně, co aktivní šablony knihovny (ATL) je navržená pro šablony knihoven a knihovny ATL čísla verzí. Obsahuje doporučení k výběru mezi ATL a MFC.
+
+## <a name="related-sections"></a>Související oddíly
+
+[Component Object Model](/windows/desktop/com/the-component-object-model)  
+Sada Windows SDK materiálu modelu COM.
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+
+[Přehled třídy ATL](../atl/atl-class-overview.md)  
+Poskytuje referenční informace a odkazy na ATL – třídy.
 

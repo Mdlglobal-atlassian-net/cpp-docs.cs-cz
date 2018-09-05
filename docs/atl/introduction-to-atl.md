@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f2331d084f4959be2157ddb6fc1b6c25ac015e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 93baa57e8567b6ab08a0157f200a4d89fc9813e4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197106"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754836"
 ---
 # <a name="introduction-to-atl"></a>Úvod do ATL
-Knihovna ATL je knihovnu Active Template Library, sady založené na šablonách C++, třídy, pomocí které můžete snadno vytvořit malé, rychlé objekty modelu COM (Component Object). Má zvláštní podporu pro klíčové funkce modelu COM, včetně: stock implementace [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), a `IDispatch`; duální rozhraní; standardní rozhraní čítače COM; body připojení; odtržených rozhraní; a ovládací prvky ActiveX.  
-  
- ATL kód slouží k vytvoření objektů s jedním vláknem, objekty apartment modelu, model volných vláken objekty nebo objekty volných vláken a apartment model.  
-  
- V této části probíraná témata zahrnují:  
-  
--   Jak [knihovna šablon](../atl/using-a-template-library.md) se liší od standardní knihovny.  
-  
--   Co jste [lze a nelze provést pomocí knihovny ATL](../atl/scope-of-atl.md).  
-  
--   [Doporučení k výběru mezi ATL a MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Úvod do modelu COM a knihovny ATL](../atl/introduction-to-com-and-atl.md)
+
+Knihovna ATL je knihovnu Active Template Library, sady založené na šablonách C++, třídy, pomocí které můžete snadno vytvořit malé, rychlé objekty modelu COM (Component Object). Má zvláštní podporu pro klíčové funkce modelu COM, včetně: stock implementace [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), a `IDispatch`; duální rozhraní; standardní rozhraní čítače COM; body připojení; odtržených rozhraní; a ovládací prvky ActiveX.
+
+ATL kód slouží k vytvoření objektů s jedním vláknem, objekty apartment modelu, model volných vláken objekty nebo objekty volných vláken a apartment model.
+
+V této části probíraná témata zahrnují:
+
+- Jak [knihovna šablon](../atl/using-a-template-library.md) se liší od standardní knihovny.
+
+- Co jste [lze a nelze provést pomocí knihovny ATL](../atl/scope-of-atl.md).
+
+- [Doporučení k výběru mezi ATL a MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
+
+## <a name="see-also"></a>Viz také
+
+[Úvod do modelu COM a knihovny ATL](../atl/introduction-to-com-and-atl.md)
 

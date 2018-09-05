@@ -1,5 +1,5 @@
 ---
-title: 'Uplynulý čas: Třídy automatizace | Microsoft Docs'
+title: 'Uplynulý čas: Automatizační třídy | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1abf6274137ae67b159ad43612d24020a0d14e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcde08e8ffdb30f9ebf0ae7577bf836e84513a07
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354965"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751674"
 ---
-# <a name="elapsed-time-automation-classes"></a>Uplynulý čas: Třídy automatizace
-Tento postup ukazuje, jak pro výpočet rozdílu mezi dvěma `CTime` objekty a získání přístupu `CTimeSpan` výsledek.  
-  
-#### <a name="to-calculate-elapsed-time"></a>Chcete-li vypočítat uplynulý čas  
-  
-1.  Vytvořte dvě `COleDateTime` objekty.  
-  
-2.  Nastavte jednu z `COleDateTime` objekty na aktuální čas.  
-  
-3.  Proveďte některé časově náročný úkol.  
-  
-4.  Nastavení dalších `COleDateTime` objektu na aktuální čas.  
-  
-5.  Rozdíl mezi dvěma dobu trvat.  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md)
+# <a name="elapsed-time-automation-classes"></a>Uplynulý čas: Automatizační třídy
+
+Tento postup ukazuje, jak vypočítat rozdíl mezi dvěma `CTime` objekty a get `CTimeSpan` výsledek.
+
+#### <a name="to-calculate-elapsed-time"></a>Pro výpočet uplynulého času
+
+1. Pak vytvoříte další dva `COleDateTime` objekty.
+
+2. Nastavte jednu z `COleDateTime` objektů na aktuální čas.
+
+3. Provedení některých časově náročné úlohy.
+
+4. Nastavit další `COleDateTime` objektů na aktuální čas.
+
+5. Využijte rozdíl mezi dvěma časy.
+
+   [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md)
 

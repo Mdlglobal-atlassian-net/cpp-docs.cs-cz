@@ -20,83 +20,94 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a996b1f2a9b81e9d74548f3e69883cee447ac3a0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881614"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757891"
 ---
 # <a name="cwintraitsor-class"></a>Cwintraitsor – třída
-Tato třída poskytuje metody pro standardizaci stylů použitých při vytváření objektu okno.  
-  
+
+Tato třída poskytuje metody pro standardizaci stylů použitých při vytváření objektu okno.
+
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <DWORD t_dwStyle = 0,
           DWORD t_dwExStyle = 0, 
           class TWinTraits = CControlWinTraits>
 class CWinTraitsOR
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *t_dwStyle*  
- Výchozí styly oken.  
-  
- *t_dwExStyle*  
- Rozšířené styly oken ve výchozím nastavení.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|Načte rozšířené styly `CWinTraitsOR` objektu.|  
-|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Načte standardní styly `CWinTraitsOR` objektu.|  
-  
-## <a name="remarks"></a>Poznámky  
- To [vlastností okna](../../atl/understanding-window-traits.md) třída poskytuje jednoduchý způsob pro standardizaci stylů použitých pro vytvoření objektu ATL okna. Použít jako parametr šablony specializace této třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md) nebo jiného tříd oken ATL k určení minimální sadu standardní a rozšířené stylů se použije pro instance této třídy okna.  
-  
- Pokud chcete mít jistotu, že určité styly jsou nastavené pro všechny instance třídy okna při povolení další styly nastavení na základě jednotlivé instance při volání funkce použijte specializace této šablony [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
-  
- Pokud chcete zadat výchozí styly oken, které budou použity pouze v případě, že žádné další styly jsou zadány při volání funkce `CWindowImpl::Create`, použijte [cwintraits –](../../atl/reference/cwintraits-class.md) místo.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlwin.h  
-  
-##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
- Voláním této funkce načtete kombinace standardní stylů (pomocí logického operátoru OR) `CWinTraits` objektu a výchozí styly určené *t_dwStyle*.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*t_dwStyle*  
+Výchozí styly oken.
+
+*t_dwExStyle*  
+Rozšířené styly oken ve výchozím nastavení.
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|Načte rozšířené styly `CWinTraitsOR` objektu.|
+|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Načte standardní styly `CWinTraitsOR` objektu.|
+
+## <a name="remarks"></a>Poznámky
+
+To [vlastností okna](../../atl/understanding-window-traits.md) třída poskytuje jednoduchý způsob pro standardizaci stylů použitých pro vytvoření objektu ATL okna. Použít jako parametr šablony specializace této třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md) nebo jiného tříd oken ATL k určení minimální sadu standardní a rozšířené stylů se použije pro instance této třídy okna.
+
+Pokud chcete mít jistotu, že určité styly jsou nastavené pro všechny instance třídy okna při povolení další styly nastavení na základě jednotlivé instance při volání funkce použijte specializace této šablony [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
+
+Pokud chcete zadat výchozí styly oken, které budou použity pouze v případě, že žádné další styly jsou zadány při volání funkce `CWindowImpl::Create`, použijte [cwintraits –](../../atl/reference/cwintraits-class.md) místo.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlwin.h
+
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle
+
+Voláním této funkce načtete kombinace standardní stylů (pomocí logického operátoru OR) `CWinTraits` objektu a výchozí styly určené *t_dwStyle*.
+
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dwStyle*  
- Stylů použitých pro vytvoření okna.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Kombinace stylů, které jsou předány v *dwStyle* a ve výchozím nastavení těch, které jsou určené `t_dwStyle`, pomocí logického operátoru OR.  
-  
-##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
- Voláním této funkce načtete kombinace rozšířené styly (pomocí logického operátoru OR) `CWinTraits` objektu a výchozí styly určené `t_dwStyle`.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*dwStyle*  
+Stylů použitých pro vytvoření okna.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Kombinace stylů, které jsou předány v *dwStyle* a ve výchozím nastavení těch, které jsou určené `t_dwStyle`, pomocí logického operátoru OR.
+
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle
+
+Voláním této funkce načtete kombinace rozšířené styly (pomocí logického operátoru OR) `CWinTraits` objektu a výchozí styly určené `t_dwStyle`.
+
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dwExStyle*  
- Rozšířené stylů použitých pro vytvoření okna.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Rozšířené styly, které jsou předány v kombinaci *dwExStyle* a těch, které jsou určené výchozí `t_dwExStyle`, pomocí logického operátoru OR  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../../atl/atl-class-overview.md)   
- [Principy vlastností okna](../../atl/understanding-window-traits.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*dwExStyle*  
+Rozšířené stylů použitých pro vytvoření okna.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Rozšířené styly, které jsou předány v kombinaci *dwExStyle* a těch, které jsou určené výchozí `t_dwExStyle`, pomocí logického operátoru OR
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../atl/atl-class-overview.md)   
+[Principy vlastností okna](../../atl/understanding-window-traits.md)
 

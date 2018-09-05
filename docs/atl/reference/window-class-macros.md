@@ -16,137 +16,142 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470c1c8e3facbeba909e182b97a8b027dc9e8ca8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879678"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752560"
 ---
 # <a name="window-class-macros"></a>Makra třídy okna
-Tato makra definují nástroje třídy okna.  
-  
-|||  
-|-|-|  
+
+Tato makra definují nástroje třídy okna.
+
+|||
+|-|-|
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Můžete zadat název nové třídy okna.| 
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Můžete zadat název nové třídy okna a jejichž proceduru okna používat nové třídy nadřazené třídy.| 
-|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna.|  
+|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umožňuje zadat parametry třídy.|  
 
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlwin.h  
-   
-##  <a name="declare_wnd_class"></a>  DECLARE_WND_CLASS  
- Můžete zadat název nové třídy okna. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.  
-  
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlwin.h
+
+##  <a name="declare_wnd_class"></a>  DECLARE_WND_CLASS
+
+Můžete zadat název nové třídy okna. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.
+
 ```
 DECLARE_WND_CLASS( WndClassName )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *WndClassName*  
- [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud použijete možnost /permissive-compiler, pak DECLARE_WND_CLASS způsobí chybu kompilátoru; Místo toho použijte DECLARE_WND_CLASS2.
- 
- DECLARE_WND_CLASS můžete zadat název nové třídy okna, jehož informace se spravovanou aplikací služby [cwndclassinfo –](cwndclassinfo-class.md). DECLARE_WND_CLASS definuje novou třídu okna díky implementaci následující statické funkce:  
-  
- [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
-  
- DECLARE_WND_CLASS určuje následující styly pro nové okno:  
-  
--   CS_HREDRAW  
-  
--   CS_VREDRAW  
-  
--   CS_DBLCLKS  
-  
- DECLARE_WND_CLASS také určuje barvu pozadí okna výchozí. Použití [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) – makro poskytovat vlastní styly a barva pozadí.  
-  
- [CWindowImpl](cwindowimpl-class.md) používá makro DECLARE_WND_CLASS vytvořit okno založené na nové třídě okna. Chcete-li toto chování přepsat, použijte [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) – makro, nebo Poskytněte vlastní implementaci [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkce.  
+```
 
-  
- Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
+### <a name="parameters"></a>Parametry
 
-##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2  
- (Visual Studio 2017) Podobně jako DECLARE_WND_CLASS, ale se speciálním parametrem, který předchází název závislý chyby při kompilaci s /permissive-option.
-  
+*WndClassName*  
+[in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud použijete možnost /permissive-compiler, pak DECLARE_WND_CLASS způsobí chybu kompilátoru; Místo toho použijte DECLARE_WND_CLASS2.
+
+DECLARE_WND_CLASS můžete zadat název nové třídy okna, jehož informace se spravovanou aplikací služby [cwndclassinfo –](cwndclassinfo-class.md). DECLARE_WND_CLASS definuje novou třídu okna díky implementaci následující statické funkce:
+
+[!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
+
+DECLARE_WND_CLASS určuje následující styly pro nové okno:
+
+- CS_HREDRAW
+
+- CS_VREDRAW
+
+- CS_DBLCLKS
+
+DECLARE_WND_CLASS také určuje barvu pozadí okna výchozí. Použití [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) – makro poskytovat vlastní styly a barva pozadí.
+
+[CWindowImpl](cwindowimpl-class.md) používá makro DECLARE_WND_CLASS vytvořit okno založené na nové třídě okna. Chcete-li toto chování přepsat, použijte [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) – makro, nebo Poskytněte vlastní implementaci [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkce.  
+
+Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
+
+##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
+
+(Visual Studio 2017) Podobně jako DECLARE_WND_CLASS, ale se speciálním parametrem, který předchází název závislý chyby při kompilaci s /permissive-option.
+
 ```
 DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *WndClassName*  
- [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna. 
+```
 
- *EnclosingClass*  
- [in] Název třídy okna, která vloží nové třídy okna. Nemůže mít hodnotu NULL.  
-  
-### <a name="remarks"></a>Poznámky 
+### <a name="parameters"></a>Parametry
+
+*WndClassName*  
+[in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna. 
+
+*EnclosingClass*  
+[in] Název třídy okna, která vloží nové třídy okna. Nemůže mít hodnotu NULL.
+
+### <a name="remarks"></a>Poznámky
+
 Pokud používáte /permissive-option, pak DECLARE_WND_CLASS způsobí chybu kompilace protože obsahuje název závislý. DECLARE_WND_CLASS2 vyžaduje, abyste explicitní název třídy, že toto makro je používán a nezpůsobí chybu v části /permissive-flag.
 V opačném případě toto makro je stejné jako [DECLARE_WND_CLASS](#declare_wnd_class).
-   
-##  <a name="declare_wnd_superclass"></a>  DECLARE_WND_SUPERCLASS  
- Umožňuje zadat parametry třídy. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.  
-  
+
+##  <a name="declare_wnd_superclass"></a>  DECLARE_WND_SUPERCLASS
+
+Umožňuje zadat parametry třídy. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.
+
 ```
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *WndClassName*  
- [in] Název okna třídy této nadřazené třídy bude *OrigWndClassName*. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.  
-  
- *OrigWndClassName*  
- [in] Název existující třídy okna.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto makro můžete zadat název třídy okna, která bude supertřídě existující třídy okna. [Cwndclassinfo –](cwndclassinfo-class.md) spravuje informace nadřazené třídy.  
-  
- DECLARE_WND_SUPERCLASS implementuje následující statické funkce:  
-  
- [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
-  
- Ve výchozím nastavení [CWindowImpl](cwindowimpl-class.md) používá [DECLARE_WND_CLASS](#declare_wnd_class) – makro vytvořit okno založené na nové třídě okna. Zadáním DECLARE_WND_SUPERCLASS – makro v `CWindowImpl`-odvozené třídy, třídu okna bude vycházet z existující třídy, ale bude používat vaše proceduru okna. Tato technika se nazývá superclassing.  
-  
- Kromě použití maker DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS, můžete přepsat [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkci s vlastní implementaci.  
+```
 
-  
- Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
-  
-##  <a name="declare_wnd_class_ex"></a>  DECLARE_WND_CLASS_EX  
- Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.  
-  
+### <a name="parameters"></a>Parametry
+
+*WndClassName*  
+[in] Název okna třídy této nadřazené třídy bude *OrigWndClassName*. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
+
+*OrigWndClassName*  
+[in] Název existující třídy okna.
+
+### <a name="remarks"></a>Poznámky
+
+Toto makro můžete zadat název třídy okna, která bude supertřídě existující třídy okna. [Cwndclassinfo –](cwndclassinfo-class.md) spravuje informace nadřazené třídy.
+
+DECLARE_WND_SUPERCLASS implementuje následující statické funkce:
+
+[!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
+
+Ve výchozím nastavení [CWindowImpl](cwindowimpl-class.md) používá [DECLARE_WND_CLASS](#declare_wnd_class) – makro vytvořit okno založené na nové třídě okna. Zadáním DECLARE_WND_SUPERCLASS – makro v `CWindowImpl`-odvozené třídy, třídu okna bude vycházet z existující třídy, ale bude používat vaše proceduru okna. Tato technika se nazývá superclassing.
+
+Kromě použití maker DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS, můžete přepsat [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkci s vlastní implementaci.  
+
+Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).
+
+##  <a name="declare_wnd_class_ex"></a>  DECLARE_WND_CLASS_EX
+
+Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna. Toto makro umístěte ovládací prvek ActiveX knihovny ATL třídy ovládacího prvku.
+
 ```
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *WndClassName*  
- [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.  
-  
- *Styl*  
- [in] Styl okna.  
-  
- *pozadí –*  
- [in] Barva pozadí okna.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto makro umožňuje zadat parametry třídy nové třídy okna, jehož informace bude spravovat [cwndclassinfo –](cwndclassinfo-class.md). DECLARE_WND_CLASS_EX definuje novou třídu okna díky implementaci následující statické funkce:  
-  
- [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
-  
- Pokud chcete použít výchozí styly a barva pozadí, použijte [DECLARE_WND_CLASS](#declare_wnd_class) – makro. Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Makra](atl-macros.md)
+```
 
+### <a name="parameters"></a>Parametry
 
+*WndClassName*  
+[in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
 
+*Styl*  
+[in] Styl okna.
 
+*pozadí –*  
+[in] Barva pozadí okna.
 
+### <a name="remarks"></a>Poznámky
 
+Toto makro umožňuje zadat parametry třídy nové třídy okna, jehož informace bude spravovat [cwndclassinfo –](cwndclassinfo-class.md). DECLARE_WND_CLASS_EX definuje novou třídu okna díky implementaci následující statické funkce:
 
+[!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
+Pokud chcete použít výchozí styly a barva pozadí, použijte [DECLARE_WND_CLASS](#declare_wnd_class) – makro. Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).
+
+## <a name="see-also"></a>Viz také
+
+[Makra](atl-macros.md)
 

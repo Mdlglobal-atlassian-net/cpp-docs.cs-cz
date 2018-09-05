@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597870"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754192"
 ---
 # <a name="fundamental-types-ccx"></a>Základní typy (C + +/ CX)
 Kromě standardní C++ předdefinovaných typů, C + +/ CX podporuje systém typů, který je definován architekturu Windows Runtime tím, že poskytuje – definice TypeDef pro Windows Runtime základních typů, která je namapována na standardní typy C++... C + +/ CX implementuje logická hodnota, znak a číselných základních typů. Tyto funkce TypeDef jsou definovány v `default` obor názvů, který nikdy musí být explicitně zadán. Kromě toho, C + +/ CX poskytuje obálky a konkrétní implementace rozhraní a některé typy Windows Runtime.  

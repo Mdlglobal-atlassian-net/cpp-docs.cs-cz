@@ -1,5 +1,5 @@
 ---
-title: Souhrn doby platnosti a viditelnosti | Microsoft Docs
+title: Souhrn doby platnosti a viditelnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c8b6f9c6be0b07dba710e50f71f96bdf3f0eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcda68906e281bdf33ebe95a8019851bcb3cdb11
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389777"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752297"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
-V následující tabulce je uveden seznam doby platnosti a viditelnosti charakteristiky pro většinu identifikátory. První tři sloupce zadejte atributy, které definují doby platnosti a viditelnosti. Identifikátor s atributy poskytují první tři sloupce má doby platnosti a viditelnosti, které jsou ve sloupci čtvrté a páté. V tabulce nepopisuje všechny možné případy. Odkazovat na [třídy úložiště](../c-language/c-storage-classes.md) Další informace.  
+V následující tabulce je uveden seznam vlastností doby platnosti a viditelnosti pro většinu identifikátory. První tři sloupce zadejte atributy, které definují doby platnosti a viditelnosti. Doby platnosti a viditelnosti ve sloupci čtvrtý a pátý má identifikátor s atributy Dal první tři sloupce. V tabulce nepopisuje všechny možné případy. Odkazovat na [třídy úložiště](../c-language/c-storage-classes.md) Další informace.  
   
 ### <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti  
   
-|Atributy:<br /><br /> úroveň|Položka|Třídy úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Doba platnosti|Viditelnost|  
+|Atributy:<br /><br /> úroveň|Položka|Třída úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Doba platnosti|Viditelnost|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
-|Rozsah souboru|Definicí proměnné|**static**|Globální|Zbývající část zdrojový soubor, ve kterém byly provedeny|  
-||Deklarace proměnné|`extern`|Globální|Zbývající část zdrojový soubor, ve kterém byly provedeny|  
-||Prototyp funkce a definice|**static**|Globální|Jeden zdrojový soubor|  
-||Prototyp funkce|`extern`|Globální|Zbývající část zdrojový soubor|  
-|Rozsah bloku|Deklarace proměnné|`extern`|Globální|Blok|  
-||Definicí proměnné|**static**|Globální|Blok|  
-||Definicí proměnné|**Automatické** nebo **zaregistrovat**|místní|Blok|  
+|Rozsah souboru|Definice proměnných|**static**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|  
+||Deklarace proměnné|**extern**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|  
+||Prototyp funkce nebo definice|**static**|Globální|Jeden zdrojový soubor|  
+||Prototyp funkce|**extern**|Globální|Zbývající část zdrojového souboru|  
+|Rozsah bloku|Deklarace proměnné|**extern**|Globální|Blok|  
+||Definice proměnných|**static**|Globální|Blok|  
+||Definice proměnných|**Automatické** nebo **zaregistrovat**|místní|Blok|  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Následující příklad ilustruje bloky, vnoření a viditelnost proměnných:  
+Následující příklad ukazuje bloky, vnoření a viditelnost proměnné:  
   
 ### <a name="code"></a>Kód  
   
@@ -71,7 +71,7 @@ int main()  // main function defined at external level
 ```  
   
 ### <a name="comments"></a>Komentáře  
- V tomto příkladu jsou čtyři úrovně viditelnosti: externí úrovni a úrovně tři bloku. Hodnoty jsou vytištěny na obrazovku, jak je uvedeno v komentářích následující každý příkaz.  
+V tomto příkladu jsou čtyři úrovně viditelnosti: na externí úrovni nebo na tři bloku. Na obrazovku, jak je uvedeno v komentářích následujících každého příkazu jsou vypsány hodnoty.  
   
 ## <a name="see-also"></a>Viz také  
- [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)
+[Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

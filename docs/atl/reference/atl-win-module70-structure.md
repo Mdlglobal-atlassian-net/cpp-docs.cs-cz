@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883031"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761550"
 ---
 # <a name="atlwinmodule70-structure"></a>_Atl_win_module70 – struktura
-Používaný kód časová okna v knihovně ATL  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Používaný kód časová okna v knihovně ATL
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize; 
@@ -38,31 +39,31 @@ struct _ATL_WIN_MODULE70 {
     _AtlCreateWndData* m_pCreateWndList;
     CSimpleArray<ATOM> m_rgWindowClassAtoms;
 };
-```  
-  
-## <a name="members"></a>Členové  
- `cbSize`  
- Velikost struktury, použít pro správu verzí.  
-  
- `m_csWindowCreate`  
- Slouží k serializaci přístup k okna registrační kód. Vnitřně jej používá knihovnu ATL.  
-  
- `m_pCreateWndList`  
- Lze svázat objekty, které windows. Vnitřně jej používá knihovnu ATL.  
-  
- `m_rgWindowClassAtoms`  
- Používá ke sledování registrace tříd oken tak, aby mohly být správně zrušit registraci při ukončení. Vnitřně jej používá knihovnu ATL.  
-  
-## <a name="remarks"></a>Poznámky  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) je definován jako typedef typu `_ATL_WIN_MODULE70`.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Členové
 
+`cbSize`  
+Velikost struktury, použít pro správu verzí.
 
+`m_csWindowCreate`  
+Slouží k serializaci přístup k okna registrační kód. Vnitřně jej používá knihovnu ATL.
 
+`m_pCreateWndList`  
+Lze svázat objekty, které windows. Vnitřně jej používá knihovnu ATL.
+
+`m_rgWindowClassAtoms`  
+Používá ke sledování registrace tříd oken tak, aby mohly být správně zrušit registraci při ukončení. Vnitřně jej používá knihovnu ATL.
+
+## <a name="remarks"></a>Poznámky
+
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) je definován jako typedef typu `_ATL_WIN_MODULE70`.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h
+
+## <a name="see-also"></a>Viz také
+
+[Třídy a struktury](../../atl/reference/atl-classes.md)
 

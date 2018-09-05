@@ -32,290 +32,338 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214272"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757582"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet – třída
-Tato třída reprezentuje modulu pro aplikaci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída reprezentuje modulu pro aplikaci.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template <class T>  
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `CAtlExeModuleT`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor|  
-|[Catlexemodulet –:: ~ catlexemodulet –](#dtor)|Destruktor.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializuje model COM.|  
-|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazového řádku a provádí registraci v případě potřeby.|  
-|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|Tato metoda je volána ihned po ukončení smyčky zpráv.|  
-|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|Tato metoda je volána těsně před zadáním smyčky zpráv.|  
-|[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|Zaregistruje objekt třídy.|  
-|[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|Odebere objekt třídy.|  
-|[CAtlExeModuleT::Run](#run)|Tato metoda spustí kód v souboru EXE modulu inicializovat, spusťte smyčky zpráv a vyčistit.|  
-|[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|Tato metoda bude spuštěna smyčka zpráv.|  
-|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|Zruší inicializaci modulu COM.|  
-|[CAtlExeModuleT::Unlock](#unlock)|Sníží počet zámků modulů.|  
-|[CAtlExeModuleT::WinMain](#winmain)|Tato metoda implementuje je kód potřebný ke spuštění EXE.|  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Příznak označující, že by měl být zpoždění vypnutí modulu.|  
-|[CAtlExeModuleT::m_dwPause](#m_dwpause)|Pozastavit hodnota používá k zajištění, že všechny objekty jsou vydané před vypnutím.|  
-|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Hodnotu časového limitu, používá ke zpoždění uvolnění modulu.|  
-  
-## <a name="remarks"></a>Poznámky  
- `CAtlExeModuleT` představuje modul pro aplikace (EXE) a obsahuje kód, který podporuje vytváření EXE, zpracování příkazového řádku, registrace objekty třídy, spouštění smyčky zpráv a vyčištění při ukončení.  
-  
- Tato třída slouží pro zvýšení výkonu při objektů COM v serveru EXE průběžně vytvořen a zničen. Po vydání poslední objekt modelu COM, soubor EXE čeká po dobu určeného [CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout) datový člen. Pokud není žádná aktivita během této doby (to znamená, COM nejsou vytvořeny žádné), je zahájeno vypínání.  
-  
- [CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown) datový člen je příznak, který umožňuje určit, pokud by měl soubor EXE použijte mechanismus výše. Pokud je nastavena na hodnotu false, se okamžitě ukončí modulu.  
-  
- Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [_ATL_MODULE](atl-typedefs.md#_atl_module)  
+```
 
-  
- [Catlmodule –](../../atl/reference/catlmodule-class.md)  
-  
- [CAtlModuleT](../../atl/reference/catlmodulet-class.md)  
-  
- `CAtlExeModuleT`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlbase.h  
-  
-##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT  
- Konstruktor  
-  
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Vaše třída odvozena od `CAtlExeModuleT`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor|
+|[Catlexemodulet –:: ~ catlexemodulet –](#dtor)|Destruktor.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializuje model COM.|
+|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazového řádku a provádí registraci v případě potřeby.|
+|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|Tato metoda je volána ihned po ukončení smyčky zpráv.|
+|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|Tato metoda je volána těsně před zadáním smyčky zpráv.|
+|[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|Zaregistruje objekt třídy.|
+|[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|Odebere objekt třídy.|
+|[CAtlExeModuleT::Run](#run)|Tato metoda spustí kód v souboru EXE modulu inicializovat, spusťte smyčky zpráv a vyčistit.|
+|[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|Tato metoda bude spuštěna smyčka zpráv.|
+|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|Zruší inicializaci modulu COM.|
+|[CAtlExeModuleT::Unlock](#unlock)|Sníží počet zámků modulů.|
+|[CAtlExeModuleT::WinMain](#winmain)|Tato metoda implementuje je kód potřebný ke spuštění EXE.|
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Příznak označující, že by měl být zpoždění vypnutí modulu.|
+|[CAtlExeModuleT::m_dwPause](#m_dwpause)|Pozastavit hodnota používá k zajištění, že všechny objekty jsou vydané před vypnutím.|
+|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Hodnotu časového limitu, používá ke zpoždění uvolnění modulu.|
+
+## <a name="remarks"></a>Poznámky
+
+`CAtlExeModuleT` představuje modul pro aplikace (EXE) a obsahuje kód, který podporuje vytváření EXE, zpracování příkazového řádku, registrace objekty třídy, spouštění smyčky zpráv a vyčištění při ukončení.
+
+Tato třída slouží pro zvýšení výkonu při objektů COM v serveru EXE průběžně vytvořen a zničen. Po vydání poslední objekt modelu COM, soubor EXE čeká po dobu určeného [CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout) datový člen. Pokud není žádná aktivita během této doby (to znamená, COM nejsou vytvořeny žádné), je zahájeno vypínání.
+
+[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown) datový člen je příznak, který umožňuje určit, pokud by měl soubor EXE použijte mechanismus výše. Pokud je nastavena na hodnotu false, se okamžitě ukončí modulu.
+
+Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+
+[Catlmodule –](../../atl/reference/catlmodule-class.md)
+
+[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
+
+`CAtlExeModuleT`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlbase.h
+
+##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT
+
+Konstruktor
+
 ```
 CAtlExeModuleT() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud nebylo možné inicializovat modul EXE, WinMain okamžitě vrátí bez dalšího zpracování.  
-  
-##  <a name="dtor"></a>  Catlexemodulet –:: ~ catlexemodulet –  
- Destruktor.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Pokud nebylo možné inicializovat modul EXE, WinMain okamžitě vrátí bez dalšího zpracování.
+
+##  <a name="dtor"></a>  Catlexemodulet –:: ~ catlexemodulet –
+
+Destruktor.
+
 ```
 ~CAtlExeModuleT() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Uvolní všechny přidělené prostředky.  
-  
-##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom  
- Inicializuje model COM.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Uvolní všechny přidělené prostředky.
+
+##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
+
+Inicializuje model COM.
+
 ```
 static HRESULT InitializeCom() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda je volána z konstruktoru a může být potlačena za účelem inicializace COM způsobem, který se liší od výchozí implementaci. Výchozí implementace volá buď `CoInitializeEx(NULL, COINIT_MULTITHREADED)` nebo `CoInitialize(NULL)` v závislosti na konfiguraci projektu.  
-  
- Potlačení této metody obvykle vyžaduje přepsání [CAtlExeModuleT::UninitializeCom](#uninitializecom).  
-  
-##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown  
- Příznak označující, že by měl být zpoždění vypnutí modulu.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda je volána z konstruktoru a může být potlačena za účelem inicializace COM způsobem, který se liší od výchozí implementaci. Výchozí implementace volá buď `CoInitializeEx(NULL, COINIT_MULTITHREADED)` nebo `CoInitialize(NULL)` v závislosti na konfiguraci projektu.
+
+Potlačení této metody obvykle vyžaduje přepsání [CAtlExeModuleT::UninitializeCom](#uninitializecom).
+
+##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown
+
+Příznak označující, že by měl být zpoždění vypnutí modulu.
+
 ```
 bool m_bDelayShutdown;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Zobrazit [catlexemodulet – přehled](../../atl/reference/catlexemodulet-class.md) podrobnosti.  
-  
-##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause  
- Pozastavit hodnota používá k zajištění, že všechny objekty jsou pryč před vypnutím.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [catlexemodulet – přehled](../../atl/reference/catlexemodulet-class.md) podrobnosti.
+
+##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause
+
+Pozastavit hodnota používá k zajištění, že všechny objekty jsou pryč před vypnutím.
+
 ```
 DWORD m_dwPause;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) nastavit počet milisekund, použije jako hodnota pozastavení pro vypnutí serveru. Výchozí hodnota je 1000 milisekund.  
-  
-##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut  
- Hodnotu časového limitu, používá ke zpoždění uvolnění modulu.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) nastavit počet milisekund, použije jako hodnota pozastavení pro vypnutí serveru. Výchozí hodnota je 1000 milisekund.
+
+##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut
+
+Hodnotu časového limitu, používá ke zpoždění uvolnění modulu.
+
 ```
 DWORD m_dwTimeOut;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) definovat dobu v milisekundách použít jako hodnotu časového limitu pro vypnutí serveru. Výchozí hodnota je 5000 MS. Zobrazit [catlexemodulet – přehled](../../atl/reference/catlexemodulet-class.md) další podrobnosti.  
-  
-##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine  
- Analyzuje příkazového řádku a provádí registraci v případě potřeby.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) definovat dobu v milisekundách použít jako hodnotu časového limitu pro vypnutí serveru. Výchozí hodnota je 5000 MS. Zobrazit [catlexemodulet – přehled](../../atl/reference/catlexemodulet-class.md) další podrobnosti.
+
+##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine
+
+Analyzuje příkazového řádku a provádí registraci v případě potřeby.
+
 ```
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpCmdLine*  
- Příkazového řádku předané do aplikace.  
-  
- *pnRetCode*  
- Hodnota HRESULT odpovídající registraci (Pokud se uskutečnilo).  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu PRAVDA, pokud aplikace by měla pokračovat ke spuštění, v opačném případě false.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda je volána z [CAtlExeModuleT::WinMain](#winmain) a může být potlačena za účelem zpracování přepínače příkazového řádku. Výchozí implementace vyhledává **/regserver** a **Unregserver** argumenty příkazového řádku a provádí registraci nebo zrušení registrace.  
-  
-##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop  
- Tato metoda je volána ihned po ukončení smyčky zpráv.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpCmdLine*  
+Příkazového řádku předané do aplikace.
+
+*pnRetCode*  
+Hodnota HRESULT odpovídající registraci (Pokud se uskutečnilo).
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu PRAVDA, pokud aplikace by měla pokračovat ke spuštění, v opačném případě false.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda je volána z [CAtlExeModuleT::WinMain](#winmain) a může být potlačena za účelem zpracování přepínače příkazového řádku. Výchozí implementace vyhledává **/regserver** a **Unregserver** argumenty příkazového řádku a provádí registraci nebo zrušení registrace.
+
+##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop
+
+Tato metoda je volána ihned po ukončení smyčky zpráv.
+
 ```
 HRESULT PostMessageLoop() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu za účelem vyčištění vlastní aplikace. Výchozí implementace volá [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects).  
-  
-##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop  
- Tato metoda je volána těsně před zadáním smyčky zpráv.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Potlačí tuto metodu za účelem vyčištění vlastní aplikace. Výchozí implementace volá [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects).
+
+##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop
+
+Tato metoda je volána těsně před zadáním smyčky zpráv.
+
 ```
 HRESULT PreMessageLoop(int nShowCmd) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nShowCmd*  
- Hodnotu předanou jako *nShowCmd* parametr WinMain.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Přepsáním této metody můžete přidat vlastní inicializační kód aplikace. Výchozí implementace zaregistruje třídu objektů.  
-  
-##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects  
- Zaregistruje objekt třídy OLE, můžete k němu připojit další aplikace.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nShowCmd*  
+Hodnotu předanou jako *nShowCmd* parametr WinMain.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Přepsáním této metody můžete přidat vlastní inicializační kód aplikace. Výchozí implementace zaregistruje třídu objektů.
+
+##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects
+
+Zaregistruje objekt třídy OLE, můžete k němu připojit další aplikace.
+
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dwClsContext*  
- Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER.  
-  
- *dwFlags*  
- Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK na úspěch, S_FALSE, je-li nebyly žádné třídy k registraci nebo chybu HRESULT při selhání.  
-  
-##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects  
- Odebere objekt třídy.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*dwClsContext*  
+Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER.
+
+*dwFlags*  
+Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK na úspěch, S_FALSE, je-li nebyly žádné třídy k registraci nebo chybu HRESULT při selhání.
+
+##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects
+
+Odebere objekt třídy.
+
 ```
 HRESULT RevokeClassObjects() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK na úspěch, S_FALSE, je-li nebyly žádné třídy k registraci nebo chybu HRESULT při selhání.  
-  
-##  <a name="run"></a>  CAtlExeModuleT::Run  
- Tato metoda spustí kód v souboru EXE modulu inicializovat, spusťte smyčky zpráv a vyčistit.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK na úspěch, S_FALSE, je-li nebyly žádné třídy k registraci nebo chybu HRESULT při selhání.
+
+##  <a name="run"></a>  CAtlExeModuleT::Run
+
+Tato metoda spustí kód v souboru EXE modulu inicializovat, spusťte smyčky zpráv a vyčistit.
+
 ```
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nShowCmd*  
- Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda může být přepsána. Ale v praxi je lepší přepsat [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), nebo [CAtlExeModuleT::PostMessageLoop](#postmessageloop) Místo toho.  
-  
-##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop  
- Tato metoda bude spuštěna smyčka zpráv.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nShowCmd*  
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda může být přepsána. Ale v praxi je lepší přepsat [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), nebo [CAtlExeModuleT::PostMessageLoop](#postmessageloop) Místo toho.
+
+##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop
+
+Tato metoda bude spuštěna smyčka zpráv.
+
 ```
 void RunMessageLoop() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda může být potlačena za účelem změny chování smyčky zpráv.  
-  
-##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom  
- Zruší inicializaci modulu COM.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda může být potlačena za účelem změny chování smyčky zpráv.
+
+##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom
+
+Zruší inicializaci modulu COM.
+
 ```
 static void UninitializeCom() throw();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda provede jednoduché volání [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) a je volána z destruktoru. Potlačí tuto metodu, pokud přepíšete [CAtlExeModuleT::InitializeCom](#initializecom).  
-  
-##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
- Sníží počet zámků modulů.  
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení tato metoda provede jednoduché volání [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) a je volána z destruktoru. Potlačí tuto metodu, pokud přepíšete [CAtlExeModuleT::InitializeCom](#initializecom).
+
+##  <a name="unlock"></a>  CAtlExeModuleT::Unlock
+
+Sníží počet zámků modulů.
+
 ```
 LONG Unlock() throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu, která může být užitečné pro diagnostiku a testování.  
-  
-##  <a name="winmain"></a>  CAtlExeModuleT::WinMain  
- Tato metoda implementuje je kód potřebný ke spuštění EXE.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu, která může být užitečné pro diagnostiku a testování.
+
+##  <a name="winmain"></a>  CAtlExeModuleT::WinMain
+
+Tato metoda implementuje je kód potřebný ke spuštění EXE.
+
 ```
 int WinMain(int nShowCmd) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nShowCmd*  
- Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí ke spustitelnému souboru návratovou hodnotu.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda může být přepsána. Pokud přepisuje [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::PostMessageLoop](#postmessageloop), nebo [CAtlExeModuleT::RunMessageLoop](#runmessageloop) neposkytuje dostatečně flexibilní, , je možné přepsat `WinMain` funkce pomocí této metody.  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázka ATLDuck](../../visual-cpp-samples.md)   
- [Catlmodulet – třída](../../atl/reference/catlmodulet-class.md)   
- [Catldllmodulet – třída](../../atl/reference/catldllmodulet-class.md)   
- [Přehled tříd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*nShowCmd*  
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí ke spustitelnému souboru návratovou hodnotu.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda může být přepsána. Pokud přepisuje [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::PostMessageLoop](#postmessageloop), nebo [CAtlExeModuleT::RunMessageLoop](#runmessageloop) neposkytuje dostatečně flexibilní, , je možné přepsat `WinMain` funkce pomocí této metody.
+
+## <a name="see-also"></a>Viz také
+
+[Ukázka ATLDuck](../../visual-cpp-samples.md)   
+[Catlmodulet – třída](../../atl/reference/catlmodulet-class.md)   
+[Catldllmodulet – třída](../../atl/reference/catldllmodulet-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Vytvoření ovládacího prvku ATL DHTML | Microsoft Docs
+title: Vytvoření ovládacího prvku ATL DHTML | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf3a4f40fcc1d9648ffa0cfdd32a2a20e1f1255
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c37a9d99ce84290885265257e1d723196277892e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354166"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753445"
 ---
-# <a name="creating-an-atl-dhtml-control"></a>Vytvoření ovládacího prvku ATL jazyka DHTML
-Průvodce ovládacím prvkem ATL automatizuje proces vytváření ovládací prvek DHTML. Generuje soubory nezbytné prostředků, včetně soubor HTML obsahující ukázkový kód.  
-  
-#### <a name="to-create-an-atl-dhtml-control"></a>Chcete-li vytvořit ovládací prvek DHTML knihovny ATL  
-  
-1.  Postupujte podle kroků v [vytváření projektu knihovny ATL](../atl/reference/creating-an-atl-project.md).  
-  
-2.  V zobrazení tříd, klikněte pravým tlačítkem na uzel projektu, přejděte na **přidat**a klikněte na tlačítko **přidat třídu** z místní nabídky. V **přidat třídu** dialogové okno, dvakrát klikněte [Průvodce ovládacím prvkem ATL](../atl/reference/atl-control-wizard.md). V Průvodce ovládacím prvkem ATL, klikněte na **možnosti** a vyberte **ovládací prvek DHTML**.  
-  
- Teď můžete [testování ovládacího prvku výchozí](../atl/testing-the-atl-dhtml-control.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
+# <a name="creating-an-atl-dhtml-control"></a>Vytvoření ovládacího prvku ATL DHTML
+
+Průvodce ovládacími prvky ATL automatizuje proces vytváření ovládací prvek DHTML. Vygeneruje soubory potřebné prostředků, včetně souboru HTML, který obsahuje vzorový kód.
+
+#### <a name="to-create-an-atl-dhtml-control"></a>Vytvoření ovládacího prvku ATL DHTML
+
+1. Postupujte podle kroků v [vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md).
+
+2. V zobrazení tříd klikněte pravým tlačítkem myši na uzel projektu, přejděte na **přidat**a klikněte na tlačítko **přidat třídu** z místní nabídky. V **přidat třídu** dialogové okno, dvakrát klikněte [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md). V Průvodce ovládacími prvky ATL, klikněte **možnosti** kartě a vyberte **ovládací prvek DHTML**.
+
+Teď můžete [otestovat výchozí ovládací prvek](../atl/testing-the-atl-dhtml-control.md).
+
+## <a name="see-also"></a>Viz také
+
+[Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
 

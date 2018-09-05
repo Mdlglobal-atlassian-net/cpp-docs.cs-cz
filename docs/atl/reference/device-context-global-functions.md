@@ -14,44 +14,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 86c8e7c6fb2d1e441ab0c85f60779bbefd221d52
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209930"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761063"
 ---
 # <a name="device-context-global-functions"></a>Globální funkce kontextu zařízení
-Tato funkce vytvoří kontext zařízení pro dané zařízení.  
-  
-|||  
-|-|-|  
-|[AtlCreateTargetDC](#atlcreatetargetdc)|Vytvoří kontext zařízení.|  
-  
-##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Vytvoří kontext zařízení pro zařízení zadané ve [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktury.  
-  
+
+Tato funkce vytvoří kontext zařízení pro dané zařízení.
+
+|||
+|-|-|
+|[AtlCreateTargetDC](#atlcreatetargetdc)|Vytvoří kontext zařízení.|
+
+##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
+
+Vytvoří kontext zařízení pro zařízení zadané ve [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktury.
+
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *hDC*  
- [in] Existující popisovač kontextu zařízení, nebo hodnota NULL.  
-  
- *ptd*  
- [in] Ukazatel `DVTARGETDEVICE` strukturu, která obsahuje informace o cílové zařízení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač kontext zařízení pro zařízení zadané ve `DVTARGETDEVICE`. Pokud není zadána žádná zařízení, vrátí popisovač na výchozím zobrazovacím zařízení.  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud struktura je NULL a *hdc* má hodnotu NULL, vytvoří kontext zařízení pro výchozím zobrazovacím zařízení.  
-  
- Pokud *hdc* nemá hodnotu NULL a *ptd* má hodnotu NULL, funkce vrátí existující *hdc*.  
+```
 
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atlwin.h  
-   
-## <a name="see-also"></a>Viz také  
- [Funkce](../../atl/reference/atl-functions.md)
+### <a name="parameters"></a>Parametry
+
+*hDC*  
+[in] Existující popisovač kontextu zařízení, nebo hodnota NULL.
+
+*ptd*  
+[in] Ukazatel `DVTARGETDEVICE` strukturu, která obsahuje informace o cílové zařízení.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí popisovač kontext zařízení pro zařízení zadané ve `DVTARGETDEVICE`. Pokud není zadána žádná zařízení, vrátí popisovač na výchozím zobrazovacím zařízení.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud struktura je NULL a *hdc* má hodnotu NULL, vytvoří kontext zařízení pro výchozím zobrazovacím zařízení.
+
+Pokud *hdc* nemá hodnotu NULL a *ptd* má hodnotu NULL, funkce vrátí existující *hdc*.  
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atlwin.h
+
+## <a name="see-also"></a>Viz také
+
+[Funkce](../../atl/reference/atl-functions.md)

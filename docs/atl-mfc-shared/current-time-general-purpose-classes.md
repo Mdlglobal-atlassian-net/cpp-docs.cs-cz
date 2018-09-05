@@ -18,36 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c99a2626c9f60c6407ca9b374bed9c83c981e5b3
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132004"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755460"
 ---
 # <a name="current-time-general-purpose-classes"></a>Aktuální čas: Obecné třídy
-Následující postup ukazuje, jak vytvořit `CTime` objektu a inicializovat s aktuálním časem.  
-  
-#### <a name="to-get-the-current-time"></a>Chcete-li získat aktuální čas  
-  
-1.  Přidělit `CTime` objektu následujícím způsobem:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#171](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_1.cpp)]  
-  
-    > [!NOTE]
-    >  Neinicializované `CTime` objekty nejsou inicializovány na platný čas.  
-  
-2.  Volání `CTime::GetCurrentTime` funkce získat aktuální čas v operačním systému. Tato funkce vrací `CTime` objekt, který slouží k nastavení hodnoty `CTime`, následujícím způsobem:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]  
-  
-     Protože `GetCurrentTime` je statickou členskou funkci ze `CTime` třídy, musí být stejný název jako název třídy a operátorem rozlišení oboru (`::`), `CTime::GetCurrentTime()`.  
-  
- Samozřejmě dva kroky popsané dříve se dají zkombinovat do jednoho příkazu program následujícím způsobem:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#173](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_3.cpp)]  
-  
 
+Následující postup ukazuje, jak vytvořit `CTime` objektu a inicializovat s aktuálním časem.
 
+#### <a name="to-get-the-current-time"></a>Chcete-li získat aktuální čas
 
+1. Přidělit `CTime` objektu následujícím způsobem:
 
+   [!code-cpp[NVC_ATLMFC_Utilities#171](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_1.cpp)]
+
+   > [!NOTE]
+   > Neinicializované `CTime` objekty nejsou inicializovány na platný čas.
+
+2. Volání `CTime::GetCurrentTime` funkce získat aktuální čas v operačním systému. Tato funkce vrací `CTime` objekt, který slouží k nastavení hodnoty `CTime`, následujícím způsobem:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
+
+   Protože `GetCurrentTime` je statickou členskou funkci ze `CTime` třídy, musí být stejný název jako název třídy a operátorem rozlišení oboru (`::`), `CTime::GetCurrentTime()`.
+
+Samozřejmě dva kroky popsané dříve se dají zkombinovat do jednoho příkazu program následujícím způsobem:
+
+[!code-cpp[NVC_ATLMFC_Utilities#173](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_3.cpp)]

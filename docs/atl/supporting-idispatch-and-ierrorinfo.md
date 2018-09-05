@@ -1,5 +1,5 @@
 ---
-title: Podpora IDispatch a IErrorInfo | Microsoft Docs
+title: Podpora IDispatch a IErrorInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360946"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753605"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Podpora IDispatch a IErrorInfo
-Můžete použít třídu šablony [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zajistit výchozí implementaci třídy `IDispatch Interface` část žádné duální rozhraní v objektu.  
-  
- Pokud používá objektu `IErrorInfo` rozhraní k hlášení chyb zpět do klienta a pak musí podporovat objektu `ISupportErrorInfo Interface` rozhraní. Šablony třídy [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) poskytuje snadný způsob, jak tuto funkci implementovat Pokud máte pouze jednu rozhraní, které generuje chyby v objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
+
+Můžete použít třídu šablony [třídou IDispatchImpl](../atl/reference/idispatchimpl-class.md) poskytnout výchozí implementaci třídy `IDispatch Interface` část jakékoli duální rozhraní na objekt.
+
+Pokud váš objekt používá `IErrorInfo` rozhraní hlášení chyb zpátky do klienta a pak musí váš objekt podporovat `ISupportErrorInfo Interface` rozhraní. Třída šablony [isupporterrorinfoimpl –](../atl/reference/isupporterrorinfoimpl-class.md) poskytuje snadný způsob, jak toto implementovat, pokud máte pouze jedno rozhraní, který generuje chyby na objekt.
+
+## <a name="see-also"></a>Viz také
+
+[Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
 

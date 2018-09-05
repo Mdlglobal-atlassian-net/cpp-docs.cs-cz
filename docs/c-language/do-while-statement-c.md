@@ -1,5 +1,5 @@
 ---
-title: proveďte-při Statement (C) | Microsoft Docs
+title: Proveďte-while Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0638e10d87ed52de49b027aea1e06bee838867d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385429"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755547"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C)
-`do-while` Příkaz umožňuje opakujte příkaz nebo složený příkaz, dokud zadaného výrazu se změní na hodnotu false.  
-  
-## <a name="syntax"></a>Syntaxe  
- *příkaz iterace*:  
- **proveďte***příkaz***při (***výraz***);**   
-  
- *Výraz* v `do-while` vyhodnotí po provedení do těla smyčky. Do těla smyčky, proto je vždy alespoň jednou spustit.  
-  
- *Výraz* musí mít typ aritmetické nebo ukazatel. Provádění pokračuje následujícím způsobem:  
-  
-1.  Provede se tělo příkaz.  
-  
-2.  Dále *výraz* vyhodnotí. Pokud *výraz* je nastavena hodnota false, `do-while` příkaz ukončí a předá řízení další příkaz v programu. Pokud *výraz* hodnotu true (nenulové hodnoty), tento proces se opakuje, počínaje z kroku 1.  
-  
- `do-while` Příkaz můžete také při ukončení **zalomení**, `goto`, nebo `return` do těla příkazu je spustit příkaz.  
-  
- Zde je příklad příkazu `do-while`:  
-  
-```  
-do   
+
+*Proveďte – zatímco* příkaz umožňuje opakujte příkaz nebo složený příkaz, dokud nebude NEPRAVDA zadaným výrazem.
+
+## <a name="syntax"></a>Syntaxe
+
+*příkaz iterace*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**proveďte***příkaz***během (***výraz***);**
+
+*Výraz* v *proveďte – zatímco* vyhodnotí po provedení tělo smyčky. Tělo smyčky, proto je vždy alespoň jednou spuštěn.
+
+*Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:
+
+1. Provede se tělo příkazu.
+
+2. Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, *proveďte-při* příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.
+
+*Proveďte-při* příkaz může také skončit při **přerušení**, **goto**, nebo **vrátit** je proveden příkaz v rámci těla příkazu.
+
+Toto je příklad *proveďte – zatímco* – příkaz:
+
+```C
+do
 {  
     y = f( x );  
     x--;  
 } while ( x > 0 );  
-```  
-  
- V tomto `do-while` prohlášení, dvou příkazů `y = f( x );` a `x--;` provedení, bez ohledu na počáteční hodnotu `x`. Potom `x > 0` vyhodnotí. Pokud `x` je větší než 0, těla příkazu se znovu spustí a `x > 0` je již znovu. Text příkazu se spustí opakovaně, dokud `x` zůstane větší než 0. Provádění `do-while` příkaz ukončí při `x` se změní na 0 nebo záporné. Alespoň jednou je proveden těla smyčky.  
-  
-## <a name="see-also"></a>Viz také  
- [do-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)
+```
+
+V tomto *proveďte – zatímco* prohlášení, dva příkazy `y = f( x );` a `x--;` jsou spouštěny, bez ohledu na počáteční hodnotu `x`. Potom `x > 0` vyhodnocena. Pokud `x` je větší než 0, je tělo příkazu spustit znovu a `x > 0` je již znovu. Tělo příkazu je proveden opakovaně tak dlouho, dokud `x` zůstane větší než 0. Provádění *proveďte – zatímco* příkaz skončí, když `x` stane 0 nebo záporná. Tělo smyčky je provedena alespoň jednou.
+
+## <a name="see-also"></a>Viz také
+
+[do-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)

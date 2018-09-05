@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958488"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760013"
 ---
 # <a name="class-factories-classes"></a>Třídy objektů pro vytváření tříd
-Následující třídy implementace nebo podporovat objekt pro vytváření tříd:  
-  
--   [Ccomclassfactory –](../atl/reference/ccomclassfactory-class.md) poskytuje výchozí objekt factory třídy pro vytvoření objektu.  
-  
--   [Ccomclassfactory2 –](../atl/reference/ccomclassfactory2-class.md) řídí vytváření objektů prostřednictvím licenci.  
-  
--   [Ccomclassfactoryautothread –](../atl/reference/ccomclassfactoryautothread-class.md) umožňuje objektů bude vytvořena ve více klientů ve fondu vláken objekty apartment.  
-  
--   [Ccomclassfactorysingleton –](../atl/reference/ccomclassfactorysingleton-class.md) vytvoří jeden objekt.  
-  
--   [CComCoClass](../atl/reference/ccomcoclass-class.md) definuje objekt pro vytváření tříd pro objekt.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)   
- [Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)
+
+Následující třídy implementace nebo podporovat objekt pro vytváření tříd:
+
+- [Ccomclassfactory –](../atl/reference/ccomclassfactory-class.md) poskytuje výchozí objekt factory třídy pro vytvoření objektu.
+
+- [Ccomclassfactory2 –](../atl/reference/ccomclassfactory2-class.md) řídí vytváření objektů prostřednictvím licenci.
+
+- [Ccomclassfactoryautothread –](../atl/reference/ccomclassfactoryautothread-class.md) umožňuje objektů bude vytvořena ve více klientů ve fondu vláken objekty apartment.
+
+- [Ccomclassfactorysingleton –](../atl/reference/ccomclassfactorysingleton-class.md) vytvoří jeden objekt.
+
+- [CComCoClass](../atl/reference/ccomcoclass-class.md) definuje objekt pro vytváření tříd pro objekt.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)   
+[Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)
 

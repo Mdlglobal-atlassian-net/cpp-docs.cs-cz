@@ -1,5 +1,5 @@
 ---
-title: Operátor podmíněného výrazu | Microsoft Docs
+title: Operátor podmíněného výrazu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,65 +16,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f3bead2a40e38698534e433d8e4289eb8da4dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386914"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751767"
 ---
 # <a name="conditional-expression-operator"></a>Operátor podmíněného výrazu
-C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).  
-  
-## <a name="syntax"></a>Syntaxe  
- *podmíněného výrazu*:  
- *logický výraz OR*  
-  
- *výraz logické OR***?**   *výraz***:***podmíněného výrazu*   
-  
- *Logický výraz OR* musí být celé číslo, číslo s plovoucí čárkou nebo ukazatel typu. Vyhodnotí z hlediska jeho ekvivalenční na hodnotu 0. Následuje bod sekvence *logický výraz OR*. Vyhodnocení operandy probíhá následujícím způsobem:  
-  
--   Pokud *logický výraz OR* není rovno 0, *výraz* vyhodnotí. Výsledek vyhodnocení výrazu je dána nonterminal *výraz*. (To znamená *výraz* vyhodnotí pouze v případě *logický výraz OR* hodnotu true.)  
-  
--   Pokud *logický výraz OR* rovná 0, *podmíněného výrazu* vyhodnotí. Výsledkem výrazu je hodnota *podmíněného výrazu*. (To znamená *podmíněného výrazu* vyhodnotí pouze v případě *logický výraz OR* je false.)  
-  
- Všimněte si, že buď *výraz* nebo *podmíněného výrazu* vyhodnotí, ale ne pomocí obou.  
-  
- Typ výsledku podmíněného operace závisí na typu *výraz* nebo *podmíněného výrazu* operand následujícím způsobem:  
-  
--   Pokud *výraz* nebo *podmíněného výrazu* má integrální nebo plovoucí typu (jejich typy může být jiný), operátor provede obvyklé aritmetické převody. Typ výsledku je typ operandy po převodu.  
-  
--   Pokud oba *výraz* a *podmíněného výrazu* mít stejnou strukturu, union nebo ukazatel typu, typ výsledek je stejného typu struktury, sjednocení nebo ukazatel.  
-  
--   Pokud oba operandy typu `void`, výsledek obsahuje typ `void`.  
-  
--   Pokud buď operand je ukazatel na objekt jakéhokoli typu a dalších operand je ukazatel na `void`, má ukazatel na objekt jsou převedeny na ukazatel na `void` a výsledkem je ukazatel na `void`.  
-  
--   Pokud má jedna *výraz* nebo *podmíněného výrazu* ukazatel a dalších operand je konstantní výraz s hodnotou 0, typ výsledku je ukazatel typu.  
-  
- Typ porovnání pro ukazatele, jakýkoli typ kvalifikátory (**const** nebo `volatile`) v typu, ke kterému jsou body ukazatel zanedbatelné, ale výsledný typ dědí kvalifikátory z obou součástí zásad správy.  
-  
-## <a name="examples"></a>Příklady  
- Následující příklady ukazují použití podmíněný operátor:  
-  
-```  
-j = ( i < 0 ) ? ( -i ) : ( i );  
-```  
-  
- Tento příklad přiřadí absolutní hodnotu `i` k `j`. Pokud `i` je menší než 0, `-i` je přiřazena k `j`. Pokud `i` je větší než nebo rovno 0, `i` je přiřazena k `j`.  
-  
-```  
-void f1( void );  
-void f2( void );  
-int x;  
-int y;  
-    .  
-    .  
-    .  
-( x == y ) ? ( f1() ) : ( f2() );  
-```  
-  
- V tomto příkladu dvě funkce `f1` a `f2`a dvě proměnné, `x` a `y`, jsou deklarované. Dále v programu, pokud dvě proměnné, které mají stejnou hodnotu, funkce `f1` je volána. V opačném `f2` je volána.  
-  
-## <a name="see-also"></a>Viz také  
- [Podmíněný operátor: ?:](../cpp/conditional-operator-q.md)
+C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).
+
+## <a name="syntax"></a>Syntaxe
+
+*podmíněného výrazu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR***?**   *výraz***:***podmíněného výrazu* 
+
+*Logického výrazu OR* musí mít typ integral, plovoucí nebo ukazatel. Vyhodnotí se z hlediska jeho ekvivalence na hodnotu 0. Následuje bod sekvence *logického výrazu OR*. Probíhá vyhodnocování operandů následujícím způsobem:
+
+-   Pokud *logického výrazu OR* není roven 0, *výraz* vyhodnocena. Výsledek vyhodnocení výrazu je dán neterminálu *výraz*. (To znamená, že *výraz* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu true.)
+
+-   Pokud *logického výrazu OR* rovná 0, *podmíněného výrazu* vyhodnocena. Výsledek výrazu je hodnota *podmíněného výrazu*. (To znamená, že *podmíněného výrazu* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu false.)
+
+Všimněte si, že buď *výraz* nebo *podmíněného výrazu* je Vyhodnocená, ale ne obojí.
+
+Typ výsledku podmíněné operace závisí na typu *výraz* nebo *podmíněného výrazu* operand, následujícím způsobem:
+
+-   Pokud *výraz* nebo *podmíněného výrazu* má integral nebo s plovoucí desetinnou čárkou typu (jejich typy mohou být jiné), operátor provádí běžné aritmetické převody. Typ výsledku je typ operandu po převodu.
+
+-   Pokud mají oba *výraz* a *podmíněného výrazu* stejnou strukturu, sjednocení nebo typ ukazatele, typ výsledku je stejný typ struktury, sjednocení nebo ukazatel.
+
+-   Pokud mají oba operandy typu `void`, výsledek je typu `void`.
+
+-   Pokud některý operand je ukazatel na objekt jakéhokoli typu, a druhý operand je ukazatel na `void`, ukazatele na objekt je převést na ukazatel na `void` a výsledkem je ukazatel na `void`.
+
+-   Pokud *výraz* nebo *podmíněného výrazu* ukazatel a druhý operand je konstantní výraz s hodnotou 0, typ výsledku je typ ukazatele.
+
+Typ porovnání ukazatelů, jakýkoli typ kvalifikátory (**const** nebo `volatile`) v typu, na který ukazatel ukazuje jsou neplatné, ale typ výsledku kvalifikátory dědí z obou součásti zásad správy.
+
+## <a name="examples"></a>Příklady
+
+Následující příklady ukazují způsoby použití podmíněného operátoru:
+
+```
+j = ( i < 0 ) ? ( -i ) : ( i );
+```
+
+Tento příklad přiřadí absolutní hodnota `i` k `j`. Pokud `i` je menší než 0, `-i` přiřazen `j`. Pokud `i` je větší než nebo rovno 0, `i` přiřazen `j`.
+
+```
+void f1( void );
+void f2( void );
+int x;
+int y;
+    .
+    .
+    .
+( x == y ) ? ( f1() ) : ( f2() );
+```
+
+V tomto příkladu dvě funkce `f1` a `f2`a dvě proměnné, `x` a `y`, jsou deklarovány. Dále v programu, pokud dvě proměnné, které mají stejnou hodnotu, funkce `f1` je volána. V opačném případě `f2` je volána.
+
+## <a name="see-also"></a>Viz také
+
+[Podmíněný operátor: ?:](../cpp/conditional-operator-q.md)

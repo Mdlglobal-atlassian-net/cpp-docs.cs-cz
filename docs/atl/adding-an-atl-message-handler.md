@@ -1,5 +1,5 @@
 ---
-title: Přidání popisovače zpráv knihovny ATL | Microsoft Docs
+title: Přidání popisovače zpráv knihovny ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79598b79ccbad13ad98c7fc1284808fe1b05cfc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 712f1b725afd52057deca8f05047c91bfc4affce
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354153"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753407"
 ---
 # <a name="adding-an-atl-message-handler"></a>Přidání popisovače zpráv knihovny ATL
-Přidání obslužné rutiny zpráv (členské funkce, která zpracovává zprávy systému Windows) do ovládacího prvku, nejprve vyberte ovládací prvek v zobrazení tříd. Otevřete **vlastnosti** vyberte **zprávy** ikonu a klikněte na rozevírací seznam řízení v poli opačným požadované zprávy. Tím se přidá deklaraci pro obslužné rutiny zpráv v záhlaví souboru ovládacího prvku a kostru implementaci obslužné rutiny v souboru sada ovládacího prvku. Rovněž přidat mapu zprávu a přidat záznam pro obslužnou rutinu.  
-  
- Přidání obslužné rutiny zpráv v ATL je podobný jako při přidávání do třídy knihovny MFC obslužné rutiny zpráv. V tématu [Přidání popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md) Další informace.  
-  
- Tyto podmínky platí pouze pro přidání popisovače zpráv knihovny ATL:  
-  
--   Obslužné rutiny zpráv podle stejné zásady vytváření názvů jako MFC.  
-  
--   Nové položky mapy zpráv se přidají do mapy hlavní zpráv. Průvodce nebyl rozpoznán mapy alternativní zpráv a řetězení.  
-  
-## <a name="see-also"></a>Viz také  
- [Implementace okna](../atl/implementing-a-window.md)
+
+Přidání obslužné rutiny zpráv (členská funkce, která zpracovává zprávy Windows) do ovládacího prvku, vyberte první ovládací prvek v zobrazení tříd. Otevřete **vlastnosti** okna, vyberte **zprávy** ikony a klikněte na rozevírací ovládací prvek v poli opačný požadovaná zpráva. Tato možnost přidá deklaraci obslužné rutiny zpráv v souboru záhlaví ovládacího prvku a kostru implementaci obslužné rutiny v soubor .cpp ovládacího prvku. Bude také přidat mapu zpráv a přidat záznam pro obslužnou rutinu.
+
+Přidání popisovače zpráv v ATL se podobá přidání obslužné rutiny zpráv pro třídy knihovny MFC. Zobrazit [Přidání popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md) Další informace.
+
+Tyto podmínky platí pouze pro přidání popisovače zpráv knihovny ATL:
+
+- Obslužné rutiny zpráv podle stejné zásady vytváření názvů jako knihovny MFC.
+
+- Do objektu map hlavní zprávy jsou přidávány nové položky mapování zprávy. Průvodce nedokáže rozpoznat mapy alternativní zpráv a zřetězení.
+
+## <a name="see-also"></a>Viz také
+
+[Implementace okna](../atl/implementing-a-window.md)
 

@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 528534abd396827815ea4913af4a0b42a5703f31
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961607"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759291"
 ---
 # <a name="dual-interfaces-classes"></a>Třídy duálního rozhraní
-Následující třída poskytuje podporu pro duální rozhraní:  
-  
--   [Idispatchimpl –](../atl/reference/idispatchimpl-class.md) implementuje `IDispatch` část duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)
+
+Následující třída poskytuje podporu pro duální rozhraní:
+
+- [Idispatchimpl –](../atl/reference/idispatchimpl-class.md) implementuje `IDispatch` část duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)
 

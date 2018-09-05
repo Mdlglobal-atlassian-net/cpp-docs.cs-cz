@@ -1,5 +1,5 @@
 ---
-title: Implementace rozhraní zpracování událostí | Microsoft Docs
+title: Implementace rozhraní zpracování událostí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356305"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757335"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementace rozhraní zpracování událostí
-ATL vám pomůže s všechny tři prvky, které jsou požadované pro zpracování událostí: implementace událostí rozhraní radí zdroj události a unadvising zdroj události. Přesné kroky, které budete muset provést závisí na typu rozhraní událostí a požadavky na výkon vaší aplikace.  
-  
- Nejběžnější způsoby implementace rozhraní pomocí knihovny ATL jsou:  
-  
--   Odvozování z vlastní rozhraní přímo.  
-  
--   Odvozování z [IDispatchImpl](../atl/reference/idispatchimpl-class.md) pro duální rozhraní, které jsou popsané v knihovny typů.  
-  
--   Odvozování z [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pro odesílající rozhraní popsané v knihovny typů.  
-  
--   Odvozování z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) pro odesílající rozhraní není popsána v knihovny typů, nebo pokud chcete zlepšit efektivitu není načítání informací o typu při běhu.  
-  
 
- Pokud implementujete vlastní nebo duální rozhraní, poraďte zdroj události voláním [AtlAdvise](reference/connection-point-global-functions.md#atladvise) nebo [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Musíte se ke sledování souboru cookie vrácený volání. Volání [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) k přerušení připojení.  
+ATL – pomáhá všech tří prvků vyžadovaných pro zpracování událostí: implementace událostí rozhraní předobjednávky zdroj události a unadvising zdroje událostí. Přesné kroky, které je potřeba provést závisí na typ rozhraní události a požadavky na výkon vaší aplikace.
 
-  
- Pokud implementujete dispinterface pomocí `IDispEventImpl` nebo `IDispEventSimpleImpl`, poraďte zdroj události voláním [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Volání [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) k přerušení připojení.  
-  
- Pokud používáte `IDispEventImpl` jako základní třída složeného ovládacího prvku, bude zdroje událostí, které jsou uvedeny v mapě podřízený doporučené a unadvised automaticky pomocí [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
-  
- `IDispEventImpl` a `IDispEventSimpleImpl` třídy spravovat souboru cookie, který pro vás.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování událostí](../atl/event-handling-and-atl.md)
+Nejběžnější způsoby implementace rozhraní pomocí knihovny ATL jsou:
+
+- Odvozování z vlastního rozhraní přímo.
+
+- Odvozování z [třídou IDispatchImpl](../atl/reference/idispatchimpl-class.md) pro duální rozhraní, které jsou popsané v knihovně typů.
+
+- Odvozování z [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pro odesílající rozhraní je popsáno v knihovně typů.
+
+- Odvozování z [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) pro odesílacích rozhraních není popsána v knihovně typů nebo pokud chcete zvýšit efektivitu není načítání informací o typu v době běhu.
+
+Pokud implementujete vlastní nebo duální rozhraní, poraďte zdroj události voláním [AtlAdvise](reference/connection-point-global-functions.md#atladvise) nebo [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Je potřeba udržovat přehled o souboru cookie vrácený voláním sami. Volání [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) přerušit připojení.  
+
+Pokud implementujete dispinterface pomocí `IDispEventImpl` nebo `IDispEventSimpleImpl`, zdroj události poraďte voláním [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Volání [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) přerušit připojení.
+
+Pokud používáte `IDispEventImpl` jako základní třída složeného ovládacího prvku zdroje událostí uvedený v mapování jímky bude doporučené a unadvised automaticky pomocí [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).
+
+`IDispEventImpl` a `IDispEventSimpleImpl` třídy soubor cookie spravovat za vás.
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování událostí](../atl/event-handling-and-atl.md)
 

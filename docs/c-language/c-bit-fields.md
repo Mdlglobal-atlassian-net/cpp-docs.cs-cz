@@ -1,5 +1,5 @@
 ---
-title: C Bit pole | Microsoft Docs
+title: Bitová pole jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b3e828af6232dec6ebfb4558fdb8501c7f90abb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385673"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757484"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C
-Kromě deklarátory pro členové struktury a sjednocení může být struktura deklarátor také zadaný počet bitů, nazývá "pole bit". Jeho délka nastavena z deklarátor pro název pole dvojtečkou. Bitová pole interpretována jako typ integrální.  
+Kromě deklarátory členů struktury nebo sjednocení může být deklarátorem struktury také zadaný počet bitů, nazývaný "bitové pole." Jeho délka je nastavena od deklarátor pro název pole dvojtečkou. Bitové pole je interpretován jako s integrálním typem.  
   
-## <a name="syntax"></a>Syntaxe  
- *Struktura deklarátor*:  
- *deklarátor*  
+## <a name="syntax"></a>Syntaxe
+
+*Struktura declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
   
- *Specifikátor typu deklarátor* opt **:** *konstantní výraz*  
+*Konstantní výraz* Určuje šířku pole v bitech. *Specifikátor typu* pro `declarator` musí být `unsigned int`, **znaménkem**, nebo `int`a *konstantní výraz* musí být nezáporné celočíselná hodnota. Pokud je hodnota nula, deklarace nemá žádné `declarator`. Pole Bitová pole ukazatelů na bitová pole a funkce, která vrátí bitová pole nejsou povoleny. Volitelný `declarator` názvy bitové pole. Bitová pole lze deklarovat pouze v rámci struktury. Operátor address-of (**&**) nelze použít na komponenty bitového pole.  
   
- *Konstantní výraz* Určuje šířku pole v bitech. *Specifikátor typu* pro `declarator` musí být `unsigned int`, **podepsané int**, nebo `int`a *konstantní výraz* musí být nezáporné celočíselná hodnota. Pokud je hodnota nula, deklaraci neobsahuje žádné `declarator`. Pole Bitová pole, ukazatele na bitových polí a funkce, které vracejí bitová pole nejsou povoleny. Volitelné `declarator` názvy pole verze. Bitová pole lze deklarovat pouze jako součást struktury. Address-of – operátor (**&**) nelze použít pro součásti bitová pole.  
+Nepojmenované bitové pole nemůže být odkazován, a jejich obsah v době běhu nepředvídatelné. Může se použít jako "fiktivní" pole, pro účely zarovnání. Nepojmenované bitové pole, jehož šířku je zadaný jako 0 zaručuje úložiště pro člena v následujících *struct-declaration-list* začíná `int` hranic.  
   
- Nelze na něj odkazovat nepojmenované bitových polí a jejich obsah v době běhu nepředvídatelné. Mohou být použity jako "fiktivní" pole pro účely zarovnání. Nepojmenované bitové pole, jehož šířka je zadaný jako 0 zaručuje, že úložiště pro člena v následujících *seznam struktura prohlášení* začínajícího `int` hranic.  
-  
- Bitová pole musí být dostatečně dlouhé, aby obsahovat vzoru bit. Například nejsou právní těchto dvou příkazů:  
+Bitová pole musí být dostatečně dlouhá, aby obsahují bitový vzor. Například tyto dva příkazy nejsou platné:  
   
 ```  
 short a:17;        /* Illegal! */  
 int long y:33;     /* Illegal! */  
 ```  
   
- Tento příklad definuje dvourozměrná pole s názvem struktury `screen`.  
+Tento příklad definuje dvourozměrné pole struktury s názvem `screen`.  
   
 ```  
 struct   
@@ -54,15 +54,15 @@ struct
 } screen[25][80];  
 ```  
   
- Toto pole obsahuje 2 000 prvků. Každý prvek je strukturu jednotlivých obsahující čtyři pole bit členy: `icon`, `color`, `underline`, a `blink`. Velikost jednotlivých struktura je dva bajty.  
+Pole obsahuje 2 000 prvků. Každý prvek je struktury jednotlivých, který obsahuje čtyři členy bitových polí: `icon`, `color`, `underline`, a `blink`. Velikost struktury je o dva bajty.  
   
- Bitová pole mají stejnou sémantiku jako typ celé číslo. To znamená, že bitová pole je použít ve výrazech stejným způsobem jako proměnnou stejného základního typu se použije bez ohledu na to, kolik bits se v poli verze.  
+Bitová pole mají stejnou sémantiku jako typ celé číslo. To znamená, že bitové pole se používá ve výrazech stejným způsobem jako proměnnou stejné základní typ by použít, bez ohledu na to, kolik bitů v bitové pole.  
   
- **Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Bit polí definovaných jako `int` jsou považovány za podepsané. Rozšíření Microsoft standardu ANSI C umožňuje `char` a **dlouho** typy (obě **podepsané** a `unsigned`) pro bitových polí. Nepojmenované bitových polí s základní typ **dlouho**, **krátké**, nebo `char` (**podepsané** nebo `unsigned`) vynutit zarovnání k určité hranici podle základního typu.  
+Bitová pole, které jsou definované jako `int` je považován za podepsaný. Rozšíření standardu ANSI C společnosti Microsoft umožňuje `char` a **dlouhé** typy (obojí **podepsané** a `unsigned`) u bitových polí. Nepojmenované bitové pole se základním typem **dlouhé**, **krátký**, nebo `char` (**podepsané** nebo `unsigned`) vynutí zarovnání na hranici vhodné základního typu.  
   
- Bitová pole jsou přidělené v rámci celé číslo z nejméně významným na většinu významných bitů. V následujícím kódu  
+Bitová pole jsou přiděleny v rámci celé číslo z nejméně významné nejvýznamnější bit. V následujícím kódu  
   
 ```  
 struct mybitfields  
@@ -80,16 +80,16 @@ int main( void );
 }  
 ```  
   
- službu bits by být uspořádána následujícím způsobem:  
+bity by být uspořádány takto:  
   
 ```  
 00000001 11110010  
 cccccccb bbbbaaaa  
 ```  
   
- Vzhledem k tomu, že 8086 rodina procesorů ukládá nízkou bajt celočíselné hodnoty před vysoké bajtů na celé číslo `0x01F2` by vyšší uložené ve fyzické paměti jako `0xF2` následuje `0x01`.  
+Jelikož procesory řady 8086 ukládají nižší bajt celočíselných hodnot před vyšší bajt, na celé číslo `0x01F2` výše by být uloženy ve fyzické paměti jako `0xF2` následovaný `0x01`.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Deklarace struktury](../c-language/structure-declarations.md)
+[Deklarace struktury](../c-language/structure-declarations.md)

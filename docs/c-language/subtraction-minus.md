@@ -1,5 +1,5 @@
 ---
-title: Odčítání (-) | Microsoft Docs
+title: Odčítání (-) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295c6bc33b42ed34fd476dbc72bec9dd398efa14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b27eead70963665e1dd3079cf5c2b49bcfda863
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386943"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751628"
 ---
 # <a name="subtraction--"></a>Odčítání (-)
-Operátor odčítání (**-**) odečítá Druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.  
+Operátor odčítání (**-**) odečte druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.  
   
- Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost celočíselné hodnoty je definován typ **ptrdiff_t –** v standardní zahrnout souboru STDDEF. H. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledek je pouze zaručena smysl pro dva elementy stejného pole, jak je popsáno v [aritmetika ukazatele](../c-language/pointer-arithmetic.md).  
+Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost této celočíselné hodnoty je definována typem **ptrdiff_t** ve standardním vloženém souboru STDDEF. H. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledkem je zaručeno smysl pro dva prvky stejného pole, jak je popsáno v [aritmetické operace ukazatele](../c-language/pointer-arithmetic.md).  
   
- Když celočíselnou hodnotu je odečten od hodnota ukazatele, operátor odčítání převede na celé číslo (*i*) vynásobením velikost hodnoty, které řeší ukazatele. Po převodu celočíselná hodnota představuje *i* paměti pozice, kdy každý pozice má délku určeného je ukazatel typu. Když převedený celočíselná hodnota je odečten od hodnota ukazatele, výsledkem je, adresa paměti *i* pozic před původní adresu. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.  
+Pokud celočíselná hodnota odečtena od hodnoty ukazatele, převede operátor odčítání celočíselnou hodnotu (*můžu*) pomocí vynásobení velikost hodnoty, kterou tento ukazatel odkazuje. Po převodu představuje celočíselná hodnota *můžu* pozice v paměti, kde má každá pozice délku určený typem ukazatele. Když je převedená celočíselná hodnota odečtena od hodnoty ukazatele, výsledkem je adresa paměti *můžu* pozic před původní adresou. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.  
   
 ## <a name="see-also"></a>Viz také  
- [Sčítací operátory jazyka C](../c-language/c-additive-operators.md)
+[Sčítací operátory jazyka C](../c-language/c-additive-operators.md)

@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c1d338851a6480014e1f7a48f848f95439d9311a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465008"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762109"
 ---
 # <a name="using-contained-windows"></a>Pomocí obsaženého Windows
-ATL – implementuje omezením windows s [ccontainedwindowt –](../atl/reference/ccontainedwindowt-class.md). Obsaženého okna představuje okno, které deleguje své zprávy na kontejnerovém objektu namísto jeho vlastní třídy.  
-  
+
+ATL – implementuje omezením windows s [ccontainedwindowt –](../atl/reference/ccontainedwindowt-class.md). Obsaženého okna představuje okno, které deleguje své zprávy na kontejnerovém objektu namísto jeho vlastní třídy.
+
 > [!NOTE]
->  Není nutné odvozovat třídu z `CContainedWindowT` Chcete-li použít omezením windows.  
-  
- S omezením windows můžete buď nadřazené třídy existující třídu Windows nebo podtřídou existujícímu oknu. Vytvoření časového období této nadřazené třídy existující Windows třídy, nejdřív zadat název existující třídy v konstruktoru pro `CContainedWindowT` objektu. Poté zavolejte `CContainedWindowT::Create`. K podtřídou existujícímu oknu není nutné zadat název třídy Windows (pass NULL do konstruktoru). Jednoduše zavoláte `CContainedWindowT::SubclassWindow` metoda s popisovačem okna se rozčlenit do podtříd.  
-  
- Omezením windows se obvykle používají jako datové členy třídy kontejneru. Kontejner nemusí být okno; ale to musí být odvozen od [cmessagemap –](../atl/reference/cmessagemap-class.md).  
-  
- Obsaženého okna můžete použít mapy alternativní zpráv pro zpracování zprávy. Pokud máte více než jeden obsaženého okna, by měla deklarovat, že několik alternativní mapy zpráv, každý odpovídající samostatné obsaženého okna.  
-  
-## <a name="example"></a>Příklad  
- Následuje příklad třídy kontejneru s omezením dvě okna:  
-  
- [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
-  
- Další informace o časových obdobích omezením, najdete v článku [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) vzorku.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy oken](../atl/atl-window-classes.md)
+>  Není nutné odvozovat třídu z `CContainedWindowT` Chcete-li použít omezením windows.
+
+S omezením windows můžete buď nadřazené třídy existující třídu Windows nebo podtřídou existujícímu oknu. Vytvoření časového období této nadřazené třídy existující Windows třídy, nejdřív zadat název existující třídy v konstruktoru pro `CContainedWindowT` objektu. Poté zavolejte `CContainedWindowT::Create`. K podtřídou existujícímu oknu není nutné zadat název třídy Windows (pass NULL do konstruktoru). Jednoduše zavoláte `CContainedWindowT::SubclassWindow` metoda s popisovačem okna se rozčlenit do podtříd.
+
+Omezením windows se obvykle používají jako datové členy třídy kontejneru. Kontejner nemusí být okno; ale to musí být odvozen od [cmessagemap –](../atl/reference/cmessagemap-class.md).
+
+Obsaženého okna můžete použít mapy alternativní zpráv pro zpracování zprávy. Pokud máte více než jeden obsaženého okna, by měla deklarovat, že několik alternativní mapy zpráv, každý odpovídající samostatné obsaženého okna.
+
+## <a name="example"></a>Příklad
+
+Následuje příklad třídy kontejneru s omezením dvě okna:
+
+[!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]
+
+Další informace o časových obdobích omezením, najdete v článku [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) vzorku.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy oken](../atl/atl-window-classes.md)
 

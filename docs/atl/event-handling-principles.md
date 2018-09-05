@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9931e194236871b9d767805464928fd4e553015e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197300"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762870"
 ---
 # <a name="event-handling-principles"></a>Principy zpracování událostí
-Společné pro všechny zpracování událostí jsou tři kroky. Budete muset:  
-  
--   Implementace rozhraní události na váš objekt.  
-  
--   Doporučte zdroj události, chce přijímat události objektu.  
-  
--   Když váš objekt už nebude potřeba příjem událostí, zrušíte avízo o zdroji události.  
-  
- Tak, že budete implementovat rozhraní události závisí na jeho typu. Události rozhraní může být vtable, dvou nebo dispinterface. Záleží jen na návrháře k definování rozhraní zdroje událostí To je pro vás k implementaci rozhraní.  
-  
+
+Společné pro všechny zpracování událostí jsou tři kroky. Budete muset:
+
+- Implementace rozhraní události na váš objekt.
+
+- Doporučte zdroj události, chce přijímat události objektu.
+
+- Když váš objekt už nebude potřeba příjem událostí, zrušíte avízo o zdroji události.
+
+Tak, že budete implementovat rozhraní události závisí na jeho typu. Události rozhraní může být vtable, dvou nebo dispinterface. Záleží jen na návrháře k definování rozhraní zdroje událostí To je pro vás k implementaci rozhraní.
+
 > [!NOTE]
->  I když neexistují žádné z technických důvodů, které nelze duální rozhraní události, existuje mnoho důvodů dobrý návrh vyhnout se použití duals. To je však rozhodnutí provedených Návrhář/implementátora události *zdroj*. Vzhledem k tomu, že pracujete z hlediska události `sink`, je nutné povolit možnost, že nemusí mít kdykoli vybíráte, ale implementace rozhraní duální události. Další informace o duální rozhraní najdete v tématu [duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md).  
-  
- Nutnost zdroj události je možné rozdělit do tří kroků:  
-  
--   Zadat dotaz na objekt zdroje pro [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
-  
--   Volání [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) předávání identifikátor IID rozhraní události, která vás zajímá. Pokud úspěšná, vrátí [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) rozhraní na objekt bodu připojení.  
-  
--   Volání [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) předání `IUnknown` z jímky událostí. Pokud úspěšná, vrátí `DWORD` představující připojení souboru cookie.  
-  
- Jakmile úspěšně jste se zaregistrovali váš zájem o přijímání událostí, zavolá se podle události vyvolané zdrojový objekt metody rozhraní objektu události. Pokud už nepotřebujete příjem událostí, soubor cookie můžete předat zpět do spojovacího bodu prostřednictvím [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Tím dojde k přerušení připojení mezi zdroje a jímky.  
-  
- Dejte pozor, abyste se vyhnuli odkaz cykly, při zpracování událostí.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování událostí](../atl/event-handling-and-atl.md)
+>  I když neexistují žádné z technických důvodů, které nelze duální rozhraní události, existuje mnoho důvodů dobrý návrh vyhnout se použití duals. To je však rozhodnutí provedených Návrhář/implementátora události *zdroj*. Vzhledem k tomu, že pracujete z hlediska události `sink`, je nutné povolit možnost, že nemusí mít kdykoli vybíráte, ale implementace rozhraní duální události. Další informace o duální rozhraní najdete v tématu [duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md).
+
+Nutnost zdroj události je možné rozdělit do tří kroků:
+
+- Zadat dotaz na objekt zdroje pro [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+
+- Volání [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) předávání identifikátor IID rozhraní události, která vás zajímá. Pokud úspěšná, vrátí [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) rozhraní na objekt bodu připojení.
+
+- Volání [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) předání `IUnknown` z jímky událostí. Pokud úspěšná, vrátí `DWORD` představující připojení souboru cookie.
+
+Jakmile úspěšně jste se zaregistrovali váš zájem o přijímání událostí, zavolá se podle události vyvolané zdrojový objekt metody rozhraní objektu události. Pokud už nepotřebujete příjem událostí, soubor cookie můžete předat zpět do spojovacího bodu prostřednictvím [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Tím dojde k přerušení připojení mezi zdroje a jímky.
+
+Dejte pozor, abyste se vyhnuli odkaz cykly, při zpracování událostí.
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování událostí](../atl/event-handling-and-atl.md)
 

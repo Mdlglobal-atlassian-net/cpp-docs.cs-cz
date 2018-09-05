@@ -1,5 +1,5 @@
 ---
-title: Podpora IDispEventImpl | Microsoft Docs
+title: Podpora IDispEventImpl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,71 +22,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680396ae912cca5f19e87697e7de0033213cc963
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9b6e62f90cfca34e92d76294e7deb5e79e8dbd12
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362216"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756006"
 ---
 # <a name="supporting-idispeventimpl"></a>Podpora IDispEventImpl
-Šablony třídy [IDispEventImpl](../atl/reference/idispeventimpl-class.md) slouží k zajištění podpory pro připojení bodu jímky ve třídě ATL. Jímka bodu připojení umožňuje třídě zpracování událostí aktivována z externích objektů COM. Tyto jímky bodu připojení jsou mapovány s mapou podřízený události poskytované třídě.  
-  
- Správně implementovat jímka bodu připojení pro třídu, musí dokončit následující kroky:  
-  
--   Import knihovny typů pro každý externí objekt  
-  
--   Deklarovat `IDispEventImpl` rozhraní  
-  
--   Deklarace mapy jímek událostí  
-  
--   Poradit a unadvise body připojení  
-  
- Kroky implementace jímka bod připojení se provádí úpravou pouze soubor hlaviček () vaší třídy.  
-  
-## <a name="importing-the-type-libraries"></a>Import knihovny typů  
- Pro každý externí objekt jehož události chcete zpracovat je nutné naimportovat knihovny typů. Tento krok definuje události, které mohou být zpracovány a poskytuje informace, které se používá při deklarování mapy jímek událostí. [#Import](../preprocessor/hash-import-directive-cpp.md) – direktiva může k tomu použít. Přidat nezbytné `#import` direktivy řádků pro každé rozhraní odesílání bude podporovat k soubor hlaviček () vaší třídy.  
-  
- Následující příklad importuje knihovny typů externího serveru COM (`MSCAL.Calendar.7`):  
-  
- [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]  
-  
+
+Třída šablony [IDispEventImpl](../atl/reference/idispeventimpl-class.md) slouží k poskytování podpory pro připojení bodu jímky ve své třídě ATL. Jímka bodu připojení umožňuje vaší třídy pro zpracování událostí vyvolaných z externí objekty modelu COM. Tyto jímky bod připojení se mapují s mapou jímky událostí, poskytnuté vaší třídy.
+
+Jímka bod připojení pro vaši třídu správně implementovat, musí dokončit následující kroky:
+
+- Import knihovny typů pro každý externí objekt
+
+- Deklarovat `IDispEventImpl` rozhraní
+
+- Deklarovat mapu jímky událostí
+
+- Dokáží a zrušíte avízo o spojovací body
+
+Kroky při implementaci jímky bod připojení se provádí úpravou pouze souboru hlaviček (.h) vaší třídy.
+
+## <a name="importing-the-type-libraries"></a>Import knihoven typů
+
+Pro každý externí objekt jehož události, které chcete zpracovat je nutné naimportovat knihovny typů. Tento krok definuje události, které mohou být zpracovány a poskytuje informace, které se používá při deklarování na mapě událostí jímky. [#Import](../preprocessor/hash-import-directive-cpp.md) – direktiva je možné dosáhnout. Přidat nezbytné `#import` direktiv řádky pro každého rozhraní odbavení bude podporovat do souboru hlaviček (.h) vaší třídy.
+
+Následující příklad importuje knihovna typů externího serveru COM (`MSCAL.Calendar.7`):
+
+[!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]
+
 > [!NOTE]
->  Musíte mít samostatný `#import` příkaz pro každý typ externího knihovny bude podporovat.  
-  
-## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarování rozhraní IDispEventImpl  
- Teď, když jste importovali knihoven typů každého rozhraní dispatch, je třeba deklarovat samostatné `IDispEventImpl` rozhraní pro jednotlivá rozhraní externí odesílání. Prohlášení o třídě upravit přidáním `IDispEventImpl` rozhraní deklarace pro každý externí objekt. Další informace o parametrech najdete v tématu [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
-  
- Následující kód deklaruje pro dvě jímky bodu připojení, `DCalendarEvents` rozhraní pro objekt COM implementováno třídou `CMyCompositCtrl2`:  
-  
- [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]  
-  
-## <a name="declaring-an-event-sink-map"></a>Deklarace mapy jímek událostí  
- V pořadí pro oznamování událostí ke zpracování pomocí správné funkce musí třídě směrovat všechny události její správné obslužné rutině. Toho se dosáhne deklarace mapy jímek událostí.  
-  
- ATL poskytuje několik makra [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), a [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), který snazší toto mapování. Standardní formát vypadá takto:  
-  
- `BEGIN_SINK_MAP(comClass)`  
-  
- `SINK_ENTRY_EX(id, iid, dispid, func)`  
-  
- `. . . //additional external event entries`  
-  
- `END_SINK_MAP()`  
-  
- Následující příklad deklaruje mapou podřízený události s dvě obslužné rutiny událostí:  
-  
- [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]  
-  
- Implementace je téměř dokončena. Poslední krok se týká informací a unadvising externí rozhraní.  
-  
-## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Poradenství a Unadvising IDispEventImpl rozhraní  
- Posledním krokem je implementace metodu, která bude poradit (nebo unadvise) všechny body připojení v době správné. Tato radí je třeba provést před může probíhat komunikace mezi externích klientů a objektu. Před objektu se zobrazí, je každé rozhraní externí odesílání nepodporuje objektu dotazován pro odchozí rozhraní. Vytvoření připojení a odkaz na rozhraní odchozí slouží ke zpracování událostí z objektu. Tento postup se označuje jako "radí."  
-  
- Po dokončení objektu s externí rozhraní mají být upozorněni odchozí rozhraní, že se už používají ve třídě. Tento proces se označuje jako "unadvising."  
-  
- Z důvodu jedinečné povaha objekty modelu COM tento postup se liší v podrobností a provádění mezi implementace. Tyto podrobnosti jsou nad rámec tohoto tématu, nejsou řešit.  
-  
-## <a name="see-also"></a>Viz také  
- [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
+>  Musíte mít samostatný `#import` prohlášení pro každou knihovnu externí bude podporovat.
+
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarování idispeventimpl – rozhraní
+
+Teď, když jste naimportovali knihovny typů rozhraní každé odeslání, musíte deklarovat samostatné `IDispEventImpl` rozhraní pro každé rozhraní externí odeslání. Upravte deklaraci vaší třídy tak, že přidáte `IDispEventImpl` rozhraní prohlášení pro každý externí objekt. Další informace o parametrech najdete v tématu [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+
+Následující kód deklaruje dvě jímky bodu připojení, pro `DCalendarEvents` rozhraní COM objekty implementované ve třídě `CMyCompositCtrl2`:
+
+[!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]
+
+## <a name="declaring-an-event-sink-map"></a>Deklarování mapu jímky událostí
+
+V pořadí pro oznamování událostí zpracovávat správné funkce musí vaše třída směrování každou událost do jeho správné obslužné rutiny. Tím se dosahuje deklarace mapu jímky událostí.
+
+Knihovna ATL poskytuje několik maker [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), a [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), která usnadňují toto mapování. Standardní formát je následující:
+
+`BEGIN_SINK_MAP(comClass)`
+
+`SINK_ENTRY_EX(id, iid, dispid, func)`
+
+`. . . //additional external event entries`
+
+`END_SINK_MAP()`
+
+Následující příklad deklaruje mapu jímky událostí s dvě obslužné rutiny události:
+
+[!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]
+
+Implementace je téměř dokončena. Poslední krok se týká informací a unadvising externí rozhraní.
+
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Nutnost a Unadvising idispeventimpl – rozhraní
+
+Posledním krokem je implementace metody, která dokáží (nebo zrušíte avízo o) všechny body připojení ve správnou dobu. Tato předobjednávky je třeba provést předtím, než může probíhat komunikace mezi externími klienty a objektu. Předtím, než se objekt stane viditelnou, každé odeslání externí rozhraní nepodporuje objekt se dotazují pro odchozí rozhraní. Navázat připojení a odkaz na odchozí rozhraní se používá ke zpracování událostí z objektu. Tento postup se označuje jako "předobjednávky."
+
+Po dokončení objektu s externí rozhraní by měla odchozí rozhraní oznámení, aby se už používaly vaší třídy. Tento proces se označuje jako "unadvising."
+
+Vzhledem k jedinečné povaze objekty modelu COM tento postup se liší v podrobností a provádění mezi implementací. Tyto podrobnosti jsou nad rámec tohoto tématu a nebudou řešit.
+
+## <a name="see-also"></a>Viz také
+
+[Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
 

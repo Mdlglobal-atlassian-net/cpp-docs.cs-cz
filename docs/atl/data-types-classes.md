@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46b65fa43ddc2fc26f2cd87746f763c8a8e7c924
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851311"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756308"
 ---
 # <a name="data-types-classes"></a>Třídy datových typů
-Následující třídy zabalení datových typů jazyka C++:  
-  
--   [CComBSTR](../atl/reference/ccombstr-class.md) zabalí `BSTR` datového typu.  
-  
--   [CComVariant](../atl/reference/ccomvariant-class.md) zabalí `VARIANT` datového typu.  
-  
--   [Ccomcurrency –](../atl/reference/ccomcurrency-class.md) obsahuje operátory a metody pro vytváření a správu `CURRENCY` objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)
+
+Následující třídy zabalení datových typů jazyka C++:
+
+- [CComBSTR](../atl/reference/ccombstr-class.md) zabalí `BSTR` datového typu.
+
+- [CComVariant](../atl/reference/ccomvariant-class.md) zabalí `VARIANT` datového typu.
+
+- [Ccomcurrency –](../atl/reference/ccomcurrency-class.md) obsahuje operátory a metody pro vytváření a správu `CURRENCY` objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)
 

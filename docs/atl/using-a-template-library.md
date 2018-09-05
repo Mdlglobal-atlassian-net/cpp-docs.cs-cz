@@ -1,5 +1,5 @@
 ---
-title: Použití knihovny šablony (ATL) | Microsoft Docs
+title: Pomocí šablony knihovny (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48d7a8838097c862e3d4c16e15ec951441b72794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91a9c10bef285780ded145e33800ebd3db198827
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357841"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754783"
 ---
-# <a name="using-a-template-library"></a>Použití knihovny šablony
-Šablona je něco jako makra. Stejně jako u makra, vyvolání šablonu způsobuje, že rozbalte (s odpovídající parametr nahrazení) kód, který jste napsali. Nicméně šablony širší než to umožňuje vytvoření nové třídy na základě typů, které můžete předat jako parametry. Tyto nové třídy implementaci zajišťující bezpečnost typů způsoby provedení operace vyjádřené v kódu šablony.  
-  
- Knihovny šablon například ATL liší od tradiční třídy knihovny jazyka C++ v tom, že jsou obvykle zadat pouze jako zdrojový kód (nebo jako zdrojový kód s malým, podpora běhu) a nejsou ve své podstatě ze své podstaty nebo nutně hierarchické. Místo odvozování od třídy, chcete-li získat funkce, které očekáváte, můžete vytvořit instanci třídy ze šablony.  
-  
-## <a name="see-also"></a>Viz také  
- [Úvod do ATL](../atl/introduction-to-atl.md)
+# <a name="using-a-template-library"></a>Použití knihovny šablon
+
+Šablona je něco jako makra. Stejně jako u makra, volání šablony způsobí, že umožňuje rozbalit (s odpovídající parametr nahrazení) na kód, který jste napsali. Nicméně šablony širší než povolíte vytváření nových tříd na základě typů, které se předávají jako parametry. Tyto nové třídy implementaci zajišťující bezpečnost typů způsoby provedení operace vyjádřit v kódu šablony.
+
+Knihovny šablon, jako je například ATL nejsou ze své podstaty nebo nemusí být hierarchicky a se liší od tradiční knihovny tříd jazyka C++, jsou obvykle dodávány pouze jako zdrojový kód (nebo jako zdrojový kód s malým, podpora doby běhu). Místo odvozování z třídy za účelem získání funkce, které očekáváte, můžete vytvořit instanci třídy ze šablony.
+
+## <a name="see-also"></a>Viz také
+
+[Úvod do ATL](../atl/introduction-to-atl.md)
 

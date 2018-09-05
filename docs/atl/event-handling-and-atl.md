@@ -1,5 +1,5 @@
 ---
-title: Zpracování událostí a ATL | Microsoft Docs
+title: Zpracování událostí a ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6586c4fd54e9e968f3d7571bc61e866f07c8f2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f5d78ea68606513b2fe8491137e29fb45afb36e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354929"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761495"
 ---
 # <a name="event-handling-and-atl"></a>Zpracování událostí a ATL
-V této části ukazuje, jak jímky událostí pomocí ATL. Pokrývá zásady zpracování událostí modelu COM a jaké jsou specifikace vnořování událostí pomocí podpory poskytované ATL.  
-  
- Informace o tom, jak aktivovat události a implementovat spojovací body, najdete v tématu [ATL – body připojení](../atl/atl-connection-points.md).  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Principy zpracování událostí](../atl/event-handling-principles.md)  
- Popisuje postup společné pro všechny události blokováním.  
-  
- [Implementace rozhraní zpracování událostí](../atl/implementing-the-event-handling-interface.md)  
- Popisuje třídy použijte pro implementaci rozhraní událostí.  
-  
- [IDispEventImpl – použití](../atl/using-idispeventimpl.md)  
- Jsou uvedené kroky pro používání `IDispEventImpl` a uvádí ukázku kódu.  
-  
- [IDispEventSimpleImpl – použití](../atl/using-idispeventsimpleimpl.md)  
- Jsou uvedené kroky pro používání `IDispEventSimpleImpl` a uvádí ukázku kódu.  
-  
- [Shrnutí zpracování událostí ATL](../atl/atl-event-handling-summary.md)  
- Shrnuje, pomocí tabulky, hlavní způsoby pro implementace událostí rozhraní a poradenství a unadvising zdroji událostí pomocí ATL.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../atl/active-template-library-atl-concepts.md)
+
+Tato část ilustruje způsob zpracování událostí pomocí knihovny ATL. Popisuje zásady zpracování událostí modelu COM a specifika zpracování událostí s využitím podpory poskytované ATL.
+
+Informace o tom, jak vyvolat a body připojení implementovat, najdete v článku [ATL – body připojení](../atl/atl-connection-points.md).
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Principy zpracování událostí](../atl/event-handling-principles.md)  
+Tento článek popisuje běžné kroky zpracování všech událostí.
+
+[Implementace rozhraní zpracování událostí](../atl/implementing-the-event-handling-interface.md)  
+Popisuje třídy pro implementaci rozhraní události.
+
+[IDispEventImpl – použití](../atl/using-idispeventimpl.md)  
+Obsahuje pokyny pro použití `IDispEventImpl` a znázorňuje ukázku kódu.
+
+[IDispEventSimpleImpl – použití](../atl/using-idispeventsimpleimpl.md)  
+Obsahuje pokyny pro použití `IDispEventSimpleImpl` a znázorňuje ukázku kódu.
+
+[Shrnutí zpracování událostí ATL](../atl/atl-event-handling-summary.md)  
+Shrnuje, pomocí tabulek, hlavní způsoby implementace událostí rozhraní a nutnost a unadvising zdroj událostí pomocí knihovny ATL.
+
+## <a name="related-sections"></a>Související oddíly
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../atl/active-template-library-atl-concepts.md)
 

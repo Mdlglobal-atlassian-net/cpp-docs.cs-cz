@@ -1,5 +1,5 @@
 ---
-title: Volání funkce | Microsoft Docs
+title: Volání funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de77f98010bec66993585d8cc998ced489ebadf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8849cd932bd44b5dd7094d05470a4a97f58b08cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387860"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755488"
 ---
 # <a name="function-calls"></a>Volání funkcí
-A *volání funkce* je výraz, který předá řízení a argumenty (pokud existuje) funkce a formulář:  
+A *volání funkce* je výraz, který předává řízení a argumenty (pokud existuje) na funkci a má formát:  
   
- *výraz* (*seznam výrazů*opt)  
+*výraz* (*seznam výrazů*<sub>optimalizované</sub>)  
   
- kde *výraz* je název funkce nebo se vyhodnocuje adresu funkce a *seznam výrazů* je seznam výrazů (oddělené čárkami). Hodnoty těchto pozdějších výrazů jsou argumenty předané funkci. Pokud funkce nevrací hodnotu, pak je deklarovat, že bude funkci, která vrátí `void`.  
+kde *výraz* je název funkce nebo vyhodnotí na adresu funkce a *seznam výrazů* je seznamem výrazů (oddělený čárkami). Hodnoty těchto pozdějších výrazů jsou argumenty předané funkci. Pokud funkce nevrací hodnotu, pak se deklaruje jako funkce, která vrátí `void`.  
   
- Pokud existuje deklaraci před voláním funkce, ale je uvedeny žádné informace pro parametry, všechny nedeklarované argumenty jednoduše podstoupit obvyklé aritmetické převody.  
+Pokud existuje deklarace před voláním funkce, ale žádné údaje o parametrech, procházejí argumentů nedeklarovaný jednoduše obvyklé aritmetické převody.  
   
 > [!NOTE]
->  Výrazy v seznamu argumentů funkce může být vyhodnocen v libovolném pořadí, tak argumenty, jejichž hodnoty mohou být změněna vedlejší účinky z jiné argument mít undefined hodnoty. Bod sekvence definované operátor volání funkce pouze zaručuje, že všechny vedlejší účinky v seznamu argumentů vyhodnocují před ovládací prvek předává do volaná funkce. (Všimněte si, že je pořadí, ve kterém jsou argumenty nabídnutých v zásobníku samostatné věci.) V tématu [body sekvence](../c-language/c-sequence-points.md) Další informace.  
+>  Výrazy v seznamu argumentů funkce mohou být vyhodnoceny v libovolném pořadí, proto mít argumenty, jejichž hodnoty mohou být změněna vedlejším účinkům z jiného argumentu nedefinované hodnoty. Tento bod sekvence určené operátor volání funkce pouze zaručuje, že všechny vedlejší účinky jsou v seznamu argumentů se vyhodnocují před řízení se předá do volané funkce. (Všimněte si, že pořadí, ve kterém jsou argumenty posunuto v zásobníku je samostatný otázkou.) Zobrazit [body sekvence](../c-language/c-sequence-points.md) Další informace.  
   
- V žádném volání funkce Jediným požadavkem je, že adresu funkce se musí vyhodnotit výraz před závorkách. To znamená, že funkci nelze volat prostřednictvím jakýkoli výraz ukazatel na funkci.  
+V žádném volání funkce Jediným požadavkem je, že výraz před závorky se musí vyhodnotit na adresu funkce. To znamená, že funkce lze volat přes libovolný výraz ukazatele na funkce.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje volat z volání funkce `switch` příkaz:  
+Tento příklad znázorňuje volání funkce volána z `switch` – příkaz:  
   
 ```  
 int main()  
@@ -81,23 +81,23 @@ void work( int number, long (*function)(int i) )
 }  
 ```  
   
- V tomto příkladu volání funkce v `main`,  
+V tomto příkladu volání funkce v `main`,  
   
 ```  
 work( count, lift );  
 ```  
   
- předá proměnná typu integer `count`a adresu funkce `lift` funkce `work`. Všimněte si, že je adresa funkce předán jednoduše tím, že identifikátor funkce, protože identifikátor funkce vyhodnocen jako výraz ukazatele. Pokud chcete používat funkce identifikátor tímto způsobem, musí být funkce deklarován nebo definované před identifikátor se používá; identifikátor, jinak se nerozpoznal. V tomto případě prototypu pro `work` je uveden na začátku `main` funkce.  
+předá proměnná typu integer `count`a adresu funkce `lift` funkci `work`. Všimněte si, že je adresa funkce předán jednoduše tak, že udělíte identifikátor funkce, protože identifikátor funkce je vyhodnocen jako výraz ukazatele. Tímto způsobem použít identifikátor funkce, musí být funkce deklarované nebo definované předtím, než se používá identifikátor; v opačném případě identifikátor nebyl rozpoznán. V tomto případě prototyp `work` dostane na začátku `main` funkce.  
   
- Parametr `function` v `work` je deklarován jako ukazatel na funkci trvá jeden `int` argument a vrací **dlouho** hodnotu. Závorky název parametru jsou požadovány; bez, by deklaraci zadejte vrácení ukazatel na funkci **dlouho** hodnotu.  
+Parametr `function` v `work` je deklarováno jako ukazatel na funkci s jeden `int` argument a vrátí **dlouhé** hodnotu. Závorky kolem názvu parametru jsou povinné; bez nich deklaraci zadáte vrací ukazatel na funkci **dlouhé** hodnotu.  
   
- Funkce `work` volá funkci vybrané z uvnitř **pro** smyčky pomocí následující volání funkce:  
+Funkce `work` volá funkci vybrané z uvnitř **pro** smyčky s použitím následující volání funkce:  
   
 ```  
 ( *function )( i );  
 ```  
   
- Jeden argument, `i`, je předán volaná funkce.  
+Jeden argument, `i`, je předán do volané funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce](../c-language/functions-c.md)
+[Funkce](../c-language/functions-c.md)

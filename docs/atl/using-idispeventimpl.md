@@ -16,68 +16,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03c4bbd4efbdbf5d1ecf566244a9000a93a7c981
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848925"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760296"
 ---
 # <a name="using-idispeventimpl"></a>Idispeventimpl – použití
-Při použití `IDispEventImpl` zpracování událostí, budete muset:  
-  
--   Odvodit třídu z [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
-  
--   Přidáte mapu jímky událostí do vaší třídy.  
-  
--   Přidání položky do pomocí mapě událostí jímky [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) – makro.  
-  
--   Implementace metody, že máte zájem zpracování.  
-  
--   Dokáží a zrušíte avízo o zdroji události.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak zpracovat `DocumentChange` události vyvolané Wordu **aplikace** objektu. Tato událost je definována jako metody na `ApplicationEvents` dispinterface.  
-  
- Příklad je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
-  
- `[`  
-  
- `uuid(000209F7-0000-0000-C000-000000000046),`  
-  
- `hidden`  
-  
- `]`  
-  
- `dispinterface ApplicationEvents {`  
-  
- `properties:`  
-  
- `methods:`  
-  
- `[id(0x00000001), restricted, hidden]`  
-  
- `void Startup();`  
-  
- `[id(0x00000002)]`  
-  
- `void Quit();`  
-  
- `[id(0x00000003)]`  
-  
- `void DocumentChange();`  
-  
- `};`  
-  
- V příkladu `#import` ke generování požadované záhlaví soubory z knihovny typů Wordu. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správné mso souboru knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je jednodušší z stdafx.h:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
-  
- Následující kód se zobrazí v NotSoSimple.h. Příslušný kód je uvedeno ve komentáře:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování událostí](../atl/event-handling-and-atl.md)   
- [Ukázka ATLEventHandling](../visual-cpp-samples.md)
+
+Při použití `IDispEventImpl` zpracování událostí, budete muset:
+
+- Odvodit třídu z [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+
+- Přidáte mapu jímky událostí do vaší třídy.
+
+- Přidání položky do pomocí mapě událostí jímky [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) – makro.
+
+- Implementace metody, že máte zájem zpracování.
+
+- Dokáží a zrušíte avízo o zdroji události.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak zpracovat `DocumentChange` události vyvolané Wordu **aplikace** objektu. Tato událost je definována jako metody na `ApplicationEvents` dispinterface.
+
+Příklad je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
+
+```cpp
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]  
+dispinterface ApplicationEvents {
+properties:
+methods:
+    [id(0x00000001), restricted, hidden]
+    void Startup();
+
+    [id(0x00000002)]
+    void Quit();
+
+    [id(0x00000003)]
+    void DocumentChange();
+};
+```
+
+V příkladu `#import` ke generování požadované záhlaví soubory z knihovny typů Wordu. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správné mso souboru knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je jednodušší z stdafx.h:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
+
+Následující kód se zobrazí v NotSoSimple.h. Příslušný kód je uvedeno ve komentáře:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování událostí](../atl/event-handling-and-atl.md)   
+[Ukázka ATLEventHandling](../visual-cpp-samples.md)
 

@@ -15,28 +15,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c59cda065a84b7b664dcfccd7c876e19ef2f1aa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b36ed5fc339fb49c7e58541465f2433804821fdb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848412"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762795"
 ---
 # <a name="message-maps-atl"></a>Mapy zpráv (ATL)
-Mapy zpráv obslužnou rutinu přidruží konkrétní zprávy, příkaz nebo oznámení. S použitím ATL [makra map zpráv](../atl/reference/message-map-macros-atl.md), můžete zadat mapy zpráv pro okna. Procedury oken v `CWindowImpl`, `CDialogImpl`, a `CContainedWindowT` směrování zpráv okna do jeho mapování zprávy.  
-  
- [Funkce obslužné rutiny zpráv](../atl/message-handler-functions.md) přijměte další argument typu `BOOL&`. Tento argument určuje, zda byla zpráva zpracována a je ve výchozím nastavení má hodnotu TRUE. Funkce obslužné rutiny můžete tento argument nastavit na hodnotu FALSE označuje, že nebyla zpracována zprávu. V takovém případě knihovny ATL bude hledat funkci obslužné rutiny dále v mapování zprávy. Tento argument nastavíte na hodnotu FALSE, můžete nejprve provést určité akce v reakci na zprávu a pak povolit výchozí zpracování nebo jinou funkci obslužné rutiny na dokončení zpracování zprávy.  
-  
-## <a name="chained-message-maps"></a>Zřetězené zprávy Maps  
- ATL také umožňuje řetězu mapy zpráv, která přesměruje zpracování do mapy zpráv definovaný v jiné třídy zpráv. Například můžete implementovat běžné zpracování zpráv v samostatné třídě poskytovat jednotné chování pro všechna okna řetězení dané třídy. Můžete zřetězit na základní třídu nebo na datový člen třídy.  
-  
- ATL také podporuje dynamické řetězení, které vám umožní do řetězce do mapy zpráv jiného objektu v době běhu. K implementaci dynamického řetězení, musí být odvozen z vaší třídy [cdynamicchain –](../atl/reference/cdynamicchain-class.md). Potom deklarovat [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) – makro v mapě zpráv. CHAIN_MSG_MAP_DYNAMIC vyžaduje jedinečné číslo identifikující objektu a mapy zpráv, ke kterému jsou řetězení. Je nutné definovat tuto jedinečnou hodnotu přímo pomocí volání `CDynamicChain::SetChainEntry`.  
-  
- Můžete zřetězit na jakoukoli třídu, která deklaruje mapy zpráv, pokud třída je odvozena z [cmessagemap –](../atl/reference/cmessagemap-class.md). `CMessageMap` Umožňuje zobrazit jeho mapy zpráv na jiné objekty. Všimněte si, že `CWindowImpl` již je odvozena z `CMessageMap`.  
-  
-## <a name="alternate-message-maps"></a>Alternativní zprávy Maps  
- Nakonec ATL podporuje alternativní zprávy maps, deklarované s [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) – makro. Každý mapování alternativních zprávy je identifikován jedinečný číslo, které můžete předat ALT_MSG_MAP. Pomocí alternativní zprávy maps, můžete zpracovávat zprávy více oken v jednu mapu. Všimněte si, že ve výchozím nastavení, `CWindowImpl` nepoužívá mapy alternativní zpráv. Na přidání této podpory, přepsat `WindowProc` metoda ve vaší `CWindowImpl`-odvozené třídy a volání `ProcessWindowMessage` s identifikátorem mapy zpráv.  
-  
-## <a name="see-also"></a>Viz také  
- [Implementace okna](../atl/implementing-a-window.md)
+
+Mapy zpráv obslužnou rutinu přidruží konkrétní zprávy, příkaz nebo oznámení. S použitím ATL [makra map zpráv](../atl/reference/message-map-macros-atl.md), můžete zadat mapy zpráv pro okna. Procedury oken v `CWindowImpl`, `CDialogImpl`, a `CContainedWindowT` směrování zpráv okna do jeho mapování zprávy.
+
+[Funkce obslužné rutiny zpráv](../atl/message-handler-functions.md) přijměte další argument typu `BOOL&`. Tento argument určuje, zda byla zpráva zpracována a je ve výchozím nastavení má hodnotu TRUE. Funkce obslužné rutiny můžete tento argument nastavit na hodnotu FALSE označuje, že nebyla zpracována zprávu. V takovém případě knihovny ATL bude hledat funkci obslužné rutiny dále v mapování zprávy. Tento argument nastavíte na hodnotu FALSE, můžete nejprve provést určité akce v reakci na zprávu a pak povolit výchozí zpracování nebo jinou funkci obslužné rutiny na dokončení zpracování zprávy.
+
+## <a name="chained-message-maps"></a>Zřetězené zprávy Maps
+
+ATL také umožňuje řetězu mapy zpráv, která přesměruje zpracování do mapy zpráv definovaný v jiné třídy zpráv. Například můžete implementovat běžné zpracování zpráv v samostatné třídě poskytovat jednotné chování pro všechna okna řetězení dané třídy. Můžete zřetězit na základní třídu nebo na datový člen třídy.
+
+ATL také podporuje dynamické řetězení, které vám umožní do řetězce do mapy zpráv jiného objektu v době běhu. K implementaci dynamického řetězení, musí být odvozen z vaší třídy [cdynamicchain –](../atl/reference/cdynamicchain-class.md). Potom deklarovat [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) – makro v mapě zpráv. CHAIN_MSG_MAP_DYNAMIC vyžaduje jedinečné číslo identifikující objektu a mapy zpráv, ke kterému jsou řetězení. Je nutné definovat tuto jedinečnou hodnotu přímo pomocí volání `CDynamicChain::SetChainEntry`.
+
+Můžete zřetězit na jakoukoli třídu, která deklaruje mapy zpráv, pokud třída je odvozena z [cmessagemap –](../atl/reference/cmessagemap-class.md). `CMessageMap` Umožňuje zobrazit jeho mapy zpráv na jiné objekty. Všimněte si, že `CWindowImpl` již je odvozena z `CMessageMap`.
+
+## <a name="alternate-message-maps"></a>Alternativní zprávy Maps
+
+Nakonec ATL podporuje alternativní zprávy maps, deklarované s [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) – makro. Každý mapování alternativních zprávy je identifikován jedinečný číslo, které můžete předat ALT_MSG_MAP. Pomocí alternativní zprávy maps, můžete zpracovávat zprávy více oken v jednu mapu. Všimněte si, že ve výchozím nastavení, `CWindowImpl` nepoužívá mapy alternativní zpráv. Na přidání této podpory, přepsat `WindowProc` metoda ve vaší `CWindowImpl`-odvozené třídy a volání `ProcessWindowMessage` s identifikátorem mapy zpráv.
+
+## <a name="see-also"></a>Viz také
+
+[Implementace okna](../atl/implementing-a-window.md)
 

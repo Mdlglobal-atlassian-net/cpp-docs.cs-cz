@@ -1,5 +1,5 @@
 ---
-title: C.2 pravidla | Microsoft Docs
+title: C.2 pravidla | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,308 +12,216 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694989"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755018"
 ---
 # <a name="c2-rules"></a>C.2 Pravidla
-Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje rozšíření pro gramatika základní jazyk pro direktivy OpenMP C a C++.  
-  
- **/\* v jazyce C++ (ISO/IEC 14882:1998) \*/**  
-  
- *příkaz seq*:  
-  
- *Příkaz*  
-  
- *OpenMP – direktiva*  
-  
- *příkaz seq – příkaz*  
-  
- *příkaz seq openmp – direktiva*  
-  
- **/\* v C90 (ISO/IEC 9899:1990) \*/**  
-  
- *seznam příkazů*:  
-  
- *Příkaz*  
-  
- *OpenMP – direktiva*  
-  
- *příkaz seznam příkazů*  
-  
- *seznam příkazů openmp – direktiva*  
-  
- **/\* v C99 (ISO/IEC 9899:1999) \*/**  
-  
- *položka bloku*:  
-  
- *deklarace*  
-  
- *Příkaz*  
-  
- *OpenMP – direktiva*  
-  
- *příkaz*:  
-  
- **/\* standardní příkazy \*/**  
-  
- *OpenMP – konstrukce*  
-  
- *OpenMP – konstrukce*:  
-  
- *paralelní konstrukce*  
-  
- *pro konstrukce*  
-  
- *části – konstrukce*  
-  
- *Single – konstrukce*  
-  
- *paralelní pro konstrukce*  
-  
- *paralelní části – konstrukce*  
-  
- *hlavní construc*  
-  
- *Critical – konstrukce*  
-  
- *Atomic – konstrukce*  
-  
- *seřazené konstrukce*  
-  
- *OpenMP – direktiva*:  
-  
- *Barrier – direktiva*  
-  
- *Flush – direktiva*  
-  
- *strukturovaná bloku*:  
-  
- *Příkaz*  
-  
- *paralelní konstrukce*:  
-  
- *paralelní – direktiva strukturovaná bloku*  
-  
- *paralelní – direktiva*:  
-  
- **omp – Direktiva pragma #, – paralelní***paralelní klauzule*optseq *nový řádek*   
-  
- *paralelní klauzule*:  
-  
- *Jedinečný paralelní klauzule*  
-  
- *dat – klauzule*  
-  
- *Jedinečný paralelní klauzule*:  
-  
- **Pokud (** *výraz* **)**  
-  
- **num_threads (** *výraz* **)**  
-  
- *pro konstrukce*:  
-  
- *pro direktiva iterace – příkaz*  
-  
- *pro direktiva*:  
-  
- **omp – Direktiva pragma # pro** *klauzuli for*optseq *nový řádek*  
-  
- *klauzuli for*:  
-  
- *Jedinečný pro klauzuli*  
-  
- *dat – klauzule*  
-  
- **nowait**  
-  
- *Jedinečný pro klauzuli*:  
-  
- **řazení**  
-  
- **plán (** *plán druh* **)**  
-  
- **plán (** *plán druh* **,** *výraz* **)**  
-  
- *Typ plánu*:  
-  
- **static**  
-  
- **dynamic**  
-  
- **na základě**  
-  
- **Modul runtime**  
-  
- *konstrukce části*:  
-  
- *část oboru části – direktiva*  
-  
- *Direktiva části*:  
-  
- **části omp – Direktiva pragma #** *části klauzule*optseq *nový řádek*  
-  
- *klauzule části*:  
-  
- *dat – klauzule*  
-  
- **nowait**  
-  
- *část oboru*:  
-  
- *{oddíl pořadí}*  
-  
- *část pořadí*:  
-  
- *Direktiva části*opt *strukturovaná bloku*  
-  
- *část pořadí část – direktiva strukturovaná bloku*  
-  
- *Direktiva části*:  
-  
- **část omp – Direktiva pragma #** *nový řádek*  
-  
- *Single – konstrukce*:  
-  
- *Single – direktiva strukturovaná bloku*  
-  
- *Single – direktiva*:  
-  
- **omp – Direktiva pragma #, – jeden** *jedním klauzule*optseq *nový řádek*  
-  
- *klauzule jedním*:  
-  
- *dat – klauzule*  
-  
- **nowait**  
-  
- *paralelní pro konstrukce*:  
-  
- *paralelní pro direktiva iterace – příkaz*  
-  
- *paralelní pro direktiva*:  
-  
- **omp – Direktiva pragma #, – paralelní pro** *paralelní pro klauzuli*optseq *nový řádek*  
-  
- *paralelní pro klauzuli*:  
-  
- *Jedinečný paralelní klauzule*  
-  
- *Jedinečný pro klauzuli*  
-  
- *dat – klauzule*  
-  
- *paralelní. části konstrukce*:  
-  
- *část oboru paralelní části – direktiva*  
-  
- *paralelní části – direktiva*:  
-  
- **# – Direktiva pragma omp – paralelní části** *paralelní. oddíly klauzule*optseq *nový řádek*  
-  
- *paralelní. oddíly klauzule*:  
-  
- *Jedinečný paralelní klauzule*  
-  
- *dat – klauzule*  
-  
- *master – konstrukce*:  
-  
- *hlavní – direktiva strukturovaná bloku*  
-  
- *hlavní – direktiva*:  
-  
- **hlavní omp – Direktiva pragma #** *nový řádek*  
-  
- *Critical – konstrukce*:  
-  
- *důležité – direktiva strukturovaná bloku*  
-  
- *důležité – direktiva*:  
-  
- **omp – Direktiva pragma #, – kritická** *oblast frázi*opt *nový řádek*  
-  
- *oblast frázi*:  
-  
- *(identifier)*  
-  
- *Barrier – direktiva*:  
-  
- **barrier omp – Direktiva pragma #** *nový řádek*  
-  
- *Atomic – konstrukce*:  
-  
- *Atomic – direktiva výraz – příkaz*  
-  
- *Atomic – direktiva*:  
-  
- **# – Direktiva pragma omp atomic –** *nový řádek*  
-  
- *Flush – direktiva*:  
-  
- **omp – Direktiva pragma #, – vyprázdnění** *vyprázdnění vars*opt *nový řádek*  
-  
- *vyprázdnění vars*:  
-  
- *(seznamu proměnné)*  
-  
- *seřazené konstrukce*:  
-  
- *seřazené – direktiva strukturovaná bloku*  
-  
- *seřazené – direktiva*:  
-  
- **omp – Direktiva pragma # seřazené** *nový řádek*  
-  
- *Deklarace*:  
-  
- **/\* Standardní deklarace \*/**  
-  
- *threadprivate – direktiva*  
-  
- *threadprivate – direktiva*:  
-  
- **threadprivate omp – Direktiva pragma # (** *seznamu proměnné***)** *nový řádek*   
-  
- *data klauzule*:  
-  
- **privátní (** *seznamu proměnné* **)**  
-  
- **copyprivate (***seznamu proměnné***)**   
-  
- **firstprivate (***seznamu proměnné***)**   
-  
- **lastprivate (** *seznamu proměnné***)**   
-  
- **sdílené (** *seznamu proměnné* **)**  
-  
- **Výchozí (sdílené)**  
-  
- **Výchozí (none)**  
-  
- **snížení (***operátor snížení***:***seznamu proměnné***)**   
-  
- **copyin (***seznamu proměnné***)**   
-  
- *operátor snížení*:  
-  
- *Jeden z*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
-  
- **/\* v jazyce C \*/**  
-  
- *Proměnná seznamu*:  
-  
- *Identifikátor*  
-  
- *Proměnná seznamu* **,** *identifikátor*  
-  
- **/\* v jazyce C++ \*/**  
-  
- *Proměnná seznamu*:  
-  
- *ID – výraz*  
-  
- *Proměnná seznamu* **,** *id výrazu*
+Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje rozšíření pro základní jazyk gramatiky direktivy OpenMP – C a C++.
+
+**/\* v jazyce C++ (ISO/IEC 14882:1998) \*/**
+
+*příkaz seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP – direktiva*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seq – příkaz – příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz seq openmp – direktiva*
+
+**/\* v C90 (ISO/IEC 9899: 1990) \*/**
+
+*seznam příkazů*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP – direktiva*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz seznamu příkazů*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam příkazů openmp – direktiva*
+
+**/\* v C99 (ISO/IEC 9899:1999) \*/**
+
+*blok item*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP – direktiva*
+
+**/\* standardní příkazy \*/**
+
+*příkaz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP – konstruktor*
+
+*konstrukce OpenMP*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel – konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pro konstruktor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*oddíly – konstruktor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Single – konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*paralelní pro konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*paralelní – oddíly – konstruktor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*master – konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Critical – konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Atomic – konstrukce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Seřadit – konstruktor*
+
+*OpenMP – direktiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Barrier – direktiva*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Flush – direktiva*
+
+*strukturovaný blok*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*
+
+*paralelní konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturované paralelní směrnice – blok*
+
+*paralelní směrnice*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# – Direktiva pragma omp parallel** *paralelní klauzule*<sub>optseq</sub> *nový řádek*
+
+*paralelní klauzule*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jedinečné paralelní klauzuli*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*
+
+*jedinečné paralelní klauzule*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (** *výraz* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**num_threads (** *výraz* **)**
+
+*pro konstruktor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pro direktivu iterace – příkaz*
+
+*pro direktivu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp – Direktiva pragma # pro** *klauzuli for*<sub>optseq</sub> *nový řádek*
+
+*pro klauzuli*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jedinečné pro klauzuli*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*jedinečné pro klauzuli*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Řazení**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**plán (** *typ plánu* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**plán (** *typ plánu* **,** *výraz* **)**
+
+*Typ plánu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Dynamické**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**s asistencí**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Modul runtime**
+
+*oddíly konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*části příslušné části – direktiva*
+
+*Direktiva oddíly*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**oddíly omp – Direktiva pragma #** *oddíly klauzule*<sub>optseq</sub> *nový řádek*
+
+*oddíly klauzule*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*Rozsah oddílu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{oddíl pořadí}*
+
+*části pořadí*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direktivu Section*<sub>optimalizované</sub> *strukturovaný blok*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturované direktivu section části pořadí – blok*
+
+*direktivu Section*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp section. # pragma** *nový řádek*
+
+*Single – konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Single – direktiva strukturovaného bloku*
+
+*Single – direktiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp – Direktiva pragma # jeden** *jedinou klauzulí*<sub>optseq</sub> *nový řádek*
+
+*jedinou klauzulí*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*paralelní pro konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*paralelní pro direktivu iterace – příkaz*
+
+*paralelní pro direktivu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# – Direktiva pragma omp parallel pro** *paralelní pro klauzuli*<sub>optseq</sub> *nový řádek*
+
+*paralelní pro klauzuli*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jedinečné paralelní klauzuli*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jedinečné pro klauzuli*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*
+
+*paralelní. oddíly konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*části rozsahu paralelní – oddíly – direktiva*
+
+*paralelní. oddíly směrnice*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# – Direktiva pragma omp parallel oddíly** *paralelních oddílů klauzule*<sub>optseq</sub> *nový řádek*
+
+*paralelní oddíly klauzule*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jedinečné paralelní klauzuli*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data – klauzule*
+
+*master – konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hlavní – direktiva strukturovaného bloku*
+
+*hlavní směrnice*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**hlavní omp – Direktiva pragma #** *nový řádek*
+
+*Critical – konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direktivy Critical strukturovaného bloku*
+
+*direktivy Critical*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp – Direktiva pragma # kritické** *oblasti frázi*<sub>optimalizované</sub> *nový řádek*
+
+*oblast frázi*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(identifikátor)*
+
+*Barrier – direktiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**bariéra omp – Direktiva pragma #** *nový řádek*
+
+*Atomic – konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výrazu direktivy Atomic*
+
+*direktivy Atomic*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# – Direktiva pragma omp atomic** *nový řádek*
+
+*Flush – direktiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp – Direktiva pragma # vyprázdnění** *vyprázdnění proměnných*<sub>optimalizované</sub> *nový řádek*
+
+*vyprázdnění proměnných*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(seznamu proměnné)*
+
+*seřazené konstrukce*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturované seřadit direktivy – blok*
+
+*Seřadit direktivy*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**omp – Direktiva pragma # seřazené** *nový řádek*
+
+**/\* Standardní deklarace \*/**
+
+*deklarace*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate – direktiva*
+
+*Direktiva threadprivate*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# threadprivate omp – Direktiva pragma (** *seznamu proměnné***)** *nový řádek* 
+
+*data klauzule*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**privátní (** *seznamu proměnné* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***seznamu proměnné***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***seznamu proměnné***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *seznamu proměnné***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sdílené (** *seznamu proměnné* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí (sdílené)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí (žádné)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**snížení (***operátorem reduction***:***seznamu proměnné***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***seznamu proměnné***)** 
+
+*operátorem Reduction*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Jeden z:  **+  \* -& ^ &#124; & &&#124;&#124;**
+
+**/\* v jazyce C \*/**
+
+*seznamu proměnné*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* **,** *identifikátor*
+
+**/\* v jazyce C++ \*/**
+
+*seznamu proměnné*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznamu proměnné* **,** *id – výraz*

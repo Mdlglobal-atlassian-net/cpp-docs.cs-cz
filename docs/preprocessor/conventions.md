@@ -15,25 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ccb595911ef3032b652faedf1195f95b468d30e9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465302"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761953"
 ---
 # <a name="conventions"></a>Konvence
-Úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|*neterminálu*|Kurzíva označuje neterminály.|  
-|#include|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|  
-|opt|Neterminály následované opt jsou vždy volitelné.|  
-|výchozí písmo|Znaky ze sady, které jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech.|  
-  
-Dvojtečka (:), která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích.  
-  
-## <a name="see-also"></a>Viz také  
+Úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:
+
+|Atribut|Popis|
+|---------------|-----------------|
+|*neterminálu*|Kurzíva označuje neterminály.|
+|#include|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|
+|opt|Neterminály následované <sub>optimalizované</sub> jsou vždy volitelné.|
+|výchozí písmo|Znaky ze sady, které jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech.|
+
+Dvojtečka (**:**) která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích.
+
+## <a name="see-also"></a>Viz také
 
 [Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

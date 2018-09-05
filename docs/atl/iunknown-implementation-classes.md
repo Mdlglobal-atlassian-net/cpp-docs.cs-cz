@@ -16,44 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4cd2f2473249271285d6b8812dac1b924e5a172
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848532"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754130"
 ---
 # <a name="iunknown-implementation-classes"></a>Implementace třídy IUnknown
-Následující třídy implementují `IUnknown` a související metody:  
-  
--   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) spravuje, neagregovaná i agregovaných objektů pro počítání odkazů. Umožňuje určit modelu vláken.  
-  
--   [Ccomobjectroot –](../atl/reference/ccomobjectroot-class.md) spravuje, neagregovaná i agregovaných objektů pro počítání odkazů. Použije výchozí model serveru vláken.  
-  
--   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementuje `IUnknown` pro agregovaného objektu.  
-  
--   [CComObject](../atl/reference/ccomobject-class.md) implementuje `IUnknown` pro neagregovaná objekt.  
-  
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` agregované a neagregovaná objektů. Pomocí `CComPolyObject` díky tomu není nutné i `CComAggObject` a `CComObject` v modulu. Jediný `CComPolyObject` objekt zpracovává agregované a neagregovaná případy.  
-  
--   [Ccomobjectnolock –](../atl/reference/ccomobjectnolock-class.md) implementuje `IUnknown` pro objekt neagregovaná beze změny počet zámků modulů.  
-  
--   [Ccomtearoffobject –](../atl/reference/ccomtearoffobject-class.md) implementuje `IUnknown` pro rozhraní s odnímatelnými nabídkami.  
-  
--   [Ccomcachedtearoffobject –](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "v mezipaměti" odtržených rozhraní.  
-  
--   [Ccomcontainedobject –](../atl/reference/ccomcontainedobject-class.md) implementuje `IUnknown` pro vnitřní objekt agregace nebo rozhraní s odnímatelnými nabídkami.  
-  
--   [Ccomobjectglobal –](../atl/reference/ccomobjectglobal-class.md) spravuje počet odkazů na modulu, aby váš objekt se neodstraní.  
-  
--   [Ccomobjectstack –](../atl/reference/ccomobjectstack-class.md) vytvoří dočasný objekt modelu COM, pomocí základní implementace `IUnknown`.  
-  
-## <a name="related-articles"></a>Související články  
- [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../atl/atl-class-overview.md)   
- [Agregace a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)   
- [Makra COM Map](../atl/reference/com-map-macros.md)   
- [Globální funkce mapy modelu COM](../atl/reference/com-map-global-functions.md)
+
+Následující třídy implementují `IUnknown` a související metody:
+
+- [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) spravuje, neagregovaná i agregovaných objektů pro počítání odkazů. Umožňuje určit modelu vláken.
+
+- [Ccomobjectroot –](../atl/reference/ccomobjectroot-class.md) spravuje, neagregovaná i agregovaných objektů pro počítání odkazů. Použije výchozí model serveru vláken.
+
+- [CComAggObject](../atl/reference/ccomaggobject-class.md) implementuje `IUnknown` pro agregovaného objektu.
+
+- [CComObject](../atl/reference/ccomobject-class.md) implementuje `IUnknown` pro neagregovaná objekt.
+
+- [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` agregované a neagregovaná objektů. Pomocí `CComPolyObject` díky tomu není nutné i `CComAggObject` a `CComObject` v modulu. Jediný `CComPolyObject` objekt zpracovává agregované a neagregovaná případy.
+
+- [Ccomobjectnolock –](../atl/reference/ccomobjectnolock-class.md) implementuje `IUnknown` pro objekt neagregovaná beze změny počet zámků modulů.
+
+- [Ccomtearoffobject –](../atl/reference/ccomtearoffobject-class.md) implementuje `IUnknown` pro rozhraní s odnímatelnými nabídkami.
+
+- [Ccomcachedtearoffobject –](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "v mezipaměti" odtržených rozhraní.
+
+- [Ccomcontainedobject –](../atl/reference/ccomcontainedobject-class.md) implementuje `IUnknown` pro vnitřní objekt agregace nebo rozhraní s odnímatelnými nabídkami.
+
+- [Ccomobjectglobal –](../atl/reference/ccomobjectglobal-class.md) spravuje počet odkazů na modulu, aby váš objekt se neodstraní.
+
+- [Ccomobjectstack –](../atl/reference/ccomobjectstack-class.md) vytvoří dočasný objekt modelu COM, pomocí základní implementace `IUnknown`.
+
+## <a name="related-articles"></a>Související články
+
+[Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../atl/atl-class-overview.md)   
+[Agregace a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)   
+[Makra COM Map](../atl/reference/com-map-macros.md)   
+[Globální funkce mapy modelu COM](../atl/reference/com-map-global-functions.md)
 

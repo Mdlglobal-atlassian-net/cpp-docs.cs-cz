@@ -1,5 +1,5 @@
 ---
-title: Definice a konvence | Microsoft Docs
+title: Definice a konvence | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f227f37f4a9de92f244df5988f7ee8088e41d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74a29acfcdc58b068ebabe9bc1c9b033cf801c21
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384143"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760403"
 ---
 # <a name="definitions-and-conventions"></a>Definice a konvence
 Terminály jsou koncové body v definici syntaxe. Žádné jiné řešení není možné. Terminály obsahují sadu vyhrazených slov a uživatelské identifikátory.  
   
- Terminálově nezávislých jsou zástupné symboly v syntaxi a jsou definovány jinde v této syntaxe souhrnu. Definice mohou být rekurzivní.  
+Neterminály jsou zástupné symboly v syntaxi a je definována jinde v tomto souhrnu syntaxe. Definice mohou být rekurzivní.  
   
- Volitelná součást je označena zkratkou opt. Například  
+Volitelná součást je označena pomocí indexovaný <sub>optimalizované</sub>. Například  
   
-```  
+> **{** *výraz*<sub>optimalizované</sub> **}**
   
-{  
-expression <SUB>opt</SUB> }  
-```  
+Určuje volitelný výraz uzavřený do složených závorek.  
   
- označuje výraz volitelné uzavřené do složených závorek.  
-  
- Konvence syntaxe použít jiné písmo atributy pro různé součásti syntaxe. Symboly a písma jsou následující:  
+Syntaxe úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|*nonterminal*|Kurzíva označuje neterminály.|  
+|*neterminálu*|Kurzíva označuje neterminály.|  
 |**const**|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|  
-|opt|Neterminály následované opt jsou vždy volitelné.|  
-|výchozí písmo|Znaky v sadě popsané nebo uvedené v této řez písma můžete použít jako terminály v příkazech jazyka C.|  
+|<sub>Odhlásit se</sub>|Neterminály následované <sub>optimalizované</sub> jsou vždy volitelné.|  
+|výchozí písmo|Znaky v sadě jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech jazyka C.|  
   
- Středník (**:**) nonterminal následující zavádí jeho definice. Alternativní definice jsou uvedeny na samostatné řádky, s výjimkou při uvedena slova "mezi."  
+Dvojtečka (**:**) která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích, s výjimkou při začíná slova "jeden z."  
   
 ## <a name="see-also"></a>Viz také  
- [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)
+[Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)
