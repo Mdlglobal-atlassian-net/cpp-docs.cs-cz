@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c229a07d7d8dbf8d74e487c99e6f79b8203f04f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202642"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687997"
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl – třída
 Poskytuje funkce pro Windows běžné tlačítko číselníku.  
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířených windows stylů, najdete v článku *dwExStyle* parametr pro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířených windows stylů, najdete v článku *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.  
   
  *dwStyle*  
  Určuje styl tlačítka číselníku. Použijte libovolnou kombinaci styly ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsány v [– styly ovládacího prvku číselník](/windows/desktop/Controls/up-down-control-styles) v sadě Windows SDK.  
