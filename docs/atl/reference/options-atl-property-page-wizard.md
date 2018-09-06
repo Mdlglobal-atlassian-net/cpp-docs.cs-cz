@@ -16,36 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c2830584ea3c54ec0963dc115318be7b7d5880c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 77849366ecfbdaee819eff6b8938b2dadb7b8db3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881211"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761001"
 ---
 # <a name="options-atl-property-page-wizard"></a>Možnosti Průvodce stránkou vlastností ATL
-Pomocí této stránky v průvodci můžete definovat vláken modelu a agregace úroveň stránky vlastností, kterou vytváříte.  
-  
- **Model vláken**  
- Určuje model vláken používané stránky vlastností.  
-  
- Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Jeden**|Na stránce vlastností spustí jenom v primárním vláknu COM.|  
-|**Objektu Apartment**|Na stránce vlastností lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení|  
-  
- **Agregace**  
- Přidá podporu agregace pro stránku vlastnost, kterou vytváříte. Zobrazit [agregace](../../atl/aggregation.md) Další informace.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Ano**|Vytvoření stránky vlastností, které se dají agregovat.|  
-|**Ne**|Vytvoření stránky vlastností, který nemůže být agregován.|  
-|**Pouze**|Vytvoření stránky vlastností, který může být vytvořena pouze prostřednictvím agregace.|  
-  
-## <a name="see-also"></a>Viz také  
- [Průvodce stránkou vlastností ATL](../../atl/reference/atl-property-page-wizard.md)   
- [Řetězce, Průvodce stránkou vlastností ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+
+Pomocí této stránky v průvodci můžete definovat vláken modelu a agregace úroveň stránky vlastností, kterou vytváříte.
+
+**Model vláken**  
+Určuje model vláken používané stránky vlastností.
+
+Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.
+
+|Možnost|Popis|
+|------------|-----------------|
+|**Jeden**|Na stránce vlastností spustí jenom v primárním vláknu COM.|
+|**Objektu Apartment**|Na stránce vlastností lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení|
+
+**Agregace**  
+Přidá podporu agregace pro stránku vlastnost, kterou vytváříte. Zobrazit [agregace](../../atl/aggregation.md) Další informace.
+
+|Možnost|Popis|
+|------------|-----------------|
+|**Ano**|Vytvoření stránky vlastností, které se dají agregovat.|
+|**Ne**|Vytvoření stránky vlastností, který nemůže být agregován.|
+|**Pouze**|Vytvoření stránky vlastností, který může být vytvořena pouze prostřednictvím agregace.|
+
+## <a name="see-also"></a>Viz také
+
+[Průvodce stránkou vlastností ATL](../../atl/reference/atl-property-page-wizard.md)   
+[Řetězce, Průvodce stránkou vlastností ATL](../../atl/reference/strings-atl-property-page-wizard.md)
 
