@@ -1,7 +1,7 @@
 ---
-title: Název Decoration | Microsoft Docs
+title: Název dekorace | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e956d0acf9e6debcb183577775e2215e7eccec7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 063464fe58417cfce58160ccba12fbcd514c7320
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323297"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894470"
 ---
 # <a name="name-decoration"></a>Dekorování názvů
-Dekorování názvů obvykle odkazuje na zásady vytváření názvů C++, ale můžete použít pro několik případů C také. Ve výchozím nastavení C++ používá název funkce, parametry a návratový typ pro vytvoření linkeru název funkce. Vezměte v úvahu následující funkce:  
-  
-```  
+
+Dekorování názvů obvykle odkazuje na zásady vytváření názvů C++, ale můžete použít na několik případů jazyka C i. Ve výchozím nastavení C++ používá název funkce, parametry a návratový typ pro vytvoření názvu linkeru pro funkci. Vezměte v úvahu následující funkce:
+
+```
 void CALLTYPE test(void)  
-```  
-  
- Následující tabulka uvádí název linkeru pro různé konvence volání.  
-  
-|Konvence volání|extern "C" nebo .c souboru|sada, .cxx nebo /TP|  
-|------------------------|---------------------------|------------------------|  
-|Zásady vytváření názvů jazyka C (`__cdecl`)|_test|? testování@ZAXXZ|  
-|Zásady vytváření názvů fastcall (`__fastcall`)|@test@0|? testování@YIXXZ|  
-|Standardní zásady vytváření názvů volání (`__stdcall`)|_test@0|? testování@YGXXZ|  
-|Zásady vytváření názvů Vectorcall (`__vectorcall`)|testování @@0|? testování@YQXXZ|  
-  
- Volání funkce C z jazyka C++ pomocí extern "C". Extern "C" vynutí použití zásady vytváření názvů jazyka C pro jiné třídy funkcí jazyka C++. Mějte na paměti přepínačů kompilátoru **/Tc** nebo **/Tp**, který oznámení kompilátoru ignorovat příponu názvu souboru a kompilaci souboru jako jazyka C nebo C++, v uvedeném pořadí. Tyto možnosti může způsobit názvy, které neočekáváte.  
-  
- Tato chyba může také způsobit s prototypy funkcí, které mají neodpovídající parametry. Dekorování názvů začleňuje do konečné dekorované funkce název parametry funkce. Volání funkce s typy parametrů, které neodpovídají definicím v deklaraci funkce může také způsobit LNK2001.  
-  
- Není aktuálně standard pro pojmenování mezi kompilátoru dodavateli nebo i mezi různými verzemi kompilátor C++. Proto propojení soubory objektů kompilovat s jinými kompilátory nemusí poskytovat stejné schéma pojmenování a proto způsobí, že chyby definicí.  
-  
-## <a name="see-also"></a>Viz také  
- [Chyba linkerů LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)
+```
+
+V následující tabulce jsou uvedeny název linkeru pro různých konvencí volání.
+
+|Konvence volání|extern "C" nebo .c souboru|.cpp nebo .cxx /TP|
+|------------------------|---------------------------|------------------------|
+|Zásady vytváření názvů jazyka C (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
+|Zásady vytváření názvů fastcall (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
+|Standardní konvence volání (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
+|Zásady vytváření názvů Vectorcall (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
+
+Extern "C" použijte k volání funkce C z jazyka C++. Extern "C" vynutí použití zásady vytváření názvů jazyka C pro funkce jazyka C++ jiné třídy. Mějte přepínače kompilátoru **/Tc** nebo **/Tp**, zjistit, které kompilátor ignorovat příponu názvu souboru a zkompilujte soubor jako C nebo C++, v uvedeném pořadí. Tyto možnosti může způsobit, že názvy, které nepočítáte.
+
+Tato chyba může také způsobit s prototypy funkcí, které mají parametry neodpovídající. Dekorování názvů parametrů funkce zahrnuje do názvu poslední upravené funkce. Volání funkce s typy parametrů, které neodpovídají těm v deklaraci funkce může také způsobit LNK2001.
+
+Aktuálně neexistuje žádný standardní pojmenování mezi dodavateli kompilátoru nebo dokonce i mezi různými verzemi kompilátoru jazyka c++. Proto propojování souborů objektů kompilován jinými kompilátory nemusí poskytovat stejné schéma pojmenování a proto způsobí, že nerozpoznané externí typy.
+
+## <a name="see-also"></a>Viz také
+
+[Chyba linkerů LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)

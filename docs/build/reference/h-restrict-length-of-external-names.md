@@ -1,7 +1,7 @@
 ---
-title: -H (omezit délku externích názvů) | Microsoft Docs
+title: -H (omezení délky externích názvů) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,81 +20,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0859c6770da56023df7ba7ba24094bea2e889319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377558"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895315"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Omezit délku externích názvů)
-Zastaralé Omezuje délku externích názvů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Hnumber  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `number`  
- Určuje maximální délku externích názvů povolené v programu.  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení je délku externích (veřejných) názvů 2,047 znaků. To platí pro programy C a C++. Pomocí **/H** lze pouze snížit maximální povolenou délku identifikátorů, není zvýšit ji. Mezery mezi **/H** a `number` je volitelný.  
-  
- Obsahuje-li program externí názvy delší než `number`, navíc znaky jsou ignorovány. Pokud je program bez **/H** a pokud identifikátor obsahuje více než 2,047 znaky, vygeneruje kompilátor [závažná chyba C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md).  
-  
- Limit délky zahrnuje všechny vytvořené kompilátoru úvodní podtržítka (_) nebo znaku zavináče (@). Tyto znaky jsou součástí identifikátor a proveďte významné umístění.  
-  
--   Kompilátor přidá úvodní podtržítka (_) na názvy upraveném `__cdecl` (výchozí) a `__stdcall` konvence volání a jako úvodní znak (@) na názvy upraveném `__fastcall` konvence volání.  
-  
--   Kompilátor připojí argument velikost informace názvy upraveném `__fastcall` a `__stdcall` konvence volání a přidá informace o typu názvy v jazyce C++.  
-  
- Možná **/H** užitečné:  
-  
--   Při vytváření smíšený jazyk nebo přenosné programy.  
-  
--   Při použití nástroje, které uložit omezení na délce externí identifikátory.  
-  
--   Pokud chcete omezit množství místa, které používají symboly v sestavení ladicí verze.  
-  
- Následující příklad ukazuje způsob použití **/H** můžete ve skutečnosti znamenat chyby, pokud identifikátor délky jsou omezené příliš mnoho:  
-  
-```cpp  
-// compiler_option_H.cpp  
-// compile with: /H5  
-// processor: x86  
-// LNK2005 expected  
-void func1(void);  
-void func2(void);  
-  
-int main() { func1(); }  
-  
-void func1(void) {}  
-void func2(void) {}  
-```  
-  
- Také musí být opatrní při používání **/H** možnost kvůli identifikátory předdefinovaných kompilátoru. Pokud délka maximální identifikátor je příliš malá, bude určité předdefinované identifikátory volání funkcí knihovny nerozpoznané a také některé. Například pokud `printf` je použita funkce a možnost **/H5** je zadána při kompilaci, symbol **_prin** vytvoří odkázat `printf`, a to nebude nalezeno v knihovně.  
-  
- Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md).  
-  
- **/H** parametr se již nepoužívá, protože Visual Studio 2005; zvýšili omezení maximální délku a **/H** již není potřeba. Seznam – možnosti kompilátoru zastaralé, najdete v části **zastaralé a odebrat – možnosti kompilátoru** v [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Zastaralé Omezí délku externích názvů.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/H**<em>číslo</em>
+
+## <a name="arguments"></a>Arguments
+
+*Číslo*  
+Určuje maximální délku externích názvů povolené v programu.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení je délku externích (veřejných) názvů 2 047 znaků. To platí pro programy C a C++. Pomocí **/H** může pouze snížit maximální povolenou délku identifikátory, neukončil jej. Mezera mezi **/H** a *číslo* je volitelný.
+
+Pokud program obsahuje externí názvy delší než *číslo*, jsou přesahující znaky ignorovány. Pokud kompilujete aplikace bez **/H** a pokud identifikátoru obsahuje více než 2 047 znaky, bude kompilátor generovat [závažná chyba C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md).
+
+Omezení na délku zahrnuje všechny kompilátor vytvoří počáteční podtržítko (**\_**) nebo zavináč (**\@**). Tyto znaky jsou součástí identifikátoru a využijte významné umístění.
+
+- Kompilátor přidá vedoucího podtržítka (**\_**) k názvům změnil `__cdecl` (výchozí) a `__stdcall` konvence volání a jeden z předních zavináč (**\@** ) k názvům změnil `__fastcall` konvence volání.
+
+- Kompilátor připojí informací o argumentech velikosti na názvy upravil `__fastcall` a `__stdcall` konvence volání a přidá informace o typu pro názvy v jazyce C++.
+
+Může být pro vás **/H** užitečné:
+
+- Při vytváření programů jazyků nebo přenosné.
+
+- Při použití nástroje, které se uplatňují omezení délky externích identifikátorů.
+
+- Pokud chcete omezit množství místa, použijte symboly v sestavení pro ladění.
+
+Následující příklad ukazuje způsob použití **/H** může ve skutečnosti způsobit chyby, pokud identifikátor délky jsou omezené příliš mnoho:
+
+```cpp
+// compiler_option_H.cpp
+// compile with: /H5
+// processor: x86
+// LNK2005 expected
+void func1(void);
+void func2(void);
+
+int main() { func1(); }
+
+void func1(void) {}
+void func2(void) {}
+```
+
+Musíte také být opatrní při použití **/H** možnost z důvodu identifikátory předdefinovaných kompilátoru. Pokud identifikátor maximální délka je příliš malá, budou některé předdefinované identifikátory nevyřešené také určité knihovna volání funkcí. Například pokud `printf` funkce se používá a možnost **/H5** určena v době kompilace, symbol **_prin** bude vytvořen, aby bylo možné odkazovat `printf`, a to nebude nalezena v knihovně.
+
+Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md).
+
+**/H** od verze Visual Studio 2005 je zastaralá možnost; zvýšily se limity maximální délku a **/H** už nepotřebujete. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+2. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+
+3. Zadáním možnosti kompilátoru v **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

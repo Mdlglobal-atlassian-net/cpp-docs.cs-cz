@@ -1,7 +1,7 @@
 ---
-title: Spuštění příkazu NMAKE | Microsoft Docs
+title: Spuštění příkazu NMAKE | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -20,31 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29516dcbcf650225ec3b86eee9e135a35bff82f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379702"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894639"
 ---
 # <a name="running-nmake"></a>Spuštění příkazu NMAKE
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-NMAKE [option...] [macros...] [targets...] [@commandfile...]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Sestavení NMAKE zadat pouze *cíle* nebo, pokud není zadaný žádný první target v soubor pravidel. Může být první cílového souboru pravidel [pseudotarget](../build/pseudotargets.md) vytvoří jiné cíle. Soubory pravidel zadaným /F; používá NMAKE Pokud není zadán /F, používá soubor souboru pravidel v aktuálním adresáři. Pokud není zadaný žádný soubor pravidel, používá odvozená pravidla k sestavení příkazového řádku *cíle*.  
-  
- `commandfile` Textového souboru (nebo soubor odpovědí) obsahuje příkazového řádku vstup. Další vstup lze předcházet nebo postupujte podle`commandfile`. Cestu je povolená. V `commandfile`, konce řádků jsou považovány za mezery. Pokud budou obsahovat mezery, uzavřete definice maker v uvozovkách.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
- [NMAKE – možnosti](../build/nmake-options.md)  
-  
- [Tools.ini a příkaz NMAKE](../build/tools-ini-and-nmake.md)  
-  
- [Kódy ukončení příkazu NMAKE](../build/exit-codes-from-nmake.md)  
-  
-## <a name="see-also"></a>Viz také  
- [NMAKE – referenční zdroje](../build/nmake-reference.md)
+
+## <a name="syntax"></a>Syntaxe
+
+> **NMAKE** [*možnost* ...] [*makra* ...] [*cíle* ...] [**\@**<em>commandfile</em> ...]
+
+## <a name="remarks"></a>Poznámky
+
+Zadat jenom sestavení NMAKE *cíle* nebo, pokud není zadaný žádný, první cíl v souboru pravidel. Může být prvního cíle souboru pravidel [pseudotarget](../build/pseudotargets.md) vytvoří další cíle. NMAKE používá zadaným /F; soubory pravidel Pokud /F není zadán, použije soubor pravidel soubor v aktuálním adresáři. Pokud není zadán žádný soubor pravidel, používá k sestavení příkazového řádku pravidla odvozování *cíle*.
+
+*Commandfile* textový soubor (nebo soubor odezvy) obsahuje vstupní příkazového řádku. Ostatní vstupy můžete předcházejícím nebo následujícím \@ *commandfile*. Smí obsahovat cestu. V *commandfile*, zalomení řádků jsou považovány za mezery. Pokud obsahují mezery, uzavřete do uvozovek definice maker.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+[NMake – možnosti](../build/nmake-options.md)  
+
+[Tools.ini a příkaz NMAKE](../build/tools-ini-and-nmake.md)  
+
+[Kódy ukončení příkazu NMake](../build/exit-codes-from-nmake.md)  
+
+## <a name="see-also"></a>Viz také
+
+[NMAKE – referenční zdroje](../build/nmake-reference.md)

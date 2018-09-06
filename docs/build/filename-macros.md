@@ -1,5 +1,5 @@
 ---
-title: Makra názvů souborů | Microsoft Docs
+title: Makra názvů souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: bc231dfb156460a2a0cc383b6d038a98c6e2015b
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458859"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894405"
 ---
 # <a name="filename-macros"></a>Makra názvů souborů
-Makra názvů souborů jsou předdefinovány jako názvy souborů zadaný v závislost (specifikace není úplný název souboru na disku). Tyto makra nemusíte být uzavřená v závorkách při vyvolání; jak je znázorněno, zadejte pouze $.  
-  
-|– Makro|Význam|  
-|-----------|-------------|  
-|**$@**|Aktuální cíl úplný název (cesta, základní název rozšíření), jak je aktuálně zadaný.|  
-|**$$@**|Aktuální cíl úplný název (cesta, základní název rozšíření), jak je aktuálně zadaný. Platné pouze jako závislé v závislost.|  
-|**$&#42;**|Aktuální cíl cestu a základní název bez přípony souboru.|  
-|**$&#42;&#42;**|Všechny položky závislé na aktuální cíle.|  
-|**$?**|Všechny závislé objekty s časovým razítkem novější než aktuální cíl.|  
-|**$<**|Závislý soubor s časovým razítkem novější než aktuální cíl. Platné jenom v příkazech v odvozených pravidlech.|  
-  
- Pokud chcete zadat části makra předdefinované název souboru, připojit modifikátor – makro a uzavřete upravené makro v závorkách.  
-  
-|Modifikátor|Výsledná část názvu souboru|  
-|--------------|-----------------------------|  
-|**D**|Jednotky a adresáře|  
-|**B**|Základní název|  
-|**F**|Základního názvu plus rozšíření|  
-|**R**|Jednotka plus directory plus základní název|  
-  
-## <a name="see-also"></a>Viz také  
- [Speciální makra NMAKE](../build/special-nmake-macros.md)
+
+Makra názvů souborů jsou předdefinovány jako názvy souborů podle závislostí (specifikace není úplný název souboru na disku). Tato makra nemusí být uzavřen v závorkách při vyvolání; Zadejte pouze $ uvedené.
+
+|– Makro|Význam|
+|-----------|-------------|
+|**$\@**|Aktuální cíl úplný název (cesta, základní název rozšíření), jak je aktuálně zadaný.|
+|**$$\@**|Aktuální cíl úplný název (cesta, základní název rozšíření), jak je aktuálně zadaný. Platné pouze jako závislé v závislosti.|
+|**$&#42;**|Aktuální cíl cestu a základní název bez přípony souboru.|
+|**$&#42;&#42;**|Všechny položky závislé na aktuální cíle.|
+|**$?**|Všechny položky závislé na s časovým razítkem novější než aktuální cíl.|
+|**$<**|Závislý soubor s časovým razítkem novější než aktuální cíl. Platné pouze v příkazech odvozených pravidel.|
+
+K určení součástí název souboru předdefinované makro, přidat modifikátor – makro a uvést upravené – makro v závorkách.
+
+|Modifikátor|Výsledná část názvu souboru|
+|--------------|-----------------------------|
+|**D**|Jednotky a adresáře|
+|**B**|Základní název|
+|**F**|Základním názvem a rozšíření|
+|**R**|Jednotky plus adresáře a základní název|
+
+## <a name="see-also"></a>Viz také
+
+[Speciální makra NMAKE](../build/special-nmake-macros.md)

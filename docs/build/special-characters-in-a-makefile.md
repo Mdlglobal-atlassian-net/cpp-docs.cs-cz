@@ -1,5 +1,5 @@
 ---
-title: Speciální znaky v souboru pravidel | Microsoft Docs
+title: Speciální znaky v souboru pravidel | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 157f9ed499ef7a0ac9efdd6bebe118ca593acabb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380447"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894431"
 ---
 # <a name="special-characters-in-a-makefile"></a>Speciální znaky v souboru pravidel
-Chcete-li použít speciální znak NMAKE jako literál znak, umístěte šipka nahoru (^) úrovních před ním. NMAKE ignoruje carets před dalšími znaky. Speciální znaky jsou:  
-  
- `:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
-  
- Šipka nahoru (^) v rámci řetězec v uvozovkách považován za znak literálu pomocí kurzoru. Šipka nahoru na konci řádku vloží literálu znaku v řetězci nebo makro.  
-  
- V makrech, zpětné lomítko (\\) a potom podle nový řádek nahrazuje znak mezery.  
-  
- V příkazech symbol procenta (%) je soubor specifikátor. Chcete-li představují % oznámena v příkazu, zadejte místo jeden Dvojitý znak procenta (%). V jiných situacích NMAKE interpretuje jeden % oznámena, ale vždy interpretuje dvojitou %% jako jeden %. Proto představují literál %%, zadejte buď znaky procenta tři servery %%%, nebo čtyři procent známky servery %%%.  
-  
- Chcete-li použít znak dolaru ($) jako literál v příkazu, zadejte dva znaky dolaru ($$). Tuto metodu lze také v jiných situacích, kde ^ $ funguje.  
-  
-## <a name="see-also"></a>Viz také  
- [Obsah souboru pravidel](../build/contents-of-a-makefile.md)
+
+Pokud chcete použít speciální znak NMAKE jako literální znak, umístíte stříšky (^) před tímto prvkem. NMAKE ignoruje střížek, které předcházet jiné znaky. Speciální znaky jsou:
+
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+
+Stříšky (^) v rámci řetězec v uvozovkách je považován za znak literálu blikajícího kurzoru. Blikající kurzor na konec řádku vloží literální znak řetězec nebo makro.
+
+V makrech, zpětného lomítka (\\) a potom nový řádek znak je nahrazen mezerou.
+
+V příkazech symbolem procenta (%) je specifikátor souboru. K reprezentaci % doslova v příkazu, zadejte místo jeden double znak procenta (%). V jiných situacích NMAKE interpretuje jeden % doslova, ale vždy interpretuje double %% jako jeden %. Proto k reprezentaci literál %%, zadejte buď znaky procenta tři %% %c, nebo znaménka čtyř procent, %% %c.
+
+Pokud chcete použít znak dolaru ($) jako literální znak v příkazu, zadejte dva znaky dolaru ($$). Tuto metodu lze také v jiných situacích, kde ^ $ funguje.
+
+## <a name="see-also"></a>Viz také
+
+[Obsah souboru pravidel](../build/contents-of-a-makefile.md)

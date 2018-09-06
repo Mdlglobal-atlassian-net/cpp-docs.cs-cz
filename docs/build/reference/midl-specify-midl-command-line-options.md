@@ -1,7 +1,7 @@
 ---
 title: -MIDL (určení možností příkazového řádku MIDL) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222678"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894587"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
-```  
-/MIDL:@file  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- `file`  
- Název souboru, který obsahuje [možností příkazového řádku MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).  
-  
-## <a name="remarks"></a>Poznámky  
- Všechny možnosti pro převod souboru IDL do vyrovnávací paměti TLB souboru musí být uvedené v `file`; Možnosti příkazového řádku MIDL nelze zadat na příkazovém řádku linkeru. Pokud není zadán /MIDL, kompilátor MIDL o tom bude vyvolán s pouze název souboru IDL a žádné jiné možnosti.  
-  
- Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řádek.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte na tlačítko **Linkeru** složky.  
-  
-3.  Klikněte na tlačítko **vložené IDL** stránku vlastností.  
-  
-4.  Upravit **příkazy MIDL** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)   
- [/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
- [/ IGNOREIDL (Nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/ TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [Sestavení programu s atributy](../../windows/building-an-attributed-program.md)
+
+Určuje soubor odpovědí pro možnosti příkazového řádku MIDL
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ MIDL:\@**<em>souboru</em>
+
+## <a name="arguments"></a>Arguments
+
+*Soubor*  
+Název souboru, který obsahuje [možností příkazového řádku MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+
+## <a name="remarks"></a>Poznámky
+
+Všechny možnosti pro převod souboru IDL do vyrovnávací paměti TLB souboru musí být uvedené v *souboru*; Možnosti příkazového řádku MIDL nelze zadat na příkazovém řádku linkeru. Pokud není zadán /MIDL, kompilátor MIDL o tom bude vyvolán s pouze název souboru IDL a žádné jiné možnosti.
+
+Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řádek.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+2. Vyberte **vlastnosti konfigurace** > **Linkeru** > **vložené IDL** stránku vlastností.
+
+3. Upravit **příkazy MIDL** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
+[Možnosti linkeru](../../build/reference/linker-options.md)   
+[/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
+[/ IGNOREIDL (Nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+[/ TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+[Sestavení programu s atributy](../../windows/building-an-attributed-program.md)

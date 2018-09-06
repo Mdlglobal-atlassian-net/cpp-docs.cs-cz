@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753726"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895289"
 ---
 # <a name="curl-class"></a>CUrl – třída
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` umožňuje manipulaci s poli Adresa URL, jako je například cesta nebo port číslo. `CUrl` rozumí adresy URL v následujícím formátu:
 
-\<Schéma > ://\<uživatelské jméno >:\<heslo > @\<název_hostitele >:\<číslo_portu > /\<UrlPath >\<ExtraInfo >
+\<Schéma > ://\<uživatelské jméno >:\<heslo >\@\<název_hostitele >:\<číslo_portu > /\<UrlPath >\<ExtraInfo >
 
 (Některá pole jsou volitelná.) Zvažte například tuto adresu URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) analyzuje následujícím způsobem:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Heslo: "tajný klíč"
 
-- Název hostitele: "www.microsoft.com"
+- Název hostitele: "`www.microsoft.com`"
 
 - Číslo_portu: 80
 
@@ -235,7 +235,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 Tato metoda přidá jeho jednotlivých polí. aby bylo možné vytvořit kompletního řetězce adresy URL v následujícím formátu:
 
-**\<schéma > ://\<uživatele >:\<předat > @\<domény >:\<port >\<cesta >\<Další >**
+**\<schéma > ://\<uživatele >:\<předat >\@\<domény >:\<port >\<cesta >\<Další >**
 
 Při volání této metody *pdwMaxLength* parametr by měl obsahovat zpočátku maximální délka vyrovnávací paměti pro řetězec odkazuje *lpszUrl* parametru. Hodnota *pdwMaxLength* parametr aktualizuje skutečnou délku řetězce adresy URL.
 

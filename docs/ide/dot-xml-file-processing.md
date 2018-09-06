@@ -1,5 +1,5 @@
 ---
-title: . Zpracování souboru XML | Microsoft Docs
+title: . Zpracování souboru XML | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,177 +14,180 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ce44cd7c8d6112859990feb4067e9160f284548b
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33340512"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894819"
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
-Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který se označí ke generování dokumentace. Další informace najdete v tématu [doporučené značky dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). ID řetězec jednoznačně identifikuje konstruktu. Programy, které zpracovávají soubor .xml můžete použít ID řetězec k identifikaci odpovídající rozhraní .NET Framework metadata nebo reflexe položky na které se vztahuje na dokumentaci.  
-  
- Soubor .xml není znázornění hierarchické kódu, je jako plochý seznam s generovaného ID pro každý prvek.  
-  
- Kompilátor dodržuje následující pravidla, když ji vygeneruje ID řetězce:  
-  
--   Bez mezer je umístěn v řetězci.  
-  
--   První část řetězec ID identifikuje druh člen, které jsou označené pomocí jednoho znaku následovaným dvojtečkou. Se používají následující typy členů:  
-  
-    |Znak|Popis|  
-    |---------------|-----------------|  
-    |N|– obor názvů<br /><br /> Dokumentační komentáře nelze přidat do oboru názvů, je možné, cref odkazy na obor názvů.|  
-    |T|Typ: třída, rozhraní, struktura, enum, delegát|  
-    |D|– definice typedef|  
-    |F|pole|  
-    |P|vlastnosti (včetně indexery nebo jiných indexované vlastnosti)|  
-    |M|(včetně takových speciální metody jako konstruktory, operátory a tak dále) – metoda|  
-    |E|event|  
-    |!|Řetězec chyby.<br /><br /> Zbývající řetězec poskytuje informace o této chybě. Visual C++ compiler generuje informace o chybě pro odkazy, které nelze vyřešit.|  
-  
--   Druhá část řetězce, který je plně kvalifikovaný název položky začínající na kořen oboru názvů. Název položky, jeho nadřazených typ nebo typy a obor názvů jsou odděleny tečkami. Pokud má název samotné položky období, se nahrazují znak hash (#). Předpokládá se, že žádná položka má symbolem hash přímo v jeho názvu. Třeba plně kvalifikovaný název `String` konstruktor by "System.String.#ctor".  
-  
--   Pro vlastnosti a metody Pokud jsou argumenty pro metodu, seznam argumentů uzavřený v závorkách následuje. Pokud neexistují žádné argumenty, jsou k dispozici žádné závorek. Argumenty, které jsou oddělené čárkami. Kódování každý argument dodržuje přímo jak je zakódován v rozhraní .NET Framework podpis:  
-  
-    -   Základní typy. Regulární typy (ELEMENT_TYPE_CLASS nebo Typ ELEMENT_TYPE_VALUETYPE, který), jsou reprezentovány jako plně kvalifikovaný název typu.  
-  
-    -   Vnitřní typy (například ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. a ELEMENT_TYPE_VOID) jsou reprezentovány jako plně kvalifikovaný název odpovídající úplné typu, například **System.Int32** nebo **System.TypedReference**.  
-  
-    -   ELEMENT_TYPE_PTR je reprezentován jako ' *' následující změny typu.  
-  
-    -   Typu ELEMENT_TYPE_BYREF je reprezentován jako ' \@' následující změny typu.  
-  
-    -   ELEMENT_TYPE_PINNED je reprezentován jako ' ^' následující změny typu. Visual C++ compiler nikdy vygeneruje.  
-  
-    -   ELEMENT_TYPE_CMOD_REQ je reprezentován jako '&#124;a plně kvalifikovaný název třídy modifikátor následující změny typu. Visual C++ compiler nikdy vygeneruje.  
-  
-    -   ELEMENT_TYPE_CMOD_OPT je reprezentován jako '!' a plně kvalifikovaný název třídy modifikátor následující změny typu.  
-  
-    -   ELEMENT_TYPE_SZARRAY je reprezentován jako ["]" následující element typ pole.  
-  
-    -   ELEMENT_TYPE_GENERICARRAY je reprezentován jako "[?]" následující element typ pole. Visual C++ compiler nikdy vygeneruje.  
-  
-    -   ELEMENT_TYPE_ARRAY je reprezentován jako [*dolní hranice*:`size`,*dolní hranice*:`size`] kde je počet čárkami pořadí - 1 a dolní meze a velikost každé dimenze, pokud Označuje, jsou reprezentovány v desítkové soustavě. Pokud není zadán dolní mez nebo velikost, je jednoduše vynechán. Pokud byly vynechány dolní mez a velikosti pro konkrétní dimenzi, ':' je také vynechán. Například dimenzionální 2 pole s 1 jako neurčené velikost a dolní meze je [1:, 1:].  
-  
-    -   ELEMENT_TYPE_FNPTR je reprezentován jako "= FUNC:`type`(*podpis*)", kde `type` je návratový typ a *podpis* je argumenty metody. Pokud neexistují žádné argumenty, jsou závorky vynechat. Visual C++ compiler nikdy vygeneruje.  
-  
-     Následující součásti podpis nenachází vzhledem k tomu, že se nikdy používají rozdílné přetížené metody:  
-  
-    -   Konvence volání  
-  
-    -   Návratový typ  
-  
-    -   TYP ELEMENT_TYPE_SENTINEL  
-  
--   Pro operátory převodu návratovou hodnotu metody zakódován ' ~' následuje návratový typ, kódovaný jako dříve.  
-  
--   Pro obecné typy název typu bude následovat back značek a pak číslo určující počet parametrů obecného typu.  Například  
-  
+
+Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který je označený ke generování dokumentace. Další informace najdete v tématu [doporučené značky dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). Řetězec ID jednoznačně identifikuje konstrukce. Programy, které zpracování souboru XML slouží k identifikaci odpovídající rozhraní .NET Framework metadata nebo reflexe položky ke kterému se vztahuje na dokumentaci ID řetězce.
+
+Soubor XML není Hierarchická reprezentace kódu, je seznam bez stromové struktury s vygenerované ID pro každý prvek.
+
+Při generování ID řetězce, kompilátor dodržuje následující pravidla:
+
+- Žádné jiné mezery, nachází v řetězci.
+
+- První část řetězec ID identifikuje typ členu, identifikují se jeden znak následovaný dvojtečkou. Se používají následující typy členů:
+
+   |Znak|Popis|
+   |---------------|-----------------|
+   |N|– obor názvů<br /><br /> Dokumentační komentáře nelze přidat do oboru názvů, je možné cref odkazy na obor názvů.|
+   |T|Typ: třída, rozhraní, struktury, výčtu, delegát|
+   |D|– definice typedef|
+   |F|pole|
+   |P|vlastnosti (včetně indexery nebo jiných indexované vlastnosti)|
+   |M|(včetně speciálních metod, jako konstruktory, operátory a tak dále) – metoda|
+   |E|event|
+   |!|Text chyby<br /><br /> Zbývající řetězec poskytuje informace o této chybě. Kompilátor Visual C++ generuje informace o chybě pro odkazy, které nelze rozpoznat.|
+
+- Druhá část řetězce je plně kvalifikovaný název položky, počínaje kořenový obor názvů. Název položky, jeho nadřazeného typu nebo typů a obor názvů jsou odděleny tečkami. Pokud má název samotné položky období, budou nahrazeny jako znak hash (#). Předpokládá se, že nemá žádná položka znak hash přímo ve svém názvu. Například plně kvalifikovaný název `String` konstruktor by "System.String.#ctor".
+
+- Vlastnosti a metody Pokud jsou argumenty metody, uzavřený do závorek seznamu argumentů se řídí. Pokud neexistují žádné argumenty, jsou k dispozici žádné závorky. Argumenty jsou odděleny čárkami. Kódování každý argument následuje přímo jak je zakódovaný v rozhraní .NET Framework podpisu:
+
+   - Základní typy. Pravidelné typy (za řetězcem ELEMENT_TYPE_CLASS nebo ELEMENT_TYPE_VALUETYPE) jsou reprezentovány ve formě plně kvalifikovaný název typu.
+
+   - Vnitřní typy (například ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. a ELEMENT_TYPE_VOID) jsou reprezentovány ve formě plně kvalifikovaný název odpovídající úplný typ, například **System.Int32** nebo **System.TypedReference**.
+
+   - Typ ELEMENT_TYPE_PTR je vyjádřena jako "*" následující typ změny.
+
+   - ELEMENT_TYPE_BYREF je vyjádřena jako "\@' následující typ změny.
+
+   - ELEMENT_TYPE_PINNED je vyjádřena jako ' ^' následující typ změny. Kompilátor Visual C++ generuje nikdy to.
+
+   - ELEMENT_TYPE_CMOD_REQ je vyjádřena jako "&#124;" a plně kvalifikovaný název třídy modifikátor následující typ změny. Kompilátor Visual C++ generuje nikdy to.
+
+   - ELEMENT_TYPE_CMOD_OPT je vyjádřena jako '!' a plně kvalifikovaný název třídy modifikátor následující typ změny.
+
+   - ELEMENT_TYPE_SZARRAY je reprezentován jako "[]" za typ prvku pole.
+
+   - "[?]" Představuje ELEMENT_TYPE_GENERICARRAY následující typ prvku pole. Kompilátor Visual C++ generuje nikdy to.
+
+   - ELEMENT_TYPE_ARRAY je vyjádřena jako [*dolní hranice*:`size`,*dolní hranice*:`size`] kde je počet čárkami pořadí - 1 a dolní meze a velikosti jednotlivých rozměrů, pokud známé, jsou reprezentovány v desítkové soustavě. Pokud není zadán dolní mez nebo velikost, je jednoduše vynechán. Pokud jsou vynechány dolní mez a velikosti pro konkrétní dimenzi, ":" je také vynechán. Je třeba 2rozměrné pole s 1 jako dolní mez a neurčené formáty [1:, 1:].
+
+   - Typ ELEMENT_TYPE_FNPTR je reprezentován jako "= FUNC:`type`(*podpis*)", kde `type` je návratový typ a *podpis* je argumenty metody. Pokud neexistují žádné argumenty, jsou vynechány závorky. Kompilátor Visual C++ generuje nikdy to.
+
+   Následující součásti podpis nejsou zastoupeny, protože se používají nikdy odlišující přetížené metody:
+
+   - Konvence volání
+
+   - Návratový typ
+
+   - TYP ELEMENT_TYPE_SENTINEL
+
+- Pro operátory převodu je návratová hodnota metody zakódován jako "~" a návratový typ jako již kódovaný.
+
+- Pro obecné typy název typu bude následovat back čárka a potom číslo určující počet parametrů obecného typu.  Například
+
     ```  
-    <member name="T:MyClass`2">  
+    <member name="T:MyClass`2">
     ```  
-  
-     Pro typ, který je definován jako `public class MyClass<T, U>`.  
-  
-     Pro metody trvá obecné typy jako parametry, jsou parametry obecného typu zadané jako čísla, kterými back rysky (například \`0, \`1).  Každý číslo představující zápis pole s nulovým základem pro obecné parametry typu.  
-  
-## <a name="example"></a>Příklad  
- Následující příklady ukazují, jak ID řetězce pro třídu a její členy by vytvořilo.  
-  
-```  
-// xml_id_strings.cpp  
-// compile with: /clr /doc /LD  
+
+   Pro typ, který je definován jako `public class MyClass<T, U>`.
+
+   Pro metody, přičemž obecné typy jako parametry, parametry obecného typu jsou zadané jako čísla začíná back značky (například \`0, \`1).  Každé číslo představující zápis založený na nule pole pro parametry obecného typu.
+
+## <a name="example"></a>Příklad
+
+Následující příklady ukazují, jak ID řetězce pro třídu a její členy by se vygenerovala.
+
+```cpp
+// xml_id_strings.cpp
+// compile with: /clr /doc /LD
 ///   
-namespace N {    
-// "N:N"  
-  
-   /// <see cref="System" />  
-   //  <see cref="N:System"/>  
-   ref class X {      
-   // "T:N.X"  
-  
-   protected:  
+namespace N {
+// "N:N"
+
+   /// <see cref="System" />
+   //  <see cref="N:System"/>
+   ref class X {
+   // "T:N.X"
+
+   protected:
       ///   
-      !X(){}     
-      // "M:N.X.Finalize", destructor's representation in metadata  
-  
-   public:  
+      !X(){}
+      // "M:N.X.Finalize", destructor's representation in metadata
+
+   public:
       ///   
-      X() {}     
-      // "M:N.X.#ctor"  
-  
+      X() {}
+      // "M:N.X.#ctor"
+
       ///   
-      static X() {}     
-      // "M:N.X.#cctor"  
-  
+      static X() {}
+      // "M:N.X.#cctor"
+
       ///   
-      X(int i) {}     
-      // "M:N.X.#ctor(System.Int32)"  
-  
+      X(int i) {}
+      // "M:N.X.#ctor(System.Int32)"
+
       ///   
-      ~X() {}     
-      // "M:N.X.Dispose", Dispose function representation in metadata  
-  
+      ~X() {}
+      // "M:N.X.Dispose", Dispose function representation in metadata
+
       ///   
-      System::String^ q;     
-      // "F:N.X.q"  
-  
+      System::String^ q;
+      // "F:N.X.q"
+
       ///   
-      double PI;     
-      // "F:N.X.PI"  
-  
+      double PI;
+      // "F:N.X.PI"
+
       ///   
-      int f() { return 1; }     
-      // "M:N.X.f"  
-  
+      int f() { return 1; }
+      // "M:N.X.f"
+
       ///   
-      int bb(System::String ^ s, int % y, void * z) { return 1; }  
-      // "M:N.X.bb(System.String,System.Int32@,System.Void*)"  
-  
+      int bb(System::String ^ s, int % y, void * z) { return 1; }
+      // "M:N.X.bb(System.String,System.Int32@,System.Void*)"
+
       ///   
-      int gg(array<short> ^ array1, array< int, 2 >^ IntArray) { return 0; }   
-      // "M:N.X.gg(System.Int16[], System.Int32[0:,0:])"  
-  
+      int gg(array<short> ^ array1, array< int, 2 >^ IntArray) { return 0; }
+      // "M:N.X.gg(System.Int16[], System.Int32[0:,0:])"
+
       ///   
-      static X^ operator+(X^ x, X^ xx) { return x; }  
-     // "M:N.X.op_Addition(N.X,N.X)"  
-  
+      static X^ operator+(X^ x, X^ xx) { return x; }
+     // "M:N.X.op_Addition(N.X,N.X)"
+
       ///   
-      property int prop;     
-      // "M:N.X.prop"  
-  
+      property int prop;
+      // "M:N.X.prop"
+
       ///   
-      property int prop2 {     
-      // "P:N.X.prop2"  
-  
+      property int prop2 {
+      // "P:N.X.prop2"
+
          ///   
-         int get() { return 0; }  
-         // M:N.X.get_prop2  
-  
+         int get() { return 0; }
+         // M:N.X.get_prop2
+
          ///   
-         void set(int i) {}  
+         void set(int i) {}
          // M:N.X.set_prop2(System.Int32)  
-      }  
-  
+      }
+
       ///   
-      delegate void D(int i);   
-      // "T:N.X.D"  
-  
+      delegate void D(int i);
+      // "T:N.X.D"
+
       ///   
-      event D ^ d;   
-      // "E:N.X.d"  
-  
+      event D ^ d;
+      // "E:N.X.d"
+
       ///   
-      ref class Nested {};   
-      // "T:N.X.Nested"  
-  
+      ref class Nested {};
+      // "T:N.X.Nested"
+
       ///   
-      static explicit operator System::Int32 (X x) { return 1; }   
-      // "M:N.X.op_Explicit(N.X!System.Runtime.CompilerServices.IsByValue)~System.Int32"  
-   };  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+      static explicit operator System::Int32 (X x) { return 1; }
+      // "M:N.X.op_Explicit(N.X!System.Runtime.CompilerServices.IsByValue)~System.Int32"
+   };
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

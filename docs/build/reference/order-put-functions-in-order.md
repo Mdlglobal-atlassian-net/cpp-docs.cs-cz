@@ -1,7 +1,7 @@
 ---
-title: -ORDER (vložení funkcí v pořadí) | Microsoft Docs
+title: -ORDER (vložení funkcí v pořadí) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,35 +22,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de9b0fb629a1bf984929ec170f05e25e740e9cd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378480"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894509"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (vložení funkcí v pořadí)
 
-Určete pořadí propojení pro samostatně zabalené funkce (sekvence COMDAT).
+Určete pořadí propojení pro samostatně zabalených funkcí (sekvence COMDAT).
 
 ## <a name="syntax"></a>Syntaxe
 
->/ POŘADÍ: @*filename*
+> **/ ORDER:\@**<em>název souboru</em>
 
 ### <a name="parameters"></a>Parametry
 
 *Název souboru*  
-Textový soubor, který určuje pořadí propojení pro sekvence COMDAT funkce.
+Textový soubor, který určuje pořadí propojení pro funkce sekvencí COMDAT.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Pořadí** – možnost kompilátoru umožňuje optimalizovat chování stránkování vašeho programu tím, že funkce společně s funkcí zavolá. Můžete taky seskupit často volaných funkcí. Tyto postupy, označuje jako *swap vyladění* nebo *stránkování optimalizace*, zvýšit pravděpodobnost, že volaná funkce je v paměti, pokud je potřeba a nemá být stránkovaného fondu z disku.
+**/ORDER** – možnost kompilátoru vám umožní optimalizovat vaše program stránkování seskupením společně s funkcí, které volá funkci. Můžete taky seskupit často volané funkce. Tyto techniky označované jako *swap vyladění* nebo *stránkování optimalizace*, zvýšit pravděpodobnost, že volaná funkce je v paměti, když je potřeba a nebude muset stránkování z disku.
 
-Při kompilaci zdrojového kódu do souboru objektu, se dá zjistit kompilátoru převést jednotlivé funkce do vlastní oddíl s názvem *sekvence COMDAT*, pomocí [/Gy (povolení propojení na úrovni funkcí)](../../build/reference/gy-enable-function-level-linking.md) kompilátoru možnost. **/Pořadí** – možnost linkeru informuje linkeru COMDATs umístit do spustitelné bitové kopie v pořadí, které zadáte.
+Při kompilaci zdrojového kódu do souboru objektu poznáte kompilátoru k vložení do vlastní oddíl s názvem jednotlivých funkcí *sekvencí COMDAT*, s použitím [/Gy (povolení propojení úrovni funkcí)](../../build/reference/gy-enable-function-level-linking.md) kompilátoru možnost. **/ORDER** – možnost linkeru přikazuje linkeru, aby umístit sekvence Comdat do spustitelné bitové kopie v pořadí, které zadáte.
 
-Chcete-li určit pořadí, sekvence COMDAT, vytvořte *soubor odezvy*, textový soubor, který uvádí každý sekvence COMDAT podle názvu, jeden na každý řádek v pořadí, které mají být umístěny ve linkeru. Předat název tento soubor jako *filename* parametr **/pořadí** možnost. Pro funkcí jazyka C++ je název sekvence COMDAT dekorované formu název funkce. Používejte pro funkce C upraveného název `main`, a pro funkcí jazyka C++ deklarován jako `extern "C"`. Názvy funkcí a dekorované názvy jsou velká a malá písmena. Další informace o dekorovaných názvech najdete v tématu [dekorované názvy](../../build/reference/decorated-names.md). 
+Chcete-li určit pořadí, sekvencí COMDAT, vytvořte *soubor odpovědí*, textový soubor, který obsahuje seznam jednotlivých sekvencí COMDAT podle názvu, jeden pro každý řádek v pořadí, které chcete umístit linkerem. Předejte název tohoto souboru jako *filename* parametr **/ORDER** možnost. Pro funkce jazyka C++ je název COMDAT upravené podobě název funkce. Použijte nedekorovaný název funkce jazyka C, `main`, a pro C++ funkce deklarované jako `extern "C"`. Názvy funkcí a dekorované názvy jsou malá a velká písmena. Další informace o dekorovaných názvech naleznete v tématu [dekorované názvy](../../build/reference/decorated-names.md).
 
-K vyhledání dekorované názvy vaší COMDATs, použijte [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroje [/symboly](../../build/reference/symbols.md) možnost na soubor objektu. Linkeru automaticky přidá podtržítko (\_) funkce názvy v odpovědi soubor, pokud název spustí s otazníkem (?) nebo znaku zavináče (@). Například pokud zdrojový soubor example.cpp, obsahuje funkce `int cpp_func(int)`, `extern "C" int c_func(int)` a `int main(void)`, příkaz `DUMPBIN /SYMBOLS example.obj` uvádí tyto dekorované názvy:
+Pokud chcete zjistit dekorované názvy vašich sekvence Comdat, použijte [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroje [/symboly](../../build/reference/symbols.md) možnost v souboru objektu. Propojovací program automaticky připojí začátek podtržítko (**\_**) funkce názvy v odpovědi soubor, pokud název začíná otazníkem (**?**) nebo zavináč ( **\@**). Například pokud zdrojový soubor example.cpp, obsahuje funkce `int cpp_func(int)`, `extern "C" int c_func(int)` a `int main(void)`, příkaz `DUMPBIN /SYMBOLS example.obj` uvádí tyto dekorované názvy:
 
 ```Output
 ...
@@ -62,24 +62,24 @@ K vyhledání dekorované názvy vaší COMDATs, použijte [DUMPBIN](../../build
 
 V takovém případě zadejte názvy jako `?cpp_func@@YAHH@Z`, `c_func`, a `main` v souboru odpovědí.
 
-Pokud je více než jeden **/pořadí** možnost se zobrazí v možnosti linkeru, byl naposledy projeví.
+Pokud více než jeden **/ORDER** možnost se zobrazí v možnosti linkeru, se projeví jako poslední.
 
-**/Pořadí** možnost zakáže přírůstkové propojování. Může se zobrazit upozornění linkerů [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) Pokud zadáte tuto možnost pokud přírůstkové propojování je povoleno, nebo pokud jste zadali [/ZI (přírůstkové PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) – možnost kompilátoru. K silence toto upozornění, můžete použít [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md) – možnost linkeru vypněte přírůstkové propojování a použít [/Zi (Generovat PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) – možnost kompilátoru ke generování PDB bez přírůstkové propojování.
+**/ORDER** zakáže přírůstkové propojení. Může se zobrazit upozornění linkeru [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) při zadání této možnosti je povoleno přírůstkové propojení nebo pokud jste zadali [/zi (přírůstkové PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) – možnost kompilátoru. Pokud chcete silence toto upozornění, můžete použít [/incremental: No](../../build/reference/incremental-link-incrementally.md) – možnost linkeru vypněte přírůstkové propojení, a použít [/zi (generování souboru PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) – možnost kompilátoru ke generování souboru PDB bez přírůstkové propojení.
 
 > [!NOTE]
-> ODKAZ nelze pořadí statické funkce, protože nejsou statické funkce názvy názvy veřejných symbolů. Když **/pořadí** není zadaný, upozornění linkerů [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) se vygeneruje pro každý symbol v souboru odpovědí pořadí, která jsou statická nebo nebyl nalezen.
+> ODKAZ nelze řadit statické funkce, protože názvy statickou funkci nejsou názvy veřejných symbolů. Když **/ORDER** není zadán, linker upozornění [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) je vygenerována pro každý symbolů v souboru odpovědí pořadí, který je buď statický, nebo se nenašel.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. V části **vlastnosti konfigurace**, otevřete **Linkeru** a potom zvolte **optimalizace** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
 
-1. Změnit **funkce pořadí** vlastnost, která má obsahovat název souboru odpovědí.
+1. Upravit **pořadí funkcí** vlastnost tak, aby obsahovala název souboru odpovědi.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.
 
 ## <a name="see-also"></a>Viz také
 

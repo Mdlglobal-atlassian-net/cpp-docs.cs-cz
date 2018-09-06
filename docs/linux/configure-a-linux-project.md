@@ -1,7 +1,7 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/05/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +14,19 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207899"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895198"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
+
 Toto téma popisuje postup konfigurace projektu C++ Linux v sadě Visual Studio. Informace o Linuxové projekty CMake v sadě Visual Studio najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Obecné nastavení
+
 Širokou škálu možností je nakonfigurovat pro Linux projekt pomocí sady Visual Studio.  Chcete-li zobrazit tyto možnosti, vyberte **projektu > vlastnosti** nabídek nebo kliknutím pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti** v místní nabídce. **Obecné** nastavení se zobrazí.
 
 ![Obecná konfigurace](media/settings_general.png)
@@ -32,13 +34,14 @@ Toto téma popisuje postup konfigurace projektu C++ Linux v sadě Visual Studio.
 Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem.  Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** výběru.
 
 ## <a name="remote-settings"></a>Nastavení vzdáleného přístupu
+
 Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v **Obecné** nastavení:
 
-* Chcete-li změnit cílový počítač s Linuxem, použijte **vzdálený počítač sestavení** položka.  To vám umožní vybrat jedno z připojení, které jste předtím vytvořili.  Chcete-li vytvořit nový záznam, přejděte prosím sem [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
+- Chcete-li změnit cílový počítač s Linuxem, použijte **vzdálený počítač sestavení** položka.  To vám umožní vybrat jedno z připojení, které jste předtím vytvořili.  Chcete-li vytvořit nový záznam, přejděte prosím sem [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
 
-* **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře.  To bude ve výchozím nastavení **~/projects** není-li změnit.
+- **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře.  To bude ve výchozím nastavení **~/projects** není-li změnit.
 
-* **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
+- **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
 
 > [!NOTE]
 > Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba.
@@ -61,17 +64,19 @@ Po zkopírování souborů, použijte **adresáře VC ++** položky ve vlastnost
 **Visual Studio 2017 verze 15.7 nebo novější:** naleznete v tématu [Správa vzdálených hlaviček IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopírovat zdroje
+
 Při sestavování, jsou zdrojové soubory na vašem počítači zkopírují do počítače s Linuxem a zkompilovány existuje.  Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v nastavení výše.  Však další zdroje můžete také přidat do seznamu nebo kopírování zdrojů může být vypnuto úplně, což je výchozí nastavení pro projektu souboru pravidel.
 
-* **Zdroje ke zkopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače.  Ve výchozím nastavení **@(SourcesToCopyRemotely)** ve výchozím nastavení všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory prostředků nebo prostředek, jako jsou obrázky.
+- **Zdroje ke zkopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače.  Ve výchozím nastavení  **\@(SourcesToCopyRemotely)** ve výchozím nastavení všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory prostředků nebo prostředek, jako jsou obrázky.
 
-* **Kopírovat zdroje** lze zapnout a vypnout můžete povolit nebo zakázat kopírování zdrojových souborů do vzdáleného počítače.
+- **Kopírovat zdroje** lze zapnout a vypnout můžete povolit nebo zakázat kopírování zdrojových souborů do vzdáleného počítače.
 
-* **Další zdroje ke zkopírování** vám umožní přidávat další zdrojové soubory, které budou zkopírovány do vzdáleného systému.  Středníkem oddělený seznam můžete zadat, nebo můžete použít **: =** syntaxe pro určení názvu místních a vzdálených používat:
+- **Další zdroje ke zkopírování** vám umožní přidávat další zdrojové soubory, které budou zkopírovány do vzdáleného systému.  Středníkem oddělený seznam můžete zadat, nebo můžete použít **: =** syntaxe pro určení názvu místních a vzdálených používat:
 
-  `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
+`C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Události sestavení
+
 Protože všechny kompilace se děje ve vzdáleném počítači, několik dalších události sestavení se přidaly do části události sestavení ve vlastnostech projektu.  Jedná se o **Vzdálená událost před sestavením**, **Vzdálená událost před propojením**, a **Vzdálená událost po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých krocích proces.
 
 ![Události sestavení](media/settings_buildevents.png)
@@ -91,6 +96,7 @@ Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti,
 ![Vzdálené hlaviček IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Viz také
+
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
 [C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)  
 [Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  

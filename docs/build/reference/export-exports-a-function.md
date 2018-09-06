@@ -1,7 +1,7 @@
 ---
-title: -EXPORT (Export funkce) | Microsoft Docs
+title: -EXPORT (Export funkce) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374489"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894791"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (export funkce)
-```  
-/EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Pomocí této možnosti můžete exportovat funkce z vaší aplikace tak, aby ostatní programy můžete volat funkci. Můžete také exportovat data. Exportuje jsou obvykle definovány v knihovně DLL.  
-  
- *Název_položky* je název položky funkce nebo data, jako je které volací program používat. `ordinal` Určuje index do tabulky exportuje v rozsahu od 1 do 65 535; Pokud nezadáte `ordinal`, odkaz přiřadí jeden. **NONAME** – klíčové slovo exportuje funkce pouze jako pořadí, bez *Název_položky*.  
-  
- **DATA** – klíčové slovo určuje, že je položka exportovaný datové položky. Datová položka v programu klienta musí být deklarován pomocí **deklarace __declspec(dllimport) extern**.  
-  
- Existují tři metody pro export definici uvedené v doporučené pořadí podle používání:  
-  
-1.  [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu  
-  
-2.  [EXPORTUJE](../../build/reference/exports.md) – příkaz souboru .def  
-  
-3.  Specifikace/export v příkazu odkaz  
-  
- Všechny tři metody lze použít ve stejný program. Při propojení sestavení program, který obsahuje exportuje, vytvoří také knihovnu importu, pokud soubor .exp není použit v sestavení.  
-  
- ODKAZ používá dekorované formy identifikátory. Kompilátor upraví identifikátor při vytváření souboru .obj. Pokud *Název_položky* je určena k linkeru v jeho upraveného formuláři (jak se objevuje v zdrojový kód), odkaz se pokusí o porovnání název. Pokud nemůže najít jedinečný shoda, vydá odkaz chybovou zprávu. Použití [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroj získat [dekorované názvy](../../build/reference/decorated-names.md) formuláře identifikátoru, pokud je třeba zadat linkeru.  
-  
+
+Exportuje funkce podle názvu nebo pořadí nebo dat, z vaší aplikace.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ EXPORT:**<em>Název_položky</em>[**,\@**<em>ordinální</em>[**, NONAME**]] [**, DATA**]
+
+## <a name="remarks"></a>Poznámky
+
+S parametrem/Export je přebytečný můžete exportovat funkce z vaší aplikace tak, aby ostatní programy mohou volat funkci. Můžete také exportovat data. Exporty jsou obvykle definovány v knihovně DLL.
+
+*Název_položky* je název položky funkci nebo data, jako je pro volající program. `ordinal` Určuje index v tabulce exportů v rozsahu od 1 do 65 535; Pokud nezadáte `ordinal`, odkaz přiřadí jednu. **NONAME** – klíčové slovo exportuje funkci pouze ordinální číslo, aniž by *Název_položky*.
+
+**DATA** – klíčové slovo určuje, zda exportované položky datové položky. Datová položka v programu klienta musí být deklarovány pomocí **extern __declspec(dllimport)**.
+
+Existují tři metody pro export definice, uvedené v doporučené pořadí podle používání:
+
+1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
+
+2. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+
+3. Specifikaci/Export je přebytečný v příkazu LINK
+
+Všechny tři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, pokud souboru .exp se používá v sestavení.
+
+ODKAZ použití dekorovaných formy identifikátory. Když se vytvoří soubor .obj, upraví kompilátor identifikátor. Pokud *Název_položky* je zadán v linkeru v jeho nedekorovaných formuláře (jak se zobrazí ve zdrojovém kódu), odkaz se pokusí shodovat s názvem. Pokud ji nemůžete najít unikátní shoda, odkaz vydá chybovou zprávu. Použití [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroj zobrazíte [dekorovaných názvů](../../build/reference/decorated-names.md) forma identifikátoru, když je potřeba zadat do propojovacího programu.
+
 > [!NOTE]
->  Nezadávejte dekorované formu identifikátory jazyka C, které jsou deklarovány `__cdecl` nebo `__stdcall`.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Zadejte možnost do **další možnosti** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+> Nezadávejte upravené podobě identifikátory jazyka C, které jsou deklarovány `__cdecl` nebo `__stdcall`.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+2. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+
+3. Zadejte možnost do **další možnosti** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
+[Možnosti linkeru](../../build/reference/linker-options.md)

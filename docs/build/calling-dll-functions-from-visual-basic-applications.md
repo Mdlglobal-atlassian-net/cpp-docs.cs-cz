@@ -1,5 +1,5 @@
 ---
-title: Volání funkcí knihovny DLL z aplikací jazyka Visual Basic | Microsoft Docs
+title: Volání funkcí knihovny DLL z aplikací Visual Basic | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,68 +20,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367079"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894561"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
-Pro aplikace Visual Basic (nebo aplikací v jiných jazycích, jako je například Pascal nebo Fortran) k volání funkce v knihovně DLL C/C++ musí být exportován funkce pomocí správné konvence volání bez jakékoli dekorování názvů kompilátorem.  
-  
- `__stdcall` Vytvoří správnou konvenci volání funkce (volaná funkce vyčistí zásobník a parametry se jí předávají zprava doleva), ale název funkce upraví odlišně. Pokud ano, **__declspec(dllexport)** se používá na exportované funkce v knihovně DLL, se exportují upravený název.  
-  
- `__stdcall` Dekorování názvů předpony název symbol podtržítko (_) a připojí symbol znaku zavináče (@) následovaný počet bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho, když je funkce deklarována jako:  
-  
-```  
-int __stdcall func (int a, double b)  
-```  
-  
- je upravena následovně:  
-  
-```  
-_func@12  
-```  
-  
- Konvence volání jazyka C (`__cdecl`) upraví název jako `_func`.  
-  
- Chcete-li získat upravený název, použijte [/MAP](../build/reference/map-generate-mapfile.md). Použití **__declspec(dllexport)** provede následující akce:  
-  
--   Pokud je funkce exportovaný s konvence volání jazyka C (**_cdecl**), odstraní vedoucí znak podtržítko (_), při exportu název.  
-  
--   Pokud funkce, která je exportována nepoužívá konvence volání jazyka C (například `__stdcall`), exportuje upravený název.  
-  
- Protože neexistuje žádný způsob, jak přepsat, kde dojde k vyčištění zásobníku, je nutné použít `__stdcall`. Chcete-li odstaranit úpravy názvů pomocí `__stdcall`, je nutné je zadat pomocí aliasů v části Export souboru .def. Tuto situaci znázorňuje takto na deklaraci následující funkce:  
-  
-```  
-int  __stdcall MyFunc (int a, double b);  
-void __stdcall InitCode (void);  
-```  
-  
- V. DEF soubor:  
-  
-```  
-EXPORTS  
-   MYFUNC=_MyFunc@12  
-   INITCODE=_InitCode@0  
-```  
-  
- Pro knihovny DLL, která se má volat programy, které jsou napsané v jazyce Visual Basic je v souboru .def potřeba alias techniku, uvedené v tomto tématu. Pokud alias se provádí v programu jazyka Visual Basic, použití v souboru .def není nutné. Toto můžete provést, v programu jazyka Visual Basic přidáte klauzuli alias k [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) příkaz.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
-  
--   [Export z knihovny DLL](../build/exporting-from-a-dll.md)  
-  
--   [Export z knihovny DLL pomocí. DEF soubory](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Export z knihovny DLL pomocí deklarace __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Výběr použité metody exportu používat](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Dekorované názvy](../build/reference/decorated-names.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+
+Pro aplikace Visual Basic (nebo aplikace v jiných jazycích, jako například Pascal nebo Fortran) pro volání funkce v knihovně DLL jazyka C/C++ funkce musí být exportovány pomocí správné konvence volání bez jakékoli dekorování názvů kompilátorem
+
+`__stdcall` Vytvoří správnou konvenci volání funkce (volaná funkce vyčistí zásobník a parametry jsou předány zprava doleva), ale název funkce upraví odlišně. Ano, v případě **__declspec(dllexport)** se používá na exportované funkce v knihovně DLL, upravený název je exportován.
+
+`__stdcall` Dekorování názvů předpon název symbol podtržítka (_) a připojí symbol zavináč (**\@**) následovaný počtem bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho je funkce deklarovaná jako:
+
+```C
+int __stdcall func (int a, double b)
+```
+
+je upravena následovně `_func@12` ve výstupu.
+
+Konvence volání jazyka C (`__cdecl`) upraví název jako `_func`.
+
+Chcete-li získat upravený název, použijte [/MAP](../build/reference/map-generate-mapfile.md). Použití **__declspec(dllexport)** provede následující akce:
+
+- Pokud se exportuje funkci s konvencí volání jazyka C (**_cdecl**), při exportu názvu odstraní počáteční podtržítko (_).
+
+- Pokud je funkce exportována nepoužívá konvence volání jazyka C (například `__stdcall`), exportuje upravený název.
+
+Protože neexistuje žádný způsob, jak přepsat, pokud dojde k vymazání zásobníku, je nutné použít `__stdcall`. Rušit úpravu názvu `__stdcall`, je nutné je zadat pomocí aliasů v oddíle EXPORTS v .def souboru. To je ukázáno následujícím způsobem pro následující deklarace funkce:
+
+```C
+int  __stdcall MyFunc (int a, double b);
+void __stdcall InitCode (void);
+```
+
+V. Soubor DEF:
+
+```
+EXPORTS
+   MYFUNC=_MyFunc@12
+   INITCODE=_InitCode@0
+```
+
+Knihovny DLL, být volány programy napsanými v jazyce Visual Basic vyžadují v souboru .def techniku "alias" v tomto tématu. Pokud se alias provede v programu Visual Basic, není nutné použití v .def souboru. To můžete udělat v aplikaci Visual Basic, tak, že přidáte klauzuli alias do [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) příkazu.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+
+- [Export z knihovny DLL pomocí. DEF soubory](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Určení, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+
+- [Dekorované názvy](../build/reference/decorated-names.md)
+
+## <a name="see-also"></a>Viz také
+
+[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

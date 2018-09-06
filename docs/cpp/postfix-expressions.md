@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403138"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895159"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých příponové operátory následují za primárním výrazem. Příponové operátory jsou uvedeny v následující tabulce.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Ve výše uvedeném výrazu `func` je primární výraz `func(1)` je výraz přípony funkce `func(1)->GetData` je výraz přípony určující člena třídy, `func(1)->GetData()` je jiný výraz přípony funkce a celý výraz je výraz přípony zvyšující návratovou hodnotu funkce GetData.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Poté zavolejte `GetValue()` dané třídy, poté zvýšení vrácené hodnoty.  
+ Ve výše uvedeném výrazu `func` je primární výraz `func(1)` je výraz přípony funkce `func(1)->GetValue` je výraz přípony určující člena třídy, `func(1)->GetValue()` je jiný výraz přípony funkce a celý výraz je výraz přípony zvyšující návratovou hodnotu GetValue.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Poté zavolejte `GetValue()` dané třídy, poté zvýšení vrácené hodnoty.  
   
  Výrazy uvedené výše jsou výrazy přiřazení, což znamená, že výsledkem těchto výrazů musí být hodnota r-value.  
   

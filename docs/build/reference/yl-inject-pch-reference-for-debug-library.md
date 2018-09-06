@@ -1,5 +1,5 @@
 ---
-title: -Yi (Vložit referenci PCH ladicí knihovny) | Microsoft Docs
+title: -Yl (Vložit referenci PCH knihovny ladění) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73e79cd50343292ae63dfa831a7638d6444fc64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378467"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894652"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Vložit referenci PCH do ladicí knihovny)
 
-**/Yl** možnost generuje jedinečné symbol v předkompilovaný hlavičkový soubor, a je ve všech objekt soubory, které používají předkompilovaných hlaviček vložit odkaz na tento symbol.
+**/Yl** možnost generuje jedinečný symbol v předkompilovaného hlavičkového souboru a odkaz na tento symbol se vloží do všech objektových souborů, které používají předkompilované hlavičky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,24 +38,24 @@ ms.locfileid: "32378467"
 ### <a name="arguments"></a>Arguments
 
 *Jméno*  
-Volitelné jméno používá jako součást jedinečný symbolu.
+Volitelný název používá jako součást jedinečný symbol.
 
 *\-*  
 Explicitně zakáže pomlčkou (-) **/Yl** – možnost kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Yl** – možnost kompilátoru vytvoří definici jedinečný symbol v předkompilovaný hlavičkový soubor vytvořili pomocí [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost. Odkazy na tento symbol jsou automaticky vložit v všechny soubory, které zahrnují předkompilovaných hlaviček pomocí [/Yu](../../build/reference/yu-use-precompiled-header-file.md) – možnost kompilátoru. **/Yl** ve výchozím nastavení je povolena možnost při **/Yc** se používá k vytvoření předkompilovaný hlavičkový soubor.
+**/Yl** – možnost kompilátoru vytvoří definici jedinečný symbolů v souboru předkompilované hlavičky vytvářeny instalační sadou [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost. Odkazy na tento symbol se automaticky vloží do všech souborů, které zahrnují předkompilované hlavičky s použitím [/Yu](../../build/reference/yu-use-precompiled-header-file.md) – možnost kompilátoru. **/Yl** možnost je povolená ve výchozím nastavení při **/Yc** slouží k vytvoření souboru předkompilované hlavičky.
 
-**/Yl**_název_ možnost se používá k vytvoření osobní symbol v předkompilovaný hlavičkový soubor. Kompilátor používá *název* argument jako část názvu dekorované symbol vytvoří, podobně jako \_ \_ @@ \_PchSym\_@00@... @ *název*, kde znak výpustky (...) představuje jedinečnou generované kompilátorem řetězec znaků. Pokud *název* je tento argument vynechán, kompilátor automaticky vygeneruje název symbolu. Za normálních okolností není potřeba znát název symbolu. Ale když projektu používá více než jeden soubor předkompilovaných hlaviček **/Yl**_název_ možnost může být užitečné k určení, který objekt soubory použití, která předkompilované hlavičky. Můžete použít *název* jako hledaný řetězec pro odkaz symbol najít v souboru výpisu.
+**/Yl**_název_ možnost se používá k vytvoření identifikovatelné symbolů v souboru předkompilované hlavičky. Kompilátor používá *název* argument jako součást názvu upravený symbol vytvoří, podobně jako `__@@_PchSym_@00@...@name`, kde řetězec znaků, tlačítko se třemi tečkami (...) představuje jedinečný generovaný kompilátorem. Pokud *název* je tento argument vynechán, kompilátor automaticky vygeneruje název symbolu. Za normálních okolností není potřeba znát název symbolu. Ale pokud váš projekt používá více než jeden soubor předkompilované hlavičky **/Yl**_název_ možnost může být užitečná k určení, který objekt soubory použití, které předkompilovanou hlavičku. Můžete použít *název* jako hledaný řetězec pro odkaz symbol najít v souboru výpisu paměti.
 
-**/Yl-** zakáže výchozí chování a nevystavuje identifikační symbol předkompilovaný hlavičkový soubor. Zkompilované soubory, které obsahují tento předkompilovaných hlaviček Nezískávat běžné symbol odkazu.
+**/Yl-** zakazuje výchozí chování a nevystavuje identifikace symbolů v souboru předkompilované hlavičky. Zkompilované soubory, které zahrnují této předkompilované hlavičky Nezískávat běžné symbol odkazu.
 
-Když **/Yc** není zadán, všechny **/Yl** možnost nemá žádný vliv, ale pokud zadán, musí se shodovat žádné **/Yl** možnost předaná při **/Yc** je zadat.
+Při **/Yc** nezadáte, všechny **/Yl** možnost nemá žádný vliv, ale pokud určena, musí se shodovat žádné **/Yl** možnost předána, když **/Yc** je zadat.
 
-Pokud používáte **/Yl-**, **/Yc** a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti Vytvořit předkompilovaný hlavičkový soubor, informace o ladění je uložený v souboru objektu pro zdrojový soubor použitý k vytvoření Předkompilované hlavičky, nikoli soubor .pdb samostatné. Pokud se tento objekt soubor pak součást knihovny, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) chyby nebo [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) upozornění se může objevit v sestavení, které používají tuto knihovnu a předkompilovaný hlavičkový soubor, pokud zdrojový soubor se používá k vytvoření předkompilovaný hlavičkový soubor nebyla definována žádné symboly. Linkeru mohou vyloučit soubor objektu z odkazu, který je společně s související informace pro ladění, když nic do souboru objektu se odkazuje v klientovi knihovny. Chcete-li tento problém vyřešit, zadejte **/Yl** (nebo odebrat **/Yl-** možnost) při použití **/Yc** vytvořit předkompilovaný hlavičkový soubor. Tím se zajistí, že soubor objektu z knihovny, který obsahuje informace o ladění získá propojené v buildu.
+Pokud používáte **/Yl-**, **/Yc** a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti k sestavení předkompilovaného hlavičkového souboru, informace o ladění jsou uloženy v souboru objekt použitý k vytvoření zdrojového souboru Předkompilované hlavičky, spíše než samostatné PDB soubor. Pokud tento soubor objektu poté je proveden součástí knihovny, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) chyby nebo [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) upozornění může dojít v sestavení, které používají tuto knihovnu a předkompilovaného souboru hlaviček, pokud zdrojový soubor použili k vytvoření soubor předkompilované hlavičky nedefinuje žádné symboly samotný. Linker může vyloučit soubor objektu z odkazu, který spolu s související informace pro ladění, když nic do souboru objektu je odkazováno v klientovi knihovny. Chcete-li tento problém vyřešit, zadejte **/Yl** (nebo odebrat **/Yl-** možnost) při použití **/Yc** k vytvoření souboru předkompilované hlavičky. Tím se zajistí, že se soubor objektu z knihovny, který obsahuje informace o ladění propojí ve vašem buildu.
 
-Další informace o předkompilovaných hlaviček najdete v tématu:
+Další informace o předkompilovaných hlaviček naleznete v tématu:
 
 - [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
 
@@ -63,7 +63,7 @@ Další informace o předkompilovaných hlaviček najdete v tématu:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
@@ -71,9 +71,9 @@ Další informace o předkompilovaných hlaviček najdete v tématu:
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)  
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  

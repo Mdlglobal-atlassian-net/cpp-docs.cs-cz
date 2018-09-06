@@ -1,7 +1,7 @@
 ---
-title: -BASE (základní adresa) | Microsoft Docs
+title: -BASE (základní adresa) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -30,62 +30,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4090a3e8d2f9f3bdcb68875d94a1b84e7bff0f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376621"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895211"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
+
+Určuje základní adresu programu.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ BASE:**{*adresu*[**,**<em>velikost</em>] | **\@** <em>filename</em>**,**<em>klíč</em>}
+
+## <a name="remarks"></a>Poznámky
+
+> [!NOTE]
+> Z bezpečnostních důvodů se společnost Microsoft doporučuje, můžete použít [možnost/DynamicBase](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) možnost místo určení základní adresy pro vaše spustitelné soubory. Tím se vygeneruje spustitelnou bitovou kopii, která lze náhodně změnit základ v okamžiku načtení pomocí funkce adresu místo rozložení náhodné (technologie ASLR) systému Windows. Možnost/DynamicBase možnost je ve výchozím.
+
+/ ZÁKLADNÍ možnosti nastavit základní adresu pro program přepisuje výchozí umístění pro soubor .exe nebo knihovny DLL. Výchozí základní adresa pro soubor s příponou .exe je 0x400000 pro 32bitové obrázky nebo 0x140000000 pro 64bitové obrazy. Pro knihovny DLL je výchozí základní adresa 0x10000000 pro 32bitové obrázky nebo 0x180000000 pro 64bitové obrazy. V operačních systémech, které nepodporují náhodného generování rozložení prostoru adres (ASLR), nebo pokud byla nastavena možnost kopii operačního systému nejdřív pokusí se načíst program na jeho zadaný nebo výchozí základní adresa. Pokud není dostatek místa k dispozici existuje, systém přemístí program. Chcete-li zabránit přemístění, použijte [/FIXED](../../build/reference/fixed-fixed-base-address.md) možnost.
+
+Linker vyvolá chybu, pokud *adresu* není násobkem 64 kB. Volitelně můžete zadat velikost programu. linker vydá upozornění, pokud program se nemůže vejít do velikosti, který jste zadali.
+
+Na příkazovém řádku je další způsob, jak zadat základní adresu pomocí souboru odpovědí. základní adresa. Soubor odpovědí základní adresa je textový soubor, který obsahuje základní adresy a volitelné velikostí všechny knihovny DLL váš program bude používat a text jedinečný klíč pro každou základní adresu. Chcete-li zadat základní adresu pomocí souboru odpovědí, použijte zavináč (**\@**) následovaný názvem souboru odpovědí *filename*následovaný čárku, pak bude *klíč*hodnotu pro základní adresa pro použití v souboru. Propojovací program hledá *filename* buď na zadané cestě, nebo pokud není zadaná žádná cesta, v adresářích určených proměnnou prostředí LIB. Každý řádek v *filename* představuje jednu knihovnu DLL a má následující syntaxi:
+
+> *klíč* *adresu* [*velikost*] **;** *komentář*
+
+*Klíč* je řetězec alfanumerických znaků a není malá a velká písmena. To je obvykle název knihovny DLL, ale nemusí být. *Klíč* následuje základní *adresu* v jazyce C, hexadecimální nebo desítkové soustavě a volitelné maximální *velikost*. Všechny tři argumenty oddělené mezerami či tabulátory. Linker vydá upozornění, pokud zadaný *velikost* je menší než požadované programem virtuální adresní prostor. A *komentář* je určená středník (**;**) a může být na stejném nebo na samostatném řádku. Propojovací program ignoruje veškerý text z středník na konec řádku. Tento příklad ukazuje část takový soubor:
+
 ```  
-/BASE:{address[,size] | @filename,key}  
+main   0x00010000    0x08000000    ; for PROJECT.exe
+one    0x28000000    0x00100000    ; for DLLONE.DLL
+two    0x28100000    0x00300000    ; for DLLTWO.DLL
 ```  
-  
- / Základní možnost nastaví základní adresa pro program, přepsání výchozí umístění pro soubor knihovny DLL nebo .exe. Výchozí základní adresa pro soubor .exe je 0x400000 pro bitové kopie, 32bitový nebo 0x140000000 pro 64bitové bitové kopie. Pro knihovny DLL je výchozí základní adresa 0x10000000 pro bitové kopie, 32bitový nebo 0x180000000 pro 64bitové bitové kopie. V operačních systémech, které nepodporují adresu místa rozložení náhodné (technologie ASLR) nebo pokud byla nastavena možnost /DYNAMICBASE:NO operačního systému nejdřív pokusí se načíst jeho zadaný programu nebo výchozí základní adresa. Pokud dostatek místa není k dispozici, systém přemístí program. Chcete-li zabránit přemístění, použijte [/FIXED](../../build/reference/fixed-fixed-base-address.md) možnost.  
-  
- Propojovací chybu pokud *adresu* není násobkem 64 kB. Volitelně můžete zadat velikost programu; linkeru vydá upozornění, pokud program se nemůže vejít velikostí, které zadáte.  
-  
- Na příkazovém řádku je další způsob, jak zadat základní adresu pomocí souboru odpovědí základní adresu. Soubor odezvy základní adresa je textový soubor, který obsahuje základní adresy a volitelné velikosti všechny knihovny DLL, bude používat váš program a text jedinečný klíč pro každou základní adresu. Chcete-li zadat základní adresu pomocí souboru odpovědí, použijte znaku zavináče (@) a název souboru odpovědí *filename*, za nímž čárkou, pak se `key` hodnotu pro základní adresu používat v souboru. Hledá linkeru *filename* buď na zadané cestě, nebo pokud není zadána žádná cesta, v adresáři určeném v proměnné prostředí LIB. Každý řádek v *filename* představuje jeden DLL a má následující syntaxi:  
-  
-```  
-  
-key address [size] ;comment  
-```  
-  
- `key` Je řetězec alfanumerické znaky a není velká a malá písmena. To je obvykle název knihovny DLL, ale nemusí být. `key` Následuje na základní *adresu* v jazyce C, šestnáctkové nebo desítkové soustavě a volitelné maximální `size`. Všechny tři argumenty jsou oddělené mezerami nebo karty. Linkeru vydá upozornění, pokud zadaný `size` je menší než požadované programem virtuální adresní prostor. A `comment` je zadán středníkem (;) a může být na stejném nebo na samostatném řádku. Linkeru ignoruje všechny text z středník na konec řádku. Tento příklad ukazuje součástí takový soubor:  
-  
-```  
-main   0x00010000    0x08000000    ; for PROJECT.exe  
-one    0x28000000    0x00100000    ; for DLLONE.DLL  
-two    0x28100000    0x00300000    ; for DLLTWO.DLL  
-```  
-  
- Pokud soubor, který obsahuje tyto řádky nazývá DLLS.txt, platí následující ukázkový příkaz tyto informace:  
-  
-```  
-link dlltwo.obj /dll /base:@dlls.txt,two  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Z bezpečnostních důvodů se společnost Microsoft doporučuje, můžete použít [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) jako možnost základní adresy pro vaše spustitelné soubory. Tím se vygeneruje spustitelné bitové kopie, který může být náhodně rebased při načítání, pomocí funkce adresního prostoru rozložení náhodného přeskupování (technologie ASLR) systému Windows. Možnost /DYNAMICBASE ve výchozím nastavení zapnutý.  
-  
- Jiný způsob, jak nastavit základní adresa je pomocí *základní* argument [název](../../build/reference/name-c-cpp.md) nebo [KNIHOVNY](../../build/reference/library.md) příkaz. /BASE a [/dll](../../build/reference/dll-build-a-dll.md) možnosti společně odpovídají **KNIHOVNY** příkaz.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Rozbalte **Linkeru** složky.  
-  
-3.  Vyberte **Upřesnit** stránku vlastností.  
-  
-4.  Změnit **základní adresu** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Pokud soubor, který obsahuje tyto řádky se nazývá DLLS.txt, příkaz v následujícím příkladu platí tyto informace:
+
+```
+link dlltwo.obj /dll /base:@dlls.txt,two
+```
+
+Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argument v [název](../../build/reference/name-c-cpp.md) nebo [KNIHOVNY](../../build/reference/library.md) příkaz. Propojovacího a [/dll](../../build/reference/dll-build-a-dll.md) možnosti společně odpovídají **KNIHOVNY** příkazu.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+2. Vyberte **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
+
+3. Upravit **základní adresa** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
+[Možnosti linkeru](../../build/reference/linker-options.md)

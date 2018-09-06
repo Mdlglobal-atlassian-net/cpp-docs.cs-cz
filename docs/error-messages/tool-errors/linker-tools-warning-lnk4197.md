@@ -1,7 +1,7 @@
 ---
-title: Upozornění linkerů Lnk4197 | Microsoft Docs
+title: Upozornění Linkerů LNK4197 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfef7f0fe2d9cd50fa6a18ad682c3e4d80df99c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55044ce511e2584e2859b7e8a8d723cbe0976105
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300828"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894483"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>Upozornění linkerů LNK4197
-Export exportname zadán vícekrát; pomocí prvního specifikace  
-  
- Exportu je uveden v několika a různé způsoby. Linkeru používá specifikace první a zbytek ignoruje.  
-  
- Pokud se znovu sestavit běhové knihovny jazyka C, můžete tuto zprávu ignorovat.  
-  
- Pokud export je úplně stejně, jako zadán vícekrát, linkeru nevydá upozornění.  
-  
- Například následující obsah souboru .def by způsobilo toto upozornění:  
-  
-```  
-EXPORTS  
-   functioname      NONAME  
-   functioname      @10  
-```  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Je zadaný stejný export i na příkazovém řádku (prostřednictvím exportu:) a v souboru .def  
-  
-2.  Stejné export je uveden dvakrát v souboru .def s různé atributy.
+
+> Export '*exportname*"zadaný víc než jednou; použije se první specifikace
+
+Export je zadán v několika a různými způsoby. Propojovací program použije první specifikace a zbytek ignoruje.
+
+Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.
+
+Pokud export je zadán více než jednou přesně stejným způsobem, nevydá linker upozornění.
+
+Například následující obsah souboru .def by způsobilo toto upozornění:
+
+```
+EXPORTS
+   functioname      NONAME
+   functioname      @10
+```
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Stejné export je zadána na příkazovém řádku (prostřednictvím exportu:) a v .def souboru.
+
+2. Stejné export je uveden v souboru .def s rozdílnými atributy dvakrát.
