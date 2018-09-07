@@ -1,5 +1,5 @@
 ---
-title: Soubory příkazů CL | Microsoft Docs
+title: Soubory příkazů CL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369874"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894756"
 ---
 # <a name="cl-command-files"></a>Soubory příkazů CL
-Příkaz Soubor je textový soubor, který obsahuje možnosti a názvy souborů, v opačném případě zadejte na [příkazového řádku](../../build/reference/compiler-command-line-syntax.md) nebo zadejte pomocí [proměnné prostředí CL](../../build/reference/cl-environment-variables.md). CL příkazového řádku kompilátoru přijímá jako argument v proměnné prostředí CL nebo na příkazovém řádku. Na rozdíl od příkazového řádku nebo proměnné prostředí CL umožňuje soubor příkazů použít několik řádků parametrů a názvů souborů.  
-  
- Možnosti a názvy souborů v souboru příkaz se zpracovávají podle umístění v rámci proměnné prostředí CL nebo na příkazovém řádku příkaz název souboru. Ale pokud/Link možnost se zobrazí v příkazového řádku, všechny možnosti na zbytek řádku jsou předány linkeru. Možnosti v následujících řádcích v příkazového řádku a možnosti na příkazovém řádku po vyvolání příkazu souboru jsou stále přijato jako – možnosti kompilátoru. Další informace o jak ovlivňuje pořadí možnosti jejich interpretace najdete v tématu [pořadí možností CL](../../build/reference/order-of-cl-options.md).  
-  
- Soubor příkazů nesmí obsahovat příkaz CL. Každá možnost musí začínat a končit na stejné přímce; nemůžete použít zpětné lomítko (\\) kombinovat možnost na dvou řádcích.  
-  
- Soubor příkazů je určeného znaku zavináče (@) následuje název souboru; Název souboru můžete zadat absolutní nebo relativní cesta.  
-  
- Například, pokud je v souboru s názvem od následující příkaz:  
-  
+
+Soubor příkazů je textový soubor, který obsahuje možnosti a názvy souborů, které by v opačném případě zadejte na [příkazového řádku](../../build/reference/compiler-command-line-syntax.md) nebo zadat pomocí [proměnné prostředí CL](../../build/reference/cl-environment-variables.md). Příkazový soubor kompilátoru CL přijímá jako argument v proměnné prostředí CL nebo na příkazovém řádku. Na rozdíl od příkazového řádku nebo proměnné prostředí CL umožňuje soubor příkazů použít několik řádků parametrů a názvů souborů.
+
+Možnosti a názvy souborů v souboru příkazů se zpracovávají podle umístění v rámci proměnné prostředí CL nebo na příkazovém řádku příkaz název souboru. Ale pokud možnost/Link se zobrazí v souboru příkazů, jsou předány všech možností na rest řádku linkeru. Možnosti v dalších řádcích v souboru příkazů a možnosti příkazového řádku po vyvolání příkazu souboru jsou stále přijímány jako možnosti kompilátoru. Další informace o vlivu pořadí možnosti jejich interpretaci najdete v tématu [pořadí možností CL](../../build/reference/order-of-cl-options.md).
+
+Soubor příkazů nesmí obsahovat příkaz CL. Jednotlivé možnosti musí začínat a končit na stejném řádku; nelze použít zpětné lomítko (**\\**) ke sloučení volbu mezi dvěma řádky.
+
+Soubor příkazů je určená zavináč (**\@**) za nímž následuje název souboru; název souboru můžete zadat absolutní nebo relativní cestu.
+
+Například následující příkaz je do souboru s názvem odezvy:
+
 ```  
-/Og /link LIBC.LIB  
+/Og /link LIBC.LIB
 ```  
-  
- a zadejte následující příkaz CL:  
-  
+
+a zadejte následující příkaz CL:
+
 ```  
-CL /Ob2 @RESP MYAPP.C  
+CL /Ob2 @RESP MYAPP.C
 ```  
-  
- příkaz pro CL vypadá takto:  
-  
+
+příkaz do CL vypadá takto:
+
 ```  
-CL /Ob2 /Og MYAPP.C /link LIBC.LIB  
+CL /Ob2 /Og MYAPP.C /link LIBC.LIB
 ```  
-  
- Všimněte si, efektivně kombinaci příkazového řádku a příkazy příkazového řádku.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
+
+Mějte na paměti, efektivně kombinovat příkazového řádku a příkazy souboru příkazů.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)
