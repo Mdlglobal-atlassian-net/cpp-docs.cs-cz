@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b65cfbe156ba462af9e87abf82d63023cfdc44b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2c9620003c1f57af966628dda2a5a0ab8352c6d2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957435"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107311"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine – třída
 
@@ -36,11 +36,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Modul* typ základního modulu.
+*Modul*<br/>
+Typ základního modulu.
 
-*P* **velikost bloku**. Počet hodnot v každém bloku.
+*P*<br/>
+**Velikost bloku**. Počet hodnot v každém bloku.
 
-*R* **používá blok**. Počet hodnot v každém bloku, které se používají. Ostatní jsou zahozeny (`P` - `R`). **Předběžná podmínka**: `0 < R ≤ P`
+*R*<br/>
+**Používá blok**. Počet hodnot v každém bloku, které se používají. Ostatní jsou zahozeny (`P` - `R`). **Předběžná podmínka**: `0 < R ≤ P`
 
 ## <a name="members"></a>Členové
 

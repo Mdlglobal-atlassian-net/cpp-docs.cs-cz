@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954718"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107455"
 ---
 # <a name="unorderedmap-class"></a>unordered_map – třída
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* hodnotu klíče pro mapování.
+*Keyval*<br/>
+Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -561,7 +562,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Parametry
 
 *nbucket*  
- Číslo kbelíku.
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -924,8 +925,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1189,8 +1190,8 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1260,16 +1261,16 @@ size_type erase(const key_type& Key);
 ### <a name="parameters"></a>Parametry
 
 *kde*  
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*  
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*  
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*  
- Hodnota klíče prvků, které mají být odebrány.
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1291,8 +1292,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2009,7 +2010,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Parametry
 
 *faktor*  
- Nové faktor maximálního zatížení.
+Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2381,7 +2382,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Parametry
 
 *nbuckets*  
- Požadovaný počet kbelíků.
+Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2565,7 +2566,7 @@ void swap(unordered_map& right);
 ### <a name="parameters"></a>Parametry
 
 *doprava*  
- Kontejner se Prohodit s.
+Kontejner se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2679,8 +2680,8 @@ unordered_map(
 |*Al*|Objekt alokátoru, který se má uložit.|
 |*Kompozice*|Objekt funkce porovnání, který se má uložit.|
 |*Hash*|Objekt hashovací funkce, který se má uložit.|
-|*bucket_count –*|Minimální počet kbelíků.|
-|*Doprava*|Kontejner, který se má kopírovat.|
+|*Bucket_count –*|Minimální počet kbelíků.|
+|*doprava*|Kontejner, který se má kopírovat.|
 |*první*||
 |*poslední*||
 |*IList*|Objekt initializer_list obsahující prvky, které mají být zkopírovány.|
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

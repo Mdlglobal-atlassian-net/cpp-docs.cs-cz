@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465848"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110159"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkce
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel *atomické* objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel *atomické* objekt, který ukládá hodnotu typu `Ty`.
 
-*Exp* ukazatel na hodnotu typu `Ty`.
+*Exp*<br/>
+Ukazatel na hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Exp* ukazatel na hodnotu typu `Ty`.
+*Exp*<br/>
+Ukazatel na hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
-*Order1* první [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
+*Order1*<br/>
+První [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
-*Order2* druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, nemůže být silnější než hodnota *Order1*.
+*Order2*<br/>
+Druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, nemůže být silnější než hodnota *Order1*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Exp* ukazatel na hodnotu typu `Ty`.
+*Exp*<br/>
+Ukazatel na hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Exp* ukazatel na hodnotu typu `Ty`.
+*Exp*<br/>
+Ukazatel na hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
-*Order1* první [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
+*Order1*<br/>
+První [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
-*Order2* druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, ani nemůže být silnější než hodnota *Order1*.
+*Order2*<br/>
+Druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, ani nemůže být silnější než hodnota *Order1*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-*Hodnota* hodnotu typu `ptrdiff_t`.
+*Hodnota*<br/>
+Hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-*Hodnota* hodnotu typu `ptrdiff_t`.
+*Hodnota*<br/>
+Hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-*Hodnota* hodnotu typu `ptrdiff_t`.
+*Hodnota*<br/>
+Hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-*Hodnota* hodnotu typu `ptrdiff_t`.
+*Hodnota*<br/>
+Hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-*Hodnota* hodnotu typu `T`.
+*Hodnota*<br/>
+Hodnotu typu `T`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak* ukazatel `atomic_flag` objektu.
+*Příznak*<br/>
+Ukazatel `atomic_flag` objektu.
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak* ukazatel `atomic_flag` objektu.
+*Příznak*<br/>
+Ukazatel `atomic_flag` objektu.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak* ukazatel `atomic_flag` objektu.
+*Příznak*<br/>
+Ukazatel `atomic_flag` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak* ukazatel `atomic_flag` objektu.
+*Příznak*<br/>
+Ukazatel `atomic_flag` objektu.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_release` nebo `memory_order_acq_rel`.
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_release` nebo `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí* omezení, která určuje typ plotu řazení paměti.
+*Pořadí*<br/>
+Omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel na Atomický objekt, který obsahuje hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel na Atomický objekt, který obsahuje hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom*<br/>
+Ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
-*Hodnota* hodnotu typu `Ty`.
+*Hodnota*<br/>
+Hodnotu typu `Ty`.
 
-*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.
+*Pořadí*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí* omezení, která určuje typ plotu řazení paměti.
+*Pořadí*<br/>
+Omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Arg* hodnotu typu `Ty`.
+*arg*<br/>
+Hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

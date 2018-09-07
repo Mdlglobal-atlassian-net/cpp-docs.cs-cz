@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767709"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110034"
 ---
 # <a name="atl-dialog-wizard"></a>Průvodce dialogem ATL
 
@@ -35,7 +35,7 @@ Průvodce se vloží do hlavičky souboru [mapu zpráv](../../atl/message-maps-a
 **Krátký název**  
 Nastaví zkrácený název objektu ATL dialogového okna. Název, který poskytnete Určuje název třídy a souboru (.cpp a .h) názvy, pokud nezměníte těchto polí samostatně.
 
-`Class`  
+**Třída**  
 Nastaví název třídy, který se má vytvořit. Tento název je založen na názvu je zadat v **krátký název**, předchází "C", typická předpona pro název třídy.
 
 **soubor .h**  

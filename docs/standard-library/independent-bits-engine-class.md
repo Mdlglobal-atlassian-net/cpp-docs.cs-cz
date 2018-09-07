@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb76c477c54192dc6b6b969ecd4cdd32850c015f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964220"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110302"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine – třída
 
@@ -36,11 +36,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Modul* typ základního modulu.
+*Modul*<br/>
+Typ základního modulu.
 
-*W* **Word velikost**. Velikost v bitech, každé číslo vygenerována. **Předběžná podmínka**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Word velikost**. Velikost v bitech, každé číslo vygenerována. **Předběžná podmínka**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType* celé číslo bez znaménka typu výsledku. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*UIntType*<br/>
+Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="members"></a>Členové
 

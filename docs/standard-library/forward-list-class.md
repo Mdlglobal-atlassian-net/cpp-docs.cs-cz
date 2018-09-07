@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954952"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102574"
 ---
 # <a name="forwardlist-class"></a>forward_list – třída
 
@@ -522,7 +522,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Třída alokátoru, která se má použít s tímto objektem.|
 |*Počet*|Počet prvků v sestaveném seznamu.|
 |*Val*|Hodnota prvků ve vytvořeném seznamu.|
-|*Doprava*|Seznam, jehož vyrobený seznam je kopií.|
+|*doprava*|Seznam, jehož vyrobený seznam je kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list ke kopírování.|
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozici v cílovém forward_list – po kterém se má vložit.
+*kde*<br/>
+Pozice v cílovém forward_list – po kterém se má vložit.
 
-*Zdroj* forward_list – zdroj, který má být vložen do forward_list – cíl.
+*Zdroj*<br/>
+Zdroj forward_list –, který má být vložen do forward_list – cíl.
 
-*ITER* elementu, který chcete vložit z forward_list – zdroj.
+*ITER*<br/>
+Element, který má být vložen z forward_list – zdroj.
 
-*První* první prvek v rozsahu, který má být vložen z forward_list – zdroj.
+*první*<br/>
+První prvek v rozsahu, který má být vložen z forward_list – zdroj.
 
-*Poslední* první pozice mimo rozsah, který má být vložen z forward_list – zdroj.
+*poslední*<br/>
+První pozice mimo rozsah, který má být vložen z forward_list – zdroj.
 
 ### <a name="remarks"></a>Poznámky
 

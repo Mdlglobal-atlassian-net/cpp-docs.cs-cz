@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960574"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104603"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap – třída
 
@@ -369,8 +369,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro mapování.
+*Keyval*  
+Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -411,7 +411,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -486,7 +486,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -515,7 +515,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Parametry
 
 *nbucket*  
- Číslo kbelíku.
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -556,7 +556,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -674,7 +674,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -880,8 +880,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -920,7 +920,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -981,7 +981,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1106,7 +1106,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1201,8 +1201,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1254,7 +1254,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1278,16 +1278,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *kde*  
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*  
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*  
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*  
- Hodnota klíče prvků, které mají být odebrány.
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1309,8 +1309,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*  
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1355,7 +1355,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1980,7 +1980,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2012,7 +2012,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Parametry
 
 *faktor*  
- Nové faktor maximálního zatížení.
+Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2076,7 +2076,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2292,7 +2292,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Parametry
 
 *nbuckets*  
- Požadovaný počet kbelíků.
+Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2346,7 +2346,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2419,7 +2419,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2475,7 +2475,8 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* kontejneru se Prohodit s.
+*doprava*<br/>
+Kontejner se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2581,7 +2582,7 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
- InputIterator first, InputIterator last,
+InputIterator first, InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),
@@ -2596,8 +2597,8 @@ unordered_multimap(
 |*Al*|Objekt alokátoru, který se má uložit.|
 |*Kompozice*|Objekt funkce porovnání, který se má uložit.|
 |*Hash*|Objekt hashovací funkce, který se má uložit.|
-|*bucket_count –*|Minimální počet kbelíků.|
-|*Doprava*|Kontejner, který se má kopírovat.|
+|*Bucket_count –*|Minimální počet kbelíků.|
+|*doprava*|Kontejner, který se má kopírovat.|
 |*IList*|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
 
 ### <a name="remarks"></a>Poznámky
@@ -2606,7 +2607,7 @@ První konstruktor určuje kopii sekvence řízenou parametrem *vpravo*. Druhý 
 
 Všechny konstruktory také inicializují několik uložených hodnot. Pro konstruktor kopírování jsou hodnoty získány z *vpravo*. V opačném případě:
 
-minimální počet kbelíků je argument *bucket_count –*, pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
+Minimální počet kbelíků je argument *bucket_count –*, pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
 
 objekt hashovací funkce je argument *Hash*, pokud existuje; v opačném případě je `Hash()`.
 
@@ -2733,9 +2734,9 @@ int main()
 
 ```Output
 [a, 1] [b, 2] [c, 3] [d, 4] [e, 5] [f, 6] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [5, g] [6, h] [7, i] [8, j] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [c, 3] [b, 2] [a, 1]
- [f, 6] [e, 5] [d, 4]
- [c, 3] [b, 2] [a, 1]
- [c, 3] [b, 2] [a, 1]
+[f, 6] [e, 5] [d, 4]
+[c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 ```
 
 ## <a name="value_type"></a>  unordered_multimap::value_type

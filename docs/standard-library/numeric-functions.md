@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199185"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100180"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
@@ -48,13 +48,17 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující první prvek v rozsahu třeba sečítá nebo zkombinován podle zadané binární operace.
+*první*<br/>
+Vstupní iterátor adresující první prvek v rozsahu třeba sečítá nebo zkombinován podle zadané binární operace.
 
-*poslední* vstupní iterátor adresující poslední prvek v rozsahu třeba sečítá nebo zkombinován podle zadané binární operace, která je o jednu pozici za posledním prvkem, který skutečně zahrnut do iterovaného souhrnu.
+*poslední*<br/>
+Vstupní iterátor adresující poslední prvek v rozsahu se sčítat ani zkombinován podle zadané binární operace, které je o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
-*Val* počáteční hodnotu, ke kterému každý element je pak přidat nebo v kombinaci s podle zadané binární operace.
+*Val*<br/>
+Počáteční hodnota, ke kterému každý element je pak přidat nebo v kombinaci s podle zadané binární operace.
 
-*binary_op* binární operace, která se použije na každý prvek v zadaném rozsahu a výsledek jeho předchozími verzemi.
+*binary_op*<br/>
+Binární operace, která se použije na každý prvek v zadaném rozsahu a výsledek jeho předchozími verzemi.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -151,16 +155,16 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
+( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
 The sum of the integers from 1 to 20 is: 210.
 The vector of partial sums is:
- ( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
+( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
 
 The original vector v3 is:
- ( 1 2 3 4 5 6 7 8 9 10 ).
+( 1 2 3 4 5 6 7 8 9 10 ).
 The product of the integers from 1 to 10 is: 3628800.
 The vector of partial products is:
- ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
+( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
 ## <a name="adjacent_difference"></a>  adjacent_difference
@@ -184,13 +188,17 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými Předchůdci nebo ve kterém použije dvojice hodnot ho zpracovat. jinou zadanou binární operací.
+*první*<br/>
+Vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*poslední* vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými Předchůdci nebo ve kterém použije dvojice hodnot ho zpracovat. jinou zadanou binární operací.
+*poslední*<br/>
+Vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*výsledek* vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série rozdílů nebo výsledky zadané operace.
+*výsledek*<br/>
+Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série rozdílů nebo výsledky zadané operace.
 
-*binary_op* binární operace, která se použije v zobecněné operaci nahrazující operace odčítání v rozdílové proceduře.
+*binary_op*<br/>
+Binární operace, která se použije v zobecněné operaci nahrazující operace odčítání v rozdílové proceduře.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -291,17 +299,23 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* vstupní iterátor adresující první prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
+*first1*<br/>
+Vstupní iterátor adresující první prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
 
-*Příjmení1* vstupní iterátor adresující poslední prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
+*Příjmení1*<br/>
+Vstupní iterátor adresující poslední prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
 
-*first2* vstupní iterátor adresující první prvek ve druhém rozsahu jehož vnitřní produktu nebo zobecněný produkt vnitřní s prvním rozsah má vypočítat.
+*first2*<br/>
+Vstupní iterátor adresující první prvek v druhého rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní s prvním rozsah má vypočítat.
 
-*Val* počáteční hodnotu, ke kterému vnitřní nebo produkt zobecněný vnitřní mezi oblastí se má přidat.
+*Val*<br/>
+Počáteční hodnotu, ke kterému vnitřní nebo produkt zobecněný vnitřní mezi oblastí se má přidat.
 
-*binary_op1* binární operace, která nahrazuje produktu vnitřní operace součtu element-wise produkty v generalizace vnitřní produktu.
+*binary_op1*<br/>
+Binární operace, která nahrazuje produktu vnitřní operace součtu element-wise produkty v generalizace vnitřní produktu.
 
-*binary_op2* binární operace, která nahrazuje vnitřní produktu element-wise fungování vícenásobně ve generalizace vnitřní produktu.
+*binary_op2*<br/>
+Binární operace, která nahrazuje vnitřní produktu element-wise operace násobení v generalizace vnitřní produktu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -422,11 +436,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující první prvek v rozsahu pro vyplnění.
+*první*<br/>
+Vstupní iterátor adresující první prvek v rozsahu pro vyplnění.
 
-*poslední* vstupní iterátor adresující poslední prvek v rozsahu pro vyplnění.
+*poslední*<br/>
+Vstupní iterátor adresující poslední prvek v rozsahu pro vyplnění.
 
-*Hodnota* na počáteční hodnotu pro uložení v prvním prvku a postupně přírůstek pro následné prvky.
+*value*<br/>
+Počáteční hodnotu pro uložení v prvním prvku a postupně přírůstek pro následné prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -493,13 +510,17 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující první prvek v rozsahu částečně sčítat ani zkombinován podle zadané binární operace.
+*první*<br/>
+Vstupní iterátor adresující první prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace.
 
-*poslední* vstupní iterátor adresující poslední prvek v rozsahu částečně sčítat ani zkombinován podle zadané binární operace, která je o jednu pozici za posledním prvkem, který skutečně zahrnut do iterovaného souhrnu.
+*poslední*<br/>
+Vstupní iterátor adresující poslední prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace, který se nachází o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
-*výsledek* vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série částečných součtů nebo výsledky zadané operace.
+*výsledek*<br/>
+Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série částečných součtů nebo výsledky zadané operace.
 
-*binary_op* binární operace, která se použije v zobecněné operaci nahrazující operace součtu v proceduře částečného součtu.
+*binary_op*<br/>
+Binární operace, která se použije v zobecněné operaci nahrazující operace součtu v proceduře částečného součtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

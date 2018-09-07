@@ -1,5 +1,5 @@
 ---
-title: _unlock_file – | Microsoft Docs
+title: _unlock_file – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407769"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107532"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
-Odemkne soubor, což jiných procesů pro přístup k souboru.
+Odemkne souboru, což jiné procesy pro přístup k souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,11 +56,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parametry
 
-*soubor* popisovač souboru.
+*Soubor*<br/>
+Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Unlock_file –** funkce odemkne soubor určený touto *soubor*. Odemknutí souboru umožňuje přístup k souboru s jinými procesy. Tuto funkci nelze volat, pokud **_lock_file –** volala dřív na *souboru* ukazatel. Volání metody **_unlock_file –** na soubor, který není uzamčený může vést k zablokování. Příklad, naleznete v části [_lock_file –](lock-file.md).
+**_Unlock_file –** funkce odemyká soubor určený parametrem *souboru*. Odemknutí souboru umožňuje přístup k souboru s jinými procesy. Tato funkce by neměla být volána, pokud **_lock_file –** dříve volalo *souboru* ukazatele. Volání **_unlock_file –** u souboru, která není uzamčena může vést k zablokování. Příklad najdete v tématu [_lock_file –](lock-file.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,9 +69,9 @@ void _unlock_file(
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

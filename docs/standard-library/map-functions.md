@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36af7eb87f777686a0a83fab98032ce36e75c906
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966365"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102522"
 ---
 # <a name="ltmapgt-functions"></a>&lt;Mapa&gt; funkce
 
@@ -33,9 +33,11 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* mapy poskytující prvky pro záměnu nebo mapu, jehož prvky mají být zaměněny mapy *levé*.
+*doprava*<br/>
+Mapa poskytující prvky pro záměnu nebo mapu, jehož prvky mají být zaměněny mapy *levé*.
 
-*levé* mapy, jehož prvky mají být zaměněny mapy *správné*.
+*doleva*<br/>
+Na mapě, jehož prvky mají být zaměněny mapy *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap *levé*.
+*doprava*<br/>
+Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap *levé*.
 
-*levé* multimap, jehož prvky mají být zaměněny objektu multimap *správné*.
+*doleva*<br/>
+Multimap, jehož prvky mají být zaměněny objektu multimap *správné*.
 
 ### <a name="remarks"></a>Poznámky
 

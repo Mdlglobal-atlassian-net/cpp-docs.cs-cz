@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198312"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105312"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -50,7 +50,8 @@ Je možné zadat následující možnosti pro **pgomgr**:
 *pgcfiles*<br/>
 .Pgc jeden nebo více soubory, jejichž data profilu, které chcete sloučit do souboru .pgd. Můžete určit soubor .pgc jeden nebo více soubory .pgc. Pokud nezadáte žádné soubory .pgc **pgomgr** sloučí všechny soubory .pgc, jejichž názvy souborů jsou stejné jako soubor .pgd.
 
-*pgdfile* soubor .pgd, do které provádíte sloučení dat ze souboru .pgc nebo soubory.
+*pgdfile*<br/>
+Soubor .pgd, do které provádíte sloučení dat ze souboru .pgc nebo soubory.
 
 ## <a name="remarks"></a>Poznámky
 

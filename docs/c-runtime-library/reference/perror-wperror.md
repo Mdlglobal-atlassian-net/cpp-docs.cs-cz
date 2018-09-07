@@ -1,5 +1,5 @@
 ---
-title: perror, _wperror – | Microsoft Docs
+title: perror _wperror – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404279"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103785"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
-Tisk chybovou zprávu.
+Tisk chybové zprávy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,25 +64,26 @@ void _wperror(
 
 ### <a name="parameters"></a>Parametry
 
-*zpráva* řetězce zprávy k vytištění.
+*message*<br/>
+Řetězcovou zprávu pro tisk.
 
 ## <a name="remarks"></a>Poznámky
 
-**Perror** funkce zobrazí chybovou zprávu do **stderr**. **_wperror –** je verze široká charakterová **_perror**; *zpráva* argument **_wperror –** je široká charakterová řetězec. **_wperror –** a **_perror** chovat jinak shodně.
+**Perror** funkce zobrazí chybovou zprávu do **stderr**. **_wperror –** je verze širokého znaku **_perror**; *zpráva* argument **_wperror –** je širokoznaký řetězec. **_wperror –** a **_perror** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror –**|**perror**|**perror**|**_wperror**|
 
-*zpráva* se vytiskne, a potom dvojtečkou a pak zprávy o chybách systému pro posledního volání knihovny, které vytváří v chybě a v neposlední řadě znak nového řádku. Pokud *zpráva* ukazatele null nebo je ukazatel na hodnotu null. řetězec **perror** vytiskne pouze zprávy o systémové chybě.
+*zpráva* vytiskne se nejprve, následovaný dvojtečkou a pak podle chybovou zprávu systému pro poslední volání knihovny, který vytvořil chybu a nakonec znakem nového řádku. Pokud *zpráva* je ukazatel s hodnotou null nebo ukazatel na řetězec null **perror** vytiskne pouze chybovou zprávu systému.
 
-Číslo chyby je uložené v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definovanou v kód chyby. H). Systém chybové zprávy, které jsou přístupné prostřednictvím proměnnou [_sys_errlist –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv, které jsou seřazené podle číslo chyby. **perror** vytiskne odpovídající chybovou zprávu pomocí **errno** hodnotu jako index pro **_sys_errlist –**. Hodnota proměnné [_sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definován jako maximální počet elementů v **_sys_errlist –** pole.
+Číslo chyby je uložen v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definované v ERRNO. H). Chybové zprávy systému jsou přístupné prostřednictvím proměnné [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv seřazené podle čísla chyby. **perror** vytiskne příslušnou chybovou zprávu pomocí **errno** hodnotu jako index tak, aby **_sys_errlist**. Hodnota proměnné [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definována jako maximální počet prvků v **_sys_errlist** pole.
 
-Pro přesné výsledky volání **perror** ihned po rutiny knihovny vrátí chybu. Jinak můžete přepsat následující volání **errno** hodnotu.
+Pro přesné výsledky zavolejte **perror** ihned poté, co knihovní rutina vrátí chybu. V opačném případě můžete přepsat následných voláních **errno** hodnotu.
 
-V systému Windows operační systém, některé **errno** hodnoty uvedené v kód chyby. H se nepoužívá. Tyto hodnoty jsou vyhrazené pro použití v operačním systému UNIX. V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) seznam **errno** hodnoty používané v operačním systému Windows. **perror** vytiskne prázdný řetězec pro žádné **errno** hodnotu, která nepoužívá tyto platformy.
+V Windows operační systém, některé **errno** hodnoty uvedené v ERRNO. H se nepoužívají. Tyto hodnoty jsou vyhrazené pro použití v operačním systému UNIX. V tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) seznam **errno** hodnot použitých v operačním systému Windows. **perror** vytiskne prázdný řetězec pro všechny **errno** hodnotu nepoužívá tyto platformy.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -91,11 +92,11 @@ V systému Windows operační systém, některé **errno** hodnoty uvedené v k�
 |**perror**|\<stdio.h > nebo \<stdlib.h >|
 |**_wperror**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -145,9 +146,9 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror – _strerror –, _wcserror –, \__wcserror –](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror _strerror –, _wcserror –, \__wcserror –](strerror-strerror-wcserror-wcserror.md)<br/>

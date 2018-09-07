@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956840"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110015"
 ---
 # <a name="basicios-class"></a>basic_ios – třída
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typu.
+*Elem*<br/>
+Typ.
 
-*Vlastnosti* proměnné typu `char_traits`.
+*Osobnostní rysy*<br/>
+Proměnné typu `char_traits`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parametry
 
-*SB* standardní vyrovnávací paměť pro ukládání vstupní nebo výstupní elementy.
+*sb*<br/>
+Standardní vyrovnávací paměti k uložení vstupních nebo výstupních elementy.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* datový proud, jehož příznaky, které chcete kopírovat.
+*doprava*<br/>
+Datový proud, jehož příznaky, které chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parametry
 
-*Newexcept* příznaky, které chcete vrátit výjimku.
+*Newexcept*<br/>
+Příznaky, které chcete vrátit výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parametry
 
-*Char –* znak jako znak výplně.
+*Char*<br/>
+Znak, který chcete, aby jako výplňovým znakem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Loc* řetězec národního prostředí.
+*Umístění*<br/>
+Řetězec národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parametry
 
-*_Sb* standardní vyrovnávací paměť pro ukládání vstupní nebo výstupní elementy.
+*_Sb*<br/>
+Standardní vyrovnávací paměti k uložení vstupních nebo výstupních elementy.
 
-*_Isstd* Určuje, zda se jedná o standardní datový proud.
+*_Isstd*<br/>
+Určuje, zda se jedná o standardní datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `ios_base` objektu přesunout hodnoty z.
+*doprava*<br/>
+`ios_base` Objektu přesunout hodnoty z.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parametry
 
-*Char* **char** pro převod.
+*Char*<br/>
+**Char** pro převod.
 
-*Výchozí* **char** , že se mají vracet Pokud se nenajde žádný ekvivalent.
+*Default*<br/>
+**Char** , že se mají vracet Pokud se nenajde žádný ekvivalent.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parametry
 
-*_Sb* datového proudu.
+*_Sb*<br/>
+Datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* nastavení další příznaky.
+*_Stavu*<br/>
+Nastavení další příznaky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* vyrovnávací paměť datového proudu k vyrovnávací paměti pro čtení.
+*strbuf*<br/>
+Vyrovnávací paměť datového proudu k vyrovnávací paměti pro čtení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parametry
 
-*Str* datového proudu.
+*str*<br/>
+Datový proud.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Char –* znak pro převod.
+*Char*<br/>
+Znak pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `basic_ios` objekt, který se používá k výměně hodnot.
+*doprava*<br/>
+`basic_ios` Objekt, který se používá k výměně hodnot.
 
 ### <a name="remarks"></a>Poznámky
 

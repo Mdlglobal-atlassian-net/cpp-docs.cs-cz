@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 789839482e623e94172bbd55342d257c2b031614
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954744"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109366"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible – třída
 
@@ -37,9 +37,11 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typ dotazu.
+*T*<br/>
+Typ, na který chcete odeslat dotaz.
 
-*Args* typy argumentů tak, aby odpovídaly v konstruktoru sady *T*.
+*Args*<br/>
+Typy argumentů tak, aby odpovídaly v konstruktoru sady *T*.
 
 ## <a name="remarks"></a>Poznámky
 

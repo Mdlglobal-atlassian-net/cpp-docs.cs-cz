@@ -1,5 +1,5 @@
 ---
-title: _Static_assert – makro | Microsoft Docs
+title: _STATIC_ASSERT – makro | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407363"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105078"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT – makro
 
-Vyhodnocení výrazu v době kompilace a generuje chybu, pokud je výsledek **FALSE**.
+Vyhodnocení výrazu v době kompilace a vygenerují chybu, pokud je výsledek **FALSE**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression* výraz (včetně ukazatele), který se vyhodnotí na nenulové hodnoty (**TRUE**) nebo 0 (**FALSE**).
+*booleanExpression*<br/>
+Výraz (včetně odkazů), který se vyhodnotí na nenulovou hodnotu (**TRUE**) nebo 0 (**FALSE**).
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro vypadá takto: [_ASSERT a _asserte – makra](assert-asserte-assert-expr-macros.md)kromě toho, že *booleanExpression* je vyhodnocován v době kompilace místo v době běhu. Pokud *booleanExpression* vyhodnotí jako **FALSE** (0), [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) se vygeneruje.
+Vypadá podobně jako toto makro [_ASSERT a _asserte – makra](assert-asserte-assert-expr-macros.md), s tím rozdílem, že *booleanExpression* je vyhodnocen v době kompilace místo za běhu. Pokud *booleanExpression* vyhodnotí jako **FALSE** (0), [Chyba kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) je generován.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu jsme zkontrolujte zda [sizeof](../../c-language/sizeof-operator-c.md) **int** je větší než nebo rovna 2 bajtů a jestli [sizeof](../../c-language/sizeof-operator-c.md) **dlouho** je 1 bajtů. Program nebude zkompilování a vygeneruje [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) protože **dlouho** je větší než 1 bajtů.
+V tomto příkladu zkontrolujeme, jestli [sizeof](../../c-language/sizeof-operator-c.md) **int** je větší než nebo rovna hodnotě 2 bajty a zda [sizeof](../../c-language/sizeof-operator-c.md) **dlouhé** 1 bajt. Program nebude kompilovat a bude generovat [Chyba kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) protože **dlouhé** je větší než 1 bajt.
 
 ```C
 // crt__static_assert.c
@@ -83,7 +84,7 @@ int main()
 |-----------|---------------------|
 |**_STATIC_ASSERT**|\<crtdbg.h>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](assert-asserte-assert-expr-macros.md)<br/>

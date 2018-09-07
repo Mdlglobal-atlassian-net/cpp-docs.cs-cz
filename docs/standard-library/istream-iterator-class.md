@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959858"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099587"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator – třída
 
@@ -38,7 +38,7 @@ Popisuje objekt vstupního iterátoru. Extrahuje objekty třídy `Type` ze vstup
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ objektu, třeba extrahovat ze vstupního datového proudu.
+*Typ*<br/>
+Typ objektu, který má být extrahován ze vstupního datového proudu.
 
-*CharType* typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
+*CharType*<br/>
+Typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
 
-*Vlastnosti* typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits` <  `CharType`>.
+*Osobnostní rysy*<br/>
+Typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits` <  `CharType`>.
 
-*Vzdálenost* integrální typ, který reprezentuje typ rozdílu pro se znaménkem `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `ptrdiff_t`.
+*vzdálenost*<br/>
+Integrální typ, který reprezentuje typ rozdílu pro se znaménkem `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `ptrdiff_t`.
 
 Po vytvoření nebo zvýšení objektu třídy istream_iterator pomocí uloženého ukazatele bez hodnoty Null, objekt pokusí extrahovat a uložit objekt typu `Type` z přidruženého vstupního datového proudu. Pokud se extrakce nezdaří, objekt nahradí uložený ukazatel ukazatelem s hodnotou null a vytvoří tak indikátor ukončení sekvence.
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* vstupního datového proudu pro čtení používá k inicializaci `istream_iterator`.
+*_Istr*<br/>
+Vstupní datový proud pro čtení používá k inicializaci `istream_iterator`.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -19,105 +19,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d56cbab412af93bf0a9694cb8f686e14cb9c1937
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767888"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102049"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute – třída
-Označuje, že model vláken pro aplikaci je jednovláknový apartment (STA).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-public ref class STAThreadAttribute sealed : Attribute  
-```  
-  
-### <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Atribut STAThreadAttribute konstruktor 1](#ctor)|Inicializuje novou instanci třídy.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
- Atribut STAThreadAttribute dědí z [Platform::Object – třída](../cppcx/platform-object-class.md). Atribut STAThreadAttribute také přetížení nebo má následující členy:  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[STAThreadAttribute::Equals](#equals)|Určuje, zda se zadaný objekt rovná aktuálnímu objektu.|  
-|[STAThreadAttribute::GetHashCode](#gethashcode)|Vrátí kód hash této instance.|  
-|[STAThreadAttribute::ToString](#tostring)|Vrací řetězec, který představuje aktuální objekt.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `Platform`  
-  
-### <a name="requirements"></a>Požadavky  
- **Záhlaví:** collection.h  
-  
- **Namespace:** platformy  
 
+Označuje, že model vláken pro aplikaci je jednovláknový apartment (STA).
 
+## <a name="syntax"></a>Syntaxe
+
+```
+public ref class STAThreadAttribute sealed : Attribute
+```
+
+### <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[Atribut STAThreadAttribute konstruktor 1](#ctor)|Inicializuje novou instanci třídy.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+Atribut STAThreadAttribute dědí z [Platform::Object – třída](../cppcx/platform-object-class.md). Atribut STAThreadAttribute také přetížení nebo má následující členy:
+
+|Název|Popis|
+|----------|-----------------|
+|[STAThreadAttribute::Equals](#equals)|Určuje, zda se zadaný objekt rovná aktuálnímu objektu.|
+|[STAThreadAttribute::GetHashCode](#gethashcode)|Vrátí kód hash této instance.|
+|[STAThreadAttribute::ToString](#tostring)|Vrací řetězec, který představuje aktuální objekt.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`Platform`
+
+### <a name="requirements"></a>Požadavky
+
+**Záhlaví:** collection.h
+
+**Namespace:** platformy
 
 ## <a name="ctor"></a> Atribut STAThreadAttribute konstruktor
-Inicializuje novou instanci třídy atribut STAThreadAttribute.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:STAThreadAttribute()  
-```  
-  
 
+Inicializuje novou instanci třídy atribut STAThreadAttribute.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:STAThreadAttribute();
+```
 
 ## <a name="equals"></a> STAThreadAttribute::Equals
-Určuje, zda se zadaný objekt rovná aktuálnímu objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:virtual override bool Equals(  Object^ obj)  
-```  
-  
-### <a name="parameters"></a>Parametry  
- obj  
- Objekt k porovnání.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud jsou objekty shodné; v opačném případě `false`.  
-  
 
+Určuje, zda se zadaný objekt rovná aktuálnímu objektu.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:virtual override bool Equals( Object^ obj );
+```
+
+### <a name="parameters"></a>Parametry
+
+*obj*<br/>
+Objekt k porovnání.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud jsou objekty shodné; v opačném případě `false`.
 
 ## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
-Vrátí kód hash této instance.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Kód hash této instance  
-  
 
+Vrátí kód hash této instance.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Kód hash této instance
 
 ## <a name="tostring"></a> STAThreadAttribute::ToString
-Vrací řetězec, který představuje aktuální objekt.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public:String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Řetězec, který představuje aktuální objekt.  
-  
 
-  
-## <a name="see-also"></a>Viz také  
- [Platforma Namespace](platform-namespace-c-cx.md)
+Vrací řetězec, který představuje aktuální objekt.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+public:String^ ToString();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Řetězec, který představuje aktuální objekt.
+
+## <a name="see-also"></a>Viz také
+
+[Platforma Namespace](platform-namespace-c-cx.md)

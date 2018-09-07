@@ -1,5 +1,5 @@
 ---
-title: REWIND | Microsoft Docs
+title: REWIND | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406830"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100284"
 ---
 # <a name="rewind"></a>rewind
 
-Na začátek souboru přemístí ukazatele souboru.
+Přemístí ukazatel na soubor na začátek souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,21 +55,22 @@ void rewind(
 
 ### <a name="parameters"></a>Parametry
 
-*datový proud* ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="remarks"></a>Poznámky
 
-**Rewind** funkce přemístí ukazatele souboru přidružené *datového proudu* na začátek souboru. Volání **rewind** je podobná
+**Rewind** funkce přemístí ukazatel na soubor přidružený k *stream* na začátku souboru. Volání **rewind** je podobný
 
-**fseek (void) (** _datového proudu_**, 0 L seek_set –);**
+**fseek (void) (** _stream_**, 0 L, SEEK_SET);**
 
-Ale na rozdíl od [fseek](fseek-fseeki64.md), **rewind** vymaže indikátory chyb pro datový proud i koncové souboru indikátoru. Navíc na rozdíl od [fseek](fseek-fseeki64.md), **rewind** nevrací hodnotu označující, zda byla úspěšně přesunuta ukazatele.
+Ale na rozdíl od [fseek](fseek-fseeki64.md), **rewind** vymaže indikátory chyb pro datový proud, stejně jako indikátor konce souboru. Navíc na rozdíl od [fseek](fseek-fseeki64.md), **rewind** nevrací hodnotu, která určuje, zda byl úspěšně přesunut ukazatel myši.
 
-Pokud chcete vymazat vyrovnávací paměti klávesnice, použijte **rewind** s datový proud **stdin –**, která je spojená s klávesnice ve výchozím nastavení.
+Pokud chcete vymazat vyrovnávací paměti klávesnice, použijte **rewind** pomocí datového proudu **stdin**, který je přidružen klávesnice ve výchozím nastavení.
 
-Pokud je datový proud **NULL** ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, vrátí tato funkce a **errno** je nastaven na **einval –**.
+Pokud je datový proud **NULL** vyvolána ukazatel, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce a **errno** je nastavena na **EINVAL**.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -77,11 +78,11 @@ Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – k�
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,6 +124,6 @@ The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>

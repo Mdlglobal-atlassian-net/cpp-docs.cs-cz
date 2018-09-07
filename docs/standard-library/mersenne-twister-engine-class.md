@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959268"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100219"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine – třída
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType* celé číslo bez znaménka typu výsledku. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*UIntType*<br/>
+Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*W* **Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **stavu velikost**. Počet elementů (hodnoty) v pořadí stavu.
+*N*<br/>
+**Velikost stavu**. Počet elementů (hodnoty) v pořadí stavu.
 
-*M* **Shift velikost**. Počet prvků, které mají přeskočit při každé prvkem. **Předběžná podmínka**: `0 < M ≤ N`
+*M*<br/>
+**Posunout velikost**. Počet prvků, které mají přeskočit při každé prvkem. **Předběžná podmínka**: `0 < M ≤ N`
 
-*R* **maskování bitů**. **Předběžná podmínka**: `R ≤ W`
+*R*<br/>
+**Maskování bitů**. **Předběžná podmínka**: `R ≤ W`
 
-*A* **XOR maska**. **Předběžná podmínka**: `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Maska XOR**. **Předběžná podmínka**: `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **Tempering shift parametry**. Použít jako hodnoty shift při kódování (popouštění). Předběžné podmínky: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Popouštění shift parametry**. Použít jako hodnoty shift při kódování (popouštění). Předběžné podmínky: `U,S,T,L ≤ W`
 
-*D*, *B*, *C* **Tempering bitová maska parametry**. Používá se jako hodnoty bitové masky při kódování (popouštění). Předběžné podmínky: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C*<br/>
+**Popouštění bitová maska parametry**. Používá se jako hodnoty bitové masky při kódování (popouštění). Předběžné podmínky: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **inicializace multiplikátor**. Využít k s inicializací pořadí. Předběžné podmínky: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Inicializace multiplikátor**. Využít k s inicializací pořadí. Předběžné podmínky: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Členové
 

@@ -1,7 +1,7 @@
 ---
 title: EXPORTY | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894548"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104287"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -38,9 +38,7 @@ První *definice* může být na stejném řádku jako `EXPORTS` – klíčové 
 
 Syntaxe pro export *definice* je:
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *název_položky*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinální_ \[ **NONAME**]] \[ \[ **PRIVÁTNÍ**] | \[ **DATA**]]
 
 *název_položky* je název funkce nebo proměnná, která chcete exportovat. Toto je povinné. Pokud se název, který exportujete liší od názvu v knihovně DLL, zadejte název pro export v knihovně DLL pomocí *internal_name*. Například, pokud vaše knihovna DLL exportuje funkce `func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-Pokud se název, který můžete exportovat z jiného modulu, který exportuje podle pořadových čísel, určení export uživatele pořadovém místě v knihovně DLL pomocí *other_module. #ordinal_number*. Například, pokud vaše knihovna DLL exportuje funkce z modulu, a to je 42 pořadovém místě, kde chcete, aby volající použít ho jako `func2`, zadali byste:
+Pokud se název, který můžete exportovat z jiného modulu, který exportuje podle pořadových čísel, určení export uživatele pořadovém místě v knihovně DLL pomocí *other_module*.__#__ *ordinální*. Například, pokud vaše knihovna DLL exportuje funkce z modulu, a to je 42 pořadovém místě, kde chcete, aby volající použít ho jako `func2`, zadali byste:
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Protože kompilátor Visual C++ používá dekorování názvů pro funkce jazyka C++, musíte použít upravený název internal_name nebo definovat exportované funkce tak, že používání příkazu extern "C" ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
+Protože kompilátor Visual C++ používá dekorování názvů pro funkce jazyka C++, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
 
 Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroje nebo linker [/MAP](../../build/reference/map-generate-mapfile.md) možnost. Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy ve. Soubor DEF spustitelné soubory, které na knihovnu DLL musí být sestaveny také pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy volajícího odpovídaly exportovaným názvům v. Soubor DEF.
 
-Můžete použít \@ *ordinální* k určení, že číslo a ne název funkce, půjdou do tabulky exportu knihovny DLL. Mnoho knihoven DLL Windows exportovat řadové číslovky důvodu podpory původního kódu. Bylo běžné použití řadové číslovky v 16bitového kódu Windows, protože může pomoct minimalizovat velikost knihovny DLL. Nedoporučujeme export funkcí podle pořadových čísel, pokud ho vaše knihovna DLL klienti potřebovat pro stále podporuje starší verze. Vzhledem k tomu,. LIB soubor bude obsahovat mapování mezi řadová číslovka a funkci, můžete použít název funkce, jako byste normálně v projektech, které používají knihovnu DLL.
+Můžete použít \@ *ordinální* k určení, že číslo a ne název funkce, přejde do tabulky exportu knihovny DLL. Mnoho knihoven DLL Windows exportovat řadové číslovky důvodu podpory původního kódu. Bylo běžné použití řadové číslovky v 16bitového kódu Windows, protože může pomoct minimalizovat velikost knihovny DLL. Nedoporučujeme export funkcí podle pořadových čísel, pokud ho vaše knihovna DLL klienti potřebovat pro stále podporuje starší verze. Vzhledem k tomu,. LIB soubor bude obsahovat mapování mezi řadová číslovka a funkci, můžete použít název funkce, jako byste normálně v projektech, které používají knihovnu DLL.
 
 Pomocí volitelného **NONAME** – klíčové slovo, můžete exportovat na základě pořadí pouze a snížit velikost tabulky exportu v výslednou knihovnu DLL. Nicméně pokud chcete použít [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) na knihovnu DLL, musíte znát řadová číslovka, protože nebude platný název.
 
@@ -88,9 +86,16 @@ Existují čtyři způsoby, jak exportovat definici uvedené v doporučené poř
 
 3. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
 
-4. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`  
+4. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje Direktiva #pragma komentář před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
 
-Všechny čtyři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, není-li. EXP soubor se používá v sestavení.
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+Direktiva #pragma je užitečné, pokud je potřeba exportovat názvu nedekorovaných funkce a mají různé exporty v závislosti na konfiguraci sestavení (například v 32bitové nebo 64bitové sestavení).
+
+Všechny čtyři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, není-li. EXP soubor se používá v sestavení. 
 
 Tady je příklad oddílu EXPORTŮ:
 

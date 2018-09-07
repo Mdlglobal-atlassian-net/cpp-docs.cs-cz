@@ -14,60 +14,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 540b759153b8fac0532a8817d89e704d55fbffd3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761509"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102075"
 ---
 # <a name="platformibox-interface"></a>Platform::ibox – rozhraní
-[Platform::ibox –](../cppcx/platform-ibox-interface.md) rozhraní je název C++ `Windows::Foundation::IReference` rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <typename T>  
-interface class IBox  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ zabalené hodnoty.  
-  
-### <a name="remarks"></a>Poznámky  
- `IBox<T>` Rozhraní je primárně interně používá k reprezentaci typy s možnou hodnotou Null, jak je popsáno v [hodnotové třídy a struktury (C + +/ CX)](../cppcx/value-classes-and-structs-c-cx.md). Rozhraní se také používá pro typy hodnot pole, které jsou předány do metody jazyka C++, které přijímají parametry typu `Object^`. Můžete explicitně deklarovat jako vstupní parametr `IBox<SomeValueType>`. Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).  
-  
-### <a name="requirements"></a>Požadavky  
-  
-### <a name="members"></a>Členové  
- `Platform::IBox` Rozhraní zdědí [Platform::ivaluetype –](../cppcx/platform-ivaluetype-interface.md) rozhraní. `IBox` má tyto členy:  
-  
- **Vlastnosti**  
-  
-|Metoda|Popis|  
-|------------|-----------------|  
-|[Hodnota](#value)|Vrátí hodnota, která byla dřív uložená v tomto `IBox` instance.|  
+
+[Platform::ibox –](../cppcx/platform-ibox-interface.md) rozhraní je název C++ `Windows::Foundation::IReference` rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <typename T>
+interface class IBox
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ zabalené hodnoty.
+
+### <a name="remarks"></a>Poznámky
+
+`IBox<T>` Rozhraní je primárně interně používá k reprezentaci typy s možnou hodnotou Null, jak je popsáno v [hodnotové třídy a struktury (C + +/ CX)](../cppcx/value-classes-and-structs-c-cx.md). Rozhraní se také používá pro typy hodnot pole, které jsou předány do metody jazyka C++, které přijímají parametry typu `Object^`. Můžete explicitně deklarovat jako vstupní parametr `IBox<SomeValueType>`. Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).
+
+### <a name="requirements"></a>Požadavky
+
+### <a name="members"></a>Členové
+
+`Platform::IBox` Rozhraní zdědí [Platform::ivaluetype –](../cppcx/platform-ivaluetype-interface.md) rozhraní. `IBox` má tyto členy:
+
+**Vlastnosti**
+
+|Metoda|Popis|
+|------------|-----------------|
+|[Hodnota](#value)|Vrátí hodnota, která byla dřív uložená v tomto `IBox` instance.|
 
 ## <a name="value"></a> Vlastnost IBox::Value
-Vrátí hodnotu, která byla původně uložená v tomto objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-property T Value {T get();}  
-```  
-  
-### <a name="parameters"></a>Parametry  
- `T`  
- Typ zabalené hodnoty.  
-  
-### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
- Vrátí hodnotu, která byla původně uložená v tomto objektu.  
-  
-### <a name="remarks"></a>Poznámky  
- Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).  
-  
-  
-## <a name="see-also"></a>Viz také  
- [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)
+
+Vrátí hodnotu, která byla původně uložená v tomto objektu.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+property T Value {T get();}
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ zabalené hodnoty.
+
+### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
+
+Vrátí hodnotu, která byla původně uložená v tomto objektu.
+
+### <a name="remarks"></a>Poznámky
+
+Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).
+
+## <a name="see-also"></a>Viz také
+
+[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

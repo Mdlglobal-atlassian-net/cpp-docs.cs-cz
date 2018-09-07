@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200025"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102613"
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** pokud jde standardní datový proud; v opačném případě **false**.
+*_Isstd*<br/>
+**Hodnota TRUE** pokud jde standardní datový proud; v opačném případě **false**.
 
-*správné* A `basic_istream` objektu, který chcete zkopírovat.
+*doprava*<br/>
+A `basic_istream` objektu, který chcete zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parametry
 
-*počet* počet znaků ke čtení z `strbuf`.
+*Počet*<br/>
+Počet znaků ke čtení z `strbuf`.
 
-*Delim* znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
+*Delim*<br/>
+Znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
 
-*Str* řetězec, do kterých chcete zapsat.
+*str*<br/>
+Řetězec, do kterých chcete zapsat.
 
-*Ch* znak zobrazíte.
+*ch*<br/>
+Znak k získání.
 
-*strbuf* do vyrovnávací paměti, do kterých chcete zapsat.
+*strbuf*<br/>
+Vyrovnávací paměť do kterých chcete zapsat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-*počet* počet znaků ke čtení z `strbuf`.
+*Počet*<br/>
+Počet znaků ke čtení z `strbuf`.
 
-*Delim* znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
+*Delim*<br/>
+Znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
 
-*Str* řetězec, do kterých chcete zapsat.
+*str*<br/>
+Řetězec, do kterých chcete zapsat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parametry
 
-*počet* počet prvků, které se od aktuálního přeskočit čtení pozici.
+*Počet*<br/>
+Počet prvků, které mají přeskočit z aktuální pozici pro čtení.
 
-*Delim* elementu, který, pokud došlo k před počet, způsobí, že `ignore` vrátit a umožňuje všechny prvky po *Delim* ke čtení.
+*Delim*<br/>
+Prvek, který, pokud došlo k před počet, způsobí, že `ignore` vrátit a umožňuje všechny prvky po *Delim* ke čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Pfn* ukazatele na funkci.
+*pfn*<br/>
+Ukazatel na funkci.
 
-*strbuf* objekt typu `stream_buf`.
+*strbuf*<br/>
+Objekt typu `stream_buf`.
 
-*Val* hodnoty ke čtení z datového proudu.
+*Val*<br/>
+Hodnoty ke čtení z datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `rvalue` odkaz `basic_ifstream` objektu.
+*doprava*<br/>
+`rvalue` Odkaz `basic_ifstream` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* znak převést zpět do datového proudu.
+*ch*<br/>
+Znak převést zpět do datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parametry
 
-*Str* pole, ve kterém čtení znaků.
+*str*<br/>
+Pole, ve kterém čtení znaků.
 
-*počet* počet znaků pro čtení.
+*Počet*<br/>
+Počet znaků pro čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parametry
 
-*Str* pole, ve kterém `readsome` ukládá přečte znaky.
+*str*<br/>
+Pole, ve kterém `readsome` ukládá přečte znaky.
 
-*počet* počet znaků pro čtení.
+*Počet*<br/>
+Počet znaků pro čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parametry
 
-*POS* absolutní pozici, do kterého chcete přesunout ukazatel pro čtení.
+*POS*<br/>
+Absolutní pozici, do kterého chcete přesunout ukazatel pro čtení.
 
-*vypnout* posun čtení ukazatele vzhledem k *způsob*.
+*Vypnout*<br/>
+Posun čtení ukazatele vzhledem k *způsob*.
 
-*způsob, jak* některou [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) výčty.
+*způsob, jak*<br/>
+Jeden z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) výčty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* reference na lvalue k `basic_istream` objektu.
+*doprava*<br/>
+Odkaz na lvalue k `basic_istream` objektu.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 31637c1c194754e193970a4ff5efef500228115b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964807"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105247"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream – třída
 
@@ -46,9 +46,11 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* základního prvku vyrovnávací paměti souboru.
+*Elem*<br/>
+Základní prvek vyrovnávací paměti souboru.
 
-*Tr* osobnostní rysy základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
+*tr*<br/>
+Vlastnosti základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -129,13 +131,17 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Parametry
 
-*Náze_v souboru* název souboru, který se otevře.
+*Náze_v souboru*<br/>
+Název souboru, který se otevře.
 
-*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* výchozí soubor otevřít ochranu, odpovídá `shflag` parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Výchozí soubor otevřít ochranu, odpovídá `shflag` parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-*správné* odkaz rvalue na `basic_ofstream` objektů se používají k inicializaci to `basic_ofstream` objektu.
+*doprava*<br/>
+Odkaz rvalue na `basic_ofstream` objektů se používají k inicializaci to `basic_ofstream` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -247,11 +253,14 @@ void open(
 
 ### <a name="parameters"></a>Parametry
 
-*Náze_v souboru* název souboru, který se otevře.
+*Náze_v souboru*<br/>
+Název souboru, který se otevře.
 
-*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* výchozí soubor otevřít ochranu, odpovídá `shflag` parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Výchozí soubor otevřít ochranu, odpovídá `shflag` parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -271,7 +280,8 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* odkaz rvalue na `basic_ofstream` objektu.
+*doprava*<br/>
+Odkaz rvalue na `basic_ofstream` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -307,7 +317,8 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `lvalue` odkazovat na jiný `basic_ofstream` objektu.
+*doprava*<br/>
+`lvalue` Odkazovat na jiný `basic_ofstream` objektu.
 
 ### <a name="remarks"></a>Poznámky
 

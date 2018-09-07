@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959817"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110120"
 ---
 # <a name="numget-class"></a>num_get – třída
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*InputIterator* typ iterátoru, ze kterého číselné funkce get čtou svůj vstup.
+*InputIterator*<br/>
+Typ iterátoru, ze kterého číselné funkce get čtou svůj vstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*první* začátek rozsahu znaků ze kterého se má přečíst číslo.
+*první*<br/>
+Začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-*poslední* konec rozsahu znaků od kterého se mají číst číslo.
+*poslední*<br/>
+Konec rozsahu znaků od kterého se mají číst číslo.
 
-*_Iosbase* [ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
+*_Iosbase*<br/>
+[Ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
 
-*_Stavu* stavu, na které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
+*_Stavu*<br/>
+Stav, který má které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
 
-*Val* hodnotu, která byla načtena.
+*Val*<br/>
+Hodnota, která byla načtena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*první* začátek rozsahu znaků ze kterého se má přečíst číslo.
+*první*<br/>
+Začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-*poslední* konec rozsahu znaků od kterého se mají číst číslo.
+*poslední*<br/>
+Konec rozsahu znaků od kterého se mají číst číslo.
 
-*_Iosbase* [ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
+*_Iosbase*<br/>
+[Ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
 
-*_Stavu* stavu, na které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
+*_Stavu*<br/>
+Stav, který má které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
 
-*Val* hodnotu, která byla načtena.
+*Val*<br/>
+Hodnota, která byla načtena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 

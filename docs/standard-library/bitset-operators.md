@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955017"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107651"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
+*doleva*<br/>
+První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
-*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objekt typu **bitset –\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
+*doprava*<br/>
+Objekt typu **bitset –\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* řetězec, který se zadá do vstupního datového proudu má být vložen do bitset –.
+*_Istr*<br/>
+Řetězec, který se zadá do vstupního datového proudu má být vložen do bitset –.
 
-*správné* bitset –, který přijímá bity ze vstupního datového proudu.
+*doprava*<br/>
+Bitset –, který přijímá bity ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
+*doleva*<br/>
+První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
-*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
+*doleva*<br/>
+První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
-*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4c4db60d3573629447bbf675c408586feec61f12
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965455"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107120"
 ---
 # <a name="ltarraygt-operators"></a>&lt;pole&gt; operátory
 
@@ -42,13 +42,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -111,13 +115,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -181,13 +189,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -251,13 +263,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -321,13 +337,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -391,13 +411,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* levé kontejneru pro porovnání.
+*doleva*<br/>
+Levé kontejner k porovnání.
 
-*správné* správném kontejneru pro porovnání.
+*doprava*<br/>
+Správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -1,5 +1,5 @@
 ---
-title: _swab – | Microsoft Docs
+title: _swab – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408438"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100271"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,21 +59,24 @@ void _swab(
 
 ## <a name="parameters"></a>Parametry
 
-*src* dat zkopírovat a vzájemně zaměněny.
+*src*<br/>
+Zkopírovat a dat prohodit.
 
-*cíle* umístění úložiště pro prohodil data.
+*cíl*<br/>
+Umístění úložiště pro byl prohozen. data.
 
-*n* počet bajtů, které mají být zkopírovány a vzájemně zaměněny.
+*n*<br/>
+Počet bajtů, které mají být zkopírovány a prohodit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Swab –** funkce nevrací hodnotu. Funkce sady **errno** k **einval –** Pokud buď *src* nebo *cíle* ukazatel má hodnotu null nebo *n* je menší než nula a neplatný parametr je volána obslužná rutina, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+**Swab –** funkce nevrací hodnotu. Funkce sady **errno** k **EINVAL** Pokud buď *src* nebo *dest* ukazatele má hodnotu null nebo *n* menší než nula a neplatný parametr je vyvolána obslužná rutina, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a ostatní návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *n* i, je **_swab –** funkce kopie *n* bajtů z *src*prohození každý pár přiléhající bajtů a ukládá výsledek v *cíle*. Pokud *n* je liché, **_swab –** zkopíruje a prohození první *n*-1 bajtů *src*, a není zkopírovaný poslední bajt. **_Swab –** funkce se obvykle používá k přípravě binární data pro přenos do počítače, které používají různé bajtů pořadí.
+Pokud *n* je sudé, **_swab –** funkce kopie *n* bajtů z *src*zaměňuje každý pár sousední bajtů a uloží výsledek v *dest*. Pokud *n* je liché, **_swab –** zkopíruje a zamění první *n*-1 bajtů *src*, a poslední bajt není zkopírován. **_Swab –** funkce se obvykle používá k připravte binární data pro přenos na počítač, který se používá pořadím různých bajtů.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -81,7 +84,7 @@ Pokud *n* i, je **_swab –** funkce kopie *n* bajtů z *src*prohození každý 
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h > C++: \<cstdlib – > nebo \<stdlib.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,6 +113,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>

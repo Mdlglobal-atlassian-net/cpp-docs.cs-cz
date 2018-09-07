@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 93b020dcdf9dd7db11be0a578885cee28e667534
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961623"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100390"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution – třída
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*<br/>
+Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -217,9 +218,11 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*znamenají* `mean` parametru distribuce.
+*střední hodnotu*<br/>
+`mean` Parametru distribuce.
 
-*Parametr* parametr struktury použité k vytvoření distribuce.
+*Parametr*<br/>
+Struktura parametr použít k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 

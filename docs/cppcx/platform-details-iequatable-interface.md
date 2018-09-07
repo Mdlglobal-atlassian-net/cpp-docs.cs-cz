@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3475eeadef19ee74fdafb7da758c79556f42ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 927b04cb661a63ccdce321af2cdd63b666d4c5b2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765187"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102012"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::details:: iequatable – rozhraní
-Toto rozhraní je určena pouze pro interní použití a není určena pro použití pro vývoj.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-  
-interface class IEquatable;  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Toto rozhraní je určena výhradně pro úplnost, protože ji můžete prozkoumat pomocí prohlížeče.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `Platform`  
-  
-### <a name="requirements"></a>Požadavky  
- **Metadata:** platform.winmd  
-  
- **Namespace:** Platform::details –  
-  
-## <a name="see-also"></a>Viz také  
- [Platforma Namespace](platform-namespace-c-cx.md)
+
+Toto rozhraní je určena pouze pro interní použití a není určena pro použití pro vývoj.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+interface class IEquatable;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Toto rozhraní je určena výhradně pro úplnost, protože ji můžete prozkoumat pomocí prohlížeče.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`Platform`
+
+### <a name="requirements"></a>Požadavky
+
+**Metadata:** platform.winmd
+
+**Namespace:** Platform::details –
+
+## <a name="see-also"></a>Viz také
+
+[Platforma Namespace](platform-namespace-c-cx.md)

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894791"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104616"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (export funkce)
 
@@ -36,26 +36,35 @@ Exportuje funkce podle názvu nebo pořadí nebo dat, z vaší aplikace.
 
 ## <a name="remarks"></a>Poznámky
 
-S parametrem/Export je přebytečný můžete exportovat funkce z vaší aplikace tak, aby ostatní programy mohou volat funkci. Můžete také exportovat data. Exporty jsou obvykle definovány v knihovně DLL.
+**/EXPORT** určuje funkce nebo data položky pro export z vaší aplikace tak, aby ostatní programy můžete volat funkci nebo data. Exporty jsou obvykle definovány v knihovně DLL.
 
-*Název_položky* je název položky funkci nebo data, jako je pro volající program. `ordinal` Určuje index v tabulce exportů v rozsahu od 1 do 65 535; Pokud nezadáte `ordinal`, odkaz přiřadí jednu. **NONAME** – klíčové slovo exportuje funkci pouze ordinální číslo, aniž by *Název_položky*.
+*Název_položky* je název položky funkci nebo data, jako je pro volající program. *ordinální* Určuje index v tabulce exportů v rozsahu od 1 do 65 535; Pokud nezadáte *ordinální*, odkaz přiřadí jednu. **NONAME** – klíčové slovo exportuje funkci pouze ordinální číslo, aniž by *Název_položky*.
 
 **DATA** – klíčové slovo určuje, zda exportované položky datové položky. Datová položka v programu klienta musí být deklarovány pomocí **extern __declspec(dllimport)**.
 
-Existují tři metody pro export definice, uvedené v doporučené pořadí podle používání:
+Existují čtyři způsoby pro export definice, uvedené v doporučené pořadí podle používání:
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
 
-2. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+1. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
 
-3. Specifikaci/Export je přebytečný v příkazu LINK
+1. Specifikaci/Export je přebytečný v příkazu LINK
 
-Všechny tři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, pokud souboru .exp se používá v sestavení.
+1. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`.
 
-ODKAZ použití dekorovaných formy identifikátory. Když se vytvoří soubor .obj, upraví kompilátor identifikátor. Pokud *Název_položky* je zadán v linkeru v jeho nedekorovaných formuláře (jak se zobrazí ve zdrojovém kódu), odkaz se pokusí shodovat s názvem. Pokud ji nemůžete najít unikátní shoda, odkaz vydá chybovou zprávu. Použití [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroj zobrazíte [dekorovaných názvů](../../build/reference/decorated-names.md) forma identifikátoru, když je potřeba zadat do propojovacího programu.
+Všechny tyto metody můžete použít ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, pokud souboru .exp se používá v sestavení.
+
+ODKAZ použití dekorovaných formy identifikátory. Když se vytvoří soubor .obj, upraví kompilátor identifikátor. Pokud *Název_položky* je zadán v linkeru v jeho nedekorovaných formuláře (jak se zobrazí ve zdrojovém kódu), odkaz se pokusí shodovat s názvem. Pokud ji nemůžete najít unikátní shoda, odkaz vydá chybovou zprávu. Použití [DUMPBIN](../../build/reference/dumpbin-reference.md) nástroj zobrazíte [dekorovaného názvu](../../build/reference/decorated-names.md) forma identifikátoru, když je potřeba zadat do propojovacího programu.
 
 > [!NOTE]
 > Nezadávejte upravené podobě identifikátory jazyka C, které jsou deklarovány `__cdecl` nebo `__stdcall`.
+
+Pokud je potřeba exportovat názvu nedekorovaných funkce a mají různé exporty v závislosti na konfiguraci sestavení (například v 32bitové nebo 64bitové sestavení), můžete použít různé soubory DEF pro každou konfiguraci. (Direktivy preprocesoru podmíněné nejsou povoleny v soubory DEF). Jako alternativu můžete použít `#pragma comment` direktiv před deklaraci funkce, jak je znázorněno zde, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
+
+```cpp
+#pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+BOOL CALLBACK PlainFuncName( Things * lpParams)
+```
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 

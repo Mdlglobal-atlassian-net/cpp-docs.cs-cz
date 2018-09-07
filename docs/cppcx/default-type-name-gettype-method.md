@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761765"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105182"
 ---
 # <a name="defaulttypenamegettype-method"></a>Výchozí:: (type_name):: GetType – metoda
-Vrátí Platform::Type – ^, který reprezentuje aktuálního typu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- A [Platform::type –](../cppcx/platform-type-class.md)^ objekt, který představuje aktuální objekt.  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** výchozí  
-  
- **Záhlaví:** vccorlib.h  
-  
-## <a name="see-also"></a>Viz také  
- [default – obor názvů](../cppcx/default-namespace.md)
+
+Vrátí Platform::Type – ^, který reprezentuje aktuálního typu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+A [Platform::type –](../cppcx/platform-type-class.md)^ objekt, který představuje aktuální objekt.
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** výchozí
+
+**Záhlaví:** vccorlib.h
+
+## <a name="see-also"></a>Viz také
+
+[default – obor názvů](../cppcx/default-namespace.md)

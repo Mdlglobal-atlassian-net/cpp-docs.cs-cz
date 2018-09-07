@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959745"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100882"
 ---
 # <a name="basicregex-class"></a>basic_regex – třída
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ prvků tak, aby odpovídaly.
+*Elem*<br/>
+Typ prvků, které se mají spárovat.
 
-*RXtraits* třída vlastností prvků.
+*RXtraits*<br/>
+Třída vlastností prvků.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* třída vlastností pro zdrojový řetězec.
+*STtraits*<br/>
+Třída vlastností pro zdrojový řetězec.
 
-*STalloc* třídu alokátoru pro zdrojový řetězec.
+*STalloc*<br/>
+Třída alokátoru pro zdrojový řetězec.
 
-*InIt* vstupní typ iterátoru rozsahu zdroje.
+*Inicializace*<br/>
+Typ vstupního iterátoru rozsahu zdroje.
 
-*správné* regulární výraz zdroje ke zkopírování.
+*doprava*<br/>
+Regulární výraz zdroje ke zkopírování.
 
-*PTR* ukazatel na začátek pořadí ke kopírování.
+*ptr*<br/>
+Ukazatel na začátek pořadí ke kopírování.
 
-*příznaky* syntaxe příznaky možnost přidat při kopírování.
+*příznaky*<br/>
+Syntaxe příznaky možnost přidat při kopírování.
 
 *Len/TD >* délky sekvence ke kopírování.
 
-*Str* řetězec zkopírujte.
+*str*<br/>
+Řetězec zkopírujte.
 
-*první* od pořadí ke kopírování.
+*první*<br/>
+Začátek pořadí ke kopírování.
 
-*poslední* konec pořadí ke kopírování.
+*poslední*<br/>
+Konec pořadí ke kopírování.
 
-*IList* initializer_list ke kopírování.
+*IList*<br/>
+Objekt initializer_list ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* třída vlastností pro zdrojový řetězec.
+*STtraits*<br/>
+Třída vlastností pro zdrojový řetězec.
 
-*STalloc* třídu alokátoru pro zdrojový řetězec.
+*STalloc*<br/>
+Třída alokátoru pro zdrojový řetězec.
 
-*InIt* vstupní typ iterátoru rozsahu zdroje.
+*Inicializace*<br/>
+Typ vstupního iterátoru rozsahu zdroje.
 
-*správné* regulární výraz zdroje ke zkopírování.
+*doprava*<br/>
+Regulární výraz zdroje ke zkopírování.
 
-*PTR* ukazatel na začátek pořadí ke kopírování.
+*ptr*<br/>
+Ukazatel na začátek pořadí ke kopírování.
 
-*příznaky* syntaxe příznaky možnost přidat při kopírování.
+*příznaky*<br/>
+Syntaxe příznaky možnost přidat při kopírování.
 
 *Len/TD >* délky sekvence ke kopírování.
 
-*Str* řetězec zkopírujte.
+*str*<br/>
+Řetězec zkopírujte.
 
-*první* od pořadí ke kopírování.
+*první*<br/>
+Začátek pořadí ke kopírování.
 
-*poslední* konec pořadí ke kopírování.
+*poslední*<br/>
+Konec pořadí ke kopírování.
 
-*IList* initializer_list ke kopírování.
+*IList*<br/>
+Objekt initializer_list ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*loc* objekt národního prostředí pro uložení.
+*Umístění*<br/>
+Objekt národního prostředí pro uložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* třída vlastností pro zdrojový řetězec.
+*STtraits*<br/>
+Třída vlastností pro zdrojový řetězec.
 
-*STalloc* třídu alokátoru pro zdrojový řetězec.
+*STalloc*<br/>
+Třída alokátoru pro zdrojový řetězec.
 
-*správné* regulární výraz zdroje ke zkopírování.
+*doprava*<br/>
+Regulární výraz zdroje ke zkopírování.
 
-*Str* řetězec zkopírujte.
+*str*<br/>
+Řetězec zkopírujte.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objekt regulárního výrazu, který chcete Prohodit s.
+*doprava*<br/>
+Objekt regulárního výrazu se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -1,5 +1,5 @@
 ---
-title: clearerr – | Microsoft Docs
+title: clearerr – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395299"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105273"
 ---
 # <a name="clearerr"></a>clearerr
 
-Obnoví označení chyb pro datový proud. Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](clearerr-s.md).
+Resetování označení chyb pro datový proud. Bezpečnější verze této funkce je k dispozici. Zobrazit [clearerr_s –](clearerr-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,15 +54,16 @@ void clearerr(
 
 ### <a name="parameters"></a>Parametry
 
-*datový proud* ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="remarks"></a>Poznámky
 
-**Clearerr –** funkce resetuje označení chyb a end souborového indikátor pro *datového proudu*. Chyba indikátory nejsou vymazána automaticky; Po nastavení označení chyb pro zadaného datového proudu nadále vrátí hodnotu chyby, dokud operace u tohoto datového proudu **clearerr –**, [fseek](fseek-fseeki64.md), **fsetpos –**, nebo [rewind](rewind.md) je volána.
+**Clearerr –** funkce resetování označení chyb a indikátor konce souboru pro *stream*. Chyba indikátory nejsou automaticky vymazána; Jakmile je nastaven indikátor chyby pro zadaný datový proud, týkající se tohoto datového proudu nadále vrátí chybovou hodnotu až do **clearerr –**, [fseek](fseek-fseeki64.md), **fsetpos**, nebo [rewind](rewind.md) je volána.
 
-Pokud *datového proudu* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí. Další informace o **errno** a kódy chyb, najdete v části [errno – konstanty](../../c-runtime-library/errno-constants.md).
+Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí. Další informace o **errno** a kódy chyb, naleznete v tématu [errno – konstanty](../../c-runtime-library/errno-constants.md).
 
-Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](clearerr-s.md).
+Bezpečnější verze této funkce je k dispozici. Zobrazit [clearerr_s –](clearerr-s.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,7 +71,7 @@ Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](cl
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -119,10 +120,10 @@ Will input cause an error? n
 No read error
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

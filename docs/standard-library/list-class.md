@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962914"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107470"
 ---
 # <a name="list-class"></a>list – třída
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ dat prvku, který bude uložen do seznamu.
+*Typ*<br/>
+Typ dat prvku, který bude uložen do seznamu.
 
-*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti v seznamu. Tento argument je nepovinný a výchozí hodnota je **alokátoru**\<*typ*>.
+*Allocator –*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti v seznamu. Tento argument je nepovinný a výchozí hodnota je **alokátoru**\<*typ*>.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>Parametry
 
-*První* pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze seznamu argumentů.
+*první*<br/>
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*Poslední* pozice prvního prvku za rozsahem prvků, které se mají zkopírovat ze seznamu argumentů.
+*poslední*<br/>
+Pozice prvního prvku za rozsahem prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*Počet* počet kopií prvku vloženého do seznamu.
+*Počet*<br/>
+Počet kopií prvku vloženého do seznamu.
 
-*Val* hodnota prvku vloženého do seznamu.
+*Val*<br/>
+Hodnota prvku vloženého do seznamu.
 
-*IList* objekt initializer_list obsahující prvky, které mají být vloženy.
+*IList*<br/>
+Objekt initializer_list obsahující prvky, které mají být vloženy.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozici elementu, který chcete odebrat ze seznamu.
+*kde*<br/>
+Pozice prvku, který chcete odebrat ze seznamu.
 
-*první* pozice prvního prvku odebrán ze seznamu.
+*první*<br/>
+Pozice prvního prvku odebrán ze seznamu.
 
-*poslední* pozice bezprostředně za posledním prvkem odebrán ze seznamu.
+*poslední*<br/>
+Pozice bezprostředně za posledním prvkem odebrán ze seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1275,7 +1285,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Třída alokátoru, která se má použít s tímto objektem.|
 |*Počet*|Počet prvků v sestaveném seznamu.|
 |*Val*|Hodnota prvků v seznamu.|
-|*Doprava*|Seznam, jehož vyrobený seznam je kopií.|
+|*doprava*|Seznam, jehož vyrobený seznam je kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list obsahující prvky, které mají být zkopírovány.|
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* seznamu argumentů ke sloučení se do cílového seznamu.
+*doprava*<br/>
+Seznam argumentů ke sloučení se do cílového seznamu.
 
-*kompozice* operátor porovnání slouží k seřazení prvků do cílového seznamu.
+*Kompozice*<br/>
+Operátor porovnání slouží k seřazení prvků do cílového seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* hodnotu, která pokud je uložena prvkem, způsobí odebrání tohoto prvku ze seznamu.
+*Val*<br/>
+Hodnota, která pokud je uložena prvkem, způsobí odebrání tohoto prvku ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametry
 
-*před* unární predikát, který pokud uspokojen prvkem, má za následek odstranění tohoto prvku ze seznamu.
+*Před*<br/>
+Unární predikát, který pokud uspokojen prvkem, má za následek odstranění tohoto prvku ze seznamu.
 
 ### <a name="example"></a>Příklad
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* novou velikost seznamu.
+*_Newsize*<br/>
+Nová velikost seznamu.
 
-*Val* nové prvky, které mají být přidán do seznamu, pokud je nová velikost větší hodnotu, která původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
+*Val*<br/>
+Hodnota nových prvků, které mají být přidány do seznamu, pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*kompozice* operátor porovnání slouží k seřazení po sobě jdoucí prvky.
+*Kompozice*<br/>
+Operátor porovnání slouží k seřazení po sobě jdoucí prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* pozice v seznamu cíl před, které se má vložit.
+*kde*<br/>
+Pozice v seznamu cíl před, které se má vložit.
 
-*Zdroj* zdrojového seznamu, který má být vložen do cílového seznamu.
+*Zdroj*<br/>
+Zdroj seznamu, který má být vložen do cílového seznamu.
 
-*ITER* elementu, který chcete vložit ze zdrojového seznamu.
+*ITER*<br/>
+Element, který má být vložen ze zdrojového seznamu.
 
-*První* první prvek v rozsahu, který chcete vložit ze zdrojového seznamu.
+*první*<br/>
+První prvek v rozsahu, který chcete vložit ze zdrojového seznamu.
 
-*Poslední* první pozici za posledním prvkem v rozsahu, který chcete vložit ze zdrojového seznamu.
+*poslední*<br/>
+První pozici za posledním prvkem v rozsahu, který chcete vložit ze zdrojového seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*správné* seznam poskytující prvky pro záměnu nebo seznam, jehož prvky mají vyměnit s těmi na seznamu *levé*.
+*doprava*<br/>
+Seznam poskytující prvky pro záměnu nebo seznam, jehož prvky mají vyměnit s těmi na seznamu *levé*.
 
-*levé* seznam, jehož prvky mají vyměnit s těmi na seznamu *správné*.
+*doleva*<br/>
+Seznam, jehož prvky mají vyměnit s těmi na seznamu *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*před* použitým k porovnání po sobě jdoucí prvky binárním predikátem.
+*Před*<br/>
+Binární predikát, který používá k porovnání po sobě jdoucí prvky.
 
 ### <a name="remarks"></a>Poznámky
 

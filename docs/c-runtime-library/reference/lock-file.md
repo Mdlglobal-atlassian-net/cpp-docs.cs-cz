@@ -1,5 +1,5 @@
 ---
-title: _lock_file – | Microsoft Docs
+title: _lock_file – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400655"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107459"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Zamkne **soubor** objekt, který má zajistit konzistenci pro přístup k vlákna **souboru** objektu současně.
+Zamkne **souboru** objekt zajistit konzistenci pro vlákna **souboru** objekt současně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,11 +53,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*soubor* popisovač souboru.
+*Soubor*<br/>
+Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Lock_file –** funkce zámky **soubor** objektu určeného *soubor*. Podkladový soubor není uzamčený **_lock_file –**. Použití [_unlock_file –](unlock-file.md) uzamčení na soubor. Volání **_lock_file –** a **_unlock_file –** musí odpovídat ve vlákně.
+**_Lock_file –** funkce zámky **souboru** objekt definovaný podle objektu *souboru*. Základní soubor není uzamčen **_lock_file –**. Použití [_unlock_file –](unlock-file.md) uvolnit zámek na souboru. Volání **_lock_file –** a **_unlock_file –** musí odpovídat ve vlákně.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,7 +66,7 @@ void _lock_file( FILE* file );
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -142,7 +143,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

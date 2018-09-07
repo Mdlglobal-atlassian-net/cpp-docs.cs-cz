@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56a8d05c3a68cf8d3e12b8a6452d43033e414cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957407"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102717"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; operátory
 
@@ -49,13 +49,17 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
-*Čas* A `time_point` objektu.
+*čas*<br/>
+A `time_point` objektu.
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -84,9 +88,11 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-`Right` Vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -114,9 +120,11 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
-*Mult* celočíselnou hodnotu.
+*Mult*<br/>
+Celočíselná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -147,13 +155,17 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
-*Div* celočíselnou hodnotu.
+*div*<br/>
+Celočíselná hodnota.
 
-*Vlevo* vlevo `duration` objektu.
+*doleva*<br/>
+Levé straně `duration` objektu.
 
-*Pravé* vpravo `duration` objektu.
+*doprava*<br/>
+Vpravo `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -191,13 +203,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
-*Čas* A `time_point` objektu.
+*čas*<br/>
+A `time_point` objektu.
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -224,9 +240,11 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -252,9 +270,11 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -278,9 +298,11 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -306,9 +328,11 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -332,9 +356,11 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `duration` nebo `time_point` objektu.
+*doleva*<br/>
+Levé straně `duration` nebo `time_point` objektu.
 
-*Pravé* vpravo `duration` nebo `time_point` objektu.
+*doprava*<br/>
+Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -360,13 +386,17 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
-*Div* celočíselnou hodnotu.
+*div*<br/>
+Celočíselná hodnota.
 
-*Vlevo* vlevo `duration` objektu.
+*doleva*<br/>
+Levé straně `duration` objektu.
 
-*Pravé* vpravo `duration` objektu.
+*doprava*<br/>
+Vpravo `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

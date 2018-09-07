@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959469"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102587"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution – třída
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu výsledku, výchozí hodnota s plovoucí desetinnou čárkou **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*<br/>
+Typ výsledku, výchozí hodnota s plovoucí desetinnou čárkou **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*firstI* vstupní iterátor první prvek v rozsahu distribuce.
+*firstI*<br/>
+Vstupní iterátor první prvek v rozsahu distribuce.
 
-*lastI* vstupní iterátor po posledním prvku v rozsahu distribuce.
+*lastI*<br/>
+Vstupní iterátor po posledním prvku v rozsahu distribuce.
 
-*firstW* vstupní iterátor první prvek v rozsahu váhy.
+*firstW*<br/>
+Vstupní iterátor první prvek v rozsahu váhy.
 
-*intervaly* [initializer_list](../cpp/initializers.md) intervaly distribuce.
+*intervaly*<br/>
+[Initializer_list](../cpp/initializers.md) intervaly distribuce.
 
-*počet* počet prvků v rozsahu distribuce.
+*Počet*<br/>
+Počet prvků v rozsahu distribuce.
 
-*Hodnoty xMin* nejnižší hodnotu v rozsahu distribuce.
+*Hodnoty xMin*<br/>
+Nejnižší hodnotu v rozsahu distribuce.
 
-*xMax* nejvyšší číslo v rozsahu distribuce. Musí být větší než *hodnoty xmin*.
+*xmax*<br/>
+Nejvyšší číslo v rozsahu distribuce. Musí být větší než *hodnoty xmin*.
 
-*weightfunc* objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
+*weightfunc*<br/>
+Objekt, který představuje funkci pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
 
-*Parametr* parametr struktury použité k vytvoření distribuce.
+*Parametr*<br/>
+Struktura parametr použít k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 

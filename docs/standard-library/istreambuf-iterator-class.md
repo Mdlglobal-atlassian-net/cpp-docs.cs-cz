@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 381316cd7b05f62ba8b730c376e266e5fd0a70cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960587"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109278"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator – třída
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ, který představuje typ znaku pro istreambuf_iterator.
+*CharType*<br/>
+Typ, který představuje typ znaku pro istreambuf_iterator.
 
-*Vlastnosti* typ, který představuje typ znaku pro istreambuf_iterator. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
+*Osobnostní rysy*<br/>
+Typ, který představuje typ znaku pro istreambuf_iterator. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
 
 ## <a name="remarks"></a>Poznámky
 
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* iterátoru, pro který chcete zkontrolovat rovnosti.
+*doprava*<br/>
+Iterátor, pro který chcete zkontrolovat rovnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* vyrovnávací paměti vstupního toku, ke kterému `istreambuf_iterator` je připojeno.
+*strbuf*<br/>
+Vyrovnávací paměti vstupního toku, ke kterému `istreambuf_iterator` je připojeno.
 
-*_Istr* vstupní proud, do kterého `istreambuf_iterator` je připojeno.
+*_Istr*<br/>
+Vstupní proud, do kterého `istreambuf_iterator` je připojeno.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

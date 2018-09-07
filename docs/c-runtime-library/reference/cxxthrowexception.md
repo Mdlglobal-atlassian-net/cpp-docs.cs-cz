@@ -1,5 +1,5 @@
 ---
-title: _Cxxthrowexception – | Microsoft Docs
+title: _Cxxthrowexception – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3ab2994359e99e490422fbb2f11cf28a05d6e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7adf4c285646e6a3f4706a9a56995f4440cc1e8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395657"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103812"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
-Vytvoří záznam výjimky a volá běhové prostředí na zahájení zpracování výjimky.
+Vytvoří záznam o výjimce a volá běhové prostředí, abyste mohli začít zpracovávat výjimky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,18 +54,20 @@ extern "C" void __stdcall _CxxThrowException(
 
 ### <a name="parameters"></a>Parametry
 
-*pExceptionObject* objekt, který vygeneruje výjimku.
+*pExceptionObject*<br/>
+Objekt, který vygeneroval výjimku.
 
-*pThrowInfo* informace, které je nutné ke zpracování výjimky.
+*pThrowInfo*<br/>
+Informace, které je vyžadován ke zpracování výjimky.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato metoda je součástí pouze kompilátoru soubor, který kompilátor používá ke zpracování výjimek. Nevolejte metodu přímo z vašeho kódu.
+Tato metoda je součástí souboru jen pro kompilátor, kterou kompilátor používá ke zpracování výjimek. Nevolejte metodu přímo z uživatelského kódu.
 
 ## <a name="requirements"></a>Požadavky
 
 **Zdroj:** Throw.cpp
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: directory_entry – třída | Microsoft Docs
+title: directory_entry – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a55109683a18415638cacd9cd15dbcaa3164fc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846929"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105780"
 ---
 # <a name="directoryentry-class"></a>directory_entry – třída
 
-Popisuje objekt, který je vrácen rutinou `*X`, kde *X* je [directory_iterator](../standard-library/directory-iterator-class.md) nebo [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md).
+Popisuje objekt, který je vrácen `*X`, kde *X* je [directory_iterator –](../standard-library/directory-iterator-class.md) nebo [recursive_directory_iterator –](../standard-library/recursive-directory-iterator-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,11 +63,48 @@ class directory_entry;
 
 ## <a name="remarks"></a>Poznámky
 
-Třída uloží objekt typu [cestu](../standard-library/path-class.md). Uložených `path` může být instance [path – třída](../standard-library/path-class.md) nebo typu, který je odvozený od `path`. Také ukládá dvě [file_type](../standard-library/filesystem-enumerations.md#file_type) hodnoty; ten, který představuje známým o stavu názvu uloženého souboru a jiné, který představuje známým o stavu symbolický odkaz názvu souboru.
+Uloží objekt typu třídy [cesta](../standard-library/path-class.md). Uložený `path` může být instancí třídy [path – třída](../standard-library/path-class.md) nebo typu, který je odvozen z `path`. Také ukládá dvě [file_type](../standard-library/filesystem-enumerations.md#file_type) hodnoty; ten, který reprezentuje, co se jedná o stav názvu uloženého souboru a další vlastnost, která představuje, co se jedná o stav symbolického odkazu názvu souboru.
 
-Další informace a příklady kódu najdete v tématu [navigační systému souborů (C++)](../standard-library/file-system-navigation.md).
+Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="assign"></a>přiřazení
+### <a name="constructors"></a>Konstruktory
+
+|Konstruktor|Popis|
+|-|-|
+|[directory_entry –](#directory_entry)|Výchozí konstruktory chovat dle očekávání. Čtvrtý konstruktor inicializuje `mypath` k *pval*, `mystat` k *stat_arg*, a `mysymstat` k *symstat_arg*.|
+
+### <a name="member-functions"></a>Členské funkce
+
+|Členská funkce|Popis|
+|-|-|
+|[přiřazení](#assign)|Členská funkce přiřadí *pval* k `mypath`, *stat* k `mystat`, a *symstat* k `mysymstat`.|
+|[Cesta](#path)|Členská funkce vrátí `mypath`.|
+|[replace_filename](#replace_filename)|Členská funkce se nahradí `mypath` s `mypath.parent_path()`  /  *pval*, `mystat` s *stat_arg*, a `mysymstat` s *symstat_arg*|
+|[Stav](#status)|Obě členské funkce vrátí `mystat` může být nejprve změněn.|
+|[symlink_status](#symlink_status)|Obě členské funkce vrátí `mysymstat` může být nejprve změněn.|
+
+### <a name="operators"></a>Operátory
+
+|Operátor|Popis|
+|-|-|
+|[operator!=](#op_neq)|Nahradí prvky seznamu kopii jiného seznamu.|
+|[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
+|[operator==](#op_eq)|Vrátí `mypath == right.mypath`.|
+|[Operator <](#op_lt)|Vrátí `mypath < right.mypath`.|
+|[Operator < =](#op_lteq)|Vrátí `!(right < *this)`.|
+|[Operator >](#op_gt)|Vrátí `right < *this`.|
+|[operator>=](#op_gteq)|Vrátí `!(*this < right)`.|
+|[operátor – konstanta path_type &](#path_type)|Vrátí `mypath`.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<experimentální/systému souborů&gt;
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="assign"></a> přiřazení
+
+Členská funkce přiřadí *pval* k `mypath`, *stat_arg* k `mystat`, a *symstat_arg* k `mysymstat`.
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -75,9 +112,20 @@ void assign(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-Členská funkce pval přiřadí cesta, stat k mystat a symstat k mysymstat.
+### <a name="parameters"></a>Parametry
 
-## <a name="directoryentry"></a>directory_entry
+*pval*<br/>
+Cesta k názvu uloženého souboru.  
+
+*stat_arg*<br/>
+Stav názvu uloženého souboru.  
+
+*symstat_arg*<br/>
+Symbolický odkaz stav názvu uloženého souboru.  
+
+## <a name="directory_entry"></a> directory_entry –
+
+Výchozí konstruktory chovat dle očekávání. Čtvrtý konstruktor inicializuje `mypath` k *pval*, `mystat` k *stat_arg*, a `mysymstat` k *symstat_arg*.
 
 ```cpp
 directory_entry() = default;
@@ -88,82 +136,128 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-Uvedena konstruktory chovat podle očekávání. Čtvrtý konstruktor inicializuje cesta k pval, mystat k stat_arg a mysymstat k symstat_arg.
+### <a name="parameters"></a>Parametry
 
-## <a name="operator"></a>operator!=
+*pval*<br/>
+Cesta k názvu uloženého souboru.  
+
+*stat_arg*<br/>
+Stav názvu uloženého souboru.  
+
+*symstat_arg*<br/>
+Symbolický odkaz stav názvu uloženého souboru.  
+
+## <a name="op_neq"></a> Operator! =
+
+Členská funkce vrátí `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí! (* to == vpravo).
+### <a name="parameters"></a>Parametry
 
-## <a name="operator"></a>operator=
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="op_as"></a> operátor =
+
+Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.
 
 ```cpp
 directory_entry& operator=(const directory_entry&) = default;
 directory_entry& operator=(directory_entry&&) noexcept = default;
 ```
 
-Operátory přiřazení uvedena člen chovat podle očekávání.
+### <a name="parameters"></a>Parametry
 
-## <a name="operator"></a>operator==
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) kopírovaná do `directory_entry`.  
+
+## <a name="op_eq"></a> Operator ==
+
+Členská funkce vrátí `mypath == right.mypath`.
 
 ```cpp
 bool operator==(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí cesta == right.mypath.
+### <a name="parameters"></a>Parametry
 
-## <a name="operatorlt"></a>Operátor&lt;
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="op_lt"></a> – Operátor&lt;
+
+Členská funkce vrátí `mypath < right.mypath`.
 
 ```cpp
 bool operator<(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí cesta &lt; right.mypath.
+### <a name="parameters"></a>Parametry
 
-## <a name="operatorlt"></a>Operátor&lt;=
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="op_lteq"></a> – Operátor&lt;=
+
+Členská funkce vrátí `!(right < *this)`.
 
 ```cpp
 bool operator&lt;=(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí! (vpravo \< * to).
+### <a name="parameters"></a>Parametry
 
-## <a name="operatorgt"></a>Operátor&gt;
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="op_gt"></a> – Operátor&gt;
+
+Členská funkce vrátí `right < *this`.
 
 ```cpp
 bool operator&gt;(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí právo \< * to.
+### <a name="parameters"></a>Parametry
 
-## <a name="operatorgt"></a>Operátor&gt;=
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="op_gteq"></a> – Operátor&gt;=
+
+Členská funkce vrátí `!(*this < right)`.
 
 ```cpp
 bool operator&gt;=(const directory_entry& right) const noexcept;
 ```
 
-Členská funkce vrátí! (* to \< vpravo).
+### <a name="parameters"></a>Parametry
 
-## <a name="operator-const-pathtype"></a>operátor – konstanta path_type &
+*doprava*<br/>
+[Directory_entry –](../standard-library/directory-entry-class.md) porovnávané hodnotě `directory_entry`.  
+
+## <a name="path_type"></a> operátor – konstanta path_type &
+
+Členský operátor vrátí `mypath`.
 
 ```cpp
 operator const std::experimental::filesystem::path&() const;
 ```
 
-Operátor členů vrátí cesta.
+## <a name="path"></a> Cesta
 
-## <a name="path"></a>cesta
+Členská funkce vrátí `mypath`.
 
 ```cpp
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-Členská funkce vrátí cesta.
+## <a name="replace_filename"></a> replace_filename
 
-## <a name="replacefilename"></a>replace_filename
+Členská funkce se nahradí `mypath` s `mypath.parent_path()`  /  *pval*, `mystat` s *stat_arg*, a `mysymstat` s *symstat_arg*
 
 ```cpp
 void replace_filename(
@@ -172,37 +266,50 @@ void replace_filename(
     file_status symstat_arg = file_status());
 ```
 
-Členská funkce nahradí mypath.parent_path() cesta / pval mystat s stat_arg a mysymstat s symstat_arg
+### <a name="parameters"></a>Parametry
 
-## <a name="status"></a>stav
+*pval*<br/>
+Cesta k názvu uloženého souboru.  
+
+*stat_arg*<br/>
+Stav názvu uloženého souboru.  
+
+*symstat_arg*<br/>
+Symbolický odkaz stav názvu uloženého souboru.  
+
+## <a name="status"></a> Stav
+
+Obě členské funkce vrátí `mystat` může být nejprve změněn následujícím způsobem:
+
+1. Pokud `status_known(mystat)` pak Neprovádět žádnou akci.
+
+1. Jinak, pokud `!status_known(mysymstat) && !is_symlink(mysymstat)` pak `mystat = mysymstat`.
 
 ```cpp
 file_status status() const;
 file_status status(error_code& ec) const noexcept;
 ```
 
-Obě členské funkce vrátí mystat pravděpodobně nejprve změnit takto:
+### <a name="parameters"></a>Parametry
 
-1. Pokud status_known(mystat) pak neprovede žádnou akci.
+*ES*<br/>
+Stavový kód chyby.  
 
-1. Jinak pokud! status_known(mysymstat) & &! is_symlink(mysymstat) pak mystat = mysymstat.
+## <a name="symlink_status"></a> symlink_status –
 
-## <a name="symlinkstatus"></a>symlink_status
+Obě členské funkce vrátí `mysymstat` může být nejprve změněn následujícím způsobem: Pokud `status_known(mysymstat)` pak Neprovádět žádnou akci. V opačném případě `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
 file_status symlink_status(error_code& ec) const noexcept;
 ```
 
-Obě členské funkce vrátí mysymstat pravděpodobně nejprve změnit jako status_known(mysymstat) způsobem: Pokud potom nic nestane. Jinak hodnota mysymstat = symlink_status(mypval).
+### <a name="parameters"></a>Parametry
 
-## <a name="requirements"></a>Požadavky
+*ES*<br/>
+Stavový kód chyby.  
 
-**Záhlaví:** \<experimentální nebo systému souborů&gt;
+## <a name="see-also"></a>Viz také:
 
-**Namespace:** std::experimental::filesystem
-
-## <a name="see-also"></a>Viz také
-
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<Systém souborů&gt;](../standard-library/filesystem.md)<br/>
+[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)  
+[\<systém souborů&gt;](../standard-library/filesystem.md)  
