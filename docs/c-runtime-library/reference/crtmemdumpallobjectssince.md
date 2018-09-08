@@ -1,5 +1,5 @@
 ---
-title: _Crtmemdumpallobjectssince – | Microsoft Docs
+title: _CrtMemDumpAllObjectsSince | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396866"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100376"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
-Vypíše informace o objektech v haldě od začátku spuštění programu, nebo ze stavu zadaného haldy (pouze ladicí verze).
+Vypíše informace o objektech v haldě od začátku spuštění programu nebo z zadaný stav haldy (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,17 +53,18 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav* ukazatel na stavu haldy zahájíte vypsání z nebo **NULL**.
+*Stav*<br/>
+Ukazatel na stav haldy zahájíte výpis z nebo **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtmemdumpallobjectssince –** funkce výpisy ladění informace hlavičky objektů přidělené v haldě ve formě uživatelem čitelný. Informace o výpisu lze aplikace ke sledování přidělování a zjišťování problémů paměti. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtmemdumpallobjectssince –** jsou odebrány při předběžném zpracování.
+**_CrtMemDumpAllObjectsSince** funkce Vypíše informace hlavičky ladění objektů, které jsou přiděleny do haldy ve formě čitelné pro uživatele. Informace z výpisu paměti lze aplikaci sledovat přidělování a vyhledávat problémy s pamětí. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtMemDumpAllObjectsSince** odstraněna během předběžného zpracování.
 
-**_Crtmemdumpallobjectssince –** používá hodnotu *stavu* parametr k určení, kam inicializace operace výpisu. Zahájíte vypsání ze zadaného haldy stavu, *stavu* parametr musí být ukazatel na **_crtmemstate –** struktura, která má byla vyplněna objektem [_crtmemcheckpoint –](crtmemcheckpoint.md) před **_Crtmemdumpallobjectssince –** byla volána. Když *stavu* je **NULL**, funkce začne výpisu od začátku spuštění programu.
+**_CrtMemDumpAllObjectsSince** používá hodnotu *stavu* parametr k určení, kam se zahájit operaci výpisu stavu systému. Začněte výpis z zadaný stav haldy, *stavu* parametr musí být ukazatel na **_CrtMemState** struktura, která byla vyplněna pomocí [_crtmemcheckpoint –](crtmemcheckpoint.md) před **_CrtMemDumpAllObjectsSince** byla volána. Když *stavu* je **NULL**, funkce začíná s výpisem paměti od samého začátku provádění programu.
 
-Pokud je aplikace nainstalována funkce háku výpisu voláním [_crtsetdumpclient –](crtsetdumpclient.md), potom pokaždé, když **_crtmemdumpallobjectssince –** Vypíše informace o **_client_block –** typ bloku, zavolá funkci výpisu zadané aplikace. Ve výchozím nastavení, interní bloky C Runtime (**_crt_block –**) nejsou zahrnuty do operace výpisu paměti. [_Crtsetdbgflag –](crtsetdbgflag.md) funkce slouží k zapnutí **_crtdbg_check_crt_df –** bit z **_crtdbgflag –** zahrnout tyto bloky. Kromě toho bloky označen jako vydání nebo ignorovat (**_free_block –**, **_ignore_block –**) nejsou součástí výpis stavu paměti.
+Pokud aplikace má nainstalovanou funkci připojení s výpisem paměti pomocí volání [_CrtSetDumpClient](crtsetdumpclient.md), pak pokaždé, když **_CrtMemDumpAllObjectsSince** Vypíše informace o **_CLIENT_BLOCK** typ bloku, volá funkci poskytované aplikací s výpisem paměti. Ve výchozím nastavení vnitřní bloky C run-time (**_CRT_BLOCK**) nejsou součástí operací výpisu paměti. [_CrtSetDbgFlag](crtsetdbgflag.md) funkce je možné zapnout **_CRTDBG_CHECK_CRT_DF** bit z **_crtDbgFlag** pro zahrnutí těchto bloků. Kromě toho bloky označené jako uvolněn nebo ignorovat (**_FREE_BLOCK**, **_IGNORE_BLOCK**) nejsou součástí výpis stavu paměti.
 
-Další informace o stavu funkce hald a **_crtmemstate –** struktury najdete v tématu [funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o funkcích stavu haldy a **_CrtMemState** struktury, přečtěte si téma [funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,17 +72,17 @@ Další informace o stavu funkce hald a **_crtmemstate –** struktury najdete v
 |-------------|---------------------|
 |**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
-Příklad, jak pomocí **_crtmemdumpallobjectssince –**, najdete v části [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Pro ukázku toho, jak používat **_CrtMemDumpAllObjectsSince**, naleznete v tématu [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>

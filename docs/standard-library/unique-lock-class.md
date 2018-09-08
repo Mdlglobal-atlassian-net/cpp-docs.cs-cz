@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956473"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110133"
 ---
 # <a name="uniquelock-class"></a>unique_lock – třída
 
@@ -76,7 +76,7 @@ Interně `unique_lock` uchovává ukazatel na přidruženou `mutex` objektu a **
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-`unique_lock`
+*unique_lock –*<br/>
 
 ## <a name="requirements"></a>Požadavky
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>Parametry
 
 *Jiné*  
- A `unique_lock` objektu.
+A `unique_lock` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>Parametry
 
 *Jiné*  
- A `unique_lock` objektu.
+A `unique_lock` objektu.
 
 ## <a name="try_lock"></a>  try_lock –
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>Parametry
 
 *Rel_time*  
- A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
+A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>Parametry
 
 *Abs_time*  
- Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
+Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>Parametry
 
 *Mtx*  
- Typ objektu mutex.
+Typ objektu mutex.
 
 *Rel_time*  
- A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
+A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
 
 *Abs_time*  
- Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
+Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
 
 *Jiné*  
- A `unique_lock` objektu.
+A `unique_lock` objektu.
 
 ### <a name="remarks"></a>Poznámky
 

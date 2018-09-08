@@ -1,5 +1,5 @@
 ---
-title: srand – | Microsoft Docs
+title: srand – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/02/2018
 ms.technology:
@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107523"
 ---
 # <a name="srand"></a>srand
 
-Nastaví počáteční počáteční hodnoty pro generátor pseudonáhodných čísel používané **rand –** funkce.
+Nastaví počáteční hodnotu seed pro generátor pseudonáhodných čísel používaný **rand** funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,11 +59,12 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*počáteční hodnoty* počáteční hodnoty pro generování pseudonáhodných čísel
+*Počáteční hodnota*<br/>
+Počáteční hodnota pro generování pseudonáhodných čísel
 
 ## <a name="remarks"></a>Poznámky
 
-**Srand –** funkce nastavuje počáteční bod pro generování řady pseudonáhodných celých čísel v aktuální vlákno. Chcete-li znovu inicializovat generátoru pro vytvoření stejné pořadí výsledků, volejte **srand –** funkce a používat stejné *počáteční hodnoty* argument znovu. Žádné jiné hodnoty pro *počáteční hodnoty* nastaví generátor pro různé výchozí bod v pseudonáhodných pořadí. **rand –** načte pseudonáhodných čísel, která se generují. Volání metody **rand –** před voláním jakékoli **srand –** generuje stejném pořadí jako volání **srand –** s *počáteční hodnoty* předány jako 1.
+**Srand –** funkce nastaví výchozí bod pro generování posloupnosti pseudonáhodných celých čísel v aktuálním vlákně. Chcete-li znovu inicializovat generátor vytvořit stejnou sekvenci výsledků, zavolejte **srand –** fungovat a využívat stejné *počáteční hodnoty* argument znovu. Jakákoli jiná hodnota parametru *počáteční hodnoty* nastaví generátor na jiný výchozí bod v pseudonáhodné posloupnosti. **rand** načte pseudonáhodná čísla, která jsou generována. Volání **rand** před voláním **srand –** vygeneruje stejnou posloupnost jako volání funkce **srand –** s *počáteční hodnoty* hodnotou 1 předanou parametru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,13 +72,13 @@ void srand(
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rand –](rand.md).
+Podívejte se na příklad pro [rand](rand.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

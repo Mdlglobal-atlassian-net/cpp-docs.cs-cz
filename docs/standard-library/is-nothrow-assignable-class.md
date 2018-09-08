@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36d078c567f3ca74fb3552cbe728076445dd6690
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965412"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110081"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable – třída
 
@@ -37,9 +37,11 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*K* typu objektu, která obdrží přiřazení.
+*k*<br/>
+Typ objektu, která obdrží přiřazení.
 
-*Z* typu objektu, který obsahuje hodnotu.
+*z*<br/>
+Typ objektu, který obsahuje hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 

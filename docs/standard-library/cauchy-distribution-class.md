@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3e3b61de731b518d965d3b7d1473489f6e863f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100855"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution – třída
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*<br/>
+Výchozí hodnota typu s plovoucí desetinnou čárkou výsledku **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*URNG* jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*URNG*<br/>
+Jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -259,11 +261,14 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a* `a` distribuční parametr.
+*a*<br/>
+`a` Parametru distribuce.
 
-*b* `b` parametru distribuce.
+*b*<br/>
+`b` Parametru distribuce.
 
-*Parametr* `param_type` struktura používaná k vytvoření distribuce.
+*Parametr*<br/>
+`param_type` Struktura používaná k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -291,11 +296,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a* `a` distribuční parametr.
+*a*<br/>
+`a` Parametru distribuce.
 
-*b* `b` parametru distribuce.
+*b*<br/>
+`b` Parametru distribuce.
 
-*správné* `param_type` objekt k porovnání s tím.
+*doprava*<br/>
+`param_type` Objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky
 

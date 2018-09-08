@@ -1,5 +1,5 @@
 ---
-title: setbuf – | Microsoft Docs
+title: setbuf – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407311"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100350"
 ---
 # <a name="setbuf"></a>setbuf
 
-Ovládací prvky datového proudu do vyrovnávací paměti. Tato funkce je zastaralé; použít [setvbuf –](setvbuf.md) místo.
+Ovládací prvky datového proudu do vyrovnávací paměti. Tato funkce je zastaralá; použít [setvbuf –](setvbuf.md) místo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,15 +54,17 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*datový proud* ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
-*vyrovnávací paměť* uživatel přidělené vyrovnávací paměti.
+*Vyrovnávací paměti*<br/>
+Uživatel přidělené vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-**Setbuf –** funkce ukládání do vyrovnávací paměti pro ovládací prvky *datového proudu*. *Datového proudu* argument musí odkazovat na soubor otevřete, který nebyl číst nebo zapisovat. Pokud *vyrovnávací paměti* argument je **NULL**, datový proud je zrušení ve vyrovnávací paměti. Pokud ne, vyrovnávací paměti musí odkazovat na pole znaků délky **bufsiz –**, kde **bufsiz –** je velikost vyrovnávací paměti, jak jsou definovány v STDIO. H. Uživatelem zadanou vyrovnávací paměť, místo vyrovnávací paměti výchozí přidělená systémem pro daný datový proud, se používá pro vstupně-výstupní operace ukládání do vyrovnávací paměti. **Stderr** datový proud je zrušení ve vyrovnávací paměti ve výchozím nastavení, ale můžete použít **setbuf –** přiřadit vyrovnávací paměti do **stderr**.
+**Setbuf –** ovládacích prvků do vyrovnávací paměti pro funkci *stream*. *Stream* argument musí odkazovat na otevřený soubor, který nebyl číst nebo zapisovat. Pokud *vyrovnávací paměti* argument je **NULL**, je ve špatném vyrovnávací paměti datového proudu. Pokud ne, vyrovnávací paměti musí odkazovat na pole znaků o délce **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak jsou definovány v STDIO. H. Uživatel zadal vyrovnávací paměť, místo výchozí systému přidělené vyrovnávací paměti pro daný datový proud, se používá pro vstupně-výstupní operace ukládání do vyrovnávací paměti. **Stderr** zrušení ve vyrovnávací paměti ve výchozím nastavení je ale můžete použít **setbuf –** přiřadit vyrovnávací paměti do **stderr**.
 
-**setbuf –** nahradila [setvbuf –](setvbuf.md), což je upřednostňovaný rutiny pro nový kód. **setbuf –** se zachovává kvůli kompatibilitě s existujícího kódu.
+**setbuf –** nahradila ji [setvbuf –](setvbuf.md), což je upřednostňovaný rutiny pro nový kód. **setbuf –** je zachován z důvodu kompatibility s existujícím kódem.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,7 +72,7 @@ void setbuf(
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -111,9 +113,9 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

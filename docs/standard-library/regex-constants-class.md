@@ -1,5 +1,5 @@
 ---
-title: regex_constants – třída | Microsoft Docs
+title: regex_constants – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -92,12 +92,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865751"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107516"
 ---
 # <a name="regexconstants-class"></a>regex_constants – třída
 
@@ -110,22 +110,22 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Obor názvů `regex_constants` zapouzdří několik typů příznak a jejich přidružené příznak hodnoty.
+Obor názvů `regex_constants` zapouzdřuje několik typů příznaků a jejich přidružené hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regex >
+**Záhlaví:** \<regulární výraz >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="error_type"></a>  regex_constants::error_type
 
-Příznaky pro zasílání zpráv o chybách syntaxi regulárního výrazu.
+Příznaky pro hlášení chyb syntaxe regulárního výrazu.
 
 ```cpp
 enum error_type
@@ -150,43 +150,43 @@ enum error_type
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je výčtového typu, která popisuje objekt, který můžou obsahovat příznaky chyby. Příznak odlišné hodnoty jsou:
+Typ je výčtového typu, který popisuje objekt, který může obsahovat chyby příznaky. Příznak odlišné hodnoty jsou:
 
-`error_backref` --výraz obsahovala neplatný odkaz na pozadí
+`error_backref` --výraz obsahovala neplatný zpětný odkaz
 
-`error_badbrace` --výraz obsažené neplatný počet ve výrazu {}
+`error_badbrace` – výraz obsahuje neplatný počet ve výrazu {}
 
-`error_badrepeat` – výraz opakování (jeden z ' *', '', '+', ' {' ve většině případů,) nebyla před sebou výrazu
+`error_badrepeat` --výrazu opakování (jednu z "*", ", '+', ' {" ve většině případů) nebyla před výrazem
 
-`error_brace` --výraz obsažené neodpovídajícím ' {' nebo '}'
+`error_brace` --obsažené žádným výraz ' {"nebo"} "
 
-`error_brack` --výraz obsažené neodpovídajícím ' [' nebo ']'
+`error_brack` – výraz obsažené žádným ' [' nebo ']'
 
-`error_collate` --výraz obsahovala neplatný název elementu řazení
+`error_collate` – výraz obsahuje neplatný název kolační prvek
 
-`error_complexity` --Pokus o shody se nezdařila, protože byl příliš složitý.
+`error_complexity` --Pokus o shodu se nezdařila, protože byl příliš složitý.
 
-`error_ctype` --výraz obsažené název neplatný znak – třída
+`error_ctype` --výraz obsažené názvu neplatný znak třídy
 
-`error_escape` --výraz obsažené neplatná řídicí sekvence
+`error_escape` --výraz obsahovala neplatnou řídicí sekvenci
 
-`error_paren` --výraz obsažené neodpovídajícím '(' nebo').
+`error_paren` --výraz obsažené žádným '(' nebo')'
 
-`error_parse` – výrazu se nezdařila
+`error_parse` – Analýza výrazu se nezdařila
 
-`error_range` --výraz obsažené specifikátor rozsah neplatný znak
+`error_range` --výraz obsažených specifikátor rozsahu je neplatný znak
 
-`error_space` --Analýza regulární výraz se nezdařila, protože nebyly dostatek prostředků k dispozici
+`error_space` --parsování regulárního výrazu se nezdařila, protože nebyl dostatek prostředků k dispozici
 
-`error_stack` --Pokus o shody se nezdařila, protože nebyl k dispozici dostatek paměti k dispozici
+`error_stack` --Pokus o shodu se nezdařila, protože nebyl k dispozici dostatek paměti k dispozici
 
-`error_syntax` --Analýza na chybu syntaxe se nezdařila.
+`error_syntax` --nepovedlo se parsovat Chyba syntaxe
 
-`error_backref` --výraz obsahovala neplatný odkaz na pozadí
+`error_backref` --výraz obsahovala neplatný zpětný odkaz
 
 ## <a name="match_flag_type"></a>  regex_constants::match_flag_type
 
-Příznaky pro regulární výraz odpovídající možnosti.
+Příznaky pro porovnávání možnosti regulárních výrazů.
 
 ```cpp
 enum match_flag_type
@@ -210,37 +210,37 @@ enum match_flag_type
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je typ bitová maska, který popisuje možnosti, které se používají při porovnávání text pořadí proti regulární výraz a formát flags má být použit při nahrazování textu. Možnosti mohou být kombinovány s `|`.
+Typ je typ bitová maska, která popisuje možnosti, jak se dá použít při porovnávání posloupnost textu regulárního výrazu a formát příznaky, které se dá použít při nahrazování textu. Možnosti lze kombinovat s `|`.
 
-Porovnání možnosti jsou:
+Možnosti porovnání jsou následující:
 
-`match_default`
+*match_default*<br/>
 
-`match_not_bol` --není považovat za první pozici v pořadí cíl začátek řádku
+`match_not_bol` --nelze považovat za první pozice v cílové sekvenci na začátek řádku
 
-`match_not_eol` --pozice minulosti the-end v pořadí cíl není považovat za konec řádku
+`match_not_eol` --není považovat za posledních koncem pozice v cílové sekvenci konce řádku
 
-`match_not_bow` --není považovat za první pozici v pořadí cíl začátku slova
+`match_not_bow` --nelze považovat za první pozice v cílové sekvenci začátku slova
 
-`match_not_eow` --není považovat za pozice minulosti the-end v pořadí target konci slova
+`match_not_eow` --nelze považovat za posledních koncem pozice v cílové sekvenci konci slova
 
-`match_any` – Pokud více než jednu shodu je možné je přijatelné všechny shody
+`match_any` --Pokud více než jedna shoda je možné je přijatelné vyhledání jakékoli shody
 
-`match_not_null` --nebude pracovat s prázdnou dalším jako shoda
+`match_not_null` --nelze považovat za prázdný dílčí sekvenci odpovídající
 
-`match_continuous` --Nevyhledávat odpovídá jinak než na začátek pořadí cíl
+`match_continuous` --Nevyhledávat odpovídá jiné než na začátku cílové sekvence
 
-`match_prev_avail` -- `--first` je platné iterator; Ignorovat `match_not_bol` a `match_not_bow` -li nastavit
+`match_prev_avail` -- `--first` je platný iterátor; Ignorovat `match_not_bol` a `match_not_bow` -li nastavit
 
-Formát příznaky jsou:
+Příznaky formátu jsou:
 
-`format_default` – pomocí pravidel ECMAScript formátu
+`format_default` – Použijte pravidla formátu ECMAScript
 
-`format_sed` – pomocí pravidel menšit formátu
+`format_sed` – Použijte pravidla formátu sed
 
 `format_no_copy` --Nekopírovat text, který se neshoduje s regulárním výrazem
 
-`format_first_only` --Nevyhledávat odpovídá po první
+`format_first_only` --Nevyhledávat shody po první z nich
 
 ## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
 
@@ -266,33 +266,33 @@ enum syntax_option_type
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je typ bitová maska, který popisuje specifikátory jazyk a syntaxe modifikátory má být použit při kompilování regulární výraz. Možnosti mohou být kombinovány s `|`. Specifikátor více než jeden jazyk je třeba použít současně.
+Typ je typ bitová maska, která popisuje specifikátory jazyka a modifikátory syntaxe se dá použít při kompilování regulárního výrazu. Možnosti lze kombinovat s `|`. Současně by měl použít specifikátor více než jeden jazyk.
 
-Specifikátory jazyk jsou:
+Specifikátory jazyka jsou:
 
-`ECMAScript` --zkompilovat jako ECMAScript
+`ECMAScript` --zkompiluje kód jako ECMAScript
 
-`basic` --zkompilovat jako BRE
+`basic` --zkompiluje kód jako BRE
 
-`extended` --zkompilovat jako ERE
+`extended` --zkompiluje kód jako ERE
 
-`awk` --zkompilovat jako awk
+`awk` --zkompiluje kód jako awk
 
-`grep` --zkompilovat jako grep
+`grep` --zkompiluje kód jako grep
 
-`egrep` --zkompilovat jako egrep
+`egrep` --zkompiluje kód jako egrep
 
-Modifikátory syntaxe je:
+Modifikátory syntaxe jsou:
 
-`icase` – Zkontrolujte odpovídá velká a malá písmena
+`icase` – Ujistěte se, odpovídá velká a malá písmena
 
-`nosubs` – implementaton nemusí udržování přehledu o obsah zachycení skupiny
+`nosubs` – implementaton nemusí udržovat přehled o obsah skupin zachycení
 
-`optimize` – implementace by měl zdůraznil rychlost odpovídajících spíš než rychlosti kompilace regulárních výrazů
+`optimize` --implementace, měli byste zdůraznit rychlost porovnávání spíše než rychlost regulárního výrazu
 
-`collate` – Zkontrolujte odpovídá konkrétní národní prostředí
+`collate` – Zkontrolujte odpovídá citlivé na národní prostředí
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_error – třída](../standard-library/regex-error-class.md)<br/>
@@ -301,4 +301,4 @@ Modifikátory syntaxe je:
 [\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
-[\<regulární výraz > Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
+[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>

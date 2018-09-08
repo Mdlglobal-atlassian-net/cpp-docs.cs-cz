@@ -1,5 +1,5 @@
 ---
-title: directory_iterator – třída | Microsoft Docs
+title: directory_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,26 +35,26 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46e4d8fc7b59f8b4919a7e36a85f29f626aa80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105201"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator – třída
 
-Popisuje vstupní iterator, který pořadí prostřednictvím názvy souborů v adresáři. Pro iterovat X, výraz * X vyhodnocen jako objekt directory_entry – třída, která zabalí název souboru a nic známé o jeho stav.
+Popisuje vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři. Iterátor výraz X * X vyhodnotí na objekt directory_entry – třída, která obaluje název souboru a nic vědět o jeho stavu.
 
-Třída ukládá objekt zadejte cestu, volat zde adresář pro účely budeme, který představuje název adresář, který má být sekvencování, a objekt typu directory_entry názvem zde myentry, který představuje aktuální název souboru v adresáři pořadí. Vytvoření objektu výchozí sestavený directory_entry typ má pathname prázdný adresář a představuje iterator koncová sekvence.
+Třída ukládá objekt typ cesty, volá `mydir` zde pro účely budeme, která představuje název adresář, který má být sekvencování a názvem objektu directory_entry – typ `myentry` tady, který představuje aktuální název souboru v adresáři pořadí. Vytvoření objektu výchozí vyrobený directory_entry – typ má prázdnou `mydir` cesta a představuje iterátor koncová sekvence.
 
-Například uděleno adresáři abc s def položky a ghi, kód:
+Mějme například adresář abc def položky a ghi, kód:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-navštíví s argumenty path("abc/def") a path("abc/ghi") volání.
+zavolá `visit` s argumenty path("abc/def") a path("abc/ghi").
 
-Další informace a příklady kódu najdete v tématu [navigační systému souborů (C++)](../standard-library/file-system-navigation.md).
+Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,7 +62,40 @@ Další informace a příklady kódu najdete v tématu [navigační systému sou
 class directory_iterator;
 ```
 
-## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator
+### <a name="constructors"></a>Konstruktory
+
+|Konstruktor|Popis|
+|-|-|
+|[directory_iterator –](#directory_iterator)|Sestaví vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři.|
+
+### <a name="member-functions"></a>Členské funkce
+
+|Členská funkce|Popis|
+|-|-|
+|[Přírůstek](#increment)|Funkce se pokusí o přechodu na další název souboru v adresáři.|
+
+### <a name="operators"></a>Operátory
+
+|Operátor|Popis|
+|-|-|
+|[operator!=](#op_neq)|Vrátí `!(*this == right)`.|
+|[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
+|[operator==](#op_eq)|Vrátí **true** pouze tehdy, pokud obě `*this` a *správné* koncová sekvence iterátory nebo obojí jsou není end z pořadí – iterátory.|
+|[Operator *](#op_star)|Vrátí `myentry`.|
+|[Operator ->](#op_cast)|Vrátí `&**this`.|
+|[Operator ++](#op_increment)|Volání `increment()`, vrátí `*this`, nebo vytvoří kopii tohoto objektu, volání `increment()`, pak vrátí kopii.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<experimentální/filesystem >
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
+
+První konstruktor vytvoří iterátor koncová sekvence. Druhý a třetí konstruktor úložiště *pval* v `mydir`, pak se pokusíte otevřít a přečíst si `mydir` jako adresář. Pokud úspěšné, jsou v nich uložené první název souboru v adresáři v `myentry`; v opačném případě vytvářejí iterátor koncová sekvence.
+
+Výchozí construtors chovat dle očekávání.
 
 ```cpp
 directory_iterator() noexcept;
@@ -73,75 +106,96 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-První konstruktoru vytvoří iterovat koncová sekvence. Druhý a třetí konstruktory uložit pval adresář a potom pokusí otevřít a přečíst si adresář jako adresář. V případě úspěšného uložení první název souboru v adresáři v myentry; v opačném případě vytvářejí iterovat koncová sekvence.
+### <a name="parameters"></a>Parametry
 
-Uvedena construtors chovat podle očekávání.
+*pval*<br/>
+Cesta k názvu uloženého souboru.
 
-## <a name="directoryiteratorincrement"></a>directory_iterator::Increment –
+*ES*<br/>
+Stavový kód chyby. 
+
+*directory_iterator –*<br/>
+Uložený objekt.
+
+## <a name="increment"></a> directory_iterator::Increment –
+
+Funkce se pokusí o přechodu na další název souboru v adresáři. Pokud úspěšně, uloží tento název souboru v `myentry`; v opačném případě vyvolá iterátor koncová sekvence.
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-Funkce se pokusí přechodu na další název souboru v adresáři. V případě úspěchu se ukládá v myentry; tento název souboru jinak vyvolá iterovat koncová sekvence.
+## <a name="op_neq"></a> directory_iterator::Operator! =
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::Operator! =
+Členský operátor vrátí `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_iterator& right) const;
 ```
 
-Vrátí člen operátor! (* to == vpravo).
+### <a name="parameters"></a>Parametry
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator=
+*doprava*<br/>
+[Directory_iterator –](../standard-library/directory-iterator-class.md) porovnávané hodnotě `directory_iterator`.
+
+## <a name="op_as"></a> directory_iterator::Operator =
+
+Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.
 
 ```cpp
 directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-Operátory přiřazení uvedena člen chovat podle očekávání.
+### <a name="parameters"></a>Parametry
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator==
+*doprava*<br/>
+[Directory_iterator –](../standard-library/directory-iterator-class.md) kopírovaná do `directory_iterator`.
+
+## <a name="op_eq"></a> directory_iterator::Operator ==
+
+Členský operátor vrátí **true** pouze tehdy, pokud obě `*this` a *správné* koncová sekvence iterátory nebo obojí jsou není end z pořadí – iterátory.
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-Vrátí hodnotu true, pouze pokud obě člen operátor * to a pravém jsou koncová sekvence iterátory nebo obě jsou není koncoví z – pořadí – iterátory.
+### <a name="parameters"></a>Parametry
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::Operator *
+*doprava*<br/>
+[Directory_iterator –](../standard-library/directory-iterator-class.md) porovnávané hodnotě `directory_iterator`.
+
+## <a name="op_star"></a> directory_iterator::Operator *
+
+Členský operátor vrátí `myentry`.
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-Operátor členů vrátí myentry.
+## <a name="op_cast"></a> directory_iterator::Operator ->
 
-## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->
+Členská funkce vrátí `&**this`.
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-Členské funkce vrátí hodnotu & ** to.
+## <a name="op_increment"></a> directory_iterator::Operator ++
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator++
+První volání členských funkcí `increment()`, vrátí `*this`. Druhá členská funkce vytváří kopii objektu volání `increment()`, pak vrátí kopii.
 
 ```cpp
 directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-První člen funkce volá increment() pak vrátí * to. Druhý členská funkce vytvoří kopii objektu, volá increment() a pak vrátí kopie.
+### <a name="parameters"></a>Parametry
 
-## <a name="requirements"></a>Požadavky
+*int*<br/>
+Počet přírůstků.
 
-**Záhlaví:** \<experimentální/filesystem >
-
-**Namespace:** std::experimental::filesystem
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<FileSystem >](../standard-library/filesystem.md)<br/>

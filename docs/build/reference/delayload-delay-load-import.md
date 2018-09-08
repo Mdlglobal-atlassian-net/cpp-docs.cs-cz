@@ -1,5 +1,5 @@
 ---
-title: -DELAYLOAD (Import odloženého načtení) | Microsoft Docs
+title: -DELAYLOAD (Import odloženého načtení) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,39 +20,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d65caa8a0ea140f93bf156e3c14a85232e6e56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372253"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103733"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (import odloženého načtení)
-```  
-/DELAYLOAD:dllname  
-```  
-  
-## <a name="parameters"></a>Parametry  
- `dllname`  
- Název knihovny DLL, kterou chcete zpoždění zatížení.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /DELAYLOAD způsobí, že knihovnu DLL, která je zadána `dllname` načíst pouze při prvním volání programem tak, aby funkce v této knihovně DLL. Další informace najdete v tématu [podpora Linkeru pro knihovny DLL Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Tuto možnost můžete podle potřeby několikrát k určení tolik knihovny DLL a zvolte. Při propojení vašeho programu nebo můžete implementovat vlastní pomocné funkce zpoždění zatížení, je nutné použít Delayimp.lib.  
-  
- [/DELAY](../../build/reference/delay-delay-load-import-settings.md) možnost určuje vazby a načítání možnosti pro každou knihovnu DLL načtené se zpožděním.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  V **Linkeru** složky, vyberte **vstup** stránku vlastností.  
-  
-3.  Změnit **DLL s odloženým načtením** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+> **/ DELAYLOAD:**_názevsouboru_
+
+## <a name="parameters"></a>Parametry
+
+*NázevSouboru*<br/>
+Název knihovny DLL, kterou chcete zpožděně načíst.
+
+## <a name="remarks"></a>Poznámky
+
+Možnost/delayload způsobí, že knihovna DLL, která je určená `dllname` načtení pouze při prvním volání funkce v této knihovně DLL programem. Další informace najdete v tématu [podpora Linkeru pro knihovny DLL Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Tuto možnost můžete použít tolikrát, kolikrát podle potřeby k určení tolika knihoven DLL dle libosti. Delayimp.lib je třeba použít při propojení programu nebo můžete implementovat vlastní odloženě zaváděné pomocné funkce.
+
+[/DELAY](../../build/reference/delay-delay-load-import-settings.md) určuje možnost vazby a načítání pro každou knihovnu DLL načtené se zpožděním.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+2. V **Linkeru** složky, vyberte **vstup** stránku vlastností.
+
+3. Upravit **DLL s odloženým načtením** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
+[Možnosti linkeru](../../build/reference/linker-options.md)

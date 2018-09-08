@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208673"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110186"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;komplexní&gt; operátory
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* komplexního čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*doleva*<br/>
+Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
 
-*správné* komplexního čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*doprava*<br/>
+Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
+*doleva*<br/>
+První dva komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
 
-*správné* druhé dvě komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
+*doprava*<br/>
+Druhé dvě komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
+*doleva*<br/>
+První dva komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
 
-*správné* druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
+*doprava*<br/>
+Druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
+*doleva*<br/>
+První dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
 
-*správné* druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
+*doprava*<br/>
+Druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* komplexní číslo nebo číslo, které je parametr typu pro komplexní čísla, která je čítač rozdělit podle jmenovatel s / operace.
+*doleva*<br/>
+Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je čítač rozdělit podle jmenovatel s / operace.
 
-*správné* komplexní číslo nebo číslo, které je parametr typu pro komplexní čísla, která je jmenovatel pro použití se má dělit dělenec s / operace.
+*doprava*<br/>
+Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je jmenovatel pro použití se má dělit dělenec s / operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr* výstupní datový proud, do kterého se zadá komplexního čísla.
+*Ostr*<br/>
+Výstupní datový proud, do kterého se zadá komplexního čísla.
 
-*správné* komplexního čísla se zapisují do výstupního datového proudu
+*doprava*<br/>
+Komplexní čísla se zapisují do výstupního datového proudu
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* komplexního čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*doleva*<br/>
+Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
 
-*správné* komplexního čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*doprava*<br/>
+Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*Istr* vstupní datový proud, ze které je extrahován komplexního čísla.
+*Istr*<br/>
+Vstupní datový proud, ze které je extrahován komplexního čísla.
 
-*správné* komplexního čísla rozbalený ze vstupního datového proudu.
+*doprava*<br/>
+Komplexní čísla, rozbalený ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

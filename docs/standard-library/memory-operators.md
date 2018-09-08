@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954232"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100467"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;paměť&gt; operátory
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* mezi objekty, které chcete otestovat nerovnost.
+*doleva*<br/>
+Jeden z objektů má být testována nerovnost.
 
-*správné* mezi objekty, které chcete otestovat nerovnost.
+*doprava*<br/>
+Jeden z objektů má být testována nerovnost.
 
-*Ty1* typ řízený vlevo sdílený ukazatel.
+*Ty1*<br/>
+Typ řízený levé sdílený ukazatel.
 
-*Ty2* typ řízený vpravo sdílený ukazatel.
+*Ty2*<br/>
+Typ řízený správné sdílený ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* mezi objekty, které chcete být testovány z hlediska rovnosti.
+*doleva*<br/>
+Jeden z objektů, které chcete testovat rovnost.
 
-*správné* mezi objekty, které chcete být testovány z hlediska rovnosti.
+*doprava*<br/>
+Jeden z objektů, které chcete testovat rovnost.
 
-*Ty1* typ řízený vlevo sdílený ukazatel.
+*Ty1*<br/>
+Typ řízený levé sdílený ukazatel.
 
-*Ty2* typ řízený vpravo sdílený ukazatel.
+*Ty2*<br/>
+Typ řízený správné sdílený ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* jeden z objektů, který se má porovnat.
+*doleva*<br/>
+Jeden z objektů, který se má porovnat.
 
-*správné* jeden z objektů, který se má porovnat.
+*doprava*<br/>
+Jeden z objektů, který se má porovnat.
 
-*Ty1* typ řízený vlevo sdílený ukazatel.
+*Ty1*<br/>
+Typ řízený levé sdílený ukazatel.
 
-*Ty2* typ řízený vpravo sdílený ukazatel.
+*Ty2*<br/>
+Typ řízený správné sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* jeden z objektů, který se má porovnat.
+*doleva*<br/>
+Jeden z objektů, který se má porovnat.
 
-*správné* jeden z objektů, který se má porovnat.
+*doprava*<br/>
+Jeden z objektů, který se má porovnat.
 
-*Ty1* typ řízený ukazatelem vlevo.
+*Ty1*<br/>
+Typ řízený ukazatelem vlevo.
 
-*Ty2* typ řízený ukazatelem vpravo.
+*Ty2*<br/>
+Typ řízený ukazatelem správné.
 
 ## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* jeden z objektů, který se má porovnat.
+*doleva*<br/>
+Jeden z objektů, který se má porovnat.
 
-*správné* jeden z objektů, který se má porovnat.
+*doprava*<br/>
+Jeden z objektů, který se má porovnat.
 
-*Ty1* typ řízený vlevo sdílený ukazatel.
+*Ty1*<br/>
+Typ řízený levé sdílený ukazatel.
 
-*Ty2* typ řízený vpravo sdílený ukazatel.
+*Ty2*<br/>
+Typ řízený správné sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* jeden z objektů, který se má porovnat.
+*doleva*<br/>
+Jeden z objektů, který se má porovnat.
 
-*správné* jeden z objektů, který se má porovnat.
+*doprava*<br/>
+Jeden z objektů, který se má porovnat.
 
-*Ty1* typ řízený vlevo sdílený ukazatel.
+*Ty1*<br/>
+Typ řízený levé sdílený ukazatel.
 
-*Ty2* typ řízený vpravo sdílený ukazatel.
+*Ty2*<br/>
+Typ řízený správné sdílený ukazatel.
 
 ## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ prvku datového proudu.
+*Elem*<br/>
+Typ prvku datového proudu.
 
-*Tr* typ elementu vlastnosti datového proudu.
+*tr*<br/>
+Typ elementu vlastnosti datového proudu.
 
-*Ty* typ řízený sdíleným ukazatelem.
+*Ty*<br/>
+Typ řízený sdíleným ukazatelem.
 
-*navýšení kapacity* výstupního datového proudu.
+*out*<br/>
+Výstupní datový proud
 
-*SP* sdílený ukazatel.
+*SP*<br/>
+Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 

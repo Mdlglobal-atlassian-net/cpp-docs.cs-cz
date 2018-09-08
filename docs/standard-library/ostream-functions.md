@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 494c750ec80000ef9090824e0436f6e443593847
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962319"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107604"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; funkce
 
@@ -42,11 +42,14 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu.
+*Elem*<br/>
+Typ elementu.
 
-*Ostr* objekt typu **basic_ostream –**.
+*Ostr*<br/>
+Objekt typu **basic_ostream –**.
 
-*Tr* znak vlastnosti.
+*tr*<br/>
+Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -86,11 +89,14 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu.
+*Elem*<br/>
+Typ elementu.
 
-*Ostr* objekt typu `basic_ostream`.
+*Ostr*<br/>
+Objekt typu `basic_ostream`.
 
-*Tr* znak vlastnosti.
+*tr*<br/>
+Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -132,11 +138,14 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu.
+*Elem*<br/>
+Typ elementu.
 
-*Ostr* objekt typu `basic_ostream`.
+*Ostr*<br/>
+Objekt typu `basic_ostream`.
 
-*Tr* znak vlastnosti.
+*tr*<br/>
+Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -177,13 +186,17 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu.
+*Elem*<br/>
+Typ elementu.
 
-*Tr* znak vlastnosti.
+*tr*<br/>
+Vlastnosti znaků.
 
-*levé* reference na lvalue k `basic_ostream` objektu.
+*doleva*<br/>
+Odkaz na lvalue k `basic_ostream` objektu.
 
-*správné* reference na lvalue k `basic_ostream` objektu.
+*doprava*<br/>
+Odkaz na lvalue k `basic_ostream` objektu.
 
 ### <a name="remarks"></a>Poznámky
 

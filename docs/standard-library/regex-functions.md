@@ -1,5 +1,5 @@
 ---
-title: '&lt;regulární výraz&gt; funkce | Microsoft Docs'
+title: '&lt;regulární výraz&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/19/2018
 ms.topic: reference
@@ -17,23 +17,25 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 0bc0fc88c3bdd370222e80f6ab96f33d5dd7df28
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 9a417cc9738aec739bdeaec58cc5d50476c9c753
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107492"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regulární výraz&gt; funkce
 
-||||
-|-|-|-|
-|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|
-|[Swap](#swap)|
+|||
+|-|-|
+|[regex_match](#regex_match)|Ověřuje, zda regulární výraz odpovídá celý cílový řetězec.|
+|[regex_replace](#regex_replace)|Nahradí odpovídající regulární výrazy.|
+|[regex_search](#regex_search)|Hledání regulárního výrazu shody.|
+|[Prohození](#swap)|Prohodí dva `basic_regex` nebo `match_results` objekty.|
 
 ## <a name="regex_match"></a>  regex_match –
 
-Ověřuje, zda regulární výraz odpovídá cílový celý řetězec.
+Ověřuje, zda regulární výraz odpovídá celý cílový řetězec.
 
 ```cpp
 // (1)
@@ -90,28 +92,52 @@ bool regex_match(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-*BidIt*| Typ iterator submatches. Pro běžné případů tento jeden z `string::const_iterator`, `wstring::const_iterator`, `const char*` nebo `const wchar_t*`.
-*Alokační*| Porovnání výsledků allocator – třída.
-*Elem*| Typ prvků, které se mají spárovat. Pro běžné případů to je `string`, `wstring`, `char*` nebo `wchar_t*`.
-*RXtraits*| Třída vlastností prvků.
-*Alloc2*| Třída allocator regulární výraz.
-*IOtraits*| Třída vlastnosti string.
-*IOalloc*| Třída allocator řetězec.
-*Příznaky*| Příznaky pro odpovídající položky.
-*první*| Začátek pořadí tak, aby odpovídaly.
-*poslední*| Konec pořadí tak, aby odpovídaly.
-*match*| Porovnání výsledků. Odpovídá typu Elem: [smatch –](../standard-library/regex-typedefs.md#smatch) pro `string`, [wsmatch –](../standard-library/regex-typedefs.md#wsmatch) pro `wstring`, [cmatch –](../standard-library/regex-typedefs.md#cmatch) pro `char*` nebo [wcmatch –](../standard-library/regex-typedefs.md#wcmatch) pro `wchar_t*`.
-*ptr*| Ukazatel na začátek pořadí tak, aby odpovídaly. Pokud *ptr* je `char*`, pak použít `cmatch` a `regex`. Pokud *ptr* je `wchar_t*` pak použít `wcmatch` a `wregex`.
-*Opětovná*| Regulární výraz tak, aby odpovídaly. Typ `regex` pro `string` a `char*`, nebo `wregex` pro `wstring` a `wchar_t*`.
-*str –*| Řetězec k porovnání shody. Odpovídá typu *Elem*.
+*BidIt*<br/> Typ iterátoru pro dílčí shody. Pro běžné případy to tak jeden z `string::const_iterator`, `wstring::const_iterator`, `const char*` nebo `const wchar_t*`.
+
+*ALLOC*<br/>
+Třída alokátoru výsledky porovnání.
+
+*Elem*<br/>
+Typ prvků, které se mají spárovat. Pro běžné případů to je `string`, `wstring`, `char*` nebo `wchar_t*`.
+
+*RXtraits*<br/>
+Třída vlastností prvků.
+
+*Alloc2*<br/>
+Třída alokátoru regulární výraz.
+
+*IOtraits*<br/>
+Třída vlastností řetězce.
+
+*IOalloc*<br/>
+Třída alokátoru řetězec.
+
+*příznaky*<br/>
+Příznaky pro shody.
+
+*první*<br/>
+Začátek pořadí tak, aby odpovídaly.
+
+*poslední*<br/>
+Konec pořadí tak, aby odpovídaly.
+
+*match*<br/>
+Výsledky porovnání. Odpovídá typu Elem: [smatch](../standard-library/regex-typedefs.md#smatch) pro `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) pro `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) pro `char*` nebo [wcmatch](../standard-library/regex-typedefs.md#wcmatch) pro `wchar_t*`.
+
+*ptr*<br/>
+Ukazatel na začátek pořadí tak, aby odpovídaly. Pokud *ptr* je `char*`, pak použijte `cmatch` a `regex`. Pokud *ptr* je `wchar_t*` použije `wcmatch` a `wregex`.
+
+*RE*<br/>
+Regulární výraz tak, aby odpovídaly. Typ `regex` pro `string` a `char*`, nebo `wregex` pro `wstring` a `wchar_t*`.
+
+*str*<br/>
+Řetězec k porovnání shody. Odpovídá typu *Elem*.
 
 ### <a name="remarks"></a>Poznámky
 
-Každé šablony funkce vrátí hodnotu true pouze v případě pořadí celý operand *str* přesně odpovídá regulárnímu výrazu argument *re*. Použití [regex_search –](../standard-library/regex-functions.md#regex_search) tak, aby odpovídaly podřetězce v rámci cílové sekvence a `regex_iterator` najít více shod. Funkcí, které přijímají `match_results` její členy tak, aby odrážela zda shody byla úspěšná a pokud ano co různých zaznamenat skupiny v regulárním výrazu zaznamenat nastavení objektu.
+Každá šablona funkce vrátí hodnotu true pouze v případě sekvenci operandů celý *str* přesně shoduje s regulárním výrazem argumentu *re*. Použití [regex_search –](../standard-library/regex-functions.md#regex_search) tak, aby odpovídaly podřetězce v cílové sekvenci a `regex_iterator` k vyhledání více shod. Funkcí, které přijímají `match_results` objekt nastaven jejích členů tak, aby odrážely, jestli byla úspěšná shoda a pokud ano co různých v regulárním výrazu zachycené skupiny zachycení.
 
-Funkcí, které přijímají `match_results` její členy tak, aby odrážela zda shody byla úspěšná a pokud ano co různých zaznamenat skupiny v regulárním výrazu zaznamenat nastavení objektu.
+Funkcí, které přijímají `match_results` objekt nastaven jejích členů tak, aby odrážely, jestli byla úspěšná shoda a pokud ano co různých v regulárním výrazu zachycené skupiny zachycení.
 
 ### <a name="example"></a>Příklad
 
@@ -189,26 +215,47 @@ basic_string<Elem> regex_replace(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-*OutIt*| Iterator typ pro nahrazení.
-*BidIt*| Typ iterator submatches.
-*RXtraits*| Třída vlastností prvků.
-*Alokační*| Třída allocator regulární výraz.
-*Elem*| Typ prvků, které se mají spárovat.
-*Příznaky*| Příznaky pro odpovídající položky.
-*první*| Začátek pořadí tak, aby odpovídaly.
-*FMT*| Formát pro nahrazení.
-*poslední*| Konec pořadí tak, aby odpovídaly.
-*out*| Iterator výstup.
-*Opětovná*| Regulární výraz tak, aby odpovídaly.
-*str –*| Řetězec k porovnání shody.
+*OutIt*<br/>
+Typ iterátoru pro nahrazení.
+
+*BidIt*<br/>
+Typ iterátoru pro dílčí shody.
+
+*RXtraits*<br/>
+Třída vlastností prvků.
+
+*ALLOC*<br/>
+Třída alokátoru regulární výraz.
+
+*Elem*<br/>
+Typ prvků, které se mají spárovat.
+
+*příznaky*<br/>
+Příznaky pro shody.
+
+*první*<br/>
+Začátek pořadí tak, aby odpovídaly.
+
+*FMT*<br/>
+Formát pro nahrazení.
+
+*poslední*<br/>
+Konec pořadí tak, aby odpovídaly.
+
+*out*<br/>
+Výstupní iterátor.
+
+*RE*<br/>
+Regulární výraz tak, aby odpovídaly.
+
+*str*<br/>
+Řetězec k porovnání shody.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří první funkce [regex_iterator – třída](../standard-library/regex-iterator-class.md) objekt `iter(first, last, re, flags)` a použije ho k rozdělení jeho vstupní rozsah `[first, last)` do řady dílčích sekvencí `T0 M0 T1 M1...TN-1 MN-1 TN`, kde `Mn` n-tou shody se zjišťují pomocí iterator. Pokud nejsou nalezeny žádné shody, `T0` je celý vstupní rozsah a `N` je nulová. Pokud `(flags & format_first_only) != 0` se použije pouze na první shodu, `T1` je vše ze vstupního textu, který následuje shody, a `N` je 1. Pro každou `i` v rozsahu `[0, N)`, pokud `(flags & format_no_copy) == 0` kopíruje text v rozsahu `Ti` k iteraci *out*. Potom zavolá `m.format(out, fmt, flags)`, kde `m` je `match_results` objekt vrácený objektem iterator `iter` pro dalším `Mi`. Navíc pokud `(flags & format_no_copy) == 0` kopíruje text v rozsahu `TN` k iteraci *out*. Funkce vrátí hodnotu *out*.
+Vytvoří první funkce [regex_iterator – třída](../standard-library/regex-iterator-class.md) objekt `iter(first, last, re, flags)` a použije ho k rozdělení jeho vstupním rozsahu `[first, last)` do řady dílčích sekvencí, které `T0 M0 T1 M1...TN-1 MN-1 TN`, kde `Mn` n-tý shody zjistí iterátor. Pokud se nenajdou žádné shody, `T0` je celý vstupním rozsahu a `N` je nula. Pokud `(flags & format_first_only) != 0` se použije pouze první shodu, `T1` je všechny vstupní text, který následuje po shodě a `N` 1. Pro každou `i` v rozsahu `[0, N)`, pokud `(flags & format_no_copy) == 0` zkopíruje text v rozsahu `Ti` na iterátor *si*. Poté zavolá `m.format(out, fmt, flags)`, kde `m` je `match_results` vrácený objekt iterátoru `iter` pro k dílčí sekvenci `Mi`. Nakonec pokud `(flags & format_no_copy) == 0` zkopíruje text v rozsahu `TN` na iterátor *si*. Funkce vrátí *si*.
 
-Funkce second vytvoří místní proměnné `result` typu `basic_string<charT>` a volání `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Vrátí `result`.
+Druhá funkce vytvoří místní proměnná `result` typu `basic_string<charT>` a volání `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Vrátí `result`.
 
 ### <a name="example"></a>Příklad
 
@@ -254,7 +301,7 @@ replacement == Adaeaf
 
 ## <a name="regex_search"></a>  regex_search –
 
-Vyhledá shoda s regulárním výrazem.
+Hledání regulárního výrazu shody.
 
 ```cpp
 template <class BidIt, class Alloc, class Elem, class RXtraits, class Alloc2>
@@ -301,26 +348,51 @@ bool regex_search(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-*BidIt*| Typ iterator submatches.
-*Alokační*| Porovnání výsledků allocator – třída.
-*Elem*| Typ prvků, které se mají spárovat.
-*RXtraits*| Třída vlastností prvků.
-*Alloc2*| Třída allocator regulární výraz.
-*IOtraits*| Třída vlastnosti string.
-*IOalloc*| Třída allocator řetězec.
-*Příznaky*| Příznaky pro odpovídající položky.
-*první*| Začátek pořadí tak, aby odpovídaly.
-*poslední*| Konec pořadí tak, aby odpovídaly.
-*match*| Porovnání výsledků.
-*ptr*| Ukazatel na začátek pořadí tak, aby odpovídaly.
-*Opětovná*| Regulární výraz tak, aby odpovídaly.
-*str –*| Řetězec k porovnání shody.
+*BidIt*<br/>
+Typ iterátoru pro dílčí shody.
+
+*ALLOC*<br/>
+Třída alokátoru výsledky porovnání.
+
+*Elem*<br/>
+Typ prvků, které se mají spárovat.
+
+*RXtraits*<br/>
+Třída vlastností prvků.
+
+*Alloc2*<br/>
+Třída alokátoru regulární výraz.
+
+*IOtraits*<br/>
+Třída vlastností řetězce.
+
+*IOalloc*<br/>
+Třída alokátoru řetězec.
+
+*příznaky*<br/>
+Příznaky pro shody.
+
+*první*<br/>
+Začátek pořadí tak, aby odpovídaly.
+
+*poslední*<br/>
+Konec pořadí tak, aby odpovídaly.
+
+*match*<br/>
+Výsledky porovnání.
+
+*ptr*<br/>
+Ukazatel na začátek pořadí tak, aby odpovídaly.
+
+*RE*<br/>
+Regulární výraz tak, aby odpovídaly.
+
+*str*<br/>
+Řetězec k porovnání shody.
 
 ### <a name="remarks"></a>Poznámky
 
-Každé šablony funkce vrátí hodnotu true pouze v případě, že vyhledejte její argument regulární výraz *re* v jeho operand pořadí úspěšné. Funkcí, které přijímají `match_results` objekt nastavit tak, aby odrážela zda hledání úspěšné a pokud ano, co různých zaznamenat skupiny v regulárním výrazu zachytit její členy.
+Každá šablona funkce vrátí hodnotu true, pouze pokud hledání regulárního výrazu argument *re* v jeho operandu pořadí úspěšné. Funkcí, které přijímají `match_results` objekt nastaven jejích členů tak, aby odrážely, zda bylo hledání úspěšné a pokud ano co různých v regulárním výrazu zachycené skupiny zachycení.
 
 ### <a name="example"></a>Příklad
 
@@ -378,9 +450,9 @@ search(string, "abc") == true
   matched: "abc"
 ```
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
-Prohození dva `basic_regex` nebo `match_results` objekty.
+Prohodí dva `basic_regex` nebo `match_results` objekty.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -396,14 +468,15 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-*Elem*| Typ prvků, které se mají spárovat.
-*RXtraits*| Třída vlastností prvků.
+*Elem*<br/>
+Typ prvků, které se mají spárovat.
+
+*RXtraits*<br/>
+Třída vlastností prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony prohození obsah jejich odpovídajících argumenty konstantní včas a nevyvolá výjimku výjimky.
+Funkce šablony Prohodit obsah svých příslušných argumentů v konstantním času a nevyvolají výjimky.
 
 ### <a name="example"></a>Příklad
 
@@ -442,11 +515,11 @@ string == aaa
 
 ## <a name="see-also"></a>Viz také:
 
-- [\<regex>](../standard-library/regex.md)
-- [regex_constants – třída](../standard-library/regex-constants-class.md)
-- [regex_error – třída](../standard-library/regex-error-class.md)
-- [regex_iterator – třída](../standard-library/regex-iterator-class.md)
-- [\<regulární výraz > operátory](../standard-library/regex-operators.md)
-- [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)
-- [regex_traits – třída](../standard-library/regex-traits-class.md)
-- [\<regulární výraz > Definice TypeDef](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_constants – třída](../standard-library/regex-constants-class.md)<br/>
+[regex_error – třída](../standard-library/regex-error-class.md)<br/>
+[regex_iterator – třída](../standard-library/regex-iterator-class.md)<br/>
+[\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
+[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>

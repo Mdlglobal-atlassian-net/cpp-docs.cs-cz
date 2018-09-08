@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 34009ac94d35a377e1080ea674f58715e7a42aa2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401558"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101051"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,7 +53,8 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*memblock* ukazatele na blok paměti, která se vrátila [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md) funkce.
+*memblock*  
+Ukazatele na blok paměti, která se vrátila [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md) funkce.
 
 ## <a name="remarks"></a>Poznámky
 

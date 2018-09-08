@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954705"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106435"
 ---
 # <a name="basiciostream-class"></a>basic_iostream – třída
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* existující `basic_streambuf` objektu.
+*strbuf*<br/>
+Existující objekt `basic_streambuf`.
 
-*správné* existující `basic_iostream` objekt, který slouží k vytvoření nového `basic_iostream`.
+*doprava*<br/>
+Existující `basic_iostream` objekt, který slouží k vytvoření nového `basic_iostream`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `rvalue` odkaz `basic_iostream` objekt přiřadit ručně z.
+*doprava*<br/>
+`rvalue` Odkaz `basic_iostream` objekt přiřadit ručně z.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `basic_iostream` objektu se prohodit.
+*doprava*<br/>
+`basic_iostream` Objektu se prohodit.
 
 ### <a name="remarks"></a>Poznámky
 

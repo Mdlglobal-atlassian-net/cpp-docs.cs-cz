@@ -1,5 +1,5 @@
 ---
-title: qsort – | Microsoft Docs
+title: qsort – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404705"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110191"
 ---
 # <a name="qsort"></a>qsort
 
-Provede rychlé řazení. Bezpečnější verze této funkce je k dispozici. v tématu [qsort_s –](qsort-s.md).
+Provádí rychlé řazení. Bezpečnější verze této funkce je k dispozici. Zobrazit [qsort_s –](qsort-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,25 +59,29 @@ void qsort(
 
 ### <a name="parameters"></a>Parametry
 
-*základní* začátek cílového pole.
+<br/>
+Spuštění cílového pole.
 
-*číslo* pole velikost v elementy.
+*Číslo*<br/>
+Velikost pole prvků.
 
-*Šířka* Element velikost v bajtech.
+*Šířka*<br/>
+Element velikost v bajtech.
 
-*porovnání* ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu, která určuje jejich vztahu.
+*compare*<br/>
+Ukazatel na uživatelem zadané rutinou, která porovná dva prvky pole a vrátí hodnotu, která určuje jejich vzájemný vztah.
 
 ## <a name="remarks"></a>Poznámky
 
-**Qsort –** funkce implementuje algoritmus rychlého řazení seřadit pole *číslo* elementy, každý z *šířka* bajtů. Argument *základní* je ukazatel na základní pole, která se má seřadit. **qsort –** přepíše toto pole pomocí seřazené elementy.
+**Qsort –** implementuje algoritmus rychlého řazení řazení pole funkce *číslo* prvky, každý z *šířka* bajtů. Argument *základní* je ukazatel na základní pole, který se má seřadit. **qsort –** přepíše toto pole pomocí seřazených elementy.
 
-**qsort –** volání *porovnat* rutiny jeden nebo více krát při řazení a předá ukazatele dva elementy pole při každém volání.
+**qsort –** volání *porovnání* rutinní jeden nebo více krát během řazení a předá dva prvky pole ukazatelů na každé volání.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
 ```
 
-Rutiny porovná elementy a vrátí jednu z následujících hodnot.
+Rutina porovná prvky a vrátí jednu z následujících hodnot.
 
 |Porovnání návratovou hodnotu funkce|Popis|
 |-----------------------------------|-----------------|
@@ -85,9 +89,9 @@ Rutiny porovná elementy a vrátí jednu z následujících hodnot.
 |0|**elem1** ekvivalentní **elem2**|
 |> 0|**elem1** větší než **elem2**|
 
-Pole je seřadit ve vzestupném pořadí, podle definice funkce porovnání. Do pole v sestupném pořadí řazení, reverse smysl "větší než" a "menší než" ve funkci porovnání.
+Pole je seřazený ve vzestupném pořadí, jak je definováno ve funkci porovnání. Chcete-li seřadit pole v sestupném pořadí, zaměňte význam "větší než" a "menší než" ve funkci porovnání.
 
-Tato funkce ověří jeho parametry. Pokud *porovnat* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL** a **číslo* je nenulové hodnoty, nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu a **errno** je nastaven na **einval –**.
+Tato funkce ověřuje své parametry. Pokud *porovnání* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL** a **číslo* je nenulová nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** je nastavena na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,7 +99,7 @@ Tato funkce ověří jeho parametry. Pokud *porovnat* nebo *číslo* je **NULL**
 |-------------|---------------------|
 |**qsort**|\<stdlib.h > a \<search.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -141,7 +145,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

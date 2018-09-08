@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760975"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102691"
 ---
 # <a name="wrl-integration-ccx"></a>Integrace WRL (C + +/ CX)
 
 Je volně kombinovat kód knihovny WRL kódem Windows Runtime C++ šablony knihovny (WRL). Ve stejné jednotce překladu, můžete použít objekty deklarované pomocí knihovny WRL popisovač objektu (`^`) zápisem a WRL inteligentní ukazatel (`ComPtr<T>`) notaci. Však musí ručně zpracovat vrácené hodnoty a kódy chyb WRL HRESULT a výjimek knihovny WRL.
-  
+
 ## <a name="wrl-development"></a>Vývoj pro knihovny WRL
 
 Další informace o vytváření a používání komponent knihovny WRL najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>Viz také:
 
-[Spolupráce s jinými jazyky](interoperating-with-other-languages-c-cx.md)  
+[Spolupráce s jinými jazyky](interoperating-with-other-languages-c-cx.md)

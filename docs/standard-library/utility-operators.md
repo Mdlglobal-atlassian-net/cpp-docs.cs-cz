@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c97e44e5110108351ac9c47f47434b828193fc7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099626"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;Nástroj&gt; operátory
 
@@ -49,10 +49,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `pair`.
+Objekt typu `pair`.
 
 *doprava*  
- Objekt typu `pair`.
+Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -120,9 +120,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `pair`.
+*doleva*<br/>
+Objekt typu `pair`.
 
-*správné* objekt typu `pair`.
+*doprava*<br/>
+Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -182,10 +184,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `pair` na levé straně operátoru.
+Objekt typu `pair` na levé straně operátoru.
 
 *doprava*  
- Objekt typu `pair` na pravé straně operátoru.
+Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -259,10 +261,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `pair` na levé straně operátoru.
+Objekt typu `pair` na levé straně operátoru.
 
 *doprava*  
- Objekt typu `pair` na pravé straně operátoru.
+Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -344,10 +346,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `pair` na levé straně operátoru.
+Objekt typu `pair` na levé straně operátoru.
 
 *doprava*  
- Objekt typu `pair` na pravé straně operátoru.
+Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -431,10 +433,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `pair` na levé straně operátoru.
+Objekt typu `pair` na levé straně operátoru.
 
 *doprava*  
- Objekt typu `pair` na pravé straně operátoru.
+Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 

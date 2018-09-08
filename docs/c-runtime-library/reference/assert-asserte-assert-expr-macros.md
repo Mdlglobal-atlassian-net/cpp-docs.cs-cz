@@ -1,5 +1,5 @@
 ---
-title: _ASSERT, _asserte –, _ASSERT_EXPR makra | Microsoft Docs
+title: _ASSERT, _asserte –, _ASSERT_EXPR makra | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa84e5c032cefa49ef3a9d21d3bbfc2073d02e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399735"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107585"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _asserte –, _ASSERT_EXPR makra
 
@@ -58,35 +58,37 @@ _ASSERTE( booleanExpression );
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression* skalární výraz, který (včetně výrazy ukazatelů), jehož výsledkem nenulové hodnoty (pravda) nebo 0 (false).
+*booleanExpression*<br/>
+Skalární výraz, který (včetně výrazy ukazatelů), který se vyhodnotí nenulová (pravda), nebo 0 (false).
 
-*zpráva* široké řetězec k zobrazení v rámci sestavy.
+*message*<br/>
+Široký řetězec k zobrazení jako součást sestavy.
 
 ## <a name="remarks"></a>Poznámky
 
-**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** makra poskytnout vyčištění a jednoduchý mechanismus pro kontrolu předpokladů během procesu ladění aplikace. Jsou velmi flexibilní, protože není potřeba být uzavřená do `#ifdef` příkazy, aby nebylo volal v prodejní sestavení aplikace. Tato možnost je dosaženo pomocí [_DEBUG –](../../c-runtime-library/debug.md) makro. **_ASSERT_EXPR**, **_ASSERT** a **_asserte –** jsou k dispozici pouze při **_DEBUG –** je definována v době kompilace. Když **_DEBUG –** není definována, volání makra jsou odebrány při předběžném zpracování.
+**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** makra poskytnout přehledné a jednoduchý mechanismus kontroly předpokladů během procesu ladění aplikace. Jsou flexibilní, protože není potřeba nacházet v `#ifdef` příkazy tak tomu, aby se volá v sestavení prodejní verze aplikace. Díky této flexibilitě se dosahuje prostřednictvím využití [_DEBUG](../../c-runtime-library/debug.md) – makro. **_ASSERT_EXPR**, **_ASSERT** a **_asserte –** jsou k dispozici pouze při **_DEBUG** je definován v době kompilace. Když **_DEBUG** není definován, volání makra jsou odstraněna během předběžného zpracování.
 
-**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** vyhodnotit jejich *booleanExpression* argument a výsledek je **false**(0), budou tisknout diagnostické zprávy a volání [_crtdbgreportw –](crtdbgreport-crtdbgreportw.md) k vygenerování sestavy ladění. **_ASSERT** makro vytiskne jednoduché diagnostické zprávy, **_asserte –** zahrnuje řetězcovou reprezentaci výrazu se nezdařilo ve zprávě, a **_ASSERT_EXPR** zahrnuje *zpráva* řetězec v diagnostické zprávy. Tyto makra nedělat nic při *booleanExpression* vyhodnocen jako nenulové hodnoty.
+**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** vyhodnotit jejich *booleanExpression* argument a výsledkem je **false**(0), vytiskne diagnostickou zprávu a volání [_crtdbgreportw –](crtdbgreport-crtdbgreportw.md) k vygenerování sestav ladění. **_ASSERT** – makro vytiskne jednoduché diagnostickou zprávu **_asserte –** zahrnuje řetězcové vyjádření neúspěšné výraz ve zprávě, a **_ASSERT_EXPR** zahrnuje *zpráva* řetězec v diagnostické zprávě. Tato makra Neprovádět žádnou akci při *booleanExpression* vyhodnocen na nenulovou hodnotu.
 
-**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** vyvolání **_crtdbgreportw –**, což způsobí, že veškerý výstup v široké znaky. **_Asserte –** správně vytiskne znaky kódování Unicode v *booleanExpression* a **_ASSERT_EXPR** vytiskne znaky kódování Unicode v *zpráva*.
+**_ASSERT_EXPR**, **_ASSERT** a **_asserte –** vyvolat **_crtdbgreportw –**, což způsobí, že veškerý výstup v širokých znaků. **_Asserte –** správně zobrazí znaky Unicode v *booleanExpression* a **_ASSERT_EXPR** vytiskne znaky kódování Unicode v *zpráva*.
 
-Protože **_asserte –** makro Určuje výraz se nezdařila, a **_ASSERT_EXPR** umožňuje zadat zprávu v vygenerovanou sestavu, umožňují uživatelům určit problém bez ohledu zdrojový kód aplikace. Ale nevýhodou existuje v tom, že každý *zpráva* tištěné **_ASSERT_EXPR** a každý výraz vyhodnocovaný **_asserte –** je zahrnutá ve výstupu (ladicí verze) soubor aplikace jako řetězcová konstanta. Proto pokud velký počet volání **_ASSERT_EXPR** nebo **_asserte –**, těchto výrazů může výrazně zvýšit velikost výstupního souboru.
+Protože **_asserte –** – makro Určuje výraz, se nezdařilo, a **_ASSERT_EXPR** umožňuje zadat zprávu v generované sestavě, umožňují uživatelům identifikovat problém bez ohledu zdrojový kód aplikace. Nevýhodou existuje však v, které každý *zpráva* zprávy vytištěné funkcí **_ASSERT_EXPR** a každý výraz vyhodnocovaný **_asserte –** je součástí výstupu (ladicí verze) soubor aplikace jako řetězcová konstanta. Proto pokud velký počet volání **_ASSERT_EXPR** nebo **_asserte –**, tyto výrazy může výrazně zvýšit velikost výstupního souboru.
 
-Pokud neurčíte jinak s [_crtsetreportmode –](crtsetreportmode.md) a [_crtsetreportfile –](crtsetreportfile.md) funguje, zprávy se zobrazují v místním dialogovém okně ekvivalentní k nastavení:
+Pokud neurčíte jinak se [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md) funguje, zprávy se zobrazují v místním dialogovém ekvivalentní nastavení:
 
 ```C
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_Crtdbgreportw –** generuje sestavu, ladění a určuje jeho cílového nebo cíle, na základě aktuální režim sestav nebo režimy a soubor definice pro **_CRT_ASSERT** typu Sestava. Ve výchozím nastavení selhání vyhodnocení a chyb jsou směrované okno zprávy ladění. [_Crtsetreportmode –](crtsetreportmode.md) a [_crtsetreportfile –](crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.
+**_Crtdbgreportw –** generuje sestavu ladění a určuje jeho cíle nebo cílů, na základě aktuální režim sestavy nebo režimech a soubor definice pro **_CRT_ASSERT** typ sestavy. Ve výchozím nastavení chyby a selhání kontrolního výrazu jsou směrované na okno zprávy ladění. [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md) funkce se používají k definování cíle pro každý typ sestavy.
 
-Pokud je cílem okno zprávy ladění a uživatel klikne **opakujte** tlačítko **_crtdbgreportw –** vrátí hodnotu 1, způsobuje **_ASSERT_EXPR**, **_ ASSERT** a **_asserte –** maker, pro spuštění ladicího programu za předpokladu, že je povoleno ladění v běhu (JIT).
+Pokud je cíl okno zprávy ladění a uživatel klikne **opakujte** tlačítko, **_crtdbgreportw –** vrátí hodnotu 1, způsobí **_ASSERT_EXPR**, **_ Kontrolní VÝRAZ** a **_asserte –** makra spuštění ladicího programu, za předpokladu, že je povoleno ladění just-in-time (JIT).
 
-Další informace o procesu vytváření sestav najdete v tématu [_crtdbgreport –, _crtdbgreportw –](crtdbgreport-crtdbgreportw.md) funkce. Další informace o řešení chyb kontrolní výraz a použití těchto maker jako ladění chyba mechanismu pro zpracování najdete v tématu [pomocí makra pro ověření a vytváření sestav](/visualstudio/debugger/macros-for-reporting).
+Další informace o procesu vytváření sestav najdete v tématu [_CrtDbgReport _crtdbgreportw –](crtdbgreport-crtdbgreportw.md) funkce. Další informace o řešení selhání kontrolního výrazu a použití těchto maker jako ladění chyba mechanismu pro zpracování, naleznete v tématu [použití maker pro ověřování a vytváření sestav](/visualstudio/debugger/macros-for-reporting).
 
-Kromě **_ASSERT** makra, [assert](assert-macro-assert-wassert.md) makro může sloužit k ověření program logiku. Toto makro je k dispozici v ladění a vydání verze knihoven. [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) makra ladění jsou také k dispozici pro generování sestavy ladění, ale nevyhodnocují výrazu. **_RPT** makra generovat jednoduchou sestavu. **_RPTF** makra obsahují zdrojový soubor a řádku číslo kde byl volán makro sestavy v vygenerovanou sestavu. Široká znaková verze těchto makra jsou k dispozici (**_RPTW**, **_rptfw –**). Široká znaková verze jsou shodné s verzí úzké znak s tím rozdílem, že široká znaková řetězce se používají pro všechny parametry řetězce a výstup.
+Kromě **_ASSERT** makra, [vyhodnocení](assert-macro-assert-wassert.md) – makro je použít k ověření logiku programu. Toto makro je k dispozici v ladění a vydání verze knihoven. [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) maker ladění k dispozici také pro generování sestav ladění, ale jejich nelze vyhodnotit výraz. **_RPT** makra generovat jednoduchou sestavu. **_RPTF** makra patří zdrojový soubor a číslo řádku kde byla volána – makro sestavy v generované sestavě. Jsou k dispozici verze širokými znaky těchto maker (**_RPTW**, **_rptfw –**). Verze širokého znaku jsou shodné s verzemi úzkými znaky, s tím rozdílem, že řetězce širokého znaku se používají pro všechny parametry řetězce a výstup.
 
-I když **_ASSERT_EXPR**, **_ASSERT** a **_asserte –** jsou makra a jsou k dispozici zahrnutím \<crtdbg.h >, aplikace musí propojení ladění verzi běhové knihovny jazyka C při **_DEBUG –** je definován, protože tyto makra volat jiné běhové funkce.
+I když **_ASSERT_EXPR**, **_ASSERT** a **_asserte –** jsou makra a dají se zahrnutím \<crtdbg.h >, je třeba propojit aplikaci s ladění verze knihovny run-time C při **_DEBUG** je definován, protože tato makra volání dalších funkcí za běhu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -96,7 +98,7 @@ I když **_ASSERT_EXPR**, **_ASSERT** a **_asserte –** jsou makra a jsou k dis
 
 ## <a name="example"></a>Příklad
 
-V tomto programu volání **_ASSERT** a **_asserte –** makra, která otestuje podmínku `string1 == string2`. V případě selhání podmínku tyto makra tisk diagnostické zprávy. **_RPT** a **_RPTF** skupinu maker je také provést tento program jako alternativu k **printf** funkce.
+V rámci tohoto programu, volání **_ASSERT** a **_asserte –** makra otestuje podmínku `string1 == string2`. Pokud podmínka selže, tato makra vytisknout diagnostickou zprávu. **_RPT** a **_RPTF** skupiny maker se také provede v rámci tohoto programu, jako alternativu k **printf** funkce.
 
 ```C
 // crt_ASSERT_macro.c
@@ -170,7 +172,7 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 'I am p1' != 'I am p2'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: _Crtdoforallclientobjects – | Microsoft Docs
+title: _CrtDoForAllClientObjects | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c3c4060098927df08d785e85b64e7e7becc2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 378ef3c6218d1f57cd1d817d8895b3ff8b081ecb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397197"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105338"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
-Volání funkce poskytované aplikací pro všechny **_client_block –** typy v haldě (pouze ladicí verze).
+Volá funkci poskytované aplikací pro všechny **_CLIENT_BLOCK** typy v haldě (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,19 +55,21 @@ void _CrtDoForAllClientObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn* ukazatel na funkci zpětného volání funkce zadané aplikace. První parametr této funkce se odkazuje na data. Druhý parametr je ukazatel kontext, který je předán volání **_crtdoforallclientobjects –**.
+*pfn*<br/>
+Ukazatel na funkci zpětného volání funkce poskytované aplikací. První parametr této funkce se odkazuje na data. Druhý parametr není ukazatel kontextu, který se předává do volání k **_CrtDoForAllClientObjects**.
 
-*kontext* ukazatel na kontext zadané aplikace mají být předána do funkce zadané aplikace.
+*Kontext*<br/>
+Ukazatel na kontext, který poskytované aplikací má předat do funkce poskytované aplikací.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtdoforallclientobjects –** funkce vyhledá haldy odkazovaného seznamu pro bloky paměti s **_client_block –** typu a volání funkce poskytované aplikací při blok tohoto typu je nalezen. Nalezen bloku a *kontextu* parametru jsou funkci byl předán jako argumenty zadané aplikace. Během ladění, můžete aplikaci sledovat konkrétní skupinu přidělení explicitně voláním ladění funkce hald přidělit paměť a určení, že na bloky přiřadit **_client_block –** blokovat typu. Tyto bloky můžete pak sledovat samostatně a ohlášeny odlišně při zjištění paměti a vytváření sestav stavu paměti.
+**_CrtDoForAllClientObjects** funkce hledá propojeného seznamu haldy pro bloky paměti se **_CLIENT_BLOCK** typu a volání funkce poskytované aplikací bloku tohoto typu se nachází. Nalezené bloku a *kontextu* parametru jsou předány jako argumenty funkce poskytované aplikací. Během ladění aplikace můžete sledovat konkrétní skupinu přidělení explicitně voláním ladění funkcí haldy pro přidělení paměti a určení, že bloky přiřadit **_CLIENT_BLOCK** typ bloku. Tyto bloky můžete potom samostatně sledovány a jinak hlášeny na během detekce nevrácení a vykazování stavu paměti.
 
-Pokud **_crtdbg_alloc_mem_df –** bit pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) není zapnut příznak, **_crtdoforallclientobjects –** hned vrátí. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtdoforallclientobjects –** jsou odebrány při předběžném zpracování.
+Pokud **_CRTDBG_ALLOC_MEM_DF** bitové pole [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) není zapnutý příznak **_CrtDoForAllClientObjects** okamžitě vrátí. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtDoForAllClientObjects** odstraněna během předběžného zpracování.
 
-Další informace o **_client_block –** zadejte a jak ho můžete používat další funkce ladění, najdete v části [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o **_CLIENT_BLOCK** zadejte a jak mohou využívat jiné funkce ladění, naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Pokud *pfn* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaven na **einval –** a funkce vrátí hodnotu.
+Pokud *pfn* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastavena na **EINVAL** a funkce vrátí.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -75,13 +77,13 @@ Pokud *pfn* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak 
 |-------------|---------------------|
 |**_CrtDoForAllClientObjects**|\<crtdbg.h>, \<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** ladicí verze universal C Runtime pouze knihovny.
+**Knihovny:** ladicí verze knihoven universal C Runtime pouze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetDbgFlag](crtsetdbgflag.md)<br/>
-[Funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details)<br/>
+[Funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>

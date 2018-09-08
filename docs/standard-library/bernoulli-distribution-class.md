@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc8b144ab8cf619469723f6fd19a4ffdac085e6d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953231"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105845"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution – třída
 
@@ -76,7 +76,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*URNG* jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*URNG*<br/>
+Jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -158,7 +159,7 @@ Enter an integer value for a sample count: 100
 p == 0.45
 Histogram for 100 samples:
 false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- true :::::::::::::::::::::::::::::::::::::::::
+true :::::::::::::::::::::::::::::::::::::::::
 ```
 
 ## <a name="requirements"></a>Požadavky
@@ -178,9 +179,11 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*p* uloženou `p` parametru distribuce.
+*p*<br/>
+Uložený `p` parametru distribuce.
 
-*Parametr* `param_type` struktura používaná k vytvoření distribuce.
+*Parametr*<br/>
+`param_type` Struktura používaná k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -200,7 +203,8 @@ param_type – struktura {distribution_type – typedef bernoulli_distribution �
 
 ### <a name="parameters"></a>Parametry
 
-*p* uloženou `p` parametru distribuce.
+*p*<br/>
+Uložený `p` parametru distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
