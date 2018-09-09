@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4627 | Microsoft Docs
+title: Upozornění (úroveň 1) C4627 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284183"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249617"
 ---
-# <a name="compiler-warning-level-1-c4627"></a>C4627 kompilátoru upozornění (úroveň 1)
-'\<identifikátor >': při vyhledávání předkompilované hlavičky použití přeskočen  
+# <a name="compiler-warning-level-1-c4627"></a>Kompilátor upozornění (úroveň 1) C4627
+
+> "*header_file*': při hledání použití předkompilované hlavičky přeskočen
+
+Pokud má aktuálního zdrojového souboru [/Yu \(použijte soubor předkompilované hlavičky)](../../build/reference/yu-use-precompiled-header-file.md) možnosti set, pak Kompilátor ignoruje všechno v souboru dříve, než je zahrnuté předkompilované hlavičky. Upozornění **C4627** generováno v sadě Visual Studio 2015 a starší, pokud *header_file* zahrnuté před předkompilovaného souboru hlaviček, a pokud Předkompilovaná hlavička neobsahuje také *header_file*.
+
+## <a name="example"></a>Příklad
+
+Tato ukázka předvádí, jak k chybě může dojít a ukazuje, jak ho opravit:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Při vyhledávání pro umístění, kde se používá předkompilovaných hlaviček, kompilátor došlo `#include` direktivy pro  *\<identifikátor >* zahrnout soubor. Kompilátor ignoruje `#include` – direktiva, ale vydá upozornění **C4627** předkompilovaných hlaviček už neobsahuje-li  *\<identifikátor >* zahrnout soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Viz také
+
+[Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
