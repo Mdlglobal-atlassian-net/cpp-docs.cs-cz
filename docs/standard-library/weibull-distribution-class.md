@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681005"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109846"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution – třída
 
@@ -80,7 +80,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*<br/>
+Výchozí hodnota typu s plovoucí desetinnou čárkou výsledku **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 

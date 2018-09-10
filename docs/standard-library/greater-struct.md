@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e467f150135fd9960747ec6bb25fd44fd8ae7e7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963804"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106119"
 ---
 # <a name="greater-struct"></a>greater – struktura
 
@@ -47,16 +47,18 @@ struct greater<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const
     ->  decltype(std::forward<T>(Left)> std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator>` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 

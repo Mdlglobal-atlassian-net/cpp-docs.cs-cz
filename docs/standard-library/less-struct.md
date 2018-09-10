@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954352"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100934"
 ---
 # <a name="less-struct"></a>less – struktura
 
@@ -51,9 +51,11 @@ struct less<void>
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator<` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -105,7 +107,7 @@ cout << Iter1->m_i << " ";
    for ( Iter1 = v1.begin() ; Iter1 != v1.end() ; Iter1++ )
 cout << Iter1->m_i << " ";
    cout << ")" << endl;
- }
+}
 ```
 
 ## <a name="output"></a>Výstup

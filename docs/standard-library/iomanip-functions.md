@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208829"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108405"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; funkce
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount* extrahované peněžní hodnoty.
+*_Amount*<br/>
+Extrahované peněžní hodnoty.
 
-*_Intl* Pokud **true**, použijte mezinárodním formátu. Výchozí hodnota je **false**.
+*_Intl*<br/>
+Pokud **true**, použijte mezinárodním formátu. Výchozí hodnota je **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr* čas ve formě struktury čas.
+*_Tptr*<br/>
+Čas ve formě struktury čas.
 
-*_Fmt* požadovaný formát, který se použijte k získání hodnoty času.
+*_Fmt*<br/>
+Požadovaný formát, který se použijte k získání hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount* peněžní hodnotu k vložení do datového proudu.
+*_Amount*<br/>
+Peněžní hodnotu k vložení do datového proudu.
 
-*_Intl* nastavena na **true** Pokud manipulátor používejte mezinárodním formátu, **false** Pokud by neměla.
+*_Intl*<br/>
+Nastavte na **true** Pokud manipulátor používejte mezinárodním formátu, **false** Pokud by neměla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr* časová hodnota k zápisu do datového proudu k dispozici ve struktuře čas.
+*_Tptr*<br/>
+Časová hodnota k zápisu do datového proudu k dispozici ve struktuře čas.
 
-*_Fmt* požadovaný formát pro zápis hodnoty času.
+*_Fmt*<br/>
+Požadovaný formát pro zápis hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*Str* std::string, char\*, řetězcový literál nebo nezpracovaný řetězcový literál nebo celou verzi některé z těchto (např. std::wstring, wchar_t\*).
+*str*<br/>
+Std::string, char\*, řetězcový literál nebo nezpracovaný řetězcový literál nebo celou verzi některé z těchto (např. std::wstring, wchar_t\*).
 
-*Oddělovač* A uživatelem zadaného znaku nebo širokého znaku, použít jako oddělovač pro začátek a konec řetězce.
+*Oddělovač*<br/>
+Uživatelem zadaný znak nebo široký znak, použít jako oddělovač pro začátek a konec řetězce.
 
-*řídicí* A uživatelem zadaného znaku nebo širokého znaku, chcete-li použít jako řídicí znak sekvence escape v řetězci.
+*Řídicí*<br/>
+Uživatelem zadaný znak nebo široký znak, chcete-li použít jako řídicí znak sekvence escape v řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametry
 
-*Maska* příznaky zrušte.
+*Maska*<br/>
+Příznaky zrušte.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parametry
 
-*_Základní* základna čísla.
+*_Základní*<br/>
+Základna čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* znak, který se použije k vyplnění mezer v zobrazení zarovnána vpravo.
+*ch*<br/>
+Znak, který se použije k vyplnění mezer v zobrazení zarovnána vpravo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametry
 
-*Maska* příznaky pro nastavení.
+*Maska*<br/>
+Příznaky pro nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Parametry
 
-*Prec* přesnosti pro hodnoty s plovoucí desetinnou čárkou.
+*Prec*<br/>
+Přesnosti pro hodnoty s plovoucí desetinnou čárkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parametry
 
-*Široký* šířku pole zobrazení.
+*Široký*<br/>
+Šířka pole zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 

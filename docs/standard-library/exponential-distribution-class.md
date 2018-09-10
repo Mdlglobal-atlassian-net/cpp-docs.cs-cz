@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960193"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103276"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution – třída
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*<br/>
+Výchozí hodnota typu s plovoucí desetinnou čárkou výsledku **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*URNG* modul generátor náhodných čísel. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*URNG*<br/>
+Náhodná čísla generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*Lambda* `lambda` parametru distribuce.
+*lambda*<br/>
+`lambda` Parametru distribuce.
 
-*Parametr* balíček parametru použitý k vytvoření distribuce.
+*Parametr*<br/>
+Balíček parametru použitý k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*Lambda* `lambda` parametru distribuce.
+*lambda*<br/>
+`lambda` Parametru distribuce.
 
-*správné* `param_type` objekt k porovnání s tím.
+*doprava*<br/>
+`param_type` Objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky
 

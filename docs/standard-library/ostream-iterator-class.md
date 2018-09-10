@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c166b39a6252c3b49427f06d88c179bd9ca25ce8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207916"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108329"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator – třída
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ objektu, který má být vložen do výstupního datového proudu.
+*Typ*<br/>
+Typ objektu, který má být vložen do výstupního toku.
 
-*CharType* typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
+*CharType*<br/>
+Typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
 
-*Vlastnosti* typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
+*Osobnostní rysy*<br/>
+Typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
 
 Třída ostream_iterator musí splňovat požadavky na výstupní iterátor. Algoritmy lze zapsat přímo do výstupních toků pomocí `ostream_iterator`.
 
@@ -114,9 +117,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 The integers written to the output stream
@@ -163,10 +166,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -213,10 +216,10 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* hodnotu objektu typu `Type` má být vložen do výstupního datového proudu.
+*Val*<br/>
+Hodnota objektu typu `Type` má být vložen do výstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -266,10 +270,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ostr* výstupního datového proudu typu [ostream_iterator::ostream_type](#ostream_type) chcete provést iteraci.
+*_Ostr*<br/>
+Výstupní datový proud typu [ostream_iterator::ostream_type](#ostream_type) chcete provést iteraci.
 
-*_Mezeru* oddělovač, který je vložen do výstupního datového proudu mezi hodnotami.
+*_Mezeru*<br/>
+Oddělovač, který je vložen do výstupního datového proudu mezi hodnotami.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -404,9 +410,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
 \* Output:
 The integers written to output stream

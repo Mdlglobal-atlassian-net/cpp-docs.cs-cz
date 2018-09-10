@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966599"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105877"
 ---
 # <a name="fpos-class"></a>fpos – třída
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>Parametry
 
-*Statetype* informace stavu.
+*Statetype*<br/>
+Informace o stavu.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun do datového proudu.
+*_Off*<br/>
+Posun do datového proudu.
 
-*_Stavu* počáteční stav `fpos` objektu.
+*_Stavu*<br/>
+Počáteční stav `fpos` objektu.
 
-*_Filepos* posun do datového proudu.
+*_Filepos*<br/>
+Posun do datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* Indikátor pozice v souboru, vůči kterému chcete porovnat.
+*doprava*<br/>
+Indikátor pozice v souboru, vůči kterému chcete porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun, podle kterého chcete zvýšit Indikátor pozice v souboru.
+*_Off*<br/>
+Posun, podle kterého chcete zvýšit Indikátor pozice v souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun, podle kterého chcete zvýšit Indikátor pozice v souboru.
+*_Off*<br/>
+Posun, podle kterého chcete zvýšit Indikátor pozice v souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* pozice v souboru.
+*doprava*<br/>
+Pozice v souboru.
 
-*_Off* posun Stream.
+*_Off*<br/>
+Posun Stream.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun Stream.
+*_Off*<br/>
+Posun Stream.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* Indikátor pozice v souboru, vůči kterému chcete porovnat.
+*doprava*<br/>
+Indikátor pozice v souboru, vůči kterému chcete porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* nový stav převodu.
+*_Stavu*<br/>
+Nový stav převodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

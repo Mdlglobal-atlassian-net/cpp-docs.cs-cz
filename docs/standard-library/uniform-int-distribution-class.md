@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b37279ef28073e758be2ebc849d6657168c22339
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961575"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104196"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution – třída
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*<br/>
+Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -213,7 +214,7 @@ Horní mez pro náhodné hodnoty, včetně.
 
 **Předběžné podmínky:** `a ≤ b`
 
-První konstruktor vytvoří objekt, jehož uložená hodnota *a* drží hodnotu *a* a  jehož uložená hodnota *b* drží hodnotu *b*.
+První konstruktor vytvoří objekt, jehož uložená hodnota *a* drží hodnotu *a* a jehož uložená hodnota *b* drží hodnotu *b*.
 
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
 

@@ -15,44 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8345a8418a2ff08b8909a7c01bd177afa426709b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758971"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104092"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime:: InteropServices – Namespace
-Tento obor názvů je určena pouze pro interní použití a není určena pro použití pro vývoj.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace InteropServices {  
-}}  
-```  
-  
-### <a name="members"></a>Členové  
- I když se tento obor názvů je určená pro interní použití, prohlížečích může zobrazit následující členy tohoto oboru názvů.  
-  
-|Název|Poznámka|  
-|----------|------------|  
-|ComInterfaceType|výčet|  
-|Atributu InterfaceTypeAttribute určíte||  
-|LayoutKind|výčet|  
-|MarshalAsAttribute||  
-|StuctLayoutAttribute||  
-|Typ UnmanagedType|výčet|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `Platform`  
-  
-### <a name="requirements"></a>Požadavky  
- **Metadata:** platform.winmd  
-  
- **Namespace:** Platform::InteropServices  
-  
-## <a name="see-also"></a>Viz také  
- [Platforma Namespace](platform-namespace-c-cx.md)
+
+Tento obor názvů je určena pouze pro interní použití a není určena pro použití pro vývoj.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+namespace Platform {
+   namespace InteropServices {
+}}
+```
+
+### <a name="members"></a>Členové
+
+I když se tento obor názvů je určená pro interní použití, prohlížečích může zobrazit následující členy tohoto oboru názvů.
+
+|Název|Poznámka|
+|----------|------------|
+|ComInterfaceType|výčet|
+|Atributu InterfaceTypeAttribute určíte||
+|LayoutKind|výčet|
+|MarshalAsAttribute||
+|StuctLayoutAttribute||
+|Typ UnmanagedType|výčet|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`Platform`
+
+### <a name="requirements"></a>Požadavky
+
+**Metadata:** platform.winmd
+
+**Namespace:** Platform::InteropServices
+
+## <a name="see-also"></a>Viz také
+
+[Platforma Namespace](platform-namespace-c-cx.md)

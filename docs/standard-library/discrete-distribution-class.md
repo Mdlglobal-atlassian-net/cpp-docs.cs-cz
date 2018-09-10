@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964207"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108756"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution – třída
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*<br/>
+Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*firstW* první iterátor v seznamu, ze které k vytvoření distribuce.
+*firstW*<br/>
+První iterátor v seznamu, ze které k vytvoření distribuce.
 
-*lastW* poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
+*lastW*<br/>
+Poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
 
-*weightlist* [initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
+*weightlist*<br/>
+[Initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
 
-*počet* počet prvků v rozsahu distribuce. Pokud `count==0`, ekvivalentní výchozí konstruktor (generuje vždy nula).
+*Počet*<br/>
+Počet prvků v rozsahu distribuce. Pokud `count==0`, ekvivalentní výchozí konstruktor (generuje vždy nula).
 
-*Nízká* nejnižší hodnotu v rozsahu distribuce.
+*Nízká*<br/>
+Nejnižší hodnotu v rozsahu distribuce.
 
-*Vysoká* nejvyšší číslo v rozsahu distribuce.
+*Vysoká*<br/>
+Nejvyšší číslo v rozsahu distribuce.
 
-*weightfunc* objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
+*weightfunc*<br/>
+Objekt, který představuje funkci pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
 
-*Parametr* `param_type` struktura používaná k vytvoření distribuce.
+*Parametr*<br/>
+`param_type` Struktura používaná k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*firstW* první iterátor v seznamu, ze které k vytvoření distribuce.
+*firstW*<br/>
+První iterátor v seznamu, ze které k vytvoření distribuce.
 
-*lastW* poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
+*lastW*<br/>
+Poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
 
-*weightlist* [initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
+*weightlist*<br/>
+[Initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
 
-*počet* počet prvků v rozsahu distribuce. Pokud *počet* je 0, jedná se o ekvivalent výchozího konstruktoru (generuje vždy nula).
+*Počet*<br/>
+Počet prvků v rozsahu distribuce. Pokud *počet* je 0, jedná se o ekvivalent výchozího konstruktoru (generuje vždy nula).
 
-*Nízká* nejnižší hodnotu v rozsahu distribuce.
+*Nízká*<br/>
+Nejnižší hodnotu v rozsahu distribuce.
 
-*Vysoká* nejvyšší číslo v rozsahu distribuce.
+*Vysoká*<br/>
+Nejvyšší číslo v rozsahu distribuce.
 
-*weightfunc* objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
+*weightfunc*<br/>
+Objekt, který představuje funkci pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
 
-*správné* `param_type` objekt k porovnání s tím.
+*doprava*<br/>
+`param_type` Objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky
 

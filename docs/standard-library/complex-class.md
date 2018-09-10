@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a76266714a462837ce8c919392abde8293af8d86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684718"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103240"
 ---
 # <a name="complex-class"></a>complex – třída
 
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* hodnotu skutečné část použitý k inicializaci komplexního čísla při konstrukci.
+*_RealVal*<br/>
+Hodnota části skutečné použitý k inicializaci komplexního čísla při konstrukci.
 
-*_ImagVal* hodnotu imaginární části použitý k inicializaci komplexního čísla při konstrukci.
+*_ImagVal*<br/>
+Hodnota imaginární části použitý k inicializaci komplexního čísla při konstrukci.
 
-*complexNum* komplexní čísla, jejichž reálné a imaginární části se používají k inicializaci komplexního čísla při konstrukci.
+*complexNum*<br/>
+Komplexní čísla, jejichž reálné a imaginární části se používají k inicializaci komplexního čísla při konstrukci.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* komplexní čísla, jehož imaginární hodnota má být extrahován.
+*doprava*<br/>
+Komplexní čísla, jehož imaginární hodnota má být extrahován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
+*doprava*<br/>
+Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
+*doprava*<br/>
+Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* komplexního čísla do odečtena od cílové komplexního čísla.
+*complexNum*<br/>
+Komplexní čísla se odečítají z cílové komplexního čísla.
 
-*_RealPart* reálné číslo, které bude odečítat od cílové komplexního čísla.
+*_RealPart*<br/>
+Reálné číslo bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -503,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* komplexního čísla do odečtena od cílové komplexního čísla.
+*complexNum*<br/>
+Komplexní čísla se odečítají z cílové komplexního čísla.
 
-*_RealPart* reálné číslo, které bude odečítat od cílové komplexního čísla.
+*_RealPart*<br/>
+Reálné číslo bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
+*doprava*<br/>
+Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  COMPLEX::Real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* komplexní čísla, jejichž skutečné hodnoty je třeba extrahovat.
+*doprava*<br/>
+Komplexní čísla, jejichž skutečné hodnoty je třeba extrahovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 

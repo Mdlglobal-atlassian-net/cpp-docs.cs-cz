@@ -1,5 +1,5 @@
 ---
-title: _free_locale – | Microsoft Docs
+title: _free_locale – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397129"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103316"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,23 +57,24 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parametry
 
-*národní prostředí* národní prostředí objektu k uvolnění.
+*Národní prostředí*<br/>
+Objekt národního prostředí pro uvolnění.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Free_locale –** funkce slouží k bezplatným objekt národního prostředí získané z volání **_get_current_locale –** nebo **_create_locale –**.
+**_Free_locale –** funkce slouží k uvolnění objektu národního prostředí získaný z volání **_get_current_locale –** nebo **_create_locale**.
 
-Předchozí název této funkce **__free_locale –** (se dvěma úvodní podtržítka) je zastaralá.
+Předchozí název této funkce **__free_locale –** (se dvěma vedoucími podtržítky) je zastaralá.
 
 ## <a name="requirements"></a>Požadavky
 
-|**Rutiny**|Požadovaný hlavičkový soubor|
+|**Rutina**|Požadovaný hlavičkový soubor|
 |---------------|---------------------|
 |**_free_locale**|\<Locale.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_get_current_locale](get-current-locale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

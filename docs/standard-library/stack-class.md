@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963222"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110409"
 ---
 # <a name="stack-class"></a>stack – třída
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ dat prvku, který bude uložen do zásobníku.
+*Typ*<br/>
+Typ dat prvku, který bude uložen do zásobníku.
 
-*Kontejner* typu základního kontejneru používaný k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >*.
+*Kontejner*<br/>
+Typ základního kontejneru používaný k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >*.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* prvku přidán do horní části zásobníku.
+*Val*<br/>
+Prvek přidán do horní části zásobníku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* kontejneru je vytvořený zásobníku kopií.
+*doprava*<br/>
+Kontejner je vytvořený zásobníku kopií.
 
 ### <a name="example"></a>Příklad
 

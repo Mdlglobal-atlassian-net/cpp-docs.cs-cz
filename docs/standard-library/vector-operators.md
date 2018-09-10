@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 64e819863623f05eeb4c1642f2f43cb81efcdb5b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959680"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108815"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vektor&gt; operátory
 
@@ -44,9 +44,11 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `vector`.
+*doleva*<br/>
+Objekt typu `vector`.
 
-*správné* objekt typu `vector`.
+*doprava*<br/>
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -94,10 +96,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 *doprava*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -145,10 +147,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 *doprava*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -196,10 +198,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 *doprava*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -247,10 +249,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 *doprava*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -299,10 +301,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Parametry
 
 *doleva*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 *doprava*  
- Objekt typu `vector`.
+Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

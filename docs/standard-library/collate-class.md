@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966456"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110370"
 ---
 # <a name="collate-class"></a>collate – třída
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
-*_Locname* název národního prostředí.
+*_Locname*<br/>
+Název národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* ukazatel na první prvek v první řadě k porovnání.
+*first1*<br/>
+Ukazatel na první prvek v první sekvenci, který se má porovnat.
 
-*Příjmení1* ukazatel na poslední prvek v první řadě k porovnání.
+*Příjmení1*<br/>
+Ukazatel na poslední prvek v první sekvenci, který se má porovnat.
 
-*first2* ukazatel na první prvek v druhé pořadí k porovnání.
+*first2*<br/>
+Ukazatel na první prvek v druhé pořadí, který se má porovnat.
 
-*Příjmení2* ukazatel po posledním prvku v druhé pořadí k porovnání.
+*Příjmení2*<br/>
+Ukazatel na po posledním prvku v druhé pořadí, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* ukazatel na první prvek v první řadě k porovnání.
+*first1*<br/>
+Ukazatel na první prvek v první sekvenci, který se má porovnat.
 
-*Příjmení1* ukazatel na poslední prvek v první řadě k porovnání.
+*Příjmení1*<br/>
+Ukazatel na poslední prvek v první sekvenci, který se má porovnat.
 
-*first2* ukazatel na první prvek v druhé pořadí k porovnání.
+*first2*<br/>
+Ukazatel na první prvek v druhé pořadí, který se má porovnat.
 
-*Příjmení2* ukazatel po posledním prvku v druhé pořadí k porovnání.
+*Příjmení2*<br/>
+Ukazatel na po posledním prvku v druhé pořadí, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
+*první*<br/>
+Ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
 
-*poslední* ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
+*poslední*<br/>
+Ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametry
 
-*první* ukazatel na první znak v sekvenci, která má být převeden.
+*první*<br/>
+Ukazatel na první znak v sekvenci, která má být převeden.
 
-*poslední* ukazatel na poslední znak v sekvenci, která má být převeden.
+*poslední*<br/>
+Ukazatel na poslední znak v sekvenci, která má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
+*první*<br/>
+Ukazatel na první znak v sekvenci, jehož má hodnota má být stanovena.
 
-*poslední* ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
+*poslední*<br/>
+Ukazatel na poslední znak v sekvenci, jehož má hodnota má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* ukazatel na první znak v sekvenci, která má být převeden.
+*první*<br/>
+Ukazatel na první znak v sekvenci, která má být převeden.
 
-*poslední* ukazatel na poslední znak v sekvenci, která má být převeden.
+*poslední*<br/>
+Ukazatel na poslední znak v sekvenci, která má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 

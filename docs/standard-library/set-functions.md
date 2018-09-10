@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0baea9b63bb012396847c6408625bbcc62001d0d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966329"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110289"
 ---
 # <a name="ltsetgt-functions"></a>&lt;Nastavte&gt; funkce
 
@@ -31,9 +31,11 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*správné* sady poskytující prvky pro záměnu nebo set, jehož prvky mají být zaměněny sady *levé*.
+*doprava*<br/>
+Sada poskytující prvky pro záměnu nebo set, jehož prvky mají být zaměněny sady *levé*.
 
-*levé* set, jehož prvky mají být zaměněny sady *správné*.
+*doleva*<br/>
+Sada, jehož prvky mají být zaměněny sady *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -58,9 +60,11 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*správné* multiset poskytující prvky pro záměnu nebo multiset, jehož prvky mají vyměnit s těmi třída multiset *levé*.
+*doprava*<br/>
+Multiset poskytující prvky pro záměnu nebo multiset, jehož prvky mají vyměnit s těmi třída multiset *levé*.
 
-*levé* multiset, jehož prvky mají vyměnit s těmi třída multiset *správné*.
+*doleva*<br/>
+Multiset, jehož prvky mají vyměnit s těmi třída multiset *správné*.
 
 ### <a name="remarks"></a>Poznámky
 

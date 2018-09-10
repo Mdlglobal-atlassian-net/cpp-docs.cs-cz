@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758375"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103876"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>Parametry
 
-*K*  
- Typ klíče v páru klíč hodnota.
+*K*<br/>
+Typ klíče v páru klíč hodnota.
 
-*V*  
+*V*<br/>
 Typ hodnoty v páru klíč hodnota.
 
-*C*  
+*C*<br/>
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map. Ve výchozím nastavení [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()*  
-Generovaný kompilátorem funkci, která ověřuje typu *K* a *V* a poskytuje uživatelsky přívětivou chybovou zprávu, pokud typ nelze ukládat v objektu Map.
+*__is_valid_winrt_type()* generovaný kompilátorem funkci, která ověřuje typu *K* a *V* a poskytuje uživatelsky přívětivou chybovou zprávu, pokud typ nelze ukládat v objektu Map.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč používaná k nalezení elementu mapy. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
-*value*  
+*value*<br/>
 Hodnota část páru klíč hodnota. Typ *hodnotu* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč používaná k nalezení prvku v objektu Map. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>Parametry
 
-*Inicializace*  
+*Inicializace*<br/>
 Typename aktuální mapování.
 
-*Kompozice*  
+*Kompozice*<br/>
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map.
 
-*m*  
+*m*<br/>
 Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` , který slouží k inicializaci aktuální mapování.
 
-*první*  
+*první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální mapování.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální mapování.
 
 ## <a name="mapchanged"></a>  Map::mapchanged – událost
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
 ## <a name="size"></a>  Map::size – metoda
@@ -304,5 +303,5 @@ Počet prvků v objektu Map.
 
 ## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)  
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platforma Namespace](platform-namespace-c-cx.md)<br/>
+[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954809"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108899"
 ---
 # <a name="moneyput-class"></a>money_put – třída
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*OutputIterator* typ iterátoru, do kterého finanční funkce zapisují svůj výstup.
+*OutputIterator*<br/>
+Typ iterátoru, do kterého finanční funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*Další* iterátor adresující první prvek vložený řetězec.
+*next*<br/>
+Iterátor adresující první prvek vložený řetězec.
 
-*_Intl* logická hodnota určující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+*_Intl*<br/>
+Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*_Iosbase* formátu příznak, který se při nastavení znamená, že symbol měny je volitelné; v opačném případě je povinný
+*_Iosbase*<br/>
+Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
 
-*_Fill* znakem, který se používá k vytvoření mezer.
+*_Fill*<br/>
+Znak, který se používá k vytvoření mezer.
 
-*Val* objekt string, který má být převeden.
+*Val*<br/>
+Objekt string má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*Další* iterátor adresující první prvek vložený řetězec.
+*next*<br/>
+Iterátor adresující první prvek vložený řetězec.
 
-*_Intl* logická hodnota určující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+*_Intl*<br/>
+Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
-*_Iosbase* formátu příznak, který se při nastavení znamená, že symbol měny je volitelné; v opačném případě je povinný
+*_Iosbase*<br/>
+Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
 
-*_Fill* znakem, který se používá k vytvoření mezer.
+*_Fill*<br/>
+Znak, který se používá k vytvoření mezer.
 
-*Val* objekt string, který má být převeden.
+*Val*<br/>
+Objekt string má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 

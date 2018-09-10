@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106753"
 ---
 # <a name="timeput-class"></a>time_put – třída
 
@@ -46,10 +46,10 @@ class time_put : public locale::facet;
 ### <a name="parameters"></a>Parametry
 
 *CharType*  
- Typ používaný v rámci programu ke kódování znaků.
+Typ používaný v rámci programu ke kódování znaků.
 
 *OutputIterator*  
- Typ iterátoru, do kterého časové funkce zapisují svůj výstup.
+Typ iterátoru, do kterého časové funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -109,19 +109,19 @@ virtual iter_type do_put(
 ### <a name="parameters"></a>Parametry
 
 *next*  
- Výstupní iterátor, kde posloupnost znaků představující datum a čas mají být vloženy.
+Výstupní iterátor, kde posloupnost znaků představující datum a čas mají být vloženy.
 
 *_Iosbase*  
- Nevyužité.
+Nevyužité.
 
 *_Pt*  
- Informace data a času vytváří výstup.
+Informace data a času vytváří výstup.
 
 *_Fmt*  
- Formát výstupu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Formát výstupu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 *_Mod*  
- Modifikátor formátu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Modifikátor formátu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -172,28 +172,28 @@ iter_type put(iter_type next,
 ### <a name="parameters"></a>Parametry
 
 *next*  
- Výstupní iterátor, kde posloupnost znaků představující datum a čas mají být vloženy.
+Výstupní iterátor, kde posloupnost znaků představující datum a čas mají být vloženy.
 
 *_Iosbase*  
- Nevyužité.
+Nevyužité.
 
 *_Fill*  
- Znak typu `CharType` používaného k vytvoření mezer.
+Znak typu `CharType` používaného k vytvoření mezer.
 
 *_Pt*  
- Informace data a času vytváří výstup.
+Informace data a času vytváří výstup.
 
 *_Fmt*  
- Formát výstupu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Formát výstupu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 *_Mod*  
- Modifikátor formátu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Modifikátor formátu. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 *první*  
- Začátek formátovací řetězce pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Začátek formátovací řetězce pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 *poslední*  
- Konec formátovací řetězec pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
+Konec formátovací řetězec pro výstup. Zobrazit [strftime, wcsftime, _strftime_l, _wcsftime_l – –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) platné hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -257,7 +257,8 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 

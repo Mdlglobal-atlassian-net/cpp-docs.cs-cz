@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767940"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103700"
 ---
 # <a name="atl-operators"></a>ATL – operátory
 
@@ -43,15 +43,15 @@ Tato část obsahuje referenční témata pro globální operátory ATL.
 Porovná `CSid` objekty nebo `SID` struktury (security identifier) pro rovnost.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-`lhs`  
+*lhs*  
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-`rhs`  
+*Zarovnání indirekce RHS*  
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -63,7 +63,7 @@ Vrátí hodnotu TRUE, pokud objekty rovnají, FALSE. Pokud nejsou stejné.
 Porovná `CSid` objekty nebo `SID` struktury (security identifier) pro nerovnost.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -83,7 +83,7 @@ Vrátí hodnotu TRUE, pokud jsou tyto objekty stejné, FALSE, pokud jsou shodné
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru menší než `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -107,7 +107,7 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru větší než `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -131,7 +131,7 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 Testuje, zda `CSid` objektu nebo `SID` struktuře na levé straně operátoru menší než nebo rovno je `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -155,7 +155,7 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru větší než nebo rovna hodnotě `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry

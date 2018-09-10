@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfe7f0c579e0e22e3de98a9e5edf3abee6cfc2b3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb6c0051fbf4a1d5b58cb53891325058effb0db1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953166"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108990"
 ---
 # <a name="lessequal-struct"></a>less_equal – struktura
 
@@ -51,9 +51,11 @@ struct less_equal<void>
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator<=` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 

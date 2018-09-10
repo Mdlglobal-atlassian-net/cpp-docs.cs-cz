@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961068"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108719"
 ---
 # <a name="ltarraygt-functions"></a>&lt;pole&gt; funkce
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Index* posunutí elementu.
+*Index*<br/>
+Posunutí elementu.
 
-*T* typ elementu.
+*T*<br/>
+Typ prvku
 
-*N* počet prvků v poli.
+*N*<br/>
+Počet prvků v poli.
 
-*směrování žádostí na aplikace* pole lze vybírat.
+*směrování žádostí na aplikace*<br/>
+Pole lze vybírat.
 
 ### <a name="example"></a>Příklad
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ prvku
 
-*N* velikost pole.
+*N*<br/>
+Velikost pole.
 
-*levé* prvního pole, které chcete prohodit.
+*doleva*<br/>
+První pole se prohodit.
 
-*správné* druhého pole, které chcete prohodit.
+*doprava*<br/>
+Druhé pole se prohodit.
 
 ### <a name="remarks"></a>Poznámky
 

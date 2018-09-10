@@ -15,30 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 197f43a8b5a9485642aca16c25cb35515cabe020
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759398"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109989"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::UIntPtr – hodnotová třída
-Představuje ukazatele bez znaménka, jejíž velikost je vhodné pro platformu (32bitová nebo 64bitová verze).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public value struct UintPtr  
-```  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)
+
+Představuje ukazatele bez znaménka, jejíž velikost je vhodné pro platformu (32bitová nebo 64bitová verze).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public value struct UintPtr
+```
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956863"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100908"
 ---
 # <a name="duration-class"></a>duration – třída
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Rep2* aritmetický typ představující počet taktů.
+*Rep2*<br/>
+Aritmetický typ představující počet taktů.
 
-*Period2* A `std::ratio` specializace šablony pro počet dob taktů v jednotkách sady sekund.
+*Period2*<br/>
+A `std::ratio` specializace šablony pro počet dob taktů v jednotkách sady sekund.
 
-*R* počet taktů výchozí období.
+*R*<br/>
+Počet taktů výchozí období.
 
-*Doba trvání* počet taktů limitu určeného *Period2*.
+*Doba trvání*<br/>
+Počet taktů limitu určeného *Period2*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Div* pro první způsob *Div* představuje počet cyklů. Pro druhý způsob *Div* je `duration` objekt, který obsahuje počet cyklů.
+*div*<br/>
+První metoda *Div* představuje počet cyklů. Pro druhý způsob *Div* je `duration` objekt, který obsahuje počet cyklů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametry
 
-*Mult* hodnotu typu, který je určen `duration::rep`.
+*Mult*<br/>
+Hodnota typu, která je zadána `duration::rep`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Div* hodnotu typu, který je určen `duration::rep`.
+*div*<br/>
+Hodnota typu, která je zadána `duration::rep`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání* A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Div* dělitel, který je buď objekt trvání, nebo hodnotu, která představuje čítače impulzů.
+*div*<br/>
+Dělitel, který je buď objekt trvání, nebo hodnotu, která představuje čítače impulzů.
 
 ### <a name="remarks"></a>Poznámky
 

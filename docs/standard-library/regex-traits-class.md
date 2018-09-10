@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960928"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106467"
 ---
 # <a name="regextraits-class"></a>regex_traits – třída
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* element typ znaku pro popis.
+*Elem*<br/>
+Typ elementu znaků pro popis.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*loc* objekt národního prostředí pro uložení.
+*Umístění*<br/>
+Objekt národního prostředí pro uložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* elementu, který chcete testovat.
+*ch*<br/>
+Testovaný prvek.
 
-*kompatibilní se specifikací* tříd pro testování.
+*specifikace CLS*<br/>
+Třídy pro testování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*
+*str*<br/>
 
 Posloupnost zakončená hodnotou null.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* od pořadí k vyhledání.
+*první*<br/>
+Začátek pořadí k vyhledání.
 
-*poslední* konec pořadí k vyhledání.
+*poslední*<br/>
+Konec pořadí k vyhledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* od pořadí k vyhledání.
+*první*<br/>
+Začátek pořadí k vyhledání.
 
-*poslední* konec pořadí k vyhledání.
+*poslední*<br/>
+Konec pořadí k vyhledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* od pořadí transformace.
+*první*<br/>
+Začátek pořadí transformace.
 
-*poslední* konec pořadí transformace.
+*poslední*<br/>
+Konec pořadí transformace.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* od pořadí transformace.
+*první*<br/>
+Začátek pořadí transformace.
 
-*poslední* konec pořadí transformace.
+*poslední*<br/>
+Konec pořadí transformace.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* elementu, který chcete převést.
+*ch*<br/>
+Elementu, který chcete převést.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* elementu, který chcete převést.
+*ch*<br/>
+Elementu, který chcete převést.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* elementu, který chcete převést.
+*ch*<br/>
+Elementu, který chcete převést.
 
-*základ číselné soustavy* základní použití aritmetické operace.
+*radix*<br/>
+Aritmetické operace základní použití.
 
 ### <a name="remarks"></a>Poznámky
 

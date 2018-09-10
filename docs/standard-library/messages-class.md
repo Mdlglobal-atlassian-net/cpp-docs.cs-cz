@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106448"
 ---
 # <a name="messages-class"></a>messages – třída
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* katalog bude uzavřen.
+*_Catval*<br/>
+Katalog bude uzavřen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* katalog bude uzavřen.
+*_Catval*<br/>
+Katalog bude uzavřen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* identifikační hodnotu určující katalog zpráv, které chcete prohledat.
+*_Catval*<br/>
+Identifikace hodnota určující katalog zpráv, které chcete prohledat.
 
-*_Nastavit* identifikovat první používaná k nalezení zprávu v katalogu zpráv.
+*_Nastavit*<br/>
+První identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_TEXT* druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
+*_TEXT*<br/>
+Druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_Dfault* řetězec, který má být vrácen při selhání.
+*_Dfault*<br/>
+Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* název katalogu pro hledání.
+*_Catname*<br/>
+Název katalogu pro hledání.
 
-*_Loc* národní prostředí prohledávána v katalogu.
+*_Loc*<br/>
+Národní prostředí prohledávána v katalogu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* identifikační hodnotu určující katalog zpráv, které chcete prohledat.
+*_Catval*<br/>
+Identifikace hodnota určující katalog zpráv, které chcete prohledat.
 
-*_Nastavit* identifikovat první používaná k nalezení zprávu v katalogu zpráv.
+*_Nastavit*<br/>
+První identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_TEXT* druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
+*_TEXT*<br/>
+Druhé identifikovat používaná k nalezení zprávu v katalogu zpráv.
 
-*_Dfault* řetězec, který má být vrácen při selhání.
+*_Dfault*<br/>
+Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
-*_Locname* název národního prostředí.
+*_Locname*<br/>
+Název národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* název katalogu pro hledání.
+*_Catname*<br/>
+Název katalogu pro hledání.
 
-*_Loc* národní prostředí prohledávána v katalogu.
+*_Loc*<br/>
+Národní prostředí prohledávána v katalogu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

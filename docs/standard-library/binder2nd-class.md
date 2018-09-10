@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 040687a4218f24bb57f20ea3307dbf69ffa3f37d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962721"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108394"
 ---
 # <a name="binder2nd-class"></a>binder2nd – třída
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*Func* objekt binární funkce pro převod na objekt jednočlenné funkce.
+*Func*<br/>
+Objekt binární funkce pro převod na objekt jednočlenné funkce.
 
-*správné* hodnotu, do kterého má být vázaný druhého argumentu binární funkce na objekt.
+*doprava*<br/>
+Hodnota, na které má být vázaný druhého argumentu binární funkce na objekt.
 
-*levé* hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
+*doleva*<br/>
+Hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 

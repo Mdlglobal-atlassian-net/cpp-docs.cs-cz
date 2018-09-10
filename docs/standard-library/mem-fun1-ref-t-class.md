@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b50f703dde69669c57e0f639e748ee596a3f1ab
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106584"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t – třída
 
@@ -44,11 +44,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*_Pm*<br/>
+Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*levé* objekt, který *_Pm* členská funkce je volána v.
+*doleva*<br/>
+Objekt, který *_Pm* členská funkce je volána v.
 
-*správné* argument, který je právě přiřazen k *_Pm*.
+*doprava*<br/>
+Argument, který je právě přiřazen k *_Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
 

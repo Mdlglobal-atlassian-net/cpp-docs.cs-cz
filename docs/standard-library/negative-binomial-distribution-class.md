@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964405"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103994"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution – třída
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*<br/>
+Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*k* `k` parametru distribuce.
+*k*<br/>
+`k` Parametru distribuce.
 
-*p* `p` parametru distribuce.
+*p*<br/>
+`p` Parametru distribuce.
 
-*Parametr* parametr struktury použité k vytvoření distribuce.
+*Parametr*<br/>
+Struktura parametr použít k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -266,11 +270,14 @@ param_type – struktura {negative_binomial_distribution – definice typedef`<`
 
 ### <a name="parameters"></a>Parametry
 
-*k* `k` parametru distribuce.
+*k*<br/>
+`k` Parametru distribuce.
 
-*p* `p` parametru distribuce.
+*p*<br/>
+`p` Parametru distribuce.
 
-*správné* `param_type` strukturu použit k porovnání.
+*doprava*<br/>
+`param_type` Strukturu použit k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 

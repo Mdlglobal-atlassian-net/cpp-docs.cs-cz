@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec74810503fa86d6b5d102aa0fd1ca34b4fef1c6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 82c885e5bb181a770c91e5f05a041c85ee5b9bc7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751267"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110841"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException – třída
-Vyvolána, když přetypování nebo explicitního převodu je neplatný.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class InvalidCastException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána, když přetypování nebo explicitního převodu je neplatný.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class InvalidCastException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

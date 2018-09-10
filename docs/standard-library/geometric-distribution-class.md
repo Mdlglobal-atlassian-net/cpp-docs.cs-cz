@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ca6120a8cd649b1c4d3d5d662cb987d950b9b4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960291"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110383"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution – třída
 
@@ -76,9 +76,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*<br/>
+Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*URNG* jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*URNG*<br/>
+Jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -228,9 +230,11 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*p* `p` parametru distribuce.
+*p*<br/>
+`p` Parametru distribuce.
 
-*Parametr* parametr struktury použité k vytvoření distribuce.
+*Parametr*<br/>
+Struktura parametr použít k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -257,9 +261,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*p* `p` parametru distribuce.
+*p*<br/>
+`p` Parametru distribuce.
 
-*správné* `param_type` instance pro tuto hodnotu na porovnání.
+*doprava*<br/>
+`param_type` Instance pro tuto hodnotu na porovnání.
 
 ### <a name="remarks"></a>Poznámky
 

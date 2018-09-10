@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964456"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110422"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterátor&gt; funkce
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>Parametry
 
-*InIt* iterátoru, který má být zvýšen a který musí splňovat požadavky na vstupní iterátor.
+*Inicializace*<br/>
+Iterátor, který má být zvýšen a který musí splňovat požadavky pro vstupní iterátor.
 
-*Vypnout* celočíselného typu lze převést na typ rozdílu iterátoru a, která určuje počet přírůstků pozice iterátoru je na rozšířené.
+*Vypnout*<br/>
+Integrální typ, který lze převést na typ rozdílu iterátoru a určuje počet přírůstků pozice, o které má být iterátor zvýšen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* kontejner, do kterého má být provedeny zpětné vložení.
+*_Cont*<br/>
+Kontejner, do kterého má být zpracována zpětné vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování* kontejneru.
+*pokračování*<br/>
+Kontejner.
 
-*pole* pole objektů typu `Ty`.
+*Pole*<br/>
+Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování* kontejner nebo seznam initializer_list.
+*pokračování*<br/>
+Kontejner nebo seznam initializer_list.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování* kontejner nebo seznam initializer_list.
+*pokračování*<br/>
+Kontejner nebo seznam initializer_list.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parametry
 
-*první* první iterátor, jehož vzdálenost od druhého se stanoví.
+*první*<br/>
+První iterátor, který má být stanovena jehož vzdálenost od druhé.
 
-*poslední* druhý iterátor, jehož vzdálenost od první má být stanovena.
+*poslední*<br/>
+Druhý iterátor, jehož vzdálenost od první má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování* kontejneru.
+*pokračování*<br/>
+Kontejner.
 
-*pole* pole objektů typu `Ty`.
+*Pole*<br/>
+Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* objektu kontejneru, jehož přední dochází k danému elementu vložen.
+*_Cont*<br/>
+Objekt kontejneru, jehož přední dochází k danému elementu vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a>  Vkládací modul
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* kontejner, ke které jsou nové prvky mají být přidány.
+*_Cont*<br/>
+Kontejner, ke kterému jsou nové prvky mají být přidány.
 
-*_Where* iterátor vyhledání bodu vložení.
+*_Where*<br/>
+Iterátor vyhledání bodu vložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
@@ -611,18 +625,21 @@ Vytvoří [checked_array_iterator](../standard-library/checked-array-iterator-cl
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na cílové pole.
+*PTR*<br/>
+Ukazatel na cílové pole.
 
-*Velikost* velikost cílového pole.
+*Velikost*<br/>
+Velikost cílového pole.
 
-*Index* volitelný index do pole.
+*Index*<br/>
+Volitelný index do pole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parametry
 
-*_It* iterátoru uložená v novém přesunout iterátoru.
+*_It*<br/>
+Iterátor uložené v nové iterátorem pohybu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na cílové pole.
+*PTR*<br/>
+Ukazatel na cílové pole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parametry
 
-*první* aktuální pozici.
+*první*<br/>
+Aktuální pozice.
 
-*_Off* počet, kolikrát chcete iterovat.
+*_Off*<br/>
+Počet pokusů pro iteraci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parametry
 
-*první* aktuální pozici.
+*první*<br/>
+Aktuální pozice.
 
-*_Off* počet, kolikrát chcete iterovat.
+*_Off*<br/>
+Počet pokusů pro iteraci.
 
 ### <a name="remarks"></a>Poznámky
 

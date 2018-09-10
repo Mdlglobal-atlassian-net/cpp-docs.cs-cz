@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208647"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107396"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkční&gt; funkce
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typ objektu určeného k volání.
+*Fty*<br/>
+Typ objektu určeného k volání.
 
-*TN* typ argumentu n-tý volání.
+*TN*<br/>
+Typ n-té volání argument.
 
-*fn* objekt, který chcete volat.
+*fn*<br/>
+Objekt k volání.
 
-*tN* n-tý argument volání.
+*TN*<br/>
+Volání n-tý argument.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parametry
 
-*Func* objekt binární funkce pro převod na objekt jednočlenné funkce.
+*Func*<br/>
+Objekt binární funkce pro převod na objekt jednočlenné funkce.
 
-*levé* hodnotu, do kterého má být vázaný prvního argumentu binární funkce na objekt.
+*doleva*<br/>
+Hodnota, na které má být vázaný prvního argumentu binární funkce na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Func* objekt binární funkce pro převod na objekt jednočlenné funkce.
+*Func*<br/>
+Objekt binární funkce pro převod na objekt jednočlenné funkce.
 
-*správné* hodnotu, do kterého má být vázaný druhého argumentu binární funkce na objekt.
+*doprava*<br/>
+Hodnota, na které má být vázaný druhého argumentu binární funkce na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator&` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -383,24 +393,26 @@ Předdefinovaný objekt funkce, která provádí bitového doplňku (ne) operaci
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ, který podporuje unární `operator~`.
+*Typ*<br/>
+Typ, který podporuje unární `operator~`.
 
-*Pravé* operand operace bitového doplňku. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování argument typu odkaz lvalue nebo rvalue *typ*.
+*doprava*<br/>
+Operand operace bitového doplňku. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování argument typu odkaz lvalue nebo rvalue *typ*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator|` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *Typ*, *T*, *U* libovolný typ, který podporuje `operator^` , která přebírá operandů zadaný nebo odvozené typy.
 
-*Vlevo* levý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*doleva*<br/>
+Levý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*Pravé* pravý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*doprava*<br/>
+Pravý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ argumentu zabalit.
+*Ty*<br/>
+Typ argumentu zabalit.
 
-*arg* argument zabalit.
+*arg*<br/>
+Argument, který chcete zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parametry
 
-*Staré* návratový typ zabalené funkce.
+*Vrácená hodnota:*<br/>
+Návratový typ zabalené funkce.
 
-*Ty* typ ukazatele členské funkce.
+*Ty*<br/>
+Typ ukazatele členské funkce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parametry
 
-*pmem* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*pmem*<br/>
+Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parametry
 
-*pmem* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*pmem*<br/>
+Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parametry
 
-*před* unární predikát k bude negovat.
+*Před*<br/>
+Unární predikát, který chcete bude negovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parametry
 
-*Func* binárním predikátem bude negovat.
+*Func*<br/>
+Binární predikát k bude negovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parametry
 
-*pfunc* unární nebo binární ukazatel funkce pro převod na přizpůsobitelné funkce.
+*pfunc*<br/>
+Unární nebo binární ukazatel funkce pro převod na přizpůsobitelné funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typ řízený objekty funkce.
+*Fty*<br/>
+Typ řízený objekty funkce.
 
-*F1* první objekt funkce.
+*F1*<br/>
+První objekt funkce.
 
-*F2* druhý objekt funkce.
+*F2*<br/>
+Druhý objekt funkce.
 
 ### <a name="remarks"></a>Poznámky
 

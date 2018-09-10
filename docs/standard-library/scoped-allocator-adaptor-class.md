@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104064"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor – třída
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parametry
 
-*počet* počet elementů, u kterých má být přidělené dostatečné úložiště.
+*Počet*<br/>
+Počet elementů, u kterých má být přidělené dostatečné úložiště.
 
-*pomocný parametr* ukazatel, který může pomoct objekt alokátoru, který vyhledává adresu objektu přidělena před žádost.
+*pomocný parametr*<br/>
+Ukazatel, který může pomoct objekt alokátoru, který vyhledává adresu objektu přidělena před žádost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na umístění v paměti, kde má být vytvořen objekt.
+*ptr*<br/>
+Ukazatel na umístění v paměti, kde má být vytvořen objekt.
 
-*args* seznam argumentů.
+*argumenty*<br/>
+Seznam argumentů.
 
-*první* objekt první typu v páru.
+*první*<br/>
+Objekt typu první v páru.
 
-*druhý* objekt druhého typu v páru.
+*Sekundy*<br/>
+Objekt typu druhé v páru.
 
-*správné* existující objekt pro přesunutí nebo kopírování.
+*doprava*<br/>
+Existující objekt pro přesunutí nebo kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na počáteční umístění objekty, které chcete být navrácena.
+*ptr*<br/>
+Ukazatel na počáteční umístění objekty, které chcete být navrácena.
 
-*počet* počet objektů, které chcete uvolnit.
+*Počet*<br/>
+Počet objektů, které chcete uvolnit.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::Destroy –
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na objekt, který se má zničit.
+*ptr*<br/>
+Ukazatel na objekt, který se má zničit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parametry
 
-*správné* existující `scoped_allocator_adaptor`.
+*doprava*<br/>
+Existující `scoped_allocator_adaptor`.
 
-*Al* existující alokátoru pro použití jako vnější alokátoru.
+*Al*<br/>
+Existující alokátoru pro použití jako vnější alokátoru.
 
-*REST* seznam alokátorů má být použit jako vnitřní alokátorů.
+*REST*<br/>
+Seznam alokátorů má být použit jako vnitřní alokátorů.
 
 ### <a name="remarks"></a>Poznámky
 

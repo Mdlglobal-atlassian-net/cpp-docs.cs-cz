@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53946335175b0919c800a5ddb57d4be2fdcc20b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f0574885fb404572052fbf5066b522ed0208eba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764475"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106922"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::objectdisposedexception – třída
-Vyvolána výjimka při provádění operace na smazaném objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class ObjectDisposedException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána výjimka při provádění operace na smazaném objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class ObjectDisposedException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

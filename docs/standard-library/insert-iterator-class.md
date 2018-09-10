@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dd9b2e3beb30be7eb9aa51d7794d0d858c0be537
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960002"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101986"
 ---
 # <a name="insertiterator-class"></a>insert_iterator – třída
 
@@ -40,7 +40,8 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-`Container` Typ kontejneru, do kterého mají být vloženy pomocí prvků `insert_iterator`.
+*Kontejner*<br/>
+Typ kontejneru, do kterého mají být vloženy pomocí prvků `insert_iterator`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -125,9 +126,11 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* kontejneru, do kterého `insert_iterator` je vložit prvky.
+*_Cont*<br/>
+Kontejner, do kterého `insert_iterator` je vložit prvky.
 
-*_It* pozici pro vložení.
+*_It*<br/>
+Pozice pro vložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -164,7 +167,7 @@ int main( )
 
    // Alternatively, you may use the template version
    insert_iterator< list < int> > Iter(L, L.end ( ) );
- *Iter = 300;
+*Iter = 300;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
@@ -173,9 +176,9 @@ int main( )
 }
 \* Output:
 The list L is:
- ( 10 20 30 ).
+( 10 20 30 ).
 After the insertions, the list L is:
- ( 2 10 20 30 300 ).
+( 2 10 20 30 300 ).
 *\
 ```
 
@@ -222,9 +225,9 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator< list < int> > Iter(L, L.begin ( ) );
- *Iter = 10;
- *Iter = 20;
- *Iter = 30;
+*Iter = 10;
+*Iter = 20;
+*Iter = 30;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
@@ -233,9 +236,9 @@ int main( )
 }
 \* Output:
 The original list L is:
- ( 0 2 4 6 ).
+( 0 2 4 6 ).
 After the insertions, the list L is:
- ( 10 20 30 0 2 4 6 ).
+( 10 20 30 0 2 4 6 ).
 *\
 ```
 
@@ -284,11 +287,11 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator<vector<int> > ii ( vec, vec.begin ( ) );
- *ii = 30;
+*ii = 30;
    ii++;
- *ii = 40;
+*ii = 40;
    ii++;
- *ii = 50;
+*ii = 50;
 
    cout << "After the insertions, the vector vec becomes:\n ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++ )
@@ -297,9 +300,9 @@ int main( )
 }
 \* Output:
 The vector vec is:
- ( 1 2 3 4 ).
+( 1 2 3 4 ).
 After the insertions, the vector vec becomes:
- ( 30 40 50 1 2 3 4 ).
+( 30 40 50 1 2 3 4 ).
 *\
 ```
 
@@ -317,7 +320,8 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*Val* hodnota, která má být přiřazena ke kontejneru.
+*Val*<br/>
+Hodnota má být přiřazena ke kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -368,9 +372,9 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator< list < int> > Iter(L, L.begin ( ) );
- *Iter = 10;
- *Iter = 20;
- *Iter = 30;
+*Iter = 10;
+*Iter = 20;
+*Iter = 30;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
@@ -379,9 +383,9 @@ int main( )
 }
 \* Output:
 The original list L is:
- ( 0 2 4 6 ).
+( 0 2 4 6 ).
 After the insertions, the list L is:
- ( 10 20 30 0 2 4 6 ).
+( 10 20 30 0 2 4 6 ).
 *\
 ```
 
@@ -412,9 +416,9 @@ int main( )
 
    list<int> L;
    insert_iterator<list<int> > iivIter( L , L.begin ( ) );
- *iivIter = 10;
- *iivIter = 20;
- *iivIter = 30;
+*iivIter = 10;
+*iivIter = 20;
+*iivIter = 30;
 
    list<int>::iterator LIter;
    cout << "The list L is: ( ";

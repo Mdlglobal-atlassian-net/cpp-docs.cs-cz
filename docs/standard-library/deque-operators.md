@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 21fdf5e624634a29d8ed32e004e7fb0d653b86f1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a714fe6cb84697df9cd449cf79ff024671e75ba6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955212"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110354"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque –&gt; operátory
 
@@ -44,9 +44,11 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -92,9 +94,11 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -144,9 +148,11 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -197,9 +203,11 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -253,9 +261,11 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -307,9 +317,11 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*levé* objekt typu `deque`.
+*doleva*<br/>
+Objekt typu `deque`.
 
-*správné* objekt typu `deque`.
+*doprava*<br/>
+Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

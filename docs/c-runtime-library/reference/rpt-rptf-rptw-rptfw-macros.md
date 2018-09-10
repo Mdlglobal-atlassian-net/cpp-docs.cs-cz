@@ -1,5 +1,5 @@
 ---
-title: _RPT, _RPTF, _RPTW, _rptfw – makra | Microsoft Docs
+title: _RPT, _RPTF, _RPTW, _rptfw – makra | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411881"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104144"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW – makra
 
-Sleduje aplikace probíhá generování sestavy ladění (pouze ladicí verze). Všimněte si, že *n* určuje počet argumentů *argumentů* a může být 0, 1, 2, 3, 4 nebo 5.
+Sleduje průběh aplikace generování sestav ladění (pouze ladicí verze). Všimněte si, že *n* určuje počet argumentů v *args* a může být 0, 1, 2, 3, 4 nebo 5.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -136,35 +136,38 @@ _RPTFWn(
 
 ### <a name="parameters"></a>Parametry
 
-*reportType* typ sestavy: **_CRT_WARN**, **_CRT_ERROR**, nebo **_CRT_ASSERT**.
+*reportType*<br/>
+Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**, nebo **_CRT_ASSERT**.
 
-*Formát* řetězec formátu – ovládací prvek použitý k vytvoření uživatelské zprávy.
+*Formát*<br/>
+Řetězec řízení formátu se používá k vytvoření zprávy pro uživatele.
 
-*argumentů* argumenty nahrazení používá *formátu*.
+*argumenty*<br/>
+Argumenty nahrazení použité příkazem *formátu*.
 
 ## <a name="remarks"></a>Poznámky
 
-Všechny tyto makra trvat *reportType* a *formát* parametry. Kromě toho se může trvat až čtyři další argumenty, které jsou označeny číslo připojeným k názvu makro. Například **_rpt0 –** a **_rptf0 –** nepřebírají žádné další argumenty, **_rpt1 –** a **_rptf1 –** trvat *arg1*, **_Rpt2 –** a **_rptf2 –** trvat *arg1* a **arg2**a tak dále.
+Tato makra trvat *reportType* a *formátu* parametry. Kromě toho se může trvat až čtyři další argumenty, které jsou označeny číslo připojeným k názvu makra. Například **_RPT0** a **_RPTF0** nepřebírají žádné další argumenty **_RPT1** a **_RPTF1** trvat *arg1*, **_RPT2** a **_RPTF2** trvat *arg1* a **arg2**, a tak dále.
 
-**_RPT** a **_RPTF** makra jsou podobné [printf](printf-printf-l-wprintf-wprintf-l.md) fungovat, protože je možné použít ke sledování průběhu aplikace během procesu ladění. Tyto makra jsou však flexibilnější než **printf** vzhledem k tomu, že není potřeba být uzavřená do **#ifdef** příkazy, aby nebylo volal v prodejní sestavení aplikace. Tuto flexibilitu potřebují dosáhnete pomocí [_DEBUG –](../../c-runtime-library/debug.md) makro; **_RPT** a **_RPTF** makra jsou k dispozici pouze při **_DEBUG –** příznak je definován. Když **_DEBUG –** není definována, volání makra jsou odebrány při předběžném zpracování.
+**_RPT** a **_RPTF** makra jsou podobné [printf](printf-printf-l-wprintf-wprintf-l.md) fungovat, protože slouží ke sledování pokroku vaší aplikace během ladění procesu. Tato makra jsou však flexibilnější, než **printf** vzhledem k tomu, že není potřeba nacházet v **#ifdef** příkazy tak tomu, aby se volá v sestavení prodejní verze aplikace. Díky této flexibilitě se dosahuje prostřednictvím využití [_DEBUG](../../c-runtime-library/debug.md) – makro; **_RPT** a **_RPTF** makra jsou k dispozici pouze pokud **_DEBUG** příznak je definice. Když **_DEBUG** není definován, volání makra jsou odstraněna během předběžného zpracování.
 
-**_RPTW** a **_rptfw –** makra jsou široká charakterová verze těchto makra. Jsou jako **wprintf** a přijímají řetězce široká charakterová jako argumenty.
+**_RPTW** a **_rptfw –** makra jsou širokoznaké verze těchto maker. Jsou jako **wprintf** a přijímají řetězce širokého znaku jako argumenty.
 
-**_RPT** makra volání [_crtdbgreport –](crtdbgreport-crtdbgreportw.md) funkce k vygenerování sestavy ladění zprávou uživatele. **_RPTW** makra volání **_crtdbgreportw –** funkce při generování sestav o stejné s široké znaky. **_RPTF** a **_rptfw –** makra vytvoření sestavy ladění se zdrojový soubor a řádku číslem kde makro sestava byla volána, kromě uživatele zprávu. Vytvoří zprávu uživatele nahraďte **arg**[*n*] argumenty do *formátu* řetězce, pomocí stejných pravidel definované [printf](printf-printf-l-wprintf-wprintf-l.md)funkce.
+**_RPT** volání makra [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) funkci generování sestav ladění se zprávou uživatele. **_RPTW** volání makra **_crtdbgreportw –** funkce k vytvoření stejné sestavy pomocí široké znaky. **_RPTF** a **_rptfw –** makra vytvořit sestavu ladění s zdrojový soubor a číslo řádku kde byla volána – makro sestavy, kromě uživatele zprávu. Vytvoření uživatelské zprávy nahrazením **arg**[*n*] argumenty do *formátu* řetězce, pomocí stejných pravidel definovaných funkcemi [printf](printf-printf-l-wprintf-wprintf-l.md)funkce.
 
-**_Crtdbgreport –** nebo **_crtdbgreportw –** generuje sestavu, ladění a určí jeho cíle podle režimů aktuální sestavy a soubor definice pro *reportType*. [_Crtsetreportmode –](crtsetreportmode.md) a [_crtsetreportfile –](crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.
+**_CrtDbgReport** nebo **_crtdbgreportw –** generuje sestavu ladění a určí své cíle založené na aktuálních režimech sestavy a soubor definice pro *reportType*. [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md) funkce se používají k definování cíle pro každý typ sestavy.
 
-Pokud **_RPT** makro nazývá a ani **_crtsetreportmode –** ani **_crtsetreportfile –** byla volána, zprávy se zobrazují následujícím způsobem.
+Pokud **_RPT** makro zavolalo a ani **_CrtSetReportMode** ani **_CrtSetReportFile** byla volána, zprávy se zobrazují následujícím způsobem.
 
 |Typ sestavy|Cíl výstupu|
 |-----------------|------------------------|
 |**_CRT_WARN**|Text upozornění se nezobrazí.|
-|**_CRT_ERROR**|Automaticky otevírané okno. Stejné jako `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` určen.|
+|**_CRT_ERROR**|Automaticky otevírané okno. Stejné jako `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` kdyby nebyl zadán.|
 |**_CRT_ASSERT**|Stejné jako **_CRT_ERROR**.|
 
-Když cílové okno zprávy ladění a uživatel vybere **opakujte** tlačítko **_crtdbgreport –** nebo **_crtdbgreportw –** vrátí hodnotu 1, příčinou těchto makra spustit ladicí program, za předpokladu, že je povoleno ladění za běhu (JIT). Další informace o použití těchto maker jako ladění chyba mechanismu pro zpracování najdete v tématu [pomocí makra pro ověření a vytváření sestav](/visualstudio/debugger/macros-for-reporting).
+Pokud cíl je okno zprávy ladění a uživatel klikne **opakujte** tlačítko, **_CrtDbgReport** nebo **_crtdbgreportw –** vrátí hodnotu 1 způsobí tato makra spustit ladicí program, za předpokladu, že je povoleno ladění just-in-time (JIT). Další informace o použití těchto maker jako ladění chyba mechanismu pro zpracování, naleznete v tématu [použití maker pro ověřování a vytváření sestav](/visualstudio/debugger/macros-for-reporting).
 
-Existují dva další makra, které vygenerovat sestavu, ladění. [_ASSERT](assert-asserte-assert-expr-macros.md) makro generuje sestavy, ale jenom v případě, že její argument výrazu vyhodnocena jako FALSE. [_Asserte –](assert-asserte-assert-expr-macros.md) je přesně například **_ASSERT**, ale zahrnuje selhání výrazu v vygenerovanou sestavu.
+Existují dvě další makra, které generují sestavu ladění. [_ASSERT](assert-asserte-assert-expr-macros.md) – makro generuje sestavu, ale pouze pokud její argument výraz nevyhodnotí jako FALSE. [_Asserte –](assert-asserte-assert-expr-macros.md) je přesně like **_ASSERT**, ale zahrnuje selhání výrazu v generované sestavě.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -175,18 +178,18 @@ Existují dva další makra, které vygenerovat sestavu, ladění. [_ASSERT](ass
 |**_RPTW** makra|\<crtdbg.h>|
 |**_Rptfw –** makra|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
-I když jsou makra a jsou získány zahrnutím Crtdbg.h, musí aplikace propojit s jedním z knihovny ladění, protože tyto makra volat jiné běhové funkce.
+I když jsou makra a získávají se zahrnutím souboru Crtdbg.h, musí aplikace propojit s jednou z knihovny ladění, protože tato makra volání dalších funkcí za běhu.
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad v [_ASSERT](assert-asserte-assert-expr-macros.md) tématu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>

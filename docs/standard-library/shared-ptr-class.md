@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957519"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109872"
 ---
 # <a name="sharedptr-class"></a>shared_ptr – třída
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parametry
 
-*SP* sdílený ukazatel na kopii.
+*SP*<br/>
+Sdílený ukazatel na kopii.
 
-*Asie a Tichomoří* automatický ukazatel, který chcete zkopírovat.
+*Asie a Tichomoří*<br/>
+Automatický ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* `lvalue` odkazu na buď `shared_ptr` nebo `weak_ptr`.
+*ptr*<br/>
+`lvalue` Odkazu na buď `shared_ptr` nebo `weak_ptr`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parametry
 
-*Další* typ řízený ukazatelem argumentu.
+*Jiné*<br/>
+Typ řízený ukazatelem argumentu.
 
-*D* typ odstraňovače.
+*D*<br/>
+Typ odstraňovače.
 
-*PTR* ukazatel na kopii.
+*ptr*<br/>
+Ukazatel na kopii.
 
-*dtor* deleter pro kopírování.
+*dtor*<br/>
+Odstraňovač pro kopírování.
 
-*A* typ alokátoru.
+*A*<br/>
+Typ alokátoru.
 
-*ALLOC* Alokátor ke kopírování.
+*ALLOC*<br/>
+Alokátor ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parametry
 
-*Další* typ řízený ukazatelem argumentu.
+*Jiné*<br/>
+Typ řízený ukazatelem argumentu.
 
-*PTR* ukazatel na kopii.
+*ptr*<br/>
+Ukazatel na kopii.
 
-*D* typ odstraňovače.
+*D*<br/>
+Typ odstraňovače.
 
-*A* typ alokátoru.
+*A*<br/>
+Typ alokátoru.
 
-*dtor* odstraňovač.
+*dtor*<br/>
+Odstraňovač.
 
-*operátor* přidělujícího modulu.
+*operátor*<br/>
+Alokátor.
 
-*SP* inteligentní ukazatel na kopii.
+*SP*<br/>
+Inteligentní ukazatel na kopii.
 
-*WP* slabý ukazatel.
+*webové části*<br/>
+Slabý ukazatel.
 
-*Asie a Tichomoří* automatický ukazatel, který chcete zkopírovat.
+*Asie a Tichomoří*<br/>
+Automatický ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*SP* sdílený ukazatel na Prohodit s.
+*SP*<br/>
+Sdílený ukazatel na Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 

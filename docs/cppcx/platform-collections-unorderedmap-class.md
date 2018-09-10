@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105832"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče v páru klíč hodnota.
 
-*V*  
+*V*<br/>
 Typ hodnoty v páru klíč hodnota.
 
-*C*  
+*C*<br/>
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map. Ve výchozím nastavení [std::equal_to\<K >](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -118,7 +118,7 @@ Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKey
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč používaná k nalezení UnorderedMap elementu. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
-*value*  
+*value*<br/>
 Hodnota část páru klíč hodnota. Typ *hodnotu* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč používaná k nalezení prvku v UnorderedMap. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
 
 ## <a name="size"></a>  Unorderedmap::size – metoda
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>Parametry
 
-*Inicializace*  
+*Inicializace*<br/>
 Typename aktuální UnorderedMap.
 
-*P*  
+*P*<br/>
 Objekt funkce, který může porovnat dva klíče pro určení, jestli jsou shodné. Výchozí hodnota tohoto parametru [std::equal_to\<K >](../standard-library/equal-to-struct.md).
 
-*H*  
+*H*<br/>
 Objekt funkce, který vytvoří hodnotu hash klíčů. Výchozí hodnota tohoto parametru [hash třídy 1](../standard-library/hash-class.md) pro klíč typy, které podporuje třídu.
 
-*m*  
+*m*<br/>
 Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k [std::unordered_map](../standard-library/unordered-map-class.md) , který slouží k inicializaci aktuální UnorderedMap.
 
-*IL* A [std::initializer_list](../standard-library/initializer-list-class.md) z [std::pair](../standard-library/pair-structure.md) objekty, které slouží k inicializaci mapy.
+*IL*<br/>
+A [std::initializer_list](../standard-library/initializer-list-class.md) z [std::pair](../standard-library/pair-structure.md) objekty, které slouží k inicializaci mapy.
 
-*první*  
+*první*<br/>
 Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální UnorderedMap.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální UnorderedMap.
 
 ## <a name="see-also"></a>Viz také:
 
-[Platforma Namespace](platform-namespace-c-cx.md)  
-[Platform::Collections – obor názvů](../cppcx/platform-collections-namespace.md)  
-[Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)  
-[Platform::Collections::UnorderedMapView – třída](../cppcx/platform-collections-unorderedmapview-class.md)  
-[Kolekce](../cppcx/collections-c-cx.md)  
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platforma Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Collections – obor názvů](../cppcx/platform-collections-namespace.md)<br/>
+[Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)<br/>
+[Platform::Collections::UnorderedMapView – třída](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[Kolekce](../cppcx/collections-c-cx.md)<br/>
+[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

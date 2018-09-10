@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202789"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100960"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf – třída
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* A [char_type](#char_type).
+*Elem*<br/>
+A [char_type](#char_type).
 
-*Tr* znak [traits_type](#traits_type).
+*tr*<br/>
+Znak [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* reference na lvalue k `basic_streambuf` objekt, který slouží k nastavení hodnot pro tento `basic_streambuf` objektu.
+*doprava*<br/>
+Odkaz na lvalue k `basic_streambuf` objekt, který slouží k nastavení hodnot pro tento `basic_streambuf` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*počet* rozsah, pomocí kterého přejdete ukazatel.
+*Počet*<br/>
+Rozsah, pomocí kterého přejdete ukazatel.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* odkaz na národním prostředí.
+*_Loc*<br/>
+Odkaz na národním prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* reference na lvalue k `basic_streambuf` objekt, který slouží k přiřazení hodnoty k tomuto objektu.
+*doprava*<br/>
+Odkaz na lvalue k `basic_streambuf` objekt, který slouží k přiřazení hodnoty k tomuto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti, nebo **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti, nebo **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*počet* počet znaků, podle kterého se má přesunout zápis vpřed pozici.
+*Počet*<br/>
+Počet znaků, o které se má posunout vpřed pozici pro zápis.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* odkaz na národním prostředí.
+*_Loc*<br/>
+Odkaz na národním prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* pozice hledání pro relativně *_Way*.
+*_Off*<br/>
+Pozice hledání pro relativně *_Way*.
 
-*_Way* výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*<br/>
+Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* pozici k vyhledání pro.
+*_Sp*<br/>
+Pozice k vyhledání pro.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Buffer* ukazatel na `char_type` pro vytvoření této instance.
+*_Buffer*<br/>
+Ukazatel na `char_type` pro vytvoření této instance.
 
-*počet* velikost vyrovnávací paměti.
+*Počet*<br/>
+Velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* pozice hledání pro relativně *_Way*.
+*_Off*<br/>
+Pozice hledání pro relativně *_Way*.
 
-*_Way* výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*<br/>
+Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* pozici k vyhledání pro.
+*_Sp*<br/>
+Pozice k vyhledání pro.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Buffer* ukazatel do vyrovnávací paměti.
+*_Buffer*<br/>
+Ukazatel do vyrovnávací paměti.
 
-*počet* velikost vyrovnávací paměti.
+*Počet*<br/>
+Velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parametry
 
-*_Gbeg* ukazatel na začátek vyrovnávací paměti.
+*_Gbeg*<br/>
+Ukazatel na začátek vyrovnávací paměti.
 
-*_Gnext* ukazatel na někde uprostřed vyrovnávací paměti.
+*_Gnext*<br/>
+Ukazatel na někde uprostřed vyrovnávací paměti.
 
-*_Gend* ukazatel na konec vyrovnávací paměti.
+*_Gend*<br/>
+Ukazatel na konec vyrovnávací paměti.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pbeg* ukazatel na začátek vyrovnávací paměti.
+*_Pbeg*<br/>
+Ukazatel na začátek vyrovnávací paměti.
 
-*_Pend* ukazatel na konec vyrovnávací paměti.
+*_Pend*<br/>
+Ukazatel na konec vyrovnávací paměti.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* vyrovnávací paměť obsahující extrahované znaků.
+*ptr*<br/>
+Vyrovnávací paměť obsahující extrahované znaků.
 
-*počet* počet prvků ke čtení.
+*Počet*<br/>
+Počet prvků ke čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* řetězec znaků.
+*ptr*<br/>
+Řetězec znaků.
 
-*počet* počet znaků.
+*Počet*<br/>
+Počet znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* vyrovnávací paměť obsahující extrahované znaků.
+*ptr*<br/>
+Vyrovnávací paměť obsahující extrahované znaků.
 
-*počet* počet prvků k extrakci.
+*Počet*<br/>
+Počet elementů k extrakci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na elementy vložit.
+*ptr*<br/>
+Ukazatel na elementy vložit.
 
-*počet* počet prvků k vložení.
+*Počet*<br/>
+Počet elementů k vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 

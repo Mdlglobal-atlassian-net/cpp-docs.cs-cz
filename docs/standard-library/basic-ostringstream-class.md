@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 623e1df599f3d1e0e2011f2cea3c7f9422516c67
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955231"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108860"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream – třída
 
@@ -42,11 +42,14 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*Elem* typ základního elementu řetězce.
+*Elem*<br/>
+Typ základního prvku objektu řetězec.
 
-*Tr* vlastností specializované na základního elementu řetězce.
+*tr*<br/>
+Vlastnosti znaků specializované na základního elementu řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -97,9 +100,11 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parametry
 
-*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* objekt typu `basic_string`.
+*str*<br/>
+Objekt typu `basic_string`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -141,7 +146,8 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newstr* nový řetězec.
+*_Newstr*<br/>
+Nový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 

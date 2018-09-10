@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221605"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103915"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parametry
 
-*cesta* úplnou cestu.
+*Cesta*<br/>
+Úplná cesta.
 
-*jednotky* písmenem jednotky následovaným dvojtečkou (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
+*Jednotky*<br/>
+Písmeno, za nímž následuje dvojtečka (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
 
-*příkaz dir* cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
+*adresář*<br/>
+Cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
 
-*%{fname/* základní název souboru (bez přípony). Můžete předat **NULL** pro tento parametr, pokud není nutné název souboru.
+*%{fname/*<br/>
+Základní název souboru (bez přípony). Můžete předat **NULL** pro tento parametr, pokud není nutné název souboru.
 
-*ext* příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
+*ext, přípona*<br/>
+Příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
 
 ## <a name="remarks"></a>Poznámky
 

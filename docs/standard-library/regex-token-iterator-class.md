@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960964"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100999"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator – třída
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru pro dílčí shody.
+*BidIt*<br/>
+Typ iterátoru pro dílčí shody.
 
-*Elem* typ prvků tak, aby odpovídaly.
+*Elem*<br/>
+Typ prvků, které se mají spárovat.
 
-*RXtraits* třída vlastností prvků.
+*RXtraits*<br/>
+Třída vlastností prvků.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* iterátoru, který má být porovnán s.
+*doprava*<br/>
+Iterátor, který má být porovnán s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* iterátoru, který má být porovnán s.
+*doprava*<br/>
+Iterátor, který má být porovnán s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametry
 
-*první* od pořadí tak, aby odpovídaly.
+*první*<br/>
+Začátek pořadí tak, aby odpovídaly.
 
-*poslední* konec pořadí tak, aby odpovídaly.
+*poslední*<br/>
+Konec pořadí tak, aby odpovídaly.
 
-*RE* regulárních výrazů pro shody.
+*RE*<br/>
+Regulárních výrazů pro shody.
 
-*f* příznaky pro shody.
+*f*<br/>
+Příznaky pro shody.
 
 ### <a name="remarks"></a>Poznámky
 

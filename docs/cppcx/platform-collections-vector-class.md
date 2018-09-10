@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761108"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103929"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector – třída
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ elementů obsažených v objektu vektoru.
 
-*E*  
+*E*<br/>
 Určuje binární predikát pro testování rovnosti s hodnotami typu *T*. Výchozí hodnota je `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Poznámky
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Položka ke vložení do vektoru. Typ *položky* je definován *T* typename.
 
 ## <a name="clear"></a>  Vector::clear – metoda
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parametry
 
-*startIndex*  
+*startIndex*<br/>
 Index založený na nule začátek položky, které chcete načíst.
 
-*cíl*  
+*cíl*<br/>
 Pole přidělené volajícímu položek, které začíná v elementu určené *startIndex* a konec na poslední prvek ve vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametry
 
-*value*  
+*value*<br/>
 Položka k vyhledání.
 
-*index*  
+*index*<br/>
 Z nuly vycházející index položky-li parametr *hodnotu* je nalezen, jinak 0.
 
 *Index* parametru je 0, pokud je první prvek vektoru položka nebo položka nebyla nalezena. Pokud je návratová hodnota `true`, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
-*Položka*  
+*Položka*<br/>
 Položky k vložení do vektoru za prvek určeného *index*. Typ *položky* je definován *T* typename.
 
 ## <a name="removeat"></a>  Vector::removeAt – metoda
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
 ## <a name="removeatend"></a>  Vector::RemoveAtEnd – metoda
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parametry
 
-*směrování žádostí na aplikace*  
+*směrování žádostí na aplikace*<br/>
 Pole objektů, jehož typ je definován *T* typename.
 
 ## <a name="setat"></a>  Vector::SetAt – metoda
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu vektoru.
 
-*Položka*  
+*Položka*<br/>
 Hodnota pro přiřazení k zadanému prvku. Typ *položky* je definován *T* typename.
 
 ## <a name="size"></a>  Vector::size – metoda
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 A [std::array](../standard-library/array-class-stl.md) , který se použije k inicializují vektor.
 
-*směrování žádostí na aplikace*  
+*směrování žádostí na aplikace*<br/>
 A [Platform::Array](../cppcx/platform-array-class.md) , který se použije k inicializují vektor.
 
-*Inicializace*  
+*Inicializace*<br/>
 Typ kolekce objektů, které slouží k inicializaci aktuální vektoru.
 
-*IL*  
+*IL*<br/>
 A [std::initializer_list](../standard-library/initializer-list-class.md) objektů typu *T* , který se použije k inicializují vektor.
 
-*N*  
+*N*<br/>
 Počet prvků v kolekci objektů, které slouží k inicializaci aktuální vektoru.
 
-*Velikost*  
+*Velikost*<br/>
 Počet prvků ve vektoru.
 
-*value*  
+*value*<br/>
 Hodnota, která slouží k inicializaci každý prvek v aktuální vektoru.
 
-*v*  
+*v*<br/>
 [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k [std::vector](../standard-library/vector-class.md) , který slouží k inicializaci aktuální vektoru.
 
-*ptr*  
+*ptr*<br/>
 Ukazatel `std::vector` , který slouží k inicializaci aktuální vektoru.
 
-*první*  
+*první*<br/>
 První prvek v sekvenci objektů, které se používají k inicializaci aktuální vektoru. Typ *první* je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*poslední*  
+*poslední*<br/>
 Po posledním prvku v sekvenci objektů, které se používají k inicializaci aktuální vektoru. Typ *poslední* je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)  
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platforma Namespace](platform-namespace-c-cx.md)<br/>
+[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

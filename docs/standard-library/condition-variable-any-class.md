@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959229"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106961"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any – třída
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*LCK* A `mutex` objekt jakéhokoli typu.
+*LCK*<br/>
+A `mutex` objekt jakéhokoli typu.
 
-*Před* libovolný výraz, který vrátí **true** nebo **false**.
+*Před*<br/>
+Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametry
 
-*LCK* A `mutex` objekt jakéhokoli typu.
+*LCK*<br/>
+A `mutex` objekt jakéhokoli typu.
 
-*Rel_time* A `chrono::duration` probudí objekt, který určuje dobu před vlákna.
+*Rel_time*<br/>
+A `chrono::duration` probudí objekt, který určuje dobu před vlákna.
 
-*Před* libovolný výraz, který vrátí **true** nebo **false**.
+*Před*<br/>
+Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*LCK* objekt mutex.
+*LCK*<br/>
+Objekt mutex.
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objektu.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) objektu.
 
-*Před* libovolný výraz, který vrátí **true** nebo **false**.
+*Před*<br/>
+Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956635"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106649"
 ---
 # <a name="future-class"></a>future – třída
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Další* A `future` objektu.
+*Jiné*<br/>
+A `future` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Pravé* A `future` objektu.
+*doprava*<br/>
+A `future` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální časový interval, který vlákno blokováno.
+*Rel_time*<br/>
+A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální časový interval, který vlákno blokováno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objekt, který určuje dobu, po jejímž uplynutí může odblokovat vlákna.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) objekt, který určuje dobu, po jejímž uplynutí může odblokovat vlákna.
 
 ### <a name="return-value"></a>Návratová hodnota
 

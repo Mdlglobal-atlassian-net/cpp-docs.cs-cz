@@ -15,49 +15,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e874b3dc479755f688128b3e6690eee89929c1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb19a922655a77a2f7a2b5806c9b721f17e028f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760133"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104170"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode – výčet
-Určuje číselný kategorii, která představuje předdefinovaný typ.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-enum class TypeCode {};  
-```  
-  
-### <a name="members"></a>Členové  
-  
-|Typ kódu|Popis|  
-|---------------|-----------------|  
-|Boolean|Typem Platform::Boolean.|  
-|char16|Typ default::char16.|  
-|DateTime|Typ DateTime.|  
-|Desetinné číslo|Číselného typu.|  
-|Double|Typ default::float64.|  
-|prázdný|Typ void|  
-|Int16|Typ default::int16.|  
-|Int32|Typ default::int32.|  
-|Int64|Typ default::int64.|  
-|Int8|Typ default::int8.|  
-|Objekt|Platform::Object typu.|  
-|Single|Typ default::float32.|  
-|String|Platform::String typu.|  
-|UInt16|Typ default::uint16.|  
-|UInt32|Typ default::uint32.|  
-|UInt64|Typ default::uint64.|  
-|UInt8|Typ default::uint8.|  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd
+
+Určuje číselný kategorii, která představuje předdefinovaný typ.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+enum class TypeCode {};
+```
+
+### <a name="members"></a>Členové
+
+|Typ kódu|Popis|
+|---------------|-----------------|
+|Boolean|Typem Platform::Boolean.|
+|char16|Typ default::char16.|
+|DateTime|Typ DateTime.|
+|Desetinné číslo|Číselného typu.|
+|Double|Typ default::float64.|
+|prázdný|Typ void|
+|Int16|Typ default::int16.|
+|Int32|Typ default::int32.|
+|Int64|Typ default::int64.|
+|Int8|Typ default::int8.|
+|Objekt|Platform::Object typu.|
+|Single|Typ default::float32.|
+|String|Platform::String typu.|
+|UInt16|Typ default::uint16.|
+|UInt32|Typ default::uint32.|
+|UInt64|Typ default::uint64.|
+|UInt8|Typ default::uint8.|
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd

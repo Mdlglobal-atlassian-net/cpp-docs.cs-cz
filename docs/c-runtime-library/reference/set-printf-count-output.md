@@ -1,5 +1,5 @@
 ---
-title: _set_printf_count_output – | Microsoft Docs
+title: _set_printf_count_output – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406638"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108316"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Povolit nebo zakázat podporu **%n** naformátována v [printf _printf_l –, wprintf, _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md)-rodiny funkce.
+Povolit nebo zakázat podporu **%n** formátu [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md)-řady funkcí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parametry
 
-*Povolit* nenulovou hodnotu, aby **%n** podporovat, 0 pro vypnutí **%n** podporovat.
+*Povolit*<br/>
+Nenulové hodnoty povolit **%n** podporovat, 0 pro vypnutí **%n** podporovat.
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-Stav **%n** podporu před voláním této funkce: Pokud nenulové **%n** byla povolená podpora, 0, pokud byl zakázán.
+Stav **%n** podporovat před voláním této funkce: Pokud nenulové **%n** byla povolená podpora, 0, pokud byla zakázána.
 
 ## <a name="remarks"></a>Poznámky
 
-Z důvodu z bezpečnostních důvodů se podpora pro **%n** je ve výchozím nastavení zakázána specifikátor formátu **printf** a všechny jeho variant. Pokud **%n** se vyskytuje v **printf** specifikaci formátu, použije se výchozí chování je vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Volání metody **_set_printf_count_output –** s argumentem nenulové způsobí **printf**-rodiny funkce interpretovat **%n** jak je popsáno v [formátu Syntaxe specifikace: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Z důvodů zabezpečení, podpora **%n** specifikátor formátu je ve výchozím nastavení zakázána **printf** a jeho variant. Pokud **%n** dochází v **printf** specifikace formátu, výchozí chování je vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Volání **_set_printf_count_output –** s argumentem nenulové způsobí **printf**-produktovou řadu funkcí pro interpretaci **%n** jak je popsáno v [formátu Syntaxe specifikace: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,7 +72,7 @@ Z důvodu z bezpečnostních důvodů se podpora pro **%n** je ve výchozím nas
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -100,6 +101,6 @@ int main()
 i = 5
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_get_printf_count_output](get-printf-count-output.md)<br/>

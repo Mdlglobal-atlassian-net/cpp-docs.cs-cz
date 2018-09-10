@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1fe772f1c2925ce28d0e445023ab14d82b9b3f23
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759912"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107689"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::wrongthreadexception – třída
-Vyvolána, když vlákno volá prostřednictvím ukazatele rozhraní pro objekt proxy serveru, který nepatří do objektu apartment vlákna.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána, když vlákno volá prostřednictvím ukazatele rozhraní pro objekt proxy serveru, který nepatří do objektu apartment vlákna.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

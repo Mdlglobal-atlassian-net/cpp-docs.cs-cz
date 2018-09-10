@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678151"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110601"
 ---
 # <a name="exit-exit-exit"></a>ukončit, _Exit, _exit
 
@@ -70,7 +70,8 @@ void _exit(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav* ukončovací kód stavu.
+*Stav*<br/>
+Ukončovací kód stavu.
 
 ## <a name="remarks"></a>Poznámky
 

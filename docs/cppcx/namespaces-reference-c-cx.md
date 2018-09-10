@@ -13,26 +13,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74eb59fa1c8c8f53591c8452cb6940bc9ae1743
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba8a3a2134475ddb172f97871ae255322e1fe1e2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753107"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101869"
 ---
 # <a name="namespaces-reference-ccx"></a>Odkaz na obory názvů (C + +/ CX)
-Články dokumentace v této části popisují obory názvů, které podporují kompilátor pro C + +/ CX.  
-  
-## <a name="compiler-supplied-namespaces"></a>Zadaný kompilátoru obory názvů  
- Pro zjednodušení programování programy, které používají modul Runtime Windows, s C + +/ CX kompilátoru a jeho podpůrné soubory záhlaví zadejte obory názvů, které definují široký rozsah typů. Obory názvů definujte předdefinované číselné typy; řetězce, pole a kolekce; Visual C++ výjimky, které představují chyby modulu Windows Runtime; a rozšíření specifické pro jazyk pro standardní typy Windows Runtime.  
-  
-## <a name="related-topics"></a>Související témata  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[default – obor názvů](../cppcx/default-namespace.md)|Obsahuje popis předdefinované, základní typy.|  
-|[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)|Obsahuje popis typy, které můžete použít a také vnitřními typy, které jsou používány pouze kompilátoru infrastruktury.|  
-|[Windows::Foundation:: Collections – Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Obsahuje popis vylepšení a rozšíření do prostředí Windows Runtime`Windows::Foundation::Collections` oboru názvů.|  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+
+Články dokumentace v této části popisují obory názvů, které podporují kompilátor pro C + +/ CX.
+
+## <a name="compiler-supplied-namespaces"></a>Zadaný kompilátoru obory názvů
+
+Pro zjednodušení programování programy, které používají modul Runtime Windows, s C + +/ CX kompilátoru a jeho podpůrné soubory záhlaví zadejte obory názvů, které definují široký rozsah typů. Obory názvů definujte předdefinované číselné typy; řetězce, pole a kolekce; Visual C++ výjimky, které představují chyby modulu Windows Runtime; a rozšíření specifické pro jazyk pro standardní typy Windows Runtime.
+
+## <a name="related-topics"></a>Související témata
+
+|Název|Popis|
+|-----------|-----------------|
+|[default – obor názvů](../cppcx/default-namespace.md)|Obsahuje popis předdefinované, základní typy.|
+|[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)|Obsahuje popis typy, které můžete použít a také vnitřními typy, které jsou používány pouze kompilátoru infrastruktury.|
+|[Windows::Foundation:: Collections – Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Obsahuje popis vylepšení a rozšíření do prostředí Windows Runtime`Windows::Foundation::Collections` oboru názvů.|
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

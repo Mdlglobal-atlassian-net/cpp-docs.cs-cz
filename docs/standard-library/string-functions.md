@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954900"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106740"
 ---
 # <a name="ltstringgt-functions"></a>&lt;řetězec&gt; funkce
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-*je* vstupní datový proud, ze kterého má být extrahován řetězec.
+*is*<br/>
+Vstupní datový proud, ze kterého má být extrahován řetězec.
 
-*Str* řetězec, do kterého se čtení znaků ze vstupního datového proudu.
+*str*<br/>
+Řetězec, do kterého se čtení znaků ze vstupního datového proudu.
 
-*delim* oddělovač řádků.
+*Delim*<br/>
+Oddělovač řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parametry
 
-*levé* jeden řetězec, jehož prvky mají vyměnit s těmi, která z jiného řetězce.
+*doleva*<br/>
+Jeden řetězec, jehož prvky mají vyměnit s těmi, která z jiného řetězce.
 
-*správné* jiný řetězec, jehož prvky mají vyměnit s první řetězec.
+*doprava*<br/>
+Další řetězec, jehož prvky mají vyměnit s první řetězec.
 
 ### <a name="remarks"></a>Poznámky
 

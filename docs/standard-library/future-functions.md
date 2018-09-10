@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b4a8b148dc8b72c7dcc1931802c503be783e9ea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027394"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108600"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;budoucí&gt; funkce
 
@@ -46,7 +46,8 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametry
 
-*zásady* A [spuštění](../standard-library/future-enums.md#launch) hodnotu.
+*Zásady*<br/>
+A [spuštění](../standard-library/future-enums.md#launch) hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -93,7 +94,8 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
+*errno*<br/>
+A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -109,7 +111,8 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
+*errno*<br/>
+A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -129,9 +132,11 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametry
 
-*Vlevo* vlevo `promise` objektu.
+*doleva*<br/>
+Levé straně `promise` objektu.
 
-*Pravé* vpravo `promise` objektu.
+*doprava*<br/>
+Vpravo `promise` objektu.
 
 ## <a name="see-also"></a>Viz také:
 

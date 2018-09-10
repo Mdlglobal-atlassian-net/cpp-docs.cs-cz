@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956879"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106080"
 ---
 # <a name="chartraits-struct"></a>char_traits – struktura
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* datový typ elementu.
+*CharType*<br/>
+Typ dat prvku.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* znak, jehož hodnota má být přiřazena.
 
-*_CharTo* elementu, který má být přiřazena hodnota znaku.
+*_CharTo*<br/>
+Prvek, který má být přiřazena hodnota znaku.
 
 * strTo * řetězec nebo znak pole, jehož počáteční prvky mají být přiřazeny hodnoty znaků.
 
-*_Num* počet prvků, které se chystáte přiřadit hodnoty.
+*_Num*<br/>
+Počet prvků, které se chystáte přiřadit hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * řetězci Str2 * sekundu dva řetězce k porovnání k sobě navzájem.
 
-*_Num* počet prvků v řetězci, který se má porovnat.
+*_Num*<br/>
+Počet prvků v řetězci, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do* prvek na začátku pole řetězec nebo znak cílené na příjem zkopírovaný posloupnost znaků.
+*_Do*<br/>
+Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*_Ze* prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
+*_Ze*<br/>
+Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
-*_Num* počet prvků, které se mají zkopírovat.
+*_Num*<br/>
+Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*DEST* cílové pole řetězec nebo znak pro příjem zkopírovaný posloupnost znaků.
+*cíl*<br/>
+Řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*dest_size* velikost *dest*. Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, pak tato velikost je ve slovech.
+*dest_size*<br/>
+Velikost *dest*. Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, pak tato velikost je ve slovech.
 
-*_Ze* zdrojový řetězec nebo znak pole má být zkopírován.
+*_Ze*<br/>
+Zdrojový řetězec nebo znak pole, které se mají zkopírovat.
 
-*počet* počet prvků, které se mají zkopírovat.
+*Počet*<br/>
+Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* první dva znaky být testovány z hlediska rovnosti.
+*_Ch1*<br/>
+První dva znaky být testovány z hlediska rovnosti.
 
-*_Ch2* sekundu dva znaky. Chcete-li být testovány z hlediska rovnosti.
+*_Ch2*<br/>
+Druhý dva znaky být testovány z hlediska rovnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* první dva znaky chcete testovat rovnost jako `int_type`s.
+*_Ch1*<br/>
+První dva znaky chcete testovat rovnost jako `int_type`s.
 
-*_Ch2* sekundu dva znaky chcete testovat rovnost jako `int_type`s.
+*_Ch2*<br/>
+Druhá dva znaky chcete testovat rovnost jako `int_type`s.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::Find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parametry
 
-*Str* první znak v řetězci pro hledání.
+*str*<br/>
+První znak v řetězci pro hledání.
 
-*_Num* počet pozic, počítáno od první, v rozsahu, který chcete prohledat.
+*_Num*<br/>
+Počet pozic, počítáno od první, v rozsahu, který chcete prohledat.
 
-*_Ch* znak, který má být vyhledán v rozsahu.
+*_Ch*<br/>
+Znak, který má být vyhledán v rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parametry
 
-*Str* C-řetězec, jehož délka se měří.
+*str*<br/>
+C – řetězec, jehož délka se měří.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* první dva znaky má být testována pro menší než.
+*_Ch1*<br/>
+První dva znaky má být testována pro menší než.
 
-*_Ch2* sekundu dva znaky má být testována pro menší než.
+*_Ch2*<br/>
+Druhá dva znaky má být testována pro menší než.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do* prvek na začátku pole řetězec nebo znak cílené na příjem zkopírovaný posloupnost znaků.
+*_Do*<br/>
+Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*_Ze* prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
+*_Ze*<br/>
+Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
-*_Num* počet prvků, které se mají zkopírovat ze zdrojový řetězec.
+*_Num*<br/>
+Počet prvků, které se mají zkopírovat ze zdrojový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-*DEST* prvek na začátku pole řetězec nebo znak cílené na příjem zkopírovaný posloupnost znaků.
+*cíl*<br/>
+Prvek na začátku řetězec nebo znak pole cílené na příjem zkopírovaný posloupnost znaků.
 
-*dest_size* velikost *dest*. Pokud `char_type` je **char**, pak toto je v bajtech. Pokud `char_type` je **wchar_t**, pak toto je ve slovech.
+*dest_size*<br/>
+Velikost *dest*. Pokud `char_type` je **char**, pak toto je v bajtech. Pokud `char_type` je **wchar_t**, pak toto je ve slovech.
 
-*_Ze* prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
+*_Ze*<br/>
+Prvek na začátku pole, které se mají zkopírovat řetězec nebo znak zdroje.
 
-*počet* počet prvků, které se mají zkopírovat ze zdrojový řetězec.
+*Počet*<br/>
+Počet prvků, které se mají zkopírovat ze zdrojový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak reprezentován jako `int_type` má být testována pro Určuje, zda je znak EOF nebo ne.
+*_Ch*<br/>
+Znak, který reprezentuje jako `int_type` má být testována pro Určuje, zda je znak EOF nebo ne.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* `int_type` znak a nelze je reprezentovat jako `char_type`.
+*_Ch*<br/>
+`int_type` Znak a nelze je reprezentovat jako `char_type`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* `char_type` znak a nelze je reprezentovat jako `int_type`.
+*_Ch*<br/>
+`char_type` Znak a nelze je reprezentovat jako `int_type`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

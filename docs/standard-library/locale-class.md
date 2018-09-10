@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963791"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100751"
 ---
 # <a name="locale-class"></a>locale – třída
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Loc* národní prostředí obsahující omezující vlastnosti má být vložen do cílového národního prostředí.
+*Umístění*<br/>
+Národní prostředí obsahující omezující vlastnosti má být vložen do cílového národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Loc* národní prostředí pro program používá jako výchozí národní prostředí.
+*Umístění*<br/>
+Národní prostředí pro program používá jako výchozí národní prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametry
 
-*Locname* název národního prostředí.
+*Locname*<br/>
+Název národního prostředí.
 
-*Loc* národního prostředí, které se mají zkopírovat při konstrukci nové národní prostředí.
+*Umístění*<br/>
+Národní prostředí, které se mají zkopírovat při konstrukci nové národní prostředí.
 
-*Další* národní prostředí, ze kterého se má vybrat kategorii.
+*Jiné*<br/>
+Národní prostředí ze kterého se má vybrat kategorii.
 
-*Cat* kategorii, kterou chcete nahradit do vytvořeného národní prostředí.
+*CAT*<br/>
+Kategorii, kterou chcete nahradit do vytvořeného národní prostředí.
 
-*FAC* omezující vlastnost pro nahrazena do vytvořeného národní prostředí.
+*FAC*<br/>
+Omezující vlastnost k nahrazena do vytvořeného národní prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* jeden národní prostředí má být testována nerovnost.
+*doprava*<br/>
+Jeden z prostředí otestovat nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale:: operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* levé řetězec.
+*doleva*<br/>
+Řetězec, který vlevo.
 
-*správné* správný řetězec.
+*doprava*<br/>
+Správný řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* jeden národní prostředí, které chcete testovat rovnost.
+*doprava*<br/>
+Jeden z národní prostředí, které chcete testovat rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -734,9 +745,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>Viz také:

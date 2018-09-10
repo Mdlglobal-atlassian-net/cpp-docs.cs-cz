@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104131"
 ---
 # <a name="function-class"></a>function – třída
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typ funkce zahrnující.
+*Fty*<br/>
+Typ funkce zahrnující.
 
-*AX* funkci alokátoru.
+*AX*<br/>
+Funkce alokátoru.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*_Func* volatelný objekt.
+*_Func*<br/>
+Volatelný objekt.
 
-*_Fnref* obálku odkaz, který obsahuje volatelný objekt.
+*_Fnref*<br/>
+Obálka odkaz, který obsahuje volatelný objekt.
 
-*AX* objekt alokátoru.
+*AX*<br/>
+Objekt alokátoru.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objektu funkce pro kopírování.
+*doprava*<br/>
+Objekt funkce ke kopírování.
 
-*FX* typu volatelný objekt.
+*FX*<br/>
+Typ volatelný objekt.
 
-*_Func* volatelný objekt zabalit.
+*_Func*<br/>
+Volatelný objekt zabalit.
 
-*ALLOC* typ alokátoru.
+*ALLOC*<br/>
+Typ alokátoru.
 
-*AX* přidělujícího modulu.
+*AX*<br/>
+Alokátor.
 
-*_Fnref* odkaz volatelný objekt zabalit.
+*_Fnref*<br/>
+Odkaz na volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*TN* typ argumentu n-tý volání.
+*TN*<br/>
+Typ n-té volání argument.
 
-*tN* n-tý argument volání.
+*TN*<br/>
+Volání n-tý argument.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-*NPC* konstantu nulového ukazatele.
+*NPC*<br/>
+Toto je konstanta ukazatele s hodnotou null.
 
-*správné* objektu funkce pro kopírování.
+*doprava*<br/>
+Objekt funkce ke kopírování.
 
-*fn* volatelný objekt zabalit.
+*fn*<br/>
+Volatelný objekt zabalit.
 
-*fnref* odkaz volatelný objekt zabalit.
+*fnref*<br/>
+Odkaz na volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objekt funkce, který chcete Prohodit s.
+*doprava*<br/>
+Objekt funkce, které chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-*Fty2* cílový typ volatelný objekt k testování.
+*Fty2*<br/>
+Cílový typ volatelný objekt k testování.
 
 ### <a name="remarks"></a>Poznámky
 

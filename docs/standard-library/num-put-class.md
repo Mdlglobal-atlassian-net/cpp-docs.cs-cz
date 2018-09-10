@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965987"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100921"
 ---
 # <a name="numput-class"></a>num_put – třída
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*OutputIterator* typ iterátoru, do kterého číselné funkce zapisují svůj výstup.
+*OutputIterator*<br/>
+Typ iterátoru, do kterého číselné funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*Další* iterátor adresující první prvek vložený řetězec.
+*next*<br/>
+Iterátor adresující první prvek vložený řetězec.
 
-*_Iosbase* zadaný datový proud, který obsahuje národní prostředí s omezující vlastnost numpunct – umožňuje vložit interpunkci výstup a příznaky pro formátování výstupu.
+*_Iosbase*<br/>
+Zadaný datový proud, který obsahuje národní prostředí s omezující vlastnost numpunct – umožňuje vložit interpunkci výstup a příznaky pro formátování výstupu.
 
-*_Fill* znak, který se používá k vytvoření mezer.
+*_Fill*<br/>
+Znak, který se používá k vytvoření mezer.
 
-*Val* číslo nebo logický typ, který má být výstup.
+*Val*<br/>
+Číslo nebo logický typ, který má být výstup.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*DEST* iterátor adresující první prvek vložený řetězec.
+*cíl*<br/>
+Iterátor adresující první prvek vložený řetězec.
 
-*_Iosbase* zadaný datový proud, který obsahuje národní prostředí s omezující vlastnost numpunct – umožňuje vložit interpunkci výstup a příznaky pro formátování výstupu.
+*_Iosbase*<br/>
+Zadaný datový proud, který obsahuje národní prostředí s omezující vlastnost numpunct – umožňuje vložit interpunkci výstup a příznaky pro formátování výstupu.
 
-*_Fill* znak, který se používá k vytvoření mezer.
+*_Fill*<br/>
+Znak, který se používá k vytvoření mezer.
 
-*Val* číslo nebo logický typ, který má být výstup.
+*Val*<br/>
+Číslo nebo logický typ, který má být výstup.
 
 ### <a name="return-value"></a>Návratová hodnota
 

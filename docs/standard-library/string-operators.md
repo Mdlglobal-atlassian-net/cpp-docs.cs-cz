@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966618"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101796"
 ---
 # <a name="ltstringgt-operators"></a>&lt;řetězec&gt; operátory
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` ke zřetězení.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` ke zřetězení.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` ke zřetězení.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` ke zřetězení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ostr* do výstupního datového proudu.
+*_Ostr*<br/>
+Výstupní datový proud do.
 
-*Str* řetězec, který má být zadány do výstupního datového proudu.
+*str*<br/>
+Řetězec, který se zapisují do výstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doleva*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
-*správné* řetězce ve stylu jazyka C nebo objekt typu `basic_string` k porovnání.
+*doprava*<br/>
+Řetězec C-style nebo objekt typu `basic_string` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* vstupního datového proudu, používá k extrakci sekvence
+*_Istr*<br/>
+Vstupní datový proud použitou k extrakci sekvence
 
-*správné* řetězec, který je právě extrahován ze vstupního datového proudu.
+*doprava*<br/>
+Řetězec, který je právě extrahován ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

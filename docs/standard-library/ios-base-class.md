@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956451"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101687"
 ---
 # <a name="iosbase-class"></a>ios_base – třída
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parametry
 
-*_E* [události](#event).
+*_E*<br/>
+[Události](#event).
 
-*_Základní* datový proud, ve kterém byla volána události.
+*_Základní*<br/>
+Datový proud, ve kterém byla volána události.
 
-*Potvrzuj_i* uživatelem definované číslo.
+*_I*<br/>
+Uživatelem definované číslo.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametry
 
-*fmtfl* nové `fmtflags` nastavení.
+*fmtfl*<br/>
+Nové `fmtflags` nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* nové nastavení národního prostředí.
+*_Loc*<br/>
+Nové nastavení národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametry
 
-*IDX* index hodnoty k ukládání jako `iword`.
+*IDX*<br/>
+Index hodnoty k ukládání jako `iword`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objekt typu `ios_base`.
+*doprava*<br/>
+Objekt typu `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parametry
 
-*_Prec* počet platných číslic, chcete-li zobrazit nebo počet číslic za desetinnou čárkou pevné notaci.
+*_Prec*<br/>
+Počet platných číslic pro zobrazení, nebo počet číslic za desetinnou čárkou pevné notaci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parametry
 
-*_Idx* index hodnoty k uložení jako `pword`.
+*_Idx*<br/>
+Index hodnoty k uložení jako `pword`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn* ukazatel na funkci zpětného volání.
+*pfn*<br/>
+Ukazatel na funkci zpětného volání.
 
-*IDX* uživatelem definované číslo.
+*IDX*<br/>
+Uživatelem definované číslo.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Podsítě* příznaky zapnout.
+*_Podsítě*<br/>
+Příznaky zapnout.
 
-*_Unset* příznaky vypnout.
+*_Unset*<br/>
+Příznaky, chcete-li vypnout.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-    The previous format flags
+Předchozí příznaky formátu
 
 ### <a name="remarks"></a>Poznámky
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+První členská funkce efektivně volá [příznaky](#flags)(_ *maska* &#124; \_ *příznaky*) (nastavení vybrané bits) a potom vrátí předchozí příznaky formátu. Druhá členská funkce efektivně volá **příznaky**(\_ *maska* **& fmtfl, příznaky & ~**`_Mask`) (nahradit vybrané bity v části masku) a pak vrátí předchozí příznaky formátu.
 
 ### <a name="example"></a>Příklad
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parametry
 
-*_Sync* Určuje, zda jsou všechny datové proudy synchronizované s `stdio`.
+*_Sync*<br/>
+Určuje, zda jsou všechny datové proudy synchronizované s `stdio`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-    Previous setting for this function.
+Předchozí nastavení pro tuto funkci.
 
 ### <a name="remarks"></a>Poznámky
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+Statické členské funkce úložiště `stdio` příznak, který budou synchronizovat **true**. Když **true**, tento příznak zajistí, že se operace se stejným souborem správně synchronizují mezi [iostreams](../standard-library/iostreams-conventions.md) funkce a jsou definované ve standardní knihovně jazyka C++. V opačném případě synchronizace může nebo nemusí být zaručena, ale může být výkon. Funkce úložiště *_Sync* v `stdio` synchronizovat příznak a vrátí jeho předchozí uložené hodnotě. Můžete ho spolehlivě volat pouze před provedením jakékoli operace u standardních streamů.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Podsítě* příznaky, které chcete vypnout.
+*_Podsítě*<br/>
+Příznaky, které chcete vypnout.
 
 ### <a name="remarks"></a>Poznámky
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+Členská funkce efektivně volá [příznaky](#flags)(`~`*_podsítě* **& příznaky**) (Vymazat vybrané bits).
 
 ### <a name="example"></a>Příklad
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+Zobrazit [ios_base::setf](#setf) ukázku použití `unsetf`.
 
 ## <a name="width"></a> ios_base::Width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>Parametry
 
-*_Wide* požadovaná velikost výstupního datového proudu.
+*_Wide*<br/>
+Požadovaná velikost výstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-    The current width setting.
+Aktuální nastavení šířky.
 
 ### <a name="remarks"></a>Poznámky
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+První členská funkce vrátí šířku uloženého pole. Druhá funkce úložišť člen *_Wide* šířku pole a vrátí jeho předchozí uloženou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a> ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+Určuje, že proměnná je součástí datového proudu.
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>Návratová hodnota
 
-    The static member function returns a stored static value, which it increments on each call.
+Statická členská funkce vrátí uložené statické hodnoty, který zvýší hodnotu při každém volání.
 
 ### <a name="remarks"></a>Poznámky
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+Návratová hodnota můžete použít jako jedinečný index argument při volání členské funkce [iword –](#iword) nebo [pword –](#pword).
 
 ### <a name="example"></a>Příklad
 

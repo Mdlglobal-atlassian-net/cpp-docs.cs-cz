@@ -1,5 +1,5 @@
 ---
-title: _free_dbg – | Microsoft Docs
+title: _free_dbg – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa485eea6f0ffda05b0ef33a808d5ec837255514
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400041"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103902"
 ---
 # <a name="freedbg"></a>_free_dbg
 
-Uvolní blok paměti haldy (pouze ladicí verze).
+Uvolní blok paměti v haldě (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,19 +56,21 @@ void _free_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*userData* ukazatel na oblast paměti přidělené na uvolnění.
+*userData*<br/>
+Ukazatele na blok paměti přidělené k uvolnění.
 
-*blockType* typ bloku přidělenou paměť na uvolnění: **_client_block –**, **_normal_block –**, nebo **_ignore_block –**.
+*blockType*<br/>
+Typ bloku paměti přidělené k uvolnění: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, nebo **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Free_dbg –** funkce je ladicí verze [volné](free.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání **_free_dbg –** byla snížena volání **volné**. Obě **volné** a **_free_dbg –** volné paměti blok v haldě základní ale **_free_dbg –** může vyrovnávat dvě funkce ladění: schopnost zachovat uvolněné bloků v do haldy odkazovaného seznamu k simulaci nedostatek paměti a parametr typ bloku k bezplatným přidělení konkrétní typy.
+**_Free_dbg –** ladicí verzi je funkce [bezplatné](free.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_free_dbg –** je omezená na volání **bezplatné**. Obě **bezplatné** a **_free_dbg –** uvolnění bloku paměti v haldě základní, ale **_free_dbg –** obsáhne dvou funkcí ladění: možnost zachovat uvolněné bloky v haldy odkazovaného seznamu Simulovat podmínky nedostatku paměti a parametr typu blok k bezplatným alokační typy.
 
-**_free_dbg –** provede kontrolu platnosti na všechny zadané soubory a umístění bloku před provedením operace volné. Aplikace není očekáván poskytnout tyto informace. Když po uvolnění paměti blok správce haldy ladění automaticky ověří integritu vyrovnávací paměti na obou stranách části uživatele a vydá zprávu o chybách v případě, že došlo k přepsání. Pokud **_crtdbg_delay_free_mem_df –** bitová pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) je příznak nastaven, uvolněné blok je vyplněn přiřazenou hodnotu 0xDD, **_free_block –** blokovat typ, a zachovány v haldě na odkazovaného seznamu bloků paměti.
+**_free_dbg –** provede kontrolu platnosti na všechny zadané soubory a umístění bloku před provedením operace zdarma. Tyto informace poskytnout neočekává se aplikace. Při uvolnění bloku paměti správce hald ladění automaticky kontroluje integritu vyrovnávací paměti na obou stranách část uživatele a vydá zprávu o chybě, pokud došlo k přepsání. Pokud **_CRTDBG_DELAY_FREE_MEM_DF** bitové pole [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) je příznak nastaven, uvolněné bloku je vyplněna přiřazenou hodnotu 0xDD, **_FREE_BLOCK** blokovat typu, a uchovávány v propojeném seznamu haldy paměťových bloků.
 
-Pokud dojde k chybě v uvolnění paměti, **errno** je nastaven s informacemi z operačního systému, o povaze chyby. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud dojde k chybě v uvolňování paměti, **errno** nastaven s informacemi z operačního systému na povaze selhání. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce standardní haldy a jeho ladicí verze v sestavení ladicí verze aplikace, najdete v tématu [ladění verzí z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,13 +78,13 @@ Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat 
 |-------------|---------------------|
 |**_free_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Příklad, jak pomocí **_free_dbg –**, najdete v části [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Pro ukázku toho, jak používat **_free_dbg –**, naleznete v tématu [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

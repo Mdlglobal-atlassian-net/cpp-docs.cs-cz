@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957422"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101661"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;paměť&gt; funkce
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* objektu nebo funkce, pro které chcete získat adresu true.
+*Val*<br/>
+Objekt nebo funkce, pro které chcete získat adresu true.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání* zarovnání čekající na pokus.
+*Zarovnání*<br/>
+Zarovnání čekající na pokus.
 
-*Velikost* velikost v bajtech pro zarovnané úložiště.
+*Velikost*<br/>
+Velikost v bajtech pro zarovnané úložiště.
 
-*PTR* počáteční adresu dostupného nepřetržitého fondu úložiště používat. Tento parametr je také výstupní parametr a je nastavena na obsahovat novou počáteční adresu, pokud je zarovnání úspěšné. Pokud `align()` je neúspěšné, nebude tento parametr změněn.
+*PTR*<br/>
+Počáteční adresa dostupného nepřetržitého fondu úložiště, který chcete použít. Tento parametr je také výstupní parametr a je nastavena na obsahovat novou počáteční adresu, pokud je zarovnání úspěšné. Pokud `align()` je neúspěšné, nebude tento parametr změněn.
 
-*Místo* celkové místo k dispozici `align()` k použití při vytváření zarovnaného úložiště. Tento parametr je také výstupní parametr a obsahuje zbývající upravené místo ve vyrovnávací paměti úložiště po odečtení zarovnaného úložiště a veškeré přidružené režie.
+*místo*<br/>
+Celkové místo k dispozici `align()` k použití při vytváření zarovnaného úložiště. Tento parametr je také výstupní parametr a obsahuje zbývající upravené místo ve vyrovnávací paměti úložiště po odečtení zarovnaného úložiště a veškeré přidružené režie.
 
 Pokud `align()` je neúspěšné, nebude tento parametr změněn.
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* Alokátor použitý k vytvoření objektů.
+*ALLOC*<br/>
+Alokátor použitý k vytvoření objektů.
 
-*Args* nuly nebo více argumentů, které se stanou objekty.
+*Args*<br/>
+Nula nebo více argumentů, které se stanou objekty.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ řízený vráceného sdílený ukazatel.
+*Ty*<br/>
+Typ řízený vrácené sdílený ukazatel.
 
-*Další* typ řízený sdíleným ukazatelem argumentu.
+*Jiné*<br/>
+Typ řízený sdíleným ukazatelem argumentu.
 
-*Další* sdíleným ukazatelem argumentu.
+*Jiné*<br/>
+Sdílený ukazatel argument.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na oblast dostupný, přidělené, platné úložiště.
+*ptr*<br/>
+Ukazatel na oblast dostupný, přidělené, platné úložiště.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na objekt odstranit.
+*PTR*<br/>
+Ukazatel na objekt, který chcete odstranit.
 
 Další typ prvků v poli, která se má odstranit.
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ řízený vráceného sdílený ukazatel.
+*Ty*<br/>
+Typ řízený vrácené sdílený ukazatel.
 
-*Další* typ řízený sdíleným ukazatelem argumentu.
+*Jiné*<br/>
+Typ řízený sdíleným ukazatelem argumentu.
 
-*SP* sdíleným ukazatelem argumentu.
+*SP*<br/>
+Sdílený ukazatel argument.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*D* typ odstraňovače.
+*D*<br/>
+Typ odstraňovače.
 
-*Ty* typ řízený sdíleným ukazatelem.
+*Ty*<br/>
+Typ řízený sdíleným ukazatelem.
 
-*SP* sdílený ukazatel.
+*SP*<br/>
+Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parametry
 
-*počet* je maximální počet prvků požadované paměti, které mají být přiděleny.
+*Počet*<br/>
+Maximální počet prvků vyžádal, pro kterou je třeba přidělit paměť.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typu objektu, který `unique_ptr` bude odkazovat.
+*T*<br/>
+Typ objektu, který `unique_ptr` bude odkazovat.
 
-*Typy* typy argumentů konstruktoru dané podle *Args*.
+*Typy*<br/>
+Typy argumentů konstruktoru dané podle *Args*.
 
-*Args* argumenty, které mají být předána do konstruktoru objektu typu *T*.
+*Args*<br/>
+Argumenty, které mají být předána do konstruktoru objektu typu *T*.
 
-*Elem* pole elementů typu *T*.
+*Elem*<br/>
+Pole elementů typu *T*.
 
-*Velikost* počet prvků k přidělení místa pro nové pole.
+*Velikost*<br/>
+Počet elementů k přidělení místa pro nové pole.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parametry
 
-*_vlevo* sdílené nebo slabý ukazatel.
+*_vlevo*<br/>
+Sdílené nebo slabý ukazatel.
 
-*správné* sdílené nebo slabý ukazatel.
+*doprava*<br/>
+Sdílené nebo slabý ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pbuf* ukazatel na uvolnění paměti.
+*_Pbuf*<br/>
+Ukazatel na uvolnění paměti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast –
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ řízený vráceného sdílený ukazatel.
+*Ty*<br/>
+Typ řízený vrácené sdílený ukazatel.
 
-*Další* typ řízený sdíleným ukazatelem argumentu.
+*Jiné*<br/>
+Typ řízený sdíleným ukazatelem argumentu.
 
-*Další* sdíleným ukazatelem argumentu.
+*Jiné*<br/>
+Sdílený ukazatel argument.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ řízený levé sdílené/weak ukazatele.
+*Ty*<br/>
+Typ řízený levé sdílené/weak ukazatele.
 
-*Další* typ řízený ukazatelem právo sdílet/weak.
+*Jiné*<br/>
+Typ řízený ukazatelem právo sdílet/weak.
 
-*levé* levé sdílené/weak ukazatele.
+*doleva*<br/>
+Levé sdílené/weak ukazatele.
 
-*správné* právo sdílet/weak ukazatele.
+*doprava*<br/>
+Právo sdílet/weak ukazatele.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor adresující první prvek ve zdrojovém rozsahu.
+*první*<br/>
+Vstupní iterátor adresující první prvek ve zdrojovém rozsahu.
 
-*poslední* vstupní iterátor adresující poslední prvek ve zdrojovém rozsahu.
+*poslední*<br/>
+Vstupní iterátor adresující poslední prvek ve zdrojovém rozsahu.
 
-*DEST* dopředný iterátor adresující první prvek v cílovém rozsahu.
+*cíl*<br/>
+Dopředný iterátor, který adresuje první prvek v cílovém rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parametry
 
-*první* vstupní iterátor, který odkazuje na objekt, který chcete zkopírovat.
+*první*<br/>
+Vstupní iterátor odkazující na objekt, který chcete kopírovat.
 
-*počet* A podepsaný nebo nepodepsaný řetězec typu celé číslo určující počet, kolikrát má objekt kopírovat.
+*Počet*<br/>
+Typ celého čísla se znaménkem nebo bez znaménka udávající, kolikrát se má objekt kopírovat.
 
-*DEST* dopředný iterátor, který odkazuje na kam se obrátit nových kopií.
+*cíl*<br/>
+Dopředný iterátor odkazující na umístění nových kopií.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parametry
 
-*první* dopředný iterátor adresující první prvek v cílovém rozsahu, který má být zahájeno.
+*první*<br/>
+Dopředný iterátor adresující první prvek v cílovém rozsahu, který má být zahájeno.
 
-*poslední* dopředný iterátor adresující poslední prvek v cílovém rozsahu, který má být zahájeno.
+*poslední*<br/>
+Dopředný iterátor adresující poslední prvek v cílovém rozsahu, který má být zahájeno.
 
-*Val* hodnota, která má sloužit k inicializaci cílového rozsahu.
+*Val*<br/>
+Hodnota, která má být použita k inicializaci cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*první* dopředný iterátor adresující první prvek v cílovém rozsahu, má být iniciován.
+*první*<br/>
+Dopředný iterátor, který adresuje první prvek v cílovém rozsahu, který má být iniciován.
 
-*počet* počet prvků, které mají být inicializovány.
+*Počet*<br/>
+Počet prvků, které mají být inicializovány.
 
-*Val* hodnota, která má sloužit k inicializaci cílového rozsahu.
+*Val*<br/>
+Hodnota, která má být použita k inicializaci cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 

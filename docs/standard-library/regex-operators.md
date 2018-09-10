@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 667de3f580734230cbc70afbe29c17aee8e35950
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961539"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107026"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regulární výraz&gt; operátory
 
@@ -70,15 +70,20 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -181,15 +186,20 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -262,17 +272,23 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu.
+*Elem*<br/>
+Typ elementu.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*operační systém* výstupního datového proudu.
+*operační systém*<br/>
+Výstupní datový proud
 
-*správné* objekt, který chcete vložit.
+*doprava*<br/>
+Objekt, který má být vložen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -342,15 +358,20 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -452,15 +473,20 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -571,15 +597,20 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -677,15 +708,20 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iterátoru.
+*BidIt*<br/>
+Typ iterátoru.
 
-*IOtraits* třída vlastností řetězce.
+*IOtraits*<br/>
+Třída vlastností řetězce.
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*levé* levý objekt k porovnání.
+*doleva*<br/>
+Levý objekt k porovnání.
 
-*správné* správný objekt k porovnání.
+*doprava*<br/>
+Pravý objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 

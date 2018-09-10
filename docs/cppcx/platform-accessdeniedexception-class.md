@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808de08163f0f94e4c3d0064fced7cb81f83c931
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c87cdc55359fbdd4855a062a3b1b56384c3be574
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104183"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::accessdeniedexception – třída
-Vyvolána při přístupu k prostředku nebo funkce byl odepřen.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class AccessDeniedException : COMException,    IException,    IPrintable,   IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud došlo k této výjimce, ujistěte se, že si vyžádáte příslušnou funkci a provedli požadované deklarací v manifestu balíčku aplikace. Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána při přístupu k prostředku nebo funkce byl odepřen.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class AccessDeniedException : COMException,    IException,    IPrintable,   IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Pokud došlo k této výjimce, ujistěte se, že si vyžádáte příslušnou funkci a provedli požadované deklarací v manifestu balíčku aplikace. Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

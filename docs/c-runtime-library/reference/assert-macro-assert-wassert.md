@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101934"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametry
 
-*výraz* skalární výraz, který (včetně výrazy ukazatelů), který se vyhodnotí na nenulovou hodnotu (**true**) nebo 0 (**false**).
+*Výraz*<br/>
+Skalární výraz, který (včetně výrazy ukazatelů), který se vyhodnotí na nenulovou hodnotu (**true**) nebo 0 (**false**).
 
-*zpráva* zprávu zobrazíte.
+*message*<br/>
+Zpráva, která se má zobrazit
 
-*Název souboru* název zdroje souboru kontrolního výrazu se nezdařilo.
+*Název souboru*<br/>
+Název zdrojového souboru kontrolního výrazu se nezdařilo.
 
-*řádek* číslo řádku ve zdrojovém souboru neplatnost kontrolního výrazu.
+*Řádek*<br/>
+Číslo řádku ve zdrojovém souboru neplatnost kontrolního výrazu.
 
 ## <a name="remarks"></a>Poznámky
 

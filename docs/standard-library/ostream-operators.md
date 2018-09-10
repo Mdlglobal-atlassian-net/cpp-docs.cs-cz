@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 766ab6f9a93cc617c2a3ecb4c305775d670a9640
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955930"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108951"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; operátory
 
@@ -88,17 +88,23 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
-*_Elem* typ elementu.
+*_Elem*<br/>
+Typ elementu.
 
-*_Ostr* A `basic_ostream` objektu.
+*_Ostr*<br/>
+A `basic_ostream` objektu.
 
-*Str* řetězec znaků.
+*str*<br/>
+Řetězec znaků.
 
-*_Tr* znak vlastnosti.
+*_Tr*<br/>
+Vlastnosti znaků.
 
-*Val* typ
+*Val*<br/>
+Typ
 
 ### <a name="return-value"></a>Návratová hodnota
 

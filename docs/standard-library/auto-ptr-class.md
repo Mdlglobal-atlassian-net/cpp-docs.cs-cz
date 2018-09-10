@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958000"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108886"
 ---
 # <a name="autoptr-class"></a>auto_ptr – třída
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>Parametry
 
-*správné* `auto_ptr` ze kterého chcete získat existující prostředek.
+*doprava*<br/>
+`auto_ptr` Ze kterého chcete získat existující prostředek.
 
-*PTR* ukazatel zadaná k nahrazení uložený ukazatel.
+*ptr*<br/>
+Ukazatel na zadaný k nahrazení uložený ukazatel.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na objekt, který `auto_ptr` zapouzdřuje.
+*ptr*<br/>
+Ukazatel na objekt, který `auto_ptr` zapouzdřuje.
 
-*správné* `auto_ptr` objektu, který chcete zkopírovat konstruktorem.
+*doprava*<br/>
+`auto_ptr` Objektu, který chcete zkopírovat konstruktorem.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*správné* objekt typu `auto_ptr`.
+*doprava*<br/>
+Objekt typu `auto_ptr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel zadaná k nahrazení uložený ukazatel `myptr`.
+*ptr*<br/>
+Ukazatel na zadaný k nahrazení uložený ukazatel `myptr`.
 
 ### <a name="example"></a>Příklad
 

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f7f45d76e69f3eaaf94bdb66a0da0e4d3b78069
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e1a7fad8f4d0bdc0c91dab50f5737b6aa4476438
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751495"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105767"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::outofboundsexception – třída
-Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class OutOfBoundsException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class OutOfBoundsException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956140"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101713"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf – třída
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* třídu alokátoru.
+*ALLOC*<br/>
+Třída alokátoru
 
-*Elem* typ základního elementu řetězce.
+*Elem*<br/>
+Typ základního prvku objektu řetězec.
 
-*Tr* vlastností specializované na základního elementu řetězce.
+*tr*<br/>
+Vlastnosti znaků specializované na základního elementu řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* objekt typu [basic_string](../standard-library/basic-string-class.md).
+*str*<br/>
+Objekt typu [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* pozice hledání pro relativně *_Way*. Další informace najdete v tématu [basic_stringbuf::off_type](#off_type).
+*_Off*<br/>
+Pozice hledání pro relativně *_Way*. Další informace najdete v tématu [basic_stringbuf::off_type](#off_type).
 
-*_Way* výchozí bod pro operace. Zobrazit [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*<br/>
+Výchozí bod pro operace. Zobrazit [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*Reži_m* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic. Další informace najdete v tématu [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic. Další informace najdete v tématu [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* pozici k vyhledání pro.
+*_Sp*<br/>
+Pozice k vyhledání pro.
 
-*Reži_m* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*Reži_m*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newstr* nový řetězec.
+*_Newstr*<br/>
+Nový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-*Další* basic_stringbuf – jehož obsah se Prohodit s této basic_stringbuf –.
+*Ostatní*<br/>
+Basic_stringbuf – jehož obsah se Prohodit s této basic_stringbuf –.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-*Další* basic_stringbuf –, jejichž obsah, včetně vlastnosti národního prostředí, se přiřadí stringbuf na levé straně operátoru.
+*Ostatní*<br/>
+Basic_stringbuf –, jejichž obsah, včetně vlastnosti národního prostředí, se přiřadí stringbuf na levé straně operátoru.
 
 ### <a name="remarks"></a>Poznámky
 

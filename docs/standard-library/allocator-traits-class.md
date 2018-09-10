@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962443"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110435"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits – třída
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
-*počet* počet prvků k přidělení.
+*Počet*<br/>
+Počet prvků, které mají přidělit.
 
-*pomocný parametr* A `const_pointer` objekt alokátoru, které může pomáhají při neodpovídajících žádosti o úložiště vyhledáním adresu přiděleného objektu před požadavku. Žádné pomocný parametr je považován za ukazatel s hodnotou null.
+*pomocný parametr*<br/>
+A `const_pointer` objekt alokátoru, které může pomáhají při neodpovídajících žádosti o úložiště vyhledáním adresu přiděleného objektu před požadavku. Žádné pomocný parametr je považován za ukazatel s hodnotou null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
-*PTR* ukazatel na umístění, kde má být vytvořen objekt.
+*ptr*<br/>
+Ukazatel na umístění, kde má být vytvořen objekt.
 
-*args* seznam argumentů, která je předána do konstruktoru objektu.
+*argumenty*<br/>
+Seznam argumentů, která je předána do konstruktoru objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
-*PTR* ukazatel na počáteční umístění objekty, které chcete být navrácena.
+*ptr*<br/>
+Ukazatel na počáteční umístění objekty, které chcete být navrácena.
 
-*počet* počet objektů, které chcete uvolnit.
+*Počet*<br/>
+Počet objektů, které chcete uvolnit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
-*PTR* ukazatel na umístění objektu.
+*ptr*<br/>
+Ukazatel na umístění objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* objekt alokátoru.
+*Al*<br/>
+Objekt alokátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 

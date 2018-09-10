@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81a176bd911203d04797f3437539730042b8dbae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965562"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108977"
 ---
 # <a name="numpunct-class"></a>numpunct – třída
 
@@ -60,7 +60,8 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -341,7 +342,7 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 ```
 
 ## <a name="numpunct"></a>  numpunct::numpunct
@@ -354,7 +355,8 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 

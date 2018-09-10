@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebc03a459a190144217ca15a9ab13bef395d5128
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201384"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103720"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
@@ -74,11 +74,14 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*DEST* cílovou složku kopírování.
+*cíl*<br/>
+Cíl kopírování.
 
-*src* vícebajtový znak pro kopírování.
+*src*<br/>
+Vícebajtový znak pro kopírování.
 
-*národní prostředí* národní prostředí.
+*Národní prostředí*<br/>
+Národní prostředí.
 
 ## <a name="remarks"></a>Poznámky
 

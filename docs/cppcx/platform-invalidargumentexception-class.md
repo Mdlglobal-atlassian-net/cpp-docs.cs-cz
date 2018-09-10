@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761378"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101856"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::invalidargumentexception – třída
-Vyvolána, když jeden z argumentů, poskytnutý metodě není platný.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.  
-  
-### <a name="requirements"></a>Požadavky  
- **Minimální podporovaná klienta:** Windows 8  
-  
- **Minimální podporovaná serverem:** systému Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadata:** platform.winmd  
-  
-## <a name="see-also"></a>Viz také  
- [Platform::COMException – třída](../cppcx/platform-comexception-class.md)
+
+Vyvolána, když jeden z argumentů, poskytnutý metodě není platný.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.
+
+### <a name="requirements"></a>Požadavky
+
+**Minimální podporovaná klienta:** Windows 8
+
+**Minimální podporovaná serverem:** systému Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadata:** platform.winmd
+
+## <a name="see-also"></a>Viz také
+
+[Platform::COMException – třída](../cppcx/platform-comexception-class.md)

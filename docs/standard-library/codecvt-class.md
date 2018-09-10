@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956804"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110627"
 ---
 # <a name="codecvt-class"></a>codecvt – třída
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ používaný v rámci programu ke kódování znaků.
+*CharType*<br/>
+Typ používaný v rámci programu ke kódování znaků.
 
-*Bajtů* typ použitý ke kódování znaků mimo program.
+*Bajtů*<br/>
+Typ použitý ke kódování znaků mimo program.
 
-*StateType* typ, který slouží k reprezentaci průběžných stavů převodu mezi interními a externími typy znázornění znaků.
+*StateType*<br/>
+Typ, který lze použít k reprezentaci průběžných stavů převodu mezi interními a externími typy znázornění znaků.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
+*_Refs*<br/>
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -216,7 +220,7 @@ Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
 - 1: doba života objektu je nutné ručně spravovat.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- 2: tyto hodnoty nejsou definovány.
 
 Konstruktor inicializuje jeho `locale::facet` základního objektu s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek sekvence má být převeden.
+*first1*<br/>
+Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1* ukazatel na konci sekvence má být převeden.
+*Příjmení1*<br/>
+Ukazatel na konci sekvence má být převeden.
 
-*next1* ukazatel za koncem převedený pořadí první nepřevedeném znak.
+*next1*<br/>
+Ukazatel za koncem převedený pořadí první nepřevedeném znak.
 
-*first2* ukazatel na začátek převedený pořadí.
+*first2*<br/>
+Ukazatel na začátek převedený pořadí.
 
-*Příjmení2* ukazatel na konci převedený sekvence.
+*Příjmení2*<br/>
+Ukazatel na konci převedený sekvence.
 
-*next2* ukazatel `CharType` , která se dodává po převedení poslední `CharType`, první nezměněném znaku v cílové sekvenci.
+*next2*<br/>
+Ukazatel `CharType` , která se dodává po převedení poslední `CharType`, první nezměněném znaku v cílové sekvenci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek pořadí externí.
+*first1*<br/>
+Ukazatel na začátek pořadí externí.
 
-*Příjmení1* ukazatel na konci externí sekvence.
+*Příjmení1*<br/>
+Ukazatel na konci externí sekvence.
 
-*_Len2* maximální počet `Byte`, které může být vrácen členskou funkci.
+*_Len2*<br/>
+Maximální počet `Byte`, které může být vrácen členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek sekvence má být převeden.
+*first1*<br/>
+Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1* ukazatel na konci sekvence má být převeden.
+*Příjmení1*<br/>
+Ukazatel na konci sekvence má být převeden.
 
-*next1* odkaz na ukazatel na první nepřevedený `CharType`, za poslední `CharType` převést.
+*next1*<br/>
+Odkaz na ukazatel na první nepřevedený `CharType`, za poslední `CharType` převést.
 
-*first2* ukazatel na začátek převedený pořadí.
+*first2*<br/>
+Ukazatel na začátek převedený pořadí.
 
-*Příjmení2* ukazatel na konci převedený sekvence.
+*Příjmení2*<br/>
+Ukazatel na konci převedený sekvence.
 
-*next2* odkaz na ukazatel na první nepřevedený `Byte`, za poslední `Byte` převést.
+*next2*<br/>
+Odkaz na ukazatel na první nepřevedený `Byte`, za poslední `Byte` převést.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first2* ukazatel na první pozici v cílovém rozsahu.
+*first2*<br/>
+Ukazatel na první pozici v cílovém rozsahu.
 
-*Příjmení2* ukazatel na poslední pozice v cílové oblasti.
+*Příjmení2*<br/>
+Ukazatel na poslední pozice v cílové oblasti.
 
-*next2* ukazatel na první prvek beze změny v cílové sekvenci.
+*next2*<br/>
+Ukazatel na první prvek beze změny v cílové sekvenci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek sekvence má být převeden.
+*first1*<br/>
+Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1* ukazatel na konci sekvence má být převeden.
+*Příjmení1*<br/>
+Ukazatel na konci sekvence má být převeden.
 
-*next1* ukazatel za koncem převedený pořadí první nepřevedeném znak.
+*next1*<br/>
+Ukazatel za koncem převedený pořadí první nepřevedeném znak.
 
-*first2* ukazatel na začátek převedený pořadí.
+*first2*<br/>
+Ukazatel na začátek převedený pořadí.
 
-*Příjmení2* ukazatel na konci převedený sekvence.
+*Příjmení2*<br/>
+Ukazatel na konci převedený sekvence.
 
-*next2* ukazatel `CharType` , která se dodává po převedení poslední `Chartype` první nezměněném znaku v cílové sekvenci.
+*next2*<br/>
+Ukazatel `CharType` , která se dodává po převedení poslední `Chartype` první nezměněném znaku v cílové sekvenci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek pořadí externí.
+*first1*<br/>
+Ukazatel na začátek pořadí externí.
 
-*Příjmení1* ukazatel na konci externí sekvence.
+*Příjmení1*<br/>
+Ukazatel na konci externí sekvence.
 
-*_Len2* maximální počet bajtů, které můžete členské funkce.
+*_Len2*<br/>
+Maximální počet bajtů, které můžete členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first1* ukazatel na začátek sekvence má být převeden.
+*first1*<br/>
+Ukazatel na začátek sekvence má být převeden.
 
-*Příjmení1* ukazatel na konci sekvence má být převeden.
+*Příjmení1*<br/>
+Ukazatel na konci sekvence má být převeden.
 
-*next1* odkaz na ukazatel na první nepřevedený `CharType` za poslední `CharType` převést.
+*next1*<br/>
+Odkaz na ukazatel na první nepřevedený `CharType` za poslední `CharType` převést.
 
-*first2* ukazatel na začátek převedený pořadí.
+*first2*<br/>
+Ukazatel na začátek převedený pořadí.
 
-*Příjmení2* ukazatel na konci převedený sekvence.
+*Příjmení2*<br/>
+Ukazatel na konci převedený sekvence.
 
-*next2* odkaz na ukazatel na první nepřevedený `Byte` po převedení poslední `Byte`.
+*next2*<br/>
+Odkaz na ukazatel na první nepřevedený `Byte` po převedení poslední `Byte`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stavu* stav převodu, který se spravuje mezi voláními na členskou funkci.
+*_Stavu*<br/>
+Stav převodu, který se spravuje mezi voláními na členskou funkci.
 
-*first2* ukazatel na první pozici v cílovém rozsahu.
+*first2*<br/>
+Ukazatel na první pozici v cílovém rozsahu.
 
-*Příjmení2* ukazatel na poslední pozice v cílové oblasti.
+*Příjmení2*<br/>
+Ukazatel na poslední pozice v cílové oblasti.
 
-*next2* ukazatel na první prvek beze změny v cílové sekvenci.
+*next2*<br/>
+Ukazatel na první prvek beze změny v cílové sekvenci.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 909bcb8446c7d876828a6d020cd20a7398ec04d5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960736"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108743"
 ---
 # <a name="integersequence-class"></a>integer_sequence – třída
 
@@ -44,9 +44,11 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parametry
 
-*T* typy hodnot; musí být celočíselného typu: bool, char, char16_t, char32_t, wchar_t, nebo podepsaný nebo nepodepsaný řetězec typy celých čísel.
+*T*<br/>
+Typy hodnot; musí být celočíselného typu: bool, char, char16_t, char32_t, wchar_t, nebo podepsaný nebo nepodepsaný řetězec typy celých čísel.
 
-*Prů* pack beztypový parametr, který představuje sekvenci hodnot celočíselného typu T.
+*Prů*<br/>
+Sada parametrů bez typu, který představuje sekvenci hodnot celočíselného typu T.
 
 ## <a name="members"></a>Členové
 
@@ -129,7 +131,7 @@ Chcete-li `index_sequence` sadu parametrů, použijte `index_sequence_for` \<T..
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: < type_traits >
+Záhlaví: \<type_traits\>
 
 Obor názvů: std
 

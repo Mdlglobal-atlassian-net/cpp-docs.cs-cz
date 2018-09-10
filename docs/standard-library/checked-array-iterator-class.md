@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74c9930816f353be7594bb67bf5e44b5251aa6c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961737"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106722"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator – třída
 
@@ -145,7 +145,7 @@ int main()
     return 0;
 }
 \* Output:
- 0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9
 *\
 ```
 
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ukazatel na pole.
+*ptr*<br/>
+Ukazatel na pole.
 
-*velikost* velikost pole.
+*Velikost*<br/>
+Velikost pole.
 
-*Index* (volitelné) je prvek v poli Inicializace iterátor.  Ve výchozím nastavení je inicializován iterátor na první prvek v poli.
+*index*<br/>
+(Volitelné) Prvek v poli Inicializace iterátor.  Ve výchozím nastavení je inicializován iterátor na první prvek v poli.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` vůči kterému chcete kontrolu rovnosti.
+*doprava*<br/>
+`checked_array_iterator` Vůči kterému chcete kontrolu rovnosti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` vůči kterému chcete kontrola nerovnosti.
+*doprava*<br/>
+`checked_array_iterator` Vůči kterému chcete kontrola nerovnosti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` vůči kterému chcete kontrola nerovnosti.
+*doprava*<br/>
+`checked_array_iterator` Vůči kterému chcete kontrola nerovnosti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` pro porovnání.
+*doprava*<br/>
+`checked_array_iterator` Pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` pro porovnání.
+*doprava*<br/>
+`checked_array_iterator` Pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `checked_array_iterator` pro porovnání.
+*doprava*<br/>
+`checked_array_iterator` Pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun, podle kterého se zvýší iterátor.
+*_Off*<br/>
+Posun, podle kterého se zvýší iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun přidávaného do `checked_array_iterator`.
+*_Off*<br/>
+Posun přidávaného do `checked_array_iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun, podle kterého se zvýší iterátor.
+*_Off*<br/>
+Posun, podle kterého se zvýší iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun k se snižují podle výše `checked_array_iterator`.
+*_Off*<br/>
+Posun k se snižují podle výše `checked_array_iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* posun od `checked_array_iterator` adresu.
+*_Off*<br/>
+Posun od `checked_array_iterator` adresu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
