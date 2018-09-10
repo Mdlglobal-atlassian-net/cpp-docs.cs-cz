@@ -1,5 +1,5 @@
 ---
-title: invalid_argument – třída | Microsoft Docs
+title: invalid_argument – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc922e99db517c9850a198c1682ea73aba31257b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7e6a555655ec6b05777c74a47090387ebf07f43
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842895"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314934"
 ---
 # <a name="invalidargument-class"></a>invalid_argument – třída
 
-Třída slouží jako základní třída pro všechny výjimky vydané nahlásit neplatný argument.
+Tato třída slouží jako základní třída pro všechny výjimky vyvolané oznamuje neplatný argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -65,19 +65,19 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught invalid bitset<N> char
 Type class std::invalid_argument
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<stdexcept – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [logic_error – třída](../standard-library/logic-error-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

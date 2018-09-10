@@ -1,5 +1,5 @@
 ---
-title: domain_error – třída | Microsoft Docs
+title: domain_error – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fa31d81b55df624c0eab4cdd68cf18c9c7f19b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baa0cd298e157db6facb8fcdb16e7724392a56fc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842635"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314531"
 ---
 # <a name="domainerror-class"></a>domain_error – třída
 
-Třída slouží jako základní třída pro všechny výjimky vydané domény chybové zprávě.
+Tato třída slouží jako základní třída pro všechny výjimky vyvolané domény chybové zprávě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -64,19 +64,19 @@ int main( )
       cerr << "Type: " << typeid(e).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught: Your domain is in error!
 Type: class std::domain_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<stdexcept – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [logic_error – třída](../standard-library/logic-error-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

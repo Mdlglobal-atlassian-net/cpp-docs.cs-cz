@@ -1,5 +1,5 @@
 ---
-title: Změna vlastností vícenásobných kláves akcelerátoru | Dokumentace Microsoftu
+title: Změna vlastností vícenásobných kláves akcelerátoru (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b24d69a080e9022f7682ba89b6cdf7cb99ce5ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf70622dc901842a74cf8718d9447f899defb57d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592148"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313517"
 ---
-# <a name="changing-the-properties-of-multiple-accelerator-keys"></a>Změna vlastností vícenásobných kláves akcelerátoru
+# <a name="changing-the-properties-of-multiple-accelerator-keys-c"></a>Změna vlastností vícenásobných kláves akcelerátoru (C++)
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Změna vlastností vícenásobných kláves akcelerátoru
 

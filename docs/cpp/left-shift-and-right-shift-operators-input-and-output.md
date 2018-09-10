@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465309"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314102"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
 
-Bitové operátory posunutí jsou operátor pravého posunutí (>>), který přesune bity *shift-expression* a operátor levého posunutí doprava (<<), který přesune bity *shift-expression* vlevo. <sup>1</sup>
+Bitové operátory posunutí jsou operátor pravého posunutí (**&gt;&gt;**), který přesune bity *shift-expression* a operátor levého posunutí doprava (**&lt; &lt;**), který přesune bity *shift-expression* vlevo. <sup>1</sup>
 
 ## <a name="syntax"></a>Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: runtime_error – třída | Microsoft Docs
+title: runtime_error – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21fcc072608d7e0aa1f2f76c1a1b070d7a442eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d21a6649e42e4f02f3655d89e230d6c739e64e4
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853453"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316390"
 ---
 # <a name="runtimeerror-class"></a>runtime_error – třída
 
-Třída slouží jako základní třída pro všechny výjimky vyvolána zprávy o chybách pravděpodobně rozpoznat pouze v případě, že se program spustí.
+Tato třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení chyb pravděpodobně zjistitelná jenom v případě, že se program spustí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené [třída exception](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená [tříd výjimek](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -65,19 +65,19 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught bad locale name
 Type class std::runtime_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<stdexcept – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [exception – třída](../standard-library/exception-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

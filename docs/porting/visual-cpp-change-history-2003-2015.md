@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206168"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319094"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -65,7 +65,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
   
 - **Přetížení C++ matematických knihovních funkcí** v předchozích verzích \<math.h > definované některé, ale ne všechna přetížení C++ pro matematických knihovních funkcí. \<cmath > definované zbývající přetížení, tak zobrazíte všechny přetížení, jeden je potřeba zahrnout \<cmath > záhlaví. To vedlo k problémům s řešení přetížení funkce v kódu, který zahrnuty pouze \<math.h >. Nyní, všechna přetížení C++ byly odebrány z \<math.h > a jsou teď k dispozici pouze v \<cmath >.  
   
-     Pro vyřešení chyb, zahrnují <cmath> získat deklarace funkce, které byly odebrány z \<math.h >. V následující tabulce jsou uvedeny funkce, které byly přesunuty.  
+     Pro vyřešení chyb, zahrnují \<cmath > Chcete-li získat deklarace funkce, které byly odebrány z \<math.h >. V následující tabulce jsou uvedeny funkce, které byly přesunuty.  
   
      Funkce, které byly přesunuty:  
   

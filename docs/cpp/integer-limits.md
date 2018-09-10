@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406016"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315183"
 ---
 # <a name="integer-limits"></a>Omezení typu Integer
 
 **Specifické pro Microsoft**
 
-Limity pro celočíselné typy jsou uvedeny v následující tabulce. Tato omezení jsou také definovány v souboru standardní záhlaví < limits.h >.
+Limity pro celočíselné typy jsou uvedeny v následující tabulce. Tato omezení jsou také definovány v souboru standardní hlavičku \<limits.h >.
 
 ## <a name="limits-on-integer-constants"></a>Omezení na konstanty typu Integer
 
@@ -59,4 +59,5 @@ Pokud hodnota přesahuje reprezentace největší celé číslo, Microsoft kompi
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [Plovoucí omezení](../cpp/floating-limits.md)  
+
+[Plovoucí omezení](../cpp/floating-limits.md)

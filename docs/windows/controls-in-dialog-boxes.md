@@ -1,5 +1,5 @@
 ---
-title: Ovládací prvky v dialogových oknech | Dokumentace Microsoftu
+title: Ovládací prvky v dialogových oknech (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591955"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317105"
 ---
-# <a name="controls-in-dialog-boxes"></a>Ovládací prvky v dialogových oknech
+# <a name="controls-in-dialog-box-ces"></a>Určuje es v dialogovém okně (C++)
 
 Do pole pomocí dialogového okna můžete přidat ovládací prvky [karta editoru dialogového okna](../windows/dialog-editor-tab-toolbox.md) v [okno nástrojů](/visualstudio/ide/reference/toolbox), což vám umožní vybrat ovládací prvek a přetáhněte ji do dialogových oken. Ve výchozím nastavení okno panelu nástrojů je nastavena na automatické skrývání. Se zobrazí jako karty na levý okraj vašeho řešení při otevření editoru dialogového okna. Ale můžete připnout **nástrojů** okno do pozice po kliknutí **automaticky skrýt** tlačítko v pravém horním rohu okna. Další informace o tom, jak řídit chování tohoto okna najdete v tématu [okno Správa](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee79ccad55d2fd360166b9d693f3d4757fe2049f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3f34a6bc42f1c01783e21e1c3b0f9f04adad46f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339225"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317755"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -99,7 +99,7 @@ void AFXAPI AfxOleInitModule( );
  Pokud vytváříte ovládacího prvku OLE a používáte `COleControlModule`, neměli by jste volat `AfxOleInitModule` protože `InitInstance` členskou funkci pro `COleControlModule` volání `AfxOleInitModule`.  
    
 ### <a name="requirements"></a>Požadavky  
- **Hlavička**: < afxdll_.h >  
+ **Hlavička**: \<afxdll_.h >  
    
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
@@ -117,7 +117,7 @@ void AFXAPI AfxNetInitModule( );
  Rozšiřující knihovny DLL; MFC je soketů knihovny MFC DLL aby rozšiřující knihovny DLL MFC do `CDynLinkLibrary` řetěz, musíte vytvořit `CDynLinkLibrary` objektu v kontextu každého modulu, který budete používat ho. `AfxNetInitModule` vytvoří `CDynLinkLibrary` objektu v kontextu vašeho běžné knihovny MFC DLL tak, aby získá zapojenými do `CDynLinkLibrary` objektu řetězce běžné knihovny MFC DLL.  
    
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví:** < afxdll_.h >  
+ **Záhlaví:** \<afxdll_.h >  
    
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   

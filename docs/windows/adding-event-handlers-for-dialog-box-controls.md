@@ -1,5 +1,5 @@
 ---
-title: Přidání obslužných rutin události pro ovládací prvky dialogového okna | Dokumentace Microsoftu
+title: Přidání obslužných rutin události pro ovládací prvky dialogového okna pole (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -8,9 +8,9 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, adding event handlers to controls
+- Dialog Editor [C++], adding event handlers to controls
 - controls [C++], event handlers
-- dialog box controls, events
+- dialog box controls [C++], events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
 author: mikeblome
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605734"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317053"
 ---
-# <a name="adding-event-handlers-for-dialog-box-controls"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna
+# <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna pole (C++)
 
 Pro projekt dialogová okna, které už jsou spojeny s třídou můžete využít výhod některé klávesové zkratky, při vytváření obslužných rutin událostí. Můžete rychle vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek nebo pro všechny příslušné zprávy Windows.
 

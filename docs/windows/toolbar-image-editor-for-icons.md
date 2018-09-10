@@ -1,5 +1,5 @@
 ---
-title: Panel nástrojů (Editor obrázků pro ikony) | Dokumentace Microsoftu
+title: Panel nástrojů (C++ Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604133"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314401"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Panel nástrojů (editor obrázků pro ikony)
+# <a name="toolbar-c-image-editor-for-icons"></a>Panel nástrojů (C++ Editor obrázků pro ikony)
 
 **Editor obrázků** nástrojů obsahuje nástroje pro kreslení, vykreslování, zadávání textu, mazání a manipulace s zobrazení. Obsahuje také výběr možnosti, pomocí kterého můžete vybrat možnosti používání jednotlivých nástrojích. Například můžete z různých šířky štětce, zvětšení faktorů a styly řádku.
 

@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464808"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319068"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Chyby kompilátoru C3500 až C3999
 
@@ -496,7 +496,7 @@ ms.locfileid: "42464808"
 |[Chyba kompilátoru C3721](compiler-error-c3721.md)|"*podpis*': nekompatibilní podpis pro událost|
 |[Chyba kompilátoru C3722](compiler-error-c3722.md)|Obecná událost není povolená|
 |[Chyba kompilátoru C3723](compiler-error-c3723.md)|"*funkce*': nepovedlo se přeložit událost|
-|[Chyba kompilátoru C3724](compiler-error-c3724.md)|musíte #include < windows.h > používat Multithreading s událostmi|
+|[Chyba kompilátoru C3724](compiler-error-c3724.md)|musíte #include \<windows.h > používat Multithreading s událostmi|
 |C3725 chyby kompilátoru|Zastaralé.|
 |C3726 chyby kompilátoru|Zastaralé.|
 |[Chyba kompilátoru C3727](compiler-error-c3727.md)|"*události*': spravovaná událost musí být členská funkce nebo datový člen, který je ukazatel na konstruktor delegate|

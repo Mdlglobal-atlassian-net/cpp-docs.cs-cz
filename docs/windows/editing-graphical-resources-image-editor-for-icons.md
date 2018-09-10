@@ -1,5 +1,5 @@
 ---
-title: Úprava grafických prostředků (Editor obrázků pro ikony) | Dokumentace Microsoftu
+title: Úprava grafických prostředků (C++ Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608858"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312633"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Úprava grafických prostředků (editor obrázků pro ikony)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Úprava grafických prostředků (C++ Editor obrázků pro ikony)
 
 Grafické prostředky jsou obrázky, které definujete pro vaši aplikaci. Můžete nakreslit OdRuky nebo kreslení tvarů pomocí. Můžete vybrat částí obrázku pro úpravy, převrácení nebo změnou velikosti, nebo můžete vytvořit vlastního štětce z vybrané části obrázku a kreslit štětcem této. Můžete definovat vlastnosti bitové kopie, uložit obrázky v různých formátech a převést imagí z jednoho formátu do druhého.
 

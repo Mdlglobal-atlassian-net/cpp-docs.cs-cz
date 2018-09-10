@@ -1,5 +1,5 @@
 ---
-title: Karta editoru dialogového okna, panel nástrojů | Dokumentace Microsoftu
+title: Karta editoru dialogového okna, panel nástrojů (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,10 +10,10 @@ dev_langs:
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
-- syslink controls ino dialog boxes
-- custom controls [Visual Studio], dialog boxes
+- syslink controls in dialog boxes
+- custom controls [C++], dialog boxes
 - controls [C++], standard
-- Dialog editor, creating controls
+- Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a528ece23301f707b267ed7cefd30649b34c5e60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613509"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316208"
 ---
-# <a name="dialog-editor-tab-toolbox"></a>Karta editoru dialogového okna, panel nástrojů
+# <a name="dialog-editor-tab-toolbox-c"></a>Karta editoru dialogového okna, panel nástrojů (C++)
 
 **Editoru dialogového okna** kartě se zobrazí v [okno nástrojů](/visualstudio/ide/reference/toolbox) když pracujete v **dialogové okno** editoru. Chcete-li přidat ovládací prvky do vaší nové dialogového okna, přetáhněte ovládací prvky z **nástrojů** k vytváření dialogových oken (Další informace najdete v tématu [přidání ovládacího prvku do dialogového okna](adding-a-control-to-a-dialog-box.md)). Potom můžete pohyb ovládací prvky nebo změňte jejich velikost a tvar.
 

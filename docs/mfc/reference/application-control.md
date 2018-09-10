@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338718"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315012"
 ---
 # <a name="application-control"></a>Řízení aplikace
 OLE vyžaduje podstatné kontrolu nad aplikacemi a objekty. OLE systémové knihovny DLL musí být možné spouštět a vydávejte verze aplikací automaticky, koordinovat jejich výrobu a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané OLE systémové knihovny DLL, tyto funkce musí být říká se jim také aplikace. 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví:** < afxwin.h >  
+ **Záhlaví:** afxwin.h  
    
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví:** < afxwin.h >  
+ **Záhlaví:** afxwin.h  
    
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)  

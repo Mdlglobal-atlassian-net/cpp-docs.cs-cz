@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850417"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319081"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru podle verze kompilátoru
 
@@ -404,7 +404,7 @@ C4694|"*typ*': zapečetěná abstraktní třída nemůže mít je třídou base*
 C4720|sestavy assembleru vloženého kódu v řádku: '*popis*.
 C4721|"*popis*': není k dispozici jako vnitřní
 C4722|"*popis*': destruktor nikdy nevrací potenciální nevrácená paměť
-C4726|ARM arch4/4T podporuje jenom ' < cpsr_f > nebo < spsr_f >' s okamžitou hodnotou
+C4726|ARM arch4/4T podporuje jenom "\<cpsr_f > nebo \<spsr_f >' s okamžitou hodnotou
 C4727|Soubor PCH s názvem *název* se stejným časovým razítkem se našel v *název* a *název*.  Pomocí první soubor PCH.
 C4729|upozornění založená na funkce je moc velká pro graf toku
 C4730|"*popis*': směšování výrazů _m64 a plovoucí desetinná čárka výrazy mohou způsobit nesprávný kód

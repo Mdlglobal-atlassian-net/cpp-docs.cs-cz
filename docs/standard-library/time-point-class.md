@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954257"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319016"
 ---
 # <a name="timepoint-class"></a>time_point – třída
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 První konstruktor vytvoří objekt, jehož uložené `duration` hodnota se rovná [duration::zero](../standard-library/duration-class.md#zero).
 
-Druhý konstruktor vytvoří objekt, jehož uložená hodnota trvání je rovna *doba trvání*. Není-li `is_convertible<Duration2, duration>` *platí*, druhý konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
+Druhý konstruktor vytvoří objekt, jehož uložená hodnota trvání je rovna *doba trvání*. Není-li `is_convertible<Duration2, duration>` obsahuje hodnotu true, druhý konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
 Třetí konstruktor inicializuje jeho `duration` hodnotu s použitím `Tp.time_since_epoch()`.
 

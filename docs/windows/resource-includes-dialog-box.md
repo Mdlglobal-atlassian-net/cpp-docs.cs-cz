@@ -1,5 +1,5 @@
 ---
-title: Prostředek zahrnuje – dialogové | Dokumentace Microsoftu
+title: Prostředek zahrnuje dialogové okno (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,29 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Resource Includes dialog box
-- rc files, changing storage
-- symbol header files, changing
-- compiling source code, including resources
-- .rc files, changing storage
-- symbol header files, read-only
-- symbols, symbol header files
+- Resource Includes dialog box [C++]
+- rc files [C++], changing storage
+- symbol header files [C++], changing
+- .rc files [C++], changing storage
+- symbol header files [C++], read-only
+- symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610658"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313335"
 ---
-# <a name="resource-includes-dialog-box"></a>Dialogové okno Prostředek zahrnuje
+# <a name="resource-includes-dialog-box-c"></a>Prostředek zahrnuje dialogové okno (C++)
 
-Můžete použít **prostředek zahrnuje** dialogové okno Upravit prostředí normální funkční uspořádání ukládání všech prostředků v projektu soubor .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v souboru Resource.h.
+Můžete použít **prostředek zahrnuje** dialogové okno projektu v jazyce C++ upravit prostředí normální funkční uspořádání ukládání všech prostředků v projektu soubor .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v souboru Resource.h.
 
 Chcete-li otevřít **prostředek zahrnuje** dialogové okno, klikněte pravým tlačítkem na příslušný .rc souborů v [zobrazení prostředků](../windows/resource-view-window.md), klikněte na tlačítko **prostředek zahrnuje** z místní nabídky.
 

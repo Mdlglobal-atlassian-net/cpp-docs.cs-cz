@@ -1,5 +1,5 @@
 ---
-title: Editor akcelerátorů | Dokumentace Microsoftu
+title: Editor akcelerátorů (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,27 +11,26 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
-- tables [Visual Studio], accelerator key
-- accelerator keys
-- resource editors, Accelerator editor
+- tables [C++], accelerator key
+- accelerator keys [C++]
+- resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
-- Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681720"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318788"
 ---
-# <a name="accelerator-editor"></a>Editor akcelerátorů
+# <a name="accelerator-editor-c"></a>Editor akcelerátorů (C++)
 
-Tabulky akcelerátorů je prostředek Windows, který obsahuje seznam klávesy akcelerátoru (označované také jako klávesové zkratky) a identifikátory příkazů, které jsou s nimi spojeny. Program může mít více než jedné tabulky akcelerátoru.
+Tabulky akcelerátorů je prostředek C++ Windows, který obsahuje seznam klávesy akcelerátoru (označované také jako klávesové zkratky) a identifikátory příkazů, které jsou s nimi spojeny. Program může mít více než jedné tabulky akcelerátoru.
 
 Za normálních okolností akcelerátorů jsou použity jako klávesové zkratky pro příkazy programu, které jsou dostupné také na nabídku nebo panel nástrojů. Můžete však použít tabulky akcelerátorů k definování kombinace kláves pro příkazy, které nemají objekt uživatelského rozhraní k nim má přiřazené.
 

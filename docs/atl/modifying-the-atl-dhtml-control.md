@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764547"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314232"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Změna ovládacího prvku ATL DHTML
 
@@ -51,7 +51,7 @@ Průvodce ovládacími prvky ATL obsahuje počáteční kód, tak můžete sesta
 
    Můžete použít **rozhraní IWebBrowser2** metody vzhledem k tomu, že knihovna ATL poskytuje ukazatel na rozhraní za vás v souboru hlaviček.
 
-V dalším kroku upravte prostředek ve formátu HTML volat metody, kterou jste vytvořili. Přidejte tři tlačítka pro volání těchto metod.  
+V dalším kroku upravte prostředek ve formátu HTML volat metody, kterou jste vytvořili. Přidejte tři tlačítka pro volání těchto metod.
 
 #### <a name="to-modify-the-html-resource"></a>Úprava prostředku HTML
 
@@ -72,9 +72,9 @@ V dalším kroku upravte prostředek ve formátu HTML volat metody, kterou jste 
 3. Přidejte volání `HelloHTML` metody, které jste vytvořili. Příklad:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Tato metoda vytvoří tlačítko s popiskem **HelloHTML**, který může uživatel kliknout na Zobrazit `HelloHTML` okno se zprávou.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 809dae9fb6bd255d36f9d7417bf6ab606b1309be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e61fe4895026881d4d4db63b9617018fbe12d889
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102730"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317209"
 ---
 # <a name="ltlistgt-operators"></a>&lt;seznam&gt; operátory
 
@@ -80,9 +80,9 @@ cout << "Lists not equal." << endl;
 else
 cout << "Lists equal." << endl;
 }
-\* Output:
+/* Output:
 Lists not equal.
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  – Operátor&lt;
@@ -135,9 +135,9 @@ int main( )
    else
       cout << "List c1 is not less than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is less than list c2.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a>  – Operátor&lt;=
@@ -190,9 +190,9 @@ int main( )
    else
       cout << "List c1 is greater than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is less than or equal to list c2.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a>  Operator ==
@@ -241,9 +241,9 @@ int main( )
    else
       cout << "The lists are not equal." << endl;
 }
-\* Output:
+/* Output:
 The lists are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  – Operátor&gt;
@@ -296,9 +296,9 @@ int main( )
    else
       cout << "List c1 is not greater than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is greater than list c2.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a>  – Operátor&gt;=
@@ -352,9 +352,9 @@ int main( )
    else
       cout << "List c1 is less than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is greater than or equal to list c2.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Viz také:

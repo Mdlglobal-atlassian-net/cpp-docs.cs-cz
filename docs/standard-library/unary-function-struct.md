@@ -1,5 +1,5 @@
 ---
-title: unary_function – struktura | Microsoft Docs
+title: unary_function – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629c7fa0a113f0db279403fcfbcc82b6c0a0571b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff8e486be6e28de313a8e1a20634af4c50c350e8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854246"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313855"
 ---
 # <a name="unaryfunction-struct"></a>unary_function – struktura
 
-Prázdný základní struktura definující typy, které může být zděděn odvozené třídy poskytující objekt unární funkce.
+Prázdnou základní strukturu, která definuje typy, které mohou být zděděny odvozenými třídami, který poskytuje objekt jednočlenné funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,9 +38,9 @@ struct unary_function
 ```
 ## <a name="remarks"></a>Poznámky
 
-Šablona struktura slouží jako základ pro třídy, které definují členské funkce ve tvaru **result_type**`operator()`( **constargument_type &**) **const**.
+Struktura šablony slouží jako základ pro třídy, které definují členské funkce ve tvaru **result_type**`operator()`( **constargument_type &**) **const**.
 
-Všechny tyto funkce odvozené unární mohou odkazovat na jejich typu jedinou argument jako **argument_type** a jejich návratový typ jako **result_type**.
+Všechny tyto funkce odvozené unární mohou odkazovat na jejich jediný argument typu jako **argument_type** a jejich návratový typ jako **result_type**.
 
 ## <a name="example"></a>Příklad
 
@@ -86,19 +86,19 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

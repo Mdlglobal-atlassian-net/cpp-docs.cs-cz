@@ -1,5 +1,5 @@
 ---
-title: Převádění bitmap na panely nástrojů | Dokumentace Microsoftu
+title: Převádění bitmap na panely nástrojů (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602397"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317224"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>Převádění bitmap na panely nástrojů
+# <a name="converting-bitmaps-to-toolbars-c"></a>Převádění bitmap na panely nástrojů (C++)
 
-Můžete vytvořit nový panel nástrojů převedením rastrový obrázek. Obrázek z rastrového obrázku se převede na obrázky tlačítek pro panel nástrojů. Obvykle rastrový obrázek obsahuje několik imagí tlačítko v jediné bitmapě pomocí jedné image pro každé tlačítko. Image může mít libovolnou velikost; Výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost obrázky tlačítek v [nový prostředek panelu nástrojů – dialogové okno](../windows/new-toolbar-resource-dialog-box.md) při výběru **panelu nástrojů editoru** z **Image** nabídky v editoru obrázků.
+Můžete vytvořit nový panel nástrojů v projektu jazyka C++ převedením rastrový obrázek. Obrázek z rastrového obrázku se převede na obrázky tlačítek pro panel nástrojů. Obvykle rastrový obrázek obsahuje několik imagí tlačítko v jediné bitmapě pomocí jedné image pro každé tlačítko. Image může mít libovolnou velikost; Výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost obrázky tlačítek v [nový prostředek panelu nástrojů – dialogové okno](../windows/new-toolbar-resource-dialog-box.md) při výběru **panelu nástrojů editoru** z **Image** nabídky v editoru obrázků.
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Převod bitmap na panelu nástrojů
 

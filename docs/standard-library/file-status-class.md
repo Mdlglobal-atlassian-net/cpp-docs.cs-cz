@@ -1,5 +1,5 @@
 ---
-title: file_status – třída | Microsoft Docs
+title: file_status – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dc955aa615deadb6e99cfdbb8d72513cc93ced8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842531"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314557"
 ---
 # <a name="filestatus-class"></a>file_status – třída
 
@@ -39,7 +39,34 @@ Zabalí [file_type](../standard-library/filesystem-enumerations.md#file_type) a 
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status –
+### <a name="constructors"></a>Konstruktory
+
+|Konstruktor|Popis|
+|-|-|
+|[file_status –](#file_status)|Vytvoří obálku pro [file_type](../standard-library/filesystem-enumerations.md#file_type) a soubor [oprávnění](../standard-library/filesystem-enumerations.md#perms).|
+
+### <a name="member-functions"></a>Členské funkce
+
+|Členská funkce|Popis|
+|-|-|
+|[Typ](#type)|Získá nebo nastaví `file_type`.|
+|[Oprávnění](#permissions)|Získá nebo nastaví oprávnění k souboru.|
+
+### <a name="operators"></a>Operátory
+
+|Operátor|Popis|
+|-|-|
+|[operátor =](#op_as)|Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<filesystem >
+
+**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+
+## <a name="file_status"></a> file_status::file_status –
+
+Vytvoří obálku pro [file_type](../standard-library/filesystem-enumerations.md#file_type) a soubor [oprávnění](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -53,42 +80,62 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::Operator =
+### <a name="parameters"></a>Parametry
+
+*ftype*<br/>
+Zadaný `file_type`, výchozí hodnota je `file_type::none`.
+
+*Maska*<br/>
+Zadaný soubor `perms`, výchozí hodnota je `perms::unknown`.
+
+*file_status –*<br/>
+Uložený objekt.
+
+## <a name="op_as"></a> file_status::Operator =
+
+Operátory přiřazení nastavený na výchozí hodnotu člena chovat dle očekávání.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-Operátory přiřazení uvedena člen chovat podle očekávání.
+### <a name="parameters"></a>Parametry
 
-## <a name="type"></a>– typ
+*file_status –*<br/>
+[File_status –](../standard-library/file-status-class.md) kopírovaná do `file_status`.
+
+## <a name="type"></a> Typ
+
+Získá nebo nastaví `file_type`.
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-Získá nebo nastaví file_type.
+### <a name="parameters"></a>Parametry
 
-## <a name="permissions"></a>oprávnění
+*ftype*<br/>
+Zadaný `file_type`.
+
+## <a name="permissions"></a> Oprávnění
+
+Získá nebo nastaví oprávnění k souboru.
+
+Můžete vytvořit soubor setter `readonly` nebo odebrat `readonly` atribut.
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-Získá nebo nastaví oprávnění k souboru.
+### <a name="parameters"></a>Parametry
 
-Použijte nastavovací metoda udělat jen pro čtení souboru nebo odeberte atribut jen pro čtení.
+*Maska*<br/>
+Zadaný `perms`.
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<filesystem >
-
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [path – třída](../standard-library/path-class.md)<br/>
