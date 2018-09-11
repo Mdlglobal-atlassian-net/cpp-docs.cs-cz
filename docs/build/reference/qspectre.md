@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130986"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385005"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -44,7 +44,7 @@ Pokud váš kód pracuje s daty, která překročí hranice vztahu důvěryhodno
 
 ### <a name="availability"></a>Dostupnost
 
-**/Qspectre** možnost je dostupná v sadě Visual Studio 2017 verze 15.5.5 a všechny aktualizace kompilátory Microsoft Visual C++ (MSVC) provedené po 23. ledna 2018.
+**/Qspectre** možnost je dostupná v sadě Visual Studio 2017 verze 15.5.5 a všechny aktualizace kompilátory Microsoft Visual C++ (MSVC) provedené po 23. ledna 2018. Aktualizovat kompilátor a k instalaci knihoven zmírnit hrozby Spectre jako jednotlivé komponenty, použijte instalační program sady Visual Studio. **/Qspectre** možnost je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím opravy. Další informace najdete v tématu [KB 4338871](https://support.microsoft.com/help/4338871).
 
 Všechny verze sady Visual Studio 2017 verze 15.5 a všechny verze Preview sady Visual Studio verze 15.6 již obsahuje nezdokumentovaný možnost **/d2guardspecload**, tedy ekvivalent počáteční chování   **/qspectre**. Můžete použít **/d2guardspecload** použít stejné způsoby zmírnění rizik pro váš kód v těchto verzích kompilátoru. Aktualizujte prosím vaše sestavení, **/qspectre** v kompilátorech, které podporují parametr; **/qspectre** možnost můžou podporovat i nové způsoby zmírnění rizik v novějších verzích kompilátoru.
 

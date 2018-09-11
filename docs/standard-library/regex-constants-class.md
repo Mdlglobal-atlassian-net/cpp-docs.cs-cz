@@ -1,7 +1,7 @@
 ---
 title: regex_constants – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107516"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384992"
 ---
-# <a name="regexconstants-class"></a>regex_constants – třída
+# <a name="regexconstants-namespace"></a>regex_constants – obor názvů
 
 Obor názvů pro příznaky regulárního výrazu
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Poznámky
 
 Obor názvů `regex_constants` zapouzdřuje několik typů příznaků a jejich přidružené hodnoty.
+
+|||
+|-|-|
+|[error_type –](#error_type)|Příznaky pro hlášení chyb syntaxe regulárního výrazu.|
+|[match_flag_type –](#match_flag_type)|Příznaky pro porovnávání možnosti regulárních výrazů.|
+|[syntax_option_type –](#syntax_option_type)|Příznaky pro výběr možnosti syntaxe.|
 
 ## <a name="requirements"></a>Požadavky
 

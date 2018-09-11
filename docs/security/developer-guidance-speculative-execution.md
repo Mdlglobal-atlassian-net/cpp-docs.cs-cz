@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613243"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384953"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
@@ -31,7 +31,7 @@ Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifik
 
 Pokynů, které jste v tomto článku se vztahuje na třídy reprezentována ohrožení zabezpečení:
 
-1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
+1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. `/Qspectre` Přepínač je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871). V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
 
 2. CVE-2018-3639, označované také jako [spekulativního jednorázové přihlášení pro Store (SSB)](https://aka.ms/sescsrdssb). Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění zatížení náskok před závislé úložiště jako výsledek misprediction přístupu k paměti.
 
