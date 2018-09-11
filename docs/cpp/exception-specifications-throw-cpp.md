@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402400"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318268"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 
@@ -43,7 +43,7 @@ Následující tabulka shrnuje implementaci specifikace výjimek Microsoft Visua
 
 |Specifikace výjimek|Význam|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|Funkce nevyvolá výjimku. V [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) režimu (výchozí), `noexcept` a `noexcept(true)` jsou ekvivalentní. Když výjimka je vyvolána z funkce, která je deklarována `noexcept` nebo `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) je vyvolána. Když je výjimka vyvolána z funkce deklarované jako `throw()` v **/std: c ++ 14** režimu, výsledek je nedefinované chování. Žádná konkrétní funkce je vyvolána. Toto je odchylkami od C ++ 14 na úrovni standard, který vyžaduje kompilátor, který má být vyvolán [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 verze 15.5 nebo novější**: V **/std: c ++ 17** režimu `noexcept`, `noexcept(true)`, a `throw()` jsou všechny ekvivalentní. V **/std: c ++ 17** režimu `throw()` je alias pro `noexcept(true)`. V **/std: c ++ 17** režimu, když výjimka je vyvolána z funkce deklarovaná pomocí některé z těchto specifikací [std::terminate](../standard-library/exception-functions.md#terminate) se vyvolá podle požadavku standardu C ++ 17.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Funkce nevyvolá výjimku. V [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) režimu (výchozí), `noexcept` a `noexcept(true)` jsou ekvivalentní. Když výjimka je vyvolána z funkce, která je deklarována `noexcept` nebo `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) je vyvolána. Když je výjimka vyvolána z funkce deklarované jako `throw()` v **/std: c ++ 14** režimu, výsledek je nedefinované chování. Žádná konkrétní funkce je vyvolána. Toto je odchylkami od C ++ 14 na úrovni standard, který vyžaduje kompilátor, který má být vyvolán [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 verze 15.5 nebo novější**: V **/std: c ++ 17** režimu `noexcept`, `noexcept(true)`, a `throw()` jsou všechny ekvivalentní. V **/std: c ++ 17** režimu `throw()` je alias pro `noexcept(true)`. V **/std: c ++ 17** režimu, když výjimka je vyvolána z funkce deklarovaná pomocí některé z těchto specifikací [std::terminate](../standard-library/exception-functions.md#terminate) se vyvolá podle požadavku standardu C ++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Žádné podmínky|Funkce může vyvolat výjimky jakéhokoli typu.|
 |`throw(type)`| (**C ++ 14 a dřívějších**) funkce může vyvolat výjimku typu `type`. Kompilátor přijímá syntaxi, ale interpretovat jako `noexcept(false)`. V **/std: c ++ 17** režimu kompilátor vydá upozornění C5040.|
 
