@@ -1,5 +1,5 @@
 ---
-title: tmpnam_s –, _wtmpnam_s – | Microsoft Docs
+title: tmpnam_s – _wtmpnam_s – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415520"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691598"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
-Generovat názvy, které můžete použít k vytvoření dočasné soubory. Toto jsou verze [tmpnam – a _wtmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generovat názvy, které lze použít k vytvoření dočasné soubory. Jde o verzích [tmpnam – a _wtmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,39 +74,39 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Ukazatel, který bude obsahovat vygenerovaný název.
+*str*<br/>
+Ukazatel, který se uloží vygenerovaný název.
 
 *sizeInChars*<br/>
 Velikost vyrovnávací paměti ve znacích.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě tyto funkce na selhání vrátit 0, pokud bylo úspěšné nebo číslo chyby.
+Obě tyto funkce vrátí 0 v případě úspěchu nebo číslo chyby při selhání.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |||||
 |-|-|-|-|
-|*str –*|*sizeInChars*|**Návratová hodnota**|**Obsah***str* |
-|**HODNOTU NULL**|všechny|**EINVAL –**|nedojde ke změně|
-|Není **NULL** (odkazuje na platný paměti)|moc krátké.|**ERANGE –**|nedojde ke změně|
+|*str*|*sizeInChars*|**Návratová hodnota**|**Obsah***str* |
+|**HODNOTU NULL**|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platný paměti)|příliš krátký|**ERANGE**|Nezměněno|
 
-Pokud *str* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **einval –**.
+Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vrátí název souboru, který neexistuje. **tmpnam_s –** vrátí v aktuálním pracovním adresáři jedinečný název. Mějte na paměti než při pre čekajícího zpětným lomítkem a žádné informace o cestě, jako je například \fname21, název souboru to označuje, že název je platný pro aktuální pracovní adresář.
+Každá z těchto funkcí vrací název souboru, který ještě neexistuje. **tmpnam_s –** vrátí název jedinečný v určené dočasný adresář Windows vrácený [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Všimněte si, než když název souboru je pre čekajícího zpětným lomítkem a informace o cestě, jako je například \fname21, to znamená, že název je platný pro aktuální pracovní adresář.
 
-Pro **tmpnam_s –**, můžete uložit tento název vygenerovaný soubor v *str*. Maximální délka řetězce vrácené **tmpnam_s –** je **l_tmpnam_s –**, definované v STDIO. H. Pokud *str* je **NULL**, pak **tmpnam_s –** ponechá výsledek v statické vnitřní vyrovnávací paměť. Proto následných volání zrušte tuto hodnotu. Název generované **tmpnam_s –** se skládá z názvu program vygeneroval soubor a po prvním volání **tmpnam_s –**, příponu pořadová čísla v základní 32 (.1-.1vvvvvu, když **TMP _MAX_S** v STDIO. H je **INT_MAX**).
+Pro **tmpnam_s –**, můžete uložit tento název generovaného souboru v *str*. Maximální délka řetězce vráceného **tmpnam_s –** je **L_tmpnam_s**definované v STDIO. H. Pokud *str* je **NULL**, pak **tmpnam_s –** ponechá výsledek v interní statické vyrovnávací paměti. Proto následných volání zničit tuto hodnotu. Název generované **tmpnam_s –** se skládá z názvu souboru generovaného programu a po prvním volání **tmpnam_s –**, příponu souboru pořadová čísla v základní 32 (.1 .1vvvvvu, když **TMP _MAX_S** v STDIO. H je **INT_MAX**).
 
-**tmpnam_s –** automaticky zpracovává vícebajtových znaků argumenty řetězce podle potřeby, rozpozná sekvencí vícebajtových znaků podle znakové stránky OEM získány z operačního systému. **_wtmpnam_s –** je verze široká charakterová **tmpnam_s –**; argument a vrátí hodnotu **_wtmpnam_s –** jsou široká charakterová řetězce. **_wtmpnam_s –** a **tmpnam_s –** vyjma toho, že se chovají stejně jako **_wtmpnam_s –** nezpracovává řetězců vícebajtových znaků.
+**tmpnam_s –** automaticky zpracovává vícebajtového znaku zakončeného argumenty řetězce podle potřeby, rozpozná vícebajtové znakové sekvence podle znakovou stránku OEM získané z operačního systému. **_wtmpnam_s –** je verze širokého znaku **tmpnam_s –**; argument a návratová hodnota funkce **_wtmpnam_s –** jsou širokoznaké řetězce. **_wtmpnam_s –** a **tmpnam_s –** chovají stejně, s výjimkou, že **_wtmpnam_s –** nezpracovává vícebajtové znakové řetězce.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
@@ -117,7 +117,7 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 |**tmpnam_s**|\<stdio.h>|
 |**_wtmpnam_s**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -152,9 +152,27 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
+```
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+## <a name="see-also"></a>Viz také:
+
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [malloc](malloc.md)<br/>
 [_setmbcp](setmbcp.md)<br/>

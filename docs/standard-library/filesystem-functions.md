@@ -1,7 +1,7 @@
 ---
 title: '&lt;systém souborů&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::u8path
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e47339813256d189e1ce6b71506d9ae29a93f51
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4dc53bff438830cfb8a7b0414c4e5cfb111f8f31
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213462"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691494"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;systém souborů&gt; funkce
 
@@ -128,15 +128,15 @@ Tyto nové bezplatné funkce v [ \<filesystem >](../standard-library/filesystem.
 path absolute(const path& pval, const path& base = current_path());
 ```
 
-Funkce vrátí absolutní cesta odpovídající `pval` vzhledem k názvu cesty `base`:
+Funkce vrátí odpovídající absolutní cesta k *pval* vzhledem k názvu cesty `base`:
 
-1. Pokud pval.has_root_name() & & pval.has_root_directory() funkce vrátí pval.
+1. Pokud `pval.has_root_name() && pval.has_root_directory()` funkce vrátí *pval*.
 
-1. Pokud pval.has_root_name() & &! pval.has_root_directory() funkce vrátí pval.root_name() / absolute(base).root_directory() / absolute(base).relative_path() / pval.relative_path().
+1. Pokud `pval.has_root_name() && !pval.has_root_directory()` funkce vrátí `pval.root_name()`  /  `absolute(base).root_directory()`  /  `absolute(base).relative_path()`  /  `pval.relative_path()`.
 
-1. Pokud! pval.has_root_name() & & pval.has_root_directory() funkce vrátí absolute(base).root_name() / pval.
+1. Pokud `!pval.has_root_name() && pval.has_root_directory()` funkce vrátí `absolute(base).root_name()`  /  *pval*.
 
-1. Pokud! pval.has_root_name() & &! pval.has_root_directory() funkce vrátí absolute(base) / pval.
+1. Pokud `!pval.has_root_name() && !pval.has_root_directory()` funkce vrátí `absolute(base)`  /  *pval*.
 
 ## <a name="begin"></a>  začít
 
@@ -146,7 +146,7 @@ const recursive_directory_iterator&
     begin(const recursive_directory_iterator& iter) noexcept;
 ```
 
-Obě funkce vrátí `iter`.
+Obě funkce vrátí *iter*.
 
 ## <a name="canonical"></a>  Canonical
 
@@ -156,15 +156,15 @@ path canonical(const path& pval, error_code& ec);
 path canonical(const path& pval, const path& base, error_code& ec);
 ```
 
-Všechny funkce formuláře absolutní cesta pabs = absolutní (pval, base) (nebo pabs = absolute(pval) pro přetížení s parametrem žádné základní), pak snížit na kanonický tvar v následujícím pořadí kroků:
+Všechny funkce tvoří absolutní cesta `pabs = absolute(pval, base)` (nebo `pabs = absolute(pval)` pro přetížení s parametrem žádné základní), pak snížit na kanonický tvar postupně následující kroky:
 
-1. Všechny komponenty cesty X které is_symlink(X) má hodnotu true je nahrazena read_symlink(X).
+1. Všechny komponenty cesty `X` pro kterou `is_symlink(X)` je **true** nahrazuje `read_symlink(X)`.
 
-1. Všechny komponenty cesty. (tečka je aktuální adresář stanovené předchozí komponenty cesta) se odebere.
+1. Všechny komponenty cesty `.` (tečka je aktuální adresář stanovené předchozí komponenty cesta) se odebere.
 
-1. Každá dvojice X součástí cesty /.. (tečka – tečka je nadřazený adresář stanovené předchozí komponenty cesta) se odebere.
+1. Každý pár součásti cesty `X` / `..` (nadřazený adresář stanovené předchozí komponenty cesty je tečka – tečka) je odebrán.
 
-Funkce pak vrátí pabs.
+Funkce pak vrátí `pabs`.
 
 ## <a name="copy"></a>  kopírování
 
@@ -175,45 +175,45 @@ void copy(const path& from, const path& to, copy_options opts);
 void copy(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-Funkce všech případně zkopírujte nebo odkaz na jeden nebo více souborů `from` k `to` pod kontrolou `opts`, který je považován za copy_options::none pro přetížení bez `opts` parametru. `opts` musí obsahovat nanejvýš jeden z:
+Funkce všech případně zkopírujte nebo odkaz na jeden nebo více souborů *z* k *k* pod kontrolou *požádá o*, který je považován za `copy_options::none` pro přetížení s žádné *požádá o* parametru. *požádá o* musí obsahovat nanejvýš jeden z:
 
-- skip_existing, overwrite_existing nebo update_existing
+- `skip_existing`, `overwrite_existing`, nebo `update_existing`
 
-- copy_symlinks nebo skip_symlinks
+- `copy_symlinks` Nebo `skip_symlinks`
 
-- directories_only, create_symlinks nebo create_hard_links
+- `directories_only`, `create_symlinks`, nebo `create_hard_links`
 
-Funkce nejprve určit file_status – f hodnoty pro `from` a t pro `to`:
+Funkce nejprve určit hodnoty file_status – `f` pro *z* a `t` pro *k*:
 
-- Pokud požádá o & (copy_options::create_symlinks &#124; copy_options::skip_symlinks), Autor symlink_status – volání
+- Pokud `opts & (copy_options::create_symlinks | copy_options::skip_symlinks)`, voláním `symlink_status`
 
-- v opačném případě voláním stav
-
-- V opačném případě Oznamte chybu.
-
-Pokud! exists(f) &#124; &#124; ekvivalent (f, t) &#124; &#124; is_other(f) &#124; &#124; is_other(t) &#124; &#124; is_directory(f) & & is_regular_file(t), potom nahlásit chybu (a dělat nic dalšího).
-
-Jinak, pokud is_symlink(f) pak:
-
-- Pokud možnosti & copy_options::skip_symlinks proveďte žádnou akci.
-
-- Jinak, pokud! exists(t) & & Možnosti & copy_options::copy_symlinks pak copy_symlink – (od, požádá o).
+- v opačném případě voláním `status`
 
 - V opačném případě Oznamte chybu.
 
-Jinak, pokud is_regular_file(f) pak:
+Pokud `!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)`, potom nahlásit chybu (a dělat nic dalšího).
 
-- Pokud požádá o & copy_options::directories_only pak Neprovádět žádnou akci.
+Jinak, pokud `is_symlink(f)` pak:
 
-- Jinak, pokud požádá o & copy_options::create_symlinks pak create_symlink(to, from).
+- Pokud `options & copy_options::skip_symlinks` pak Neprovádět žádnou akci.
 
-- Jinak, pokud požádá o & copy_options::create_hard_links pak create_hard_link(to, from).
+- Jinak, pokud `!exists(t)&& options & copy_options::copy_symlinks` pak `copy_symlink(from, to, opts)`.
 
-- Jinak, pokud is_directory(f) pak copy_file – (z položky/from.filename(), požádá o).
+- V opačném případě Oznamte chybu.
 
-- Copy_file – jinak (od, požádá o).
+Jinak, pokud `is_regular_file(f)` pak:
 
-Jinak, pokud is_directory(f) & & (požádá o & copy_options::recursive &#124; &#124; ! požádá o) pak:
+- Pokud `opts & copy_options::directories_only` pak Neprovádět žádnou akci.
+
+- Jinak, pokud `opts & copy_options::create_symlinks` pak `create_symlink(to, from)`.
+
+- Jinak, pokud `opts & copy_options::create_hard_links` pak `create_hard_link(to, from)`.
+
+- Jinak, pokud `is_directory(f)` pak `copy_file(from, to`  /  `from.filename(), opts)`.
+
+- V opačném případě `copy_file(from, to, opts)`.
+
+Jinak, pokud `is_directory(f) && (opts & copy_options::recursive || !opts)` pak:
 
 ```cpp
 if (!exists(t))
@@ -224,7 +224,6 @@ if (!exists(t))
     {
         copy(next->path(), to / next->path().filename(), opts, ec);
     }
-
 }
 ```
 
@@ -239,13 +238,13 @@ bool copy_file(const path& from, const path& to, copy_options opts);
 bool copy_file(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-Funkce všechny možné zkopírovat soubor na `from` k `to` pod kontrolou `opts`, který je považován za copy_options::none pro přetížení bez `opts` parametru. `opts` musí obsahovat nanejvýš jeden skip_existing, overwrite_existing nebo update_existing.
+Funkce všechny možné zkopírovat soubor na *z* k *k* pod kontrolou *požádá o*, který je považován za `copy_options::none` pro přetížení bez *požádá o*  parametru. *požádá o* musí obsahovat nanejvýš jeden z `skip_existing`, `overwrite_existing`, nebo `update_existing`.
 
-Pokud existuje\(k\) && \!\(požádá o & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options::update_existing\) \) pak sestavu jako chybu, že soubor již existuje.
+Pokud `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))` pak sestavu jako chybu, že soubor již existuje.
 
-Jinak, pokud \!existuje\(k\) &#124; &#124; požádá o & copy_options::overwrite_existing &#124; &#124; požádá o & copy_options::update_existing & & last_write_time –\(do \) \< last_write_time –\(z\) &#124; &#124; \! \(požádá o & \(copy_options::skip_existing &#124; copy_options::o verwrite_existing &#124; copy_options:update_existing\) \) pak se pokusíte zkopírovat obsah a atributy souboru ze souboru. Sestavu jako chybu, pokud se nezdaří pokus o kopírování.
+Jinak, pokud `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))` pak se pokusíte zkopírovat obsah a atributy souboru *z* do souboru *k*. Sestavu jako chybu, pokud se nezdaří pokus o kopírování.
 
-Funkce vrátí hodnotu PRAVDA, pokud dojde k pokusu o kopírování a úspěšné, jinak hodnota false.
+Funkce vrací **true** Pokud dojde k pokusu o kopírování a bude úspěšné, jinak **false**.
 
 ## <a name="copy_symlink "></a>  copy_symlink –
 
@@ -254,7 +253,7 @@ void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-Pokud is_directory\(z\) funkce volá create_directory_symlink –\(z možnosti\). V opačném případě volá create_symlink –\(z možnosti\).
+Pokud `is_directory(from)` volání funkce `create_directory_symlink(from, to)`. V opačném případě volá `create_symlink(from, to)`.
 
 ## <a name="create_directories"></a>  create_directories –
 
@@ -263,7 +262,7 @@ bool create_directories(const path& pval);
 bool create_directories(const path& pval, error_code& ec) noexcept;
 ```
 
-Pro název cesty, jako\/b\/c funkce vytvoří adresáře a\/b podle potřeby, takže je možné vytvořit adresář\/b\/c podle potřeby. To vrací hodnotu true, pouze pokud se ve skutečnosti vytváří adresáři `pval`.
+Pro název cesty, jako\/b\/c funkce vytvoří adresáře a\/b podle potřeby, takže je možné vytvořit adresář\/b\/c podle potřeby. Vrátí **true** pouze v případě, že ve skutečnosti vytváří adresáři *pval*.
 
 ## <a name="create_directory"></a>  create_directory –
 
@@ -275,7 +274,7 @@ bool create_directory(const path& pval, const path& attr);
 bool create_directory(const path& pval, const path& attr, error_code& ec) noexcept;
 ```
 
-Funkce vytvoří adresář `pval` podle potřeby. To vrací hodnotu true, pouze pokud se ve skutečnosti vytváří adresáři `pval`, v takovém případě kopíruje oprávnění z existujícího souboru `attr`, nebo využívá perms::all pro přetížení bez `attr` parametru.
+Funkce vytvoří adresář *pval* podle potřeby. Se vrací hodnotu true, pouze pokud se ve skutečnosti vytváří adresáři *pval*, v takovém případě kopíruje oprávnění z existujícího souboru *attr*, nebo využívá `perms::all` pro přetížení bez *attr*  parametru.
 
 ## <a name="create_directory_symlink "></a>  create_directory_symlink –
 
@@ -284,7 +283,7 @@ void create_directory_symlink(const path& to, const path& link);
 void create_directory_symlink(const path& to, const path& link, error_code& ec) noexcept;
 ```
 
-Funkce vytvoří odkaz jako symlink k adresáři `to`.
+Funkce vytvoří odkaz jako symlink k adresáři *k*.
 
 ## <a name="create_hard_link"></a>  create_hard_link –
 
@@ -293,7 +292,7 @@ void create_hard_link(const path& to,  const path& link);
 void create_hard_link(const path& to, const path& link, error_code& ec) noexcept;
 ```
 
-Funkce vytvoří odkaz jako pevný odkaz pro adresář nebo soubor `to`.
+Funkce vytvoří odkaz jako pevný odkaz pro adresář nebo soubor *k*.
 
 ## <a name="create_symlink "></a>  create_symlink –
 
@@ -303,7 +302,7 @@ void create_symlink(const path& to,  const path& link);
 void create_symlink(const path& to, const path& link, error_code& ec) noexcept;
 ```
 
-Funkce vytvoří `link` jako symlink do souboru `to`.
+Funkce vytvoří *odkaz* jako symlink do souboru *k*.
 
 ## <a name="current_path"></a>  current_path –
 
@@ -314,7 +313,7 @@ void current_path(const path& pval);
 void current_path(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce se žádný parametr `pval` vrátí název cesty pro aktuální adresář. Zbývající funkce nastavit aktuální adresář `pval`.
+Funkce se žádný parametr *pval* vrátí název cesty pro aktuální adresář. Zbývající funkce nastavit aktuální adresář *pval*.
 
 ## <a name="end"></a>  ukončení
 
@@ -323,7 +322,7 @@ directory_iterator& end(const directory_iterator& iter) noexcept;
 recursive_directory_iterator& end(const recursive_directory_iterator& iter) noexcept;
 ```
 
-První funkce vrací directory_iterator –\( \) a druhá funkce vrátí recursive_directory_iterator –\(\)
+První funkce vrací `directory_iterator()` a druhá funkce vrátí `recursive_directory_iterator()`
 
 ## <a name="equivalent"></a>  ekvivalent
 
@@ -332,7 +331,7 @@ bool equivalent(const path& left, const path& right);
 bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 ```
 
-Funkce vrací hodnotu true pouze v případě `left` a `right` určit stejné entity systému souborů.
+Funkce vrací **true** pouze tehdy, pokud *levé* a *správné* určit stejné entity systému souborů.
 
 ## <a name="exists"></a>  Existuje
 
@@ -342,7 +341,7 @@ bool exists(const path& pval);
 bool exists(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací status_known – & & stat.type\( \) \! \= file_not_found. Druhý a třetí funkce vrací existuje\(stav\(pval\)\).
+První funkce vrací `status_known && stat.type() != file_not_found`. Druhý a třetí funkce vrátí `exists(status(pval))`.
 
 ## <a name="file_size"></a>  file_size –
 
@@ -351,7 +350,7 @@ uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce vrátí velikost v bajtech souboru určeném `pval`, pokud existuje\(pval\) & & is_regular_file –\(pval\) a můžete určit velikost souboru. V opačném případě se ohlásí chyby a vrátí uintmax_t\(\-1\).
+Funkce vrátí velikost v bajtech souboru určeném *pval*, pokud `exists(pval) && is_regular_file(pval)` a můžete určit velikost souboru. V opačném případě nahlásit chybu a vrátí `uintmax_t(-1)`.
 
 ## <a name="hard_link_count"></a>  hard_link_count
 
@@ -360,7 +359,7 @@ uintmax_t hard_link_count(const path& pval);
 uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce vrátí počet pevných odkazů pro `pval`, nebo \-1, pokud dojde k chybě.
+Funkce vrátí počet pevných odkazů pro *pval*, nebo \-1, pokud dojde k chybě.
 
 ## <a name="hash_value"></a>  hash_value
 
@@ -368,7 +367,7 @@ Funkce vrátí počet pevných odkazů pro `pval`, nebo \-1, pokud dojde k chyb�
 size_t hash_value(const path& pval) noexcept;
 ```
 
-Funkce vrátí hodnotu hash pro pval.native\(\).
+Funkce vrátí hodnotu hash pro `pval.native()`.
 
 ## <a name="is_block_file"></a>  is_block_file
 
@@ -378,7 +377,7 @@ bool is_block_file(const path& pval);
 bool is_block_file(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::block. Zbývající funkce vrátí is_block_file\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::block`. Zbývající funkce vrátit `is_block_file(status(pval))`.
 
 ## <a name="is_character_file"></a>  is_character_file
 
@@ -388,7 +387,7 @@ bool is_character_file(const path& pval);
 bool is_character_file(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::character. Zbývající funkce vrátí is_character_file\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::character`. Zbývající funkce vrátit `is_character_file(status(pval))`.
 
 ## <a name="is_directory "></a>  is_directory
 
@@ -398,7 +397,7 @@ bool is_directory(const path& pval);
 bool is_directory(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::directory. Zbývající funkce vrátí is_directory_file\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::directory`. Zbývající funkce vrátit `is_directory_file(status(pval))`.
 
 ## <a name="is_empty"></a>  is_empty –
 
@@ -408,7 +407,7 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-Pokud is_directory\(pval\) directory_iterator – vrátí funkce\(pval\) \= \= directory_iterator –\(\); v opačném případě vrátí název_ velikost\(pval\) \= \= 0.
+Pokud `is_directory(pval)` vrátí funkce `directory_iterator(pval) == directory_iterator()`; v opačném případě vrátí `file_size(pval) == 0`.
 
 ## <a name="is_fifo"></a>  is_fifo
 
@@ -418,7 +417,7 @@ bool is_fifo(const path& pval);
 bool is_fifo(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::fifo. Zbývající funkce vrátí is_fifo\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::fifo`. Zbývající funkce vrátit `is_fifo(status(pval))`.
 
 ## <a name="is_other"></a>  is_other –
 
@@ -428,7 +427,7 @@ bool is_other(const path& pval);
 bool is_other(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::other. Is_other – vrátí zbývající funkce\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::other`. Zbývající funkce vrátit `is_other(status(pval))`.
 
 ## <a name="s_regular_file"></a>  is_regular_file –
 
@@ -438,7 +437,7 @@ bool is_regular_file(const path& pval);
 bool is_regular_file(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::regular. Is_regular_file – vrátí zbývající funkce\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::regular`. Zbývající funkce vrátit `is_regular_file(status(pval))`.
 
 ## <a name="is_socket"></a>  is_socket
 
@@ -448,7 +447,7 @@ bool is_socket(const path& pval);
 bool is_socket(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::socket. Zbývající funkce vrátí is_socket\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::socket`. Zbývající funkce vrátit `is_socket(status(pval))`.
 
 ## <a name="is_symlink"></a>  is_symlink –
 
@@ -458,7 +457,7 @@ bool is_symlink(const path& pval);
 bool is_symlink(const path& pval, error_code& ec) noexcept;
 ```
 
-První funkce vrací stat.type\( \) \= \= file_type::symlink. Is_symlink – vrátí zbývající funkce\(stav\(pval\)\).
+První funkce vrací `stat.type() == file_type::symlink`. Zbývající funkce vrátit `is_symlink(status(pval))`.
 
 ## <a name="last_write_time"></a>  last_write_time –
 
@@ -469,7 +468,7 @@ void last_write_time(const path& pval, file_time_type new_time);
 void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;
 ```
 
-První dvě funkce vrátí čas poslední změny dat pro `pval`, nebo file_time_type\(\-1\) Pokud dojde k chybě. Poslední dvě funkce nastaví čas poslední změny dat pro `pval` k new_time.
+První dvě funkce vrátí čas poslední změny dat pro *pval*, nebo `file_time_type(-1)` Pokud dojde k chybě. Poslední dvě funkce nastaví čas poslední změny dat pro *pval* k *new_time*.
 
 ## <a name="permissions"></a>  Oprávnění
 
@@ -478,9 +477,9 @@ void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-Funkce nastaví oprávnění pro cesty určené `pval` maska & perms::mask pod kontrolou oprávnění & \(perms::add_perms &#124; perms::remove_perms\). Maska musí obsahovat nanejvýš jeden perms::add_perms a perms::remove_perms.
+Funkce nastaví oprávnění pro cesty určené *pval* k `mask & perms::mask` pod kontrolou `perms & (perms::add_perms | perms::remove_perms)`. *Maska* musí obsahovat nanejvýš jeden z `perms::add_perms` a `perms::remove_perms`.
 
-Pokud maska & perms::add_perms funkce nastaví oprávnění pro stav stav\(pval\).permissions\( \) &#124; maska & perms::mask. Jinak, pokud maska & perms::remove_perms funkce nastaví oprávnění pro stav stav\(pval\).permissions\( \) & ~\(maska & perms::mask\). Jinak funkce nastaví oprávnění maska & perms::mask.
+Pokud `mask & perms::add_perms` funkce nastaví oprávnění `status(pval).permissions() | mask & perms::mask`. Jinak, pokud `mask & perms::remove_perms` funkce nastaví oprávnění `status(pval).permissions() & ~(mask & perms::mask)`. Jinak, funkce nastaví oprávnění `mask & perms::mask`.
 
 ## <a name="read_symlink"></a>  read_symlink
 
@@ -489,7 +488,7 @@ path read_symlink(const path& pval);
 path read_symlink(const path& pval, error_code& ec);
 ```
 
-Funkce nahlásit chyby a vrátí cestu\( \) Pokud \!is_symlink –\(pval\). V opačném případě vrátí funkce objekt typu `path` obsahující symbolický odkaz.
+Funkce nahlásit chybu a vrátí `path()` Pokud `!is_symlink(pval)`. V opačném případě vrátí funkce objekt typu `path` obsahující symbolický odkaz.
 
 ## <a name="remove"></a>  odebrat
 
@@ -498,7 +497,7 @@ bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce vrací hodnotu true pouze tehdy, pokud existuje\(symlink_status –\(pval\) \) a soubor se úspěšně odebral. Symlink je sama o sobě odebrána, není soubor, který se jmenuje.
+Funkce vrací **true** pouze tehdy, pokud `exists(symlink_status(pval))` a soubor se úspěšně odebral. Symlink je sama o sobě odebrána, není soubor, který se jmenuje.
 
 ## <a name="remove_all"></a>  remove_all –
 
@@ -507,7 +506,7 @@ uintmax_t remove_all(const path& pval);
 uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 ```
 
-Pokud `pval` je adresář, funkce rekurzivně odebrat všechny položky adresář a potom položku samotný. V opačném případě volání funkce odebrat. Vrátí počet všech elementů se úspěšně odebral.
+Pokud *pval* je adresář, funkce rekurzivně odebrat všechny položky adresář a potom položku samotný. V opačném případě volání funkce `remove`. Vrátí počet všech elementů se úspěšně odebral.
 
 ## <a name="rename"></a>  Přejmenovat
 
@@ -516,7 +515,7 @@ void rename(const path& from,  const path& to);
 void rename(const path& from,  const path& to, error_code& ec) noexcept;
 ```
 
-Přejmenování funkce `from` k `to`. Symlink je sama o sobě přejmenovali, není soubor, který se jmenuje.
+Přejmenování funkce *z* k *k*. Symlink je sama o sobě přejmenovali, není soubor, který se jmenuje.
 
 ## <a name="resize_file"></a>  resize_file –
 
@@ -525,7 +524,7 @@ void resize(const path& pval, uintmax_t size);
 void resize(const path& pval, uintmax_t size, error_code& ec) noexcept;
 ```
 
-Změnit velikost souboru takové funkce tohoto file_size –\(pval\) \= \= velikost
+Funkce změnit velikost souboru tak, aby `file_size(pval) == size`
 
 ## <a name="space"></a>  místo
 
@@ -534,7 +533,7 @@ space_info space(const path& pval);
 space_info space(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce vrátí informace o svazku určeném `pval`, v strukturu typu `space_info`. Struktura obsahuje uintmax_t\(\-1\) pro libovolnou hodnotu, která nelze určit.
+Funkce vrátí informace o svazku určeném *pval*, v strukturu typu `space_info`. Struktura obsahuje `uintmax_t(-1)` pro libovolnou hodnotu, která nelze určit.
 
 ## <a name="status"></a>  Stav
 
@@ -543,7 +542,7 @@ file_status status(const path& pval);
 file_status status(const path& pval, error_code& ec) noexcept;
 ```
 
-Funkce vrátí název cesty stav, typ souboru a oprávnění přidružené k `pval`. Symlink je sama o sobě není testovány, ale tento soubor Určuje.
+Funkce vrátí název cesty stav, typ souboru a oprávnění přidružené k *pval*. Symlink je sama o sobě není testovány, ale tento soubor Určuje.
 
 ## <a name="status_known"></a>  status_known –
 
@@ -551,7 +550,7 @@ Funkce vrátí název cesty stav, typ souboru a oprávnění přidružené k `pv
 bool status_known(file_status stat) noexcept;
 ```
 
-Funkce vrátí stat.type\( \) \! \= file_type::none
+Funkce vrátí `stat.type() != file_type::none`
 
 ## <a name="swap"></a>  Prohození
 
@@ -559,7 +558,7 @@ Funkce vrátí stat.type\( \) \! \= file_type::none
 void swap(path& left, path& right) noexcept;
 ```
 
-Funkce vyměňuje obsahy `left` a `right`.
+Funkce vyměňuje obsahy *levé* a *správné*.
 
 ## <a name="symlink_status"></a>  symlink_status –
 
@@ -568,7 +567,7 @@ file_status symlink_status(const path& pval);
 file_status symlink_status(const path& pval, erroxr_code& ec) noexcept;
 ```
 
-Funkce vrátí stav symlink cesty, typ souboru a oprávnění přidružené k `pval`. Tyto funkce se chovají stejně jako stav\(pval\) s tím rozdílem, že symlink samotného testování, nikoli soubor jmenuje.
+Funkce vrátí stav symlink cesty, typ souboru a oprávnění přidružené k *pval*. Tyto funkce se chovají stejně jako `status(pval)` s tím rozdílem, že symlink samotného testování, nikoli soubor jmenuje.
 
 ## <a name="system_complete"></a>  system_complete –
 
@@ -577,7 +576,7 @@ path system_complete(const path& pval);
 path system_complete(const path& pval, error_code& ec);
 ```
 
-Vrátí absolutní cestu souboru, který bere v úvahu, podle potřeby, aktuální adresář spojené s jeho název kořenové funkce. \(Pro specifikace Posix, funkce vrátí absolutní\(pval\).\)
+Vrátí absolutní cestu souboru, který bere v úvahu, podle potřeby, aktuální adresář spojené s jeho název kořenové funkce. \(Pro specifikace Posix, vrátí funkce `absolute(pval)`.\)
 
 ## <a name="temp_directory_path"></a>  temp_directory_path
 
@@ -598,6 +597,4 @@ template <class InIt>
 path u8path(InIt first, InIt last);
 ```
 
-První funkce se chová stejně jako path(source) a druhá funkce se chová stejně jako cestu (jméno, příjmení) s tím rozdílem, že určený zdroj v každém případě je považován za sekvenci prvků char kódováním UTF-8, bez ohledu na to systém souborů.
-
-
+První funkce se chová stejně jako `path(source)` a druhá funkce se chová stejně jako `path(first, last)` s tím rozdílem, že určený zdroj v každém případě je považován za sekvenci prvků char kódováním UTF-8, bez ohledu na to systém souborů.

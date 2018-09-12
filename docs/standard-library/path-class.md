@@ -1,7 +1,7 @@
 ---
 title: Path – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104157"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691507"
 ---
 # <a name="path-class"></a>path – třída
 
-**Cesta** třída uchovává objekt typu String\_typ názvem Jmeno zde pro účely budeme vhodný pro použití jako cestu. řetězec\_typ je synonymum pro základní\_řetězec\<value_type >, kde hodnota\_typ je synonymum pro znaky v části Windows nebo wchar_t v rámci specifikace Posix.
+**Cesta** třída uchovává objekt typu `string_type`, označované jako `myname` zde pro účely budeme vhodný pro použití jako cestu. `string_type` je synonymum pro `basic_string<value_type>`, kde `value_type` je synonymum pro **char** pod Windows nebo **wchar_t** v rámci specifikace Posix.
 
 Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
@@ -443,7 +443,7 @@ Pro `pval` objekt typu `path`:
 
 ## <a name="make_preferred"></a> path::make_preferred –
 
-Převede každý oddělovače preferred_separator podle potřeby.
+Každý oddělovač, který se převede `preferred_separator` podle potřeby.
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ Přidání zdroje.
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> path::Operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí nadřazenou součást cesty `myname`, konkrétně předponu `myname` po odebrání `filename().native()` a bezprostředně předcházející oddělovačů adresáře. (Stejně, pokud `begin() != end()`, je kombinování všechny prvky v rozsahu [begin(),--end()) použitím postupně / = – operátor.) Komponenta může být prázdný.
+Vrátí nadřazenou součást cesty `myname`, konkrétně předponu `myname` po odebrání `filename().native()` a bezprostředně předcházející oddělovačů adresáře. (Stejně, pokud `begin() != end()`, je kombinování všechny prvky v rozsahu `[begin(), --end())` postupně použitím `operator/=`.) Komponenta může být prázdný.
 
 ## <a name="path"></a> path::path –
 
@@ -687,7 +687,7 @@ Nové rozšíření.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejprve Odebere příponu `extension().native()` z `myname`. Pak v případě `!newext.empty() && newext[0] != dot` (kde `dot` je `*path(".").c_str()`), pak `dot` se připojí k `myname`. Potom `newext` se připojí k `myname`.
+Nejprve Odebere příponu `extension().native()` z `myname`. Pak v případě `!newext.empty() && newext[0] != dot` (kde `dot` je `*path(".").c_str()`), pak `dot` se připojí k `myname`. Potom *newext* se připojí k `myname`.
 
 ## <a name="replace_filename"></a> path::replace_filename –
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí komponentu kořenové cesty `myname`, konkrétně root_name() / root_directory. Komponenta může být prázdný.
+Vrátí komponentu kořenové cesty `myname`, konkrétně `root_name()`  /  `root_directory`. Komponenta může být prázdný.
 
 ## <a name="stem"></a> path::stem –
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce (šablona) převede sekvenci uložené v cesta stejným způsobem jako:
+První členská funkce (šablona) převede sekvenci uložené v `mypath` stejným způsobem jako:
 
 1. `string()` pro `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ První členská funkce (šablona) převede sekvenci uložené v cesta stejným 
 
 1. `u32string()` pro `string<char32_t, Traits, Alloc>()`
 
-Druhá členská funkce převede sekvenci uložené v `mypath` kódování podporuje systém hostitele char pořadí a vrátí je uložená v objektu typu String.
+Druhá členská funkce převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele **char** pořadí a vrátí je uložená v objektu typu `string`.
 
 ## <a name="string_type"></a> path::STRING_TYPE
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> path::value_type
 
-Typ, který popisuje prvků cesty podporuje operačním systémem hostitele.
+Typ, který popisuje `path` prvky podporuje operačním systémem hostitele.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> path::wstring
 
-Převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele `wchar_t` pořadí a vrátí je uložená v objektu typu `wstring`.
+Převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele **wchar_t** pořadí a vrátí je uložená v objektu typu `wstring`.
 
 ```cpp
 wstring wstring() const;

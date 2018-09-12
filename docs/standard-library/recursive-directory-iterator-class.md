@@ -1,7 +1,7 @@
 ---
 title: recursive_directory_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110653"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691650"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator – třída
 
@@ -41,7 +41,7 @@ class recursive_directory_iterator;
 
 1. objekt typu `directory_entry` volá `myentry` tady, který představuje aktuální název souboru v adresáři pořadí
 
-1. objekt typu `bool`, označované jako `no_push` tady, která zaznamenává, jestli je zakázaná rekurzivní sestup do podadresáře
+1. objekt typu **bool**, označované jako `no_push` tady, která zaznamenává, jestli je zakázaná rekurzivní sestup do podadresáře
 
 1. objekt typu `directory_options`, označované jako `myoptions` tady, tj. zaznamenalo se stanoví při konstrukci možnosti
 

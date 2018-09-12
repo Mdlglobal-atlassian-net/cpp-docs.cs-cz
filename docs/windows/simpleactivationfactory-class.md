@@ -1,28 +1,34 @@
 ---
 title: Simpleactivationfactory – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory
+- module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+- module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory::ActivateInstance method
+- Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0820012c8c22de1287fcb09037212b870a4ff7bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594795"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691468"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory – třída
 
@@ -54,9 +60,9 @@ Následující příklad kódu ukazuje, jak používat simpleactivationfactory �
 
 |Název|Popis|
 |----------|-----------------|
-|[SimpleActivationFactory::ActivateInstance – metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Vytvoří instanci zadaného rozhraní.|
-|[SimpleActivationFactory::GetRuntimeClassName – metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Získá název třídy runtime instance třídy určené *Base* parametr šablony třídy.|
-|[SimpleActivationFactory::GetTrustLevel – metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Získá instanci třídy určené úroveň důvěryhodnosti *Base* parametr šablony třídy.|
+|[SimpleActivationFactory::ActivateInstance – metoda](#activateinstance)|Vytvoří instanci zadaného rozhraní.|
+|[SimpleActivationFactory::GetRuntimeClassName – metoda](#getruntimeclassname)|Získá název třídy runtime instance třídy určené *Base* parametr šablony třídy.|
+|[SimpleActivationFactory::GetTrustLevel – metoda](#gettrustlevel)|Získá instanci třídy určené úroveň důvěryhodnosti *Base* parametr šablony třídy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -88,6 +94,67 @@ Následující příklad kódu ukazuje, jak používat simpleactivationfactory �
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="activateinstance"></a>Simpleactivationfactory::activateinstance – metoda
 
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)
+Vytvoří instanci zadaného rozhraní.
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*ppvObject*  
+Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem `Base` parametr šablony třídy.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo nemá nakonfigurovanou WinRt nebo WinRtClassicComMix [ Runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
+
+## <a name="getruntimeclassname"></a>Simpleactivationfactory::getruntimeclassname – metoda
+
+Získá název třídy runtime instance třídy určené `Base` parametr šablony třídy.
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*runtimeName*  
+Po dokončení této operace, název třídy runtime.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud třída určená `Base` parametr šablony třídy není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo nemá nakonfigurovanou WinRt nebo WinRtClassicComMix [Runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
+
+## <a name="gettrustlevel"></a>Simpleactivationfactory::gettrustlevel – metoda
+
+Získá instanci třídy určené úroveň důvěryhodnosti `Base` parametr šablony třídy.
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*trustLvl*  
+Když tato operace dokončí, úroveň důvěryhodnosti objektu aktuální třídy.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vždy S_OK.

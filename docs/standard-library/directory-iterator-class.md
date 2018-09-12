@@ -1,7 +1,7 @@
 ---
 title: directory_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105201"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691585"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator – třída
 
-Popisuje vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři. Iterátor výraz X * X vyhodnotí na objekt directory_entry – třída, která obaluje název souboru a nic vědět o jeho stavu.
+Popisuje vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři. Iterátor `X`, výraz `*X` vyhodnocen jako objekt třídy `directory_entry` tím končí naše název souboru a nic vědět o jeho stavu.
 
-Třída ukládá objekt typ cesty, volá `mydir` zde pro účely budeme, která představuje název adresář, který má být sekvencování a názvem objektu directory_entry – typ `myentry` tady, který představuje aktuální název souboru v adresáři pořadí. Vytvoření objektu výchozí vyrobený directory_entry – typ má prázdnou `mydir` cesta a představuje iterátor koncová sekvence.
+Uloží objekt typu třídy `path`, označované jako `mydir` zde pro účely budeme, který představuje název adresář, který má být seřazeny, a objekt typu `directory_entry` volá `myentry` tady, který představuje aktuální Název souboru v adresáři pořadí. Výchozí vyrobený objekt typu `directory_entry` prázdnou `mydir` cesta a představuje iterátor koncová sekvence.
 
-Mějme například adresář abc def položky a ghi, kód:
+Mějme například adresář `abc` s položkami `def` a `ghi`, kód:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-zavolá `visit` s argumenty path("abc/def") a path("abc/ghi").
+zavolá `visit` s argumenty `path("abc/def")` a `path("abc/ghi")`.
 
 Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Členská funkce|Popis|
 |-|-|
-|[Přírůstek](#increment)|Funkce se pokusí o přechodu na další název souboru v adresáři.|
+|[Přírůstek](#increment)|Pokusy o přechodu na další název souboru v adresáři.|
 
 ### <a name="operators"></a>Operátory
 

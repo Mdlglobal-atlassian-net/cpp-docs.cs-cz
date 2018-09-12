@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd853affc343a4f07c64d025cd73122fdb8d458
-ms.sourcegitcommit: 32fd693d092ea0b43c3916703364f494a5b502cf
-ms.translationtype: HT
+ms.openlocfilehash: ce1b0a495c2556b39a18937635d9109eaaeb2433
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44389481"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691416"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -100,7 +100,7 @@ Každá z těchto funkcí vrací ukazatel na název generované nebo **NULL** Po
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vrací název souboru, který ještě neexistuje. **tmpnam –** vrací název, který je jedinečný v určené dočasný adresář Windows vrácený [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_tempnam –** generuje jedinečný název v adresáři než na kterém určené. Všimněte si, než když název souboru je pre čekajícího zpětným lomítkem a informace o cestě, jako je například \fname21, to znamená, že název je platný pro aktuální pracovní adresář. 
+Každá z těchto funkcí vrací název souboru, který ještě neexistuje. **tmpnam –** vrací název, který je jedinečný v určené dočasný adresář Windows vrácený [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_tempnam –** generuje jedinečný název v adresáři než na kterém určené. Všimněte si, než když název souboru je pre čekajícího zpětným lomítkem a informace o cestě, jako je například \fname21, to znamená, že název je platný pro aktuální pracovní adresář.
 
 Pro **tmpnam –**, můžete uložit tento název generovaného souboru v *str*. Pokud *str* je **NULL**, pak **tmpnam –** ponechá výsledek v interní statické vyrovnávací paměti. Proto následných volání zničit tuto hodnotu. Název generované **tmpnam –** se skládá z názvu souboru generovaného programu a po prvním volání **tmpnam –**, příponu souboru pořadová čísla v základní 32 (.1 .vvu, když **TMP_MAX**  v STDIO. H je 32 767.)
 
@@ -141,44 +141,69 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 // crt_tempnam.c
 // compile with: /W3
 // This program uses tmpnam to create a unique filename in the
-// current working directory, then uses _tempnam to create
-// a unique filename with a prefix of stq.
+// temporary directory, and _tempname to create a unique filename
+// in C:\\tmp.
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main( void )
+int main(void)
 {
-   char* name1 = NULL;
-   char* name2 = NULL;
+   char * name1 = NULL;
+   char * name2 = NULL;
+   char * name3 = NULL;
 
    // Create a temporary filename for the current working directory:
-   if( ( name1 = tmpnam( NULL ) ) != NULL ) // C4996
+   if ((name1 = tmpnam(NULL)) != NULL) { // C4996
    // Note: tmpnam is deprecated; consider using tmpnam_s instead
-      printf( "%s is safe to use as a temporary file.\n", name1 );
-   else
-      printf( "Cannot create a unique filename\n" );
+      printf("%s is safe to use as a temporary file.\n", name1);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
    // Create a temporary filename in temporary directory with the
    // prefix "stq". The actual destination directory may vary
    // depending on the state of the TMP environment variable and
    // the global variable P_tmpdir.
 
-   if( ( name2 = _tempnam( "c:\\tmp", "stq" ) ) != NULL )
-      printf( "%s is safe to use as a temporary file.\n", name2 );
-   else
-      printf( "Cannot create a unique filename\n" );
+   if ((name2 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name2);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
-   // When name2 is no longer needed :
-   if(name2)
-     free(name2);
+   // When name2 is no longer needed:
+   if (name2) {
+      free(name2);
+   }
 
+   // Unset TMP environment variable, then create a temporary filename in C:\tmp.
+   if (_putenv("TMP=") != 0) {
+      printf("Could not remove TMP environment variable.\n");
+   }
+
+   // With TMP unset, we will use C:\tmp as the temporary directory.
+   // Create a temporary filename in C:\tmp with prefix "stq".
+   if ((name3 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name3);
+   }
+   else {
+      printf("Cannot create a unique filename\n");
+   }
+
+   // When name3 is no longer needed:
+   if (name3) {
+      free(name3);
+   }
+
+   return 0;
 }
 ```
 
 ```Output
-\s1gk. is safe to use as a temporary file.
-C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\sriw.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\stq2 is safe to use as a temporary file.
+c:\tmp\stq3 is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>Viz také:
