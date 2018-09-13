@@ -1,7 +1,7 @@
 ---
 title: MFC – ovládací prvky ActiveX | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205839"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535194"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
-Ovládací prvek ActiveX je opakovaně použitelná softwarová komponenta založená na modelu COM (Component Object), který podporuje širokou škálu funkcí OLE a lze je přizpůsobit podle potřeb mnoha softwaru. Ovládací prvky ActiveX jsou navrženy pro použití v běžných kontejnerech ovládacího prvku ActiveX a v Internetu na webových stránkách. Můžete vytvořit ovládací prvky ActiveX, buď pomocí rozhraní MFC popsaného zde, nebo pomocí [aktivní šablony knihovny (ATL)](../atl/active-template-library-atl-concepts.md).  
+
+Ovládací prvek ActiveX je opakovaně použitelná softwarová komponenta založená na modelu COM (Component Object), který podporuje širokou škálu funkcí OLE a lze je přizpůsobit podle potřeb mnoha softwaru. 
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace najdete v tématu [ovládací prvky ActiveX](activex-controls.md).
+
+Ovládací prvky ActiveX jsou navrženy pro použití v běžných kontejnerech ovládacího prvku ActiveX a v Internetu na webových stránkách. Můžete vytvořit ovládací prvky ActiveX, buď pomocí rozhraní MFC popsaného zde, nebo pomocí [aktivní šablony knihovny (ATL)](../atl/active-template-library-atl-concepts.md).  
   
  Ovládací prvek ActiveX se dokáže vykreslit do vlastního okna, reagovat na události (například kliknutí myší) a lze jej spravovat pomocí rozhraní zahrnujícího vlastnosti a metody podobné těm, které obsahují automatizační objekty.  
   

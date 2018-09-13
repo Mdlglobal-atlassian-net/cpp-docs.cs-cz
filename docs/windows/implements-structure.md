@@ -1,28 +1,36 @@
 ---
 title: Implementuje strukturu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603285"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535350"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
 
@@ -104,23 +112,23 @@ Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozh
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`ClassFlags`|Synonymum pro `RuntimeClassFlags<WinRt>`.|
+| Název        | Popis                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| Synonymum pro `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[Implements::CanCastTo – metoda](../windows/implements-cancastto-method.md)|Získá ukazatel na rozhraní zadané.|
-|[Implements::CastToUnknown – metoda](../windows/implements-casttounknown-method.md)|Získá ukazatel na základní `IUnknown` rozhraní.|
-|[Implements::FillArrayWithIid – metoda](../windows/implements-fillarraywithiid-method.md)|Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.|
+| Název                                              | Popis                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements::cancastto –](#cancastto)               | Získá ukazatel na rozhraní zadané.                                                                    |
+| [Implements::casttounknown –](#casttounknown)       | Získá ukazatel na základní `IUnknown` rozhraní.                                                        |
+| [Implements::fillarraywithiid –](#fillarraywithiid) | Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu. |
 
 ### <a name="protected-constants"></a>Chráněné konstanty
 
-|Název|Popis|
-|----------|-----------------|
-|[Implements::IidCount – konstanta](../windows/implements-iidcount-constant.md)|Obsahuje počet implementovaných rozhraní ID.|
+| Název                              | Popis                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements::IidCount](#iidcount) | Obsahuje počet implementovaných rozhraní ID. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -142,6 +150,76 @@ Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozh
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="cancastto"></a>Implements::cancastto –
 
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)
+Získá ukazatel na rozhraní zadané.
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*riid*  
+Odkaz na identifikátor rozhraní.
+
+*ppv*  
+Pokud úspěšná, ukazatel na rozhraní určené *riid*.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu, například E_NOINTERFACE.
+
+### <a name="remarks"></a>Poznámky
+
+Toto je interní pomocné funkce, který provádí operace QueryInterface.
+
+## <a name="casttounknown"></a>Implements::casttounknown –
+
+Získá ukazatel na základní `IUnknown` rozhraní.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Tato operace je vždy úspěšné a vrátí `IUnknown` ukazatele.
+
+### <a name="remarks"></a>Poznámky
+
+Interní pomocné funkce.
+
+## <a name="fillarraywithiid"></a>Implements::fillarraywithiid –
+
+Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*  
+Z nuly vycházející index určující počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* zvyšuje o 1.
+
+*IID*  
+Pole typu IID.
+
+### <a name="remarks"></a>Poznámky
+
+Interní pomocné funkce.
+
+## <a name="iidcount"></a>Implements::IidCount
+
+Obsahuje počet implementovaných rozhraní ID.
+
+```cpp
+static const unsigned long IidCount;
+```

@@ -1,7 +1,7 @@
 ---
-title: Vytvoření kontejneru ovládacího prvku ActiveX knihovny MFC | Microsoft Docs
+title: Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,21 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 322e7feba87b83802299a99ad36b16e35704f2ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7167f00e3abf74d4638bc79615d68ed81fafabf9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372479"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535116"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC
-Kontejneru ovládacího prvku ActiveX je nadřazený program, který poskytuje prostředí pro spuštění ovládacího prvku ActiveX (dříve OLE). Můžete vytvořit aplikace může obsahovat s nebo bez MFC ovládací prvky ActiveX, ale je mnohem jednodušší dělat s MFC.  
+Kontejneru ovládacího prvku ActiveX je nadřazené program, který poskytuje prostředí pro ovládací prvek ActiveX (dříve OLE) ke spuštění. Můžete vytvořit aplikaci může obsahovat ovládací prvky ActiveX s nebo bez knihovny MFC, ale je mnohem jednodušší provádět pomocí knihovny MFC.
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](../activex-controls.md).  
   
- Vytvoření pomocí programu MFC kontejneru [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md) umožňuje přístup k mnoha funkcím, které implementují třídy MFC a ActiveX – ovládací prvky ActiveX a automatizace. Tyto funkce úpravy s náhledem, automatizace, vytváření složených souborů a podpora pro ovládací prvky. MFC – Průvodce aplikací visual úpravy možnosti, které budou podporovat nadřazeného programu zahrnují vytváření kontejner, mini serveru, úplný server a program, který je kontejner a server.  
+ Vytvoření kontejneru program knihovny MFC pomocí [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md) umožňuje přístup k mnoha funkcím ovládací prvky ActiveX a automatizace, které jsou implementovány ve třídách knihovny MFC a ActiveX. Tyto funkce zahrnout úpravy s náhledem, automatizace, vytváření složených souborů a podpora pro ovládací prvky. Průvodce aplikací knihovny MFC visual možnosti úprav, které budou podporovat váš program nadřazené patří vytváření kontejneru, mini serveru, úplný server a program, který je kontejner a server.  
   
--   **Nová aplikace MFC**. K vytvoření nové aplikace MFC, která obsahuje automatizace, úpravy s náhledem, složené soubory, nebo řízení podpory, pomocí Průvodce aplikací MFC a vyberte požadované možnosti automatizace.  
+-   **Nová aplikace knihovny MFC**. K vytvoření nové aplikace knihovny MFC, která obsahuje automatizace, úpravy s náhledem, složené soubory nebo řízení podpory, pomocí Průvodce aplikací knihovny MFC a vyberte příslušné možnosti automatizace.  
   
--   **Existující aplikaci MFC**. Pokud přidáváte uzavření ovládacího prvku na existující aplikaci MFC, najdete v části [OLE – kontejnery ovládacích prvků: Ruční povolení OLE uzavření ovládacího prvku](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
+-   **Existující aplikaci MFC**. Pokud přidáváte používání kontejnerů ovládacích prvků do existující aplikaci MFC, přečtěte si téma [OLE – kontejnery ovládacích prvků: Ruční povolení OLE používání kontejnerů ovládacích prvků](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
   
 ### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Chcete-li vytvořit kontejner ActiveX pro některý z následujících typů aplikací  
   

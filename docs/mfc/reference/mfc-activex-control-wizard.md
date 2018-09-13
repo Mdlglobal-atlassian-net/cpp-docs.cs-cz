@@ -1,7 +1,7 @@
 ---
-title: Průvodce ovládacím prvkem ActiveX knihovny MFC | Microsoft Docs
+title: Průvodce ovládacím prvkem ActiveX knihovny MFC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7dcd6d1924281f5a283a86211e49b338b6bc42
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375060"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535129"
 ---
 # <a name="mfc-activex-control-wizard"></a>Průvodce ovládacím prvkem ActiveX v prostředí MFC
-Ovládací prvek ActiveX je určitý typ [automatizační server](../../mfc/automation-servers.md); je znovu použitelné komponentní. Hostování ovládacího prvku ActiveX aplikace je [klienta automatizace](../../mfc/automation-clients.md) tohoto ovládacího prvku. Pokud je vaším cílem je vytvořit znovu použitelné komponentní, pomocí tohoto průvodce k vytvoření vlastního ovládacího prvku. V tématu [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) Další informace.  
+Ovládací prvek ActiveX je konkrétní typ [automatizační server](../../mfc/automation-servers.md); je opětovně použitelnou komponentu. Aplikace hostující ovládací prvek ActiveX je [klient automatizace](../../mfc/automation-clients.md) ovládacího prvku. Pokud je vaším cílem je vytvořit opětovně použitelnou komponentu, pomocí tohoto průvodce k vytvoření ovládacího prvku. Zobrazit [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) Další informace.
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](../activex-controls.md).  
   
- Alternativně můžete vytvořit automation server MFC aplikace pomocí [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md).  
+ Alternativně můžete vytvořit automatizační server knihovny MFC aplikace s využitím [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md).  
   
- Ovládací prvek ActiveX, který je vytvořen pomocí tohoto průvodce můžete mít uživatelské rozhraní, nebo může být skrytá. Můžete určit, tato možnost v [nastavení řízení](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránku průvodce. Ovládací prvek časovače je příkladem ovládací prvek ActiveX, který chcete, aby byla neviditelná.  
+ Ovládací prvek ActiveX vytvořené pomocí tohoto průvodce můžete mít uživatelské rozhraní, nebo může být viditelná. Můžete určit tuto možnost v [nastavení](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránku průvodce. Ovládací prvek časovače je příkladem ovládacího prvku ActiveX, který chcete, aby byla neviditelná.  
   
- ActiveX – ovládací prvky můžete mít složité uživatelské rozhraní. Některé ovládací prvky může být jako zapouzdřené formuláře: jeden ovládací prvek obsahující mnoho polí se každý ovládacího prvku Windows v sobě. Objekt částí automaticky implementované jako ovládacího prvku ActiveX knihovny MFC mohou například představovat formuláře jako uživatelské rozhraní, přes který by mohl přečíst a upravit výrobní číslo, název součásti a další informace uživatele. V tématu [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) Další informace.  
+ Ovládací prvky ActiveX můžete mít složitý uživatelské rozhraní. Mohou být některé ovládací prvky jako zapouzdřený objekt formuláře: jeden ovládací prvek obsahující mnoho polí se každý ovládací prvek Windows v sama o sobě. Objekt částí automaticky implementovaná jako ovládací prvek ActiveX knihovny MFC například mohou představovat formuláře jako uživatelské rozhraní, přes který by mohl přečíst a upravit číslo součásti, názvu součásti a další informace uživatele. Zobrazit [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) Další informace.  
   
- Pokud potřebujete vytvořit kontejner pro objekty technologie ActiveX, přečtěte si téma [vytvoření kontejneru ovládacího prvku ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
+ Pokud je potřeba vytvořit kontejner pro objekty ActiveX, přečtěte si téma [vytvoření kontejneru ovládacího prvku ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- Výchozí program knihovny MFC zahrnuje C++ zdrojové (sada) soubory, soubory prostředků (RC) a soubor projektu (VCXPROJ). Kód, který vygenerovala v těchto souborech starter vychází MFC.  
+ Výchozí program knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc) a soubor projektu (.vcxproj). Kód generovaný v těchto souborech starter je založena na knihovně MFC.  
   
- V následujícím seznamu ukázka uvádí úlohy a typy rozšíření pro ovládací prvek ActiveX:  
+ Následující ukázka seznamu jsou uvedeny úkoly a typy rozšíření pro ovládací prvek ActiveX:  
   
 -   [Optimalizace ovládacího prvku ActiveX](../../mfc/mfc-activex-controls-optimization.md)  
   
@@ -59,16 +62,16 @@ Ovládací prvek ActiveX je určitý typ [automatizační server](../../mfc/auto
 -   [Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
 ## <a name="overview"></a>Přehled  
- Tato stránka průvodce popisuje aktuální nastavení aplikace pro projekt ovládacího prvku ActiveX knihovny MFC, kterou vytváříte. Ve výchozím nastavení Průvodce vytvoří projekt takto:  
+ Tato stránka průvodce popisuje aktuální nastavení aplikace pro projekt ovládacího prvku ActiveX knihovny MFC, kterou vytváříte. Ve výchozím nastavení Průvodce vytvoří projekt následujícím způsobem:  
   
--   Výchozí projekt generuje žádné licence nebo nápovědy spustitelné soubory. Tato výchozí nastavení můžete změnit na [nastavení aplikace](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) stránky. Pouze na této stránce Průvodce ovládacím prvkem ActiveX provedete výběr se projeví ve **přehled** stránky.  
+-   Výchozí projekt negeneruje žádné soubory licence nebo nápovědy za běhu. Tato výchozí nastavení můžete změnit na [nastavení aplikace](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) stránky. Pouze výběr provedené na této stránce Průvodce ovládacím prvkem ActiveX, se projeví ve **přehled** stránky.  
   
--   Tento projekt zahrnuje ovládací prvek třídy a třídy stránky vlastností na základě názvu projektu. Názvy vašeho projektu a názvy souborů můžete upravit na [názvy ovládacích prvků](../../mfc/reference/control-names-mfc-activex-control-wizard.md) stránky.  
+-   Projekt obsahuje ovládací prvek třídy a třídy stránky vlastností na základě názvu projektu. Můžete upravit název vašeho projektu a souboru názvy na [názvy ovládacích prvků](../../mfc/reference/control-names-mfc-activex-control-wizard.md) stránky.  
   
--   Ovládací prvek je založen na žádné existující ovládacího prvku systému Windows, aktivuje, když se zobrazí, má uživatelské rozhraní a zahrnuje **o** dialogové okno. Tato výchozí nastavení můžete změnit na [nastavení řízení](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky.  
+-   Ovládací prvek je založen na žádný existující ovládací prvek Windows, aktivuje se, když se zobrazí, má uživatelské rozhraní a zahrnuje **o** dialogové okno. Tato výchozí nastavení můžete změnit na [nastavení](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření a správa projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
  [Koncepty](../../atl/active-template-library-atl-concepts.md)
 

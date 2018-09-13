@@ -1,7 +1,7 @@
 ---
-title: Úlohy internetového programování MFC | Microsoft Docs
+title: Úlohy internetového programování MFC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8d8fab6fe78c6ca1e32f7973327d2285cfcd20
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347243"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534908"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Úlohy internetového programování MFC
-Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše aplikace. Témata zahrnují postup používání třídy MFC Internetu povolte existující aplikace a jak přidat podporu pro aktivní dokument do vaší stávající komponenty modelu COM. Opravdu chcete vytvořit dokument s mohou uložených uvozovky, je Pittsburgh fotbalové skóre, a nejnovější teploty v Antarktida Microsoft poskytuje řadu technologií, můžete to udělat přes Internet.  
+Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše aplikace. Mezi témata patří, jak pomocí třídy knihovny MFC k Internetu povolit existující aplikace a přidání podpory pro aktivní dokument do vaší existující komponenty modelu COM. Chcete vytvořit dokument s nejčerstvější akcií, skóre, které se v Pensylvánském fotbalu, a nejnovější teploty v Antarktida Microsoft nabízí celou řadu technologií, které umožňují udělat přes Internet.  
   
- Technologie Active zahrnují ovládací prvky ActiveX (dříve OLE prvky) a aktivní dokumenty; WinInet snadno načítání a ukládání souborů přes Internet; a stahování asynchronní monikery pro efektivní data. Visual C++ poskytuje průvodce, které vám pomohou rychle začít používat Startovní aplikace. Úvod do těchto technologií, najdete v části [základy programování MFC Internet](../mfc/mfc-internet-programming-basics.md) a [MFC COM](../mfc/mfc-com.md).  
+ Aktivní technologie patří ovládací prvky ActiveX (dříve ovládací prvky OLE) a aktivní dokumenty; Wininet – snadno načítání a ukládání souborů na Internetu; a asynchronních monikerů pro efektivní datové stahování. Visual C++ obsahuje průvodce, které vám pomůžou rychle začít s aplikací starter. Úvod do těchto technologiích najdete v tématu [základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md) a [MFC COM](../mfc/mfc-com.md).  
   
- Jste si vždy chtěli FTP souboru, ale nebyly zjištěné síťové programování protokoly WinInet – třídy a rozhraní WinSock zapouzdření tyto protokoly poskytování s jednoduchou sadou funkcí, které můžete použít k zápisu klientskou aplikaci v Internetu a stahování souborů pomocí protokolu HTTP, FTP a gopher. WinInet můžete použít k vyhledání adresáře na pevném disku nebo po celém světě. Můžete transparentně shromažďovat data z několika různých typů a prezentovat uživatele v integrované rozhraní.  
+ Jste se vždy chtěli FTP souboru ale nebyly zjištěná WinSock a síťové programování tříd WinInet protokoly zapouzdření tyto protokoly poskytuje jednoduchou sadu funkcí, které můžete použít k zápisu klientské aplikace na Internetu a stahování souborů pomocí protokolu HTTP, FTP a gopher. Wininet – slouží k prohledávání adresáře na pevném disku nebo po celém světě. Transparentně můžete shromažďovat data z několika různých typů a prezentovat je pro uživatele v integrované rozhraní.  
   
- Máte velké objemy dat ke stažení asynchronního zástupných názvů poskytuje řešení s COM (Component Object Model) pro progresivní vykreslování velké objekty. WinInet lze také asynchronně.  
+ Máte velké objemy dat. Chcete-li stáhnout asynchronní monikery poskytují modelu COM (Component Object Model) řešení pro progresivní vykreslování velké objekty. Wininet – lze také asynchronně.  
   
- Následující tabulka popisuje několik věcí, které můžete provést tyto technologie.  
+ Následující tabulka popisuje některé věci, které vám pomůžou s tyto technologie.  
   
 |Máte|Chcete|Měli byste|  
 |--------------|-----------------|----------------|  
-|Webový server.|Sledovat přihlášení a podrobné informace o požadavcích na adresu URL.|Zápis filtru, žádost o oznámení o události přihlášení a mapování adresy URL.|  
-|Webový prohlížeč.|Zadejte dynamický obsah.|Vytvořte ovládací prvky ActiveX a aktivní dokumenty.|  
-|Na základě dokumentu aplikace.|Přidání podpory pro FTP soubor.|Použijte WinInet nebo asynchronní monikery.|  
+|Webový server.|Sledování přihlášení a podrobné informace o adrese URL žádosti.|Zápis filtru, žádost o oznámení o události přihlášení a mapování adresy URL.|  
+|Webový prohlížeč.|Poskytují dynamický obsah.|Vytvoření ovládacích prvků ActiveX a aktivní dokumenty.|  
+|Aplikace založené na dokument.|Přidání podpory pro protokol FTP do souboru.|Použití rozhraní WinInet nebo asynchronní monikery.|  
   
- Najdete v následujících tématech podrobnosti, které vám pomůžou začít:  
+ Naleznete v následujících tématech pro podrobnosti, které vám pomůžou začít:  
   
 -   [Volby při návrhu aplikací](../mfc/application-design-choices.md)  
   
@@ -49,13 +49,11 @@ Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše
   
 -   [Upgrade existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Aktivní dokumenty na internetu](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Testování internetových aplikací](../mfc/testing-internet-applications.md)  
   
--   [Zabezpečení Internetu](../mfc/internet-security-cpp.md)  
+-   [Internetové zabezpečení](../mfc/internet-security-cpp.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   

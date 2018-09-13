@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465119"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687932"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary a AfxLoadLibrary
 
-Procesy volají [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (nebo [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pro explicitní propojení ke knihovně DLL. Pokud funkce uspěje, namapuje určenou knihovnu DLL do adresového prostoru volajícího procesu a vrátí popisovač do knihovny DLL, který lze použít s jinými funkcemi v explicitním propojení – například `GetProcAddress` a `FreeLibrary`.
+Procesy volají [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) nebo [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(nebo [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pro explicitní propojení ke knihovně DLL. Pokud funkce uspěje, namapuje určenou knihovnu DLL do adresového prostoru volajícího procesu a vrátí popisovač do knihovny DLL, který lze použít s jinými funkcemi v explicitním propojení – například `GetProcAddress` a `FreeLibrary`.
 
 `LoadLibrary` pokusí se vyhledat knihovnu DLL pomocí stejné vyhledávací sekvence použité pro implicitní propojení. Pokud systém nemůže najít knihovnu DLL nebo funkci vstupního bodu vrátí hodnotu FALSE, `LoadLibrary` vrátí hodnotu NULL. Pokud volání `LoadLibrary` Určuje modul knihovny DLL, která je již mapovaný do adresového prostoru volajícího procesu, vrátí funkce popisovač knihovny DLL a zvýší hodnotu referenčního počtu modulu.
 
@@ -59,5 +59,3 @@ Pokud Windows nemůže načíst knihovnu DLL, proces se může pokusit obnovit z
 ## <a name="see-also"></a>Viz také:
 
 - [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

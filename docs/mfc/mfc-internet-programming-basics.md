@@ -1,7 +1,7 @@
 ---
-title: Základy internetového programování MFC | Microsoft Docs
+title: Základy internetového programování MFC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -26,19 +26,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 980822792c3be4bc9c4de93baa20d4b3decb5af9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255606"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535155"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
-Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientské a serverové aplikace. Mnoho nových aplikací se zapisují pro Internet, a jako technologie, možnosti prohlížeče a změnit možnosti zabezpečení, budou zapisovat nových typů aplikací. Spuštění prohlížeče na klientských počítačích, které umožňují přístup k Internetu a zobrazení stránky HTML, které obsahují text, grafiky, ovládací prvky ActiveX a dokumenty. Servery poskytují FTP, HTTP a gopher služby a spuštění aplikací rozšíření server použití rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytování dat na Internetu.  
+
+Společnost Microsoft poskytuje řadu rozhraní API pro programování klientských i serverových aplikací. Jsou zapisovaná mnoho nových aplikací pro Internet, a technologií, možnosti prohlížeče a změnit možnosti zabezpečení, se zapíšou nových typů aplikací. Prohlížeče spustit na klientských počítačích, zajištění přístupu k webu a zobrazování stránky HTML, které obsahují text, grafiku, ovládací prvky ActiveX a dokumenty. Servery FTP, HTTP a gopher služby a spuštění serverové aplikace rozšíření rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytují data na Internetu.  
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace najdete v tématu [ovládací prvky ActiveX](activex-controls.md).
   
  ![Klientské a serverové aplikace](../mfc/media/vc38bq1.gif "vc38bq1")  
   
- Knihovna MFC poskytuje třídy, které podporují internetové programování. Můžete použít [COleControl](../mfc/reference/colecontrol-class.md) a [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) a související třídy MFC k zápisu – ovládací prvky ActiveX a aktivní dokumenty. MFC – třídy můžete použít jako [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), a [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) načíst soubory a informace, pomocí Internetové protokoly, jako HTTP a gopher.  
+ Knihovna MFC poskytuje třídy, které podporují programování na Internetu. Můžete použít [COleControl](../mfc/reference/colecontrol-class.md) a [cdocobjectserver –](../mfc/reference/cdocobjectserver-class.md) a související třídy knihovny MFC k tvorbě ovládacích prvků ActiveX a aktivní dokumenty. MFC – třídy můžete použít například [cinternetsession –](../mfc/reference/cinternetsession-class.md), [cftpconnection –](../mfc/reference/cftpconnection-class.md), a [casyncmonikerfile –](../mfc/reference/casyncmonikerfile-class.md) načíst soubory a informace, pomocí protokolů sítě Internet, jako je například FTP, HTTP a gopher.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
@@ -58,8 +62,6 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
   
 -   [Ovládací prvky ActiveX na internetu](../mfc/activex-controls-on-the-internet.md)  
   
--   [Aktivní dokumenty na internetu](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)  
@@ -72,19 +74,19 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
   
 -   [Testování internetových aplikací](../mfc/testing-internet-applications.md)  
   
--   [Zabezpečení Internetu](../mfc/internet-security-cpp.md)  
+-   [Internetové zabezpečení](../mfc/internet-security-cpp.md)  
   
 -   [ATL – podpora ovládacích prvků DHTML](../atl/atl-support-for-dhtml-controls.md)  
   
 ##  <a name="_core_web_sites_for_more_information"></a> Weby pro další informace  
- Další informace o technologii Microsoft Internet najdete v tématu [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) webu. (Odkazy mohou bez předchozího oznámení změnit.)  
+ Další informace o technologii Microsoft Internet, najdete v článku [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) webu. (Odkazy mohou změnit bez předchozího upozornění.)  
   
- Tento web pro vývojáře, obsahuje informace o používání vývojové nástroje společnosti Microsoft a technologie a nejdůležitější zprávy o poslední a nadcházející konferencí. Z této stránky můžete přejít na mnoho související vývojáře webů, včetně .NET a centra pro vývojáře XML. Můžete také stáhnout sady SDK beta a ukázky.  
+ Tento web pro vývojáře obsahuje informace o použití Microsoft vývojářské nástroje a technologie a hlavní zprávy o poslední a nadcházející konference. Na této stránce můžete přejít na mnoho související vývojářské weby, včetně .NET a centra pro vývojáře XML. Můžete také stáhnout beta verze sady SDK a ukázky.  
   
- [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specifikace jazyka HTML, HTTP, CGI a další technologie webu.  
+ [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specifikace HTML, protokolu HTTP, CGI a jiné webové technologie.  
   
-##  <a name="_core_more_internet_help"></a> Další nápovědu k Internetu  
- OLE část sady Windows SDK obsahuje další informace o programování OLE. Tyto informace obsahuje podrobné informace o používání funkce Win32 WinInet přímo, nikoli prostřednictvím třídy MFC. Obsahuje také základní informace o technologiích Internetu.  
+##  <a name="_core_more_internet_help"></a> Další nápovědu Internet  
+ OLE – část sady Windows SDK obsahuje další informace o programování technologie OLE. Tyto informace obsahuje podrobnosti o použití funkce rozhraní Win32 WinInet přímo, namísto prostřednictvím třídy knihovny MFC. Také obsahuje souhrnné informace o technologiích Internet.  
   
 ## <a name="see-also"></a>Viz také  
 

@@ -1,7 +1,7 @@
 ---
 title: Colecmdui – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ece2d45bdce490d09c7195deec380728d79392d
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851473"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535228"
 ---
 # <a name="colecmdui-class"></a>Colecmdui – třída
 Implementuje metodu knihovny MFC pro aktualizaci stavu objektů uživatelského rozhraní související s `IOleCommandTarget`-driven funkce vaší aplikace.  
@@ -61,7 +61,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI` Umožňuje DocObject přijímají příkazy, které pocházejí z příslušného kontejneru uživatelského rozhraní (například funkci FileNew, otevřít, tisk a tak dále), a kontejner pro příjem příkazy, které pocházejí z uživatelského rozhraní DocObject. I když `IDispatch` může použít k odesílání stejných příkazů `IOleCommandTarget` nabízí jednodušší způsob, jak dotazovat a provést, protože závisí na standardní sadu příkazů, obvykle bez argumentů, a je součástí žádné informace o typu. `COleCmdUI` slouží k povolení, aktualizovat a nastavit další vlastnosti DocObject uživatelských rozhraní příkazů. Pokud chcete vyvolat příkaz, volání [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mfc/reference/cdocobjectserver-class.md) a [cdocobjectserveritem –](../../mfc/reference/cdocobjectserveritem-class.md). Viz také [první kroky Internet: aktivní dokumenty](../../mfc/active-documents-on-the-internet.md) a [aktivní dokumenty](../../mfc/active-documents-on-the-internet.md).  
+ Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mfc/reference/cdocobjectserver-class.md) a [cdocobjectserveritem –](../../mfc/reference/cdocobjectserveritem-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Ccmdui –](../../mfc/reference/ccmdui-class.md)  

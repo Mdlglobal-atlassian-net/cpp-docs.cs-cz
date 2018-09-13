@@ -1,7 +1,7 @@
 ---
 title: Cedit – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757787"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535402"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 Poskytuje funkce pro Windows textové pole.  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) zprávu, která je popsána v sadě Windows SDK. Obě `SetHighlight` a `GetHighlight` aktuálně nejsou povoleny pro UNICODE pouze sestavení. 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Voláním této členské funkce se získat text limit pro to `CEdit` objektu.  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in] *ichEnd*|Z nuly vycházející index posledního znaku v rozsahu text, abyste měli na očích.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) zprávu, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) zprávu, která je popsána v sadě Windows SDK.  Tato metoda odesílá [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) zprávu, která je popsána v sadě Windows SDK. Obě `SetHighlight` a `GetHighlight` jde jenom sestavení kódování UNICODE. 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Voláním této členské funkce se nastavit limit textu pro tento `CEdit` objektu.  

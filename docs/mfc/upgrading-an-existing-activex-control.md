@@ -1,7 +1,7 @@
 ---
 title: Upgrade existujícího ovládacího prvku ActiveX | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686183"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535265"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
-Ovládací prvky ActiveX existující (dříve ovládací prvky OLE) je možné na Internetu bez úprav. Však můžete chtít upravit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, některé další aspekty. Soubor .ocx a všechny podpůrné soubory musí být na cílovém počítači nebo stáhnout přes Internet. Díky tomu velikost kódu a stažení čas, což je důležité. Soubory ke stažení se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit jako bezpečné pro skriptování a jako bezpečné pro inicializaci ovládacího prvku.  
+Ovládací prvky ActiveX existující (dříve ovládací prvky OLE) je možné na Internetu bez úprav. Však můžete chtít upravit ovládací prvky pro zlepšení výkonu. 
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+
+Při použití ovládacího prvku na webové stránce, některé další aspekty. Soubor .ocx a všechny podpůrné soubory musí být na cílovém počítači nebo stáhnout přes Internet. Díky tomu velikost kódu a stažení čas, což je důležité. Soubory ke stažení se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit jako bezpečné pro skriptování a jako bezpečné pro inicializaci ovládacího prvku.  
   
  Tento článek popisuje v následujících tématech:  
   

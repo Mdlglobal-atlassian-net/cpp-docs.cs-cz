@@ -1,5 +1,5 @@
 ---
-title: Přidělení zásobníku | Microsoft Docs
+title: Přidělení zásobníku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caa6d435db98c7177cbf55b866bb8e5a4a110c1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22c2afae3678e945678862059034b4d60be456b0
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "32380599"
 ---
 # <a name="stack-allocation"></a>Přidělení zásobníku
-Prolog funkce zodpovídá za přidělování místa v zásobníku pro místní proměnné, – uložené registry, zásobníku parametrů a parametry registru.  
+Prologu funkce zodpovídá za přidělování místa v zásobníku pro místní proměnné, uložené registry, parametry zásobníku a parametry registru.  
   
- Oblast parametru je vždy v dolní části zásobníku (i když je použita funkce alloca) tak, aby ho bude vždy přiléhající návratové adresy během volání žádné funkce. Obsahuje alespoň čtyři záznamy, ale vždycky potřeboval dostatkem místa pro všechny parametry funkcí, které může být volána. Všimněte si, že je vždy přiděleno místo pro parametry registru, i v případě, že jsou parametry sami nikdy adresami zásobníku; Volaný záruku, že je pro všechny její parametry přiděleno místo. Domovské adresy jsou požadovány pro argumenty registru tak souvislý oblasti je dostupná v případě, že volaná funkce musí vzít na adresu seznamu argumentů (va_list) nebo jednotlivé argument. Tato oblast představuje také vhodné místo pro uložení argumentů registru během provádění převodu a jako možnost ladění (například umožňuje argumentům snadno najít během ladění, pokud jsou uložené na jejich domovských adresách v kódu prologu). I v případě volaná funkce obsahuje méně než 4 parametry, tyto 4 zásobníku umístění jsou efektivně vlastněny volaná funkce a může být používán volaná funkce pro jiné účely, než uložení hodnot parametrů registru.  Proto nemůže volající uložit informace v této oblasti zásobníku prostřednictvím volání funkce.  
+ Oblasti parametrů je vždy v dolní části zásobníku (i v případě, že je použita funkce alloca), takže ho bude vždy sousední na návratovou adresu během každé volání funkce. Obsahuje alespoň čtyři položky, ale vždy dostatek místa pro všechny parametry vyžadované všechny funkce, které může být volána. Všimněte si, že je vždy přiděleno místo pro parametry registru, i když parametrů samotných jsou nikdy adresami v zásobníku; Volaný je zaručeno, že bylo přiděleno místo pro všechny její parametry. Poštovní adresy jsou požadované pro argumenty registru, takže souvislých oblasti je dostupná v případě, že volaná funkce je potřeba převzít adresu proměnné seznamu argumentů (va_list) nebo jednotlivým argument. Tato oblast také poskytuje praktické místo k uložení argumentů registru při provádění převodu a jako možnost ladění (například umožňuje argumenty snadné najít během ladění, pokud se ukládají na své domovské adresy v kódu prologu). I v případě, že volaná funkce má méně než 4 parametry, umístění těchto 4 zásobníku jsou efektivně vlastní volané funkce a může využívat k jiným účelům kromě uložení hodnot parametrů registru volané funkce.  Proto nemusí volající uložit informace v této oblasti zásobníku ve volání funkce.  
   
- Pokud místo dynamicky přiděluje (alloca –) ve funkci, stálý registr musí být použit jako ukazatel na rámec k označení základu pevné části zásobníku a této registrace musí být uloženy a v prologu inicializovat. Všimněte si, že při použití alloca – volání stejného volaného ze stejné volající může mít různé domovské adresy pro své parametry registru.  
+ Pokud se místo přiděluje dynamicky (alloca) ve funkci, stálé registr musí být použit jako ukazatel na rámec, k označení základní pevnou součástí do zásobníku a registru musí být uloženy a inicializovat v prologu. Všimněte si, že při použití funkce alloca volání stejné volaný ze stejné volající může mít různé domovské adresy pro své parametry registru.  
   
- V zásobníku se vždycky zachovají s 16 bajtů zarovnán, kromě v rámci prologu (například po návratové adresy) a s výjimkou uvedenou v [typy funkce](../build/function-types.md) některých tříd rámcových funkcí.  
+ Zásobníku se vždycky zachovají s 16 bajtů zarovnána, s výjimkou v rámci prolog (například po zpáteční adresu) a s výjimkou uvedenou v [typy funkcí](../build/function-types.md) třídy funkce rámce.  
   
- Toto je příklad rozložení zásobníku, kde funkce A volání mimo úroveň listu funkce prolog B. funkce A již přidělené místo pro všechny registrace a zásobníku parametrů požadovaných b v dolní části zásobníku. Volání posune návratovou adresu a na B prologu přiděluje místo pro jeho místní proměnné, stálé registry a prostor potřebný pro jeho volání funkcí. Pokud B používá alloca –, je místo přidělené mezi oblasti místním registru proměnné/stálé úložné a oblasti zásobníku parametrů.  
+ Následující je příklad rozložení zásobníku, kde funkce A volání mimo úroveň listu funkce prolog B. funkce A již přidělené místo pro všechny registrace a zásobníku parametrů vyžadovaných B v dolní části zásobníku. Posune návratovou adresu volání a B prologu přiděluje místo pro své místní proměnné, stálé registry a místa potřebného pro jeho volání funkcí. Pokud B používá alloca, je mezi místní proměnné nebo stálé registr uložit oblasti a oblasti zásobníku parametrů přidělené místo.  
   
  ![Příklad převodu AMD](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- Když funkce B volá jinou funkci, zpětná adresa je posunuta domovské adresy pro RCX.  
+ Když se funkce B volá jinou funkci, převede se zpětná adresa pro RCX pod adresa domů.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití zásobníku](../build/stack-usage.md)

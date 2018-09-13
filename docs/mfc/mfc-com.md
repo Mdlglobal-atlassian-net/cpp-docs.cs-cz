@@ -1,7 +1,7 @@
 ---
 title: MFC COM | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205646"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534830"
 ---
 # <a name="mfc-com"></a>MFC COM
 Podmnožinu knihovny MFC je navržena pro podporu modelu COM, zatímco většina aktivní šablony knihovny (ATL) je určena k programování v modelu. Témata v této části popisuje podporu knihovny MFC pro modelu COM.  
@@ -34,8 +34,6 @@ Podmnožinu knihovny MFC je navržena pro podporu modelu COM, zatímco většina
  Aktivní technologie (například ActiveX ovládací prvky, zahrnutí aktivního dokumentu, OLE a tak dále) povolit softwarové komponenty komunikovat mezi sebou v síťovém prostředí, bez ohledu na jazyk, pomocí kterého byly pomocí modelu COM (Component Object) vytvořit. Technologie Active lze použít k vytvoření aplikace, které běží na ploše nebo na Internet. Další informace najdete v části [Úvod do modelu COM](../atl/introduction-to-com.md) nebo [The Component Object Model](/windows/desktop/com/the-component-object-model).  
   
  Aktivní technologie patří klientských i serverových technologií, včetně následujících:  
-  
--   [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md), podporované v MFC – verze 4.2 a novější, umožňuje uživatelům zobrazit [aktivní dokumenty](../mfc/active-documents.md) (jako je například Microsoft Excel nebo Word soubory) a aktivovat celé rozhraní nativní dokumentu. aplikace v celé klientské oblasti [kontejner pro aktivní dokument](../mfc/active-document-containers.md) například modul vazby sady Office Microsoft nebo Microsoft Internet Explorer. Kontejnery fungovat jako klienti, zatímco dokumenty jsou poskytovány [servery pro aktivní dokumenty](../mfc/active-document-servers.md). Další informace o použití aktivní dokumenty v internetových aplikací naleznete v tématu: [aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md).  
   
 -   Ovládací prvky ActiveX jsou interaktivní objekty, které lze použít v kontejnery, jako jsou webové stránky. Další informace o ovládacích prvků ActiveX naleznete v tématu:  
   

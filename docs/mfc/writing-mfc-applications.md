@@ -1,7 +1,7 @@
 ---
-title: Psaní aplikací MFC | Microsoft Docs
+title: Psaní aplikací MFC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -17,35 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267fee7f3309cf5cbc4daa48f65e647c4d85a47d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f3f542fc1ff45a80f4d198c58255d91388a30ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385986"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535168"
 ---
 # <a name="writing-mfc-applications"></a>Psaní aplikací MFC
-Tento článek vysvětluje počáteční kroky, které je třeba provést vyvíjet aplikaci. Nejprve je nutné rozhodnout, jaký druh aplikace píšete. Některé z těchto možností se zabývá [volby při návrhu aplikací](../mfc/application-design-choices.md). Bude vaše aplikace:  
+Tento článek popisuje první kroky, které k vývoji aplikací. Nejprve musíte rozhodnout, jaký typ aplikace, kterou píšete. Některé z možností se zabývá [volby při návrhu aplikací](../mfc/application-design-choices.md). Bude vaše aplikace:  
   
--   Spuštění v Internetu nebo intranetu  
+-   Běží na Internetu nebo intranetu  
   
 -   Spuštěný v klientském počítači nebo na serveru  
   
--   Spouštění v prohlížeči nebo jako samostatnou aplikaci  
+-   Spuštění v prohlížeči nebo jako samostatné aplikace  
   
 -   Pomocí modelu COM nebo aktivní technologie  
   
--   Stahování dat pomocí WinInet nebo asynchronní monikery  
+-   Stahování dat s využitím rozhraní WinInet nebo asynchronní monikery  
   
- Vaše rozhodnutí určí, které třídy jsou vhodné pro vaši aplikaci. Vaše odpovědi také pomohou určit, které můžete provést při spuštění Průvodce aplikace zahájíte vytváření aplikace výběr.  
+ Vaše rozhodnutí určí, které třídy jsou vhodné pro vaši aplikaci. Odpovědi také pomoci určit výběry, které provedete, když spustíte Průvodce aplikací zahájíte vytváření vaší aplikace.  
   
- Po provedení svoje rozhodnutí o návrhu počáteční o internetovou aplikaci, můžete začít pracovat v Průvodce vytvořením aplikace. Pomocí Průvodce aplikace kostru aplikace vytvářet a upravovat kód, jak je popsáno v následujících článcích:  
+ Po provedení vaše počáteční rozhodnutí o vaší aplikaci Internet, můžete použít Průvodce aplikací začít. Pomocí Průvodce aplikací kostry aplikace vytvářet a upravovat kód, jak je popsáno v následujících článcích:  
   
--   Ovládací prvek ActiveX, najdete v části [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md).  
+-   Ovládací prvek ActiveX naleznete v tématu [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).  
   
--   Aktivní dokument, najdete v části [aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md).  
-  
- Následující články poskytují také pokyny, které usnadňují začátek programovacích úloh:  
+ Následující články poskytují také pokyny vám pomohou v začátcích vaše programátorské úkoly:  
   
 -   [Volby při návrhu aplikací](../mfc/application-design-choices.md)  
   

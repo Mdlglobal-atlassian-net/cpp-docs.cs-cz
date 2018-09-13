@@ -141,7 +141,6 @@
 ### [Psaní aplikací MFC](writing-mfc-applications.md)
 ### [Ovládací prvky ActiveX na internetu](activex-controls-on-the-internet.md)
 ### [Upgrade existujícího ovládacího prvku ActiveX](upgrading-an-existing-activex-control.md)
-### [Aktivní dokumenty na internetu](active-documents-on-the-internet.md)
 ### [Asynchronní monikery na internetu](asynchronous-monikers-on-the-internet.md)
 ### [Testování internetových aplikací](testing-internet-applications.md)
 ### [Internetové zabezpečení (C++)](internet-security-cpp.md)

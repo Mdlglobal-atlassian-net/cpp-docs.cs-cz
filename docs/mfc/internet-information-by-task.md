@@ -1,7 +1,7 @@
 ---
 title: Internetové informace podle úloh | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677544"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534999"
 ---
 # <a name="internet-information-by-task"></a>Internetové informace podle úloh
 Úkoly vypsané v tomto tématu jsou seřazeny podle úloh, které chcete provést.  
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
   
  V tomto tématu jsou uvedeny následující kategorie úloh:  
   
@@ -34,13 +37,9 @@ ms.locfileid: "43677544"
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Ovládací prvky ActiveX, dokumenty a asynchronní zástupný název úlohy  
   
--   [Další informace o aktivní dokumenty](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Další informace o asynchronní Monikery](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Další informace o ovládacích prvcích ActiveX v rámci Internetu](../mfc/activex-controls-on-the-internet.md)  
-  
--   [Další informace o aktivní dokumenty v rámci Internetu](../mfc/active-documents-on-the-internet.md)  
   
 -   [Optimalizace ovládacího prvku ActiveX](../mfc/mfc-activex-controls-optimization.md)  
   

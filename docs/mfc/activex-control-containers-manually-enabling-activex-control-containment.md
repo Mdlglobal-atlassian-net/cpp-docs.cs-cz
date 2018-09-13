@@ -1,7 +1,7 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX | Microsoft Docs'
+title: 'Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,31 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde0ee4dc740826c9efdf7b86cd2f021699f8820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339888"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534973"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX
-Pokud jste nepovolili podporu ovládacích prvků ActiveX při vygenerování aplikace pomocí Průvodce aplikací MFC, bude mít tato podpora přidat ručně. Tento článek popisuje proces pro ruční přidání uzavření ovládacího prvku ActiveX na existující aplikaci kontejneru OLE. Pokud znáte předem chcete podporu ovládacích prvků ActiveX v kontejneru vaší OLE, najdete v článku [vytvoření kontejneru ovládacího prvku ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).  
+Pokud jste nepovolili podporu ovládacích prvků ActiveX při generování aplikace pomocí Průvodce aplikací MFC, budete muset ručně přidat tuto podporu. Tento článek popisuje postup pro ruční přidání používání kontejnerů ovládacích prvků ActiveX do stávající aplikace kontejneru OLE. Pokud víte předem, který má podporu ovládacích prvků ActiveX v kontejneru OLE, najdete v článku [vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).  
   
 > [!NOTE]
->  Tento článek používá na základě dialogové okno ActiveX řízení kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem str jako příklady v postupy a kódu.  
+>  Tento článek používá založené na dialogu ActiveX ovládací prvek kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem KR jako příklady v procedurách a kódu.  
   
- Podpora ovládacích prvků ActiveX, musíte přidat jeden řádek kódu na dva soubory vašeho projektu.  
+ Podpora ovládacích prvků ActiveX, je nutné přidat jeden řádek kódu do dvou souborů projektu.  
   
--   Upravit hlavním dialogu `InitInstance` – funkce (tuto možnost najdete v KONTEJNERU. CPP) pomocí Průvodce aplikací MFC, že zavoláte [AfxEnableControlContainer –](reference/ole-initialization.md#afxenablecontrolcontainer), jako v následujícím příkladu:  
+-   Upravit hlavním dialogu `InitInstance` – funkce (nacházející se v KONTEJNERU. CPP) pomocí Průvodce aplikací knihovny MFC provedením volání do [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), jako v následujícím příkladu:  
   
      [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
   
--   Přidejte následující STDAFX vašeho projektu. Soubor hlaviček H:  
+-   Přidejte do projektu STDAFX následující. H hlavičkový soubor:  
   
      [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
   
- Po dokončení těchto kroků, znovu sestavte projekt kliknutím **sestavení** na **sestavení** nabídky.  
+ Po dokončení těchto kroků znovu sestavit projekt kliknutím **sestavení** na **sestavení** nabídky.  
   
 ## <a name="see-also"></a>Viz také  
  [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)

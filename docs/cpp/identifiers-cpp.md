@@ -1,7 +1,7 @@
 ---
 title: Identifikátory (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405227"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535142"
 ---
 # <a name="identifiers-c"></a>Identifikátory (C++)
 Identifikátor je sekvence znaků používaná k označení jednoho z následujících akcí:  
@@ -104,7 +104,7 @@ int main() {
   
  Identifikátory nesmí mít přesně stejný tvar a pád jako klíčová slova. Identifikátory, které obsahují klíčová slova jsou platné. Například `Pint` je platný identifikátor, přestože obsahuje **int**, což je klíčové slovo.  
   
- Použití dvou po sobě jdoucích podtržítek ( **__** ) na začátku identifikátoru nebo jedno vedoucí podtržítko následované jedním velkým písmenem je vyhrazeno pro implementace jazyka C++ ve všech oborech. Můžete Vyhněte se použití jednoho vedoucí znaku podtržítka následovaného malým písmenem pro názvy s rozsahem souboru z důvodu možných konfliktů současných nebo budoucích vyhrazených identifikátorů.  
+ Použití dvou po sobě jdoucích podtržítek ( **__** ) v identifikátoru nebo jedno vedoucí podtržítko následované jedním velkým písmenem je vyhrazeno pro implementace jazyka C++ ve všech oborech. Můžete Vyhněte se použití jednoho vedoucí znaku podtržítka následovaného malým písmenem pro názvy s rozsahem souboru z důvodu možných konfliktů současných nebo budoucích vyhrazených identifikátorů.  
   
 ## <a name="see-also"></a>Viz také:  
  [Lexikální konvence](../cpp/lexical-conventions.md)

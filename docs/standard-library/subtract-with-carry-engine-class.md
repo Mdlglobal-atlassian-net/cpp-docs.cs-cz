@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955303"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687984"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine – třída
 
@@ -84,7 +84,7 @@ I když generátor tento modul můžete vytvořit přímo, můžete použít tak
 `ranlux48_base`: Používá se jako základ pro `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Podrobné informace o subract s algoritmem carry modul najdete v článku na wikipedii [zaostávalo kvůli Fibonacciho generátor](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Podrobné informace o subract s algoritmem carry modul najdete v článku na wikipedii [zaostávalo kvůli Fibonacciho generátor](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Požadavky
 

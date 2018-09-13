@@ -1,7 +1,7 @@
 ---
 title: regex_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2502ab1d7fbcbfc33883df3627ec36dfcf46e2d7
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108280"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535337"
 ---
 # <a name="regexiterator-class"></a>regex_iterator – třída
 
@@ -43,37 +43,10 @@ Iterator – třída pro shody.
 template<class BidIt,
    class Elem = typename std::iterator_traits<BidIt>::value_type,
    class RxTraits = regex_traits<Elem> >
-class regex_iterator {
-public:
-   typedef basic_regex<Elem, RXtraits> regex_type;
-   typedef match_results<BidIt> value_type;
-   typedef std::forward_iterator_tag iterator_category;
-   typedef std::ptrdiff_t difference_type;
-   typedef const match_results<BidIt>* pointer;
-   typedef const match_results<BidIt>& reference;
-
-   regex_iterator();
-   regex_iterator(
-      BidIt first, BidIt last, const regex_type& re,
-      regex_constants::match_flag_type f = regex_constants::match_default);
-
-   bool operator==(const regex_iterator& right);
-   bool operator!=(const regex_iterator& right);
-   const match_results<BidIt>& operator*();
-   const match_results<BidIt> * operator->();
-   regex_iterator& operator++();
-   regex_iterator& operator++(int);
-
-private:
-   BidIt begin; // exposition only
-   BidIt end; // exposition only
-   regex_type *pregex;     // exposition only
-   regex_constants::match_flag_type flags; // exposition only
-   match_results<BidIt> match; // exposition only
-   };
+class regex_iterator 
 ```
 
-### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
 *BidIt*<br/>
 Typ iterátoru pro dílčí shody.
@@ -88,6 +61,39 @@ Třída vlastností prvků.
 
 Třída šablony popisuje objekt konstanty dopředný iterátor. Extrahuje objekty typu `match_results<BidIt>` opakovaně použitím jeho objekt regulárního výrazu `*pregex` do sekvence znaků, které jsou definovány rozsahem iterátoru `[begin, end)`.
 
+### <a name="constructors"></a>Konstruktory
+
+|Konstruktor|Popis|
+|-|-|
+|[regex_iterator](#regex_iterator)|Vytvoří iterátor.|
+
+### <a name="typedefs"></a>Typedefs
+
+|Název typu|Popis|
+|-|-|
+|[difference_type](#difference_type)|Typ rozdílu iterátoru.|
+|[iterator_category](#iterator_category)|Typ iterátoru kategorie.|
+|[Ukazatel](#pointer)|Typ ukazatele na shodu.|
+|[Referenční dokumentace](#reference)|Typ odkazu na shodu.|
+|[regex_type](#regex_type)|Typ odpovídající regulární výraz.|
+|[value_type](#value_type)|Typ shody.|
+
+### <a name="operators"></a>Operátory
+
+|Operátor|Popis|
+|-|-|
+|[operator!=](#op_neq)|Porovná nerovnost iterátory.|
+|[Operator *](#op_star)|Přistupuje k určené shoda.|
+|[Operator ++](#op_add_add)|Zvýší iterátor.|
+|[operátor =](#op_eq)|Porovná rovnost iterátory.|
+|[Operator ->](#op_arrow)|Přistupuje k určené shoda.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<regulární výraz >
+
+**Namespace:** std
+
 ## <a name="examples"></a>Příklady
 
 V regulárních výrazech naleznete v následujících tématech příklady:
@@ -100,11 +106,46 @@ V regulárních výrazech naleznete v následujících tématech příklady:
 
 - [Prohození](../standard-library/regex-functions.md#swap)
 
-## <a name="requirements"></a>Požadavky
+```cpp
+// std__regex__regex_iterator.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
 
-**Záhlaví:** \<regulární výraz >
+typedef std::regex_iterator<const char *> Myiter;
+int main()
+    {
+    const char *pat = "axayaz";
+    Myiter::regex_type rx("a");
+    Myiter next(pat, pat + strlen(pat), rx);
+    Myiter end;
 
-**Namespace:** std
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+
+// other members
+    Myiter it1(pat, pat + strlen(pat), rx);
+    Myiter it2(it1);
+    next = it1;
+
+    Myiter::iterator_category cat = std::forward_iterator_tag();
+    Myiter::difference_type dif = -3;
+    Myiter::value_type mr = *it1;
+    Myiter::reference ref = mr;
+    Myiter::pointer ptr = &ref;
+
+    dif = dif; // to quiet "unused" warnings
+    ptr = ptr;
+
+    return (0);
+    }
+```
+
+```Output
+match == a
+match == a
+match == a
+```
 
 ## <a name="difference_type"></a>  regex_iterator::difference_type
 
@@ -118,49 +159,6 @@ typedef std::ptrdiff_t difference_type;
 
 Typ je synonymum pro `std::ptrdiff_t`.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_difference_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
 Typ iterátoru kategorie.
@@ -172,49 +170,6 @@ typedef std::forward_iterator_tag iterator_category;
 ### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro `std::forward_iterator_tag`.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_iterator_category.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_neq"></a>  regex_iterator::Operator! =
 
@@ -233,49 +188,6 @@ Iterátor, který má být porovnán s.
 
 Členská funkce vrátí `!(*this == right)`.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_operator_ne.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="op_star"></a>  regex_iterator::Operator *
 
 Přistupuje k určené shoda.
@@ -287,49 +199,6 @@ const match_results<BidIt>& operator*();
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí uloženou hodnotu `match`.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_operator_star.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_add_add"></a>  regex_iterator::Operator ++
 
@@ -345,49 +214,6 @@ regex_iterator& operator++(int);
 Pokud aktuální shoda nemá žádné znaky první operátor zavolá `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`; v opačném případě zálohy uložené hodnoty `begin` tak, aby odkazoval na první znak za aktuální shodovat pak volání `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`. V obou případech Pokud vyhledávání selže operátor, který nastaví objekt iterátoru koncová sekvence. Operátor vrací objekt.
 
 Druhý operátor vytvoří kopii tohoto objektu, zvýší na objekt a potom vrátí kopii.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_operator_inc.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="op_eq"></a>  regex_iterator::Operator =
 
@@ -406,49 +232,6 @@ Iterátor, který má být porovnán s.
 
 Členská funkce vrátí hodnotu true, pokud `*this` a *správné* koncová sekvence iterátory nebo pokud ani jeden není iterátor koncová sekvence a `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, a `flags == right.flags`. V opačném případě vrátí hodnotu false.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_operator_as.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="op_arrow"></a>  regex_iterator::Operator-&gt;
 
 Přistupuje k určené shoda.
@@ -460,49 +243,6 @@ const match_results<BidIt> * operator->();
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí adresu uloženou hodnotu `match`.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_operator_arrow.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="pointer"></a>  regex_iterator::Pointer
 
@@ -516,49 +256,6 @@ typedef match_results<BidIt> *pointer;
 
 Typ je synonymum pro `match_results<BidIt>*`, kde `BidIt` je parametr šablony.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_pointer.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="reference"></a>  regex_iterator::Reference
 
 Typ odkazu na shodu.
@@ -570,50 +267,6 @@ typedef match_results<BidIt>& reference;
 ### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro `match_results<BidIt>&`, kde `BidIt` je parametr šablony.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_reference.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
@@ -646,50 +299,6 @@ Příznaky pro shody.
 
 První konstruktor vytvoří iterátor koncová sekvence. Druhý konstruktor inicializuje uložené hodnoty `begin` s *první*, uloženou hodnotu `end` s *poslední*, uloženou hodnotu `pregex` s `&re`a uložená hodnota `flags` s *f*. Poté zavolá `regex_search(begin, end, match, *pregex, flags)`. Pokud se hledání nezdaří, nastaví konstruktor objektu na iterátor koncová sekvence.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
 Typ odpovídající regulární výraz.
@@ -702,50 +311,6 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 Typedef je synonymum pro `basic_regex<Elem, RXtraits>`.
 
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_regex_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
-
 ## <a name="value_type"></a>  regex_iterator::value_type
 
 Typ shody.
@@ -757,50 +322,6 @@ typedef match_results<BidIt> value_type;
 ### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro `match_results<BidIt>`, kde `BidIt` je parametr šablony.
-
-### <a name="example"></a>Příklad
-
-```cpp
-// std__regex__regex_iterator_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "axayaz";
-    Myiter::regex_type rx("a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == a
-match == a
-match == a
-```
 
 ## <a name="see-also"></a>Viz také:
 

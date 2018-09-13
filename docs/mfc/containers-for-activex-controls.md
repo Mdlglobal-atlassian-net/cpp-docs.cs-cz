@@ -1,7 +1,7 @@
 ---
-title: Kontejnery pro ovládací prvky ActiveX | Microsoft Docs
+title: Kontejnery pro ovládací prvky ActiveX | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,22 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008cf9ea24958cad0866e180d74a43fb031416c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c40a158777622856942c4c436299470aba3e6f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341443"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534856"
 ---
 # <a name="containers-for-activex-controls"></a>Kontejnery pro ovládací prvky ActiveX
-ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikacích můžete použít také podporují uzavření ovládacího prvku ActiveX. Počet aplikací společnosti Microsoft, počínaje verzí uvedených, podporují uzavření ovládacího prvku ActiveX.  
+Ovládací prvky ActiveX vyvinuté v jazyce Visual C++ v jiných aplikacích můžete použít, za předpokladu, že podporují používání kontejnerů ovládacích prvků ActiveX. Počet aplikací Microsoftu, počínaje verzí uvedených, podporují používání kontejnerů ovládacích prvků ActiveX.
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).  
   
 > [!NOTE]
->  Následující seznam není úplný seznam aplikací, které podporují ovládací prvky ActiveX, ale představuje sadu nejčastěji používají při testování:  
+>  Následující seznam není úplný seznam aplikací, které podporují ovládací prvky ActiveX, ale představuje sadu při testování se používají nejčastěji:  
   
- Aplikace, které podporují uzavření ovládacího prvku ActiveX patří:  
+ Aplikace, které podporují používání kontejnerů ovládacích prvků ActiveX patří:  
   
--   Internet Explorer 3.x a vyšší  
+-   Aplikace Internet Explorer 3.x a vyšší  
   
 -   Visual Basic 4.x a vyšší  
   
@@ -37,11 +40,11 @@ ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikac�
   
 -   Přístup 95 a vyšší  
   
--   Aplikace Excel 97 a vyšší  
+-   Excel 97 a vyšší  
   
--   Word 97 a vyšší  
+-   Wordu 97 a vyšší  
   
--   Aplikace Access 97 a vyšší  
+-   Access 97 a vyšší  
   
 -   FrontPage 97 a vyšší  
   
@@ -49,7 +52,7 @@ ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikac�
   
 -   Visual InterDev 97 a vyšší  
   
- Tady jsou aplikací od jiných výrobců, které podporují uzavření ovládacího prvku ActiveX:  
+ Následují aplikací od jiných výrobců, které podporují používání kontejnerů ovládacích prvků ActiveX:  
   
 -   PowerBuilder  
   
@@ -57,7 +60,7 @@ ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikac�
   
 -   Tvůrce C++  
   
--   Modul Plug-in pro Netscape Navigátor NCompass  
+-   Modul Plug-in pro Netscape Navigator NCompass  
   
 ## <a name="see-also"></a>Viz také  
  [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)

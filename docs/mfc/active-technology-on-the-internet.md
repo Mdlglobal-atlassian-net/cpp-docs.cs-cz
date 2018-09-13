@@ -1,7 +1,7 @@
 ---
-title: Technologie Active na Internetu | Microsoft Docs
+title: Technologie Active na Internetu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,34 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7062ae67c9fdfbe79efe20ce3251eba37cc926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 295873282f8d4cf44c2d00ba0bdec3a2c88fdd13
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338585"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535012"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologie Active na Internetu
-Technologie Active je otevřená platforma, která umožňuje vývojářům vytvářet zajímavé, dynamické obsah a aplikace pro globální Internetu, nebo pro interní síti společnosti, označuje jako intranetu. Hlavní technologie od společnosti Microsoft pro programování Internet, jsou popsané níže.  
+Technologie Active je otevřená platforma, která umožňuje vývojářům vytvářet zajímavé, dynamického obsahu a aplikací pro globální internetové nebo interní síti vaší společnosti, označované jako intranet. Hlavní technologie od Microsoftu pro programování na Internetu jsou popsané níže.  
+
+>[!IMPORTANT]
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
   
 ## <a name="activex-controls"></a>ActiveX – ovládací prvky  
- Ovládací prvky ActiveX (dříve OLE prvky) jsou objekty, které můžete vložit do webové stránky nebo jiné aplikace, která je kontejneru ovládacího prvku ActiveX. Mezi příklady patří tlačítek, kurzů akcií a ovládacích prvků grafu. Další informace najdete v tématu [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md).  
+ Ovládací prvky ActiveX (dříve ovládací prvky OLE) jsou objekty, které mohou být zařazeny do webové stránky nebo jakékoli jiné aplikace, která je kontejnerem ovládacího prvku ActiveX. Mezi příklady patří tlačítka, akcií a ovládací prvky grafu. Další informace najdete v tématu [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).  
   
-## <a name="active-documents"></a>Aktivní dokumenty  
- Aktivní dokumenty lze zobrazit pomocí webového prohlížeče nebo prohlížečů dokumentů. Tradiční vložené objekty byla omezena na jednu stránku a byly zobrazen vložená v dokumentu. Pomocí technologie Active lze zobrazit v dokumentu úplné rámce v okně klienta celou oblast. Další informace najdete v tématu [aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md).  
+## <a name="internet-data-download-services"></a>Stažení dat internetové služby  
+ Data můžete stáhnout z Internetu pomocí běžných protokolů: HTTP, FTP a gopher. Přenos dat pomocí protokolů HTTP, FTP a gopher poskytuje abstrakci protokolů TCP/IP a WinSock usnadňují tříd WinInet knihovny MFC. Asynchronní zástupný název třídy knihovny MFC poskytují způsob stahování souborů bez blokování a pro vykreslení velké objekty asynchronně. Další informace najdete v tématu [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="internet-data-download-services"></a>Stahování dat internetové služby  
- Data lze stáhnout přes Internet pomocí běžných protokolů: HTTP, FTP a gopher. Třídy MFC WinInet usnadňují přenosu dat pomocí protokolů HTTP, FTP a gopher poskytuje abstrakci protokolů TCP/IP a rozhraní WinSock. Třídy MFC asynchronní Přezdívka poskytují způsob, stahovat soubory bez blokování a k vykreslení rozsáhlé objekty asynchronně. Další informace najdete v tématu [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
+## <a name="active-scripts"></a>Aktivních skriptů  
+ VBScript či jiné skriptovací jazyky připojení ovládací prvky a přidat interaktivní funkce na webové stránky. Skriptování přesune zpracování ze serveru do klienta. Například formuláře položky můžete ověření na straně klienta a následně odesílána k serveru.  
   
-## <a name="active-scripts"></a>Aktivní skripty  
- VBScript či jiné skriptovací jazyky připojení ovládacích prvků a přidat další interaktivní funkce webové stránky. Skriptování přesune zpracování ze serveru do klienta. Například formulář položky můžete ověřit na straně klienta a pak se odešle na server.  
-  
-## <a name="html-extensions"></a>Rozšíření HTML  
- Rozšíření HTML, jako je například značky object byly přidány k podpoře ovládací prvky a skriptování.  
+## <a name="html-extensions"></a>Rozšíření jazyka HTML  
+ Rozšíření jazyka HTML, jako je například značky object byly přidány pro podporu ovládacích prvků a skriptování.  
   
 ## <a name="see-also"></a>Viz také  
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   
- [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md)   
- [Aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md)   
+ [Ovládací prvky ActiveX na Internetu](../mfc/activex-controls-on-the-internet.md)   
  [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 
