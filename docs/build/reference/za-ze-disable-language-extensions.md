@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597570"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556751"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Zakázat jazyková rozšíření)
 **/Za** – možnost kompilátoru generuje chybu pro konstruktory jazyka, které nejsou kompatibilní s ANSI C89 nebo ISO C ++ 11. **/Ze** – možnost kompilátoru, která je ve výchozím, umožňuje rozšíření společnosti Microsoft.  
@@ -54,8 +54,8 @@ ms.locfileid: "42597570"
   
  Doporučujeme zakázat jazyková rozšíření tak, že zadáte **/Za** Pokud plánujete přenést váš program do jiných prostředí. Když **/Za** není zadán, kompilátor zpracovává Rozšířená klíčová slova jako identifikátory jednoduché společnosti Microsoft, zakáže ostatní rozšíření společnosti Microsoft a automaticky definuje `__STDC__` předdefinované makro pro programy C.  
   
- Další možnosti kompilátoru použít s **/Za** může ovlivnit, jak kompilátor pak zajistí shoda se standardy. Například **/Za** a [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md) může způsobit chování povýšení typu s plovoucí desetinnou čárkou, které neodpovídá ISO C99 nebo C ++ 11 standardy.  
-  
+ Další možnosti kompilátoru použít s **/Za** může ovlivnit, jak kompilátor pak zajistí shoda se standardy.
+
  Způsoby, jak určit nastavení chování konkrétní standardy-splňovala podmínky shody, najdete v článku [/Zc](../../build/reference/zc-conformance.md) – možnost kompilátoru.  
   
  Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).  
