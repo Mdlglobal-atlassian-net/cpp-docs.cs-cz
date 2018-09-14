@@ -1,6 +1,6 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4839 | Microsoft Docs
-ms.date: 10/25/2017
+title: Upozornění (úroveň 3) C4839 kompilátoru | Dokumentace Microsoftu
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -15,24 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14a79c6abb118fb173382be87ebda4316545c65a
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291954"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601402"
 ---
-# <a name="compiler-warning-level-4-c4839"></a>C4839 kompilátoru upozornění (úroveň 4)
+# <a name="compiler-warning-level-3-c4839"></a>Kompilátor upozornění (úroveň 3) C4839
 
-> nestandardní použití třídy se*typu*' jako argument funkce variadická
+> nestandardní použití třídy*typ*"jako argumentu variadické funkce
 
-Ve Visual Studio 2017, třídy a struktury, která se budou předávat variadická fungovat, jako `printf` musí být trivially kopírovatelná. Při předávání tyto objekty, kompilátor jednoduše vytvoří bitové kopie a nevyvolá konstruktoru nebo destruktor.
+Třídy nebo struktury, které jsou předány variadické funkce, jako například `printf` musí být snadno kopírovatelná. Při předávání těchto objektů, kompilátor jednoduše vytvoří bitové kopie a nevolá konstruktor nebo destruktor.
+
+Toto upozornění je k dispozici od verze Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4839:
 
 ```cpp
+// C4839.cpp
+// compile by using: cl /EHsc /W3 C4839.cpp
 #include <atomic>
 #include <memory>
 #include <stdio.h>
@@ -42,38 +46,21 @@ int main()
     std::atomic<int> i(0);
     printf("%i\n", i); // error C4839: non-standard use of class 'std::atomic<int>'
                         // as an argument to a variadic function
-                        // note: the constructor and destructor will not be called; 
+                        // note: the constructor and destructor will not be called;
                         // a bitwise copy of the class will be passed as the argument
                         // error C2280: 'std::atomic<int>::atomic(const std::atomic<int> &)':
                         // attempting to reference a deleted function
-
-    struct S {
-        S(int i) : i(i) {}
-        S(const S& other) : i(other.i) {}
-        operator int() { return i; }
-    private:
-        int i;
-    } s(0);
-    printf("%i\n", s); // warning C4840 : non-portable use of class 'main::S'
-                      // as an argument to a variadic function
 }
 ```
 
-Chcete-li chybu opravit, můžete zavolat členské funkce, která vrátí hodnotu typu trivially kopírovatelná
+Chcete-li opravit chybu, můžete volat členské funkce, která vrací triviálně kopírovatelné typu
 
 ```cpp
     std::atomic<int> i(0);
     printf("%i\n", i.load());
 ```
 
-jinak provést statické přetypování převést objekt před jeho odesláním:
-
-```cpp
-    struct S {/* as before */} s(0);
-    printf("%i\n", static_cast<int>(s))
-```
-
-Pro řetězce vytvořené a spravují pomocí `CStringW`, poskytnutého `operator LPCWSTR()` se má použít k přetypování `CStringW` objekt, který má ukazatel C očekávaný řetězec formátu.
+Pro řetězce vytvořené a spravují s použitím `CStringW`, poskytnutého `operator LPCWSTR()` by měla sloužit k přetypování `CStringW` objektu na ukazatel C očekává formátovacím řetězcem.
 
 ```cpp
     CStringW str1;

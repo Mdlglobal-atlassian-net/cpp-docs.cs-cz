@@ -1,7 +1,7 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4127 | Microsoft Docs
+title: C4127 kompilátoru (úroveň 4) upozornění | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98b2eb42cfc66c27faf74c3d6e46e981851a0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bfd913b95b84d8425649476649f9bffa6163141
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293644"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601519"
 ---
-# <a name="compiler-warning-level-4-c4127"></a>C4127 kompilátoru upozornění (úroveň 4)
-podmíněným výrazem je konstant  
-  
- Řízení výraz `if` příkaz nebo `while` smyčky vyhodnocen jako konstanta. Kvůli jejich běžné idiomatickou využití, například 1 trivial konstanty nebo `true` nespouštějí upozornění, pokud se nejedná o výsledek operace ve výrazu. Pokud řízení výraz `while` smyčky je konstanta, protože opakování ve smyčce ukončeno uprostřed, zvažte nahrazení `while` cykly s `for` smyčky. Můžete vynechat inicializace, testovací ukončení a cykly přírůstek `for` ve smyčce, což způsobí, že smyčky být nekonečné, stejně jako `while(1)`, a můžete ukončit smyčky z textu `for` příkaz.  
-  
- Následující příklad ukazuje dva způsoby C4127 se generuje a ukazuje, jak používat pro smyčky, aby se zabránilo upozornění:  
-  
-```  
+# <a name="compiler-warning-level-4-c4127"></a>Kompilátor C4127 upozornění (úroveň 4)
+
+> podmíněný výraz je konstantní.
+
+## <a name="remarks"></a>Poznámky
+
+Řídicí výraz `if` příkazu nebo `while` smyčky je vyhodnocen jako konstanta. Z důvodu jejich společné idiomatickou využití, od Visual Studio 2015 update 3, jako je například 1 triviální konstanty nebo `true` nespouštějí upozornění, pokud nejsou výsledek operace ve výrazu.
+
+Pokud kontrolní výraz `while` smyčky je konstanta, vzhledem k tomu, opakování ve smyčce ukončeno uprostřed, zvažte nahrazení `while` smyčky s `for` smyčky. Můžete vynechat inicializaci, ukončení testu a opakovat přírůstek `for` smyčky, což způsobí, že smyčka bude neomezený, stejně jako `while(1)`, a můžete ukončení smyčky z textu `for` příkazu.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje dva způsoby C4127 se vygeneruje a ukazuje způsob použití smyčky for, aby se zabránilo upozornění:
+
+```cpp
 // C4127.cpp  
 // compile with: /W4  
 #include <stdio.h>  
 int main() {  
-   if (1 == 1) {}   // C4127  
-   while (42) { break; }   // C4127  
-  
-   // OK  
-   for ( ; ; ) {  
-      printf("test\n");  
-      break;  
-   }  
-}  
+   if (true) {}           // OK in VS2015 update 3 and later
+   if (1 == 1) {}         // C4127
+   while (42) { break; }  // C4127
+
+   // OK
+   for ( ; ; ) {
+      printf("test\n");
+      break;
+   }
+}
 ```

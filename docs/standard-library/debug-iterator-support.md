@@ -1,7 +1,7 @@
 ---
 title: Podpora ladění iterátorů | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959589"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601467"
 ---
 # <a name="debug-iterator-support"></a>Podpora ladění iterátorů
 
@@ -38,7 +38,7 @@ C++ standard popisuje, jak členské funkce může způsobit, že iterátory do 
 
 - Zvětšení velikosti [vektoru](../standard-library/vector.md) s využitím push nebo vložit iterátorů způsobí, že do `vector` stanou neplatnými.
 
-## <a name="example"></a>Příklad
+## <a name="invalid-iterators"></a>Neplatný iterátorů
 
 Pokud kompilujete tento ukázkový program v režimu ladění, za běhu se vyhodnotí a ukončí.
 
@@ -49,12 +49,7 @@ Pokud kompilujete tento ukázkový program v režimu ladění, za běhu se vyhod
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Příklad
+## <a name="using-iteratordebuglevel"></a>Pomocí _ITERATOR_DEBUG_LEVEL
 
 Můžete použít preprocesor makro [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) vypnout iterační ladění funkcí v sestavení pro ladění. Tento program není výraz, ale stále vyvolá nedefinované chování.
 
@@ -81,11 +76,7 @@ Můžete použít preprocesor makro [_ITERATOR_DEBUG_LEVEL](../standard-library/
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Příklad
+## <a name="unitialized-iterators"></a>Neinicializovaných iterátorů
 
 Vyhodnocení také v případě pokusu o použití iterátor před inicializací, jak je znázorněno zde:
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Příklad
+## <a name="incompatible-iterators"></a>Nekompatibilní iterátory
 
 Následující příklad kódu způsobí, že kontrolní výraz protože dvěma iterátory, které chcete [for_each](../standard-library/algorithm-functions.md#for_each) algoritmus jsou nekompatibilní. Algoritmy zaškrtněte, pokud chcete zjistit, zda iterátory, které jsou dodávány na ně odkazují stejný kontejner.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Všimněte si, že tento příklad používá výraz lambda `[] (int& elem) { elem *= 2; }` místo funktor. I když se tato možnost nemá žádný vliv na selhání assert – podobně jako funktor by způsobilo stejná chyba – výrazy lambda jsou velmi užitečný způsob, jak provádět úlohy compact funkce objektu. Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Příklad
+## <a name="iterators-going-out-of-scope"></a>Iterátory probíhající mimo rozsah
 
 Iterátor kontroly ladění také způsobit iterační proměnná, která je deklarována v **pro** smyčka bude z oboru, kdy **pro** oboru skončení smyčky.
 
@@ -163,11 +148,7 @@ Iterátor kontroly ladění také způsobit iterační proměnná, která je dek
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Příklad
+## <a name="destructors-for-debug-iterators"></a>Destruktory pro ladění iterátorů
 
-Ladění iterátory mají netriviální destruktory. Pokud destruktor není spuštěn, z jakéhokoli důvodu může dojít k narušení přístupu a poškození dat. Podívejte se například:
+Ladění iterátory mají netriviální destruktory. Pokud destruktor se nespustí, ale uvolnění paměti objektu, může dojít k poškození data a narušení přístupu. Podívejte se například:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Viz také:

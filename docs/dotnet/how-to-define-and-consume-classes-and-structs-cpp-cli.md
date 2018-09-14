@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: definování a používání tříd a struktur (C + +/ CLI) | Microsoft Docs'
+title: 'Postupy: definice a používání tříd a struktur (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0c264bce733cd4ce86e387560890caac15b1c51
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138992"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601559"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C++/CLI)
-Tento článek ukazuje, jak definovat a využívat uživatelem definované odkazové a hodnotové typy v jazyce C + +/ CLI.  
+Tento článek popisuje, jak definovat a využívat typy odkazů definované uživatelem a typů hodnot v jazyce C + +/ CLI.  
   
 ##  <a name="BKMK_Contents"></a> Obsah  
  [Vytvoření instance objektu](#BKMK_Object_instantiation)  
@@ -35,20 +35,20 @@ Tento článek ukazuje, jak definovat a využívat uživatelem definované odkaz
   
  [Viditelnost členů](#BKMK_Member_visibility)  
   
- [Veřejné a privátní nativních tříd](#BKMK_Public_and_private_native_classes)  
+ [Veřejné a soukromé nativních tříd](#BKMK_Public_and_private_native_classes)  
   
  [Statické konstruktory](#BKMK_Static_constructors)  
   
- [Sémantika této ukazatele](#BKMK_Semantics_of_the_this_pointer)  
+ [Sémantika tento ukazatel](#BKMK_Semantics_of_the_this_pointer)  
   
- [Funkce skrytí podle podpisu](#BKMK_Hide_by_signature_functions)  
+ [Skrytí podle podpisu funkce](#BKMK_Hide_by_signature_functions)  
   
  [Kopírovací konstruktory](#BKMK_Copy_constructors)  
   
  [Destruktory a finalizační metody](#BKMK_Destructors_and_finalizers)  
   
 ##  <a name="BKMK_Object_instantiation"></a> Vytvoření instance objektu  
- Typy odkazů (ref) a typy hodnot se dá jenom vytvořit instance na spravované haldě, není v zásobníku nebo v haldě nativní.  
+ Typy odkazů (referenční) může být vytvořena, pouze na spravované haldě, ne na zásobníku nebo na nativní haldě. Typy hodnot může být vytvořena na zásobníku nebo spravované haldě.
   
 ```  
 // mcppv2_ref_class2.cpp  
@@ -102,11 +102,11 @@ int main() {
 ```  
   
 ##  <a name="BKMK_Implicitly_abstract_classes"></a> Implicitně abstraktní třídy  
- *Implicitně abstraktní třídy* nelze vytvořit instanci. Pokud základní typ třídy rozhraní a třídy neimplementuje všechny funkce člen rozhraní je implicitně abstraktní třídu.  
+ *Implicitně abstraktní třídy* se nedá vytvořit instance. Třída je implicitně abstraktní, pokud je základní typ třídy, rozhraní a třídy neimplementuje všechny funkce člena rozhraní.  
   
- Pokud není možné vytvořit objekty z třídy, která je odvozena z rozhraní, může být z důvodu, že třída je implicitně abstraktní. Další informace o abstraktní třídy najdete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).  
+ Pokud se nemůžete k vytvoření objektů ze třídy, který je odvozen z rozhraní, důvodem může být, že je implicitně abstraktní třídy. Další informace o abstraktních tříd naleznete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).  
   
- Následující příklad kódu ukazuje, který `MyClass` třída nelze vytvořit instance, protože funkce `MyClass::func2` není implementována. Chcete-li povolit příklad zkompilovat, zrušte komentář u `MyClass::func2`.  
+ Následující příklad kódu ukazuje, že `MyClass` třídy nejde vytvořit, protože funkce `MyClass::func2` není implementována. Chcete-li příklad zkompilovat, zrušte komentář u `MyClass::func2`.  
   
 ```  
 // mcppv2_ref_class5.cpp  
@@ -129,15 +129,15 @@ int main() {
 ```  
   
 ##  <a name="BKMK_Type_visibility"></a> Viditelnost typů  
- Viditelnost běžné typy language runtime (CLR) můžete řídit, takže pokud je sestavení odkazováno, typy v sestavení může být viditelné nebo mimo sestavení nejsou viditelné.  
+ Můžete řídit viditelnost běžné language runtime (CLR) typy tak, že pokud sestavení se odkazuje, typy v sestavení mohou být viditelná nebo není viditelný mimo sestavení.  
   
- `public` Označuje, že je viditelná pro zdrojový soubor, který obsahuje typ `#using` pro sestavení, které obsahuje typ direktivy.  `private` Označuje, že typ není viditelná pro zdrojové soubory, které obsahují `#using` pro sestavení, které obsahuje typ direktivy. Privátní typy jsou však viditelné v rámci stejného sestavení. Ve výchozím nastavení, je viditelnost pro třídu `private`.  
+ `public` Označuje, že typ je viditelný do libovolného zdrojového souboru, který obsahuje `#using` směrnice pro sestavení, který obsahuje typ.  `private` Označuje, že typ není viditelný pro zdrojové soubory, které obsahují `#using` směrnice pro sestavení, který obsahuje typ. Privátní typy jsou však viditelné v rámci stejného sestavení. Výchozí viditelnost pro třídu je `private`.  
   
- Ve výchozím nastavení před Visual C++ 2005 měl nativní typy veřejnou dostupnost mimo sestavení. Povolit [upozornění kompilátoru (úroveň 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) můžete zobrazit, kde jsou nesprávně použity privátní nativní typy. Použití [make_public –](../preprocessor/make-public.md) – Direktiva pragma předat veřejnou dostupnost nativního typu v souboru zdrojového kódu, který nelze změnit.  
+ Ve výchozím nastavení před Visual C++ 2005 musely nativní typy přístupnost public mimo sestavení. Povolit [upozornění kompilátoru (úroveň 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) můžete zobrazit, kde jsou správně použity privátní nativní typy. Použití [make_public](../preprocessor/make-public.md) – Direktiva pragma přidělit nativní typ v souboru zdrojového kódu, který nemůže změnit přístupnost public.  
   
- Další informace najdete v tématu [#using – direktiva](../preprocessor/hash-using-directive-cpp.md).  
+ Další informace najdete v tématu [# direktiva using](../preprocessor/hash-using-directive-cpp.md).  
   
- Následující příklad ukazuje, jak deklarujte typy a zadat jejich usnadnění a poté přístup k tyto typy v sestavení. Samozřejmě, pokud je sestavení, který má privátní typy odkazován pomocí `#using`, pouze veřejné typy v sestavení jsou viditelné.  
+ Následující příklad ukazuje, jak deklarovat typy a určete jejich přístupnost a pak přístup k těmto typům v sestavení. Samozřejmě pokud sestavení, který má privátní typy se odkazuje pomocí `#using`pouze veřejné typy v sestavení jsou viditelné.  
   
 ```  
 // type_visibility.cpp  
@@ -179,7 +179,7 @@ in Private_Class
 in Private_Class_2  
 ```  
   
- Nyní Pojďme přepište v předchozím příkladu tak, aby je vytvořen jako knihovny DLL.  
+ Teď Pojďme přepsat předchozí ukázce tak, aby je vytvořený jako knihovnu DLL.  
   
 ```  
 // type_visibility_2.cpp  
@@ -202,7 +202,7 @@ public:
 };  
 ```  
   
- Další příklad ukazuje postup přístup k typům mimo sestavení. V této ukázce spotřebuje klienta komponentu, která je vestavěná v předchozím příkladu.  
+ Další příklad ukazuje, jak pro přístup k typům mimo sestavení. V této ukázce klient využívá komponentu, která je vytvořená v předchozím příkladu.  
   
 ```  
 // type_visibility_3.cpp  
@@ -225,20 +225,20 @@ in Public_Class
 ```  
   
 ##  <a name="BKMK_Member_visibility"></a> Viditelnost členů  
- Můžete provést přístupu členem veřejnou třídu z v rámci stejného sestavení liší od přístup k němu z mimo sestavení pomocí párů specifikátory přístupu `public`, `protected`, a `private`  
+ Můžete provádět přístup člena veřejné třídy z v rámci stejného sestavení liší od přístupu k němu z mimo sestavení pomocí dvojice specifikátory přístupu `public`, `protected`, a `private`  
   
- Tato tabulka shrnuje účinek různých specifikátory přístupu:  
+ Tato tabulka shrnuje vliv různých specifikátory přístupu:  
   
 |Specifikátor|Efekt|  
 |---------------|------------|  
-|public|Člen je přístupná uvnitř i vně sestavení.  V tématu [veřejné](../cpp/public-cpp.md) Další informace.|  
-|private|Člen není dostupný, ani mimo sestavení.  V tématu [privátní](../cpp/private-cpp.md) Další informace.|  
-|protected|Člen je přístupná uvnitř i vně sestavení, ale jenom pro odvozené typy.  V tématu [chráněné](../cpp/protected-cpp.md) Další informace.|  
-|internal|Člen je veřejný uvnitř sestavení, ale privátní mimo sestavení.  `internal` je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
-|veřejné chráněné - nebo - chráněné veřejné|Člen je veřejný uvnitř sestavení, ale chráněné mimo sestavení.|  
-|privátní chráněné - nebo - chráněné privátní|Člen je chráněný uvnitř sestavení, ale privátní mimo sestavení.|  
+|public|Člen je přístupný uvnitř i mimo sestavení.  Zobrazit [veřejné](../cpp/public-cpp.md) Další informace.|  
+|private|Člen není přístupný, ani mimo sestavení.  Zobrazit [privátní](../cpp/private-cpp.md) Další informace.|  
+|protected|Člen je přístupný uvnitř i mimo sestavení, ale pouze pro odvozené typy.  Zobrazit [chráněné](../cpp/protected-cpp.md) Další informace.|  
+|internal|Člen je veřejné uvnitř sestavení, ale privátní mimo sestavení.  `internal` je kontextové klíčové slovo.  Další informace najdete v tématu [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
+|veřejné chráněný - nebo - chráněné veřejné|Člen je veřejné uvnitř sestavení, ale chráněný mimo sestavení.|  
+|privátní chráněný - nebo - chráněné privátní|Člen je chráněný v sestavení, ale privátní mimo sestavení.|  
   
- Následující příklad ukazuje veřejného typu, který má členy, které jsou deklarovány s jinou přístupnosti a potom zobrazí přístup k těmto členům z uvnitř sestavení.  
+ Následující příklad ukazuje veřejný typ, který má členy, které jsou deklarovány pomocí jiné přístupnosti a potom zobrazí přístupu k těmto členům z uvnitř sestavení.  
   
 ```  
   
@@ -318,7 +318,7 @@ exiting function of derived class
 =======================  
 ```  
   
- Nyní Vytvořme v předchozím příkladu jako knihovny DLL.  
+ Nyní Vytvořme předchozí ukázce jako knihovnu DLL.  
   
 ```  
   
@@ -365,7 +365,7 @@ ref struct MyClass : public Public_Class {
 };  
 ```  
   
- Následující ukázka spotřebuje komponentu, který je vytvořen v předchozí ukázce a tím ukazuje, jak přístup ke členům z mimo sestavení.  
+ Následující příklad využívá komponenta, která se vytvoří v předchozí ukázce a tím ukazuje, jak pro přístup ke členům z mimo sestavení.  
   
 ```  
   
@@ -414,8 +414,8 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a> Veřejné a privátní nativních tříd  
- Nativní typ lze odkazovat z spravovaného typu.  Například funkce v spravovaného typu, může trvat parametr, jehož typ je nativní struktury.  Pokud jsou veřejné v sestavení spravovaného typu a funkce, pak nativní typ musí být také veřejné.  
+##  <a name="BKMK_Public_and_private_native_classes"></a> Veřejné a soukromé nativních tříd  
+ Nativní typ může odkazovat ze spravovaného typu.  Funkce v spravovaného typu může trvat parametr, jehož typ je nativní struktury.  Pokud jsou v sestavení veřejné spravovaného typu a funkce, pak nativní typ musí také být veřejné.  
   
 ```  
   
@@ -426,7 +426,7 @@ public struct N {
 };  
 ```  
   
- Dále vytvořte souboru zdrojového kódu, který využívá nativní typ:  
+ Dále vytvořte souboru se zdrojovým kódem, která využívá nativní typ:  
   
 ```  
   
@@ -456,15 +456,15 @@ int main() {
 ```  
   
 ##  <a name="BKMK_Static_constructors"></a> Statické konstruktory  
- Typ CLR – například třídě nebo struktuře – může mít statický konstruktor, který slouží k inicializaci členy statických dat.  Statický konstruktor je volána alespoň jednou a je volána před všechny statický člen typu přistupuje poprvé.  
+ Typ CLR – například třídy nebo struktury, může mít statický konstruktor, který slouží k inicializaci statické datové členy.  Statický konstruktor se nazývá nejvýše jednou a je volána před všechny statický člen typu přistupuje poprvé.  
   
- Konstruktoru instance je spouštěn vždy po statického konstruktoru.  
+ Konstruktor instance je spouštěn vždy po statický konstruktor.  
   
- Kompilátor nelze vložené volání konstruktoru, pokud třída má statického konstruktoru.  Kompilátor nelze vložené volat jakékoli funkce člen, pokud třída je typ hodnoty, má statického konstruktoru a nemá konstruktoru instance.  Modulu CLR může vložené volání, ale nemůže kompilátoru.  
+ Kompilátor nemůže provést vložení volání konstruktoru Pokud třída má statický konstruktor.  Kompilátor nemůže provést vložení volání žádnou členskou funkci třídy je typ hodnoty, má statický konstruktor a nemá konstruktor instance.  Modul CLR může vložené volání, ale kompilátor nemůže provést.  
   
- Definujte statického konstruktoru jako funkce privátního člena, protože měl by být volána pouze pomocí modulu CLR.  
+ Definujte statický konstruktor jako funkci soukromého členu, protože je určená k volání pouze platformou CLR.  
   
- Další informace o statické konstruktory najdete v tématu [postupy: definice a používání statického konstruktoru (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
+ Další informace o statické konstruktory, naleznete v tématu [postupy: definice statického konstruktoru (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
   
 ```  
   
@@ -501,10 +501,10 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a> Sémantika této ukazatele  
- Pokud používáte Visual C++ pro definování typů, `this` ukazatel v typu odkazu je typu "popisovač". `this` Ukazatel v typ hodnoty je typu "vnitřní ukazatel".  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> Sémantika tento ukazatel  
+ Při použití jazyka Visual C++ k definování typů, `this` ukazatel v typu odkazu je typu "popisovač". `this` Ukazatele typu hodnota je typu "vnitřní ukazatel".  
   
- Tyto různé sémantiku `this` ukazatel může způsobit neočekávané chování při volání výchozí indexer. Další příklad ukazuje způsob správný přístup k výchozí indexeru v typu ref a typ hodnoty.  
+ Tyto různé sémantiky `this` ukazatelů může způsobit neočekávané chování, když je zavolána výchozímu indexeru. Další příklad ukazuje správný způsob pro přístup k výchozímu indexeru v typu ref a typem hodnoty.  
   
  Další informace naleznete v tématu  
   
@@ -556,18 +556,18 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a> Funkce skrytí podle podpisu  
- V jazyce C++ standardní funkce v základní třídě je skrytý na základě funkci, která má stejný název v odvozené třídě, i v případě, že funkce odvozené třídy nemá stejný počet nebo druh parametry. Tento proces se označuje jako *skrýt podle názvu* sémantiku. V typu odkazu funkce v základní třídě lze pouze skrýt funkcí v odvozené třídě Pokud název a seznam parametrů jsou stejné. To se označuje jako *skrytí podle podpisu* sémantiku.  
+##  <a name="BKMK_Hide_by_signature_functions"></a> Skrytí podle podpisu funkce  
+ Ve standardním jazyce C++ funkce v základní třídě je skrytá ve funkci, která má stejný název v odvozené třídě, i v případě, že odvozené třídy funkce nemá stejný počet a druh parametry. To se označuje jako *skrýt podle názvu* sémantiku. V typu odkazu funkce v základní třídě můžete pouze být skryty pomocí funkce v odvozené třídě. Pokud název a seznamu parametrů jsou stejné. To se označuje jako *skrytí podle podpisu* sémantiku.  
   
- Třídy se považuje za třídu skrytí podle podpisu, pokud všechny funkce jsou označené v metadatech jako `hidebysig`. Ve výchozím nastavení jsou všechny třídy, které se vytvořily pod **/CLR** mít `hidebysig` funkce. Pokud má třídu `hidebysig` funkce, kompilátor není skrýt funkce tak, že název v žádné přímé základní třídy, ale pokud kompilátor zaznamená skrýt podle názvu třídy v řetězce dědičnosti, pokračuje daná chování skrýt podle názvu.  
+ Třída je považován za třídu skrytí podle podpisu, pokud jsou všechny jeho funkce označené v metadatech jako `hidebysig`. Ve výchozím nastavení jsou všechny třídy, které jsou vytvořené v rámci **/CLR** mají `hidebysig` funkce. Pokud má třída `hidebysig` funkce, kompilátor neskryje funkce podle názvu v žádné přímé základní třídy, ale pokud kompilátor narazí na třídu skrýt název v řetěz dědičnosti, bude toto chování skrýt podle názvu.  
   
- V části skrytí podle podpisu sémantiku při volání funkce na objekt, kompilátor identifikuje nejvíce odvozené třídy, která obsahuje funkce, která se může stát odpovědí volání funkce. Pokud je třída, která se může stát odpovědí volání jenom jednu funkci, kompilátor volání této funkce. Pokud je třída, která se může stát odpovědí volání více než jednu funkci, používá kompilátoru přetížení pravidel řešení určit funkce, které má být volána. Další informace o pravidlech přetížení, najdete v části [přetížení funkcí](../cpp/function-overloading.md).  
+ V části skrytí podle podpisu sémantiku při volání funkce na objekt, kompilátor identifikuje nejvíce odvozenou třídu, která obsahuje funkce, která může splňovat volání funkce. Pokud existuje pouze jedna funkce ve třídě, která může splňovat volání, kompilátor volá tuto funkci. Pokud existuje více než jednu funkci ve třídě, která může splňovat volání, kompilátor používá přetížení pravidla řešení k určení funkce, které má být volána. Další informace o pravidlech přetížení, naleznete v tématu [přetížení funkce](../cpp/function-overloading.md).  
   
- Pro danou funkci volání funkce v základní třídě pravděpodobně podpis, která usnadňuje mírně lepší shodu než funkce v odvozené třídě. Pokud funkce byla explicitně volána objektu odvozené třídy, se nazývá funkce v odvozené třídě.  
+ Pro volání dané funkce funkce v základní třídě pravděpodobně podpis, který umožňuje o trochu lepší shody než funkce v odvozené třídě. Funkce byla explicitně volána na objektu odvozené třídy, je volána funkce v odvozené třídě.  
   
- Vzhledem k tomu, že návratová hodnota není považovány za součást podpis funkce, funkce základní třídy je skrytý Pokud má stejný název a používá stejný počet a typ argumenty jako funkce odvozené třídy, i když se liší v typ vrácené hodnoty.  
+ Protože vrácená hodnota není považována za součást podpisu funkce, funkce základní třídy je skrytá Pokud má stejný název a má stejný počet a typ argumentů jako funkce odvozené třídy i v případě, že se liší v typu vrácené hodnoty.  
   
- Následující příklad ukazuje, že není funkcí v odvozené třídě skrytý funkce v základní třídě.  
+ Následující příklad ukazuje, že funkce v základní třídě není skryté funkce v odvozené třídě.  
   
 ```  
   
@@ -598,7 +598,7 @@ int main() {
 Base::Test  
 ```  
   
- Další příklad ukazuje, že Visual C++ compiler volá funkci nejvíce odvozené třídy – i když převod je vyžadováno tak, aby odpovídaly jeden nebo více parametrů – a není v základní třídu, která představuje lepší shodu pro volání funkce volání funkce.  
+ Další příklad ukazuje, že kompilátor Visual C++ volá funkci v nejvíce odvozené třídy – i v případě, že převod je vyžadovaný pro shodu nejméně jeden z parametrů – a není volání funkce v základní třídě, která představuje lepší shodu pro volání funkce.  
   
 ```  
   
@@ -630,7 +630,7 @@ int main() {
 Derived::Test2  
 ```  
   
- Následující příklad ukazuje, že je možné skrýt funkci i v případě, že se stejným podpisem jako odvozené třídy základní třídy.  
+ Následující příklad ukazuje, že je možné skrýt funkci i v případě, že nemá stejný podpis jako odvozené třídy základní třídy.  
   
 ```  
   
@@ -667,13 +667,13 @@ Derived::Test4
 ```  
   
 ##  <a name="BKMK_Copy_constructors"></a> Kopírovací konstruktory  
- Standardní C++ říká, že kopírovacího konstruktoru je volána, když je přesunout objekt, tak, aby objekt je vytvořen a zničen v stejnou adresu.  
+ Standard jazyka C++ říká, že kopírovací konstruktor se volá, když je přesunout objekt, tak, že objekt je vytvořeno a zničeno na stejné adrese.  
   
- Ale když **/CLR** slouží ke kompilaci a funkce, který se zkompiluje do MSIL volání nativní funkce kde nativních tříd – nebo má více než jeden – je předaná hodnota a kde nativních tříd má kopírovacího konstruktoru a/nebo destruktor, žádná kopie volání konstruktoru a objekt zničen na jinou adresu než kdy byla vytvořena. Pokud třída má ukazatel do sebe, nebo pokud kód ke sledování objektů pomocí adresy to může způsobit problémy.  
+ Ale když **/CLR** slouží ke kompilaci a funkci, která je kompilováno do jazyka MSIL volání nativní funkce tam, kde nativních tříd – nebo má více než jeden – je předán podle hodnoty a kdy má nativních tříd kopírovací konstruktor nebo destruktor, bez kopírování Konstruktor je volán a objekt je zničen na jinou adresu než ve kterém byla vytvořena. To může způsobit potíže, pokud třída má ukazatel na sebe sama, nebo pokud kód je objekty sledování podle adresy.  
   
  Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Následující příklad ukazuje, když se Binder negeneruje kopírovacího konstruktoru.  
+ Následující příklad ukazuje, když se nevygeneroval kopírovací konstruktor.  
   
 ```  
   
@@ -732,7 +732,7 @@ S object 0 being destroyed, this=0018F378
 ```  
   
 ##  <a name="BKMK_Destructors_and_finalizers"></a> Destruktory a finalizační metody  
- Destruktory v typu odkazu čištění, deterministická prostředků. Finalizační metody vyčištění nespravované prostředky a lze volat nepodmíněně destruktoru nebo nedeterministicky modulem garbage collector. Informace o destruktorech v standardní C++ najdete v tématu [destruktory](../cpp/destructors-cpp.md).  
+ Destruktory v typu odkazu provádět deterministickou vyčištění prostředků. Finalizační metody vyčistit nespravované prostředky a může být volána nedeterministicky, destruktor nebo nedeterministicky systémem uvolňování. Informace o destruktorech ve standardním jazyce C++, naleznete v tématu [destruktory](../cpp/destructors-cpp.md).  
   
 ```  
 class classname {  
@@ -741,13 +741,13 @@ class classname {
 };  
 ```  
   
- Chování destruktory v třídě spravované Visual C++ se liší od spravovaných rozšíření jazyka C++. Další informace o této změně najdete v tématu [změny v sémantice](../dotnet/changes-in-destructor-semantics.md).  
+ Chování destruktorů ve spravované třídě Visual C++ se liší od spravovaných rozšíření jazyka C++. Další informace o této změně najdete v tématu [změny v sémantice destruktorů](../dotnet/changes-in-destructor-semantics.md).  
   
- Uvolňování paměti CLR Odstraní nepoužívané spravované objekty a uvolní jejich paměti, když už jsou povinné. Typ však může používat prostředky, které má systém uvolňování nebude vědět, jak k uvolnění. Tyto prostředky se označují jako nespravované prostředky (nativní souboru zpracuje, například). Doporučujeme, abyste uvolnění všechny nespravované prostředky v finalizační metodu. Protože spravované prostředky vydávají nedeterministicky modulem garbage collector, není bezpečné odkazovat na spravované prostředky v finalizační metody vzhledem k tomu, že je možné, že uvolňování má již vyčistit spravované prostředku.  
+ CLR systému uvolňování paměti odstraní nepoužitých spravovaných objektů a jejich paměť uvolní, když už nejsou povinné. Typ však mohou používat prostředky, které systému uvolňování paměti není známo, jak k uvolnění. Tyto prostředky jsou označovány jako nespravované prostředky (nativní soubor zpracovává, třeba). Doporučujeme, abyste uvolnění všech nespravovaných prostředků v finalizační metodu. Vzhledem k tomu, že spravované prostředky vydávají nedeterministicky systémem uvolňování, není bezpečné pro odkazování na spravované prostředky v finalizační metoda vzhledem k tomu je možné, že systému uvolňování paměti již vyčistila tento spravovaný prostředek.  
   
- Finalizační metodu Visual C++ není stejný jako <xref:System.Object.Finalize%2A> metoda. (CLR dokumentace používá finalizační metodu a <xref:System.Object.Finalize%2A> metoda jako synonyma). <xref:System.Object.Finalize%2A> Metoda je volána modulem garbage collector, které vyvolá každý finalizační metodu v řetězu dědičnosti třídy. Na rozdíl od destruktory Visual C++ finalizační metodu odvozené třídy volání nezpůsobí kompilátoru volat finalizační metodu v všechny základní třídy.  
+ Finalizační metoda Visual C++ není stejný jako <xref:System.Object.Finalize%2A> metody. (CLR dokumentace používá finalizační metody a <xref:System.Object.Finalize%2A> metoda jako synonyma). <xref:System.Object.Finalize%2A> Metoda je volána metodou systému uvolňování paměti, které vyvolá každý finalizační metody v řetězu dědičnosti třídy. Na rozdíl od destruktory jazyka Visual C++ finalizační metodu odvozené třídy volání nezpůsobí kompilátor volat finalizační metodu všech základních tříd.  
   
- Protože Visual C++ compiler podporuje deterministickou verzi prostředky, nepokoušejte implementovat <xref:System.IDisposable.Dispose%2A> nebo <xref:System.Object.Finalize%2A> metody. Pokud jste obeznámeni s těmito metodami, zde je však jak finalizační metodu Visual C++ a destruktor, který volá finalizační metodu mapovány <xref:System.IDisposable.Dispose%2A> vzoru:  
+ Protože kompilátor Visual C++ podporuje deterministické uvolnění prostředků, nedoporučujeme provádět <xref:System.IDisposable.Dispose%2A> nebo <xref:System.Object.Finalize%2A> metody. Pokud jste obeznámeni s těmito metodami, tady je ale jak Visual C++ finalizační metody a destruktor, která volá finalizační metodu mapují na <xref:System.IDisposable.Dispose%2A> vzoru:  
   
 ```  
 // Visual C++ code  
@@ -766,9 +766,9 @@ void Dispose(bool disposing) {
 }  
 ```  
   
- Spravovaný typ mohou používat také spravované prostředky, které si přejete deterministicky a, není zůstat uvolňování k uvolnění nedeterministicky v určitém okamžiku po objekt se už nevyžaduje. Deterministické verzi prostředky může výrazně zlepšit výkon.  
+ Spravovaný typ může použít také spravované prostředky, které chcete uvolnit deterministicky a nesmí zůstat na systému uvolňování paměti k uvolnění nedeterministicky v určitém okamžiku po objekt se už nevyžaduje. Deterministické uvolnění prostředků může výrazně zlepšit výkon.  
   
- Visual C++ compiler umožňuje definici destruktor nepodmíněně vyčistěte objekty. Pomocí destruktoru uvolní všechny prostředky, které chcete uvolnit nepodmíněně.  Finalizační metody je k dispozici, kontaktujte z destruktor, chcete-li zabránit zdvojení kódu.  
+ Kompilátor Visual C++ umožňuje definice destruktor nedeterministicky vyčistit objekty. Můžete uvolnit všechny prostředky, které chcete uvolnit nedeterministicky destruktor.  Pokud se nachází finalizační metodu, jeho volání z destruktoru, aby se zabránilo duplicitě kódu.  
   
 ```  
   
@@ -793,35 +793,35 @@ ref struct A {
 };  
 ```  
   
- Pokud kód, který využívá vašeho typu nevyvolá destruktoru, bude systém uvolňování nakonec uvolní všechny spravované prostředky.  
+ Pokud kód, který využívá typ nevolá destruktor, systému uvolňování paměti uvolní nakonec všechny spravované prostředky.  
   
- Přítomnost destruktor neznamená přítomnost finalizační metody. Však přítomnost finalizační metody znamená, že jste musí definovat destruktor a z této destruktor zavolat finalizační metodu. To umožňuje deterministickou verzi nespravovaných prostředků.  
+ Přítomnost destruktor neznamená přítomnost finalizační metodu. Přítomnost finalizační metody však znamená, že musíte definovat destruktor a volat finalizační metodu z této – destruktor. To umožňuje deterministické uvolnění nespravovaných prostředků.  
   
- Volání destruktoru potlačí – pomocí <xref:System.GC.SuppressFinalize%2A>– finalizace objektu. Pokud není volána destruktoru, finalizační metodu vašeho typu nakonec volat modulem garbage collector.  
+ Volání destruktoru potlačí – s použitím <xref:System.GC.SuppressFinalize%2A>– finalizaci objektu. Pokud je destruktor není volána, finalizační metodu pro váš typ bude nakonec volat systému uvolňování paměti.  
   
- Nepodmíněně vymazání tohoto objektu prostředků pomocí volání destruktoru může zlepšit výkon ve srovnání s umožníte CLR nedeterministicky dokončit objektu.  
+ Nedeterministicky uvolnění prostředků objektu voláním destruktoru může zlepšit výkon ve srovnání s umožníte tím CLR nedeterministicky finalizaci objektu.  
   
- Kód, který má napsané v jazyce Visual C++ a zkompilovat pomocí **/CLR** spouští destruktor typ, pokud:  
+ Kód, který má napsaný v jazyce Visual C++ a zkompilován s použitím **/CLR** spustí destruktor typu, pokud:  
   
--   Objekt, který je vytvořen pomocí sémantika zásobníku ocitne mimo rozsah. Další informace najdete v tématu [C++ – sémantika zásobníku pro odkazové typy](../dotnet/cpp-stack-semantics-for-reference-types.md).  
+-   Objekt, který je vytvořen pomocí – sémantika zásobníku dostane mimo rozsah. Další informace najdete v tématu [C++ – sémantika zásobníku pro odkazové typy](../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
--   Při vytváření objektu je vyvolána výjimka.  
+-   Výjimka je vyvolána během konstrukce objektu.  
   
--   Objekt je člena v objektu, jehož destruktor běží.  
+-   Objekt je člen v objektu, jehož destruktor je spuštěná.  
   
 -   Volání [odstranit](../cpp/delete-operator-cpp.md) operátor na popisovač ([operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).  
   
--   Explicitní volání destruktoru.  
+-   Explicitně zavolat destruktor.  
   
- Pokud váš typ spotřebovává klientem, který je napsána v jiném jazyce, destruktoru následujícím způsobem:  
+ Pokud váš typ spotřebovává klienta, která je napsána v jiném jazyce, je zavolán destruktor následujícím způsobem:  
   
--   Pro volání na <xref:System.IDisposable.Dispose%2A>.  
+-   Volání <xref:System.IDisposable.Dispose%2A>.  
   
--   Na volání `Dispose(void)` na typu.  
+-   Volání `Dispose(void)` na typu.  
   
--   Pokud typ přejde mimo rozsah v jazyce C# `using` příkaz.  
+-   Pokud typ dostane mimo rozsah v jazyce C# `using` příkazu.  
   
- Pokud vytvoříte objekt typu odkaz na spravovaná halda (ne pomocí sémantika zásobníku pro odkazové typy), použijte [try-finally –](../cpp/try-finally-statement.md) syntaxe zajistit, že výjimku nezabrání destruktoru spuštění.  
+ Pokud vytvoříte objekt typu odkazu na spravované haldě (bez použití – sémantika zásobníku pro odkazové typy), použijte [try-finally](../cpp/try-finally-statement.md) syntaxe Ujistěte se, že výjimka nezabrání spuštění destruktoru.  
   
 ```  
   
@@ -841,25 +841,25 @@ int main() {
 }  
 ```  
   
- Pokud má váš typ destruktor, kompilátor vygeneruje `Dispose` metodu, která implementuje <xref:System.IDisposable>. Pokud typ, který je napsaný v jazyce Visual C++ a má destruktor, který je používán z jiný jazyk, volání `IDisposable::Dispose` daný typ způsobí, že destruktor typu k volání. Když je typ zpracován z klienta Visual C++, nelze volat přímo `Dispose`; místo toho volání destruktoru pomocí `delete` operátor.  
+ Pokud váš typ má destruktor, kompilátor vygeneruje `Dispose` metody, která implementuje <xref:System.IDisposable>. Pokud typ, který je napsán v jazyce Visual C++ a má destruktor, která se využívá v jiném jazyce, volání `IDisposable::Dispose` u tohoto typu způsobí, že destruktor typu volat. Když typ je zpracován z klienta Visual C++, nelze volat přímo `Dispose`; místo toho zavolejte destruktor pomocí `delete` operátor.  
   
- Pokud má váš typ finalizační metody, kompilátor vygeneruje `Finalize(void)` metoda, která přepisuje <xref:System.Object.Finalize%2A>.  
+ Pokud váš typ má finalizační metodu, kompilátor vygeneruje `Finalize(void)` metodu, která přepíše <xref:System.Object.Finalize%2A>.  
   
- Pokud typ má finalizační metody nebo destruktor, kompilátor vygeneruje `Dispose(bool)` metoda, podle vzoru návrhu. (Podrobnosti naleznete v tématu [Dispose vzor](/dotnet/standard/design-guidelines/dispose-pattern)). Nelze explicitně vytvářet nebo volání `Dispose(bool)` v jazyce Visual C++.  
+ Pokud typ má finalizační metodu nebo destruktor, kompilátor vygeneruje `Dispose(bool)` metoda podle vzoru návrhu. (Informace najdete v tématu [vzor Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). Nejde explicitně vytvářet nebo volání `Dispose(bool)` v jazyce Visual C++.  
   
- Pokud typ má základní třídu, která vyhovuje vzoru návrhu, se nazývají destruktory pro všechny základní třídy při volání destruktoru pro odvozené třídy. (Pokud váš typ je napsán v jazyce Visual C++, kompilátor zajistí, že vaše typy implementovat tohoto vzoru.) Jinými slovy, destruktoru objektu referenční třídy řetězí jeho základů a členů podle specifikace C++ standard – první třídy destruktor je spustit a pak destruktory pro její členy obráceným pořadí, ve kterém byly sestavený, a nakonec destruktory pro jeho základních tříd obráceným pořadí, ve kterém byly zkonstruovat.  
+ Pokud typ má základní třída, která odpovídá vzoru návrhu, destruktory pro všechny základní třídy jsou volány při je volán destruktor odvozené třídy. (Pokud váš typ je napsán v jazyce Visual C++, kompilátor pak zajistí, že tento model implementovat vaše typy.) Jinými slovy, destruktor třídy odkazu zřetězený jeho základních tříd a členů podle standardu jazyka C++ – první destruktor třídy je spustit a destruktory členů opakem pořadí, ve kterém byly vytvořeny, a nakonec destruktory pro její základní třídy opakem pořadí, ve kterém byly vytvořeny.  
   
- Destruktory a finalizační metody nejsou povoleny uvnitř typy hodnot nebo rozhraní.  
+ Destruktory a finalizační metody nejsou povolené uvnitř rozhraní nebo typy hodnot.  
   
- Finalizační metody pouze nelze definovat ani deklarované v odkazového typu. Finalizační metody jako konstruktor a destruktor, nemá žádný návratový typ.  
+ Finalizační metody pouze nelze definovat ani deklarovaného v typu odkazu. Jako konstruktor a destruktor finalizační metoda nemá žádný návratový typ.  
   
- Po spuštění finalizační metodu objektu finalizační metody v všechny základní třídy se také nazývají, počínaje nejméně odvozeného typu. Finalizační metody pro datové členy nejsou zřetězené automaticky podle finalizační metodu třídy.  
+ Po spuštění finalizační metodu objektu finalizační metody v žádné základní třídy se také označují jako, od nejméně odvozeného typu. Finalizační metody pro datové členy nejsou zřetězené automaticky podle finalizační metodu třídy.  
   
- Pokud finalizační metody odstraní nativní ukazatel v spravovaného typu, je třeba zajistit, že nejsou shromážděna předčasně odkazy nebo prostřednictvím nativní ukazatel; volání destruktoru na spravovaný typ místo použití <xref:System.GC.KeepAlive%2A>.  
+ Pokud finalizační metody odstraní nativní ukazatel v spravovaného typu, musíte zajistit, že odkazy na nebo prostřednictvím nativní ukazatel se neshromažďují předčasně; Zavolejte destruktor na spravovaný typ namísto použití <xref:System.GC.KeepAlive%2A>.  
   
- Při kompilaci můžete zjistit, zda má finalizační metody nebo destruktor typu. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ V době kompilace můžete zjistit, zda má typ finalizační metodu nebo destruktor. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Další příklad ukazuje dva typy, ten, který má nespravované prostředky a jeden, který se má spravovat prostředky, které jsou vydané nepodmíněně.  
+ Další příklad ukazuje dva typy, ten, který má nespravované prostředky a jeden, který se má spravovat prostředky, které se vydávají nedeterministicky.  
   
 ```  
   

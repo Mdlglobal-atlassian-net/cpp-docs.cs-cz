@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 866f6832869675f3c92d09642064e5aafce9a449
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465780"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601532"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -65,7 +65,8 @@ Tato tabulka shrnuje, které implementují knihovnu vcruntime knihoven.
 |vcruntime.lib|vcruntime\<verze > .dll|Importovat knihovny DLL pro vcruntime.|**/ MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Importovat knihovny DLL pro ladění vcruntime. Redistributable.|**/ MDd**|_DEBUG, _MT, _DLL|
 
-Kdy UCRT refaktoring došlo k chybě, funkce modulu Runtime souběžnosti byly přesunuty do concrt140.dll, který je součástí Distribuovatelný balíček C++. Tato knihovna DLL je požadovaná pro C++ paralelní kontejnery a algoritmy, jako `concurrency::parallel_for`. Kromě toho standardní knihovny C++ potřebuje tuto knihovnu DLL na Windows XP pro podporu synchronizace primitiv, protože Windows XP nemá podmínku proměnné.
+> [!NOTE] 
+> Kdy UCRT refaktoring došlo k chybě, funkce modulu Runtime souběžnosti se přesunuly do concrt140.dll, která byla přidána do Distribuovatelný balíček C++. Tato knihovna DLL je požadovaná pro C++ paralelní kontejnery a algoritmy, jako `concurrency::parallel_for`. Kromě toho standardní knihovny C++ potřebuje tuto knihovnu DLL na Windows XP pro podporu synchronizace primitiv, protože Windows XP nemá podmínku proměnné.
 
 Kód, který inicializuje CRT je v jednom z několika knihoven, podle toho, jestli knihovny CRT staticky nebo dynamicky propojené, nebo nativního, spravovaného nebo smíšený kód. Tento kód zpracovává spuštění CRT, interní vlákno inicializace dat a ukončení. Je specifické pro verzi kompilátoru použít. Tato knihovna je vždy staticky propojeny, i když se používá dynamicky propojené UCRT.
 

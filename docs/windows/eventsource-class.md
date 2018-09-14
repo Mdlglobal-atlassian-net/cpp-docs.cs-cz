@@ -1,32 +1,48 @@
 ---
 title: EventSource – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
+- event/Microsoft::WRL::EventSource::Add
+- event/Microsoft::WRL::EventSource::addRemoveLock_
+- event/Microsoft::WRL::EventSource::EventSource
+- event/Microsoft::WRL::EventSource::GetSize
+- event/Microsoft::WRL::EventSource::InvokeAll
+- event/Microsoft::WRL::EventSource::Remove
+- event/Microsoft::WRL::EventSource::targets_
+- event/Microsoft::WRL::EventSource::targetsPointerLock_
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventSource class
+- Microsoft::WRL::EventSource class
+- Microsoft::WRL::EventSource::Add method
+- Microsoft::WRL::EventSource::addRemoveLock_ data member
+- Microsoft::WRL::EventSource::EventSource, constructor
+- Microsoft::WRL::EventSource::GetSize method
+- Microsoft::WRL::EventSource::InvokeAll method
+- Microsoft::WRL::EventSource::Remove method
+- Microsoft::WRL::EventSource::targets_ data member
+- Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8805547c5803ae665178330063e6b77b1b3c662e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596208"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601493"
 ---
 # <a name="eventsource-class"></a>EventSource – třída
 
-Představuje událost agile. **EventSource** členské funkce přidání, odebrání a vyvolání obslužných rutin událostí. Agilní události, použijte [agileeventsource –](agileeventsource-class.md).
+Představuje událost agile. `EventSource` Členské funkce přidání, odebrání a vyvolání obslužných rutin událostí. Agilní události, použijte [agileeventsource –](agileeventsource-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,26 +60,26 @@ Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
-|----------|-----------------|
-|[EventSource::EventSource – konstruktor](../windows/eventsource-eventsource-constructor.md)|Inicializuje novou instanci třídy **EventSource** třídy.|
+| Název                                     | Popis                                            |
+| ---------------------------------------- | ------------------------------------------------------ |
+| [EventSource::EventSource –](#eventsource) | Inicializuje novou instanci třídy `EventSource` třídy. |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[EventSource::Add – metoda](../windows/eventsource-add-method.md)|Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **EventSource** objektu.|
-|[EventSource::GetSize – metoda](../windows/eventsource-getsize-method.md)|Získá počet obslužných rutin událostí, které jsou přidružené k aktuální **EventSource** objektu|
-|[EventSource::InvokeAll – metoda](../windows/eventsource-invokeall-method.md)|Volá Každá obslužná rutina události spojené s aktuálním **EventSource** pomocí zadanými typy argumentu a argumenty.|
-|[EventSource::Remove – metoda](../windows/eventsource-remove-method.md)|Odstraní obslužná rutina události reprezentována zadanou událost registračního tokenu ze sady obslužné rutiny událostí, které jsou přidružené k aktuální **EventSource** objektu.|
+| Název                                 | Popis                                                                                                                                                      |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [EventSource::add –](#add)             | Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální `EventSource` objektu.                     |
+| [EventSource::getsize –](#getsize)     | Získá počet obslužných rutin událostí, které jsou přidružené k aktuální `EventSource` objektu.                                                                         |
+| [EventSource::invokeall –](#invokeall) | Volá Každá obslužná rutina události spojené s aktuálním `EventSource` pomocí zadanými typy argumentu a argumenty.                                      |
+| [EventSource::Remove –](#remove)       | Odstraní obslužná rutina události reprezentována zadanou událost registračního tokenu ze sady obslužné rutiny událostí, které jsou přidružené k aktuální `EventSource` objektu. |
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
-|----------|-----------------|
-|[EventSource::addRemoveLock_ – datový člen](../windows/eventsource-addremovelock-data-member.md)|Synchronizuje přístup k [targets_ –](../windows/eventsource-targets-data-member.md) pole při přidání, odebrání nebo volání obslužné rutiny událostí.|
-|[EventSource::targets_ – datový člen](../windows/eventsource-targets-data-member.md)|Pole jednoho nebo více obslužných rutin událostí.|
-|[EventSource::targetsPointerLock_ – datový člen](../windows/eventsource-targetspointerlock-data-member.md)|Synchronizuje přístup k interní datových členů, dokonce i za běhu obslužné rutiny událostí pro EventSource se neustále přidávají, odebrat nebo vyvolána.|
+| Název                                                    | Popis                                                                                                                       |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [EventSource::addremovelock_ –](#addremovelock)           | Synchronizuje přístup k [targets_ –](#targets) pole při přidání, odebrání nebo volání obslužné rutiny událostí.                          |
+| [EventSource::targets_ –](#targets)                       | Pole jednoho nebo více obslužných rutin událostí.                                                                                           |
+| [EventSource::targetspointerlock_ –](#targetspointerlock) | Synchronizuje přístup k interní datových členů, dokonce i za běhu obslužné rutiny událostí pro EventSource se neustále přidávají, odebrat nebo vyvolána. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -75,7 +91,316 @@ Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="add"></a>EventSource::add –
 
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)  
-[AgileEventSource – třída](agileeventsource-class.md)
+Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální `EventSource` objektu.
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*delegateInterface*  
+Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
+
+*Token*  
+Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru [Remove()](#remove) metoda zahodíte obslužné rutiny události.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+## <a name="addremovelock"></a>EventSource::addremovelock_ –
+
+Synchronizuje přístup k [targets_ –](#targets) pole při přidání, odebrání nebo volání obslužné rutiny událostí.
+
+```cpp
+Wrappers::SRWLock addRemoveLock_;
+```
+
+## <a name="eventsource"></a>EventSource::EventSource –
+
+Inicializuje novou instanci třídy `EventSource` třídy.
+
+```cpp
+EventSource();
+```
+
+## <a name="getsize"></a>EventSource::getsize –
+
+Získá počet obslužných rutin událostí, které jsou přidružené k aktuální `EventSource` objektu.
+
+```cpp
+size_t GetSize() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Počet obslužných rutin událostí v [targets_ –](#targets).
+
+## <a name="invokeall"></a>EventSource::invokeall –
+
+Volá Každá obslužná rutina události spojené s aktuálním `EventSource` pomocí zadanými typy argumentu a argumenty.
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T0*  
+Typ argumentu ID nultého obslužné rutiny události.
+
+*T1*  
+Typ prvního argumentu obslužné rutiny události.
+
+*T2*  
+Typ druhého argumentu obslužné rutiny události.
+
+*T3*  
+Typ třetí argument obslužné rutiny události.
+
+*T4*  
+Typ čtvrtého argumentu obslužné rutiny události.
+
+*T5*  
+Typ pátého argumentu obslužné rutiny události.
+
+*T6*  
+Typ šestého argumentu obslužné rutiny události.
+
+*T7*  
+Typ sedmého argumentu obslužné rutiny události.
+
+*T8*  
+Typ osmého argumentu obslužné rutiny události.
+
+*T9*  
+Typ devátého argumentu obslužné rutiny události.
+
+*arg0*  
+Argument obslužné rutiny události ID nultého.
+
+*arg1*  
+První argument obslužné rutiny události.
+
+*arg2*  
+Druhý argument obslužné rutiny události.
+
+*arg3*  
+Třetí argument obslužné rutiny události.
+
+*arg4*  
+Čtvrtý argument obslužné rutiny události.
+
+*arg5*  
+Pátý argument obslužné rutiny události.
+
+*arg6*  
+Šestý argument obslužné rutiny události.
+
+*arg7*  
+Sedmého argumentu obslužné rutiny události.
+
+*arg8*  
+Argument obslužné rutiny události osmého.
+
+*arg9*  
+Devátého argumentu obslužné rutiny události.
+
+## <a name="remove"></a>EventSource::Remove –
+
+Odstraní obslužná rutina události reprezentována zadanou událost registračního tokenu ze sady obslužné rutiny událostí, které jsou přidružené k aktuální `EventSource` objektu.
+
+```cpp
+HRESULT Remove(
+   EventRegistrationToken token
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Token*  
+Popisovač, který představuje obslužnou rutinu události. Tento token byl vrácen při registraci obslužné rutiny události byl [Add()](#add) metody.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+### <a name="remarks"></a>Poznámky
+
+Další informace o `EventRegistrationToken` struktury, přečtěte si téma **Windows::Foundation:: struktura** téma v **modulu Windows Runtime** referenční dokumentaci.
+
+## <a name="targets"></a>EventSource::targets_ –
+
+Pole jednoho nebo více obslužných rutin událostí.
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Pokud událost, která je reprezentována aktuální `EventSource` dochází k objektu, jsou volány obslužné rutiny události.
+
+## <a name="targetspointerlock"></a>EventSource::targetspointerlock_ –
+
+Synchronizuje přístup k interní datové členy i v průběhu obslužné rutiny události pro tento `EventSource` se neustále přidávají, odstraněné nebo vyvolaný.
+
+```cpp
+Wrappers::SRWLock targetsPointerLock_;
+```

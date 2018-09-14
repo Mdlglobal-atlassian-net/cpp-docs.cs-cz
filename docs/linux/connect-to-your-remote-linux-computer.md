@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207663"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601441"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Připojení ke vzdálenému počítači s Linuxem
 
@@ -41,7 +41,7 @@ Při sestavování projektu C++ Linux v sadě Visual Studio, na základě nastav
    | **Uživatelské jméno**           | Ověření jako
    | **Typ ověřování** | Heslo nebo privátní klíč jsou podporované
    | **Heslo**            | Heslo pro zadané uživatelské jméno
-   | **Souboru s privátním klíčem**    | Privátní klíč vytvořený pro ssh připojení
+   | **Souboru s privátním klíčem**    | Soubor privátního klíče vytvořené pro ssh připojení
    | **Přístupové heslo**          | Heslo s privátním klíčem výše vybraného
 
 1. Klikněte na tlačítko **připojit** tlačítko pokusu o připojení ke vzdálenému počítači.  Pokud se nepovede, vstupní pole, které je potřeba změnit bude označeno červeně.
