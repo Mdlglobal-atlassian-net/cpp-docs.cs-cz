@@ -1,5 +1,5 @@
 ---
-title: / FILEALIGN (Align oddíly v souborech) | Microsoft Docs
+title: / FILEALIGN (zarovnání oddílů v souborech) | Dokumentace Microsoftu
 ms.date: 10/23/2017
 ms.technology:
 - cpp-tools
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a737801663a2c7c1e896166291a1635fbbe6c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 630fe7014c87487a9b4df61de60ac8f5518593e0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373267"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720015"
 ---
-# <a name="filealign-align-sections-in-files"></a>/ FILEALIGN (Align oddíly v souborech)
+# <a name="filealign-align-sections-in-files"></a>/ FILEALIGN (zarovnání oddílů v souborech)
 
-**/Filealign** – možnost linkeru slouží k určení zarovnání oddílů zapsána do výstupního souboru jako násobkem zadanou velikost.
+**/Filealign** – možnost linkeru umožňuje určit zarovnání oddílů zapsána do výstupního souboru jako násobek čísla zadané velikosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,30 +35,30 @@ ms.locfileid: "32373267"
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
-Část zarovnání velikost v bajtech, které musí být násobek dvou.
+*Velikost*<br/>
+Velikost zarovnání oddílu v bajtech, které musí být mocninou čísla 2.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Filealign** linkeru Chcete-li zarovnat každý oddíl ve výstupním souboru na hranici, která je násobkem způsobí, že *velikost* hodnotu. Ve výchozím nastavení linkeru nepoužívá zarovnání pevnou velikost.
+**/Filealign** – možnost linkeru, aby zarovnat jednotlivé oddíly výstupního souboru na hranici, která je násobkem způsobí, že *velikost* hodnotu. Ve výchozím nastavení propojovací program nepoužívá zarovnání pevnou velikost.
 
-**/Filealign** možnost lze použít k efektivní využití disku, nebo aby stránka načte z disku rychlejší. Menší velikost oddílu může být užitečné pro aplikace, které běží na menší zařízení, nebo chcete zachovat menší soubory ke stažení. Zarovnání oddílů na disku neovlivňuje zarovnání v paměti.
+**/Filealign** možnost lze zefektivnit využití disku, nebo aby stránka načte z disku rychleji. Menší velikost oddílu může být užitečné pro aplikace spuštěné na menších zařízeních, nebo zachovat menší soubory ke stažení. Zarovnání oddílů na disku neovlivní zarovnání v paměti.
 
-Použití [DUMPBIN](dumpbin-reference.md) zobrazíte informace o oddílech ve výstupním souboru.
+Použití [DUMPBIN](dumpbin-reference.md) zobrazíte informace o oddílech výstupního souboru.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Vyberte **příkazového řádku** stránka vlastností v **Linkeru** složky.
+1. Vyberte **příkazového řádku** stránku vlastností v **Linkeru** složky.
 
 1. Zadejte název možnosti **/filealign:** a velikost v **další možnosti** pole.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 
-[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Vypsání importy s odloženým načtením | Microsoft Docs
+title: Importu se zpožděným načtením | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f832f0ea7aaf7b766141ce7df4f83f21e1cdca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29f2faecb29da93729b0be0f40c00c18b82f6344
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720873"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Výpis importu se zpožděným načtením
-Importy s odloženým načtením můžete vypsat pomocí [/Imports dumpbin](../../build/reference/imports-dumpbin.md) a zobrazí se mírně liší informace než importuje standard. Tyto jsou rozdělen na vlastní část/Imports vypsání a jsou explicitně označeny jako importy s odloženým načtením. Pokud je uvolnit informace obsažené v bitové kopii, která poznamenat. Pokud je přítomen vazby informací, je třeba časového razítka cílový DLL poznamenat spolu s vázané adresy import.  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Importy s odloženým načtením můžete vypsat pomocí [dumpbin/Imports](../../build/reference/imports-dumpbin.md) a zobrazují se s informacemi o trochu jinak než importuje standard. Tyto jsou rozdělen na vlastní část/Imports vypsání a jsou explicitně označeny jako importy s odloženým načtením. Dojde-li uvolnit informace, které jsou k dispozici na obrázku, který je třeba poznamenat. Pokud není k dispozici informace o vázání, nebo časové razítko cíle knihovny DLL je třeba poznamenat spolu s vazbou adresy importů.
+
+## <a name="see-also"></a>Viz také
+
+[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

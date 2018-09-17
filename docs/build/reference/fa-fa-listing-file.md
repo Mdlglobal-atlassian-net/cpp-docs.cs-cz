@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101726"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717961"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (soubor seznamu)
 
@@ -49,38 +49,38 @@ Ve výchozím nastavení každý soubor výpisu získá stejný základní náze
 
 ### <a name="fa-arguments"></a>/FA argumenty
 
-žádná  
+žádná<br/>
 Ve výpisu je zahrnuta pouze assembleru jazyka.
 
-**c**  
+**c**<br/>
 Volitelné. Zahrnuje strojového kódu v ukázce.
 
-**s**  
+**s**<br/>
 Volitelné. Obsahuje zdrojový kód v ukázce.
 
-**u**  
+**u**<br/>
 Volitelné. Zakóduje soubor výpisu ve formátu UTF-8 a obsahuje značku pořadí bajtů. Ve výchozím souboru kódováním ANSI. Použití `u` vytvoření souboru výpisu, který se zobrazí správně v libovolném systému, nebo pokud používáte Unicode souborů zdrojového kódu jako vstup do kompilátoru.
 
 Pokud mají oba **s** a **u** jsou určené a pokud zdroj kód soubor používá kódování Unicode jiné než UTF-8, pak řádky kódu do souboru .asm nemusí být zobrazeny správně.
 
 ### <a name="fa-argument"></a>/Fa argument
 
-žádná  
+žádná<br/>
 Jeden *zdroj*.asm soubor se vytvoří pro každý soubor zdrojového kódu dané kompilace.
 
-*Název souboru*  
+*Název souboru*<br/>
 Soubor výpisu s názvem *filename*asm je umístěn v aktuálním adresáři. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
-*filename.Extension*  
+*filename.Extension*<br/>
 Soubor výpisu s názvem *filename.extension* je umístěn v aktuálním adresáři. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
-*Adresář*__\\__  
+*Adresář*__\\__<br/>
 Jeden *$source_file*.asm soubor je vytvořen a umístí v zadaném *directory* pro každý soubor zdrojového kódu dané kompilace. Poznámka: vyžaduje lomítkem. Jsou povolené jenom cesty na aktuálním disku.
 
-*adresář*__\\__*název souboru*  
+*adresář*__\\__*název souboru*<br/>
 Soubor výpisu s názvem *filename*asm je umístěn v zadaném *directory*. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
-*adresář*__\\__*filename.extension*  
+*adresář*__\\__*filename.extension*<br/>
 Soubor výpisu s názvem *filename.extension* je umístěn v zadaném *directory*. To platí jenom při kompilaci jeden zdrojový soubor kódu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
@@ -98,6 +98,7 @@ Poznámka: Toto nastavení i **výstup assembleru** a **použijte kódování Un
 - Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> nebo <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Chcete-li určit **/fau vytvořte**, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Příklad
+
 Následující příkaz vytvoří kombinované zdroje a výpis strojového kódu s názvem HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Viz také
 
-[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)   
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
+[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
 [Určení názvu cesty](../../build/reference/specifying-the-pathname.md)

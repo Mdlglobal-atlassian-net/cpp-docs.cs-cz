@@ -1,5 +1,5 @@
 ---
-title: Průvodce obecnými třídami C++ | Microsoft Docs
+title: Průvodce obecnými třídami C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43e86a4047ef025f49dd01eda90f324623a90752
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 758aafa91a8b74c52e8af88e0f6862c1cf99f229
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328302"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719613"
 ---
 # <a name="generic-c-class-wizard"></a>Průvodce obecnými třídami C++
-Přidá obecnými třídami C++ do projektu. Třída nedědí z knihovny ATL nebo MFC.  
+
+Do projektu přidá generické třídy jazyka C++. Třída nedědí z knihovny ATL nebo MFC.  
   
- **Název třídy**  
- Nastaví název nové třídy.  
+- **Název třídy**
+
+   Nastaví název nové třídy.  
   
- **soubor h**  
- Nastaví název hlavičky souboru pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu poskytují v **název třídy**. Uložte soubor hlaviček umístění podle vaší volby, nebo deklaraci třídy připojit k existující soubor, klikněte na tlačítko se třemi tečkami (**...** ). Pokud zadáte existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k určení, zda by měl deklaraci třídy přiložit do obsahu souboru. Chcete-li připojit deklaraci, klikněte na tlačítko **Ano**; Chcete-li se vraťte do průvodce a zadejte jiný název souboru, klikněte na tlačítko **ne**.  
+- **soubor .h**
+
+   Nastaví název souboru hlaviček pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Uložte soubor hlaviček do umístění podle vašeho výběru, nebo deklaraci třídy připojit k existujícímu souboru, klikněte na tlačítko se třemi tečkami (**...** ). Pokud zadáte existující soubor, po kliknutí na **Dokončit**, Průvodce zobrazí výzvu k určení, zda by měla být k obsah souboru připojen deklaraci třídy. Přidat deklaraci, klikněte na tlačítko **Ano**; pokud ho chcete vrátit do průvodce a zadejte jiný název souboru, klikněte na tlačítko **ne**.  
   
- **souboru**  
- Nastaví název souboru implementace pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu poskytují v **název třídy**. Uložte soubor implementace umístění podle vaší volby, nebo připojit k existující soubor definice třídy, klikněte na tlačítko se třemi tečkami (**...** ). Pokud zadáte existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k určení, zda by měl definici třídy přiložit k obsahu souboru. Připojit definici, klikněte na tlačítko **Ano**; Chcete-li se vraťte do průvodce a zadejte jiný název souboru, klikněte na tlačítko **ne**.  
+- **soubor .cpp**
+
+   Nastaví název implementačního souboru pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Uložte soubor implementace do umístění podle vaší volby, nebo připojit k existujícímu souboru definice třídy, klikněte na tlačítko se třemi tečkami (**...** ). Pokud zadáte existující soubor, po kliknutí na **Dokončit**, Průvodce zobrazí výzvu k určení, zda má být definici třídy připojen do obsahu souboru. Přidat definici, klikněte na tlačítko **Ano**; pokud ho chcete vrátit do průvodce a zadejte jiný název souboru, klikněte na tlačítko **ne**.  
   
- **Base – třída**  
- Nastaví základní třídu pro novou třídu.  
+- **Základní třída**
+
+   Nastaví základní třídu pro novou třídu.  
   
- **Přístup**  
- Nastaví přístup na členy základní třídy pro novou třídu. Modifikátory přístupu jsou klíčová slova, které určují úroveň přístupu, které ostatní třídy členské funkce tříd. Další informace o tom, jak zadat přístupu najdete v tématu [řízení přístupu ke členu](../cpp/member-access-control-cpp.md). Ve výchozím nastavení je úroveň přístupu třída nastavena na `public`.  
+- **Přístup**
+
+   Nastaví přístup ke členům základní třídy pro novou třídu. Modifikátory přístupu jsou klíčová slova, které určují úroveň přístupu, které mají jiné třídy pro členské funkce třídy. Další informace o tom, jak určit přístup, najdete v části [řízení přístupu ke členu](../cpp/member-access-control-cpp.md). Ve výchozím nastavení je úroveň přístupu třídy nastavena na `public`.  
   
--   `public`  
+   - `public`  
   
--   `protected`  
+   - `protected`  
   
--   `private`  
+   - `private`  
   
--   **Výchozí** (žádné – modifikátor přístupu se vygeneruje.)  
+   - **Výchozí** (je generována žádná modifikátor přístupu.)  
   
- **Virtuální – destruktor**  
- Určuje, jestli je virtuální destruktoru třídy. Použití virtuální destruktor pomáhá zajistit, že správné – destruktor je volána, když se odstraní instanci odvozené třídy.  
+- **Virtuální destruktor**
+
+   Určuje, zda je virtuální destruktor třídy. Použijte virtuální destruktor pomáhá zajistit, že správný destruktor se volá, když se odstraní výskyty odvozené třídy.  
   
- **Vložené**  
- Generuje konstruktoru třídy a definice třídy jako vložené funkce v záhlaví souboru.  
+- **vložené**
+
+   Generuje konstruktoru třídy a definice třídy jako vložené funkce v hlavičkovém souboru.  
   
- **Spravované**  
- Při výběru, přidá soubor spravované třídy a hlavičky. Není-li zaškrtnuto, přidá soubor nativní třídy a hlavičky.  
+- **Spravované**
+
+   Když vyberete, přidá spravované třídy a záhlaví souboru. Není-li zaškrtnuto, přidá nativní soubor třídy a záhlaví.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání generické třídy jazyka C++](../ide/adding-a-generic-cpp-class.md)

@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719267"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (kontrola volání ověření zásobníku)
+
 Řídí sondu zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Arguments
+
 *Velikost*<br/>
 (Volitelné) Počet bajtů, které může zabírat místní proměnné před sondu zásobníku je zahájeno. Pokud **/Gs** je zadána možnost bez `size` argument, je stejné jako zadání **/Gs0**,
 
 ## <a name="remarks"></a>Poznámky
+
 Sondy zásobníku je posloupnost kód, který kompilátor vloží do každé volání funkce. Při spuštění, dosáhne sondu zásobníku benignly do paměti na množství místa, které je nutné pro ukládání místních proměnných funkce.
 
 Pokud funkce vyžaduje více než `size` bajtů zásobníku místo pro místní proměnné, je zahájeno jeho sondy zásobníku. Ve výchozím nastavení kompilátor generuje kód, který iniciuje sondu zásobníku, pokud funkci vyžaduje více než jednu stránku místo v zásobníku. To je ekvivalentní možnosti kompilátoru **/Gs4096** x86, x64 a ARM platformy. Tato hodnota umožňuje aplikaci a Windows správce paměti pro zvýšení množství paměti potvrzené do zásobníku programu dynamicky za běhu.
@@ -58,18 +61,19 @@ Sondy zásobníku zapnutí nebo vypnutí můžete vypnout pomocí [check_stack �
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-2.  Vyberte **C/C++** složky.
+1. Vyberte **C/C++** složky.
 
-3.  Vyberte **příkazového řádku** stránku vlastností.
+1. Vyberte **příkazového řádku** stránku vlastností.
 
-4.  Zadejte možnost do kompilátoru **další možnosti** pole.
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
--   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

@@ -21,73 +21,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 75e4612104fdc57fd1442f1a35efbf317a60310d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200385"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717090"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
-```  
-/SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|  
-            EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|  
-            POSIX|WINDOWS)  
-            [,major[.minor]]  
-```  
-  
- BOOT_APPLICATION  
- Aplikace, která běží v prostředí spouštění Windows. Další informace o spouštěcích aplikacích najdete v tématu [o BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
-  
- KONZOLY  
- Aplikace znakového režimu systému Win32. Operační systém poskytuje konzolu pro konzolové aplikace. Pokud `main` nebo `wmain` je definována pro nativní kód `int main(array<String ^> ^)` je definována pro spravovaný kód, nebo zcela sestavení aplikace s použitím `/clr:safe`, KONZOLA je výchozí hodnota.  
-  
- Extensible Firmware Interface  
- EFI_ * subsystémů. V tématu Specifikace rozhraní EFI pro další informace. Příklad najdete v článku na webu společnosti Intel. Minimální verze a výchozí verze je 1.0.  
-  
- NATIVNÍ  
- Ovladače režimu jádra Windows NT. Tato možnost je obvykle vyhrazena pro součásti systému Windows. Pokud [/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) není zadán, výchozí hodnota je NATIVNÍ.  
-  
- POSIX  
- Aplikace, která běží v subsystému POSIX v systému Windows NT.  
-  
- SYSTÉM WINDOWS  
- Aplikace nevyžaduje konzolu, pravděpodobně, protože vytváří vlastní okna pro interakci s uživatelem. Pokud `WinMain` nebo `wWinMain` je definována pro nativní kód, nebo `WinMain(HISTANCE *, HINSTANCE *, char *, int)` nebo `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` je definována pro spravovaný kód, je WINDOWS výchozí hodnota.  
-  
- `Major` a `minor` (volitelné)  
- Zadejte minimální požadovanou verzi subsystému. Argumenty jsou desetinná čísla v rozmezí 0 až 65535. Viz poznámky pro další informace. Neexistují žádná horní mez pro čísla verzí.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost/Subsystem Určuje prostředí pro spustitelný soubor.  
-  
- Volba subsystému ovlivňuje symbol vstupního bodu (nebo funkci vstupního bodu), který vybere linkeru.  
-  
- Volitelné minimální a výchozí `major` a `minor` čísla verzí pro subsystémy jsou následující.  
-  
-|Subsystém|Minimální|Výchozí|  
-|---------------|-------------|-------------|  
-|BOOT_APPLICATION|1.0|1.0|  
-|KONZOLY|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
-|SYSTÉM WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
-|NATIVNÍ (DRIVER: WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|  
-|NATIVNÍ (bez /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|  
-|POSIX|1.0|19.90|  
-|EFI_APPLICATION, BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte složku Linkeru.  
-  
-3.  Vyberte **systému** stránku vlastností.  
-  
-4.  Upravit `SubSystem` vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|
+            EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|
+            POSIX|WINDOWS)
+            [,major[.minor]]
+```
+
+## <a name="arguments"></a>Arguments
+
+**BOOT_APPLICATION**<br/>
+Aplikace, která běží v prostředí spouštění Windows. Další informace o spouštěcích aplikacích najdete v tématu [o BCD](/previous-versions/windows/desktop/bcd/about-bcd).
+
+**KONZOLY**<br/>
+Aplikace znakového režimu systému Win32. Operační systém poskytuje konzolu pro konzolové aplikace. Pokud `main` nebo `wmain` je definována pro nativní kód `int main(array<String ^> ^)` je definována pro spravovaný kód, nebo zcela sestavení aplikace s použitím `/clr:safe`, KONZOLA je výchozí hodnota.
+
+**EFI_APPLICATION**<br/>
+**BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER**<br/>
+**EFI_ROM**<br/>
+**EFI_RUNTIME_DRIVER**<br/>
+Subsystémy Extensible Firmware Interface. V tématu Specifikace rozhraní EFI pro další informace. Příklady naleznete v tématu na webu společnosti Intel. Minimální verze a výchozí verze je 1.0.
+
+**NATIVNÍ**<br/>
+Ovladače režimu jádra Windows NT. Tato možnost je obvykle vyhrazena pro součásti systému Windows. Pokud [/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) není zadán, výchozí hodnota je NATIVNÍ.
+
+**POSIX**<br/>
+Aplikace, která běží v subsystému POSIX v systému Windows NT.
+
+**SYSTÉM WINDOWS**<br/>
+Aplikace nevyžaduje konzolu, pravděpodobně, protože vytváří vlastní okna pro interakci s uživatelem. Pokud `WinMain` nebo `wWinMain` je definována pro nativní kód, nebo `WinMain(HISTANCE *, HINSTANCE *, char *, int)` nebo `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` je definována pro spravovaný kód, je WINDOWS výchozí hodnota.
+
+*hlavní* a *podverze*<br/>
+(Volitelné) Zadejte minimální požadovanou verzi subsystému. Argumenty jsou desetinná čísla v rozmezí 0 až 65535. Viz poznámky pro další informace. Neexistují žádná horní mez pro čísla verzí.
+
+## <a name="remarks"></a>Poznámky
+
+**/Subsystem** Určuje prostředí pro spustitelný soubor.
+
+Volba subsystému ovlivňuje symbol vstupního bodu (nebo funkci vstupního bodu), který vybere linkeru.
+
+Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subsystémy jsou následující.
+
+|Subsystém|Minimální|Výchozí|
+|---------------|-------------|-------------|
+|BOOT_APPLICATION|1.0|1.0|
+|KONZOLY|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|SYSTÉM WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|NATIVNÍ (DRIVER: WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
+|NATIVNÍ (bez /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
+|POSIX|1.0|19.90|
+|EFI_APPLICATION, BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Vyberte složku Linkeru.
+
+1. Vyberte **systému** stránku vlastností.
+
+1. Upravit `SubSystem` vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

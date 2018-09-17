@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonCustomizeDialog | Microsoft Docs
+title: Cmfcribboncustomizedialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d342ec75fd45224dcd36ba3fc17aa1a6f8c12e33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720652"
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog – třída
-Zobrazí na pásu karet **přizpůsobit** stránky.  
+# <a name="cmfcribboncustomizedialog-class"></a>Cmfcribboncustomizedialog – třída
+Zobrazí na pásu karet **vlastní** stránky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +47,17 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
 |Název|Popis|  
 |----------|-----------------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
   
 ## <a name="remarks"></a>Poznámky  
- MFC vytvoří tato třída automaticky, pokud není zpracovat zprávu AFX_WM_ON_RIBBON_CUSTOMIZE, nebo pokud vrátíte 0 od obslužné rutiny zpráv.  
+ MFC vytvoří instanci této třídy automaticky pokud nezpracovává zprávy AFX_WM_ON_RIBBON_CUSTOMIZE nebo vrátí 0 z obslužné rutiny zprávy.  
   
- Pokud chcete pomocí této třídy v aplikaci můžete zobrazit na pásu karet **přizpůsobit** dialogové okno pole, stačí vytvořit instanci a volání `DoModal` metoda.  
+ Pokud chcete použít tuto třídu v aplikaci zobrazit na pásu karet **vlastní** dialogové okno pole, stačí vytvořit její instanci a volat `DoModal` metody.  
   
- Vzhledem k tomu, že tato třída je odvozený od [CMFCPropertySheet třída](../../mfc/reference/cmfcpropertysheet-class.md), můžete přidat vlastní stránky pomocí `CMFCPropertySheet` rozhraní API.  
+ Protože tato třída je odvozena z [CMFCPropertySheet – třída](../../mfc/reference/cmfcpropertysheet-class.md), můžete přidat vlastní stránky pomocí `CMFCPropertySheet` rozhraní API.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -65,9 +65,9 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)  
   
- [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
+ [CMFCPropertySheet –](../../mfc/reference/cmfcpropertysheet-class.md)  
   
- [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
+ [Cmfcribboncustomizedialog –](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribboncustomizedialog.h  
@@ -82,11 +82,11 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
- Ukazatel do nadřazeného okna (obvykle hlavního rámce).  
+*pWndParent*<br/>
+[in] Ukazatel do nadřazeného okna (obvykle hlavního rámce).  
   
- [v] *pRibbon*  
- Ukazatel `CMFCRibbonBar` , který má být přizpůsobit.  
+*pRibbon*<br/>
+[in] Ukazatel `CMFCRibbonBar` , který je možné přizpůsobit.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit `CMFCRibbonCustomizeDialog` objektu.  
@@ -94,7 +94,7 @@ CMFCRibbonCustomizeDialog(
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   
 ### <a name="remarks"></a>Poznámky  
- V konstruktoru vytvoří [CMFCRibbonCustomizePropertyPage třída](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) objektu a přidá ji do kolekce stránky vlastností.  
+ Vytvoří instanci konstruktoru [cmfcribboncustomizepropertypage – třída](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) objektu a přidá jej do kolekce stránky vlastností.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

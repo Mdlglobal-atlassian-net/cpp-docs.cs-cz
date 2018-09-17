@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718071"
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl – třída
 Poskytuje funkce pro Windows běžné tlačítko číselníku.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Parametry  
- *nLower* a *nUpper*  
- Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani jedno z těchto omezení může být větší než UD_MAXVAL nebo menší než UD_MINVAL; navíc rozdíl mezi dvě omezení nemůže být delší než UD_MAXVAL. `SetRange32` umístí bez omezení na omezení; použijte libovolný celých čísel.  
+### <a name="parameters"></a>Parametry
+
+*nLower* a *nUpper*<br/>
+Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani jedno z těchto omezení může být větší než UD_MAXVAL nebo menší než UD_MINVAL; navíc rozdíl mezi dvě omezení nemůže být delší než UD_MAXVAL. `SetRange32` umístí bez omezení na omezení; použijte libovolný celých čísel.  
   
 ### <a name="remarks"></a>Poznámky  
  Členská funkce `SetRange32` Nastaví rozsah 32bitové otočný ovládací prvek tlačítko.  

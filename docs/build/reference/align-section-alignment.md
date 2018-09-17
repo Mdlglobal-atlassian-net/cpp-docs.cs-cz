@@ -1,5 +1,5 @@
 ---
-title: / ALIGN (zarovnání oddílů) | Microsoft Docs
+title: / ALIGN (zarovnání oddílů) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 543ea30b06f62939f378167d8598c73f66061f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb92d4b16be7903004831ffb25e2891f498a8989
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718247"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (zarovnání oddílů)
 
@@ -36,32 +36,32 @@ ms.locfileid: "32370303"
 
 ### <a name="arguments"></a>Arguments
 
-*Číslo*  
+*Číslo*<br/>
 Hodnota zarovnání v bajtech.
 
 ## <a name="remarks"></a>Poznámky
 
-**/ALIGN** možnost určuje zarovnání každého oddílu v lineární adresní prostor programu. *Číslo* argument je v bajtech a musí být násobek dvou. Výchozí hodnota je 4K (4096). Linkeru vydá upozornění, pokud zarovnání vytvoří bitovou kopii neplatný.
+**/ALIGN** Určuje zarovnání jednotlivých oddílů uvnitř lineárního adresního prostoru programu. *Číslo* argument je vyjádřen v bajtech a musí být mocninou čísla 2. Výchozí hodnota je 4 kB (4096). Linker vydá upozornění, pokud zarovnání vytvoří image v neplatný.
 
-Pokud píšete aplikace například ovladač zařízení, by neměl muset upravit zarovnání.
+Pokud vytváříte aplikaci, jako jsou ovladače zařízení, neměli byste potřebovat změnit zarovnání.
 
-Je možné upravit zarovnání s parametrem align do určitého oddílu [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.
+Je možné změnit zarovnání určitého oddílu s parametrem zarovnat [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.
 
-Zarovnání hodnotu, která zadáte nemůže být menší než největší zarovnání oddílů.
+Hodnota zarovnání, který zadáte, nemůže být menší než největšímu zarovnání oddílu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+1. Zvolte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
-1. Zadejte možnost v **další možnosti** pole. Zvolte **OK** nebo **použít** na použití změny.
+1. Zadejte parametr do **další možnosti** pole. Zvolte **OK** nebo **použít** na použití změny.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
-[Možnosti linkeru](../../build/reference/linker-options.md)  
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

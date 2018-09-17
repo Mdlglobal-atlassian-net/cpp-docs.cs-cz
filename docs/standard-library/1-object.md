@@ -1,5 +1,5 @@
 ---
-title: _1 objekt | Microsoft Docs
+title: _1 objekt | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840339"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719183"
 ---
 # <a name="1-object"></a>_1 – objekt
 
-Zástupné symboly replaceable argumenty.
+Zástupné symboly pro nahraditelné argumenty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,14 +35,14 @@ Zástupné symboly replaceable argumenty.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Objekty `_1, _2, ... _M` jsou zástupné symboly určení první, druhý,..., měsíc argument, respektive ve volání funkce na objekt vrácený [vazby](../standard-library/functional-functions.md#bind). Používáte `_N` k určení, kde n-tou argument musí být zařazeny při vyhodnocování výrazu vazby.
+Objekty `_1, _2, ... _M` jsou funkce vyhrazenými první, druhý,..., n-tý argument ve volání funkce na objekt vrácený [svázat](../standard-library/functional-functions.md#bind). Použijete `_N` k určení, kde by měl být vložen n-tý argument při vyhodnocování výrazu bind.
 
-V této implementaci hodnotu z `M` je 20.
+V této implementaci je hodnota z `M` je 20.
 
 ## <a name="example"></a>Příklad
 
@@ -100,9 +100,9 @@ int main()
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vazby](../standard-library/functional-functions.md#bind)<br/>
+[Vytvoření vazby](../standard-library/functional-functions.md#bind)<br/>
 [is_placeholder – třída](../standard-library/is-placeholder-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: -STACK | Microsoft Docs
+title: -STACK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a82111ce950d14bc6b3e270ee9a658d806b28b62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8deb3e3bedcb773aa01ae5f1c3ff66ce9d509f2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374073"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716657"
 ---
 # <a name="stack"></a>/STACK
-```  
-/STACK:reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost nastaví velikost zásobníku v bajtech a přijímá argumenty notaci desítkový nebo jazyka C. Možnost /STACK se vztahuje pouze na spustitelný soubor.  
-  
- *Rezervovat* argument určuje přidělení celkový zásobníku v virtuální paměti. Editbin – zaokrouhlí na nejbližší 4 bajtů zadanou hodnotu.  
-  
- Volitelné `commit` argument podléhá interpretace v operačním systému. V systému Windows NT, Windows 95 a Windows 98 `commit` určuje množství fyzické paměti k přidělení najednou. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. A vyšší `commit` hodnota šetří čas, pokud aplikace vyžaduje více místa v zásobníku, ale zvyšuje požadavky na paměť a případně čas spuštění.  
-  
-## <a name="see-also"></a>Viz také  
- [EDITBIN – možnosti](../../build/reference/editbin-options.md)
+
+```
+/STACK:reserve[,commit]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost nastaví velikost zásobníku v bajtech a přebírá argumenty v zápisu jazyka C nebo decimal. Možnost/Stack se vztahuje pouze na spustitelný soubor.
+
+*Rezervovat* argument určuje celkové přidělení zásobníku ve virtuální paměti. Editbin – zaokrouhlí nahoru zadanou hodnotu do nejbližší 4 bajty.
+
+Volitelný `commit` argument podléhá interpretaci operačního systému. V systému Windows NT, Windows 95 a Windows 98 `commit` určuje množství fyzické paměti do okamžiku přidělit. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. Vyšší `commit` hodnotu šetří čas, kdy aplikace potřebuje více místa v zásobníku, ale zvyšuje požadavky na paměť a případně čas spuštění.
+
+## <a name="see-also"></a>Viz také
+
+[EDITBIN – možnosti](../../build/reference/editbin-options.md)

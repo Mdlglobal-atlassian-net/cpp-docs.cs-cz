@@ -1,5 +1,5 @@
 ---
-title: -PDB (použít databázi programu) | Microsoft Docs
+title: -PDB (použití databáze programu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 776d23c0c0c7ce392b1ff0d7a989c3c5503129b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8717be9ee8f754f4e61dbed0211360a0b4f4f780
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375996"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717229"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Použít databázi programu)
-```  
-/PDB:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Název souboru*  
- Název zadaného uživatelem pro databázi programu (PDB), který vytváří linkeru. Nahradí výchozí název.  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení když [/DEBUG](../../build/reference/debug-generate-debug-info.md) není zadaný, linkeru vytvoří databázi programu (PDB), která obsahuje informace o ladění. Výchozí název souboru PDB má základní název programu a PDB rozšíření.  
-  
- Použít/pdb:*filename* k zadání názvu souboru PDB. Pokud není zadán/Debug, možnost/PDB je ignorována.  
-  
- Soubor PDB může být až 2GB.  
-  
- Další informace najdete v tématu [soubory .pdb jako vstup Linkeru](../../build/reference/dot-pdb-files-as-linker-input.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **ladění** stránku vlastností.  
-  
-4.  Změnit **generování souboru databáze programu** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/PDB:filename
+```
+
+## <a name="arguments"></a>Arguments
+
+*Název souboru*<br/>
+Uživatelem zadaný název databáze programu (PDB), který vytvoří linker. Nahradí výchozí název.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení když [/DEBUG](../../build/reference/debug-generate-debug-info.md) není zadán, linker vytvoří databázi programu (PDB), který obsahuje informace o ladění. Výchozí název souboru PDB má základní název programu a příponou PDB.
+
+Pomocí/pdb:*filename* zadat název souboru PDB. Pokud není zadán/Debug, / PDB možnost je ignorována.
+
+Soubor PDB může být až 2GB.
+
+Další informace najdete v tématu [soubory .pdb jako vstup Linkeru](../../build/reference/dot-pdb-files-as-linker-input.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **ladění** stránku vlastností.
+
+1. Upravit **generovat soubor databáze programu** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

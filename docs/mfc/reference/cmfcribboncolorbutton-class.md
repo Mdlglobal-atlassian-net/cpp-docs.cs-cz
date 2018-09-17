@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0966faee52febce026028fc6a93e611983ff61cb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 968dc2103f4abfeab2001394ae91044f0f67ff7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719690"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Cmfcribboncolorbutton – třída
 `CMFCRibbonColorButton` Třída implementuje barevné tlačítko, které můžete přidat na panel pásu karet. Tlačítko Barva pásu karet zobrazí rozevírací nabídku, která obsahuje jeden nebo více palet barev.  
@@ -128,14 +128,14 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název skupiny.  
+*lpszName*<br/>
+[in] Název skupiny.  
   
- [in] *lstColors*  
- Seznam barev.  
+*lstColors*<br/>
+[in] Seznam barev.  
   
- [in] *bContiguousColumns*  
- Určuje způsob zobrazení Barva položek ve skupině. Pokud je hodnota TRUE, jsou vykreslovány vedle položek barev bez svislé mezery. Pokud má hodnotu FALSE, barva položky vykreslí ve svislé mezery.  
+*bContiguousColumns*<br/>
+[in] Určuje způsob zobrazení Barva položek ve skupině. Pokud je hodnota TRUE, jsou vykreslovány vedle položek barev bez svislé mezery. Pokud má hodnotu FALSE, barva položky vykreslí ve svislé mezery.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nastavit barvu místní použití zobrazit několik skupin barev. Můžete řídit, jak barvy zobrazují ve skupině.  
@@ -164,23 +164,23 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje Identifikátor příkazu příkazu ke spuštění, když uživatel klikne na tlačítko.  
+*nID*<br/>
+[in] Určuje Identifikátor příkazu příkazu ke spuštění, když uživatel klikne na tlačítko.  
   
- [in] *lpszText*  
- Určuje text, který se zobrazí na tlačítku.  
+*lpszText*<br/>
+[in] Určuje text, který se zobrazí na tlačítku.  
   
- [in] *nSmallImageIndex*  
- Index založený na nule malý obrázek, který se zobrazí na tlačítku.  
+*nSmallImageIndex*<br/>
+[in] Index založený na nule malý obrázek, který se zobrazí na tlačítku.  
   
- [in] *barva*  
- Barva tlačítka (výchozí hodnota je černá).  
+*Barva*<br/>
+[in] Barva tlačítka (výchozí hodnota je černá).  
   
- [in] *bSimpleButtonLook*  
- Při hodnotě TRUE se tlačítko vykreslí jako jednoduchý obdélník.  
+*bSimpleButtonLook*<br/>
+[in] Při hodnotě TRUE se tlačítko vykreslí jako jednoduchý obdélník.  
   
- [in] *nLargeImageIndex*  
- Index založený na nule velký obrázek, který se zobrazí na tlačítku.  
+*nLargeImageIndex*<br/>
+[in] Index založený na nule velký obrázek, který se zobrazí na tlačítku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -200,23 +200,23 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Popisek **automatické** tlačítko.  
+*lpszLabel*<br/>
+[in] Popisek **automatické** tlačítko.  
   
- [in] *barvaAutomatická*  
- Hodnota RGB, která určuje, **automatické** výchozí barvy tlačítka.  
+*barvaAutomatická*<br/>
+[in] Hodnota RGB, která určuje, **automatické** výchozí barvy tlačítka.  
   
- [in] *bEnable*  
- Hodnota TRUE, pokud **automatické** tlačítko je dostupné; FALSE, pokud je zakázaná.  
+*bEnable*<br/>
+[in] Hodnota TRUE, pokud **automatické** tlačítko je dostupné; FALSE, pokud je zakázaná.  
   
- [in] *lpszToolTip*  
- Text nápovědy **automatické** tlačítko.  
+*lpszToolTip*<br/>
+[in] Text nápovědy **automatické** tlačítko.  
   
- [in] *bOnTop*  
- Určuje, zda **automatické** je tlačítko v horní části před palety barev.  
+*bOnTop*<br/>
+[in] Určuje, zda **automatické** je tlačítko v horní části před palety barev.  
   
- [in] *bDrawBorder*  
- TRUE, pokud aplikace vykreslí ohraničení pruhu barev na tlačítko Barva pásu karet. Pruhu barev zobrazí aktuálně vybranou barvu. FALSE, pokud aplikace není nakreslí rámeček  
+*bDrawBorder*<br/>
+[in] TRUE, pokud aplikace vykreslí ohraničení pruhu barev na tlačítko Barva pásu karet. Pruhu barev zobrazí aktuálně vybranou barvu. FALSE, pokud aplikace není nakreslí rámeček  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
  Umožňuje **jiných** tlačítko.  
@@ -307,8 +307,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Barvu, kterou chcete nastavit.  
+*Barva*<br/>
+[in] Barvu, kterou chcete nastavit.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
  Nastaví velikost všech prvků barev, které se zobrazují na pruhu barev.  
@@ -318,8 +318,8 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeBox*  
- Nová velikost tlačítka barvy v barevné palety.  
+*sizeBox*<br/>
+[in] Nová velikost tlačítka barvy v barevné palety.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
  Nastaví nový název pro zadanou barvu.  
@@ -331,11 +331,11 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Hodnota RGB barvu.  
+*Barva*<br/>
+[in] Hodnota RGB barvu.  
   
- [in] *%{strName/*  
- Nový název pro zadanou barvu.  
+*%{strName/*<br/>
+[in] Nový název pro zadanou barvu.  
   
 ### <a name="remarks"></a>Poznámky  
  Jelikož volá `CMFCColorBar::SetColorName`, tato metoda se změní název zadané barvy ve všech `CMFCColorBar` objekty ve vaší aplikaci.  
@@ -348,8 +348,8 @@ void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nColumns*  
- Počet barevných ikon pro zobrazení v jednotlivých řádcích.  
+*nColumns*<br/>
+[in] Počet barevných ikon pro zobrazení v jednotlivých řádcích.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -363,11 +363,11 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Text, který zobrazuje barvy dokumentu.  
+*lpszLabel*<br/>
+[in] Text, který zobrazuje barvy dokumentu.  
   
- [in] *lstColors*  
- Odkaz na seznam hodnoty RGB.  
+*lstColors*<br/>
+[in] Odkaz na seznam hodnoty RGB.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
  Určuje standardní barvy pro zobrazení v tabulce barev, která bude tlačítko barev zobrazí.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pPalette*  
- Ukazatel na paletu barev.  
+*pPalette*<br/>
+[in] Ukazatel na paletu barev.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -390,8 +390,8 @@ void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Barva vybraná uživatelem.  
+*Barva*<br/>
+[in] Barva vybraná uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMFCRibbonColorButton::UpdateColor` Metoda změní barvu vybraného tlačítka a upozorní nadřazené odesláním wm_command – zprávy s oznámením BN_CLICKED standard. Použití [CMFCRibbonColorButton::GetColor](#getcolor) metodu pro načtení vybraných barev.  

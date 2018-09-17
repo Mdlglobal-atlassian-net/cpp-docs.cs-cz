@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960551"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719131"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf – třída
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-*_Freezeit*  
- A **bool** označující, zda chcete datového proudu k zmrazit.
+*_Freezeit*<br/>
+A **bool** označující, zda chcete datového proudu k zmrazit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*  
- Znak k vložení do vyrovnávací paměti, nebo `EOF`.
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo `EOF`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*  
- Znak k vložení do vyrovnávací paměti, nebo `EOF`.
+*_Meta*<br/>
+Znak k vložení do vyrovnávací paměti, nebo `EOF`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*  
- Pozice hledání pro relativně *_Way*.
+*_Off*<br/>
+Pozice hledání pro relativně *_Way*.
 
-*_Way*  
- Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*<br/>
+Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*_Which*  
- Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp*  
- Pozice k vyhledání pro.
+*_Sp*<br/>
+Pozice k vyhledání pro.
 
-*_Which*  
- Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Allocfunc*  
- Funkce použitá k přidělení vyrovnávací paměti.
+*_Allocfunc*<br/>
+Funkce použitá k přidělení vyrovnávací paměti.
 
-*Počet*  
- Určuje délku vyrovnávací paměti, na které odkazuje *_Getptr*. Pokud *_Getptr* není argument (první konstruktoru formuláře), navrhované přidělení velikost pro vyrovnávací paměti.
+*Počet*<br/>
+Určuje délku vyrovnávací paměti, na které odkazuje *_Getptr*. Pokud *_Getptr* není argument (první konstruktoru formuláře), navrhované přidělení velikost pro vyrovnávací paměti.
 
-*_Freefunc*  
- Funkce použitá k uvolnění vyrovnávací paměti.
+*_Freefunc*<br/>
+Funkce použitá k uvolnění vyrovnávací paměti.
 
-*_Getptr*  
- Vyrovnávací paměti použili pro vstup.
+*_Getptr*<br/>
+Vyrovnávací paměti použili pro vstup.
 
-*_Putptr*  
- Vyrovnávací paměť pro výstup.
+*_Putptr*<br/>
+Vyrovnávací paměť pro výstup.
 
 ### <a name="remarks"></a>Poznámky
 

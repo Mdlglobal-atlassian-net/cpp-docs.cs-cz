@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 282d8bbd55bec8053961c709eb3733a65972b187
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693110"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717701"
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
 
@@ -25,89 +25,113 @@ Ve většině případů assembler Microsoft ARM používá assembleru ARM, kter
 
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementace Microsoft direktivy sestavení ARM
 
-`AREA`<br/>
-Assembler Microsoft ARM podporuje tyto `AREA` atributy: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
+- OBLAST
 
-Všechny s výjimkou `THUMB` a `ARM` fungovat, jak je uvedeno v [kompilátoru ARM armasm referenční příručka](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+   Assembler Microsoft ARM podporuje tyto `AREA` atributy: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
 
-V assembler Microsoft ARM `THUMB` znamená, že `CODE` oddíl obsahuje kód pro Thumb a je pro výchozí `CODE` oddíly.  `ARM` Označuje, že oddíl obsahuje kód pro ARM.
+   Všechny s výjimkou `THUMB` a `ARM` fungovat, jak je uvedeno v [kompilátoru ARM armasm referenční příručka](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
 
-`ATTR`<br/>
-Není podporováno.
+   V assembler Microsoft ARM `THUMB` znamená, že `CODE` oddíl obsahuje kód pro Thumb a je pro výchozí `CODE` oddíly.  `ARM` Označuje, že oddíl obsahuje kód pro ARM.
 
-`CODE16`<br/>
-Není podporována, protože zahrnuje pre-UAL Thumb syntaxi, což není povoleno assembler Microsoft ARM.  Použití `THUMB` direktiv místo toho spolu s syntaxe protokolování přístupu uživatele.
+- ATTR
 
-`COMMON`<br/>
-Specifikace zarovnání pro běžné oblasti nepodporuje.
+   Není podporováno.
 
-`DCDO`<br/>
-Není podporováno.
+- CODE16
 
-`DN`, `QN`, `SN`<br/>
-Specifikace typu nebo lane na register alias není podporována.
+   Není podporována, protože zahrnuje pre-UAL Thumb syntaxi, což není povoleno assembler Microsoft ARM.  Použití `THUMB` direktiv místo toho spolu s syntaxe protokolování přístupu uživatele.
 
-`ENTRY`<br/>
-Není podporováno.
+- BĚŽNÉ
 
-`EQU`<br/>
-Specifikace typu pro definovaný symbol není podporována.
+   Specifikace zarovnání pro běžné oblasti nepodporuje.
 
-`EXPORT` a `GLOBAL`
+- DCDO
 
-> **EXPORT** <em>sym</em>{**[**<em>typ</em>**]**}
+   Není podporováno.
 
-*Sym* je symbol, nelze exportovat.  [*typ*], je-li zadána, může být buď `[DATA]` k označení, že symbol odkazuje na data nebo `[FUNC]` k označení, že symbol odkazuje na kód.
+- `DN`, `QN`, `SN`
 
-`GLOBAL` je synonymum pro `EXPORT`.
+   Specifikace typu nebo lane na register alias není podporována.
 
-`EXPORTAS`<br/>
-Není podporováno.
+- POLOŽKA
 
-`FRAME`<br/>
-Není podporováno.
+   Není podporováno.
 
-`FUNCTION` a `PROC`<br/>
-I když syntaxe sestavení podporuje specifikaci vlastní konvence volání na postupech uvedením registrů, které jsou volající uložit a ty, které jsou volaný ukládání, assembler Microsoft ARM přijímá syntaxi ale ignoruje seznamy registru.  Informace o ladění, který je vytvořen assembler podporuje pouze výchozí konvenci volání.
+- EQU
 
-`IMPORT` a `EXTERN`
+   Specifikace typu pro definovaný symbol není podporována.
 
-> **IMPORT** *sym*{**, SLABÉ** *alias*{**, typ** *t*}}
+- `EXPORT` a `GLOBAL`
 
-*Sym* je název symbolu, které se mají naimportovat.
+   Určuje exporty pomocí této syntaxe:
 
-Pokud `WEAK` *alias* není zadán, znamená, že *sym* je slabý externí. Pokud je nalezena žádná definice pro něj v době spojení, pak všechny odkazy na něj svázat místo toho *alias*.
+   > **EXPORT**|**globální** <em>sym</em>{**[**<em>typ</em>**]**}
 
-Pokud `TYPE` *t* není zadán, pak *t* Určuje, jak by měl pokusit vyřešit linker *sym*.  Tyto hodnoty pro *t* jsou možné:<br/>
-1 – nebude provádět vyhledávání knihovny *symbolů*<br/>
-2 – hledání knihovny pro *symbolů*<br/>
-3 –*sym* je alias pro *alias* (výchozí)
+   *Sym* je symbol, nelze exportovat.  [*typ*], je-li zadána, může být buď `[DATA]` k označení, že symbol odkazuje na data nebo `[FUNC]` k označení, že symbol odkazuje na kód. `GLOBAL` je synonymum pro `EXPORT`.
 
-`EXTERN` je synonymum pro `IMPORT`, s tím rozdílem, že *sym* je importován pouze v případě, že existují odkazy na něj v aktuálním sestavení.
+- EXPORTAS
 
-`MACRO`<br/>
-Použití proměnnou pro uchování stavu kódu makra není podporováno. Výchozí hodnoty pro makra, které parametry nejsou podporovány.
+   Není podporováno.
 
-`NOFP`<br/>
-Není podporováno.
+- RÁMCE
 
-`OPT`, `TTL`, `SUBT`<br/>
-Není podporována, protože výsledkem assembler Microsoft ARM není výpisy.
+   Není podporováno.
 
-`PRESERVE8`<br/>
-Není podporováno.
+- `FUNCTION` a `PROC`
 
-`RELOC`<br/>
-`RELOC n` může následovat pouze instrukce nebo direktivě definice data. Neexistuje žádná "anonymní symbol", který může být přemístění.
+   I když syntaxe sestavení podporuje specifikaci vlastní konvence volání na postupech uvedením registrů, které jsou volající uložit a ty, které jsou volaný ukládání, assembler Microsoft ARM přijímá syntaxi ale ignoruje seznamy registru.  Informace o ladění, který je vytvořen assembler podporuje pouze výchozí konvenci volání.
 
-`REQUIRE`<br/>
-Není podporováno.
+- `IMPORT` a `EXTERN`
 
-`REQUIRE8`<br/>
-Není podporováno.
+   Určuje importy pomocí této syntaxe:
 
-`THUMBX`<br/>
-Není podporováno, protože assembler Microsoft ARM nepodporuje instrukční sadu Thumb-2EE.
+   > **IMPORT**|**EXTERN** *sym*{**, SLABÉ** *alias*{**, typ** *t*}}
+
+   *Sym* je název symbolu, které se mají naimportovat.
+
+   Pokud `WEAK` *alias* není zadán, znamená, že *sym* je slabý externí. Pokud je nalezena žádná definice pro něj v době spojení, pak všechny odkazy na něj svázat místo toho *alias*.
+
+   Pokud `TYPE` *t* není zadán, pak *t* Určuje, jak by měl pokusit vyřešit linker *sym*.  Tyto hodnoty pro *t* jsou možné:
+
+   |Hodnota|Popis|
+   |-|-|
+   |1|Neprovádějte hledání knihovny *symbolů*|
+   |2|Hledání knihovny pro *symbolů*|
+   |3|*Sym* je alias pro *alias* (výchozí)|
+
+   `EXTERN` je synonymum pro `IMPORT`, s tím rozdílem, že *sym* je importován pouze v případě, že existují odkazy na něj v aktuálním sestavení.
+
+- MACRO
+
+   Použití proměnnou pro uchování stavu kódu makra není podporováno. Výchozí hodnoty pro makra, které parametry nejsou podporovány.
+
+- NOFP
+
+   Není podporováno.
+
+- `OPT`, `TTL`, `SUBT`
+
+   Není podporována, protože výsledkem assembler Microsoft ARM není výpisy.
+
+- PRESERVE8
+
+   Není podporováno.
+
+- RELOC
+
+   `RELOC n` může následovat pouze instrukce nebo direktivě definice data. Neexistuje žádná "anonymní symbol", který může být přemístění.
+
+- VYŽADOVAT
+
+   Není podporováno.
+
+- REQUIRE8
+
+   Není podporováno.
+
+- THUMBX
+
+   Není podporováno, protože assembler Microsoft ARM nepodporuje instrukční sadu Thumb-2EE.
 
 ## <a name="see-also"></a>Viz také:
 

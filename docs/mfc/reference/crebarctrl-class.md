@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693877"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717584"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízené okno.  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *uBand*|Index založený na nule pruhy matrice.|  
-|[in] *cxWidth*|Novou šířku pásma matrice, v pixelech.|  
+|*uBand*|[in] Index založený na nule pruhy matrice.|  
+|*cxWidth*|[in] Novou šířku pásma matrice, v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwMask*|Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu nadřazenému oknu.|  
-|[in] *dwStyleEx*|Bitová kombinace (nebo) příznaků, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejný příznak, který se používá v *dwMask* parametru. Pokud chcete resetovat styl, zadejte binární nulu.|  
+|*dwMask*|[in] Bitová kombinace (OR) mezi příznaky, které určují, které příznaky v *dwStyleEx* použít parametr. Použijte jednu nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, Zobrazit příčky v dolní části ve vodorovném režimu a na pravé straně ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu nadřazenému oknu.|  
+|*dwStyleEx*|[in] Bitová kombinace (nebo) příznaků, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejný příznak, který se používá v *dwMask* parametru. Pokud chcete resetovat styl, zadejte binární nulu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí rozšířený styl.  

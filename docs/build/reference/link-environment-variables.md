@@ -1,5 +1,5 @@
 ---
-title: Proměnné prostředí LINK | Microsoft Docs
+title: Proměnné prostředí LINK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 076e427e50520651f30cde20c764ff1124a6f953
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88ac63ace95ac0b9874dc3376210f3f5b4af320
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372695"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716649"
 ---
 # <a name="link-environment-variables"></a>Proměnné prostředí LINK
 
-Nástroj LINK používá následující proměnné prostředí:  
-  
--   ODKAZ a \_odkaz\_, pokud je definována. Nástroj LINK přidá možnosti a argumenty, které jsou definované v proměnné prostředí LINK a připojí možnosti a argumenty definované v \_odkaz\_ proměnnou prostředí pro argumenty příkazového řádku před zpracováním.  
-  
--   LIB, pokud je definována. Nástroje pro propojení používá cesta LIB při hledání objektu, knihovny nebo jiné souboru zadat na příkazovém řádku nebo pomocí [/základní](../../build/reference/base-base-address.md) možnost. Také používá LIB cesta k nalezení PDB soubor s názvem v objektu. Proměnná LIB může obsahovat jednu nebo více specifikací cesty oddělené středníky. Jedna cesta musí odkazovat podadresáři \lib instalace Visual C++.  
-  
--   CESTA, pokud tento nástroj je potřeba spustit CVTRES a nemůže najít soubor ve stejném adresáři jako odkaz sám sebe. (Odkaz vyžaduje CVTRES propojení .res souboru.) Cesta musí odkazovat na podadresáři \bin instalace Visual C++.  
-  
--   TMP k určení adresáře při propojování OMF nebo .res soubory.  
-  
-## <a name="see-also"></a>Viz také  
+Nástroj LINK používá následující proměnné prostředí:
 
-[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
-[Možnosti linkeru](../../build/reference/linker-options.md)   
-[Sestavení kódu C/C++ na příkazovém řádku](../../build/building-on-the-command-line.md)  
+- ODKAZ a \_odkaz\_, pokud je definována. Nástroj LINK připojí na začátek možnosti a argumenty, které jsou definovány v proměnné prostředí LINK a připojí možností a argumentů definované v \_odkaz\_ proměnnou prostředí pro argumenty příkazového řádku před zpracováním.
+
+- LIB, pokud je definována. Nástroje pro propojení používá cesta ke KNIHOVNĚ při hledání objektu, knihovny nebo jiný soubor zadaný v příkazovém řádku nebo pomocí [/základní](../../build/reference/base-base-address.md) možnost. Cesta ke KNIHOVNĚ také používá k nalezení souboru .pdb s názvem v objektu. LIB proměnné může obsahovat jeden nebo více specifikace cesty oddělené středníky. Jedna cesta musí odkazovat na podadresáři \lib instalace sady Visual C++.
+
+- CESTA, je-li nástroj je potřeba spustit CVTRES a nemůže najít soubor ve stejném adresáři jako samotného odkazu. (Odkaz vyžaduje CVTRES propojit soubor .res). Cesta musí odkazovat na podadresáři \bin instalace sady Visual C++.
+
+- TMP, zadejte adresář, při propojování omf – nebo .res souborů.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[Sestavení kódu C/C++ na příkazovém řádku](../../build/building-on-the-command-line.md)<br/>
 [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

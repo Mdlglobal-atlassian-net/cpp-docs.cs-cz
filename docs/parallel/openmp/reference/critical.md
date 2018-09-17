@@ -1,5 +1,5 @@
 ---
-title: kritické | Microsoft Docs
+title: kritické | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716947"
 ---
 # <a name="critical"></a>critical
-Určuje, zda kód je lze spustit pouze v jedno vlákno najednou.  
+Určuje, že kód provádí pouze v jednom vlákně najednou.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,13 @@ Určuje, zda kód je lze spustit pouze v jedno vlákno najednou.
 }  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+## <a name="arguments"></a>Arguments
+
+*Jméno*<br/>
+(Volitelné) Název pro identifikaci kritický kód. Poznámka: Tento název musí být uzavřen v závorkách.  
   
- (`name`) (volitelné)  
- Název pro identifikaci kód kritický. Všimněte si, že tento název musí být uzavřena v závorkách.  
-  
 ## <a name="remarks"></a>Poznámky  
- **Kritické** – direktiva podporuje žádné OpenMP – klauzule.  
+ **Kritické** podporuje bez klauzule OpenMP – direktiva.  
   
  Další informace najdete v tématu [2.6.2 důležité vytvořit](../../../parallel/openmp/2-6-2-critical-construct.md).  
   

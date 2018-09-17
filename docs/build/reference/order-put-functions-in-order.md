@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894509"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717775"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (vložení funkcí v pořadí)
 
@@ -39,7 +39,7 @@ Určete pořadí propojení pro samostatně zabalených funkcí (sekvence COMDAT
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*  
+*Název souboru*<br/>
 Textový soubor, který určuje pořadí propojení pro funkce sekvencí COMDAT.
 
 ## <a name="remarks"></a>Poznámky
@@ -83,5 +83,5 @@ Pokud více než jeden **/ORDER** možnost se zobrazí v možnosti linkeru, se p
 
 ## <a name="see-also"></a>Viz také
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

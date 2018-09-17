@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs
+title: __writefsbyte __writefsdword, __writefsqword __writefsword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338299"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718468"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
-**Konkrétní Microsoft**  
+# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte __writefsdword, __writefsqword, __writefsword
+**Specifické pro Microsoft**  
   
- Paměť k zápisu do umístění určeného posun vzhledem k začátku segmentu služby FS.  
+ Zápis paměti do umístění určeného proměnnou posun vzhledem k začátku segmentu služby FS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,15 +60,15 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
- Posun od začátku FS k zápisu.  
+*Posun*<br/>
+[in] Posun od začátku této služby FS zapisovat do.  
   
- [v] `Data`  
- Hodnota pro zápis  
+*Data*<br/>
+[in] Hodnota k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__writefsbyte`|x86|  
 |`__writefsword`|x86|  
@@ -80,7 +80,7 @@ void __writefsqword(
 ## <a name="remarks"></a>Poznámky  
  Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   

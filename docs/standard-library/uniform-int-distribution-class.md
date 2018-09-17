@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37279ef28073e758be2ebc849d6657168c22339
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c97b80031c60dabb22d3dfea905c9a46f7731f67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716440"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution – třída
 
@@ -201,13 +201,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Dolní mez pro náhodné hodnoty, včetně.
 
-*b*  
+*b*<br/>
 Horní mez pro náhodné hodnoty, včetně.
 
-*Parametr*  
+*Parametr*<br/>
 `param_type` Struktura používaná k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
@@ -237,13 +237,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Dolní mez pro náhodné hodnoty, včetně.
 
-*b*  
+*b*<br/>
 Horní mez pro náhodné hodnoty, včetně.
 
-*doprava*  
+*doprava*<br/>
 `param_type` Objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky

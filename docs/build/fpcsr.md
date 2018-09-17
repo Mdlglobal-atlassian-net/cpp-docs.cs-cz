@@ -1,5 +1,5 @@
 ---
-title: FpCsr | Microsoft Docs
+title: FpCsr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,33 +12,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9defb41a026b32acb4375185f14c903788b91a23
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6ed0500d0382563878d0751ba5386e4cc637fdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367443"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718286"
 ---
 # <a name="fpcsr"></a>FpCsr
-Stav registru také obsahuje x87 FPU řídicího slova. Konvence volání určí tento registr stálým.  
-  
- Spuštění programu x87 FPU kontrolní slovo registru je nastavena na tyto standardní hodnoty na začátku:  
-  
-```  
-FPCSR[0:6]: Exception masks all 1's (all exceptions masked)  
-FPCSR[7]: Reserved - 0  
-FPCSR[8:9]: Precision Control - 10B (double precision)  
-FPCSR[10:11]: Rounding  control - 0 (round to nearest)  
-FPCSR[12]: Infinity control - 0 (not used)  
-```  
-  
- Volaný, který mění žádná pole v rámci FPCSR musí obnovit před návratem do jeho volajícího. Kromě toho volající, který změní některé z těchto polí musí obnovit na standardní hodnoty před vyvoláním volaného, pokud dohodou volaného očekává upravené hodnoty.  
-  
- Existují dvě výjimky pravidla týkající se bez volatility příznaky ovládacích prvků:  
-  
-1.  Ve funkcích, kde zdokumentovaných účel dané funkce stálé FpCsr příznaků.  
-  
-2.  Pokud je prokazatelně správné, že porušení těchto pravidel výsledky v programech, které se chovají/znamenají stejně jako program, kde nejsou porušena tato pravidla, například prostřednictvím analýzy celého programu.  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../build/calling-convention.md)
+
+Stav registrace obsahuje také x87 FPU řídicího slova. Určuje konvenci volání tento registr stálé.
+
+X87 FPU kontrolní slovo registru je nastavena na následující standardní hodnoty na začátku provádění programu:
+
+```
+FPCSR[0:6]: Exception masks all 1's (all exceptions masked)
+FPCSR[7]: Reserved - 0
+FPCSR[8:9]: Precision Control - 10B (double precision)
+FPCSR[10:11]: Rounding  control - 0 (round to nearest)
+FPCSR[12]: Infinity control - 0 (not used)
+```
+
+Volaný, který upravuje některé z polí v rámci FPCSR musí obnovit před vrácením volající funkci. Kromě toho volající, který změní některé z těchto polí musí obnovit na standardní hodnoty před vyvoláním volaného Pokud smlouvou volaný očekává, že změněné hodnoty.
+
+Existují dvě výjimky k pravidlům týkající se jiných volatility příznaky ovládacích prvků:
+
+1. Ve funkcích, kde zdokumentovaných účel danou funkci stálé FpCsr příznaků.
+
+1. Pokud je prokazatelně správné, že porušení pravidla výsledky v programech, které se chová/znamená, že stejně jako program, ve kterém nejsou porušena tato pravidla, například prostřednictvím analýzy celého programu.
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../build/calling-convention.md)

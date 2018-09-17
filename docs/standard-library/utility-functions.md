@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960304"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718316"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;Nástroj&gt; funkce
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parametry
 
-*Val*  
- Objekt, který se zobrazí hodnota new_val.
+*Val*<br/>
+Objekt, který se zobrazí hodnota new_val.
 
-*new_val*  
- Objekt, jehož hodnota je zkopírovaný ani přesunutý do val.
+*new_val*<br/>
+Objekt, jehož hodnota je zkopírovaný ani přesunutý do val.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
- Index elementu určené založený na 0.
+*Index*<br/>
+Index elementu určené založený na 0.
 
-*T1*  
- Typ první prvek dvojice.
+*T1*<br/>
+Typ první prvek dvojice.
 
-*T2*  
- Typ elementu druhý pár.
+*T2*<br/>
+Typ elementu druhý pár.
 
-*žádost o přijetí změn*  
- Dvojice lze vybírat.
+*žádost o přijetí změn*<br/>
+Dvojice lze vybírat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parametry
 
-*Val1*  
- Hodnota, která inicializuje první prvek `pair`.
+*Val1*<br/>
+Hodnota, která inicializuje první prvek `pair`.
 
-*Val2*  
- Hodnota, která inicializuje druhý prvek `pair`.
+*Val2*<br/>
+Hodnota, která inicializuje druhý prvek `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

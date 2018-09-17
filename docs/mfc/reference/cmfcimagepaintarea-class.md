@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee3bf6b087777bc550a34234a8969e2127c8ec2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720249"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Cmfcimagepaintarea – třída
 Poskytuje oblast obrázku, který můžete použít ke změně obrázku v dialogovém okně editor obrázků.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pParentDlg*|Ukazatel na dialogovém okně, které je nadřazené editoru obrázků.|  
+|*pParentDlg*|[in] Ukazatel na dialogovém okně, které je nadřazené editoru obrázků.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Načte aktuální režim vykreslování.  
@@ -122,7 +122,7 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pBitmap*|Nový rastrový obrázek k zobrazení.|  
+|*pBitmap*|[in] Nový rastrový obrázek k zobrazení.|  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *pBitmap* má hodnotu NULL, tato metoda nastaví velikost oblasti lze měnit barvy na nulu. Jinak nastaví velikost oblasti upravitelná malířského velikost zadaná rastrový obrázek.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *barva*|Nové vykreslení barvy.|  
+|*Barva*|[in] Nové vykreslení barvy.|  
   
 ### <a name="remarks"></a>Poznámky  
  Když vyberte barvu z palety panelu editor image nebo výběr barev, rozhraní volá tuto metodu za účelem aktualizace aktuální vykreslení barvy. Počáteční barva vykreslování je černá (COLORREF hodnotu 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *režimu*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.|  
+|*Režim*|[in] [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

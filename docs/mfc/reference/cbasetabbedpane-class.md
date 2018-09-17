@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fa9af83ce4f18f4e4f2e916c5d9bacf724720814
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690431"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718442"
 ---
 # <a name="cbasetabbedpane-class"></a>Cbasetabbedpane – třída
 Rozšiřuje funkce [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) pro podporu vytváření oken s kartami.  
@@ -176,14 +176,14 @@ virtual BOOL AddTab(
  [in] [out] *pNewBar*  
  Ukazatel na panelu Přidat. Tento ukazatel může stát neplatnými po volání této metody. Další informace najdete v části poznámky.  
   
- [in] *bVisible*  
- Hodnota TRUE pro zviditelnění na kartě; v opačném případě hodnota FALSE.  
+*bVisible*<br/>
+[in] Hodnota TRUE pro zviditelnění na kartě; v opačném případě hodnota FALSE.  
   
- [in] *bSetActive*  
- TRUE, pokud chcete provést na kartě na aktivní kartě; v opačném případě hodnota FALSE.  
+*bSetActive*<br/>
+[in] TRUE, pokud chcete provést na kartě na aktivní kartě; v opačném případě hodnota FALSE.  
   
- [in] *bDetachable*  
- TRUE, pokud chcete provést na kartě odpojitelných; v opačném případě hodnota FALSE.  
+*bDetachable*<br/>
+[in] TRUE, pokud chcete provést na kartě odpojitelných; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud se podokno se úspěšně přidal jako kartu a nebyl zničeny v procesu. FALSE, pokud je podokno přidávaný objekt typu `CBaseTabbedPane`. Další informace najdete v části poznámky.  
@@ -212,8 +212,8 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUseTabIndexes*  
- Tento parametr se používá interně v rámci rozhraní.  
+*bUseTabIndexes*<br/>
+[in] Tento parametr se používá interně v rámci rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rozhraním, když se znovu načte dokovací informace o stavu z registru. Metoda získává informace o pořadí a názvy karet pro podokna s kartami.  
@@ -249,8 +249,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bActiveTabOnly*  
- Při převodu podokna s kartami, zadejte hodnotu PRAVDA pro převod na aktivní kartě. Zadáním hodnoty FALSE převést všechny karty na panelu.  
+*bActiveTabOnly*<br/>
+[in] Při převodu podokna s kartami, zadejte hodnotu PRAVDA pro převod na aktivní kartě. Zadáním hodnoty FALSE převést všechny karty na panelu.  
   
 ##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
  Odpojí podokno z podokna s kartami.  
@@ -262,11 +262,11 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Ukazatel do podokna odpojit.  
+*pBar*<br/>
+[in] Ukazatel do podokna odpojit.  
   
- [in] *bHide*  
- Logický parametr, který určuje, zda rozhraní skryje panel po je odpojená.  
+*bHide*<br/>
+[in] Logický parametr, který určuje, zda rozhraní skryje panel po je odpojená.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud rozhraní framework úspěšně odpojí podokna. FALSE v případě *pBar* má hodnotu NULL nebo odkazuje na podokno, které se nenachází v podokně s kartami.  
@@ -282,8 +282,8 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete synchronizovat Titulek podokna s kartami s titulkem aktivní kartě; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete synchronizovat Titulek podokna s kartami s titulkem aktivní kartě; v opačném případě hodnota FALSE.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  Interní pořadí obnoví do výchozího stavu.  
@@ -303,8 +303,8 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uBarID*  
- Určuje ID v podokně, který se má najít.  
+*uBarID*<br/>
+[in] Určuje ID v podokně, který se má najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na podokno, pokud byl nalezen; v opačném případě hodnota NULL.  
@@ -322,11 +322,11 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTabNum*  
- Určuje index založený na nule kartě k načtení.  
+*nTabNum*<br/>
+[in] Určuje index založený na nule kartě k načtení.  
   
- [in] *bGetWrappedBar*  
- TRUE, pokud chcete vrátit základní (zabalená) okno podokna místo v podokně sama o sobě; v opačném případě FALSE. To platí jenom pro odvozený z podokna [cdockablepaneadapter –](../../mfc/reference/cdockablepaneadapter-class.md).  
+*bGetWrappedBar*<br/>
+[in] TRUE, pokud chcete vrátit základní (zabalená) okno podokna místo v podokně sama o sobě; v opačném případě FALSE. To platí jenom pro odvozený z podokna [cdockablepaneadapter –](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud se najde v podokně, pak je vrácen platný ukazatel do podokna vyhledávaná; v opačném případě hodnota NULL.  
@@ -349,14 +349,14 @@ virtual BOOL FloatTab(
  [in] [out] *pBar*  
  Ukazatel na podokně s plovoucí desetinnou čárkou.  
   
- [in] *nTabID*  
- Určuje index založený na nule na kartu pro plovoucí desetinnou čárkou.  
+*nTabID*<br/>
+[in] Určuje index založený na nule na kartu pro plovoucí desetinnou čárkou.  
   
- [in] *dockMethod*  
- Určuje způsob, kterým uvolnit podokně. Další informace najdete v části poznámky.  
+*dockMethod*<br/>
+[in] Určuje způsob, kterým uvolnit podokně. Další informace najdete v části poznámky.  
   
- [in] *bHide*  
- TRUE, pokud chcete skrýt podokno před plovoucí; v opačném případě hodnota FALSE.  
+*bHide*<br/>
+[in] TRUE, pokud chcete skrýt podokno před plovoucí; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud se v podokně obtékané; v opačném případě hodnota FALSE.  
@@ -387,8 +387,8 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTabNum*  
- Odkaz na celé číslo. Tato metoda zápisy z nuly vycházející index první karta zobrazené pro tento parametr nebo -1, pokud ne, zobrazí se karta nachází.  
+*iTabNum*<br/>
+[in] Odkaz na celé číslo. Tato metoda zápisy z nuly vycházející index první karta zobrazené pro tento parametr nebo -1, pokud ne, zobrazí se karta nachází.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud je úspěšná, ukazatel na první zobrazené karta; v opačném případě hodnota NULL.  
@@ -401,8 +401,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *velikost*  
- A `CSize` objekt, který je vyplněna minimální povolenou velikost.  
+*Velikost*<br/>
+[out] A `CSize` objekt, který je vyplněna minimální povolenou velikost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je aktivní konzistentní zpracování podokna minimální velikostí ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *velikost* je vyplněna minimální povolená velikost na aktivní kartě. V opačném případě *velikost* je vyplněna návratová hodnota [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -415,8 +415,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *velikost*  
- A `CSize` objekt, který je vyplněna minimální povolenou velikost.  
+*Velikost*<br/>
+[out] A `CSize` objekt, který je vyplněna minimální povolenou velikost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je aktivní konzistentní zpracování podokna minimální velikostí ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *velikost* je vyplněna minimální povolená velikost na aktivní kartě. V opačném případě *velikost* je vyplněna návratová hodnota [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -431,11 +431,11 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *obrázků*  
- A `CObList` , který je vyplněna podoken, které jsou obsaženy v podokně s kartami.  
+*obrázků*<br/>
+[out] A `CObList` , který je vyplněna podoken, které jsou obsaženy v podokně s kartami.  
   
- [in] *pRTCFilter*  
- Pokud hodnota není NULL, vrácený seznam obsahuje pouze podoken, které jsou zadané runtime třídy.  
+*pRTCFilter*<br/>
+[in] Pokud hodnota není NULL, vrácený seznam obsahuje pouze podoken, které jsou zadané runtime třídy.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  Vrací ohraničující rámečky pro horní a dolní části karty.  
@@ -447,11 +447,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectTabAreaTop*  
- Přijímá souřadnice obrazovky oblasti karta nahoře.  
+*rectTabAreaTop*<br/>
+[out] Přijímá souřadnice obrazovky oblasti karta nahoře.  
   
- [out] *rectTabAreaBottom*  
- Přijímá souřadnice obrazovky nižší oblasti karet.  
+*rectTabAreaBottom*<br/>
+[out] Přijímá souřadnice obrazovky nižší oblasti karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem určení ohraničovacího obdélníků v souřadnicovém systému obrazovky, pro oblasti horní a dolní karty.  
@@ -540,8 +540,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAutoDestroy*  
- Hodnota TRUE, pokud se podokno s kartami vytvořil dynamicky a nejsou řízení životnosti; v opačném případě hodnota FALSE.  
+*bAutoDestroy*<br/>
+[in] Hodnota TRUE, pokud se podokno s kartami vytvořil dynamicky a nejsou řízení životnosti; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastavit automatické zničení režim na hodnotu TRUE v případě, že vytvoříte podokna s kartami dynamicky a nejsou řízení svého životního cyklu. Pokud automatické zničení režimu je hodnota TRUE, v podokně s kartami zničí automaticky v rámci rozhraní.  
@@ -558,17 +558,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Ukazatel do podokna zobrazení nebo skrytí.  
+*pBar*<br/>
+[in] Ukazatel do podokna zobrazení nebo skrytí.  
   
- [in] *bShow*  
- TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
+*bShow*<br/>
+[in] TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
   
- [in] *bDelay*  
- Hodnota TRUE pro úpravy rozložení karet; zpoždění v opačném případě hodnota FALSE.  
+*bDelay*<br/>
+[in] Hodnota TRUE pro úpravy rozložení karet; zpoždění v opačném případě hodnota FALSE.  
   
- [in] *bActivate*  
- TRUE, pokud chcete provést na kartě na aktivní kartě; v opačném případě hodnota FALSE.  
+*bActivate*<br/>
+[in] TRUE, pokud chcete provést na kartě na aktivní kartě; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud na kartě byla buď zobrazený nebo skrytý úspěšně; v opačném případě hodnota FALSE.  
@@ -600,17 +600,17 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMode*  
- TRUE, pokud chcete povolit režim automatického skrytí; FALSE, pokud chcete zapnout pravidelné dokovací režim.  
+*bMode*<br/>
+[in] TRUE, pokud chcete povolit režim automatického skrytí; FALSE, pokud chcete zapnout pravidelné dokovací režim.  
   
- [in] *dwAlignment*  
- Určuje zarovnání automatického schovávání podokno, které se má vytvořit. Seznam možných hodnot najdete v tématu [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+*dwAlignment*<br/>
+[in] Určuje zarovnání automatického schovávání podokno, které se má vytvořit. Seznam možných hodnot najdete v tématu [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
  [in] [out] *pCurrAutoHideBar*  
  Ukazatel na aktuální automatického schovávání panelu nástrojů. Může mít hodnotu NULL.  
   
- [in] *bUseTimer*  
- Určuje, zda automatického schovávání efekt použít, když uživatel přejde do režimu automatického skrytí podokna nebo skrytí podokna okamžitě.  
+*bUseTimer*<br/>
+[in] Určuje, zda automatického schovávání efekt použít, když uživatel přejde do režimu automatického skrytí podokna nebo skrytí podokna okamžitě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na automatického schovávání panelu nástrojů, který je vytvořen při přepnutí do režimu automatického skrytí nebo hodnota NULL, pokud je vytvořen bez nástrojů.  

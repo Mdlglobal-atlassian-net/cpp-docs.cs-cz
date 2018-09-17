@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719937"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr písma.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *%{strName/*  
- Název vlastnosti  
+*%{strName/*<br/>
+[in] Název vlastnosti.  
   
- [in] *lf*  
- Písmo logickou strukturu, která určuje atributy písma.  
+*LF*<br/>
+[in] Písmo logickou strukturu, která určuje atributy písma.  
   
- [in] *dwFontDialogFlags*  
- Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnotu rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
+*dwFontDialogFlags*<br/>
+[in] Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnotu rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *lpszDescr*  
- Popis vlastnosti font. Výchozí hodnota je NULL.  
+*lpszDescr*<br/>
+[in] Popis vlastnosti font. Výchozí hodnota je NULL.  
   
- [in] *dwData*  
- Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
+*dwData*<br/>
+[in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [in] *barva*  
- Barva písma. Výchozí hodnota je výchozí barvy.  
+*Barva*<br/>
+[in] Barva písma. Výchozí hodnota je výchozí barvy.  
   
 ### <a name="remarks"></a>Poznámky  
  A `CMFCPropertyGridFontProperty` objekt představuje vlastnost font v ovládacím prvku písma grid vlastnost.  

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716635"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -173,7 +173,7 @@ Pro každý argument v seznamu následující pravidla se použijí pak dokud ar
 
 11. NGRN byla nastavená na 8.
 
-12. NSAA se zaokrouhlí na větší z 8 nebo přirozené zarovnání typu argumentu... 
+12. NSAA se zaokrouhlí na větší z 8 nebo přirozené zarovnání typu argumentu...
 
 13. Pokud argument je složený typ argumentu je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
 
@@ -189,7 +189,7 @@ Funkce vyžadující proměnný počet argumentů jsou zpracovány jinak než v�
 
 2. Nejsou použity SIMD a zaregistruje plovoucí desetinné čárky.
 
-Efektivně to odpovídá následujícím pravidlům C.12–C.15 přidělit argumenty, které mají imaginární zásobníku, kde první 64 bajtů zásobníku se načtou do x0 x7 a všechny zbývající argumenty zásobníku jsou obvykle umístěny. 
+Efektivně to odpovídá následujícím pravidlům C.12–C.15 přidělit argumenty, které mají imaginární zásobníku, kde první 64 bajtů zásobníku se načtou do x0 x7 a všechny zbývající argumenty zásobníku jsou obvykle umístěny.
 
 ## <a name="return-values"></a>Vrácené hodnoty
 
@@ -231,5 +231,5 @@ Nezapomeňte ale, že čítač cyklus je true cyklu čítače, není wall hodina
 
 ## <a name="see-also"></a>Viz také:
 
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[Zpracování výjimek ARM64](../build/arm64-exception-handling.md)  
+[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Zpracování výjimek ARM64](../build/arm64-exception-handling.md)

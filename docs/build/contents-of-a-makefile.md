@@ -1,5 +1,5 @@
 ---
-title: Obsah souboru pravidel | Microsoft Docs
+title: Obsah souboru pravidel | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192e64e1f40df7a4e871d6765f57f16132cc8b5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 83b48855d990f0c6c3c0872e8c9b22441d04e76a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367066"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718273"
 ---
 # <a name="contents-of-a-makefile"></a>Obsah souboru pravidel
-Obsahuje souboru pravidel:  
-  
--   [Bloky popisů](../build/description-blocks.md)  
-  
--   [Příkazy](../build/commands-in-a-makefile.md)  
-  
--   [Makra](../build/macros-and-nmake.md)  
-  
--   [Odvozená pravidla](../build/inference-rules.md)  
-  
--   [Direktivy s tečkou](../build/dot-directives.md)  
-  
--   [Direktivy předběžného zpracování](../build/makefile-preprocessing.md)  
-  
-## <a name="remarks"></a>Poznámky  
- Další funkce, které můžete použít v souboru pravidel jsou [zástupné znaky](../build/wildcards-and-nmake.md), [dlouhé názvy souborů](../build/long-filenames-in-a-makefile.md), [komentáře](../build/comments-in-a-makefile.md), a [speciální znaky](../build/special-characters-in-a-makefile.md).  
-  
- Ukázku, najdete v části [ukázkový soubor pravidel](../build/sample-makefile.md).  
-  
-## <a name="see-also"></a>Viz také  
- [NMAKE – referenční zdroje](../build/nmake-reference.md)
+
+Soubor pravidel obsahuje:
+
+- [Bloky popisů](../build/description-blocks.md)
+
+- [Příkazy](../build/commands-in-a-makefile.md)
+
+- [Makra](../build/macros-and-nmake.md)
+
+- [Odvozená pravidla](../build/inference-rules.md)
+
+- [Direktivy s tečkou](../build/dot-directives.md)
+
+- [Direktivy předběžného zpracování](../build/makefile-preprocessing.md)
+
+## <a name="remarks"></a>Poznámky
+
+Další funkce můžete použít v souboru pravidel jsou [zástupné znaky](../build/wildcards-and-nmake.md), [dlouhé názvy souborů](../build/long-filenames-in-a-makefile.md), [komentáře](../build/comments-in-a-makefile.md), a [speciální znaky](../build/special-characters-in-a-makefile.md).
+
+Ukázku najdete v tématu [ukázkový soubor pravidel](../build/sample-makefile.md).
+
+## <a name="see-also"></a>Viz také
+
+[NMAKE – referenční zdroje](../build/nmake-reference.md)

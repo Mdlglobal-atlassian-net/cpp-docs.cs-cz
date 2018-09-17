@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720743"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl – třída
 `CMFCShellTreeCtrl` Třída rozšiřuje [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Logická hodnota, která určuje, jestli se má povolit nabídku.  
+*bEnable*<br/>
+[in] Logická hodnota, která určuje, jestli se má povolit nabídku.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  Vrátí nastavení pro příznaků [CMFCShellTreeCtrl – třída](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odkaz na parametr řetězce. Metoda zapíše cesta položky do tohoto parametru.  
+*strPath*<br/>
+[out] Odkaz na parametr řetězce. Metoda zapíše cesta položky do tohoto parametru.  
   
- [in] *htreeItem*  
- Metoda načte cestu pro tuto položku ovládacího prvku stromu.  
+*htreeItem*<br/>
+[in] Metoda načte cestu pro tuto položku ovládacího prvku stromu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *zprávy*  
- [in] *wParam*  
- [in] *lParam*  
- [in] *pLResult*  
+*message*<br/>
+[in] [in] *wParam*  
+*lParam*<br/>
+[in] [in] *pLResult*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pItem*  
- [in] *bSelected*  
+*pItem*<br/>
+[in] [in] *bSelected*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPath*  
- Řetězec, který určuje cestu položce.  
+*lpszPath*<br/>
+[in] Řetězec, který určuje cestu položce.  
   
- [in] *lpidl*  
- PIDL, které určuje položku  
+*lpidl*<br/>
+[in] PIDL, které určuje položku  
   
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK v případě úspěchu; Jinak E_FAIL.  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwFlags*  
- Příznaky pro nastavení.  
+*dwFlags*<br/>
+[in] Příznaky pro nastavení.  
   
- [in] *bRefresh*  
- Logická hodnota určující, zda `CMFCShellTreeCtrl` by měl být aktualizace okamžitě.  
+*bRefresh*<br/>
+[in] Logická hodnota určující, zda `CMFCShellTreeCtrl` by měl být aktualizace okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMFCShellTreeCtrl` Předá všechny nastaveny příznaky na [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Další informace o hodnotách jiné příznaky, naleznete v tématu [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pShellList*  
- Ukazatel `CMFCShellListCtrl` objektu.  
+*pShellList*<br/>
+[in] Ukazatel `CMFCShellListCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přidruží `CMFCShellListCtrl` s `CMFCShellTreeCtrl`. Tyto objekty může zobrazit jako oknem Průzkumníka podobném: když uživatel vybere objekt `CMFCShellTreeCtrl`, související položky v `CMFCShellListCtrl` se automaticky aktualizují.  

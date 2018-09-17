@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 063bbb74f0cb1b0a6396448ba7d6be7bf91dab85
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464113"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720397"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Důležité informace k zápisu kódu prologu/epilogu
- **Specifické pro Microsoft**  
+ **Specifické pro Microsoft**
+ 
  Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Také je užitečné vědět, jak používat `__LOCAL_SIZE` symbol.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Rozložení rámce zásobníku  

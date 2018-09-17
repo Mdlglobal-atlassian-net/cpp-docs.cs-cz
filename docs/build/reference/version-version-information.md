@@ -1,5 +1,5 @@
 ---
-title: -VERSION (informace o verzi) | Microsoft Docs
+title: -VERSION (informace o verzi) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092fd11d7bf062afb59c9b33d620624c63b5e01f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de2d7e3988c2e0024c4b0a668960bccfcf3dd2ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378987"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720886"
 ---
 # <a name="version-version-information"></a>/VERSION (informace o verzi)
-```  
-/VERSION:major[.minor]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *hlavní*a *menší*  
- Číslo verze, které chcete v záhlaví souboru .exe nebo .dll.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /VERSION informuje linkeru uvést číslo verze v hlavičce souboru .exe nebo .dll. Použijte DUMPBIN [/HEADERS](../../build/reference/headers.md) zobrazíte pole verze bitové kopie volitelné hodnoty HLAVIČKY tak, aby se projevily /VERSION.  
-  
- *Hlavní* a *menší* argumenty jsou desítková číslice v rozsahu 0 až 65 535. Výchozí hodnota je verze 0,0.  
-  
- Informace o zadaným /VERSION nemá vliv na informace o verzi, která se zobrazí pro aplikaci po zobrazte její vlastnosti v Průzkumníku souborů. Informace o této verzi pochází ze zdrojového souboru, který je použit k vytvoření aplikace. V tématu [Editor informací o verzi](../../windows/version-information-editor.md) Další informace.  
-  
- Je také možné vložit číslo verze se [verze](../../build/reference/version-c-cpp.md) příkaz definice modulu.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **Obecné** stránku vlastností.  
-  
-4.  Změnit **verze** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/VERSION:major[.minor]
+```
+
+## <a name="arguments"></a>Arguments
+
+*hlavní* a *podverze*<br/>
+Číslo verze, které chcete v hlavičce souboru .exe nebo .dll.
+
+## <a name="remarks"></a>Poznámky
+
+Parametr/Version přikáže linkeru, aby vložil číslo verze v hlavičce souboru .exe nebo .dll. Pomocí DUMPBIN [/HEADERS](../../build/reference/headers.md) zobrazíte pole verze image OPTIONAL HEADER VALUES a posoudit účinek parametru/Version.
+
+*Hlavní* a *menší* argumenty jsou desetinná čísla v rozsahu 0 až 65535. Výchozí hodnota je verze 0,0.
+
+Informace o zadaný s/Version nemá vliv informace o verzi, která se zobrazí aplikace, když zobrazíte její vlastnosti v Průzkumníku souborů. Informace o této verzi pocházejí ze souboru prostředků, který se používá k sestavení aplikace. Zobrazit [Editor informací o verzi](../../windows/version-information-editor.md) Další informace.
+
+Dalším způsobem, jak vložit číslo verze se [verze](../../build/reference/version-c-cpp.md) příkaz definice modulu.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **Obecné** stránku vlastností.
+
+1. Upravit **verze** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

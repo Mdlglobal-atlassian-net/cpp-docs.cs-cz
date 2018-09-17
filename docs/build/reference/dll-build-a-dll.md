@@ -1,5 +1,5 @@
 ---
-title: -DLL (sestavit knihovnu DLL) | Microsoft Docs
+title: -DLL (sestavení knihovny DLL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,49 +20,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1767ac9ef063ace2ee9d567dd9038519afababf8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec5beed66de3834759f35a5021d0155eab0a066e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716823"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Sestavit knihovnu DLL)
-```  
-/DLL  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost/DLL sestavení knihovny DLL jako hlavní výstupní soubor. Knihovny DLL obvykle obsahuje export, které lze použít v jiném programu. Existují tři metody pro určení exportů, uvedené v doporučené pořadí podle používání:  
-  
-1.  [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu  
-  
-2.  [EXPORTUJE](../../build/reference/exports.md) – příkaz souboru .def  
-  
-3.  [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu odkaz  
-  
- Program můžete použít více než jednu metodu.  
-  
- Je také možné sestavení knihovny DLL s **KNIHOVNY** příkaz definice modulu. Možnosti /BASE a/DLL společně odpovídají **KNIHOVNY** příkaz.  
-  
- Neurčujte tuto možnost v rámci vývojového prostředí; Tato možnost je použít jenom na příkazovém řádku. Tato možnost nastavená při vytváření projektu knihovny DLL pomocí Průvodce aplikací.  
-  
- Všimněte si, že když vytvoříte své knihovny importu v předběžný krok před vytvořením vaší .dll, je nutné předat stejnou sadu soubory objektů při sestavování .dll, jako předaný při sestavení knihovny importu.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **vlastnosti konfigurace** složky.  
-  
-3.  Klikněte **Obecné** stránku vlastností.  
-  
-4.  Změnit **typ konfigurace** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/DLL
+```
+
+## <a name="remarks"></a>Poznámky
+
+Možnost/DLL sestavení a knihovny DLL jako hlavní výstupního souboru. Knihovny DLL obvykle obsahuje exporty se dají jiným programem. Existují tři metody pro určení exportů uvedené v doporučené pořadí podle používání:
+
+1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
+
+1. [EXPORTY](../../build/reference/exports.md) – příkaz souboru .def
+
+1. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
+
+Program můžete použít více než jednu metodu.
+
+Dalším způsobem, jak sestavit knihovnu DLL se **KNIHOVNY** příkaz definice modulu. Možnosti propojovacího a/DLL společně odpovídají **KNIHOVNY** příkazu.
+
+Tato možnost ve vývojovém prostředí; není zadáno Tato možnost je pro použití pouze v příkazovém řádku. Tato možnost je nastavena při vytváření projektu knihovny DLL pomocí Průvodce aplikací.
+
+Všimněte si, že když vytvoříte knihovny importu v předběžný krok před vytvořením vaší knihovny DLL, je nutné předat stejnou sadu souborů objektů při sestavování knihovny DLL, jako úspěšný při sestavování knihovny importu.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **vlastnosti konfigurace** složky.
+
+1. Klikněte na tlačítko **Obecné** stránku vlastností.
+
+1. Upravit **typ konfigurace** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

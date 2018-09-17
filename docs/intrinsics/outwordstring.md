@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3c49f76175ced83fb9a9b7e72e1c1fc7dbb68e20
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464718"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720665"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Specifické pro Microsoft**  
@@ -41,14 +41,14 @@ void __outwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Port`  
- Port pro odesílání dat na.  
+*Port*<br/>
+[in] Port pro odesílání dat na.  
   
- [in] `Buffer`  
- Ukazatel na data, která mají být odeslány zadaný port.  
+*Vyrovnávací paměti*<br/>
+[in] Ukazatel na data, která mají být odeslány zadaný port.  
   
- [in] `Count`  
- Počet slov k odeslání.  
+*Počet*<br/>
+[in] Počet slov k odeslání.  
   
 ## <a name="requirements"></a>Požadavky  
   

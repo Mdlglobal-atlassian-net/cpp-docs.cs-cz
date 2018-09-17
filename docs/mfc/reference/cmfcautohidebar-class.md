@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719976"
 ---
 # <a name="cmfcautohidebar-class"></a>Cmfcautohidebar – třída
 `CMFCAutoHideBar` Třídy je třída speciální nástrojů, která implementuje funkce automatického skrytí.  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pAutoHideWnd*  
- V okně, které chcete skrýt.  
+*pAutoHideWnd*<br/>
+[in] V okně, které chcete skrýt.  
   
- [in] *dwAlignment*  
- Hodnota, která určuje zarovnání automaticky skrýt tlačítko podle okna aplikace.  
+*dwAlignment*<br/>
+[in] Hodnota, která určuje zarovnání automaticky skrýt tlačítko podle okna aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszClassName*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *dwControlBarStyle*  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
  [in] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nLength*  
- Hodnota se nepoužívá v základní implementaci. V odvozených implementací používejte tuto hodnotu k označení délka změněnou velikostí stavového řádku.  
+*nLength*<br/>
+[in] Hodnota se nepoužívá v základní implementaci. V odvozených implementací používejte tuto hodnotu k označení délka změněnou velikostí stavového řádku.  
   
- [in] *bVert*  
- Hodnota se nepoužívá v základní implementaci. V odvozených implementace, použijte hodnotu PRAVDA, popisovač případ, ve kterém je automatického schovávání panelu svisle sbalený a hodnotu FALSE pro případ, ve kterém je automatického schovávání panelu vodorovně sbalený.  
+*bVert*<br/>
+[in] Hodnota se nepoužívá v základní implementaci. V odvozených implementace, použijte hodnotu PRAVDA, popisovač případ, ve kterém je automatického schovávání panelu svisle sbalený a hodnotu FALSE pro případ, ve kterém je automatického schovávání panelu vodorovně sbalený.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výsledná velikost podokna změněnou velikostí.  

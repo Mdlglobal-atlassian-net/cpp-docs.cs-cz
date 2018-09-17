@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720548"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Cmfcvisualmanagerwindows7 – třída
 `CMFCVisualManagerWindows7` Poskytuje vzhled aplikace Windows 7 aplikace.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pEdit*  
- Ukazatel na ovládací prvek pro úpravy. Tato hodnota nemůže být NULL.  
+*pEdit*<br/>
+[in] Ukazatel na ovládací prvek pro úpravy. Tato hodnota nemůže být NULL.  
   
- [out] *bIsHighlighted*  
- Vrátí, zda se zvýrazní pole pásu karet.  
+*bIsHighlighted*<br/>
+[out] Vrátí, zda se zvýrazní pole pásu karet.  
   
- [out] *bIsPaneHighlighted*  
- Vrátí hodnotu TRUE, pokud na pásu karet panelu, který obsahuje *pEdit* je zvýrazněn.  
+*bIsPaneHighlighted*<br/>
+[out] Vrátí hodnotu TRUE, pokud na pásu karet panelu, který obsahuje *pEdit* je zvýrazněn.  
   
- [out] *bIsDisabled*  
- Vrátí, zda *pEdit* je zakázaná.  
+*bIsDisabled*<br/>
+[out] Vrátí, zda *pEdit* je zakázaná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Barva pozadí textového pole *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení tlačítka s nabídkou.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení tlačítka s nabídkou.  
   
- [in] *pButton*  
- Ukazatel `CMFCToolBarButton`. Rozhraní framework výplně pozadí pro toto tlačítko.  
+*pButton*<br/>
+[in] Ukazatel `CMFCToolBarButton`. Rozhraní framework výplně pozadí pro toto tlačítko.  
   
- [in] *rect*  
- Obdélník, který určuje hranice oblasti obrázek tlačítka nabídky.  
+*Rect*<br/>
+[in] Obdélník, který určuje hranice oblasti obrázek tlačítka nabídky.  
   
- [in] *stavu*  
- Stav tlačítka.  
+*Stav*<br/>
+[in] Stav tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
   

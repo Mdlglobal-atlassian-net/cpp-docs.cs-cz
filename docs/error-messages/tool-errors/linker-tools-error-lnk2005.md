@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2005 | Microsoft Docs
+title: Chyba Linkerů LNK2005 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b20d3037649e99419250f1b3ec4255f2e87e31e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301239"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718819"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Chyba linkerů LNK2005
-*symbol* již definována v objektu  
+
+> *symbol* již definována v objektu  
   
-Symbol *symbol* byl definován více než jednou.   
+Symbol *symbol* byl definován více než jednou.
   
-Tato chyba je následován závažná chyba [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
+Tato chyba je následována závažná chyba [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
   
 ### <a name="possible-causes-and-solutions"></a>Možné příčiny a řešení  
   
-Obecně platí, tato chyba znamená, mají poškozen *jednu definici pravidla*, což umožňuje jenom jednu definici pro použité šablony, funkce, typ nebo objekt v souboru daného objektu a pouze jednu definici napříč celou spustitelný soubor pro externě zobrazené objekty nebo funkce.  
+Obecně platí, tato chyba znamená mají poškozen *jednu definici pravidla*, což umožňuje jenom jednu definici pro použité šablony, funkce, typ nebo objekt v souboru daný objekt a jenom jednu definici napříč celou spustitelný soubor pro externě viditelný objekty nebo funkce.  
   
 Tady jsou některé běžné příčiny této chyby.  
   
--   Této chybě může dojít, pokud soubor hlaviček definuje proměnnou. Například pokud zahrnete více než jeden zdrojový soubor tento soubor hlaviček v projektu, vrátí chybu:  
+-   Této chybě může dojít, když soubor hlaviček definuje proměnnou. Například pokud zahrnete více než jednom zdrojovém souboru tento soubor hlaviček v projektu, vrátí chybu:  
   
     ```h  
     // LNK2005_global.h  
@@ -45,13 +46,13 @@ Tady jsou některé běžné příčiny této chyby.
   
     Možná řešení patří:  
   
-    -   Deklarovat proměnnou `extern` v záhlaví souboru: `extern int global_int;`, pak je definujte a volitelně provést jeho inicializaci v jediném zdrojový soubor: `int global_int = 17;`. Tato proměnná je nyní globální konfiguraci, můžete použít v jakékoli zdrojový soubor deklarací `extern`, například zahrnutím soubor hlaviček. Doporučujeme, abyste toto řešení pro proměnné, které musí být globální, ale dobrý inženýrství softwaru postup minimalizuje globální proměnné.  
+    -   Deklarujte proměnnou `extern` v souboru hlaviček: `extern int global_int;`, pak je definujte a volitelně inicializovat v jednom a pouze jeden zdrojový soubor: `int global_int = 17;`. Tato proměnná je globální, můžete použít v libovolného zdrojového souboru deklarováním `extern`, například zahrnutím souboru hlaviček. Doporučujeme, abyste toto řešení pro proměnné, které musí být globální, ale vhodné softwarového inženýrství postup minimalizuje globální proměnné.  
     
-    -   Deklarovat proměnnou [statické](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Omezuje oboru definice aktuální objekt souboru a umožňuje více souborů objekt má své vlastní kopie proměnnou. Není doporučeno, že definujete statické proměnné v hlavičkových souborů z důvodu nedorozuměním s globální proměnné. Přednost přesunout statické proměnné definice do zdrojových souborů, které je používají.  
+    -   Deklarujte proměnnou [statické](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Omezuje rozsah definici pro aktuální soubor objektu a umožňuje více souborů objekt má své vlastní kopii proměnné. Nedoporučujeme definovat statické proměnné v souborech hlaviček z důvodu předešli nedorozuměním s globálními proměnnými. Raději k přesunutí definice statických proměnných do zdrojové soubory, které je používají.  
   
-    -   Deklarovat proměnnou [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. Tato hodnota informuje linkeru a vyberte jednu definici pro použití ve všech externích odkazů a vyřadí zbývající. Toto řešení je užitečné, někdy při kombinování knihoven importovat. Jinak nedoporučujeme ji jako způsob, jak se vyhnout se chybám linkeru.  
+    -   Deklarujte proměnnou [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. Toto dá linkeru pokyn, vyberte jednu definici pro použití podle všechny externí odkazy a zrušit zbývající. Toto řešení je někdy užitečné při kombinování knihovny importu. V opačném případě nedoporučujeme ji tak, aby nedocházelo k chybám linkeru.  
   
--   K této chybě může dojít, když soubor hlaviček definuje funkci, která není `inline`. Pokud tento soubor hlaviček zahrnete do více než jeden zdrojový soubor, získáte více definice funkce v spustitelný soubor.  
+-   Této chybě může dojít, když soubor hlaviček definuje funkci, která není `inline`. Pokud zahrnete více než jednom zdrojovém souboru tento soubor hlavičky, získáte více definicí funkce ve spustitelném souboru.  
     
     ```h  
     // LNK2005_func.h  
@@ -60,14 +61,14 @@ Tady jsou některé běžné příčiny této chyby.
   
     Možná řešení patří:  
   
-    -   Přidat `inline` – klíčové slovo funkce: 
+    -   Přidat `inline` klíčové funkce: 
 
         ```h  
         // LNK2005_func_inline.h  
         inline int sample_function(int k) { return 42 * (k % 167); }  
         ```  
   
-    -   Odeberte tělo funkce z hlavičky souboru a ponechat jenom deklarace a pak implementovat funkce v jediném zdrojového souboru:  
+    -   Odeberte tělo funkce ze souboru hlaviček a ponechat jenom deklarace a pak implementovat funkci v jeden a pouze jeden zdrojový soubor:  
   
         ```h  
         // LNK2005_func_decl.h  
@@ -78,7 +79,7 @@ Tady jsou některé běžné příčiny této chyby.
         // LNK2005_func_impl.cpp  
         int sample_function(int k) { return 42 * (k % 167); }  
         ```  
--   Této chybě může dojít také při definování členské funkce mimo deklaraci třídy v záhlaví souboru:  
+-   Této chybě může dojít také při definování členské funkce mimo deklaraci třídy v souboru hlaviček:  
   
     ```h  
     // LNK2005_member_outside.h  
@@ -89,7 +90,7 @@ Tady jsou některé běžné příčiny této chyby.
     int Sample::sample_function(int k) { return 42 * (k % 167); }  // LNK2005
     ```  
   
-    Chcete-li tento problém vyřešit, přesuňte definice funkcí člen uvnitř třídy. Členské funkce definované uvnitř deklaraci třídy jsou implicitně vložená.  
+    Chcete-li opravit tento problém, přesuňte definice členské funkce uvnitř třídy. Členské funkce definované uvnitř deklarace třídy jsou implicitně vložená.  
   
     ```h  
     // LNK2005_member_inline.h  
@@ -99,34 +100,34 @@ Tady jsou některé běžné příčiny této chyby.
     };
     ```  
   
--   Této chybě může dojít, pokud jste více než jedna verze standardní knihovny nebo CRT. Například pokud se pokusíte maloobchodní a knihovny ladění CRT i statické a dynamické verze knihovny nebo dvě různé verze standardní knihovny propojit váš spustitelný soubor, tato chyba se může hlásit mnohokrát. Chcete-li tento problém vyřešit, odeberte všechny kromě jednoho kopírování jednotlivých knihoven z příkaz odkaz. Nedoporučujeme kombinovat maloobchodní a ladění knihoven nebo různé verze knihovny, ve stejném spustitelný soubor.  
+-   Této chybě může dojít, pokud připojíte více než jedna verze standardní knihovny nebo CRT. Například pokud budete chtít propojit jak maloobchodní a knihovny ladění CRT nebo statické a dynamické verze knihovny nebo dvě různé verze knihovny standard spustitelný soubor, tato chyba může být nahlášeno v mnoha případech. Chcete-li vyřešit tento problém, odeberte všechny kopie krom jedné každou knihovnu z příkazu link. Nedoporučujeme kombinovat maloobchodního prodeje a ladění knihoven nebo různými verzemi knihovny ve stejném spustitelném souboru.  
   
-    Říct linkeru používat knihovny než výchozí hodnoty, na příkazovém řádku zadejte knihovny, které chcete použít a použít [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) možnost zakázat výchozí knihovny. V prostředí IDE, přidáte odkazy na projekt k určení knihovny, které chcete použít a pak otevřete **stránky vlastností** dialogové okno pro svůj projekt a v **Linkeru**, **vstup** vlastnost Nastavte buď **ignorovat všechny výchozí knihovny**, nebo **ignorovat konkrétní výchozí knihovny** vlastnosti, které chcete zakázat výchozí knihovny.   
+    Sdělí linkeru, aby používat knihovny jiné než výchozí hodnoty, na příkazovém řádku zadejte knihoven, které chcete použít a použít [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) možnost zakázat výchozí knihovny. V integrovaném vývojovém prostředí, přidejte odkazy do projektu k určení knihovny, které chcete použít a pak otevřete **stránky vlastností** dialogové okno pro váš projekt a **Linkeru**, **vstup** vlastnost Nastavte buď **ignorovat všechny výchozí knihovny**, nebo **ignorovat konkrétní výchozí knihovny** vlastnosti, které chcete zakázat výchozí knihovny.   
   
--   Této chybě může dojít, pokud zároveň použití statické a dynamické knihovny při použití [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) možnost. Například této chybě může dojít, pokud vytváření knihovny DLL pro použití v vaší spustitelný soubor odkazující v statické CRT. Chcete-li tento problém vyřešit, použijte pouze statické knihovny nebo jenom dynamické knihovny pro celý spustitelný soubor a pro všechny knihovny, které vytvoříte pro použití v spustitelný soubor.  
+-   K této chybě může dojít, pokud je kombinovat používání statické a dynamické knihovny, při použití [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) možnost. Této chybě může dojít například při vytváření knihovny DLL pro použití v spustitelný soubor, který odkazuje ve statické CRT. Chcete tento problém vyřešit, použijte pouze statické knihovny nebo pouze dynamické knihovny pro celý spustitelný soubor a všechny knihovny, kterou můžete používat ve spustitelném souboru.  
   
--   Této chybě může dojít, pokud symbol je zabalené funkce (vytvořený kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md)) a je zahrnutý ve víc než jeden soubor, ale byl změněn mezi kompilace. Chcete-li tento problém vyřešit, znovu zkompiluje všechny soubory, které zahrnují zabalené funkce.  
+-   K této chybě může dojít, pokud symbol je zabalenou funkcí (vytvořené kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md)) a je zahrnutý v více než jeden soubor, ale byl změněn mezi kompilacemi. Chcete-li vyřešit tento problém, znovu zkompilujte všechny soubory, které zahrnují zabalené funkce.  
   
--   Této chybě může dojít, pokud symbol je definována jinak v dva objekty člen v různé knihovny, a obě člen objekty se používají. Jeden způsob, jak tento problém vyřešit, když jsou staticky propojené knihovny je použít objekt člena z jenom jeden knihovny, a musí zahrnovat této knihovny nejdřív na příkazový řádek linkeru. Pokud chcete používat obě symboly, je nutné vytvořit způsob, jak je odlišili. Například můžete vytvořit knihovny ze zdroje, může obtékat jednotlivých knihoven v jedinečný obor názvů. Alternativně můžete vytvořit novou obálku knihovnu, která používá jedinečné názvy zabalení odkazy na jednu z původní knihovny, propojit původní knihovna nové knihovny a pak propojte spustitelný soubor do nové knihovny místo původní knihovna.  
+-   Této chybě může dojít, pokud symbol je definována odlišně v dva členské objekty v jiných knihovnách a obě členské objekty se používají. Jedním ze způsobů chcete opravit tento problém, když jsou staticky propojené knihovny je použijte členského objektu z jediného knihovny a zahrňte tuto knihovnu nejprve do příkazového řádku linkeru. Pokud chcete použít obě symboly, musíte vytvořit způsob, jak odlišit. Pokud vytváříte knihovnu ze zdroje, můžete zabalit každou knihovnu v jedinečný obor názvů. Alternativně můžete vytvořit novou knihovnu obálky, který používá k zabalení odkazy na jednu z původní knihovny, odkaz nové knihovny původní knihovny, a potom odkaz spustitelný soubor do nové knihovny namísto původní knihovna jedinečné názvy.  
   
--   Této chybě může dojít, pokud `extern const` proměnné je definován dvakrát a má v každé definici jinou hodnotu. Chcete-li tento problém vyřešit, definovat konstantní jen jednou nebo použijte obory názvů nebo `enum class` definice k rozlišení konstanty.  
+-   K této chybě může dojít, pokud `extern const` proměnná je definována dvakrát a má jinou hodnotu v každé definici. Chcete-li vyřešit tento problém, definovat konstantní pouze jednou, nebo použití oborů názvů nebo `enum class` definice k rozlišení konstanty.  
   
--   Této chybě může dojít, pokud používáte uuid.lib v kombinaci s ostatními soubory .lib, které definují identifikátory GUID (například oledb.lib a adsiid.lib). Příklad:  
+-   K této chybě může dojít, pokud použijete uuid.lib v kombinaci s jinými soubory LIB, které definují GUID (například oledb.lib a adsiid.lib). Příklad:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
     already defined in uuid.lib(go7.obj)  
     ```  
   
-     Chcete-li tento problém vyřešit, přidejte [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) možnosti příkazového řádku linkeru a ujistěte se, že tento uuid.lib je první knihovny odkazuje.
+     Chcete-li tento problém vyřešit, přidejte [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) možnosti příkazového řádku linkeru a ujistěte se, že je tento uuid.lib první knihovna odkazuje.
   
 ## <a name="additional-information"></a>Další informace  
   
-Pokud používáte starší verzi sady nástrojů, naleznete v článcích znalostní báze Knowledge Base další informace o konkrétní příčiny této chyby:  
+Pokud používáte starší verzi sady nástrojů, najdete v článcích znalostní báze pro další informace o konkrétní příčiny této chyby:  
   
--   [LNK2005 chyba nastane, když jsou v nesprávném pořadí v jazyce Visual C++ propojené knihovny CRT a knihovny MFC](https://support.microsoft.com/kb/148652)  
+-   [Chyba LNK2005 nastane, pokud jsou v nesprávném pořadí, v jazyce Visual C++ propojené knihovny CRT a knihovny MFC](https://support.microsoft.com/kb/148652)  
   
--   [Oprava: Globální přetížené odstranit operátor příčiny LNK2005](https://support.microsoft.com/kb/140440)  
+-   [Oprava: Globální přetížené Delete – operátor způsobí, že LNK2005](https://support.microsoft.com/kb/140440)  
   
--   [Při kompilaci projektu knihovny ATL spustitelný soubor (.exe) v jazyce Visual C++, zobrazí se chyba LNK2005](https://support.microsoft.com/kb/184235).  
+-   [Pokud kompilujete projekt knihovny ATL spustitelný soubor (.exe) v jazyce Visual C++ se zobrazí chyby LNK2005](https://support.microsoft.com/kb/184235).  
   

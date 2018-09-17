@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719287"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Ukazatel na metodu obslužné rutiny události pro připojeny k události. Obslu
 
 - Spravované události: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.
 
-*příjemce* (volitelné)<br/>
-Ukazatel na instanci třídy příjemce událostí. Pokud nezadáte příjemce, výchozí hodnota je příjemce třídu nebo strukturu, ve kterém **__hook** je volána.
+*Příjemce*<br/>
+(Volitelné) Ukazatel na instanci třídy příjemce událostí. Pokud nezadáte příjemce, výchozí hodnota je příjemce třídu nebo strukturu, ve kterém **__hook** je volána.
 
 ## <a name="usage"></a>Použití
 

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720223"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Cmfcdesktopalertwnd – třída
 `CMFCDesktopAlertWnd` Třída implementuje funkce nemodálního dialogového okno, které se zobrazí na obrazovce a informuje uživatele o události.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Určuje vlastníka okně oznámení. Tento vlastník pak dostanou všechna oznámení pro okno výstrah plochy. Tato hodnota nemůže být NULL.  
   
- [in] *uiDlgResID*  
- Určuje ID prostředku okna výstrahy.  
+*uiDlgResID*<br/>
+[in] Určuje ID prostředku okna výstrahy.  
   
- [in] *hMenu*  
- Určuje nabídku, která se zobrazí, když uživatel klikne na tlačítko nabídky. Pokud má hodnotu NULL, není zobrazeno tlačítko nabídky.  
+*hMenu*<br/>
+[in] Určuje nabídku, která se zobrazí, když uživatel klikne na tlačítko nabídky. Pokud má hodnotu NULL, není zobrazeno tlačítko nabídky.  
   
- [in] *ptPos*  
- Určuje počáteční pozici, kde se zobrazí okno výstrahy, pomocí souřadnice obrazovky. Pokud je tento parametr (-1, -1), okno upozornění se zobrazí v pravém dolním rohu obrazovky.  
+*ptPos*<br/>
+[in] Určuje počáteční pozici, kde se zobrazí okno výstrahy, pomocí souřadnice obrazovky. Pokud je tento parametr (-1, -1), okno upozornění se zobrazí v pravém dolním rohu obrazovky.  
   
- [in] *pRTIDlgBar*  
- Informace o třídě modulu runtime pro vlastní třídy dialogového okna, která zahrnuje klientské oblasti okna výstrahy.  
+*pRTIDlgBar*<br/>
+[in] Informace o třídě modulu runtime pro vlastní třídy dialogového okna, která zahrnuje klientské oblasti okna výstrahy.  
   
- [in] *parametry*  
- Určuje parametry, které se používají k vytvoření výstrahy okna.  
+*params*<br/>
+[in] Určuje parametry, které se používají k vytvoření výstrahy okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud okno upozornění se úspěšně; vytvořil. v opačném případě hodnota FALSE.  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Tento parametr není používán.  
+*uiCmdID*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy hodnotu FALSE.  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wParam*  
- [in] *lParam*  
+*wParam*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nSpeed*  
- Určuje novou rychlost animace v milisekundách.  
+*nSpeed*<br/>
+[in] Určuje novou rychlost animace v milisekundách.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit rychlost animace okna výstrahy. Rychlost animace výchozí doba je 30 milisekund.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *typu*  
- Určuje typ animace.  
+*Typ*<br/>
+[in] Určuje typ animace.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit typ animace. Můžete určit jednu z následujících hodnot:  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTime*  
- Doba v milisekundách, který uplyne mezi výstrah okno automaticky zavře.  
+*nTime*<br/>
+[in] Doba v milisekundách, který uplyne mezi výstrah okno automaticky zavře.  
   
 ### <a name="remarks"></a>Poznámky  
  Okno výstrahy se automaticky ukončí po zadanou dobu, pokud uživatel nekomunikuje s oknem.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSmallCaption*  
- TRUE, pokud chcete určit, že okno výstrah zobrazí malé titulek; v opačném případě FALSE, pokud chcete určit, že výstrahy okně se zobrazí popisek normální velikosti.  
+*bSmallCaption*<br/>
+[in] TRUE, pokud chcete určit, že okno výstrah zobrazí malé titulek; v opačném případě FALSE, pokud chcete určit, že výstrahy okně se zobrazí popisek normální velikosti.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu pro zobrazení titulků malé nebo normální velikosti. Ve výchozím nastavení je malé titulek 7 pixelů na výšku. Velikost regulární titulek lze získat voláním funkce rozhraní Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTransparency*  
- Určuje úroveň průhlednosti. Tato hodnota musí být mezi 0 a 255. Vyšší hodnota, další neprůhledné okna.  
+*nTransparency*<br/>
+[in] Určuje úroveň průhlednosti. Tato hodnota musí být mezi 0 a 255. Vyšší hodnota, další neprůhledné okna.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce nastavíte úroveň průhlednosti v automaticky otevíraném okně.  

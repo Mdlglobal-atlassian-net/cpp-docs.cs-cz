@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720268"
 ---
 # <a name="cmousemanager-class"></a>Cmousemanager – třída
 Umožňuje uživateli přidružit různé příkazy ke konkrétním [CView](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř daného zobrazení.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- ID zobrazení  
+*iViewId*<br/>
+[in] ID zobrazení  
   
- [in] *uiViewNameResId*  
- ID prostředku řetězce, který odkazuje na název zobrazení.  
+*uiViewNameResId*<br/>
+[in] ID prostředku řetězce, který odkazuje na název zobrazení.  
   
- [in] *uiIconId*  
- ID ikony zobrazení  
+*uiIconId*<br/>
+[in] ID ikony zobrazení  
   
- [in] *iId*  
- ID zobrazení  
+*identifikátor iId*<br/>
+[in] ID zobrazení  
   
- [in] *lpszViewName*  
- Název zobrazení.  
+*lpszViewName*<br/>
+[in] Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iId*  
- ID zobrazení.  
+*identifikátor iId*<br/>
+[in] ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor příkazu, pokud zobrazení je spojen s příkazem; jinak 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- ID zobrazení.  
+*iViewId*<br/>
+[in] ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor prostředku ikony v případě úspěchu; jinak 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název zobrazení.  
+*lpszName*<br/>
+[in] Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  ID zobrazení v případě úspěchu; jinak 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *listOfNames*  
- Odkaz na `CStringList` objektu.  
+*listOfNames*<br/>
+[out] Odkaz na `CStringList` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyplní parametr `listOfNames` s názvy všech registrovaných pomocí zobrazení [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Cesta klíče registru.  
+*lpszProfileName*<br/>
+[in] Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Cesta klíče registru.  
+*lpszProfileName*<br/>
+[in] Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- Identifikátor zobrazení.  
+*iViewId*<br/>
+[in] Identifikátor zobrazení.  
   
- [in] *uiCmd*  
- Identifikátor příkazu.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
  Aby bylo možné přidružit k zobrazení vlastního příkazu, musíte se nejprve zaregistrovat zobrazení pomocí [CMouseManager::AddView](#addview). `AddView` Metoda vyžaduje zobrazení identifikátor jako vstupní parametr. Jakmile si zaregistrujete zobrazení, můžete volat `CMouseManager::SetCommandForDblClk` pomocí stejného zobrazení identifikátor vstupní parametr, který jste zadali do `AddView`. Po tomto datu, když uživatel pokliká myší v registrovaných zobrazení, aplikace se provést příkaz indikován *uiCmd.* Pro podporu myši vlastní chování, bude také muset přizpůsobit zobrazení zaregistrované pomocí myši správce. Další informace týkající se myši vlastní chování najdete v tématu [přizpůsobení klávesnice a myši](../keyboard-and-mouse-customization.md).  

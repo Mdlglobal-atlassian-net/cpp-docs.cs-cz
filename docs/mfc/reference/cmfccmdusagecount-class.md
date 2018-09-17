@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853761"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719963"
 ---
 # <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount – třída
 Sleduje počet použití zpráv Windows, například když uživatel vybere položku z nabídky.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *uiCmd*|Určuje příkaz čítače se zvýší.|  
+|*uiCmd*|[in] Určuje příkaz čítače se zvýší.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přidá novou položku do mapy struktury příkaz počty `m_CmdUsage`, pokud položka už neexistuje.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *uiCmd*|ID čítač příkaz pro načtení.|  
+|*uiCmd*|[in] ID čítač příkaz pro načtení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet použití, který je přidružen ID daného příkazu.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *uiCmd*|Určuje příkaz a zkontrolujte.|  
+|*uiCmd*|[in] Určuje příkaz a zkontrolujte.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud příkaz se často používá; jinak 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *ar*|A `CArchive` objektu určeného k serializaci z nebo do.|  
+|*ar*|[in] A `CArchive` objektu určeného k serializaci z nebo do.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda serializuje strukturu mapy příkaz počty `m_CmdUsage`a použití celkový příkazu `m_nTotalUsage`, čítač z nebo do zadaného archivu.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *nStartCount*|Nový počáteční počet všechny sledované příkazy.|  
-|[in] *nMinUsagePercentage*|Nový minimální využití je procento.|  
+|*nStartCount*|[in] Nový počáteční počet všechny sledované příkazy.|  
+|*nMinUsagePercentage*|[in] Nový minimální využití je procento.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje, FALSE-li *nMinUsagePercentage* parametr je větší než nebo rovna 100.  

@@ -1,5 +1,5 @@
 ---
-title: -vmb, - vmg (metoda reprezentace) | Microsoft Docs
+title: -vmb, - vmg (metoda reprezentace) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,44 +23,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5263b6c7ca227a10b34c32e0b0801eeddf07b9cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a95081dfb417711002039727b04d1916c5fe0a14
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377180"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720574"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (metoda reprezentace)
-Vyberte metodu, kterou kompilátor používá k reprezentaci ukazatelů na členy třídy.  
-  
- Použití **/vmb** Pokud vždy před je definovat třídu deklarovat ukazatele na člena třídy.  
-  
- Použití **/vmg** deklarovat ukazatele na člena třídy před definováním třídy. Pokud definujete členy v dvěma různými třídami, které odkazují na sobě navzájem, může dojít k tohoto požadavku. Pro tyto třídy vzájemně odkazující musí odkazovat jednu třídu dříve, než je definován.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/vmb  
-/vmg  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Můžete také použít [pointers_to_members –](../../preprocessor/pointers-to-members.md) nebo [klíčová slova dědičnosti](../../cpp/inheritance-keywords.md) ve vašem kódu k určení znázornění ukazatele.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Vyberte metodu, kterou kompilátor používá k reprezentaci ukazatele na členy třídy.
+
+Použití **/vmb** Pokud vždy definujete třídu před deklarovat ukazatel na člen třídy.
+
+Použití **/vmg** k deklaraci ukazatele na člen třídy před definováním třídy. Tyto potřeby může nastat, pokud definujete členy ve dvou různých tříd, které odkazují na sebe navzájem. Jednu třídu pro takové vzájemně referenční třídy, musí se odkazovat dříve, než je definován.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/vmb
+/vmg
+```
+
+## <a name="remarks"></a>Poznámky
+
+Můžete také použít [pointers_to_members](../../preprocessor/pointers-to-members.md) nebo [klíčová slova dědičnosti](../../cpp/inheritance-keywords.md) v kódu k určení reprezentaci ukazatele.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

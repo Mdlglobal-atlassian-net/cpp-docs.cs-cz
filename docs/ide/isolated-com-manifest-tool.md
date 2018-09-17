@@ -17,34 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216377"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720093"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Izolované modely COM, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností projektu
 Použít toto dialogové okno k zadání **izolovaná komponenta COM** možnosti pro [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Pro přístup k této dialogové okno stránky vlastností, otevřete stránky vlastností projektu, nebo seznam vlastností. Rozbalte **Nástroj Manifest** pod uzlem **společné vlastnosti**a pak vyberte **izolovaná komponenta COM**.  
+Pro přístup k této dialogové okno stránky vlastností, otevřete stránky vlastností projektu, nebo seznam vlastností. Rozbalte **Nástroj Manifest** pod uzlem **společné vlastnosti**a pak vyberte **izolovaná komponenta COM**.  
   
 ## <a name="task-list"></a>Seznam úloh  
   
 -   [Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Soubor knihovny typů**  
- Pomocí možnosti/tlb lze zadat název souboru knihovny typů (souboru .tlb), který nástroj manifest použije k vygenerování souboru manifestu.  
+- **Soubor knihovny typů**
+
+   Pomocí možnosti/tlb lze zadat název souboru knihovny typů (souboru .tlb), který nástroj manifest použije k vygenerování souboru manifestu.  
   
- **Soubor skriptu registrátoru**  
- Rgs používá k určení názvu soubor skriptu registrátoru (souboru .rgs), nástroj manifest použije k vygenerování souboru manifestu.  
+- **Soubor skriptu registrátoru**
+
+   Rgs používá k určení názvu soubor skriptu registrátoru (souboru .rgs), nástroj manifest použije k vygenerování souboru manifestu.  
   
- **Název souboru komponenty**  
- Možnost/DLL používá k určení názvu prostředku, který vygeneruje nástroj manifest. Musíte zadat hodnotu pro tuto vlastnost při hodnoty pro buď **soubor knihovny typů** nebo **soubor skriptu registrátoru** jsou uvedeny.  
+- **Název souboru komponenty**
+
+   Možnost/DLL používá k určení názvu prostředku, který vygeneruje nástroj manifest. Musíte zadat hodnotu pro tuto vlastnost při hodnoty pro buď **soubor knihovny typů** nebo **soubor skriptu registrátoru** jsou uvedeny.  
   
- **Soubor náhrad**  
- Pomocí replacements Určuje úplnou cestu k souboru, který obsahuje hodnoty pro nahraditelné řetězce v souboru .rgs.  
+- **Soubor náhrad**
+
+   Pomocí replacements Určuje úplnou cestu k souboru, který obsahuje hodnoty pro nahraditelné řetězce v souboru .rgs.  
   
 ## <a name="see-also"></a>Viz také  
  [Izolované aplikace](/windows/desktop/SbsCs/isolated-applications)   

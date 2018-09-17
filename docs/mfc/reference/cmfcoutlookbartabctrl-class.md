@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465216"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718260"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Cmfcoutlookbartabctrl – třída
 Ovládací prvek karty, která má vzhled **navigačním podokně** v aplikaci Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndCtrl*  
- Ukazatel na ovládací prvek pro přidání.  
+*pWndCtrl*<br/>
+[in] Ukazatel na ovládací prvek pro přidání.  
   
- [in] *lpszName*  
- Určuje název karty.  
+*lpszName*<br/>
+[in] Určuje název karty.  
   
- [in] *bDetachable*  
- Při hodnotě TRUE se na stránce se vytvoří na jako odpojitelných.  
+*bDetachable*<br/>
+[in] Při hodnotě TRUE se na stránce se vytvoří na jako odpojitelných.  
   
- [in] *nImageID*  
- Index obrázku v seznamu interní image pro image, který se má zobrazit v nové záložce.  
+*nImageID*<br/>
+[in] Index obrázku v seznamu interní image pro image, který se má zobrazit v nové záložce.  
   
- [in] *dwControlBarStyle*  
- Určuje styl AFX_ CBRS_ * zabalené ukotvitelných podoken.  
+*dwControlBarStyle*<br/>
+[in] Určuje styl AFX_ CBRS_ * zabalené ukotvitelných podoken.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci použijte k přidání ovládacího prvku na novou stránku panel aplikace outlook.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- Určuje počáteční velikost a umístění v pixelech.  
+*Rect*<br/>
+[in] Určuje počáteční velikost a umístění v pixelech.  
   
- [in] *pParentWnd*  
- Body do nadřazeného okna. Nesmí mít hodnotu NULL.  
+*pParentWnd*<br/>
+[in] Body do nadřazeného okna. Nesmí mít hodnotu NULL.  
   
- [in] *nID*  
- ID ovládacího prvku.  
+*nID*<br/>
+[in] ID ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud ovládací prvek se úspěšně vytvořila; jinak 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Určuje, zda by měl být animace povoleno nebo zakázáno.  
+*bEnable*<br/>
+[in] Určuje, zda by měl být animace povoleno nebo zakázáno.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této funkce můžete povolit nebo zakázat animace. Když uživatel otevře kartu, snímky popisek na stránku nahoru nebo dolů Pokud je povolené animace. Pokud je animace je zakázané, na stránce aktivují okamžitě.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Určuje, zda jsou zobrazena tlačítka pro posunutí.  
+*bEnable*<br/>
+[in] Určuje, zda jsou zobrazena tlačítka pro posunutí.  
   
- [in] *bIsUp*  
- Určuje, zda je zobrazen posuvník nejvyšší.  
+*bIsUp*<br/>
+[in] Určuje, zda je zobrazen posuvník nejvyšší.  
   
- [in] *bIsDown*  
- Určuje, zda je zobrazen posuvník dolní části.  
+*bIsDown*<br/>
+[in] Určuje, zda je zobrazen posuvník dolní části.  
   
 ### <a name="remarks"></a>Poznámky  
  Umožňuje zobrazovat tlačítka pro posunutí. Tato metoda je volána rozhraním, když se změní na aktivní kartě obnovení tlačítka pro posunutí.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Index založený na nule kartě Otevřít.  
+*iTab*<br/>
+[in] Index založený na nule kartě Otevřít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud zadaný kartu se otevřelo úspěšně; jinak 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nBorderSize*  
- Určuje novou velikost ohraničení v pixelech.  
+*nBorderSize*<br/>
+[in] Určuje novou velikost ohraničení v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastaví novou velikost ohraničení a přepočítá rozložení okna aplikace outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiAlign*  
- Určuje zarovnání textu.  
+*uiAlign*<br/>
+[in] Určuje zarovnání textu.  
   
- [in] *bRedraw*  
- Pokud je hodnota TRUE, bude se měl překreslit okno aplikace outlook.  
+*bRedraw*<br/>
+[in] Pokud je hodnota TRUE, bude se měl překreslit okno aplikace outlook.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete změnit zarovnání textu pro stránky, tlačítka.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Určuje ID prostředku bitové kopie k načtení.  
+*uiID*<br/>
+[in] Určuje ID prostředku bitové kopie k načtení.  
   
- [in] *cx*  
- Určuje šířku obrázku v seznamu obrázku v pixelech.  
+*CX*<br/>
+[in] Určuje šířku obrázku v seznamu obrázku v pixelech.  
   
- [in] *clrTransp*  
- Hodnota RGB, která určuje průhlednou barvu.  
+*clrTransp*<br/>
+[in] Hodnota RGB, která určuje průhlednou barvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE v případě úspěchu; v opačném případě vrátí hodnotu FALSE.  

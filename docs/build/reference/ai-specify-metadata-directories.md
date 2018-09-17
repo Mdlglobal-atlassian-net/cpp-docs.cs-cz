@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f932e186630d1bc6c846c78af99f98262861068
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716585"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Zadat adresáře metadat)
 
@@ -42,6 +42,7 @@ Určuje adresář, který kompilátor bude vyhledávání pro přeložení refer
 Adresář nebo cesta, které má kompilátor prohledat.
 
 ## <a name="remarks"></a>Poznámky
+
 Lze předat pouze jeden adresář **/AI** vyvolání. Zadejte jednu **/AI** možnost pro každou cestu, kterou má kompilátor prohledat. Například pro přidání do vyhledávací cesty kompilátoru C:\Project\Meta a C:\Common\Meta `#using` direktivy, přidejte `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` do příkazového řádku kompilátoru nebo přidejte všechny adresáře do **další # adresáře using** Vlastnost v sadě Visual Studio.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
@@ -58,6 +59,6 @@ Lze předat pouze jeden adresář **/AI** vyvolání. Zadejte jednu **/AI** mož
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
 [#using – direktiva](../../preprocessor/hash-using-directive-cpp.md)

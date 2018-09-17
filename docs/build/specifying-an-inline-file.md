@@ -1,5 +1,5 @@
 ---
-title: Zadání vloženého souboru | Microsoft Docs
+title: Zadání vloženého souboru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720561"
 ---
 # <a name="specifying-an-inline-file"></a>Zadání vloženého souboru
-Zadejte dvě lomené závorky (<<) v příkazu kde *filename* se má zobrazit. Makro rozšíření nemůže být lomené závorky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Při spuštění příkazu se nahrazují lomené závorky *filename*, pokud zadaný nebo jedinečný název generované NMAKE. -Li zadána, *filename* musí následovat lomené závorky bez mezera nebo kartě. Cestu je povolená. Žádné rozšíření je požadovaná nebo předpokládá, že. Pokud *filename* je zadaný soubor je vytvořen v aktuální nebo zadaný adresář přepsal všechny existující soubor s tímto názvem; jinak, je vytvořen v adresáři TMP (nebo v aktuálním adresáři, pokud TMP proměnné prostředí není definována). Pokud předchozí *filename* je opakovaně, NMAKE nahradí předchozí soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory vložené do souboru pravidel](../build/inline-files-in-a-makefile.md)
+
+Zadejte dva lomené závorky (<<) v příkazu kde *filename* se zobrazí. Lomené závorky nemůže být rozšíření makra.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Při spuštění příkazu lomené závorky jsou nahrazené *filename*, pokud zadaný, nebo jedinečný název generovaný NMAKE. Je-li zadána, *filename* musí následovat ostrých závorek bez mezera nebo tabulátor. Smí obsahovat cestu. Bez přípony je vyžaduje nebo předpokládá, že. Pokud *filename* není zadán, soubor je vytvořen v aktuální nebo zadaný adresář, přepíše všechny existující soubor s tímto názvem; v opačném případě se vytvoří v adresáři TMP (nebo aktuálního adresáře, pokud TMP proměnné prostředí není definovaný). Pokud předchozí *filename* je znovu použít, NMAKE nahradí předchozí soubor.
+
+## <a name="see-also"></a>Viz také
+
+[Soubory vložené do souboru pravidel](../build/inline-files-in-a-makefile.md)

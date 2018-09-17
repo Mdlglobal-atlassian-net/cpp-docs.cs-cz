@@ -1,5 +1,5 @@
 ---
-title: Jak BSCMAKE sestavení. Souboru BSC | Microsoft Docs
+title: 'Postupy: sestavení BSCMAKE. Soubor BSC | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdc8a2840e3beb1272b33b2794f70a979684f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aadf3b29b0714cc47850e177ebe6e1d0e54df784
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719430"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Postupy: Sestavení souboru BSC programem BSCMAKE
-BSCMAKE sestavení nebo znovu sestaví souboru BSC nejefektivnějším způsobem, může to. Aby nedocházelo k problémům, je důležité si uvědomit, procesu sestavení.  
-  
- Při BSCMAKE sestavení soubor s informacemi o procházení, zkrátí soubory .sbr nule délka. Během následných sestavení stejného souboru soubor .sbr nulové délky (nebo je prázdný) informuje BSCMAKE, zda má soubor .sbr bez nového příspěvku aby. Umožňuje BSCMAKE vědět, že aktualizace té části souboru se nevyžaduje a přírůstkové sestavení jsou dostatečné. Při každé sestavení (Pokud je zadána možnost/n), BSCMAKE se nejprve pokusí přírůstkově aktualizovat soubor pomocí pouze .sbr soubory, které se změnily.  
-  
- BSCMAKE hledá .bsc soubor, který má zadaný název s parametrem /o. Pokud není zadán /o, BSCMAKE vyhledá soubor, který má základní název první soubor .sbr a .bsc rozšíření. Pokud soubor existuje, provede BSCMAKE informačního souboru procházet pomocí přispívajících soubory .sbr přírůstkové sestavení. Pokud soubor neexistuje, BSCMAKE provede úplné sestavení pomocí všechny soubory .sbr. Pravidla pro sestavení jsou následující:  
-  
--   Pro úplnou sestavení proběhla úspěšně všechny zadané soubory .sbr musí existovat a nesmí se zkrátila. Pokud se zkrátí souboru .sbr, je nutné znovu sestavit ho (pomocí nutnosti rekompilace nebo sestavení) před spuštěním nástroje BSCMAKE.  
-  
--   Pro přírůstkové sestavení úspěšné musí existovat souboru BSC programem. Všechny přispívajících soubory .sbr, dokonce i prázdné soubory, musí existovat a musí být zadán v příkazovém řádku BSCMAKE. Pokud vynecháte souboru .sbr z příkazového řádku, BSCMAKE jeho příspěvku odebere ze souboru.  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení souboru .Bsc](../../build/reference/building-a-dot-bsc-file.md)
+
+BscMake – sestavení nebo znovu sestaví souboru .BSC nástrojem nejefektivnějším způsobem, může to. Aby nedocházelo k problémům, je důležité pochopit, proces sestavení.
+
+Při sestavení BSCMAKE informačního souboru procházení, zkrátí soubory .sbr délku nula. Soubor .sbr nulové délky (nebo je prázdný) říká během další sestavení na stejný soubor, BSCMAKE, že soubor .sbr nemá žádný nový příspěvek provést. Umožňuje BSCMAKE vědět, že aktualizace z část souboru se nevyžaduje a přírůstkového sestavení bude stačit. Při každém sestavení (Pokud je zadána možnost /n), BSCMAKE poprvé pokusí přírůstkově aktualizovat soubor s použitím pouze soubory .sbr, které se změnily.
+
+BscMake – vyhledá, který má název zadaný pomocí možnosti /o soubor .bsc. Pokud není zadán /o, BSCMAKE hledá soubor, který má základní název prvního souboru .sbr a rozšíření .bsc. Pokud soubor existuje, BSCMAKE provádí přírůstkové sestavení z informačního souboru procházení pomocí přispívající soubory .sbr. Pokud soubor neexistuje, BSCMAKE provede úplné sestavení pomocí všechny soubory .sbr. Pravidla pro sestavení jsou následující:
+
+- Pro úplné sestavení úspěšné všechny zadané soubory .sbr musí existovat a nesmí být zkrácena. Pokud soubor .sbr zkrácen, je nutné znovu sestavit ji (pomocí rekompilace nebo sestavení) před spuštěním nástroje BSCMAKE.
+
+- Pro přírůstkové sestavení úspěšné musí existovat souboru .bsc. Všechny přispívající soubory .sbr i prázdné soubory, musí existovat a musí být zadán v příkazovém řádku nástroje BSCMAKE. Vynecháte-li soubor .sbr z příkazového řádku, BSCMAKE odebere jeho příspěvku ze souboru.
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení souboru .Bsc](../../build/reference/building-a-dot-bsc-file.md)

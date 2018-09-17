@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fb028f3383225d89a8366461400bf704c7a4dd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720080"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set –&gt; funkce
 
@@ -34,23 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*  
- Klíčový typ
+*Key*<br/>
+Klíčový typ
 
-*Hash*  
- Typ objektu hashovací funkce
+*Hash*<br/>
+Typ objektu hashovací funkce
 
-*Před*  
- Typ objektu funkce porovnání rovnosti
+*Před*<br/>
+Typ objektu funkce porovnání rovnosti
 
-*ALLOC*  
- Třída alokátoru
+*ALLOC*<br/>
+Třída alokátoru
 
-*doleva*  
- První kontejner přepínat.
+*doleva*<br/>
+První kontejner přepínat.
 
-*doprava*  
- Druhý kontejner přepínat.
+*doprava*<br/>
+Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -126,23 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*  
- Klíčový typ
+*Key*<br/>
+Klíčový typ
 
-*Hash*  
- Typ objektu hashovací funkce
+*Hash*<br/>
+Typ objektu hashovací funkce
 
-*Před*  
- Typ objektu funkce porovnání rovnosti
+*Před*<br/>
+Typ objektu funkce porovnání rovnosti
 
-*ALLOC*  
- Třída alokátoru
+*ALLOC*<br/>
+Třída alokátoru
 
-*doleva*  
- První kontejner přepínat.
+*doleva*<br/>
+První kontejner přepínat.
 
-*doprava*  
- Druhý kontejner přepínat.
+*doprava*<br/>
+Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 

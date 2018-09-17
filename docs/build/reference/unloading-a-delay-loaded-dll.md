@@ -1,5 +1,5 @@
 ---
-title: Uvolnění knihovny DLL odloženým načtením | Microsoft Docs
+title: Uvolnění knihovny DLL s odloženým načtením | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,58 +15,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa7b9652c37b6c4e841a798dae3cfeb69779b5ff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719924"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Uvolnění knihovny DLL s odloženým načtením
-Zadaný výchozí zpoždění zatížení pomocné rutiny zkontroluje Pokud popisovače načtení zpoždění mít v poli pUnloadIAT ukazatel a kopii původní tabulky adres import (IAT). Pokud ano, uloží ukazatel v seznamu do popisovače zpoždění importu. To umožňuje pomocné funkce najít knihovnu DLL podle názvu pro podporu explicitně uvolnění této knihovny DLL.  
-  
- Zde jsou přidružené struktury a funkce pro explicitní uvolnění knihovny DLL s odloženým načtením:  
-  
-```  
-//  
-// Unload support from delayimp.h  
-//  
-  
-// routine definition; takes a pointer to a name to unload  
-  
-ExternC  
-BOOL WINAPI  
-__FUnloadDelayLoadedDLL2(LPCSTR szDll);  
-  
-// structure definitions for the list of unload records  
-typedef struct UnloadInfo * PUnloadInfo;  
-typedef struct UnloadInfo {  
-    PUnloadInfo     puiNext;  
-    PCImgDelayDescr pidd;  
-    } UnloadInfo;  
-  
-// from delayhlp.cpp  
-// the default delay load helper places the unloadinfo records in the   
-// list headed by the following pointer.  
-ExternC  
-PUnloadInfo __puiHead;  
-```  
-  
- Struktura UnloadInfo je implementovaná pomocí C++ třídu, která využívá **LocalAlloc** a **LocalFree** implementace jako jeho operátor **nové** a operátor  **Odstranit** v uvedeném pořadí. Tyto možnosti jsou uchovávány v standardní odkazovaného seznamu pomocí __puiHead jako první pozice v seznamu.  
-  
- Volání __FUnloadDelayLoadedDLL se pokusí najít název zadáte v seznamu načíst knihovny DLL (je vyžadována přesná shoda). Pokud je nalezen, je zkopírovat kopii IAT v pUnloadIAT v horní části spuštěné IAT k obnovení jinou bitovou šířku ukazatele, knihovny uvolněno s **FreeLibrary**, shody **UnloadInfo** záznamu je odpojení od v seznamu a odstranit a hodnotu TRUE se vrátí.  
-  
- Argument funkce __FUnloadDelayLoadedDLL2 je malá a velká písmena. Například zadali byste:  
-  
-```  
-__FUnloadDelayLoadedDLL2("user32.DLL");  
-```  
-  
- a ne:  
-  
-```  
-__FUnloadDelayLoadedDLL2("User32.DLL");.  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Základní informace o podpůrné funkci](understanding-the-helper-function.md)
+
+Zadaný výchozí odloženě zaváděné pomocné zkontroluje, zkontrolujte, jestli popisovače zpožděného načtení ukazatel a kopii původní tabulky importních adres (IAT) v poli pUnloadIAT. Pokud ano, se uloží ukazatel na seznam do popisovače zpoždění importu. To umožňuje pomocnou funkci k nalezení knihovny DLL podle názvu pro podporu explicitně uvolnění této knihovny DLL.
+
+Tady jsou přidružené strukturách a funkcích pro explicitní uvolnění odloženě zaváděné knihovny DLL:
+
+```cpp
+//
+// Unload support from delayimp.h
+//
+
+// routine definition; takes a pointer to a name to unload
+
+ExternC
+BOOL WINAPI
+__FUnloadDelayLoadedDLL2(LPCSTR szDll);
+
+// structure definitions for the list of unload records
+typedef struct UnloadInfo * PUnloadInfo;
+typedef struct UnloadInfo {
+    PUnloadInfo     puiNext;
+    PCImgDelayDescr pidd;
+    } UnloadInfo;
+
+// from delayhlp.cpp
+// the default delay load helper places the unloadinfo records in the
+// list headed by the following pointer.
+ExternC
+PUnloadInfo __puiHead;
+```
+
+Struktura UnloadInfo je implementováno pomocí C++ třídu, která používá **LocalAlloc** a **LocalFree** implementace jako jeho operátor **nové** a operátor  **Odstranit** v uvedeném pořadí. Tyto možnosti jsou uloženy v standardní odkazovaného seznamu pomocí __puiHead jako první pozice v seznamu.
+
+__FUnloadDelayLoadedDLL volání funkce se pokusí najít název zadáte v seznamu načtené knihovny DLL (přesná shoda se vyžaduje). Pokud je nalezen, je zkopírován kopii IAT v pUnloadIAT přes horní spuštěné IAT obnovit ukazatele převodní rutina knihovny uvolněna pomocí **FreeLibrary**, odpovídající **UnloadInfo** záznamu je byl odpojen od v seznamu a odstranit a nastavena hodnota TRUE je vrácena.
+
+Argument funkce __FUnloadDelayLoadedDLL2 je velká a malá písmena. Například zadali byste:
+
+```cpp
+__FUnloadDelayLoadedDLL2("user32.DLL");
+```
+
+a ne:
+
+```cpp
+__FUnloadDelayLoadedDLL2("User32.DLL");.
+```
+
+## <a name="see-also"></a>Viz také
+
+[Základní informace o podpůrné funkci](understanding-the-helper-function.md)

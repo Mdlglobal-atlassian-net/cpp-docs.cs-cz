@@ -1,5 +1,5 @@
 ---
-title: Hledat – tlačítko | Microsoft Docs
+title: Hledat – tlačítko | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a8ab3259560cbc99a509f3b7cf6075aacc7036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7dc18065499773d0646bde2bc63cb5c8e1d6076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371444"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717948"
 ---
 # <a name="look-up-button"></a>Hledat – tlačítko
-Klikněte na tlačítko **Hledat** načíst chybovou zprávu, která odpovídá zadané hodnotě modul nebo systému. Hodnoty lze zadat v podobě hexadecimální nebo desetinné číslo (včetně záporné desetinných míst). Moduly, které jsou uvedené v **další moduly pro vyhledávání chyb** prohledají se také dialogové okno.  
-  
-## <a name="see-also"></a>Viz také  
- [Hodnota – textové pole](../../build/reference/value-edit-control.md)
+
+Klikněte na tlačítko **vyhledat** načíst chybovou zprávu, která odpovídá zadané hodnotě systému nebo modulu. Můžete zadat hodnoty v podobě desítkové nebo šestnáctkové (včetně záporné hodnoty decimal). Moduly, které jsou uvedeny v **další moduly pro hledání chyb** dialogové okno se také vyhledávat.
+
+## <a name="see-also"></a>Viz také
+
+[Hodnota – textové pole](../../build/reference/value-edit-control.md)

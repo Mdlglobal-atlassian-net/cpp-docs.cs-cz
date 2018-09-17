@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716778"
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 Ve výše uvedené syntaxe se používají následující termíny:
 
-*atributy* (volitelné)  
-Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
+*Atributy*  
+(Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
 *klíč třídy*  
 Buď **třídy** nebo **typename**
@@ -58,7 +58,7 @@ Buď **třídy** nebo **typename**
 *klauzule omezení*  
 Seznam (nikoli oddělený čárkami) **kde** klauzule určující omezení pro parametry typu. Má podobu:
 
-`where`  *identifikátor typu parametru*`:`*seznam omezení*  `...`
+> **kde** *identifikátor typu parametru* **:** *seznam omezení***...** 
 
 *seznam omezení*  
 *Třída nebo rozhraní*[`,` *...* ]
@@ -69,8 +69,8 @@ Modifikátory dostupnosti pro obecná třída. Prostředí Windows Runtime je je
 *identifikátor*  
 Název obecná třída libovolný platný identifikátor C++.
 
-*Modifikátory* (volitelné)  
-Povolené modifikátory zahrnují **zapečetěné** a **abstraktní**.
+*Modifikátory*  
+(Volitelné) Povolené modifikátory zahrnují **zapečetěné** a **abstraktní**.
 
 *Base-list*  
 Seznam obsahující jednu základní třídu a žádné implementovaná rozhraní, všechny oddělených čárkami.

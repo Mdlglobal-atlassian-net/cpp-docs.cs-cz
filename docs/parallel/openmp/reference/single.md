@@ -1,5 +1,5 @@
 ---
-title: jeden | Microsoft Docs
+title: jeden | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716986"
 ---
 # <a name="single"></a>single
-Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli nutně hlavní vlákno.  
+Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,9 @@ Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli n
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `clause` (volitelné)  
- Nula nebo více klauzulích. Najdete v části poznámky seznam klauzulích nepodporuje **jeden**.  
+
+`clause`  
+(Volitelné) Nula nebo více klauzulí. Naleznete v části poznámky pro seznam klauzule podporované službou **jeden**.  
   
 ## <a name="remarks"></a>Poznámky  
  **Jeden** podporuje následující klauzule OpenMP – direktiva:  
@@ -50,7 +51,7 @@ Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli n
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [Hlavní](../../../parallel/openmp/reference/master.md) umožňuje zadat, že části kódu, se má provést pouze v hlavní vlákno.  
+ [Hlavní](../../../parallel/openmp/reference/master.md) umožňuje určit, že část kódu by měl provést pouze v hlavní vlákno.  
   
  Další informace najdete v tématu [2.4.3 jeden vytvořit](../../../parallel/openmp/2-4-3-single-construct.md).  
   

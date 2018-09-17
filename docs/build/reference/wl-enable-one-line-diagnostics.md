@@ -1,5 +1,5 @@
 ---
-title: -WL (Povolit diagnostiku online) | Microsoft Docs
+title: -WL (povolení jednořádkové diagnostiky) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,51 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a6b41e66f7ec37ad02747edb8331049b9baef5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e82a3273673d45d1abf3ac201d7a0f63334cecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718665"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Povolit diagnostiku online)
-Další informace se připojí k chybě nebo upozornění.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/WL  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Chybové zprávy upozornění z kompilátoru C++ a může následovat další informace, které se zobrazí ve výchozím nastavení na nový řádek. Při kompilaci z příkazového řádku na další řádek informace může být přidán k chybě nebo upozornění. To může být žádoucí, pokud zaznamenáte výstupu sestavení do protokolového souboru a pak zpracovat protokol najít všechny chyby a upozornění. Středník dojde k oddělení chyby nebo zprávy upozornění z další řádku.  
-  
- Ne všechny chybové zprávy a upozornění mají další řádek informace. Následující kód vygenerují chybu, která má další řádek informace; umožní vám testování účinků při použití **/Wl online**.  
-  
-```  
-// compiler_option_WL.cpp  
-// compile with: /WL  
-#include <queue>  
-int main() {  
-   std::queue<int> q;  
-   q.fromthecontinuum();   // C2039  
-}  
-```  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Další informace se připojí k chybě nebo upozornění.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/WL
+```
+
+## <a name="remarks"></a>Poznámky
+
+Chybové zprávy a upozornění z kompilátoru jazyka C++ může být následován Další informace, které se zobrazí ve výchozím nastavení, na nový řádek. Při kompilaci z příkazového řádku, řádku další informace lze připojit k chybě nebo upozornění. To může být žádoucí, pokud zachytit výstup sestavení do souboru protokolu a následně zpracovat tento protokol a vyhledejte všechny chyby a upozornění. Středník se oddělení chyby nebo upozornění od další řádek.
+
+Ne všechny chybové zprávy a upozornění mají další řádek informace. Následující kód vygeneruje chybu, která má další řádek informace; To vám umožní testování účinků při použití **/WL**.
+
+```
+// compiler_option_WL.cpp
+// compile with: /WL
+#include <queue>
+int main() {
+   std::queue<int> q;
+   q.fromthecontinuum();   // C2039
+}
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

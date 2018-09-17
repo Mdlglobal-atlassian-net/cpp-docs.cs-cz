@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720301"
 ---
 # <a name="cdocksite-class"></a>Cdocksite – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
- [in] *nHeight*  
+*POS*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
  [in] *lprect –*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID příkazu podokna nalezen.  
+*nID*<br/>
+[in] ID příkazu podokna nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel do podokna s ID zadaného příkazu, nebo hodnota NULL, pokud nebyl nalezen v podokně.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *nFlags*  
+*pWnd*<br/>
+[in] [in] *nFlags*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
- [in] *bByShow*  
+*POS*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectAvailable*  
- [in] *nSide*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *nSide*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nFlags*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
- [in] *bShow*  
+*POS*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pt*  
- Bod, v souřadnicovém systému obrazovky, podokna pro načtení.  
+*PT*<br/>
+[in] Bod, v souřadnicovém systému obrazovky, podokna pro načtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel do podokna umístěny v zadaném bodu nebo hodnota NULL, pokud žádné podokně nebyl nalezen zadaný okamžiku.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *bodu*  
+*Rect*<br/>
+[in] [in] *bodu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Ukazatel do podokna zobrazený nebo skrytý.  
   
- [in] *bShow*  
- TRUE, pokud chcete určit, že v podokně má být zobrazen; FALSE, pokud chcete určit, že v podokně jako skryté.  
+*bShow*<br/>
+[in] TRUE, pokud chcete určit, že v podokně má být zobrazen; FALSE, pokud chcete určit, že v podokně jako skryté.  
   
- [in] *bDelay*  
- TRUE, pokud chcete určit, že rozložení v podokně zpoždění až poté, co se zobrazuje v podokně; v opačném případě hodnota FALSE.  
+*bDelay*<br/>
+[in] TRUE, pokud chcete určit, že rozložení v podokně zpoždění až poté, co se zobrazuje v podokně; v opačném případě hodnota FALSE.  
   
- [in] *bActivate*  
- Tento parametr není používán.  
+*bActivate*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud se v podokně zobrazený nebo skrytý úspěšně. FALSE, pokud zadaný podokně nepatří do této dokovacího webu.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRow*  
- [in] *bShow*  
+*pRow*<br/>
+[in] [in] *bShow*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Poznámky  
   

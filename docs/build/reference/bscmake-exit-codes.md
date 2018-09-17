@@ -1,5 +1,5 @@
 ---
-title: BscMake – kódy ukončení | Microsoft Docs
+title: BscMake – kódy ukončení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fc0e2bcb73e8aad00fd3cb74eb534409384c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbb5b5f9e61cab7abdd1ba9a8594176680e95f77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369225"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720860"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE – kódy ukončení
-BSCMAKE vrátí ukončovací kód (také nazývané návratový kód nebo kód chyby) do operačního systému nebo volací program.  
-  
-|Kód|Význam|  
-|----------|-------------|  
-|0|Žádná chyba|  
-|1|Chyba příkazového řádku|  
-|4|Závažná chyba při vytváření sestavení|  
-  
-## <a name="see-also"></a>Viz také  
- [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)
+
+BscMake – vrátí výstupní kód (také nazývané návratový kód nebo kód chyby) operačního systému nebo volající program.
+
+|Kód|Význam|
+|----------|-------------|
+|0|Žádná chybová zpráva|
+|1|Chyba příkazového řádku|
+|4|Závažná chyba během sestavení|
+
+## <a name="see-also"></a>Viz také
+
+[BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

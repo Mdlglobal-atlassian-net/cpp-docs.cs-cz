@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720132"
 ---
 # <a name="movsb"></a>__movsb
 **Specifické pro Microsoft**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Destination`  
- Ukazatel na cíl kopírování.  
+*cíl*<br/>
+[out] Ukazatel na cíl kopírování.  
   
- [in] `Source`  
- Ukazatel na zdroj kopie.  
+*Zdroj*<br/>
+[in] Ukazatel na zdroj kopie.  
   
- [in] `Count`  
- Počet bajtů, které mají kopírovat.  
+*Počet*<br/>
+[in] Počet bajtů, které mají kopírovat.  
   
 ## <a name="requirements"></a>Požadavky  
   

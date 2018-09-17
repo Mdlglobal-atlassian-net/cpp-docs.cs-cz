@@ -1,5 +1,5 @@
 ---
-title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
+title: __lzcnt16 __lzcnt, __lzcnt64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e04182cf673674e1f1ba8c073b624760bc4809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c24dcd92628b9f03596c9d10c38b5d63806dc6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332790"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720002"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
-**Konkrétní Microsoft**  
+
+**Specifické pro Microsoft**  
   
- Počty počet úvodní nuly v 16-, 32- nebo 64bitovou celočíselnou hodnotu.  
+Spočítá počet úvodní nuly v 16, 32 nebo 64-bit integer.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,28 +52,28 @@ unsigned __int64 __lzcnt64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `value`  
- 16 – 32- a celé číslo bez znaménka 64-bit kontrolovala úvodními nulami.  
+*value*<br/>
+[in] 16 - 32 a 64-bit znaménka kontrolovala počátečními nulami.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Počet mezer na začátku nulový počet bitů `value` parametr. Pokud `value` rovná nule, je vrácenou hodnotu velikost vstupní operand (16, 32 nebo 64). Pokud bit významné `value` je 1, návratovou hodnotou je nulová.  
+ Počet úvodní nula bity `value` parametru. Pokud `value` je nula, vrácená hodnota je velikost vstupní operand (16, 32 nebo 64). Pokud bitu `value` je 1, vrácená hodnota je nula.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__lzcnt16`|AMD: Pokročilé bitové manipulace (ABM)<br /><br /> Intel: Haswell|  
-|`__lzcnt`|AMD: Pokročilé bitové manipulace (ABM)<br /><br /> Intel: Haswell|  
-|`__lzcnt64`|AMD: Rozšířené Bit manipulaci (ABM) v režimu 64-bit.<br /><br /> Intel: Haswell|  
+|`__lzcnt16`|AMD: Manipulace pokročilé Bit (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: Manipulace pokročilé Bit (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: Pokročilé zpracování Bit (ABM) v 64bitovém režimu.<br /><br /> Intel: Haswell|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Každý z těchto vnitřní funkce generuje `lzcnt` instrukcí.  Velikost hodnoty, `lzcnt` instrukce vrátí je stejná jako velikost jeho argumentem.  V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registrů, proto žádné 64-bit `lzcnt`.  
+ Každá z těchto vnitřních objektů vygeneruje `lzcnt` instrukce.  Velikost hodnoty, který `lzcnt` instrukce vrátí je stejná jako velikost svého argumentu.  V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registry, tedy ne 64-bit `lzcnt`.  
   
- K určení podporu hardwaru pro `lzcnt` instrukce volání `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolovat bitu 5 `CPUInfo[2] (ECX)`. Tato verze bude 1, pokud je podporováno pokyn a 0 jinak. Pokud jste spustili kód, který používá tento vnitřní hardware, který nepodporuje `lzcnt` instrukce, nepředvídatelné výsledky.  
+ K určení hardwarovou podporu `lzcnt` volání instrukce `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 5 `CPUInfo[2] (ECX)`. Tato verze bude 1, pokud podporované instrukce a 0 jinak. Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `lzcnt` instrukce, výsledky nepředvídatelné.  
   
- Na procesory Intel, které nepodporují `lzcnt` instrukce, instrukce bajtů kódování se spustí jako `bsr` (bit zpětného kontroly). Pokud vám záleží hlavně přenositelnost kódu, zvažte použití `_BitScanReverse` vnitřní místo. Další informace najdete v tématu [_BitScanReverse _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+ Na procesorech Intel, které nepodporují `lzcnt` instrukce, kódování instrukce bajt je proveden, protože `bsr` (bit zpětného kontroly). Pokud je přenositelnost kódu, zvažte použití `_BitScanReverse` vnitřní místo. Další informace najdete v tématu [_BitScanReverse _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -112,8 +113,9 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0  
 ```  
   
-**Konkrétní Microsoft END**  
- Části tohoto obsahu jsou Copyright 2007 Advanced Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**
+
+Některé části tohoto článku je Copyright 2007 rozšířené Micro zařízení, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

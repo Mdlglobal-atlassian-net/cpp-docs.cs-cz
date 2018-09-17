@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598230"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720725"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
 Vzhledem k tomu, že Visual Studio podporuje více sad nástrojů platformy, můžete směrovat operačních systémů a knihovny runtime, které nejsou podporované výchozí sady nástrojů. Například přepnutím sada nástrojů platformy můžete C ++ 11, C ++ 14 a C ++ 17 jazyk vylepšení podporována kompilátorem jazyka Visual C++ v sadě Visual Studio k vytváření aplikací určených pro Windows XP a Windows Server 2003. Můžete také použít starší sad nástrojů platformy zachovat starší verze kódu binárně kompatibilní a stále využívat nejnovější funkce integrovaného vývojového prostředí sady Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Nainstalovat sadu nástrojů platformy Windows XP
+
 Pokud chcete získat sadu nástrojů platformy a komponenty na cíl Windows XP a Windows Server 2003 v sadě Visual Studio 2017, spusťte instalační program sady Visual Studio. Při počáteční instalaci sady Visual Studio, nebo když zvolíte **změnit** k úpravě stávající instalace, ujistěte se, že **vývoj desktopových aplikací pomocí C++** vybrané úlohy. V seznamu volitelných součástí pro danou úlohu, vyberte **podpora Windows XP pro C++** a klikněte na tlačítko **nainstalovat** nebo **změnit**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP cílení
@@ -72,7 +73,7 @@ Vývojové prostředí pro aplikace, které používají sadu nástrojů platfor
 
 - **Ladění grafiky DirectX**
 
-     Protože ladicí program grafiky nepodporuje rozhraní API Direct3D 9, nelze použít k ladění aplikace, které používají rozhraní Direct3D na Windows XP nebo Windows Server 2003. Pokud aplikace implementuje alternativní renderer, který používá rozhraní Direct3D 10 nebo rozhraní Direct3D 11 API, ladicí program grafiky můžete použít k diagnostice problémů s použitím těchto rozhraní API.
+   Protože ladicí program grafiky nepodporuje rozhraní API Direct3D 9, nelze použít k ladění aplikace, které používají rozhraní Direct3D na Windows XP nebo Windows Server 2003. Pokud aplikace implementuje alternativní renderer, který používá rozhraní Direct3D 10 nebo rozhraní Direct3D 11 API, ladicí program grafiky můžete použít k diagnostice problémů s použitím těchto rozhraní API.
 
 - **Vytváření HLSL**
 

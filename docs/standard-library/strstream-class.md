@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b321891bc5b9392fffc72ec0c9661a39a5631e5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717831"
 ---
 # <a name="strstream-class"></a>strstream – třída
 
@@ -77,8 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-*_Freezeit*  
- A **bool** označující, zda chcete datového proudu k zmrazit.
+*_Freezeit*<br/>
+A **bool** označující, zda chcete datového proudu k zmrazit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -162,14 +162,14 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*  
- Velikost vyrovnávací paměti.
+*Počet*<br/>
+Velikost vyrovnávací paměti.
 
-*Reži_m*  
- Režim vstupní a výstupní vyrovnávací paměti. Zobrazit [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Další informace.
+*Reži_m*<br/>
+Režim vstupní a výstupní vyrovnávací paměti. Zobrazit [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Další informace.
 
-*ptr*  
- Vyrovnávací paměť.
+*ptr*<br/>
+Vyrovnávací paměť.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -1,5 +1,5 @@
 ---
-title: -PDBALTPATH (použít alternativní cestu PDB) | Microsoft Docs
+title: -PDBALTPATH (použití alternativní cesty PDB) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec06c3d6a8a981a059f173700e716431acc53a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c494745fa33c8feeb4955f4542e9db5ed22307
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718381"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Použít alternativní cestu PDB)
-```  
-/PDBALTPATH:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *pdb_file_name*  
- Název a cesta k souboru pro soubor .pdb.  
-  
-## <a name="remarks"></a>Poznámky  
- Pomocí této možnosti můžete zadat alternativní umístění souboru databáze programu (.pdb) v kompilovaném binární soubor. Za normálních okolností linkeru zaznamenává umístění souboru PDB v binárních souborech, které vytvoří. Tuto možnost můžete zadejte jinou cestu a název souboru pro soubor .pdb. Informace poskytnuté s /PDBALTPATH nezmění umístění nebo název souboru skutečné pdb; změní informace, které linkeru zápisů v binární soubor. To umožňuje zadejte cestu, která je nezávislá strukturu souborů sestavení počítače. Dvě běžné používá pro tuto možnost mají zadejte síťovou cestu nebo soubor, který nemá žádné informace o cestě.  
-  
- Hodnota *pdb_file_name* může být libovolný řetězec, proměnné prostředí, nebo **_PDB %**. Linkeru rozbalit proměnné prostředí, například **% SystemRoot %**, na jeho hodnotu. Proměnné prostředí definuje linkeru **_PDB %** a **_EXT %**. **% _PDB %** zasahuje do souboru PDB skutečné bez jakýchkoli informací o cestě název souboru a **_EXT %** , je rozšíření generovaného spustitelný soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti DUMPBIN](../../build/reference/dumpbin-options.md)   
- [/PDBPATH](../../build/reference/pdbpath.md)
+
+```
+/PDBALTPATH:pdb_file_name
+```
+
+## <a name="arguments"></a>Arguments
+
+*pdb_file_name*<br/>
+Název a cesta k souboru pro soubor .pdb.
+
+## <a name="remarks"></a>Poznámky
+
+Pomocí této možnosti můžete zadat alternativní umístění pro soubor databáze programu (PDB) v kompilované binární soubor. Za normálních okolností linkeru zaznamenává umístění souboru .pdb v binárních souborech, které vytvoří. Tuto možnost můžete zadat jinou cestu a název souboru pro soubor .pdb. Informace, opatřeného /PDBALTPATH nezmění umístění nebo název souboru PDB skutečné; změní informace, které linker zapisuje v binárním souboru. To umožňuje zadat cestu, která je nezávislá struktura souborů počítače sestavení. Dvě běžné použití této možnosti se zadejte síťovou cestu nebo soubor, který nemá žádné informace o cestě.
+
+Hodnota *pdb_file_name* může být libovolný řetězec, proměnné prostředí, nebo **_PDB %**. Linker se rozbalí proměnné prostředí, jako například **adresáře % SystemRoot %**, na jeho hodnotu. Linker definuje proměnné prostředí **_PDB %** a **_EXT %**. **_PDB %** rozšíří na název souboru PDB skutečný soubor bez jakýchkoli informací o cestě a **_EXT %** je rozšíření generované spustitelné soubory.
+
+## <a name="see-also"></a>Viz také
+
+[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)<br/>
+[/PDBPATH](../../build/reference/pdbpath.md)

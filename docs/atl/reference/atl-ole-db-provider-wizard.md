@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762976"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717207"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Průvodce zprostředkovatelem ATL OLE DB
 
@@ -34,49 +34,63 @@ Od verze Visual Studio 2008, registrace skriptu vytvářených Tento průvodce z
 
 Následující tabulka popisuje možnosti pro Průvodce zprostředkovatelem ATL OLE DB:
 
-**Krátký název**  
-Zadejte krátký název zprostředkovatele, který se má vytvořit. Upravit pole v Průvodci se automaticky vyplní podle vás zadejte sem. Pokud chcete, můžete upravit ostatní.
+- **Krátký název**
 
-**Coclass**  
-Název třídy typu coclass. Název ProgID se změní tak, aby odpovídaly tento název.
+   Zadejte krátký název zprostředkovatele, který se má vytvořit. Upravit pole v Průvodci se automaticky vyplní podle vás zadejte sem. Pokud chcete, můžete upravit ostatní.
 
-**S atributy**  
-Tato možnost určuje, zda má průvodce vytvořit pomocí atributů nebo deklarací šablony třídy zprostředkovatele. Když vyberete tuto možnost, Průvodce místo deklarací šablony (Toto je výchozí možnost, pokud jste vytvořili projekt s atributy) používá atributy. Když zrušíte zaškrtnutí tohoto políčka, používá Průvodce místo atributů (Toto je výchozí možnost, pokud jste vytvořili projekt bez atributů) deklarace šablony.
+- **Coclass**
 
-Pokud vyberete tuto možnost, při vytváření projektu bez atributů, Průvodce zobrazí upozornění, že projekt bude převeden do projektu s atributy a zeptá, jestli se má pokračovat nebo ne.
+   Název třídy typu coclass. Název ProgID se změní tak, aby odpovídaly tento název.
 
-**ProgID**  
-ProgID, neboli programový identifikátor, je textový řetězec, který vaše aplikace může používat místo identifikátoru GUID. Název ProgID má tvar *Projectname.Coclassname*.
+- **S atributy**
 
-**Verze**  
-Číslo verze vašeho zprostředkovatele. Výchozí hodnota je 1.
+   Tato možnost určuje, zda má průvodce vytvořit pomocí atributů nebo deklarací šablony třídy zprostředkovatele. Když vyberete tuto možnost, Průvodce místo deklarací šablony (Toto je výchozí možnost, pokud jste vytvořili projekt s atributy) používá atributy. Když zrušíte zaškrtnutí tohoto políčka, používá Průvodce místo atributů (Toto je výchozí možnost, pokud jste vytvořili projekt bez atributů) deklarace šablony.
 
-**Třída zdroje dat**  
-Název třídy zdroje dat formuláře C*Shortname*zdroje.
+   Pokud vyberete tuto možnost, při vytváření projektu bez atributů, Průvodce zobrazí upozornění, že projekt bude převeden do projektu s atributy a zeptá, jestli se má pokračovat nebo ne.
 
-**Soubor .h zdroje dat**  
-Hlavičkový soubor pro třídu zdroje data. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+- **ProgID**
 
-**Třída relace**  
-Název třídy relace ve formátu jazyka C*Shortname*relace.
+   ProgID, neboli programový identifikátor, je textový řetězec, který vaše aplikace může používat místo identifikátoru GUID. Název ProgID má tvar *Projectname.Coclassname*.
 
-**Soubor .h relace**  
-Hlavičkový soubor pro třídu relace. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+- **Verze**
 
-**Třídy příkazů**  
-Název třídy příkazu ve formátu jazyka C*Shortname*příkazu.
+   Číslo verze vašeho zprostředkovatele. Výchozí hodnota je 1.
 
-**Soubor .h příkazů**  
-Hlavičkový soubor pro třídu příkazu. Tento název nejde upravit a závisí na názvu hlavičkového souboru sady řádků.
+- **Třída zdroje dat**
 
-**Třídy sady řádků**  
-Název třídy sady řádků ve formátu jazyka C*Shortname*sady řádků.
+   Název třídy zdroje dat formuláře C*Shortname*zdroje.
 
-**Soubor .h sady řádků**  
-Hlavičkový soubor pro třídu sady řádků. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+- **Soubor .h zdroje dat**
 
-**Soubor .cpp sady řádků**  
-Implementační soubor zprostředkovatele. Můžete upravit tento název souboru nebo vybrat existující implementační soubor.
+   Hlavičkový soubor pro třídu zdroje data. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+- **Třída relace**
+
+   Název třídy relace ve formátu jazyka C*Shortname*relace.
+
+- **Soubor .h relace**
+
+   Hlavičkový soubor pro třídu relace. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+- **Třídy příkazů**
+
+   Název třídy příkazu ve formátu jazyka C*Shortname*příkazu.
+
+- **Soubor .h příkazů**
+
+   Hlavičkový soubor pro třídu příkazu. Tento název nejde upravit a závisí na názvu hlavičkového souboru sady řádků.
+
+- **Třídy sady řádků**
+
+   Název třídy sady řádků ve formátu jazyka C*Shortname*sady řádků.
+
+- **Soubor .h sady řádků**
+
+   Hlavičkový soubor pro třídu sady řádků. Můžete upravit tento název souboru nebo vybrat existující hlavičkový soubor.
+
+- **Soubor .cpp sady řádků**
+
+   Implementační soubor zprostředkovatele. Můžete upravit tento název souboru nebo vybrat existující implementační soubor.
 
 ## <a name="see-also"></a>Viz také
 

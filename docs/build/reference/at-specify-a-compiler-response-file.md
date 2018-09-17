@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720847"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Zadat soubor odezvy kompilátoru)
 
@@ -35,7 +35,7 @@ Určuje soubor odezvy kompilátoru.
 
 ## <a name="arguments"></a>Arguments
 
-*response_file*  
+*response_file*<br/>
 Textový soubor obsahující kompilátoru příkazy.
 
 ## <a name="remarks"></a>Poznámky
@@ -56,5 +56,5 @@ Z příkazového řádku můžete zadat libovolný počet možností soubor odpo
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

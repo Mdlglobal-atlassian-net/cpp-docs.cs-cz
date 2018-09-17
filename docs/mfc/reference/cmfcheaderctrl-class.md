@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850079"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718117"
 ---
 # <a name="cmfcheaderctrl-class"></a>Cmfcheaderctrl – třída
 `CMFCHeaderCtrl` Třída podporuje řazení více sloupců v ovládacím prvku hlavička.  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit režim řazení více sloupců; FALSE, chcete-li zakázat režim řazení více sloupců a odeberte všechny sloupce v seznamu seřazené sloupce. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit režim řazení více sloupců; FALSE, chcete-li zakázat režim řazení více sloupců a odeberte všechny sloupce v seznamu seřazené sloupce. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete povolit nebo zakázat režim řazení více sloupců. Dva nebo více sloupců mohou účastnit řazení, pokud je ovládací prvek záhlaví v režimu řazení více sloupců.  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Z nuly vycházející index sloupce.  
+*iColumn*<br/>
+[in] Z nuly vycházející index sloupce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která indikuje stav řazení pro určený sloupec. V následující tabulce jsou uvedeny možné hodnoty:  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *položky*  
- Index položky k vykreslení založený na nule.  
+*Položky*<br/>
+[in] Index položky k vykreslení založený na nule.  
   
- [in] *rect*  
- Ohraničující obdélník položky k vykreslení.  
+*Rect*<br/>
+[in] Ohraničující obdélník položky k vykreslení.  
   
- [in] *bIsPressed*  
- TRUE, pokud chcete kreslit položky při stisknutí stavu; v opačném případě hodnota FALSE.  
+*bIsPressed*<br/>
+[in] TRUE, pokud chcete kreslit položky při stisknutí stavu; v opačném případě hodnota FALSE.  
   
- [in] *bIsHighlighted*  
- TRUE, pokud chcete kreslit položky v zvýrazněné stavu; v opačném případě hodnota FALSE.  
+*bIsHighlighted*<br/>
+[in] TRUE, pokud chcete kreslit položky v zvýrazněné stavu; v opačném případě hodnota FALSE.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  Volá se rozhraním, chcete-li nakreslit na šipku řazení.  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectArrow*  
- Ohraničující obdélník na šipku řazení.  
+*rectArrow*<br/>
+[in] Ohraničující obdélník na šipku řazení.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  Volá se rozhraním vyplnit pozadí ovládacího prvku záhlaví sloupce.  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Z nuly vycházející index sloupce za účelem odebrání.  
+*iColumn*<br/>
+[in] Z nuly vycházející index sloupce za účelem odebrání.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  Nastaví pořadí řazení zadané sloupce v ovládacím prvku hlavička.  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Z nuly vycházející index sloupce záhlaví ovládacího prvku. Pokud tento parametr menší než nula, tato metoda odebere všechny sloupce ze seznamu sloupců seřadit.  
+*iColumn*<br/>
+[in] Z nuly vycházející index sloupce záhlaví ovládacího prvku. Pokud tento parametr menší než nula, tato metoda odebere všechny sloupce ze seznamu sloupců seřadit.  
   
- [in] *bAscending*  
- Určuje pořadí řazení ve sloupci, který *iColumn* parametrem. TRUE, pokud chcete nastavit vzestupné pořadí. FALSE, pokud chcete nastavit sestupném pořadí. Výchozí hodnota je TRUE.  
+*bAscending*<br/>
+[in] Určuje pořadí řazení ve sloupci, který *iColumn* parametrem. TRUE, pokud chcete nastavit vzestupné pořadí. FALSE, pokud chcete nastavit sestupném pořadí. Výchozí hodnota je TRUE.  
   
- [in] *bAdd*  
- Hodnota true pro nastavení pořadí řazení ve sloupci, který *iColumn* parametrem.  
+*bAdd*<br/>
+[in] Hodnota true pro nastavení pořadí řazení ve sloupci, který *iColumn* parametrem.  
   
  Pokud je aktuální ovládací prvek záhlaví v *řazení více sloupců* režimu, tato metoda přidá zadaný sloupec na seznam řazení sloupců. Použití [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) nastavit režim řazení více sloupců.  
   

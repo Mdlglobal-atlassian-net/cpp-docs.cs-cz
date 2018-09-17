@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612998"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719098"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odd
 *Pořadí*  
 Číslo sloupce (DBCOLUMNINFO pořadí), který je odpovídající pole v dané sadě řádků, ke kterému chcete svázat data.
 
-*paramtype* (volitelné)  
-Typ, který má nastavit pro parametr. Podporují pouze vstupně-výstupní typy parametrů, které podporují podkladovému zdroji dat. Typ je kombinace jedné nebo více hodnot DBPARAMIOENUM:
+*paramtype*  
+(Volitelné) Typ, který má nastavit pro parametr. Podporují pouze vstupně-výstupní typy parametrů, které podporují podkladovému zdroji dat. Typ je kombinace jedné nebo více hodnot DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT vstupního parametru.
 
@@ -56,20 +56,20 @@ Typ, který má nastavit pro parametr. Podporují pouze vstupně-výstupní typy
 
 - DBPARAMIO_NOTPARAM přistupující objekt nemá žádné parametry. Nastavení `eParamIO` na tuto hodnotu v řádku přistupující objekty upozorňuje uživatele, že parametry budou ignorovány.
 
-*Hodnota DbType* (volitelné)  
-OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pro vstupní sloupec.
+*Hodnota DbType*  
+(Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pro vstupní sloupec.
 
-*přesnost* (volitelné)  
-Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Přesnost*  
+(Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*škálování* (volitelné)  
-Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Škálování*  
+(Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Stav* (volitelné)  
-Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
+*Stav*  
+(Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
 
-*Délka* (volitelné)  
-Členské proměnné používané pro udržení velikost sloupce v bajtech.
+*Délka*  
+(Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky
 

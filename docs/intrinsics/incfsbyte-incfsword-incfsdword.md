@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte, __incfsword, __incfsdword | Microsoft Docs
+title: __incfsbyte __incfsword, __incfsdword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719352"
 ---
-# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
-**Konkrétní Microsoft**  
+# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte __incfsword, __incfsdword
+**Specifické pro Microsoft**  
   
- Přidat na hodnotu v umístění paměti určeného posun vzhledem k začátku `FS` segmentu.  
+ Přidejte jej na hodnotu v paměti umístění určené posun vzhledem k začátku `FS` segmentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,21 +50,21 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
- Posun od začátku `FS`.  
+*Posun*<br/>
+[in] Posun od začátku `FS`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní tyto funkce jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto vnitřní objekty jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   

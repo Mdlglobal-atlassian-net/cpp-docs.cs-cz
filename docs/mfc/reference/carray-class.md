@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717636"
 ---
 # <a name="carray-class"></a>Carray – třída
 Podporuje pole, které se podobají polím jazyka C, ale můžete dynamicky zmenšit nebo zvětšit podle potřeby.  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *TYP*  
- Parametr šablony, který určuje typ objektů uložených v poli. *TYP* je parametr, který je vrácený `CArray`.  
-  
- *ARG* *_* *TYPU*  
- Parametr šablony určující typ argumentu, který se používá pro přístup k objektům, které jsou uloženy v poli. Často odkaz na *typ*. *ARG_TYPE* je parametr, který je předán `CArray`.  
+#### <a name="parameters"></a>Parametry
+
+*TYP*<br/>
+Parametr šablony, který určuje typ objektů uložených v poli. *TYP* je parametr, který je vrácený `CArray`.
+
+*ARG_TYPE*<br/>
+Parametr šablony určující typ argumentu, který se používá pro přístup k objektům, které jsou uloženy v poli. Často odkaz na *typ*. *ARG_TYPE* je parametr, který je předán `CArray`.  
   
 ## <a name="members"></a>Členové  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Požadavky  
- `Header:` afxtempl.h  
+**Záhlaví:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Přidá nový prvek na konec pole, stále se rozšiřující pole o 1.  

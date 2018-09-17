@@ -1,5 +1,5 @@
 ---
-title: -errorReport (sestava s chybami kompilátoru) | Microsoft Docs
+title: -errorReport (sestava interními chybami kompilátoru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e87143d31de98039f5d679c102a5815dd87abb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c96225e566593987bef8ec9a82c73daacfcefb6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720106"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (sestava s interními chybami kompilátoru)
-Umožňuje zadat informace o chybě (LED) interní kompilátoru přímo společnosti Microsoft.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/errorReport:[ none | prompt | queue | send ]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- **None**  
- Zprávy o chybách interní kompilátoru nebudou shromažďovány nebo odesílány do společnosti Microsoft.  
-  
- **prompt**  
- Dotaz, zda chcete poslat zprávu, když obdrží vnitřní chyby kompilátoru. **řádku** je výchozí hodnota při kompilaci aplikace ve vývojovém prostředí.  
-  
- **Fronty**  
- Fronty zprávy o chybách. Když se přihlásíte pomocí oprávnění správce, tak, aby ohlásíte případných selhání od posledního byly přihlášení, zobrazí se okno (nezobrazí se výzva k odeslání zpráv o selhání více než jednou za tři dní). **fronty** je výchozí hodnota při kompilaci aplikace na příkazovém řádku.  
-  
- **Odeslat**  
- Pokud je povoleno oznamování pomocí nastavení systému zasílání zpráv o chybách systému Windows automaticky odesílá zprávy o chybách interní kompilátoru společnosti Microsoft.  
-  
-## <a name="remarks"></a>Poznámky  
- Vnitřní chyba kompilátoru (LED) nastává kompilátor nemůže zpracovat soubor zdrojového kódu. Když dojde LED, kompilátor nevytváří výstupní soubor nebo užitečnou diagnostiku, můžete použít k opravě kódu.  
-  
- V dřívějších verzích když jste získali LED, jste doporučujeme, aby volání služby Microsoft Product Support Services nahlásit problém. S **/errorreport**, můžete zadat informace LED přímo společnosti Microsoft. Zprávy o chybách může pomoct zlepšit budoucí vydání kompilátoru.  
-  
- Schopnost uživatele odesílat zprávy závisí na oprávnění zásad počítače a uživatele.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **Upřesnit** stránku vlastností.  
-  
-4.  Změnit **zasílání zpráv o chybách** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo společnosti Microsoft.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/errorReport:[ none | prompt | queue | send ]
+```
+
+## <a name="arguments"></a>Arguments
+
+**None**<br/>
+Sestavy o vnitřních chybách kompilátoru nebudou shromážděné nebo odeslané společnosti Microsoft.
+
+**prompt**<br/>
+Zobrazí výzvu k odeslání hlášení, pokud obdržíte chybu kompilátoru. **řádek** výchozí nastavení je při kompilaci aplikace ve vývojovém prostředí.
+
+**fronty**<br/>
+Zařadí do fronty zprávy o chybách. Při přihlašování s použitím oprávnění správce, takže můžete nahlásit všechny chyby od posledního byly zaznamenány v, zobrazí se okno (nezobrazí se výzva k odeslání zprávy o chybách více než jednou za tři dny). **fronty** výchozí nastavení je při kompilaci aplikace příkazového řádku.
+
+**Odeslat**<br/>
+Automaticky odesílá zprávy o vnitřních chybách kompilátoru společnosti Microsoft, pokud vytváření sestav je povolené nastavení systému Windows zasílání zpráv o chybách.
+
+## <a name="remarks"></a>Poznámky
+
+Vnitřní chyba kompilátoru (ICE) výsledky, když kompilátor nemůže zpracovat soubor zdrojového kódu. Pokud dojde k ICE, kompilátor nevytvoří výstupní soubor nebo užitečnou diagnostiku, která můžete použít jak kód opravit.
+
+V dřívějších verzích když jste se dostali ICE jste ukončena. doporučujeme volat Microsoft Product Support Services nahlásit problém. S **/errorreport**, můžete zadat informace ICE přímo společnosti Microsoft. Zprávy o chybách můžete zvýšit kompilátoru budoucích verzí.
+
+Uživatele umožňuje odeslat sestavy závisí na oprávnění zásad počítače a uživatele.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **Upřesnit** stránku vlastností.
+
+1. Upravit **zpráv o chybách** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

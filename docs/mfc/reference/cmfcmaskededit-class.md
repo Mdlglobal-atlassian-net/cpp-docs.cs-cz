@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717428"
 ---
 # <a name="cmfcmaskededit-class"></a>Cmfcmaskededit – třída
 `CMFCMaskedEdit` Třída podporuje maskovaného ovládacího prvku, který ověřuje vstup uživatele v porovnání s maskou a zobrazí ověřené výsledky podle šablony.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- PRAVDA, pokud chcete určit, že [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodu načtení pouze maskované znaků. FALSE, pokud chcete určit, že metodu načtení celého textu. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] PRAVDA, pokud chcete určit, že [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodu načtení pouze maskované znaků. FALSE, pokud chcete určit, že metodu načtení celého textu. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete povolit načítání maskované znaků. Pak vytvořte maskované textové pole, která odpovídá telefonní číslo, například (425) 555-0187. Při volání `GetWindowText` metody, vrátí "4255550187". Pokud zakážete načítání maskované znaků `GetWindowText` metoda vrací text, který se zobrazí v textovém poli, například "(425) 555-0187".  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszMask*  
- Maska řetězec, který určuje typ znaku, který se může zobrazit na každou pozici v vstupu uživatele. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné. Další podrobnosti o znaky masky v části poznámky.  
+*lpszMask*<br/>
+[in] Maska řetězec, který určuje typ znaku, který se může zobrazit na každou pozici v vstupu uživatele. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné. Další podrobnosti o znaky masky v části poznámky.  
   
- [in] *lpszInputTemplate*  
- Řetězec masky šablony, která určuje, že je literál znaků, které se může zobrazit na každé pozici ve vstupu uživatele. Použijte znak podtržítka ("_") jako zástupný znak. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné.  
+*lpszInputTemplate*<br/>
+[in] Řetězec masky šablony, která určuje, že je literál znaků, které se může zobrazit na každé pozici ve vstupu uživatele. Použijte znak podtržítka ("_") jako zástupný znak. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné.  
   
- [in] *chMaskInputTemplate*  
- Výchozí znak, který rozhraní provede nahrazení pro každý neplatný znak v vstupu uživatele. Výchozí hodnota tohoto parametru je podtržítko (_).  
+*chMaskInputTemplate*<br/>
+[in] Výchozí znak, který rozhraní provede nahrazení pro každý neplatný znak v vstupu uživatele. Výchozí hodnota tohoto parametru je podtržítko (_).  
   
- [in] *lpszValid*  
- Řetězec, který obsahuje sadu platných znaků. Hodnota NULL označuje, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
+*lpszValid*<br/>
+[in] Řetězec, který obsahuje sadu platných znaků. Hodnota NULL označuje, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete vytvořit maska maskované textové pole. Odvodit třídu z `CMFCMaskedEdit` třídy a přepsat [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metodu použít vlastní kód pro zpracování vlastní masku.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete vybrat jenom skupiny. FALSE, pokud chcete vybrat celý text. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete vybrat jenom skupiny. FALSE, pokud chcete vybrat celý text. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci použijte k určení, zda maskované textové pole umožňuje uživateli vybrat podle skupiny nebo celého textu.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete ověřit uživatele zadejte proti jen maskované znaků. FALSE, pokud chcete ověřovat proti celý masky. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete ověřit uživatele zadejte proti jen maskované znaků. FALSE, pokud chcete ověřovat proti celý masky. Výchozí hodnota je TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Načte ověřit text z maskované textové pole.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lpszStringBuf*  
- Ukazatel do vyrovnávací paměti, která přijímá text z ovládacího prvku pro úpravy.  
+*lpszStringBuf*<br/>
+[out] Ukazatel do vyrovnávací paměti, která přijímá text z ovládacího prvku pro úpravy.  
   
- [in] *nMaxCount*  
- Maximální počet znaků pro příjem.  
+*nMaxCount*<br/>
+[in] Maximální počet znaků pro příjem.  
   
- [out] *rstrString*  
- Odkaz na objekt řetězce, která přijímá text z ovládacího prvku pro úpravy.  
+*rstrString*<br/>
+[out] Odkaz na objekt řetězce, která přijímá text z ovládacího prvku pro úpravy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První přetížení metody vrátí počet bajtů na řetězec, který se zkopíruje do *lpszStringBuf* parametr vyrovnávací paměti; 0, pokud maskované textové pole nemá žádný text.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *chChar*  
- Znak, který má být ověřen.  
+*chChar*<br/>
+[in] Znak, který má být ověřen.  
   
- [in] *chMaskChar*  
- Na odpovídající znak z řetězec masky.  
+*chMaskChar*<br/>
+[in] Na odpovídající znak z řetězec masky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud *chChar* je parametr typu znak povoleném *chMaskChar* parametr; jinak hodnota FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszValid*  
- Řetězec, který obsahuje sadu platných vstupních znaků. Hodnota NULL znamená, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
+*lpszValid*<br/>
+[in] Řetězec, který obsahuje sadu platných vstupních znaků. Hodnota NULL znamená, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete definovat seznam platné znaky. Pokud vstupní znak není v tomto seznamu, ovládacího prvku pro editování nepřijme.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszString*  
- Odkazuje na řetězec zakončený hodnotou null, který se použije příkazovém řádku.  
+*lpszString*<br/>
+[in] Odkazuje na řetězec zakončený hodnotou null, který se použije příkazovém řádku.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví text ovládacího prvku.  

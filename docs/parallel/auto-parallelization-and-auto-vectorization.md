@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464804"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720387"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatická paralelizace a automatická vektorizace
 Automatický Paralelizér a automatický Vektorizér jsou navržená k poskytování zvýšení výkonu automatické smyčky ve vašem kódu.  
@@ -75,8 +75,10 @@ Kompilování pomocí tohoto příkazu:
   
  poskytuje tento výstup:  
   
-**---Analýza funkce: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): smyčka paralelizovaná**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 Kompilování pomocí tohoto příkazu:  
   
@@ -84,9 +86,11 @@ Kompilování pomocí tohoto příkazu:
   
 poskytuje tento výstup:  
   
-**---Analýza funkce: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): smyčka paralelizovaná**   
-**d:\myproject\mytest.cpp(4): smyčka není paralelizovaná z důvodu "1008.**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Všimněte si, že ve výstupu rozdíl mezi dvě různé [/Qpar-report (úroveň sestav automatický Paralelizér)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) možnosti. `/Qpar-report:1` Vypíše automatickou paralelizací zprávy pouze pro smyčky, které jsou úspěšně paralelizována. `/Qpar-report:2` zprávy nástrojů pro obě smyčky úspěšné a neúspěšné parallelizations výstupů.  
   

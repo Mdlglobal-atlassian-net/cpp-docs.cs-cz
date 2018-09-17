@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf4afebc7288a953a0f8785e1f18097c21d71e3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720528"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (soubor s vynuceným názvem #using)
 
@@ -62,6 +62,6 @@ Informace o tom, jak vytvořit sestavení nebo modul pro modul common language r
 
 ## <a name="see-also"></a>Viz také
 
-[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)   
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

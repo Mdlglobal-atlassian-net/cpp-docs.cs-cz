@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206187"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719094"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl – třída
 Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Ukazatel [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) struktura, která obdrží informace o ovládacím prvku kalendáři aktuálního měsíce. Volající zodpovídá za přidělování a inicializaci této struktury.|  
+|*pmcGridInfo*|[out] Ukazatel [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) struktura, která obdrží informace o ovládacím prvku kalendáři aktuálního měsíce. Volající zodpovídá za přidělování a inicializaci této struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *cxyBorder*|Šířka ohraničení v pixelech.|  
+|*cxyBorder*|[in] Šířka ohraničení v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud tato metoda bude úspěšná, šířka ohraničení nastaven *cxyBorder* parametru. V opačném případě šířka ohraničení se resetují na výchozí hodnotu, která je určená aktuální [motiv](/windows/desktop/Controls/visual-styles-overview), nebo nula, pokud nejsou použity motivů.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *ID_kal*|Jeden z [identifikátor kalendáře](/windows/desktop/Intl/calendar-identifiers) konstanty.|  
+|*ID_kal*|[in] Jeden z [identifikátor kalendáře](/windows/desktop/Intl/calendar-identifiers) konstanty.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwNewView*|Jeden z následujících hodnot, které určuje měsíční, roční, deset nebo zobrazení století.<br /><br /> MCMV_MONTH: Zobrazení měsíčního<br /><br /> MCMV_YEAR: Roční zobrazení<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
+|*dwNewView*|[in] Jeden z následujících hodnot, které určuje měsíční, roční, deset nebo zobrazení století.<br /><br /> MCMV_MONTH: Zobrazení měsíčního<br /><br /> MCMV_YEAR: Roční zobrazení<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|  
+|*lprect –*|[in] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélníku, jehož velikost je menší než nebo rovna obdélníku definovaném *lprect –* parametru.  

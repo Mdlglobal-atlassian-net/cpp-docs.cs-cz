@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720067"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx – třída
 `CWinAppEx` Zpracovává stav aplikace ukládá stav do registru, načítá stav z registru, inicializuje správce aplikace a poskytuje odkazy na ty stejné správce aplikace.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Řetězec, který obsahuje cestu klíče registru.  
+*lpszSectionName*<br/>
+[in] Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda byla úspěšná. jinak 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bResourceSmartUpdate*  
- Parametr logické hodnoty, která určuje, zda by měl objekt workspace detekoval a řešil aktualizace prostředku.  
+*bResourceSmartUpdate*<br/>
+[in] Parametr logické hodnoty, která určuje, zda by měl objekt workspace detekoval a řešil aktualizace prostředku.  
   
 ### <a name="remarks"></a>Poznámky  
  `CWinAppEx` Třída obsahuje metody inicializace, poskytuje funkce pro ukládání a načítání informací o aplikaci do registru a řídí nastavení globální aplikace. Taky umožňuje použít globální správci, jako [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md) a [cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md). Každá aplikace může obsahovat jenom jednu instanci `CWinAppEx` třídy.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Určuje, zda aplikace načte z registru počáteční velikost a umístění okna hlavního rámce.  
+*bEnable*<br/>
+[in] Určuje, zda aplikace načte z registru počáteční velikost a umístění okna hlavního rámce.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení velikost a umístění hlavního rámce se načte z registru společně s další nastavení aplikace. K tomu dochází během [CWinAppEx::LoadState](#loadstate). Pokud nechcete načíst umístění počáteční okna z registru, volání této metody s *bEnable* nastavena na hodnotu FALSE.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszRegEntry*  
- Řetězec, který obsahuje cestu klíče registru. Aplikace používá tohoto klíče registru k ukládání informací o odnímatelné nabídky.  
+*lpszRegEntry*<br/>
+[in] Řetězec, který obsahuje cestu klíče registru. Aplikace používá tohoto klíče registru k ukládání informací o odnímatelné nabídky.  
   
- [in] *uiCmdFirst*  
- ID první odtrhnout nabídky.  
+*uiCmdFirst*<br/>
+[in] ID první odtrhnout nabídky.  
   
- [in] *uiCmdLast*  
- ID poslední odtrhnout nabídky.  
+*uiCmdLast*<br/>
+[in] ID poslední odtrhnout nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud `CMenuTearOffManager` je vytvořen a inicializován úspěšně; FALSE Pokud dojde k chybě nebo pokud `CMenuTearOffManager` již existuje.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdToolsDummy*  
- Celé číslo bez znaménka, která rozhraní používá jako zástupný symbol pro Identifikátor příkazu v nabídce Nástroje pro uživatele.  
+*uiCmdToolsDummy*<br/>
+[in] Celé číslo bez znaménka, která rozhraní používá jako zástupný symbol pro Identifikátor příkazu v nabídce Nástroje pro uživatele.  
   
- [in] *uiCmdFirst*  
- ID příkazu pro příkaz první nástroj uživatele.  
+*uiCmdFirst*<br/>
+[in] ID příkazu pro příkaz první nástroj uživatele.  
   
- [in] *uiCmdLast*  
- ID příkazu pro příkaz poslední nástroj uživatele.  
+*uiCmdLast*<br/>
+[in] ID příkazu pro příkaz poslední nástroj uživatele.  
   
- [in] *pToolRTC*  
- Třída, která `CUserToolsManager` objektu používá k vytvoření nové uživatelské nástroje.  
+*pToolRTC*<br/>
+[in] Třída, která `CUserToolsManager` objektu používá k vytvoření nové uživatelské nástroje.  
   
- [in] *uArgMenuID*  
- ID argument nabídky.  
+*uArgMenuID*<br/>
+[in] ID argument nabídky.  
   
- [in] *uInitDirMenuID*  
- ID nabídky pro adresář počáteční nástroj.  
+*uInitDirMenuID*<br/>
+[in] ID nabídky pro adresář počáteční nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda vytvoří a inicializuje `CUserToolsManager` objektu FALSE Jestliže metoda selže nebo pokud `CUserToolsManager` objekt již existuje.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [out] *ppData*  
- Ukazatel do vyrovnávací paměti, který metoda vyplní binární data.  
+*ppData*<br/>
+[out] Ukazatel do vyrovnávací paměti, který metoda vyplní binární data.  
   
- [out] *pBytes*  
- Ukazatel na celé číslo bez znaménka, která metoda se používá k zápisu počet přečtených bajtů.  
+*pBytes*<br/>
+[out] Ukazatel na celé číslo bez znaménka, která metoda se používá k zápisu počet přečtených bajtů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; FALSE v opačném případě.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název položky registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název položky registru.  
   
- [in] *Nvýchozí*  
- Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
+*Nvýchozí*<br/>
+[in] Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Data registru, pokud metoda byla úspěšná. v opačném případě *Nvýchozí*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje relativní cestu z položky registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje relativní cestu z položky registru.  
   
- [out] *obj*  
- Odkaz na `CObject`. Metoda používá tento odkaz k ukládání dat registru.  
+*obj*<br/>
+[out] Odkaz na `CObject`. Metoda používá tento odkaz k ukládání dat registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda byla úspěšná. jinak 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *szSectionAdd*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*szSectionAdd*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CString` , který obsahuje absolutní cesta klíče registru.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnoty ke čtení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnoty ke čtení.  
   
- [out] *ppData*  
- Ukazatel do vyrovnávací paměti, kde Metoda ukládá data.  
+*ppData*<br/>
+[out] Ukazatel do vyrovnávací paměti, kde Metoda ukládá data.  
   
- [out] *pBytes*  
- Ukazatel na celé číslo bez znaménka. Metoda zapíše velikost *ppData* tomuto parametru.  
+*pBytes*<br/>
+[out] Ukazatel na celé číslo bez znaménka. Metoda zapíše velikost *ppData* tomuto parametru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnoty ke čtení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnoty ke čtení.  
   
- [in] *Nvýchozí*  
- Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
+*Nvýchozí*<br/>
+[in] Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Celé číslo data, která je uložená v hodnotě registru; *Nvýchozí* Pokud dat neexistuje.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnoty ke čtení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnoty ke čtení.  
   
- [out] *obj*  
- Odkaz na `CObject`. Tato metoda používá `CObject` k ukládání dat registru.  
+*obj*<br/>
+[out] Odkaz na `CObject`. Tato metoda používá `CObject` k ukládání dat registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnoty ke čtení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnoty ke čtení.  
   
- [in] *lpszDefault*  
- Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
+*lpszDefault*<br/>
+[in] Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Řetězcová data uložená v hodnotě registru, pokud existuje data v opačném případě *lpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název klíče registru  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název klíče registru  
   
- [in] *lpzDefault*  
- Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
+*lpzDefault*<br/>
+[in] Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Data řetězce, který je uložen v registru v případě úspěchu; *lpszDefault* jinak.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Řetězec, který obsahuje cestu klíče registru.  
+*lpszSectionName*<br/>
+[in] Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je klíč v registru. jinak 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrame*  
- Ukazatel na objekt okna rámce. Metoda použije informace o stavu v registru do tohoto okna rámce.  
+*pFrame*<br/>
+[in] Ukazatel na objekt okna rámce. Metoda použije informace o stavu v registru do tohoto okna rámce.  
   
- [in] *lpszSectionName*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSectionName*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *pFrameImpl*  
- Ukazatel `CFrameImpl` objektu. Metoda použije informace o stavu v registru do tohoto okna rámce.  
+*pFrameImpl*<br/>
+[in] Ukazatel `CFrameImpl` objektu. Metoda použije informace o stavu v registru do tohoto okna rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectNormalPosition*  
- Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je v obnovené pozici.  
+*rectNormalPosition*<br/>
+[out] Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je v obnovené pozici.  
   
- [out] *nFlags*  
- Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
+*nFlags*<br/>
+[out] Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
   
- [out] *nShowCmd*  
- Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndControl*  
- Ukazatel na objekt window, pro kterou uživatel vyvolal kontextové nápovědy.  
+*pWndControl*<br/>
+[in] Ukazatel na objekt window, pro kterou uživatel vyvolal kontextové nápovědy.  
   
- [in] *dwHelpIDArray]*  
- Rezervovanou hodnotu.  
+*[] dwHelpIDArray*<br/>
+[in] Rezervovanou hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je aktuálně vyhrazena pro budoucí použití. Výchozí implementace neprovede žádnou akci a není aktuálně volá se rozhraním.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrameImpl*  
- Ukazatel `CFrameImpl` objektu.  
+*pFrameImpl*<br/>
+[in] Ukazatel `CFrameImpl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této metody uloží stav *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Ukazatel na objekt odvozený od [CView Class](../../mfc/reference/cview-class.md).  
+*pWnd*<br/>
+[in] Ukazatel na objekt odvozený od [CView Class](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- ID zobrazení.  
+*iViewId*<br/>
+[in] ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud najde příkaz; rozhraní v opačném případě FALSE.  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrame*  
- Ukazatel na okno rámce.  
+*pFrame*<br/>
+[in] Ukazatel na okno rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda byla úspěšná. 0, je-li zatížení selhalo nebo že žádná data pro načtení.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSectionName*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *pFrameImpl*  
- Ukazatel `CFrameImpl` objektu. Tento snímek je uložena do registru Windows.  
+*pFrameImpl*<br/>
+[in] Ukazatel `CFrameImpl` objektu. Tento snímek je uložena do registru Windows.  
   
- [in] *pFrame*  
- Ukazatel na objekt okna rámce. Tento snímek je uložena do registru Windows.  
+*pFrame*<br/>
+[in] Ukazatel na objekt okna rámce. Tento snímek je uložena do registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; FALSE v opačném případě.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Řetězec, který obsahuje cestu klíče registru.  
+*lpszSectionName*<br/>
+[in] Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Řetězec, který obsahuje cestu k umístění registru výchozí.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMenuResId*  
- ID prostředku nabídky  
+*uiMenuResId*<br/>
+[in] ID prostředku nabídky  
   
- [in] *bodu*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , která určuje umístění v nabídce v souřadnicovém systému obrazovky.  
+*Bod*<br/>
+[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , která určuje umístění v nabídce v souřadnicovém systému obrazovky.  
   
- [in] *pWnd*  
- Ukazatel, který vlastní místní nabídka okna.  
+*pWnd*<br/>
+[in] Ukazatel, který vlastní místní nabídka okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud se zobrazí místní nabídka se úspěšně; jinak 0.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFlags*  
- Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
+*nFlags*<br/>
+[in] Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
   
- [in] *nShowCmd*  
- Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *rectNormalPosition*  
- Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je ve stavu pro obnovený.  
+*rectNormalPosition*<br/>
+[in] Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je ve stavu pro obnovený.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [in] *pData*  
- Data k uložení.  
+*pData*<br/>
+[in] Data k uložení.  
   
- [in] *nBytes*  
- Velikost *pData* v bajtech.  
+*nBytes*<br/>
+[in] Velikost *pData* v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [in] *nHodnota*  
- Data k uložení.  
+*nHodnota*<br/>
+[in] Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnotu pro nastavení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [in] *obj*  
- Odkaz na `CObject` data, která metoda se uloží.  
+*obj*<br/>
+[in] Odkaz na `CObject` data, která metoda se uloží.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje název klíče registru  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje název klíče registru  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnotu pro nastavení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [in] *pData*  
- Data k zápisu do registru.  
+*pData*<br/>
+[in] Data k zápisu do registru.  
   
- [in] *nBytes*  
- Velikost *pData* v bajtech.  
+*nBytes*<br/>
+[in] Velikost *pData* v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnotu pro nastavení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [in] *nHodnota*  
- Data k zápisu do registru.  
+*nHodnota*<br/>
+[in] Data k zápisu do registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec obsahující název hodnoty nastavení.  
+*lpszEntry*<br/>
+[in] Řetězec obsahující název hodnoty nastavení.  
   
- [in] *obj*  
- Data k uložení.  
+*obj*<br/>
+[in] Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszSubSection*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [in] *lpszEntry*  
- Řetězec, který obsahuje hodnotu pro nastavení.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [in] *lpszValue*  
- Řetězcová data k zápisu do registru.  
+*lpszValue*<br/>
+[in] Řetězcová data k zápisu do registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Řetězec, který obsahuje název klíče registru.  
+*lpszEntry*<br/>
+[in] Řetězec, který obsahuje název klíče registru.  
   
- [in] *lpszValue*  
- Data k uložení.  
+*lpszValue*<br/>
+[in] Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  

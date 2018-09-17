@@ -1,5 +1,5 @@
 ---
-title: -E (předběžné zpracování výstupu stdout) | Microsoft Docs
+title: -E (předběžné zpracování výstupu stdout) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,76 +19,80 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f9105c5c75bc4695d0b00debdff49acf78690b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48517f4469f203f5e29fbaa4ec105a3e36aafb44
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376911"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720264"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (předběžné zpracování výstupu stdout)
-Upraví C a C++ zdrojové soubory a zkopíruje předběžně zpracované soubory do standardního výstupního zařízení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/E  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- V tomto procesu všechny preprocesor – direktivy jsou prováděny postupně, jsou prováděny makro rozšíření a komentáře se odeberou. Chcete-li zachovat komentáře v předběžně zpracované výstup, použijte [/C (zachovat komentáře při předběžném zpracování)](../../build/reference/c-preserve-comments-during-preprocessing.md) i – možnost kompilátoru.  
-  
- **/E** přidá `#line` direktivy pro výstup na začátku a konci jednotlivých součástí souborů a kolem řádky odebrat pomocí preprocesor – direktivy pro Podmíněná kompilace. Tyto direktivy přečíslování řádky předběžně zpracované souboru. Chyby generované během novější fáze zpracování v důsledku toho naleznete čísla řádků původní zdrojový soubor místo řádků v předběžně zpracované souboru.  
-  
- **/E** možnost potlačí kompilace. Soubor předběžně zpracované pro kompilaci musí odešlete znovu. **/E** také potlačí výstupní soubory z **/FA**, **/Fa**, a **/Fm** možnosti. Další informace najdete v tématu [/FA, /Fa (soubor výpis)](../../build/reference/fa-fa-listing-file.md) a [/Fm (název souboru mapování)](../../build/reference/fm-name-mapfile.md).  
-  
- Chcete-li potlačit `#line` direktivy, použijte [/EP (předběžné zpracování do direktiv bez #line direktivy)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) místo něj.  
-  
- K odeslání předběžně zpracované výstup do souboru místo položky `stdout`, použijte [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) místo něj.  
-  
- Chcete-li potlačit `#line` direktivy a odesílání předběžně zpracované výstup do souboru, použijte **/P** a **/EP** společně.  
-  
- Nelze použít s předkompilovaných hlaviček **/E** možnost.  
-  
- Všimněte si, že při předběžném zpracování do samostatného souboru, mezery nejsou vygenerované po tokeny. To mít za následek neplatný program nebo mít nezamýšleným vedlejší účinky. Úspěšně se zkompiluje následující program:  
-  
-```  
-#define m(x) x  
-m(int)main( )  
-{  
-   return 0;  
-}  
-```  
-  
- Ale pokud zkompilujete pomocí:  
-  
-```  
-cl -E test.cpp > test2.cpp  
-```  
-  
- `int main` v test2.cpp nesprávně bude `intmain`.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti**pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
-  
-## <a name="example"></a>Příklad  
- Upraví následující příkazový řádek `ADD.C`, zachová komentáře, přidá `#line` direktivy a zobrazí výsledek do standardního výstupního zařízení:  
-  
-```  
-CL /E /C ADD.C  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Předzpracuje zdrojové soubory jazyka C a C++ a zkopíruje předzpracovaných souborů do standardního výstupního zařízení.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/E
+```
+
+## <a name="remarks"></a>Poznámky
+
+V tomto procesu jsou prováděny všechny direktivy preprocesoru, rozšíření makra se provádí a komentáře se odeberou. Chcete-li zachovat komentáře v Předzpracovaný výstup, použijte [/C (zachovat komentáře při předběžném zpracování)](../../build/reference/c-preserve-comments-during-preprocessing.md) i – možnost kompilátoru.
+
+**/E** přidá `#line` direktivy k výstupu na začátek a konec jednotlivých součástí souborů a kolem řádky odebrat direktivy preprocesoru podmíněné kompilace. Tyto direktivy přečíslování řádky předzpracovaného souboru. Chyby vytvořené během pozdější fáze zpracování v důsledku toho odkazují na čísla řádků původní zdrojový soubor namísto vstupující Předzpracovaný soubor.
+
+**/E** parametr zakazuje kompilaci. Musíte znovu spustit Předzpracovaný soubor pro kompilaci. **/E** výstupní soubory z potlačí i **/FA**, **/Fa**, a **/Fm** možnosti. Další informace najdete v tématu [/FA, /Fa (soubor výpisu)](../../build/reference/fa-fa-listing-file.md) a [/Fm (pojmenování souboru mapování)](../../build/reference/fm-name-mapfile.md).
+
+Chcete-li potlačit `#line` direktivy, použijte [/EP (předběžné zpracování do direktiv bez příkazů #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) místo něj parametr.
+
+K odeslání Předzpracovaný výstup do souboru místo položky `stdout`, použijte [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) místo něj parametr.
+
+Chcete-li potlačit `#line` direktivy a odeslat Předzpracovaný výstup do souboru, použijte **/P** a **/EP** společně.
+
+Nelze použít s předkompilovaných hlaviček **/E** možnost.
+
+Všimněte si, že při předzpracování do samostatného souboru, mezery nejsou zaznamenávány po tokeny. K tomu může mít za následek neplatný program nebo mít nežádoucí vedlejší účinky. Následující program zkompiluje úspěšně:
+
+```
+#define m(x) x
+m(int)main( )
+{
+   return 0;
+}
+```
+
+Nicméně pokud kompilujete s:
+
+```
+cl -E test.cpp > test2.cpp
+```
+
+`int main` test2.cpp nesprávně budou `intmain`.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti**pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.
+
+## <a name="example"></a>Příklad
+
+Následující příkaz upraví `ADD.C`, zachová komentáře, přidá `#line` direktivy a zobrazí výsledek do standardního výstupního zařízení:
+
+```
+CL /E /C ADD.C
+```
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
