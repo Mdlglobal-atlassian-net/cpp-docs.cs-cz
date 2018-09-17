@@ -15,37 +15,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1fc7f2bc51c257690a300776120d093e746e3eb8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464710"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711892"
 ---
 # <a name="x64-software-conventions"></a>x64 – softwarové konvence
-Tato část popisuje metodologii konvence volání pro x64, 64-bit rozšíření x86 Visual C++ architektury.  
-  
--   [Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)  
-  
--   [Typy a úložiště](../build/types-and-storage.md)  
-  
--   [Využití registrů](../build/register-usage.md)  
-  
--   [Konvence volání](../build/calling-convention.md)  
-  
--   [Použití zásobníku](../build/stack-usage.md)  
-  
--   [Prolog a epilog](../build/prolog-and-epilog.md)  
-  
--   [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)  
-  
--   [Vnitřní objekty a vložené sestavení](../build/intrinsics-and-inline-assembly.md)  
-  
--   [Formát obrázku](../build/image-format.md)  
-  
- Následující možnost kompilátoru umožňuje optimalizovat aplikaci pro x64:  
-  
--   [/favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../cpp/calling-conventions.md)
+
+Tato část popisuje metodologii konvence volání pro x64, 64-bit rozšíření x86 Visual C++ architektury.
+
+- [Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)
+
+- [Typy a úložiště](../build/types-and-storage.md)
+
+- [Využití registrů](../build/register-usage.md)
+
+- [Konvence volání](../build/calling-convention.md)
+
+- [Použití zásobníku](../build/stack-usage.md)
+
+- [Prolog a epilog](../build/prolog-and-epilog.md)
+
+- [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)
+
+- [Vnitřní objekty a vložené sestavení](../build/intrinsics-and-inline-assembly.md)
+
+- [Formát obrázku](../build/image-format.md)
+
+Následující možnost kompilátoru umožňuje optimalizovat aplikaci pro x64:
+
+- [/favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../cpp/calling-conventions.md)

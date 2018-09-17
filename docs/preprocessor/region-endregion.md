@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715553"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` Umožňuje určit blok kódu, které můžete rozbalit nebo sbalit při použití [funkce osnovy](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.  
@@ -40,11 +40,11 @@ ms.locfileid: "42465384"
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*Komentář* (volitelné)  
-Komentář, který se zobrazí v editoru kódu.  
+*Komentář*  
+(Volitelné) Komentář, který se zobrazí v editoru kódu.  
   
-*Název* (volitelné)  
-Název oblasti.  Tento název se zobrazí v editoru kódu.  
+*Jméno*  
+(Volitelné) Název oblasti.  Tento název se zobrazí v editoru kódu.  
   
 ## <a name="remarks"></a>Poznámky  
  

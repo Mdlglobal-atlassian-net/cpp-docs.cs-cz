@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b301483e2c2f76838054059af838b282aee2d523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611380"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711253"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchange
 **Specifické pro Microsoft**  
@@ -186,14 +186,14 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `Destination`  
- Ukazatel na cílové hodnoty. Znaménko se ignoruje.  
+*cíl*<br/>
+[out v] Ukazatel na cílové hodnoty. Znaménko se ignoruje.  
   
- [in] `Exchange`  
- Hodnota serveru Exchange. Znaménko se ignoruje.  
+*Exchange*<br/>
+[in] Hodnota serveru Exchange. Znaménko se ignoruje.  
   
- [in] `Comparand`  
- Hodnota pro porovnání do cíle. Znaménko se ignoruje.  
+*Operand porovnávání*<br/>
+[in] Hodnota pro porovnání do cíle. Znaménko se ignoruje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota je počáteční hodnota proměnné `Destination` ukazatele.  

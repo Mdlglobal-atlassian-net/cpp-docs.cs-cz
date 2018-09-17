@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107422"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711049"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funkce oboru názvů Concurrency::precise_math
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Hodnota s plovoucí desetinnou čárkou
 
-`_Iptr` (výstupní parametr)  
-Celočíselnou část `_X`, jako hodnotu s plovoucí desetinnou čárkou.
+`_Iptr`  
+[out] Celočíselnou část `_X`, jako hodnotu s plovoucí desetinnou čárkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 Podepsaná desetinná část čísla `_X`.
@@ -1891,8 +1891,8 @@ První argument s plovoucí desetinnou čárkou.
 `_Y`  
 Druhý argument s plovoucí desetinnou čárkou.
 
-`_Quo` (výstupní parametr)  
-Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
+`_Quo`  
+[out] Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
 
 ### <a name="return-value"></a>Návratová hodnota
 Vrátí zbytek `_X` dělený `_Y`.
@@ -1914,8 +1914,8 @@ První argument s plovoucí desetinnou čárkou.
 `_Y`  
 Druhý argument s plovoucí desetinnou čárkou.
 
-`_Quo` (výstupní parametr)  
-Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
+`_Quo`  
+[out] Adresa celého čísla, který se používá k vrácení podílu zlomkových bitů `_X` dělený dělené desetinnými bity `_Y`.
 
 ### <a name="return-value"></a>Návratová hodnota
 Vrátí zbytek `_X` dělený `_Y`.

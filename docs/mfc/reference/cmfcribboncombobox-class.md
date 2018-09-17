@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701737"
 ---
 # <a name="cmfcribboncombobox-class"></a>Cmfcribboncombobox – třída
 `CMFCRibbonComboBox` Třída implementuje ovládací prvek pole se seznamem, který lze přidat na panel pásu karet, panel pásu karet nebo nabídky pásu karet.  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszItem*  
- Řetězec položky pro přidání.  
+*lpszItem*<br/>
+[in] Řetězec položky pro přidání.  
   
- [in] *dwData*  
- Data přidružená k položka k přidání.  
+*dwData*<br/>
+[in] Data přidružená k položka k přidání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule připojené položky.  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID pole se seznamem.  
+*nID*<br/>
+[in] ID pole se seznamem.  
   
- [in] *bHasEditBox*  
- Hodnota TRUE, pokud chcete, aby do textového pole v ovládacím prvku; FALSE v opačném případě.  
+*bHasEditBox*<br/>
+[in] Hodnota TRUE, pokud chcete, aby do textového pole v ovládacím prvku; FALSE v opačném případě.  
   
- [in] *nWidth*  
- Šířka v pixelech; pole se seznamem nebo -1 pro výchozí šířky.  
+*nWidth*<br/>
+[in] Šířka v pixelech; pole se seznamem nebo -1 pro výchozí šířky.  
   
- [in] *lpszLabel*  
- Zobrazit popisek pole se seznamem.  
+*lpszLabel*<br/>
+[in] Zobrazit popisek pole se seznamem.  
   
- [in] *nvybrán Nobrázek*  
- Malý obrázek indexu pole se seznamem.  
+*nvybrán Nobrázek*<br/>
+[in] Malý obrázek indexu pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí šířka je 108 pixelů.  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položka, která má být odstraněna.  
+*iIndex*<br/>
+[in] Index založený na nule položka, která má být odstraněna.  
   
- [in] *dwData*  
- Data přidružená k položka, která má být odstraněna.  
+*dwData*<br/>
+[in] Data přidružená k položka, která má být odstraněna.  
   
- [in] *lpszText*  
- Řetězec položky, která má být odstraněna. Pokud existuje více položek s do jednoho řetězce, odstraní se první položky.  
+*lpszText*<br/>
+[in] Řetězec položky, která má být odstraněna. Pokud existuje více položek s do jednoho řetězce, odstraní se první položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaná položka je Odstraněná; v opačném případě hodnota FALSE.  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Pokud chcete povolit změnu velikosti; FALSE, pokud chcete zakázat změnu velikosti.  
+*bEnable*<br/>
+[in] Pokud chcete povolit změnu velikosti; FALSE, pokud chcete zakázat změnu velikosti.  
   
 ### <a name="remarks"></a>Poznámky  
  Při změně velikosti je povoleno, bude pole se seznamem změnit velikost položkám, které se zobrazí.  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Řetězec položky v seznamu.  
+*lpszText*<br/>
+[in] Řetězec položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index položky; nebo -1, pokud položka není nalezena.  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení pro pole se seznamem.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení pro pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost pole se seznamem.  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položku v seznamu.  
+*iIndex*<br/>
+[in] Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na řetězec, který je přidružený k položce; v opačném případě hodnotu NULL, pokud parametr indexu je neplatný, nebo pokud je parametr indexu -1 a neexistuje žádná položka vybraná v poli se seznamem.  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položku v seznamu.  
+*iIndex*<br/>
+[in] Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Data přidružená k položce; nebo 0. Pokud položka buď neexistuje, nebo pokud je parametr indexu -1 a v seznamu není vybrána žádná položka.  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItem*  
- Index vybrané položky.  
+*nItem*<br/>
+[in] Index vybrané položky.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete zpracovat výběr vstupu uživatele.  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položku v seznamu.  
+*iIndex*<br/>
+[in] Index založený na nule položku v seznamu.  
   
- [in] *dwData*  
- Data související s položkou v seznamu.  
+*dwData*<br/>
+[in] Data související s položkou v seznamu.  
   
- [in] *lpszText*  
- Řetězec položky v seznamu.  
+*lpszText*<br/>
+[in] Řetězec položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHeight*  
- Výška v pixelech, pole se seznamem.  
+*nHeight*<br/>
+[in] Výška v pixelech, pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí výška je 150 pixelů.  

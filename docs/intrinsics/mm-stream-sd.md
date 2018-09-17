@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_sd | Microsoft Docs
+title: _mm_stream_sd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333141"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700164"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
-**Konkrétní Microsoft**  
+
+**Specifické pro Microsoft**  
   
- Zapíše data 64-bit do umístění v paměti bez zahlcení mezipaměti.  
+ Zapíše data 64-bit do umístění v paměti bez zahlcení mezipamětí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,27 +40,27 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Dest`  
- Ukazatel na umístění, kam budou zapsány zdrojová data.  
+*cíl*<br/>
+[out] Ukazatel na umístění, kam se budou zapisovat zdrojová data.  
   
- [v] `Source`  
- Hodnota 128-bit obsahující `double` hodnota má být zapsán v jeho dolní 64bitová verze...  
+*Zdroj*<br/>
+[in] 128bitové hodnotu obsahující `double` hodnota má být zapsán v její dolní 64 bitů...  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Žádné  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní vygeneruje `movntsd` instrukcí. Chcete-li určit podporu hardwaru pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud hardware podporuje tento pokyn a 0 jinak.  
+ Tomto vnitřní vygeneruje `movntsd` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud hardware podporuje tento pokyn a 0 jinak.  
   
- Pokud spustíte kód, který používá `_mm_stream_sd` vnitřní na hardware, který nepodporuje `movntsd` instrukce, nepředvídatelné výsledky.  
+ Při spuštění kódu, který používá `_mm_stream_sd` vnitřní na hardwaru, který není podporován `movntsd` instrukce, výsledky nepředvídatelné.  
   
 ## <a name="example"></a>Příklad  
   
@@ -88,8 +89,9 @@ int main()
 d[0] = -1, d[1] = 1  
 ```  
   
-**Konkrétní Microsoft END**  
- Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**  
+
+Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

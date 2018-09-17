@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711656"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Specifické pro Microsoft**  
@@ -41,14 +41,14 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Port`  
- Port, který se má číst z.  
+*Port*<br/>
+[in] Port, který se má číst z.  
   
- [out] `Buffer`  
- Tady je zapsána data načtená z portu.  
+*Vyrovnávací paměti*<br/>
+[out] Tady je zapsána data načtená z portu.  
   
- [in] `Count`  
- Počet bajtů ke čtení.  
+*Počet*<br/>
+[in] Počet bajtů ke čtení.  
   
 ## <a name="requirements"></a>Požadavky  
   

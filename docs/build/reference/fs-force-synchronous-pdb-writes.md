@@ -1,5 +1,5 @@
 ---
-title: -FS (vynutit synchronní PDB zápisy) | Microsoft Docs
+title: -FS (vynucení synchronních PDB zápisů) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8565022a77742a1a8c7ed1f243a192d94c8627fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b332782cb9bcd929bcd67d4d81b7a7d0259f53cc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714594"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Vynutit synchronní zápisy do souboru PDB)
-Vynutí zapisuje do souboru databáze (PDB) programu – vytvořené [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) nebo [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)– k serializaci prostřednictvím MSPDBSRV. SOUBOR EXE.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/FS  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení když **/Zi** nebo **/ZI** není zadaný, kompilátor zamkne soubory PDB zápis informací o typu a symbolické ladicí informace. To může výrazně snížit čas, který potřebuje kompilátoru generovat informace o typu při velký počet typů. Pokud jiný proces dočasně uzamkne soubor PDB – například antivirový program – zápisy kompilátorem může selhat a může dojít k závažné chybě. Tento problém může také dojít v případě více kopií cl.exe přistupovat ke stejnému souboru PDB – například pokud má vaše řešení nezávislé projekty, které používají stejné mezilehlé adresáře nebo výstupního adresáře, a paralelní sestavení jsou povolené. **/FS** zabrání kompilátoru zamykání soubor PDB – možnost kompilátoru a vynutí zápisy projít MSPDBSRV. Soubor EXE, který serializuje přístup. To může být výrazně delší sestavení a nezabrání všechny chyby, které mohou nastat při více instancí cl.exe přístup k souboru PDB ve stejnou dobu. Doporučujeme změnit řešení, tak, aby zápis nezávislé projekty k oddělení zprostředkující a výstupní umístění, nebo které jste si ho projektů závislá na druhé pro sestavení projektu platnost serializován.  
-  
- [/MP](../../build/reference/mp-build-with-multiple-processes.md) možnost umožňuje **/FS** ve výchozím nastavení.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte **C/C++** složky.  
-  
-3.  Vyberte **příkazového řádku** stránku vlastností.  
-  
-4.  Změnit **další možnosti** vlastnost, aby zahrnovala `/FS` a potom zvolte **OK**.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Vynutí zápisy do souboru databáze (PDB) programu – vytvořil [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) nebo [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)– k serializaci pomocí MSPDBSRV. SOUBOR EXE.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/FS
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení když **/zi** nebo **/zi** není zadán, kompilátor uzamkne soubory PDB, zaznamená se informace o typech a symbolickém ladění. To může výrazně snížit čas potřebný kompilátoru generovat informace o typu, když je velký počet typů. Pokud jiný proces dočasně uzamkne soubor PDB – například antivirový program – zápisy kompilátor může dojít k selhání a může dojít k závažné chybě. Tento problém může taky dojít v případě více kopií cl.exe přístup ke stejnému souboru PDB – například pokud má vaše řešení nezávislé projekty, které používají stejné zprostředkující adresáře nebo výstupní adresáře, a paralelní sestavení jsou povolená. **/FS** zabrání kompilátoru zamykání souborů PDB – možnost kompilátoru a vynutí zápisy do projít MSPDBSRV. Exe souboru, který serializuje přístup. To může být výrazně delší dobu sestavení a nezabrání všechny chyby, které mohou nastat při více instancí cl.exe přístup k souboru PDB ve stejnou dobu. Doporučujeme změnit vaše řešení tak, aby nezávislé projekty zápisu do samostatných zprostředkující a výstupní umístění nebo které jste proveďte jeden z projektů závislá na druhé sestavování projektu platnost serializovat.
+
+[/MP](../../build/reference/mp-build-with-multiple-processes.md) možnost umožňuje **/FS** ve výchozím nastavení.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Vyberte **C/C++** složky.
+
+1. Vyberte **příkazového řádku** stránku vlastností.
+
+1. Upravit **další možnosti** vlastnost, aby zahrnovala `/FS` a klikněte na tlačítko **OK**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

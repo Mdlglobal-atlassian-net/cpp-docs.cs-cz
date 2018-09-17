@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: da3f7882a24d31f1a8560cdc9c038081324bf675
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715608"
 ---
 # <a name="wildcards-and-nmake"></a>Zástupné znaky a příkaz NMAKE
-NMAKE rozbalí zástupné znaky názvu souboru (\* a?) na řádcích závislostí. Zástupný znak zadaný v příkazu je předán příkazu; NMAKE Nerozbaluje ho.  
-  
-## <a name="see-also"></a>Viz také  
- [Obsah souboru pravidel](../build/contents-of-a-makefile.md)
+
+NMAKE rozbalí zástupné znaky názvu souboru (\* a?) na řádcích závislostí. Zástupný znak zadaný v příkazu je předán příkazu; NMAKE Nerozbaluje ho.
+
+## <a name="see-also"></a>Viz také
+
+[Obsah souboru pravidel](../build/contents-of-a-makefile.md)

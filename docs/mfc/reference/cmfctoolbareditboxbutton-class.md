@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ffb78d1c7893255666e5a340ce48649da72df6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215512"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706898"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Cmfctoolbareditboxbutton – třída
 Tlačítka panelu nástrojů obsahující ovládací prvek úprav ( [cedit – třída](../../mfc/reference/cedit-class.md)).  
@@ -177,17 +177,17 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Určuje ID ovládacího prvku.  
+*uiID*<br/>
+[in] Určuje ID ovládacího prvku.  
   
- [in] *iImage*  
- Určuje index založený na nule Obrázek panelu nástrojů. Na obrázku se nachází v [cmfctoolbarimages – třída](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md) třída udržuje.  
+*iImage*<br/>
+[in] Určuje index založený na nule Obrázek panelu nástrojů. Na obrázku se nachází v [cmfctoolbarimages – třída](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md) třída udržuje.  
   
- [in] *dwStyle*  
- Určuje styl ovládacího prvku úprav.  
+*dwStyle*<br/>
+[in] Určuje styl ovládacího prvku úprav.  
   
- [in] *iWidth*  
- Určuje šířku v pixelech ovládacích prvků pro úpravy.  
+*iWidth*<br/>
+[in] Určuje šířku v pixelech ovládacích prvků pro úpravy.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí konstruktor nastaví následující kombinace stylu ovládacího prvku úprav:  
@@ -204,8 +204,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
+*src*<br/>
+[in] Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem kopírování jiné tlačítko panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCToolBarEditBoxButton`.  
@@ -220,11 +220,11 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Určuje nadřazené okno ovládacího prvku pro úpravy. Nesmí být NULL.  
+*pWndParent*<br/>
+[in] Určuje nadřazené okno ovládacího prvku pro úpravy. Nesmí být NULL.  
   
- [in] *rect*  
- Určuje velikost a umístění textové pole.  
+*Rect*<br/>
+[in] Určuje velikost a umístění textové pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořený textové pole; To má hodnotu NULL, pokud selžou i přílohy a vytvoření ovládacího prvku.  
@@ -240,8 +240,8 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identifikátor příkazu tlačítka pro načtení.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu tlačítka pro načtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První `CMFCToolBarEditBoxButton` objektu v aplikaci, která má ID zadaného příkazu nebo hodnota NULL, pokud žádný takový objekt neexistuje.  
@@ -257,8 +257,8 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identifikátor příkazu tlačítka, ze kterého se má načíst obsah.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu tlačítka, ze kterého se má načíst obsah.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CString` objekt, který obsahuje text první upravit pole ovládacím prvkem panel nástrojů, která má ID zadaného příkazu.  
@@ -287,8 +287,8 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectBorder*  
- Odkaz na `CRect` objekt, který přijme ohraničující obdélník.  
+*rectBorder*<br/>
+[out] Odkaz na `CRect` objekt, který přijme ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda načte ohraničující obdélník ovládacích prvků pro úpravy v souřadnicích klienta. Velikost pravoúhelníku v každém směru rozšiřuje o jeden pixel.  
@@ -368,8 +368,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iNotifyCode*  
- Zprávy oznámení, který je přidružený příkaz.  
+*iNotifyCode*<br/>
+[in] Zprávy oznámení, který je přidružený příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud tlačítko zpracovává wm_command – zprávy nebo hodnotu NEPRAVDA označuje, že zpráva musí být zpracovány nadřazeného panelu nástrojů.  
@@ -399,8 +399,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Ukazatel do nového nadřazeného okna.  
+*pWndParent*<br/>
+[in] Ukazatel do nového nadřazeného okna.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje implementaci základní třídy ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) prostřednictvím přetvoření vnitřní `CEdit` objektu.  
@@ -415,11 +415,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Nevyužité.  
+*pWnd*<br/>
+[in] Nevyužité.  
   
- [in] *bDelay*  
- Nevyužité.  
+*bDelay*<br/>
+[in] Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud na tlačítko zpracovává zprávy klikněte na tlačítko. jinak 0.  
@@ -437,11 +437,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Kontext zařízení, která se zobrazí tlačítko.  
+*primární řadič domény*<br/>
+[in] Kontext zařízení, která se zobrazí tlačítko.  
   
- [in] *nCtlColor*  
- Nevyužité.  
+*nCtlColor*<br/>
+[in] Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro globální okno štětce.  
@@ -481,8 +481,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Určuje, zda je viditelný na tlačítko. Pokud tento parametr má hodnotu TRUE, je viditelný na tlačítko. V opačném případě na tlačítko se nezobrazuje.  
+*bShow*<br/>
+[in] Určuje, zda je viditelný na tlačítko. Pokud tento parametr má hodnotu TRUE, je viditelný na tlačítko. V opačném případě na tlačítko se nezobrazuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) tím, že pokud se zobrazuje tlačítko *bShow* má hodnotu TRUE. Jinak tato metoda skryje tlačítko.  
@@ -495,8 +495,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iSize*  
- Novou šířku tlačítka v pixelech.  
+*iSize*<br/>
+[in] Novou šířku tlačítka v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje výchozí implementaci třídy [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize), aktualizací, velikost a umístění vnitřního `CEdit` objektu.  
@@ -513,17 +513,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nevyužité.  
+*pWndParent*<br/>
+[in] Nevyužité.  
   
- [in] *iButtonIndex*  
- Nevyužité.  
+*iButtonIndex*<br/>
+[in] Nevyužité.  
   
- [in] *wndToolTip*  
- Ovládací prvek, který zobrazí text popisku.  
+*wndToolTip*<br/>
+[in] Ovládací prvek, který zobrazí text popisku.  
   
- [out] *str*  
- A `CString` objekt, který přijme aktualizovaná přejede myší.  
+*str*<br/>
+[out] A `CString` objekt, který přijme aktualizovaná přejede myší.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda aktualizuje přejede myší; jinak 0.  
@@ -539,8 +539,8 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sContents*  
- Určuje nastavení nového textu.  
+*sContents*<br/>
+[in] Určuje nastavení nového textu.  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
  Vyhledá [cmfctoolbareditboxbutton –](../../mfc/reference/cmfctoolbareditboxbutton-class.md) objekt, který má zadaný příkaz ID a nastaví zadaný text v rámci jeho textového pole.  
@@ -552,11 +552,11 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje ID příkazu, pro kterou se změní text ovládacího prvku.  
+*uiCmd*<br/>
+[in] Určuje ID příkazu, pro kterou se změní text ovládacího prvku.  
   
- [in] *strContents*  
- Určuje nastavení nového textu.  
+*strContents*<br/>
+[in] Určuje nastavení nového textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud byla nastavena text; 0, pokud `CMFCToolBarEditBoxButton` ovládací prvek s ID zadaného příkazu, který neexistuje.  
@@ -569,8 +569,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- ID prostředku v místní nabídce.  
+*uiCmd*<br/>
+[in] ID prostředku v místní nabídce.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní používá ID prostředku k vytvoření nabídku, když uživatel klepne pravým tlačítkem myši na tlačítko panelu nástrojů.  
@@ -583,8 +583,8 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bFlat*  
- Plochý pro tlačítka Upravit pole. Pokud tento parametr má hodnotu TRUE, je povoleno plochý vzhled; Plochý vzhled jinak je zakázaná.  
+*bFlat*<br/>
+[in] Plochý pro tlačítka Upravit pole. Pokud tento parametr má hodnotu TRUE, je povoleno plochý vzhled; Plochý vzhled jinak je zakázaná.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí styl ploché tlačítka Upravit pole má hodnotu TRUE. Použití [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) metodu pro načtení plochý vzhled pro vaši aplikaci.  
@@ -597,8 +597,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nStyle*  
- Nový styl nastavení.  
+*nStyle*<br/>
+[in] Nový styl nastavení.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) k *nStyle* když se aplikace je v režimu vlastní nastavení a povolí ho, když aplikace není v režimu vlastní (viz takézakážedotextovéhopole[ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) a [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam příznaky platný styl.  

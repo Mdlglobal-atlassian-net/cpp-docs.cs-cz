@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701750"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|[in] *zarovnání indirekce rhs*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
-|[in] *mi*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
-|[in] *bits*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+|*Zarovnání indirekce RHS*|[in] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+|*i*|[in] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+|*Služba BITS*|[in] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
 
 ## <a name="members"></a>Členové
 

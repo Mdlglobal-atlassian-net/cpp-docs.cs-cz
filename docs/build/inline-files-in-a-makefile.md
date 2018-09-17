@@ -1,5 +1,5 @@
 ---
-title: Vložené soubory v souboru pravidel | Microsoft Docs
+title: Vložené soubory v souboru pravidel | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1203a38380e9d5975460fe05de3ced32b939c237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a845c071979c0736e2e968cf3e7c74568dc95b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368119"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704467"
 ---
 # <a name="inline-files-in-a-makefile"></a>Vložené soubory v souboru pravidel
-Vloženého souboru obsahuje text, který určíte v soubor pravidel. Jeho název můžete použít v příkazech jako vstup (například soubor příkazů odkaz), nebo je příkazy předat operačního systému. Soubor je vytvořen na disku, když se spustí příkaz, který vytvoří soubor.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
- [Zadání vloženého souboru](../build/specifying-an-inline-file.md)  
-  
- [Vytváření vložený text souboru](../build/creating-inline-file-text.md)  
-  
- [Opětovné použití vložených souborů](../build/reusing-inline-files.md)  
-  
- [Několik vložených souborů](../build/multiple-inline-files.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy v souboru pravidel](../build/commands-in-a-makefile.md)
+
+Vložený soubor obsahuje text, který jste zadali v souboru pravidel. Jeho název lze použít v příkazech jako vstup (například souboru příkazu LINK), nebo ho předat příkazy v operačním systému. Soubor se vytvoří při spuštění příkaz, který vytvoří soubor na disku.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+[Zadání vloženého souboru](../build/specifying-an-inline-file.md)
+
+[Vytvoření textu vloženého souboru](../build/creating-inline-file-text.md)
+
+[Opětovné použití vložených souborů](../build/reusing-inline-files.md)
+
+[Několik vložených souborů](../build/multiple-inline-files.md)
+
+## <a name="see-also"></a>Viz také
+
+[Příkazy v souboru pravidel](../build/commands-in-a-makefile.md)

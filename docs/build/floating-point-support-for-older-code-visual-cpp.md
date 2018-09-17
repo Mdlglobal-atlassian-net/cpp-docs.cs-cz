@@ -1,5 +1,5 @@
 ---
-title: Podpora plovoucí desetinné čárky ve starším kódu (Visual C++) | Microsoft Docs
+title: Podpora plovoucí desetinné čárky starším kódu (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367157"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706807"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Podpora plovoucí desetinné čárky ve starším kódu (Visual C++)
-MMX a zaregistruje se s plovoucí desetinnou čárkou zásobníku (MM0-MM7/ST0-ST7) se zachovají v souvislosti přepínače.  Neexistuje žádné explicitní konvence volání pro tyto registry.  Použití těchto registrů výhradně zakázané kódu v režimu jádra.  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../build/calling-convention.md)
+
+MMX a registry zásobníku s plovoucí desetinnou čárkou (MM0-MM7/ST0-ST7) jsou zachovány v kontextu.  Neexistuje žádné explicitní konvenci volání pro tyto registry.  Použití těchto registrů je přísně zakázáno v kódu v režimu jádra.
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../build/calling-convention.md)

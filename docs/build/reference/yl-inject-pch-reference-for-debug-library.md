@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894652"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712371"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Vložit referenci PCH do ladicí knihovny)
 
@@ -31,16 +31,16 @@ ms.locfileid: "43894652"
 
 ## <a name="syntax"></a>Syntaxe
 
->**/Yl**  
->**/Yl**_název_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_název_
+> **/Yl-**
 
 ### <a name="arguments"></a>Arguments
 
-*Jméno*  
+*Jméno*<br/>
 Volitelný název používá jako součást jedinečný symbol.
 
-*\-*  
+*\-*<br/>
 Explicitně zakáže pomlčkou (-) **/Yl** – možnost kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
@@ -75,5 +75,5 @@ Další informace o předkompilovaných hlaviček naleznete v tématu:
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

@@ -1,5 +1,5 @@
 ---
-title: -Wp64 (zjištěny problémy s 64bitovou přenositelností) | Microsoft Docs
+title: -Wp64 (zjištění problémů s 64bitovou přenositelností) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,58 +21,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295f2f690cb3c9db17a410cea1f23d04e54b0054
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac86fb6372db5aa88b4416dba07fd183f5f1df20
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700736"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Zjištěny problémy s 64bitovou přenositelností)
 
-Tato možnost kompilátoru je zastaralé. Ve verzích sady Visual Studio před Visual Studio 2013, tato zjistí problémy s 64bitovou přenositelností v typy, které jsou také označené [__w64](../../cpp/w64.md) – klíčové slovo.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Wp64  
-```  
-  
-## <a name="remarks"></a>Poznámky  
+Tato možnost kompilátoru je zastaralý. Ve verzích sady Visual Studio před Visual Studio 2013, to zjistí problémy přenositelnosti na 64-bit na typy, které jsou také označené [__w64](../../cpp/w64.md) – klíčové slovo.
 
-Ve výchozím nastavení se ve verzích sady Visual Studio před Visual Studiu 2013 se **/Wp64** – možnost kompilátoru vypnuté v kompilátoru Visual C++, který sestaví x86 32-bit kód, a na ve Visual C++ compiler, vytvoří 64bitové x64 kódu.  
-  
+## <a name="syntax"></a>Syntaxe
+
+```
+/Wp64
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení ve verzích sady Visual Studio před Visual Studio 2013 **/Wp64** – možnost kompilátoru je vypnuté v kompilátoru jazyka Visual C++, který vytváří x86 32-bit kódu v kompilátoru jazyka Visual C++, která sestavení a 64-bit, x64 kódu.
+
 > [!IMPORTANT]
->  [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) – možnost kompilátoru a [__w64](../../cpp/w64.md) – klíčové slovo v sadě Visual Studio 2010 a Visual Studio 2012 jsou zastaralé a nepodporují spouštění v sadě Visual Studio 2013. Pokud převedete projekt, který používá tento přepínač, přepínač se nemigruje během převodu. Chcete-li použít tuto možnost v sadě Visual Studio 2010 nebo Visual Studio 2012, musíte zadat přepínače kompilátoru pod **další možnosti** v **příkazového řádku** části vlastností projektu. Pokud použijete **/Wp64** – možnost kompilátoru do příkazového řádku kompilátoru problémy D9002 upozornění příkazového řádku. Místo použití tuto možnost a klíčové slovo rozpoznat problémy s 64bitovou přenositelností, použít – kompilátor Visual C++, která je cílena 64bitové platformě a zadejte [/W4](../../build/reference/compiler-option-warning-level.md) možnost. Další informace najdete v tématu [konfigurace Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-Proměnné následující typy jsou testovány v 32bitové verzi operačního systému, jako kdyby byly se používají na 64bitový operační systém:  
-  
--   int  
-  
--   long  
-  
--   ukazatel  
-  
- Pokud zkompilujete pravidelně vaší aplikace pomocí kompilátoru, která vytvoří 64bitové x64 kódu, můžete jenom zakázat **/Wp64** v kompilaci vaše 32bitová verze protože 64bitový kompilátor zjistí všechny problémy. Další informace o tom, jak cílový Windows 64bitový operační systém najdete v tématu [konfigurace Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevřete projekt **stránky vlastností** dialogové okno.  
-  
-     Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Změnit **další možnosti** políčko zahrnout **/Wp64**.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.  
-  
-## <a name="see-also"></a>Viz také  
+>  [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) – možnost kompilátoru a [__w64](../../cpp/w64.md) – klíčové slovo se považují za zastaralé v sadě Visual Studio 2010 a Visual Studio 2012 a nepodporuje se spouští v sadě Visual Studio 2013. Pokud převedete projekt, který používá tento přepínač, nebude se migrovat přepínač během převodu. Tato možnost dala použít v sadě Visual Studio 2010 nebo Visual Studio 2012, je nutné zadat přepínač kompilátoru pod **další možnosti** v **příkazového řádku** části Vlastnosti projektu. Pokud používáte **/Wp64** – možnost kompilátoru na příkazovém řádku, kompilátor vydá upozornění D9002 příkazového řádku. Namísto použití této možnosti a klíčového slova ke zjišťování problémů přenositelnosti na 64-bit, použijte kompilátor jazyka Visual C++, který cílí na 64bitovou platformu a zadejte [/W4](../../build/reference/compiler-option-warning-level.md) možnost. Další informace najdete v tématu [konfigurovat Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
+Proměnné z následujících typů jsou testovány v 32bitové verzi operačního systému, jako kdyby byly používány na 64bitový operační systém:
+
+- int
+
+- long
+
+- ukazatel
+
+Pokud kompilujete aplikace pravidelně pomocí kompilátoru, který vytváří 64-bit, x64 kódu, můžete jenom zakázat **/Wp64** do vaší 32bitové kompilace protože 64-bit kompilátor rozpozná všechny problémy. Další informace o tom, jak Windows 64-bit cílový operační systém najdete v tématu [konfigurovat Visual C++ pro 64bitové, x64 cíle](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete projekt **stránky vlastností** dialogové okno.
+
+   Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Upravit **další možnosti** pole zahrnout **/Wp64**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
 [Konfigurace Visual C++ pro 64bitové cíle x64](../../build/configuring-programs-for-64-bit-visual-cpp.md)

@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677454"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701919"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 `AFX_GLOBAL_DATA` Struktura obsahuje pole a metody, které se používají ke správě rozhraní nebo upravit vzhled a chování aplikace.  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *pWnd*  
- Ukazatel na okno ovládacího prvku.  
+*pWnd*<br/>
+[in] Ukazatel na okno ovládacího prvku.  
   
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *lprect –*  
- Ukazatel na obdélník, který oblasti pro kreslení za rozsahem. Výchozí hodnota je NULL.  
+*lprect –*<br/>
+[in] Ukazatel na obdélník, který oblasti pro kreslení za rozsahem. Výchozí hodnota je NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *hTheme*  
- Zpracování dat motiv okna, nebo hodnotu NULL. Rozhraní používá zadaný motiv vykreslování textu, pokud tento parametr není NULL a motivy podporují. V opačném případě rozhraní framework nepoužívá motiv vykreslování textu.  
+*hTheme*<br/>
+[in] Zpracování dat motiv okna, nebo hodnotu NULL. Rozhraní používá zadaný motiv vykreslování textu, pokud tento parametr není NULL a motivy podporují. V opačném případě rozhraní framework nepoužívá motiv vykreslování textu.  
   
  Použití [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodu pro vytvoření HTHEME.  
   
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *iPartId*  
- Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.  
+*iPartId*<br/>
+[in] Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.  
   
- [in] *iStateId*  
- Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
+*iStateId*<br/>
+[in] Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *strText*  
- Text, chcete-li nakreslit.  
+*strText*<br/>
+[in] Text, chcete-li nakreslit.  
   
- [in] *rect*  
- Hranice v oblasti, ve které je vykresleno zadaným textem.  
+*Rect*<br/>
+[in] Hranice v oblasti, ve které je vykresleno zadaným textem.  
   
- [in] *dwFlags*  
- Bitová kombinace (OR) mezi příznaky, které určují, jak je vykreslen zadaným textem.  
+*dwFlags*<br/>
+[in] Bitová kombinace (OR) mezi příznaky, které určují, jak je vykreslen zadaným textem.  
   
  Pokud *hTheme* parametr je `NULL` nebo pokud nejsou podporované a povolení motivů *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) popisuje platnými – metoda Příznaky. Pokud jsou podporovány motivy, *dwFlags* parametr [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda popisuje platné příznaky.  
   
- [in] *nGlowSize*  
- Velikost záře efekt, který je vykreslen na pozadí před kreslením zadaný text. Výchozí hodnota je 0.  
+*nGlowSize*<br/>
+[in] Velikost záře efekt, který je vykreslen na pozadí před kreslením zadaný text. Výchozí hodnota je 0.  
   
- [in] *clrText*  
- Barva, ve které je vykresleno zadaným textem. Výchozí hodnota je výchozí barvy.  
+*clrText*<br/>
+[in] Barva, ve které je vykresleno zadaným textem. Výchozí hodnota je výchozí barvy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud, motiv se používá k nakreslení zadaný text; v opačném případě hodnota FALSE.  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *bEnable*  
- TRUE, pokud chcete povolit podporu pro usnadnění; FALSE, pokud chcete zakázat podporu usnadnění přístupu. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit podporu pro usnadnění; FALSE, pokud chcete zakázat podporu usnadnění přístupu. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Active Accessibility je technologie založené na modelu COM, které zlepší způsob, jakým programy a pracovní operačního systému Windows společně s produktů využívajících technologie usnadnění. Poskytuje spolehlivé metody pro odhalení informací o prvky uživatelského rozhraní. Novější model usnadnění volá automatizace uživatelského rozhraní Microsoft je však nyní k dispozici. Porovnání dvou technologie najdete v tématu [automatizace uživatelského rozhraní a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *strBuffer*  
- Vyrovnávací paměť textu.  
+*strBuffer*<br/>
+[in] Vyrovnávací paměť textu.  
   
- [in] *lpszTag*  
- Název páru počátečních a koncových značek XML.  
+*lpszTag*<br/>
+[in] Název páru počátečních a koncových značek XML.  
   
- [out] *strTag*  
- Po návratu tato metoda *strTag* parametr obsahuje text, který je mezi otevírací a zavírací XML značky, které jsou pojmenovány podle *lpszTag* parametru. Ořízne všechny počáteční ani koncové prázdné znaky z výsledku.  
+*strTag*<br/>
+[out] Po návratu tato metoda *strTag* parametr obsahuje text, který je mezi otevírací a zavírací XML značky, které jsou pojmenovány podle *lpszTag* parametru. Ořízne všechny počáteční ani koncové prázdné znaky z výsledku.  
   
- [in] *bIsCharsList*  
- True pro převod symbolů pro řídicí znaky v *strTag* parametr do skutečné řídicí znaky; FALSE, nedojde k provedení převodu. Výchozí hodnota je FALSE. Další informace najdete v části poznámky.  
+*bIsCharsList*<br/>
+[in] True pro převod symbolů pro řídicí znaky v *strTag* parametr do skutečné řídicí znaky; FALSE, nedojde k provedení převodu. Výchozí hodnota je FALSE. Další informace najdete v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *nColor*  
- Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) metody.  
+*nColor*<br/>
+[in] Hodnota, která určuje prvek uživatelského rozhraní, jejichž barva se načítají. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota barvy RGB elementu zadaného uživatelského rozhraní. Další informace najdete v části poznámky.  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [out v] *informace*  
- A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.  
+*Informace o*<br/>
+[out v] A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *bHorz*  
- TRUE, pokud chcete načíst výška znaků při spuštění text vodorovně. FALSE, pokud chcete načíst výška znaků při spuštění text svisle. Výchozí hodnota je TRUE.  
+*bHorz*<br/>
+[in] TRUE, pokud chcete načíst výška znaků při spuštění text vodorovně. FALSE, pokud chcete načíst výška znaků při spuštění text svisle. Výchozí hodnota je TRUE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výška aktuální písmo, které je měřená od jeho horní dotah k jeho spodním dotahem.  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *lpszClassNamePrefix*  
- Název třídy okna k registraci.  
+*lpszClassNamePrefix*<br/>
+[in] Název třídy okna k registraci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném případě [prostředků výjimka](exception-processing.md#afxthrowresourceexception).  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *hwnd*  
- Popisovač okna vrstvami.  
+*hWnd*<br/>
+[in] Popisovač okna vrstvami.  
   
- [in] *crKey*  
- Průhledná barva klíče, který [Správce oken plochy](/windows/desktop/dwm/dwm-overview) používá k vytvoření okna vrstvami.  
+*crKey*<br/>
+[in] Průhledná barva klíče, který [Správce oken plochy](/windows/desktop/dwm/dwm-overview) používá k vytvoření okna vrstvami.  
   
- [in] *bAlpha*  
- Alfa hodnotu, která se používá k popisu krytí okně vrstvami.  
+*bAlpha*<br/>
+[in] Alfa hodnotu, která se používá k popisu krytí okně vrstvami.  
   
- [in] *dwFlags*  
- Bitová kombinace (OR) mezi příznaky, které určují, které metoda parametry se mají použít. Zadejte LWA_COLORKEY používat *crKey* parametr jako průhlednou barvu. Zadejte LWA_ALPHA používat *bAlpha* parametr k určení krytí okně vrstvami.  
+*dwFlags*<br/>
+[in] Bitová kombinace (OR) mezi příznaky, které určují, které metoda parametry se mají použít. Zadejte LWA_COLORKEY používat *crKey* parametr jako průhlednou barvu. Zadejte LWA_ALPHA používat *bAlpha* parametr k určení krytí okně vrstvami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *lpLogFont*  
- Ukazatel na strukturu, která obsahuje atributy písma.  
+*lpLogFont*<br/>
+[in] Ukazatel na strukturu, která obsahuje atributy písma.  
   
- [in] *bHorz*  
- TRUE, pokud chcete zadat, že text spuštěna vodorovně. FALSE, pokud chcete zadat, že text svisle spuštěna.  
+*bHorz*<br/>
+[in] TRUE, pokud chcete zadat, že text spuštěna vodorovně. FALSE, pokud chcete zadat, že text svisle spuštěna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE. V režimu ladění tato metoda vyhodnotí, pokud tato metoda neúspěšné.  

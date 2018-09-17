@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713277"
 ---
 # <a name="ccontextmenumanager-class"></a>Ccontextmenumanager – třída
 `CContextMenuManager` Objektu spravuje místní nabídky, také známé jako kontextové nabídky.  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMenuNameResId*  
- ID prostředku pro řetězec, který obsahuje název nové nabídky.  
+*uiMenuNameResId*<br/>
+[in] ID prostředku pro řetězec, který obsahuje název nové nabídky.  
   
- [in] *uiMenuResId*  
- ID nabídky prostředku.  
+*uiMenuResId*<br/>
+[in] ID nabídky prostředku.  
   
- [in] *lpszName*  
- Řetězec, který obsahuje název nové nabídky.  
+*lpszName*<br/>
+[in] Řetězec, který obsahuje název nové nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda byla úspěšná. 0, jestliže metoda selže.  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nMenuResId*  
- ID prostředku pro nabídku.  
+*nMenuResId*<br/>
+[in] ID prostředku pro nabídku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro příslušné nabídky nebo `NULL` Pokud nebyl nalezen v nabídce.  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Řetězec, který obsahuje název nabídky k načtení.  
+*lpszName*<br/>
+[in] Řetězec, který obsahuje název nabídky k načtení.  
   
- [out] *puiOrigResID*  
- Ukazatel UINT. Tento parametr obsahuje ID prostředku zadaného nabídky, pokud nalezen.  
+*puiOrigResID*<br/>
+[out] Ukazatel UINT. Tento parametr obsahuje ID prostředku zadaného nabídky, pokud nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V nabídce, která odpovídá názvu, který byl zadán popisovač *lpszName*. Hodnota NULL, pokud neexistuje žádné nabídky s názvem *lpszName*.  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *listOfNames*  
- Odkaz na [CStringList](../../mfc/reference/cstringlist-class.md) parametru. Tato metoda zapíše seznam názvů nabídek, které tomuto parametru.  
+*listOfNames*<br/>
+[out] Odkaz na [CStringList](../../mfc/reference/cstringlist-class.md) parametru. Tato metoda zapíše seznam názvů nabídek, které tomuto parametru.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  Načte informace o přidružené [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md) z registru Windows.  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszProfileName*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je metoda úspěšná. jinak 0.  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Řetězec, který obsahuje relativní cestu klíče registru.  
+*lpszProfileName*<br/>
+[in] Řetězec, který obsahuje relativní cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je metoda úspěšná. jinak 0.  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Parametr logické hodnoty, která určuje, zda se zavřít aktivní rozbalovací nabídky. Hodnota TRUE označuje, že není uzavřená v rozbalovací nabídce aktivní. Hodnota FALSE označuje, že je uzavřena v rozbalovací nabídce aktivní.  
+*bSet*<br/>
+[in] Parametr logické hodnoty, která určuje, zda se zavřít aktivní rozbalovací nabídky. Hodnota TRUE označuje, že není uzavřená v rozbalovací nabídce aktivní. Hodnota FALSE označuje, že je uzavřena v rozbalovací nabídce aktivní.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `CContextMenuManager` zavře aktivní rozbalovací nabídky.  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMenuResId*  
- ID prostředku v nabídce, která se zobrazí takto.  
+*uiMenuResId*<br/>
+[in] ID prostředku v nabídce, která se zobrazí takto.  
   
- [in] *x*  
- Vodorovný posun nabídku souřadnice klienta.  
+*x*<br/>
+[in] Vodorovný posun nabídku souřadnice klienta.  
   
- [in] *y*  
- Svislý posun pro nabídku souřadnice klienta  
+*y*<br/>
+[in] Svislý posun pro nabídku souřadnice klienta  
   
- [in] *pWndOwner*  
- Ukazatel na nadřazené okno místní nabídky.  
+*pWndOwner*<br/>
+[in] Ukazatel na nadřazené okno místní nabídky.  
   
- [in] *bOwnMessage*  
- Parametr logické hodnoty, která určuje, jak se směrují zprávy. Pokud *bOwnMessage* je FALSE, standardní knihovny MFC směrování se používá. V opačném případě *pWndOwner* přijme zprávy.  
+*bOwnMessage*<br/>
+[in] Parametr logické hodnoty, která určuje, jak se směrují zprávy. Pokud *bOwnMessage* je FALSE, standardní knihovny MFC směrování se používá. V opačném případě *pWndOwner* přijme zprávy.  
   
- [in] *hmenuPopup*  
- Popisovač nabídky, která se zobrazí takto.  
+*hmenuPopup*<br/>
+[in] Popisovač nabídky, která se zobrazí takto.  
   
- [in] *bAutoDestroy*  
- Parametr logické hodnoty označující, zda v nabídce se automaticky odstraní.  
+*bAutoDestroy*<br/>
+[in] Parametr logické hodnoty označující, zda v nabídce se automaticky odstraní.  
   
- [in] *bRightAlign*  
- Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva.  
+*bRightAlign*<br/>
+[in] Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První přetížení metody vrátí nenulovou hodnotu, pokud metoda zobrazí v nabídce úspěšně; jinak 0. Druhé přetížení metody vrací ukazatel na [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) Pokud v místní nabídce se zobrazí správně; v opačném případě hodnota NULL.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hmenuPopup*  
- Popisovač nabídku, která zobrazuje tuto metodu.  
+*hmenuPopup*<br/>
+[in] Popisovač nabídku, která zobrazuje tuto metodu.  
   
- [in] *x*  
- Vodorovný posun nabídku souřadnice klienta.  
+*x*<br/>
+[in] Vodorovný posun nabídku souřadnice klienta.  
   
- [in] *y*  
- Svislý posun pro nabídku souřadnice klienta.  
+*y*<br/>
+[in] Svislý posun pro nabídku souřadnice klienta.  
   
- [in] *pWndOwner*  
- Ukazatel na nadřazené okno místní nabídky.  
+*pWndOwner*<br/>
+[in] Ukazatel na nadřazené okno místní nabídky.  
   
- [in] *bRightAlign*  
- Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva. Pokud *bRightAlign* má hodnotu FALSE, v nabídce zarovnané vlevo pořadí čtení zleva doprava.  
+*bRightAlign*<br/>
+[in] Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva. Pokud *bRightAlign* má hodnotu FALSE, v nabídce zarovnané vlevo pořadí čtení zleva doprava.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  ID nabídky příkazu příkazu, který uživatel vybere; 0, pokud uživatel nezavře nabídku bez výběru příkazu nabídky.  

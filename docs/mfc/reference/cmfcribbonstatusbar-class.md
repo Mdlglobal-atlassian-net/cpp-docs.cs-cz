@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710505"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar – třída
 `CMFCRibbonStatusBar` Třída implementuje ovládací prvek panel stav, který dokáže zobrazit prvky pásu.  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Ukazatel na prvek dynamické.  
+*pElement*<br/>
+[in] Ukazatel na prvek dynamické.  
   
 ### <a name="remarks"></a>Poznámky  
  Na rozdíl od pravidelných prvky dynamické prvky nejsou upravitelné a přizpůsobit nabídku ve stavovém řádku nezobrazí je.  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Ukazatel na přidání elementu.  
+*pElement*<br/>
+[in] Ukazatel na přidání elementu.  
   
- [in] *lpszLabel*  
- Text popisku elementu.  
+*lpszLabel*<br/>
+[in] Text popisku elementu.  
   
- [in] *bIsVisible*  
- Hodnota TRUE, pokud chcete přidat jako viditelný, element FALSE. Pokud chcete přidat jako skrytý element.  
+*bIsVisible*<br/>
+[in] Hodnota TRUE, pokud chcete přidat jako viditelný, element FALSE. Pokud chcete přidat jako skrytý element.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Přidá prvek pásu karet do oblasti rozšířené stavový panel pásu karet.  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Ukazatel na přidání elementu.  
+*pElement*<br/>
+[in] Ukazatel na přidání elementu.  
   
- [in] *lpszLabel*  
- Text popisku elementu.  
+*lpszLabel*<br/>
+[in] Text popisku elementu.  
   
- [in] *bIsVisible*  
- Hodnota TRUE, pokud chcete přidat jako viditelný, element FALSE. Pokud chcete přidat jako skrytý element.  
+*bIsVisible*<br/>
+[in] Hodnota TRUE, pokud chcete přidat jako viditelný, element FALSE. Pokud chcete přidat jako skrytý element.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozšířené oblast je na pravé straně ovládacího prvku panelu stavu.  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Ukazatel do nadřazeného okna.  
+*pParentWnd*<br/>
+[in] Ukazatel do nadřazeného okna.  
   
- [in] *dwStyle*  
- Logický OR kombinace – styly ovládacího prvku.  
+*dwStyle*<br/>
+[in] Logický OR kombinace – styly ovládacího prvku.  
   
- [in] *nID*  
- ID ovládacího prvku na stavovém řádku.  
+*nID*<br/>
+[in] ID ovládacího prvku na stavovém řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud stavový řádek je úspěšně vytvořen, FALSE v opačném případě.  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- [in] *BOOL*  
+*uiCmdID*<br/>
+[in] [in] *BOOL*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- ID elementu.  
+*uiID*<br/>
+[in] ID elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek, který má ID zadaného příkazu. Hodnota NULL, pokud neexistuje žádný takový prvek.  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index založený na nule, který je umístěný v oblasti hlavního panelu ovládacího prvku stav elementu.  
+*nIndex*<br/>
+[in] Určuje index založený na nule, který je umístěný v oblasti hlavního panelu ovládacího prvku stav elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek, který se nachází na zadaném indexu. Hodnota NULL, pokud je index záporný nebo větší než počet elementů ve stavovém řádku.  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index založený na nule element, který se nachází v oblasti Rozšířené ovládací prvek panel stavu.  
+*nIndex*<br/>
+[in] Určuje index založený na nule element, který se nachází v oblasti Rozšířené ovládací prvek panel stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek, který se nachází na zadaném indexu v oblasti rozšířené stavový panel pásu karet. Hodnota NULL, pokud *nIndex* je záporný nebo větší než počet elementů v oblasti rozšířené stavový panel pásu karet.  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *strInfo*  
- Informace řetězce.  
+*strInfo*<br/>
+[in] Informace řetězce.  
   
- [in] *rectInfo*  
- Ohraničující obdélník.  
+*rectInfo*<br/>
+[in] Ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled řetězec informací na stavovém řádku. Použití [CMFCRibbonStatusBar::SetInformation](#setinformation) metoda put stavového řádku v režimu informace. V tomto režimu se stavový řádek skryje všechny podokna a zobrazí informace o řetězec určený *strInfo*.  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- ID elementu odebrání stavový řádek.  
+*uiID*<br/>
+[in] ID elementu odebrání stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud element se zadaným *uiID* se odebere. FALSE v opačném případě.  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszInfo*  
- Informace řetězce.  
+*lpszInfo*<br/>
+[in] Informace řetězce.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete umístit na stavovém řádku v režimu informace. V tomto režimu se stavový řádek skryje všechny podokna a zobrazí informace o řetězec určený *lpszInfo*.  

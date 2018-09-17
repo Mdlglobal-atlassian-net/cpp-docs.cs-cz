@@ -1,5 +1,5 @@
 ---
-title: Průvodce přidáním členské proměnné | Microsoft Docs
+title: Průvodce přidáním členské proměnné | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4d4518a48d51e6187015dc3fd7b5456e04e1ae84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336323"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701529"
 ---
 # <a name="add-member-variable-wizard"></a>Průvodce přidáním členské proměnné
-Tento průvodce přidá deklaraci členské proměnné soubor hlaviček a v závislosti na možnosti, můžete přidat kód do souboru. Po přidání členské proměnné pomocí průvodce, můžete upravit kód ve vývojovém prostředí.  
+Tento průvodce přidá deklaraci členské proměnné do záhlaví souborů a v závislosti na možnostech, můžete přidat kód do souboru .cpp. Po přidání členské proměnné pomocí průvodce, můžete upravit kód ve vývojovém prostředí.  
   
- **Přístup**  
- Nastaví přístupu k členské proměnné. Modifikátory přístupu jsou klíčová slova, která určující přístup ostatní třídy mají k členské proměnné. V tématu [řízení přístup ke členu](../cpp/member-access-control-cpp.md) pro další informace o přístupu. Úroveň proměnné přístupu členů je nastavena na **veřejné** ve výchozím nastavení.  
+- **Přístup**
+
+   Nastaví přístup k členské proměnné. Modifikátory přístupu jsou klíčová slova, které určují přístup jiných tříd k členské proměnné. Zobrazit [řízení přístupu členů](../cpp/member-access-control-cpp.md) pro další informace o zadávání přístupu. Úroveň přístup k proměnným členů je nastavena na **veřejné** ve výchozím nastavení.  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -35,62 +36,74 @@ Tento průvodce přidá deklaraci členské proměnné soubor hlaviček a v záv
   
 -   [private](../cpp/private-cpp.md)  
   
- **Typ proměnné**  
- Nastaví návratový typ pro proměnnou člen, který chcete přidat.  
+- **Typ proměnné**
+
+   Nastaví návratový typ pro členské proměnné, které chcete přidat.  
   
--   Pokud přidáváte členské proměnné, která není ovládací prvek dialogového okna, vyberte ze seznamu dostupných typů.  
+   - Pokud přidáváte členské proměnné, která není ovládací prvek dialogového okna, vyberte ze seznamu dostupných typů.  
   
-     Informace o typech najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).  
+      Informace o typech najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).  
   
-    |||  
-    |-|-|  
-    |`char`|**short**|  
-    |**double**|`unsigned char`|  
-    |**float**|`unsigned int`|  
-    |`int`|`unsigned long`|  
-    |**long**||  
+      |||  
+      |-|-|  
+      |**char**|**short**|  
+      |**double**|**unsigned char**|  
+      |**float**|**unsigned int**|  
+      |**int**|**unsigned long**|  
+      |**long**||  
   
--   Pokud přidáváte členské proměnné pro ovládací prvek dialogového okna, je toto políčko vyplněn typ objektu pro ovládací prvek nebo hodnota vrácena. Pokud vyberete **řízení**, pak **typ proměnné** určuje základní třídy, vyberte v ovládacího prvku **ID ovládacího prvku** pole. Pokud ovládací prvek dialogovém okně pole může obsahovat hodnotu, a pokud vyberete **hodnotu**, pak **typ proměnné** Určuje hodnotu, která může obsahovat řízení příslušného typu. V tématu [ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.  
+   - Pokud přidáváte členské proměnné pro ovládací prvek dialogového okna, je toto pole vyplněna typ objektu vrácený pro ovládací prvek nebo hodnotu. Pokud vyberete **ovládací prvek**, pak **typ proměnné** určuje základní třídu vyberete ovládací prvek **ID ovládacího prvku** pole. Pokud ovládací prvek dialogového okna pole může obsahovat hodnotu, a pokud vyberete **hodnotu**, pak **typ proměnné** určuje odpovídající typ hodnoty, který může obsahovat ovládací prvek. Zobrazit [ovládací prvky dialogového okna a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.  
   
-     Tato hodnota závisí na výběr v **ID ovládacího prvku** a nelze je změnit.  
+      Tato hodnota závisí na výběr v **ID ovládacího prvku** a nedá se změnit.  
   
- **Název proměnné**  
- Nastaví název členské proměnné, který chcete přidat. Členské proměnné obvykle začínají identifikační řetězec "m_", který je poskytnut pro vás ve výchozím nastavení.  
+- **Název proměnné**
+
+   Nastaví název členské proměnné, které chcete přidat. Členské proměnné obvykle začínají identifikační řetězec "m_", která je ve výchozím nastavení za vás.  
   
- **Proměnná ovládacího prvku**  
- Označuje, že členské proměnné spravuje ovládacího prvku v dialogovém okně s [výměny dat a ověření dat](../mfc/dialog-data-exchange-and-validation.md) podporovat. V tématu [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) Další informace. Tato možnost je dostupná pouze pro členské proměnné přidány do třídy odvozené od třídy [CDialog](../mfc/reference/cdialog-class.md). Toto pole chcete aktivovat **ID ovládacího prvku** a **řízení typu** možnosti.  
+- **Proměnné ovládacího prvku.**
+
+   Označuje, že spravuje členskou proměnnou ovládacího prvku dialogové okno s [výměny dat a ověřování dat](../mfc/dialog-data-exchange-and-validation.md) podporovat. Zobrazit [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) Další informace. Tato možnost je dostupná jenom pro členské proměnné přidány do třídy odvozené od [CDialog](../mfc/reference/cdialog-class.md). Zaškrtněte toto políčko, chcete-li aktivovat **ID ovládacího prvku** a **ovládací prvek typu** možnosti.  
   
- **ID ovládacího prvku**  
- Nastaví ID pro proměnnou ovládací prvek, který chcete přidat. Vyberte ze seznamu ID pro typ ovládacího prvku, pro kterou přidáváte členské proměnné. Seznam je aktivní pouze tehdy, když **řídicí proměnná** políčko zaškrtnuto, a je omezen na ID pro ovládací prvky již přidán do dialogového okna. Například pro standardní **OK** je ID ovládacího prvku tlačítko **IDOK**.  
+- **ID ovládacího prvku**
+
+   Nastaví ID pro ovládací prvek proměnnou, kterou chcete přidat. Vyberte ze seznamu ID pro typ ovládacího prvku, pro který chcete přidat členskou proměnnou. V seznamu je účinné pouze tehdy, když **řídicí proměnná** je zaškrtnuté políčko, a je omezená na ID pro ovládací prvky již přidán do dialogového okna. Například pro standardní **OK** je ID ovládacího prvku tlačítko, **IDOK**.  
   
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Ovládací prvek**|Tato možnost nastavená ve výchozím nastavení pro typ ovládacího prvku. (Jak je můžete chtít provést v seznamu, pole se seznamem nebo upravit) spravuje ovládacího prvku sám a není stavu nebo obsah ovládacího prvku.|  
-|**Hodnota**|Tato možnost je dostupná jenom pro typy ovládacích prvků, které mohou obsahovat hodnotu (například textové pole) nebo odpovídal stavu (například zaškrtávací políčko) a pro které může spravovat rozsah, obsah nebo stavu. V tématu [ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.|  
+   |Možnost|Popis|  
+   |------------|-----------------|  
+   |**Ovládací prvek**|Tato možnost je nastavena ve výchozím nastavení pro typ ovládacího prvku. Spravuje samotného a nikoli na stav nebo obsah ovládacího prvku (jak je můžete chtít provést v seznamu, pole se seznamem nebo upravit) ovládacího prvku.|  
+   |**Hodnota**|Tato možnost je dostupná pouze pro typy ovládacích prvků, které mohou obsahovat hodnotu (například do textového pole) nebo odráží stav (jako je například zaškrtávací políčko) a pro které může spravovat rozsahu, obsah nebo stavu. Zobrazit [ovládací prvky dialogového okna a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.|  
   
- **Kategorie**  
- Určuje, jestli je proměnná založený na typu ovládacího prvku nebo hodnota ovládacího prvku.  
+- **Kategorie**
+
+   Určuje, zda je proměnná založená na typu ovládacího prvku nebo hodnota ovládacího prvku.  
   
- **– Typ ovládacího prvku**  
- Nastaví typ ovládacího prvku, který chcete přidat. Toto políčko není možné změnit. Například tlačítko má typ ovládacího prvku **tlačítko**, a seznamem má typ ovládacího prvku **COMBOBOX**. V tématu [ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.  
+- **Typ ovládacího prvku**
+
+   Nastaví typ ovládacího prvku přidán. Toto políčko není možné změnit. Například, že tlačítko má typ ovládacího prvku **tlačítko**, a má typ ovládacího prvku pole se seznamem **– pole se SEZNAMEM**. Zobrazit [ovládací prvky dialogového okna a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.  
   
- **Maximální počet znaků**  
- K dispozici pouze tehdy, když **typ proměnné** je nastaven na [CString](../atl-mfc-shared/reference/cstringt-class.md). Určuje maximální počet znaků, které mohou být uloženy ovládacího prvku.  
+- **Maximální počet znaků**
+
+   K dispozici pouze tehdy, když **typ proměnné** je nastavena na [CString](../atl-mfc-shared/reference/cstringt-class.md). Určuje maximální počet znaků, které může obsahovat ovládací prvek.  
   
- **Minimální hodnota**  
- K dispozici, pouze pokud je typ proměnné **BOOL**, `int`, **Celé_číslo**, **dlouho**, `DWORD`, **float**, **dvojité**, **BAJTŮ**, **krátké**, [COLECurrency](../mfc/reference/colecurrency-class.md) nebo [CTime –](../atl-mfc-shared/reference/ctime-class.md). Určuje nejnižší hodnotu přijatelné pro změnu nebo rozsah.  
+- **Minimální hodnota**
+
+   K dispozici pouze v případě, že je typ proměnné **BOOL**, `int`, **UINT**, **dlouhé**, `DWORD`, **float**, **double**, **BAJTŮ**, **krátký**, [COLECurrency](../mfc/reference/colecurrency-class.md) nebo [CTime](../atl-mfc-shared/reference/ctime-class.md). Určuje přijatelné pro změnu nebo rozsah nejnižší hodnotu.  
   
- **Hodnota maximálního počtu**  
- K dispozici, pouze pokud je typ proměnné **BOOL**, `int`, **Celé_číslo**, **dlouho**, `DWORD`, **float**, **dvojité**, **BAJTŮ**, **krátké**, `COLECurrency` nebo `CTime`. Určuje nejvyšší hodnotu přijatelné pro změnu nebo rozsah.  
+- **Maximální hodnota**
+
+   K dispozici pouze v případě, že je typ proměnné **BOOL**, `int`, **UINT**, **dlouhé**, `DWORD`, **float**, **double**, **BAJTŮ**, **krátký**, `COLECurrency` nebo `CTime`. Určuje přijatelné pro změnu nebo rozsah nejvyšší hodnotu.  
   
- **soubor h**  
- Pro ovládací prvky ActiveX, jejichž členské proměnné vyžadují obálkovou třídu. Nastaví název hlavičky souboru přidejte deklaraci třídy.  
+- **soubor .h**
+
+   Pro ovládací prvky ActiveX, jejíž členské proměnné vyžadují obálkovou třídu. Nastaví název souboru hlavičky k přidání deklarace třídy.  
   
- **souboru**  
- Pro ovládací prvky ActiveX, jejichž členské proměnné vyžadují obálkovou třídu. Nastaví název souboru implementace přidejte definici třídy.  
+- **soubor .cpp**
+
+   Pro ovládací prvky ActiveX, jejíž členské proměnné vyžadují obálkovou třídu. Nastaví název implementačního souboru přidat definici třídy.  
   
- **Komentář**  
- Komentář v záhlaví souboru pro členské proměnné.  
+- **Komentář**
+
+   Komentář v souboru hlaviček pro členské proměnné.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)

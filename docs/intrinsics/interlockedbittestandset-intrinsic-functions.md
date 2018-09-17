@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5327470057928466c1aede37205ac4f35175b899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466113"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712215"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>vnitřní funkce _interlockedbittestandset
 **Specifické pro Microsoft**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
- Ukazatel paměti prozkoumat.  
+*a*<br/>
+[in] Ukazatel paměti prozkoumat.  
   
- [in] `b`  
- Bitová pozice pro testování.  
+*b*<br/>
+[in] Bitová pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Hodnota na pozici bitu `b` předtím, než je nastavena.  

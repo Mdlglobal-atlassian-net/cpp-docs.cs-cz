@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849158"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701646"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup – třída
 `CMFCTasksPaneTaskGroup` Třída je pomocná třída, používá [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupiny úloh*. Skupina úloh je seznam položek, které zobrazí rozhraní v rámci samostatného pole, které má tlačítko Sbalit. Pole může mít nepovinný titulek (název skupiny). Pokud je skupina sbalena, seznam úkolů není viditelný.  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Představuje nadřazené okno aktuální skupiny úlohy.  
+*pParent*<br/>
+[in] Představuje nadřazené okno aktuální skupiny úlohy.  
   
- [out] *dat*  
- Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální skupiny úlohy.  
+*data*<br/>
+[out] Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální skupiny úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuální skupiny úlohy; v opačném případě hodnota FALSE.  

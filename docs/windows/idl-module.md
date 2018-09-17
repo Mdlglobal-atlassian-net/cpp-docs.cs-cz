@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715530"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *Jméno*  
 Uživatelem definovaný název pro blok kódu, který se zobrazí v souboru IDL.
 
-*NázevSouboru* (volitelné)  
-Soubor .dll, který obsahuje exportu.
+*NázevSouboru*  
+(Volitelné) Soubor .dll, který obsahuje exportu.
 
-*identifikátor UUID* (volitelné)  
-Jedinečný identifikátor.
+*uuid*  
+(Volitelné) Jedinečný identifikátor.
 
-*helpstring* (volitelné)  
-Znakový řetězec používaný k popisu knihovny typů.
+*helpstring*  
+(Volitelné) Znakový řetězec používaný k popisu knihovny typů.
 
-*helpstringcontext –* (volitelné)  
-ID tématu nápovědy HLP nebo CHM souboru.
+*helpstringcontext*  
+(Volitelné) ID tématu nápovědy HLP nebo CHM souboru.
 
-*HelpContext* (volitelné)  
-ID nápovědy pro tuto knihovnu typů.
+*helpcontext*  
+(Volitelné) ID nápovědy pro tuto knihovnu typů.
 
-*skryté* (volitelné)  
-Parametr, který zabraňuje zobrazení knihovny. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
+*hidden*  
+(Volitelné) Parametr, který zabraňuje zobrazení knihovny. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
-*s omezeným přístupem* (volitelné)  
-Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
+*restricted*  
+(Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
 *deklarace funkce*  
 Funkce, která budou definovat.

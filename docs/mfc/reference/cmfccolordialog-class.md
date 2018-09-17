@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715355"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog – třída
 `CMFCColorDialog` Třída představuje dialogové okno Výběr barvy.  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrInit*  
- Výchozí výběr barvy. Pokud není zadána žádná hodnota, výchozí hodnota je RGB(0,0,0) (černá).  
+*clrInit*<br/>
+[in] Výchozí výběr barvy. Pokud není zadána žádná hodnota, výchozí hodnota je RGB(0,0,0) (černá).  
   
- [in] *dwFlags*  
- (Vyhrazeno).  
+*dwFlags*<br/>
+[in] Vyhrazená.
   
- [in] *pParentWnd*  
- Ukazatel na okno nadřazené nebo vlastník dialogových oken.  
+*pParentWnd*<br/>
+[in] Ukazatel na okno nadřazené nebo vlastník dialogových oken.  
   
- [in] *hPal*  
- Popisovač palety barev.  
+*hPal*<br/>
+[in] Popisovač palety barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rgb*  
- Hodnota barvy RGB  
+*RGB*<br/>
+[in] Hodnota barvy RGB  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rgb*  
- A [COLORREF](/windows/desktop/gdi/colorref) , který určuje barva RGB.  
+*RGB*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) , který určuje barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *R*  
- Určuje hodnota červené hodnoty RGB.  
+*R*<br/>
+[in] Určuje hodnota červené hodnoty RGB.  
   
- [in] *G*  
- Určuje hodnota zelené hodnoty RGB.  
+*G*<br/>
+[in] Určuje hodnota zelené hodnoty RGB.  
   
- [in] *B*  
- Určuje modrou složku hodnoty RGB.  
+*B*<br/>
+[in] Určuje modrou složku hodnoty RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *R*  
- Určuje komponentu red hodnoty RGB  
+*R*<br/>
+[in] Určuje komponentu red hodnoty RGB  
   
- [in] *G*  
- Určuje komponentu zelené hodnoty RGB  
+*G*<br/>
+[in] Určuje komponentu zelené hodnoty RGB  
   
- [in] *B*  
- Určuje komponentu modré hodnoty RGB  
+*B*<br/>
+[in] Určuje komponentu modré hodnoty RGB  
   
 ### <a name="remarks"></a>Poznámky  
   

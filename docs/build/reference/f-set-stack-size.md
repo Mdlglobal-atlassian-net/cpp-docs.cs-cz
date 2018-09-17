@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103772"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704242"
 ---
 # <a name="f-set-stack-size"></a>/F (nastavení velikosti zásobníku)
+
 Nastaví velikost zásobníku aplikace v bajtech.
 
 ## <a name="syntax"></a>Syntaxe
@@ -47,9 +48,9 @@ Budete muset zvětšete velikost zásobníku, pokud se program dostane zprávy p
 
 Můžete také nastavit velikost zásobníku:
 
--   Použití **/STACK** – možnost linkeru. Další informace najdete v tématu [/STACK](../../build/reference/stack.md).
+- Použití **/STACK** – možnost linkeru. Další informace najdete v tématu [/STACK](../../build/reference/stack.md).
 
--   Pomocí nástroje EDITBIN na soubor .exe. Další informace najdete v tématu [Editbin – referenční dokumentace](../../build/reference/editbin-reference.md).
+- Pomocí nástroje EDITBIN na soubor .exe. Další informace najdete v tématu [Editbin – referenční dokumentace](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
@@ -65,5 +66,5 @@ Můžete také nastavit velikost zásobníku:
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

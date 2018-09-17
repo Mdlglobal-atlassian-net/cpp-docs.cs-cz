@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712164"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 Poskytuje funkce pro ovládací prvek zobrazení stromové struktury běžné Windows.  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|TRUE, pokud chcete zahodit změny položky zobrazení stromu před uzavřením operace úprav, nebo FALSE se uložit změny před uzavřením operace položky zobrazení stromu.|  
+|*fCancelWithoutSave*|[in] TRUE, pokud chcete zahodit změny položky zobrazení stromu před uzavřením operace úprav, nebo FALSE se uložit změny před uzavřením operace položky zobrazení stromu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Zpracování na položku Ovládací prvek stromového zobrazení.|  
+|*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index obrázku, který se zobrazí, když je zadaná položka v rozbaleném stavu.  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Zpracování na položku Ovládací prvek stromového zobrazení.|  
-|[in] *nPart*|Identifikátor pro část. Musí být nastavena na TVGIPR_BUTTON.|  
-|[out] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|  
+|*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|  
+|*nPart*|[in] Identifikátor pro část. Musí být nastavena na TVGIPR_BUTTON.|  
+|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, struktura obdrží souřadnice obdélník části určené *: hItem* a *nPart*.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Zpracování na položku Ovládací prvek stromového zobrazení.|  
+|*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Rozšířené stavu položky. Další informace najdete v tématu `uStateEx` člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *uAccId*|Identifikátor pro usnadnění pro prvek položky zobrazení stromu.|  
+|*uAccId*|[in] Identifikátor pro usnadnění pro prvek položky zobrazení stromu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač na položku zobrazení stromu ( `HTREEITEM`), který odpovídá *uAccId* parametru. Další informace najdete v tématu *: hItem* člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Popisovač předmětu stromové zobrazení v ovládacím prvku. Další informace najdete v tématu *: hItem* člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*: hItem*|[in] Popisovač předmětu stromové zobrazení v ovládacím prvku. Další informace najdete v tématu *: hItem* člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Usnadnění identifikátor, který odpovídá *: hItem* parametru.  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Počet pixelů na posuňte se za sekundu.|  
-|[in] *uUpdateTime*|Časový interval mezi aktualizacemi ovládacího prvku.|  
+|*uPixelsPerSec*|[in] Počet pixelů na posuňte se za sekundu.|  
+|*uUpdateTime*|[in] Časový interval mezi aktualizacemi ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu TRUE.  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwExMask*|Bitová maska, která určuje, jaké styly v ovládacím prvku stromového zobrazení aktuální ovlivněných touto metodou. Pokud tento parametr je nula, je ignorována a hodnota *dwExStyles* parametr je přiřazený k ovládacímu prvku stromového zobrazení.<br /><br /> Určete nula nebo bitová kombinace (nebo) stylů je popsáno v [rozšířené styly ovládacího prvku Tree-View](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
-|[in] *dwExStyles*|Bitová maska, která určuje, styly, které v aktuálním zobrazení stromu ovládacího prvku nastavte nebo jeho zaškrtnutí zrušte.<br /><br /> Nastavit kombinace stylů, zadejte (nebo) bitová kombinace stylů je popsáno v [rozšířené styly ovládacího prvku Tree-View](/windows/desktop/Controls/tree-view-control-window-extended-styles). Vymazat sadu stylů, určete nula.|  
+|*dwExMask*|[in] Bitová maska, která určuje, jaké styly v ovládacím prvku stromového zobrazení aktuální ovlivněných touto metodou. Pokud tento parametr je nula, je ignorována a hodnota *dwExStyles* parametr je přiřazený k ovládacímu prvku stromového zobrazení.<br /><br /> Určete nula nebo bitová kombinace (nebo) stylů je popsáno v [rozšířené styly ovládacího prvku Tree-View](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Bitová maska, která určuje, styly, které v aktuálním zobrazení stromu ovládacího prvku nastavte nebo jeho zaškrtnutí zrušte.<br /><br /> Nastavit kombinace stylů, zadejte (nebo) bitová kombinace stylů je popsáno v [rozšířené styly ovládacího prvku Tree-View](/windows/desktop/Controls/tree-view-control-window-extended-styles). Vymazat sadu stylů, určete nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která obsahuje předchozí rozšířené – styly ovládacího prvku.  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Zpracování na položku Ovládací prvek stromového zobrazení.|  
-|[in] *iExpandedImage*|Index obrázku, který se zobrazí, když je zadaná položka v rozbaleném stavu.|  
+|*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|  
+|*iExpandedImage*|[in] Index obrázku, který se zobrazí, když je zadaná položka v rozbaleném stavu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Zpracování na položku Ovládací prvek stromového zobrazení.|  
-|[in] *uStateEx*|Rozšířené stavu položky. Další informace najdete v tématu `uStateEx` člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*: hItem*|[in] Zpracování na položku Ovládací prvek stromového zobrazení.|  
+|*uStateEx*|[in] Rozšířené stavu položky. Další informace najdete v tématu `uStateEx` člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *: hItem*|Popisovač na položku zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*: hItem*|[in] Popisovač na položku zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` člena [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o rozdílech mezi popisy tlačítek a infotips, vyhledejte téma "A popisy tlačítek Infotips" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  

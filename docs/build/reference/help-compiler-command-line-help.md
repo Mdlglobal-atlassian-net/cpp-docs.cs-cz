@@ -1,5 +1,5 @@
 ---
-title: -HELP (Nápověda příkazového řádku pro kompilátor) | Microsoft Docs
+title: -HELP (Nápověda příkazového řádku pro kompilátor) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40246db2d70d69fc2dab576ef5c7da9c7829ab80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc21ac544a7f30dd193ca571fcd82e1078fb44dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713229"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Nápověda příkazového řádku pro kompilátor)
-Zobrazí seznam možností kompilátoru standardním výstupu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/HELP  
-/help  
-/?  
-```  
-  
-## <a name="remarks"></a>Poznámky  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
--   Tato možnost kompilátoru by měly být dostupné jenom z příkazového řádku.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   Tato možnost kompilátoru nelze změnit prostřednictvím kódu programu.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Zobrazí seznam možností kompilátoru do standardního výstupu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/HELP
+/help
+/?
+```
+
+## <a name="remarks"></a>Poznámky
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+- Tato možnost kompilátoru by měl dá přistupovat jenom z příkazového řádku.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Tato možnost kompilátoru nelze změnit prostřednictvím kódu programu.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

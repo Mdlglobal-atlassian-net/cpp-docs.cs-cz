@@ -1,5 +1,5 @@
 ---
-title: _local_unwind2 – | Microsoft Docs
+title: _local_unwind2 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,15 +29,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bee1decf5b5a3676e6111960282c19e87628c48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4774156f36e5f929db1c5ddd35f423caa5cf7831
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391376"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702504"
 ---
 # <a name="localunwind2"></a>_local_unwind2
-Vnitřní funkce CRT. Spouští všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.  
+Vnitřní funkce CRT. Spustí všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,16 +49,16 @@ void _local_unwind2(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `xr`  
- Registrační záznam, který je přidružen jeden obor tabulky.  
+*XR*<br/>
+[in] Registrační záznam, který je přidružený jeden rozsah tabulky.  
   
- [v] `stop`  
- Lexikální úroveň, která určuje, kde `_local_unwind2` by se měla zastavit.  
+*Stop*<br/>
+[in] Lexikální úroveň, která označuje, kde `_local_unwind2` by se měla zastavit.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá pouze v prostředí runtime. Nevolejte metodu v kódu.  
+ Tato metoda se používá pouze pomocí prostředí za běhu. Nevolejte metodu v kódu.  
   
- Když tato metoda provede obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje jeho způsobem až lexikální úrovně, dokud nedosáhne úroveň, která je indikován `stop`. Nepracuje obslužné rutiny ukončení na úrovni označená `stop`.  
+ Když tato metoda se spouští obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje směrem nahoru lexikální úrovní, dokud nebude dosaženo úrovně, který je označen `stop`. Nespouští obslužné rutiny ukončení na úrovni, který je označen `stop`.  
   
 ## <a name="see-also"></a>Viz také  
  [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

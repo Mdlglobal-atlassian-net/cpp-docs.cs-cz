@@ -1,5 +1,5 @@
 ---
-title: / Tc, /Tp /TC, /TP (zadání typu zdrojového souboru) | Microsoft Docs
+title: / Tc, /Tp /TC, /TP (zadání typu zdrojového souboru) | Dokumentace Microsoftu
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
@@ -23,60 +23,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c6c264a11e4cec478502fbd0e1837ceba450ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714295"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (zadání typu zdrojového souboru)
 
-**/Tc** možnost určuje, že její parametr filename je C zdrojového souboru, i v případě, že nemá příponu .c. **/Tp** možnost určuje, že její název souboru by se zdrojového souboru C++, i v případě, že nemá příponu sada nebo .cxx. Mezery mezi parametrem a název souboru je volitelný. Každá možnost určuje jeden soubor. Chcete-li zadat další soubory, opakujte možnost.
+**/Tc** možnost určuje, že je její argument souboru filename zdrojový soubor jazyka C i v případě, že nemá příponu .c. **/Tp** možnost určuje, že její parametr filename je zdrojový soubor jazyka C++ i v případě, že nemá příponu .cpp nebo .cxx. Mezera mezi možností a název souboru je volitelný. Jednotlivé možnosti určuje jeden soubor. Chcete-li určit další soubory, opakujte možnost.
 
-**/TC** a **/TP** globální variant **/Tc** a **/Tp**. Určí pro kompilátor považovat všechny soubory s názvem na příkazovém řádku jako zdrojové soubory C (**/TC**) nebo zdrojové soubory C++ (**/TP**), bez ohledu na umístění na příkazovém řádku ve vztahu k možnost. Tyto globální možnosti je možné přepsat na jeden soubor prostřednictvím **/Tc** nebo **/Tp**.
+**/TC** a **/TP** globální variant **/Tc** a **/Tp**. Určí pro kompilátor, aby považoval všechny soubory s názvem v příkazovém řádku jako zdrojové soubory jazyka C (**/TC**) nebo zdrojové soubory C++ (**/TP**), bez ohledu na umístění na příkazovém řádku ve vztahu k možnost. Tyto globální možnosti můžete přepsat na jeden soubor prostřednictvím **/Tc** nebo **/Tp**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/TC** _filename_  
-> **/TP** _filename_  
-> **/TC**  
-> **/TP**  
+> **/TC** _filename_
+>  **/Tp** _filename_
+>  **/TC** 
+>  **/TP**
 
 ## <a name="arguments"></a>Arguments
 
-*Název souboru*  
-C nebo C++ zdrojového souboru.
+*Název souboru*<br/>
+Zdrojový soubor jazyka C nebo C++.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení **CL** předpokládá, že jsou soubory s příponou .c zdrojové soubory C a C++ zdrojové soubory jsou soubory s sada nebo .cxx rozšíření.
+Ve výchozím nastavení **CL** předpokládá, že jsou soubory s příponou .c zdrojových souborech jazyka C a C++ zdrojové soubory jsou soubory .cpp nebo .cxx rozšíření.
 
-Při buď **TC** nebo **Tc** je zadána možnost, všechny specifikaci [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) možnost je ignorována.
+Při buď **TC** nebo **Tc** je zadána možnost, všechny specifikace [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) možnost je ignorována.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit** stránku vlastností.
 
-1. Změnit **zkompilovat jako** vlastnost. Zvolte **OK** nebo **použít** proveďte změny.
+1. Upravit **zkompilovat jako** vlastnost. Zvolte **OK** nebo **použít** změny.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAs%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAs%2A>.
 
 ## <a name="examples"></a>Příklady
 
-Tento příkaz CL Určuje, že MAIN.c, TEST.prg a COLLATE.prg jsou všechny zdrojové soubory C. CL nerozpozná PRINT.prg.
+Cl – příkazový řádek určuje, že MAIN.c TEST.prg a COLLATE.prg jsou všechny zdrojové soubory jazyka C. CL nerozpozná PRINT.prg.
 
-> CL HLAVNÍ. C /TcTEST.PRG /TcCOLLATE.PRG tisku. PRG
+> HLAVNÍ CL. C /TcTEST.PRG /TcCOLLATE.PRG tisk. PRG
 
-Tento příkaz CL Určuje, že TEST1.c, TEST2.cxx, TEST3.huh a TEST4.o zjišťují jako soubory C++ a kompiluje TEST5.z jako soubor C.
+Cl – příkazový řádek určuje, že TEST1.c, TEST2.cxx, TEST3.huh a TEST4.o jsou kompilovány jako soubory C++ a TEST5.z je zkompilován jako soubor C.
 
 > CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

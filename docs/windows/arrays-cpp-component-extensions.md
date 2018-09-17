@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714444"
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
 
@@ -62,12 +62,14 @@ První příklad syntaxe používá **ref nové** agregační – klíčové slo
     {initialization-list [,...]}
 ```
 
-*Kvalifikátory* [volitelný] jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
+*Kvalifikátory*<br/>
+(Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
 *Typ pole*  
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).
 
-*pořadí* [volitelný] počet rozměrů pole. Musí být 1.
+*pořadí*<br/>
+(Volitelné) Počet rozměrů pole. Musí být 1.
 
 *identifikátor*  
 Název proměnné pole.
@@ -75,7 +77,8 @@ Název proměnné pole.
 *typ inicializace*  
 Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* jsou stejného typu. Však mohou být typy lišit, když existuje převod z *typ inicializace* k *typ pole*– například pokud *typ inicializace* je odvozen z *typ pole*.
 
-*inicializační seznam* [volitelný] čárkami oddělený seznam hodnot ve složených hranaté závorky tuto inicializaci prvků pole. Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jednorozměrné pole prvků 3 *inicializačního seznamu* může být `{1,2,3}`.
+*Inicializace seznamu*<br/>
+(Volitelné) Čárkami oddělený seznam hodnot ve složených závorkách, které inicializaci prvků pole. Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jednorozměrné pole prvků 3 *inicializačního seznamu* může být `{1,2,3}`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -115,12 +118,14 @@ První příklad syntaxe používá **gcnew** – klíčové slovo pro přiděle
     {initialization-list [,...]}
 ```
 
-*Kvalifikátory* [volitelný] jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
+*Kvalifikátory*<br/>
+(Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
 *Typ pole*  
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (obyčejná stará data).
 
-*pořadí* [volitelný] počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.
+*pořadí*<br/>
+(Volitelné) Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.
 
 *identifikátor*  
 Název proměnné pole.
@@ -131,7 +136,8 @@ Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* 
 *pořadí seznamu velikost*  
 Čárkami oddělený seznam velikosti jednotlivých rozměrů pole. Případně pokud *inicializačního seznamu* parametr zadán, kompilátor může odvodit velikost každého rozměru a *řazení seznamu velikost* lze vynechat.
 
-*inicializační seznam* [volitelný] čárkami oddělený seznam hodnot ve složených hranaté závorky tuto inicializaci prvků pole. Nebo vnořený seznam oddělený čárkami *inicializačního seznamu* položky, které inicializaci prvků v vícerozměrné pole.
+*Inicializace seznamu*<br/>
+(Volitelné) Čárkami oddělený seznam hodnot ve složených závorkách, které inicializaci prvků pole. Nebo vnořený seznam oddělený čárkami *inicializačního seznamu* položky, které inicializaci prvků v vícerozměrné pole.
 
 Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jednorozměrné pole prvků 3 *inicializačního seznamu* může být `{1,2,3}`. Pokud *řazení seznamu velikost* byly `(3,2,4)`, který deklaruje třídimenzionální pole prvků 3 v prvním rozměru, 2 prvky za sekundu a 4 prvky v třetí, *inicializačního seznamu* může být `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 

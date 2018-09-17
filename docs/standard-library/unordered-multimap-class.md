@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104603"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715595"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap – třída
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*  
+*Keyval*<br/>
 Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
+*nbucket*<br/>
 Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*  
+*Keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*  
+*Keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*kde*  
+*kde*<br/>
 Pozice prvku, který má být odebrán.
 
-*první*  
+*první*<br/>
 Pozice prvního prvku, který má být odebrán.
 
-*poslední*  
+*poslední*<br/>
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*  
+*Key*<br/>
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Keyval*  
+*Keyval*<br/>
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor*  
+*faktor*<br/>
 Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
+*nbuckets*<br/>
 Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky

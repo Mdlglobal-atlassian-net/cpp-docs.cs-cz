@@ -1,5 +1,5 @@
 ---
-title: Bloky popisů | Microsoft Docs
+title: Bloky popisů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0784f08c479a8c8f3968ef61a01431cd9e0ca71e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d83e010f690f96afa5a57eb89ca1e8f4cf444225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699657"
 ---
 # <a name="description-blocks"></a>Bloky popisů
-Popis blok je řádek závislostí a za blok příkazů:  
-  
-```  
-targets... : dependents...  
-    commands...  
-```  
-  
- Řádek závislostí Určuje jeden nebo více cílů a nula nebo více závislé objekty. Cíl musí být na začátek řádku. Samostatné cíle z položky závislé na dvojtečkou (:); mezery nebo karty jsou povoleny. Rozdělit čáru, použijte po cíl a závislé na zpětné lomítko (\). Cíl neexistuje, má starší časové razítko než závislé, zda je [pseudotarget](../build/pseudotargets.md), NMAKE provede příkazy. Pokud závislé je cílem jinde a neexistuje nebo je zastaralé s ohledem na svůj vlastní závislé objekty, aktualizuje NMAKE závislé před aktualizací aktuální závislost.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
- [Cíle](../build/targets.md)  
-  
- [Závislé prvky](../build/dependents.md)  
-  
-## <a name="see-also"></a>Viz také  
- [NMAKE – referenční zdroje](../build/nmake-reference.md)
+
+Popis blok je řádku závislostí může volitelně následovat bloku příkazů:
+
+```
+targets... : dependents...
+    commands...
+```
+
+Řádek závislostí Určuje jeden nebo více cílů a nula nebo více závislé položky. Cíl musí být na začátku řádku. Jsou povoleny samostatné cíle z položky závislé na dvojtečkou (:); mezery ani tabulátory. Rozdělit na řádku, použijte po cíl nebo závislé na zpětné lomítko (\). Cíl neexistuje, je předchozí časové razítko než závislé, zda je [pseudotarget](../build/pseudotargets.md), NMAKE provede příkazy. Pokud závislé je cílem jinde a neexistuje nebo není aktuální s ohledem na vlastní položky závislé na, aktualizuje NMAKE rolích dependent před aktualizací aktuální závislostí.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+[Cíle](../build/targets.md)
+
+[Závislé prvky](../build/dependents.md)
+
+## <a name="see-also"></a>Viz také
+
+[NMAKE – referenční zdroje](../build/nmake-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: -Z7,. - Zi, - ZI (formát ladicích informací) | Microsoft Docs
+title: -Z7, - Zi, - ZI (formát ladicích informací) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
@@ -33,75 +33,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271948368190ddf5110d8b1fb357fe770a72e1aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379078"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714269"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (formát ladicích informací)
 
-Určuje typ ladění informace vytvořené k aplikaci a zda tyto informace jsou uchovávány v souborech objekt nebo v databázi (PDB) soubor programu.
+Určuje typ ladicích informací vytvářených pro program a zda tyto informace jsou uchovávány v souborech objektů nebo v souboru databáze (PDB) programu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Z**{**7**|**i**|**I**}  
+> **/Z**{**7**|**i**|**I**}
 
 ## <a name="remarks"></a>Poznámky
 
-Při kompilaci kódu a je integrovaný v režimu ladění, kompilátor vytvoří názvy symbolů pro funkce a proměnné, informace o typu a číslo umístění řádku pro použití ladicího programu. Tyto symbolické ladicí informace může být zahrnuta v vyprodukované kompilátor soubory objektů (soubory .obj) nebo v samostatném souboru PDB (soubor .pdb) pro spustitelný soubor.  Možnosti ladění informace o formátu jsou popsány v následujících částech.  
-  
+Pokud kód je zkompilován a vytvořené v režimu ladění, kompilátor vytvoří názvy symbolů pro funkce a proměnné, informace o typu a umístění číslo řádku pro použití ladicím programem. Symbolickém ladění může být zahrnuté v souborech objektů (soubory .obj) produkované kompilátorem nebo v samostatném souboru PDB (soubor typu .pdb) pro spustitelný soubor.  Možnosti formátování informace o ladění jsou popsány v následujících částech.
+
 ### <a name="none"></a>Žádné
 
-Ve výchozím nastavení Pokud není zadána žádná možnost formátu informace ladění, kompilátor vytvoří žádné informace o ladění, takže kompilace je rychlejší.  
-  
+Ve výchozím nastavení Pokud není zadána žádná možnost formát informací ladění, kompilátor nevytváří žádné ladicí informace, kompilace je proto rychlejší.
+
 ### <a name="z7"></a>/Z7
 
-**/Z7** možnost vytvoří objekt soubory, které také obsahují úplné symbolické ladicí informace pro použití s ladicím programem. Tyto soubory objektu a integrované spustitelný soubor může být podstatně větší než soubory, které mají žádné informace o ladění. Symbolické ladicí informace obsahuje názvy a typy proměnných, a také funkce a čísla řádků. Žádný soubor PDB vytváří.
+**/Z7** možnost vytvoří soubory objektů, které také obsahují úplné symbolické ladicí informace pro použití s ladicím programem. Tyto soubory objektů a připravené spustitelný soubor může být podstatně větší než soubory, které mají žádné ladicí informace. Symbolické ladicí informace obsahují názvy a typy proměnných a také funkce a čísla řádků. Není vytvořen žádný soubor PDB.
 
-Pro distributorů ladicí verze knihoven jiných výrobců je výhodné nemá soubor PDB. Soubory objektů pro všechny předkompilované hlavičky jsou však nutné během fáze odkaz knihovny a pro ladění. Pokud je do souboru objektu .pch pouze zadejte informace (a žádný kód), musíte také použít [/Yl (Vložit referenci PCH knihovny ladění)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) možnost, která je povolena ve výchozím nastavení, když vytváříte knihovny.
+Pro distributory ladicích verzí knihoven třetích stran je výhodné nemít soubor .pdb. Však soubory objektů pro předkompilované záhlaví jsou nezbytné během fáze propojení knihovny a pro ladění. Pokud existuje pouze typ informací (a žádný kód) do souboru .pch objektu, musíte taky použít [/Yl (Vložit referenci PCH knihovny ladění)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) možnost, která je povolena ve výchozím nastavení, při sestavování knihovny.
 
-[/Gm (povolit minimální sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** je zadán.
+[/Gm (povolení minimálního opětovného sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) možnost není k dispozici při **/Z7** určena.
 
 ### <a name="zi"></a>/Zi
 
-**/Zi** možnost vytvoří samostatný soubor PDB, který obsahuje všechny symbolické ladicí informace pro použití s ladicím programem. Informace o ladění není zahrnutý v souborech objekt nebo spustitelného souboru, takže je mnohem menší.
+**/Zi** možnost vytváří samostatný soubor PDB, který obsahuje všechny symbolické ladicí informace pro použití s ladicím programem. Informace o ladění není zahrnutý v objektových souborů nebo spustitelného souboru, který je mezi nimi vlastně mnohem menší.
 
-Použití **/Zi** nemá vliv na optimalizace. Ale **/Zi** implikují **/debug**; najdete v části [/Debug (Generovat ladicí informace)](../../build/reference/debug-generate-debug-info.md) Další informace.
+Použití **/zi** nemá vliv na optimalizaci. Ale **/zi** vyjadřuje **/debug**; viz [/Debug (Generovat ladicí informace)](../../build/reference/debug-generate-debug-info.md) Další informace.
 
+Pokud zadáte obě **/zi** a **/CLR**, <xref:System.Diagnostics.DebuggableAttribute> atribut není umístěn v metadatech sestavení. Pokud chcete, zadejte ho ve zdrojovém kódu. Tento atribut může ovlivnit výkon modulu runtime aplikace. Další informace o tom, jak **Debuggable** atributy ovlivňují výkon a jak můžete upravit dopad na výkon, naleznete v tématu [usnadnění bitové kopie k ladění](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
-Pokud zadáte oba **/Zi** a **/CLR**, <xref:System.Diagnostics.DebuggableAttribute> atribut není umístěn v metadatech sestavení. Pokud ho chcete, zadejte ji ve zdrojovém kódu. Tento atribut může ovlivnit výkon modulu runtime aplikace. Další informace o tom, jak **Debuggable** atribut ovlivňuje výkon a jak můžete upravit dopad na výkon, najdete v části [snadněji bitové kopie pro ladění](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
+Kompilátor pojmenuje soubor PDB *projektu*.pdb. Pokud kompilujete soubor mimo projekt, kompilátor vytvoří soubor .pdb s názvem VC*x*.pdb, kde *x* zřetězení číslo hlavní verze a podverze kompilátoru verze používá. Kompilátor vloží název PDB a identifikační podpis časovým razítkem v každém souboru objektu vytvořené pomocí této možnosti, která odkazuje na umístění symbolických a číslo řádku informace o ladicím programu. Název a podpis v souboru PDB musí odpovídat spustitelný soubor symbolů, které mají být načteny v ladicím programu. Ladicí program WinDBG neodpovídající symboly můžete načíst pomocí `.symopt+0x40` příkazu. Visual Studio nemá podobné možnost načíst neodpovídající symboly.
 
-Kompilátor názvy soubor PDB *projektu*pdb. Pokud je soubor mimo projekt, kompilátor vytvoří soubor PDB s názvem VC*x*pdb, kde *x* je tvořen hlavní verze a podverze číslo verze kompilátoru používán. Kompilátor vloží název identifikační podpisu označen časovým razítkem a PDB do každého souboru objekt vytvořený tato možnost, která odkazuje na umístění informací symbolický a číslo řádku ladicího programu. Název a podpis v souboru PDB musí odpovídat spustitelný soubor pro symboly načíst v ladicím programu. Ladicí program WinDBG můžete načíst pomocí neodpovídajícího symboly `.symopt+0x40` příkaz. Visual Studio nemá podobné možnost načíst neodpovídající symboly.
-
-Pokud vytvoříte knihovnu objekty, které byly zkompilovány pomocí **/Zi**, musí být na soubor .pdb přidružené k dispozici, knihovny propojen s program. Proto pokud distribuujete knihovny, je nutné také distribuovat soubor PDB. Chcete-li vytvořit knihovnu, která obsahuje informace o ladění bez použití soubory PDB, je nutné vybrat **/Z7** možnost. Pokud použijete možnosti předkompilovaných hlaviček, ladicí informace pro předkompilované hlavičky a zbytek zdrojový kód je umístěn v souboru PDB.
+Pokud vytvoříte knihovnu z objektů, které byly zkompilovány pomocí **/zi**, přidružený soubor PDB musí být k dispozici, když knihovně je spojena s programem. Proto při distribuci knihovny, musíte také distribuovat souboru PDB. Pokud chcete vytvořit knihovnu, která obsahuje informace o ladění bez použití souborů PDB, musíte vybrat **/Z7** možnost. Pokud použijete možnosti předkompilovaného záhlaví, ladicí informace pro předkompilované záhlaví a zbytek zdrojového kódu je umístěn v souboru PDB.
 
 ### <a name="zi"></a>/ZI
 
-**/ZI** možnost je podobná **/Zi**, vyvolá PDB soubor ve formátu, který podporuje, ale [upravit a pokračovat](/visualstudio/debugger/edit-and-continue-visual-cpp) funkce. Pokud chcete používat, úpravy a pokračujete v ladění funkcí, musíte použít tuto možnost. Funkce upravit a pokračovat je užitečné pro vývojáře produktivitu, ale může způsobit problémy v kódu velikost, výkon a kompilátoru shoda. Protože většina optimalizace nejsou kompatibilní s upravit a pokračovat, pomocí **/ZI** zakáže všechny `#pragma optimize` příkazů v kódu. **/ZI** možnost je také kompatibilní s použitím [ &#95; &#95;řádku&#95; &#95; předdefinované makro](../../preprocessor/predefined-macros.md); kódu kompilovat s **/ZI** nelzepoužít.**&#95; &#95;Řádku&#95; &#95;** jako šablonu jiný typ argumentu, i když **&#95; &#95;řádku&#95; &#95;** mohou být používány makro rozšíření.
+**/Zi** možnost je podobná **/zi**, vytvoří soubor .pdb ve formátu, který podporuje, ale [upravit a pokračovat](/visualstudio/debugger/edit-and-continue-visual-cpp) funkce. Pokud chcete použít ladění funkce upravit a pokračovat, musíte použít tuto možnost. Funkce upravit a pokračovat je užitečné pro produktivitu vývojářů, ale může způsobit problémy v kódu velikosti, výkon a kompilátoru shoda. Protože většina optimalizací nejsou kompatibilní s upravit a pokračovat, pomocí **/zi** zakáže všechny `#pragma optimize` příkazy ve vašem kódu. **/Zi** možnost je také kompatibilní s využitím [ &#95; &#95;řádku&#95; &#95; předdefinované makro](../../preprocessor/predefined-macros.md); kód zkompilovaný s **/zi** nelzepoužít.**&#95; &#95;Řádku&#95; &#95;** jako argumentu šablony bez typu, i když **&#95; &#95;řádku&#95; &#95;** lze použít v rozšíření makra.
 
-**/ZI** možnost vynutí i [/Gy (povolení propojení na úrovni funkcí)](../../build/reference/gy-enable-function-level-linking.md) a [/FC (úplná cesta z souboru zdrojového kódu v diagnostice)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) možnosti pro použití v kompilaci.
+**/Zi** možnost vynutí i [/Gy (povolení funkce propojení na úrovni)](../../build/reference/gy-enable-function-level-linking.md) a [/FC (úplná cesta ze souboru zdrojového kódu v diagnostice)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) možnosti pro použití v kompilaci.
 
-**/ZI** není kompatibilní s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/ Zi** není kompatibilní s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> **/ZI** možnost je dostupná v kompilátory cílení x86 a x64 procesory jenom; tento – možnost kompilátoru není k dispozici v kompilátory cílení procesory ARM.
+> **/Zi** možnost je dostupná v kompilátorech, které cílí na procesory x86 a x64 jenom; tato možnost kompilátoru není k dispozici v kompilátorech, které cílí na procesory ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Otevřete **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
+1. Otevřít **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
 
-1. Změnit **Debug Information Format** vlastnost. Zvolte **OK** uložte provedené změny.
+1. Upravit **formát informací o ladění** vlastnost. Zvolte **OK** uložte provedené změny.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
 

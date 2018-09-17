@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Kompilace programu v jazyce C na příkazovém řádku | Microsoft Docs'
+title: 'Návod: Kompilace programu C na příkazovém řádku | Dokumentace Microsoftu'
 ms.custom: conceptual
 ms.date: 06/21/2018
 ms.technology:
@@ -15,41 +15,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3578fbc5a85757fedda3e9078e54934016607eb
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710330"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilace programu v jazyce C na příkazovém řádku
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilace programu C na příkazovém řádku
 
-Visual C++ obsahuje kompilátor C, který můžete použít k vytvoření všechno, co od základní konzoly programy úplné aplikace na ploše systému Windows, mobilní aplikace a další.
+Visual C++ obsahuje kompilátor jazyka C, který můžete použít k vytvoření čehokoliv od základních konzoly programy celých aplikací Windows Desktop, mobilní aplikace a další.
 
-Tento návod ukazuje, jak vytvořit základní, "Hello, World"-stylu programu C pomocí textového editoru a pak jeho kompilace příkazového řádku. Pokud by se místo fungovat v jazyce C++ v příkazovém řádku, najdete v části [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Pokud chcete akci prostředí Visual Studio IDE místo pomocí příkazového řádku najdete v tématu [návod: práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) nebo [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Tento návod ukazuje, jak vytvořit základní, "Hello, World"-stylu programu jazyka C pomocí textového editoru a jeho následnou kompilaci v příkazovém řádku. Pokud by raději pracujete v jazyce C++ v příkazovém řádku, naleznete v tématu [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Pokud chcete zkusit IDE sady Visual Studio namísto z příkazového řádku, naleznete v tématu [návod: práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) nebo [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pro dokončení tohoto návodu, musíte instalaci sady Visual Studio a volitelné součásti Visual C++ nebo nástroje pro sestavení pro Visual Studio.
+K dokončení tohoto návodu, musíte instalaci sady Visual Studio a volitelné součásti Visual C++ nebo nástroje Build Tools pro Visual Studio.
 
-Visual Studio je výkonný integrované vývojové prostředí, které podporuje o plně vybavený editor, správci prostředků, ladicí programy a kompilátory pro mnoho jazyky a platformy. Informace o těchto funkcích a o tom, jak stáhnout a nainstalovat Visual Studio, včetně edice free Visual Studio Community, najdete v části [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).
+Visual Studio je výkonné integrované vývojové prostředí, které podporuje editoru se plně funkční, správce prostředků, ladicí programy a kompilátory pro mnoho jazyky a platformy. Informace o těchto funkcích a jak si stáhnout a nainstalovat sadu Visual Studio, včetně bezplatné edice Visual Studio Community najdete v části [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
 
-Nástroje pro sestavení pro Visual Studio verzi sady Visual Studio nainstaluje pouze příkazového řádku sady nástrojů, kompilátory, nástroje a knihovny, které potřebujete k vytvoření programy C a C++. Je ideální pro prostředí sestavení nebo učebny vykonává a nainstaluje poměrně rychle. Chcete-li nainstalovat jenom příkazového řádku sady nástrojů, stáhněte [nástroje sestavení pro Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) a spusťte instalační program.
+Nástroje Build Tools pro Visual Studio verze sady Visual Studio nainstaluje pouze příkazového řádku sady nástrojů, kompilátory, nástroje a knihovny, které potřebujete k vytváření programů jazyka C a C++. Je ideální pro testovací prostředí pro sestavování nebo classroom vykonává a nainstaluje poměrně rychle. Chcete-li nainstalovat pouze příkazového řádku sady nástrojů, stáhněte si [Build Tools pro Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) a spusťte instalační program.
 
-Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné ověřit, zda jsou nainstalovány nástroje a že se dostanete z příkazového řádku. Visual C++ má komplexní požadavky na prostředí příkazového řádku a hledat tak nástroje, hlavičky a knihovny, které používá. **Visual C++ nelze použít v okně příkazového řádku prostý** bez určitou přípravu. Je nutné *příkazový řádek vývojáře* okno, které je okno regulární příkazového řádku, který nemá všechny požadované prostředí proměnné nastavit. Naštěstí Visual C++ nainstaluje zástupce můžete spustit na příkazovém řádku vývojáře se mají nastavit pro sestavení příkazového řádku prostředí. Bohužel názvy zástupce příkazového řádku vývojáře a kde se nacházejí se liší v téměř všechny verze aplikace Visual C++ a v různých verzích systému Windows. První úlohu návod je nalezení správné zástupce, který chcete použít.
+Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné ověřit, že jsou nainstalované nástroje a že je můžete přistupovat k nim z příkazového řádku. Visual C++ má složité požadavky na prostředí příkazového řádku k vyhledání nástroje, hlavičky a knihovny, které používá. **Visual C++ nelze použít v okně prostý příkazového řádku** bez některé přípravy. Je nutné *příkazový řádek pro vývojáře* okna, což je okno regulární příkazového řádku, který má všechny požadované prostředí proměnné nastavené. Naštěstí Visual C++ nainstaluje zástupce můžete spustit příkazový řádek pro vývojáře, které mají prostředí pro sestavení příkazového řádku. Bohužel se liší v téměř všechny verze aplikace Visual C++ a různými verzemi Windows názvy zkratky příkazového řádku pro vývojáře a kde se nacházejí. Vaše první úkol návodu je najít správné místní použití.
 
 > [!NOTE]
-> Zástupce příkazového řádku vývojáře automaticky nastaví správné cesty pro kompilátoru a nástroje a pro všechny požadované hlavičky a knihovny. Některé z těchto hodnot se liší u každé konfiguraci sestavení. Je nutné nastavit tyto hodnoty prostředí sami Pokud nepoužijete mezi zástupce. Další informace najdete v tématu [nastavit cesty a proměnných prostředí pro sestavení příkazového řádku](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Protože je komplexní prostředí sestavení, důrazně doporučujeme, že abyste použili zástupce příkazového řádku vývojáře místo vytváření vlastní.
+> Zástupce příkazového řádku pro vývojáře automaticky nastaví správnou cesty kompilátoru a nástrojů a pro jakékoli požadované hlavičky a knihovny. Některé z těchto hodnot se liší pro každou konfiguraci sestavení. Je nutné nastavit tyto hodnoty prostředí sami Pokud nechcete použít jeden z klávesové zkratky. Další informace najdete v tématu [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Protože je komplexní prostředí pro sestavení, důrazně doporučujeme že použít zástupce příkazového řádku pro vývojáře namísto sestavování vlastních.
 
-## <a name="open-a-developer-command-prompt"></a>Otevřete příkazový řádek vývojáře
+## <a name="open-a-developer-command-prompt"></a>Otevřete příkazový řádek pro vývojáře
 
-1. Pokud jste nainstalovali Visual Studio 2017 ve Windows 10, otevření nabídky Start a potom přejděte dolů a otevřete **Visual Studio 2017** složce (ne aplikace Visual Studio 2017). Zvolte **příkazový řádek vývojáře pro VS 2017** a otevřete okno příkazového řádku.
+1. Pokud jste nainstalovali Visual Studio 2017 ve Windows 10, otevřete nabídku Start a posuňte se dolů a otevřete **Visual Studio 2017** složce (ne aplikace Visual Studio 2017). Zvolte **Developer Command Prompt for VS 2017** otevřete okno příkazového řádku.
 
-   Pokud jste nainstalovali Microsoft Visual C++ sestavení nástroje 2015 na Windows 10, otevřete **spustit** nabídce a potom přejděte dolů a otevřete **nástroje sestavení Visual C++** složky. Zvolte **Visual C++ 2015 x86 nativní nástroje příkazového řádku** a otevřete okno příkazového řádku.
+   Pokud jste nainstalovali Microsoft Visual C++ Build Tools 2015 ve Windows 10, otevřete **Start** nabídky a potom přejděte dolů a otevřete **Visual C++ Build Tools** složky. Zvolte **příkazového řádku nativních nástrojů Visual C++ 2015 x86** otevřete okno příkazového řádku.
 
-   Pokud používáte jinou verzi sady Visual Studio nebo běží s jinou verzí systému Windows, vyhledejte v nabídce Start nebo úvodní stránka pro složky nástroje pro Visual Studio, který obsahuje zástupce příkazového řádku vývojáře. Funkce vyhledávání systému Windows můžete použít také k hledání "příkazový řádek vývojáře" a vyberte ten, který se shoduje s nainstalovanou verzí sady Visual Studio. Otevřete okno příkazového řádku pomocí klávesové zkratky.
+   Pokud používáte jinou verzi sady Visual Studio nebo jsou spuštěny na jinou verzi Windows, vyhledejte v nabídce Start nebo úvodní stránka pro složku nástroje Visual Studio, který obsahuje zástupce příkazového řádku pro vývojáře. Funkce vyhledávání Windows můžete použít také k vyhledání "developer command prompt" a vyberte ten, který odpovídá vaší nainstalované verzi sady Visual Studio. Chcete-li otevřít okno příkazového řádku použijte klávesovou zkratku.
 
-2. Dále ověřte, zda příkazový řádek vývojáře Visual C++ je správně. V okně příkazového řádku zadejte `cl` a ověřte, že výstup vypadá přibližně takto:
+2. Dále ověřte, že je správně nastavené příkazový řádek pro vývojáře Visual C++. V okně příkazového řádku zadejte `cl` a ověřte, že výstup by měl vypadat přibližně takto:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -61,23 +61,23 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>
    ```
 
-   Může docházet k rozdílům v aktuálním adresáři nebo číslo verze, a to v závislosti na verzi Visual C++ a nainstalovány žádné aktualizace. Pokud je to podobné co vidíte, pak jste připraveni k sestavení programy C nebo C++ v příkazovém řádku.
+   Může docházet k rozdílům v aktuálním adresáři nebo číslo verze, a to v závislosti na verzi aplikace Visual C++ a nainstalovány žádné aktualizace. Pokud je to podobné, co vidíte, pak jste připravení sestavit programy jazyka C nebo C++ v příkazovém řádku.
 
    > [!NOTE]
-   > Pokud dojde k chybě, jako je "'cl' nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru" Chyba C1034 nebo chyba LNK1104 při spuštění **cl** příkaz, pak buď nejsou pomocí příkazového řádku vývojáře nebo je něco špatně s instalací sady Visual C++. Než budete pokračovat, je nutné opravit tento problém.
+   > Pokud dojde k chybě, jako je "'cl' nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru" Chyba C1034 nebo chyba LNK1104 při spuštění **cl** příkaz, pak buď nejsou pomocí příkazového řádku pro vývojáře, nebo něco se nepovedlo s instalací aplikace Visual C++. Než budete pokračovat, je nutné opravit tento problém.
 
-   Pokud nemůžete najít vývojář zástupce příkazového řádku, nebo pokud se zobrazí chybové hlášení, když zadáte `cl`, pak instalaci aplikace Visual C++ pravděpodobně došlo k potížím. Pokud používáte Visual Studio 2017, přeinstalujte **vývoj aplikací s jazykem C++** zatížení v instalačním programu sady Visual Studio. Podrobnosti najdete v tématu [podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Nebo, přeinstalujte [nástroje sestavení pro Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Nemáte přejděte k další části dokud to funguje. Další informace o instalaci a řešení potíží s Visual Studio najdete v tématu [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).
+   Pokud nemůžete najít vývojář zástupce příkazového řádku, nebo pokud se zobrazí chybová zpráva při zadání `cl`, pak instalaci aplikace Visual C++ může mít potíže. Pokud používáte Visual Studio 2017, zkuste přeinstalovat **vývoj desktopových aplikací pomocí C++** úlohy v instalačním programu sady Visual Studio. Podrobnosti najdete v tématu [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Nebo, přeinstalujte [Build Tools pro Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Není přejděte k další části dokud to funguje. Další informace o instalaci a řešení potíží s Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > V závislosti na verzi Windows na počítači a konfiguraci zabezpečení systému, možná budete muset pravým tlačítkem a otevřete místní nabídku pro vývojáře zástupce příkazového řádku a potom zvolte **spustit jako správce** na úspěšně sestavit a spustit program, který vytvoříte podle tohoto návodu.
+   > V závislosti na verzi systému Windows v počítači a konfiguraci zabezpečení systému, bude pravděpodobně nutné klikněte pravým tlačítkem na otevřete místní nabídku pro zástupce příkazového řádku pro vývojáře a klikněte na tlačítko **spustit jako správce** do úspěšně sestavíte a spustíte program, který vytvoříte podle tohoto postupu.
 
-## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Vytvoření C zdrojového souboru a jeho kompilace příkazového řádku
+## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Vytvořte zdrojový soubor jazyka C a jeho kompilace na příkazovém řádku
 
-1. V okně příkazového řádku vývojáře zadejte **cd c:\\**  změnit aktuální pracovní adresář na kořenové jednotce C:. Potom zadejte **md c:\simple** vytvořte adresář, a potom zadejte **cd c:\simple** tohoto adresáře. Toto je adresář, který bude obsahovat zdrojový soubor a zkompilovaný program.
+1. V okně příkazového řádku pro vývojáře zadejte **cd c:\\**  změnit aktuální pracovní adresář na kořenové jednotce C:. Pak zadejte **md c:\simple** vytvoření adresáře, a pak zadejte **cd c:\simple** pro přechod do této složky. Toto je adresář, který bude obsahovat zdrojový soubor a zkompilovaný program.
 
-2. Zadejte **simple.c Poznámkový blok** příkazového řádku vývojáře. V výstrahy dialogovém okně Poznámkový blok, která se objeví, zvolte **Ano** k vytvoření nového souboru simple.c v pracovní adresář.
+2. Zadejte **Poznámkový blok simple.c** příkazového řádku pro vývojáře. V programu Poznámkový blok dialogového okna výstrah, která se otevře, zvolte **Ano** k vytvoření nového souboru simple.c ve svém pracovním adresáři.
 
-3. V poznámkovém bloku zadejte následující řádky kódu:
+3. V programu Poznámkový blok zadejte následující řádky kódu:
 
     ```C
     #include <stdio.h>
@@ -86,12 +86,12 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
     {
         printf("Hello, World! This is a native C program compiled on the command line.\n");
         return 0;
-    } 
+    }
     ```
 
-4. V řádku nabídek Poznámkový blok, zvolte **soubor**, **Uložit** uložit simple.c v pracovním adresáři.
+4. Na panelu nabídek poznámkového bloku vyberte **souboru**, **Uložit** uložit simple.c ve svém pracovním adresáři.
 
-5. Přepněte zpátky na okno příkazového řádku vývojáře. Zadejte **dir** na příkazovém řádku zobrazit obsah adresáře c:\simple. Měli byste vidět simple.c souboru zdroje v seznamu adresářů, která vypadá přibližně takto:
+5. Přepněte zpět do okna příkazového řádku pro vývojáře. Zadejte **dir** příkazového řádku k výpisu obsahu adresáře c:\simple. Měli byste vidět simple.c zdrojového souboru v seznamu adresářů, která vypadá přibližně takto:
 
     ```Output
     C:\simple>dir
@@ -108,11 +108,11 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
 
     ```
 
-   Kalendářní data a další podrobnosti se budou lišit v počítači. Pokud nevidíte vašeho souboru se zdrojovým kódem, simple.c, ujistěte se, že jste změnili c:\simple adresář, který jste vytvořili a v poznámkovém bloku, ujistěte se, že jste uložili zdrojový soubor v tomto adresáři. Ujistěte se také ukládají zdrojový kód s .c příponu názvu, příponu .txt.
+   Kalendářní data a další podrobnosti se bude lišit v počítači. Pokud nevidíte souboru zdrojového kódu, simple.c, ujistěte se, že jste změnili c:\simple adresáře, který jste vytvořili a v programu Poznámkový blok, ujistěte se, že jste uložili zdrojový soubor v tomto adresáři. Také se ujistěte, že jste uložili zdrojový kód s .c příponu souboru, ne .txt příponu.
 
-6. Kompilace programu, zadejte **cl simple.c** příkazového řádku vývojáře.
+6. Chcete-li kompilovat aplikaci, zadejte **cl simple.c** příkazového řádku pro vývojáře.
 
-   Zobrazí název spustitelný program simple.exe řádků kompilátor zobrazí výstup informace:
+   Zobrazí se název spustitelného programu simple.exe v řádcích výstupních informací, které kompilátor zobrazí:
 
     ```Output
     c:\simple>cl simple.c
@@ -128,26 +128,26 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
     ```
 
    > [!NOTE]
-   > Pokud dojde k chybě, jako je "'cl' nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru" Chyba C1034 nebo chyba LNK1104, vaše příkazový řádek vývojáře není správně nastaven. Informace o tom, jak tento problém vyřešit, přejděte zpět na **otevřete příkazový řádek vývojáře** části.
+   > Pokud dojde k chybě, jako je "'cl' nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru" Chyba C1034 nebo chyba LNK1104, příkazový řádek pro vývojáře není správně nastavený. Informace o tom, jak tento problém vyřešit, přejděte zpět **otevřete příkazový řádek pro vývojáře** oddílu.
 
    > [!NOTE]
-   > Pokud se objeví jiné kompilátoru nebo linkeru chyby nebo upozornění, zkontrolujte zdrojový kód a opravte všechny chyby, pak jej uložit a znovu spusťte kompilátoru. Informace o konkrétní chyby použijte vyhledávací pole v horní části této stránky hledání číslo chyby.
+   > Pokud se zobrazí různých kompilátoru nebo linkeru chybu nebo upozornění, zkontrolujte zdrojový kód opravte všechny chyby, pak jej uložit a znovu spusťte kompilátor. Informace o konkrétní chyby použijte vyhledávací pole v horní části této stránky a vyhledejte číslo chyby.
 
-7. Chcete-li spustit program, zadejte **jednoduché** na příkazovém řádku.
+7. Chcete-li spustit program, zadejte **jednoduché** příkazového řádku.
 
-   Program zobrazí tento text a pak bude ukončen:
+   Program zobrazí tento text a následně skončí:
 
     ```Output
     Hello, World! This is a native C program compiled on the command line.
     ```
 
-   Blahopřejeme, jste právě zkompilovat a spuštění programu C pomocí příkazového řádku.
+   Blahopřejeme, právě jste zkompilován a spuštění programu jazyka C pomocí příkazového řádku.
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto příkladu "Hello, World" je o stejně jednoduché jako programu C můžete získat. Programy skutečných mít soubory hlaviček a další zdrojové soubory, na odkaz v knihovnách a užitečné práci.
+V tomto příkladu "Hello, World" je přibližně stejně jednoduché jako C programu můžete získat. Programy reálného světa mít hlavičkové soubory a další zdrojové soubory, na odkaz v knihovnách a dělat užitečnou práci.
 
-Kroky v tomto návodu můžete použít k vytvoření vlastního kódu C místo zadání ukázkový kód ukazuje. Můžete také vytvořit mnoho C kód ukázkové programy, které můžete najít jinde. Kompilace programu, který má více soubory zdrojového kódu, zadejte je všechny na příkazovém řádku, například takto:
+Kroky v tomto názorném postupu můžete použít k vytvoření vlastního kódu jazyka C namísto zadávání vzorový kód ukazuje. Můžete také vytvořit mnoho C kód ukázkové aplikace, které jinde nenajdete. Kompilace programu, který má více souborů zdrojového kódu, zadejte je všechny na příkazovém řádku, například takto:
 
 `cl file1.c file2.c file3.c`
 
@@ -155,21 +155,21 @@ Kompilátor výstupy program s názvem file1.exe. Chcete-li změnit název na pr
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-K zachycení více programovacích chyb automaticky, doporučujeme zkompilujete pomocí [/W3](../build/reference/compiler-option-warning-level.md) nebo [/W4](../build/reference/compiler-option-warning-level.md) upozornění úrovně možnost:
+K zachycení více programovacích chyb automaticky, doporučujeme při kompilaci pomocí [w3](../build/reference/compiler-option-warning-level.md) nebo [/W4](../build/reference/compiler-option-warning-level.md) upozornění úrovně možnost:
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Kompilátor, cl.exe, má mnoho dalších možností, můžete použít k sestavení, optimalizace, ladění a analýze kódu. Seznam rychlé zadejte **cl /?** na příkazovém řádku vývojáře. Můžete také zkompilovat a propojit samostatně a použít možnosti linkeru ve složitějších scénářích sestavení. Další informace o kompilátoru a linkeru možnosti a využití najdete v tématu [odkaz sestavení C/C++](../build/reference/c-cpp-building-reference.md).
+Kompilátor, cl.exe má mnoho dalších možností, můžete použít k sestavení, optimalizovat, ladit a analyzovat svůj kód. Stručný seznam, zadejte **cl /?** na příkazovém řádku pro vývojáře. Můžete také zkompilovat a propojit samostatně a použít možnosti linkeru v podobě komplexních scénářů sestavení. Další informace o kompilátoru a možnosti propojovacího programu a jeho použití najdete v tématu [Reference sestavení C/C++](../build/reference/c-cpp-building-reference.md).
 
-NMAKE a soubory pravidel nebo MSBuild a projekt soubory můžete použít ke konfiguraci a složitější projekty sestavení na příkazovém řádku. Další informace o používání těchto nástrojů najdete v tématu [NMAKE – odkaz](../build/nmake-reference.md) a [MSBuild](../build/msbuild-visual-cpp.md).
+NMAKE a soubory pravidel nebo MSBuild a soubory projektu můžete použít ke konfiguraci a sestavit projekty složitější na příkazovém řádku. Další informace o použití těchto nástrojů naleznete v tématu [NMake – odkaz](../build/nmake-reference.md) a [MSBuild](../build/msbuild-visual-cpp.md).
 
-Jazyky C a C++ jsou podobné, ale nejsou stejné. Kompilátor Visual C++ pomocí jednoduché pravidlo určuje jazyk, který se má použít při kompilaci kódu. Ve výchozím nastavení Visual C++ compiler zpracovává všechny soubory, které končí jako zdrojový kód C a všechny soubory, které končí sada jako C++ zdrojového kódu. Chcete-li vynutit kompilátor považovat všechny soubory C bez ohledu na příponu názvu souboru, použijte [/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) – možnost kompilátoru.
+Jazyky C a C++ jsou podobné, ale nejsou stejné. Kompilátor Visual C++ používá jednoduché pravidlo k určení jazyk, který se má použít při kompilaci kódu. Ve výchozím nastavení kompilátor Visual C++ zpracovává všechny soubory, které končí .c jako zdrojový kód jazyka C a všechny soubory, které končí .cpp jako zdrojový kód jazyka C++. Chcete-li vynutit na kompilátoru, aby považoval všechny soubory jako C bez ohledu na příponu názvu souboru, použijte [/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) – možnost kompilátoru.
 
-Kompilátor Visual C++ C je obecně kompatibilní se standardem ISO C99, ale výhradně kompatibilní. Ve většině případů přenosné C – kód zkompilování a spouštějí se podle očekávání. Visual C++ nepodporuje většinu změn v ISO C11. Visual C++ compiler nepoužívají určité funkce knihovny a názvy funkcí POSIX. Jsou podporované, ale upřednostňované názvy změnily. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md) a [upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Kompilátor Visual C++ C je obecně kompatibilní se standardem ISO C99, ale není striktně kompatibilní. Ve většině případů bude přenositelný kód C zkompilovat a spustit podle očekávání. Visual C++ nepodporuje většinu změn v ISO C11. Některé funkce knihovny a POSIX – názvy funkcí jsou zastaralé v kompilátoru jazyka Visual C++. Jsou podporované, ale upřednostňované názvy změnily. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md) a [upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)  
-[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)  
-[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
-[Kompatibilita](../c-runtime-library/compatibility.md)  
+[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
+[referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Kompatibilita](../c-runtime-library/compatibility.md)

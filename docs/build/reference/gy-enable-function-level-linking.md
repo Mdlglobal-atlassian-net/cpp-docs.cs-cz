@@ -1,5 +1,5 @@
 ---
-title: -Gy (povolení propojení na úrovni funkcí) | Microsoft Docs
+title: -Gy (povolení propojení úrovni funkcí) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,48 +23,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e939a12cf23a9d9e476b676a5b068889414497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09faa1a1d2b6743b7fce31af32ba4fe1572b592e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376296"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705000"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (povolení propojení na úrovni funkcí)
-Umožňuje kompilátoru na jednotlivé funkce balíček ve formě zabalené funkce (COMDATs).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Gy[-]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Linkeru vyžaduje, aby funkce samostatně zabalené jako COMDATs vyloučit nebo pořadí jednotlivých funkcí v souboru DLL nebo .exe.  
-  
- Můžete použít možnosti linkeru [/OPT (optimalizace)](../../build/reference/opt-optimizations.md) vyloučit neregistrované zabalené funkce ze souboru .exe.  
-  
- Můžete použít možnosti linkeru [/ORDER (funkce uveďte v pořadí)](../../build/reference/order-put-functions-in-order.md) zahrnout zabalené funkce v uvedeném pořadí, v souboru .exe.  
-  
- Pokud jsou vytvářeny jako volání vždy spojených vložené funkce (což například dochází, pokud vložené je vypnuté nebo provést adresu funkce). Kromě toho jsou automaticky zabalené členské funkce C++ definované v deklaraci třídy; Další funkce nejsou a výběr této možnosti je nutné jejich kompilace jako zabalené funkce.  
-  
+
+Umožňuje kompilátoru vytvořit balíček individuálních funkcí ve formě zabalených funkcí (sekvence Comdat).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/Gy[-]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Propojovací program vyžaduje funkce, ke které balí samostatně jako sekvence Comdat vyloučit nebo pořadí jednotlivých funkcí v souboru DLL nebo .exe.
+
+Můžete použít možnost linkeru [/OPT (optimalizace)](../../build/reference/opt-optimizations.md) neodkazované zabalené funkce vyloučení ze souboru .exe.
+
+Můžete použít možnost linkeru [/Order (Put funkcí v pořadí)](../../build/reference/order-put-functions-in-order.md) zahrnout zabalené funkce v zadaném pořadí v souboru .exe.
+
+Vložené funkce jsou vždy zabaleny, pokud jsou vytvořeny jako volání (které dojde, například pokud vkládání je vypnout nebo vzít adresu funkce). Kromě toho jsou zabaleny automaticky členských funkcí jazyka C++ definované v deklaraci třídy; Další funkce nejsou, a výběrem této možnosti je potřeba kompilovat jako zabalené funkce.
+
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) možnost použít pro upravit a pokračovat, automaticky nastaví **/Gy** možnost.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **generování kódu** stránku vlastností.  
-  
-4.  Změnit **povolit propojení na úrovni funkcí** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+>  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/Gy** možnost.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **generování kódu** stránku vlastností.
+
+1. Upravit **povolit propojování na úrovní funkcí** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

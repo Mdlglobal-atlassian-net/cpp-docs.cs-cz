@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715673"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray –&gt; funkce
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice y arkustangens argumentu.
+*doleva*<br/>
+Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice y arkustangens argumentu.
 
-*doprava*  
- Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice x arkustangens argumentu.
+*doprava*<br/>
+Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice x arkustangens argumentu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky zadat základ pro každý prvek bude exponentiated.
+*doleva*<br/>
+Vstupní valarray, jehož prvky zadat základ pro každý prvek bude exponentiated.
 
-*doprava*  
- Vstupní valarray, jehož prvky napájení pro každý prvek bude exponentiated.
+*doprava*<br/>
+Vstupní valarray, jehož prvky napájení pro každý prvek bude exponentiated.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Vstupní valarray, jehož prvky mají být provozována členskou funkci.
+*doleva*<br/>
+Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 

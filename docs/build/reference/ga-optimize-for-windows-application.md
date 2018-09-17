@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2ef8aaf1e2b3f1dd75f7ca2669aaf09f3d121a98
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194660"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710057"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (optimalizace pro aplikaci systému Windows)
-Výsledkem efektivnější kód pro soubor s příponou .exe pro přístup k proměnné úložiště thread local (TLS).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/GA  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **/GA** rychlosti přístupu k datům deklarována s [__declspec(thread)](../../cpp/declspec.md) v systému Windows. Když nastavíte tuto možnost, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) makra je považován za 0.  
-  
- Pomocí **/GA** pro knihovnu DLL může vést k generování chybného kódu.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte na tlačítko **C/C++** složky.  
-  
-3.  Klikněte na tlačítko **příkazového řádku** stránku vlastností.  
-  
-4.  Zadejte možnost do kompilátoru **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Výsledkem efektivnější kód pro soubor s příponou .exe pro přístup k proměnné úložiště thread local (TLS).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/GA
+```
+
+## <a name="remarks"></a>Poznámky
+
+**/GA** rychlosti přístupu k datům deklarována s [__declspec(thread)](../../cpp/declspec.md) v systému Windows. Když nastavíte tuto možnost, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) makra je považován za 0.
+
+Pomocí **/GA** pro knihovnu DLL může vést k generování chybného kódu.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

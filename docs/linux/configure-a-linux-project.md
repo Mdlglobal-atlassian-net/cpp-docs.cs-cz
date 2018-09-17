@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a66e2f6b6506d995859c89d9588b59056047220e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895198"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713580"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -48,7 +48,8 @@ Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, 
 
 ## <a name="include-directories-and-intellisense-support"></a>Zahrnout adresáře a podporu technologie IntelliSense
 
-**Visual Studio 2017 verze 15.6 a starší:** ve výchozím nastavení, Visual Studio nezahrnuje všech souborů include úrovni systému z počítače s Linuxem.  Příklad položky v **/usr/include** adresáře nejsou k dispozici v sadě Visual Studio.
+**Visual Studio 2017 verze 15.6 a starší:**<br/>
+Ve výchozím nastavení Visual Studio nezahrnuje všech souborů include úrovni systému z počítače s Linuxem.  Příklad položky v **/usr/include** adresáře nejsou k dispozici v sadě Visual Studio.
 Úplné [IntelliSense](/visualstudio/ide/using-intellisense) podpory, budete muset zkopírovat tyto soubory do umístění ve svém vývojovém počítači a sady Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovacího bodu služby (Secure Copy) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  U předchozích verzí systému Windows, například použít něco jako [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Zkopírujte soubory s použitím příkazu, který je podobný následujícímu:
@@ -61,7 +62,8 @@ Po zkopírování souborů, použijte **adresáře VC ++** položky ve vlastnost
 
 ![Adresáře VC ++](media/settings_directories.png)
 
-**Visual Studio 2017 verze 15.7 nebo novější:** naleznete v tématu [Správa vzdálených hlaviček IntelliSense](#remote_intellisense).
+**Visual Studio 2017 verze 15.7 nebo novější:**<br/>
+Zobrazit [Správa vzdálených hlaviček IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopírovat zdroje
 

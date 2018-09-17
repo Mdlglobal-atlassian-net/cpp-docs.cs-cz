@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686454"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702050"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane – třída
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Určuje index založený na nule stránky.  
+*nPageIdx*<br/>
+[in] Určuje index založený na nule stránky.  
   
- [in] *lpszGroupName*  
- Určuje název skupiny.  
+*lpszGroupName*<br/>
+[in] Určuje název skupiny.  
   
- [in] *bBottomLocation*  
- TRUE, pokud chcete vytvořit skupinu dolní podokno úloh ovládacího prvku; v opačném případě hodnota FALSE.  
+*bBottomLocation*<br/>
+[in] TRUE, pokud chcete vytvořit skupinu dolní podokno úloh ovládacího prvku; v opačném případě hodnota FALSE.  
   
- [in] *bSpecial*  
- Označit tuto skupinu jako hodnotu TRUE *speciální* skupiny; v opačném případě FALSE. Další informace o speciálních skupin, najdete v části poznámky `CMFCTasksPane`.  
+*bSpecial*<br/>
+[in] Označit tuto skupinu jako hodnotu TRUE *speciální* skupiny; v opačném případě FALSE. Další informace o speciálních skupin, najdete v části poznámky `CMFCTasksPane`.  
   
- [in] *hIcon*  
- Určuje ikonu k zobrazení v záhlaví skupiny.  
+*hIcon*<br/>
+[in] Určuje ikonu k zobrazení v záhlaví skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule skupiny ve vnitřním seznamu skupin, které udržuje třídy.  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index skupiny, ve kterém je přidat popisek.  
+*Zrušit seskupení*<br/>
+[in] Určuje index skupiny, ve kterém je přidat popisek.  
   
- [in] *lpszLabelName*  
- Určuje název popisku.  
+*lpszLabelName*<br/>
+[in] Určuje název popisku.  
   
- [in] *nTaskIcon*  
- Určuje ikona bude zobrazena vedle popisku. Rozhraní framework uloží ikony v seznamu imagí. Tento parametr je index do tohoto seznamu.  
+*nTaskIcon*<br/>
+[in] Určuje ikona bude zobrazena vedle popisku. Rozhraní framework uloží ikony v seznamu imagí. Tento parametr je index do tohoto seznamu.  
   
- [in] *bIsBold*  
- TRUE, pokud chcete zobrazit popisek tučným písmem; v opačném případě hodnota FALSE.  
+*bIsBold*<br/>
+[in] TRUE, pokud chcete zobrazit popisek tučným písmem; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index o základu 0 skupiny, ve kterém byl přidán popisek nebo -1, pokud určené skupině *rušit seskupení* neexistuje.  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index skupiny. Tato metoda přidá do seznamu naposledy použitých souborů do skupiny zadána tímto parametrem.  
+*Zrušit seskupení*<br/>
+[in] Určuje index skupiny. Tato metoda přidá do seznamu naposledy použitých souborů do skupiny zadána tímto parametrem.  
   
- [in] *nMaxFiles*  
- Určuje počet souborů, které se zobrazí v seznamu naposledy použitých souborů.  
+*nMaxFiles*<br/>
+[in] Určuje počet souborů, které se zobrazí v seznamu naposledy použitých souborů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index o základu 0 skupiny, ve kterém byl přidán do seznamu naposledy použitých souborů nebo -1, pokud určené skupině *rušit seskupení* neexistuje.  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPageLabel*  
- Určuje popisek pro danou stránku.  
+*lpszPageLabel*<br/>
+[in] Určuje popisek pro danou stránku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule nová stránka.  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index skupiny, ve kterém se úkol přidá.  
+*Zrušit seskupení*<br/>
+[in] Určuje index skupiny, ve kterém se úkol přidá.  
   
- [in] *lpszTaskName*  
- Určuje název úkolu.  
+*lpszTaskName*<br/>
+[in] Určuje název úkolu.  
   
- [in] *nTaskIcon*  
- Určuje ikonu k zobrazení u úkolu. Rozhraní framework uloží ikony v seznamu imagí. Tento parametr je index do tohoto seznamu.  
+*nTaskIcon*<br/>
+[in] Určuje ikonu k zobrazení u úkolu. Rozhraní framework uloží ikony v seznamu imagí. Tento parametr je index do tohoto seznamu.  
   
- [in] *uiCommandID*  
- Určuje Identifikátor příkazu příkazu ke spuštění, když uživatel klikne úkol. Úloha se považují za popisek, když *uiCommandID* je 0.  
+*uiCommandID*<br/>
+[in] Určuje Identifikátor příkazu příkazu ke spuštění, když uživatel klikne úkol. Úloha se považují za popisek, když *uiCommandID* je 0.  
   
- [in] *dwUserData*  
- Určuje uživatelský datový být přidružená k úloze.  
+*dwUserData*<br/>
+[in] Určuje uživatelský datový být přidružená k úloze.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index o základu 0 skupiny, ve kterém byla přidána úloha nebo -1, pokud určené skupině *rušit seskupení* neexistuje.  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index skupiny, ve kterém se přidá v okně.  
+*Zrušit seskupení*<br/>
+[in] Určuje index skupiny, ve kterém se přidá v okně.  
   
- [in] *hwndTask*  
- Určuje popisovač okna pro přidání.  
+*hwndTask*<br/>
+[in] Určuje popisovač okna pro přidání.  
   
- [in] *nWndHeight*  
- Určuje výšku okna.  
+*nWndHeight*<br/>
+[in] Určuje výšku okna.  
   
- [in] *bAutoDestroyWindow*  
- TRUE, pokud chcete odstranit okno, když úkol odstraněn; v opačném případě hodnota FALSE.  
+*bAutoDestroyWindow*<br/>
+[in] TRUE, pokud chcete odstranit okno, když úkol odstraněn; v opačném případě hodnota FALSE.  
   
- [in] *dwUserData*  
- Určuje uživatelský datový přidruženou úloze, úlohu.  
+*dwUserData*<br/>
+[in] Určuje uživatelský datový přidruženou úloze, úlohu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index o základu 0 skupiny, ve kterém byl přidán v okně nebo -1, pokud určené skupině *rušit seskupení* neexistuje.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bCollapse*  
- [in] *nPageIdx*  
+*bCollapse*<br/>
+[in] [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pGroup*  
- Určuje skupinu, kterou chcete sbalit.  
+*pGroup*<br/>
+[in] Určuje skupinu, kterou chcete sbalit.  
   
- [in] *bCollapse*  
- TRUE, pokud chcete sbalit skupiny; FALSE, rozbalte skupinu.  
+*bCollapse*<br/>
+[in] TRUE, pokud chcete sbalit skupiny; FALSE, rozbalte skupinu.  
   
- [in] *rušit seskupení*  
- Určuje skupinu, kterou chcete sbalit ve vnitřním seznamu skupin index založený na nule.  
+*Zrušit seskupení*<br/>
+[in] Určuje skupinu, kterou chcete sbalit ve vnitřním seznamu skupin index založený na nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud skupina sbalí nebo rozšiřuje úspěšně; v opačném případě hodnota FALSE.  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit animace, která nastane, pokud skupina úloh rozbalí nebo sbalí; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit animace, která nastane, pokud skupina úloh rozbalí nebo sbalí; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je povoleno animace, která nastane, pokud skupina úloh rozbalí nebo sbalí.  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Hodnota TRUE, pokud uživatele lze sbalit skupiny úloh; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] Hodnota TRUE, pokud uživatele lze sbalit skupiny úloh; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Skupiny úloh, která je sbalené zobrazí pouze titulek skupiny; Seznam úkolů je skrytá.  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- True pro povolení rozevíracích nabídek na **Další** a **předchozí** navigační tlačítka; jinak hodnota FALSE.  
+*bEnable*<br/>
+[in] True pro povolení rozevíracích nabídek na **Další** a **předchozí** navigační tlačítka; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, rozevíracích nabídek na **Další** a **předchozí** tlačítek je vypnuto.  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit navigačním panelu; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit navigačním panelu; v opačném případě hodnota FALSE.  
   
- [in] *uiToolbarBmpRes*  
- Určuje Identifikátor prostředku rastrového obrázku, který obsahuje Image se zobrazí na panelu nástrojů.  
+*uiToolbarBmpRes*<br/>
+[in] Určuje Identifikátor prostředku rastrového obrázku, který obsahuje Image se zobrazí na panelu nástrojů.  
   
- [in] *sizeToolbarImage*  
- Určuje velikost obrázků panelu nástrojů.  
+*sizeToolbarImage*<br/>
+[in] Určuje velikost obrázků panelu nástrojů.  
   
- [in] *sizeToolbarButton*  
- Určuje velikost tlačítka panelu nástrojů.  
+*sizeToolbarButton*<br/>
+[in] Určuje velikost tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Navigační panel nástrojů je panel nástrojů, který zobrazí rozhraní v horní části podokna úloh. Obsahuje navigačním panelu **zpět**, **vpřed**, a **Domů** navigační tlačítka a tlačítka nabídky, který obsahuje seznam stránky k dispozici.  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete zobrazit v podokně úloh místo na posuvníku; tlačítka pro posunutí v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zobrazit v podokně úloh místo na posuvníku; tlačítka pro posunutí v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení zobrazí rozhraní tlačítka pro posunutí v podokně úloh.  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- True pro obtékání textu v popisky, které se zobrazují v podokně úloh; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] True pro obtékání textu v popisky, které se zobrazují v podokně úloh; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení rozhraní není zalomen text v popiscích. Když je povoleno zalamování textu v popiscích mohou objevit v více řádků. Popisek může obsahovat například zalomení značky řádku `\n` a značku podtržení `&`.  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete zabalit úlohy do podokna úloh. v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zabalit úlohy do podokna úloh. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je zakázána zalamování pro úlohy.  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pGroup*  
- Určuje skupiny úloh, jejichž umístění se načítají.  
+*pGroup*<br/>
+[in] Určuje skupiny úloh, jejichž umístění se načítají.  
   
- [out] *rušit seskupení*  
- Obsahuje index založený na nule skupiny úloh.  
+*Zrušit seskupení*<br/>
+[out] Obsahuje index založený na nule skupiny úloh.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě, že úkol skupiny nebyl nalezen; v opačném případě hodnota FALSE.  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny úloh.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny úloh.  
   
- [out] *nPage*  
- Obsahuje index stránky pro zadanou skupinu. Pokud skupina úloh obsahuje pouze výchozí stránku, vrácená hodnota je 0.  
+*nPage*<br/>
+[out] Obsahuje index stránky pro zadanou skupinu. Pokud skupina úloh obsahuje pouze výchozí stránku, vrácená hodnota je 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě skupiny *rušit seskupení* existuje; jinak hodnota FALSE.  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny, která obsahuje úlohu.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny, která obsahuje úlohu.  
   
- [in] *nTask*  
- Určuje index založený na nule úkol v seznamu určené *rušit seskupení*.  
+*nTask*<br/>
+[in] Určuje index založený na nule úkol v seznamu určené *rušit seskupení*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Úkol v zadaném indexu.  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index skupiny úloh.  
+*Zrušit seskupení*<br/>
+[in] Určuje index skupiny úloh.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet úloh v zadané skupině nebo 0, pokud *rušit seskupení* je neplatný.  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupinu, kterou chcete načíst.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupinu, kterou chcete načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Skupiny úloh v zadaném indexu.  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCommandID*  
- Určuje ID příkazu úkolu se má najít.  
+*uiCommandID*<br/>
+[in] Určuje ID příkazu úkolu se má najít.  
   
- [out] *rušit seskupení*  
- Obsahuje index skupiny úloh.  
+*Zrušit seskupení*<br/>
+[out] Obsahuje index skupiny úloh.  
   
- [out] *nTask*  
- Obsahuje index úlohy ve skupině úloh.  
+*nTask*<br/>
+[out] Obsahuje index úlohy ve skupině úloh.  
   
- [in] *hwndTask*  
- Určuje okno přidruženou úloze, úlohu.  
+*hwndTask*<br/>
+[in] Určuje okno přidruženou úloze, úlohu.  
   
- [in] *pTask*  
- Určuje úlohu, která najít.  
+*pTask*<br/>
+[in] Určuje úlohu, která najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl nalezen umístění úloh; FALSE, pokud zadaný úkol neexistuje.  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupNumber*  
- Určuje index založený na nule skupině, která obsahuje kliknutí na úlohu.  
+*nGroupNumber*<br/>
+[in] Určuje index založený na nule skupině, která obsahuje kliknutí na úlohu.  
   
- [in] *nTaskNumber*  
- Určuje index založený na nule kliknutí na úlohu.  
+*nTaskNumber*<br/>
+[in] Určuje index založený na nule kliknutí na úlohu.  
   
- [in] *uiCommandID*  
- Určuje ID příkazu, který je přidružený k úkolu.  
+*uiCommandID*<br/>
+[in] Určuje ID příkazu, který je přidružený k úkolu.  
   
- [in] *dwUserData*  
- Obsahuje uživatelsky definovaný datový přidruženou úloze, kliknutí na úlohu.  
+*dwUserData*<br/>
+[in] Obsahuje uživatelsky definovaný datový přidruženou úloze, kliknutí na úlohu.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu, když uživatel klikne úkol. Ve výchozím nastavení rozhraní zkontroluje Identifikátor příkazu přidruženou úloze, kliknutí na úlohu a pokud není nula, odešle zprávu wm_command – vlastník podokno úloh ovládacího prvku.  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pbtn*  
- [in] *pWndOwner*  
+*pbtn*<br/>
+[in] [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Určuje index založený na nule stránky.  
+*nPageIdx*<br/>
+[in] Určuje index založený na nule stránky.  
   
 ### <a name="remarks"></a>Poznámky  
  Odebere všechny skupiny v stránkou určenou parametrem *nPageIdx*, nebo pokud není výchozí stránka všechny skupiny.  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Odebere skupinu.  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupinu, kterou chcete odebrat.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupinu, kterou chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odebere jednu skupinu. Chcete-li odebrat všechny skupiny, zavolejte [CMFCTasksPane::RemoveAllGroups](#removeallgroups) místo.  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Určuje index založený na nule stránce odebrat.  
+*nPageIdx*<br/>
+[in] Určuje index založený na nule stránce odebrat.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Úlohu se odebere ze skupiny úloh.  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule, který obsahuje úlohu k odebrání skupiny úloh.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule, který obsahuje úlohu k odebrání skupiny úloh.  
   
- [in] *nTask*  
- Určuje index založený na nule úkolu pro odebrání.  
+*nTask*<br/>
+[in] Určuje index založený na nule úkolu pro odebrání.  
   
- [in] *bRedraw*  
- TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
+*bRedraw*<br/>
+[in] TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud funkce uspěje; FALSE v případě *rušit seskupení* nebo *nTask* je neplatný.  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Určuje index o základu 0 pro zobrazení stránky.  
+*nPageIdx*<br/>
+[in] Určuje index o základu 0 pro zobrazení stránky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyhodnotí, pokud *nPageIdx* je neplatný.  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Určuje název záhlaví.  
+*lpszName*<br/>
+[in] Určuje název záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud podokno úloh obsahuje více stránek, výchozí stránka obsahuje popisek, která byla nastavena pomocí této funkce.  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje výšku titulek.  
+*n*<br/>
+[in] Určuje výšku titulek.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem přizpůsobení okraje prvky v podokně úloh.  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje vodorovný posun titulek skupiny.  
+*n*<br/>
+[in] Určuje vodorovný posun titulek skupiny.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Nastaví svislý posun popisek skupiny.  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje svislý posun v pixelech titulek skupiny.  
+*n*<br/>
+[in] Určuje svislý posun v pixelech titulek skupiny.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Nastaví název skupiny.  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny.  
   
- [in] *lpszGroupName*  
- Určuje název skupiny.  
+*lpszGroupName*<br/>
+[in] Určuje název skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je název skupiny se úspěšně nastavila; v opačném případě hodnota FALSE.  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny.  
   
- [in] *barva*  
- Určuje barvu textu.  
+*Barva*<br/>
+[in] Určuje barvu textu.  
   
- [in] *colorHot*  
- Určuje barvu textu pro vybranou skupinu. Pokud hodnotu-1, použije se výchozí barvu zvýraznění.  
+*colorHot*<br/>
+[in] Určuje barvu textu pro vybranou skupinu. Pokud hodnotu-1, použije se výchozí barvu zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je barva textu skupiny se úspěšně změnil; v opačném případě hodnota FALSE.  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje svislý posun.  
+*n*<br/>
+[in] Určuje svislý posun.  
   
 ### <a name="remarks"></a>Poznámky  
  Svislý posun je vzdálenost mezi skupinu úloh a ohraničení podokna úloh.  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje v pixelech na okraj.  
+*n*<br/>
+[in] Určuje v pixelech na okraj.  
   
 ### <a name="remarks"></a>Poznámky  
  Vodorovný okraj je vzdálenost mezi horní nebo dolní okraje oblasti klienta a podokno úloh.  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiImageListResID*  
- Určuje ID prostředku ze seznamu obrázků.  
+*uiImageListResID*<br/>
+[in] Určuje ID prostředku ze seznamu obrázků.  
   
- [in] *cx*  
- Určuje velikost ikony v seznamu obrázků.  
+*CX*<br/>
+[in] Určuje velikost ikony v seznamu obrázků.  
   
- [in] *clrTransparent*  
- Určuje průhlednou barvu.  
+*clrTransparent*<br/>
+[in] Určuje průhlednou barvu.  
   
- [in] *hIcons*  
- Určuje seznam obrázků, který obsahuje ikony podokna úloh.  
+*hIcons*<br/>
+[in] Určuje seznam obrázků, který obsahuje ikony podokna úloh.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework uloží ikony v seznamu obrázků. Úkoly jsou spojeny s ikonami, které jsou uložené v tomto seznamu.  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Určuje index založený na nule stránky.  
+*nPageIdx*<br/>
+[in] Určuje index založený na nule stránky.  
   
- [in] *lpszName*  
- Určuje titulek textu se zobrazí na stránce.  
+*lpszName*<br/>
+[in] Určuje titulek textu se zobrazí na stránce.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud podokno úloh obsahuje více stránek, výchozí stránka obsahuje popisek, která byla nastavena pomocí této metody.  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny úloh.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny úloh.  
   
- [in] *nTask*  
- Určuje index založený na nule úkolu.  
+*nTask*<br/>
+[in] Určuje index založený na nule úkolu.  
   
- [in] *lpszTaskName*  
- Určuje název úlohy.  
+*lpszTaskName*<br/>
+[in] Určuje název úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud název úlohy byl úspěšně nastaven; v opačném případě hodnota FALSE.  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje vodorovné posunutí.  
+*n*<br/>
+[in] Určuje vodorovné posunutí.  
   
 ### <a name="remarks"></a>Poznámky  
  Vodorovný posun je vzdálenost v pixelech z levých a pravých okrajů skupinu.  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule, která obsahuje úlohu skupiny úloh.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule, která obsahuje úlohu skupiny úloh.  
   
- [in] *nTask*  
- Určuje index založený na nule úkolu.  
+*nTask*<br/>
+[in] Určuje index založený na nule úkolu.  
   
- [in] *barva*  
- Určuje barvu textu pro úlohu.  
+*Barva*<br/>
+[in] Určuje barvu textu pro úlohu.  
   
- [in] *colorHot*  
- Určuje barvu textu pro vybranou skupinu. Pokud hodnotu-1, tato metoda používá výchozí barvu zvýraznění.  
+*colorHot*<br/>
+[in] Určuje barvu textu pro vybranou skupinu. Pokud hodnotu-1, tato metoda používá výchozí barvu zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je barva textu pro úlohy se úspěšně nastavila; v opačném případě hodnota FALSE.  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Určuje svislé nastavení.  
+*n*<br/>
+[in] Určuje svislé nastavení.  
   
 ### <a name="remarks"></a>Poznámky  
  Svislé okraj je vzdálenost mezi svislá okraje oblasti klienta a podokno úloh.  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny, která obsahuje ovládací prvek okna.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny, která obsahuje ovládací prvek okna.  
   
- [in] *hwndTask*  
- Určuje popisovač okna ovládacího prvku.  
+*hwndTask*<br/>
+[in] Určuje popisovač okna ovládacího prvku.  
   
- [in] *nWndHeight*  
- Určuje výšku nastavení.  
+*nWndHeight*<br/>
+[in] Určuje výšku nastavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud se úspěšně nastavila výšku ovládacího prvku okno; FALSE v případě *rušit seskupení* je neplatný nebo pokud *hwndTask* neexistuje.  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rušit seskupení*  
- Určuje index založený na nule skupiny.  
+*Zrušit seskupení*<br/>
+[in] Určuje index založený na nule skupiny.  
   
- [in] *nTask*  
- Určuje index založený na nule úloh můžete zobrazit nebo skrýt.  
+*nTask*<br/>
+[in] Určuje index založený na nule úloh můžete zobrazit nebo skrýt.  
   
- [in] *bShow*  
- TRUE, pokud chcete zobrazit úkolu. FALSE, pokud chcete skrýt úkol.  
+*bShow*<br/>
+[in] TRUE, pokud chcete zobrazit úkolu. FALSE, pokud chcete skrýt úkol.  
   
- [in] *bRedraw*  
- TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
+*bRedraw*<br/>
+[in] TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úloha byla úspěšně zobrazený nebo skrytý; FALSE, pokud má zadaná skupina nebo úkol neexistuje.  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCommandID*  
- Určuje ID příkazu úkolu, který umožňuje zobrazit nebo skrýt.  
+*uiCommandID*<br/>
+[in] Určuje ID příkazu úkolu, který umožňuje zobrazit nebo skrýt.  
   
- [in] *bShow*  
- TRUE, pokud chcete zobrazit úkolu. FALSE, pokud chcete skrýt úkol.  
+*bShow*<br/>
+[in] TRUE, pokud chcete zobrazit úkolu. FALSE, pokud chcete skrýt úkol.  
   
- [in] *bRedraw*  
- TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
+*bRedraw*<br/>
+[in] TRUE, pokud chcete ho překreslit podokna úloh. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úloha byla úspěšně zobrazený nebo skrytý; FALSE, pokud úloha zadaný příkaz ID neexistuje.  

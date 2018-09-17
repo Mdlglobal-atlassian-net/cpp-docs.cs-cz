@@ -1,5 +1,5 @@
 ---
-title: bad_function_call – třída | Microsoft Docs
+title: bad_function_call – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e00dd485478a5a6fb7ff029afdad7bf7212fd56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b6a450d26480a0e89a115efc5731725f8f8b913
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839943"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714191"
 ---
 # <a name="badfunctioncall-class"></a>bad_function_call – třída
 
-Sestavy chybný funkce volání.
+Sestavy funkce Chybné volání.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class bad_function_call
- : public std::exception {
- };
+class bad_function_call : public std::exception {};
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje výjimka vyvolaná k označení, že volání `operator()` na [funkce – třída](../standard-library/function-class.md)
+Tato třída popisuje výjimku vyvolána výjimka, která označuje, že volání `operator()` na [funkce třídy](../standard-library/function-class.md)

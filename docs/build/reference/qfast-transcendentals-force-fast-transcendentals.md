@@ -1,5 +1,5 @@
 ---
-title: -Qfast_transcendentals (vynutit rychlé Transcendentní objekty) | Microsoft Docs
+title: -Qfast_transcendentals (vynucení rychlých transcendentních objektů) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4bb296c8a1fdfde46969ef601fde33c901c9306
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d979dc9005921ce1a760b2e61c4519ef852b7f84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709433"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Vynutit rychlé transcendentní objekty)
-Generuje kód vložený přechodový funkcí.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Qfast_transcendentals  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost kompilátoru vynutí přechodový funkce má být převeden na vloženého kódu, aby se zvýšila rychlost provádění. Tato možnost má vliv pouze v případě, že byl spárován s **/fp: kromě** nebo **/fp: přesné**. Generování kódu vloženého pro přechodový funkce je již výchozí chování v části **/fp:fast**.  
-  
- Tato možnost není kompatibilní s **/fp: striktní**. V tématu [/fp (zadejte Floating-Point chování)](../../build/reference/fp-specify-floating-point-behavior.md) Další informace o plovoucí – možnosti kompilátoru bodu.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+generuje kód vloženého Transcendentní funkce.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/Qfast_transcendentals
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost kompilátoru vynutí Transcendentní funkce pro převod na vložený kód, aby se zvýšila rychlost provádění. Tuto možnost má vliv pouze v případě, že je spárovaná s **/FP: except** nebo **/FP: precise**. Generování vloženého kódu pro Transcendentní funkce už je výchozí chování v rámci **Fast**.
+
+Tato možnost není kompatibilní s **/FP: strict**. Zobrazit [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md) Další informace o – možnosti kompilátoru bod s plovoucí desetinnou čárkou.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

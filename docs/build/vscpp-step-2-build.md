@@ -1,5 +1,5 @@
 ---
-title: Sestavení a spuštění projektu jazyka C++ konzole aplikace | Microsoft Docs
+title: Sestavení a spuštění projektu aplikace konzoly C++ | Dokumentace Microsoftu
 description: Sestavte a spusťte konzolovou aplikaci Hello World v jazyce Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
@@ -14,82 +14,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa63175e086fcb22552d0b7fd027b380d9766739
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388085"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705780"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly jazyka C++
+# <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly C++
 
-Když jste vytvořili projekt aplikace konzoly C++ a kódu, sestavit a spustit v sadě Visual Studio pak spusťte jako samostatnou aplikaci z příkazového řádku.
+Když máte vytvořený projekt konzolové aplikace jazyka C++ a zadali kódu, sestavení a spuštění v rámci sady Visual Studio spusťte jej jako samostatné aplikace z příkazového řádku.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Visual Studio s vývoj aplikací máte C++ zatížení nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalovaná, postupujte podle kroků v [podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Sada Visual Studio s vývoj desktopových aplikací pomocí úlohy pro C++ nainstalovaný a spuštěný ve vašem počítači. Pokud ještě není nainstalovaný, postupujte podle kroků v [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
 
 - Vytvoření "Hello, World!" projekt a zadejte jeho zdrojový kód. Pokud jste to ještě neudělali, postupujte podle kroků v [vytvoření projektu aplikace konzoly C++](../build/vscpp-step-1-create.md).
 
-Pokud Visual Studio vypadá to, jste připraveni k sestavení a spuštění aplikace:
+Pokud aplikace Visual Studio vypadá to, jste připraveni k sestavení a spuštění aplikace:
 
    ![Průvodce je připraven vytvořit nový projekt](../build/media/vscpp-ready-to-build.png "Průvodce je připraven vytvořit nový projekt")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Sestavení a spuštění kódu v sadě Visual Studio
 
-1. Pokud chcete vytvořit projekt, vyberte **sestavit řešení** z **sestavení** nabídky. **Výstup** v okně se zobrazí výsledky procesu sestavení.
+1. Chcete-li projekt sestavit, zvolte **sestavit řešení** z **sestavení** nabídky. **Výstup** okno zobrazuje výsledky procesu sestavení.
 
-   ![Sestavení projektu](../build/media/vscpp-build-solution.gif "sestavení projektu")
+   ![Sestavte projekt](../build/media/vscpp-build-solution.gif "sestavení projektu")
 
 1. Chcete-li spustit kód, na panelu nabídek, zvolte **ladění**, **spustit bez ladění**.
 
-   ![Spusťte projekt](../build/media/vscpp-start-without-debugging.gif "spusťte projekt")
+   ![Spustit projekt](../build/media/vscpp-start-without-debugging.gif "spustit projekt")
 
-    Okno konzoly otevře a spustí aplikace. Když spustíte konzolovou aplikaci v sadě Visual Studio, spuštění kódu a pak výtisků "stisknutím libovolné klávesy pokračujte. . ." získáte možnost zobrazit výstup.
+    Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím libovolné klávesy, abyste mohli pokračovat. . ." získáte možnost zobrazit výstup.
 
-Blahopřejeme! Jste vytvořili první "Hello, world!" konzolové aplikace v sadě Visual Studio! Stiskněte klávesu zrušit okno konzoly a vrátíte se k sadě Visual Studio.
+Blahopřejeme! Vytvoření první "Hello, world!" Konzolová aplikace v sadě Visual Studio! Stisknutím jakékoli klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
 
-[Byl spuštěn na problém.](#build-and-run-your-code-in-visual-studio-issues)
+[Můžu narazili na problém.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Spuštění kódu v příkazovém okně
 
-Za normálních okolností spustit konzolu aplikace příkazového řádku, není v sadě Visual Studio. Po aplikaci Visual Studio, ho můžete spustit z jakékoli příkazové okno. Zde je způsob vyhledání a spuštění nové aplikace v okně příkazového řádku.
+Za normálních okolností spuštění aplikace konzoly příkazového řádku, není v sadě Visual Studio. Jakmile vaše aplikace je vytvořená pomocí sady Visual Studio, můžete ji spustit z jakékoli okno příkazového řádku. Tady je postup pro vyhledání a spuštění nové aplikace v okně příkazového řádku.
 
-1. V **Průzkumníku řešení**vyberte HelloWorld řešení a pravým tlačítkem a otevřete kontextu nabídku. Zvolte **otevřete složky v Průzkumníku souborů** otevřete **Průzkumníka souborů** okno ve složce HelloWorld řešení.
+1. V **Průzkumníka řešení**, vyberte HelloWorld řešení a klikněte pravým tlačítkem na otevřete místní nabídku. Zvolte **otevřít složku v Průzkumníku souborů** otevřete **Průzkumníka souborů** okna ve složce řešení HelloWorld.
 
-1. V **Průzkumníka souborů** okno, otevřete složku ladění. Tato položka obsahuje aplikace, HelloWorld.exe a několik dalších soubory ladění. Vyberte HelloWorld.exe, podržte stisknutou klávesu Shift a pravým tlačítkem a otevřete kontextu nabídku. Zvolte **kopie jako cestu** zkopírujte cestu do vaší aplikace do schránky.
+1. V **Průzkumníka souborů** okno, otevřete složku ladění. Tato položka obsahuje vaši aplikaci, HelloWorld.exe a pár dalších ladění souborů. Vyberte HelloWorld.exe, podržte stisknutou klávesu Shift a klikněte pravým tlačítkem na otevřete místní nabídku. Zvolte **kopie jako cestu** zkopírovat cestu do vaší aplikace do schránky.
 
-1. Chcete-li otevřít okno příkazového řádku, stiskněte klávesu Windows-R otevřete **spustit** dialogové okno. Zadejte *cmd.exe* v **otevřete** textovému poli, zvolte **OK** spustit okno příkazového řádku.
+1. Chcete-li otevřít okno příkazového řádku, stiskněte klávesu Windows-R otevřete **spustit** dialogového okna. Zadejte *cmd.exe* v **otevřít** textové pole, klikněte na tlačítko **OK** spustit okno příkazového řádku.
 
-1. V okně příkazového řádku klikněte pravým tlačítkem myši, vložte cestu do vaší aplikace do příkazového řádku. Stiskněte klávesu Enter pro spuštění aplikace.
+1. V okně příkazového řádku klikněte pravým tlačítkem a vložte cestu do vaší aplikace do příkazového řádku. Stiskněte klávesu Enter pro spuštění vaší aplikace.
 
    ![Spuštění aplikace příkazového řádku](../build/media/vscpp-run-in-cmd.gif "spuštění aplikace příkazového řádku")
 
-Blahopřejeme, jste vytvořené a spusťte konzolovou aplikaci v sadě Visual Studio.
+Blahopřejeme, právě jste vytvořili a spustíte aplikaci konzoly v sadě Visual Studio.
 
-[Byl spuštěn na problém.](#run-your-code-in-a-command-window-issues)
+[Můžu narazili na problém.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Další kroky
 
-Jakmile jste vytvořené a spusťte tento jednoduchou aplikaci, jste připraveni pro složitější projekty. V tématu [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) podrobné návody, které prozkoumat možnosti aplikace Visual C++ v sadě Visual Studio.
+Jakmile jste vytvořili a spustili Tato jednoduchá aplikace, budete připravení na složitější projekty. Zobrazit [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) podrobné návody, které prozkoumat možnosti jazyka Visual C++ v sadě Visual Studio.
 
-## <a name="troubleshooting-guide"></a>Průvodce odstraňováním potíží s
+## <a name="troubleshooting-guide"></a>Průvodce odstraňováním potíží
 
-Tohoto prostoru pro řešení pro běžné problémy při vytvoření prvního projektu C++.
+Jsou zde pro řešení běžných potíží s když vytvoříte svůj první projekt C++.
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Sestavení a spuštění kódu v sadě Visual Studio problémy
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Sestavte a spusťte váš kód v problémy v sadě Visual Studio
 
-Pokud se zobrazí červený podtržení vlnovkou pod nic v editoru zdrojového kódu, sestavení může mít chyby nebo upozornění. Zkontrolujte, jestli odpovídá kódu v příkladu v pravopis a interpunkce a písmena.
+Pokud červenou vlnovkou Microsoft.VSTS.Common nic v editoru zdrojového kódu, sestavení může být chyby nebo varování. Zkontrolujte, jestli váš kód odpovídá příklad v pravopisu, interpunkce a případ.
 
 [Vrať se.](#build-and-run-your-code-in-visual-studio)
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>Spuštění kódu v příkazovém okně problémy
 
-Můžete také přejít do složky ladění řešení na příkazovém řádku ke spouštění vaší aplikace. Aplikaci nelze spustit z dalších adresářů bez určení cesty k aplikaci. Můžete však kopírovat aplikace do jiného adresáře a spusťte jej z.
+Můžete také přejít ke složce řešení ladění na příkazový řádek pro spuštění vaší aplikace. Nelze spustit aplikaci z jiných adresářů bez zadání cesta k aplikaci. Můžete však zkopírovat vaší aplikace do jiného adresáře a spustit ho odtud.
 
-Pokud nevidíte **kopie jako cestu** v místní nabídce zavření v nabídce a potom podržte stisknutou klávesu Shift a znovu otevřete. Toto je pouze ke zvýšení pohodlí. Můžete také zkopírovat cestu ke složce z panelu Hledat Průzkumníka souborů a vložte ji do **spustit** dialogové okno a pak zadejte název vaší spustitelný soubor na konci. Je jen málo zadáte více, ale má stejný výsledek.
+Pokud nevidíte **kopie jako cestu** v místní nabídce zrušit v nabídce a potom podržte stisknutou klávesu Shift a znovu otevřete. Toto platí jenom pro usnadnění práce. Můžete také zkopírovat cestu ke složce z panelu hledání v Průzkumníkovi souborů a vložte ho do **spustit** dialogového okna a potom zadejte název spustitelný soubor na konci. Je jen trochu více psát, ale má stejný výsledek.
 
 [Vrať se.](#run-your-code-in-a-command-window)
-
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

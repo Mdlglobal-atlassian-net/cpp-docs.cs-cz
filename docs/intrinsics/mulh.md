@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 853666f6dee7bae68b03ccc1d9d9c23ce765925b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699957"
 ---
 # <a name="mulh"></a>__mulh
 **Specifické pro Microsoft**  
@@ -38,11 +38,11 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
- První číslo pro vynásobení.  
+*a*<br/>
+[in] První číslo pro vynásobení.  
   
- [in] `b`  
- Druhé číslo pro vynásobení.  
+*b*<br/>
+[in] Druhé číslo pro vynásobení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vysoká 64 bitů 128bitové výsledek násobení.  

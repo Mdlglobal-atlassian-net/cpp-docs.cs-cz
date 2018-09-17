@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f81b1e675f6b0c12330d84d17b2e6b1635503dfc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690418"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704935"
 ---
 # <a name="clinkctrl-class"></a>Clinkctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek SysLink.  
@@ -237,7 +237,7 @@ int GetIdealSize(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *cxMaxWidth*|Maximální šířka propojení v pixelech.|  
+|*cxMaxWidth*|[in] Maximální šířka propojení v pixelech.|  
 |[out] \* *pSize*|Ukazatel Windows [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po návratu tato metoda *cy* člena `SIZE` struktura obsahuje text výška ideální odkaz pro šířku textu odkazu, která je zadána *cxMaxWidth*. *Cx* členu struktury obsahuje šířku text odkazu, který je skutečně potřeba.|  
   
 ### <a name="return-value"></a>Návratová hodnota  

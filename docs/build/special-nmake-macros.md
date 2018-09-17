@@ -1,5 +1,5 @@
 ---
-title: Speciální makra NMAKE | Microsoft Docs
+title: Speciální makra NMAKE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710200"
 ---
 # <a name="special-nmake-macros"></a>Speciální makra NMAKE
-NMAKE poskytuje několik speciální makra k reprezentaci různých názvy souborů a příkazy. Je jedno použití pro některé z těchto maker v předdefinované odvozená pravidla. Makra NMAKE poskytované jsou stejně jako všechny makra velká a malá písmena.  
-  
--   [Makra názvů souborů](../build/filename-macros.md)  
-  
--   [Rekurzivní makra](../build/recursion-macros.md)  
-  
--   [Příkaz makra a makra možností](../build/command-macros-and-options-macros.md)  
-  
--   [Makra proměnné prostředí](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Makra a příkaz NMAKE](../build/macros-and-nmake.md)
+
+NMAKE poskytuje několik speciální makra k reprezentaci různých názvů souborů a příkazy. Předdefinované odvozených pravidel je jedno použití některé z těchto maker. Stejně jako všechna makra jsou makra NMAKE poskytované malá a velká písmena.
+
+- [Makra názvů souborů](../build/filename-macros.md)
+
+- [Rekurzivní makra](../build/recursion-macros.md)
+
+- [Příkazová makra a makra možností](../build/command-macros-and-options-macros.md)
+
+- [Makra proměnné prostředí](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>Viz také
+
+[Makra a příkaz NMAKE](../build/macros-and-nmake.md)

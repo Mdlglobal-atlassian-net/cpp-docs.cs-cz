@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465766"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711877"
 ---
 # <a name="ctooltipmanager-class"></a>Ctooltipmanager – třída
 Udržuje běhové informace o popiscích. `CTooltipManager` Třída je instance jednou za každou aplikaci.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *pToolTip*  
- Odkaz na ukazatel na popisek. Je nastaven tak, aby odkazoval na nově vytvořený popisek, když funkce vrátí.  
+*pToolTip*<br/>
+[out] Odkaz na ukazatel na popisek. Je nastaven tak, aby odkazoval na nově vytvořený popisek, když funkce vrátí.  
   
- [in] *pWndParent*  
- Nadřazený popisek.  
+*pWndParent*<br/>
+[in] Nadřazený popisek.  
   
- [in] *nTyp*  
- Typ ovládacího prvku tooltip.  
+*nTyp*<br/>
+[in] Typ ovládacího prvku tooltip.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud popisek byl úspěšně vytvořen.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out v] *pToolTip*  
- Odkaz na ukazatel na popisek, který se má zničit.  
+*pToolTip*<br/>
+[out v] Odkaz na ukazatel na popisek, který se má zničit.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu volat pro každou [ctooltipctrl – třída](../../mfc/reference/ctooltipctrl-class.md) , který vytvořil [CTooltipManager::CreateToolTip](#createtooltip). Nadřazený ovládací prvek by měly volat tuto metodu z jeho `OnDestroy` obslužné rutiny. To je nutné správně odebrat popisek z rozhraní framework. Tato metoda nastaví *pToolTip* na hodnotu NULL, před jeho vrácením.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTypes*  
- Určuje typy ovládacích prvků.  
+*nTypes*<br/>
+[in] Určuje typy ovládacích prvků.  
   
- [in] *pRTC*  
- Modul runtime třídy vlastní popisek.  
+*pRTC*<br/>
+[in] Modul runtime třídy vlastní popisek.  
   
- [in] *pParams*  
- Popisek parametrů.  
+*pParams*<br/>
+[in] Popisek parametrů.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví třídy modulu runtime a počáteční parametry, které [ctooltipmanager –](../../mfc/reference/ctooltipmanager-class.md) používá při vytváření popisů tlačítek. Když ovládacího prvku volá [CTooltipManager::CreateToolTip](#createtooltip) a předá v popisku typ, který je jedním z typů indikován *nTypes*, vytvoří správce popisku ToolTip – ovládací prvek, který je instancí modul runtime třída určená typem *pRTC* a předává parametry určené *pParams* na nový popisek.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTI*  
- Ukazatel na objekt TOOLINFO.  
+*pTI*<br/>
+[in] Ukazatel na objekt TOOLINFO.  
   
- [out v] *pToolTip*  
- Ukazatel na ovládací prvek tooltip, pro kterou chcete nastavit text a popis.  
+*pToolTip*<br/>
+[out v] Ukazatel na ovládací prvek tooltip, pro kterou chcete nastavit text a popis.  
   
- [in] *nTyp*  
- Určuje typ ovládacího prvku, ke kterému je přidružené tento popisek.  
+*nTyp*<br/>
+[in] Určuje typ ovládacího prvku, ke kterému je přidružené tento popisek.  
   
- [in] *strText*  
- Text, který nastavíte jako text popisku.  
+*strText*<br/>
+[in] Text, který nastavíte jako text popisku.  
   
- [in] *lpszDescr*  
- Ukazatel na popis popisku. Může mít hodnotu NULL.  
+*lpszDescr*<br/>
+[in] Ukazatel na popis popisku. Může mít hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Hodnota *nTyp* musí mít stejnou hodnotu jako *nTyp* parametr [CTooltipManager::CreateToolTip](#createtooltip) při vytváření popisek.  

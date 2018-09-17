@@ -1,5 +1,5 @@
 ---
-title: Optimalizace kódu | Microsoft Docs
+title: Optimalizace kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -18,35 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378974"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714373"
 ---
 # <a name="optimizing-your-code"></a>Optimalizace kódu
 
-Optimalizace spustitelný soubor, můžete dosáhnout rovnováhu mezi rychlé spuštění rychlost a velikost malý kód. Toto téma popisuje některé z mechanismů, které poskytuje Visual C++ pro optimalizaci kódu.
+Optimalizace spustitelný soubor, můžete dosáhnout rovnováhy mezi rychlostí provádění rychlé a velikost malý kód. Toto téma popisuje některé mechanismy, které poskytuje jazyk Visual C++ pro optimalizaci kódu.
 
 ## <a name="language-features"></a>Jazykové funkce
 
-Následující témata popisují některé z funkcí Optimalizace v jazyce C/C++.
+Následující témata popisují některé optimalizace funkce v jazyce C/C++.
 
-[Direktivy pragma a klíčová slova pro optimalizaci](../../build/reference/optimization-pragmas-and-keywords.md)  
-Seznam klíčová slova a pragmas používané ve vašem kódu ke zlepšení výkonu.
+[Optimalizace Pragmas a klíčových slov](../../build/reference/optimization-pragmas-and-keywords.md) seznam klíčová slova a pragmas, můžete použít ve vašem kódu pro zlepšení výkonu.
 
-[Možnosti kompilátoru uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md)  
-Seznam **/O** – možnosti kompilátoru konkrétně ovlivňujících velikost provádění rychlost nebo kódu.
+[Možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md) seznam **/O** – možnosti kompilátoru, které určují velikost rychlost nebo kód spuštění.
 
-[Deklarátor odkazu r-hodnoty: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
-Odkazy rvalue podporu implementace *přesunout sémantiku*. Pokud přesunutí sémantiku slouží k implementaci knihovny šablon, výkon aplikací, které používají tyto šablony může výrazně zlepšit.
+[Deklarátor odkazu hodnoty r: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) odkazy Rvalue podporují implementaci *sémantiky přesunutí*. Pokud přesunutí sémantiky se používají k implementaci knihovny šablon, výkon aplikace, které používají tyto šablony může výrazně zlepšit.
 
-### <a name="the-optimize-pragma"></a>Optimalizovat Direktiva pragma
+### <a name="the-optimize-pragma"></a>Optimize – Direktiva pragma
 
-Pokud optimalizované část kódu způsobí chyby nebo zpomalení, můžete použít [optimalizovat](../../preprocessor/optimize.md) – Direktiva pragma k vypnutí možnosti optimalizace pro tento oddíl.
+Pokud optimalizované část kódu způsobí, že chyby nebo zpomalení, můžete použít [optimalizovat](../../preprocessor/optimize.md) – Direktiva pragma, chcete-li vypnout optimalizaci pro tuto část.
 
-Uzavřete kód mezi dvěma direktivy, jak je vidět tady:
+Uvést kód mezi dvěma direktiv pragma, jak je znázorněno zde:
 
 ```cpp
 #pragma optimize("", off)
@@ -54,37 +51,35 @@ Uzavřete kód mezi dvěma direktivy, jak je vidět tady:
 #pragma optimize("", on)
 ```
 
-## <a name="programming-practices"></a>Postupy programování
+## <a name="programming-practices"></a>Postupy pro programování
 
-Možná jste si všimli další zprávy upozornění při kompilaci kódu s optimalizací. Toto chování je očekávané, protože některé upozornění se týkají pouze optimalizovaný kód. Pokud jste věnujte pozornost tato upozornění se můžete vyhnout mnoho problémů optimalizace.
+Můžete si všimnout zpráv dalších upozornění při kompilaci kódu pomocí optimalizace. Toto chování je očekávané, protože některá upozornění se týkají jenom optimalizovaný kód. Mnoho problémů optimalizace můžete vyhnout, pokud věnujte pozornost těchto upozornění.
 
-Optimalizace programu pro rychlost paradoxically, by mohl způsobit kódu pomaleji. Je to proto, že některé optimalizace pro rychlost zvýšení velikosti kódu. Například vložené funkce eliminuje režijní náklady volání funkce. Ale vložené příliš mnoho kódu provést vašeho programu tak velká, že číslo stránky virtuální paměti chyb zvyšuje. Rychlost získaných během volání funkce odstraňuje proto mohou být ztraceny k odkládací paměť.
+Optimalizace programu pro rychlost paradoxically, může způsobit kód poběží pomaleji. Je to proto, že některé optimalizací pro rychlost zvýšit velikost kódu. Například vkládání funkcí eliminuje režijní náklady volání funkce. Nicméně vkládání příliš mnoho kódu by mohlo způsobit nepoužitelnost program tak velká, že číslo stránky virtuální paměti chyb zvyšuje. Proto rychlost získaných během volání funkce vyloučení může dojít ke ztrátě k záměně paměti.
 
-Následující témata popisují drželi osvědčených postupů programování.
+Následující témata popisují funkční programovací postupy.
 
-[Tipy pro zlepšení časově kritického kódu](../../build/reference/tips-for-improving-time-critical-code.md)  
-Lépe kódování techniky přispět lepší výkon. Toto téma navrhuje kódování technik, které vám může pomoct zajistěte, aby uspokojivému provádění kritický pro čas části kódu.
+[Tipy pro zlepšení časově kritického kódu](../../build/reference/tips-for-improving-time-critical-code.md) lépe kódování techniky může přinést lepší výkon. Toto téma navrhuje kódování techniky, které vám umožňují Ujistěte se, že uspokojivě provádět náročné části kódu.
 
-[Doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md)  
-Obsahuje obecné pokyny o optimálním optimalizovat vaší aplikace.
+[Doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md) obsahuje obecné pokyny o optimálním optimalizovat výkon své aplikace.
 
 ## <a name="debugging-optimized-code"></a>Ladění optimalizovaného kódu
 
-Protože optimalizace může změnit kód vytvořené kompilátor, doporučujeme ladit aplikaci a měření jeho výkon a pak optimalizovat kód.
+Protože optimalizace může změnit kód vytvořený kompilátorem, doporučujeme ladit aplikaci a měřila svou výkonnost a optimalizujte váš kód.
 
-Následující témata obsahují základní informace o ladění.
+Následující témata obsahují základní informace o tom, jak ladit.
 
 - [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
 - [Běžné problémy při vytváření sestavení pro vydání](../../build/reference/common-problems-when-creating-a-release-build.md)
 
-Následující témata obsahují více rozšířené informace o ladění.
+Rozšířené informace o ladění naleznete v následujících tématech.
 
-- [Postupy: ladění optimalizovaného kódu](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Postupy: Ladění optimalizovaného kódu](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Proč čísla s plovoucí desetinnou čárkou můžou ztratit přesnost](../../build/reference/why-floating-point-numbers-may-lose-precision.md)
 
-Následující témata obsahují informace o tom, jak optimalizovat vytváření, načítání a provádění kódu.
+Následující témata obsahují informace o tom, jak optimalizovat vytváření, načítání a spouštění vašeho kódu.
 
 - [Zvýšení propustnosti kompilátoru](../../build/reference/improving-compiler-throughput.md)
 
@@ -96,6 +91,6 @@ Následující témata obsahují informace o tom, jak optimalizovat vytváření
 
 - [Jaké optimalizační techniky mám použít ke zlepšení výkonu klientské aplikace při načítání?](../../build/dll-frequently-asked-questions.md#mfc_optimization)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)  
+[Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)

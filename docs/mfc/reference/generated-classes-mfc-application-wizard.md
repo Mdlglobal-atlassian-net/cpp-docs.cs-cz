@@ -1,5 +1,5 @@
 ---
-title: Vygenerované třídy, Průvodce aplikací knihovny MFC | Microsoft Docs
+title: Generované třídy, Průvodce aplikací MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6b8c6518489e1439930996089a412f0f7a2eb65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715479"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Generované třídy, Průvodce aplikací MFC
-Toto téma obsahuje seznam názvů základní třídy a soubory, které generuje projektu. Ve výchozím nastavení jsou názvy založené na název projektu, který jste zadali v **dialogové okno Nový projekt**. Většina těchto názvů, můžete změnit podle postupu popsaného tady:  
+Toto téma uvádí seznam základních tříd a soubory, které váš projekt vytvoří. Ve výchozím nastavení, názvy jsou založeny na název projektu, který jste zadali v **dialogové okno Nový projekt**. Většina z těchto názvů, můžete změnit podle postupu popsaného tady:  
   
- **Vygenerované třídy**  
- Názvy tříd vytvořených pro projekt. Ve výchozím nastavení jsou názvy založeny na název projektu. Vytvoří výchozího projektu knihovny MFC a C*ProjName*zobrazení třídy a C*ProjName*– třída aplikace, a C*ProjName*třída Doc, CMainFrame – třída a třídu CChildFrame. Všechny ostatní hodnoty na této stránce obsahují informace o třídě vybrané v **generované třídy** seznamu.  
+- **Generované třídy**
+
+   Názvy tříd, které jsou vytvořeny pro projekt. Ve výchozím nastavení názvy jsou založeny na název projektu. Vytvoří výchozí projekt knihovny MFC a C*název_projektu*zobrazení třídy a C*název_projektu*třídu aplikace, a C*název_projektu*třídy, CMainFrame – třída a třída CChildFrame dokumentu. Všechny ostatní hodnoty na této stránce obsahují informace o třídě aktuálně vybraného v **generované třídy** seznamu.  
   
- Chcete-li změnit název třídy, použijte **název třídy** textové pole.  
+   Chcete-li změnit název třídy, použijte **název třídy** textového pole.  
   
- **Název třídy**  
- Název třídy, který je aktuálně vybraný v **generované třídy** seznamu. Pokud pole nejsou aktivní, můžete změnit název třídy. Pokud změníte fokusu z **název třídy** pole, všechny změny na vybrané třídy název se zobrazí v **generované třídy** seznamu.  
+- **Název třídy**
+
+   Název třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud toto políčko není aktivní, můžete změnit název třídy. Při změně fokusu z **název třídy** pole se zobrazí v změny názvu vybranou třídu **generované třídy** seznamu.  
   
- **soubor h**  
- Název souboru záhlaví třídy, který je aktuálně vybraný v **generované třídy** seznamu. Pokud se textové pole je aktivní, můžete změnit název souboru hlaviček.  
+- **soubor .h**
+
+   Název souboru hlaviček třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud textové pole aktivní, můžete změnit název souboru hlaviček.  
   
- **Base – třída**  
- Název základní třídy v aktuálně vybrané třídy **generované třídy** seznamu. Pokud pole nejsou aktivní, můžete vybrat ze seznamu jinou třídu pro základní třídy.  
+- **Základní třída**
+
+   Název základní třídy v aktuálně vybrané třídy **generované třídy** seznamu. Pokud toto políčko není aktivní, můžete vybrat ze seznamu jiné třídy pro základní třídu.  
   
- **souboru**  
- Název souboru zdrojového kódu, který je přidružený vybrané třídy. Pokud se textové pole je aktivní, můžete změnit název souboru implementace.  
+- **soubor .cpp**
+
+   Název souboru se zdrojovým kódem, který je spojen s vybranou třídu. Pokud textové pole aktivní, můžete změnit název implementačního souboru.  
   
 ## <a name="see-also"></a>Viz také  
- [Pokročilé funkce, Průvodce aplikací knihovny MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
+ [Pokročilé funkce, Průvodce aplikací MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
  [Typy souborů vytvořených pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
 

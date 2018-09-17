@@ -1,5 +1,5 @@
 ---
-title: Syntaxe částí názvu souboru | Microsoft Docs
+title: Syntaxe částí názvu souboru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d807087be171a2ad63ed37a8b359c3200c812040
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bf7a9685face739059c4b947a5796cc0a28950a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703167"
 ---
 # <a name="filename-parts-syntax"></a>Syntaxe částí názvu souboru
-Syntaxe částí názvu souboru v příkazech představuje součástí první závislé název souboru (který může být předpokládané závislé). Název souboru součásti jsou jednotky v souboru, cesta, základní název a příponu jako zadaný, není, protože existuje na disku. Použití **%s** představují úplný název souboru. Použití **%&#124;**[*částí*]**F** (svislá čára znak následuje symbol procenta) představují částí názvu souboru, kde *částí*může být nula nebo více z následujících písmen v libovolném pořadí.  
-  
-|Písmeno|Popis|  
-|------------|-----------------|  
-|Žádné písmeno|Úplný název (stejné jako **%s**)|  
-|**d**|Jednotka|  
-|**p**|Cesta|  
-|**f**|Základní název souboru|  
-|**e**|Přípona souboru|  
-  
- Například, pokud je název souboru c:\prog.exe:  
-  
--   %s bude c:\prog.exe  
-  
--   %&#124;F bude c:\prog.exe  
-  
--   %&#124;dF bude c  
-  
--   %&#124;pF bude c:\  
-  
--   %&#124;fF bude programové  
-  
--   %&#124;eF bude exe  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy v souboru pravidel](../build/commands-in-a-makefile.md)
+
+Syntaxe částí názvu souboru v příkazech představuje komponenty první závislý název souboru (který může být implicitní závislé). Název souboru komponenty jsou jednotky, cesty, základním názvem a rozšíření, jak je uvedeno, v souboru nejsou, protože existuje na disku. Použití **%s** představovat úplný název souboru. Použití **%&#124;**[*částí*]**F** (svislá čára znak následuje symbol procenta) představující částí názvu souboru, kde *částí*může být nula nebo více z následujících písmen v libovolném pořadí.
+
+|Písmeno|Popis|
+|------------|-----------------|
+|Žádné písmeno|Úplný název (stejné jako **%s**)|
+|**d**|Jednotky|
+|**p**|Cesta|
+|**f**|Základní název souboru|
+|**e**|Přípona souboru|
+
+Například, pokud je název souboru c:\prog.exe:
+
+- %s se c:\prog.exe
+
+- %&#124;F bude c:\prog.exe
+
+- %&#124;dF bude c
+
+- %&#124;pF bude c:\
+
+- %&#124;fF bude GID
+
+- %&#124;eF bude exe
+
+## <a name="see-also"></a>Viz také
+
+[Příkazy v souboru pravidel](../build/commands-in-a-makefile.md)

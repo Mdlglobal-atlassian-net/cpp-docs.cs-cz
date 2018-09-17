@@ -1,5 +1,5 @@
 ---
-title: Unwind – procedura | Microsoft Docs
+title: Unwind – procedura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,35 +12,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2a5af5d8db5974aa10595bbd3bac1cd032a0f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 294353baf8c15818ba836bd3093226a78aa6e44c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382020"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700651"
 ---
 # <a name="unwind-procedure"></a>Unwind – procedura
-Unwind kódu jsou rozděleny na sestupném pořadí. Když dojde k výjimce celý kontext uložen operační systém v záznamu kontextu. Logika pro odesílání výjimek je pak vyvolána, která provádí následující kroky k nalezení obslužné rutiny výjimek.  
-  
-1.  Aktuální RIP uložené v kontextu záznamu slouží k vyhledání položky v tabulce runtime popisující aktuální funkci (nebo část funkce v případě zřetězených položek UNWIND_INFO).  
-  
-2.  Pokud se nenajde žádný záznam tabulky funkcí, pak je v listu funkcí a konfigurace přímo vyřeší návratový ukazatel. Návratový ukazatel [Konfigurace] je uložená v aktualizované kontextu, simulované konfigurace se zvýší o 8 a krok 1 se opakuje.  
-  
-3.  Pokud se najde záznam tabulky funkcí, RIP může nacházet ve třech oblastech a) v epilogu, b) v prologu nebo c) v kódu, která mohou být předmětem obslužnou rutinu výjimky.  
-  
-    -   Případu) Pokud RIP je v rámci epilogu, pak řízení po skončení funkce, může být přidružené k této výjimce pro tuto funkci žádná obslužná rutina výjimky a musí být dál důsledky epilogu výpočetní kontextu volající funkce. Chcete-li zjistit, jestli RIP v rámci epilogu, kód datového proudu z RIP na je zkontrolován. Pokud tento kód datového proudu je možné přiřadit ke konci část legitimního epilogu, pak je v epilogu a zbývající část epilogu se simuluje, pomocí kontextu záznamu, aktualizovat, protože každý instrukce je zpracovat. Poté se opakuje krok 1.  
-  
-    -   Případě b) Pokud RIP leží v rámci prologu, pak nemá ovládací vložené funkce, může být přidružené k této výjimce pro tuto funkci žádná obslužná rutina výjimky a důsledky prologu musí odvolat k výpočtu kontextu volající funkce. RIP je v rámci prologu pokud vzdálenost od spuštění funkce do RIP je menší než nebo rovna velikosti prologu kódovaný v unwind informace. Účinky prologu jsou odděleny kontrolu předat prostřednictvím unwind kódů pro první položku s posunem menší než nebo rovno posun RIP od začátku funkce a potom vrátí zpět všechny zbývající položky v poli kód unwind účinek. Krok 1 se pak opakuje.  
-  
-    -   Case c), pokud RIP není v rámci prolog nebo epilogu a funkce má obslužné rutiny výjimek (UNW_FLAG_EHANDLER je nastaveno) a potom je volána obslužná rutina pro konkrétní jazyk. Obslužná rutina prohledá data a volání funkce jako odpovídající filtru. Obslužná rutina pro konkrétní jazyk může vrátit, že bylo zpracováno výjimku nebo vyhledávání bude pokračovat. Unwind ho také můžete spustit přímo.  
-  
-4.  Pokud obslužná rutina pro konkrétní jazyk vrátí zpracovávaný stavu, pak se pokračuje pomocí původního kontextu záznamu.  
-  
-5.  Pokud není žádná obslužná rutina konkrétní jazyk nebo obslužná rutina vrátí stav "pokračovat v hledání", musí být oddělen stavu volající záznamu kontextu. To se provádí zpracování všechny elementy pole kód unwind účinek jednotlivých vrácení zpět. Krok 1 se pak opakuje.  
-  
- Pokud zřetězené unwind informace je zahrnuta, jsou stále dodrženy tyto základní kroky. Jediným rozdílem je, že při procházení unwind kódu do unwind prologu důsledky, když je dosaženo konce pole, je nadřazená unwind informace pak propojen a je proveden vaši firmu celý unwind kódu můžete nalezeny. Toto propojení pokračuje v až přicházejících unwind informace bez příznaku UNW_CHAINED_INFO a nedokončí se procházení pole unwind kódu.  
-  
- Nejmenší sadu unwind dat je 8 bajtů. To představuje funkci, která přiděleny pouze tehdy, 128 bajtů zásobníku nebo méně a případné uložení jednoho stálého registru. Toto je také velikost zřetězené struktury unwind informace nulové délky prologu s žádnými unwind kódy.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek (x64)](../build/exception-handling-x64.md)
+
+Unwind kódu je seřazen v sestupném pořadí. Když dojde k výjimce, úplný kontext uložený v kontextového záznamu v operačním systému. Odeslání logiky výjimka je následně vyvolány, která provádí následující kroky k nalezení obslužné rutiny výjimky.
+
+1. Aktuální RIP uložené v záznamu o kontextu slouží k vyhledání položky v tabulce runtime, která popisuje aktuální funkci (nebo část funkce, v případě zřetězených položek UNWIND_INFO).
+
+1. Pokud se nenajde žádný záznam tabulky funkcí, pak je ve funkci typu list a RSP bude adresovat přímo návratový ukazatel. Vrácené ukazatel na [RSP] je uložen v rámci aktualizované, simulované RSP je zvýšen o 8 a opakovat krok 1.
+
+1. Pokud se najde záznam tabulky funkcí, RIP může nacházet ve třech oblastech) v epilogu, (b) v prologu nebo c) v kódu, který může být pokryté komponentami obslužné rutiny výjimky.
+
+   - Case) Pokud RIP je v rámci epilogu, pak opouští funkce ovládacího prvku, může být žádná obslužná rutina výjimky, který je přidružený k této výjimky pro tuto funkci a efekty epilogu musí být nadále výpočetního kontextu volající funkce. Chcete-li zjistit, pokud je v rámci epilogu datový proud kódu z RIP RIP na je zkontrolován. Pokud tento datový proud kódu je možné přiřadit ke konci části legitimní epilogu pak je v epilog a zbývající část epilogu simulujeme, s kontextového záznamu, aktualizovat, protože každou instrukci jsou zpracovávána. Potom se opakuje kroku 1.
+
+   - Případ b) Pokud RIP leží v prologu, nemá -li ovládací prvek není vložené funkce, může být žádná obslužná rutina výjimky, který je přidružený k této výjimky pro tuto funkci a efekty prologu musí vrátit zpět k výpočetním kontextu volající funkce. RIP se v prologu, pokud vzdálenost od zahájení funkce do RIP je menší než nebo roven velikosti prologu kódována unwind info. Účinky prologu jsou odděleny prohledávání vpřed prostřednictvím unwind kódů pro první položku s posunem menší než nebo rovný posunu RIP od samého začátku funkce a pak vracením všechny zbývající položky v kódu unwind. Krok 1 se pak opakuje.
+
+   - Případu c), pokud RIP se nenachází v prologu nebo epilogu a funkce má obslužné rutiny výjimek (UNW_FLAG_EHANDLER nastavuje), pak volá obslužná rutina pro konkrétní jazyk. Obslužná rutina vyhledá svoje data a volání funkce jako odpovídající filtru. Obslužná rutina pro konkrétní jazyk může vrátit, že výjimka byla zpracována nebo, že má být pokračování hledání. Unwind ho také můžete spustit přímo.
+
+1. Pokud obslužná rutina pro konkrétní jazyk vrátí zpracované stav, pak se pokračuje pomocí původního záznamu o kontextu.
+
+1. Pokud neexistuje žádná obslužná rutina konkrétní jazyk nebo obslužná rutina vrátí stav "pokračuje v hledání", musí být oddělen stav volajícího kontextového záznamu. Toho lze dosáhnout zpracování všech prvků pole kód unwind vracením každého. Krok 1 se pak opakuje.
+
+Při řetězení unwind info je zahrnuta, stále postupovali podle těchto základních kroků. Jediným rozdílem je, že při procházení unwind kódu k provedení operace unwind prologu efekty, jakmile je dosaženo konce pole, je nadřazená unwind informace pak propojen a šel celý unwind kódu můžete najít zde. Toto propojení pokračuje, dokud přicházejících u unwind informace bez příznaku UNW_CHAINED_INFO a dokončení walking jeho unwind kódu.
+
+Nejmenší sadu unwind dat je 8 bajtů. To představuje funkci, která jen přidělených 128 bajtů zásobníku nebo méně a může být uložen jeden stálé registr. Toto je také velikost zřetězené struktury unwind informace prologu nulové délky s žádné kódy unwind.
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek (x64)](../build/exception-handling-x64.md)

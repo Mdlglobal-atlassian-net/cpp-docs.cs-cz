@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 3a93a9c4e8cf9059d80b602d80043809fb75152a
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c92f4f845552f5f6c14adb08191f1bd0519c7ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712449"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;národní prostředí&gt; funkce
 
@@ -64,7 +64,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí má být testována přítomnost omezující vlastnost.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -107,10 +107,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Alfanumerické elementu, který chcete testovat.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí obsahující alfanumerické element má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -174,10 +174,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje abecední element má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -239,10 +239,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -304,10 +304,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -369,10 +369,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -434,10 +434,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -499,10 +499,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -563,10 +563,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -628,10 +628,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -693,10 +693,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -758,10 +758,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Element, který má být testována.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje element, který má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -825,10 +825,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak, který má být převeden na malá písmena.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje znak, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -874,10 +874,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak, který má být převeden na velká písmena.
 
-*Umístění*  
+*Umístění*<br/>
 Národní prostředí, který obsahuje znak, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -923,7 +923,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Umístění*  
+*Umístění*<br/>
 Const národní prostředí obsahující typ omezující vlastnost, na kterou se odkazuje.
 
 ### <a name="return-value"></a>Návratová hodnota

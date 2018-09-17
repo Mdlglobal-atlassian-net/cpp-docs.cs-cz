@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b740613666c7e4e1b5cc2c1b14c5cbf04b0fe6ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702868"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;paměť&gt; funkce
 
@@ -310,7 +310,8 @@ struct default_delete {
 *PTR*<br/>
 Ukazatel na objekt, který chcete odstranit.
 
-Další typ prvků v poli, která se má odstranit.
+*Jiné*<br/>
+Typ prvků v poli, která se má odstranit.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -1,5 +1,5 @@
 ---
-title: Funkce typy | Microsoft Docs
+title: Funkce typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 322bd45abbfe217671fd39f0617987fde21445db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dfb36dc9e177fdb9ad196c0e2a8ad0f352d5f2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367648"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709563"
 ---
 # <a name="function-types"></a>Typy funkcí
-V podstatě existují dva typy funkcí. Funkci, která vyžaduje rámce zásobníku se nazývá funkce rámce. Funkci, která nevyžaduje rámce zásobníku se nazývá funkce listu.  
-  
- Bloková funkce je funkce, která přiděluje místo v zásobníku volání jiných funkcí, ukládá stálé registry nebo používá zpracování výjimek. Také budete potřebovat záznam tabulky funkcí. Bloková funkce vyžaduje prolog a epilog. Bloková funkce můžete dynamicky přidělit prostor zásobníku a můžete využít ukazatel na rámec. Bloková funkce má úplné možnosti tohoto volání standardní k dispozici.  
-  
- Pokud bloková funkce nevolá jinou funkci, pak není požadováno zarovnání zásobníku (odkazuje v oddíle [přidělení zásobníku](../build/stack-allocation.md)).  
-  
- Funkce listu je ten, který nevyžaduje záznam tabulky funkcí. Žádné stálé registry, včetně konfigurace, což znamená, že nelze volat jakékoli funkce nebo přidělit prostor v zásobníku ji nelze provádět změny. Je povoleno nechte nezarovnané zásobníku, když ji spustí.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zásobníku](../build/stack-usage.md)
+
+V podstatě existují dva typy funkcí. Funkce, která vyžaduje rámec zásobníku je volána funkce rámce. Funkce, která nevyžaduje blok zásobníku je volána funkce typu list.
+
+Funkce rámce je funkce, která přiděluje místo v zásobníku volání dalších funkcí, ukládá stálé registry a používá zpracování výjimek. Také vyžaduje záznam tabulky funkcí. Funkce rámce vyžaduje prologu a epilogu. Bloková funkce můžete dynamicky přidělit místo v zásobníku a můžete použít ukazatel na rámec. Funkce rámce obsahuje všechny funkce tohoto volání standardní k dispozici.
+
+Pokud funkce rámce nevolá jinou funkci, není to nutné k zarovnání zásobníku (odkazováno v oddíle [přidělení zásobníku](../build/stack-allocation.md)).
+
+Funkce typu list je ten, který nevyžaduje, aby záznam tabulky funkcí. Ho nemůže provádět změny libovolné stálé registry, včetně RSP, což znamená, že nelze volat jakékoli funkce nebo přidělit místo v zásobníku. Je povoleno ji nechte nezarovnaných zásobníku během provádění.
+
+## <a name="see-also"></a>Viz také
+
+[Použití zásobníku](../build/stack-usage.md)

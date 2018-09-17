@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9ee255afd70ff789a1d6fb833253b7114d9ad3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689229"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711396"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 `CMFCToolBar` Vypadá podobně jako třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.
@@ -563,8 +563,8 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje příkaz pro přidání.  
+*uiCmd*<br/>
+[in] Určuje příkaz pro přidání.  
   
 ### <a name="remarks"></a>Poznámky  
  Základní příkaz se vždy zobrazí, když se otevře nabídka. Tato metoda má smysl, když uživatel zvolí možnost zobrazit naposledy použité příkazy.  
@@ -579,8 +579,8 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCommand*  
- Určuje příkaz čítače se zvýší.  
+*uiCommand*<br/>
+[in] Určuje příkaz čítače se zvýší.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu, když uživatel vybere položku nabídky.  
@@ -603,23 +603,23 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- ID prostředku s obrázky panelu nástrojů načíst.  
+*uiResID*<br/>
+[in] ID prostředku s obrázky panelu nástrojů načíst.  
   
- [in] *uiBmpResID*  
- ID prostředku rastrového obrázku s obrázky panelu nástrojů.  
+*uiBmpResID*<br/>
+[in] ID prostředku rastrového obrázku s obrázky panelu nástrojů.  
   
- [in] *uiColdResID*  
- ID prostředku rastrového obrázku s obrázky panelu nástrojů "studenými".  
+*uiColdResID*<br/>
+[in] ID prostředku rastrového obrázku s obrázky panelu nástrojů "studenými".  
   
- [in] *uiMenuResID*  
- ID prostředku rastrového obrázku pomocí nabídky imagí.  
+*uiMenuResID*<br/>
+[in] ID prostředku rastrového obrázku pomocí nabídky imagí.  
   
- [in] *uiDisabledResID*  
- ID prostředku rastrového obrázku s obrázky panelu nástrojů zakázané.  
+*uiDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku s obrázky panelu nástrojů zakázané.  
   
- [in] *uiMenuDisabledResID*  
- ID prostředku rastrového obrázku s zakázáno nabídky Image.  
+*uiMenuDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku s zakázáno nabídky Image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; FALSE v případě *uiResID* nebo *uiBmpResID* neurčují platný prostředky nebo dojde k jiné chybě.  
@@ -709,14 +709,14 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Logická hodnota, která určuje, jestli se má dim neaktivní imagí. Pokud tento parametr má hodnotu TRUE, jsou neaktivní neaktivní imagí. V opačném případě neaktivní obrázky nejsou nedostupné.  
+*bEnable*<br/>
+[in] Logická hodnota, která určuje, jestli se má dim neaktivní imagí. Pokud tento parametr má hodnotu TRUE, jsou neaktivní neaktivní imagí. V opačném případě neaktivní obrázky nejsou nedostupné.  
   
- [in] *nGrayImagePercentage*  
- Určuje procento světelnost pro neaktivní bitové kopie. Pokud *bEnable* má hodnotu FALSE, tato hodnota se ignoruje.  
+*nGrayImagePercentage*<br/>
+[in] Určuje procento světelnost pro neaktivní bitové kopie. Pokud *bEnable* má hodnotu FALSE, tato hodnota se ignoruje.  
   
- [in] *bRedrawAllToolbars*  
- Logická hodnota, která určuje, zda překreslení všech panelů nástrojů v aplikaci. Pokud tento parametr má hodnotu TRUE, tato metoda překreslí všechny panely nástrojů.  
+*bRedrawAllToolbars*<br/>
+[in] Logická hodnota, která určuje, zda překreslení všech panelů nástrojů v aplikaci. Pokud tento parametr má hodnotu TRUE, tato metoda překreslí všechny panely nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *bEnable* má hodnotu TRUE, používá rozhraní framework *nGrayImagePercentage* ke generování neaktivní Image od běžných bitových kopií. V opačném případě je nutné zadat sadu neaktivní imagí pomocí [CMFCToolBar::GetColdImages](#getcoldimages) metody. Ve výchozím nastavení je tato možnost zakázaná.  
@@ -731,8 +731,8 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na objekt tlačítka panelu nástrojů.  
+*pButton*<br/>
+[in] Ukazatel na objekt tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index o *pButton* ve vnitřním seznamu tlačítka na panelu nástrojů; nebo -1, pokud není zadaný tlačítko na tomto panelu nástrojů.  
@@ -747,11 +747,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- TRUE, pokud chcete roztáhnout nástrojů velikosti nadřazeného rámce.  
+*bStretch*<br/>
+[in] TRUE, pokud chcete roztáhnout nástrojů velikosti nadřazeného rámce.  
   
- [in] *bHorz*  
- TRUE, pokud chcete změnit orientaci panelu vodorovně. FALSE, pokud chcete změnit orientaci panelu svisle.  
+*bHorz*<br/>
+[in] TRUE, pokud chcete změnit orientaci panelu vodorovně. FALSE, pokud chcete změnit orientaci panelu svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který určuje velikost panelu nástrojů.  
@@ -784,8 +784,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bVertDock*  
- TRUE, pokud chcete určit, že panelu nástrojů je ukotven. FALSE, pokud chcete určit, že se ukotví vodorovně.  
+*bVertDock*<br/>
+[in] TRUE, pokud chcete určit, že panelu nástrojů je ukotven. FALSE, pokud chcete určit, že se ukotví vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který určuje celkovou velikost tlačítka na panelu nástrojů.  
@@ -887,11 +887,11 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIDFind*  
- Určuje ID příkazu.  
+*nIDFind*<br/>
+[in] Určuje ID příkazu.  
   
- [in] *iIndexFirst*  
- Určuje počáteční index, spusťte z.  
+*iIndexFirst*<br/>
+[in] Určuje počáteční index, spusťte z.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule tlačítka panelu nástrojů, byla-li metoda úspěšná; -1, pokud není tlačítko se zadaným ID.  
@@ -912,14 +912,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Ukazatel na nadřazené okno panelu nástrojů.  
+*pParentWnd*<br/>
+[in] Ukazatel na nadřazené okno panelu nástrojů.  
   
- [in] *dwStyle*  
- Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) v sadě Windows SDK pro seznam styly.  
+*dwStyle*<br/>
+[in] Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) v sadě Windows SDK pro seznam styly.  
   
- [in] *nID*  
- Identifikátor podřízené okno panelu nástrojů.  
+*nID*<br/>
+[in] Identifikátor podřízené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
@@ -943,20 +943,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Ukazatel na nadřazené okno panelu nástrojů.  
+*pParentWnd*<br/>
+[in] Ukazatel na nadřazené okno panelu nástrojů.  
   
- [in] *dwCtrlStyle*  
- Další styly pro vytvoření objektu panelu vloženému ovládacímu prvku.  
+*dwCtrlStyle*<br/>
+[in] Další styly pro vytvoření objektu panelu vloženému ovládacímu prvku.  
   
- [in] *dwStyle*  
- Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) seznam vhodné styly.  
+*dwStyle*<br/>
+[in] Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](/windows/desktop/Controls/toolbar-control-and-button-styles) seznam vhodné styly.  
   
- [in] *rcBorders*  
- A `CRect` objekt, který určuje šířku ohraničení okna nástrojů.  
+*rcBorders*<br/>
+[in] A `CRect` objekt, který určuje šířku ohraničení okna nástrojů.  
   
- [in] *nID*  
- Identifikátor podřízené okno panelu nástrojů.  
+*nID*<br/>
+[in] Identifikátor podřízené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud tato metoda bude úspěšná; jinak 0.  
@@ -990,8 +990,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rozhraním, když musí být překreslit část panelu nástrojů.  
@@ -1011,20 +1011,20 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *pButton*  
- Ukazatel na tlačítku pro kreslení.  
+*pButton*<br/>
+[in] Ukazatel na tlačítku pro kreslení.  
   
- [in] *pImages*  
- Ukazatel na obrázky panelu nástrojů.  
+*pImages*<br/>
+[in] Ukazatel na obrázky panelu nástrojů.  
   
- [in] *bHighlighted*  
- Hodnota TRUE, pokud je zvýrazněný na tlačítko. v opačném případě FALSE.  
+*bHighlighted*<br/>
+[in] Hodnota TRUE, pokud je zvýrazněný na tlačítko. v opačném případě FALSE.  
   
- [in] *bDrawDisabledImages*  
- Hodnota TRUE, pokud jsou neaktivní zakázané tlačítka; v opačném případě FALSE.  
+*bDrawDisabledImages*<br/>
+[in] Hodnota TRUE, pokud jsou neaktivní zakázané tlačítka; v opačném případě FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl překreslit tlačítko; FALSE, pokud je skrytý na tlačítko.  
@@ -1045,14 +1045,14 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník umístění, kde je vykreslen oddělovače v pixelech.  
+*Rect*<br/>
+[in] Ohraničující obdélník umístění, kde je vykreslen oddělovače v pixelech.  
   
- [in] *bHorz*  
- Hodnotu TRUE, pokud oddělovač vodorovné, FALSE v případě, že oddělovač je svislý.  
+*bHorz*<br/>
+[in] Hodnotu TRUE, pokud oddělovač vodorovné, FALSE v případě, že oddělovač je svislý.  
   
 ### <a name="remarks"></a>Poznámky  
  [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu pro každý [CMFCToolBar::DrawSeparator](#drawseparator) objekt, který má TBBS_SEPARATOR styl, namísto volání metody [CMFCToolBar::DrawButton](#drawbutton) pro ty tlačítka.  
@@ -1078,20 +1078,20 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Povolí nebo zakáže tlačítko Přizpůsobit.  
+*bEnable*<br/>
+[in] Povolí nebo zakáže tlačítko Přizpůsobit.  
   
- [in] *iCustomizeCmd*  
- Identifikátor příkazu tlačítka Upravit.  
+*iCustomizeCmd*<br/>
+[in] Identifikátor příkazu tlačítka Upravit.  
   
- [in] *strCustomizeText*  
- Textový popisek tlačítka pro přizpůsobení.  
+*strCustomizeText*<br/>
+[in] Textový popisek tlačítka pro přizpůsobení.  
   
- [in] *uiCustomizeTextResId*  
- ID prostředku řetězce vlastní popisek tlačítka.  
+*uiCustomizeTextResId*<br/>
+[in] ID prostředku řetězce vlastní popisek tlačítka.  
   
- [in] *bQuickCustomize*  
- Povolí nebo zakáže **přidat nebo odebrat tlačítka** možnost v nabídce, který rozbalí se na panelu.  
+*bQuickCustomize*<br/>
+[in] Povolí nebo zakáže **přidat nebo odebrat tlačítka** možnost v nabídce, který rozbalí se na panelu.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *iCustomizeCmd* se -1, zobrazí rozhraní framework nebudou vyhovovat více tlačítek panelu nástrojů v oblasti panelu nástrojů tlačítko Přizpůsobit. Tlačítko dvojitou směřující vlevo zobrazí šipky, nebo dvojitou šipku, což znamená, že existují další tlačítka.  
@@ -1108,8 +1108,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
- Určuje dokovací zarovnáním, které chcete povolit.  
+*dwAlignment*<br/>
+[in] Určuje dokovací zarovnáním, které chcete povolit.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje implementaci základní třídy [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), tak, že nastavíte `CBasePane::m_dwControlBarStyle` datový člen do AFX_CBRS_FLOAT. Tato metoda pak předá *dwAlignment* k implementaci základní třídy.  
@@ -1122,8 +1122,8 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Hodnota TRUE, FALSE povolit velké ikony, chcete-li zakázat velké ikony.  
+*bEnable*<br/>
+[in] Hodnota TRUE, FALSE povolit velké ikony, chcete-li zakázat velké ikony.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení jsou povoleny velké ikony.  
@@ -1136,8 +1136,8 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit rychlé přizpůsobení FALSE zakázat rychlé přizpůsobení.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit rychlé přizpůsobení FALSE zakázat rychlé přizpůsobení.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  Povolí nebo zakáže příkaz reflexe.  
@@ -1147,8 +1147,8 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit příkaz reflexe. FALSE, pokud chcete zakázat příkaz reflexe.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit příkaz reflexe. FALSE, pokud chcete zakázat příkaz reflexe.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem povolení reflexe příkaz pro tlačítka panelu nástrojů, které obsahují vložené ovládací prvky, jako je například pole se seznamem.  
@@ -1177,8 +1177,8 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hwnd*  
- Popisovač okna, který se má hledat.  
+*hWnd*<br/>
+[in] Popisovač okna, který se má hledat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `CMFCToolBar` objekt, který obsahuje daném okně popisovač nebo hodnota NULL, pokud žádné odpovídající `CMFCToolBar` objekt existuje.  
@@ -1227,8 +1227,8 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Určuje index na tlačítko pro vrácení.  
+*iIndex*<br/>
+[in] Určuje index na tlačítko pro vrácení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na panelu nástrojů, pokud existuje; nebo hodnota NULL, pokud neexistuje žádný takový tlačítko.  
@@ -1245,17 +1245,17 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index tlačítka v seznamu tlačítka na panelu nástrojů.  
+*nIndex*<br/>
+[in] Určuje index tlačítka v seznamu tlačítka na panelu nástrojů.  
   
- [out] *nID*  
- Identifikátor příkazu tlačítka.  
+*nID*<br/>
+[out] Identifikátor příkazu tlačítka.  
   
- [out] *nStyle*  
- Styl tlačítka.  
+*nStyle*<br/>
+[out] Styl tlačítka.  
   
- [out] *iImage*  
- Index obrázku pro tlačítko.  
+*iImage*<br/>
+[out] Index obrázku pro tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetButtonInfo` Metoda vyhledá tlačítka panelu nástrojů v zadaném indexu a načte index příkazu ID, styl a obrázku tlačítka.  
@@ -1283,8 +1283,8 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index tlačítka panelu nástrojů.  
+*nIndex*<br/>
+[in] Určuje index tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která určuje styl tlačítka panelu nástrojů. . Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam možných styly.  
@@ -1304,11 +1304,11 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index tlačítka panelu nástrojů.  
+*nIndex*<br/>
+[in] Index tlačítka panelu nástrojů.  
   
- [out] *rString*  
- Text popisku tlačítka panelu nástrojů.  
+*rString*<br/>
+[out] Text popisku tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Text popisku tlačítka panelu nástrojů.  
@@ -1352,11 +1352,11 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identifikátor příkazu tlačítka.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu tlačítka.  
   
- [out] *listButtons*  
- Odkaz na [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který přijme seznam tlačítek panelu nástrojů.  
+*listButtons*<br/>
+[out] Odkaz na [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který přijme seznam tlačítek panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet tlačítek, které mají ID zadaného příkazu.  
@@ -1394,8 +1394,8 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Určuje Identifikátor příkazu tlačítka.  
+*uiID*<br/>
+[in] Určuje Identifikátor příkazu tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index obrázku panelu nástrojů v seznamu sdílených bitových kopií.  
@@ -1437,8 +1437,8 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *pIndex*  
- Získá index na tlačítko v kolekci tlačítek panelu nástrojů.  
+*pIndex*<br/>
+[out] Získá index na tlačítko v kolekci tlačítek panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na objekt tlačítka nabídky, který se zobrazuje jeho dílčí nabídky nebo hodnota NULL, pokud žádná nabídka zobrazit jeho dílčí nabídky.  
@@ -1573,11 +1573,11 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index tlačítko, pro které se mají načíst klientské oblasti.  
+*nIndex*<br/>
+[in] Index tlačítko, pro které se mají načíst klientské oblasti.  
   
- [out] *lprect –*  
- Ukazatel na objekt OBD, který přijímá oblasti od klientské oblasti.  
+*lprect –*<br/>
+[out] Ukazatel na objekt OBD, který přijímá oblasti od klientské oblasti.  
   
 ### <a name="remarks"></a>Poznámky  
  *Lprect –* parametr nesmí mít hodnotu NULL. Pokud se neobjeví tlačítko neexistuje na zadané pozici indexu *lprect –* přijímá objekt OBDÉLNÍK, který je inicializován na hodnotu nula.  
@@ -1590,8 +1590,8 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index panelu nástrojů.  
+*nIndex*<br/>
+[in] Určuje index panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor příkazu tlačítka panelu nástrojů; nebo nula, pokud neexistuje na tlačítko se zadaným indexem.  
@@ -1606,11 +1606,11 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index tlačítka panelu nástrojů.  
+*nIndex*<br/>
+[in] Určuje index tlačítka panelu nástrojů.  
   
- [out] *lprect –*  
- Ukazatel na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.  
+*lprect –*<br/>
+[out] Ukazatel na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  `CRect` Objekt, na který *lprect –* body je nastavena na 0, pokud neexistuje tlačítko v zadaném indexu.  
@@ -1904,8 +1904,8 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Bod, který má být testována, v souřadnicích klienta.  
+*Bod*<br/>
+[in] Bod, který má být testována, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index tlačítka, které je umístěn na určené pozici nebo -1, pokud neexistuje žádný takový tlačítko nebo je oddělovač.  
@@ -1925,11 +1925,11 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *tlačítko*  
- Určuje tlačítko pro vložení.  
+*Tlačítko*<br/>
+[in] Určuje tlačítko pro vložení.  
   
- [in] *iInsertAt*  
- Určuje pozice s nulovým základem pro vložení na tlačítko v.  
+*iInsertAt*<br/>
+[in] Určuje pozice s nulovým základem pro vložení na tlačítko v.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pozice, kdy byl objekt vložen tlačítka nebo dojde k-1, pokud chybu.  
@@ -1947,8 +1947,8 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iInsertAt*  
- Určuje pozici založený na nule vložit oddělovač za. Tento parametr musí být větší než 0.  
+*iInsertAt*<br/>
+[in] Určuje pozici založený na nule vložit oddělovač za. Tento parametr musí být větší než 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Umístění, ve kterém byl vložen oddělovač nebo nastane-1, pokud chybu.  
@@ -1968,8 +1968,8 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule tlačítko na panelu nástrojů.  
+*nIndex*<br/>
+[in] Index založený na nule tlačítko na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `CMFCToolBarButton` objekt, který existuje na zadaný index nebo hodnota NULL, pokud žádný takový objekt neexistuje.  
@@ -2022,8 +2022,8 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje příkaz a zkontrolujte.  
+*uiCmd*<br/>
+[in] Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný příkaz patří do seznamu základních příkazů; v opačném případě FALSE.  
@@ -2054,8 +2054,8 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iButton*  
- Určuje index tlačítka panelu nástrojů.  
+*iButton*<br/>
+[in] Určuje index tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je zvýrazněný určeného tlačítka. v opačném případě hodnota FALSE.  
@@ -2070,8 +2070,8 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje příkaz a zkontrolujte.  
+*uiCmd*<br/>
+[in] Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný příkaz je povolené; v opačném případě FALSE.  
@@ -2089,8 +2089,8 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje příkaz a zkontrolujte.  
+*uiCmd*<br/>
+[in] Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný příkaz je málo používané; v opačném případě FALSE.  
@@ -2131,8 +2131,8 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na tlačítka panelu nástrojů.  
+*pButton*<br/>
+[in] Ukazatel na tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je přetažen určeného tlačítka; v opačném případě hodnota FALSE.  
@@ -2187,8 +2187,8 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na tlačítko.  
+*pButton*<br/>
+[in] Ukazatel na tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud poslední příkaz byl odeslán z tlačítka, který *pButton* určuje; jinak hodnota FALSE.  
@@ -2272,23 +2272,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
+*uiResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
   
- [in] *uiColdResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
+*uiColdResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
   
- [in] *uiMenuResID*  
- ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
+*uiMenuResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
   
- [in] *blokované*  
- TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.  
+*Blokováno*<br/>
+[in] TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.  
   
- [in] *uiDisabledResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
+*uiDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
   
- [in] *uiMenuDisabledResID*  
- ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
+*uiMenuDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *parametry*  
- [in] *blokované*  
+*params*<br/>
+[in] [in] *blokované*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2337,8 +2337,8 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Určuje relativní cestu klíče registru Windows.  
+*lpszProfileName*<br/>
+[in] Určuje relativní cestu klíče registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2359,14 +2359,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Určuje relativní cestu klíče registru Windows.  
+*lpszProfileName*<br/>
+[in] Určuje relativní cestu klíče registru Windows.  
   
- [in] *nIndex*  
- Určuje ID ovládacího prvku panelu nástrojů.  
+*nIndex*<br/>
+[in] Určuje ID ovládacího prvku panelu nástrojů.  
   
- [in] *uiID*  
- Určuje ID prostředku panelu nástrojů.  
+*uiID*<br/>
+[in] Určuje ID prostředku panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2389,26 +2389,26 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- ID prostředku panelu nástrojů.  
+*uiResID*<br/>
+[in] ID prostředku panelu nástrojů.  
   
- [in] *uiColdResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
+*uiColdResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
   
- [in] *uiMenuResID*  
- ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
+*uiMenuResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
   
- [in] *blokované*  
- Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud je tento parametr *TRUE*, panelu nástrojů je uzamčen. V opačném případě není uzamčen panelu nástrojů.  
+*Blokováno*<br/>
+[in] Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud je tento parametr *TRUE*, panelu nástrojů je uzamčen. V opačném případě není uzamčen panelu nástrojů.  
   
- [in] *uiDisabledResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
+*uiDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
   
- [in] *uiMenuDisabledResID*  
- ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
+*uiMenuDisabledResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
   
- [in] *uiHotResID*  
- ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
+*uiHotResID*<br/>
+[in] ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2433,14 +2433,14 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiToolbarResID*  
- ID prostředku panelu nástrojů.  
+*uiToolbarResID*<br/>
+[in] ID prostředku panelu nástrojů.  
   
- [in] *parametry*  
- Odkaz na `CMFCToolBarInfo` objekt, který obsahuje ID prostředků obrázků panelu nástrojů.  
+*params*<br/>
+[in] Odkaz na `CMFCToolBarInfo` objekt, který obsahuje ID prostředků obrázků panelu nástrojů.  
   
- [in] *blokované*  
- Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud tento parametr má hodnotu TRUE, je uzamčené panelu nástrojů. V opačném případě není uzamčen panelu nástrojů.  
+*Blokováno*<br/>
+[in] Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud tento parametr má hodnotu TRUE, je uzamčené panelu nástrojů. V opačném případě není uzamčen panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2481,11 +2481,11 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Nevyužité.  
+*pButton*<br/>
+[in] Nevyužité.  
   
- [in] *dropEffect*  
- Nevyužité.  
+*dropEffect*<br/>
+[in] Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2499,8 +2499,8 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iHot*  
- Určuje index panelu nástrojů, který je vybrán; nebo -1, pokud je vybrána žádná tlačítka panelu nástrojů.  
+*iHot*<br/>
+[in] Určuje index panelu nástrojů, který je vybrán; nebo -1, pokud je vybrána žádná tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem zpracovat oznámení, že uživatel vybral tlačítko na panelu nástrojů.  
@@ -2522,8 +2522,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
  [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu, když bylo vyplněno pozadí panelu nástrojů. Výchozí implementace nemá žádný účinek.  
@@ -2573,8 +2573,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Odkazuje na tlačítku, jejichž text je nastavena.  
+*pButton*<br/>
+[in] Odkazuje na tlačítku, jejichž text je nastavena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE ifthe text byl úspěšně obnoven; v opačném případě FALSE.  
@@ -2594,11 +2594,11 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Odkazuje na tlačítka na panelu nástrojů, pro kterou je ovládací prvek tooltip zobrazený.  
+*pButton*<br/>
+[in] Odkazuje na tlačítka na panelu nástrojů, pro kterou je ovládací prvek tooltip zobrazený.  
   
- [out] *strTTText*  
- Odkaz na `CString` objekt, který přijme text ovládacího prvku tooltip.  
+*strTTText*<br/>
+[out] Odkaz na `CString` objekt, který přijme text ovládacího prvku tooltip.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě *strTTText* byla vyplněna pomocí přejede myší; jinak hodnota FALSE.  
@@ -2627,8 +2627,8 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na tlačítka na panelu nástrojů.  
+*pButton*<br/>
+[in] Ukazatel na tlačítka na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda by měla vždy vrátí hodnotu TRUE. Knihovna MFC používá hodnoty FALSE interně.  
@@ -2656,8 +2656,8 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Určuje index založený na nule na tlačítko Odebrat.  
+*iIndex*<br/>
+[in] Určuje index založený na nule na tlačítko Odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje, nebo FALSE, pokud zadaný index je neplatná nebo index odkazuje **vlastní** tlačítko.  
@@ -2678,14 +2678,14 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Určuje klíč registru, ve kterém se nachází informace o stavu.  
+*lpszProfileName*<br/>
+[in] Určuje klíč registru, ve kterém se nachází informace o stavu.  
   
- [in] *nIndex*  
- ID ovládacího prvku panelu nástrojů.  
+*nIndex*<br/>
+[in] ID ovládacího prvku panelu nástrojů.  
   
- [in] *uiID*  
- ID prostředku panelu nástrojů. Pokud má parametr hodnotu -1, tato metoda používá [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metody k získání ID prostředku.  
+*uiID*<br/>
+[in] ID prostředku panelu nástrojů. Pokud má parametr hodnotu -1, tato metoda používá [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metody k získání ID prostředku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identifikátor příkazu tlačítka pro nahrazení.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu tlačítka pro nahrazení.  
   
- [in] *tlačítko*  
- Odkaz na `CMFCToolBarButton` pro vložení.  
+*Tlačítko*<br/>
+[in] Odkaz na `CMFCToolBarButton` pro vložení.  
   
- [in] *koule*  
- Logická hodnota, která určuje, jestli se má nahradit všechna tlačítka, které mají určená ID příkazu *uiCmd*. Pokud tento parametr má hodnotu TRUE, jsou nahrazeny všechna tlačítka, které mají ID zadaného příkazu. V opačném případě se nahradí první tlačítko.  
+*Koule*<br/>
+[in] Logická hodnota, která určuje, jestli se má nahradit všechna tlačítka, které mají určená ID příkazu *uiCmd*. Pokud tento parametr má hodnotu TRUE, jsou nahrazeny všechna tlačítka, které mají ID zadaného příkazu. V opačném případě se nahradí první tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet tlačítek, která se nahradí. Tato metoda vrátí hodnotu 0, pokud tlačítko s Identifikátorem zadaný příkaz neexistuje na panelu nástrojů.  
@@ -2805,14 +2805,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Určuje relativní cestu klíče registru Windows.  
+*lpszProfileName*<br/>
+[in] Určuje relativní cestu klíče registru Windows.  
   
- [in] *nIndex*  
- ID ovládacího prvku panelu nástrojů.  
+*nIndex*<br/>
+[in] ID ovládacího prvku panelu nástrojů.  
   
- [in] *uiID*  
- ID prostředku panelu nástrojů.  
+*uiID*<br/>
+[in] ID prostředku panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2828,8 +2828,8 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lstCommands*  
- Odkaz na `CList` objekt, který obsahuje kolekci příkazů.  
+*lstCommands*<br/>
+[in] Odkaz na `CList` objekt, který obsahuje kolekci příkazů.  
   
 ### <a name="remarks"></a>Poznámky  
  Základní příkaz se vždy zobrazí, když se otevře nabídka. Tato metoda má smysl, když uživatel zvolí možnost zobrazit naposledy použité příkazy.  
@@ -2850,17 +2850,17 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule tlačítko, jehož vlastnosti jsou nastavené.  
+*nIndex*<br/>
+[in] Index založený na nule tlačítko, jehož vlastnosti jsou nastavené.  
   
- [in] *nID*  
- Identifikátor příkazu tlačítka.  
+*nID*<br/>
+[in] Identifikátor příkazu tlačítka.  
   
- [in] *nStyle*  
- Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
+*nStyle*<br/>
+[in] Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
   
- [in] *iImage*  
- Index založený na nule obrázku tlačítka (to znamená, indexu v kolekci obrázků panelu nástrojů).  
+*iImage*<br/>
+[in] Index založený na nule obrázku tlačítka (to znamená, indexu v kolekci obrázků panelu nástrojů).  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit vlastnosti tlačítka panelu nástrojů.  
@@ -2880,14 +2880,14 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpIDArray*  
- Ukazatele na pole ID příkazů tlačítek pro vložení.  
+*lpIDArray*<br/>
+[in] Ukazatele na pole ID příkazů tlačítek pro vložení.  
   
- [in] *nIDCount*  
- Počet položek v *lpIDArray*.  
+*nIDCount*<br/>
+[in] Počet položek v *lpIDArray*.  
   
- [in] *bRemapImages*  
- Logická hodnota, která určuje, jestli se má přidružit existující obrázky tlačítek vložené tlačítka. Pokud tento parametr má hodnotu TRUE, jsou mapovány obrázky.  
+*bRemapImages*<br/>
+[in] Logická hodnota, která určuje, jestli se má přidružit existující obrázky tlačítek vložené tlačítka. Pokud tento parametr má hodnotu TRUE, jsou mapovány obrázky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -2907,11 +2907,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Z nuly vycházející index panelu nástrojů, jehož styl, je možné nastavit.  
+*nIndex*<br/>
+[in] Z nuly vycházející index panelu nástrojů, jehož styl, je možné nastavit.  
   
- [in] *nStyle*  
- Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
+*nStyle*<br/>
+[in] Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odstraní styl TBBS_PRESSED Pokud *nStyle* je TBBS_DISABLED, protože uživatel nelze kliknout na tlačítko zakázané.  
@@ -2926,11 +2926,11 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index panelu nástrojů.  
+*nIndex*<br/>
+[in] Index panelu nástrojů.  
   
- [in] *lpszText*  
- Textový popisek tlačítka panelu nástrojů. Musí mít hodnotu NULL.  
+*lpszText*<br/>
+[in] Textový popisek tlačítka panelu nástrojů. Musí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
@@ -2948,11 +2948,11 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nStartCount*  
- Určuje, kolikrát, která příkazů musí být provedeny před rozhraní obsahuje pouze základní a naposledy použité příkazy.  
+*nStartCount*<br/>
+[in] Určuje, kolikrát, která příkazů musí být provedeny před rozhraní obsahuje pouze základní a naposledy použité příkazy.  
   
- [in] *nMinUsagePercentage*  
- Procento případů, kdy je třeba spustit příkaz aby byla považována za příkaz naposledy použitých.  
+*nMinUsagePercentage*<br/>
+[in] Procento případů, kdy je třeba spustit příkaz aby byla považována za příkaz naposledy použitých.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  FALSE v případě *nMinUsagePercentage* je roven nebo větší než 100; v opačném případě TRUE.  
@@ -2970,8 +2970,8 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Logická hodnota, která určuje, jestli se má povolit nebo zakázat režim úprav. Nastavte tento parametr na hodnotu PRAVDA, povolte režim úprav, nebo hodnotu NEPRAVDA pro jeho zakázání.  
+*bSet*<br/>
+[in] Logická hodnota, která určuje, jestli se má povolit nebo zakázat režim úprav. Nastavte tento parametr na hodnotu PRAVDA, povolte režim úprav, nebo hodnotu NEPRAVDA pro jeho zakázání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud volání této metody změní režim úprav; v opačném případě FALSE.  
@@ -2987,8 +2987,8 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bGrayDisabledButtons*  
- Logická hodnota, která určuje způsob zobrazení není k dispozici tlačítka. Pokud tento parametr má hodnotu TRUE, rozhraní ztmavnou tlačítek. V opačném případě rozhraní používá kolekce není k dispozici tlačítko imagí.  
+*bGrayDisabledButtons*<br/>
+[in] Logická hodnota, která určuje způsob zobrazení není k dispozici tlačítka. Pokud tento parametr má hodnotu TRUE, rozhraní ztmavnou tlačítek. V opačném případě rozhraní používá kolekce není k dispozici tlačítko imagí.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení jsou neaktivní není k dispozici tlačítka.  
@@ -3001,8 +3001,8 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *cyHeight*  
- Výška panelu nástrojů v pixelech.  
+*cyHeight*<br/>
+[in] Výška panelu nástrojů v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda překreslí panelu nástrojů po Nastaví výšku.  
@@ -3041,8 +3041,8 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShowHotBorder*  
- Logická hodnota, která určuje, jestli se má horkou průběh tlačítka na panelu nástrojů. Pokud tento parametr má hodnotu TRUE, panel nástrojů horká stop jeho tlačítka. V opačném případě panelu nástrojů nejsou horká sledování jeho tlačítka.  
+*bShowHotBorder*<br/>
+[in] Logická hodnota, která určuje, jestli se má horkou průběh tlačítka na panelu nástrojů. Pokud tento parametr má hodnotu TRUE, panel nástrojů horká stop jeho tlačítka. V opačném případě panelu nástrojů nejsou horká sledování jeho tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je tlačítko horkou sledovat, rozhraní zvýrazní tlačítko při pohybu myši přes tuto. Ve výchozím nastavení každý nástrojů horká sleduje jeho tlačítka.  
@@ -3057,8 +3057,8 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrText*  
- Určuje barvu textu pro tlačítka panelu nástrojů, které jsou sledovány za běhu.  
+*clrText*<br/>
+[in] Určuje barvu textu pro tlačítka panelu nástrojů, které jsou sledovány za běhu.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o hot sledovat tlačítka, naleznete v tématu [CMFCToolBar::GetHotBorder](#gethotborder) a [CMFCToolBar::SetHotBorder](#sethotborder).  
@@ -3083,8 +3083,8 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bLargeIcons*  
- Logická hodnota, která určuje, jaké ikony použít. Pokud tento parametr má hodnotu TRUE, zobrazí rozhraní velké ikony. V opačném případě zobrazí rozhraní pravidelně ikony.  
+*bLargeIcons*<br/>
+[in] Logická hodnota, která určuje, jaké ikony použít. Pokud tento parametr má hodnotu TRUE, zobrazí rozhraní velké ikony. V opačném případě zobrazí rozhraní pravidelně ikony.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu, když uživatel změní stav **velké ikony** zaškrtávací políčko **možnosti** karty **vlastní** dialogové okno. Tato metoda mění velikost všech panelů nástrojů v aplikaci.  
@@ -3104,11 +3104,11 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeButton*  
- Určuje velikost tlačítka na panelu nástrojů uzamčené.  
+*sizeButton*<br/>
+[in] Určuje velikost tlačítka na panelu nástrojů uzamčené.  
   
- [in] *sizeImage*  
- Určuje velikost obrázků uzamčené nástrojů.  
+*sizeImage*<br/>
+[in] Určuje velikost obrázků uzamčené nástrojů.  
   
  *bDontScale*  
  Určuje, zda škálování nebo není uzamčen obrázky panelu nástrojů v režimu vysoké rozlišení DPI.  
@@ -3140,11 +3140,11 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeButton*  
- Určuje velikost tlačítka panelu nástrojů v pixelech.  
+*sizeButton*<br/>
+[in] Určuje velikost tlačítka panelu nástrojů v pixelech.  
   
- [in] *sizeImage*  
- Určuje velikost obrázků panelu nástrojů v pixelech.  
+*sizeImage*<br/>
+[in] Určuje velikost obrázků panelu nástrojů v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení mají nedefinovaný velikost tlačítka nabídky a jejich bitové kopie.  
@@ -3161,8 +3161,8 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lstCommands*  
- Odkaz na `CList` objekt, který obsahuje příkazy, které uživatel nemůže provést.  
+*lstCommands*<br/>
+[in] Odkaz na `CList` objekt, který obsahuje příkazy, které uživatel nemůže provést.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze zabránit uživateli v výběrem některé příkazy. Můžete například chtít zabránit uživateli v výběrem některé příkazy z bezpečnostních důvodů. Najdete v ukázkách MDITabsDemo a MenuSubSet příklady, které používají tuto metodu.  
@@ -3203,8 +3203,8 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bPermament*  
- Logická hodnota určující, zda uživatel můžete zavřít panel nástrojů. Pokud tento parametr má hodnotu TRUE, uživatel nezavře panelu nástrojů. Uživatel, v opačném případě můžete zavřít panelu nástrojů.  
+*bPermament*<br/>
+[in] Logická hodnota určující, zda uživatel můžete zavřít panel nástrojů. Pokud tento parametr má hodnotu TRUE, uživatel nezavře panelu nástrojů. Uživatel, v opačném případě můžete zavřít panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení můžete zavřít uživatel každý panel nástrojů.  
@@ -3219,8 +3219,8 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bValue*  
- Pokud tento parametr má hodnotu TRUE, nadřazeného rámce odesílá příkazy do panelu nástrojů. V opačném případě vlastník odesílá příkazy do panelu nástrojů.  
+*bValue*<br/>
+[in] Pokud tento parametr má hodnotu TRUE, nadřazeného rámce odesílá příkazy do panelu nástrojů. V opačném případě vlastník odesílá příkazy do panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení nadřazeného rámce odesílá příkazy do panelu nástrojů. Volání [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) metodou ke zjištění, zda nadřazeného rámce nebo vlastník odesílá příkazy do panelu nástrojů.  
@@ -3233,8 +3233,8 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bValue*  
- Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje popisy tlačítek. V opačném případě rozhraní se skryje možnost popisů tlačítek.  
+*bValue*<br/>
+[in] Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje popisy tlačítek. V opačném případě rozhraní se skryje možnost popisů tlačítek.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení zobrazuje rozhraní popisů tlačítek.  
@@ -3249,8 +3249,8 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBrotherToolbar*  
- Ukazatel na panelu nástrojů na stejné úrovni.  
+*pBrotherToolbar*<br/>
+[in] Ukazatel na panelu nástrojů na stejné úrovni.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda umožňuje **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, která se zobrazí, když uživatel zobrazí **vlastní** rozbalovací nabídky. Tuto metodu volejte, pokud chcete povolit uživatele, aby určil, zda se zobrazí související panelů nástrojů na stejném řádku nebo na různé řádky.  
@@ -3269,11 +3269,11 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeButton*  
- Velikost tlačítka panelu nástrojů v pixelech.  
+*sizeButton*<br/>
+[in] Velikost tlačítka panelu nástrojů v pixelech.  
   
- [in] *sizeImage*  
- Velikost obrázku tlačítka panelu nástrojů, v pixelech.  
+*sizeImage*<br/>
+[in] Velikost obrázku tlačítka panelu nástrojů, v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí velikost tlačítka na panelu nástrojů je 23 × 22 pixelů. Výchozí velikost obrázky tlačítka panelu nástrojů je 16 × 15 pixelů.  
@@ -3292,17 +3292,17 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nBtnIndex*  
- Z nuly vycházející index panelu nástrojů v seznamu tlačítka na panelu nástrojů.  
+*nBtnIndex*<br/>
+[in] Z nuly vycházející index panelu nástrojů v seznamu tlačítka na panelu nástrojů.  
   
- [in] *szText*  
- Určuje textový popisek tlačítka panelu nástrojů.  
+*szText*<br/>
+[in] Určuje textový popisek tlačítka panelu nástrojů.  
   
- [in] *bShowText*  
- Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje textový popisek. V opačném případě rozhraní se skryje možnost textový popisek.  
+*bShowText*<br/>
+[in] Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje textový popisek. V opačném případě rozhraní se skryje možnost textový popisek.  
   
- [in] *bShowImage*  
- Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje obrázek tlačítka panelu nástrojů. V opačném případě rozhraní se skryje možnost obrázku tlačítka panelu nástrojů.  
+*bShowImage*<br/>
+[in] Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje obrázek tlačítka panelu nástrojů. V opačném případě rozhraní se skryje možnost obrázku tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení rozhraní zobrazuje obrázky tlačítka panelu nástrojů, ale nezobrazuje textový popisek tlačítka na panelu nástrojů.  
@@ -3331,8 +3331,8 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pUserImages*  
- Ukazatel na kolekci uživatelem definované obrázky.  
+*pUserImages*<br/>
+[in] Ukazatel na kolekci uživatelem definované obrázky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; v opačném případě 0, pokud zadaný `CMFCToolBarImages` objektu je neplatný nebo má velikost obrázku, který se liší od výchozí velikost obrázků panelu nástrojů.  
@@ -3356,11 +3356,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nLength*  
- Velikost v pixelech, podle kterého chcete roztáhnout podokna.  
+*nLength*<br/>
+[in] Velikost v pixelech, podle kterého chcete roztáhnout podokna.  
   
- [in] *bVert*  
- Při hodnotě TRUE se roztáhne podokna svisle. Pokud má hodnotu FALSE, roztáhne podokna vodorovně.  
+*bVert*<br/>
+[in] Při hodnotě TRUE se roztáhne podokna svisle. Pokud má hodnotu FALSE, roztáhne podokna vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který určuje velikost klientské oblasti panelu nástrojů.  
@@ -3378,8 +3378,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Určuje kód virtuální klávesy. Seznam kódů standardní virtuální klíče najdete v tématu winuser  
+*nChar*<br/>
+[in] Určuje kód virtuální klávesy. Seznam kódů standardní virtuální klíče najdete v tématu winuser  
   
 ### <a name="return-value"></a>Návratová hodnota  
  FALSE, pokud zadaný kód je buď málo častého netisknutelného nebo neodpovídá platný klávesové zkratky; Hodnota TRUE, pokud zadaný kód odpovídá z rozevírací nabídky; v opačném případě se návratová hodnota z [CMFCToolBar::ProcessCommand](#processcommand).  
@@ -3395,8 +3395,8 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index založený na nule na tlačítko Aktualizovat.  
+*nIndex*<br/>
+[in] Určuje index založený na nule na tlačítko Aktualizovat.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3413,17 +3413,17 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWidth*  
- Maximální šířka panelu nástrojů.  
+*nWidth*<br/>
+[in] Maximální šířka panelu nástrojů.  
   
- [in] *nHeight*  
- Maximální výška panelu nástrojů. Není použito, pokud je plovoucí panel nástrojů.  
+*nHeight*<br/>
+[in] Maximální výška panelu nástrojů. Není použito, pokud je plovoucí panel nástrojů.  
   
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení. Pokud má hodnotu NULL, použije se kontext zařízení pro panel nástrojů.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení. Pokud má hodnotu NULL, použije se kontext zařízení pro panel nástrojů.  
   
- [in] *nColumnWidth*  
- Šířka tlačítka. Pokud hodnotu-1, použije se aktuální šířka.  
+*nColumnWidth*<br/>
+[in] Šířka tlačítka. Pokud hodnotu-1, použije se aktuální šířka.  
   
  [in] m *nRowHeight*  
  Výška tlačítka. Pokud hodnotu-1, použije se aktuální výška.  

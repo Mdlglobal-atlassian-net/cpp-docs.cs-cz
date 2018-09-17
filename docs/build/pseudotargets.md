@@ -1,5 +1,5 @@
 ---
-title: Pseudocíle | Microsoft Docs
+title: Pseudocíle souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56c0c0c93163759b604352a6e623f15726b8e7ec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368405"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715829"
 ---
 # <a name="pseudotargets"></a>Pseudocíle
-Pseudotarget je štítek použít místo název souboru na řádku závislostí. Je interpretován jako soubor, který neexistuje a proto je zastaralý. NMAKE předpokládá, že časové razítko pseudotarget je nejnovější všechny jeho závislé objekty. Pokud má žádné závislé objekty, se předpokládá, že aktuální čas. Pokud pseudotarget se používá jako cíl, jsou vždy provádět její příkazy. Pseudotarget, použít jako závislé musí zobrazit i jako cíl v jiné závislostí. Tuto závislost však nemusí mít blok příkazů.  
-  
- Názvy pseudotarget podle pravidla syntaxe názvu souboru pro cíle. Ale pokud název nemá rozšíření (to znamená, neobsahuje období), to může být vyšší než 8 znaků limit pro názvy souborů a může být až 256 znaků.  
-  
-## <a name="see-also"></a>Viz také  
- [Cíle](../build/targets.md)
+
+Pseudotarget je popisek, použijí se místo názvu souboru na řádku závislostí. Je interpretován jako soubor, který neexistuje a proto je zastaralý. NMAKE předpokládá, že že pseudotarget časové razítko je nejnovější z jejích závislých hodnot. Pokud nemá žádné závislé položky, se předpokládá, že aktuální čas. Pokud se pseudotarget používá jako cíl, jsou provedeny vždy její příkazy. Pseudotarget použít jako závislé také musí být uvedena jako cíl v jiném závislostí. Tato závislost ale není potřeba zablokování příkazy.
+
+Názvy pseudotarget podle pravidel syntaxe názvu souboru pro cíle. Nicméně není-li název rozšíření (to znamená, že neobsahuje tečkou), může být delší než 8 znaků omezení pro názvy souborů a může mít až 256 znaků.
+
+## <a name="see-also"></a>Viz také
+
+[Cíle](../build/targets.md)

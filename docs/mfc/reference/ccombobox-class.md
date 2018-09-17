@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205284"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702088"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 Poskytuje funkce pro pole se seznamem Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lpszText*|Ukazatel do vyrovnávací paměti, která bude přijímat upozornění text nápisu.|  
-|[in] *cchText*|Velikost vyrovnávací paměti, *lpszText* parametr odkazuje na.|  
+|*lpszText*|[out] Ukazatel do vyrovnávací paměti, která bude přijímat upozornění text nápisu.|  
+|*cchText*|[in] Velikost vyrovnávací paměti, *lpszText* parametr odkazuje na.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V první přetížení [CString](../../atl-mfc-shared/using-cstring.md) objekt, který obsahuje text nápisu upozornění, pokud existuje; v opačném případě `CString` objekt, který má nulovou délku.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *lpszText*|Ukazatel na vyrovnávací paměť zakončená hodnotou null, obsahující text upozornění.|  
+|*lpszText*|[in] Ukazatel na vyrovnávací paměť zakončená hodnotou null, obsahující text upozornění.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Určuje minimální počet viditelných položek.|  
+|*iMinVisible*|[in] Určuje minimální počet viditelných položek.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  

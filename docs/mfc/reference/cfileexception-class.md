@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713593"
 ---
 # <a name="cfileexception-class"></a>Cfileexception – třída
 Představuje podmínku výjimky vztahující se k souboru.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out v] *lpszError*  
- Ukazatel do vyrovnávací paměti, která obdrží chybovou zprávu.  
+*lpszError*<br/>
+[out v] Ukazatel do vyrovnávací paměti, která obdrží chybovou zprávu.  
   
- [in] *nMaxError*  
- Maximální počet znaků, které může obsahovat zadané vyrovnávací paměti. To zahrnuje ukončující znak null.  
+*nMaxError*<br/>
+[in] Maximální počet znaků, které může obsahovat zadané vyrovnávací paměti. To zahrnuje ukončující znak null.  
   
- [out v] *pnHelpContext*  
- Ukazatel na celé číslo bez znaménka, která přijímá ID kontextové nápovědy Pokud `NULL`, je vrácena žádná ID.  
+*pnHelpContext*<br/>
+[out v] Ukazatel na celé číslo bez znaménka, která přijímá ID kontextové nápovědy Pokud `NULL`, je vrácena žádná ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.  

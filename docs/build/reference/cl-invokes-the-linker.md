@@ -1,5 +1,5 @@
 ---
-title: CL vyvolává Linker | Microsoft Docs
+title: CL vyvolává Linker | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,50 +20,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc9c5c4815dc83b37d0b7971d5fd0f31db51e39e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed6c968b86192ae79c0c921f8b3fababc596c9a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371912"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713827"
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
-CL vyvolává linker automaticky po kompilování, pokud se používá možnost /c. CL předá linkeru názvů .obj soubory vytvořené během kompilace a názvy všechny další soubory zadané na příkazovém řádku. Linkeru používá možnosti uvedené v proměnném prostředí odkaz. Možnost/Link můžete použít k určení možnosti linkeru na příkazovém řádku CL. Možnosti, které následují možnosti/Link přepíšou nastavení v proměnné prostředí odkaz. Možnosti v následující tabulce potlačit propojení.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|/c|Kompilovat bez propojení|  
-|/ /P E, /EP,|Předběžné zpracování bez kompilování a propojování|  
-|/Zg|Generovat prototypy funkcí|  
-|/ZS|Kontrola syntaxe|  
-  
- Další informace o propojení najdete v tématu [možnosti Linkeru](../../build/reference/linker-options.md).  
-  
-## <a name="example"></a>Příklad  
- Předpokládejme, že jsou kompilování tři C zdrojové soubory: MAIN.c, MOD1.c a MOD2.c. Každý soubor obsahuje volání funkci definovanou v jiném souboru:  
-  
--   MAIN.c volá funkci `func1` v MOD1.c a funkce `func2` v MOD2.c.  
-  
--   MOD1.c volání funkce standardní knihovny `printf_s` a `scanf_s`.  
-  
--   MOD2.c volání funkce grafiky s názvem `myline` a `mycircle`, která jsou definována v knihovně s názvem MYGRAPH.lib.  
-  
- K vytvoření tohoto programu, kompilovat s následující příkazový řádek:  
-  
-```  
-CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib  
-```  
-  
- CL nejprve zkompiluje zdrojové soubory C a vytvoří objekt soubory MAIN.obj, MOD1.obj a MOD2.obj. Kompilátor umístí do každého souboru .obj název standardní knihovny. Další podrobnosti najdete v tématu [použití běhové knihovny](../../build/reference/md-mt-ld-use-run-time-library.md).  
-  
- CL předá názvy soubory .obj, společně s názvem MYGRAPH.lib, linkeru. Linkeru přeloží externí odkazy následujícím způsobem:  
-  
-1.  V MAIN.obj, odkaz na `func1` vyřešen v definici MOD1.obj; odkaz na `func2` vyřešen v definici MOD2.obj.  
-  
-2.  V MOD1.obj, odkazy na `printf_s` a `scanf_s` se přeloží pomocí definice do knihovny, která vyhledá linkeru s názvem v rámci MOD1.obj.  
-  
-3.  V MOD2.obj, odkazy na `myline` a `mycircle` se přeloží pomocí definice v MYGRAPH.lib.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+CL vyvolává linker automaticky po kompilaci, pokud se nepoužije možnost /c. CL předá linkeru názvy .obj soubory vytvořené během kompilaci a názvy všechny další soubory zadané na příkazovém řádku. Propojovací program používá možnosti uvedené v proměnné prostředí LINK. Možnost/Link můžete použít k určení možnosti linkeru v příkazovém řádku CL. Možnosti, které následují možností/Link přepíšou nastavení v proměnné prostředí LINK. Možnosti v následující tabulce potlačit propojení.
+
+|Možnost|Popis|
+|------------|-----------------|
+|/c|Kompilovat bez propojení|
+|/ /P E, /EP,|Umožňuje předzpracování bez kompilace nebo propojení|
+|/Zg|Generovat prototypy funkcí|
+|/ZS|Zkontrolovat syntaxi|
+
+Další informace o propojení naleznete v tématu [možnosti Linkeru](../../build/reference/linker-options.md).
+
+## <a name="example"></a>Příklad
+
+Předpokládejme, že při kompilaci tři C zdrojové soubory: MAIN.c MOD1.c a MOD2.c. Každý soubor obsahuje volání funkce definované v jiném souboru:
+
+- MAIN.c volá funkci `func1` MOD1.c a funkci `func2` v MOD2.c.
+
+- Volání funkce standardní knihovny MOD1.c `printf_s` a `scanf_s`.
+
+- MOD2.c volá grafické funkce s názvem `myline` a `mycircle`, které jsou definovány v knihovně s názvem MYGRAPH.lib.
+
+K vytvoření tohoto programu, proveďte kompilaci s následujícím příkazovým řádkem:
+
+```
+CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
+```
+
+CL nejprve zkompiluje zdrojové soubory jazyka C a vytvoří soubory objektů MAIN.obj MOD1.obj a MOD2.obj. Kompilátor umístí do každého souboru .obj název standardní knihovny. Další podrobnosti najdete v tématu [použití knihovny Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md).
+
+CL názvy souborů .obj, spolu s názvem MYGRAPH.lib, předá linkeru. Linker překladu externích odkazů následujícím způsobem:
+
+1. V MAIN.obj, odkaz na `func1` vyřeší v definici MOD1.obj; odkaz na `func2` vyřeší v definici MOD2.obj.
+
+1. V MOD1.obj, odkazy na `printf_s` a `scanf_s` se budou překládat pomocí definice v knihovně, který vyhledá propojovací program s názvem v rámci MOD1.obj.
+
+1. V MOD2.obj, odkazy na `myline` a `mycircle` se budou překládat pomocí definice v MYGRAPH.lib.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

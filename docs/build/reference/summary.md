@@ -1,5 +1,5 @@
 ---
-title: -SUMMARY | Microsoft Docs
+title: – SOUHRN | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c4824de941674f55e85bc702f442cfa2f45aa5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b960387aad13744ed8e0a83b10348e6e314c1d35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373745"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715702"
 ---
 # <a name="summary"></a>/SUMMARY
-```  
-/SUMMARY  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost zobrazuje minimální informace o oddílech, včetně celková velikost. Tato možnost je výchozí, pokud není zadána žádná další možnost.  
-  
- Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
-  
-## <a name="see-also"></a>Viz také  
- [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+
+```
+/SUMMARY
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost zobrazuje minimální informace o oddílech, včetně celkové velikosti. Tato možnost je výchozí, pokud není zadána žádná možnost.
+
+Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+
+## <a name="see-also"></a>Viz také
+
+[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

@@ -18,43 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee1d2cac587db64451fbc3622351461d4651b2f8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318905"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705884"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>Dialogové okno Výběr vlastních barev (Editor obrázků pro ikony) (C++)
 
 Toto dialogové okno umožňuje přizpůsobit barvy, které používáte pro vaši image. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
 
-**Barevný přechod zobrazení**  
-Změní hodnoty vybraná barva. Umístěte na křížek na barvu, kterou chcete změnit. Potom přesuňte posuvník nahoru nebo dolů změnu světelnost nebo hodnoty RGB barvy.
+- **Barevný přechod zobrazení**
 
-**Panel světelnost**  
-Nastaví světelnost pro barvu vyberte v **přechodu barevné zobrazení** pole. Klikněte a přetáhněte bílé šipka nahoru na panelu pro větší jas nebo méně. Všimněte si, že **barva** zobrazí vámi zvolená barva a ovlivnit světelnost nastavíte.
+   Změní hodnoty vybraná barva. Umístěte na křížek na barvu, kterou chcete změnit. Potom přesuňte posuvník nahoru nebo dolů změnu světelnost nebo hodnoty RGB barvy.
 
-**Barva**  
-Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.
+- **Panel světelnost**
 
-**HUE**  
-Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.
+   Nastaví světelnost pro barvu vyberte v **přechodu barevné zobrazení** pole. Klikněte a přetáhněte bílé šipka nahoru na panelu pro větší jas nebo méně. Všimněte si, že **barva** zobrazí vámi zvolená barva a ovlivnit světelnost nastavíte.
 
-**Po Ne**  
-Určuje hodnotu sytost barev, které definujete. Sytost je množství barvy v zadané odstín. Hodnoty v rozmezí 0 až 240.
+- **Barva**
 
-**Světelnost**  
-Zobrazí seznam světelnost (jas) na barvu, kterou definujete. Hodnoty v rozmezí 0 až 240.
+   Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.
 
-**Červená**  
-Určuje hodnotu červenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
+- **HUE**
 
-**Zelená**  
-Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
+   Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.
 
-**Modrá**  
-Určuje hodnotu modrou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
+- **Po Ne**
+
+   Určuje hodnotu sytost barev, které definujete. Sytost je množství barvy v zadané odstín. Hodnoty v rozmezí 0 až 240.
+
+- **Světelnost**
+
+   Zobrazí seznam světelnost (jas) na barvu, kterou definujete. Hodnoty v rozmezí 0 až 240.
+
+- **Červená**
+
+   Určuje hodnotu červenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
+
+- **Zelená**
+
+   Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
+
+- **Modrá**
+
+   Určuje hodnotu modrou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.
 
 ## <a name="requirements"></a>Požadavky
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959066"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716186"
 ---
 # <a name="tupleelement-class"></a>tuple_element – třída
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 Index prvku určené.
 
-*Řazené kolekce členů*  
+*Řazené kolekce členů*<br/>
 Typ řazené kolekce členů.
 
-*Elem*  
+*Elem*<br/>
 Typ elementu pole.
 
-*Velikost*  
+*Velikost*<br/>
 Velikost pole.
 
-*T1*  
+*T1*<br/>
 Typ první prvek v páru.
 
-*T2*  
+*T2*<br/>
 Typ druhý prvek v páru.
 
 ## <a name="remarks"></a>Poznámky
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<řazené kolekce členů > **hlavičky:** \<pole > (pro specializaci pole) **hlavičky:** \<nástroje > (pro dvojice specializace)  **Namespace:** std
+**Záhlaví:** \<řazené kolekce členů >
+
+**Záhlaví:** \<pole > (pro specializaci pole)
+
+**Záhlaví:** \<nástroje > (pro dvojice specializace)
+
+**Namespace:** std
 
 ## <a name="see-also"></a>Viz také:
 

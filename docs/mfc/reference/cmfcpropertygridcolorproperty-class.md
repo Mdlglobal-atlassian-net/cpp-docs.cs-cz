@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849162"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705832"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Cmfcpropertygridcolorproperty – třída
 `CMFCPropertyGridColorProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr barvy.  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *%{strName/*  
- Název vlastnosti  
+*%{strName/*<br/>
+[in] Název vlastnosti.  
   
- [in] *barva*  
- Hodnota barvy vlastnosti.  
+*Barva*<br/>
+[in] Hodnota barvy vlastnosti.  
   
- [in] *pPalette*  
- Ukazatel na paletu barev. Výchozí hodnota je NULL.  
+*pPalette*<br/>
+[in] Ukazatel na paletu barev. Výchozí hodnota je NULL.  
   
- [in] *lpszDescr*  
- Vlastnost popis. Výchozí hodnota je NULL.  
+*lpszDescr*<br/>
+[in] Vlastnost popis. Výchozí hodnota je NULL.  
   
- [in] *dwData*  
- Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
+*dwData*<br/>
+[in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Umožňuje *automatické* tlačítko na dialogové okno Výběr barvy. (Standardní automatické tlačítko má název **automatické**.)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Text popisku tlačítka pro automatické.  
+*lpszLabel*<br/>
+[in] Text popisku tlačítka pro automatické.  
   
- [in] *barvaAutomatická*  
- Hodnota barvy RGB barvy automaticky (výchozí).  
+*barvaAutomatická*<br/>
+[in] Hodnota barvy RGB barvy automaticky (výchozí).  
   
- [in] *bEnable*  
- TRUE, pokud chcete povolit automatické tlačítko; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit automatické tlačítko; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Text popisku tlačítka Další.  
+*lpszLabel*<br/>
+[in] Text popisku tlačítka Další.  
   
- [in] *bAltColorDlg*  
- True pro zobrazení `CMFCColorDialog` dialogové okno; FALSE, pokud chcete zobrazit dialogové okno Výběr standardní barvu. Výchozí hodnota je TRUE.  
+*bAltColorDlg*<br/>
+[in] True pro zobrazení `CMFCColorDialog` dialogové okno; FALSE, pokud chcete zobrazit dialogové okno Výběr standardní barvu. Výchozí hodnota je TRUE.  
   
- [in] *bEnable*  
- TRUE, pokud chcete zobrazit další tlačítka; v opačném případě hodnota FALSE.  Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zobrazit další tlačítka; v opačném případě hodnota FALSE.  Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Hodnota barvy RGB.  
+*Barva*<br/>
+[in] Hodnota barvy RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nColumnsNumber*  
- Upřednostňovaný počet sloupců v mřížce vlastností barev.  
+*nColumnsNumber*<br/>
+[in] Upřednostňovaný počet sloupců v mřížce vlastností barev.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví hodnotu vlastnosti `m_nColumnsNumber` chráněný datový člen.  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varValue*  
- Hodnota.  
+*varValue*<br/>
+[in] Hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) metoda obnovit původní hodnotu upravených vlastností.  

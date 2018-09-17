@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714519"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -30,7 +30,7 @@ Představuje oddíl jednu nebo víc definic exportu určujících exportovaným 
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Poznámky
 
@@ -76,7 +76,7 @@ Optional – klíčové slovo **DATA** Určuje, že export dat, není kód. Tent
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Existují čtyři způsoby, jak exportovat definici uvedené v doporučené pořadí:
 
@@ -95,7 +95,7 @@ Existují čtyři způsoby, jak exportovat definici uvedené v doporučené poř
 
 Direktiva #pragma je užitečné, pokud je potřeba exportovat názvu nedekorovaných funkce a mají různé exporty v závislosti na konfiguraci sestavení (například v 32bitové nebo 64bitové sestavení).
 
-Všechny čtyři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, není-li. EXP soubor se používá v sestavení. 
+Všechny čtyři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, není-li. EXP soubor se používá v sestavení.
 
 Tady je příklad oddílu EXPORTŮ:
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Při exportu proměnné z knihovny DLL pomocí. Soubor DEF, není nutné zadat `__declspec(dllexport)` na proměnnou. Ale v žádném souboru, který používá knihovnu DLL, musí stále používáte `__declspec(dllimport)` u deklarace data.
 

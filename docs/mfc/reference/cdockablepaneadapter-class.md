@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676360"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712072"
 ---
 # <a name="cdockablepaneadapter-class"></a>Cdockablepaneadapter – třída
 Poskytuje podporu dokování pro `CWnd`-odvozené podoken.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Název profilu.  
+*lpszProfileName*<br/>
+[in] Název profilu.  
   
- [in] *nIndex*  
- Index profilu.  
+*nIndex*<br/>
+[in] Index profilu.  
   
- [in] *uiID*  
- ID podokně.  
+*uiID*<br/>
+[in] ID podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Název profilu.  
+*lpszProfileName*<br/>
+[in] Název profilu.  
   
- [in] *nIndex*  
- Profil indexu (výchozí nastavení ID ovládacího prvku v okně).  
+*nIndex*<br/>
+[in] Profil indexu (výchozí nastavení ID ovládacího prvku v okně).  
   
- [in] *uiID*  
- ID podokně.  
+*uiID*<br/>
+[in] ID podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Ukazatel do okna pro podokno adaptér zabalit.  
+*pWnd*<br/>
+[in] Ukazatel do okna pro podokno adaptér zabalit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   

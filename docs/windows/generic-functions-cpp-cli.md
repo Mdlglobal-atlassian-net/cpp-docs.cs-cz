@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593477"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709140"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*atributy* (volitelné)  
-Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
+*Atributy*  
+(Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*Modifikátory* (volitelné)  
-Modifikátor pro funkce, jako je statická.  **virtuální** není povolená, protože virtuální metody nemusí být obecný.
+*Modifikátory*  
+(Volitelné) Modifikátor pro funkce, jako je statická.  **virtuální** není povolená, protože virtuální metody nemusí být obecný.
 
 *Návratový typ*  
 Typ vrácený metodou Pokud je návratový typ void, vyžádáním žádnou návratovou hodnotu.
@@ -78,8 +78,8 @@ Název funkce.
 *parametr typu identifikátory*  
 Seznam identifikátorů oddělených čárkou.
 
-*formální parametry* (volitelné)  
-Seznam parametrů.
+*formální parametry*  
+(Volitelné) Seznam parametrů.
 
 *Typ parametru omezení klauzule*  
 Toto určuje omezení na typy, které mohou používat jako argumenty typu a má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).

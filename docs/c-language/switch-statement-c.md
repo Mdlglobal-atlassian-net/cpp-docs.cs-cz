@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fa5ae717963d8ab2afc0b290bb42a3de72c0b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5d5a4598a83c448a36750dc1aac6b4a22ef3513f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760354"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704350"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C)
 `switch` a **případ** příkazy nápovědy komplexní větvení a podmíněného operace u ovládacího prvku. `switch` Příkaz přenese ovládací prvek v rámci svého těla příkazu.  
@@ -39,18 +39,20 @@ Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* o
   
 Použití `switch` příkaz obvykle vypadá nějak takto:  
 
-**Přepnout** ( *výraz* )  
-**{**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarace*  
-&nbsp;&nbsp;&nbsp;&nbsp;/\* . . . \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;**případ** *konstantní výraz* **:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* příkazy se spustí, pokud výraz rovná \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Hodnota tohoto výrazu – konstanta \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Konec;**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí hodnota:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* příkazy se spustí, pokud výraz není rovno \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* libovolný výraz case – konstanta \*/  
-**}**
+```C
+switch ( expression )
+{
+    // declarations
+    // . . .
+    case constant_expression:
+        // statements executed if the expression equals the
+        // value of this constant_expression
+        break;
+    default:
+        // statements executed if expression does not equal
+        // any case constant_expression
+}
+```
 
 Můžete použít **přerušení** příkaz k ukončení zpracování konkrétního případu v `switch` příkazu a do větve na konec objektu `switch` příkazu. Bez **přerušení**, program bude pokračovat na další případ provádění příkazů, dokud **přerušení** nebo je dosažen konec příkazu. V některých případech může být žádoucí tento pokračování.
 

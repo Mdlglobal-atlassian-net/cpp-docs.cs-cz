@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce8706b36af848fadba041871233204e664cabf4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464951"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712436"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar – třída
 `CMFCRibbonBar` Třída implementuje panel pásu karet, který je podobný, který používá v Office 2007.  
@@ -353,8 +353,8 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiContextID*  
- ID kontextu kategorie.  
+*uiContextID*<br/>
+[in] ID kontextu kategorie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud kontext kategorii *uiContextID* je nalezen a aktivovanou; jinak hodnota FALSE.  
@@ -376,26 +376,26 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název kategorie pásu karet.  
+*lpszName*<br/>
+[in] Název kategorie pásu karet.  
   
- [in] *uiSmallImagesResID*  
- ID prostředku seznamu malých obrázku pro kategorii pásu karet.  
+*uiSmallImagesResID*<br/>
+[in] ID prostředku seznamu malých obrázku pro kategorii pásu karet.  
   
- [in] *uiLargeImagesResID*  
- ID prostředku seznamu velkých obrázku pro kategorii pásu karet.  
+*uiLargeImagesResID*<br/>
+[in] ID prostředku seznamu velkých obrázku pro kategorii pásu karet.  
   
- [in] *sizeSmallImage*  
- Určuje velikost malé obrázky pro kategorii pásu karet.  
+*sizeSmallImage*<br/>
+[in] Určuje velikost malé obrázky pro kategorii pásu karet.  
   
- [in] *sizeLargeImage*  
- Určuje velikost velké obrázky pro kategorii pásu karet.  
+*sizeLargeImage*<br/>
+[in] Určuje velikost velké obrázky pro kategorii pásu karet.  
   
- [in] *nInsertAt*  
- Nulové založené na index umístění kategorie.  
+*nInsertAt*<br/>
+[in] Nulové založené na index umístění kategorie.  
   
- [in] *pRTI*  
- Ukazatel [cmfcribboncategory – třída](../../mfc/reference/cmfcribboncategory-class.md) run-time třída dynamicky se vytvářejí kategorie pásu karet za běhu.  
+*pRTI*<br/>
+[in] Ukazatel [cmfcribboncategory – třída](../../mfc/reference/cmfcribboncategory-class.md) run-time třída dynamicky se vytvářejí kategorie pásu karet za běhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou kategorii pásu karet, byla-li metoda úspěšná; v opačném případě hodnota NULL.  
@@ -427,32 +427,32 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název kategorie.  
+*lpszName*<br/>
+[in] Název kategorie.  
   
- [in] *lpszContextName*  
- Název kategorie titulek kontextu.  
+*lpszContextName*<br/>
+[in] Název kategorie titulek kontextu.  
   
- [in] *uiContextID*  
- ID kontextu.  
+*uiContextID*<br/>
+[in] ID kontextu.  
   
- [in] *clrContext*  
- Barva titulek kategorii kontextu.  
+*clrContext*<br/>
+[in] Barva titulek kategorii kontextu.  
   
- [in] *uiSmallImagesResID*  
- ID prostředku malý obrázek kategorii kontextu.  
+*uiSmallImagesResID*<br/>
+[in] ID prostředku malý obrázek kategorii kontextu.  
   
- [in] *uiLargeImagesResID*  
- ID prostředku velkého obrázku kategorii kontextu.  
+*uiLargeImagesResID*<br/>
+[in] ID prostředku velkého obrázku kategorii kontextu.  
   
- [in] *sizeSmallImage*  
- Velikost malý obrázek.  
+*sizeSmallImage*<br/>
+[in] Velikost malý obrázek.  
   
- [in] *sizeLargeImage*  
- Velikost velký obrázek.  
+*sizeLargeImage*<br/>
+[in] Velikost velký obrázek.  
   
- [in] *pRTI*  
- Ukazatel na třídu modulu runtime.  
+*pRTI*<br/>
+[in] Ukazatel na třídu modulu runtime.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořené kategorie, nebo hodnota NULL, pokud `CreateObject` metodu *pRTI* nelze vytvořit zadané kategorie.  
@@ -493,20 +493,20 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název kategorie hlavní pás karet.  
+*lpszName*<br/>
+[in] Název kategorie hlavní pás karet.  
   
- [in] *uiSmallImagesResID*  
- ID prostředku malé obrázky.  
+*uiSmallImagesResID*<br/>
+[in] ID prostředku malé obrázky.  
   
- [in] *uiLargeImagesResID*  
- ID prostředku velkých obrázků.  
+*uiLargeImagesResID*<br/>
+[in] ID prostředku velkých obrázků.  
   
- [in] *sizeSmallImage*  
- Velikost malých obrázků.  
+*sizeSmallImage*<br/>
+[in] Velikost malých obrázků.  
   
- [in] *sizeLargeImage*  
- Velikost velkých obrázků.  
+*sizeLargeImage*<br/>
+[in] Velikost velkých obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou kategorii hlavní pás karet, byla-li metoda úspěšná; v opačném případě hodnota NULL.  
@@ -544,14 +544,14 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název kategorie.  
+*lpszName*<br/>
+[in] Název kategorie.  
   
- [in] *uiSmallImagesResID*  
- ID prostředku seznam obrázků pro kategorii.  
+*uiSmallImagesResID*<br/>
+[in] ID prostředku seznam obrázků pro kategorii.  
   
- [in] *sizeSmallImage*  
- Velikost bitové kopie pro prvky pásu karet v kategorii.  
+*sizeSmallImage*<br/>
+[in] Velikost bitové kopie pro prvky pásu karet v kategorii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou kategorii, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
@@ -567,8 +567,8 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Ukazatel na prvek pásu karet.  
+*pElement*<br/>
+[in] Ukazatel na prvek pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Ribbon element je umístěn před všechny systémových tlačítek.  
@@ -581,8 +581,8 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bReplaceFrameCaption*  
- Hodnota TRUE pro panel pásu karet k nahrazení titulek okna hlavního rámce. FALSE, pokud chcete najít panel pásu karet v části titulek okna hlavního rámce.  
+*bReplaceFrameCaption*<br/>
+[in] Hodnota TRUE pro panel pásu karet k nahrazení titulek okna hlavního rámce. FALSE, pokud chcete najít panel pásu karet v části titulek okna hlavního rámce.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -597,14 +597,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Ukazatel na nadřazené okno panelu pásu karet.  
+*pParentWnd*<br/>
+[in] Ukazatel na nadřazené okno panelu pásu karet.  
   
- [in] *dwStyle*  
- Logická kombinace stylů v novém okně.  
+*dwStyle*<br/>
+[in] Logická kombinace stylů v novém okně.  
   
- [in] *nID*  
- ID nového okna.  
+*nID*<br/>
+[in] ID nového okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl vytvořen v okně; v opačném případě FALSE.  
@@ -628,17 +628,17 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Ukazatel na nadřazené okno panelu pásu karet.  
+*pParentWnd*<br/>
+[in] Ukazatel na nadřazené okno panelu pásu karet.  
   
- [in] *dwCtrlStyle*  
- Tento parametr není používán.  
+*dwCtrlStyle*<br/>
+[in] Tento parametr se nepoužívá.  
   
- [in] *dwStyle*  
- Logická kombinace stylů v novém okně.  
+*dwStyle*<br/>
+[in] Logická kombinace stylů v novém okně.  
   
- [in] *nID*  
- ID nového okna.  
+*nID*<br/>
+[in] ID nového okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl vytvořen v okně; v opačném případě FALSE.  
@@ -653,8 +653,8 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSetFocus*  
- Hodnota TRUE, chcete-li se zaměřit na nadřazené okno panelu pásu karet.  
+*bSetFocus*<br/>
+[in] Hodnota TRUE, chcete-li se zaměřit na nadřazené okno panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -669,14 +669,14 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení pro tlačítko nabídky.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení pro tlačítko nabídky.  
   
- [in] *pMenuItem*  
- Ukazatel na tlačítko nabídky panelu nástrojů.  
+*pMenuItem*<br/>
+[in] Ukazatel na tlačítko nabídky panelu nástrojů.  
   
- [in] *rectImage*  
- Obdélník zobrazení tlačítka nabídky.  
+*rectImage*<br/>
+[in] Obdélník zobrazení tlačítka nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl nakreslen image; v opačném případě FALSE.  
@@ -700,8 +700,8 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit funkci popisy tlačítek; FALSE, pokud chcete zakázat funkci popisy tlačítek.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit funkci popisy tlačítek; FALSE, pokud chcete zakázat funkci popisy tlačítek.  
   
 ### <a name="remarks"></a>Poznámky  
  Když tuto funkci povolit, popisy kláves se zobrazí, když uživatel stiskne tlačítko ALT nebo F10. Když uživatel stiskne klávesu ALT, jsou zobrazeny popisy kláves se zpožděním 200 milisekund. Toto zpoždění umožňuje zkratky provádět tak, aby při stisknutí klávesy ALT neovlivňuje ostatní kombinace, které zahrnují klávesu ALT.  
@@ -714,8 +714,8 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Hodnota **Náhled** funkce; FALSE, pokud chcete zakázat **Náhled** funkce.  
+*bEnable*<br/>
+[in] Hodnota **Náhled** funkce; FALSE, pokud chcete zakázat **Náhled** funkce.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *bEnable* NEPRAVDA a tisku kategorie ve verzi preview existuje, ale bude odstraněn.  
@@ -732,11 +732,11 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit popisky na panelu pásu karet; FALSE, pokud chcete zakázat popisy tlačítek na panelu pásu karet.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit popisky na panelu pásu karet; FALSE, pokud chcete zakázat popisy tlačítek na panelu pásu karet.  
   
- [in] *bEnableDescr*  
- TRUE, pokud chcete povolit popisy popisu tlačítka na ovládacím prvku ToolStrip; FALSE, pokud chcete zakázat popisy popisu tlačítka na ovládacím prvku ToolStrip.  
+*bEnableDescr*<br/>
+[in] TRUE, pokud chcete povolit popisy popisu tlačítka na ovládacím prvku ToolStrip; FALSE, pokud chcete zakázat popisy popisu tlačítka na ovládacím prvku ToolStrip.  
   
 ### <a name="remarks"></a>Poznámky  
  *BEnable* parametr určuje, zda jsou popisky zobrazeny po umístění ukazatele myši nad prvek pásu karet. *BEnableDescr* parametr určuje, zda se zobrazí další popisný text s přejede myší.  
@@ -751,11 +751,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Data přidružená k prvek pásu karet.  
+*dwData*<br/>
+[in] Data přidružená k prvek pásu karet.  
   
- [in] *bVisibleOnly*  
- TRUE, pokud chcete hledat prvky viditelné pásu karet. FALSE, pokud chcete prohledávat všechny prvky pásu karet.  
+*bVisibleOnly*<br/>
+[in] TRUE, pokud chcete hledat prvky viditelné pásu karet. FALSE, pokud chcete prohledávat všechny prvky pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek pásu karet, pokud má zadaná data a viditelnost; v opačném případě hodnota NULL.  
@@ -774,14 +774,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- ID příkazu pro prvek pásu karet.  
+*uiCmdID*<br/>
+[in] ID příkazu pro prvek pásu karet.  
   
- [in] *bVisibleOnly*  
- TRUE, pokud chcete hledat prvky viditelné pásu karet. FALSE, pokud chcete prohledávat všechny prvky pásu karet.  
+*bVisibleOnly*<br/>
+[in] TRUE, pokud chcete hledat prvky viditelné pásu karet. FALSE, pokud chcete prohledávat všechny prvky pásu karet.  
   
- [in] *bExcludeQAT*  
- TRUE, pokud chcete vyloučit prvky panelu nástrojů Rychlý přístup z prohledávání. v opačném případě hodnota FALSE.  
+*bExcludeQAT*<br/>
+[in] TRUE, pokud chcete vyloučit prvky panelu nástrojů Rychlý přístup z prohledávání. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek pásu karet, pokud má zadaný příkaz ID a vyhledávání hodnoty; v opačném případě hodnota NULL.  
@@ -799,8 +799,8 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Data přidružená k kategorie pásu karet.  
+*dwData*<br/>
+[in] Data přidružená k kategorie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule kategorie pásu karet, pokud metoda byla úspěšná. v opačném případě hodnota-1.  
@@ -859,8 +859,8 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule kategorie pásu karet v seznamu kategorií pásu karet, která je součástí na pásu karet.  
+*nIndex*<br/>
+[in] Index založený na nule kategorie pásu karet v seznamu kategorií pásu karet, která je součástí na pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na kategorie pásu karet v zadaném indexu; v opačném případě hodnotu NULL, pokud *nIndex* je mimo rozsah.  
@@ -896,8 +896,8 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCategory*  
- Ukazatel na pásu karet.  
+*pCategory*<br/>
+[in] Ukazatel na pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule kategorie pásu karet určené *pCategory*; nebo -1, pokud se nenajde kategorie pásu karet.  
@@ -912,11 +912,11 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiContextID*  
- ID pásu karet kategorii kontextu.  
+*uiContextID*<br/>
+[in] ID pásu karet kategorii kontextu.  
   
- [out] *%{strName/*  
- Název kategorie titulek kontextu.  
+*%{strName/*<br/>
+[out] Název kategorie titulek kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE if *uiContextID* je nulový nebo popisek kategorie kontextu nebyla nalezena.  
@@ -943,11 +943,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Příkaz ID elementu pásu karet.  
+*uiCmdID*<br/>
+[in] Příkaz ID elementu pásu karet.  
   
- [out] *arButtons*  
- Pole ukazatelů na prvky pásu karet.  
+*arButtons*<br/>
+[out] Pole ukazatelů na prvky pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Více prvků pásu karet může mít stejné ID příkazu, protože některé prvky pásu karet je možné zkopírovat do panelu nástrojů Rychlý přístup.  
@@ -980,11 +980,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lstItems*  
- Seznam ID příkazu pro prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
+*lstItems*<br/>
+[out] Seznam ID příkazu pro prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
   
- [in] *bHiddenOnly*  
- TRUE, pokud chcete vyloučení prvků pásu karet, které jsou zobrazeny; FALSE, zahrnuta budou všechny prvky pásu karet na panelu pásu karet.  
+*bHiddenOnly*<br/>
+[in] TRUE, pokud chcete vyloučení prvků pásu karet, které jsou zobrazeny; FALSE, zahrnuta budou všechny prvky pásu karet na panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1081,8 +1081,8 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lstCommands*  
- Seznam ID příkazu pro prvky pásu karet na panelu nástrojů Rychlý přístup.  
+*lstCommands*<br/>
+[out] Seznam ID příkazu pro prvky pásu karet na panelu nástrojů Rychlý přístup.  
   
 ### <a name="remarks"></a>Poznámky  
  Seznam neobsahuje prvky pásu karet, které jsou ovládací prvek oddělovače.  
@@ -1183,14 +1183,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Umístění bodu v souřadnicích panel pásu karet.  
+*Bod*<br/>
+[in] Umístění bodu v souřadnicích panel pásu karet.  
   
- [in] *bCheckActiveCategory*  
- TRUE, pokud chcete hledat aktivní kategorie; FALSE, nedojde k vyhledání aktivní kategorie.  
+*bCheckActiveCategory*<br/>
+[in] TRUE, pokud chcete hledat aktivní kategorie; FALSE, nedojde k vyhledání aktivní kategorie.  
   
- [in] *bCheckPanelCaption*  
- TRUE, pokud chcete otestovat titulek panel pásu karet se bod nachází v FALSE, nedojde k otestování titulek panel pásu karet se bod nachází v ní. Další informace naleznete v části Poznámky.  
+*bCheckPanelCaption*<br/>
+[in] TRUE, pokud chcete otestovat titulek panel pásu karet se bod nachází v FALSE, nedojde k otestování titulek panel pásu karet se bod nachází v ní. Další informace naleznete v části Poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na prvek pásu karet na zadaný bod; jinak hodnota NULL, pokud je bod není umístěn v elementu pásu karet.  
@@ -1271,8 +1271,8 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pGroup*  
- Tento parametr není používán.  
+*pGroup*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  vždy vrátí hodnotu FALSE.  
@@ -1325,11 +1325,11 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na došlo ke kliknutí na tlačítko.  
+*pButton*<br/>
+[in] Ukazatel na došlo ke kliknutí na tlačítko.  
   
- [in] *bodu*  
- Tento parametr není používán.  
+*Bod*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pEdit*  
- [in] *bodu*  
+*pEdit*<br/>
+[in] [in] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1356,8 +1356,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsRTL*  
- Hodnota TRUE v případě rozložení je right to left; FALSE, pokud je rozložení zleva doprava.  
+*bIsRTL*<br/>
+[in] Hodnota TRUE v případě rozložení je right to left; FALSE, pokud je rozložení zleva doprava.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda upraví rozložení všech ovládacích prvků na pásu karet pro nový směr rozložení.  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*pWnd*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*pWnd*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrameWnd*  
- Ukazatel do nadřazeného okna hlavního rámce na pásu karet.  
+*pFrameWnd*<br/>
+[in] Ukazatel do nadřazeného okna hlavního rámce na pásu karet.  
   
- [in] *wParam*  
- Virtuální kód je stisknuta klávesa.  
+*wParam*<br/>
+[in] Virtuální kód je stisknuta klávesa.  
   
- [in] *lParam*  
- Stav klávesnice příznaky byl stisknutí klávesy.  
+*lParam*<br/>
+[in] Stav klávesnice příznaky byl stisknutí klávesy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě stisknutí kláves událost byla zpracována; v opačném případě FALSE.  
@@ -1456,14 +1456,14 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrameWnd*  
- Ukazatel do nadřazeného okna hlavního rámce na pásu karet.  
+*pFrameWnd*<br/>
+[in] Ukazatel do nadřazeného okna hlavního rámce na pásu karet.  
   
- [in] *wParam*  
- Virtuální kód klíče se vydávají.  
+*wParam*<br/>
+[in] Virtuální kód klíče se vydávají.  
   
- [in] *lParam*  
- Tento parametr není používán.  
+*lParam*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě stisknutí kláves událost byla zpracována; v opačném případě FALSE.  
@@ -1487,8 +1487,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMsg*  
- Ukazatel na zprávu.  
+*pMsg*<br/>
+[in] Ukazatel na zprávu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl zpracovat zprávu na panelu pásu karet; v opačném případě FALSE.  
@@ -1533,8 +1533,8 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule kategorii v seznamu kategorií pásu karet, která je součástí na pásu karet.  
+*nIndex*<br/>
+[in] Index založený na nule kategorii v seznamu kategorií pásu karet, která je součástí na pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl odstraněn kategorie zadané pásu karet; v opačném případě FALSE.  
@@ -1552,11 +1552,11 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCategory*  
- Kategorie pásu karet, která je součástí na pásu karet.  
+*pCategory*<br/>
+[in] Kategorie pásu karet, která je součástí na pásu karet.  
   
- [in] *bForceRestore*  
- TRUE, pokud chcete maximalizovat na pásu karet, pokud je minimalizován; FALSE, pokud chcete zobrazit aktivní kategorie v překryvném okně Pokud je panel pásu karet minimalizovaný.  
+*bForceRestore*<br/>
+[in] TRUE, pokud chcete maximalizovat na pásu karet, pokud je minimalizován; FALSE, pokud chcete zobrazit aktivní kategorie v překryvném okně Pokud je panel pásu karet minimalizovaný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadané kategorie byla nastavena na aktivní kategorie; v opačném případě FALSE.  
@@ -1574,8 +1574,8 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Ukazatel na podřízené okno MDI.  
+*pWnd*<br/>
+[in] Ukazatel na podřízené okno MDI.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1589,11 +1589,11 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na pásu karet tlačítko aplikace.  
+*pButton*<br/>
+[in] Ukazatel na pásu karet tlačítko aplikace.  
   
- [in] *sizeButton*  
- Velikost tlačítka pásu karet aplikace.  
+*sizeButton*<br/>
+[in] Velikost tlačítka pásu karet aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
  Tlačítko pásu karet aplikace je velké zakulacený tlačítko v levém horním rohu ovládacího prvku pásu karet.  
@@ -1614,14 +1614,14 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identifikátor příkazu prvek pásu karet.  
+*uiCmdID*<br/>
+[in] Identifikátor příkazu prvek pásu karet.  
   
- [in] *lpszKeys*  
- Klávesovou zkratku.  
+*lpszKeys*<br/>
+[in] Klávesovou zkratku.  
   
- [in] *lpszMenuKeys*  
- Klávesová zkratka nabídky.  
+*lpszMenuKeys*<br/>
+[in] Klávesová zkratka nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud jsou nastavené popisy tlačítek pásu karet alespoň jeden element; v opačném případě FALSE.  
@@ -1639,11 +1639,11 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pLevel*  
- Ukazatel na aktuální objekt navigačního klávesnice.  
+*pLevel*<br/>
+[in] Ukazatel na aktuální objekt navigačního klávesnice.  
   
- [in] *bSetFocus*  
- TRUE, pokud chcete nastavit fokus klávesnice na panel pásu karet.  
+*bSetFocus*<br/>
+[in] TRUE, pokud chcete nastavit fokus klávesnice na panel pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Navigace pomocí kláves na pásu karet začne, když uživatel stiskne klávesu ALT nebo F10. Uživatel vybere na další úroveň navigační klávesy popisek tlačítka na panelu pásu karet. Uživatel může vrátit na předchozí úroveň navigační stisknutím klávesy ESC.  
@@ -1658,11 +1658,11 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMax*  
- TRUE, pokud chcete zobrazit na panelu pásu karet; systémových tlačítek pro podřízené okno MDI. FALSE systémových tlačítek pro podřízené okno MDI. Odeberte z pásu karet.  
+*bMax*<br/>
+[in] TRUE, pokud chcete zobrazit na panelu pásu karet; systémových tlačítek pro podřízené okno MDI. FALSE systémových tlačítek pro podřízené okno MDI. Odeberte z pásu karet.  
   
- [in] *pWnd*  
- Ukazatel na hlavní okno rámce pro panel pásu karet.  
+*pWnd*<br/>
+[in] Ukazatel na hlavní okno rámce pro panel pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Na pásu karet zobrazí systémových tlačítek pro podřízené okno MDI v řádku kartu při maximalizované podřízené okno MDI.  
@@ -1677,11 +1677,11 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lstCommands*  
- Seznam příkazů umístit na panel nástrojů Rychlý přístup.  
+*lstCommands*<br/>
+[in] Seznam příkazů umístit na panel nástrojů Rychlý přístup.  
   
- [in] *bRecalcLayout*  
- Hodnota TRUE, pokud chcete po přidání prvků pásu karet; ho překreslit na pásu karet FALSE v opačném případě.  
+*bRecalcLayout*<br/>
+[in] Hodnota TRUE, pokud chcete po přidání prvků pásu karet; ho překreslit na pásu karet FALSE v opačném případě.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob použití `SetQuickAccessCommands` metodu `CMFCRibbonBar` třídy.  
@@ -1696,8 +1696,8 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *stavu*  
- Výchozí stav panelu nástrojů Rychlý přístup.  
+*Stav*<br/>
+[in] Výchozí stav panelu nástrojů Rychlý přístup.  
   
 ### <a name="remarks"></a>Poznámky  
  Stav panelu nástrojů Rychlý přístup obsahuje seznam příkazů a jejich viditelnost.  
@@ -1715,8 +1715,8 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bOnTop*  
- TRUE, pokud chcete pozici panelu nástrojů Rychlý přístup nad panelem pásu karet. Chcete-li hodnotu FALSE na pozici panelu nástrojů Rychlý přístup pod na pásu karet.  
+*bOnTop*<br/>
+[in] TRUE, pokud chcete pozici panelu nástrojů Rychlý přístup nad panelem pásu karet. Chcete-li hodnotu FALSE na pozici panelu nástrojů Rychlý přístup pod na pásu karet.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  Nastaví pravidelné a velké velikosti popisek pevnou šířku panelu pásu karet.  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWidthRegular*  
- Šířka v pixelech, o pravidelných pevné velikosti popisek.  
+*nWidthRegular*<br/>
+[in] Šířka v pixelech, o pravidelných pevné velikosti popisek.  
   
- [in] *nWidthLargeImage*  
- Šířka v pixelech velké pevnou velikost popisku.  
+*nWidthLargeImage*<br/>
+[in] Šířka v pixelech velké pevnou velikost popisku.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastavení parametru na hodnotu 0 způsobí, že odpovídající šířka se liší.  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index kategorie pásu karet.  
+*nIndex*<br/>
+[in] Index kategorie pásu karet.  
   
- [in] *bShow*  
- Při hodnotě TRUE se zobrazí kategorie pásu karet; v opačném případě skryjte kategorie pásu karet.  
+*bShow*<br/>
+[in] Při hodnotě TRUE se zobrazí kategorie pásu karet; v opačném případě skryjte kategorie pásu karet.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Zobrazí nebo skryje kontextu kategorií, které mají zadané ID.  
@@ -1763,11 +1763,11 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiContextID*  
- ID kontextu kategorie.  
+*uiContextID*<br/>
+[in] ID kontextu kategorie.  
   
- [in] *bShow*  
- Při hodnotě TRUE se zobrazí kategorie, které mají zadané ID; v opačném případě skryjete kategorie, které mají zadané ID.  
+*bShow*<br/>
+[in] Při hodnotě TRUE se zobrazí kategorie, které mají zadané ID; v opačném případě skryjete kategorie, které mají zadané ID.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  Zobrazuje popisy tlačítek pro každý prvek pásu karet na panelu pásu karet.  
@@ -1798,8 +1798,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Kód znaku stisk klávesy uživatele.  
+*nChar*<br/>
+[in] Kód znaku stisk klávesy uživatele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud kód znaku na pásu karet; zpracování v opačném případě FALSE.  

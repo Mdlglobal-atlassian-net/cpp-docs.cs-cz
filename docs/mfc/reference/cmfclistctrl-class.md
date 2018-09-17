@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702674"
 ---
 # <a name="cmfclistctrl-class"></a>Cmfclistctrl – třída
 `CMFCListCtrl` Třída rozšiřuje funkce [třídě CListCtrl](../../mfc/reference/clistctrl-class.md) třídy díky podpoře funkcionality kontroly rozšířené hlavičky z [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMark*  
- Parametr logické hodnoty, která určuje, jestli se má povolit jinou barvu pozadí.  
+*bMark*<br/>
+[in] Parametr logické hodnoty, která určuje, jestli se má povolit jinou barvu pozadí.  
   
- [in] *bRedraw*  
- Parametr logické hodnoty, který určuje, zda překreslení ovládacího prvku okamžitě.  
+*bRedraw*<br/>
+[in] Parametr logické hodnoty, který určuje, zda překreslení ovládacího prvku okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
  `EnableMarkSortedColumn` používá metodu `CDrawingManager::PixelAlpha` k výpočtu barvu, která má použít pro seřazené sloupce. Barva výběru je založena na barvu pozadí pravidelně.  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Logická hodnota určující, zda chcete povolit režim řazení více sloupců.  
+*bEnable*<br/>
+[in] Logická hodnota určující, zda chcete povolit režim řazení více sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
  Když povolíte řazení podle více sloupců, sloupci mít hierarchii. Řádky dat, budou seřazeny nejprve podle primární sloupce. Žádné odpovídající hodnoty jsou potom seřazeno podle jednotlivých následující sloupce na základě priority.  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lParam1*  
- První položka určená k porovnání.  
+*lParam1*<br/>
+[in] První položka určená k porovnání.  
   
- [in] *lParam2*  
- Druhá položka určená k porovnání.  
+*lParam2*<br/>
+[in] Druhá položka určená k porovnání.  
   
- [in] *iColumn*  
- Index sloupce, který tato metoda je řazení.  
+*iColumn*<br/>
+[in] Index sloupce, který tato metoda je řazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Celé číslo, které označuje relativní polohu dvě položky. Záporná hodnota naznačuje, že první položky by měl předcházet druhý, kladná hodnota označuje, že první položky by měly dodržovat druhé a nula znamená, že jsou ekvivalentní dvě položky.  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Řádek dotyčný buňky.  
+*nRow*<br/>
+[in] Řádek dotyčný buňky.  
   
- [in] *nColumn*  
- Sloupec dotyčný buňky.  
+*nColumn*<br/>
+[in] Sloupec dotyčný buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  COLOREF hodnotu, která určuje barvu pozadí buňky.  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Řádek dotyčný buňky.  
+*nRow*<br/>
+[in] Řádek dotyčný buňky.  
   
- [in] *nColumn*  
- Sloupec dotyčný buňky.  
+*nColumn*<br/>
+[in] Sloupec dotyčný buňky.  
   
- [in] *dwData*  
- Data definovaná uživatelem. Výchozí implementace nepoužívá tento parametr.  
+*dwData*<br/>
+[in] Data definovaná uživatelem. Výchozí implementace nepoužívá tento parametr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač písma, která se používá pro aktuální buňku.  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Řádek dotyčný buňky.  
+*nRow*<br/>
+[in] Řádek dotyčný buňky.  
   
- [in] *nColumn*  
- Sloupec dotyčný buňky.  
+*nColumn*<br/>
+[in] Sloupec dotyčný buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  COLOREF hodnotu, která určuje barvu textu buňky.  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Sloupec, který chcete odebrat.  
+*iColumn*<br/>
+[in] Sloupec, který chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odebere řazení sloupců z ovládacího prvku záhlaví. Volá [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Tento sloupec seřadit.  
+*iColumn*<br/>
+[in] Tento sloupec seřadit.  
   
- [in] *bAscending*  
- Logická hodnota, která určuje pořadí řazení.  
+*bAscending*<br/>
+[in] Logická hodnota, která určuje pořadí řazení.  
   
- [in] *bAdd*  
- Logická hodnota, která určuje, zda metoda přidá sloupec označen *iColumn* do seznamu sloupců seřadit.  
+*bAdd*<br/>
+[in] Logická hodnota, která určuje, zda metoda přidá sloupec označen *iColumn* do seznamu sloupců seřadit.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda předává vstupních parametrů do ovládacího prvku záhlaví pomocí metody [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Tento sloupec seřadit.  
+*iColumn*<br/>
+[in] Tento sloupec seřadit.  
   
- [in] *bAscending*  
- Logická hodnota, která určuje pořadí řazení.  
+*bAscending*<br/>
+[in] Logická hodnota, která určuje pořadí řazení.  
   
- [in] *bAdd*  
- Logická hodnota, která určuje, zda tato metoda přidá sloupec označen *iColumn* do seznamu sloupců seřadit.  
+*bAdd*<br/>
+[in] Logická hodnota, která určuje, zda tato metoda přidá sloupec označen *iColumn* do seznamu sloupců seřadit.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

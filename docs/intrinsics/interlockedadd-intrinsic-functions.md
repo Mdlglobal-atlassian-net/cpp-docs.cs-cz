@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedAdd | Microsoft Docs
+title: Vnitřní funkce _InterlockedAdd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,17 +36,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333944"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709524"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Proveďte atomic toho, které zajišťuje, že po úspěšném dokončení operace Pokud více vláken mají přístup ke sdílené proměnné.  
+ Provádění atomických sčítání, což zajistí, že operace úspěšně dokončí v případě více vláken, máte přístup ke sdílené proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,18 +86,18 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Addend`  
- Ukazatel na celé číslo, které mají být přidány do; výsledkem přidání nahrazena.  
+*Sčítanec*<br/>
+[out v] Ukazatel na celé číslo, které mají být přidány do; výsledek součtu nahrazena.  
   
- [v] `Value`  
- Hodnota k přidání.  
+*Hodnota*<br/>
+[in] Hodnota k přidání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Obě funkce vrátit výsledek přidání.  
+ Obě funkce vrátí výsledek součtu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`_InterlockedAdd`|ARM|  
 |`_InterlockedAdd_acq`|ARM|  
@@ -111,9 +111,9 @@ __int64 _InterlockedAdd64_rel(
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Verze tyto funkce s `_acq` nebo `_rel` přípony provést interlocked doplněk následující sémantiku získání nebo verzi. Získejte sémantiku znamená, že výsledek operace jsou dostupná pro všechny vláken a procesory než libovolná další paměť čte a zapisuje. Získání je užitečné, když zadáte kritická sekce. Verze sémantiku znamená, že se všechny paměti čtení a zápisy nuceni viditelná pro všechny vláken a procesory než výsledek operace jsou dostupná sám sebe. Verze je užitečné, když ponechat kritická sekce. Vnitřní funkce s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Verze těchto funkcí s `_acq` nebo `_rel` přípony provedení propojené dodatek následující sémantika získání nebo vydání. Získejte sémantiku znamená, že výsledek operace jsou dostupná pro všechna vlákna a procesory než všechny následné paměti čte a zapisuje. Získání je užitečné, když zadáte kritický oddíl. Sémantika vydání znamená, že se všechny paměti přečtených a zapsaných nuceni nastavena jako viditelná pro všechny vlákna a procesory než výsledek operace jsou dostupná vlastní. Verze je užitečné při opuštění kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
 ## <a name="example"></a>Příklad  
   
@@ -173,7 +173,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

@@ -1,5 +1,5 @@
 ---
-title: NÁZEV (C/C++) | Microsoft Docs
+title: NÁZEV (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc37a96e50c6cd5bae2cc60661db04f3b92d162b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715751"
 ---
 # <a name="name-cc"></a>NÁZEV (C/C++)
-Určuje název pro hlavní výstupní soubor.  
-  
-```  
-NAME [application][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ekvivalentní způsob zadejte název výstupního souboru je [/OUT](../../build/reference/out-output-file-name.md) – možnost linkeru a ekvivalentní způsob, jak základní adresa je [/základní](../../build/reference/base-base-address.md) – možnost linkeru. Pokud jsou zadány oba/přepsání na více systémů **název**.  
-  
- Pokud vytvoříte knihovny DLL, bude název ovlivní pouze název souboru DLL.  
-  
-## <a name="see-also"></a>Viz také  
- [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+
+Určuje název hlavního výstupního souboru.
+
+```
+NAME [application][BASE=address]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ekvivalentní umožňuje zadat název výstupního souboru je [/OUT](../../build/reference/out-output-file-name.md) – možnost linkeru a ekvivalentní umožňuje nastavit základní adresu [/základní](../../build/reference/base-base-address.md) – možnost linkeru. Pokud jsou zadány oba/OUT přepisuje **název**.
+
+Pokud vytváříte knihovnu DLL, název ovlivní pouze název knihovny DLL.
+
+## <a name="see-also"></a>Viz také
+
+[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)

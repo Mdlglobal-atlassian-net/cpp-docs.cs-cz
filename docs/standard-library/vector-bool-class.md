@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702907"
 ---
 # <a name="vectorltboolgt-class"></a>vektor&lt;bool&gt; třídy
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Doprava*  
- Odkaz prvku, jehož hodnota má být přiřazena k bitu.
+*doprava*<br/>
+Odkaz prvku, jehož hodnota má být přiřazena k bitu.
 
-*Val*  
- Logická hodnota, která má být přiřazena k bitu.
+*Val*<br/>
+Logická hodnota, která má být přiřazena k bitu.
 
 #### <a name="example"></a>Příklad
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Element, který bude vyměněn za *vpravo* elementu.
+*doleva*<br/>
+Element, který bude vyměněn za *vpravo* elementu.
 
-*Doprava*  
- Element, který bude vyměněn za *vlevo* elementu.
+*doprava*<br/>
+Element, který bude vyměněn za *vlevo* elementu.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465025"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708184"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar – třída
 `CMFCStatusBar` Třída implementuje stavový řádek podobný `CStatusBar` třídy. Ale `CMFCStatusBar` třída obsahuje funkce, které nejsou nabízeny třídou `CStatusBar` třídy, jako je schopnost zobrazit obrázky, animace a indikátory; a schopnost reagovat na poklepání myši. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- [in] *dwStyle*  
+*pParentWnd*<br/>
+[in] [in] *dwStyle*  
  [in] *nID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- [in] *dwCtrlStyle*  
- [in] *dwStyle*  
- [in] *nID*  
+*pParentWnd*<br/>
+[in] [in] *dwCtrlStyle*  
+*dwStyle*<br/>
+[in] [in] *nID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Pokud je hodnota TRUE, povolte zpracování dvojitým kliknutím myši. V opačném případě zakážete zpracování dvojitým kliknutím myši.  
+*bEnable*<br/>
+[in] Pokud je hodnota TRUE, povolte zpracování dvojitým kliknutím myši. V opačném případě zakážete zpracování dvojitým kliknutím myši.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je stavový řádek je povoleno zpracování dvojité kliknutí, Windows odešle oznámení wm_command – spolu s ID prostředku vlastníkovi stavového řádku pokaždé, když uživatel dvakrát klikne na panelu stavového stav.  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index podokna jehož indikátor průběhu povolit.  
+*nIndex*<br/>
+[in] Určuje index podokna jehož indikátor průběhu povolit.  
   
- [in] *ncelkový počet*  
- Určuje maximální hodnotu indikátor průběhu.  
+*ncelkový počet*<br/>
+[in] Určuje maximální hodnotu indikátor průběhu.  
   
- [in] *bDisplayText*  
- Určuje, zda by měl indikátor průběhu zobrazit aktuální hodnotu průběh.  
+*bDisplayText*<br/>
+[in] Určuje, zda by měl indikátor průběhu zobrazit aktuální hodnotu průběh.  
   
- [in] *clrBar*  
- Určuje barvu pozadí indikátor průběhu.  
+*clrBar*<br/>
+[in] Určuje barvu pozadí indikátor průběhu.  
   
- [in] *clrBarDest*  
- Určuje sekundární barvu pozadí panelu průběh. Použít jinou hodnotu než *clrBar* tak, aby vyplnil pomocí barev prolnuty do přechodu.  
+*clrBarDest*<br/>
+[in] Určuje sekundární barvu pozadí panelu průběh. Použít jinou hodnotu než *clrBar* tak, aby vyplnil pomocí barev prolnuty do přechodu.  
   
- [in] *clrProgressText*  
- Určuje barvu textu indikátor průběhu.  
+*clrProgressText*<br/>
+[in] Určuje barvu textu indikátor průběhu.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete zakázat volání panelu průběh `EnablePaneProgressBar` s *ncelkový počet* nastavena na hodnotu -1. Ve výchozím nastavení *ncelkový počet* je nastavena na hodnotu 100. Proto není nutné žádné další výpočty, chcete-li zobrazit průběh v procentech.  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *lprect –*  
+*nIndex*<br/>
+[in] [in] *lprect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *s*  
+*nIndex*<br/>
+[in] [in] *s*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index panelu stavového řádku stav.  
+*nIndex*<br/>
+[in] Určuje index panelu stavového řádku stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Šířka panelu stavového stav, který *nIndex* určuje; v opačném případě nula, pokud neexistuje panelu stavového řádku.  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně pro kterou se má načíst text tipu nástroj.  
+*nIndex*<br/>
+[in] Určuje index v podokně pro kterou se má načíst text tipu nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Text popisu tlačítka panelu stavového řádku, který *nIndex* určuje. V opačném případě prázdnému řetězci, pokud neexistuje panelu stavového řádku stavu pro zadaný *nIndex* nebo pokud jeho text popisu je prázdný.  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně, jejíž obsah má být zrušena a překreslení.  
+*nIndex*<br/>
+[in] Určuje index v podokně, jejíž obsah má být zrušena a překreslení.  
   
 ### <a name="remarks"></a>Poznámky  
  Když stavový řádek zneplatněna, označí se pro překreslení. Windows překreslí ho při `UpdateWindow` metoda odesílá zprávu WM_PAINT `OnPaint` metody.  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení pro kreslení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení pro kreslení.  
   
- [in] *pPane*  
- Ukazatel `CMFCStatusBarPaneInfo` strukturu, která obsahuje informace o podokně tak, aby vyžadovaly překreslení.  
+*pPane*<br/>
+[in] Ukazatel `CMFCStatusBarPaneInfo` strukturu, která obsahuje informace o podokně tak, aby vyžadovaly překreslení.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `OnDrawPane` překreslí v podokně s použitím kontextu zařízení *primárního řadiče domény* podle stylu a obsah v podokně.  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpIDArray*  
- [in] *nIDCount*  
+*lpIDArray*<br/>
+[in] [in] *nIDCount*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně, ke kterému chcete přiřadit k ní animace.  
+*nIndex*<br/>
+[in] Určuje index v podokně, ke kterému chcete přiřadit k ní animace.  
   
- [in] *hImageList*  
- Určuje popisovač pro seznam obrázků, která uchovává snímky animace.  
+*hImageList*<br/>
+[in] Určuje popisovač pro seznam obrázků, která uchovává snímky animace.  
   
- [in] *nFrameRate*  
- Určuje frekvenci snímků v milisekundách pro animaci.  
+*nFrameRate*<br/>
+[in] Určuje frekvenci snímků v milisekundách pro animaci.  
   
- [in] *bUpdate*  
- Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. V opačném případě se aktualizuje obsah podokně při jeho platnost.  
+*bUpdate*<br/>
+[in] Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. V opačném případě se aktualizuje obsah podokně při jeho platnost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete zakázat aktuální animace, zavolejte `SetPaneAnimation` s `hImageList` nastavena na hodnotu NULL.  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně pro kterou chcete nastavit novou barvou pozadí.  
+*nIndex*<br/>
+[in] Určuje index v podokně pro kterou chcete nastavit novou barvou pozadí.  
   
- [in] *clrBackground*  
- Určuje novou barvou pozadí.  
+*clrBackground*<br/>
+[in] Určuje novou barvou pozadí.  
   
- [in] *bUpdate*  
- Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
+*bUpdate*<br/>
+[in] Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  Nastavte ikonu panelu stavového řádku stav.  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně pro kterou chcete nastavit bitovou kopii.  
+*nIndex*<br/>
+[in] Určuje index v podokně pro kterou chcete nastavit bitovou kopii.  
   
- [in] *hIcon*  
- Určuje popisovač ikona nastavit jako obrázek podokna.  
+*hIcon*<br/>
+[in] Určuje popisovač ikona nastavit jako obrázek podokna.  
   
- [in] *bUpdate*  
- Určuje, zda pro aktualizaci obsahu podokna okamžitě.  
+*bUpdate*<br/>
+[in] Určuje, zda pro aktualizaci obsahu podokna okamžitě.  
   
- [in] *hBmp*  
- Určuje popisovač rastrový obrázek, nastavit jako obrázek podokna.  
+*hBmp*<br/>
+[in] Určuje popisovač rastrový obrázek, nastavit jako obrázek podokna.  
   
- [in] *clrTransparent*  
- Určuje průhlednou barvu rastrového obrázku, který *hBmp* označuje.  
+*clrTransparent*<br/>
+[in] Určuje průhlednou barvu rastrového obrázku, který *hBmp* označuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete předat HICON nebo HBITMAP spolu s průhledná barva obrázku v podokně nastavení. Pokud nechcete zobrazit obrázek déle, předejte hodnotu NULL jako popisovač bitové kopie.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně, pro které chcete aktualizovat indikátor průběhu.  
+*nIndex*<br/>
+[in] Určuje index v podokně, pro které chcete aktualizovat indikátor průběhu.  
   
- [in] *nCurr*  
- Určuje aktuální hodnotu indikátor průběhu.  
+*nCurr*<br/>
+[in] Určuje aktuální hodnotu indikátor průběhu.  
   
- [in] *bUpdate*  
- Určuje, zda by měl v podokně okamžitě aktualizovat.  
+*bUpdate*<br/>
+[in] Určuje, zda by měl v podokně okamžitě aktualizovat.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu volejte, pokud chcete aktualizovat indikátoru průběhu pro indikátor průběhu v podokně zadané.  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nStyle*  
+*nIndex*<br/>
+[in] [in] *nStyle*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *lpszNewText*  
+*nIndex*<br/>
+[in] [in] *lpszNewText*  
  [in] *bUpdate*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index v podokně, ke kterému chcete přiřadit novou barvu textu.  
+*nIndex*<br/>
+[in] Určuje index v podokně, ke kterému chcete přiřadit novou barvu textu.  
   
- [in] *clrText*  
- Určuje barvu textu.  
+*clrText*<br/>
+[in] Určuje barvu textu.  
   
- [in] *bUpdate*  
- Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
+*bUpdate*<br/>
+[in] Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  Nastavte šířku panelu stavového řádku stav.  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index podokno panelu Stav, pro kterou chcete nastavit novou šířku.  
+*nIndex*<br/>
+[in] Index podokno panelu Stav, pro kterou chcete nastavit novou šířku.  
   
- [in] *cx*  
- Novou šířku podokno panelu Stav, v pixelech.  
+*CX*<br/>
+[in] Novou šířku podokno panelu Stav, v pixelech.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  Nastavte text popisu tlačítka na panelu stavového řádku stav.  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index v podokně, ke kterému chcete přiřadit přejede myší.  
+*nIndex*<br/>
+[in] Index v podokně, ke kterému chcete přiřadit přejede myší.  
   
- [in] *pszTipText*  
- Nový text popisku.  
+*pszTipText*<br/>
+[in] Nový text popisku.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

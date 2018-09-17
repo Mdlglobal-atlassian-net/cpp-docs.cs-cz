@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCWindowsManagerDialog | Microsoft Docs
+title: Cmfcwindowsmanagerdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042094"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707002"
 ---
-# <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog – třída
-`CMFCWindowsManagerDialog` Objektu umožňuje uživatelům spravovat podřízených oken MDI v aplikaci MDI.  
+# <a name="cmfcwindowsmanagerdialog-class"></a>Cmfcwindowsmanagerdialog – třída
+`CMFCWindowsManagerDialog` Objektu umožňuje uživateli spravovat podřízená okna MDI v aplikaci MDI.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ class CMFCWindowsManagerDialog : public CDialog
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Vytvoří `CMFCWindowsManagerDialog` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMFCWindowsManagerDialog` Obsahuje seznam podřízených oken MDI, které jsou právě otevřeny v aplikaci. Uživatele můžete ručně řídit stav podřízených oken MDI pomocí tohoto dialogového okna.  
+ `CMFCWindowsManagerDialog` Obsahuje seznam podřízených oken MDI, které jsou právě otevřeny v aplikaci. Uživatele můžete ručně řídit stav podřízených oken MDI pomocí dialogovému oknu.  
   
- `CMFCWindowsManagerDialog` je vložena do [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md). `CMFCWindowsManagerDialog` Není třídu, která byste měli vytvořit ručně. Místo toho zavolejte funkci [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), a vytvoří a zobrazí `CMFCWindowsManagerDialog` objektu.  
+ `CMFCWindowsManagerDialog` je vložena do [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md). `CMFCWindowsManagerDialog` Se nejedná o třídu, která byste měli vytvořit ručně. Místo toho zavolejte funkci [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), potom vytvoří a zobrazí `CMFCWindowsManagerDialog` objektu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit `CMFCWindowsManagerDialog` objekt voláním `CMDIFrameWndEx::ShowWindowsDialog`. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit `CMFCWindowsManagerDialog` objektu voláním `CMDIFrameWndEx::ShowWindowsDialog`. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -61,13 +61,13 @@ class CMFCWindowsManagerDialog : public CDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
+ [Cmfcwindowsmanagerdialog –](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxWindowsManagerDialog.h  
   
 ##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
- Vytvoří [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) objektu.  
+ Vytvoří [cmfcwindowsmanagerdialog –](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) objektu.  
   
 ```  
 CMFCWindowsManagerDialog(
@@ -76,14 +76,14 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pMDIFrame*  
- Ukazatel na okno nadřazené nebo vlastníka.  
+*pMDIFrame*<br/>
+[in] Ukazatel na okno nadřazené nebo vlastníka.  
   
- [v] *bHelpButton*  
- Parametr typu Boolean, která určuje, zda se má zobrazit rozhraní **pomoci** tlačítko.  
+*bHelpButton*<br/>
+[in] Parametr logické hodnoty, která určuje, zda se zobrazí rozhraní framework **pomáhají** tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o správcích visual najdete v tématu [správce vizualizace](../../mfc/visualization-manager.md).  
+ Další informace o vzhledu najdete v tématu [správce vizualizace](../../mfc/visualization-manager.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

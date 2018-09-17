@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711110"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Specifické pro Microsoft**  
@@ -41,14 +41,14 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Port`  
- Port, který se má číst z.  
+*Port*<br/>
+[in] Port, který se má číst z.  
   
- [out] `Buffer`  
- Tady je zapsána data načtená z portu.  
+*Vyrovnávací paměti*<br/>
+[out] Tady je zapsána data načtená z portu.  
   
- [in] `Count`  
- Počet slov data ke čtení.  
+*Počet*<br/>
+[in] Počet slov data ke čtení.  
   
 ## <a name="requirements"></a>Požadavky  
   

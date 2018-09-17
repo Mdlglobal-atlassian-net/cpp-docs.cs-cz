@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336982"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709836"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate – třída
 Abstraktní základní třída definující základní funkčnost pro šablony dokumentů.  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPathName*  
- Ukazatel na cestu k souboru, který obsahuje dokument otevřít.  
+*lpszPathName*<br/>
+[in] Ukazatel na cestu k souboru, který obsahuje dokument otevřít.  
   
- [in] *bAddToMRU*  
- Hodnota TRUE označuje, že dokument je jednou z nejnovější soubory; Hodnota FALSE označuje, že dokument není jeden z posledních souborů.  
+*bAddToMRU*<br/>
+[in] Hodnota TRUE označuje, že dokument je jednou z nejnovější soubory; Hodnota FALSE označuje, že dokument není jeden z posledních souborů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na dokument, soubor je pojmenován podle *lpszPathName*; Hodnota NULL, pokud není úspěšné.  

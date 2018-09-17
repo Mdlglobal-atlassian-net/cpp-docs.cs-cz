@@ -1,5 +1,5 @@
 ---
-title: -FD (minimální opětovné sestavení IDE) | Microsoft Docs
+title: -FD (minimální opětovné sestavení IDE) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e31955b131e4ca22d23013565e53f83493275d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702439"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (minimální opětovné sestavení IDE)
-**/FD** není dostupná uživatelům s výjimkou v [příkazového řádku](../../ide/command-line-property-pages.md) stránce vlastností projektu C++ **stránky vlastností** dialogové okno pole, pokud a pouze v případě [/Gm (povolit minimální sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) zároveň nevyberete. **/FD** nemá žádný vliv jiné než z vývojového prostředí. **/FD** nebude vystavena, ve výstupu **cl /?**.  
-  
- Pokud nepovolíte **/Gm** ve vývojovém prostředí **/FD** se použije. **/FD** zajistí, že soubor IDB má dostatek informací o závislostech. **/FD** se používá pouze ve vývojovém prostředí a neměl by být použit z příkazového řádku nebo skriptu buildu.  
-  
-## <a name="see-also"></a>Viz také  
- [Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+**/FD** nezveřejňují uživatelům s výjimkou v [příkazového řádku](../../ide/command-line-property-pages.md) stránku vlastností projektu C++ **stránky vlastností** dialogové okno, pokud a pouze v případě [/Gm (povolení minimálního opětovného sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) zároveň nevyberete. **/FD** nemá žádný vliv jiné než z vývojového prostředí. **/FD** nezveřejňují v rámci výstupu **cl /?**.
+
+Pokud nepovolíte **/Gm** ve vývojovém prostředí **/FD** se použije. **/FD** zajišťuje, že souboru IDB má dostatek informací o závislostech. **/FD** slouží pouze ve vývojovém prostředí a neměl by se používat z příkazového řádku nebo skriptu sestavení.
+
+## <a name="see-also"></a>Viz také
+
+[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

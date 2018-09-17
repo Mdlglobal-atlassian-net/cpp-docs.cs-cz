@@ -1,5 +1,5 @@
 ---
-title: -MD,. -MT, -LD (použít běhovou knihovnu) | Microsoft Docs
+title: -MD, -MT, -LD (použití knihovny Run-Time) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,59 +45,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378256"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701360"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Použít běhovou knihovnu)
-Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo ladicí verze knihovny runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/MD[d]  
-/MT[d]  
-/LD[d]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**/MD**|Způsobí, že aplikace použije verzi knihovny runtime, která je vícevláknová a specifická pro knihovnu DLL. Definuje `_MT` a `_DLL` a způsobí, že kompilátor název knihovny MSVCRT.lib umístěte do souboru .obj.<br /><br /> Aplikace kompilované s tímto parametrem jsou staticky propojeny se souborem MSVCRT.lib. Tato knihovna poskytuje vrstvu kódu, která linkeru umožňuje překládat externí odkazy. Skutečné pracovní kódu je součástí MSVCR*cisloverze*. Knihovny DLL, které musí být k dispozici v době běhu aplikací propojená s MSVCRT.lib.|  
-|**/ MDd**|Definuje `_DEBUG`, `_MT`, a `_DLL` a způsobí, že aplikace pro používání ladění vícevláknový specifické a knihovny DLL verze běhové knihovny. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|  
-|**/MT**|Způsobí, že aplikace použije vícevláknovou statickou verzi knihovny runtime. Definuje `_MT` a způsobí, že kompilátor umístěte název knihovny LIBCMT.lib do souboru .obj tak, aby linkeru použije LIBCMT.lib přeložit externí symboly.|  
-|**/MTd**|Definuje `_DEBUG` a `_MT`. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.|  
-|**/LD**|Vytvoří knihovnu DLL.<br /><br /> Předává **/dll** možnosti linkeru. Linkeru hledá, ale nevyžaduje, `DllMain` funkce. Pokud jste Nezapisovat `DllMain` vloží linkeru funkce, `DllMain` funkce, která vrátí hodnotu TRUE.<br /><br /> Propojí spouštěcí kód knihovny DLL.<br /><br /> Vytvoří knihovnu importu (.lib), není-li na příkazovém řádku zadán soubor exportu (.exp). Knihovnu importu propojíte s aplikacemi, které volají vaši knihovnu DLL.<br /><br /> Interpretuje [/Fe (název souboru EXE)](../../build/reference/fe-name-exe-file.md) jako pojmenování knihovny DLL, nikoli soubor .exe. Ve výchozím nastavení, stane se název programu *basename*.dll místo *basename*.exe.<br /><br /> Znamená **/MT** explicitně nezadáte **/MD**.|  
-|**/ LDd**|Vytvoří ladicí knihovnu DLL. Definuje `_MT` a `_DEBUG`.|  
-  
- Další informace o běhové knihovny jazyka C a které knihovny se používají při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), najdete v části [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).  
-  
- Všechny moduly předaný dané vyvolání linkeru musí být zkompilován s stejná knihovna RTL – možnost kompilátoru (**/MD**, **/MT**, **/LD**).  
-  
- Další informace o tom, jak používat ladicí verze běhové knihovny najdete v tématu [referenční dokumentace knihoven C Run-Time](../../c-runtime-library/c-run-time-library-reference.md).  
-  
- Výběr příslušné knihovny runtime jazyka C popisuje také článek Q140584 znalostní báze Knowledge Base.  
-  
- Další informace o rozhraní DLLs najdete v tématu [knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozbalte **C/C++** složky.  
-  
-3.  Vyberte **generování kódu** stránku vlastností.  
-  
-4.  Změnit **Runtime Library** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo ladicí verze knihovny runtime.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/MD[d]
+/MT[d]
+/LD[d]
+```
+
+## <a name="remarks"></a>Poznámky
+
+|Možnost|Popis|
+|------------|-----------------|
+|**/ MD**|Způsobí, že aplikace použije verzi knihovny runtime, která je vícevláknová a specifická pro knihovnu DLL. Definuje `_MT` a `_DLL` a způsobí, že kompilátor umístí knihovnu s názvem MSVCRT.lib do souboru .obj.<br /><br /> Aplikace kompilované s tímto parametrem jsou staticky propojeny se souborem MSVCRT.lib. Tato knihovna poskytuje vrstvu kódu, která linkeru umožňuje překládat externí odkazy. Skutečný pracovní kód je obsažen v knihovně MSVCR*číslo_verze*. Knihovny DLL, která musí být k dispozici v době běhu k aplikacím propojeným s knihovnou MSVCRT.lib.|
+|**/ MDd**|Definuje `_DEBUG`, `_MT`, a `_DLL` a způsobí, že aplikace použije ladicí Vícevláknová a specifická knihovnu DLL verze knihovny run-time. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
+|**/MT**|Způsobí, že aplikace použije vícevláknovou statickou verzi knihovny runtime. Definuje `_MT` a způsobí, že kompilátor umístí knihovnu s názvem LIBCMT.lib do souboru .obj, aby linker použil k překladu externích symbolů LIBCMT.lib.|
+|**/MTd**|Definuje `_DEBUG` a `_MT`. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.|
+|**/LD**|Vytvoří knihovnu DLL.<br /><br /> Předává **/dll** – možnost linkeru. Propojovací program hledá, ale nevyžaduje, `DllMain` funkce. Pokud nenapíšete `DllMain` vloží linker funkci `DllMain` funkce, která vrací hodnotu TRUE.<br /><br /> Propojí spouštěcí kód knihovny DLL.<br /><br /> Vytvoří knihovnu importu (.lib), není-li na příkazovém řádku zadán soubor exportu (.exp). Knihovnu importu propojíte s aplikacemi, které volají vaši knihovnu DLL.<br /><br /> Interpretuje [/Fe (pojmenování souboru EXE)](../../build/reference/fe-name-exe-file.md) jako pojmenování knihovny DLL a nikoli souboru .exe. Ve výchozím nastavení, název programu bude *basename*.dll namísto *basename*.exe.<br /><br /> Zahrnuje **/MT** Pokud explicitně neurčíte **/MD**.|
+|**/ LDd**|Vytvoří ladicí knihovnu DLL. Definuje `_MT` a `_DEBUG`.|
+
+Další informace o běhové knihovny jazyka C a které knihovny se používají při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), naleznete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+
+Všechny moduly předané danému vyvolání linkeru musí být zkompilovány s možností kompilátoru stejné knihovny run-time (**/MD**, **/MT**, **/LD**).
+
+Další informace o použití ladicích verzí knihoven runtime naleznete v tématu [C Run-Time Library Reference](../../c-runtime-library/c-run-time-library-reference.md).
+
+Výběr příslušné knihovny runtime jazyka C popisuje také článek Q140584 znalostní báze Knowledge Base.
+
+Další informace o knihovnách DLL naleznete v tématu [knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Rozbalte **C/C++** složky.
+
+1. Vyberte **generování kódu** stránku vlastností.
+
+1. Upravit **knihovny prostředí Runtime** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

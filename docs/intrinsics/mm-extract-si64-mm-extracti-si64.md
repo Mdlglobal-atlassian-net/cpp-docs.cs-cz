@@ -1,5 +1,5 @@
 ---
-title: _mm_extract_si64 _mm_extracti_si64 | Microsoft Docs
+title: _mm_extract_si64 _mm_extracti_si64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8ba4986abf097a5827d3db7f93dbbd0a9640862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d4db2fa67924a6925a19d2714c604f2c9aaa4e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705650"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
-**Konkrétní Microsoft**  
+
+**Specifické pro Microsoft**  
   
- Generuje `extrq` instrukce k extrahování určené bits z nízkou 64 bitů svůj první argument.  
+Generuje `extrq` instrukce k extrakci zadané bitů z nízké 64 bitů svůj první argument.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +47,24 @@ __m128i _mm_extracti_si64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Source`  
- Pole 128-bit s vstupní data v jeho nižší 64 bitů.  
+*Zdroj*<br/>
+[in] 128bitové pole se vstupní data v dolním 64 bitů.  
   
- [v]  `Descriptor`  
- Pole 128-bit, který popisuje pole bit k extrakci.  
+*Popisovač*<br/>
+[in] Pole 128-bit, který popisuje bitové pole k extrakci.  
   
- [v]  `Length`  
- Celé číslo, které určuje délka pole k extrakci.  
+*Délka*<br/>
+[in] Celé číslo, které určuje délku pole, které chcete extrahovat.  
   
- [v]  `Index`  
- Celé číslo, které určuje index pole extrahovat  
+*Index*<br/>
+[in] Celé číslo, které určuje index pole k extrahování  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pole 128-bit s poli extrahované v jeho nejméně významný bits.  
+ 128bitové pole s polem extrahované v její nejméně významných bitů.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
@@ -71,13 +72,13 @@ __m128i _mm_extracti_si64(
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní vygeneruje `extrq` instrukce k extrakci bits z `Source`. Existují dvě verze tohoto vnitřní: `_mm_extracti_si64` je okamžitou verze a `_mm_extract_si64` je ten, který není okamžitý.  Každá verze extrahuje z `Source` bitové pole definované jeho délky a index jeho nejméně významný bit. Hodnot délkou a index, která mod 64, proto se jako 63 interpretují -1 do 127. Pokud součet (snížené) indexu a délky (snížené) pole je větší než 64, není definován výsledky. Hodnota 0 pro délka pole interpretována jako 64. Pokud jsou oba nulové, služba bits 63:0 z index délku a bitová pole `Source` extrahují. Pokud bit index je nulová délka pole je nulová. však není definován výsledky.  
+ Tomto vnitřní vygeneruje `extrq` instrukce k extrakci bitů z `Source`. Existují dvě verze tohoto vnitřní: `_mm_extracti_si64` okamžité verze a `_mm_extract_si64` je – okamžitě.  Každá verze extrahuje ze `Source` bitového pole definované jeho délky a index jeho nejméně významných bitů. Index a délka hodnoty pocházejí mod 64, tedy -1 do 127 číslic se interpretují jako 63. Pokud součet (nižší) index a délky pole (nižší) je větší než 64, nejsou výsledky definovány. Hodnota 0 pro délku pole je interpretován jako 64. Pokud je index délku a bitová pole jsou obě nulové, služba bits 63:0 z `Source` jsou extrahovány. Pokud délka pole je nula, ale bit index je nenulová, nejsou výsledky definovány.  
   
- Ve volání _mm_extract_si64 `Descriptor` obsahuje index v 13:8 bitů a délky pole dat extrahovat v bits 5:0...  
+ Ve volání _mm_extract_si64 `Descriptor` obsahuje index v 13:8 bitů a délku pole dat extrahovaným bits 5:0..  
   
- Když zavoláte `_mm_extracti_si64` s argumenty, nemůže být konstanty typu integer zjistit kompilátor kompilátor generuje kód do pack tyto hodnoty do registraci XMM (`Descriptor`) a k volání `_mm_extract_si64`.  
+ Při volání `_mm_extracti_si64` argumentů, kompilátor nemůže určit být konstanty typu integer kompilátor generuje kód se zabalit tyto hodnoty do registru XMM (`Descriptor`) a k volání `_mm_extract_si64`.  
   
- K určení podporu hardwaru pro `extrq` instrukce, volání `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze bude 1, pokud je podporováno pokyn a 0 jinak. Pokud spustíte kód, který používá tento vnitřní hardware, který nepodporuje `extrq` instrukce, nepředvídatelné výsledky.  
+ K určení hardwarovou podporu `extrq` instrukce, volání `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze bude 1, pokud podporované instrukce a 0 jinak. Pokud je třeba spustit kód, který používá tento vnitřní hardware, který nepodporuje `extrq` instrukce, výsledky nepředvídatelné.  
   
 ## <a name="example"></a>Příklad  
   
@@ -114,8 +115,9 @@ result2 = 0x30eca86
 result3 = 0x30eca86  
 ```  
   
-**Konkrétní Microsoft END**  
- Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**
+
+Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   

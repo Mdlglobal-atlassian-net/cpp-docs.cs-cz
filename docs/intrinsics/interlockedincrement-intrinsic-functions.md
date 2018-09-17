@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 369d7c1c6c5bf2201c52bab67361f196b309c6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702543"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedIncrement
 **Specifické pro Microsoft**  
@@ -108,8 +108,8 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `lpAddend`  
- Ukazatel na proměnnou se zvýší.  
+*lpAddend*<br/>
+[out v] Ukazatel na proměnnou se zvýší.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota je výsledná hodnota zvýšena.  

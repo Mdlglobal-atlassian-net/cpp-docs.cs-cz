@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711383"
 ---
 # <a name="uniquelock-class"></a>unique_lock – třída
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
+*Jiné*<br/>
 A `unique_lock` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
+*Jiné*<br/>
 A `unique_lock` objektu.
 
 ## <a name="try_lock"></a>  try_lock –
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time*  
+*Rel_time*<br/>
 A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time*  
+*Abs_time*<br/>
 Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>Parametry
 
-*Mtx*  
+*Mtx*<br/>
 Typ objektu mutex.
 
-*Rel_time*  
+*Rel_time*<br/>
 A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.
 
-*Abs_time*  
+*Abs_time*<br/>
 Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metody se již nebude pokoušet o získání vlastnictví `mutex`.
 
-*Jiné*  
+*Jiné*<br/>
 A `unique_lock` objektu.
 
 ### <a name="remarks"></a>Poznámky

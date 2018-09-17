@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315025"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703557"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být testovány z hlediska nerovnost.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být testovány z hlediska nerovnost.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit.
+*doleva*<br/>
+Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit.
 
-*doprava*  
- Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray.
+*doprava*<br/>
+Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doleva*<br/>
+První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
+*doleva*<br/>
+Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-*doprava*  
- Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
+*doprava*<br/>
+Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
+*doleva*<br/>
+Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-*doprava*  
- Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
+*doprava*<br/>
+Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Hodnota nebo valarray –, který slouží jako minuend, ze kterého jiných hodnot nebo valarrays se bude odečítat v které tvoří rozdíl.
+*doleva*<br/>
+Hodnota nebo valarray –, který slouží jako minuend, ze kterého jiných hodnot nebo valarrays se bude odečítat v které tvoří rozdíl.
 
-*doprava*  
- Hodnota nebo valarray –, který slouží jako, který se bude odečítat od jiných hodnot nebo valarrays v které tvoří rozdíl menšitel.
+*doprava*<br/>
+Hodnota nebo valarray –, který slouží jako, který se bude odečítat od jiných hodnot nebo valarrays v které tvoří rozdíl menšitel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit do tvořící podíl.
+*doleva*<br/>
+Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit do tvořící podíl.
 
-*doprava*  
- Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray v tvořící podíl.
+*doprava*<br/>
+Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray v tvořící podíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays, jehož prvky mají být testovány z hlediska rovnosti.
+*doleva*<br/>
+První dva valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
-*doprava*  
- Druhé dvě valarrays, jehož prvky mají být testovány z hlediska rovnosti.
+*doprava*<br/>
+Druhé dvě valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doleva*<br/>
+První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doleva*<br/>
+První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*  
- První dva valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
+*doleva*<br/>
+První dva valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-*doprava*  
- Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
+*doprava*<br/>
+Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 

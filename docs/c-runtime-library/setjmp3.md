@@ -1,5 +1,5 @@
 ---
-title: _setjmp3 – | Microsoft Docs
+title: _setjmp3 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,15 +29,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1db24214cde4358e55f86ce5ca60f3547220511f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408364"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704311"
 ---
 # <a name="setjmp3"></a>_setjmp3
-Vnitřní funkce CRT. Na nové implementace `setjmp` funkce.  
+Vnitřní funkce CRT. Novou implementaci `setjmp` funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,20 +50,20 @@ int _setjmp3(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `env`  
- Adresa vyrovnávací paměti pro ukládání informací o stavu.  
+*env*<br/>
+[out] Adresa vyrovnávací paměti pro ukládání informací o stavu.  
   
- [v] `count`  
- Počet Další `DWORD`s informací, které jsou uložené v `optional parameters`.  
+*Počet*<br/>
+[in] Počet dalších `DWORD`s informací, které jsou uloženy v `optional parameters`.  
   
- [v] `optional parameters`  
- Další data posunuta pomocí `setjmp` vnitřní. První `DWORD` je ukazatel na funkci, která se používá k unwind doplňující data a vrátit do stálého registru zaregistrovat stavu. Druhý `DWORD` je úroveň zkuste obnovit. Žádná další data se uloží do pole obecných datových v `jmp_buf`.  
+*Volitelné parametry*<br/>
+[in] Další data nasdílí `setjmp` vnitřní. První `DWORD` je ukazatel na funkci, která slouží k uvolnění doplňující data a vrátit se stálé registraci stavu. Druhá `DWORD` je úroveň, zkuste obnovit. Další data se uloží do pole Obecná data v `jmp_buf`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu 0.  
   
 ## <a name="remarks"></a>Poznámky  
- Nepoužívejte tuto funkci v programu C++. Je vnitřní funkce, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, najdete v části [používání setjmp/longjmp](../cpp/using-setjmp-longjmp.md).  
+ Nepoužívejte tuto funkci v programu v jazyce C++. Je vnitřní funkce, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, naleznete v tématu [používání setjmp/longjmp](../cpp/using-setjmp-longjmp.md).  
   
 ## <a name="requirements"></a>Požadavky  
   

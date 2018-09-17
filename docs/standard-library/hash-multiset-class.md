@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 767c57db8f9af90ab997b0e75ce40461a2494725
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701868"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset – třída
 
@@ -120,13 +120,13 @@ class hash_multiset
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ dat prvku, který bude uložen do hash_multiset.
+Typ dat prvku, který bude uložen do hash_multiset.
 
 *Osobnostní rysy*<br/>
- Typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíčové hodnoty unární predikát mapování elementů na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
+Typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíčové hodnoty unární predikát mapování elementů na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multiset –. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_multiset –. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč prvky lze porovnat z hash_multiset.
+Klíč prvky lze porovnat z hash_multiset.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1022,7 +1022,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1111,16 +1111,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozice prvku, který chcete odebrat z hash_multiset.
+Pozice prvku, který chcete odebrat z hash_multiset.
 
 *první*<br/>
- Pozice prvního prvku odebrán hash_multiset.
+Pozice prvního prvku odebrán hash_multiset.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem odebrán hash_multiset.
+Pozice bezprostředně za posledním prvkem odebrán hash_multiset.
 
 *Klíč*<br/>
- Klíč prvky, které mají být odebrány hash_multiset –.
+Klíč prvky, které mají být odebrány hash_multiset –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1232,7 +1232,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1667,7 +1667,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2150,7 +2150,7 @@ void swap(hash_multiset& right);
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Hash_multiset – argument poskytující prvky pro záměnu s hash_multiset – cíl.
+Hash_multiset – argument poskytující prvky pro záměnu s hash_multiset – cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2226,7 +2226,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_multiset vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 

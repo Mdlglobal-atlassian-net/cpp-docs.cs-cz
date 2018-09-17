@@ -1,5 +1,5 @@
 ---
-title: Dot direktivy | Microsoft Docs
+title: Dot direktivy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29eeedbdc2eaccb753751082a38736fa239837b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2f4b984bcfe1aa89fd8e0229c7381c0d01f8685
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714608"
 ---
 # <a name="dot-directives"></a>Direktivy s tečkou
-Zadejte direktivy s tečkou mimo blok popis na začátku řádku. Direktivy s tečkou začínat tečkou (. ) a jsou následovaným dvojtečkou (:). Jsou povoleny mezery a karty. Direktivy názvy tečkou se rozlišují malá a velká písmena.  
-  
-|– Direktiva|Účel|  
-|---------------|-------------|  
-|**. IGNORUJTE:**|Ignoruje nenulový ukončovací kód vrátí příkazy z místa, které jsou zadány na konec objektu souboru pravidel. Ve výchozím nastavení NMAKE zastaví, pokud příkaz vrátí nenulový ukončovací kód. K obnovení, kontroly chyb, použijte **! Cmdswitches –**. Ignorovat ukončovací kód pro jeden příkaz, použijte modifikátor pomlčky (-). Chcete-li ignorovat ukončovací kód pro celý soubor, použijte / I.|  
-|**. DRAHÝCH:** *cíle*|Zachovává *cíle* na disku při zastavení jsou příkazy k jejich aktualizaci; nemá vliv, pokud příkaz přerušení zpracovává odstraněním souboru. Cílové názvy oddělujte mezery nebo karty. Ve výchozím nastavení odstraní NMAKE cíl, pokud dojde k přerušení sestavení CTRL + C nebo CTRL + BREAK. Každý použití **. DRAHOCENNÝ** se vztahují na celou makefile; více specifikace jsou kumulativní.|  
-|**. TICHOU:**|Potlačí zobrazení spuštění příkazů z místa, které jsou zadány na konec objektu souboru pravidel. Ve výchozím nastavení zobrazí NMAKE příkazy, které vyvolá. Pokud chcete obnovit, zobrazování, použijte **! Cmdswitches –**. Chcete-li potlačit zobrazení do jednoho příkazu, použijte **@** modifikátor. K potlačení odezva pro celý soubor, použijte/S.|  
-|**. PŘÍPONY:** `list`|Obsahuje seznam rozšíření pro odvozené pravidlo odpovídající; předdefinované zahrnují následující přípony: .exe .obj .asm .c sada .cxx BAS .cbl .for .pas .res .rc .f .f90|  
-  
- Chcete-li změnit **. PŘÍPONY** seznamu pořadí nebo pokud chcete zadat nový seznam, vymažte seznamu a zadejte nové nastavení. Vymazání seznamu, zadejte po dvojtečkou se žádné přípony:  
-  
-```  
-.SUFFIXES :  
-```  
-  
- Chcete-li přidat další přípony na konec seznamu, zadejte  
-  
-```  
-.SUFFIXES : suffixlist  
-```  
-  
- kde *suffixlist* je seznam další přípony, oddělených mezery nebo karty. Chcete-li zobrazit aktuální nastavení **. PŘÍPONY**, spusťte s parametrem/p. NMAKE  
-  
-## <a name="see-also"></a>Viz také  
- [NMAKE – referenční zdroje](../build/nmake-reference.md)
+
+Zadejte direktivy s tečkou mimo blok popis na začátku řádku. Direktivy s tečkou začínat tečkou (. ) a jsou následovaný dvojtečkou (:). Jsou povoleny mezerami a tabulátory. Tečka direktiv názvy jsou malá a velká písmena a velká písmena.
+
+|– Direktiva|Účel|
+|---------------|-------------|
+|**. IGNORUJTE:**|Ignoruje nenulový ukončovací kód vrácený příkazy z místa, který je zadaný na konec souboru pravidel. Ve výchozím nastavení NMAKE zastaví, pokud příkaz vrátí nenulový ukončovací kód. K obnovení, kontroly chyb, použijte **! CMDSWITCHES**. Chcete-li ignorovat ukončovací kód pro jediný příkaz, použijte modifikátor pomlčky (-). Chcete-li ignorovat ukončovací kód pro celý soubor, použijte / I.|
+|**. DRAHÝMI:** *cíle*|Zachová *cíle* na disku při zastavení se příkazy k jejich aktualizaci; nemá vliv, pokud příkaz zpracovává přerušení odstraněním souboru. Cílové názvy oddělte mezery nebo tabulátory. Ve výchozím nastavení odstraní NMAKE cíl, pokud dojde k přerušení sestavení pomocí kombinace kláves CTRL + C nebo CTRL + BREAK. Každé použití klíčového **. CENNÝ** se vztahuje na celý soubor pravidel; více specifikace jsou kumulativní.|
+|**. TICHÉ:**|Potlačí zobrazení provedených příkazů z místa, který je zadaný na konec souboru pravidel. Ve výchozím nastavení zobrazí NMAKE příkazy, které vyvolá. Chcete-li obnovit, zobrazování, použijte **! CMDSWITCHES**. Chcete-li potlačit zobrazení jediným příkazem, použijte **@** modifikátor. Potlačí zobrazování pro celý soubor, použijte/S.|
+|**. PŘÍPONY:** `list`|Zobrazí seznam rozšíření pro porovnávání odvozené pravidlo; předdefinované zahrnují následující přípony: .exe .obj .asm .c .cpp .cxx BAS .cbl tlačítka .pas .res .rc .f .f90|
+
+Chcete-li změnit **. PŘÍPONY** seznamu pořadí nebo pokud chcete zadat nový seznam, vymazání seznamu a zadejte nové nastavení. Vymazat seznam, zadejte žádná rozšíření po dvojtečka:
+
+```
+.SUFFIXES :
+```
+
+Chcete-li přidat další přípony na konec seznamu, zadejte
+
+```
+.SUFFIXES : suffixlist
+```
+
+kde *suffixlist* seznam obsahuje další přípony, oddělené mezerami nebo karty. Pokud chcete zobrazit aktuální nastavení **. PŘÍPONY**, spusťte s parametrem/p. NMAKE
+
+## <a name="see-also"></a>Viz také
+
+[NMAKE – referenční zdroje](../build/nmake-reference.md)

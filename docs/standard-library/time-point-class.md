@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319016"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705975"
 ---
 # <a name="timepoint-class"></a>time_point – třída
 
@@ -111,8 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*  
- A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -128,8 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*  
- A `duration` objektu.
+*Doba trvání*<br/>
+A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -150,11 +150,11 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*  
- A [doba trvání](../standard-library/duration-class.md) objektu.
+*Doba trvání*<br/>
+A [doba trvání](../standard-library/duration-class.md) objektu.
 
-*Zpracování transakcí*  
- A `time_point` objektu.
+*Zpracování transakcí*<br/>
+A `time_point` objektu.
 
 ### <a name="remarks"></a>Poznámky
 

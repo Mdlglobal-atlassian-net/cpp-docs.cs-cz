@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bdc9d89dbc0e77a8002cc34e5d010ee49d761da4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894639"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706690"
 ---
 # <a name="running-nmake"></a>Spuštění příkazu NMAKE
 
@@ -41,11 +41,11 @@ Zadat jenom sestavení NMAKE *cíle* nebo, pokud není zadaný žádný, první 
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-[NMake – možnosti](../build/nmake-options.md)  
+[NMake – možnosti](../build/nmake-options.md)
 
-[Tools.ini a příkaz NMAKE](../build/tools-ini-and-nmake.md)  
+[Tools.ini a příkaz NMAKE](../build/tools-ini-and-nmake.md)
 
-[Kódy ukončení příkazu NMake](../build/exit-codes-from-nmake.md)  
+[Kódy ukončení příkazu NMake](../build/exit-codes-from-nmake.md)
 
 ## <a name="see-also"></a>Viz také
 

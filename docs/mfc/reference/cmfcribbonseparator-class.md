@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849761"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705312"
 ---
 # <a name="cmfcribbonseparator-class"></a>Cmfcribbonseparator – třída
 Implementuje oddělovač pásu karet.  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndListBox*  
- Ukazatel **příkazy** seznam, kde se přidá oddělovače.  
+*pWndListBox*<br/>
+[in] Ukazatel **příkazy** seznam, kde se přidá oddělovače.  
   
- [in] *bDeep*  
- Ignorovat.  
+*bDeep*<br/>
+[in] Ignorovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule na řetězec v poli určeném *pWndListBox*.  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsHoriz*  
- Hodnota TRUE znamená, že oddělovač je vodorovné; Pokud má hodnotu FALSE, oddělovač je svislý.  
+*bIsHoriz*<br/>
+[in] Hodnota TRUE znamená, že oddělovač je vodorovné; Pokud má hodnotu FALSE, oddělovač je svislý.  
   
 ### <a name="remarks"></a>Poznámky  
  Vodorovné oddělovače jsou použité v nabídkách aplikace. Svislé oddělovače se používají v panelech nástrojů.  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Src*  
- Zdroj pásu karet elementu, který chcete kopírovat.  
+*src*<br/>
+[in] Zdroj pásu karet elementu, který chcete kopírovat.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Vrátí velikost položky oddělovače.  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na obsah zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na obsah zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost oddělovač v kontextu daného zařízení.  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Volá se v systému k vykreslení oddělovač **příkazy** seznamu.  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *primárního řadiče domény*|Ukazatel na kontext zařízení.|  
-|[in] *strText*|Text zobrazený v seznamu.|  
-|[in] *nTextOffset*|Vzdálenost mezi textem a levé straně ohraničující obdélník.|  
-|[in] *rect*|Určuje ohraničující obdélník.|  
-|[in] *bIsSelected*|Ignorovat.|  
-|[in] *bHighlighted*|Ignorovat.|  
+|*primární řadič domény*|[in] Ukazatel na kontext zařízení.|  
+|*strText*|[in] Text zobrazený v seznamu.|  
+|*nTextOffset*|[in] Vzdálenost mezi textem a levé straně ohraničující obdélník.|  
+|*Rect*|[in] Určuje ohraničující obdélník.|  
+|*bIsSelected*|[in] Ignorovat.|  
+|*bHighlighted*|[in] Ignorovat.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

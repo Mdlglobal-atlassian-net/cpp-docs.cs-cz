@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894587"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706937"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
 
@@ -38,7 +38,7 @@ Určuje soubor odpovědí pro možnosti příkazového řádku MIDL
 
 ## <a name="arguments"></a>Arguments
 
-*Soubor*  
+*Soubor*<br/>
 Název souboru, který obsahuje [možností příkazového řádku MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Poznámky
@@ -61,9 +61,9 @@ Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řáde
 
 ## <a name="see-also"></a>Viz také
 
-[Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
-[Možnosti linkeru](../../build/reference/linker-options.md)   
-[/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/ IGNOREIDL (Nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/ TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[Sestavení programu s atributy](../../windows/building-an-attributed-program.md)
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (Nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[sestavení programu s atributy](../../windows/building-an-attributed-program.md)

@@ -1,5 +1,5 @@
 ---
-title: Přehled LIB | Microsoft Docs
+title: Přehled LIB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,117 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 223f5284ed25b5a13fddef879e63ec2e480f3314
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703764"
 ---
 # <a name="overview-of-lib"></a>Přehled LIB
-LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, které můžete použít se [odkaz](../../build/reference/linker-options.md) při sestavování programu. LIB se spouští z příkazového řádku.  
-  
- LIB můžete použít v následujících režimech:  
-  
--   [Vytváříte nebo upravujete knihovnu COFF](../../build/reference/managing-a-library.md)  
-  
--   [Extrahování člena objektu do souboru](../../build/reference/extracting-a-library-member.md)  
-  
--   [Vytvoření souboru exportu a knihovnu importu](../../build/reference/working-with-import-libraries-and-export-files.md)  
-  
- Tyto režimy se vzájemně vylučují. současně můžete použít LIB v pouze jeden režim.  
-  
-## <a name="lib-options"></a>Možnosti lib  
- Následující tabulka uvádí možnosti lib.exe, se zobrazí odkaz na další informace.  
-  
- **/ DEF**  
- Vytvořte knihovnu importu a souboru exportu.  
-  
- Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).  
-  
- **/ ERRORREPORT**  
- Odesílat informace společnosti Microsoft o s lib.exe s interními chybami.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
- **/EXPORT**  
- Export funkce z vaší aplikace.  
-  
- Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).  
-  
- **/ EXTRACT**  
- Vytvořte soubor objektu (.obj), který obsahuje kopii členem existující knihovnu.  
-  
- Další informace najdete v části [extrahování člena knihovny](../../build/reference/extracting-a-library-member.md).  
-  
- **/ INCLUDE**  
- Přidá symbol do tabulky symbolů.  
-  
- Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).  
-  
- **/ LIBPATH**  
- Přepíše danou cestu knihovny prostředí.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **NEBO JEJICH VÝPISU**  
- Zobrazí informace o knihovně výstup standardním výstupu.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **/LTCG**  
- Způsobí, že knihovnu, která má být sestaven pomocí kódu v době propojování generace.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
- **/ MACHINE**  
- Určuje cílovou platformu programu.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
- **/ NAME**  
- Při sestavování knihovnu importu, určuje název knihovny DLL, pro kterou je vytvořený knihovny importu.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **/ NODEFAULTLIB**  
- Odebere ze seznamu knihoven, které vyhledávání při rozpoznávání externí odkazy na jeden nebo více výchozí knihovny.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **/NOLOGO**  
- Potlačí zobrazení LIB autorským zprávu a verze číslo a zabraňuje zobrazování příkaz souborů.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
- **/ OUT**  
- Přepíše výchozí název výstupního souboru.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **NEBO ODEBRAT**  
- Vynechá objekt z knihovny výstup.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **/SUBSYSTEM**  
- Informuje operačního systému, jak spustit program vytvořené připojování ke knihovně výstup.  
-  
- Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
-  
- **/ VERBOSE**  
- Zobrazí podrobnosti o průběhu relace, včetně názvů soubory .obj, který chcete přidat.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
- **/WX**  
- Upozornění považovat za chyby.  
-  
- Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace LIB](../../build/reference/lib-reference.md)   
- [Vstupní soubory LIB](../../build/reference/lib-input-files.md)   
- [LIB – výstupní soubory](../../build/reference/lib-output-files.md)   
- [Další výstup LIB](../../build/reference/other-lib-output.md)   
- [Struktura knihovny](../../build/reference/structure-of-a-library.md)
+
+LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory můžete použít s [odkaz](../../build/reference/linker-options.md) při sestavování programu. Lib – spustí z příkazového řádku.
+
+Lib – můžete použít v následujících režimech:
+
+- [Vytvářejí nebo upravují knihoven COFF](../../build/reference/managing-a-library.md)
+
+- [Extrahování člena objektu do souboru](../../build/reference/extracting-a-library-member.md)
+
+- [Vytvoření souboru exportu a knihovnu importu](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+Tyto režimy se vzájemně vylučují. lib – můžete použít v pouze jeden režim najednou.
+
+## <a name="lib-options"></a>Lib – možnosti
+
+V následující tabulce jsou uvedeny možnosti lib.exe odkazy na další informace.
+
+|Možnost|Popis|
+|-|-|
+|**/ DEF**|Vytvořte knihovnu importu a souboru exportu.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/ ERRORREPORT**|   Odesílat informace společnosti Microsoft o vnitřních chybách s lib.exe.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+|**/EXPORT**|   Exportuje funkci z vaší aplikace.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/ EXTRACT**|   Vytvořte soubor objektů (.obj), který obsahuje kopii členem existující knihovnu.<br/><br/>Další informace najdete v části [extrahování člena knihovny](../../build/reference/extracting-a-library-member.md).|
+|**/ INCLUDE**|   Symbol se přidá do tabulky symbolů.<br/><br/>Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).|
+|**/ LIBPATH**|   Přepíše cestu ke knihovně prostředí.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/ LIST**|   Zobrazí informace o výstupní knihovně na standardním výstupu.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/LTCG**|   Způsobí, že knihovna, která má být sestaven pomocí generování kódu při propojování.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+|**/ MACHINE**|   Určuje cílovou platformu programu.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+|**/ NAME**|   Při sestavování knihovny importů Určuje název knihovny DLL pro kterou má být sestaven knihovny importu.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/ NODEFAULTLIB**|   Odebere jeden nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/NOLOGO**|   Potlačí zobrazení LIB o autorských právech zprávu a číslo verze a zabraňuje zobrazování souborů příkazu.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+|**/ OUT**|   Přepíše výchozí název výstupního souboru.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/ REMOVE**|   Vynechá objektu z výstupní knihovně.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/SUBSYSTEM**|   Říká operačnímu systému, jak spustit program vytvořil připojování ke knihovně výstup.<br/><br/>Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).|
+|**/ VERBOSE**|   Zobrazí podrobnosti o průběhu relace, včetně názvů přidávané soubory .obj.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+|**/WX**|   Zpracovávat upozornění jako chyby.<br/><br/>Další informace najdete v části [spuštění knihovny LIB](../../build/reference/running-lib.md).|
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)<br/>
+[Vstupní soubory knihovny LIB](../../build/reference/lib-input-files.md)<br/>
+[Výstupní soubory knihovny LIB](../../build/reference/lib-output-files.md)<br/>
+[Další výstup knihovny LIB](../../build/reference/other-lib-output.md)<br/>
+[Struktura knihovny](../../build/reference/structure-of-a-library.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709680"
 ---
 # <a name="cautohidedocksite-class"></a>Cautohidedocksite – třída
 `CAutoHideDockSite` Rozšiřuje [cdocksite – třída](../../mfc/reference/cdocksite-class.md) k implementaci automatického schovávání panelu ukotvení.  
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pBar*|Základní panel, který testuje rozhraní framework.|  
+|*pBar*|[in] Základní panel, který testuje rozhraní framework.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě *pBar* je odvozen z `CMFCAutoHideBar`; FALSE v opačném případě.  
@@ -138,9 +138,9 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWnd*|Podokno, které ukotvené rozhraní framework.|  
-|[in] *dockMethod*|Možnosti pro podokno ukotvení.|  
-|[in] *lprect –*|Obdélník, který určuje hranice pro ukotvené podokno.|  
+|*pWnd*|[in] Podokno, které ukotvené rozhraní framework.|  
+|*dockMethod*|[in] Možnosti pro podokno ukotvení.|  
+|*lprect –*|[in] Obdélník, který určuje hranice pro ukotvené podokno.|  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace nepoužívá parametr *dockMethod*, který je k dispozici pro budoucí použití.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *rect*|Odkaz na obdélníku. Metoda ukládá velikost dokovacím místě v obdélníku.|  
+|*Rect*|[in] Odkaz na obdélníku. Metoda ukládá velikost dokovacím místě v obdélníku.|  
   
 ### <a name="remarks"></a>Poznámky  
  Obdélníku je přizpůsobené pro posun okrajů tak, aby nebyly zahrnuty.  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- Nové posun.  
+*nOffset*<br/>
+[in] Nové posun.  
   
 ### <a name="remarks"></a>Poznámky  
  [Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny na staticky `CAutoHideDockSite` objektu. To znamená, že uživatel nemůže ručně změnit umístění `CMFCAutoHideBar` objekty. `SetOffsetLeft` Metodu ovládá mezery mezi nalevo od nejvíce vlevo `CMFCAutoHideBar` a na levé straně `CAutoHideDockSite`.  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- Nové posun.  
+*nOffset*<br/>
+[in] Nové posun.  
   
 ### <a name="remarks"></a>Poznámky  
  [Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny na staticky `CAutoHideDockSite` objektu. To znamená, že uživatel nemůže ručně změnit umístění `CMFCAutoHideBar` objekty. `SetOffsetRight` Metody určuje mezery mezi úplně vpravo pravé straně `CMFCAutoHideBar` a pravé straně `CAutoHideDockSite`.  
@@ -214,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *rectNewClientArea*|Rezervovanou hodnotu.|  
+|*rectNewClientArea*|[in] Rezervovanou hodnotu.|  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace nepoužívá *rectNewClientArea*. Ho překreslí podoken s globální nástrojů okraje a mezera na tlačítku.  
@@ -231,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pAutoHideToolbar*|Ukazatel [cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objektů – podokno umístěn na `CAutoHideDockSite`.|  
+|*pAutoHideToolbar*|[in] Ukazatel [cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objektů – podokno umístěn na `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyhledává řádek, který obsahuje *pAutoHideToolbar*. Volá `CMFCAutoHideBar.UnSetAutoHideMode` pro všechny `CMFCAutoHideBar` objekty na daném řádku. Pokud *pAutoHideToolbar* nebyl nalezen nebo má hodnotu NULL, tato metoda volá `CMFCAutoHideBar.UnSetAutoHideMode` pro všechny `CMFCAutoHideBar` objektů `CAutoHideDockSite`.  

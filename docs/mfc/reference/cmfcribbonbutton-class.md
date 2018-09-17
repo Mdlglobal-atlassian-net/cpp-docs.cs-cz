@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712951"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton – třída
 `CMFCRibbonButton` Třída implementuje tlačítka, které můžete umístit na prvky panelu pásu karet, jako je například panely, panely nástrojů Rychlý přístup a místní nabídky.  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pSubItem*  
- Určuje ukazatel na nový element přidat.  
+*pSubItem*<br/>
+[in] Určuje ukazatel na nový element přidat.  
   
- [in] *nIndex*  
- Určuje index, na kterém chcete-li přidat prvek k poli položky nabídky tlačítka; -1, chcete-li přidat prvek na konec pole položek nabídky.  
+*nIndex*<br/>
+[in] Určuje index, na kterém chcete-li přidat prvek k poli položky nabídky tlačítka; -1, chcete-li přidat prvek na konec pole položek nabídky.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje Identifikátor příkazu tlačítka.  
+*nID*<br/>
+[in] Určuje Identifikátor příkazu tlačítka.  
   
- [in] *lpszText*  
- Určuje textový popisek tlačítka.  
+*lpszText*<br/>
+[in] Určuje textový popisek tlačítka.  
   
- [in] *nSmallImageIndex*  
- V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index malý obrázek tlačítka.  
+*nSmallImageIndex*<br/>
+[in] V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index malý obrázek tlačítka.  
   
- [in] *nLargeImageIndex*  
- V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index velkého obrázku tlačítka.  
+*nLargeImageIndex*<br/>
+[in] V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index velkého obrázku tlačítka.  
   
- [in] *hIcon*  
- Určuje popisovač pro ikonu, která aplikace používá jako obrázek na tlačítko.  
+*hIcon*<br/>
+[in] Určuje popisovač pro ikonu, která aplikace používá jako obrázek na tlačítko.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit `CMFCRibbonButton` objektu.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *bCalcOnly*  
+*primární řadič domény*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *typu*  
+*primární řadič domény*<br/>
+[in] [in] *typu*  
  [in] *rectImage*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *strText*  
- [in] *rectText*  
- [in] *uiDTFlags*  
+*primární řadič domény*<br/>
+[in] [in] *strText*  
+*rectText*<br/>
+[in] [in] *uiDTFlags*  
  [in] *clrText*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Určuje Identifikátor příkazu položku rozbalovací nabídky.  
+*uiID*<br/>
+[in] Určuje Identifikátor příkazu položku rozbalovací nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule, který je přidružen dílčí položky *uiID*. -1, pokud neexistuje žádný takový podřízenou položku.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bLargeImage*  
- Pokud je hodnota TRUE, vrátí index obrázku v seznamu obrázků, který obsahuje velké obrázky; v opačném případě vrátí index obrázku v seznamu obrázků, který obsahuje malé obrázky.  
+*bLargeImage*<br/>
+[in] Pokud je hodnota TRUE, vrátí index obrázku v seznamu obrázků, který obsahuje velké obrázky; v opačném případě vrátí index obrázku v seznamu obrázků, který obsahuje malé obrázky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index obrázku tlačítka v seznamu přidružené image.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Určuje pozici kliknutí myší.  
+*Bod*<br/>
+[in] Určuje pozici kliknutí myší.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě, pokud chcete pro zpracování této události.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index založený na nule, který chcete odebrat položky nabídky.  
+*nIndex*<br/>
+[in] Určuje index založený na nule, který chcete odebrat položky nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaná položka úspěšně odebral; v opačném případě FALSE v případě *nIndex* je záporná nebo přesahuje počet položek nabídky v místní nabídce.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Při hodnotě TRUE se na tomto tlačítku zobrazí velký obrázek. V opačném případě na tomto tlačítku zobrazí malý obrázek.  
+*bSet*<br/>
+[in] Při hodnotě TRUE se na tomto tlačítku zobrazí velký obrázek. V opačném případě na tomto tlačítku zobrazí malý obrázek.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Povolí výchozí příkaz pro tlačítko pásu karet.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Při hodnotě TRUE může spustit tlačítko jeho výchozí příkaz. Pokud má hodnotu FALSE, tlačítko nelze provést její výchozí příkaz.  
+*bSet*<br/>
+[in] Při hodnotě TRUE může spustit tlačítko jeho výchozí příkaz. Pokud má hodnotu FALSE, tlačítko nelze provést její výchozí příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
  *bSet* platí, pouze pokud má tlačítka nabídky. Pokud *bSet* hodnotu TRUE, na tlačítko můžete provést její výchozí příkaz a přiřazené rozbalovací nabídce se zobrazí, pouze když uživatel klikne na šipku na pravé straně tlačítka. V opačném případě tlačítka nelze provést její výchozí příkaz a zobrazí se místní nabídka, bez ohledu na to, jaké oblasti uživatel klikne.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Určuje index bitové kopie.  
+*nIndex*<br/>
+[in] Určuje index bitové kopie.  
   
- [in] *bLargeImage*  
- Při hodnotě TRUE se zadaným indexem odkazuje na seznamu velkých obrázků. V opačném případě index odkazuje na seznamu malých obrázků.  
+*bLargeImage*<br/>
+[in] Při hodnotě TRUE se zadaným indexem odkazuje na seznamu velkých obrázků. V opačném případě index odkazuje na seznamu malých obrázků.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Místní nabídka přiřadí tlačítko pásu karet.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Pokud je hodnota TRUE, v nabídce zarovnán doprava. V opačném případě je v nabídce vlevo zarovnaný  
+*bSet*<br/>
+[in] Pokud je hodnota TRUE, v nabídce zarovnán doprava. V opačném případě je v nabídce vlevo zarovnaný  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

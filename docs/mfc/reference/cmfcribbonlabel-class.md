@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848580"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703830"
 ---
 # <a name="cmfcribbonlabel-class"></a>Cmfcribbonlabel – třída
 Implementuje neklikatelné textový popisek pro pás karet.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Text, který se zobrazí v popisku.  
+*lpszText*<br/>
+[in] Text, který se zobrazí v popisku.  
   
- [in] *bIsMultiLine*  
- TRUE, pokud chcete určit, že popisek je Víceřádkový popisek; v opačném případě hodnota FALSE.  
+*bIsMultiLine*<br/>
+[in] TRUE, pokud chcete určit, že popisek je Víceřádkový popisek; v opačném případě hodnota FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Určuje usnadnění dat pro aktuální popisek prvek pásu karet.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Představuje nadřazené okno aktuální popisku pásu karet.  
+*pParent*<br/>
+[in] Představuje nadřazené okno aktuální popisku pásu karet.  
   
- [out] *dat*  
- Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální popisku pásu karet.  
+*data*<br/>
+[out] Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální popisku pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuální popisku pásu karet; v opačném případě hodnota FALSE.  

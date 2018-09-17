@@ -1,5 +1,5 @@
 ---
-title: NMake – stránka vlastností (Windows C++) | Microsoft Docs
+title: NMake – stránka vlastností (Windows C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 29d10b35b0855e34826c10b813a2df48cd84cfef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711968"
 ---
 # <a name="nmake-property-page"></a>NMake – stránka vlastností
-**NMake** stránka vlastností umožňuje zadat nastavení sestavení pro projekty NMake.  
+**NMake** stránku vlastností umožňuje určit nastavení sestavení pro projekty NMake.  
   
- Další informace o projekty NMake najdete v tématu [vytvoření projektu souboru pravidel](../ide/creating-a-makefile-project.md). Projekty MakeFile non_Windows, najdete v tématu [vlastnosti projektu souboru pravidel (Linux C++)](../linux/prop-pages/makefile-linux.md), [obecné vlastnosti projektu (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) nebo [NMake vlastnosti (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
+Další informace o projektech NMake najdete v tématu [vytváření projektu souboru pravidel](../ide/creating-a-makefile-project.md). Non_Windows projekty souborů pravidel, naleznete v tématu [vlastnosti projektu souboru pravidel (Linux C++)](../linux/prop-pages/makefile-linux.md), [obecné vlastnosti projektů (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) nebo [vlastnosti NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- **NMake** vlastnost stránka obsahuje následující vlastnosti.  
+**NMake** stránka vlastností obsahuje následující vlastnosti.  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Sestavení příkazového řádku**  
- Určuje příkaz, který se spustí, když **sestavení** po kliknutí na na **sestavení** nabídky.  
+
+- **Sestavení příkazového řádku**
+
+   Určuje příkaz, který se spustí, když **sestavení** je kliknuli **sestavení** nabídky.  
   
- **Znovu vytvořit všechny příkazového řádku**  
- Určuje příkaz, který se spustí, když **znovu vytvořit všechny** po kliknutí na na **sestavení** nabídky.  
+- **Opětovné sestavení všech příkazového řádku**
+
+   Určuje příkaz, který se spustí, když **sestavit vše znovu** je kliknuli **sestavení** nabídky.  
   
- **Vyčištění příkazového řádku**  
- Určuje příkaz, který se spustí, když **Vyčistit** po kliknutí na na **sestavení** nabídky.  
+- **Příkazový řádek příkazu vyčistit**
+
+   Určuje příkaz, který se spustí, když **Vyčistit** je kliknuli **sestavení** nabídky.  
   
- **Output**  
- Určuje název souboru, který bude obsahovat výstup příkazového řádku. Ve výchozím nastavení je tento název souboru založen na název projektu.  
+- **Output**
+
+   Určuje název souboru, který bude obsahovat výstup do příkazového řádku. Ve výchozím nastavení tento název souboru je podle názvu projektu.  
   
- **Definice preprocesoru**  
- Určuje žádné definice preprocesoru používají zdrojové soubory. Výchozí hodnota je určen podle aktuální platformě a konfigurace.  
+- **Definice preprocesoru**
+
+   Určuje všechny definice preprocesoru používají zdrojové soubory. Výchozí hodnota je vzhledem k aktuální platformy a konfigurace.  
   
- **Zahrnout cesty pro hledání**  
- Určuje adresáře, kde kompilátor vyhledává zahrnout soubory.  
+- **Zahrnout cestu vyhledávání**
+
+   Určuje adresáře, kde kompilátor hledá vkládané soubory.  
   
- **Vynutit zahrnuje**  
- Určuje soubory, které preprocesor automaticky zpracuje, i když nejsou zahrnuty v souborech projektu.  
+- **Vynucené zahrnuje**
+
+   Určuje soubory, které preprocesor zpracuje automaticky i v případě, že nejsou zahrnuté v souborech projektu.  
   
- **Cesta hledání sestavení**  
- Určuje adresáře, kde rozhraní .NET Framework vyhledává ho zkusí vyřešit sestavení .NET.  
+- **Cesta pro vyhledávání sestavení**
+
+   Určuje adresáře, kde rozhraní .NET Framework vyhledává to zkusí vyřešit sestavení .NET.  
   
- **Vynucené použití sestavení**  
- Určuje sestavení, které automaticky zpracuje rozhraní .NET Framework.  
+- **Vynuceně použitá sestavení**
+
+   Určuje sestavení, která automaticky zpracovává rozhraní .NET Framework.  
   
- **Další možnosti**  
- Určuje dalších přepínačů technologie IntelliSense pro použití při analýze souborů C++.  
+- **Další možnosti**
+
+   Určuje další přepínačů technologie IntelliSense při analýze souborů C++.  
   
- Informace o tom, jak získat přístup **NMake** stránce vlastností, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+Informace o tom, jak získat přístup **NMake** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
- Informace o tom, jak programově přístup členům tohoto objektu najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+Informace o tom, jak prostřednictvím kódu programu získat přístup ke členům tohoto objektu najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   

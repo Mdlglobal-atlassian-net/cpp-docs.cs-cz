@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 065529796ead2a37b9a417f5e1a2352deb429aba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204209"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711240"
 ---
 # <a name="cmfcpopupmenu-class"></a>Cmfcpopupmenu – třída
 Implementuje funkce rozbalovací nabídky Windows a rozšiřuje jej přidáním funkce, jako je odtrhnout nabídky a popisy tlačítek.
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTopFrame*  
- [in] *pPopupMenu*  
+*pTopFrame*<br/>
+[in] [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -330,8 +330,8 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Hodnota TRUE, pokud je rozbalovací nabídky můžete zobrazit prázdný položek. FALSE v opačném případě.  
+*bShow*<br/>
+[in] Hodnota TRUE, pokud je rozbalovací nabídky můžete zobrazit prázdný položek. FALSE v opačném případě.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -352,8 +352,8 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ptScreen*  
- Bod, v souřadnicovém systému obrazovky.  
+*ptScreen*<br/>
+[in] Bod, v souřadnicovém systému obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Parametr MENUAREA_TYPE, která určuje, kde je bod je relativní vzhledem k rozbalovací nabídky.  
@@ -395,11 +395,11 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCustPage*  
- Ukazatel na přizpůsobení stránky.  
+*pCustPage*<br/>
+[in] Ukazatel na přizpůsobení stránky.  
   
- [in] *lpszTitle*  
- Řetězec, který obsahuje popisek nabídky.  
+*lpszTitle*<br/>
+[in] Řetězec, který obsahuje popisek nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přidělí prostředky `CMFCPopupMenu`. Chcete-li vytvořit položku rozbalovací nabídky, zavolejte [CMFCPopupMenu::Create](#create).  
@@ -418,23 +418,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nadřazené okno pro `CMFCPopupMenu`.  
+*pWndParent*<br/>
+[in] Nadřazené okno pro `CMFCPopupMenu`.  
   
- [in] *x*  
- Souřadnice obrazovky vodorovné umístění v místní nabídce  
+*x*<br/>
+[in] Souřadnice obrazovky vodorovné umístění v místní nabídce  
   
- [in] *y*  
- Souřadnice obrazovky svislé umístění pop nabídky.  
+*y*<br/>
+[in] Souřadnice obrazovky svislé umístění pop nabídky.  
   
- [in] *hMenu*  
- Popisovač pro prostředek nabídky.  
+*hMenu*<br/>
+[in] Popisovač pro prostředek nabídky.  
   
- [in] *blokované*  
- Parametr logické hodnoty označující, zda je v nabídce přizpůsobitelné. Hodnota FALSE označuje, že je přizpůsobitelný rozbalovací nabídky.  
+*Blokováno*<br/>
+[in] Parametr logické hodnoty označující, zda je v nabídce přizpůsobitelné. Hodnota FALSE označuje, že je přizpůsobitelný rozbalovací nabídky.  
   
- [in] *bOwnMessage*  
- Parametr logické hodnoty, která určuje, jak rozhraní provádí směrování zpráv nabídky. Další podrobnosti v části poznámky.  
+*bOwnMessage*<br/>
+[in] Parametr logické hodnoty, která určuje, jak rozhraní provádí směrování zpráv nabídky. Další podrobnosti v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.  
@@ -458,8 +458,8 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndMain*  
- [in] *uiID*  
+*pWndMain*<br/>
+[in] [in] *uiID*  
  [in] *lpszName*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -487,11 +487,11 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iLogoSize*  
- Velikost loga v pixelech.  
+*iLogoSize*<br/>
+[in] Velikost loga v pixelech.  
   
- [in] *nLogoLocation*  
- Výčtový datový typ, který označuje umístění loga.  
+*nLogoLocation*<br/>
+[in] Výčtový datový typ, který označuje umístění loga.  
   
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zobrazit logo, implementovat metodu [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) v hlavní okno rámce.  
@@ -506,8 +506,8 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Povolte zvuky, FALSE v opačném případě TRUE.  
+*bEnable*<br/>
+[in] Povolte zvuky, FALSE v opačném případě TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud povolíte zvuk, zavolá rozhraní [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metodu, když uživatel otevře místní nabídky nebo vybere příkaz nabídky. Ve výchozím nastavení je tato funkce povolena.  
@@ -596,8 +596,8 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bNoSystem*  
- Parametr logické hodnoty označující, zda tato metoda zkontroluje globální hodnoty. FALSE, pokud chcete tuto metodu za účelem vrácení animace styl pro tuto instanci [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md).  
+*bNoSystem*<br/>
+[in] Parametr logické hodnoty označující, zda tato metoda zkontroluje globální hodnoty. FALSE, pokud chcete tuto metodu za účelem vrácení animace styl pro tuto instanci [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výčtová hodnota, která popisuje typ animace.  
@@ -682,8 +682,8 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položku nabídky.  
+*iIndex*<br/>
+[in] Index založený na nule položku nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na položku nabídky. Hodnota NULL, pokud je index není platný.  
@@ -849,11 +849,11 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *tlačítko*  
- Odkaz na položku nabídky přidat.  
+*Tlačítko*<br/>
+[in] Odkaz na položku nabídky přidat.  
   
- [in] *iInsertAt*  
- Index založený na nule pro novou položku. Pokud *iInsertAt* se -1, je položka přidána na konec objektu v nabídce.  
+*iInsertAt*<br/>
+[in] Index založený na nule pro novou položku. Pokud *iInsertAt* se -1, je položka přidána na konec objektu v nabídce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index pozice, kdy byla položka vložena. -1, jestliže metoda selže.  
@@ -869,8 +869,8 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iInsertAt*  
- Z nuly vycházející index pozice, kde bude tato metoda vložit oddělovač.  
+*iInsertAt*<br/>
+[in] Z nuly vycházející index pozice, kde bude tato metoda vložit oddělovač.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index pozice, kdy byl vložen oddělovač. -1, pokud tato metoda se nezdaří.  
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1137,8 +1137,8 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položku odstranit.  
+*iIndex*<br/>
+[in] Index založený na nule položku odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.  
@@ -1163,8 +1163,8 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nElapse*  
- Nové rychlost animace, v milisekundách.  
+*nElapse*<br/>
+[in] Nové rychlost animace, v milisekundách.  
   
 ### <a name="remarks"></a>Poznámky  
  Rychlost animace se globální hodnoty a ovlivňuje všechny místní nabídky v aplikaci. Tato hodnota určuje, jak dlouho trvá, animace rozbalovací nabídky na dokončení.  
@@ -1179,8 +1179,8 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *typu*  
- Výčtový datový typ, který určuje typ animace.  
+*Typ*<br/>
+[in] Výčtový datový typ, který určuje typ animace.  
   
 ### <a name="remarks"></a>Poznámky  
  Zobrazit [CMFCPopupMenu::GetAnimationType](#getanimationtype) seznam platných hodnot pro *typ*.  
@@ -1205,8 +1205,8 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- ID nabídky příkazu nový výchozí příkaz.  
+*uiCmd*<br/>
+[in] ID nabídky příkazu nový výchozí příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí příkaz v rozbalovací nabídce je příkaz, který je vybrána, když se objeví v rozbalovací nabídce.  
@@ -1219,8 +1219,8 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bValue*  
- Hodnota TRUE, pokud chcete přinutit zaměření pro vstup na panelu nabídek když se zobrazí místní nabídka rozhraní. FALSE, pokud chcete, aby v rozbalovací nabídce, pokud chcete zachovat fokus.  
+*bValue*<br/>
+[in] Hodnota TRUE, pokud chcete přinutit zaměření pro vstup na panelu nabídek když se zobrazí místní nabídka rozhraní. FALSE, pokud chcete, aby v rozbalovací nabídce, pokud chcete zachovat fokus.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví příznak, který je globálním pro všechny místní nabídky v aplikaci. Tato funkce není ve výchozím nastavení povolena.  
@@ -1233,8 +1233,8 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bValue*  
- TRUE, pokud chcete, aby rozhraní pro kreslení nabídky odstínů; FALSE v opačném případě.  
+*bValue*<br/>
+[in] TRUE, pokud chcete, aby rozhraní pro kreslení nabídky odstínů; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
  Při volání této metody nastaví globální příznak ve vaší aplikaci. Tento příznak má vliv na všechny místní nabídky v aplikaci.  
@@ -1247,8 +1247,8 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iMaxWidth*  
- Maximální šířka rozbalovací nabídky v pixelech.  
+*iMaxWidth*<br/>
+[in] Maximální šířka rozbalovací nabídky v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud text přidružený k příkazu nabídky se nevejde na maximální šířku, zkrátí se a části, který se nevejde se nahrazuje tři tečky.  
@@ -1306,8 +1306,8 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bRightAlign*  
- Logická hodnota, která určuje zarovnání nabídky. Hodnota TRUE označuje zarovnání doprava, hodnota FALSE označuje zarovnání doleva.  
+*bRightAlign*<br/>
+[in] Logická hodnota, která určuje zarovnání nabídky. Hodnota TRUE označuje zarovnání doprava, hodnota FALSE označuje zarovnání doleva.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení všechny místní nabídky jsou zarovnané vlevo.  
@@ -1320,8 +1320,8 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- TRUE, pokud v rozbalovací nabídce upozorní jeho nadřazeného rámce FALSE v opačném případě.  
+*bSet*<br/>
+[in] TRUE, pokud v rozbalovací nabídce upozorní jeho nadřazeného rámce FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
  Toto je globální možností pro všechny místní nabídky v aplikaci. Pokud je povoleno, odešle místní nabídky do nadřazeného rámce WM_MENUSELECT zprávu, když uživatel vybere příkaz.  
@@ -1353,8 +1353,8 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lprectScreen*  
- Obdélník, který určuje oblasti, kterou chcete aktualizovat, v souřadnicovém systému obrazovky.  
+*lprectScreen*<br/>
+[in] Obdélník, který určuje oblasti, kterou chcete aktualizovat, v souřadnicovém systému obrazovky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je užitečná, když místní nabídky se zobrazí nad animovaný ovládacích prvků nebo jiných oknech, které mají dynamický obsah.  
@@ -1367,8 +1367,8 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lprectScreen*  
- Obdélník, v souřadnicovém systému obrazovky, který určuje hranice oblasti, kterou chcete aktualizovat.  
+*lprectScreen*<br/>
+[in] Obdélník, v souřadnicovém systému obrazovky, který určuje hranice oblasti, kterou chcete aktualizovat.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu volejte, když místní nabídka, která má stín překrývá animovaný obrázek.  

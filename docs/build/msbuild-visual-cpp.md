@@ -1,5 +1,5 @@
 ---
-title: MSBuild (Visual C++) | Microsoft Docs
+title: Nástroj MSBuild (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bdb48c71c244adc2df5beef9668e12ee47f2b48
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369302"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703947"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
-Můžete použít **MSBuild** nástroj pro vývoj aplikace Visual C++ z příkazového řádku. Informace v souboru projektu (VCXPROJ), který může vytvářet a upravovat řídí procesu sestavení. Soubor projektu určuje možnosti sestavení na základě sestavení fáze, podmínky a události.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
-|Termín|Definice|  
-|----------|----------------|  
-|[Přehled nástroje MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Popisuje, jak používá Visual C++ **MSBuild** systému.|  
-|[Změny systému sestavení](../build/build-system-changes.md)|Popisuje některé rozdíly mezi systém sestavení aktuální a předchozí verze.|  
-|[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Demonstruje postup vytvoření projektu Visual C++ pomocí **MSBuild**.|  
-|[Postupy: Použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Ukazuje, jak určit akci, ke kterému dochází v particuler fázi v sestavení: před začátkem sestavování; Před spuštěním kroku odkaz; i po skončení sestavení.|  
-|[Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Ukazuje, jak přidat fázi uživatelem definované pořadí sestavení.|  
-|[Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Ukazuje, jak nástroj pro sestavení přidružit určitého souboru.|  
-|[Postupy: Integrace vlastních nástrojů do vlastností projektu](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Demonstruje možnosti vlastní nástroje pro přidání do vlastností projektu.|  
-|[Postupy: Změna cílové architektury a sady nástrojů](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Ukazuje, jak k sestavení projektu, pro více rozhraní nebo modulové.|  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)
+
+Můžete použít **MSBuild** nástroj pro sestavování z příkazového řádku aplikace Visual C++. Proces sestavení se řídí tím informace v souboru projektu (.vcxproj), které můžete vytvářet a upravovat. Soubor projektu určuje možnosti sestavení na základě sestavení fáze, podmínky a události.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+|Termín|Definice|
+|----------|----------------|
+|[Přehled nástroje MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Popisuje, jak Visual C++ používá **MSBuild** systému.|
+|[Změny systému sestavení](../build/build-system-changes.md)|Tento článek popisuje některé rozdíly mezi systému sestavení aktuální a předchozí verzí.|
+|[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Popisuje způsob vytvoření projektu jazyka Visual C++ pomocí **MSBuild**.|
+|[Postupy: Použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Ukazuje, jak určit akci, ke které dochází v particuler fázi v buildu: před začátkem sestavení; Před spuštěním kroku odkazu; nebo po ukončení sestavení.|
+|[Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Ukazuje, jak přidat fázi uživatelem definované pořadí sestavení.|
+|[Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Ukazuje, jak přidružit určitý soubor nástroj sestavení.|
+|[Postupy: Integrace vlastních nástrojů do vlastností projektu](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Ukazuje, jak přidat možnosti pro vlastní nástroj ve vlastnostech projektu.|
+|[Postupy: Změna cílové architektury a sady nástrojů](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Ukazuje, jak sestavit projekt pro více rozhraní nebo sad nástrojů.|
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)

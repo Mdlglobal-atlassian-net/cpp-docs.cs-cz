@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849786"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700906"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
 Tlačítko, které zobrazí místní nabídku, informuje o možnosti nabídky uživatele.  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMsg*  
- Odkazuje [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.  
+*pMsg*<br/>
+[in] Odkazuje [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud zpráva byl přeložen a by neměl být odeslána; 0, pokud zpráva nebyl přeložen a by měla být odeslána.  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bCalcOnly*  
- Parametr logické hodnoty označující, zda tato metoda mění velikost tlačítka.  
+*bCalcOnly*<br/>
+[in] Parametr logické hodnoty označující, zda tato metoda mění velikost tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje novou velikost tlačítka.  

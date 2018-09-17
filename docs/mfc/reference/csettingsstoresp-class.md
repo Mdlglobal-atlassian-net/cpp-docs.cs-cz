@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716346"
 ---
 # <a name="csettingsstoresp-class"></a>Csettingsstoresp – třída
 `CSettingsStoreSP` Třída je pomocná třída, která můžete použít k vytvoření instance [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAdmin*  
- Parametr logické hodnoty, která určuje, zda `CSettingsStore` objekt je vytvořen v režimu správce.  
+*bAdmin*<br/>
+[in] Parametr logické hodnoty, která určuje, zda `CSettingsStore` objekt je vytvořen v režimu správce.  
   
- [in] *bReadOnly*  
- Parametr logické hodnoty, která určuje, zda `CSettingsStore` vytvoření objektu pro přístup jen pro čtení.  
+*bReadOnly*<br/>
+[in] Parametr logické hodnoty, která určuje, zda `CSettingsStore` vytvoření objektu pro přístup jen pro čtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na nově vytvořený `CSettingsStore` objektu.  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwUserData*  
- Data definovaná uživatelem, který `CSettingsStoreSP` objektu úložiště.  
+*dwUserData*<br/>
+[in] Data definovaná uživatelem, který `CSettingsStoreSP` objektu úložiště.  
   
 ### <a name="remarks"></a>Poznámky  
  `CSettingsStoreSP` Ukládají data z objektu *dwUserData* proměnné chráněný člen `m_dwUserData`.  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRTI*  
- Ukazatel na informace o třídě modulu runtime pro třídy odvozené z [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).  
+*pRTI*<br/>
+[in] Ukazatel na informace o třídě modulu runtime pro třídy odvozené z [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; FALSE, pokud třída identifikována *pRTI* není odvozen od `CSettingsStore`.  

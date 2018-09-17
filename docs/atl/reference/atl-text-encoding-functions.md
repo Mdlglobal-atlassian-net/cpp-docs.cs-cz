@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706833"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pbSrcData*  
-Vyrovnávací paměť obsahující data, která mají dekódovat.
+*pbSrcData*<br/>
+[in] Vyrovnávací paměť obsahující data, která mají dekódovat.
 
-[in] *nSrcLen*  
-Délka v bajtech *pbSrcData*.
+*nSrcLen*<br/>
+[in] Délka v bajtech *pbSrcData*.
 
-[out] *szDest*  
-Volající – přidělené vyrovnávací paměti pro příjem dekódovaná data.
+*szDest*<br/>
+[out] Volající – přidělené vyrovnávací paměti pro příjem dekódovaná data.
 
-[out] *pnDestLen*  
-Ukazatel na proměnnou, která obsahuje délku v bajtech *szDest*. Pokud funkce uspěje, proměnná přijímá počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, proměnné obdrží má požadovanou délku v bajtech vyrovnávací paměti.
+*pnDestLen*<br/>
+[out] Ukazatel na proměnnou, která obsahuje délku v bajtech *szDest*. Pokud funkce uspěje, proměnná přijímá počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, proměnné obdrží má požadovanou délku v bajtech vyrovnávací paměti.
 
-[in] *dwFlags*  
-ATLSMTP_QPENCODE příznaky popisující, jak se má provést převod.
+*dwFlags*<br/>
+[in] ATLSMTP_QPENCODE příznaky popisující, jak se má provést převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 

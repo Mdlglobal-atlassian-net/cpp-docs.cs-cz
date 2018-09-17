@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (sestava interními chybami Linkeru) | Microsoft Docs
+title: -ERRORREPORT (sestava interními chybami Linkeru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -19,51 +19,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374333"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701087"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (sestava s interními chybami linkeru)
 
-> **/ errorreport:**[ **žádné** | **řádku** | **fronty** | **odeslat** ]
+> **/ errorreport:**[ **žádný** | **řádku** | **fronty** | **odeslat** ]
 
 ## <a name="arguments"></a>Arguments
 
-**None**  
-Zprávy o chybách interní kompilátoru nebudou shromažďovány nebo odesílány do společnosti Microsoft.
+**None**<br/>
+Sestavy o vnitřních chybách kompilátoru nebudou shromážděné nebo odeslané společnosti Microsoft.
 
-**prompt**  
-Dotaz, zda chcete poslat zprávu, když obdrží vnitřní chyby kompilátoru. **řádku** je výchozí hodnota při kompilaci aplikace ve vývojovém prostředí.
+**prompt**<br/>
+Zobrazí výzvu k odeslání hlášení, pokud obdržíte chybu kompilátoru. **řádek** výchozí nastavení je při kompilaci aplikace ve vývojovém prostředí.
 
-**Fronty**  
-Fronty zprávy o chybách. Když se přihlásíte pomocí oprávnění správce, tak, aby ohlásíte případných selhání od posledního byly přihlášení, zobrazí se okno (nezobrazí se výzva k odeslání zpráv o selhání více než jednou za tři dní). **fronty** je výchozí hodnota při kompilaci aplikace na příkazovém řádku.
+**fronty**<br/>
+Zařadí do fronty zprávy o chybách. Při přihlašování s použitím oprávnění správce, takže můžete nahlásit všechny chyby od posledního byly zaznamenány v, zobrazí se okno (nezobrazí se výzva k odeslání zprávy o chybách více než jednou za tři dny). **fronty** výchozí nastavení je při kompilaci aplikace příkazového řádku.
 
-**Odeslat**  
-Pokud je povoleno oznamování nastavením služby zasílání zpráv o chybách systému Windows automaticky odesílá zprávy o chybách interní kompilátoru společnosti Microsoft.
+**Odeslat**<br/>
+Automaticky odesílá zprávy o vnitřních chybách kompilátoru společnosti Microsoft, pokud je povoleno oznamování nastavením služby zasílání zpráv o chybách Windows.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Errorreport** možnost umožňuje zadat informace o chybě (LED) interní kompilátoru přímo společnosti Microsoft.
+**/Errorreport** možnost vám umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo společnosti Microsoft.
 
-Možnost **/errorreport:send** automaticky odesílá informace o chybách společnosti Microsoft, pokud je povoleno nastavením služby zasílání zpráv o chybách systému Windows.
+Možnost **/errorreport: send** automaticky odesílá informace o chybách společnosti Microsoft, pokud je povoleno zasílání zpráv o chybách Windows nastavení služby.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
 1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Otevřete **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
+1. Otevřít **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
 
-1. Změnit **zasílání zpráv o chybách** vlastnost.
+1. Upravit **zpráv o chybách** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[/errorReport (vytvoření sestavy s interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
-[Možnosti linkeru](../../build/reference/linker-options.md)  
+[/ errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[nastavení možností Linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

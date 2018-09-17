@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465961"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703726"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 Poskytuje implementaci `IRowset` rozhraní.  
@@ -244,11 +244,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] *vlastnosti CurrentRow platné*  
- Na aktuálním řádku.  
+*vlastnosti CurrentRow platné*<br/>
+[in] Na aktuálním řádku.  
   
- [in] *názvy sloupců*  
- Sloupec, pro který je požadovaný stav.  
+*názvy sloupců*<br/>
+[in] Sloupec, pro který je požadovaný stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) příznaky pro sloupec. 

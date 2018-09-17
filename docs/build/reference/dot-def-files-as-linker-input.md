@@ -1,5 +1,5 @@
 ---
-title: . DEF soubory jako vstup Linkeru | Microsoft Docs
+title: . DEF soubory jako vstup Linkeru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370524"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710271"
 ---
 # <a name="def-files-as-linker-input"></a>Soubory .Def jako vstup linkeru
-V tématu [soubory definice modulu (.def)](../../build/reference/module-definition-dot-def-files.md) Další informace. Použití [/def](../../build/reference/def-specify-module-definition-file.md) možnost zadat název souboru .def.  
-  
-## <a name="see-also"></a>Viz také  
- [Vstupní soubory LINK](../../build/reference/link-input-files.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Zobrazit [soubory definice modulu (.def)](../../build/reference/module-definition-dot-def-files.md) Další informace. Použití [def](../../build/reference/def-specify-module-definition-file.md) můžete zadat název souboru .def.
+
+## <a name="see-also"></a>Viz také
+
+[Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

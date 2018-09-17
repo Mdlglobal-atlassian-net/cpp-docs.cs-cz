@@ -1,5 +1,5 @@
 ---
-title: Import dat pomocí deklarace __declspec(dllimport) | Microsoft Docs
+title: Import dat pomocí deklarace __declspec(dllimport) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,51 +19,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9877c5a229c3cabcb7703dd2617d1d57e3512f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a024d7488eb1683f40548839ab843da1e56f65e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368509"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710213"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Import dat pomocí deklarace __declspec(dllimport)
-V případě dat, pomocí **deklarace __declspec(dllimport)** je užitečný položka, která odebere úroveň dereference. Pokud importujete data z knihovny DLL, máte stále projít tabulku importních adres. Před **deklarace __declspec(dllimport)**, vynutila si museli pamatovat, abyste provedli vyšší úroveň dereference při přístupu k datům exportovat z knihovny DLL:  
-  
-```  
-// project.h  
-#ifdef _DLL   // If accessing the data from inside the DLL  
-   ULONG ulDataInDll;  
-  
-#else         // If accessing the data from outside the DLL  
-   ULONG *ulDataInDll;  
-#endif  
-```  
-  
- By pak exportovat data ve vašem. DEF soubor:  
-  
-```  
-// project.def  
-LIBRARY project  
-EXPORTS  
-   ulDataInDll   CONSTANT  
-```  
-  
- a k němu přístup mimo knihovnu DLL:  
-  
-```  
-if (*ulDataInDll == 0L)   
-{  
-   // Do stuff here  
-}  
-```  
-  
- Pokud označíte data jako **deklarace __declspec(dllimport)**, kompilátor automaticky generuje dereferenční kód za vás. Už máte starat o výše uvedených kroků. Jak jsme uvedli dříve, nepoužívejte **deklarace __declspec(dllimport)** deklaraci na základě dat při vytváření knihovny DLL. Funkce v rámci knihovny DLL nepoužívají tabulku importních adres pro přístup k objektu dat; proto nebude mít další úroveň dereference.  
-  
- Chcete-li automaticky exportovat data z knihovny DLL, použijte tuto deklaraci:  
-  
-```  
-__declspec(dllexport) ULONG ulDataInDLL;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Import do aplikace](../build/importing-into-an-application.md)
+
+V případě dat, pomocí **__declspec(dllimport)** položka pohodlí, které odstraní úroveň dereference. Při importu dat z knihovny DLL, máte stále procházejí tabulky importních adres. Před **__declspec(dllimport)**, to znamená, že jste museli pamatovat, abyste provedli vyšší úroveň dereference při přístupu k data exportovaná z knihovny DLL:
+
+```
+// project.h
+#ifdef _DLL   // If accessing the data from inside the DLL
+   ULONG ulDataInDll;
+
+#else         // If accessing the data from outside the DLL
+   ULONG *ulDataInDll;
+#endif
+```
+
+By pak exportovat data ve vašich. Soubor DEF:
+
+```
+// project.def
+LIBRARY project
+EXPORTS
+   ulDataInDll   CONSTANT
+```
+
+a k němu přístup mimo knihovnu DLL:
+
+```
+if (*ulDataInDll == 0L)
+{
+   // Do stuff here
+}
+```
+
+Určíte-li data jako **__declspec(dllimport)**, kompilátor automaticky generuje kód dereference za vás. Už si nemusíte dělat starosti o výše uvedených kroků. Jak bylo uvedeno dříve, nepoužívejte **__declspec(dllimport)** deklarace dat při vytváření knihovny DLL. Funkce v rámci knihovny DLL nepoužívejte tabulky importních adres pro přístup k objektu data; proto nebude mít vyšší úroveň dereference.
+
+Pokud chcete exportovat data automaticky z knihovny DLL, použijte tuto deklaraci:
+
+```
+__declspec(dllexport) ULONG ulDataInDLL;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Import do aplikace](../build/importing-into-an-application.md)

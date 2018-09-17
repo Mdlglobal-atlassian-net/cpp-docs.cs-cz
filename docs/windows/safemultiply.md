@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79f2ae3edaf7f820008882e5ce035446f67b7ce9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 003f2c9241a4ba81e370204ce2102b60e420df04
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700541"
 ---
 # <a name="safemultiply"></a>SafeMultiply
 
@@ -41,14 +41,14 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-První číslo pro vynásobení. Musí se jednat o typ `T`.
+*t*<br/>
+[in] První číslo pro vynásobení. Musí se jednat o typ `T`.
 
-[in] *u*  
-Druhé číslo pro vynásobení. Musí se jednat o typ `U`.
+*u*<br/>
+[in] Druhé číslo pro vynásobení. Musí se jednat o typ `U`.
 
-[out] *výsledek*  
-Parametr kde **SafeMultiply** výsledek je uložen.
+*výsledek*<br/>
+[out] Parametr kde **SafeMultiply** výsledek je uložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 

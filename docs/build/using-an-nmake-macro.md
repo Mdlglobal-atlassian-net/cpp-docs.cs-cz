@@ -1,5 +1,5 @@
 ---
-title: Použití makra NMAKE | Microsoft Docs
+title: Použití makra NMAKE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6bf098a3723aa7b067b8192bf503975998e4e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0b68a5f3128b5d3780895f8080411819ed9b538
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380573"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712584"
 ---
 # <a name="using-an-nmake-macro"></a>Použití makra NMAKE
-Pomocí makra, uzavřete jeho název v závorkách sebou znak dolaru ($) následujícím způsobem.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-$(macroname)  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Žádné mezery. Závorky jsou volitelné Pokud *makro* je jeden znak. Řetězec definice nahrazuje $(*makro*); Nedefinovaná makra je nahrazena řetězec null.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
- [Nahrazení makra](../build/macro-substitution.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Makra a příkaz NMAKE](../build/macros-and-nmake.md)
+
+Použití makra, uvést jeho názvu v závorkách předchází znak dolaru ($) následujícím způsobem.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+$(macroname)
+```
+
+## <a name="remarks"></a>Poznámky
+
+Nejsou povoleny mezery. Závorky jsou nepovinné Pokud *makro* je jednoho znaku. Nahradí řetězec definice $(*makro*); Nedefinovaná makra je nahrazen řetězec s hodnotou null.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+[Nahrazení makra](../build/macro-substitution.md)
+
+## <a name="see-also"></a>Viz také
+
+[Makra a příkaz NMAKE](../build/macros-and-nmake.md)

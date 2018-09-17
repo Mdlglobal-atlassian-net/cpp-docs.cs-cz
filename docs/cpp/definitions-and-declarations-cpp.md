@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462885"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699612"
 ---
 # <a name="definitions-and-declarations-c"></a>Definice a deklarace (C++)
-**Specifické pro Microsoft** rozhraní knihovna DLL odkazuje na všechny položky (funkce a data), které je známo, že mají být exportovány nějakým programem v systému; to znamená, že všechny položky, které jsou deklarovány jako **dllimport** nebo **dllexport** . Všechny deklarace, které jsou součástí rozhraní DLL musí určovat buď **dllimport** nebo **dllexport** atribut. Nicméně, definice musí určovat pouze **dllexport** atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
+**Specifické pro Microsoft**
+
+ Rozhraní DLL odkazuje na všechny položky (funkce a data), které jsou známé být exportovány nějakým programem v systému. To znamená, že všechny položky, které jsou deklarovány jako **dllimport** nebo **dllexport**. Všechny deklarace, které jsou součástí rozhraní DLL musí určovat buď **dllimport** nebo **dllexport** atribut. Nicméně, definice musí určovat pouze **dllexport** atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

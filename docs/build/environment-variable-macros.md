@@ -1,5 +1,5 @@
 ---
-title: Makra proměnné prostředí | Microsoft Docs
+title: Makra proměnné prostředí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cebb544b1d8fc8489de298bf7512cc612a6dfef2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701165"
 ---
 # <a name="environment-variable-macros"></a>Makra proměnné prostředí
-NMAKE dědí definice maker pro proměnné prostředí, které existují před zahájením relace. Pokud proměnná nastavena v prostředí operačního systému, je k dispozici jako makra NMAKE. Zděděné názvy se převedou na velká písmena. Dědičnost dojde před předběžného zpracování. Pomocí možnosti /E způsobit makra zděděno z proměnných prostředí pro přepsání makra se stejným názvem v soubor pravidel.  
-  
- Makra proměnné prostředí, můžete jej předefinovat v relaci, a tím změní odpovídající proměnné prostředí. Můžete také změnit proměnné prostředí pomocí příkazu SET. Chcete-li změnit proměnné prostředí v relaci pomocí příkazu SET nezmění odpovídající makro, ale.  
-  
- Příklad:  
-  
-```  
-PATH=$(PATH);\nonesuch  
-  
-all:  
-    echo %PATH%  
-```  
-  
- V tomto příkladu, změna `PATH` změny odpovídající proměnnou prostředí `PATH`; přidá `\nonesuch` pro vaši cestu.  
-  
- Pokud proměnná prostředí je definováno jako řetězec, který bude v souboru pravidel správnou syntaxi, vytvoření žádné makra a žádné upozornění je generováno. Pokud hodnota proměnné obsahuje znak dolaru ($), NMAKE interpretovat jako začátek makro volání. Použití makra může způsobit neočekávané chování.  
-  
-## <a name="see-also"></a>Viz také  
- [Speciální makra NMAKE](../build/special-nmake-macros.md)
+
+NMAKE dědí definice maker pro proměnné prostředí, které existují před zahájením relace. Pokud proměnná byla nastavena v prostředí operačního systému, je k dispozici jako makra NMAKE. Zděděné názvy jsou převedeny na velká písmena. Vyvolá se před předzpracování dědičnosti. Pomocí možnosti /E způsobit maker zděděno z proměnné prostředí pro přepsání jakékoli makro se stejným názvem v souboru pravidel.
+
+Makra proměnné prostředí lze redefinovat v relaci, a tím změní příslušné proměnné prostředí. Můžete také změnit proměnných prostředí pomocí příkazu SET. Chcete-li změnit proměnné prostředí v relaci pomocí příkazu SET nezmění odpovídající – makro, ale.
+
+Příklad:
+
+```
+PATH=$(PATH);\nonesuch
+
+all:
+    echo %PATH%
+```
+
+V tomto příkladu mění `PATH` změní příslušné proměnné prostředí `PATH`; přidá `\nonesuch` do cesty.
+
+Pokud proměnná prostředí je definovaný jako řetězec, který by byla syntaxe chybná v souboru pravidel, žádné – makro se vytvoří a je generována bez upozornění. Pokud hodnota proměnné obsahuje znak dolaru ($), NMAKE interpretovat jako začátek volání makra. Použití makra může způsobit neočekávané chování.
+
+## <a name="see-also"></a>Viz také
+
+[Speciální makra NMAKE](../build/special-nmake-macros.md)

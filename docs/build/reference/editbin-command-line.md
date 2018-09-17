@@ -1,5 +1,5 @@
 ---
-title: Příkazový řádek EDITBIN | Microsoft Docs
+title: Editbin – příkazový řádek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371174"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700591"
 ---
 # <a name="editbin-command-line"></a>Příkazový řádek EDITBIN
-Pokud chcete spustit nástroje EDITBIN, použijte následující syntaxi:  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- Zadejte jeden nebo více souborů pro objekty nebo Image se musí změnit a jedna nebo více možností pro změnu souborů.  
-  
- Pokud zadáte příkaz `editbin` bez jiného příkazového řádku vstupu, nástroje EDITBIN zobrazí využití příkaz, který shrnuje jeho možnosti.  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)
+
+Ke spuštění nástroje EDITBIN, použijte následující syntaxi:
+
+```
+EDITBIN [options] files...
+```
+
+Zadejte jeden nebo více souborů pro objekty nebo obrázků na změnit a jedna nebo více možností pro změnu souborů.
+
+Po zadání příkazu `editbin` bez jiného příkazového řádku vstupu, EDITBIN zobrazí využití příkaz, který shrnuje jeho možnosti.
+
+## <a name="see-also"></a>Viz také
+
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209725"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713853"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikativní operátory a operátor numerického zbytku
 ## <a name="syntax"></a>Syntaxe  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Vzhledem k tomu, že převody prováděné operátory násobení nepočítají s podmínkami přetečení nebo podtečení, informace se mohou ztratit, pokud výsledek operace násobení nelze reprezentovat v typu operandu po převodu.  
   
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- V programu Microsoft C++ výsledek výrazu zbytku je vždy stejný jako znaménko prvního operandu.  
-  
-**Specifické pro END Microsoft**  
- Pokud je vypočítané dělení dvou celých čísel nepřesné a pouze jeden operand je záporný, výsledkem je největší celé číslo (v rozsahu bez ohledu na znaménko) menší než přesná hodnota, kterou by byla výsledkem operace dělení. Například vypočítaná hodnota -11 / 3 je-3.666666666. Výsledek tohoto dělení celých čísel je -3.  
+**Specifické pro Microsoft**
+
+V programu Microsoft C++ výsledek výrazu zbytku je vždy stejný jako znaménko prvního operandu.
+
+**Specifické pro END Microsoft**
+
+Pokud je vypočítané dělení dvou celých čísel nepřesné a pouze jeden operand je záporný, výsledkem je největší celé číslo (v rozsahu bez ohledu na znaménko) menší než přesná hodnota, kterou by byla výsledkem operace dělení. Například vypočítaná hodnota -11 / 3 je-3.666666666. Výsledek tohoto dělení celých čísel je -3.  
   
  Vztah mezi operátory násobení je dán identitou (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

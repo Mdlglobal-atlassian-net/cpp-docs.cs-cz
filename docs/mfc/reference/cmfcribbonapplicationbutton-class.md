@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701386"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton – třída
 Implementuje speciální tlačítko umístěné v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevře nabídku, která obvykle obsahuje běžné **souboru** příkazy jako **otevřít**, **Uložit**, a **ukončovací**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiBmpResID*  
- ID prostředku bitové kopie se zobrazí na tlačítku aplikace.  
+*uiBmpResID*<br/>
+[in] ID prostředku bitové kopie se zobrazí na tlačítku aplikace.  
   
- [in] *hBmp*  
- Popisovač rastrový obrázek se zobrazí na tlačítku aplikace.  
+*hBmp*<br/>
+[in] Popisovač rastrový obrázek se zobrazí na tlačítku aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete po vytvoření tlačítka přiřadit novou bitovou kopii na pásu karet tlačítko aplikace. Tlačítko aplikace se nachází v levém horním rohu okna aplikace.  

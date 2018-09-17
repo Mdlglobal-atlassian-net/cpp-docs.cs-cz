@@ -1,5 +1,5 @@
 ---
-title: -GZ (Povolit zásobníku rámečku Kontrola chyb za běhu) | Microsoft Docs
+title: -GZ (povolení zásobník snímků, kontrola chyb za běhu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31224fa3b2809cbc7b7f29868ad4c3e6a89954e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f13824064b7c7dcdb75524a22b14a4d90942918
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707216"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Povolit běhovou kontrolu chyb rámce zásobníku)
-Provádí stejné operace, jako [/RTC (kontroluje chyby Run-Time)](../../build/reference/rtc-run-time-error-checks.md) možnost. Zastaralé  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/GZ  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **/GZ** jsou pouze pro použití v nonoptimized ([/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md)) sestavení.  
-  
- **/GZ** je zastaralé od verze Visual Studio 2005; použít [/RTC (kontroluje chyby Run-Time)](../../build/reference/rtc-run-time-error-checks.md) místo. Seznam – možnosti kompilátoru zastaralé, najdete v části **zastaralé a odebrat – možnosti kompilátoru** v [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Provede stejné operace jako [/RTC (kontroly chyb za běhu)](../../build/reference/rtc-run-time-error-checks.md) možnost. Zastaralé
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/GZ
+```
+
+## <a name="remarks"></a>Poznámky
+
+**/GZ** platí pouze pro použití v nonoptimized ([/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md)) sestavení.
+
+**/GZ** se už nepoužívá od sady Visual Studio 2005; použijte [/RTC (kontroly chyb za běhu)](../../build/reference/rtc-run-time-error-checks.md) místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

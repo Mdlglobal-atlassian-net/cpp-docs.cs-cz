@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701724"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registrace a TypeLib
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-[out] *pEnabled*  
-Hodnota TRUE označuje, že informace registru během směrována **HKCU** uzel. Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).
+*pEnabled*<br/>
+[out] Hodnota TRUE označuje, že informace registru během směrována **HKCU** uzel. Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnable*  
-Hodnota TRUE označuje, že informace registru během směrována **HKCU** uzel. Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).
+*bEnable*  
+[in] Hodnota TRUE označuje, že informace registru během směrována **HKCU** uzel. Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Návratová hodnota
 

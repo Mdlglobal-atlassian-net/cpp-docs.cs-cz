@@ -1,5 +1,5 @@
 ---
-title: . Soubory res jako vstup Linkeru | Microsoft Docs
+title: . Soubory res jako vstup Linkeru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706299"
 ---
 # <a name="res-files-as-linker-input"></a>Soubory .Res jako vstup linkeru
-Při propojování program, můžete zadat soubor .res. Soubor .res je vytvořen kompilátor prostředků (RC). Soubory .res odkaz automaticky převede na COFF. Nástroj CVTRES.exe musí být ve stejném adresáři jako LINK.exe nebo v adresáři zadaném v proměnné prostředí PATH.  
-  
-## <a name="see-also"></a>Viz také  
- [Vstupní soubory LINK](../../build/reference/link-input-files.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Při propojení programu, můžete určit soubor .res. Soubor .res je vytvořen kompilátorem prostředku (RC). Soubory .res odkaz automaticky převede na COFF. Nástroj CVTRES.exe musí být ve stejném adresáři jako LINK.exe nebo v adresáři uvedeném na proměnné prostředí PATH.
+
+## <a name="see-also"></a>Viz také
+
+[Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

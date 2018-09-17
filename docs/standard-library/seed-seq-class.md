@@ -1,5 +1,5 @@
 ---
-title: seed_seq – třída | Microsoft Docs
+title: seed_seq – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711747"
 ---
 # <a name="seedseq-class"></a>seed_seq – třída
 
-Ukládá vektoru hodnot celé číslo bez znaménka, které můžete zadat náhodnou počáteční hodnoty pro modul náhodné číslo.
+Ukládá vektor nepodepsaných celočíselných hodnot, které dokáží poskytovat náhodnou hodnotu seed pro modul náhodných čísel.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,34 +68,67 @@ public:
 
 ## <a name="types"></a>Typy
 
-`typedef unsigned int result_type;` Typ elementů pořadí počáteční hodnoty. Typ 32bitové celé číslo bez znaménka.
+```cpp
+typedef unsigned int result_type;
+```
+
+Typ prvků pořadí počáteční hodnoty. 32bitové celé číslo bez znaménka typu.
 
 ## <a name="constructors"></a>Konstruktory
 
-`seed_seq();` Výchozí konstruktor inicializuje mít prázdnou sekvencí interní.
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` Používá `initlist` se nastavit interní pořadí.
+Výchozí konstruktor, inicializuje prázdnou interní sekvenci.
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+Používá `initlist` nastavit interní pořadí.
 `T` musí být celočíselného typu.
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` Inicializuje interní pořadí pomocí všechny elementy v rozsahu vstupní iterator zadat.
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+Inicializuje interní pořadí pomocí všechny prvky v rozsahu vstupní iterátor, k dispozici.
 `iterator_traits<InputIterator>::value_type` musí být celočíselného typu.
 
 ## <a name="members"></a>Členové
 
-### <a name="generating-functions"></a>Generování funkce
+### <a name="generating-functions"></a>Generuje se funkce
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` Naplní elementy zadané pořadí pomocí interní algoritmus. Tento algoritmus je ovlivňován interní pořadí, pomocí kterého `seed_seq` byl inicializován.
-Se nic nestane. Pokud `begin == end`.
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+Naplní prvky zadané pořadí pomocí algoritmu interní. Je tento algoritmus vliv na interní pořadím, pomocí kterého `seed_seq` byl inicializován.
+Nemá žádný účinek, pokud `begin == end`.
 
 ### <a name="property-functions"></a>Funkce vlastností
 
-`size_t size() const;` Vrátí počet prvků v `seed_seq`.
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` Zkopíruje interní pořadí do výstupní iterator `dest`.
+Vrátí počet prvků v `seed_seq`.
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+Zkopíruje do výstupního iterátoru interní pořadí `dest`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu vykonává tři konstruktory a generuje výstup ve výsledném `seed_seq` instance když přiřazeny pole. Pro příklad, který používá `seed_seq` s generátor náhodných čísel, přečtěte si téma [ \<náhodných >](../standard-library/random.md).
+Následující příklad kódu vykonává tři konstruktory a vygeneruje výstup z výsledné `seed_seq` instancí, když je přiřazený k matici. Příklad, který používá `seed_seq` s generátor náhodných čísel, přečtěte si téma [ \<náhodné >](../standard-library/random.md).
 
 ```cpp
 #include <iostream>
@@ -164,14 +197,14 @@ Generating a sequence of 5 elements into an array:
 
 ## <a name="remarks"></a>Poznámky
 
-Členské funkce této třídy nevyvolá výjimku výjimky.
+Členské funkce této třídy nevyvolají výjimky.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055c1a0c19afce43338df90a92afef2a8469f3f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac6968a688c50ad665e8b28a883eaf62255aaf28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700107"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 
@@ -41,14 +41,14 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-První číslo v odčítání. Musí se jednat o typ `T`.
+*t*<br/>
+[in] První číslo v odčítání. Musí se jednat o typ `T`.
 
-[in] *u*  
-Číslo, které se má odečíst od *t*. Musí se jednat o typ `U`.
+*u*<br/>
+[in] Číslo, které se má odečíst od *t*. Musí se jednat o typ `U`.
 
-[out] *výsledek*  
-Parametr kde **SafeSubtract** výsledek je uložen.
+*výsledek*<br/>
+[out] Parametr kde **SafeSubtract** výsledek je uložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 

@@ -1,5 +1,5 @@
 ---
-title: Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX knihovny MFC | Microsoft Docs
+title: Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX knihovny MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,68 +16,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a406bf633715f6a6e9546295da3b02a41f0063
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d8342c76e58b5d21f36147f073e1380fbad15bd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369307"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712111"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX v prostředí MFC
-Zadejte názvy pro ovládací prvek třídy a třídy stránky vlastností, názvy typů a zadejte identifikátory pro vlastní ovládací prvek. S výjimkou produktů **krátký název**, ostatní pole můžete upravovat nezávisle. Pokud změníte text pro **krátký název**, změny se projeví v názvech všechna pole na této stránce. Toto chování je navržená tak, aby bylo možné všechny názvy snadno identifikovat jako vývoje ovládacího prvku.  
+Zadejte názvy pro ovládací prvek třídy a třídy stránky vlastností, názvy typů a zadejte identifikátory pro ovládací prvek. S výjimkou produktů **krátký název**, všechna ostatní pole lze nezávisle upravovat. Pokud se změní text pro **krátký název**, změny se projeví v názvech všechna ostatní pole na této stránce. Toto chování je navržené tak, aby všechny názvy jednoduše rozpoznatelným názvem za vás při vývoji ovládacího prvku.  
   
- **Krátký název**  
- Poskytuje zkrácený název pro ovládací prvek. Ve výchozím nastavení je tento název založen na název projektu, který jste zadali v **nový projekt** dialogové okno. Poskytnutý název určuje názvy tříd, názvy typů a identifikátory typu, pokud nezměníte tato pole samostatně.  
+- **Krátký název**
+
+   Zadejte zkrácený název ovládacího prvku. Ve výchozím nastavení, tento název je založen na názvu projektu, který jste zadali v **nový projekt** dialogové okno. Název, který poskytnete určuje názvy tříd, názvy typů a identifikátory typu, pokud nezměníte těchto polí samostatně.  
   
- **Název třídy ovládacího prvku**  
- Ve výchozím nastavení, je název třídy ovládacího prvku založený na krátký název, s `C` jako předponu a `Ctrl` jako příponu. Například pokud krátký název je `Price`, je název třídy ovládacího prvku `CPriceCtrl`.  
+- **Název třídy ovládacího prvku**
+
+   Ve výchozím nastavení, název třídy ovládacího prvku je založen na krátký název s `C` jako předponu a `Ctrl` jako příponu. Například pokud krátký název je `Price`, je název třídy ovládacího prvku `CPriceCtrl`.  
   
- **Soubor h ovládacího prvku**  
- Ve výchozím nastavení, je název souboru hlaviček založen na krátký název, s `Ctrl` jako příponu a `.h` jako přípona souboru. Například pokud krátký název je `Price`, je název souboru záhlaví `PriceCtrl.h`. Název v tomto poli by měl odpovídat názvu třídy ovládacího prvku.  
+- **Soubor .h ovládacího prvku**
+
+   Ve výchozím nastavení, název souboru hlaviček je založen na krátký název s `Ctrl` jako příponu a `.h` jako příponu souboru. Například pokud krátký název je `Price`, název souboru hlaviček je `PriceCtrl.h`. Název v tomto poli by měl odpovídat názvu třídy ovládacího prvku.  
   
- **Soubor sada ovládacího prvku**  
- Ve výchozím nastavení, je název souboru hlaviček založen na krátký název, s `Ctrl` jako příponu a `.cpp` jako přípona souboru. Například pokud krátký název je `Price`, je název souboru záhlaví `PriceCtrl.cpp`. Název v tomto poli by měl odpovídat název hlavičky.  
+- **Soubor .cpp ovládacího prvku**
+
+   Ve výchozím nastavení, název souboru hlaviček je založen na krátký název s `Ctrl` jako příponu a `.cpp` jako příponu souboru. Například pokud krátký název je `Price`, název souboru hlaviček je `PriceCtrl.cpp`. Název v tomto poli by měl odpovídat názvu záhlaví.  
   
- **Název typu ovládacího prvku**  
- Ve výchozím nastavení, název typu ovládacího prvku podle krátký název, za nímž následuje `Control`. Například pokud krátký název je `Price`, je typ názvu třídy ovládacího prvku `Price Control`. Pokud změníte hodnotu v tomto poli, zkontrolujte, zda že název značí dědičnosti.  
+- **Název typu ovládacího prvku**
+
+   Ve výchozím nastavení, název typu ovládacího prvku založené na krátký název, za nímž následuje `Control`. Například pokud krátký název je `Price`, je název třídy typu ovládacího prvku `Price Control`. Pokud změníte hodnotu v tomto poli, ujistěte se, že název označuje dědičnosti.  
   
- **ID typu ovládacího prvku**  
- Nastaví ID typu třídy ovládacího prvku. Ovládací prvek zapíše tento řetězec do registru při jejím přidání do projektu. Aplikace typu kontejner, použijte tento řetězec k vytvoření instance ovládacího prvku.  
+- **ID typu ovládacího prvku**
+
+   Nastaví ID ovládacího prvku typu třídy ovládacího prvku. Ovládací prvek zapíše tento řetězec do registru, když se přidá do projektu. Aplikace typu kontejner použít tento řetězec pro vytvoření instance ovládacího prvku.  
   
- Ve výchozím nastavení je ID typu ovládacího prvku založen na název projektu, který jste zadali v **nový projekt** dialogové okno a krátký název. Tento název by měl odpovídat názvu typu.  
+   Ve výchozím nastavení, ID typu ovládacího prvku podle názvu projektu, který jste určili v **nový projekt** dialogové okno a krátký název. Tento název by měl odpovídat názvu typu.  
   
- Ve výchozím nastavení zobrazí se následující ID typu:  
+   Ve výchozím nastavení zobrazí ID typu ovládacího prvku následujícím způsobem:  
   
- *ProjectName.ShortName*Ctrl.1  
+   *ProjectName.ShortName*Ctrl.1  
   
- Pokud změníte krátký název v tomto dialogovém, zobrazí se následující ID typu:  
+   Pokud změníte v tomto dialogovém okně krátký název, ID typu ovládacího prvku se zobrazí takto:  
   
- *ProjectName.NewShortName*Ctrl.1  
+   *ProjectName.NewShortName*Ctrl.1  
   
- **Název třídy PropPage**  
- Ve výchozím nastavení, je název třídy stránky vlastností založen na krátký název, s `C` jako předponu a `PropPage` jako příponu. Například pokud krátký název je `Price`, je název třídy stránky vlastností `CPricePropPage`. Tento název by měl odpovídat názvu třídy ovládacího prvku s příponou `PropPage`.  
+- **Název třídy stránky vlastností**
+
+   Ve výchozím nastavení, název třídy stránky vlastností je založen na krátký název s `C` jako předponu a `PropPage` jako příponu. Například pokud krátký název je `Price`, je název třídy stránky vlastností `CPricePropPage`. Tento název by měl odpovídat názvu třídy ovládacího prvku s příponou `PropPage`.  
   
- **Soubor PropPage h**  
- Ve výchozím nastavení je název souboru záhlaví stránky vlastností založen na krátký název, s `PropPage` jako příponu a `.h` jako přípona souboru. Například pokud krátký název je `Price`, je název souboru záhlaví stránky vlastností `PricePropPage.h`. Tento název by měl odpovídat názvu třídy.  
+- **Soubor .h stránky vlastností**
+
+   Ve výchozím nastavení je název souboru záhlaví stránky vlastností založen na krátký název s `PropPage` jako příponu a `.h` jako příponu souboru. Například pokud krátký název je `Price`, je název souboru záhlaví stránky vlastností `PricePropPage.h`. Tento název by měl odpovídat názvu třídy.  
   
- **PropPage souboru**  
- Ve výchozím nastavení je název souboru implementace stránky vlastností založen na krátký název, s `PropPage` jako příponu a `.cpp` jako přípona souboru. Například pokud krátký název je `Price`, je název souboru záhlaví stránky vlastností `PricePropPage.cpp`. Tento název by měl odpovídat názvu záhlaví souboru.  
+- **Soubor .cpp stránky vlastností**
+
+   Ve výchozím nastavení je název souboru implementace stránky vlastností založen na krátký název s `PropPage` jako příponu a `.cpp` jako příponu souboru. Například pokud krátký název je `Price`, je název souboru záhlaví stránky vlastností `PricePropPage.cpp`. Tento název by měl odpovídat názvu záhlaví souboru.  
   
- **Název typu PropPage**  
- Ve výchozím nastavení, název typu stránky vlastností podle krátký název, za nímž následuje `Property Page`. Například pokud krátký název je `Price`, je název typu stránky vlastností `Price Property Page`. Pokud změníte hodnotu v tomto poli, zkontrolujte, zda že název označuje třída ovládacích prvků.  
+- **Název typu stránky vlastností**
+
+   Ve výchozím nastavení, název typu stránky vlastností vychází krátký název, za nímž následuje `Property Page`. Například pokud krátký název je `Price`, je název typu stránky vlastností `Price Property Page`. Pokud změníte hodnotu v tomto poli, ujistěte se, že název označuje třídě ovládacího prvku.  
   
- **ID typu PropPage**  
- Nastaví ID třídy stránky vlastností. Ovládací prvek zapíše tento řetězec v registru, pokud bylo použito k projektu. Aplikace typu kontejner tento řetězec používá k vytvoření instance ze stránky vlastností ovládacího prvku.  
+- **ID typu stránky vlastností**
+
+   Nastaví ID třídy stránky vlastností. Ovládací prvek zapíše tento řetězec v registru při použití do projektu. Aplikace typu kontejner pro tento řetězec používá k vytvoření instance stránku vlastností ovládacího prvku.  
   
- Ve výchozím nastavení je ID typu stránky vlastností založen na název projektu, který jste zadali v **nový projekt** dialogové okno a krátký název. Tento název by měl odpovídat názvu typu.  
+   Ve výchozím nastavení, ID typu stránky vlastností podle názvu projektu, který jste určili v **nový projekt** dialogové okno a krátký název. Tento název by měl odpovídat názvu typu.  
   
- Ve výchozím nastavení zobrazí se následující ID typu stránky vlastností:  
+   Ve výchozím nastavení zobrazí se následující ID typu stránky vlastností:  
   
- *ProjectName.ShortName*PropPage.1  
+   *ProjectName.ShortName*PropPage.1  
   
- Pokud změníte krátký název v tomto dialogovém, zobrazí se následující ID typu stránky vlastností:  
+   Pokud změníte v tomto dialogovém okně krátký název, ID typu stránky vlastností se zobrazí takto:  
   
- *ProjectName.NewShortName*PropPage.1  
+   *ProjectName.NewShortName*PropPage.1  
   
 ## <a name="see-also"></a>Viz také  
  [Průvodce ovládacím prvkem ActiveX knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md)   

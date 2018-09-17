@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716167"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl – třída
 Ovládací prvek implementuje popisek, který [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá k zobrazení popisů tlačítek.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Ukazatel do nadřazeného okna.  
+*pWndParent*<br/>
+[in] Ukazatel do nadřazeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud v okně se úspěšně vytvořil; v opačném případě hodnota FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rect*  
- Obsahuje poslední pozice ovládacího prvku tooltip.  
+*Rect*<br/>
+[out] Obsahuje poslední pozice ovládacího prvku tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  ToolTip – ovládací prvek skryje.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTextMargin*  
- Určuje mezery mezi text ovládacího prvku popisku a ohraničení okna popisu. Výchozí hodnota je 10 pixelů.  
+*nTextMargin*<br/>
+[in] Určuje mezery mezi text ovládacího prvku popisku a ohraničení okna popisu. Výchozí hodnota je 10 pixelů.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Zobrazí ovládací prvek tooltip.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- Určuje umístění a velikost ovládacího prvku tooltip.  
+*Rect*<br/>
+[in] Určuje umístění a velikost ovládacího prvku tooltip.  
   
- [in] *strText*  
- Určuje text zobrazený v popisku.  
+*strText*<br/>
+[in] Určuje text zobrazený v popisku.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda zobrazí ToolTip – ovládací prvek na pozici a velikost určená *rect*. Pokud umístění, velikost a text nebyly změněny od poslední chvíle, kdy byla tato metoda volána, tato metoda nemá žádný vliv.  

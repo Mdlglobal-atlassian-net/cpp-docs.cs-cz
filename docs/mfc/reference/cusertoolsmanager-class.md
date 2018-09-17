@@ -1,5 +1,5 @@
 ---
-title: Třída CUserToolsManager | Microsoft Docs
+title: Cusertoolsmanager – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 19c2622802fe984f586bb3a8a7b3c67f52cc82b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122873"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701672"
 ---
-# <a name="cusertoolsmanager-class"></a>CUserToolsManager – třída
-Udržuje kolekci [CUserTool třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatele nástroje k aplikaci. Podporuje provádění příkazů související nástroje pro uživatele, a také ukládá informace o nástrojích uživatele do registru systému Windows.  
+# <a name="cusertoolsmanager-class"></a>Cusertoolsmanager – třída
+Udržuje kolekci [cusertool – třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Uživatelský nástroj je položka nabídky, která spustí externí aplikaci. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatelské nástroje do aplikace. Podporuje provádění příkazů přidružených s uživatelskými nástroji a také uloží informace o nástrojích pro uživatele v registru Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,45 +82,45 @@ class CUserToolsManager : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CUserToolsManager::CreateNewTool](#createnewtool)|Vytvoří nového uživatele nástroje.|  
-|[CUserToolsManager::FindTool](#findtool)|Vrátí ukazatele myši `CMFCUserTool` objekt, který je přidružen ID zadaného příkazu.|  
-|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|Vrátí ID prostředku, který je spojen s **argumenty** nabídce **nástroje** kartě **přizpůsobit** dialogové okno.|  
-|[CUserToolsManager::GetDefExt](#getdefext)|Vrátí výchozí rozšíření, která **otevřít soubor** dialogové okno ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.|  
-|[CUserToolsManager::GetFilter](#getfilter)|Vrací filtr souborů, které **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.|  
-|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|Vrátí ID prostředku, který je přidružený **directory počáteční** nabídce **nástroje** kartě **přizpůsobit** dialogové okno.|  
-|[CUserToolsManager::GetMaxTools](#getmaxtools)|Vrátí maximální počet uživatelů nástroje, které mohou být přiděleny v aplikaci.|  
-|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|Vrátí ID příkazu, který zástupného textu položky nabídky pro uživatele nástroje.|  
-|[CUserToolsManager::GetUserTools](#getusertools)|Vrátí odkaz na seznam nástrojů uživatele.|  
-|[CUserToolsManager::InvokeTool](#invoketool)|Spustí aplikaci přidruženou k nástroji uživatele, který má zadaný příkaz ID.|  
-|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|Určuje, zda je přidružena k nástroji uživatelské ID příkazu.|  
-|[CUserToolsManager::LoadState](#loadstate)|Načte informace o nástrojích uživatele z registru systému Windows.|  
-|[CUserToolsManager::MoveToolDown](#movetooldown)|Přesune nástroj pro zadaného uživatele v seznamu uživatelů nástrojů dolů.|  
-|[CUserToolsManager::MoveToolUp](#movetoolup)|Přesune nástroj pro zadaného uživatele v seznamu uživatelů nástrojů nahoru.|  
+|[CUserToolsManager::CreateNewTool](#createnewtool)|Vytvoří nový uživatelský nástroj.|  
+|[CUserToolsManager::FindTool](#findtool)|Vrací ukazatel `CMFCUserTool` objekt, který je přidružen ID zadaného příkazu.|  
+|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|Vrátí ID prostředku, který je přidružen **argumenty** nabídce **nástroje** kartě **vlastní** dialogové okno.|  
+|[CUserToolsManager::GetDefExt](#getdefext)|Vrátí výchozí rozšíření, která **otevřít soubor** dialogové okno ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) používá **příkaz** na **nástroje** kartě **Vlastní** dialogové okno.|  
+|[CUserToolsManager::GetFilter](#getfilter)|Vrací filtr souborů, které **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá **příkaz** na **nástroje** kartě **Vlastní** dialogové okno.|  
+|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|Vrátí ID prostředku, který je přidružen **výchozí adresář** nabídce **nástroje** kartě **vlastní** dialogové okno.|  
+|[CUserToolsManager::GetMaxTools](#getmaxtools)|Vrátí maximální počet uživatelských nástrojů, které mohou být přiděleny v aplikaci.|  
+|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|Vrátí Identifikátor příkazu zástupný prvek položky nabídky pro uživatele nástroje.|  
+|[CUserToolsManager::GetUserTools](#getusertools)|Vrátí odkaz na seznam uživatelských nástrojů.|  
+|[CUserToolsManager::InvokeTool](#invoketool)|Spustí aplikace přidružené k uživatelský nástroj, který má ID zadaného příkazu.|  
+|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|Určuje, zda ID příkazu je přidružen uživatelský nástroj.|  
+|[CUserToolsManager::LoadState](#loadstate)|Načte informace o nástrojích pro uživatele z registru Windows.|  
+|[CUserToolsManager::MoveToolDown](#movetooldown)|Přesune zadaný uživatelský nástroj dolů v seznamu nástrojů pro uživatele.|  
+|[CUserToolsManager::MoveToolUp](#movetoolup)|Posune zadaný uživatelský nástroj nahoru v seznamu uživatelů nástroje.|  
 |[CUserToolsManager::RemoveTool](#removetool)|Nástroj pro zadaného uživatele se odebere z aplikace.|  
-|[CUserToolsManager::SaveState](#savestate)|Ukládá informace o nástrojích uživatele v registru systému Windows.|  
-|[CUserToolsManager::SetDefExt](#setdefext)|Určuje výchozí příponu, **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** karta z **přizpůsobit** dialogové okno.|  
-|[CUserToolsManager::SetFilter](#setfilter)|Určuje soubor filtru, který **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.|  
+|[CUserToolsManager::SaveState](#savestate)|Ukládá informace o nástrojích pro uživatele v registru Windows.|  
+|[CUserToolsManager::SetDefExt](#setdefext)|Určuje výchozí rozšíření, která **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartu nástroje **vlastní** dialogové okno.|  
+|[CUserToolsManager::SetFilter](#setfilter)|Určuje soubor filtru, který **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** karty **Vlastní** dialogové okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Do aplikace zahrnout nástroje pro uživatele, musíte:  
+ Chcete-li zahrnout uživatelské nástroje do vaší aplikace, musíte:  
   
- 1. Rezervujte položku nabídky a přidružený příkaz ID pro položku nabídky Nástroje uživatele.  
+ 1. Rezervujte položky nabídky a přidružený příkaz ID pro položku nabídky Nástroje uživatele.  
   
- 2. Rezervujte ID sekvenční příkazu pro každého uživatele nástroj, který můžete definovat uživatele ve vaší aplikaci.  
+ 2. Rezervujte ID sekvenční příkazu pro každý nástroj uživatele definující uživatele ve vaší aplikaci.  
   
- 3. Volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) metoda a zadejte následující parametry: nabídky ID příkazu, první nástroj příkaz ID uživatele a ID poslední uživatele nástroj příkazu.  
+ 3. Volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) metoda a zadat následující parametry: nabídka ID příkazu, první ID příkazu nástroj uživatel a ID poslední uživatel nástroj příkazu.  
   
- Měla by existovat pouze jedna globální `CUserToolsManager` objektu na aplikaci.  
+ Měl by existovat pouze jeden globální `CUserToolsManager` objektu na aplikaci.  
   
- Příklad nástrojů pro uživatele naleznete v části VisualStudioDemo ukázkový projekt.  
+ Příklad uživatelské nástroje najdete v článku VisualStudioDemo ukázkového projektu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak načíst odkaz na `CUserToolsManager` objekt a postup vytvoření nových nástrojů uživatele. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak načíst odkaz na `CUserToolsManager` objekt a jak vytvářet nové uživatelské nástroje. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CUserToolsManager`  
   
@@ -128,22 +128,22 @@ class CUserToolsManager : public CObject
  **Záhlaví:** afxusertoolsmanager.h  
   
 ##  <a name="createnewtool"></a>  CUserToolsManager::CreateNewTool  
- Vytvoří nového uživatele nástroje.  
+ Vytvoří nový uživatelský nástroj.  
   
 ```  
 CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na nově vytvořeného uživatele nástroj nebo hodnota NULL, pokud počet nástroje pro uživatele byla překročena maximální. Typ vrácený je stejný jako typ, který je předán `CWinAppEx::EnableUserTools` jako *pToolRTC* parametr.  
+ Ukazatel na nově vytvořený uživatelský nástroj nebo hodnota NULL, pokud počet uživatelských nástrojů byla překročena maximální délka. Vrácený typ je stejný jako typ, který je předán `CWinAppEx::EnableUserTools` jako *pToolRTC* parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyhledá první ID příkazu nabídky k dispozici v rozsahu, který je zadaný ve volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) a přiřadí nástroj pro uživatele mu ID této.  
+ Tato metoda vyhledá první ID příkazu nabídky dostupné v rozsahu, který není zadána ve volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) a přiřadí uživatelský nástroj číslem ID této.  
   
- Metoda selže, pokud počet nástroje byl dosažen maximální počet. K tomu dochází, když uživatel nástroje jsou přiřazeny všechny identifikátory příkazů v rozsahu. Maximální počet nástrojů můžete načíst pomocí volání [CUserToolsManager::GetMaxTools](#getmaxtools). Můžete získat přístup k seznamu nástroje voláním [CUserToolsManager::GetUserTools](#getusertools) metoda.  
+ Metoda selže, pokud počet nástroje dosáhla maximálního počtu. K tomu dojde, když jsou přiřazeny všechny identifikátory příkazů v rámci rozsahu uživatelské nástroje. Maximální počet nástroje můžete načíst pomocí volání [CUserToolsManager::GetMaxTools](#getmaxtools). Můžete získat přístup k seznamu nástroje voláním [CUserToolsManager::GetUserTools](#getusertools) metody.  
   
 ##  <a name="cusertoolsmanager"></a>  CUserToolsManager::CUserToolsManager  
- Vytvoří `CUserToolsManager`. Každá aplikace musí mít maximálně jeden správce nástrojů uživatelů.  
+ Vytvoří `CUserToolsManager`. Každá aplikace musí mít maximálně jeden správce nástroje uživatelů.  
   
 ```  
 CUserToolsManager();
@@ -159,46 +159,46 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdToolsDummy*  
- Celé číslo bez znaménka, který rozhraní používá jako zástupný symbol pro ID příkazu v nabídce Nástroje pro uživatele.  
+*uiCmdToolsDummy*<br/>
+[in] Celé číslo bez znaménka, která rozhraní používá jako zástupný symbol pro Identifikátor příkazu v nabídce Nástroje pro uživatele.  
   
- [v] *uiCmdFirst*  
- ID příkazu pro příkaz první nástroj uživatele.  
+*uiCmdFirst*<br/>
+[in] ID příkazu pro příkaz první nástroj uživatele.  
   
- [v] *uiCmdLast*  
- ID příkazu pro příkaz poslední nástroj uživatele.  
+*uiCmdLast*<br/>
+[in] ID příkazu pro příkaz poslední nástroj uživatele.  
   
- [v] *pToolRTC*  
- Třída, [CUserToolsManager::CreateNewTool](#createnewtool) vytvoří. Pomocí této třídy lze použít odvozené typ [CUserTool třída](../../mfc/reference/cusertool-class.md) místo výchozí implementace.  
+*pToolRTC*<br/>
+[in] Třída, která [CUserToolsManager::CreateNewTool](#createnewtool) vytvoří. Pomocí této třídy, můžete použít odvozeným typem [cusertool – třída](../../mfc/reference/cusertool-class.md) místo výchozí implementaci.  
   
- [v] *uArgMenuID*  
- ID prostředku nabídky argumenty místní nabídky.  
+*uArgMenuID*<br/>
+[in] ID prostředku nabídky místní nabídka argumenty.  
   
- [v] *uInitDirMenuID*  
- ID prostředku nabídky Počáteční adresář místní nabídky.  
+*uInitDirMenuID*<br/>
+[in] ID prostředku nabídky Počáteční adresář místní nabídka.  
   
 ### <a name="remarks"></a>Poznámky  
- Nevolejte tento konstruktor. Místo toho volat [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) povolit uživatele nástroje a volání [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) k získání ukazatele na `CUserToolsManager`. Další informace najdete v tématu [uživatelem definované nástroje](../../mfc/user-defined-tools.md).  
+ Není volání tohoto konstruktoru. Namísto toho zavolejte metodu [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) povolit uživatelské nástroje a volání [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) získat ukazatel `CUserToolsManager`. Další informace najdete v tématu [uživatelem definované nástroje](../../mfc/user-defined-tools.md).  
   
 ##  <a name="findtool"></a>  CUserToolsManager::FindTool  
- Vrátí má ukazatel na [CUserTool třída](../../mfc/reference/cusertool-class.md) objekt, který je přidružen ID zadaného příkazu.  
+ Vrací ukazatel [cusertool – třída](../../mfc/reference/cusertool-class.md) objekt, který je přidružen ID zadaného příkazu.  
   
 ```  
 CUserTool* FindTool(UINT uiCmdId) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdId*  
- Identifikátor příkazu nabídky.  
+*uiCmdId*<br/>
+[in] Identifikátor příkazu nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na [CUserTool třída](../../mfc/reference/cusertool-class.md) nebo `CUserTool`-odvozené objektu, pokud úspěch; jinak hodnota NULL.  
+ Ukazatel [cusertool – třída](../../mfc/reference/cusertool-class.md) nebo `CUserTool`-odvozenému objektu, pokud úspěchu; jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Když `FindTool` je úspěšné, typ vrácený je, stejný jako typ *pToolRTC* parametru [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Když `FindTool` je úspěšné, vrácený typ odpovídá typu *pToolRTC* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
- Vrátí ID prostředku, který je spojen s **argumenty** nabídce **nástroje** kartě **přizpůsobit** dialogové okno.  
+ Vrátí ID prostředku, který je přidružen **argumenty** nabídce **nástroje** kartě **vlastní** dialogové okno.  
   
 ```  
 UINT GetArgumentsMenuID() const;  
@@ -208,10 +208,10 @@ UINT GetArgumentsMenuID() const;
  Identifikátor prostředku nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
- *UArgMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Určuje ID prostředku.  
+ *UArgMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) určuje Identifikátor prostředku.  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
- Vrátí výchozí rozšíření, která **otevřít soubor** dialogové okno ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.  
+ Vrátí výchozí rozšíření, která **otevřít soubor** dialogové okno ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) používá **příkaz** na **nástroje** kartě **Vlastní** dialogové okno.  
   
 ```  
 const CString& GetDefExt() const;  
@@ -221,17 +221,17 @@ const CString& GetDefExt() const;
  Odkaz na `CString` objekt, který obsahuje rozšíření.  
   
 ##  <a name="getfilter"></a>  CUserToolsManager::GetFilter  
- Vrací filtr souborů, které **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.  
+ Vrací filtr souborů, které **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá **příkaz** na **nástroje** kartě **Vlastní** dialogové okno.  
   
 ```  
 const CString& GetFilter() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na `CString` objekt, který obsahuje filtru.  
+ Odkaz na `CString` objekt, který obsahuje filtr.  
   
 ##  <a name="getinitialdirmenuid"></a>  CUserToolsManager::GetInitialDirMenuID  
- Vrátí ID prostředku, který je přidružený **directory počáteční** nabídce **nástroje** kartě **přizpůsobit** dialogové okno.  
+ Vrátí ID prostředku, který je přidružen **výchozí adresář** nabídce **nástroje** kartě **vlastní** dialogové okno.  
   
 ```  
 UINT GetInitialDirMenuID() const;  
@@ -241,133 +241,133 @@ UINT GetInitialDirMenuID() const;
  Identifikátor prostředku nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácený ID je uveden v *uInitDirMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Je v zadané vrácené ID *uInitDirMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
- Vrátí maximální počet uživatelů nástroje, které mohou být přiděleny v aplikaci.  
+ Vrátí maximální počet uživatelských nástrojů, které mohou být přiděleny v aplikaci.  
   
 ```  
 int GetMaxTools() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Maximální počet uživatelů nástroje, které mohou být přiděleny.  
+ Maximální počet uživatelských nástrojů, které mohou být přiděleny.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem načtení maximální počet nástroje, které mohou být přiděleny v aplikaci. Toto číslo je číslo v rozsahu od ID *uiCmdFirst* prostřednictvím *uiCmdLast* parametry, které můžete předat [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Volejte tuto metodu za účelem načtení maximální počet nástroje, které mohou být přiděleny v aplikaci. Toto číslo je počet ID v rozsahu od *uiCmdFirst* prostřednictvím *uiCmdLast* parametry, které můžete předat [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
- Vrátí ID příkazu, který zástupného textu položky nabídky pro uživatele nástroje.  
+ Vrátí Identifikátor příkazu zástupný prvek položky nabídky pro uživatele nástroje.  
   
 ```  
 UINT GetToolsEntryCmd() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID příkazu zástupného textu.  
+ ID příkazu zástupný symbol.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li povolit nástroje pro uživatele, zavolejte [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). *UiCmdToolsDummy* parametr určuje ID příkazu, který položka příkazu nástroje. Tato metoda vrátí ID nástroje položka příkazu. Bez ohledu na toto ID se používá v nabídce, nahrazuje seznam nástrojů uživatele po zobrazení nabídky.  
+ Pokud chcete povolit uživatelské nástroje, volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). *UiCmdToolsDummy* parametr určuje Identifikátor příkazu položka příkazu nástroje. Tato metoda vrátí ID nástroje položka příkazu. Bez ohledu na toto ID se používá v nabídce, je nahrazen seznam uživatelských nástrojů až se zobrazí v nabídce.  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
- Vrátí odkaz na seznam nástrojů uživatele.  
+ Vrátí odkaz na seznam uživatelských nástrojů.  
   
 ```  
 const CObList& GetUserTools() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Const odkaz na [CObList třída](../../mfc/reference/coblist-class.md) objekt, který obsahuje seznam nástrojů pro uživatele.  
+ Konstantní odkaz [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který obsahuje seznam uživatelských nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání nástrojů pro tuto metodu za účelem načtení seznamu uživatele, který [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) udržuje objektu. Nástroj pro každého uživatele je reprezentována objekt typu [CUserTool třída](../../mfc/reference/cusertool-class.md) nebo typ odvozený z `CUserTool`. Typ je zadána *pToolRTC* parametr při volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) k povolení nástrojů uživatele.  
+ Volání této metody k načtení seznamu uživatele, nástroje, které [cusertoolsmanager –](../../mfc/reference/cusertoolsmanager-class.md) udržuje objekt. Každý nástroj uživatele je reprezentován objektem typu [cusertool – třída](../../mfc/reference/cusertool-class.md) nebo typ odvozený od `CUserTool`. Typ je určená *pToolRTC* parametru při volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) povolit uživatelské nástroje.  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
- Spustí aplikaci přidruženou k nástroji uživatele, který má zadaný příkaz ID.  
+ Spustí aplikace přidružené k uživatelský nástroj, který má ID zadaného příkazu.  
   
 ```  
 BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdId*  
- ID příkazu nabídky přidružené nástroj pro uživatele.  
+*uiCmdId*<br/>
+[in] ID nabídky příkazu přidružený uživatelský nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud příkaz spojené s nástrojem pro uživatele byla spuštěna úspěšně; jinak 0.  
+ Nenulové, pokud se příkaz přidružený uživatelský nástroj provedl úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání tuto metodu provést aplikace přidružené k uživateli nástroj, který má ID příkazu, který je určeného *uiCmdId*.  
+ Volání této metody ke spuštění aplikace přidružené k uživateli nástroj, který má Identifikátor příkazu určené *uiCmdId*.  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
- Určuje, zda je přidružena k nástroji uživatelské ID příkazu.  
+ Určuje, zda ID příkazu je přidružen uživatelský nástroj.  
   
 ```  
 BOOL IsUserToolCmd(UINT uiCmdId) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdId*  
- ID příkazu položky nabídky.  
+*uiCmdId*<br/>
+[in] ID příkazu položky nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud daný příkaz ID je přidružena k nástroji uživatele; jinak 0.  
+ Nenulové, pokud zadaný příkaz ID je přidružena k nástroji uživatele; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda ověří, zda ID daného příkazu, který je v rozsahu ID příkazu. Zadejte rozsah při volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) k povolení nástrojů uživatele.  
+ Tato metoda zkontroluje, jestli ID daného příkazu, který je v rozsahu ID příkazu. Zadejte rozsah při volání [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) povolit uživatelské nástroje.  
   
 ##  <a name="loadstate"></a>  CUserToolsManager::LoadState  
- Načte informace o nástrojích uživatele z registru systému Windows.  
+ Načte informace o nástrojích pro uživatele z registru Windows.  
   
 ```  
 BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
- Cesta klíče registru Windows.  
+*lpszProfileName*<br/>
+[in] Cesta klíče registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud stav byl načten úspěšně; jinak 0.  
+ Nenulové, pokud stav byl načten úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte stav `CUserToolsManager` objekt z registru systému Windows.  
+ Tato metoda načte stav `CUserToolsManager` objektu z registru Windows.  
   
- Obvykle je tato metoda není volána přímo. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) nazve je jako součást procesu inicializace pracovního prostoru.  
+ Obvykle je není tuto metodu volat přímo. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) volá jako součást procesu inicializace pracovního prostoru.  
   
 ##  <a name="movetooldown"></a>  CUserToolsManager::MoveToolDown  
- Přesune nástroj pro zadaného uživatele v seznamu uživatelů nástrojů dolů.  
+ Přesune zadaný uživatelský nástroj dolů v seznamu nástrojů pro uživatele.  
   
 ```  
 BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pTool*  
- Určuje nástroj uživatele přesunout.  
+*pTool*<br/>
+[in] Určuje uživatelský nástroj přesunout.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud nástroj pro uživatele byla úspěšně; přesunout jinak 0.  
+ Nenulové, pokud nástroj pro uživatele byla úspěšně; přesunout dolů jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Metoda selže, pokud nástroj který *pTool* určuje není v seznamu interní nebo pokud tento nástroj je poslední v seznamu.  
+ Metoda selže, pokud nástroj, který *pTool* určuje není ve vnitřním seznamu nebo pokud tento nástroj je poslední v seznamu.  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
- Přesune nástroj pro zadaného uživatele v seznamu uživatelů nástrojů nahoru.  
+ Posune zadaný uživatelský nástroj nahoru v seznamu uživatelů nástroje.  
   
 ```  
 BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pTool*  
- Určuje nástroj uživatele přesunout.  
+*pTool*<br/>
+[in] Určuje uživatelský nástroj přesunout.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud nástroj pro uživatele byla úspěšně; přesunout nahoru jinak 0.  
+ Nenulové, pokud nástroj pro uživatele byla úspěšně; přesunout nahoru jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Metoda selže, pokud nástroj který *pTool* parametr určuje není v seznamu interní nebo pokud tento nástroj je první nástroj položky v seznamu.  
+ Metoda selže, pokud nástroj, který *pTool* parametr určuje není ve vnitřním seznamu nebo pokud tento nástroj je první nástroj položky v seznamu.  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  Nástroj pro zadaného uživatele se odebere z aplikace.  
@@ -377,58 +377,58 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] *pTool*  
- Ukazatel na nástroj uživatele k odebrání.  
+*pTool*<br/>
+[out v] Ukazatel na uživatelský nástroj k odebrání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je nástroj úspěšně odebrána. Jinak hodnota FALSE.  
+ TRUE, pokud nástroj se úspěšně odebral. V opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tento nástroj je úspěšně odebrána, tato metoda odstraní *pTool*.  
+ Pokud nástroj je úspěšně odebrána, tato metoda odstraní *pTool*.  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
- Ukládá informace o nástrojích uživatele v registru systému Windows.  
+ Ukládá informace o nástrojích pro uživatele v registru Windows.  
   
 ```  
 BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
- Cesta ke klíči registru systému Windows.  
+*lpszProfileName*<br/>
+[in] Cesta ke klíči registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud byl úspěšně; uložen stav jinak 0.  
+ Nenulové, pokud státu byla uložena úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Metoda ukládá aktuální stav `CUserToolsManager` objekt v registru systému Windows.  
+ Metoda uloží aktuální stav `CUserToolsManager` objektu v registru Windows.  
   
- Obvykle, není potřeba volat tuto metodu přímo, [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) nazve je automaticky jako součást procesu serializace pracovní prostor aplikace.  
+ Obvykle není nutné tuto metodu volat přímo, [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) volá automaticky jako součást procesu serializace pracovního prostoru aplikace.  
   
 ##  <a name="setdefext"></a>  CUserToolsManager::SetDefExt  
- Určuje výchozí příponu, **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** karta z **přizpůsobit** dialogové okno.  
+ Určuje výchozí rozšíření, která **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartu nástroje **vlastní** dialogové okno.  
   
 ```  
 void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *strDefExt*  
- Textový řetězec, který obsahuje výchozí příponu názvu souboru.  
+*strDefExt*<br/>
+[in] Textový řetězec, který obsahuje výchozí přípona názvu souboru.  
   
 ### <a name="remarks"></a>Poznámky  
- Volat tuto metodu za účelem zadejte příponu názvu souboru výchozí v **otevřít soubor** dialogové okno, které se zobrazí, když uživatel vybere aplikaci přidružit nástroj pro uživatele. Výchozí hodnota je "exe".  
+ Voláním této metody lze zadat výchozí přípona názvu souboru v **otevřít soubor** dialogové okno, které se zobrazí, když uživatel vybere aplikaci přidružit uživatelský nástroj. Výchozí hodnota je "řetězec exe".  
   
 ##  <a name="setfilter"></a>  CUserToolsManager::SetFilter  
- Určuje soubor filtru, který **otevřít soubor** dialogové okno ( [CFileDialog třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** kartě **Přizpůsobit** dialogové okno.  
+ Určuje soubor filtru, který **otevřít soubor** dialogové okno ( [cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)) používá v **příkaz** na **nástroje** karty **Vlastní** dialogové okno.  
   
 ```  
 void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *strFilter*  
- Určuje filtr.  
+*strFilter*<br/>
+[in] Určuje filtr.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

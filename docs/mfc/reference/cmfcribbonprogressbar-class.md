@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711981"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
 Implementuje ovládací prvek, který vizuálně označuje průběh déletrvající operace.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje ID příkazu pro indikátor průběhu pásu karet.  
+*nID*<br/>
+[in] Určuje ID příkazu pro indikátor průběhu pásu karet.  
   
- [in] *nWidth*  
- Určuje šířku v pixelech, indikátor průběhu pásu karet.  
+*nWidth*<br/>
+[in] Určuje šířku v pixelech, indikátor průběhu pásu karet.  
   
- [in] *nHeight*  
- Určuje výšku v pixelech, indikátor průběhu pásu karet.  
+*nHeight*<br/>
+[in] Určuje výšku v pixelech, indikátor průběhu pásu karet.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Vrátí aktuální pozici indikátor průběhu.  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- TRUE, pokud chcete určit, že indikátor průběhu v nekonečné režimu. v opačném případě hodnota FALSE.  
+*bSet*<br/>
+[in] TRUE, pokud chcete určit, že indikátor průběhu v nekonečné režimu. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Obvykle Pokud indikátor průběhu v nekonečné režimu, je sděluje uživateli, že probíhá operace, ale, že čas dokončení neznámý. Tak indikátor průběhu vyplní opakovaně od minimální hodnoty na maximální hodnotu.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPos –*  
- Určuje umístění, ke kterému je nastaven indikátor průběhu.  
+*nPos –*<br/>
+[in] Určuje umístění, ke kterému je nastaven indikátor průběhu.  
   
- [in] *bRedraw*  
- Určuje, zda by měl překreslit indikátor průběhu.  
+*bRedraw*<br/>
+[in] Určuje, zda by měl překreslit indikátor průběhu.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozsah nastavování musí být v rozsahu určeném [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nminimum*  
- Určuje minimální hodnotu rozsahu.  
+*Nminimum*<br/>
+[in] Určuje minimální hodnotu rozsahu.  
   
- [in] *Nmaximum*  
- Určuje maximální hodnotu rozsahu.  
+*Nmaximum*<br/>
+[in] Určuje maximální hodnotu rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k definování rozsahu indikátoru průběhu nastavením minimální a maximální hodnoty.  

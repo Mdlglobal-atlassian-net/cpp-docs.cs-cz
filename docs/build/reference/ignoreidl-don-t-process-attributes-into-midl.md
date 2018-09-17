@@ -1,5 +1,5 @@
 ---
-title: -IGNOREIDL (Tento&#39;atributy proces t do MIDL) | Microsoft Docs
+title: -IGNOREIDL (Don&#39;t procesu atributy do MIDL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,39 +19,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d32be32f019e55f8bad9cc01199d8dc6ae6301
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7014440c3479016c89b774f9a80cc03fc4b5d4c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708224"
 ---
-# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/ IGNOREIDL (Tento&#39;atributy proces t do MIDL)
-```  
-/IGNOREIDL  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /IGNOREIDL Určuje, že jakékoli [IDL – atributy](../../windows/idl-attributes.md) ve zdroji nesmí kód do souboru IDL zpracovat.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **Embedded IDL** stránku vlastností.  
-  
-4.  Změnit **ignorovat Embedded IDL** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)   
- [/ IDLOUT (pojmenovat výstupní soubory MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
- [/ TLBOUT (název. Soubor TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [/ MIDL (zadejte možnosti příkazového řádku MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Sestavení programu s atributy](../../windows/building-an-attributed-program.md)
+# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/ IGNOREIDL (Don&#39;t procesu atributy do MIDL)
+
+```
+/IGNOREIDL
+```
+
+## <a name="remarks"></a>Poznámky
+
+/ Ignoreidl Určuje, že všechny [IDL – atributy](../../windows/idl-attributes.md) ve zdroji kódu nemají být zpracovány do souboru IDL.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **vložené IDL** stránku vlastností.
+
+1. Upravit **ignorovat vložené IDL** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[/MIDL (určení možností příkazového řádku MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
+[sestavení programu s atributy](../../windows/building-an-attributed-program.md)

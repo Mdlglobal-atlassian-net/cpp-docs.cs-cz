@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595045"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706677"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ s plovoucí desetinnou čárkou optimalizace
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Tento druh zaokrouhlování další může způsobit pomocí nižší přesnost s plovoucí desetinnou čárkou jednotka, jako je například SSE2, provádět některé zprostředkující výpočty. Přesnost, zaokrouhlení FP: Fast je proto platforma závislé; kód, který zkompiluje dobře pro jeden procesor nemusí nutně fungovat dobře pro jiný procesor. Je ponecháno na uživatele a zjistí, pokud rychlost výhody převáží nad žádné problémy s přesností.
 
 Pokud FP: Fast optimalizace je zvláště problematický pro konkrétní funkci, s plovoucí desetinnou čárkou režimu můžete místně přešla na fp: precise pomocí `float_control` – Direktiva pragma kompilátoru.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Algebraický transformace v části FP: Fast
 

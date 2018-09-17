@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848765"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709180"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton – třída
 `CMFCRibbonUndoButton` Třída implementuje tlačítko rozevíracího seznamu, který obsahuje nejnovější uživatelských příkazů. Uživatelé mohou vybrat jednu nebo více příkazů nejnovější z rozevíracího seznamu znovu, nebo je zrušit.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Popisek akce, která se zobrazí v rozevíracím seznamu.  
+*lpszLabel*<br/>
+[in] Popisek akce, která se zobrazí v rozevíracím seznamu.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Vymaže seznam akcí, což je rozevíracím seznamu.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje identifikátor příkazu.  
+*nID*<br/>
+[in] Určuje identifikátor příkazu.  
   
- [in] *lpszText*  
- Určuje textový popisek tlačítka.  
+*lpszText*<br/>
+[in] Určuje textový popisek tlačítka.  
   
- [in] *nSmallImageIndex*  
- Index založený na nule v seznamu obrázků nadřazeného objektu pro malý obrázek tlačítka.  
+*nSmallImageIndex*<br/>
+[in] Index založený na nule v seznamu obrázků nadřazeného objektu pro malý obrázek tlačítka.  
   
- [in] *nLargeImageIndex*  
- Index založený na nule v seznamu obrázků nadřazeného objektu pro velkých obrázku tlačítka.  
+*nLargeImageIndex*<br/>
+[in] Index založený na nule v seznamu obrázků nadřazeného objektu pro velkých obrázku tlačítka.  
   
- [in] *hIcon*  
- Popisovač pro ikonu, která můžete použít jako obrázek tlačítka.  
+*hIcon*<br/>
+[in] Popisovač pro ikonu, která můžete použít jako obrázek tlačítka.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Určuje počet položek, které uživatel vybrat z rozevíracího seznamu.  

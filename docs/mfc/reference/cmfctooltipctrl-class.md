@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715660"
 ---
 # <a name="cmfctooltipctrl-class"></a>Cmfctooltipctrl – třída
 Implementace rozšířeného popisku na základě [ctooltipctrl – třída](../../mfc/reference/ctooltipctrl-class.md). Popisek na základě `CMFCToolTipCtrl` třída může zobrazit ikonu, popisek a popis. Můžete upravit jeho vzhled pomocí přechodové výplně, vlastní text a barvy ohraničení, tučným písmem, zaoblených rohů nebo stylu bublin.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník ovládacího prvku tooltip.  
+*Rect*<br/>
+[in] Ohraničující obdélník ovládacího prvku tooltip.  
   
- [in] *clrLine*  
- Barva ohraničení.  
+*clrLine*<br/>
+[in] Barva ohraničení.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení popisu tlačítka.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *rect*  
+*primární řadič domény*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectImage*  
- Souřadnice na ikonu.  
+*rectImage*<br/>
+[in] Souřadnice na ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud byl nakreslen ikonu. V opačném případě FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Popisek oblasti ohraničující obdélník.  
+*Rect*<br/>
+[in] Popisek oblasti ohraničující obdélník.  
   
- [in] *bCalcOnly*  
- Při hodnotě TRUE se nebude vykreslen popisek.  
+*bCalcOnly*<br/>
+[in] Při hodnotě TRUE se nebude vykreslen popisek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost popisku v pixelech.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *x1*  
- Vodorovné souřadnice levého koncový oddělovač  
+*x1*<br/>
+[in] Vodorovné souřadnice levého koncový oddělovač  
   
- [in] *x2*  
- Vodorovné souřadnice pravého konce oddělovače.  
+*x2*<br/>
+[in] Vodorovné souřadnice pravého konce oddělovače.  
   
- [in] *Y*  
- Svislé souřadnice oddělovače.  
+*Y*<br/>
+[in] Svislé souřadnice oddělovače.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace nakreslí čáru z bodu (x1, y) do bodu (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Určuje ohraničující obdélník oblasti tak, aby vyplnil.  
+*Rect*<br/>
+[in] Určuje ohraničující obdélník oblasti tak, aby vyplnil.  
   
- [in] *clrText*  
- Barva popředí popisu tlačítka.  
+*clrText*<br/>
+[in] Barva popředí popisu tlačítka.  
   
- [in] *clrLine*  
- Barva ohraničení a čára oddělovač mezi popisek a popis.  
+*clrLine*<br/>
+[in] Barva ohraničení a čára oddělovač mezi popisek a popis.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace vyplní obdélník, který je určen *rect* s barvu nebo vzorek určené posledního volání [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDesrciption*  
- Text popisu.  
+*strDesrciption*<br/>
+[in] Text popisu.  
   
 ### <a name="remarks"></a>Poznámky  
  Text popisu, který se zobrazí na ovládacím prvku ToolStrip za oddělovače.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParams*  
- Ukazatel [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objekt, který obsahuje parametry zobrazení.  
+*pParams*<br/>
+[in] Ukazatel [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objekt, který obsahuje parametry zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokaždé, když se zobrazí popis tlačítka, je vykreslen pomocí barvy a styly vizuál, který *pParams* určuje. Hodnota *pParams* je uložen v chráněný člen `m_Params`, který je přístupný prostřednictvím odvozené třídy, která přepíše [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [cmfctooltipctrl –: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), nebo [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)udržovat zadané vzhled.  

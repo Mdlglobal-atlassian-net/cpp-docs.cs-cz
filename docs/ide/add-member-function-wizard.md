@@ -1,5 +1,5 @@
 ---
-title: Průvodce přidáním členské funkce | Microsoft Docs
+title: Průvodce přidáním členské funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f7c9f15a7f487b6f2d948404a5877a902414b37e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710499"
 ---
 # <a name="add-member-function-wizard"></a>Průvodce přidáním členské funkce
-Tento průvodce přidá deklaraci členské funkce soubor hlaviček a implementaci do souboru implementace pro vybrané třídy.  
+
+Tento průvodce přidá do souboru hlaviček a implementace členské funkce zástupných procedur do souboru implementace pro vybranou třídu deklaraci členské funkce.  
   
- Po přidání členské funkce pomocí průvodce, můžete upravit kód ve vývojovém prostředí.  
+Po přidání členské funkce pomocí průvodce, můžete upravit kód ve vývojovém prostředí.  
   
- **Návratový typ**  
- Nastaví návratový typ pro funkci člen, který chcete přidat. Můžete zadat vlastní návratový typ, nebo můžete vybrat ze seznamu dostupných typů. Informace o typech najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).  
+- **Návratový typ**
+
+   Nastaví návratový typ pro členské funkce, které chcete přidat. Můžete zadat vlastní návratový typ, nebo můžete vybrat ze seznamu dostupných typů. Informace o typech najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).  
   
-||||  
-|-|-|-|  
-|`char`|`int`|`unsigned int`|  
-|**double**|**long**|`unsigned long`|  
-|**float**|**short**|`void`|  
-|`HRESULT`|`unsigned char`||  
+   ||||  
+   |-|-|-|  
+   |**char**|**int**|**unsigned int**|  
+   |**double**|**long**|**unsigned long**|  
+   |**float**|**short**|**void**|  
+   |`HRESULT`|**unsigned char**||  
   
- **Název funkce**  
- Nastaví název členské funkce, kterou chcete přidat.  
+- **Název funkce**
+
+   Nastaví název členské funkce, které chcete přidat.  
   
- **Typ parametru**  
- Nastaví typ parametru, který přidáváte členské funkce, pokud funkci člen má parametry. Můžete zadat vlastní typ parametru, nebo můžete vybrat ze seznamu dostupných typů.  
+- **Typ parametru**
+
+   Nastaví typ parametru, který chcete přidat pro členskou funkci, pokud členskou funkci obsahuje parametry. Můžete zadat vlastní typ parametru, nebo můžete vybrat ze seznamu dostupných typů.  
   
-||||  
-|-|-|-|  
-|`char`|`int`|`unsigned char`|  
-|**double**|**long**|`unsigned int`|  
-|**float**|**short**|`unsigned long`|  
+   ||||  
+   |-|-|-|  
+   |**char**|**int**|**unsigned char**|  
+   |**double**|**long**|**unsigned int**|  
+   |**float**|**short**|**unsigned long**|  
   
- **Název parametru**  
- Nastaví název parametru, který přidáváte členské funkce, pokud funkci člen má parametry.  
+- **Název parametru**
+
+   Nastaví název parametru, který chcete přidat pro členskou funkci, pokud členskou funkci obsahuje parametry.  
   
- **Seznam parametrů**  
- Zobrazí seznam parametrů, které jste přidali do členské funkce. Pro přidání parametru do seznamu, zadejte typ a název **typ parametru** a **název parametru** políčka a klikněte na tlačítko **přidat**. Chcete-li parametr odebrat ze seznamu, vyberte parametr a klikněte na **odebrat**.  
+- **Seznam parametrů**
+
+   Zobrazí seznam parametrů, které jste přidali na členskou funkci. Přidání parametru do seznamu, zadejte typ a název v **typ parametru** a **název parametru** políčka a klikněte na tlačítko **přidat**. Odebrat parametr ze seznamu, vyberte parametr a klikněte na **odebrat**.  
   
- **Přístup**  
- Nastaví přístupu k funkci člen. Modifikátory přístupu jsou klíčová slova, která určující přístup ostatní třídy mají členské funkce. V tématu [řízení přístup ke členu](../cpp/member-access-control-cpp.md) pro další informace o přístupu. Úroveň přístupu funkce členů je nastavena na **veřejné** ve výchozím nastavení.  
+- **Přístup**
+
+   Nastaví přístup na členskou funkci. Modifikátory přístupu jsou klíčová slova, které určují přístup jiných tříd na členskou funkci. Zobrazit [řízení přístupu členů](../cpp/member-access-control-cpp.md) pro další informace o zadávání přístupu. Úroveň přístupu členské funkce je nastavena na **veřejné** ve výchozím nastavení.  
   
--   [public](../cpp/public-cpp.md)  
+   - [public](../cpp/public-cpp.md)  
   
--   [protected](../cpp/protected-cpp.md)  
+   - [protected](../cpp/protected-cpp.md)  
   
--   [private](../cpp/private-cpp.md)  
+   - [private](../cpp/private-cpp.md)  
   
- Zkontrolujte, jestli jsou nové funkce člen statická nebo virtuální, a zda je vložené nebo prázdná. Pokud nastavíte členskou funkci jako prázdnou, `Virtual` je zaškrtnuté políčko a **vložené** zaškrtávací políčko je k dispozici. Výchozí hodnota je nevirtuální, nestatické členské funkce.  
+   Zkontrolujte, jestli nové členské funkce jsou statická nebo virtuální, a zda je vložené nebo čistě. Pokud nastavíte členské funkce bude čistý, `Virtual` zaškrtávací políčko zaškrtnuto a **vložené** zaškrtávací políčko je k dispozici. Výchozí hodnota je nevirtuální, nestatické členské funkce.  
   
-|Možnost|Popis|  
-|------------|-----------------|  
-|[Static](../cpp/storage-classes-cpp.md)|Určuje, že funkce chová jako globální a lze volat mimo třídu, i když bez vytváření instance třídy. Členská funkce nemá přístup k nestatické členy. Členské funkce zadaná jako `Static` nemůže být virtuální.|  
-|[Virtuální](../cpp/virtual-cpp.md)|Zajišťuje, že pro objekt, bez ohledu na to výraz použitý k volání členské funkce je volána funkce správné člen. Členské funkce zadaná jako `Virtual` nemůže být statická.|  
-|**Čistý**|Označuje, žádné implementace jsou dodané pro člena virtuální funkci se deklarovat; Proto **prázdná** lze zadat pouze u člena virtuální funkce. Třída, která obsahuje alespoň jeden prázdné virtuální členské funkce považuje za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat prázdné virtuální členské funkce nebo, příliš, jsou abstraktní třídy.|  
-|[Vložené](../cpp/inline-functions-cpp.md)|Dá pokyn kompilátoru vložení kopii tělo funkce člena do každé místo, kde je volána funkce člen. Členské funkce zadaná jako **vložené** nemůže být prázdná.|  
+   |Možnost|Popis|  
+   |------------|-----------------|  
+   |[Static](../cpp/storage-classes-cpp.md)|Určuje, že funguje jako globální funkci a může být volána mimo třídu, i s bez vytvoření instance třídy. Členská funkce nemá přístup k nestatické členy. Členská funkce definována jako `Static` nemůže být virtuální.|  
+   |[Virtuální](../cpp/virtual-cpp.md)|Zajišťuje, že správné členská funkce je volána pro objekt, bez ohledu na výraz použitý k volání členské funkce. Členská funkce definována jako `Virtual` nemohou být statické.|  
+   |**pure**|Označuje, že pro virtuální členské funkce deklarované; není dodávána žádná implementace Proto **prázdná** se dá nastavit jenom pro virtuální členské funkce. Třídu, která obsahuje alespoň jeden čistě virtuální členská funkce je považována za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistě virtuální členské funkci nebo, příliš, jsou abstraktní třídy.|  
+   |[vložené](../cpp/inline-functions-cpp.md)|Dává pokyn kompilátoru k vložení kopie těla členské funkce do každé místo, kde má členská funkce je volána. Členská funkce definována jako **vložené** nemůže být prázdná.|  
   
- **souboru**  
- Nastaví umístění souboru, do níž je zapsána implementaci. Ve výchozím nastavení se zapisují do souboru pro třídu, ke kterému se přidá – členská funkce. Klikněte na tlačítko se třemi tečkami změňte název souboru. Implementace členské funkce se přidá do obsah vybraného souboru.  
+- **soubor .cpp**
+
+   Nastaví umístění souboru, do níž je zapsána implementace se zakázaným inzerováním členské funkce. Ve výchozím nastavení se zapisují do souboru CPP pro třídy, do kterého se přidá členskou funkci. Klikněte na tlačítko se třemi tečkami změňte název souboru. Obsah vybraný soubor se přidá implementace členské funkce.  
   
- **Komentář**  
- Komentář v záhlaví souboru – členská funkce.  
+- **Komentář**
+
+   Komentář v souboru hlaviček pro členské funkce.  
   
- **Podpis funkce**  
- Zobrazí – členská funkce, které je uvedeno v kódu po kliknutí na tlačítko **Dokončit**. Text v tomto poli nelze upravit. Chcete-li změnit členskou funkci, změňte do příslušných polí v průvodci.  
+- **Signatura funkce**
+
+   Zobrazí členská funkce, které je uvedeno v kódu po kliknutí na **Dokončit**. Text v tomto poli nelze upravit. Chcete-li změnit členská funkce, změňte do příslušných polí v průvodci.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)

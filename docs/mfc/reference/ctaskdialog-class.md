@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202392"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710811"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog – třída
 
@@ -274,17 +274,17 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-Příkaz Ovládací prvek identifikační číslo.
+*nCommandControlID*<br/>
+[in] Příkaz Ovládací prvek identifikační číslo.
 
-[in] *strCaption*  
-Řetězec, který `CTaskDialog` zobrazí uživateli. Použijte tento řetězec vysvětlující účel příkazu.
+*strCaption*<br/>
+[in] Řetězec, který `CTaskDialog` zobrazí uživateli. Použijte tento řetězec vysvětlující účel příkazu.
 
-[in] *bEnabled*  
-Parametr logické hodnoty označující, pokud je tlačítko Povolit nebo zakázat.
+*bEnabled*<br/>
+[in] Parametr logické hodnoty označující, pokud je tlačítko Povolit nebo zakázat.
 
-[in] *bRequiresElevation*  
-Parametr logické hodnoty, která určuje, zda příkaz vyžaduje zvýšení oprávnění.
+*bRequiresElevation*<br/>
+[in] Parametr logické hodnoty, která určuje, zda příkaz vyžaduje zvýšení oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -309,14 +309,14 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-Identifikační číslo přepínač.
+*nRadioButtonID*<br/>
+[in] Identifikační číslo přepínač.
 
-[in] *strCaption*  
-Řetězec, který `CTaskDialog` zobrazí vedle přepínač.
+*strCaption*<br/>
+[in] Řetězec, který `CTaskDialog` zobrazí vedle přepínač.
 
-[in] *bEnabled*  
-Parametr logické hodnoty označující, zda je povoleno přepínač.
+*bEnabled*<br/>
+[in] Parametr logické hodnoty označující, zda je povoleno přepínač.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -339,8 +339,8 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-ID příkazu ovládacího prvku klikněte na tlačítko.
+*nCommandControlID*<br/>
+[in] ID příkazu ovládacího prvku klikněte na tlačítko.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -357,8 +357,8 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-ID klikněte na přepínač.
+*nRadioButtonID*<br/>
+[in] ID klikněte na přepínač.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -391,29 +391,29 @@ CTaskDialog(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strContent*  
-Řetězec, který má použít pro obsah `CTaskDialog`.
+*strContent*<br/>
+[in] Řetězec, který má použít pro obsah `CTaskDialog`.
 
-[in] *strMainInstruction*  
-Hlavní instrukce `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Hlavní instrukce `CTaskDialog`.
 
-[in] *strTitle*  
-Název `CTaskDialog`.
+*strTitle*<br/>
+[in] Název `CTaskDialog`.
 
-[in] *nCommonButtons*  
-Maska běžné tlačítka pro přidání do `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Maska běžné tlačítka pro přidání do `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Sadu možností pro `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Sadu možností pro `CTaskDialog`.
 
-[in] *strFooter*  
-Řetězec, který chcete použít jako zápatí.
+*strFooter*<br/>
+[in] Řetězec, který chcete použít jako zápatí.
 
-[in] *nIDCommandControlsFirst*  
-Řetězec ID prvního příkazu.
+*nIDCommandControlsFirst*<br/>
+[in] Řetězec ID prvního příkazu.
 
-[in] *nIDCommandControlsLast*  
-Řetězec ID poslední příkaz.
+*nIDCommandControlsLast*<br/>
+[in] Řetězec ID poslední příkaz.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -437,8 +437,8 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hParent*  
-Nadřazené okno pro `CTaskDialog`.
+*hParent*<br/>
+[in] Nadřazené okno pro `CTaskDialog`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -482,8 +482,8 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nButtonId*  
-Standardní tlačítko hodnotu Windows.
+*nButtonId*<br/>
+[in] Standardní tlačítko hodnotu Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -499,8 +499,8 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *načit*  
-Společný typ tlačítko přidružené `CTaskDialog` třídy.
+*načit*<br/>
+[in] Společný typ tlačítko přidružené `CTaskDialog` třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -592,8 +592,8 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-ID příkazové tlačítko nebo tlačítko test.
+*nCommandControlID*<br/>
+[in] ID příkazové tlačítko nebo tlačítko test.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -619,8 +619,8 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-ID přepínač k testování.
+*nRadioButtonID*<br/>
+[in] ID přepínač k testování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -666,11 +666,11 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nIDCommandControlsFirst*  
-Řetězec ID prvního příkazu.
+*nIDCommandControlsFirst*<br/>
+[in] Řetězec ID prvního příkazu.
 
-[in] *nIDCommandControlsLast*  
-Řetězec ID poslední příkaz.
+*nIDCommandControlsLast*<br/>
+[in] Řetězec ID poslední příkaz.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -694,11 +694,11 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nIDRadioButtonsFirst*  
-Řetězec ID první přepínač.
+*nIDRadioButtonsFirst*<br/>
+[in] Řetězec ID první přepínač.
 
-[in] *nIDRadioButtonsLast*  
-Řetězec ID poslední přepínač.
+*nIDRadioButtonsLast*<br/>
+[in] Řetězec ID poslední přepínač.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -721,8 +721,8 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *oTaskDialog*  
-`CTaskDialog` , Který získá fokus.
+*oTaskDialog*<br/>
+[in] `CTaskDialog` , Který získá fokus.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -738,8 +738,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-ID ovládacího prvku tlačítko příkazu, který uživatel vybral.
+*nCommandControlID*<br/>
+[in] ID ovládacího prvku tlačítko příkazu, který uživatel vybral.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -791,8 +791,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bExpanded*  
-Nenulová hodnota označuje, že se zobrazí další informace. Hodnota 0 znamená, že je skrytý dodatečné informace.
+*bExpanded*<br/>
+[in] Nenulová hodnota označuje, že se zobrazí další informace. Hodnota 0 znamená, že je skrytý dodatečné informace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -828,8 +828,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strHref*  
-Řetězec, který reprezentuje hypertextový odkaz.
+*strHref*<br/>
+[in] Řetězec, který reprezentuje hypertextový odkaz.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -883,8 +883,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-ID ovládacího prvku tlačítko přepínače, který uživatel klikl na.
+*nRadioButtonID*<br/>
+[in] ID ovládacího prvku tlačítko přepínače, který uživatel klikl na.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -904,8 +904,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lTime*  
-Doba v milisekundách, protože `CTaskDialog` byl vytvořen nebo byl resetován časovač.
+*lTime*<br/>
+[in] Doba v milisekundách, protože `CTaskDialog` byl vytvořen nebo byl resetován časovač.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -925,8 +925,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bChecked*  
-Hodnota TRUE označuje, že je zaškrtnuto políčko ověřování. Hodnota FALSE označuje, že není.
+*bChecked*<br/>
+[in] Hodnota TRUE označuje, že je zaškrtnuto políčko ověřování. Hodnota FALSE označuje, že není.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -973,14 +973,14 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-ID ovládacího prvku příkaz k aktualizaci.
+*nCommandControlID*<br/>
+[in] ID ovládacího prvku příkaz k aktualizaci.
 
-[in] *bEnabled*  
-Parametr logické hodnoty, která určuje povolený nebo zakázaný ovládací prvek tlačítko zadaný příkaz.
+*bEnabled*<br/>
+[in] Parametr logické hodnoty, která určuje povolený nebo zakázaný ovládací prvek tlačítko zadaný příkaz.
 
-[in] *bRequiresElevation*  
-Parametr logické hodnoty označující, pokud ovládací prvek tlačítko zadaný příkaz požaduje zvýšení oprávnění.
+*bRequiresElevation*<br/>
+[in] Parametr logické hodnoty označující, pokud ovládací prvek tlačítko zadaný příkaz požaduje zvýšení oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1002,11 +1002,11 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nDisabledButtonMask*  
-Maska pro běžné tlačítka zakázat.
+*nDisabledButtonMask*<br/>
+[in] Maska pro běžné tlačítka zakázat.
 
-[in] *nElevationButtonMask*  
-Maska pro běžné tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
+*nElevationButtonMask*<br/>
+[in] Maska pro běžné tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1033,14 +1033,14 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nButtonMask*  
-Maska tlačítka pro přidání do `CTaskDialog`.
+*nButtonMask*<br/>
+[in] Maska tlačítka pro přidání do `CTaskDialog`.
 
-[in] *nDisabledButtonMask*  
-Maska tlačítka zakázat.
+*nDisabledButtonMask*<br/>
+[in] Maska tlačítka zakázat.
 
-[in] *nElevationButtonMask*  
-Maska tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
+*nElevationButtonMask*<br/>
+[in] Maska tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1066,8 +1066,8 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strContent*  
-Řetězec, který se má zobrazit uživateli.
+*strContent*<br/>
+[in] Řetězec, který se má zobrazit uživateli.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1087,8 +1087,8 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCommandControlID*  
-ID ovládacího prvku tlačítko příkazu na výchozí.
+*nCommandControlID*<br/>
+[in] ID ovládacího prvku tlačítko příkazu na výchozí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1110,8 +1110,8 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-ID přepínač na výchozí.
+*nRadioButtonID*<br/>
+[in] ID přepínač na výchozí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1133,8 +1133,8 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nWidth*  
-Šířka pole dialogového okna v pixelech.
+*nWidth*<br/>
+[in] Šířka pole dialogového okna v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1159,14 +1159,14 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strExpandedInformation*  
-Řetězec, který `CTaskDialog` zobrazí v hlavní části dialogového okna, když uživatel klikne na tlačítko rozšíření.
+*strExpandedInformation*<br/>
+[in] Řetězec, který `CTaskDialog` zobrazí v hlavní části dialogového okna, když uživatel klikne na tlačítko rozšíření.
 
-[in] *strCollapsedLabel*  
-Řetězec, který `CTaskDialog` při sbalení rozšířené oblasti se zobrazí vedle tlačítka, rozšíření.
+*strCollapsedLabel*<br/>
+[in] Řetězec, který `CTaskDialog` při sbalení rozšířené oblasti se zobrazí vedle tlačítka, rozšíření.
 
-[in] *strExpandedLabel*  
-Řetězec, který `CTaskDialog` zobrazí vedle tlačítka, rozšíření, když se zobrazí rozšířené oblast.
+*strExpandedLabel*<br/>
+[in] Řetězec, který `CTaskDialog` zobrazí vedle tlačítka, rozšíření, když se zobrazí rozšířené oblast.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1189,11 +1189,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hFooterIcon*  
-Na novou ikonu `CTaskDialog`.
+*hFooterIcon*<br/>
+[in] Na novou ikonu `CTaskDialog`.
 
-[in] *lpszFooterIcon*  
-Na novou ikonu `CTaskDialog`.
+*lpszFooterIcon*<br/>
+[in] Na novou ikonu `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1217,8 +1217,8 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strFooterText*  
-Nový text zápatí.
+*strFooterText*<br/>
+[in] Nový text zápatí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1239,11 +1239,11 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hMainIcon*  
-Na ikonu nový.
+*hMainIcon*<br/>
+[in] Na ikonu nový.
 
-[in] *lpszMainIcon*  
-Na ikonu nový.
+*lpszMainIcon*<br/>
+[in] Na ikonu nový.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1265,8 +1265,8 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strInstructions*  
-Nový hlavní instrukce.
+*strInstructions*<br/>
+[in] Nový hlavní instrukce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1286,8 +1286,8 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nOptionFlag*  
-Sada příznaků pro `CTaskDialog`.
+*nOptionFlag*<br/>
+[in] Sada příznaků pro `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1330,11 +1330,11 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnabled*  
-TRUE, pokud chcete povolit výběr řádku; FALSE, pokud chcete zakázat výběr řádku a odebere ho z `CTaskDialog`.
+*bEnabled*<br/>
+[in] TRUE, pokud chcete povolit výběr řádku; FALSE, pokud chcete zakázat výběr řádku a odebere ho z `CTaskDialog`.
 
-[in] *nMarqueeSpeed*  
-Celé číslo udávající rychlost výběr řádku.
+*nMarqueeSpeed*<br/>
+[in] Celé číslo udávající rychlost výběr řádku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1358,8 +1358,8 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nProgressPos*  
-Pozice pro indikátor průběhu.
+*nProgressPos*<br/>
+[in] Pozice pro indikátor průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1381,11 +1381,11 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRangeMin*  
-Dolní mez indikátor průběhu.
+*nRangeMin*<br/>
+[in] Dolní mez indikátor průběhu.
 
-[in] *nRangeMax*  
-Horní mez indikátor průběhu.
+*nRangeMax*<br/>
+[in] Horní mez indikátor průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1409,8 +1409,8 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nInformace*  
-Stav indikátor průběhu. Možné hodnoty v části poznámky.
+*nInformace*<br/>
+[in] Stav indikátor průběhu. Možné hodnoty v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1442,11 +1442,11 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nRadioButtonID*  
-ID ovládacího prvku tlačítko přepínače.
+*nRadioButtonID*<br/>
+[in] ID ovládacího prvku tlačítko přepínače.
 
-[in] *bEnabled*  
-TRUE, pokud chcete povolit přepínač; FALSE, pokud chcete zakázat přepínač.
+*bEnabled*<br/>
+[in] TRUE, pokud chcete povolit přepínač; FALSE, pokud chcete zakázat přepínač.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1466,8 +1466,8 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bChecked*  
-Hodnota true pro mají ověření zaškrtávací políčko zaškrtnuto, pokud `CTaskDialog` , se zobrazí. Zrušení výběru hodnotu FALSE má zaškrtávací políčko ověřování, kdy `CTaskDialog` se zobrazí.
+*bChecked*<br/>
+[in] Hodnota true pro mají ověření zaškrtávací políčko zaškrtnuto, pokud `CTaskDialog` , se zobrazí. Zrušení výběru hodnotu FALSE má zaškrtávací políčko ověřování, kdy `CTaskDialog` se zobrazí.
 
 ### <a name="example"></a>Příklad
 
@@ -1483,8 +1483,8 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strVerificationText*  
-Text, který tato metoda se zobrazí vedle zaškrtnutí políčka pro ověření.
+*strVerificationText*<br/>
+[in] Text, který tato metoda se zobrazí vedle zaškrtnutí políčka pro ověření.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1504,8 +1504,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strWindowTitle*  
-Nový název `CTaskDialog`.
+*strWindowTitle*<br/>
+[in] Nový název `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1531,29 +1531,29 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *strContent*  
-Řetězec, který má použít pro obsah `CTaskDialog`.
+*strContent*<br/>
+[in] Řetězec, který má použít pro obsah `CTaskDialog`.
 
-[in] *strMainInstruction*  
-Hlavní instrukce `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Hlavní instrukce `CTaskDialog`.
 
-[in] *strTitle*  
-Název `CTaskDialog`.
+*strTitle*<br/>
+[in] Název `CTaskDialog`.
 
-[in] *nIDCommandControlsFirst*  
-Řetězec ID prvního příkazu.
+*nIDCommandControlsFirst*<br/>
+[in] Řetězec ID prvního příkazu.
 
-[in] *nIDCommandControlsLast*  
-Řetězec ID poslední příkaz.
+*nIDCommandControlsLast*<br/>
+[in] Řetězec ID poslední příkaz.
 
-[in] *nCommonButtons*  
-Maska tlačítka pro přidání do `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Maska tlačítka pro přidání do `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Sadu možností pro `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Sadu možností pro `CTaskDialog`.
 
-[in] *strFooter*  
-Řetězec, který chcete použít jako zápatí.
+*strFooter*<br/>
+[in] Řetězec, který chcete použít jako zápatí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1589,20 +1589,20 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hwnd*  
-Popisovač `m_hWnd` strukturu pro `CTaskDialog`.
+*hWnd*<br/>
+[in] Popisovač `m_hWnd` strukturu pro `CTaskDialog`.
 
-[in] *uNotification*  
-Určuje zprávu, která vygenerovaný kód oznámení.
+*uNotification*<br/>
+[in] Určuje zprávu, která vygenerovaný kód oznámení.
 
-[in] *wParam*  
-Další informace o zprávě.
+*wParam*<br/>
+[in] Další informace o zprávě.
 
-[in] *lParam*  
-Další informace o zprávě.
+*lParam*<br/>
+[in] Další informace o zprávě.
 
-[in] *dwRefData*  
-Ukazatel `CTaskDialog` objekt, který zpětného volání zpráv se vztahuje na.
+*dwRefData*<br/>
+[in] Ukazatel `CTaskDialog` objekt, který zpětného volání zpráv se vztahuje na.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707525"
 ---
 # <a name="weakptr-class"></a>weak_ptr – třída
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*  
- Typ řízený slabý ukazatel.
+*Ty*<br/>
+Typ řízený slabý ukazatel.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
- Typ řízený ukazatelem argumentu sdílené/weak.
+*Jiné*<br/>
+Typ řízený ukazatelem argumentu sdílené/weak.
 
-*webové části*  
- Slabý ukazatel na kopii.
+*webové části*<br/>
+Slabý ukazatel na kopii.
 
-*SP*  
- Sdílený ukazatel na kopii.
+*SP*<br/>
+Sdílený ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*  
- `lvalue` Odkazu na buď `shared_ptr` nebo `weak_ptr`.
+*ptr*<br/>
+`lvalue` Odkazu na buď `shared_ptr` nebo `weak_ptr`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parametry
 
-*webové části*  
- Slabý ukazatel, který chcete Prohodit s.
+*webové části*<br/>
+Slabý ukazatel, který chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
- Typ řízený ukazatelem argumentu sdílené/weak.
+*Jiné*<br/>
+Typ řízený ukazatelem argumentu sdílené/weak.
 
-*webové části*  
- Slabý ukazatel na kopii.
+*webové části*<br/>
+Slabý ukazatel na kopii.
 
-*SP*  
- Sdílený ukazatel na kopii.
+*SP*<br/>
+Sdílený ukazatel na kopii.
 
 ### <a name="remarks"></a>Poznámky
 

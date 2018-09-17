@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712946"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 Knihovny Microsoft Foundation Class poskytuje mnoho diagnostické služby, které usnadňují ladění svých programů jednodušší. Tyto diagnostické služby zahrnují makra a globální funkce, které umožňují sledovat paměti pro vaše programy přidělení, Vypsat obsah objektů za běhu a Tisk zprávy ladění za běhu. Makra a globální funkce pro diagnostické služby jsou seskupené do následujících kategorií:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDump*  
- Hodnota TRUE označuje, že výpis paměti je povolená; Hodnota FALSE označuje, že výpis paměti je zakázaná.  
+*bDump*<br/>
+[in] Hodnota TRUE označuje, že výpis paměti je povolená; Hodnota FALSE označuje, že výpis paměti je zakázaná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí hodnota pro tento příznak.  

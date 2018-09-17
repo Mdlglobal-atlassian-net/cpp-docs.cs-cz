@@ -1,5 +1,5 @@
 ---
-title: Podpora linkeru pro knihovny DLL s odloženým načtením | Microsoft Docs
+title: Podpora linkeru pro knihovny DLL s odloženým načtením | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,50 +14,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aea4ca6d5391f71f27d59d0192fcf1f832dd6702
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 555a46ee65a5d5d5565128a15af01a2c1cf18540
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375581"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711899"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Podpora linkeru pro knihovny DLL s odloženým načtením
-Visual C++ linkeru teď podporuje zpožděné načítání knihovny DLL. To zbavuje kterou přináší nutnost je potřeba použít funkce Windows SDK **LoadLibrary** a **GetProcAddress** implementovat odložené načtení knihoven DLL.  
-  
- Před Visual C++ verze 6.0, jediný způsob, jak načíst knihovny DLL v době běhu byl pomocí **LoadLibrary** a **GetProcAddress**; operačního systému by načíst knihovnu DLL při spustitelný soubor nebo knihovny DLL pomocí byla načtena.  
-  
- Od verze Visual C++ verze 6.0, když staticky propojení s knihovnou DLL, poskytuje linkeru možnosti zpoždění načíst knihovnu DLL, dokud program zavolá funkci v této knihovně DLL.  
-  
- Aplikaci může pozdržet načtení knihovny DLL pomocí [/DELAYLOAD (zpoždění načíst Import)](../../build/reference/delayload-delay-load-import.md) – možnost linkeru s pomocné funkce (výchozí implementace poskytovaná Visual C++). Pomocné funkce se načíst knihovnu DLL v době běhu voláním **LoadLibrary** a **GetProcAddress** za vás.  
-  
- Měli byste zvážit s odloženým načtením knihovny DLL, pokud:  
-  
--   Váš program nemusí volání funkce v knihovně DLL.  
-  
--   Až v pozdějších spuštění vašeho programu nemusí zavolána funkce v knihovně DLL.  
-  
- Zpožděné načítání knihovny DLL lze zadat během vytváření sestavení buď. Soubor EXE nebo. Projektu knihovny DLL. A. Projektu knihovny DLL, která zpozdí načítání knihoven DLL jeden nebo více nesmí samotné volání odloženým načtením vstupní bod v Dllmain.  
-  
- Následující témata popisují odloženého načítání knihoven DLL:  
-  
--   [Určení knihoven DLL pro odložené načtení](../../build/reference/specifying-dlls-to-delay-load.md)  
-  
--   [Explicitní uvolnění knihovny DLL načtené se zpožděním](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
-  
--   [Načtení všech importů pro knihovnu DLL se zpožděným načtením](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)  
-  
--   [Import vazeb](../../build/reference/binding-imports.md)  
-  
--   [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)  
-  
--   [Výpis importu se zpožděným načtením](../../build/reference/dumping-delay-loaded-imports.md)  
-  
--   [Omezení odloženého načítání knihoven DLL](../../build/reference/constraints-of-delay-loading-dlls.md)  
-  
--   [Základní informace o podpůrné funkci](understanding-the-helper-function.md)  
-  
--   [Vývoj vlastní pomocné funkce](../../build/reference/developing-your-own-helper-function.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md)   
- [Propojování](../../build/reference/linking.md)
+
+Linker Visual C++ teď podporuje opožděné načtení knihoven DLL. To která vás zbaví nutnosti použití funkce Windows SDK **LoadLibrary** a **GetProcAddress** implementace knihovny DLL s odloženým načtením.
+
+Před Visual C++ 6.0, byl jediný způsob, jak načíst knihovny DLL v době běhu pomocí **LoadLibrary** a **GetProcAddress**; operační systém by načíst knihovnu DLL při spustitelný soubor nebo knihovny DLL pomocí byl načten.
+
+Od verze Visual C++ 6.0, když statického propojení s knihovnou DLL, linker zajišťuje možnosti zpoždění načíst knihovnu DLL, dokud je program volá funkci v této knihovně DLL.
+
+Aplikace může zpozdit načtení knihovny DLL pomocí [/delayload (Import načtení odloženého)](../../build/reference/delayload-delay-load-import.md) – možnost linkeru s funkcí pomocné rutiny (Visual C++ poskytuje výchozí implementaci). Pomocná funkce se načíst knihovnu DLL v době běhu voláním **LoadLibrary** a **GetProcAddress** za vás.
+
+Zpoždění načítání knihovny DLL, pokud byste měli zvážit:
+
+- Program nemůže volat funkci v knihovně DLL.
+
+- Funkce v knihovně DLL nemusí zavolána až v pozdějších vykonávání vašeho programu.
+
+Opožděné načtení knihovny DLL lze zadat během sestavování buď. Soubor EXE nebo. Projekt knihovny DLL. ODPOVĚĎ. Projekt knihovny DLL, která způsobuje zpoždění načítání knihovny DLL jeden nebo více neměli samotný volat odloženě zaváděné vstupní bod ve zpracování funkce Dllmain.
+
+Následující témata popisují odloženého načítání knihoven DLL:
+
+- [Určení knihoven DLL pro odložené načtení](../../build/reference/specifying-dlls-to-delay-load.md)
+
+- [Explicitní uvolnění knihovny DLL načtené se zpožděním](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+
+- [Načtení všech importů pro knihovnu DLL se zpožděným načtením](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)
+
+- [Import vazeb](../../build/reference/binding-imports.md)
+
+- [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)
+
+- [Výpis importu se zpožděným načtením](../../build/reference/dumping-delay-loaded-imports.md)
+
+- [Omezení odloženého načítání knihoven DLL](../../build/reference/constraints-of-delay-loading-dlls.md)
+
+- [Základní informace o podpůrné funkci](understanding-the-helper-function.md)
+
+- [Vývoj vlastní pomocné funkce](../../build/reference/developing-your-own-helper-function.md)
+
+## <a name="see-also"></a>Viz také
+
+[Knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md)<br/>
+[Propojování](../../build/reference/linking.md)

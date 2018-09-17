@@ -1,5 +1,5 @@
 ---
-title: -vmm,. - virtuální počítače, - vmv (obecná reprezentace) | Microsoft Docs
+title: -vmm, - vms, - vmv (obecná reprezentace) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,50 +29,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d4e790281cd23ba43987ec6ab003787c115150be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379559"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701298"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
-Použít, když [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je vybrán jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti znamenat model dědičnosti definice třídy není ještě došlo.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/vmm  
-/vms  
-/vmv  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto možnosti jsou popsány v následující tabulce.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**/vmm**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá vícenásobná dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **vícenásobná dědičnost –**.<br /><br /> Tento zápis je větší než se vyžaduje pro jedna dědičnost.<br /><br /> Pokud je virtuální dědičnost model definice třídy, pro kterou je deklarován ukazatel na člena, kompilátor vygeneruje chybu.|  
-|**/vms**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá žádné dědičnosti nebo jedna dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **single_inheritance**.<br /><br /> Toto je nejmenší reprezentace ukazatel na člena třídy.<br /><br /> Pokud je model dědičnosti definice třídy, pro kterou je deklarován ukazatele na člena, několik nebo virtuální, kompilátor vygeneruje chybu.|  
-|**/vmv**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá virtuální dědičnost. Tato nikdy dojde k chybě a je výchozí.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **virtual_inheritance**.<br /><br /> Tato možnost vyžaduje větší ukazatel a další kód interpretovat ukazatele než ostatní možnosti.|  
-  
- Když zadáte jednu z těchto možností model dědičnosti, tento model se používá pro všechny ukazatelé na členy třídy, bez ohledu na jejich dědičnost typů nebo zda je ukazatel deklarovaný před nebo po třídy. Proto, pokud chcete vždy použít jedním dědičnost třídy, můžete snížit velikost kód kompilovat s **/VMS**, nicméně pokud chcete použít nejobecnější případ (za cenu největší znázornění dat), kompilovat s **/vmv**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [/ vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Kdy použít [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je zvolen jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti označení model dědičnosti definice třídy není dosud došlo.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/vmm
+/vms
+/vmv
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto možnosti jsou popsány v následující tabulce.
+
+|Možnost|Popis|
+|------------|-----------------|
+|**/vmm**|Určuje nejobecnější reprezentace ukazatele na člen třídy bude ten, který se používá vícenásobné dědičnosti.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) je **vícenásobná dědičnost –**.<br /><br /> Tento zápis je větší než požadované pro jednoduchou dědičnost.<br /><br /> Pokud je model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako virtuální, kompilátor vygeneruje chybu.|
+|**/vms**|Určuje nejobecnější reprezentace ukazatele na člen třídy bude ten, který používá žádné dědičnosti nebo jednoduchá dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) je **single_inheritance**.<br /><br /> Toto je nejmenší možnou reprezentaci ukazatele na člen třídy.<br /><br /> Pokud je model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako více nebo virtuální, kompilátor vygeneruje chybu.|
+|**/vmv**|Určuje nejobecnější reprezentace ukazatele na člen třídy bude ten, který používá virtuální dědičnost. Nikdy způsobí chybu a je výchozí nastavení.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) je **virtual_inheritance**.<br /><br /> Tato možnost vyžaduje větší ukazatele a dalšího kódu k interpretaci tohoto ukazatele než u ostatních možností.|
+
+Pokud chcete zadat jednu z těchto možností model dědičnosti, tohoto modelu se používá pro všechny ukazatele na členy třídy, bez ohledu na jejich typ dědičnosti nebo zda ukazatel je deklarován před nebo po třídy. Proto pokud vždy používáte jednoduché dědičnosti tříd, můžete snížit velikost kódu kompilaci **/VMS**; nicméně, pokud chcete mít nejobecnější velikost (za cenu největší reprezentaci dat), proveďte kompilaci s **/vmv**.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[/ vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

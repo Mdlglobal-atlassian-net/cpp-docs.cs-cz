@@ -1,5 +1,5 @@
 ---
-title: Zřetězené struktury Unwind Info | Microsoft Docs
+title: Zřetězené struktury Unwind Info | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6da09387595188026d855fb99a49b588e6f21aa3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366949"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715023"
 ---
 # <a name="chained-unwind-info-structures"></a>Zřetězené struktury unwind info
-Pokud je nastavený příznak UNW_FLAG_CHAININFO, pak je struktura unwind info je sekundární a pole sdílené výjimka – obslužná rutina/adresy zřetězené informace obsahuje primární unwind informace. Následující kód načítá primární unwind informace za předpokladu, že `unwindInfo` je nastaven příznak strukturu, která má UNW_FLAG_CHAININFO.  
-  
-```  
-PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);  
-```  
-  
- Zřetězené informace jsou užitečné v situacích, dva. Nejprve se může použít pro segmenty nesouvislé kódu. Pomocí zřetězené informace, můžete snížit velikost požadované unwind informací, protože nemáte duplicitní unwind kódů z primárního unwind info.  
-  
- Zřetězené informace můžete použít také k seskupení volatile registrace uloží. Kompilátor může zdržet ukládání některé závislé registry, dokud nebude mimo prolog vstupu funkce. To můžete zaznamenat tak, že primární unwind informace pro část funkce před kód seskupené, a poté nastavením zřetězených informací s nenulovou velikostí prologu, kde unwind kódy ve zřetězených informacích odrážejí uložení stálé registry. V takovém případě jsou všechny instance UWOP_SAVE_NONVOL unwind kódy. Seskupení, které ukládá stálé registry pomocí PUSH nebo upraví konfigurace zaregistrovat pomocí další pevné přidělení zásobníku není podporována.  
-  
- UNWIND_INFO položku, která má nastaven UNW_FLAG_CHAININFO může obsahovat položku RUNTIME_FUNCTION, jehož položka UNWIND_INFO také má nastaven UNW_FLAG_CHAININFO (vícenásobné zmenšující obalení). Nakonec zřetězené unwind informace, že budou doručeny ukazatele na položku UNWIND_INFO, který má UNW_FLAG_CHAININFO vymazán; Toto je primární položka UNWIND_INFO, která odkazuje na vstupní bod procedury skutečný.  
-  
-## <a name="see-also"></a>Viz také  
- [Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)
+
+Pokud je nastavený příznak UNW_FLAG_CHAININFO, je sekundární struktury unwind info a sdílenou – obslužná rutina/zřetězené – informace o výjimce adresu pole obsahuje informace o primární unwind. Následující kód načte primární unwind informace za předpokladu, že `unwindInfo` je nastaven příznak, který má UNW_FLAG_CHAININFO strukturu.
+
+```
+PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
+```
+
+Zřetězené informace jsou užitečné ve dvou situacích. Nejdřív může sloužit pro segmenty nesouvislé kódu. Pomocí zřetězené informace můžete zmenšit velikost požadované unwind informací, protože není nutné duplikovat unwind kódů z primárního unwind info.
+
+Zřetězené informace můžete použít také k seskupení uložení volatile registrů. Kompilátor může způsobit prodlevu při ukládání některé závislé registry, dokud není mimo položky prologu funkce. Můžete zaznamenat to tak, že primární unwind informace pro část funkce před seskupené kódu a následným nastavováním zřetězené informace o s nenulovou hodnotu size prologu, kde kódy unwind v zřetězené informace, které odrážejí uložení stálé registrů. V takovém případě jsou kódy unwind všechny výskyty UWOP_SAVE_NONVOL. Seskupení, který ukládá stálé registry s využitím PUSH nebo upravuje RSP registru pomocí dalších pevné zásobníku přidělení se nepodporuje.
+
+UNWIND_INFO položku, která má nastaven UNW_FLAG_CHAININFO může obsahovat RUNTIME_FUNCTION položku, jejíž položku UNWIND_INFO má také UNW_FLAG_CHAININFO nastavit (více shrink-wrapping). Nakonec zřetězených unwind informací, že ukazatele dorazí na UNWIND_INFO položku, která má UNW_FLAG_CHAININFO vymazána; Toto je primární UNWIND_INFO položka, která odkazuje na vstupní bod skutečný procedury.
+
+## <a name="see-also"></a>Viz také
+
+[Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)

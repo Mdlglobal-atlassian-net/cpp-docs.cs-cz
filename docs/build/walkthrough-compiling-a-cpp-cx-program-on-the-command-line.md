@@ -12,64 +12,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc4e6dbf3023256a6a0db556c02e08453bb1a730
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fdde74f1612986fab8f88f4659b006bbcfbd3901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194272"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703753"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilace a C + +/ CX Program na příkazovém řádku
-Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
-  
- V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které obsahují bez prvků uživatelského rozhraní.)  
-  
+
+Můžete vytvořit programy v jazyce Visual C++, které se zaměřují na modul Windows Runtime je v příkazovém řádku. Jazyk Visual C++ podporuje rozšíření součásti Visual C++ (C + +/ CX), který má další typy a operátory cílení programovacího modelu Windows Runtime. Můžete použít C + +/ CX a vytvářejte aplikace pro univerzální platformu Windows (UPW), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídku vyhodnocování +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) a [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
+
+V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CX programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které obsahují bez prvků uživatelského rozhraní.)
+
 > [!NOTE]
->  Můžete také integrovaného vývojového prostředí sady Visual Studio ke kompilaci C + +/ CX programy. Integrované vývojové prostředí zahrnuje návrhu, ladění, emulace a podpoře nasazení, která není k dispozici v příkazovém řádku, a proto doporučujeme použít integrovaného vývojového prostředí pro vytváření aplikací univerzální platformy Windows (UPW). Další informace najdete v tématu [vytvoření aplikace pro UPW v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).  
-  
-## <a name="prerequisites"></a>Požadavky  
- Je třeba porozumět základům jazyka C++.  
-  
-## <a name="compiling-a-ccx-program"></a>Kompilace jazyka C + +/ CX programu  
- Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor Visual C++ generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.  
-  
-#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CX aplikace v příkazovém řádku  
-  
-1.  Otevřít **Developer Command Prompt** okna. (Na **Start** otevřené okno **aplikace**. Otevřít **Visual Studio Tools** ve složce vaší verze sady Visual Studio a klikněte na tlačítko **Developer Command Prompt** zástupce.) Další informace o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md).  
-  
-     Přihlašovací údaje správce, může být nutné úspěšně kompilaci kódu, v závislosti na operačním systému a konfigurace počítače. Chcete-li spustit okno příkazového řádku jako správce, otevřete místní nabídku pro **Developer Command Prompt** a klikněte na tlačítko **spustit jako správce**.  
-  
-2.  Na příkazovém řádku zadejte **Poznámkový blok basiccx.cpp**.  
-  
-     Zvolte **Ano** po zobrazení výzvy k vytvoření souboru.  
-  
-3.  V programu Poznámkový blok zadejte tyto řádky:  
-  
-    ```cpp  
-    using namespace Platform;  
-  
-    int main(Platform::Array<Platform::String^>^ args)  
-    {  
-        Platform::Details::Console::WriteLine("This is a C++/CX program.");  
-    }  
-  
-    ```  
-  
-4.  V panelu nabídky zvolte **souboru**, **Uložit**.  
-  
-     Vytvoření zdrojového souboru jazyka Visual C++, který používá prostředí Windows Runtime [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md) oboru názvů.  
-  
-5.  Na příkazovém řádku zadejte **/Link /ZW basiccx.cpp cl/EHsc/Subsystem: Console**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj a pak spustí linkeru, aby generoval spustitelný program s názvem basiccx.exe. ( [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru Určuje model zpracování výjimek jazyka C++ a [/link](../build/reference/link-pass-options-to-linker.md) příznak určuje konzolové aplikace.)  
-  
-6.  Chcete-li spustit basiccx.exe program příkazového řádku, zadejte **basiccx**.  
-  
-     Program zobrazí tento text a ukončení:  
-  
-    ```Output  
-    This is a C++/CX program.  
-    ```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavování programů jazyka C/C++](../build/building-c-cpp-programs.md)   
- [Možnosti kompilátoru](../build/reference/compiler-options.md)
+> Můžete také integrovaného vývojového prostředí sady Visual Studio ke kompilaci C + +/ CX programy. Integrované vývojové prostředí zahrnuje návrhu, ladění, emulace a podpoře nasazení, která není k dispozici v příkazovém řádku, a proto doporučujeme použít integrovaného vývojového prostředí pro vytváření aplikací univerzální platformy Windows (UPW). Další informace najdete v tématu [vytvoření aplikace pro UPW v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+
+## <a name="prerequisites"></a>Požadavky
+
+Je třeba porozumět základům jazyka C++.
+
+## <a name="compiling-a-ccx-program"></a>Kompilace jazyka C + +/ CX programu
+
+Chcete-li povolit kompilace pro C + +/ CX, je nutné použít [/ZW](../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. Kompilátor Visual C++ generuje soubor .exe, zaměřuje na modul Windows Runtime, který obsahuje odkazy na požadované knihovny.
+
+#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CX aplikace v příkazovém řádku
+
+1. Otevřít **Developer Command Prompt** okna. (Na **Start** otevřené okno **aplikace**. Otevřít **Visual Studio Tools** ve složce vaší verze sady Visual Studio a klikněte na tlačítko **Developer Command Prompt** zástupce.) Další informace o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md).
+
+   Přihlašovací údaje správce, může být nutné úspěšně kompilaci kódu, v závislosti na operačním systému a konfigurace počítače. Chcete-li spustit okno příkazového řádku jako správce, otevřete místní nabídku pro **Developer Command Prompt** a klikněte na tlačítko **spustit jako správce**.
+
+1. Na příkazovém řádku zadejte **Poznámkový blok basiccx.cpp**.
+
+   Zvolte **Ano** po zobrazení výzvy k vytvoření souboru.
+
+1. V programu Poznámkový blok zadejte tyto řádky:
+
+    ```cpp
+    using namespace Platform;
+
+    int main(Platform::Array<Platform::String^>^ args)
+    {
+        Platform::Details::Console::WriteLine("This is a C++/CX program.");
+    }
+
+    ```
+
+1. V panelu nabídky zvolte **souboru**, **Uložit**.
+
+   Vytvoření zdrojového souboru jazyka Visual C++, který používá prostředí Windows Runtime [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md) oboru názvů.
+
+1. Na příkazovém řádku zadejte **/Link /ZW basiccx.cpp cl/EHsc/Subsystem: Console**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj a pak spustí linkeru, aby generoval spustitelný program s názvem basiccx.exe. ( [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru Určuje model zpracování výjimek jazyka C++ a [/link](../build/reference/link-pass-options-to-linker.md) příznak určuje konzolové aplikace.)
+
+1. Chcete-li spustit basiccx.exe program příkazového řádku, zadejte **basiccx**.
+
+   Program zobrazí tento text a ukončení:
+
+    ```Output
+    This is a C++/CX program.
+    ```
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Možnosti kompilátoru](../build/reference/compiler-options.md)

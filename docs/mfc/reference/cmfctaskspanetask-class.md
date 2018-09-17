@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853966"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711136"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask – třída
 `CMFCTasksPaneTask` Třída je pomocná třída, která představuje úkoly pro podokno úloh ovládacího prvku ( [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klepne na úlohu a ikonu, která se zobrazí vlevo od názvu úkolu.  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Představuje nadřazené okno aktuálního úkolu.  
+*pParent*<br/>
+[in] Představuje nadřazené okno aktuálního úkolu.  
   
- [out] *dat*  
- Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuálního úkolu.  
+*data*<br/>
+[out] Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuálního úkolu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuálního úkolu; v opačném případě hodnota FALSE.  

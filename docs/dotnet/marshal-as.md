@@ -1,5 +1,5 @@
 ---
-title: marshal_as | Microsoft Docs
+title: marshal_as | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701620"
 ---
 # <a name="marshalas"></a>marshal_as
-Tato metoda převádí data mezi nativní a spravovaná prostředí.  
+Tato metoda převádí data mezi nativními a spravovanými prostředími.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,21 +38,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `input`  
- Hodnota, kterou chcete zařazování na `To_Type` proměnné.  
+*Vstup*<br/>
+[in] Hodnota, kterou chcete zařadit na `To_Type` proměnné.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Proměnné typu `To_Type` tedy převedenou hodnotu `input`.  
+ Proměnné typu `To_Type` , který je převedená hodnota `input`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je jednodušší způsob, jak převést data mezi nativní a spravovaná typy. Pokud chcete zjistit, jaké typy dat jsou podporované, najdete v části [přehled zařazování v jazyku C++](../dotnet/overview-of-marshaling-in-cpp.md). Některé konverze datových vyžadují kontextu. Tyto datové typy lze převést pomocí [marshal_context – třída](../dotnet/marshal-context-class.md).  
+ Tato metoda je jednodušší způsob, jak převést dat mezi nativními a spravovanými typy. Pokud chcete zjistit, jaké typy dat jsou podporovány, naleznete v tématu [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md). Některé převodů dat vyžadují kontextu. Tyto typy dat můžete převádět pomocí [marshal_context Class](../dotnet/marshal-context-class.md).  
   
- Pokud se pokusíte zařazování pár typy dat, které nejsou podporovány, `marshal_as` vygenerují chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadaný k této chybě Další informace. `C4996` Pro více než jen zastaralé funkce může být generována chyba. Příkladem toho je pokusu o zařazení pár typy dat, které nejsou podporovány.  
+ Pokud se pokusíte zařazování pár datových typů, které nejsou podporované. zahrnuje `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadané k této chybě Další informace. `C4996` Chyby mohou být generovány pro více než jen zastaralé funkce. Jedním z příkladů je pokusu o zařazení pár datových typů, které nejsou podporovány.  
   
- Knihovny zařazování se skládá z několika hlavičkových souborů. Jakékoli převody vyžaduje pouze jeden soubor, ale můžete zahrnout další soubory, pokud je potřeba pro jiné převody. Pokud chcete zjistit, které převody jsou přidruženy soubory, které, podívejte se v tabulce v `Marshaling Overview`. Bez ohledu na to co převod chcete udělat, požadavek na obor názvů je vždy v platnost.  
+ Zařazovací knihovna se skládá z několika hlavičkové soubory. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud je potřeba pro ostatní převody, které můžete zahrnout další soubory. Pokud chcete zjistit, které převody jsou přidruženy soubory, které, podívejte se v tabulce v `Marshaling Overview`. Bez ohledu na to co převodu chcete udělat, požadavek na obor názvů je vždy v platnosti.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad zařazuje z `const char*` k `System::String` typ proměnné.  
+ V tomto příkladu zařazuje z `const char*` k `System::String` typ proměnné.  
   
 ```  
 // marshal_as_test.cpp  

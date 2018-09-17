@@ -1,5 +1,5 @@
 ---
-title: -NATVIS (přidání Natvis do souboru PDB) | Microsoft Docs
+title: -NATVIS (přidání Natvisu do souboru PDB) | Dokumentace Microsoftu
 ms.date: 08/10/2017
 ms.technology:
 - cpp-tools
@@ -19,42 +19,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3bce34095aec1558d2466447770a8ac4c46528f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c1a20fef785c0267eb630bf044c8cb9609605e2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377099"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708120"
 ---
-# <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (přidání Natvis do souboru PDB)
-  
-> / NATVIS:*filename*  
-  
-## <a name="parameters"></a>Parametry  
-  
-*Název souboru*  
-Soubor Natvis přidání do souboru PDB. Vizualizace ladicí program v souboru Natvis se vloží do PDB.  
-  
-## <a name="remarks"></a>Poznámky  
-  
-Možnost /NATVIS vloží ladicí program vizualizacemi definované v souboru Natvis *filename* do souboru PDB generované odkaz. To umožňuje zobrazit vizualizacemi nezávisle na soubor .natvis ladicího programu. Více možností /NATVIS můžete vložit více než jeden soubor Natvis vygenerovaný soubor PDB.  
-  
-ODKAZ /NATVIS ignoruje, pokud soubor PDB nebyl vytvořen pomocí [/DEBUG](../../build/reference/debug-generate-debug-info.md) možnost. Informace o vytváření a používání souborů .natvis najdete v tématu [vytváření vlastních pohledů nativních objektů v ladicím programu sady Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte **příkazového řádku** stránka vlastností v **Linkeru** složky.  
-  
-3.  Přidat možnost /NATVIS **další možnosti** textové pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   Tato možnost není k dispozici programový ekvivalent.  
-  
-## <a name="see-also"></a>Viz také  
-  
-[Vytváření vlastních pohledů nativních objektů v ladicím programu sady Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects)  
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
+# <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (přidání Natvisu do souboru PDB)
+
+> / NATVIS:*název souboru*
+
+## <a name="parameters"></a>Parametry
+
+*Název souboru*<br/>
+Soubor Natvis pro přidání do souboru PDB. Vizualizace ladicího programu v souboru Natvis se vloží do PDB.
+
+## <a name="remarks"></a>Poznámky
+
+Možnost /NATVIS vloží vizualizace ladicího programu, které jsou definovány v souboru Natvis *filename* do souboru PDB generovaných odkaz. To umožňuje ladicí program zobrazí se vizualizace bez ohledu na jejich souboru .natvis. Více možností /NATVIS můžete vložit více než jeden soubor Natvis generovaného souboru PDB.
+
+ODKAZ ignoruje /NATVIS při soubor PDB nebyl vytvořen pomocí [/DEBUG](../../build/reference/debug-generate-debug-info.md) možnost. Informace o vytváření a používání soubory .natvis, naleznete v tématu [vytváření vlastních zobrazení nativních objektů v ladicím programu sady Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Vyberte **příkazového řádku** stránku vlastností v **Linkeru** složky.
+
+1. Přidat možnost /NATVIS **další možnosti** textového pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Tato možnost nemá programový ekvivalent.
+
+## <a name="see-also"></a>Viz také
+
+[Vytváření vlastních zobrazení nativních objektů v ladicím programu sady Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects)<br/>
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

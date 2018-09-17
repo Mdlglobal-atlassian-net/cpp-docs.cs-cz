@@ -1,5 +1,5 @@
 ---
-title: paralelní | Microsoft Docs
+title: paralelní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692282"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705962"
 ---
 # <a name="parallel"></a>parallel
-Definuje paralelní oblasti, která je kód, který budou spuštěny několik vláken současně.  
+Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,11 +35,10 @@ Definuje paralelní oblasti, která je kód, který budou spuštěny několik vl
 }  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
-  
- `clause` (volitelné)  
- Nula nebo více klauzulích.  Najdete v části poznámky seznam klauzulích nepodporuje **paralelní**.  
+## <a name="arguments"></a>Arguments
+
+*Klauzule*<br/>
+(Volitelné) Nula nebo více klauzulí.  Naleznete v části poznámky pro seznam klauzule podporované službou **paralelní**.  
   
 ## <a name="remarks"></a>Poznámky  
  **Paralelní** podporuje následující klauzule OpenMP – direktiva:  
@@ -58,14 +57,14 @@ Definuje paralelní oblasti, která je kód, který budou spuštěny několik vl
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [Sdílené](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [Sdílet](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **paralelní** lze také použít s [části](../../../parallel/openmp/reference/sections-openmp.md) a [pro](../../../parallel/openmp/reference/for-openmp.md) direktivy.  
+ **paralelní** je také možné se [oddíly](../../../parallel/openmp/reference/sections-openmp.md) a [pro](../../../parallel/openmp/reference/for-openmp.md) direktivy.  
   
  Další informace najdete v tématu [2.3 parallel – konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak nastavit počet vláken a definovat paralelní oblast. Ve výchozím nastavení počet vláken, se rovná počet logických procesorů na počítači. Například pokud máte počítač s jednoho fyzického procesoru, který má povoleným Hyper-threadingem, bude mít dva logické procesory a tedy dvě vláken.  
+ Následující příklad ukazuje, jak nastavit počet vláken a definovat paralelní oblasti. Ve výchozím nastavení počet vláken je rovna počtu logických procesorů v počítači. Například pokud máte počítače s jednoho fyzického procesoru, s povoleným hyperthreadingem, bude mít dva logické procesory a proto se dvěma vlákny.  
   
 ```  
 // omp_parallel.cpp  
@@ -90,7 +89,7 @@ Hello from thread 3
 ```  
   
 ## <a name="comment"></a>Komentář  
- Všimněte si, že pořadí výstupu se může lišit na různé počítače.  
+ Všimněte si, že pořadí výstup se může lišit na různých strojích.  
   
 ## <a name="see-also"></a>Viz také  
  [Direktivy](../../../parallel/openmp/reference/openmp-directives.md)

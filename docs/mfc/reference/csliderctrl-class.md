@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693189"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703960"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek posuvník.  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *nLength*|Délka posuvník v pixelech.|  
+|*nLength*|[in] Délka posuvník v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyžaduje, aby ovládací prvek posuvník nastavena na [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.  

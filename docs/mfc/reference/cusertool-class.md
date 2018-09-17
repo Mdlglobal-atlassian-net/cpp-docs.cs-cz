@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202973"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708991"
 ---
 # <a name="cusertool-class"></a>Cusertool – třída
 Uživatelský nástroj je položka nabídky, která spustí externí aplikaci. **Nástroje** karty **vlastní** dialogové okno ( [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatelské nástroje a zadejte název, příkaz, argumenty, a Počáteční adresář pro každý nástroj uživatele.  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectImage*  
- Určuje souřadnice oblasti zobrazit ikonu.  
+*rectImage*<br/>
+[in] Určuje souřadnice oblasti zobrazit ikonu.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Vrátí řetězec, který obsahuje text příkazu přidružený uživatelský nástroj.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszCmd*  
- Určuje novou aplikaci, který se má přidružit uživatelský nástroj.  
+*lpszCmd*<br/>
+[in] Určuje novou aplikaci, který se má přidružit uživatelský nástroj.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit novou aplikaci, na kterém běží nástroj uživatele. Metoda odstraní staré ikonu a načte nová ikona z dané aplikace. Pokud ho nejde načíst ikonu z aplikace, načte výchozí ikonu pro uživatelský nástroj voláním [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

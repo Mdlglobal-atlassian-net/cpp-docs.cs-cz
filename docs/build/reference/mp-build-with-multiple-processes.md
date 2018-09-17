@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713424"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 
@@ -127,7 +127,7 @@ Visual Studio používá [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 
 
 Čas sestavení vašeho řešení závisí částečně na počet procesů, které provádějí sestavení. *Číslo* argument [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild určuje maximální počet projektů k sestavení ve stejnou dobu. Podobně *processMax* argument **/MP** – možnost kompilátoru určuje maximální počet jednotek kompilace na sestavení ve stejnou dobu. Pokud **/maxcpucount** určuje možnost *P* projekty a **/MP** určuje možnost *C* zpracovává, nesmí být delší *P*  x *C* procesy spuštění ve stejnou dobu.
 
- Pokyny pro rozhodování o tom, jestli se má použít nástroj MSBuild nebo **/MP** technologie vypadá takto:
+Pokyny pro rozhodování o tom, jestli se má použít nástroj MSBuild nebo **/MP** technologie vypadá takto:
 
 - Pokud existuje mnoho projektů s několika souborů v každém projektu, použijte nástroj MSBuild.
 

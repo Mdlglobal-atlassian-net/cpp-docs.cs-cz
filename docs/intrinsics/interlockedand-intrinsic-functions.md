@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465591"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707860"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Vnitřní funkce _InterlockedAnd
 **Specifické pro Microsoft**  
@@ -180,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `value`  
- Ukazatel na první operand, bude nahrazen výsledek.  
+*value*<br/>
+[out v] Ukazatel na první operand, bude nahrazen výsledek.  
   
- [in] `mask`  
- Druhý operand.  
+*Maska*<br/>
+[in] Druhý operand.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Původní hodnotu prvního operandu.  

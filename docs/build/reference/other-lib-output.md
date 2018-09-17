@@ -1,5 +1,5 @@
 ---
-title: Další výstup LIB | Microsoft Docs
+title: Další výstup LIB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e793aaaa335bed430d8486b858d3413be7ba74dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6bd31c0534ae7ff2e7d840ad245be6f66983ea0a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704237"
 ---
 # <a name="other-lib-output"></a>Další výstup LIB
-Ve výchozím režimu můžete použít možnost/list zobrazíte informace o výsledné knihovny. Tento výstup můžete přesměrovat do souboru.  
-  
- LIB zobrazí zprávu o autorských právech a verze a vrátí soubory příkazů, pokud se používá možnost/nologo.  
-  
- Pokud zadáte `lib` s žádný vstup LIB zobrazí využití příkaz, který shrnuje jeho možnosti.  
-  
- Chybové a výstražné zprávy vygenerované LIB mají tvar LNK*nnnn*. Nástroje pro připojení, DUMPBIN a nástroje EDITBIN také použít tento rozsah chyb. Výběrem chyby ve výstupním okně a stisknutím klávesy F1 je k dispozici nápověda.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)
+
+Ve výchozím režimu můžete použít možnost/list pro zobrazení informací o výslednou knihovnu. Tento výstup lze přesměrovat do souboru.
+
+Lib – zobrazí zprávu o autorských právech a verze a vrátí soubory příkazů, pokud není použit parametr/nologo.
+
+Po zadání `lib` s žádný vstup, LIB zobrazí využití příkaz, který shrnuje jeho možnosti.
+
+Chybové a výstražné zprávy vydané LIB mít formát _služba ._protokol LNK*nnnn*. Nástroje pro propojení, DUMPBIN a EDITBIN také použít tuto řadu chyb. Výběrem chyby v okně Výstup a stisknutím klávesy F1 není k dispozici nápověda.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled knihovny LIB](../../build/reference/overview-of-lib.md)

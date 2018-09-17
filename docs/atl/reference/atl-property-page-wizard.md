@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760380"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703792"
 ---
 # <a name="atl-property-page-wizard"></a>Průvodce stránkou vlastností ATL
 
@@ -56,17 +56,20 @@ Poskytuje informace pro třídy C++ vytvořený pro implementaci objektu.
 
 Poskytuje informace o funkcích, které modelu COM pro objekt.
 
-**Coclass**  
-Nastaví název třídy komponenty, který obsahuje seznam podporovaných v objektu rozhraní.
+- **Coclass**
 
-> [!NOTE]
->  Pokud vytváříte projekt pomocí atributů nebo pokud na této stránce průvodce určujete, že na stránce vlastností používá atributy, tuto možnost nelze změnit, protože nezahrnuje ATL `coclass` atribut.
+   Nastaví název třídy komponenty, který obsahuje seznam podporovaných v objektu rozhraní.
 
-**Typ**  
-Nastaví popis objektu, který se zobrazí v registru
+   > [!NOTE]
+   > Pokud vytváříte projekt pomocí atributů nebo pokud na této stránce průvodce určujete, že na stránce vlastností používá atributy, tuto možnost nelze změnit, protože nezahrnuje ATL `coclass` atribut.
 
-**ProgID**  
-Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
+- **Typ**
+
+   Nastaví popis objektu, který se zobrazí v registru
+
+- **ProgID**
+
+   Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
 
 ## <a name="see-also"></a>Viz také
 

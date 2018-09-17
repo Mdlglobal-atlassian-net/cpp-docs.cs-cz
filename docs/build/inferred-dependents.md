@@ -1,5 +1,5 @@
 ---
-title: Odvozené závislé objekty | Microsoft Docs
+title: Odvozené závislé objekty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86ed1a8fe6c97ae11af50f59cb639ef6fd7c1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 631c5631b60f0e05dd1f1541facc767f35944d3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367895"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701477"
 ---
 # <a name="inferred-dependents"></a>Odvozené závislé objekty
-Odvozené závislé je odvozený od odvozené pravidlo a je vyhodnocena před explicitní závislosti. Pokud odvozené závislé zastaralé s ohledem na cíli, NMAKE vyvolá příkazy bloku pro závislost. Pokud odvozené závislé neexistuje nebo je zastaralé s ohledem na svůj vlastní závislosti, aktualizuje NMAKE nejprve odvozené závislé položky. Další informace o odvozené závislé objekty najdete v tématu [odvozená pravidla](../build/inference-rules.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Závislé prvky](../build/dependents.md)
+
+Odvozené závislé je odvozen z odvozené pravidlo a je vyhodnoceno před explicitní závislé položky. Pokud odvozené závislé není aktuální s ohledem na cíli, vyvolá NMAKE bloku příkazů pro závislost. Pokud odvozené závislé neexistuje nebo není aktuální s ohledem na své vlastní závislé objekty, NMAKE nejprve aktualizuje odvozené závislé. Další informace o odvozené závislé objekty, najdete v části [pravidla odvozování](../build/inference-rules.md).
+
+## <a name="see-also"></a>Viz také
+
+[Závislé prvky](../build/dependents.md)

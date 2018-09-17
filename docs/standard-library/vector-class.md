@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199492"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710228"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
- Typ dat prvku mají být uloženy ve vektoru
+*Typ*<br/>
+Typ dat prvku mají být uloženy ve vektoru
 
-*Allocator –*  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti vektoru. Tento argument je nepovinný a výchozí hodnota je `allocator<Type>`.
+*Allocator –*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti vektoru. Tento argument je nepovinný a výchozí hodnota je `allocator<Type>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
- Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
+*první*<br/>
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
 
-*poslední*  
- Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
+*poslední*<br/>
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
 
-*Počet*  
- Počet kopií prvku vloženého do vektoru.
+*Počet*<br/>
+Počet kopií prvku vloženého do vektoru.
 
-*Val*  
- Hodnota prvku vloženého do vektoru.
+*Val*<br/>
+Hodnota prvku vloženého do vektoru.
 
-*IList*  
- Objekt initializer_list obsahující prvky, které mají vložit.
+*IList*<br/>
+Objekt initializer_list obsahující prvky, které mají vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos*  
- Číslo dolní index nebo pozice prvku, který chcete odkazovat ve vektoru.
+*_Pos*<br/>
+Číslo dolní index nebo pozice prvku, který chcete odkazovat ve vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>Parametry
 
 *Val*<br/>
- Hodnota, kterou chcete přiřadit k elementu přidány na konec vektoru.
+Hodnota, kterou chcete přiřadit k elementu přidány na konec vektoru.
 
 ### <a name="example"></a>Příklad
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*  
- Minimální délka úložiště, která bude přidělena pro vektor.
+*Počet*<br/>
+Minimální délka úložiště, která bude přidělena pro vektor.
 
 ### <a name="example"></a>Příklad
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Newsize*  
- Nová velikost vektoru.
+*Newsize*<br/>
+Nová velikost vektoru.
 
-*Val*  
- Inicializační hodnotu nové elementy přidané do vektoru, pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové objekty pomocí jejich výchozí konstruktor.
+*Val*<br/>
+Inicializační hodnotu nové elementy přidané do vektoru, pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové objekty pomocí jejich výchozí konstruktor.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Vektor poskytující prvky pro záměnu nebo vektor, jehož prvky mají být zaměněny vektoru *levé*.
+*doprava*<br/>
+Vektor poskytující prvky pro záměnu nebo vektor, jehož prvky mají být zaměněny vektoru *levé*.
 
-*doleva*  
- Vektor, jehož prvky mají být zaměněny vektoru *správné*.
+*doleva*<br/>
+Vektor, jehož prvky mají být zaměněny vektoru *správné*.
 
 ### <a name="example"></a>Příklad
 

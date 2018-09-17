@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711794"
 ---
 # <a name="cstatusbarctrl-class"></a>Cstatusbarctrl – třída
 Poskytuje funkce pro Windows běžné stav panelu ovládacího prvku.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iPart*|Z nuly vycházející index části, která obsahuje ikonu, která se má načíst. Pokud má parametr hodnotu -1, stavový řádek je považován za jednoduchý režim stavový řádek.|  
+|*iPart*|[in] Z nuly vycházející index části, která obsahuje ikonu, která se má načíst. Pokud má parametr hodnotu -1, stavový řádek je považován za jednoduchý režim stavový řádek.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač na ikonu-li metoda úspěšná. v opačném případě hodnota NULL.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSimple*  
- Příznak zobrazení typu. Pokud tento parametr má hodnotu TRUE, ovládací prvek zobrazí jednoduchý text; Pokud je FALSE, zobrazí se více částí.  
+*bSimple*<br/>
+[in] Příznak zobrazení typu. Pokud tento parametr má hodnotu TRUE, ovládací prvek zobrazí jednoduchý text; Pokud je FALSE, zobrazí se více částí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu 0.  

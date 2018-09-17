@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709550"
 ---
 # <a name="cmfclinkctrl-class"></a>Cmfclinkctrl – třída
 `CMFCLinkCtrl` Třídy zobrazí tlačítko jako hypertextový odkaz a po kliknutí na tlačítko vyvolá cíl odkazu.  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectClient*  
- Obdélník, který odkaz ovládacího prvku za rozsahem.  
+*rectClient*<br/>
+[in] Obdélník, který odkaz ovládacího prvku za rozsahem.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete použít vlastní kód chcete-li nakreslit obdélník na tlačítko.  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszURL*  
- Text tlačítka pro zobrazení.  
+*lpszURL*<br/>
+[in] Text tlačítka pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPrefix*  
- Předpona protokolu URL.  
+*lpszPrefix*<br/>
+[in] Předpona protokolu URL.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k nastavení předponu adresy URL. Předpona není zobrazena na tlačítka pro rozpoznávání tváře, ale slouží ke, přejděte na adresu URL cílové.  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bVCenter*  
- TRUE, pokud chcete text tlačítka a rastrový obrázek svisle mezi horní a dolní ovládací prvek odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bVCenter*<br/>
+[in] TRUE, pokud chcete text tlačítka a rastrový obrázek svisle mezi horní a dolní ovládací prvek odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
- [in] *bHCenter*  
- TRUE, pokud chcete text tlačítka a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bHCenter*<br/>
+[in] TRUE, pokud chcete text tlačítka a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje novou velikost ovládacího prvku odkaz.  

@@ -1,5 +1,5 @@
 ---
-title: Export funkcí z knihovny DLL podle pořadových nikoli podle názvu | Microsoft Docs
+title: Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05f3e429406b3c24c7a21ce9ee8e10fe19c14b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d894df971dd0c50556a420eafa2909474ee6912
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367690"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714256"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu
-Nejjednodušší způsob, jak funkce exportu z vaší knihovny DLL je k jejich exportování podle názvu. To se stane, když používáte **__declspec(dllexport)**, např. Ale místo toho můžete exportovat funkce podle pořadí. S touto technikou, musíte použít soubor .def místo **__declspec(dllexport)**. K určení pořadového čísla funkce, připojí k názvu funkce v souboru .def jeho pořadí. Informace o určování pořadí najdete v tématu [export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md).  
-  
+
+Nejjednodušší způsob, jak export funkcí z knihovny DLL je a exportujte je podle názvu. Je to, co se stane, když použijete **__declspec(dllexport)**, např. Ale místo toho můžete exportovat funkce podle řádu. S touto technikou, musíte použít soubor .def místo **__declspec(dllexport)**. K určení funkce pořadové číslo, připojte k názvu funkce v souboru .def jeho pořadové číslo. Informace o zadávání řadové číslovky, naleznete v tématu [export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md).
+
 > [!TIP]
->  Pokud chcete optimalizovat velikost souboru knihovny DLL, použijte **NONAME** atribut na každé exportované funkci. S **NONAME** atribut pořadová čísla jsou uložené v knihovnu DLL export tabulky namísto názvů funkce. Pokud exportujete mnoho funkcí, může to být značné úspory.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
-  
--   [Použít soubor .def exportování podle pořadí](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Použijte __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+>  Pokud chcete optimalizovat velikost souboru vaše knihovna DLL, použijte **NONAME** atribut u každého exportované funkce. S **NONAME** řadové číslovky atributu, jsou uloženy v knihovně DLL exportovat tabulku, nikoli názvy funkcí. Pokud exportujete mnoho funkcí, to může být značné úspory.
+
+## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
+
+- [Použijte soubor .def tak můžete exportovat podle pořadových čísel](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Pomocí deklarace __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+## <a name="see-also"></a>Viz také
+
+[Export z knihovny DLL](../build/exporting-from-a-dll.md)

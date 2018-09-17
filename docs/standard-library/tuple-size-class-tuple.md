@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700216"
 ---
 # <a name="tuplesize-class"></a>tuple_size – třída;
 
@@ -66,22 +66,22 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parametry
 
-*Řazené kolekce členů*  
+*Řazené kolekce členů*<br/>
 Typ řazené kolekce členů.
 
-*Elem*  
+*Elem*<br/>
 Typ prvků pole.
 
-*Velikost*  
+*Velikost*<br/>
 Velikost pole.
 
-*T1*  
+*T1*<br/>
 Typ prvního člena, které odpovídá páru licencí.
 
-*T2*  
+*T2*<br/>
 Typ druhý člen, které odpovídá páru licencí.
 
-*Typy*  
+*Typy*<br/>
 Typy elementů řazené kolekce členů.
 
 ## <a name="remarks"></a>Poznámky

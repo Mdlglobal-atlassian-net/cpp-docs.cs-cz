@@ -1,5 +1,5 @@
 ---
-title: -NOLOGO (NÁSTROJE EDITBIN) | Microsoft Docs
+title: -NOLOGO (EDITBIN) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de5591caab2488b4e55464e783df063859e538e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b800e827daebbe7656a69888617a74081eb3ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709459"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
-```  
-/NOLOGO  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost nezobrazí zobrazení nástroje EDITBIN zpráva o autorských právech a číslo verze.  
-  
-## <a name="see-also"></a>Viz také  
- [EDITBIN – možnosti](../../build/reference/editbin-options.md)
+
+```
+/NOLOGO
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost potlačí zobrazování EDITBIN zprávu o autorských právech a čísla verze.
+
+## <a name="see-also"></a>Viz také
+
+[EDITBIN – možnosti](../../build/reference/editbin-options.md)

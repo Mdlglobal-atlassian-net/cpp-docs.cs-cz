@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849445"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713450"
 ---
 # <a name="cmfcdropdownframe-class"></a>Cmfcdropdownframe – třída
 Poskytuje funkce okna rámce rozevíracího seznamu na panely nástrojů v rozevíracím seznamu a rozevírací tlačítka.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWndParent*|Nadřazené okno rámce rozevíracího seznamu.|  
-|[in] *x*|Vodorovné obrazovky souřadnice umístění rozevírací rámce.|  
-|[in] *y*|Souřadnice obrazovky svislé umístění rámce rozevírací.|  
-|[in] *pWndOriginToolbar*|Panel nástrojů, který má rozevíracích tlačítek, které tato metoda používá k naplnění nový objekt rámce rozevíracího seznamu.|  
+|*pWndParent*|[in] Nadřazené okno rámce rozevíracího seznamu.|  
+|*x*|[in] Vodorovné obrazovky souřadnice umístění rozevírací rámce.|  
+|*y*|[in] Souřadnice obrazovky svislé umístění rámce rozevírací.|  
+|*pWndOriginToolbar*|[in] Panel nástrojů, který má rozevíracích tlačítek, které tato metoda používá k naplnění nový objekt rámce rozevíracího seznamu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud rámec rozevíracího seznamu byl úspěšně vytvořen; v opačném případě FALSE.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *bNotify*|Nevyužité.|  
+|*bNotify*|[in] Nevyužité.|  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu, když je vytvořen rámec rozevíracího seznamu nebo změně velikosti nadřazené okno. Tato metoda se vypočítává umístění a velikost rámce rozevíracího seznamu umístění a velikost nadřazeného okna.  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAutoDestroy*  
- TRUE, pokud chcete automaticky odstranit přidružený rozevírací seznam nástrojů okna. v opačném případě hodnota FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE, pokud chcete automaticky odstranit přidružený rozevírací seznam nástrojů okna. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *bAutoDestroy* má hodnotu TRUE, pak bude `CMFCDropDownFrame` destruktor odstraní přidružené rozevírací seznam nástrojů okno. Výchozí hodnota je TRUE.  

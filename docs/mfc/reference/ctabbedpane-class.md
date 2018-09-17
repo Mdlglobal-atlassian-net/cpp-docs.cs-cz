@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901008"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712828"
 ---
 # <a name="ctabbedpane-class"></a>Ctabbedpane – třída
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnable*  
-TRUE pro povolení automatického barvy karet; v opačném případě hodnota FALSE.
+*bEnable*<br/>
+[in] TRUE pro povolení automatického barvy karet; v opačném případě hodnota FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parametry
 
-[out] *rectTabAreaTop*  
-Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, oblasti horní kartě.
+*rectTabAreaTop*<br/>
+[out] Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, oblasti horní kartě.
 
-[out] *rectTabAreaBottom*  
-Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, od oblasti karet dole.
+*rectTabAreaBottom*<br/>
+[out] Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, od oblasti karet dole.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *arColors*  
-Obsahuje pole barev k nastavení.
+*arColors*<br/>
+[in] Obsahuje pole barev k nastavení.
 
 ### <a name="remarks"></a>Poznámky
 

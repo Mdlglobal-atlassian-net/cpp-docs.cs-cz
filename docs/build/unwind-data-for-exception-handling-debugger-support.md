@@ -1,5 +1,5 @@
 ---
-title: Unwind Data pro zpracování výjimek, podpora ladicího programu | Microsoft Docs
+title: Unwind Data pro zpracování výjimek, podpora ladicího programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5961159ab87426a26b31afcc09a16fece0a81b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0196d30f0634d37db976dab9416d7a5d23f8b719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707379"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Unwind data pro zpracování výjimek, podpora ladění
-Tato část popisuje datové struktury potřebné pro zpracování výjimek a ladění podpory.  
-  
--   [RUNTIME_FUNCTION – struktura](../build/struct-runtime-function.md)  
-  
--   [UNWIND_INFO – struktura](../build/struct-unwind-info.md)  
-  
--   [UNWIND_CODE – struktura](../build/struct-unwind-code.md)  
-  
--   [Zřetězené struktury unwind info](../build/chained-unwind-info-structures.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek (x64)](../build/exception-handling-x64.md)
+
+Tato část popisuje datové struktury, vyžaduje se pro zpracování výjimek a podporu ladění.
+
+- [RUNTIME_FUNCTION – struktura](../build/struct-runtime-function.md)
+
+- [UNWIND_INFO – struktura](../build/struct-unwind-info.md)
+
+- [UNWIND_CODE – struktura](../build/struct-unwind-code.md)
+
+- [Zřetězené struktury unwind info](../build/chained-unwind-info-structures.md)
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek (x64)](../build/exception-handling-x64.md)

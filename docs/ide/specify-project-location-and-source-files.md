@@ -1,5 +1,5 @@
 ---
-title: Nový projekt z existujícího kódu – zdrojové soubory (Visual C++) | Microsoft Docs
+title: Nový projekt z existujícího kódu – zdrojové soubory (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,52 +14,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3647ad3211043a5356649cb5f350ec07009f2279
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707834"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Zadání umístění projektu a zdrojových souborů, Průvodce vytvořením nového projektu z existujících souborů kódu
-Na této stránce Průvodce vytvoření nového projektu z existujících souborů kódu můžete zadat:  
+Tato stránka Průvodce vytvoření nového projektu z existujících souborů kódu slouží k určení:  
   
 -   Cesta k adresáři nového projektu  
   
--   Adresáře k vyhledání existujícího zdrojové soubory  
+-   Adresáře ke hledání pro zdrojové soubory  
   
 -   Typy souborů, které průvodce provede import do nového projektu  
   
 ## <a name="task-list"></a>Seznam úloh  
- [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+[Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Umístění souboru projektu**  
- Určuje cestu k adresáři nový projekt. Toto umístění je, kde průvodce uloží všechny soubory (a podadresáře) nového projektu.  
+- **Umístění souboru projektu**
+
+   Určuje cestu k adresáři nový projekt. Toto umístění je, kde průvodce uloží všechny soubory (a jeho podadresářích) nového projektu.  
   
- **Procházet**  
- Zobrazí **umístění souboru projektu** dialog, který slouží k určení adresáře, který bude obsahovat nový projekt. Tento ovládací prvek umožňuje přejděte do požadované složky.  
+- **Procházet**
+
+   Zobrazí **umístění souboru projektu** dialogové okno, které vám umožní určit adresář, který bude obsahovat nový projekt. Tento ovládací prvek umožňuje přejděte do požadované složky.  
   
- **název projektu**  
- Určuje název nového projektu. Soubory projektu, které mají přípony jako VCXPROJ zavede tento název. Existujících souborů kódu ponechá jejich původní název.  
+- **název projektu**
+
+   Určuje název nového projektu. Soubory projektu, které mají přípony, jako je tento název přijmou .vcxproj. Existujících souborů kódu se zachovají původní názvy.  
   
- **Do projektu přidejte soubory z těchto složek**  
- Pokud je zaškrtnuto, nastaví průvodcem ke kopírování existujících souborů kódu z jejich původní adresáře (které jsou určené v poli seznamu níže tento ovládací prvek) do nového projektu.  
+- **Přidejte soubory do projektu z těchto složek**
+
+   Pokud je zaškrtnuto, nastaví průvodcem ke kopírování existujících souborů kódu z jejich původní adresářů (které jsou uvedeny v seznamu pod tento ovládací prvek) do nového projektu.  
   
- **Přidat podsložky**  
- Určuje, zkopírujte soubory kódu z všechny podadresáře adresáře uvedené **složky** sloupce do nového projektu.  
+- **Přidat podsložky**
+
+   Určuje, zkopírujte soubory kódu ze všech podadresářích adresáře uvedené **složky** sloupce do nového projektu.  
   
- **Složka**  
- Určuje cestu k adresáři, který obsahuje existujících souborů kódu chcete zkopírovat do nového projektu. Tento sloupec uvádí všechny adresáře, které průvodce vyhledá existujících souborů kódu.  
+- **Složka**
+
+   Určuje cestu k adresáři, který obsahuje existujících souborů kódu, který se zkopíruje do nového projektu. V tomto sloupci jsou uvedeny všechny adresáře, které průvodce vyhledá existujících souborů kódu.  
   
- **Přidat**  
- Zobrazí **do projektu přidejte soubory z této složky** dialogové okno, které vám umožní určit adresáře, které průvodce vyhledá existujících souborů kódu.  
+- **Add**
+
+   Zobrazí **přidat soubory do projektu z této složky** dialogové okno, které vám pomůže určit adresáře, které průvodce vyhledá existujících souborů kódu.  
   
- **Odebrat**  
- Odstraní cesta k adresáři, který je vybraný v seznamu nalevo tohoto ovládacího prvku.  
+- **odebrat**
+
+   Odstraní cesta k adresáři, který je vybrán v seznamu nalevo tohoto ovládacího prvku.  
   
- **Typy souborů, které chcete přidat do projektu**  
- Určuje typy souborů, které průvodce přidá do nového projektu založené na rozšířeních daný soubor. Přípony souborů jsou uvedeny s zástupný znak hvězdička a jsou v seznamu přípon souborů oddělený středníkem.  
+- **Typy souborů, které chcete přidat do projektu**
+
+   Určuje typy souborů, které průvodce přidá do nový projekt založený na daný soubor rozšíření. Přípony souborů jsou uvedeny s zástupný znak hvězdička a jsou odděleny středníky v seznamu přípon souborů.  
   
- **Zobrazit všechny soubory v Průzkumníkovi řešení**  
- Určuje, že všechny soubory v novém projektu budou viditelné a zobrazených v okně Průzkumníka řešení. Tato možnost je povolená ve výchozím nastavení.
+- **Zobrazit všechny soubory v Průzkumníku řešení**
+
+   Určuje, že všechny soubory v novém projektu bude viditelné a zobrazují se v okně Průzkumník řešení. Tato možnost je povolená ve výchozím nastavení.

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756360"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709797"
 ---
 # <a name="idispatchimpl-class"></a>Idispatchimpl – třída
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parametry
 
-[in] *T*  
-Duální rozhraní.
+*T*<br/>
+[in] Duální rozhraní.
 
-[in] *piid*  
-Ukazatel na IID *T*.
+*piid*<br/>
+[in] Ukazatel na IID *T*.
 
-[in] *plibid*  
-Ukazatel na LIBID knihovnu typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předán typ na úrovni serveru knihovny.
+*plibid*<br/>
+[in] Ukazatel na LIBID knihovnu typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předán typ na úrovni serveru knihovny.
 
-[in] *wMajor*  
-Hlavní verze knihovny typů. Výchozí hodnota je 1.
+*wMajor*<br/>
+[in] Hlavní verze knihovny typů. Výchozí hodnota je 1.
 
-[in] *wMinor*  
-Dílčí verze knihovny typů. Výchozí hodnota je 0.
+*wMinor*<br/>
+[in] Dílčí verze knihovny typů. Výchozí hodnota je 0.
 
-[in] *tihclass*  
-Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Členové
 

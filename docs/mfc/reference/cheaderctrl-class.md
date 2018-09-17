@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758853"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712728"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl – třída
 Poskytuje funkce pro Windows běžný ovládací prvek záhlaví.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *položky*|Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|  
-|[out] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|  
+|*Položky*|[in] Z nuly vycházející index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace najdete v tématu `fmt` člena [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|  
+|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktuře získávat informace ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato funkce je úspěšná. v opačném případě hodnota FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|  
+|*lprect –*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato funkce je úspěšná. v opačném případě hodnota FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out v] *phdhti*|Ukazatel [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struktura, která určuje bod k testování a přijímá výsledky testu.|  
+|*phdhti*|[out v] Ukazatel [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struktura, která určuje bod k testování a přijímá výsledky testu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index položky záhlaví, pokud existuje, na zadané pozici; jinak -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *položky*|Z nuly vycházející index položky záhlaví.|  
+|*Položky*|[in] Z nuly vycházející index položky záhlaví.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034735"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716529"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -129,7 +129,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    Pouze r19 uložit:
+   Pouze r19 uložit:
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ Poznámka: EpilogStart Index [4] odkazuje na uprostřed unwind kód prologu (č�
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled konvencí ARM64 ABI](arm64-windows-abi-conventions.md)  
-[Zpracování výjimek ARM](../build/arm-exception-handling.md)  
+[Přehled konvencí ARM64 ABI](arm64-windows-abi-conventions.md)<br/>
+[Zpracování výjimek ARM](../build/arm-exception-handling.md)

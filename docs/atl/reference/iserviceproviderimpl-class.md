@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703199"
 ---
 # <a name="iserviceproviderimpl-class"></a>Iserviceproviderimpl – třída
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parametry
 
-[IN] *guidService*  
-Ukazatel na identifikátor služby (SID).
+*guidService*<br/>
+[in] Ukazatel na identifikátor služby (SID).
 
-[IN] *riid*  
-Identifikátor rozhraní, ke kterému volající získat přístup.
+*riid*<br/>
+[in] Identifikátor rozhraní, ke kterému volající získat přístup.
 
-[OUT] *ppvObj*  
-Nepřímé ukazatel na požadované rozhraní.
+*ppvObj*<br/>
+[out] Nepřímé ukazatel na požadované rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 

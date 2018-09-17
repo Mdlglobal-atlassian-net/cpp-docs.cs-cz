@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693969"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707463"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
 `CMFCEditBrowseCtrl` Třída podporuje textové pole procházení, což je upravitelné textové pole, který volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  `CMFCEditBrowseCtrl` Třída podporuje následující režimy.  
   
- **vlastní režim**  
- Vlastní akce se provádí, když uživatel klikne na tlačítko Procházet. Například může zobrazit dialogové okno s konkrétní aplikace.  
+- **vlastní režim**
+
+   Vlastní akce se provádí, když uživatel klikne na tlačítko Procházet. Například může zobrazit dialogové okno s konkrétní aplikace.  
   
- **režim souboru**  
- Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní soubor.  
+- **režim souboru**
+
+   Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní soubor.  
   
- **režimu složky**  
- Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní složku.  
+- **režimu složky**
+
+   Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní složku.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Postupy: Určení procházet ovládacího prvku pro úpravy  
  Proveďte následující kroky a začlenit procházet ovládacího prvku pro úpravy ve vaší aplikaci:  

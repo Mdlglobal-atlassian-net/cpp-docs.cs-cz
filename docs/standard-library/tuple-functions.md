@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966404"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712761"
 ---
 # <a name="lttuplegt-functions"></a>&lt;řazené kolekce členů&gt; funkce
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
- Index prvku, který chcete získat.
+*Index*<br/>
+Index prvku, který chcete získat.
 
-*Typy*  
- Posloupnost typy deklarované v řazené kolekci členů, v pořadí deklarace.
+*Typy*<br/>
+Posloupnost typy deklarované v řazené kolekci členů, v pořadí deklarace.
 
-*T*  
- Typ elementu, který chcete získat.
+*T*<br/>
+Typ elementu, který chcete získat.
 
-*Řazené kolekce členů*  
- Std::tuple, která obsahuje libovolný počet prvků.
+*Řazené kolekce členů*<br/>
+Std::tuple, která obsahuje libovolný počet prvků.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-*TN*  
- Typ parametru Nth – funkce
+*TN*<br/>
+Typ parametru Nth – funkce
 
-*tN*  
- Hodnota parametru n-tý funkce.
+*TN*<br/>
+Hodnota parametru n-tý funkce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-*TN*  
- Základní typ řazené kolekce členů n-tý prvek.
+*TN*<br/>
+Základní typ řazené kolekce členů n-tý prvek.
 
 ### <a name="remarks"></a>Poznámky
 

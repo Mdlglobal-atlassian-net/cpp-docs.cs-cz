@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 499b621c804f13f6a56bc2ce9be0ba91ab824a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88f734cbcee303741858c933d1c3729720f0e76f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710265"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 
@@ -40,11 +40,11 @@ inline bool SafeLessThan (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-První číslo. Musí se jednat o typ `T`.
+*t*<br/>
+[in] První číslo. Musí se jednat o typ `T`.
 
-[in] *u*  
-Druhé číslo. Musí se jednat o typ `U`.
+*u*<br/>
+[in] Druhé číslo. Musí se jednat o typ `U`.
 
 ## <a name="return-value"></a>Návratová hodnota
 

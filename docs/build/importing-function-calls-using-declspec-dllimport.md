@@ -1,5 +1,5 @@
 ---
-title: Import volání funkcí pomocí deklarace __declspec(dllimport) | Microsoft Docs
+title: Import volání funkcí pomocí deklarace __declspec(dllimport) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,66 +20,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3f7c1bf81b94eebbe32b40053fc5ce3aeaa0bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368532"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715790"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Import volání funkcí pomocí deklarace __declspec(dllimport)
-Následující příklad kódu ukazuje, jak používat **_declspec(dllimport)** Import volání funkcí z knihovny DLL do aplikace. Předpokládáme, že `func1` je funkce, která se nachází v knihovně DLL oddělené od souboru .exe, který obsahuje **hlavní** funkce.  
-  
- Bez **deklarace __declspec(dllimport)**, daný tento kód:  
-  
-```  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- kompilátor vygeneruje kód, který vypadá takto:  
-  
-```  
-call func1  
-```  
-  
- a linkeru převede volání do přibližně takto:  
-  
-```  
-call 0x4000000         ; The address of 'func1'.  
-```  
-  
- Pokud `func1` existuje v jiné knihovně DLL linkeru nelze vyřešit přímo protože nemá žádný způsob, jak zjistit, jaká je adresa `func1` je. V prostředích 16bitové přidá linkeru tuto adresu kód v souboru .exe, který by zavaděč za běhu se správnou adresou v seznamu. V prostředích 32bitové a 64bitové verze generuje linkeru převodu, které zná adresu. V prostředí s 32-bit jinou bitovou šířku vypadá takto:  
-  
-```  
-0x40000000:    jmp DWORD PTR __imp_func1  
-```  
-  
- Zde `imp_func1` adresa pro `func1` slot v tabulce importovaných adres souboru .exe. Všechny adresy jsou tedy známy linkeru. Zavaděč má jenom k aktualizaci tabulky adres importovat soubor .exe při načítání, aby vše správně fungovat.  
-  
- Proto pomocí **deklarace __declspec(dllimport)** je lepší, protože linkeru negeneruje převodu, pokud není potřeba. Převody zvětšit kód (v systémech RISC, může být několik pokyny) a může snížit výkon mezipaměti. Pokud jste, že funkce je v knihovně DLL oznámení kompilátoru, to může generovat nepřímé volání za vás.  
-  
- Proto nyní tento kód:  
-  
-```  
-__declspec(dllimport) void func1(void);  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- generuje tento pokyn:  
-  
-```  
-call DWORD PTR __imp_func1  
-```  
-  
- K dispozici není žádná převodu a ne `jmp` pokyn, aby kód je menší a rychlejší.  
-  
- Na druhé straně pro volání funkcí uvnitř knihovny DLL, které nechcete muset použít nepřímé volání. Už víte, adresu funkce. Protože jsou náročné na načíst a uložit na adresu funkce před nepřímé volání na čas a místa, přímé volání je vždy rychlejší a menší. Chcete použít **deklarace __declspec(dllimport)** při volání funkcí knihovny DLL mimo knihovnu DLL, sám sebe. Nepoužívejte **deklarace __declspec(dllimport)** na funkcích uvnitř knihovny DLL při vytváření této knihovny DLL.  
-  
-## <a name="see-also"></a>Viz také  
- [Import do aplikace](../build/importing-into-an-application.md)
+
+Následující příklad kódu ukazuje, jak používat **_declspec(dllimport)** Import volání funkcí z knihovny DLL do aplikace. Předpokládejme, že `func1` je funkce, která se nachází v knihovně DLL nezávisle na soubor .exe, který obsahuje **hlavní** funkce.
+
+Bez **__declspec(dllimport)**, daný tento kód:
+
+```
+int main(void)
+{
+   func1();
+}
+```
+
+kompilátor generuje kód, který vypadá takto:
+
+```
+call func1
+```
+
+a propojovací program překládá volání do vypadat přibližně takto:
+
+```
+call 0x4000000         ; The address of 'func1'.
+```
+
+Pokud `func1` existuje v jiné knihovně DLL linkeru nelze vyřešit přímo protože nemá žádný způsob jak zjistit, jaká je adresa `func1` je. V prostředích s 16 bitů přidá linker adresu tohoto kódu do seznamu v souboru .exe, který by zavaděč za běhu se správnou adresou. V 32bitové a 64bitové prostředí linker generuje převodní rutina z nich ví, že adresu. V prostředí s 32-bit převodní rutině vypadá jako:
+
+```
+0x40000000:    jmp DWORD PTR __imp_func1
+```
+
+Tady `imp_func1` následuje adresa pro `func1` místo v tabulky importních adres souboru .exe. Všechny adresy jsou proto známé linkeru. Zavaděč má pouze k aktualizaci tabulky importních adres soubor .exe v okamžiku načtení pro všechno, co fungovat správně.
+
+Proto pomocí **__declspec(dllimport)** je lepší, protože linkeru negeneruje převodní rutinou, pokud se nevyžaduje. Převodní rutiny zvětšit kód (v systémech RISC, může být několik pokyny) a může snížit výkon mezipaměti. Pokud dáte kompilátor, že je funkce v knihovně DLL, může vygenerovat nepřímé volání za vás.
+
+Takže teď tento kód:
+
+```
+__declspec(dllimport) void func1(void);
+int main(void)
+{
+   func1();
+}
+```
+
+generuje tento pokyn:
+
+```
+call DWORD PTR __imp_func1
+```
+
+Neexistuje žádný převodní rutina a ne `jmp` instrukce, takže kód je menší a rychlejší.
+
+Na druhé straně pro volání funkce uvnitř knihovny DLL, nechcete k použít nepřímé volání. Adresa funkce už znáte. Protože jsou náročné na načítají a ukládají adresu funkce před nepřímé volání na čas a prostor, přímého volání je vždy menší a rychlejší. Chcete použít **__declspec(dllimport)** při volání funkcí knihovny DLL mimo samotná knihovna DLL. Nepoužívejte **__declspec(dllimport)** ve funkcích uvnitř knihovny DLL při vytváření této knihovny DLL.
+
+## <a name="see-also"></a>Viz také
+
+[Import do aplikace](../build/importing-into-an-application.md)

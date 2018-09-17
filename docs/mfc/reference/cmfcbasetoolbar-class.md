@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCBaseToolBar | Microsoft Docs
+title: Cmfcbasetoolbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037841"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705234"
 ---
-# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar – třída
+# <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar – třída
 Základní třída pro panely nástrojů.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -51,13 +51,13 @@ class CMFCBaseToolBar : public CPane
   
 |Název|Popis|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Vrátí hodnotu režimu ukotvení. (Přepisuje [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Vrátí minimální velikost panelu nástrojů. (Přepisuje [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Voláno rámcem po provedení změn v podokně nadřazené. (Přepisuje [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|`CMFCBaseToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Vrátí režim ukotvení. (Přepíše [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Vrátí minimální velikost panelu nástrojů. (Přepíše [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním po změně nadřazené v podokně. (Přepíše [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -67,20 +67,20 @@ class CMFCBaseToolBar : public CPane
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
+ [Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxbasetoolbar.h  
   
 ##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
- Vrátí hodnotu režimu ukotvení.  
+ Vrátí režim ukotvení.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukotvení režim.  
+ Ukotvení režimu.  
   
 ##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
  Vrátí minimální velikost panelu nástrojů.  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *velikost*  
- Minimální velikost panelu nástrojů.  
+*Velikost*<br/>
+[out] Minimální velikost panelu nástrojů.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Voláno rámcem po provedení změn v podokně nadřazené.  
+ Volá se rozhraním po změně nadřazené v podokně.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndOldParent*  
- Ukazatel na předchozí nadřazeného okna.  
+*pWndOldParent*<br/>
+[in] Ukazatel na předchozí nadřazené okno.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

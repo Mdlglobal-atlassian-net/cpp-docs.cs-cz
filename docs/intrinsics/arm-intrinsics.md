@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712800"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
 Kompilátor Visual C++ zpřístupňuje následující vnitřní objekty na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  Adresa umístění v paměti a číst nebo zapisovat.  
   
- `Value` (pouze vnitřních úložiště objektů)  
- Hodnota k zápisu na zadaném umístění v paměti.  
+ `Value`  
+ Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).  
   
  **Vrátí hodnotu (pouze pro zatížení vnitřní)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  Můžete použít `__iso_volatile_load8/16/32/64` a `__iso_volatile_store8/16/32/64` vnitřní objekty explicitně provádět přístupy do paměti, které nejsou v souladu s optimalizace kompilátoru. Kompilátor nelze odebrat, synthetize, nebo změňte relativní pořadí těchto operací, ale negeneruje implicitní hardwarové překážky paměti. Proto hardwaru může stále změnit pořadí přístupu k pozorovatelných paměti napříč více vlákny. Přesněji řečeno, tyto vnitřní objekty jsou ekvivalentní s následující výrazy zkompilovat v rámci **/volatile:iso**.  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

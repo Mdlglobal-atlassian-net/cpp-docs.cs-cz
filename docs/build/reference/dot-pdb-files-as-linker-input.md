@@ -1,5 +1,5 @@
 ---
-title: . Soubory PDB jako vstup Linkeru | Microsoft Docs
+title: . Soubory PDB jako vstup Linkeru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6707be955b5c4a332d1162f53b1cb854391a2ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b728903d2a270efc6b3eb736e45540651dae8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370173"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706183"
 ---
 # <a name="pdb-files-as-linker-input"></a>Soubory .Pdb jako vstup linkeru
-Objekt, soubory (.obj) zkompilovat pomocí možnosti /Zi obsahovat název databáze programu (PDB). Nezadávejte název souboru PDB objektu linkeru; ODKAZ používá vložený název najít PDB, pokud je to potřeba. To platí také pro debuggable objekty obsažené v knihovně; PDB debuggable knihovny musí být k dispozici linkeru společně s knihovny.  
-  
- Souboru PDB odkaz také používá k ukládání ladicí informace pro soubor .exe nebo .dll soubor. PDB programu je výstupní soubor a vstupní soubor, protože při znovu sestaví program aktualizuje odkaz PDB.  
-  
-## <a name="see-also"></a>Viz také  
- [Vstupní soubory LINK](../../build/reference/link-input-files.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Objekt (.obj) soubory zkompilovány pomocí možnosti/zi obsahovat název databáze programu (PDB). Nezadávejte název souboru PDB objektu do propojovacího programu; ODKAZ používá vložený název najít soubor PDB, pokud je to potřeba. To platí i pro laditelné objekty obsažené v knihovně; soubor PDB pro knihovnu laditelné musí být k dispozici v linkeru spolu s knihovny.
+
+ODKAZ také pomocí souboru PDB obsahovat informace o ladění pro soubor .exe nebo .dll. Programu PDB je výstupní soubor a vstupní soubor, protože když replikujícím program aktualizuje odkaz do souboru PDB.
+
+## <a name="see-also"></a>Viz také
+
+[Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

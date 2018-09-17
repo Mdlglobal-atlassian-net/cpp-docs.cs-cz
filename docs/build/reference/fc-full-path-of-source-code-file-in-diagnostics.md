@@ -1,5 +1,5 @@
 ---
-title: -FC (úplná cesta k souboru zdrojového kódu v diagnostice) | Microsoft Docs
+title: -FC (úplná cesta k souboru zdrojového kódu v diagnostice) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d34fe85354d218d2499dbece70964c2e55e2592
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373202"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702704"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (úplná cesta k souboru zdrojového kódu v diagnostice)
 
-Způsobí, že kompilátor zobrazit úplnou cestu předaný kompilátoru v diagnostice soubory zdrojového kódu.
+Způsobí, že kompilátor zobrazí úplnou cestu k souborům zdrojového kódu předaných do kompilátoru v diagnostice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,33 +44,33 @@ int main( ) {
 }
 ```
 
-Bez **/FC**, diagnostiky text by vypadat podobně jako tento diagnostický text:
+Bez **/FC**, by vypadalo podobně jako tento diagnostický text diagnostického textu:
 
-- compiler_option_FC.cpp(5): chyba C2143: Chyba syntaxe: chybějící ';' než '}'
+- compiler_option_FC.cpp(5): chyba C2143: Chyba syntaxe: chybí ";" před "}"
 
-S **/FC**, diagnostiky text by vypadat podobně jako tento diagnostický text:
+S **/FC**, by vypadalo podobně jako tento diagnostický text diagnostického textu:
 
-- c:\test\compiler_option_fc.cpp(5): chyba C2143: Chyba syntaxe: chybějící ';' než '}'
+- c:\test\compiler_option_fc.cpp(5): chyba C2143: Chyba syntaxe: chybí ";" před "}"
 
- **/FC** je také nutný v případě, že chcete zobrazit úplnou cestu název souboru, při použití &#95; &#95;soubor&#95; &#95; makro. V tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md) Další informace o &#95; &#95;soubor&#95;&#95;.
+**/FC** je také potřeba, pokud chcete zobrazit úplnou cestu název souboru při použití &#95; &#95;souboru&#95; &#95; – makro. Zobrazit [předdefinovaná makra](../../preprocessor/predefined-macros.md) Další informace o &#95; &#95;souboru&#95;&#95;.
 
-**/FC** možnost je zahrnuto v **/ZI**. Další informace o **/ZI**, najdete v části [/Z7, / zi, /ZI (formát informace ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).
+**/FC** možnost předpokládá **/zi**. Další informace o **/zi**, naleznete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-**/FC** výstupy úplné cesty ve malá písmena.
+**/FC** výstupy úplné cesty v malými písmeny.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit** stránku vlastností.
 
-1. Změnit **použití úplné cesty** vlastnost.
+1. Upravit **použít úplné cesty** vlastnost.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UseFullPaths%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UseFullPaths%2A>.
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

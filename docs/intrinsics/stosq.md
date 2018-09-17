@@ -1,5 +1,5 @@
 ---
-title: __stosq | Microsoft Docs
+title: __stosq | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332023"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715504"
 ---
 # <a name="stosq"></a>__stosq
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje řetězcovou instrukci úložiště (`rep stosq`).  
+ Generuje instrukce řetězec úložiště (`rep stosq`).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,25 +41,25 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Dest`  
- Cíl operace.  
+*cíl*<br/>
+[out] Cíl operace.  
   
- [v] `Data`  
- Data, která k ukládání.  
+*Data*<br/>
+[in] Data k uložení.  
   
- [v] `Count`  
- Délka bloku quadwords k zápisu.  
+*Počet*<br/>
+[in] Délka bloku x quadword k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__stosq`|AMD64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem je, že quadword `Data` jsou zapsána do bloku `Count` quadwords v `Dest` řetězec.  
+ Výsledkem je, že quadword `Data` je zapsán do bloku `Count` x quadword v `Dest` řetězec.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -89,7 +89,7 @@ int main()
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

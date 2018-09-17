@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221129"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706625"
 ---
 # <a name="csettingsstore-class"></a>Csettingsstore – třída
 Zalomí funkce rozhraní API Windows, poskytuje objektově orientovaného rozhraní, které používáte pro přístup k registru.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Určuje název klíče, který má být vytvořen nebo otevřen.  
+*pszPath*<br/>
+[in] Určuje název klíče, který má být vytvořen nebo otevřen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  0 v případě úspěchu; v opačném případě nenulovou hodnotu.  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAdmin*  
- Logický parametr, který určuje, zda `CSettingsStore` objekt funguje v režimu správce.  
+*bAdmin*<br/>
+[in] Logický parametr, který určuje, zda `CSettingsStore` objekt funguje v režimu správce.  
   
- [in] *bReadOnly*  
- Logický parametr, který určuje, zda `CSettingsStore` objekt je vytvořen v režimu jen pro čtení.  
+*bReadOnly*<br/>
+[in] Logický parametr, který určuje, zda `CSettingsStore` objekt je vytvořen v režimu jen pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *bAdmin* nastavena na hodnotu TRUE, `m_hKey` členská proměnná je nastavena na **HKEY_LOCAL_MACHINE**. Pokud nastavíte *bAdmin* na hodnotu FALSE, `m_hKey` je nastavena na **HKEY_CURRENT_USER**.  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Název klíče odstranit.  
+*pszPath*<br/>
+[in] Název klíče odstranit.  
   
- [in] *bAdmin*  
- Přepínač, který určuje umístění klíče odstranit.  
+*bAdmin*<br/>
+[in] Přepínač, který určuje umístění klíče odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszValue*  
- Určuje hodnotu pole odebrat.  
+*pszValue*<br/>
+[in] Určuje hodnotu pole odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Název klíče registru.  
+*pszPath*<br/>
+[in] Název klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszKey*  
- Ukazatel na řetězec zakončený hodnotou null, který obsahuje název hodnoty ke čtení z registru.  
+*pszKey*<br/>
+[in] Ukazatel na řetězec zakončený hodnotou null, který obsahuje název hodnoty ke čtení z registru.  
   
- [out] *iVal*  
- Odkaz na celočíselnou proměnnou, která přijímá hodnotu čtení z klíče registru.  
+*iVal*<br/>
+[out] Odkaz na celočíselnou proměnnou, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *dwVal*  
- Odkaz na proměnnou double word 32-bit, který přijímá hodnotu čtení z klíče registru.  
+*dwVal*<br/>
+[out] Odkaz na proměnnou double word 32-bit, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *sVal*  
- Odkaz na proměnnou s řetězcem, který přijímá hodnotu čtení z klíče registru.  
+*sVal*<br/>
+[out] Odkaz na proměnnou s řetězcem, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *scStringList*  
- Odkaz na proměnnou s řetězcem seznam, který přijímá hodnotu čtení z klíče registru.  
+*scStringList*<br/>
+[out] Odkaz na proměnnou s řetězcem seznam, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *scArray*  
- Odkaz na proměnnou pole řetězce, který přijímá hodnotu čtení z klíče registru.  
+*scArray*<br/>
+[out] Odkaz na proměnnou pole řetězce, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *dwcArray*  
- Odkaz na proměnnou pole double word 32-bit, který přijímá hodnotu čtení z klíče registru.  
+*dwcArray*<br/>
+[out] Odkaz na proměnnou pole double word 32-bit, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *wcArray*  
- Odkaz na proměnnou pole 16bitových slov, která přijímá hodnotu čtení z klíče registru.  
+*wcArray*<br/>
+[out] Odkaz na proměnnou pole 16bitových slov, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *bcArray*  
- Odkaz na proměnnou pole bajtů, který přijímá hodnotu čtení z klíče registru.  
+*bcArray*<br/>
+[out] Odkaz na proměnnou pole bajtů, který přijímá hodnotu čtení z klíče registru.  
   
- [out] *lppoint –*  
- Odkaz na ukazatel `POINT` struktura, která přijímá hodnotu čtení z klíče registru.  
+*lppoint –*<br/>
+[out] Odkaz na ukazatel `POINT` struktura, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *rect*  
- Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
+*Rect*<br/>
+[out] Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *ppData*  
- Ukazatel na ukazatel na data, která přijímá hodnotu čtení z klíče registru.  
+*ppData*<br/>
+[out] Ukazatel na ukazatel na data, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *pBytes*  
- Ukazatel na proměnnou celého čísla bez znaménka. Tato proměnná obdrží velikost vyrovnávací paměti, která *ppData* odkazuje na.  
+*pBytes*<br/>
+[out] Ukazatel na proměnnou celého čísla bez znaménka. Tato proměnná obdrží velikost vyrovnávací paměti, která *ppData* odkazuje na.  
   
- [out] *seznamu*  
- Odkaz [coblist –](../../mfc/reference/coblist-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
+*list*<br/>
+[out] Odkaz [coblist –](../../mfc/reference/coblist-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *obj*  
- Odkaz [CObject](../../mfc/reference/cobject-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
+*obj*<br/>
+[out] Odkaz [CObject](../../mfc/reference/cobject-class.md) proměnné, která přijímá hodnotu čtení z klíče registru.  
   
- [out] *pObj*  
- Odkaz na ukazatel `CObject` proměnné, která přijímá hodnotu čtení z klíče registru.  
+*pObj*<br/>
+[out] Odkaz na ukazatel `CObject` proměnné, která přijímá hodnotu čtení z klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszKey*  
- Ukazatel na řetězec, který obsahuje název má být nastavena hodnota.  
+*pszKey*<br/>
+[in] Ukazatel na řetězec, který obsahuje název má být nastavena hodnota.  
   
- [in] *iVal*  
- Odkaz na celočíselnou proměnnou, která obsahuje data k uložení.  
+*iVal*<br/>
+[in] Odkaz na celočíselnou proměnnou, která obsahuje data k uložení.  
   
- [in] *dwVal*  
- Odkaz na proměnnou double word 32-bit, který obsahuje data k uložení.  
+*dwVal*<br/>
+[in] Odkaz na proměnnou double word 32-bit, který obsahuje data k uložení.  
   
- [in] *pszVal*  
- Ukazatel na řetězec zakončený hodnotou null proměnné, která obsahuje data k uložení.  
+*pszVal*<br/>
+[in] Ukazatel na řetězec zakončený hodnotou null proměnné, která obsahuje data k uložení.  
   
- [in] *scStringList*  
- Odkaz [CStringList](../../mfc/reference/cstringlist-class.md) proměnnou, která obsahuje data k uložení.  
+*scStringList*<br/>
+[in] Odkaz [CStringList](../../mfc/reference/cstringlist-class.md) proměnnou, která obsahuje data k uložení.  
   
- [in] *bcArray*  
- Odkaz na proměnnou pole bajtů, který obsahuje data k uložení.  
+*bcArray*<br/>
+[in] Odkaz na proměnnou pole bajtů, který obsahuje data k uložení.  
   
- [in] *scArray*  
- Odkaz na proměnnou pole řetězce, který obsahuje data k uložení.  
+*scArray*<br/>
+[in] Odkaz na proměnnou pole řetězce, který obsahuje data k uložení.  
   
- [in] *dwcArray*  
- Odkaz na proměnnou pole double word 32-bit, který obsahuje data k uložení.  
+*dwcArray*<br/>
+[in] Odkaz na proměnnou pole double word 32-bit, který obsahuje data k uložení.  
   
- [in] *wcArray*  
- Odkaz na proměnnou pole 16bitových slov, která obsahuje data k uložení.  
+*wcArray*<br/>
+[in] Odkaz na proměnnou pole 16bitových slov, která obsahuje data k uložení.  
   
- [in] *rect*  
- Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) proměnnou, která obsahuje data k uložení.  
+*Rect*<br/>
+[in] Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) proměnnou, která obsahuje data k uložení.  
   
- [in] *lppoint –*  
- Odkaz na ukazatel `POINT` proměnnou, která obsahuje data k uložení.  
+*lppoint –*<br/>
+[in] Odkaz na ukazatel `POINT` proměnnou, která obsahuje data k uložení.  
   
- [in] *pData*  
- Ukazatel do vyrovnávací paměti, která obsahuje data k uložení.  
+*pData*<br/>
+[in] Ukazatel do vyrovnávací paměti, která obsahuje data k uložení.  
   
- [in] *nBytes*  
- Určuje velikost v bajtech, dat, ke kterému *pData* parametr body.  
+*nBytes*<br/>
+[in] Určuje velikost v bajtech, dat, ke kterému *pData* parametr body.  
   
- [in] *seznamu*  
- Odkaz [coblist –](../../mfc/reference/coblist-class.md) proměnnou, která obsahuje data k uložení.  
+*list*<br/>
+[in] Odkaz [coblist –](../../mfc/reference/coblist-class.md) proměnnou, která obsahuje data k uložení.  
   
- [in] *obj*  
- Odkaz [CObject](../../mfc/reference/cobject-class.md) proměnnou, která obsahuje data k uložení.  
+*obj*<br/>
+[in] Odkaz [CObject](../../mfc/reference/cobject-class.md) proměnnou, která obsahuje data k uložení.  
   
- [in] *pObj*  
- Ukazatel na ukazatel `CObject` proměnnou, která obsahuje data k uložení.  
+*pObj*<br/>
+[in] Ukazatel na ukazatel `CObject` proměnnou, která obsahuje data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  

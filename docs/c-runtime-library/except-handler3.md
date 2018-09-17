@@ -1,5 +1,5 @@
 ---
-title: _except_handler3 – | Microsoft Docs
+title: _except_handler3 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,15 +29,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8253db3ce5a1ec60001bb32b241bfebe000502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 664de5ad25fcce2bf744fb9365542d63f3d91e51
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389404"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699886"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-Vnitřní funkce CRT. Rozhraní používá k vyhledání příslušné výjimky obslužná rutina zpracovávala aktuální výjimku.  
+Vnitřní funkce CRT. Používá rozhraní k vyhledání příslušné výjimky obslužná rutina zpracovávala na aktuální výjimku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,24 +50,25 @@ int _except_handler3(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [v] `exception_record`  
- Informace o určité výjimky.  
+#### <a name="parameters"></a>Parametry
+
+*exception_record*<br/>
+[in] Informace o určité výjimky.  
   
- [v] `registration`  
- Záznam, která určuje obor tabulek, které se má použít k vyhledání obslužná rutina výjimky.  
+*Registrace*<br/>
+[in] Záznam, který určuje, které rozsah tabulky by měl být použit k vyhledání obslužná rutina výjimky.  
   
- [v] `context`  
- Vyhrazena.  
+*Kontext*<br/>
+[in] Vyhrazená.  
   
- [v] `dispatcher`  
- Vyhrazena.  
+*Dispečer*<br/>
+[in] Vyhrazená.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud by měl zrušit výjimku, vrátí `DISPOSITION_DISMISS`. Pokud se výjimka by měla být o úroveň výš předána zapouzdřením obslužné rutiny výjimek, vrátí `DISPOSITION_CONTINUE_SEARCH`.  
+ Pokud by měl zrušit výjimku, vrátí `DISPOSITION_DISMISS`. Pokud výjimky by měly být předány o úroveň výš zapouzdřující obslužné rutiny výjimek, vrátí `DISPOSITION_CONTINUE_SEARCH`.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud tato metoda vyhledá obslužnou rutinu příslušné výjimky, předá výjimku do obslužné rutiny. V takovém případě tato metoda nevrátí kód, který je volán a návratovou hodnotu je důležité.  
+ Pokud tato metoda vyhledá obslužnou rutinu příslušné výjimky, předá výjimku do obslužné rutiny. V takovém případě tato metoda nevrátí do kódu, která ji zavolala a vrácená hodnota je relevantní.  
   
 ## <a name="see-also"></a>Viz také  
  [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607522"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714308"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (rozšíření komponent C++)
 
@@ -50,8 +50,8 @@ Název rozhraní.
 *inherit_access*  
 Přístupnost *base_interface*.  Pouze povoleno usnadnění pro základní rozhraní není **veřejné** (výchozí).
 
-*base_interface* (volitelné)  
-Základní rozhraní pro rozhraní *název*.
+*base_interface*  
+(Volitelné) Základní rozhraní pro rozhraní *název*.
 
 ### <a name="remarks"></a>Poznámky
 

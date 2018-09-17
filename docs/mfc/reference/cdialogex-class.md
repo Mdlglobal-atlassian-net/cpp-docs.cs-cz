@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335955"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716298"
 ---
 # <a name="cdialogex-class"></a>Cdialogex – třída
 `CDialogEx` Třída určuje barvu pozadí a obrázek pozadí dialogového okna.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIDTemplate*  
- ID prostředku šablony dialogového okna.  
+*nIDTemplate*<br/>
+[in] ID prostředku šablony dialogového okna.  
   
- [in] *lpszTemplateName*  
- Název prostředku šablony dialogového okna.  
+*lpszTemplateName*<br/>
+[in] Název prostředku šablony dialogového okna.  
   
- [in] *pParent*  
- Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
+*pParent*<br/>
+[in] Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
   
- [in] *pParentWnd*  
- Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
+*pParentWnd*<br/>
+[in] Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Hodnota barvy RGB.  
+*Barva*<br/>
+[in] Hodnota barvy RGB.  
   
- [in] *bRepaint*  
- TRUE, pokud chcete okamžitě aktualizovat obrazovce. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bRepaint*<br/>
+[in] TRUE, pokud chcete okamžitě aktualizovat obrazovce. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hBitmap*  
- Popisovač pro obrázek na pozadí.  
+*hBitmap*<br/>
+[in] Popisovač pro obrázek na pozadí.  
   
- [in] *uiBmpResId*  
- ID prostředku obrázku pozadí.  
+*uiBmpResId*<br/>
+[in] ID prostředku obrázku pozadí.  
   
- [in] *umístění*  
- Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty jsou BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
+*umístění*<br/>
+[in] Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty jsou BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- TRUE, pokud chcete automaticky odstranit obrázek pozadí; v opačném případě hodnota FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE, pokud chcete automaticky odstranit obrázek pozadí; v opačném případě hodnota FALSE.  
   
- [in] *bRepaint*  
- TRUE, pokud chcete okamžitě ho překreslit dialogové okno. v opačném případě hodnota FALSE.  
+*bRepaint*<br/>
+[in] TRUE, pokud chcete okamžitě ho překreslit dialogové okno. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ve druhé metodě přetížení syntaxe, hodnotu TRUE Pokud je metoda úspěšná. v opačném případě hodnota FALSE.  

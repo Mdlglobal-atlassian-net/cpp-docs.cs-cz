@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte, __addfsword, __addfsdword | Microsoft Docs
+title: __addfsbyte __addfsword, __addfsdword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714217"
 ---
-# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
-**Konkrétní Microsoft**  
+# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte __addfsword, __addfsdword
+**Specifické pro Microsoft**  
   
- Přidejte hodnotu do umístění v paměti určeného posun vzhledem k začátku `FS` segmentu.  
+ Přidat hodnotu do umístění v paměti určený posun vzhledem k začátku `FS` segmentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,15 +53,15 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
- Posun od začátku `FS`.  
+*Posun*<br/>
+[in] Posun od začátku `FS`.  
   
- [v] `Data`  
- Hodnota k přidání do umístění v paměti.  
+*Data*<br/>
+[in] Hodnota k přidání do umístění v paměti.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__addfsbyte`|x86|  
 |`__addfsword`|x86|  
@@ -70,7 +70,7 @@ void __addfsdword(
 ## <a name="remarks"></a>Poznámky  
  Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   

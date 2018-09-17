@@ -1,5 +1,5 @@
 ---
-title: -HEAP (nastavit velikost haldy) | Microsoft Docs
+title: -HEAP (nastavení velikosti haldy) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b968b3c8e9063eea897c70d4ae2a62a9a232d6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2f853b46c9a4cc2ec8f396be2b2f8355270ccf95
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374554"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702691"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Nastavit velikost haldy)
-```  
-/HEAP:reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /HEAP nastaví velikost haldy v bajtech. Tato možnost je jenom pro použití při vytváření souboru s příponou .exe.  
-  
- *Rezervovat* argument určuje přidělení celkový haldy ve virtuální paměti. Výchozí velikost haldy je 1 MB. Linkeru zaokrouhlí na nejbližší 4 bajtů zadanou hodnotu.  
-  
- Volitelné `commit` argument určuje množství fyzické paměti k přidělení najednou. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. A vyšší `commit` hodnota šetří čas, kdy aplikace vyžaduje více místa na haldy, ale zvyšuje požadavky na paměť a případně čas spuštění.  
-  
- Zadejte *rezervovat* a `commit` hodnoty v desítkový nebo jazyka C zápis.  
-  
- Tato funkce je také dostupná prostřednictvím soubor definice modulu s [velikost HALDY](../../build/reference/heapsize.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **systému** stránku vlastností.  
-  
-4.  Změnit **potvrdit velikost haldy** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/HEAP:reserve[,commit]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Možnost /HEAP nastaví velikost haldy v bajtech. Tato možnost je pouze pro použití při vytváření souboru s příponou .exe.
+
+*Rezervovat* argument určuje celkový počet haldy ve virtuální paměti. Výchozí velikost haldy je 1 MB. Linker se zaokrouhlí nahoru zadanou hodnotu do nejbližší 4 bajty.
+
+Volitelný `commit` argument určuje množství fyzické paměti do okamžiku přidělit. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. Vyšší `commit` hodnotu šetří čas, kdy aplikace potřebuje více místa v haldě, ale zvyšuje požadavky na paměť a případně i čas spuštění.
+
+Zadejte *rezervovat* a `commit` hodnoty v desítkovém zápisu nebo v zápisu jazyka.
+
+Tato funkce je také k dispozici prostřednictvím souboru definice modulu s [HEAPSIZE](../../build/reference/heapsize.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **systému** stránku vlastností.
+
+1. Upravit **velikost potvrzení změn haldy** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

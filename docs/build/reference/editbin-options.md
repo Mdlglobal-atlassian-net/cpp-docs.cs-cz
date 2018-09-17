@@ -1,5 +1,5 @@
 ---
-title: – Možnosti nástroje EDITBIN | Microsoft Docs
+title: – Možnosti nástroje EDITBIN | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0850f242b8368a9592a5622e627c781b4df4cde5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710135"
 ---
 # <a name="editbin-options"></a>Možnosti EDITBIN
-Editbin – slouží k úpravě objektu soubory, spustitelné soubory a dynamické knihovny (DLL). Zadejte možnosti změny, které provádí nástroje EDITBIN.  
-  
- Možnost se skládá z specifikátor možnosti, která je pomlčkou (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti trvat argumenty, které jsou zadány po dvojtečkou (:). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich argumentů – klíčové slovo nebo argumenty název souboru nejsou malá a velká písmena. Například - vazby a/BIND mají stejný význam.  
-  
- Editbin – obsahuje následující možnosti:  
-  
-|Možnost|Účel|  
-|------------|-------------|  
-|[/ALLOWBIND](../../build/reference/allowbind.md)|Určuje, zda mohou být vázány knihovny DLL.|  
-|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Určuje knihovny DLL nebo spustitelný soubor manifestu vyhledávání chování.|  
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|Určuje, zda aplikace musíte spustit v rámci AppContainer – například aplikace UPW.|  
-|[/BIND](../../build/reference/bind.md)|Nastaví adresy pro vstupní body v zadané objekty, které se doba načítání rychlost.|  
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Určuje, zda knihovnu DLL nebo spustitelné bitové kopie může být náhodně rebased během zatížení pomocí adres místo rozložení náhodné (technologie ASLR).|  
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Sestava s interními chybami společnosti Microsoft.|  
-|[/HEAP](../../build/reference/heap.md)|Nastaví velikost haldy spustitelné bitové kopie v bajtech.|  
-|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Určuje, zda knihovnu DLL nebo spustitelné bitové kopie podporuje vysokou entropie (64 bitů) adresu místa rozložení náhodné (technologie ASLR).|  
-|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Určuje, jestli při načítání, zkontrolujte digitální podpis.|  
-|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Určuje, zda objekt podporuje adresy, které jsou větší než dva gigabajty.|  
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Potlačí úvodní nápis nástroje EDITBIN.|  
-|[/NXCOMPAT](../../build/reference/nxcompat.md)|Určuje, jestli je kompatibilní s Windows Zabránění spuštění dat spustitelné bitové kopie.|  
-|[/REBASE](../../build/reference/rebase.md)|Nastaví základní adresy pro zadané objekty.|  
-|[/RELEASE](../../build/reference/release.md)|Nastaví kontrolního součtu v hlavičce.|  
-|[/ SECTION](../../build/reference/section-editbin.md)|Přepíše atributy oddílu.|  
-|[/STACK](../../build/reference/stack.md)|Nastaví velikost zásobníku spustitelné bitové kopie v bajtech.|  
-|[/SUBSYSTEM](../../build/reference/subsystem.md)|Určuje prostředí pro spuštění.|  
-|[/SWAPRUN](../../build/reference/swaprun.md)|Určuje, že spustitelné bitové kopie musí být zkopírován do souboru odkládacího souboru a pak spusťte z.|  
-|[/TSAWARE](../../build/reference/tsaware.md)|Určuje, že aplikace je určená ke spuštění v prostředí s více uživateli.|  
-|[/VERSION](../../build/reference/version.md)|Nastaví číslo verze v hlavičce.|  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)
+
+Editbin – můžete použít k úpravě souborů objektů, spustitelných souborů a dynamické knihovny (DLL). Možnosti určují změny, které provádí EDITBIN.
+
+Možnost sestává ze specifikátoru možnosti, který je buď pomlčka (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argumenty zadané za dvojtečkou (:). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich – klíčové slovo argumenty nebo argumenty názvů souborů nejsou malá a velká písmena. Například - bind a/BIND mají stejný význam.
+
+Editbin – obsahuje následující možnosti:
+
+|Možnost|Účel|
+|------------|-------------|
+|[/ALLOWBIND](../../build/reference/allowbind.md)|Určuje, zda může být vázaný knihovny DLL.|
+|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Určuje knihovnu DLL nebo spustitelného souboru chování při vyhledávání manifestu.|
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|Určuje, zda je třeba aplikaci spustit v rámci kontejneru AppContainer – například aplikace pro UPW.|
+|[/BIND](../../build/reference/bind.md)|Nastaví adresy pro vstupní body v zadané objekty, abyste urychlili čas zatížení.|
+|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Určuje, zda knihovna DLL nebo spustitelný obraz lze náhodně změnit základ v okamžiku načtení pomocí náhodného generování rozložení prostoru adres (ASLR).|
+|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Společnosti Microsoft sestavy s interními chybami.|
+|[/HEAP](../../build/reference/heap.md)|Nastaví velikost haldy spustitelné bitové kopie v bajtech.|
+|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Určuje, zda knihovna DLL nebo spustitelný obraz podporuje vysokou entropie (64-bit) Adresa náhodného generování rozložení prostoru (technologie ASLR).|
+|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Určuje, jestli se má zkontrolovat digitální podpis v okamžiku načtení.|
+|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Určuje, zda objekt podporuje adresy, které jsou větší než dva gigabajty.|
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Potlačí úvodní nápis EDITBIN.|
+|[/NXCOMPAT](../../build/reference/nxcompat.md)|Určuje, zda spustitelné bitové kopie je kompatibilní s předcházením spuštění dat Windows.|
+|[/REBASE](../../build/reference/rebase.md)|Nastaví bázové adresy pro zadané objekty.|
+|[/RELEASE](../../build/reference/release.md)|Nastaví kontrolní součet v hlavičce.|
+|[/ SECTION](../../build/reference/section-editbin.md)|Obejde atributy oddílu.|
+|[/STACK](../../build/reference/stack.md)|Nastaví velikost zásobníku spustitelné bitové kopie v bajtech.|
+|[/SUBSYSTEM](../../build/reference/subsystem.md)|Určuje prostředí spuštění.|
+|[/SWAPRUN](../../build/reference/swaprun.md)|Určuje, že spustitelné bitové kopie musí být zkopírován do odkládacího souboru a pak spusťte z něj.|
+|[/TSAWARE](../../build/reference/tsaware.md)|Určuje, že aplikace je navržen pro spouštění v prostředí s více uživateli.|
+|[/VERSION](../../build/reference/version.md)|Nastaví číslo verze v záhlaví.|
+
+## <a name="see-also"></a>Viz také
+
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)

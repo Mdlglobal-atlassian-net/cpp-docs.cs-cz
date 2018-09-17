@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703895"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane – třída
 Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Určuje cílový podokno, které aktuální podokno připojí k. V podokně cíl musí být ukotvitelné podokně.  
   
- [in] *dockMethod*  
- Určuje metodu ukotvení.  
+*dockMethod*<br/>
+[in] Určuje metodu ukotvení.  
   
- [in] *bSetActive*  
- TRUE, pokud chcete aktivovat v podokně s kartami po operaci připojení; v opačném případě hodnota FALSE.  
+*bSetActive*<br/>
+[in] TRUE, pokud chcete aktivovat v podokně s kartami po operaci připojení; v opačném případě hodnota FALSE.  
   
- [out] *ppTabbedControlBar*  
- Obsahuje podokna s kartami, která je výsledkem operace připojení.  
+*ppTabbedControlBar*<br/>
+[out] Obsahuje podokna s kartami, která je výsledkem operace připojení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na aktuální podokně, pokud není podokna s kartami. v opačném případě ukazatel do podokna s kartami, která je výsledkem operace připojení. Vrácená hodnota je NULL, pokud aktuální podokno nelze připojit, nebo pokud dojde k chybě.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- Nepoužívá se.  
+*bStretch*<br/>
+[in] Nepoužívá se.  
   
- [in] *bHorz*  
- Nepoužívá se.  
+*bHorz*<br/>
+[in] Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který obsahuje velikost podokna obdélník.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMiniFrame*  
- Ukazatel `CPaneFrameWnd` objektu.  
+*pMiniFrame*<br/>
+[in] Ukazatel `CPaneFrameWnd` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě *pMiniFrame* může být ukotveného podokna; v opačném případě hodnota FALSE.  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Určuje, v podokně ukotvení panelu aktuální.  
+*pBar*<br/>
+[in] Určuje, v podokně ukotvení panelu aktuální.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný podokně lze ukotvit do tohoto podokna; v opačném případě hodnota FALSE.  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bActiveTabOnly*  
- Při převodu `CTabbedPane`, zadejte hodnotu PRAVDA pro převod na aktivní kartě. Zadáním hodnoty FALSE převést všechny karty na panelu.  
+*bActiveTabOnly*<br/>
+[in] Při převodu `CTabbedPane`, zadejte hodnotu PRAVDA pro převod na aktivní kartě. Zadáním hodnoty FALSE převést všechny karty na panelu.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Určuje, zda je ukotvené podokno skryty (označované také jako režim automatické skrývání).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDirection*  
- Hodnota TRUE, pokud je podokno viditelný; FALSE, pokud je skrytý podokna.  
+*bDirection*<br/>
+[in] Hodnota TRUE, pokud je podokno viditelný; FALSE, pokud je skrytý podokna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je splněna podmínka stop; v opačném případě hodnota FALSE.  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOrgBar*  
- Ukazatel na ukotvitelné stavového řádku.  
+*pOrgBar*<br/>
+[in] Ukazatel na ukotvitelné stavového řádku.  
   
 ### <a name="remarks"></a>Poznámky  
  `CDockablePane::CopyState` zkopíruje stav *pOrgBar* do podokna aktuálním voláním těchto metod:  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszCaption*  
- Určuje název okna.  
+*lpszCaption*<br/>
+[in] Určuje název okna.  
   
  [in] [out] *pParentWnd*  
  Určuje nadřazené okno.  
   
- [in] *rect*  
- Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.  
+*Rect*<br/>
+[in] Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE, pokud chcete vytvořit v podokně s titulkem; v opačném případě hodnota FALSE.  
+*bHasGripper*<br/>
+[in] TRUE, pokud chcete vytvořit v podokně s titulkem; v opačném případě hodnota FALSE.  
   
- [in] *nID*  
- Určuje Identifikátor podřízené okno. Tato hodnota musí být jedinečné, pokud chcete uložit stav pro tento ukotvené podokno dokování.  
+*nID*<br/>
+[in] Určuje Identifikátor podřízené okno. Tato hodnota musí být jedinečné, pokud chcete uložit stav pro tento ukotvené podokno dokování.  
   
- [in] *dwStyle*  
- Určuje atributy stylu okna.  
+*dwStyle*<br/>
+[in] Určuje atributy stylu okna.  
   
- [in] *dwTabbedStyle*  
- Určuje styl s kartami s kartami okno, které se vytvoří, když uživatel přetáhne podokno v titulku v tomto podokně.  
+*dwTabbedStyle*<br/>
+[in] Určuje styl s kartami s kartami okno, které se vytvoří, když uživatel přetáhne podokno v titulku v tomto podokně.  
   
- [in] *dwControlBarStyle*  
- Určuje styl další atributy.  
+*dwControlBarStyle*<br/>
+[in] Určuje styl další atributy.  
   
  [in] [out] *pContext*  
  Určuje kontext vytvoření okna.  
   
- [in] *lpszWindowName*  
- Určuje název okna.  
+*lpszWindowName*<br/>
+[in] Určuje název okna.  
   
- [in] *sizeDefault*  
- Určuje velikost okna.  
+*sizeDefault*<br/>
+[in] Určuje velikost okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně vytvořen podokně ukotvitelné; v opačném případě hodnota FALSE.  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
- Určuje stranu ovládacího prvku hlavního rámce, do kterého je ukotven v podokně. Pokud *dwAlignment* obsahuje příznak CBRS_ALIGN_LEFT nebo CBRS_ALIGN_RIGHT tato metoda vytvoří a jsou odděleny svislou (`CPaneDivider::SS_VERT`) oddělovače; v opačném případě tato metoda vytvoří vodorovnou (`CPaneDivider::SS_HORZ`) oddělovač.  
+*dwAlignment*<br/>
+[in] Určuje stranu ovládacího prvku hlavního rámce, do kterého je ukotven v podokně. Pokud *dwAlignment* obsahuje příznak CBRS_ALIGN_LEFT nebo CBRS_ALIGN_RIGHT tato metoda vytvoří a jsou odděleny svislou (`CPaneDivider::SS_VERT`) oddělovače; v opačném případě tato metoda vytvoří vodorovnou (`CPaneDivider::SS_HORZ`) oddělovač.  
   
- [in] *pParent*  
- Ukazatel na nadřazeného rámce.  
+*pParent*<br/>
+[in] Ukazatel na nadřazeného rámce.  
   
- [in] *pSliderRTC*  
- Nepoužívá se.  
+*pSliderRTC*<br/>
+[in] Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vrací ukazatel na nově vytvořený oddělovač nebo hodnota NULL, pokud se nezdaří vytváření oddělovač.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwStyleEx*  
- Určuje atributy rozšířeného stylu v novém okně.  
+*dwStyleEx*<br/>
+[in] Určuje atributy rozšířeného stylu v novém okně.  
   
- [in] *lpszCaption*  
- Určuje název okna.  
+*lpszCaption*<br/>
+[in] Určuje název okna.  
   
  [in] [out] *pParentWnd*  
  Určuje nadřazené okno.  
   
- [in] *rect*  
- Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.  
+*Rect*<br/>
+[in] Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE, pokud chcete vytvořit v podokně s titulkem; v opačném případě hodnota FALSE.  
+*bHasGripper*<br/>
+[in] TRUE, pokud chcete vytvořit v podokně s titulkem; v opačném případě hodnota FALSE.  
   
- [in] *nID*  
- Určuje Identifikátor podřízené okno. Tato hodnota musí být jedinečné, pokud chcete uložit dokovací stav pro tento ukotvené podokno.  
+*nID*<br/>
+[in] Určuje Identifikátor podřízené okno. Tato hodnota musí být jedinečné, pokud chcete uložit dokovací stav pro tento ukotvené podokno.  
   
- [in] *dwStyle*  
- Určuje atributy stylu okna.  
+*dwStyle*<br/>
+[in] Určuje atributy stylu okna.  
   
- [in] *dwTabbedStyle*  
- Určuje styl s kartami s kartami okno, které se vytvoří, když uživatel přetáhne podokno v titulku v tomto podokně.  
+*dwTabbedStyle*<br/>
+[in] Určuje styl s kartami s kartami okno, které se vytvoří, když uživatel přetáhne podokno v titulku v tomto podokně.  
   
- [in] *dwControlBarStyle*  
- Určuje atributy stylu Další.  
+*dwControlBarStyle*<br/>
+[in] Určuje atributy stylu Další.  
   
  [in] [out] *pContext*  
  Určuje kontext vytvoření okna.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barContainerManager*  
- Odkaz na kontejner správce kontejneru, který je právě ukotven.  
+*barContainerManager*<br/>
+[in] Odkaz na kontejner správce kontejneru, který je právě ukotven.  
   
- [in] *dwAlignment*  
- DWORD, který určuje stranu ovládacího prvku podokno, ke kterému je ukotven kontejneru.  
+*dwAlignment*<br/>
+[in] DWORD, který určuje stranu ovládacího prvku podokno, ke kterému je ukotven kontejneru.  
   
- [in] *dockMethod*  
- Nepoužívá se.  
+*dockMethod*<br/>
+[in] Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud kontejner byl úspěšně ukotveno podokna. v opačném případě hodnota FALSE.  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWasDocked*  
- Po návratu metody tato hodnota obsahuje hodnotu TRUE v případě, že v podokně byl úspěšně ukotven; v opačném případě obsahuje hodnotu FALSE.  
+*bWasDocked*<br/>
+[in] Po návratu metody tato hodnota obsahuje hodnotu TRUE v případě, že v podokně byl úspěšně ukotven; v opačném případě obsahuje hodnotu FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud se v podokně ukotvené okno s kartami nebo okno s kartami vznikl jako výsledek ukotvení, tato metoda vrací ukazatel na okno s kartami. Pokud v podokně se jinak úspěšně ukotveno, vrátí tato metoda **to** ukazatele. Pokud ukotvení se nezdařilo, tato metoda vrátí hodnotu NULL.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Určuje podokně ukotvitelné ukotvení v tomto podokně na.  
   
- [in] *dwAlignment*  
- Určuje zarovnání ukotvení panelu. Může být jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM nebo CBRS_ALIGN_ANY. (Definované v souboru afxres.h.)  
+*dwAlignment*<br/>
+[in] Určuje zarovnání ukotvení panelu. Může být jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM nebo CBRS_ALIGN_ANY. (Definované v souboru afxres.h.)  
   
- [in] *lprect –*  
- Určuje dokovací obdélník podokna.  
+*lprect –*<br/>
+[in] Určuje dokovací obdélník podokna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; ukotven podokna v opačném případě hodnota FALSE.  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Představuje kontext zařízení pro kreslení.  
+*primární řadič domény*<br/>
+[in] Představuje kontext zařízení pro kreslení.  
   
- [in] *rectCaption*  
- Určuje titulek v podokně ohraničující obdélník.  
+*rectCaption*<br/>
+[in] Určuje titulek v podokně ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu za účelem vykreslení titulek ukotvitelné podokně.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit automatické skrývání všech funkci pro podokna ukotvitelné; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit automatické skrývání všech funkci pro podokna ukotvitelné; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Když uživatel udržuje **Ctrl** klíč a kliknutí na tlačítko PIN kódu přejděte do podokna do režimu automaticky skrývat, všechny ostatní podokna ve stejném kontejneru jsou také přepnout do režimu automaticky skrývat.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit titulek; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit titulek; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Když systém vytvoří ukotvitelné podoken, nemají WS_STYLE styl okna, i v případě, že zadaný. To znamená, že v podokně titulek je neklientská oblast, která je řízena rozhraním, ale tato oblast se liší od standardní okno popisek.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pt*  
- Umístění ukazatele myši v souřadnicovém systému obrazovky.  
+*PT*<br/>
+[in] Umístění ukazatele myši v souřadnicovém systému obrazovky.  
   
- [in] *nSensitivity*  
- Vzdálenost v pixelech, od edge obdélník musí být ukazatel povolit ukotvení.  
+*nSensitivity*<br/>
+[in] Vzdálenost v pixelech, od edge obdélník musí být ukazatel povolit ukotvení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden z následujících hodnot stavu:  
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectTabAreaTop*  
- `GetTabArea` Pokud jsou umístěny v horní části podokna karty vyplní tato proměnná oblasti karet. Pokud jsou umístěny v dolní části podokna záložky, tato proměnná je vyplněna prázdného obdélník.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` vyplní tato proměnná oblasti karet Pokud karet jsou umístěny v horní části podokna. Pokud jsou umístěny v dolní části podokna záložky, tato proměnná je vyplněna prázdného obdélník.  
   
- [in] *rectTabAreaBottom*  
- `GetTabArea` Pokud jsou umístěné v dolní části podokna záložky vyplní tato proměnná oblasti karet. Pokud jsou umístěny v horní části podokna záložky, tato proměnná je vyplněna prázdného obdélník.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` vyplní tato proměnná oblasti karet Pokud karet jsou umístěny v dolní části podokna. Pokud jsou umístěny v horní části podokna záložky, tato proměnná je vyplněna prázdného obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda se používá pouze v třídách, které jsou odvozeny z `CDockablePane` a karty. Další informace najdete v tématu [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) a [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Určuje bod k testování.  
+*Bod*<br/>
+[in] Určuje bod k testování.  
   
- [in] *bDetectCaption*  
- Hodnota TRUE, pokud HTCAPTION by měla být vrácena, pokud se bod nachází na titulek v podokně; v opačném případě hodnota FALSE.  
+*bDetectCaption*<br/>
+[in] Hodnota TRUE, pokud HTCAPTION by měla být vrácena, pokud se bod nachází na titulek v podokně; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden z následujících hodnot:  
@@ -1228,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndNewParent*  
- Ukazatel do nového nadřazeného okna.  
+*pWndNewParent*<br/>
+[in] Ukazatel do nového nadřazeného okna.  
   
- [in] *bDelay*  
- Logická hodnota, která určuje, jestli se má zpoždění přepočet dokovací rozložení, pokud je podokno uvolněna. Další informace najdete v tématu [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] Logická hodnota, která určuje, jestli se má zpoždění přepočet dokovací rozložení, pokud je podokno uvolněna. Další informace najdete v tématu [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je ukotven v podokně a nový nadřazený neumožňuje ukotvení, tato metoda předchozího podokna.  
@@ -1249,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectFloat*  
- Určuje umístění a velikost podokna, když je ve stavu s plovoucí desetinnou čárkou.  
+*rectFloat*<br/>
+[in] Určuje umístění a velikost podokna, když je ve stavu s plovoucí desetinnou čárkou.  
   
- [in] *dockMethod*  
- Určuje metodu ukotvení. Zobrazit [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) seznam možných hodnot.  
+*dockMethod*<br/>
+[in] Určuje metodu ukotvení. Zobrazit [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) seznam možných hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud se v podokně mohou obtékané; v opačném případě hodnota FALSE.  
@@ -1269,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHit*  
- Tento parametr není používán.  
+*nHit*<br/>
+[in] Tento parametr se nepoužívá.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud přidáte tlačítka s vlastní titulek ukotvitelné podokno, přepište tuto metodu za účelem dostávat oznámení, když uživatel stiskne tlačítko.  
@@ -1283,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSlideOut*  
- TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
+*bSlideOut*<br/>
+[in] TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě implementovat vlastní automatické skrývání účinky.  
@@ -1310,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBarToReplaceWith*  
- Ukazatel na ukotvitelné stavového řádku.  
+*pBarToReplaceWith*<br/>
+[in] Ukazatel na ukotvitelné stavového řádku.  
   
- [in] *dockMethod*  
- Nepoužívá se.  
+*dockMethod*<br/>
+[in] Nepoužívá se.  
   
- [in] *bRegisterWithFrame*  
- Při hodnotě TRUE se nové podokno zaregistruje dokovací správce nadřazené podokně staré. Vloží se nové podokno v indexu stará podokna Seznam podoken, který udržuje dokovací správce.  
+*bRegisterWithFrame*<br/>
+[in] Při hodnotě TRUE se nové podokno zaregistruje dokovací správce nadřazené podokně staré. Vloží se nové podokno v indexu stará podokna Seznam podoken, který udržuje dokovací správce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je úspěšné; nahrazení v opačném případě hodnota FALSE.  
@@ -1344,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMode*  
- TRUE, pokud chcete povolit režim automatické skrývání FALSE, pokud chcete zapnout pravidelné dokovací režim.  
+*bMode*<br/>
+[in] TRUE, pokud chcete povolit režim automatické skrývání FALSE, pokud chcete zapnout pravidelné dokovací režim.  
   
- [in] *dwAlignment*  
- Určuje zarovnání podokně automatické skrývání k vytvoření.  
+*dwAlignment*<br/>
+[in] Určuje zarovnání podokně automatické skrývání k vytvoření.  
   
  [in] [out] *pCurrAutoHideBar*  
  Ukazatel na aktuální automaticky skrývat panel nástrojů. Může mít hodnotu NULL.  
   
- [in] *bUseTimer*  
- Určuje, zda chcete automaticky skrývat efekt použít, když uživatel přejde do režimu automatické skrývání podokně nebo skrýt podokno okamžitě.  
+*bUseTimer*<br/>
+[in] Určuje, zda chcete automaticky skrývat efekt použít, když uživatel přejde do režimu automatické skrývání podokně nebo skrýt podokno okamžitě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Automatické skrývání nástrojů, který byl vytvořen v důsledku přepnutí do režimu automaticky skrývat, nebo hodnota NULL.  
@@ -1374,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pToolBar*  
- Ukazatel na panel nástrojů automatické skrývání.  
+*pToolBar*<br/>
+[in] Ukazatel na panel nástrojů automatické skrývání.  
   
- [in] *pBtn*  
- Ukazatel na automaticky skrýt tlačítko.  
+*pBtn*<br/>
+[in] Ukazatel na automaticky skrýt tlačítko.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Nastaví procento místa, které zabírá na stavového řádku v kontejneru.  
@@ -1388,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- **Int** , který určuje procento místa, které zabírá podokna v kontejneru.  
+*n*<br/>
+[in] **Int** , který určuje procento místa, které zabírá podokna v kontejneru.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework upraví podokně tak, aby při přepočítá rozložení použít novou hodnotu.  
@@ -1402,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hRestoredSlider*  
- Popisovač rozdělovač podokna (posuvník).  
+*hRestoredSlider*<br/>
+[in] Popisovač rozdělovač podokna (posuvník).  
   
 ### <a name="remarks"></a>Poznámky  
  Rozdělovač podokna obnovené výchozí získáte při deserializaci na stavového řádku. Další informace najdete v tématu [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1416,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRTC*  
- Informace třídy modulu runtime pro podokno s kartami.  
+*pRTC*<br/>
+[in] Informace třídy modulu runtime pro podokno s kartami.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit informace o třídě modulu runtime pro podokna s kartami, které dynamicky se vytvářejí. Tato situace může nastat, když uživatel přetáhne jedno podokno titulku další podokno nebo při volání [CDockablePane::AttachToTabWnd](#attachtotabwnd) metoda prostřednictvím kódu programu vytvořit ze dvou podoken ukotvitelné podokna s kartami.  
@@ -1443,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
+*bShow*<br/>
+[in] TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
   
- [in] *bDelay*  
- True pro zpoždění nastavení dokovací rozložení; FALSE, pokud chcete upravit dokovací rozložení okamžitě.  
+*bDelay*<br/>
+[in] True pro zpoždění nastavení dokovací rozložení; FALSE, pokud chcete upravit dokovací rozložení okamžitě.  
   
- [in] *bActivate*  
- TRUE, pokud chcete aktivovat v podokně, když zobrazí; v opačném případě hodnota FALSE.  
+*bActivate*<br/>
+[in] TRUE, pokud chcete aktivovat v podokně, když zobrazí; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání této metody místo [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) zobrazení nebo skrytí podokna ukotvit.  
@@ -1465,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSlideOut*  
- TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
+*bSlideOut*<br/>
+[in] TRUE, pokud chcete zobrazit podokno; FALSE, pokud chcete skrýt podokno.  
   
- [in] *bUseTimer*  
- TRUE, pokud chcete zobrazit nebo skrýt podokno s efektem automatické skrývání; FALSE, pokud chcete zobrazit nebo skrýt podokno okamžitě.  
+*bUseTimer*<br/>
+[in] TRUE, pokud chcete zobrazit nebo skrýt podokno s efektem automatické skrývání; FALSE, pokud chcete zobrazit nebo skrýt podokno okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu za účelem animace podokno, které je v režimu automaticky skrývat.  
@@ -1494,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDelay*  
- True pro zpoždění výpočet dokovací rozložení; FALSE, pokud chcete okamžitě přepočítat dokovací rozložení.  
+*bDelay*<br/>
+[in] True pro zpoždění výpočet dokovací rozložení; FALSE, pokud chcete okamžitě přepočítat dokovací rozložení.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze uvolnit podokně z okna hlavního rámce nebo z kontejneru s více miniframe okno (podokno, které je v okně jednoho miniframe s jiná podokna s plovoucí čárkou).  

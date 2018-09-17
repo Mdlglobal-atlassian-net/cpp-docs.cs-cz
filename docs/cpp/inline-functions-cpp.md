@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701686"
 ---
 # <a name="inline-functions-c"></a>Vložené funkce (C++)
 Funkce definovaná v těle deklarace třídy je vloženou funkcí.  
@@ -156,7 +156,8 @@ private:
   
  Rekurzivní funkce mohou být nahrazeny vložením do hloubky určeného direktivou [inline_depth](../preprocessor/inline-depth.md) – Direktiva pragma, až do maximálního počtu 16 volání. Následně jsou hluboké rekurzivní funkce považovány za volání instance funkce.  Hloubka, do které jsou pomocí heuristiky vložení rekurzivní funkce prozkoumány, nesmí překročit 16. [Inline_recursion](../preprocessor/inline-recursion.md) – Direktiva pragma řídí vložené rozšíření aktuálně rozšiřované funkce. Zobrazit [rozbalení vložené funkce](../build/reference/ob-inline-function-expansion.md) (/ Ob) – možnost kompilátoru související informace.  
   
-**Specifické pro END Microsoft**  
+**Specifické pro END Microsoft**
+
  Další informace o používání **vložené** specifikátor, naleznete v tématu:  
   
 -   [Vložené členské funkce třídy](../cpp/inline-functions-cpp.md)  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682324"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710148"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog – třída
 `CPaneDialog` Podporuje nemodální ukotvitelné dialogové třídy.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszWindowName*  
- Název dialogového okna ukotvení.  
+*lpszWindowName*<br/>
+[in] Název dialogového okna ukotvení.  
   
- [in] *pParentWnd*  
- Body do nadřazeného okna.  
+*pParentWnd*<br/>
+[in] Body do nadřazeného okna.  
   
- [in] *bHasGripper*  
- TRUE, pokud chcete vytvořit dialogové okno ukotvení s popiskem (úchytu); v opačném případě hodnota FALSE.  
+*bHasGripper*<br/>
+[in] TRUE, pokud chcete vytvořit dialogové okno ukotvení s popiskem (úchytu); v opačném případě hodnota FALSE.  
   
- [in] *lpszTemplateName*  
- Název prostředku šablony dialogového okna.  
+*lpszTemplateName*<br/>
+[in] Název prostředku šablony dialogového okna.  
   
- [in] *nStyle*  
- Styl Windows.  
+*nStyle*<br/>
+[in] Styl Windows.  
   
- [in] *nID*  
- ID ovládacího prvku.  
+*nID*<br/>
+[in] ID ovládacího prvku.  
   
- [in] *nIDTemplate*  
- ID prostředku šablony dialogového okna.  
+*nIDTemplate*<br/>
+[in] ID prostředku šablony dialogového okna.  
   
- [in] *dwTabbedStyle*  
- Styl okna s kartami, která vznikne, když uživatel přetáhne jiného ovládacího prvku podokna na titulek tento ovládací prvek stavového řádku. Výchozí hodnota je AFX_CBRS_REGULAR_TABS. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
+*dwTabbedStyle*<br/>
+[in] Styl okna s kartami, která vznikne, když uživatel přetáhne jiného ovládacího prvku podokna na titulek tento ovládací prvek stavového řádku. Výchozí hodnota je AFX_CBRS_REGULAR_TABS. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
- [in] *dwControlBarStyle*  
- Další šablony atributy. Výchozí hodnota je AFX_DEFAULT_DOCKING_PANE_STYLE. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
+*dwControlBarStyle*<br/>
+[in] Další šablony atributy. Výchozí hodnota je AFX_DEFAULT_DOCKING_PANE_STYLE. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wParam*  
- Zpracování do ovládacího prvku, který se zobrazí výchozí fokus klávesnice.  
+*wParam*<br/>
+[in] Zpracování do ovládacího prvku, který se zobrazí výchozí fokus klávesnice.  
   
- [in] *lParam*  
- Určuje další inicializační data.  
+*lParam*<br/>
+[in] Určuje další inicializační data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE. Kromě toho TRUE nastaví fokus klávesnice pro ovládací prvek určený *wParam* parameter; FALSE brání nastavení výchozí fokus klávesnice.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOccDialogInfo*  
- Ukazatel na pole šablony dialogového okna, která se používá k vytvoření objektu pole dialogového okna. Hodnota tohoto parametru je následně předán [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
+*pOccDialogInfo*<br/>
+[in] Ukazatel na pole šablony dialogového okna, která se používá k vytvoření objektu pole dialogového okna. Hodnota tohoto parametru je následně předán [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy TRUE.  

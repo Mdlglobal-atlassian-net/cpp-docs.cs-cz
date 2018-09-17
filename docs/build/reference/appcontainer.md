@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d8e19724183963329b959286a996b4f21d18b4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709175"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Označí spustitelný soubor, který se musí spustit v kontejneru aplikace, například Microsoft Store nebo Universal Windows app.  
-  
-```  
-  
-/APPCONTAINER[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Spustitelný soubor, který má **/appcontainer** sady možností lze spustit pouze v aplikačním kontejneru, což je prostředí izolace procesu zavedené v systému Windows 8. Tato možnost musí být nastavena pro aplikace pro Microsoft Store a Windows Universal.  
-  
-## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)   
- [Co je aplikace Universal Windows?](/windows/uwp/get-started/universal-application-platform-guide)
+
+Označí spustitelný soubor, který se musí spustit v kontejneru aplikace, například Microsoft Store nebo Universal Windows app.
+
+```
+
+/APPCONTAINER[:NO]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Spustitelný soubor, který má **/appcontainer** sady možností lze spustit pouze v aplikačním kontejneru, což je prostředí izolace procesu zavedené v systému Windows 8. Tato možnost musí být nastavena pro aplikace pro Microsoft Store a Windows Universal.
+
+## <a name="see-also"></a>Viz také
+
+[EDITBIN – možnosti](../../build/reference/editbin-options.md)<br/>
+[Co je aplikace Universal Windows?](/windows/uwp/get-started/universal-application-platform-guide)

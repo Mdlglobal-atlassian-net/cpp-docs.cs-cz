@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214163"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713303"
 ---
 # <a name="deque-class"></a>deque – třída
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>Parametry
 
 *Typ*<br/>
- Typ dat prvku, který bude uložen do deque.
+Typ dat prvku, který bude uložen do deque.
 
 *Allocator –*<br/>
- Typ, který představuje uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti deque. Tento argument je nepovinný a výchozí hodnota je **alokátoru\<typ >**.
+Typ, který představuje uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti deque. Tento argument je nepovinný a výchozí hodnota je **alokátoru\<typ >**.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>Parametry
 
 *první*<br/>
- Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze argument deque.
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze argument deque.
 
 *poslední*<br/>
- Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat ze argument deque.
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat ze argument deque.
 
 *Počet*<br/>
- Počet kopií prvku vloženého do deque.
+Počet kopií prvku vloženého do deque.
 
 *Val*<br/>
- Hodnota prvku vloženého do deque.
+Hodnota prvku vloženého do deque.
 
 *IList*<br/>
- Objekt initializer_list vloženého do deque.
+Objekt initializer_list vloženého do deque.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>Parametry
 
 *POS*<br/>
- Dolní index (nebo číslo pozice) elementu odkazovat deque.
+Dolní index (nebo číslo pozice) elementu odkazovat deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozice prvku, který chcete odebrat z deque.
+Pozice prvku, který chcete odebrat z deque.
 
 *první*<br/>
- Pozice prvního prvku odebrán deque.
+Pozice prvního prvku odebrán deque.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem odebrán deque.
+Pozice bezprostředně za posledním prvkem odebrán deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>Parametry
 
 *POS*<br/>
- Pozice prvku deque má odkazovat.
+Pozice prvku deque má odkazovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::Pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>Parametry
 
 *_Newsize*<br/>
- Nová velikost deque.
+Nová velikost deque.
 
 *Val*<br/>
- Hodnota nové prvky, které mají být přidány do deque – Pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
+Hodnota nové prvky, které mají být přidány do deque – Pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Deque – poskytující prvky pro záměnu nebo deque, jehož prvky mají vyměnit s těmi deque `left`.
+Deque – poskytující prvky pro záměnu nebo deque, jehož prvky mají vyměnit s těmi deque `left`.
 
 *doleva*<br/>
- Deque, jehož prvky mají vyměnit s těmi deque *správné*.
+Deque, jehož prvky mají vyměnit s těmi deque *správné*.
 
 ### <a name="example"></a>Příklad
 

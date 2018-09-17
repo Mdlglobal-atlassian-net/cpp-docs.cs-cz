@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758128"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703843"
 ---
 # <a name="ccomgitptr-class"></a>Ccomgitptr – třída
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*  
-Ukazatel rozhraní k uložení do tabulky globálního rozhraní (GIT).
+*p*<br/>
+[in] Ukazatel rozhraní k uložení do tabulky globálního rozhraní (GIT).
 
-[in] *git*  
-Odkaz na existující `CComGITPtr` objektu.
+*Git*<br/>
+[in] Odkaz na existující `CComGITPtr` objektu.
 
-[in] *dwCookie*  
-Soubor cookie používaný k identifikaci ukazatel rozhraní.
+*dwCookie*<br/>
+[in] Soubor cookie používaný k identifikaci ukazatel rozhraní.
 
-[in] *rv*  
-Zdroj `CComGITPtr` pro přesun dat z objektu.
+*Rv*<br/>
+[in] Zdroj `CComGITPtr` pro přesun dat z objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*  
-Ukazatel na rozhraní.
+*p*<br/>
+[in] Ukazatel na rozhraní.
 
-[in] *git*  
-Odkaz na `CComGITPtr` objektu.
+*Git*<br/>
+[in] Odkaz na `CComGITPtr` objektu.
 
-[in] *dwCookie*  
-Soubor cookie používaný k identifikaci ukazatel rozhraní.
+*dwCookie*<br/>
+[in] Soubor cookie používaný k identifikaci ukazatel rozhraní.
 
-[in] *rv*  
-`CComGITPtr` Pro přesun dat z.
+*Rv*<br/>
+[in] `CComGITPtr` Pro přesun dat z.
 
 ### <a name="return-value"></a>Návratová hodnota
 

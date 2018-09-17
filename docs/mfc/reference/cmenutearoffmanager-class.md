@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700931"
 ---
 # <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager – třída
 Spravuje odnímatelné nabídky. Odnímatelná nabídka je nabídka na panelu nabídek. Uživatel může odebrat odnímatelnou nabídku z řádku nabídek, způsobí odnímatelná nabídka uvolnění.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszRegEntry*  
- Řetězec, který obsahuje cestu položky registru. Aplikace ukládá nastavení odtržených pruhy v této položky registru.  
+*lpszRegEntry*<br/>
+[in] Řetězec, který obsahuje cestu položky registru. Aplikace ukládá nastavení odtržených pruhy v této položky registru.  
   
- [in] *uiTearOffMenuFirst*  
- ID prvního nabídky pro odnímatelnou nabídku.  
+*uiTearOffMenuFirst*<br/>
+[in] ID prvního nabídky pro odnímatelnou nabídku.  
   
- [in] *uiTearOffMenuLast*  
- ID poslední nabídky pro odnímatelnou nabídku.  
+*uiTearOffMenuLast*<br/>
+[in] ID poslední nabídky pro odnímatelnou nabídku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdId*  
- [in] *bUse*  
+*uiCmdId*<br/>
+[in] [in] *bUse*  
   
 ### <a name="remarks"></a>Poznámky  
   

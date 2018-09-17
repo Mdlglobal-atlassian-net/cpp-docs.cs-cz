@@ -1,5 +1,5 @@
 ---
-title: Třída CRecentDockSiteInfo | Microsoft Docs
+title: Crecentdocksiteinfo – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078997"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702608"
 ---
-# <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo – třída
-`CRecentDockSiteInfo` Třída je pomocná třída, která ukládá nejnovější informace o stavu pro [CPane třída](../../mfc/reference/cpane-class.md).  
+# <a name="crecentdocksiteinfo-class"></a>Crecentdocksiteinfo – třída
+`CRecentDockSiteInfo` Třída je pomocná třída, která ukládá nejnovější informace o stavu [cpane – třída](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,14 +83,14 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||  
   
 ## <a name="remarks"></a>Poznámky  
- `CRecentDockSiteInfo` Třídy je třída správy data. Sleduje stav poslední `CPane` jako přechází mezi je ukotvena a číslo s plovoucí čárkou. Po kliknutí dvakrát plovoucí lze ukotvit podokno, bude ukotven. Dvojím kliknutím na podokně ukotveného vrátí ji do jeho předchozího umístění, velikosti a stavu. Podobně platí když je znovu ukotveného podokno vrátí do předchozího umístění ukotvení. Tato třída dat je, díky které možné. Vzhledem k tomu, že členy této třídy uložit informace o stavu pro podokně ukotveného, se nesmí upravovat přímo vaší aplikací.  
+ `CRecentDockSiteInfo` Třídy je třída dat správy. Sleduje poslední stav `CPane` jako přechází mezi je ukotvena a s plovoucí desetinnou čárkou. Když uživatel dvakrát klikne na tlačítko s plovoucí desetinnou čárkou ukotvitelné podokno, ukotven. Dvojité kliknutí ukotvené podokno vrátí ji do jeho předchozího umístění, velikost a stavu. Podobně když je znovu ukotvené podokno vrátí do předchozího umístění ukotvení. Tato třída dat dělá, který je to možné. Protože členy této třídy obsahují informace o stavu pro ukotvené podokno, se nesmí upravovat přímo v aplikaci.  
   
- A `CRecentDockSiteInfo` pokaždé, když je vytvořena podokno je vytvořen objekt. Každý `CPane` objekt má členské proměnné, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), k ukládání těchto informací.  
+ A `CRecentDockSiteInfo` pokaždé, když se vytvoří podokno je vytvořen objekt. Každý `CPane` členské proměnné, má objekt [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), k ukládání příslušných informací.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)  
+ [Crecentdocksiteinfo –](../../mfc/reference/crecentdocksiteinfo-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxrecentDockSiteInfo.h  
@@ -112,7 +112,7 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -135,7 +135,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -149,7 +149,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -163,7 +163,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -177,7 +177,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -191,7 +191,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -214,7 +214,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
+ [in] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -228,7 +228,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *src*  
+ [in] *src*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -244,9 +244,9 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *CList < HWND*  
- [v] *lstOrg*  
- [v] *bForSlider*  
+*CList – < HWND*<br/>
+[in] [in] *lstOrg*  
+ [in] *bForSlider*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForSlider*  
- [v] *srcInfo*  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRecentContainer*  
- [v] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

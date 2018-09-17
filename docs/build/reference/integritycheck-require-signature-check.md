@@ -12,40 +12,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703119"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (povinná kontrola podpisu)
-Určuje, že digitální podpis binárního obrazu musí být v okamžiku načtení zkontrolován.  
-  
-```  
-/INTEGRITYCHECK[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení **/INTEGRITYCHECK** je vypnuté.  
-  
- **/INTEGRITYCHECK** sady možností – v záhlaví PE souboru DLL nebo spustitelný soubor – příznak pro správce paměti pro kontrolu pro digitální podpis načtení obrázku ve Windows. Tato možnost musí být nastavena pro 32bitové i 64bitové knihovny DLL, které implementují kód režimu jádra načtený některými funkcemi Windows a je doporučena pro všechny ovladače zařízení ve Windows Vista, Windows 7, Windows 8, Windows Server 2008 a Windows Server 2012. Verze Windows starší než Windows Vista ignorují tento příznak. Další informace najdete v tématu [vynutit integritu podepisování sady PE (Portable Executable) soubory](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Nastavení této možnosti linkeru v sadě Visual Studio  
-  
-1.  Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozbalte **vlastnosti konfigurace** uzlu.  
-  
-3.  Rozbalte **Linkeru** uzlu.  
-  
-4.  Vyberte **příkazového řádku** stránku vlastností.  
-  
-5.  V **další možnosti**, zadejte `/INTEGRITYCHECK` nebo `/INTEGRITYCHECK:NO`.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)   
- [Vynucené soubory Integrity podepisování sady PE (Portable Executable)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [Návod pro podepisování kódu režimu jádra](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [Knihovny AppInit dll ve Windows 7 a Windows serveru 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+
+Určuje, že digitální podpis binárního obrazu musí být v okamžiku načtení zkontrolován.
+
+```
+/INTEGRITYCHECK[:NO]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení **/INTEGRITYCHECK** je vypnuté.
+
+**/INTEGRITYCHECK** sady možností – v záhlaví PE souboru DLL nebo spustitelný soubor – příznak pro správce paměti pro kontrolu pro digitální podpis načtení obrázku ve Windows. Tato možnost musí být nastavena pro 32bitové i 64bitové knihovny DLL, které implementují kód režimu jádra načtený některými funkcemi Windows a je doporučena pro všechny ovladače zařízení ve Windows Vista, Windows 7, Windows 8, Windows Server 2008 a Windows Server 2012. Verze Windows starší než Windows Vista ignorují tento příznak. Další informace najdete v tématu [vynutit integritu podepisování sady PE (Portable Executable) soubory](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Nastavení této možnosti linkeru v sadě Visual Studio
+
+1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Rozbalte **vlastnosti konfigurace** uzlu.
+
+1. Rozbalte **Linkeru** uzlu.
+
+1. Vyberte **příkazového řádku** stránku vlastností.
+
+1. V **další možnosti**, zadejte `/INTEGRITYCHECK` nebo `/INTEGRITYCHECK:NO`.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+[Vynutit integritu podepisování sady PE (Portable Executable) soubory](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
+[návod pro podepisování kódu režimu jádra](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
+[Knihovny AppInit dll ve Windows 7 a Windows serveru 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

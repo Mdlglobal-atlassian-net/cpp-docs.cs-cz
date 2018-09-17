@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102743"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704871"
 ---
 # <a name="timeget-class"></a>time_get – třída
 
@@ -69,10 +69,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*  
+*CharType*<br/>
 Typ používaný v rámci programu ke kódování znaků.
 
-*InputIterator*  
+*InputIterator*<br/>
 Iterátor, ze kterého se čtou hodnoty času.
 
 ## <a name="remarks"></a>Poznámky
@@ -320,19 +320,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na ve kterém se uloží informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -371,19 +371,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Nevyužité.
 
-*Stav*  
+*Stav*<br/>
 Výstupní parametr, který nastaví prvky odpovídající bitové masky pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*druh*  
+*druh*<br/>
 Ukazatel na umístění informace měsíce mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,19 +414,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Nevyužité.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na ve kterém se uloží informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -465,19 +465,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na kde se uloží informace o den v týdnu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -508,19 +508,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na kdy informace roku se uloží.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -563,31 +563,31 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor, který označuje, kde začíná sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor, který označuje konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Datový proud.
 
-*Stav*  
+*Stav*<br/>
 Prvky odpovídající bitové masky jsou nastavené pro stav datového proudu pro označení chyb.
 
-*druh*  
+*druh*<br/>
 Ukazatel na čas strukturu, ve kterém má být uložen čas.
 
-*FMT*  
+*FMT*<br/>
 Znak specifikátoru převodu.
 
-*MOD*  
+*MOD*<br/>
 Znak volitelný modifikátor.
 
-*fmt_first*  
+*fmt_first*<br/>
 Odkazuje na kde začít direktivy formátu.
 
-*fmt_last*  
+*fmt_last*<br/>
 Odkazuje na konci direktivy formátu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -620,19 +620,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na ve kterém se uloží informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -714,19 +714,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Nevyužité.
 
-*Stav*  
+*Stav*<br/>
 Výstupní parametr, který nastaví prvky odpovídající bitové masky pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*druh*  
+*druh*<br/>
 Ukazatel na umístění informace měsíce mají být uloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -806,19 +806,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Nevyužité.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na ve kterém se uloží informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -887,19 +887,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na kde se uloží informace o den v týdnu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -964,19 +964,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*  
+*první*<br/>
 Vstupní iterátor adresující začátek sekvence má být převeden.
 
-*poslední*  
+*poslední*<br/>
 Vstupní iterátor adresující konec sekvence má být převeden.
 
-*iosbase*  
+*iosbase*<br/>
 Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
-*Stav*  
+*Stav*<br/>
 Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
-*druh*  
+*druh*<br/>
 Ukazatel na kdy informace roku se uloží.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1050,7 +1050,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*odolný systém souborů*  
+*odolný systém souborů*<br/>
 Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky

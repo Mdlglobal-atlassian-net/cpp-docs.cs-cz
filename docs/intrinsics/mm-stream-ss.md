@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss | Microsoft Docs
+title: _mm_stream_ss | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714386"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Zapíše data 32-bit do umístění v paměti bez zahlcení mezipaměti.  
+ Zapíše data 32-bit do umístění v paměti bez zahlcení mezipamětí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parametry  
   
- [out] `Dest`  
- Ukazatel na umístění, do níž je zapsána zdrojová data.  
+*cíl*<br/>
+[out] Ukazatel na umístění, do níž je zapsána zdrojová data.  
   
- [v] `Source`  
- Číslo 128-bit, který obsahuje `float` hodnota má být zapsán v jeho dolní 32 bity...  
+*Zdroj*<br/>
+[in] 128bitové číslo, které obsahuje `float` hodnota má být zapsán v její dolní části 32 bitů...  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
@@ -53,7 +53,7 @@ void _mm_stream_ss(
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`_mm_stream_ss`|SSE4a|  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>Poznámky  
   
-Tento vnitřní vygeneruje `movntss` instrukcí. Chcete-li určit podporu hardwaru pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud je podporovaná pokyn a 0 jinak.  
+Tomto vnitřní vygeneruje `movntss` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tento bit jinak je 1 podporováno podle pokynů a 0.  
   
-Pokud spustíte kód, který používá `_mm_stream_ss` vnitřní na hardware, který nepodporuje `movntss` instrukce, nepředvídatelné výsledky.  
+Při spuštění kódu, který používá `_mm_stream_ss` vnitřní na hardwaru, který není podporován `movntss` instrukce, výsledky nepředvídatelné.  
   
 ## <a name="example"></a>Příklad  
   
@@ -97,9 +97,9 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
 
-Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707483"
 ---
 # <a name="ckeyboardmanager-class"></a>Ckeyboardmanager – třída
 Spravuje tabulky klávesových zkratek pro hlavní okno rámce a podřízených oken rámce.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- ID příkazu.  
+*uiCmd*<br/>
+[in] ID příkazu.  
   
- [out] *str*  
- Odkaz na `CString` objektu.  
+*str*<br/>
+[out] Odkaz na `CString` objektu.  
   
- [in] *pWndFrame*  
- Ukazatel na okno rámce.  
+*pWndFrame*<br/>
+[in] Ukazatel na okno rámce.  
   
- [in] *bIsDefaultFrame*  
- Určuje, zda je okno rámce okna rámce výchozí.  
+*bIsDefaultFrame*<br/>
+[in] Určuje, zda je okno rámce okna rámce výchozí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud zástupce; jinak 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *nKey*|Klíč ke kontrole.|  
-|[in] *fVirt*|Určuje chování klávesovou zkratku. Seznam možných hodnot najdete v tématu [AKCELERACE struktura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Okno rámce. Tato metoda určuje, zda je zpracována klávesovou zkratku v tomto snímku.|  
-|[in] *bIsDefaultFrame*|Parametr logické hodnoty označující, zda *pWndFrame* je okno rámce výchozí.|  
+|*nKey*|[in] Klíč ke kontrole.|  
+|*fVirt*|[in] Určuje chování klávesovou zkratku. Seznam možných hodnot najdete v tématu [AKCELERACE struktura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Okno rámce. Tato metoda určuje, zda je zpracována klávesovou zkratku v tomto snímku.|  
+|*bIsDefaultFrame*|[in] Parametr logické hodnoty označující, zda *pWndFrame* je okno rámce výchozí.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud se zpracovává klávesovou zkratku. FALSE Pokud nezpracovává klíči, nebo pokud *pWndFrame* má hodnotu NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *nChar*|Znak, který tato metoda zkontroluje.|  
+|*nChar*|[in] Znak, který tato metoda zkontroluje.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je tisknutelný znak, hodnotu není.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Cesta v registru kde `CKeyboardManager` data jsou uložena.  
+*lpszProfileName*<br/>
+[in] Cesta v registru kde `CKeyboardManager` data jsou uložena.  
   
- [in] *pDefaultFrame*  
- Ukazatel na okno rámce, který se použije jako výchozí okna.  
+*pDefaultFrame*<br/>
+[in] Ukazatel na okno rámce, který se použije jako výchozí okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud stav jinak bylo úspěšně načteny, nebo 0.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Cestu registru pro ukládání `CKeyboardManager` stavu.  
+*lpszProfileName*<br/>
+[in] Cestu registru pro ukládání `CKeyboardManager` stavu.  
   
- [in] *pDefaultFrame*  
- Ukazatel na rámec okna, který změní výchozí okna.  
+*pDefaultFrame*<br/>
+[in] Ukazatel na rámec okna, který změní výchozí okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud správce stavu klávesnice byla uložena úspěšně, nebo jinak 0.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShowAll*  
- Pokud je hodnota TRUE, zobrazí se všechny klávesové zkratky. Pokud má hodnotu FALSE, zobrazí se pouze první klávesovou zkratku.  
+*bShowAll*<br/>
+[in] Pokud je hodnota TRUE, zobrazí se všechny klávesové zkratky. Pokud má hodnotu FALSE, zobrazí se pouze první klávesovou zkratku.  
   
- [in] *lpszDelimiter*  
- Řetězec se dá vložit mezi klávesových zkratek. Tento oddělovač nemá žádný vliv, pokud pouze zobrazí jednu klávesovou zkratku.  
+*lpszDelimiter*<br/>
+[in] Řetězec se dá vložit mezi klávesových zkratek. Tento oddělovač nemá žádný vliv, pokud pouze zobrazí jednu klávesovou zkratku.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení Pokud příkaz obsahuje více než jednu klávesovou zkratku přidruženo, pouze první klávesovou zkratku se nezobrazí. Tato funkce umožňuje seznam všech klávesových zkratek přidružené všechny příkazy.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Znak pro převod.  
+*nChar*<br/>
+[in] Znak pro převod.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Znak, který je horní registr vstupního parametru.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTemplate*  
- Ukazatel na šablonu dokumentu.  
+*pTemplate*<br/>
+[in] Ukazatel na šablonu dokumentu.  
   
- [in] *lpAccel*  
- Ukazatel na novou klávesovou zkratku.  
+*lpAccel*<br/>
+[in] Ukazatel na novou klávesovou zkratku.  
   
- [in] *nSize*  
- Velikost novou místní tabulku.  
+*nSize*<br/>
+[in] Velikost novou místní tabulku.  
   
- [in] *pDefaultFrame*  
- Ukazatel na okno rámce výchozí.  
+*pDefaultFrame*<br/>
+[in] Ukazatel na okno rámce výchozí.  
   
- [in] *hAccelNew*  
- Popisovač do nové tabulky místní.  
+*hAccelNew*<br/>
+[in] Popisovač do nové tabulky místní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je metoda úspěšná. jinak 0.  

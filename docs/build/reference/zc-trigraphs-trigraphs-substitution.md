@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: trigraphs (náhrada trigraph) | Microsoft Docs'
+title: '/ Zc: trigraphs (náhrada trigraph) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,38 +19,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e465b62944b360d6fdb09da1230f3353658437b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce8c9d13fa062ddac0f31eac0e20fba1266c7a8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379868"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707730"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Náhrada trigraph)
 
-Když **/Zc: trigraphs** není zadaný, kompilátor nahradí znak posloupnost trigraph pomocí odpovídající interpunkční znaménko.
+Když **/Zc: trigraphs** není zadán, kompilátor nahradí znak sekvence trigrafu pomocí odpovídající znak interpunkce.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ Zc: trigraphs**[**-**]  
+> **/ Zc: trigraphs**[**-**]
 
 ## <a name="remarks"></a>Poznámky
 
-A *trigraph* se skládá ze dvou po sobě jdoucích otazníky ("??") následuje jedinečný třetí znak. Jazyk C standardní podporuje trigraph pro zdrojové soubory, které používají znaková sada, která neobsahuje vhodné grafické reprezentace pro některé znaky interpunkce. Například pokud jsou povolené trigraph, kompilátor nahradí "?? = "trigraph pomocí znaku '#'. Prostřednictvím C ++ 14 jsou podporovány trigraph jako C. C ++ 17 standardní odebere trigraph z jazyka C++. V kódu C++ **/Zc: trigraphs** – možnost kompilátoru umožňuje náhrada trigraph pořadí podle odpovídající interpunkční znaménko. **/Zc:trigraphs-** zakáže trigraph nahrazení.
+A *trigraph* se skládá ze dvou po sobě jdoucími otazníky ("??") následovaný znakem třetí jedinečný. Standard jazyka C podporuje trigraphs pro zdrojové soubory, které používají znakovou sadu, která neobsahuje vhodné grafické reprezentace pro některá interpunkční znaménka. Například pokud trigrafy jsou povolené, kompilátor nahradí "?? = "trigraph pomocí znak"#". Pomocí C ++ 14 jsou podporovány trigraphs stejně jako v jazyce C. Standardu C ++ 17 odebere trigraphs z jazyka C++. V kódu jazyka C++ **/Zc: trigraphs** – možnost kompilátoru umožňuje nahrazování sekvence trigrafů umožňuje díky na odpovídající znak interpunkce. **/Zc:trigraphs-** zakáže náhrada trigraph.
 
-**/Zc: trigraphs** možnost je ve výchozím nastavení vypnuta a tato možnost není při vliv [/ projektovou-](permissive-standards-conformance.md) je zadána možnost.
+**/Zc: trigraphs** možnost je vypnuto ve výchozím nastavení, a tato možnost není při měla vliv [/ permissive-](permissive-standards-conformance.md) je zadána možnost.
 
-Seznam trigraph C/C++ a příklad, který ukazuje způsob použití trigraph najdete v tématu [trigraph](../../c-language/trigraphs.md).
+Seznam trigraphs C/C++ a příklad, který ukazuje způsob použití trigraphs najdete v tématu [Trigraphs](../../c-language/trigraphs.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc: trigraphs** nebo **/Zc:trigraphs-** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc: trigraphs** nebo **/Zc:trigraphs-** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
 [Spřežky tří znaků](../../c-language/trigraphs.md)<br/>

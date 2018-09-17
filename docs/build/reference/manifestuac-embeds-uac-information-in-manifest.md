@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTUAC (vložené informace UAC v manifestu) | Microsoft Docs
+title: -MANIFESTUAC (vložené informace UAC v manifestu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,69 +20,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd872b43fbabdb14457ca54e6c4dfbe039313f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377271"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715140"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (vložené informace UAC v manifestu)
-Určuje, zda je v manifestu program vložených informace řízení uživatelských účtů (UAC).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/MANIFESTUAC  
-/MANIFESTUAC:NO  
-/MANIFESTUAC:fragment  
-/MANIFESTUAC:level=_level  
-/MANIFESTUAC:uiAccess=_uiAccess  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fragment`  
- Řetězec, který obsahuje `level` a `uiAccess` hodnoty. Další informace najdete v části poznámky později v tomto tématu.  
-  
- `_level`  
- Jeden z *asInvoker*, *highestAvailable*, nebo *requireAdministrator*. Výchozí hodnota je asInvoker. Další informace najdete v části poznámky později v tomto tématu.  
-  
- `_uiAccess`  
- `true` Pokud chcete, aby obešla úrovních ochrany uživatelské rozhraní a jednotky vstup do windows vyšší oprávnění na ploše; v opačném `false`. Použije se výchozí hodnota `false`. Nastavte na `true` pouze pro uživatelské rozhraní usnadnění aplikace.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud zadáte více možností /MANIFESTUAC na příkazovém řádku, byl naposledy zadali přednost.  
-  
- Volby /MANIFESTUAC:level jsou následující:  
-  
--   `asInvoker`: Aplikace spustí se stejnými oprávněními jako proces, který spustil. Aplikace může být se zvýšenými oprávněními na vyšší úroveň oprávnění výběrem **spustit jako správce**.  
-  
--   highestAvailable: bude aplikace spuštěna s nejvyšší úrovní oprávnění, která ji můžete. Pokud uživatel, který spustí aplikaci, která je členem skupiny Administrators, tato možnost je stejný jako requireAdministrator. Pokud na nejvyšší úrovni oprávnění k dispozici je vyšší než úroveň proces otevírání, systém zobrazí výzvu pro přihlašovací údaje.  
-  
--   requireAdministrator: aplikace spustí s oprávněními správce. Uživatel, který spustí aplikaci, musí být členem skupiny Administrators. Pokud proces otevírání není spuštěn s oprávněními pro správu, systém zobrazí výzvu pro přihlašovací údaje.  
-  
- Můžete zadat hodnoty úroveň a uiAccess v jednom kroku pomocí možnosti /MANIFESTUAC:fragment. Fragment musí mít následující tvar:  
-  
-```  
-"level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"  
-```  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozbalte **vlastnosti konfigurace** uzlu.  
-  
-3.  Rozbalte **Linkeru** uzlu.  
-  
-4.  Vyberte **souboru Manifest** stránku vlastností.  
-  
-5.  Změnit **povolit řízení uživatelských účtů (UAC)**, **úroveň spuštění nástroje Řízení uživatelských účtů**, a **ochrany uživatelského rozhraní nástroje Řízení uživatelských účtů nepoužívat** vlastnosti.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
-1.  V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Určuje, zda informace o řízení uživatelských účtů (UAC) je vloženy do manifestu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/MANIFESTUAC
+/MANIFESTUAC:NO
+/MANIFESTUAC:fragment
+/MANIFESTUAC:level=_level
+/MANIFESTUAC:uiAccess=_uiAccess
+```
+
+### <a name="parameters"></a>Parametry
+
+*Fragment*<br/>
+Řetězec, ve kterém `level` a `uiAccess` hodnoty. Další informace najdete v části poznámky dále v tomto tématu.
+
+*ú_roveň*<br/>
+Jeden z *asInvoker*, *highestAvailable*, nebo *requireAdministrator*. Výchozí hodnota je asInvoker. Další informace najdete v části poznámky dále v tomto tématu.
+
+*_uiAccess*<br/>
+`true` Pokud chcete aplikace obejít úrovně ochrany uživatelského rozhraní a jednotka vstup pro vyšší oprávnění windows na ploše; v opačném případě `false`. Výchozí hodnota je `false`. Nastavte na `true` pouze pro uživatelské rozhraní aplikace.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud zadáte více možností/MANIFESTUAC na příkazovém řádku, posledním blokem zadali přednost.
+
+Možnosti pro /MANIFESTUAC:level jsou následující:
+
+- `asInvoker`: Aplikace se spustí se stejnými oprávněními jako proces, který ji spustil. Aplikace může být zvýšena na vyšší úroveň oprávnění tak, že vyberete **spustit jako správce**.
+
+- highestAvailable: aplikace se spustí s nejvyšší úrovní oprávnění, která se to dá. Pokud uživatel spustí aplikaci, která je členem skupiny Administrators, tato možnost je stejný jako requireAdministrator. Pokud je vyšší než úroveň při otevírání nejvyšší úroveň oprávnění k dispozici, systém zobrazí výzvu pro přihlašovací údaje.
+
+- requireAdministrator: aplikace se spustí s oprávněními správce. Uživatel, který spustí aplikaci, která musí být členem skupiny Administrators. Pokud při otevírání neběží s oprávněními správce, systém zobrazí výzvu k zadání pověření.
+
+Můžete zadat úroveň a uiAccess hodnoty v jednom kroku pomocí možnosti /MANIFESTUAC:fragment. Fragment musí být v následujícím tvaru:
+
+```
+"level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"
+```
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Rozbalte **vlastnosti konfigurace** uzlu.
+
+1. Rozbalte **Linkeru** uzlu.
+
+1. Vyberte **soubor manifestu** stránku vlastností.
+
+1. Upravit **povolit řízení uživatelských účtů (UAC)**, **úroveň spuštění nástroje Řízení uživatelských účtů**, a **ochrana UI nástroje Řízení uživatelských účtů** vlastnosti.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

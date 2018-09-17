@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464957"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700830"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Cmfcpropertygridfileproperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr souboru.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *%{strName/*  
- Název vlastnosti  
+*%{strName/*<br/>
+[in] Název vlastnosti.  
   
- [in] *bOpenFileDialog*  
- True pro otevření **otevřít soubor** dialogové okno; FALSE, pokud chcete otevřít **uložit soubor** dialogové okno.  
+*bOpenFileDialog*<br/>
+[in] True pro otevření **otevřít soubor** dialogové okno; FALSE, pokud chcete otevřít **uložit soubor** dialogové okno.  
   
- [in] *%{strFileName/*  
- Je původní název souboru.  
+*%{strFileName/*<br/>
+[in] Je původní název souboru.  
   
- [in] *lpszDefExt*  
- Řetězec jeden nebo více přípon souborů. Výchozí hodnota je NULL.  
+*lpszDefExt*<br/>
+[in] Řetězec jeden nebo více přípon souborů. Výchozí hodnota je NULL.  
   
- [in] *dwFlags*  
- Dialogové okno pole příznaky. Výchozí hodnota je bitová kombinace (nebo) OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Dialogové okno pole příznaky. Výchozí hodnota je bitová kombinace (nebo) OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.  
   
- [in] *lpszFilter*  
- Řetězec jeden nebo více filtrů souborů. Výchozí hodnota je NULL.  
+*lpszFilter*<br/>
+[in] Řetězec jeden nebo více filtrů souborů. Výchozí hodnota je NULL.  
   
- [in] *lpszDescr*  
- Popis vlastnosti položky. Výchozí hodnota je NULL.  
+*lpszDescr*<br/>
+[in] Popis vlastnosti položky. Výchozí hodnota je NULL.  
   
- [in] *dwData*  
- Specifické pro aplikaci data, která je přidružená k položce vlastnost. Například 32bitové celé číslo nebo ukazatel na další data. Výchozí hodnota je 0.  
+*dwData*<br/>
+[in] Specifické pro aplikaci data, která je přidružená k položce vlastnost. Například 32bitové celé číslo nebo ukazatel na další data. Výchozí hodnota je 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   

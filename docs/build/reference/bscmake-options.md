@@ -1,5 +1,5 @@
 ---
-title: Možnosti BSCMAKE | Microsoft Docs
+title: Možnosti BSCMAKE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,67 +39,69 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c00e6abd28d2e21c73d1eca83f2effb8782d8aa4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700866"
 ---
 # <a name="bscmake-options"></a>Možnosti BSCMAKE
-Tato část popisuje možnosti dostupné pro řízení BSCMAKE. Několik možností obsah soubor s informacemi o procházení řídit vyloučení nebo zahrnutí určité informace. Možnosti vyloučení můžete povolit BSCMAKE spouštět rychleji a může mít za následek menší souboru BSC programem. Možnost názvů malá a velká písmena (s výjimkou **/HELP** a **/nologo**).  
-  
- Pouze **/nologo** a **/o** jsou k dispozici ve vývojovém prostředí sady Visual Studio.  V tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md) informace o přístup k stránky vlastností projektu.  
-  
- /Ei ( `filename`...)  
- Obsah zadaného zahrnout soubory vyloučí z soubor s informacemi o procházení. Chcete-li zadat více souborů, názvy oddělte mezerou a seznam uvést v závorkách. Závorky nejsou nutné v případě, že zadáváte pouze jednu `filename`. Použití **/Ei** spolu s **/Es** možnost vyloučit soubory není vyloučený **/Es**.  
-  
- /El  
- Vyloučí lokální symboly. Ve výchozím nastavení se místní symboly. Další informace o lokální symboly najdete v tématu [vytváření souboru .sbr](../../build/reference/creating-an-dot-sbr-file.md).  
-  
- /Em  
- Vyloučí symboly v těle makra. Použití **/Em** mají být zahrnuty pouze názvy makra soubor s informacemi o procházení. Výchozí hodnota je makro názvy a výsledek makro rozšíření.  
-  
- /ER ( `symbol`...)  
- Zadané symboly vyloučí z soubor s informacemi o procházení. Chcete-li zadat více názvů symbol, názvy oddělte mezerou a seznam uvést v závorkách. Závorky nejsou nutné v případě, že zadáváte pouze jednu `symbol`.  
-  
- /ES  
- Vyloučí z soubor s informacemi o procházení každý soubor zahrnout zadaným absolutní cestu nebo byla nalezena v určeném v proměnné prostředí zahrnout absolutní cesta. (Obvykle, jedná se o systému obsahovat soubory, které obsahují mnoho informace, které nemusí být nutné v váš soubor s informacemi o procházení.) Tato možnost není vyloučit soubory zadané bez cesty, nebo relativní cesty nebo soubory, které jsou relativní cestu v zahrnout. Můžete použít **/Ei** možnost spolu s **/Es** vyloučit soubory, které **/Es** není vyloučit. Pokud chcete vyloučit jenom některé soubory, **/Es** vyloučí, použijte **/Ei** místo **/Es** a seznam souborů, které chcete vyloučit.  
-  
- / errorreport: [žádné &#124; řádku &#124; fronty &#124; odeslat]  
- Umožňuje odesílat informace společnosti Microsoft týkající se vnitřní chyby v bscmake.exe.  
-  
- Další informace o **/errorreport**, najdete v části [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
-  
- / HELP  
- Zobrazí souhrn syntaxe příkazového řádku BSCMAKE.  
-  
- /IU  
- Zahrnuje neregistrované symboly. Ve výchozím nastavení BSCMAKE nezaznamenává všechny symboly, které jsou definovány, ale neodkazuje. Pokud soubor .sbr byly zabaleny, tato možnost nemá žádný vliv pro tento vstupní soubor, protože kompilátor již odebrána neregistrované symboly.  
-  
- / n  
- Vynutí nonincremental sestavení. Použití **/n** Chcete-li vynutit úplnou sestavení informačního souboru procházet, jestli existuje soubor .bsc a zabránit ke zkrácení .sbr souborů. V tématu [jak BSCMAKE sestavení souboru BSC programem](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
-  
- /NOLOGO  
- Potlačí zprávu o autorských právech BSCMAKE.  
-  
- /o `filename`  
- Určuje název pro soubor s informacemi o procházení. Ve výchozím nastavení BSCMAKE poskytuje soubor s informacemi o procházení základní název první soubor .sbr a .bsc rozšíření.  
-  
- /S ( `filename`...)  
- Informuje BSCMAKE zpracovat zadaný soubor poprvé, kdy je zjištěn a chcete vyloučit jinak. Tuto možnost použijte, chcete-li ušetřit čas zpracování při souboru (například záhlaví, nebo .h, souboru .c nebo zdrojového souboru) je součástí několika zdrojové soubory, ale je beze změny pomocí direktivy předběžného zpracování pokaždé, když. Můžete také tuto možnost použijte, pokud dojde ke změně souboru způsobem, který je důležitý pro soubor s informacemi o procházení, kterou vytváříte. Chcete-li zadat více souborů, názvy oddělte mezerou a seznam uvést v závorkách. Závorky nejsou nutné v případě, že zadáváte pouze jednu `filename`. Pokud chcete vyloučit souboru pokaždé, když je zahrnuta, použijte **/Ei** nebo **/Es** možnost.  
-  
- /v  
- Poskytuje podrobný výstup, který obsahuje název každého souboru .sbr zpracovávána a informace o dokončení BSCMAKE spustit.  
-  
- /?  
- Zobrazuje stručné souhrnné informace o BSCMAKE syntaxe příkazového řádku.  
-  
- Následující příkazový řádek říká BSCMAKE lze dosáhnout úplné sestavení MAIN.bsc z tři soubory .sbr. Poskytuje také BSCMAKE vyloučit duplicitní instance TOOLBOX.h:  
-  
-```  
-BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)
+
+Tato část popisuje dostupné možnosti pro řízení BSCMAKE. Několik možností, jak obsah informačního souboru procházení řízen vyloučení nebo zahrnutí určité informace. Možnosti vyloučení můžete povolit BSCMAKE běželo rychleji a může mít za následek menší soubor .bsc. Názvy možností jsou malá a velká písmena (s výjimkou **/HELP** a **/nologo**).
+
+Pouze **/nologo** a **/o** jsou dostupné v rámci vývojového prostředí sady Visual Studio.  Zobrazit [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md) o přístup k stránky vlastností projektu.
+
+**/Ei (** *filename*... **)**<br/>
+Obsah souboru určeného zahrnutého vyloučí z informačního souboru procházení. Chcete-li zadat více souborů, názvy oddělte mezerou a uvést v seznamu v závorkách. Závorky nejsou nezbytné, pokud zadáte pouze jeden *filename*. Použití **/Ei** spolu s **/Es** možnost vyloučit soubory není vyloučeno podle **/Es**.
+
+**/El**<br/>
+Vyloučí místní symboly. Ve výchozím nastavení je místní symboly. Další informace o místní symboly, naleznete v tématu [vytváření souboru .sbr](../../build/reference/creating-an-dot-sbr-file.md).
+
+**/Em**<br/>
+Vyloučí symboly v těle makra. Použití **/Em** mají být zahrnuty pouze názvy maker informačního souboru procházení. Ve výchozím nastavení je zahrnout názvy maker a výsledkem rozšíření makra.
+
+**/ER (** *symbol*... **)**<br/>
+Vyloučí zadaný symboly z informačního souboru procházení. Chcete-li zadat více názvů symbol, názvy oddělte mezerou a uvést v seznamu v závorkách. Závorky nejsou nezbytné, pokud zadáte pouze jeden *symbol*.
+
+**/ES**<br/>
+Vyloučí z informačního souboru procházení každý soubor zahrnutí zadán s parametrem absolutní cestu nebo absolutní cesta zadaná v proměnné prostředí INCLUDE součástí. (Obvykle se jedná o systému vkládané soubory, které obsahují velké množství informací, které nemusí být nutné v informačního souboru procházení.) Tato možnost nevylučuje zadaných bez cesty, nebo relativní cesty nebo soubory nalezené v relativní cestu VLOŽENÝCH souborů. Můžete použít **/Ei** možnost spolu s **/Es** vyloučit soubory, které **/Es** nevylučuje. Pokud budete chtít vyloučit pouze některé soubory, které **/Es** vyloučí, použijte **/Ei** místo **/Es** a seznam souborů, které chcete vyloučit.
+
+**/ errorreport:**[**žádný** &#124; **řádku** &#124; **fronty** &#124; **odeslat**]<br/>
+Umožňuje odesílat informace společnosti Microsoft týkající se s interními chybami v bscmake.exe.
+
+Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+
+**/ HELP**<br/>
+Zobrazí souhrn syntaxe příkazového řádku nástroje BSCMAKE.
+
+**/IU**<br/>
+Zahrnuje neodkazovaná symboly. Ve výchozím nastavení BSCMAKE nezaznamenává všechny symboly, které jsou definovány, ale neodkazuje. Pokud soubor .sbr byla zabalena, tato možnost nemá žádný účinek pro tento vstupní soubor, protože kompilátor už odebrala neodkazovaná symboly.
+
+**/n**<br/>
+Vynutí nepřírůstková sestavení. Použití **/n** vynutit na úplné sestavení informačního souboru procházení, jestli existuje soubor .bsc a zabránit soubory .sbr vedlo ke zkrácení. Zobrazit [postupy: sestavení souboru .BSC nástrojem BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+
+**/NOLOGO**<br/>
+Potlačí zprávu o autorských právech nástroje BSCMAKE.
+
+**/o** *název souboru*<br/>
+Určuje název informačního souboru procházení. Ve výchozím nastavení BSCMAKE poskytuje informačního souboru procházení základní název prvního souboru .sbr a rozšíření .bsc.
+
+**/S (** *filename*... **)**<br/>
+Říká BSCMAKE zpracovat určeného zahrnutého souboru okamžiku, kdy byla zjištěna a vyloučit jinak. Tuto možnost použijte, chcete-li ušetřit čas zpracovávání, když je součástí několika zdrojových souborů soubor (například záhlaví, nebo .h, souboru .c nebo .cpp zdrojový soubor), ale je beze změny pomocí direktivy předběžného zpracování pokaždé, když. Můžete také chtít tuto možnost použijte, pokud se soubor změní způsoby, které nejsou důležité pro informačního souboru procházení, kterou vytváříte. Chcete-li zadat více souborů, názvy oddělte mezerou a uvést v seznamu v závorkách. Závorky nejsou nezbytné, pokud zadáte pouze jeden *filename*. Pokud budete chtít vyloučit souboru pokaždé, když je součástí, použít **/Ei** nebo **/Es** možnost.
+
+**/v**<br/>
+Poskytuje podrobný výstup, který obsahuje název každého souboru .sbr zpracovává a informace o dokončení BSCMAKE spustit.
+
+**/?**<br/>
+Obsahuje stručný přehled syntaxe příkazového řádku nástroje BSCMAKE.
+
+Následující příkazový řádek říká BSCMAKE provést úplné sestavení MAIN.bsc ze tří soubory .sbr. Také poskytuje nástroje BSCMAKE vyloučit duplicitní instance TOOLBOX.h:
+
+```
+BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
+```
+
+## <a name="see-also"></a>Viz také
+
+[BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

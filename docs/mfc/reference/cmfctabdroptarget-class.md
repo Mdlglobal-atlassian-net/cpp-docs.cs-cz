@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852965"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711630"
 ---
 # <a name="cmfctabdroptarget-class"></a>Cmfctabdroptarget – třída
 Poskytuje mechanismus pro komunikaci mezi ovládacím prvkem karta a knihovnami OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWnd*|Nevyužité.|  
-|[in] *pDataObject*|Ukazatel na objekt, který uživatel přetáhne.|  
-|[in] *dwKeyState*|Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|  
-|[in] *bodu*|Umístění kurzoru v souřadnicích klienta.|  
+|*pWnd*|[in] Nevyužité.|  
+|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|  
+|*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|  
+|*Bod*|[in] Umístění kurzoru v souřadnicích klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bodu*. Může být jeden nebo více z následujících akcí:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWnd*|Nevyužité.|  
+|*pWnd*|[in] Nevyužité.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá `CMFCBaseTabCtrl::OnDragLeave` metody k provedení operace přetažení.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWnd*|Nevyužité.|  
-|[in] *pDataObject*|Ukazatel na objekt, který uživatel přetáhne.|  
-|[in] *dwKeyState*|Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|  
-|[in] *bodu*|Umístění ukazatele myši v souřadnice klienta.|  
+|*pWnd*|[in] Nevyužité.|  
+|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|  
+|*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|  
+|*Bod*|[in] Umístění ukazatele myši v souřadnice klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bodu*. Může být jeden nebo více z následujících akcí:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWnd*|Nevyužité.|  
-|[in] *pDataObject*|Ukazatel na objekt, který uživatel přetáhne.|  
-|[in] *dropEffect*|Výchozí operaci přetažení.|  
-|[in] *rozevíracího seznamu*|Nevyužité.|  
-|[in] *bodu*|Umístění ukazatele myši v souřadnice klienta.|  
+|*pWnd*|[in] Nevyužité.|  
+|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|  
+|*dropEffect*|[in] Výchozí operaci přetažení.|  
+|*rozevíracího seznamu*|[in] Nevyužité.|  
+|*Bod*|[in] Umístění ukazatele myši v souřadnice klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výsledný efekt přetažení. Může být jeden nebo více z následujících akcí:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pOwner*|Ovládací prvek karty zaregistrovat jako cíl přetažení.|  
+|*pOwner*|[in] Ovládací prvek karty zaregistrovat jako cíl přetažení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud byla registrace úspěšná. jinak 0.  

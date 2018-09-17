@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211589"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702024"
 ---
 # <a name="hashmap-class"></a>hash_map – třída
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Datový typ klíče, který bude uložen do hash_map.
+Datový typ klíče, který bude uložen do hash_map.
 
 *Typ*<br/>
- Typ dat prvku, který bude uložen do hash_map.
+Typ dat prvku, který bude uložen do hash_map.
 
 *Osobnostní rysy*<br/>
- Typ, který obsahuje dva objekty funkce, jedním z třídy porovnání moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hodnoty hash funkce, které je unární predikát mapování hodnot klíče prvků na celá čísla bez znaménka typu `size_t`. Tento argument je nepovinný a hash_compare – <`Key`, méně <`Key`>> je výchozí hodnota.
+Typ, který obsahuje dva objekty funkce, jedním z třídy porovnání moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hodnoty hash funkce, které je unární predikát mapování hodnot klíče prvků na celá čísla bez znaménka typu `size_t`. Tento argument je nepovinný a hash_compare – <`Key`, méně <`Key`>> je výchozí hodnota.
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_map –. Tento argument je nepovinný a výchozí hodnota je allocator < pair < const `Key`, `Type`>>.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_map –. Tento argument je nepovinný a výchozí hodnota je allocator < pair < const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče prvků lze porovnat z hash_map.
+Hodnota klíče prvků lze porovnat z hash_map.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::Empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
+Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozice prvku, který chcete odebrat z hash_map.
+Pozice prvku, který chcete odebrat z hash_map.
 
 *první*<br/>
- Pozice prvního prvku odebrán hash_map.
+Pozice prvního prvku odebrán hash_map.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem odebrán hash_map.
+Pozice bezprostředně za posledním prvkem odebrán hash_map.
 
 *Klíč*<br/>
- Hodnota klíče prvky, které mají být odebrány hash_map –.
+Hodnota klíče prvky, které mají být odebrány hash_map –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče k porovnání s klíči řazení prvek z hash_map vyhledávaná.
+Hodnota klíče k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
+Hodnota klíče argumentu k porovnání s klíči řazení prvek z hash_map vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Hash_map – argument poskytující prvky pro záměnu s hash_map – cíl.
+Hash_map – argument poskytující prvky pro záměnu s hash_map – cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s hodnotou klíče řazení elementu z hash_map být vyhledán.
+Hodnota klíče argumentu k porovnání s hodnotou klíče řazení elementu z hash_map být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
 

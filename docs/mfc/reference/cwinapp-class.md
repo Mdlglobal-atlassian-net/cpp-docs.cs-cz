@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688542"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712033"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpvParam*  
-Vyhrazeno pro budoucí použití.
+*lpvParam*<br/>
+[in] Vyhrazeno pro budoucí použití.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpszFileName*  
-Název souboru, který má být otevřen.
+*lpszFileName*<br/>
+[in] Název souboru, který má být otevřen.
 
-[in] *bAddToMRU*  
-Hodnota TRUE označuje, že dokument je jednou z nejnovější soubory; Hodnota FALSE označuje, že dokument není jeden z posledních souborů.
+*bAddToMRU*<br/>
+[in] Hodnota TRUE označuje, že dokument je jednou z nejnovější soubory; Hodnota FALSE označuje, že dokument není jeden z posledních souborů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bCompat*  
-Hodnota TRUE přidá registrační přístupy pro příkazy prostředí tisku a tisk do, která uživatelům umožňuje tisknout soubory přímo z prostředí nebo přetažením souboru do objektu tiskárny. Také přidá klíč DefaultIcon. Ve výchozím nastavení, je tento parametr hodnotu FALSE z důvodu zpětné kompatibility.
+*bCompat*<br/>
+[in] Hodnota TRUE přidá registrační přístupy pro příkazy prostředí tisku a tisk do, která uživatelům umožňuje tisknout soubory přímo z prostředí nebo přetažením souboru do objektu tiskárny. Také přidá klíč DefaultIcon. Ve výchozím nastavení, je tento parametr hodnotu FALSE z důvodu zpětné kompatibility.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Parametr|Popis|
-|[in] *bRegisterRecoveryCallback*|Hodnota TRUE označuje, že tato instance aplikace používá funkce zpětného volání obnovení; Hodnota FALSE označuje, že tomu tak není. Rozhraní volá funkci zpětného volání obnovení, když se aplikace neočekávaně ukončí. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *strRestartIdentifier*|Jedinečný řetězec, který identifikuje správce restartování této instance. Identifikátor správce restartování je jedinečný pro každou instanci aplikace.|
-|[in] *pwzCommandLineArgs*|Řetězec, který obsahuje jakékoli další argumenty z příkazového řádku.|
-|[in] *dwRestartFlags*|Volitelné příznaky pro správce restartování. Další informace najdete v části poznámky.|
-|[in] *pRecoveryCallback*|Funkce zpětného volání pro obnovení. Tato funkce musí přijímat jako vstupní parametr lpvoid – a vracet typu DWORD. Výchozí funkce zpětného volání pro obnovení je `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *lpvParam*|Vstupní parametr pro funkci zpětného volání pro obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *dwPingInterval*|Časový úsek, který správce restartování čeká na obnovení funkce zpětného volání k vrácení. Tento parametr je v milisekundách.|
-|[in] *dwCallbackFlags*|Příznaky předán funkci zpětného volání pro obnovení. Vyhrazeno pro budoucí použití.|
+|*bRegisterRecoveryCallback*|[in] Hodnota TRUE označuje, že tato instance aplikace používá funkce zpětného volání obnovení; Hodnota FALSE označuje, že tomu tak není. Rozhraní volá funkci zpětného volání obnovení, když se aplikace neočekávaně ukončí. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] Jedinečný řetězec, který identifikuje správce restartování této instance. Identifikátor správce restartování je jedinečný pro každou instanci aplikace.|
+|*pwzCommandLineArgs*|[in] Řetězec, který obsahuje jakékoli další argumenty z příkazového řádku.|
+|*dwRestartFlags*|[in] Volitelné příznaky pro správce restartování. Další informace najdete v části poznámky.|
+|*pRecoveryCallback*|[in] Funkce zpětného volání pro obnovení. Tato funkce musí přijímat jako vstupní parametr lpvoid – a vracet typu DWORD. Výchozí funkce zpětného volání pro obnovení je `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] Vstupní parametr pro funkci zpětného volání pro obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] Časový úsek, který správce restartování čeká na obnovení funkce zpětného volání k vrácení. Tento parametr je v milisekundách.|
+|*dwCallbackFlags*|[in] Příznaky předán funkci zpětného volání pro obnovení. Vyhrazeno pro budoucí použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

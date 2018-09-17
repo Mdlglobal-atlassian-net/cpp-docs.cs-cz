@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692197"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699644"
 ---
 # <a name="web-references-property-page"></a>Stránka vlastností webových odkazů
 **Webové odkazy** stránku vlastností určuje, jak budou generovány třídu proxy XML webové služby. Pokud chcete přidat webový odkaz na váš projekt se vygeneruje třídu proxy XML webové služby.  
   
  **Webové odkazy** stránka vlastností obsahuje následující vlastnosti:  
   
- **Výstupní soubor**  
- Název souboru obsahujícího třídu proxy XML webové služby.  
+- **Výstupní soubor**
+
+   Název souboru obsahujícího třídu proxy XML webové služby.  
   
- **Potlačit úvodní nápis**  
- Nejsou zobrazeny na banner pro Web Services Description Language Tool (Wsdl.exe).  
+- **Potlačit úvodní nápis**
+
+   Nejsou zobrazeny na banner pro Web Services Description Language Tool (Wsdl.exe).  
   
- **Namespace**  
- Určuje název vygenerovaný webový proxy server.  
+- **Namespace**
+
+   Určuje název vygenerovaný webový proxy server.  
   
- **Další odkazy**  
- Určuje další knihovny DLL odkazuje proxy knihovny DLL.  
+- **Další odkazy**
+
+   Určuje další knihovny DLL odkazuje proxy knihovny DLL.  
   
- Informace o tom, jak získat přístup **webový odkaz** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+Informace o tom, jak získat přístup **webový odkaz** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958202"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706885"
 ---
 # <a name="thread-class"></a>thread – třída
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
- A **vlákno** objektu.
+*Jiné*<br/>
+A **vlákno** objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*  
- A **vlákno** objektu.
+*Jiné*<br/>
+A **vlákno** objektu.
 
 ## <a name="thread"></a>  Thread::Thread – konstruktor
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*F*  
- Aplikacemi definovaná funkce ke spuštění podle vlákna.
+*F*<br/>
+Aplikacemi definovaná funkce ke spuštění podle vlákna.
 
-*A*  
- Seznam argumentů, které mají být předány *F*.
+*A*<br/>
+Seznam argumentů, které mají být předány *F*.
 
-*Jiné*  
- Existující **vlákno** objektu.
+*Jiné*<br/>
+Existující **vlákno** objektu.
 
 ### <a name="remarks"></a>Poznámky
 

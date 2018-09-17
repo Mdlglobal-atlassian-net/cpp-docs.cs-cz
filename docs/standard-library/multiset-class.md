@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27bdcea6f7ebd51f000310f4916f16bfec7840e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686624"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708692"
 ---
 # <a name="multiset-class"></a>multiset – třída
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ dat prvku, který bude uložen do multisady.
+Typ dat prvku, který bude uložen do multisady.
 
 *Compare*<br/>
- Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v multisadě. Binární predikát **méně**\<Key > je výchozí hodnota.
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v multisadě. Binární predikát **méně**\<Key > je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je `allocator<Key>`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč prvky lze porovnat z multisady.
+Klíč prvky lze porovnat z multisady.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *kde*<br/>
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*<br/>
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*<br/>
- Hodnota klíče prvků, které mají být odebrány.
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče k porovnání s klíči řazení prvek z multiset vyhledaly.
+Hodnota klíče k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Třída multiset argument poskytující prvky pro záměnu s multiset cíl.
+Třída multiset argument poskytující prvky pro záměnu s multiset cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 

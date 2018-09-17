@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217116"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713186"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 
@@ -34,10 +34,10 @@ Strukturované zpracování výjimek (SEH) je rozšířením společnosti Micros
 
 ## <a name="grammar"></a>Gramatika
 
-*s výjimkou příkazu Try* :  
+*s výjimkou příkazu Try* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *výraz* **)** *compound-statement*
 
-*try-finally-statement* :  
+*try-finally-statement* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Poznámky

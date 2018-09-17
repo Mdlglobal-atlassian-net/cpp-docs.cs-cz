@@ -1,5 +1,5 @@
 ---
-title: -FR, -Fr (vytvořit. Soubor SBR) | Microsoft Docs
+title: -FR, -Fr (vytvoření. Soubor SBR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,51 +23,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6f61a3360c820a2d47d54f7c174af484079d154
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709597"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Vytvořit soubor .Sbr)
-Vytvoří soubory .sbr.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/FR[pathname[\filename]]  
-/Fr[pathname[\filename]]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Během procesu sestavení Microsoft vyhledejte informace o souboru údržby nástroj (BSCMAKE) používá k vytvoření těchto souborů. BSC souboru, který se používá k zobrazení informací procházení.  
-  
- **/FR** vytvoří soubor .sbr s úplné symbolické informace.  
-  
- **/FR** vytvoří soubor .sbr bez informací o na lokální proměnné.  
-  
- Pokud nezadáte `filename`, soubor .sbr získá základní stejný název jako zdrojový soubor.  
-  
- **/FR** je zastaralý, pomocí **/FR** místo. Další informace najdete v tématu zastaralé a odebrat – možnosti kompilátoru v [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
-  
+
+Vytvoří soubory .sbr.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/FR[pathname[\filename]]
+/Fr[pathname[\filename]]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Během procesu sestavení, nástroje Microsoft procházet informace souboru údržby Utility (BSCMAKE) používá k vytvoření těchto souborů. Soubor BSC, který se používá k zobrazení informací o procházení.
+
+**/FR** vytvoří soubor .sbr s úplné symbolické informace.
+
+**/FR** vytvoří soubor .sbr bez informací o lokálních proměnných.
+
+Pokud nezadáte `filename`, soubor .sbr získá stejný základní název zdrojového souboru.
+
+**/FR** je zastaralá; použijte **/FR** místo. Další informace najdete v tématu zastaralé a odebrat možnosti kompilátoru v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+
 > [!NOTE]
->  Neměňte .sbr rozšíření. BSCMAKE vyžaduje zprostředkující soubory tak, aby měl rozšíření.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  V navigačním podokně, vyberte **C/C++**, **informacemi o procházení** stránku vlastností.  
-  
-3.  Změnit **procházet soubor s informacemi o** nebo **povolit informacemi o procházení** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+>  Neměňte .sbr rozšíření. BscMake – vyžaduje zprostředkující soubory, které chcete mít tuto příponu.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. V navigačním podokně, vyberte **C/C++**, **informace o procházení** stránku vlastností.
+
+1. Upravit **soubor s informacemi o procházení** nebo **povolit informace o procházení** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)

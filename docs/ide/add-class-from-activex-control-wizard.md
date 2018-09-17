@@ -1,5 +1,5 @@
 ---
-title: Přidání třídy z Průvodce ovládacím prvkem ActiveX | Microsoft Docs
+title: Přidání třídy z Průvodce ovládacím prvkem ActiveX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,61 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2be1d736bc82b88af66650192c24b4b8eae8c21d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710109"
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Přidání třídy z průvodce ovládacím prvkem ActiveX
-Pomocí tohoto průvodce k přidání třídy knihovny MFC z ovládacího prvku ActiveX k dispozici. Průvodce vytvoří třídu pro každé rozhraní, které přidáte z vybraný ovládací prvek ActiveX.  
+
+Tohoto průvodce použijte k přidání třídy knihovny MFC z ovládacího prvku ActiveX k dispozici. Průvodce vytvoří třídu pro každé rozhraní, kterou přidáte z vybraného ovládacího prvku ActiveX.  
   
- **Přidání třídy z**  
- Určuje umístění knihovny typů, ze kterého je vytvořen třídy.  
+- **Přidat třídu Z:**  
+
+   Určuje umístění knihovny typů, ze kterého se vytvoří třídu.  
   
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Registru**|Knihovny typů je zaregistrován v systému. Registrovaného typu knihovny jsou uvedeny v **ovládací prvky ActiveX k dispozici**.|  
-|**Soubor**|Knihovny typů není nutně zaregistrována v systému, ale je obsažený v souboru. Je nutné zadat umístění souboru v **umístění**.|  
+   |Možnost|Popis|
+   |------------|-----------------|
+   |**Registru**|Knihovna typů je registrován v systému. Zaregistrované knihovny typů jsou uvedeny v **dostupné ovládací prvky ActiveX**.|
+   |**Soubor**|Knihovna typů není nutně registrován v systému, ale je obsažena v souboru. Je nutné zadat umístění souborů v **umístění**.|
   
- **K dispozici ovládací prvky ActiveX**  
- Určuje ovládací prvky ActiveX, které jsou aktuálně registrované v systému. Vyberte ze seznamu zobrazíte jeho rozhraní ovládacího prvku ActiveX **rozhraní** seznamu. V tématu [MFC – ovládací prvky ActiveX: distribuce ovládacích prvků ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) Další informace o registraci ovládacích prvků ActiveX.  
+- **Dostupné ovládací prvky ActiveX**  
+
+   Určuje ovládací prvky ActiveX, které jsou aktuálně registrované v systému. Vyberte ze seznamu zobrazíte jeho rozhraní v ovládacím prvku ActiveX **rozhraní** seznamu. Zobrazit [knihovny MFC – ovládací prvky ActiveX: distribuce ovládacích prvků ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) Další informace o registraci komponenty – ovládací prvky ActiveX.  
   
- Pokud kliknete na tlačítko **soubor** pod **přidat třídu z**, toto políčko není možné měnit.  
+   Vyberete-li **souboru** pod **přidat třídu z**, toto pole je k dispozici pro změnu.  
   
- **Poloha**  
- Určuje umístění ovládacího prvku ActiveX. Pokud kliknete na tlačítko **soubor** pod **přidat třídu z**, můžete zadat umístění souboru, který obsahuje knihovny typů. Chcete-li přejděte do umístění souboru, klikněte na tlačítko se třemi tečkami.  
+- **Poloha**  
+
+   Určuje umístění ovládacího prvku ActiveX. Vyberete-li **souboru** pod **přidat třídu z**, můžete uvést umístění souboru, který obsahuje knihovnu typů. Přejděte do umístění souboru, klikněte na tlačítko se třemi tečkami.  
   
- Pokud kliknete na tlačítko **registru** pod **přidat třídu z**, toto políčko není možné měnit.  
+   Vyberete-li **registru** pod **přidat třídu z**, toto pole je k dispozici pro změnu.  
   
- **Rozhraní**  
- Určuje rozhraní v ovládacím prvku ActiveX v aktuálně vybranou **ovládací prvky ActiveX k dispozici** nebo v knihovně typů v zadaném v souboru **umístění**.  
+- **Rozhraní**  
+
+   Určuje ovládací prvek ActiveX, který je aktuálně vybrána v rozhraní **dostupné ovládací prvky ActiveX** nebo v knihovně typů v souboru zadaného v **umístění**.  
   
-|Tlačítko přenosu|Popis|  
-|---------------------|-----------------|  
-|**>**|Přidá rozhraní vybrané v **rozhraní** seznamu. Tato možnost je k dispozici, pokud není vybrané žádné rozhraní.|  
-|**>>**|Přidá všechna rozhraní v ovládacím prvku ActiveX v aktuálně vybranou **ovládací prvky ActiveX k dispozici** nebo v knihovně typů v zadaném v souboru **umístění**.|  
-|**<**|Odebere aktuálně vybranou v třídu **generované třídy** seznamu. Není k dispozici, pokud neexistuje žádná třída je v vybrané **generované třídy** seznamu.|  
-|**<\<**|Odebere všechny třídy v **generované třídy** seznamu. Pokud není k dispozici **generované třídy** seznam je prázdný.|  
+   |Tlačítka převodu|Popis|  
+   |---------------------|-----------------|  
+   |**>**|Přidá rozhraní vybrané v **rozhraní** seznamu. Tato možnost je k dispozici, pokud není vybrané žádné rozhraní.|  
+   |**>>**|Přidá všechna rozhraní v aktuálně vybraného v ovládacím prvku ActiveX **dostupné ovládací prvky ActiveX** nebo v knihovně typů v souboru zadaného v **umístění**.|  
+   |**\<**|Odebere aktuálně vybranou v třídu **generované třídy** seznamu. Není k dispozici, pokud není žádná třída aktuálně vybraný **generované třídy** seznamu.|  
+   |**\<\<**|Odebere všechny třídy v **generované třídy** seznamu. Pokud není k dispozici **generované třídy** seznam je prázdný.|  
   
- **Vygenerované třídy**  
- Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor h** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
+- **Generované třídy**  
+
+   Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknout na toto políčko, aby vyberte třídu a potom použít nahoru nebo dolů kláves procházejte seznam, název každé třídy v zobrazení `Class` a název souboru v **souboru .h** pole, které průvodce vygeneruje po kliknutí na  **Dokončit**. V tomto poli můžete vybrat pouze jednu třídu najednou.  
   
- Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na **<**. Není potřeba vyberte třídu v **generované třídy** pole odebrat všechny třídy; pomocí kliknutím na tlačítko **<<**, odeberete všechny třídy v **generované třídy** pole.  
+   Třídu můžete odebrat tak, že ji vyberete v tomto seznamu a kliknete na **<**. Není potřeba vybrat třídu v **generované třídy** pole odebrat všechny třídy; kliknutím **<<**, odeberte všechny třídy v **generované třídy** pole.  
   
- `Class`  
- Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na tlačítko **Dokončit**. Můžete upravit název v `Class` pole.  
+- **Třída**  
+
+   Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na **Dokončit**. Můžete upravit název v **třídy** pole.  
   
- **soubor h**  
- Nastaví název hlavičky souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu poskytují v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby nebo připojit k existující soubor deklaraci třídy. Pokud zvolíte existující soubor, průvodce jej neuloží do vybraného umístění dokud klikněte na tlačítko **Dokončit** v průvodci.  
+- **soubor .h**  
+
+   Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.  
   
- Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být deklaraci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.  
+   Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.  
   
- **souboru**  
- Nastaví název souboru implementace pro nový objekt třídu. Ve výchozím nastavení, tento název je založen na názvu poskytují v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložíte soubor do umístění podle vaší volby. Soubor se neuloží do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.  
+- **soubor .cpp**  
+
+   Nastaví název implementačního souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **generované třídy**. Klikněte na tlačítko se třemi tečkami se uložit název souboru do umístění podle vašeho výběru. Soubor se neukládá do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.  
   
- Průvodce nepřepisuje soubor. Pokud vyberete název existující soubor, po kliknutí na tlačítko **Dokončit**, Průvodce zobrazí výzvu k označení, zda by měl být implementaci třídy přiložit k obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru; klikněte na tlačítko **ne** se vraťte do průvodce a zadejte jiný název souboru.  
+   Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy z ovládacího prvku ActiveX](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   

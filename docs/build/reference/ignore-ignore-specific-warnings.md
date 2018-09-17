@@ -1,5 +1,5 @@
 ---
-title: -Ignorovat (ignorovat konkrétní varování) | Microsoft Docs
+title: -IGNORE (ignorování konkrétních upozornění) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b096fc12f69fbe637a3067646c20f6d520a9250f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aee498951c01c332dffe720dbd6e3b77c8121aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378006"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705858"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Ignorovat konkrétní varování)
-```  
-/IGNORE:warning[,warning]  
-```  
-  
-## <a name="parameters"></a>Parametry  
- `warning`  
- Počet upozornění pro potlačení v rozsahu 4000 do 4999 linkeru.  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení sestavy odkaz všech upozornění. Zadejte **/ignorovat:** `warning` říct linkeru pro potlačení specifické číslo upozornění. Několik upozornění ignorovat, čísla upozornění oddělujte čárkami.  
-  
- Linkeru neumožňuje některé upozornění ignorovat. Tato tabulka uvádí upozornění, která nejsou potlačit pomocí **/Ignorovat**:  
-  
-|Upozornění linkerů||  
-|--------------------|-|  
-|LNK4017|`keyword` příkaz není podporován pro cílovou platformu; Ignorovat|  
-|[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|Nerozpoznaný možnost '`option`'; ignorováno|  
-|LNK4062|'`option`'není kompatibilní s'`architecture`se cílový počítač; možnost Ignorovat|  
-|[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)|ignoruje "`option1`"kvůli na"`option2`" specifikace|  
-|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|EntryPoint '`function`'není __stdcall s'`number`' bajtů argumenty; bitová kopie nemusí fungovat.|  
-|LNK4088|Obrázek generován z důvodu/Force – možnost; bitová kopie nemusí fungovat.|  
-|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|žádný argument zadaný s možností "`option`'; bude ignorována přepínače|  
-|LNK4203|Chyba při čtení databáze programu '`filename`'; propojování objektů, jako kdyby žádné informace o ladění|  
-|[LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)|'`filename`' chybí ladicí informace pro odkazování na modulu; propojování objektů, jako kdyby žádné informace o ladění|  
-|[LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)|'`filename`' chybí aktuální informace o ladění pro odkazování na modulu; propojování objektů, jako kdyby žádné informace o ladění|  
-|[LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)|informace o předkompilovaných typu nebyl nalezen. '`filename`' není propojené nebo přepsána; propojování objektů, jako kdyby žádné informace o ladění|  
-|LNK4207|'`filename`' zkompilovat /Yc /Yu /Z7; nelze vytvořit PDB; spojující objekt a pak ji znovu zkompilovat s /Zi, jako kdyby žádné informace o ladění|  
-|LNK4208|kompatibilní formát PDB v '`filename`'; odstranit a znovu sestavte; propojování objektů, jako kdyby žádné informace o ladění|  
-|LNK4209|informace o ladění poškozený; znovu zkompiluje modulu; propojování objektů, jako kdyby žádné informace o ladění|  
-|[LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)|`option` již není podporována; Ignorovat|  
-|LNK4228|'`option`se ignoruje; neplatná pro knihovny DLL|  
-|[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)|Neplatná direktiva /`directive` ignorován; najít|  
-  
- Obecně platí upozornění linkeru, které nelze ignorovat představují selhání sestavení, chyby příkazového řádku či chyby konfigurace, které problém byste měli odstranit.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  V **Linkeru** složky, vyberte **příkazového řádku** stránku vlastností.  
-  
-3.  Změnit **další možnosti** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+```
+/IGNORE:warning[,warning]
+```
+
+## <a name="parameters"></a>Parametry
+
+*warning*<br/>
+Počet upozornění můžete potlačit, v rozsahu 4000 na 4999 linkeru.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení sestavy odkaz všechna upozornění. Zadejte **/ignorovat:** `warning` říct linkeru, aby potlačit konkrétní číslo upozornění. Ignorovat upozornění na více čísel upozornění oddělte čárkami.
+
+Linker neumožňuje některé upozornění ignorovat. Tato tabulka obsahuje seznam upozornění, která nejsou potlačil **/Ignorovat**:
+
+|Upozornění linkeru||
+|--------------------|-|
+|LNK4017|`keyword` příkaz není podporován pro cílovou platformu; Ignorovat|
+|[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|Nerozpoznaná možnost "`option`se ignoruje|
+|LNK4062|"`option`"není kompatibilní s"`architecture`' cílový počítač; možnost se ignoruje|
+|[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)|ignorování "`option1`"kvůli"`option2`" specifikace|
+|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|vstupní bod "`function`"není __stdcall s"`number`' b argumentů; image se možná nespustí.|
+|LNK4088|bitové kopie se generuje na možnosti/Force; bitové kopie se možná nespustí.|
+|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|žádný argument zadaný pomocí možnosti "`option`"; ignoruje přepínač|
+|LNK4203|Chyba při čtení databáze programu "`filename`"; objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|[LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)|"`filename`' neobsahuje ladicí informace pro odkazující modul objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|[LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)|"`filename`' chybí aktuální ladicí informace pro odkazující modul objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|[LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)|Předkompilované informace o typu nebyl nalezen. "`filename`' není propojený nebo přepsat; objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|LNK4207|"`filename`" zkompilovat /Yc /Yu/Z7; nelze vytvořit soubor PDB, zkompilujte znovu s/zi, objektu, jako by nebyly dostupné žádné ladicí informace|
+|LNK4208|nekompatibilní formát PDB v '`filename`"; odstraňte a znovu sestavte; objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|LNK4209|ladicí informace jsou poškozené; modul s rekompilujte; objekt se propojí, jako by nebyly dostupné žádné ladicí informace|
+|[LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)|`option` už není podporovaná; Ignorovat|
+|LNK4228|"`option`" ignoruje neplatné pro knihovny DLL|
+|[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)|Neplatná direktiva /`directive` nalezen; ignoruje se.|
+
+Obecně platí představují upozornění linkeru, které nelze ignorovat chyby sestavení, příkazového řádku chyby nebo chyby konfigurace, které by měla vyřešit.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. V **Linkeru** složky, vyberte **příkazového řádku** stránku vlastností.
+
+1. Upravit **další možnosti** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.

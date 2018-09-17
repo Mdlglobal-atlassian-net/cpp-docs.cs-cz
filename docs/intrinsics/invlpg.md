@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1ada416217be672da8f93c777b0b2a6e12684711
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703024"
 ---
 # <a name="invlpg"></a>__invlpg
 **Specifické pro Microsoft**  
@@ -39,8 +39,8 @@ void __invlpg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]  `Address`  
- 64-bit adresa.  
+*Adresa*<br/>
+[in] 64-bit adresa.  
   
 ## <a name="requirements"></a>Požadavky  
   

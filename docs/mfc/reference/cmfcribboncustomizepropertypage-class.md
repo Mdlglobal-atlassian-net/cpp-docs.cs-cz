@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonCustomizePropertyPage | Microsoft Docs
+title: Cmfcribboncustomizepropertypage – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707498"
 ---
-# <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage – třída
-Implementuje vlastní stránky pro **přizpůsobit** dialogové okno v aplikacích založených na pásu karet.  
+# <a name="cmfcribboncustomizepropertypage-class"></a>Cmfcribboncustomizepropertypage – třída
+Implementuje vlastní stránky pro **vlastní** dialogové okno v aplikacích založených na pásu karet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,21 +53,21 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Přidá vlastní kategorii, která **příkazy** – pole se seznamem.|  
-|`CMFCRibbonCustomizePropertyPage::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Volá se v systému, když uživatel klikne **OK** na **přizpůsobit** dialogové okno.|  
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Přidá vlastní kategorii **příkazy** – pole se seznamem.|  
+|`CMFCRibbonCustomizePropertyPage::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Volá se v systému, když uživatel klikne **OK** na **vlastní** dialogové okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud chcete přidat vlastní příkazy **přizpůsobit** dialogové okno, je nutné zpracovat zprávu AFX_WM_ON_RIBBON_CUSTOMIZE. V popisovač zpráv, vytváření instancí `CMFCRibbonCustomizePropertyPage` objektu v zásobníku. Vytvořte seznam, který vlastní příkazy a pak zavolají `AddCustomCategory` přidat nové stránky **přizpůsobit** dialogové okno.  
+ Pokud chcete přidat vlastní příkazy **vlastní** dialogové okno, musí zpracovat AFX_WM_ON_RIBBON_CUSTOMIZE zprávy. V popisovači zpráv vytvořit instanci `CMFCRibbonCustomizePropertyPage` objekt v zásobníku. Vytvoří seznam vlastních příkazů a následně zavolat `AddCustomCategory` pro přidání nové stránky **vlastní** dialogové okno.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit `CMFCRibbonCustomizePropertyPage` objektu a přidat vlastní kategorii.  
+ Následující příklad ukazuje, jak vytvořit `CMFCRibbonCustomizePropertyPage` objektu a chcete-li přidat vlastní kategorii.  
   
  [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -75,17 +75,17 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CPropertyPage](../../mfc/reference/cpropertypage-class.md)  
+ [CPropertyPage –](../../mfc/reference/cpropertypage-class.md)  
   
- [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
+ [Cmfcpropertypage –](../../mfc/reference/cmfcpropertypage-class.md)  
   
- [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
+ [Cmfcribboncustomizepropertypage –](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribboncustomizedialog.h  
   
 ##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
- Přidá vlastní kategorii, která **příkazy** – pole se seznamem.  
+ Přidá vlastní kategorii **příkazy** – pole se seznamem.  
   
 ```  
 void AddCustomCategory(
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *lpszName*|Určuje název vlastní kategorie.|  
-|[v] *lstIDS*|Obsahuje příkaz pásu karet ID zobrazený v vlastní kategorie.|  
+|*lpszName*|[in] Určuje název vlastní kategorii.|  
+|*lstIDS*|[in] Obsahuje příkaz pásu karet ID má být zobrazen v kategorii Vlastní.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přidá kategorie s názvem *lpszName* k **příkazy** – pole se seznamem. Pokud uživatel vybere kategorii, příkazy zadaná v *lstIDS* se zobrazí v seznamu příkazů.  
+ Tato metoda přidá kategorii s názvem *lpszName* k **příkazy** – pole se seznamem. Když uživatel vybere kategorii, příkazy podle *lstIDS* se zobrazí v seznamu příkazů.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Vytvoří `CMFCRibbonCustomizePropertyPage` objektu.  
@@ -112,18 +112,18 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRibbonBar*  
- Ukazatel na ovládacího prvku pásu karet, pro které možnosti chcete přizpůsobit.  
+*pRibbonBar*<br/>
+[in] Ukazatel na ovládací prvek pásu karet, pro kterou možnosti přizpůsobení.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
- Calleld v systému, když uživatel klikne **OK** na **přizpůsobit** dialogové okno.  
+ Calleld systému, když uživatel klikne **OK** na **vlastní** dialogové okno.  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace použije vybrané v možnosti **přizpůsobit** dialogové okno pro panel nástrojů Rychlý přístup.  
+ Výchozí implementace použije ve vybrané možnosti **vlastní** dialogové okno panelu nástrojů Rychlý přístup.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

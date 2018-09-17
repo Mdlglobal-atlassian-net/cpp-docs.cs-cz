@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření sestavení pro vydání | Microsoft Docs'
+title: 'Postupy: vytváření sestavení pro vydání | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949cfe629332488821da4313c13d40054778ef06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1221133b55002d49c93d66210c5eae6844b534b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370873"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705600"
 ---
 # <a name="how-to-create-a-release-build"></a>Postupy: Vytváření sestavení pro vydání
-### <a name="to-generate-a-release-build-of-your-program"></a>Chcete-li vygenerovat sestavení pro vydání vašeho programu  
-  
-1.  Vyberte **verze** z **konfigurace řešení** rozevíracího seznamu, který je na **standardní** panelu nástrojů.  
-  
-2.  Na **sestavení** nabídky, klikněte na tlačítko **sestavení**.  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení pro vydání](../../build/reference/release-builds.md)
+
+### <a name="to-generate-a-release-build-of-your-program"></a>Ke generování sestavení pro vydání aplikace
+
+1. Vyberte **vydání** z **konfigurace řešení** rozevíracího seznamu, který se nachází na **standardní** nástrojů.
+
+1. Na **sestavení** nabídky, klikněte na tlačítko **sestavení**.
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení pro vydání](../../build/reference/release-builds.md)

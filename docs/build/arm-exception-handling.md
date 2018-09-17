@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205700"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711227"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -175,26 +175,26 @@ Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je
 1. Hlavička 1 nebo 2 slova, která popisuje celkovou velikost struktury .xdata a poskytuje klíčové funkce data. Druhý slovo je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole jsou nastaveny na hodnotu 0. Pole se uvádějí v této tabulce:
 
    |Word|Bity|Účel|
-    |----------|----------|-------------|
-    |0|0-17|*Funkce délka* je 18 bitové pole, která určuje celková délka funkce v bajtech, děleno 2. Pokud funkce je větší než 512 KB, musí k popisu funkce používá více záznamů .pdata a .xdata. Podrobnosti najdete v části rozsáhlé funkce v tomto dokumentu.|
-    |0|18-19|*Ver* je 2 bitové pole, která popisuje verzi zbývající xdata. Pouze verze 0 je aktuálně definován; hodnoty 1-3 jsou vyhrazené.|
-    |0|20|*X* je 1bitové pole, která určuje (1) přítomnosti nebo absenci (0) data výjimky.|
-    |0|21|*Elektronické* je 1bitové pole, která označuje, že je informace, které popisují jeden epilogu obsahuje záhlaví (1) namísto toho, aby další obor slova novější (0).|
-    |0|22|*F* je 1bitové pole, která označuje, že tento záznam popisuje fragment – funkce (1) nebo úplné – funkce (0). Fragment znamená, že neexistuje žádná prologu a zda mají být ignorovány veškeré zpracování v prologu.|
-    |0|23-27|*Počet epilogu* je 5 bitové pole, která má dvě význam, v závislosti na stavu *E* bit:<br /><br /> -Pokud *E* je 0, toto pole je počet celkový počet výjimek obory, které je popsáno v oddílu 3. Pokud existuje více než 31 oborů ve funkci a pak toto pole a *slova kódu* pole musí obě být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.<br />-Pokud *E* 1, toto pole určuje index první unwind kód, který popisuje pouze epilogu.|
-    |0|28-31|*Kód slova* je 4 bitové pole, která určuje počet slov 32-bit musí obsahovat všechny kódy unwind sekce 4. Pokud se více než 15 slova jsou povinné pro více než 63 unwind kód bajtů, toto pole a *epilogu počet* pole musí obě být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.|
-    |1|0-15|*Rozšířené epilogu počet* je 16 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet epilogů. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
-    |1|16-23|*Rozšířené slova kódu* je 8 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet slov kód unwind. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
-    |1|24-31|Rezervováno|
+   |----------|----------|-------------|
+   |0|0-17|*Funkce délka* je 18 bitové pole, která určuje celková délka funkce v bajtech, děleno 2. Pokud funkce je větší než 512 KB, musí k popisu funkce používá více záznamů .pdata a .xdata. Podrobnosti najdete v části rozsáhlé funkce v tomto dokumentu.|
+   |0|18-19|*Ver* je 2 bitové pole, která popisuje verzi zbývající xdata. Pouze verze 0 je aktuálně definován; hodnoty 1-3 jsou vyhrazené.|
+   |0|20|*X* je 1bitové pole, která určuje (1) přítomnosti nebo absenci (0) data výjimky.|
+   |0|21|*Elektronické* je 1bitové pole, která označuje, že je informace, které popisují jeden epilogu obsahuje záhlaví (1) namísto toho, aby další obor slova novější (0).|
+   |0|22|*F* je 1bitové pole, která označuje, že tento záznam popisuje fragment – funkce (1) nebo úplné – funkce (0). Fragment znamená, že neexistuje žádná prologu a zda mají být ignorovány veškeré zpracování v prologu.|
+   |0|23-27|*Počet epilogu* je 5 bitové pole, která má dvě význam, v závislosti na stavu *E* bit:<br /><br /> -Pokud *E* je 0, toto pole je počet celkový počet výjimek obory, které je popsáno v oddílu 3. Pokud existuje více než 31 oborů ve funkci a pak toto pole a *slova kódu* pole musí obě být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.<br />-Pokud *E* 1, toto pole určuje index první unwind kód, který popisuje pouze epilogu.|
+   |0|28-31|*Kód slova* je 4 bitové pole, která určuje počet slov 32-bit musí obsahovat všechny kódy unwind sekce 4. Pokud se více než 15 slova jsou povinné pro více než 63 unwind kód bajtů, toto pole a *epilogu počet* pole musí obě být nastaveno na hodnotu 0 označující, že je vyžadována word rozšíření.|
+   |1|0-15|*Rozšířené epilogu počet* je 16 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet epilogů. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
+   |1|16-23|*Rozšířené slova kódu* je 8 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet slov kód unwind. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
+   |1|24-31|Rezervováno|
 
 2. Po data výjimky (Pokud *E* bitu v hlavičce byl nastaven na hodnotu 0) je přehled informací o epilogu obory, které jsou zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje tato pole:
 
    |Bity|Účel|
-    |----------|-------------|
-    |0-17|*Posun Start epilogu* je 18 bitové pole, který popisuje posun epilogu v bajtech, děleno 2, vzhledem k začátku funkce.|
-    |18-19|*Res* je 2 bitového pole vyhrazené pro budoucí rozšíření. Hodnotou musí být 0.|
-    |20-23|*Podmínka* je 4 bitové pole, která poskytuje podmínku, pod kterým je spuštěn epilogu. Nepodmíněný epilogů by měla být nastavena na 0xE, což znamená "always". (Epilogu musí být zcela podmíněný nebo zcela Nepodmíněný a v režimu Thumb-2 epilogu začíná první instrukce po IT operační kód.)|
-    |24-31|*Start Index epilogu* je 8 bitů pole, která určuje bajtový index první unwind kódu, který popisuje toto epilogu.|
+   |----------|-------------|
+   |0-17|*Posun Start epilogu* je 18 bitové pole, který popisuje posun epilogu v bajtech, děleno 2, vzhledem k začátku funkce.|
+   |18-19|*Res* je 2 bitového pole vyhrazené pro budoucí rozšíření. Hodnotou musí být 0.|
+   |20-23|*Podmínka* je 4 bitové pole, která poskytuje podmínku, pod kterým je spuštěn epilogu. Nepodmíněný epilogů by měla být nastavena na 0xE, což znamená "always". (Epilogu musí být zcela podmíněný nebo zcela Nepodmíněný a v režimu Thumb-2 epilogu začíná první instrukce po IT operační kód.)|
+   |24-31|*Start Index epilogu* je 8 bitů pole, která určuje bajtový index první unwind kódu, který popisuje toto epilogu.|
 
 3. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind, které jsou podrobně popsány v části kódy Unwind v tomto článku. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
 
@@ -358,16 +358,16 @@ Je složitější zvláštní případ – funkce fragmenty *shrink-wrapping*, t
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Pečlivě zabaleny funkce obvykle předem přidělte místo pro další registr ukládá pravidelných prologu a pak provést uložení registrů pomocí `str` nebo `stm` místo `push`. Všechny ukazatel zásobníku manipulace se takto zachová v původní prologu funkce.
@@ -386,14 +386,14 @@ Alternativním přístupem můžete také použít, když zásobník manipulace 
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 Klíč zde je, že na každé hranici instrukce je plně v souladu s kódy unwind pro oblast zásobníku. V případě unwind před vnitřní nasdílení změn v tomto příkladu je považovány za součást této oblasti A a je oddělen pouze oblasti prologu. Pokud dojde k procesu odvíjení po dokončení vnitřní operace push, bude považován, že obsahuje části oblasti B, který nemá žádné prologu, ale má unwind kódy, které popisují vnitřní nasdílení změn a původní prologu z oblasti A. podobnou logiku pro vnitřní pop.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
+[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)

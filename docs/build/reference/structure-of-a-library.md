@@ -1,5 +1,5 @@
 ---
-title: Struktura knihovny | Microsoft Docs
+title: Struktura knihovny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eff0000aef01790106b44b49b4855218fcf9332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c2c66d45ee415ddc4f3ba27b6a100c5e2ec1dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702101"
 ---
 # <a name="structure-of-a-library"></a>Struktura knihovny
-Knihovnu obsahuje COFF objekty. Objekty v knihovně obsahují funkce a data, která může externě odkazují jiné objekty v programu. Objekt v knihovně se někdy označuje jako člena knihovny.  
-  
- Další informace o obsahu knihovny můžete získat spuštěním nástroje DUMPBIN s parametrem /LINKERMEMBER. Další informace o této možnosti najdete v tématu [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)
+
+Knihovny obsahuje objekty COFF. Objekty v knihovně obsahují funkce a data, která může odkazovat na externě jinými objekty v programu. Objekt v knihovně se někdy označuje jako člena knihovny.
+
+Další informace o obsahu knihovny můžete získat spuštěním nástroj DUMPBIN s možností /LINKERMEMBER. Další informace o této možnosti najdete v tématu [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled knihovny LIB](../../build/reference/overview-of-lib.md)

@@ -1,5 +1,5 @@
 ---
-title: -nologo (Potlačit úvodní nápis při spouštění) (C/C++) | Microsoft Docs
+title: -nologo (Potlačit úvodní nápis při spouštění) (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51209280fe4ce4b32aa108adb02815c1b9cf57fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36f1d1771abb56bd22e8239923fe2e3c15b1588f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373839"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711864"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Potlačit úvodní nápis při spouštění) (C/C++)
-Potlačí zobrazení Banner informující o autorských právech při spuštění kompilátor a zobrazení informačních zpráv během kompilace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/nologo  
-```  
-  
-## <a name="remarks"></a>Poznámky  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **Obecné** stránku vlastností.  
-  
-4.  Změnit **Potlačit úvodní nápis při spouštění** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Potlačí zobrazení o autorských právech nápisu při spuštění kompilátoru a zobrazení informačních zpráv během kompilace.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/nologo
+```
+
+## <a name="remarks"></a>Poznámky
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **Obecné** stránku vlastností.
+
+1. Upravit **Potlačit úvodní nápis** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

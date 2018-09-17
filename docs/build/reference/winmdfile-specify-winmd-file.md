@@ -1,5 +1,5 @@
 ---
-title: -WINMDFILE (určení souboru winmd) | Microsoft Docs
+title: -WINMDFILE (určení souboru winmd) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eaf1bfc805db568a012c28d66361bbd99745a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375594"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709888"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (Určení souboru winmd)
-Určuje název souboru pro výstupní soubor metadat Windows Runtime (.winmd), který je generovaný [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) – možnost linkeru.  
-  
-```  
-/WINMDFILE:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Použít hodnotu, která je zadána v `filename` přepsat výchozí název souboru .winmd (`binaryname`.winmd). Všimněte si ".winmd" nepřidáte do `filename`.  Pokud více hodnot, které jsou uvedené na **/WINMDFILE** příkazového řádku, jako poslední má přednost před.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte **Linkeru** složky.  
-  
-3.  Vyberte **metadat Windows** stránku vlastností.  
-  
-4.  V **soubor metadat Windows** zadejte umístění souboru.  
-  
-## <a name="see-also"></a>Viz také  
- [/ WINMD (generování metadat Windows)](../../build/reference/winmd-generate-windows-metadata.md)   
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Určuje název souboru výstupního souboru Windows Runtime Metadata (.winmd), který je generován [winmd](../../build/reference/winmd-generate-windows-metadata.md) – možnost linkeru.
+
+```
+/WINMDFILE:filename
+```
+
+## <a name="remarks"></a>Poznámky
+
+Použijte hodnotu ve stanoveném `filename` přepsat výchozí název souboru .winmd (`binaryname`.winmd). Všimněte si, že ".winmd" nepřipojujte k `filename`.  Pokud více hodnot, které jsou uvedeny na **/WINMDFILE** příkazovým řádkem, poslední z nich má přednost.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Vyberte **Linkeru** složky.
+
+1. Vyberte **metadat Windows** stránku vlastností.
+
+1. V **soubor metadat Windows** zadejte umístění souboru.
+
+## <a name="see-also"></a>Viz také
+
+[/ WINMD (generování metadat Windows)](../../build/reference/winmd-generate-windows-metadata.md)
+[nastavení možností Linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

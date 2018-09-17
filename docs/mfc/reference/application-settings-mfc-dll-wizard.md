@@ -1,5 +1,5 @@
 ---
-title: Nastavení aplikace, Průvodce MFC DLL | Microsoft Docs
+title: Nastavení aplikace, Průvodce MFC DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a243b790881452a983c43fb92d8ebea18c26bcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fcf796c7d08cc2733edbf23b66c591e07ec71a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348677"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704974"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Nastavení aplikace, průvodce MFC DLL
-Na této stránce Průvodce MFC DLL návrh a přidat základní funkce do nového projektu knihovny MFC DLL.  
+Tato stránka Průvodce MFC DLL slouží k návrhu a přidat základní funkce do nového projektu knihovny MFC DLL.  
   
-## <a name="dll-type"></a>Typ knihovny DLL  
+## <a name="dll-type"></a>Typ DLL  
  Vyberte typ knihovny DLL, kterou chcete vytvořit.  
   
- **Regulární knihovny MFC DLL pomocí sdílené knihovně MFC DLL**  
- Vyberte tuto možnost propojení knihovny MFC s vaším programem jako sdílenou knihovnu DLL. Použití této možnosti nelze sdílet objekty MFC mezi knihovnou DLL a volající aplikace. Program volá knihovny MFC za běhu. Tato možnost snižuje požadavky na disk a paměť vašeho programu, pokud se skládá z několika provádění soubory, které používají knihovny MFC. Win32 a MFC programy můžete volat funkce v knihovně DLL. Je třeba znovu distribuovat MFC DLL s tímto typem projektu.  
+- **Běžné knihovny MFC DLL pomocí sdílenou knihovnu MFC DLL**
+
+   Tuto možnost propojit váš program jako sdílenou knihovnu DLL knihovny MFC. Použití této možnosti nemůžete sdílet objekty MFC mezi knihovnou DLL a volající aplikace. Váš program provede volání do knihovny MFC v době běhu. Tato možnost snižuje požadavky na disku a paměti programu, pokud se skládá z více spustitelných souborů, které používají knihovnu MFC. Win32 a knihovny MFC programy mohou volat funkce v knihovně DLL. Musíte redistribuovat knihovnu MFC DLL s tímto typem projektu.  
   
- **Staticky propojené běžné knihovny MFC DLL s knihovnou MFC**  
- Tuto možnost propojit váš program staticky knihovny MFC v čase vytvoření buildu. Win32 a MFC programy můžete volat funkce v knihovně DLL. Když tuto možnost zvyšuje velikost vašeho programu, není potřeba znovu distribuovat MFC DLL s tímto typem projektu. MFC – objekty nemohou sdílet mezi knihovnou DLL a volající aplikace.  
+- **Běžné knihovny MFC DLL s knihovnou MFC staticky propojeny.**
+
+   Tuto možnost propojení programu s knihovnou MFC staticky v okamžiku sestavení. Win32 a knihovny MFC programy mohou volat funkce v knihovně DLL. Při této možnosti dojde ke zvětšení program, není nutné znovu distribuovat knihovny DLL MFC s tímto typem projektu. Objekty knihovny MFC nelze sdílet mezi knihovnou DLL a volající aplikace.  
   
- **MFC – rozšiřující knihovny DLL**  
- Tuto možnost vyberte, pokud chcete, aby váš program pro volání do knihovny MFC za běhu, a pokud chcete sdílet objekty knihovny MFC mezi knihovnou DLL a volající aplikace. Tato možnost snižuje požadavky na disk a paměť vašeho programu, pokud se skládá z několika spustitelné soubory, které využívají knihovny MFC. Pouze MFC programy můžete volat funkce v knihovně DLL. Je třeba znovu distribuovat MFC DLL s tímto typem projektu.  
+- **MFC – rozšiřující knihovny DLL**
+
+   Tuto možnost vyberte, pokud chcete program provádět volání do knihovny MFC v době běhu, a pokud budete chtít sdílet objekty MFC mezi knihovnou DLL a volající aplikace. Tato možnost snižuje požadavky na disku a paměti programu, pokud se skládá z více spustitelných souborů, které využívají knihovnu MFC. Pouze v aplikacích MFC lze volat funkce v knihovně DLL. Musíte redistribuovat knihovnu MFC DLL s tímto typem projektu.  
   
 ## <a name="additional-features"></a>Další funkce  
- Vyberte, zda vaše knihovna MFC DLL musí podporovat automatizace a zda má podporovat rozhraní Windows sockets.  
+
+Vyberte, zda vaše knihovna DLL MFC by měl podporu automatizace, a zda má podporovat rozhraní Windows sockets.  
   
- **Automatizace**  
- Vyberte **automatizace** umožnit programu manipulovat s objekty, které jsou implementované v jiném programu. Výběr **automatizace** také poskytuje váš program jiným klientům automatizace. V tématu [automatizace](../../mfc/automation.md) Další informace.  
+- **Automatizace**
+
+   Vyberte **automatizace** povolit program k manipulaci s objekty, které jsou implementovány v jiném programu. Výběr **automatizace** také poskytuje váš program jiným klientům automatizace. Zobrazit [automatizace](../../mfc/automation.md) Další informace.  
   
- **Windows sockets**  
- Vyberte tuto možnost určíte, že daná aplikace podporuje rozhraní Windows sockets. Windows sockets umožňují psát programy, které komunikují přes sítích TCP/IP.  
+- **Windows sockets**
+
+   Tuto možnost použijte k označení, že vaše aplikace podporuje rozhraní Windows sockets. Windows sockets umožňuje psát programy, které komunikují v sítích TCP/IP.  
   
- Když Knihovnu MFC s Windows sockets podpory se vytvoří, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) inicializuje podpora pro sokety a hlavičkový soubor knihovny MFC StdAfx.h AfxSock.h.  
+   Pokud vaše knihovna MFC s Windows sockets – vytvoření podporu [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) inicializuje podporu soketů a souboru hlaviček knihovny MFC StdAfx.h AfxSock.h.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC DLL – Průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)   
+ [Průvodce MFC DLL](../../mfc/reference/mfc-dll-wizard.md)   
  [Vytvoření projektu knihovny MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)
 

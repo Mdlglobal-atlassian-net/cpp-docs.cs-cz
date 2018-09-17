@@ -1,5 +1,5 @@
 ---
-title: Import vazeb | Microsoft Docs
+title: Import vazeb | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7519fb18ac7f24e79a5f7f664cb35f8eb5b3fd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 551028999d11379c06d3319f01e882a33ad57936
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368925"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705195"
 ---
 # <a name="binding-imports"></a>Import vazeb
-Výchozí chování linkeru je vytvoření tabulku vazbu importních adres pro knihovny DLL načtené se zpožděním. Pokud je vázána knihovnu DLL, pomocné funkce se pokusí použít vázané informace namísto volání **GetProcAddress** na každém z odkazovaného importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídají definicím načtené knihovny DLL, pomocné funkce převezme tabulky adres vázané import je zastaralá a bude pokračovat, protože pokud neexistuje.  
-  
- Pokud chcete nikdy vazby importy s odloženým načtením knihovnu DLL, zadání [/delay](../../build/reference/delay-delay-load-import-settings.md): nobind na příkazový řádek linkeru zabráníte tabulku vázané importních adres vygenerovaný a využívání místa v souboru bitové kopie.  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Výchozí chování linkeru je vytvoření tabulky s možností vazby importních adres pro knihovny DLL načtené se zpožděním. Pokud je vázán knihovnu DLL, pomocná funkce se pokusí použít vázané informace namísto volání metody **GetProcAddress** ve všech odkazovaných importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídají těm načtené knihovny DLL, bude předpokládat pomocnou funkci tabulky vázané importních adres je zastaralá a bude pokračovat, protože pokud neexistuje.
+
+Pokud chcete nikdy svázat importy knihovny DLL s odloženým načtením, určení [/delay](../../build/reference/delay-delay-load-import-settings.md): nobind příkazového řádku linkeru zabráníte tabulky vázané importních adres generované a využívání místa v souboru bitové kopie.
+
+## <a name="see-also"></a>Viz také
+
+[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

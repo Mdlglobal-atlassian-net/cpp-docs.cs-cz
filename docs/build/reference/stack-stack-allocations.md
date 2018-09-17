@@ -22,47 +22,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29ed2efa73d3ec1014bf0a65e7b4b1b1b85cf879
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7bd61f1cd56043dd7e2a2234630d722850850735
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703336"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (přidělení zásobníku)
-```  
-/STACK:reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /STACK nastaví velikost zásobníku v bajtech. Tuto možnost použijte pouze v případě, že sestavujete soubor .exe.  
-  
- Hodnota `reserve` určuje celkové přidělení zásobníku ve virtuální paměti. Pro ARM je x86 a x64 počítače, je výchozí velikost zásobníku 1 MB.  
-  
- Parametr `commit` podléhá interpretaci operačního systému. V systémech Windows RT určuje množství fyzické paměti, kterou lze v jednom okamžiku přidělit. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. Vyšší hodnota `commit` šetří čas, potřebuje-li aplikace více místa v zásobníku, ale zvyšuje požadavky na paměť a případně i čas spuštění. Pro ARM je x86 a x64 počítače, je výchozí potvrzená hodnota 4 KB.  
-  
- Hodnoty `reserve` a `commit` zadávejte v desítkovém zápisu nebo v zápisu jazyka C.  
-  
- Dalším způsobem, jak nastavit velikost zásobníku je [STACKSIZE](../../build/reference/stacksize.md) prohlášení v souboru definice modulu (.def). **STACKSIZE** přidělení zásobníku (/ STACK) Pokud jsou zadány oba. Po sestavení souboru .exe s použitím můžete změnit velikost zásobníku [EDITBIN](../../build/reference/editbin-reference.md) nástroj.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte **Linkeru** složky.  
-  
-3.  Vyberte **systému** stránku vlastností.  
-  
-4.  Změňte některou z následujících vlastností:  
-  
-    -   **Velikost potvrzení zásobníku**  
-  
-    -   **Velikost rezervace zásobníku**  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
-1.  Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A> vlastnosti.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/STACK:reserve[,commit]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Možnost /STACK nastaví velikost zásobníku v bajtech. Tuto možnost použijte pouze v případě, že sestavujete soubor .exe.
+
+Hodnota `reserve` určuje celkové přidělení zásobníku ve virtuální paměti. Pro ARM je x86 a x64 počítače, je výchozí velikost zásobníku 1 MB.
+
+Parametr `commit` podléhá interpretaci operačního systému. V systémech Windows RT určuje množství fyzické paměti, kterou lze v jednom okamžiku přidělit. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. Vyšší hodnota `commit` šetří čas, potřebuje-li aplikace více místa v zásobníku, ale zvyšuje požadavky na paměť a případně i čas spuštění. Pro ARM je x86 a x64 počítače, je výchozí potvrzená hodnota 4 KB.
+
+Hodnoty `reserve` a `commit` zadávejte v desítkovém zápisu nebo v zápisu jazyka C.
+
+Dalším způsobem, jak nastavit velikost zásobníku je [STACKSIZE](../../build/reference/stacksize.md) prohlášení v souboru definice modulu (.def). **STACKSIZE** přidělení zásobníku (/ STACK) Pokud jsou zadány oba. Po sestavení souboru .exe s použitím můžete změnit velikost zásobníku [EDITBIN](../../build/reference/editbin-reference.md) nástroj.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Vyberte **Linkeru** složky.
+
+1. Vyberte **systému** stránku vlastností.
+
+1. Změňte některou z následujících vlastností:
+
+   - **Velikost potvrzení zásobníku**
+
+   - **Velikost rezervace zásobníku**
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A> vlastnosti.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

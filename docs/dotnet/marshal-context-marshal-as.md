@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as | Microsoft Docs
+title: marshal_context::marshal_as | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136204"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707899"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
-Provede zařazování na konkrétní datový objekt k převedení mezi spravované a nativní datový typ.  
+Provádí zařazování na konkrétní datový objekt k převodu mezi spravovaný a nativní datovým typem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `input`  
- Hodnota, kterou chcete zařazování na `To_Type` proměnné.  
+*Vstup*<br/>
+[in] Hodnota, kterou chcete zařadit na `To_Type` proměnné.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Proměnné typu `To_Type` tedy převedenou hodnotu `input`.  
+ Proměnné typu `To_Type` , který je převedená hodnota `input`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce provede zařazování na konkrétní datový objekt. Tuto funkci můžete používat jenom s převody uvedené v tabulce v [přehled zařazování v jazyku C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Tato funkce provede zařazování na konkrétní datový objekt. Tuto funkci použít pouze s převody uvedené v tabulce v [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
- Pokud se pokusíte zařazování pár typy dat, které nejsou podporovány, `marshal_as` vygenerují chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadaný k této chybě Další informace. `C4996` Pro více než jen zastaralé funkce může být generována chyba. Jsou dvě podmínky, které bude generovat tuto chybu pokusu o zařazení pár typy dat, které nejsou podporovány a pokusu o použití `marshal_as` pro převod, který vyžaduje kontext.  
+ Pokud se pokusíte zařazování pár datových typů, které nejsou podporované. zahrnuje `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadané k této chybě Další informace. `C4996` Chyby mohou být generovány pro více než jen zastaralé funkce. Jsou dvě podmínky, které budou generovat tato chyba pokusu o zařazení pár datových typů, které nejsou podporovány a pokusu o použití `marshal_as` pro převod, který vyžaduje kontext.  
   
- Knihovny zařazování se skládá z několika hlavičkových souborů. Jakékoli převody vyžaduje pouze jeden soubor, ale můžete zahrnout další soubory, pokud je potřeba pro jiné převody. V tabulce v `Marshaling Overview in C++` Určuje, který zařazování soubor by měl být zahrnutý pro každý převod.  
+ Zařazovací knihovna se skládá z několika hlavičkové soubory. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud je potřeba pro ostatní převody, které můžete zahrnout další soubory. V tabulce v `Marshaling Overview in C++` označuje zařazování soubor, který by měl být zahrnutý pro každý převod.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad vytvoří kontextu pro zařazování z `System::String` k `const char *` typ proměnné. Převedená data nebude po řádek, který odstraní kontextu platný.  
+ Tento příklad vytvoří kontext pro zařazování z `System::String` k `const char *` typ proměnné. Převedená data nebudou po řádek, který odstraní kontextu platný.  
   
 ```  
 // marshal_context_test.cpp  
@@ -82,5 +82,5 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_as –](../dotnet/marshal-as.md)   
  [marshal_context Class](../dotnet/marshal-context-class.md)

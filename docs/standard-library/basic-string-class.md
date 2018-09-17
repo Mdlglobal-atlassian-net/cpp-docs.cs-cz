@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105663"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706612"
 ---
 # <a name="basicstring-class"></a>basic_string – třída
 
@@ -3979,9 +3979,11 @@ C – řetězec, který je jako zdroj pro operand řetězec znaků.
 *_Ch*<br/>
 Znak, který chcete zkopírovat do řetězce operand.
 
-* first0 * na iterátor adresující první znak v řetězci operand odeberou.
+*first0*<br/>
+Iterátor adresující první znak v řetězci operand odebrána.
 
-* last0 * na iterátor adresující poslední znak v řetězci operand odeberou.
+*last0*<br/>
+Iterátor adresující poslední znak v řetězci operand odebrána.
 
 *první*<br/>
 Iterátoru, const_pointer nebo const_iterator adresující první znak ke zkopírování v řetězci parametr.

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706157"
 ---
 # <a name="set-class"></a>set – třída
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ dat prvku, který bude uložen do sady.
+Typ dat prvku, který bude uložen do sady.
 
 *Osobnostní rysy*<br/>
- Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v sadě. Tento argument je nepovinný a binární predikát **méně**  *\<klíč >* je výchozí hodnota.
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v sadě. Tento argument je nepovinný a binární predikát **méně**  *\<klíč >* je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět sady. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět sady. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč prvky, které mají být porovnány ze sady.
+Klíč prvky, které mají být porovnány ze sady.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *kde*<br/>
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*<br/>
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*<br/>
- Hodnota klíče prvků, které mají být odebrány.
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče k porovnání s klíči řazení prvek ze sady vyhledaly.
+Hodnota klíče k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Argument nastavit poskytující prvky pro záměnu s cílem nastavit.
+Argument nastavit poskytující prvky pro záměnu s cílem nastavit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 

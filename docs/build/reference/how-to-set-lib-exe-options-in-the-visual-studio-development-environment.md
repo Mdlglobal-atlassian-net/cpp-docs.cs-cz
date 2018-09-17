@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: nastavení LIB. Možnosti EXE ve vývojovém prostředí sady Visual Studio | Microsoft Docs'
+title: 'Postupy: nastavení LIB. Možnosti EXE ve vývojovém prostředí sady Visual Studio | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707212"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Chcete-li nastavit LIB. Možnosti EXE ve vývojovém prostředí sady Visual Studio  
-  
-1.  Přístup k projektu, [stránka vlastností](../../ide/working-with-project-properties.md) dialogové okno.  
-  
-2.  S projektem statické knihovny active, vyberte **Librarian** uzlu.  
-  
-3.  Vyberte buď obecné nebo vstupu a výstupu stránku vlastností.  
-  
-4.  Podle potřeby upravte vlastnosti.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Chcete-li nastavit LIB. Možnosti EXE ve vývojovém prostředí sady Visual Studio
+
+1. Přístup k projektu [stránku vlastností](../../ide/working-with-project-properties.md) dialogové okno.
+
+1. Aktivní projekt statické knihovny, vyberte **Librarian** uzlu.
+
+1. Vyberte stránku vlastností Obecné nebo vstup/výstup.
+
+1. Podle potřeby upravte vlastnosti.
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

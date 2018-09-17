@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464822"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712514"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl – třída
 Implementuje hypertextový odkaz, který je umístěn na pásu karet. Hypertextový odkaz otevře webovou stránku, po kliknutí.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje ID příkazu, který se spustí po kliknutí na ovládací prvek odkazu příkazu.  
+*nID*<br/>
+[in] Určuje ID příkazu, který se spustí po kliknutí na ovládací prvek odkazu příkazu.  
   
- [in] *lpszText*  
- Určuje popisek se zobrazí na ovládací prvek odkazu.  
+*lpszText*<br/>
+[in] Určuje popisek se zobrazí na ovládací prvek odkazu.  
   
- [in] *lpszLink*  
- Určuje hypertextový odkaz přidružený k ovládacímu prvku odkaz.  
+*lpszLink*<br/>
+[in] Určuje hypertextový odkaz přidružený k ovládacímu prvku odkaz.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob použití konstruktoru `CMFCRibbonLinkCtrl` třídy. Tento fragment kódu je součástí [miniaplikace na pásu karet ukázka](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLink*  
- Určuje text, hypertextový odkaz.  
+*lpszLink*<br/>
+[in] Určuje text, hypertextový odkaz.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

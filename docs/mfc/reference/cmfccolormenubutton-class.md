@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40e943fd6c03838c8c14e202026e10d3c7b22ace
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab793b8c758b95c259c717a794436b59057d4273
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852937"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712982"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton – třída
 `CMFCColorMenuButton` Třída podporuje příkaz nabídky nebo tlačítko panelu nástrojů, které spustí dialogové okno Výběr barvy.  
@@ -143,14 +143,14 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identifikátor příkazu tlačítka  
+*uiCmdID*<br/>
+[in] Identifikátor příkazu tlačítka  
   
- [in] *lpszText*  
- Text tlačítka.  
+*lpszText*<br/>
+[in] Text tlačítka.  
   
- [in] *pPalette*  
- Ukazatel na tlačítko palety barev.  
+*pPalette*<br/>
+[in] Ukazatel na tlačítko palety barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -167,8 +167,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Tlačítko Zdroj kopírování.  
+*src*<br/>
+[in] Tlačítko Zdroj kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem kopírování objektů, které jsou odvozeny z `CMFCColorMenuButton` objektu.  
@@ -197,14 +197,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Určuje text tlačítka, který se zobrazí, když bude automatické tlačítka.  
+*lpszLabel*<br/>
+[in] Určuje text tlačítka, který se zobrazí, když bude automatické tlačítka.  
   
- [in] *barvaAutomatická*  
- Určuje barvu automatického nové.  
+*barvaAutomatická*<br/>
+[in] Určuje barvu automatického nové.  
   
- [in] *bEnable*  
- Určuje, zda je tlačítko Automatické.  
+*bEnable*<br/>
+[in] Určuje, zda je tlačítko Automatické.  
   
 ### <a name="remarks"></a>Poznámky  
  Automatické tlačítko použije aktuální výchozí barvu.  
@@ -219,11 +219,11 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Určuje text tlačítka.  
+*lpszLabel*<br/>
+[in] Určuje text tlačítka.  
   
- [in] *bEnable*  
- TRUE, pokud chcete zobrazit konkrétní dokumenty barvy nebo FALSE pro zobrazení systémových barev.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zobrazit konkrétní dokumenty barvy nebo FALSE pro zobrazení systémových barev.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete zobrazit aktuální barvy dokumentu nebo systémové barvy palety, když uživatel klikne na tlačítko nabídky barvu.  
@@ -239,14 +239,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Určuje text tlačítka.  
+*lpszLabel*<br/>
+[in] Určuje text tlačítka.  
   
- [in] *bAltColorDlg*  
- Zadejte hodnotu TRUE pro zobrazení `CMFCColorDialog` dialogového okna, nebo hodnotu FALSE, chcete-li zobrazit dialogové okno Barva standardní systém.  
+*bAltColorDlg*<br/>
+[in] Zadejte hodnotu TRUE pro zobrazení `CMFCColorDialog` dialogového okna, nebo hodnotu FALSE, chcete-li zobrazit dialogové okno Barva standardní systém.  
   
- [in] *bEnable*  
- Zadejte TRUE, pokud chcete zobrazit tlačítko "other"; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] Zadejte TRUE, pokud chcete zobrazit tlačítko "other"; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -261,14 +261,14 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Určuje ID pro podokno odnímatelnými nabídkami.  
+*uiID*<br/>
+[in] Určuje ID pro podokno odnímatelnými nabídkami.  
   
- [in] *nVertDockColumns*  
- Určuje počet sloupců v podokně svisle barva ve stavu odnímatelnými nabídkami.  
+*nVertDockColumns*<br/>
+[in] Určuje počet sloupců v podokně svisle barva ve stavu odnímatelnými nabídkami.  
   
- [in] *nHorzDockRows*  
- Určuje počet řádků pro podokna vodorovně ukotvené barva ve stavu odnímatelnými nabídkami.  
+*nHorzDockRows*<br/>
+[in] Určuje počet řádků pro podokna vodorovně ukotvené barva ve stavu odnímatelnými nabídkami.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem povolení této funkce "odtržených" pro podokno barvu, která se zobrazí, když `CMFCColorMenuButton` stisknutí tlačítka.  
@@ -306,8 +306,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- ID příkazu.  
+*uiCmdID*<br/>
+[in] ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Barva, která odpovídá ID zadaného příkazu.  
@@ -336,8 +336,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Ukazatel do nového nadřazeného okna.  
+*pWndParent*<br/>
+[in] Ukazatel do nového nadřazeného okna.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -357,29 +357,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Obdélník, který oblasti, ke které se měl překreslit za rozsahem.  
+*Rect*<br/>
+[in] Obdélník, který oblasti, ke které se měl překreslit za rozsahem.  
   
- [in] *pImages*  
- Odkazuje na seznam obrázků panelu nástrojů.  
+*pImages*<br/>
+[in] Odkazuje na seznam obrázků panelu nástrojů.  
   
- [in] *bHorz*  
- TRUE, pokud chcete určit, že panelu nástrojů v vodorovné ukotvených stavu; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bHorz*<br/>
+[in] TRUE, pokud chcete určit, že panelu nástrojů v vodorovné ukotvených stavu; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
- [in] *bCustomizeMode*  
- TRUE, pokud chcete určit, že aplikace je v režimu úprav. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bCustomizeMode*<br/>
+[in] TRUE, pokud chcete určit, že aplikace je v režimu úprav. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
- [in] *bHighlight*  
- TRUE, pokud chcete určit, že tlačítko bude zvýrazněný. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bHighlight*<br/>
+[in] TRUE, pokud chcete určit, že tlačítko bude zvýrazněný. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
- [in] *bDrawBorder*  
- TRUE, pokud chcete určit, že se zobrazí okraj tlačítka. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bDrawBorder*<br/>
+[in] TRUE, pokud chcete určit, že se zobrazí okraj tlačítka. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
- [in] *bGrayDisabledButtons*  
- TRUE, pokud chcete určit, že jsou zakázané tlačítka šedým (neaktivní) v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bGrayDisabledButtons*<br/>
+[in] TRUE, pokud chcete určit, že jsou zakázané tlačítka šedým (neaktivní) v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -394,14 +394,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Obdélník, který za rozsahem tlačítko, které chcete kreslit.  
+*Rect*<br/>
+[in] Obdélník, který za rozsahem tlačítko, které chcete kreslit.  
   
- [in] *bSelected*  
- Hodnota TRUE Určuje, že je tlačítko ve vybraném stavu; v opačném případě hodnota FALSE.  
+*bSelected*<br/>
+[in] Hodnota TRUE Určuje, že je tlačítko ve vybraném stavu; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Šířka tlačítka.  
@@ -419,11 +419,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *colorDefault*  
- Výchozí barva, která je vybrána v dialogovém okně barev.  
+*colorDefault*<br/>
+[in] Výchozí barva, která je vybrána v dialogovém okně barev.  
   
- [out] *colorRes*  
- Vrátí barvu, kterou uživatel vybere v dialogovém okně barev.  
+*colorRes*<br/>
+[out] Vrátí barvu, kterou uživatel vybere v dialogovém okně barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud uživatel vybere novou barvu. jinak, nula.  
@@ -441,11 +441,11 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clr*  
- Hodnota barvy RGB.  
+*CLR*<br/>
+[in] Hodnota barvy RGB.  
   
- [in] *bNotify*  
- PRAVDA, pokud chcete použít *clr* parametr barva jakékoli přidružené nabídky nebo panelu nástrojů tlačítko; jinak hodnota FALSE.  
+*bNotify*<br/>
+[in] PRAVDA, pokud chcete použít *clr* parametr barva jakékoli přidružené nabídky nebo panelu nástrojů tlačítko; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze změnit barvu aktuální barva – tlačítko. Pokud *bNotify* je parametr nenulovou hodnotu, se změní barvu na odpovídající tlačítko na jakékoli přidružené místní nabídky nebo panelu nástrojů na barva určená *clr* parametru.  
@@ -460,11 +460,11 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- ID prostředku barva tlačítek nabídky.  
+*uiCmdID*<br/>
+[in] ID prostředku barva tlačítek nabídky.  
   
- [in] *barva*  
- Hodnota barvy RGB.  
+*Barva*<br/>
+[in] Hodnota barvy RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Nastaví nový název pro zadanou barvu.  
@@ -476,11 +476,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- Hodnota RGB barvy, jehož název se změní.  
+*Barva*<br/>
+[in] Hodnota RGB barvy, jehož název se změní.  
   
- [in] *%{strName/*  
- Nový název barvy.  
+*%{strName/*<br/>
+[in] Nový název barvy.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -492,8 +492,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nColumns*  
- Počet zobrazovaných sloupců.  
+*nColumns*<br/>
+[in] Počet zobrazovaných sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
   

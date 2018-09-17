@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711682"
 ---
 # <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton – třída
 `CMFCCaptionButton` Třída implementuje tlačítka, který se zobrazí v záhlaví pro ukotvené podokno nebo okno s minirámcem. Obvykle rozhraní vytvoří titulek tlačítka automaticky.  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHit*  
- Příkaz přidružený k tlačítku.  
+*nHit*<br/>
+[in] Příkaz přidružený k tlačítku.  
   
- [in] *bLeftAlign*  
- Určuje, zda tlačítko je umístěno na levé straně.  
+*bLeftAlign*<br/>
+[in] Určuje, zda tlačítko je umístěno na levé straně.  
   
  V následující tabulce jsou uvedeny možné hodnoty pro *nHit* parametru.  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHorz*  
- Hodnota TRUE pro image šipka doleva nebo doprava ID; FALSE pro navýšení nebo snížení kapacity obrázku šipky ID.  
+*bHorz*<br/>
+[in] Hodnota TRUE pro image šipka doleva nebo doprava ID; FALSE pro navýšení nebo snížení kapacity obrázku šipky ID.  
   
- [in] *bMaximized*  
- Hodnota TRUE pro ID bitové kopie maximalizovat; FALSE pro ID minimalizovat bitové kopie.  
+*bMaximized*<br/>
+[in] Hodnota TRUE pro ID bitové kopie maximalizovat; FALSE pro ID minimalizovat bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  ID bitové kopie.  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ptTo*  
- Nové umístění.  
+*ptTo*<br/>
+[in] Nové umístění.  
   
- [in] *bHide*  
- Určuje, zda je zobrazeno tlačítko.  
+*bHide*<br/>
+[in] Určuje, zda je zobrazeno tlačítko.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Nakreslí titulek tlačítka.  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení pro tlačítko.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení pro tlačítko.  
   
- [in] *bActive*  
- Určuje, zda vykreslení obrázku tlačítka aktivní.  
+*bActive*<br/>
+[in] Určuje, zda vykreslení obrázku tlačítka aktivní.  
   
- [in] *bHorz*  
- Vyhrazené pro použití v odvozené třídě.  
+*bHorz*<br/>
+[in] Vyhrazené pro použití v odvozené třídě.  
   
- [in] *bMaximized*  
- Určuje, zda chcete-li nakreslit obrázek maximalizované tlačítka.  
+*bMaximized*<br/>
+[in] Určuje, zda chcete-li nakreslit obrázek maximalizované tlačítka.  
   
- [in] *bDisabled*  
- Určuje, zda vykreslení obrázku povolené tlačítko.  
+*bDisabled*<br/>
+[in] Určuje, zda vykreslení obrázku povolené tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  *BMaximized* parametr se používá, když je tlačítko Maximalizovat nebo tlačítko Minimalizovat.  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- Hodnota TRUE pro Výška pruhu mini názvu; FALSE pro Výška pruhu výchozí název.  
+*bSet*<br/>
+[in] Hodnota TRUE pro Výška pruhu mini názvu; FALSE pro Výška pruhu výchozí název.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

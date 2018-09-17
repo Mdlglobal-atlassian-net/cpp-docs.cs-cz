@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705130"
 ---
 # <a name="writemsr"></a>__writemsr
 **Specifické pro Microsoft**  
@@ -40,11 +40,11 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Register`  
- Model konkrétním registru.  
+*Registrace*<br/>
+[in] Model konkrétním registru.  
   
- [in] `Value`  
- Hodnota pro zápis  
+*Hodnota*<br/>
+[in] Hodnota k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   

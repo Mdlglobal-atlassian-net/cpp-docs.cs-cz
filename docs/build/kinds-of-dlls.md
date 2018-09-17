@@ -1,5 +1,5 @@
 ---
-title: Druhy knihoven DLL | Microsoft Docs
+title: Druhy knihoven DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,63 +16,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ca646c39bbe99ba4ed4059f350d9478b669d408
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369939"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710174"
 ---
 # <a name="kinds-of-dlls"></a>Druhy knihoven DLL
-Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro sestavení.  
-  
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Různé druhy knihoven DLL, které jsou k dispozici  
- Pomocí Visual C++, můžete vytvořit Win32 knihovny DLL v jazyka C nebo C++, která nepoužívají knihovna Microsoft Foundation Class (MFC). Můžete vytvořit projekt knihovny MFC DLL pomocí Průvodce aplikací Win32.  
-  
- Samotné knihovny MFC je k dispozici, buď statických knihoven nebo v počtu knihovny DLL pomocí Průvodce MFC DLL. Pokud vaše knihovna DLL je použití prostředí MFC, Visual C++ podporuje tři různé scénáře vývoje knihovny DLL:  
-  
--   Sestavování běžný MFC DLL, která staticky propojuje MFC  
-  
--   Sestavování běžný MFC DLL, která dynamicky propojuje MFC  
-  
--   Sestavování knihovnu DLL, která vždy dynamicky propojené knihovny MFC  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
-  
--   [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)  
-  
--   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
-  
--   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
-  
--   [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)  
-  
--   [Jaký druh knihovny DLL používat](#_core_which_kind_of_dll_to_use)  
-  
-##  <a name="_core_which_kind_of_dll_to_use"></a> Rozhodování, jaký druh knihovny DLL pro použití  
- Pokud vaše knihovna DLL nepoužívá MFC, použijte k vytvoření non - MFC Win32 DLL Visual C++. Propojování vaší knihovny DLL do MFC (staticky nebo dynamicky) zabere podstatné místo na disku a paměť. Pokud vaše knihovna DLL aktuálně používá MFC, by neměl MFC propojit.  
-  
- Pokud vaše knihovna DLL použijete MFC a použije MFC nebo mimo MFC aplikací, musíte sestavit běžné knihovny DLL MFC, který dynamicky odkazuje na knihovny MFC nebo běžné knihovny DLL MFC, který staticky odkazuje na knihovny MFC. Ve většině případů budete chtít pravděpodobně používat běžné knihovny DLL MFC, který dynamicky odkazuje na knihovny MFC, protože budou mnohem menší velikost souboru knihovny DLL a úspory v paměti pomocí sdílené verze knihovny MFC může být důležité. Pokud se staticky propojíte s knihovnou MFC, velikost souboru vaší knihovny DLL bude větší a potenciálně trvat až paměť navíc, protože je načten jeho vlastní privátní kopii kódu knihovny MFC.  
-  
- Vytváření knihovny DLL, která propojuje ke knihovně MFC je rychlejší než vytváření knihovny DLL, který staticky odkazuje na knihovny MFC, protože není potřeba propojit MFC sám sebe. To platí hlavně v linkeru musí kde compact informace o ladění sestavení pro ladění. Pomocí propojení s knihovny DLL, která již obsahuje informace o ladění, je menší informace o ladění, chcete-li komprimovat v rámci vaší knihovny DLL.  
-  
- Jednou z nevýhod k dynamickému propojení s knihovnou MFC je s knihovny DLL musí distribuovat sdílené knihovny DLL Mfcx0.dll a Msvcrxx.dll (nebo podobné soubory). Knihovny MFC DLL jsou volně redistributable, ale stále je nutné nainstalovat knihovny DLL v instalačním programu. Kromě toho můžete musíte poskytnout Msvcrxx.dll, který obsahuje běhové knihovny jazyka C, který se používá jak podle vašeho programu a knihovny MFC DLL sami.  
-  
- Pokud vaše knihovna DLL se používá pouze spustitelné soubory knihovny MFC, máte možnost volby mezi vytváření běžné knihovny MFC DLL nebo knihovnu DLL. Pokud vaše knihovna DLL implementuje použitelné třídy odvozené z existujících tříd MFC nebo potřebujete předat objekt odvozené MFC mezi aplikací a knihovny DLL, musíte sestavit knihovnu DLL.  
-  
- Pokud vaše knihovna DLL dynamicky odkazuje na knihovny MFC a knihovny MFC DLL může být znovu distribuovány s knihovny DLL. Tato architektura je zvláště užitečná pro sdílení knihovny tříd mezi více spustitelné soubory ušetřit místo na disku a minimalizovat využití paměti.  
-  
- Starší než verze 4.0, Visual C++ pouze podporované dva druhy knihoven DLL, které používají MFC: knihovny USRDLL a AFXDLL. Regulární knihovny MFC DLL staticky propojené do MFC mají stejné vlastnosti jako dosavadní USRDLL. MFC – knihovny DLL rozšíření mají stejné vlastnosti jako dřívější AFXDLL.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
-  
--   [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)  
-  
--   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
-  
--   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
-  
--   [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+
+Toto téma obsahuje informace, které vám pomohou určit druh Knihovny k sestavení.
+
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Různé typy dostupných knihoven DLL
+
+Visual C++ můžete sestavit Win32 knihovny DLL v jazyce C nebo C++, které nepoužívají knihovny Microsoft Foundation Class (MFC). Vytvořte projekt knihovny MFC DLL pomocí Průvodce aplikací Win32.
+
+Samotné knihovny MFC je k dispozici ve statickém propojení knihoven nebo v řadě knihoven DLL s průvodcem knihovny MFC DLL. Pokud vaše knihovna DLL používána knihovnou MFC, Visual C++ podporuje tři různé scénáře vývoje knihovny DLL:
+
+- Sestavování běžné knihovny MFC DLL, která staticky propojuje knihovnu MFC
+
+- Sestavování běžné knihovny MFC DLL, která dynamicky propojuje knihovnu MFC
+
+- Sestavování rozšiřující knihovny DLL MFC, která vždy dynamicky propojí knihovnu MFC
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+- [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)
+
+- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+
+- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+
+- [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)
+
+- [Jaký druh knihovny DLL použít](#_core_which_kind_of_dll_to_use)
+
+##  <a name="_core_which_kind_of_dll_to_use"></a> Rozhodování o tom, jaký druh knihovny DLL použít
+
+Pokud vaše knihovna DLL nepoužívá knihovnu MFC, použijte Visual C++ k sestavení non - MFC Win32 DLL. Propojování vaší knihovny DLL ke knihovně MFC (staticky nebo dynamicky) zabere značnou část disku a paměti. Neměli byste propojovat ke knihovně MFC, pokud vaše knihovna DLL aktuálně nepoužívá knihovnu MFC.
+
+Pokud vaše knihovna DLL používat knihovnu MFC a budou používat aplikace knihovny MFC nebo knihovny non-MFC, musíte sestavit obvyklou knihovnu DLL MFC, která dynamicky propojuje ke knihovně MFC nebo běžné knihovny MFC DLL, která staticky propojuje ke knihovně MFC. Ve většině případů budete pravděpodobně chtít použít běžné knihovny MFC DLL dynamicky propojuje ke knihovně MFC, protože velikost souboru knihovny DLL bude mnohem menší a mohou být Úspora paměti narozdíl od použití sdílených verzí knihovny MFC. Pokud staticky propojíte ke knihovně MFC, velikost souboru knihovny DLL bude větší a potenciálně zabere dodatečnou paměť, protože je načtena vlastní soukromá kopie kódu knihovny MFC.
+
+Sestavení knihovny DLL, která dynamicky propojuje ke knihovně MFC je rychlejší než sestavování knihovny DLL, která staticky propojuje ke knihovně MFC, protože není nutné samostatně propojit knihovnu MFC. To platí zejména v sestavení ladění, kde musí propojovací program kompaktně ladit informace. Díky propojení s knihovnou DLL, která už obsahuje informace o ladění, je méně ladících informací ke spojení v rámci vaší DLL Knihovny.
+
+Jednou nevýhodou dynamického propojení ke knihovně MFC je, že musíte distribuovat sdílené knihovny DLL Mfcx0.dll a Msvcrxx.dll (nebo podobné soubory) s vaší knihovou DLL. Knihovny DLL MFC jsou volně redistribuovány, ale stále je nutné nainstalovat knihovny DLL ve vašem instalačním programu. Kromě toho můžete musíte poskytnout Msvcrxx.dll, která obsahuje knihovny runtime jazyka C, který se používá i tak, že váš program a samotnými knihovnami MFC DLL.
+
+Pokud vaše knihovna DLL bude použita pouze spustitelnými soubory knihovny MFC, máte možnost volby mezi sestavením běžné knihovny MFC DLL nebo rozšiřující knihovny DLL MFC. Pokud vaše knihovna DLL opakovaně implementuje použitelné třídy odvozené z existujících tříd knihovny MFC nebo potřebujete předat mezi aplikací a knihovny DLL MFC odvozené objekty, musíte sestavit rozšiřující knihovny DLL MFC.
+
+Pokud vaše knihovna DLL dynamicky propojuje ke knihovně MFC, knihovny DLL MFC můžou být znovu distribuovány s vaší knihovou DLL. Tato architektura je zvláště užitečná pro sdílení knihovny tříd mezi několika spustitelnými soubory k ušetřit místo na disku a minimalizuje využití paměti.
+
+Před verzí 4.0, Visual C++ pouze podporované dva druhy knihoven DLL, které používají knihovnu MFC: USRDLL a AFXDLL. Regulární knihovny MFC DLL staticky propojené do MFC mají stejné vlastnosti jako dosavadní USRDLL. Rozšiřující knihovny DLL MFC mají stejné vlastnosti jako dřívější AFXDLL.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+- [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)
+
+- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+
+- [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+
+- [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)
+
+## <a name="see-also"></a>Viz také
+
+[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

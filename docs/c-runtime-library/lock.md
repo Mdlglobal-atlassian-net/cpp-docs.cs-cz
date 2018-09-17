@@ -1,5 +1,5 @@
 ---
-title: _Lock | Microsoft Docs
+title: _Lock | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57b1cfca4740b3190c2afb8eb557fabded3895bd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390466"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707613"
 ---
 # <a name="lock"></a>_lock
 Získá zámek více vláken.  
   
 > [!IMPORTANT]
->  Tato funkce je zastaralé. Od verze sady Visual Studio 2015, není k dispozici v CRT.  
+>  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,11 +52,11 @@ void __cdecl _lock
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `locknum`  
- Identifikátor získat zámek.  
+*locknum*<br/>
+[in] Identifikátor zámek k získání.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud již byla získal zámek, tato metoda získá zámek přesto a způsobí, že k vnitřní chybě C Runtime (CRT). Pokud metoda nelze získat zámek, ukončí se o závažnou chybu a nastaví kód chyby `_RT_LOCK`.  
+ Pokud již byly získány zámek, tato metoda přesto získá zámek a způsobí, že vnitřní chybě C Runtime (CRT). Pokud metoda nemůže získat zámek, ukončí kvůli závažné chybě a nastaví kód chyby: `_RT_LOCK`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Zdroj:** mlock.c  

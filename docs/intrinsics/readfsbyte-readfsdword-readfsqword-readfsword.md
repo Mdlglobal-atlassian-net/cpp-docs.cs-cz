@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs
+title: __readfsbyte __readfsdword, __readfsqword __readfsword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705683"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
-**Konkrétní Microsoft**  
+# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte __readfsdword, __readfsqword, __readfsword
+**Specifické pro Microsoft**  
   
- Čtení paměti z umístění určeného posun vzhledem k začátku segmentu služby FS.  
+ Čtení paměti z umístění, které určuje posun vzhledem k začátku segmentu služby FS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,15 +56,15 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
- Posun od začátku `FS` číst z.  
+*Posun*<br/>
+[in] Posun od začátku `FS` ke čtení z.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Obsah paměti bajtů, word, doubleword nebo quadword (označeno název volaná funkce) v umístění `FS:[Offset]`.  
+ Obsah paměti byte, word, dvojitého slova nebo quadword (jak je uvedeno podle názvu funkce volaná) v umístění `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__readfsbyte`|x86|  
 |`__readfsdword`|x86|  
@@ -76,7 +76,7 @@ unsigned __int64 __readfsqword(
 ## <a name="remarks"></a>Poznámky  
  Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   

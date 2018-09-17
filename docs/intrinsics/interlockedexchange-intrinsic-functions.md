@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716212"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchange
 **Specifické pro Microsoft**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `Target`  
- Ukazatel na hodnotu, která bude vyměněn. Funkce nastaví tuto proměnnou na `Value` a vrátí jeho předchozí hodnotu.  
+*Cíl*<br/>
+[out v] Ukazatel na hodnotu, která bude vyměněn. Funkce nastaví tuto proměnnou na `Value` a vrátí jeho předchozí hodnotu.  
   
- [in] `Value`  
- Hodnota mají vyměnit s hodnotou odkazované `Target`.  
+*Hodnota*<br/>
+[in] Hodnota mají vyměnit s hodnotou odkazované `Target`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí počáteční hodnotu, na které odkazuje `Target`.  

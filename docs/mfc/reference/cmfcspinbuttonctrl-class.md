@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCSpinButtonCtrl | Microsoft Docs
+title: Cmfcspinbuttonctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039463"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712748"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl – třída
-`CMFCSpinButtonCtrl` Třída podporuje visual správce, který se vykreslí ovládací prvek typu číselník tlačítko.  
+# <a name="cmfcspinbuttonctrl-class"></a>Cmfcspinbuttonctrl – třída
+`CMFCSpinButtonCtrl` Třída podporuje vizuálního správce, který vykreslí ovládací prvek číselníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 |[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Překreslí aktuální ovládací prvek typu číselník tlačítko.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud chcete použít k vykreslení ovládacího prvku typu číselník tlačítko v aplikaci visual manager, nahraďte všechny výskyty `CSpinButtonCtrl` třídy s `CMFCSpinButtonCtrl` třídy.  
+ Nakreslete ovládací prvek číselníku ve vaší aplikaci pomocí Správce vzhledu, nahraďte všechny výskyty `CSpinButtonCtrl` třídy s `CMFCSpinButtonCtrl` třídy.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit objekt `CMFCSpinButtonCtrl` třídy a použít jeho `Create` metoda.  
@@ -58,15 +58,15 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)  
+ [Cspinbuttonctrl –](../../mfc/reference/cspinbuttonctrl-class.md)  
   
- [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
+ [Cmfcspinbuttonctrl –](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxspinbuttonctrl.h  
@@ -79,11 +79,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání framework `CMFCSpinButtonCtrl::OnPaint` metodu ke zpracování [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) zprávu, a že metoda volá to `CMFCSpinButtonCtrl::OnDraw` metoda. Potlačí tuto metodu lze upravit způsob rozhraní nevykresluje ovládací prvek typu číselník tlačítko.  
+ Rámec volá `CMFCSpinButtonCtrl::OnPaint` metodu ke zpracování [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) zprávu, a že metoda volá to `CMFCSpinButtonCtrl::OnDraw` metody. Přepsáním této metody můžete přizpůsobit tak, jak rozhraní nakreslí otočný ovládací prvek tlačítko.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

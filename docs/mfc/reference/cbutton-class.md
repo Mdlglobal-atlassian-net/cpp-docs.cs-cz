@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196708"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701830"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 Poskytuje funkce pro ovládací prvky tlačítka Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Ukazatel do vyrovnávací paměti, která má volající zodpovídá za přidělování a rušení přidělení. Pokud vrácená hodnota je TRUE, vyrovnávací paměť obsahuje text poznámky, který je přidružený aktuální příkaz Ovládací prvek odkazu; v opačném případě vyrovnávací paměť je beze změny.|  
-|[out v] *cchNote*|Ukazatel na proměnnou celého čísla bez znaménka.<br /><br /> Když tato metoda je volána, proměnná obsahuje velikost vyrovnávací paměti určené parametrem *lpszNote* parametru.<br /><br /> Pokud tato metoda vrátí hodnotu, pokud vrácená hodnota je TRUE proměnné obsahuje velikost poznámky přidružené k aktuální ovládací prvek odkazu příkazu. Pokud vrácená hodnota je FALSE, proměnná obsahuje velikost vyrovnávací paměti musí obsahovat poznámku.|  
+|*lpszNote*|[out] Ukazatel do vyrovnávací paměti, která má volající zodpovídá za přidělování a rušení přidělení. Pokud vrácená hodnota je TRUE, vyrovnávací paměť obsahuje text poznámky, který je přidružený aktuální příkaz Ovládací prvek odkazu; v opačném případě vyrovnávací paměť je beze změny.|  
+|*cchNote*|[out v] Ukazatel na proměnnou celého čísla bez znaménka.<br /><br /> Když tato metoda je volána, proměnná obsahuje velikost vyrovnávací paměti určené parametrem *lpszNote* parametru.<br /><br /> Pokud tato metoda vrátí hodnotu, pokud vrácená hodnota je TRUE proměnné obsahuje velikost poznámky přidružené k aktuální ovládací prvek odkazu příkazu. Pokud vrácená hodnota je FALSE, proměnná obsahuje velikost vyrovnávací paměti musí obsahovat poznámku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V první přetížení [CString](../../atl-mfc-shared/using-cstring.md) objekt, který obsahuje text poznámky, které jsou přidružené k aktuální ovládací prvek odkazu příkazu.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pInfo*|Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura, která obdrží informace o aktuální tlačítko rozdělení ovládání. Volající zodpovídá za přidělování struktury.|  
+|*pInfo*|[out] Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktura, která obdrží informace o aktuální tlačítko rozdělení ovládání. Volající zodpovídá za přidělování struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pSize*|Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
+|*pSize*|[out] Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *fDropDown*|TRUE, pokud chcete nastavit stav BST_DROPDOWNPUSHED; v opačném případě hodnota FALSE.|  
+|*fDropDown*|[in] TRUE, pokud chcete nastavit stav BST_DROPDOWNPUSHED; v opačném případě hodnota FALSE.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|True pro sadu `elevation required` stavu; jinak FALSE.|  
+|*fElevationRequired*|[in] True pro sadu `elevation required` stavu; jinak FALSE.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Ukazatel na řetězec znaků Unicode, který je nastaven jako text poznámky pro ovládací prvek propojení příkazů.|  
+|*lpszNote*|[in] Ukazatel na řetězec znaků Unicode, který je nastaven jako text poznámky pro ovládací prvek propojení příkazů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Znak, který určuje glyfů pro použití jako na šipku rozevíracího seznamu tlačítko rozdělení.|  
+|*chGlyph*|[in] Znak, který určuje glyfů pro použití jako na šipku rozevíracího seznamu tlačítko rozdělení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu, který chcete přiřadit k aktuální tlačítko rozdělení ovládání.|  
+|*pSplitImageList*|[in] Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) objektu, který chcete přiřadit k aktuální tlačítko rozdělení ovládání.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pInfo*|Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu, která definuje aktuální tlačítko rozdělení ovládání.|  
+|*pInfo*|[in] Ukazatel [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturu, která definuje aktuální tlačítko rozdělení ovládání.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pSize*|Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
+|*pSize*|[in] Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
+|*uSplitStyle*|[in] Bitová kombinace hodnot styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` člena [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  

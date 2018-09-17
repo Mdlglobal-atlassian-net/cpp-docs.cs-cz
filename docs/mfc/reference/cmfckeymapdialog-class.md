@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704039"
 ---
 # <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog – třída
 `CMFCKeyMapDialog` Třída podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParentFrame*  
- Ukazatel do nadřazeného okna `CMFCKeyMapDialog` objektu.  
+*pWndParentFrame*<br/>
+[in] Ukazatel do nadřazeného okna `CMFCKeyMapDialog` objektu.  
   
- [in] *bEnablePrint*  
- Hodnota TRUE, pokud lze vytisknout seznam klávesové zkratky; v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bEnablePrint*<br/>
+[in] Hodnota TRUE, pokud lze vytisknout seznam klávesové zkratky; v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItem*  
- Index založený na nule položka ve vnitřním seznamu mapování klíčů.  
+*nItem*<br/>
+[in] Index založený na nule položka ve vnitřním seznamu mapování klíčů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CString` objekt, který obsahuje text formátovaný položky.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- ID příkazu.  
+*uiCmdID*<br/>
+[in] ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Oddělený středníkem (;) seznam klávesových zkratek, které souvisí s zadaný příkaz.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel, který se používá k mapování kombinaci kláves klávesnice k příkazu název a popis tlačítka panelu nástrojů. Položka mapování klíčů je uložena v ovládacím prvku vnitřní seznam.  
+*pButton*<br/>
+[in] Ukazatel, který se používá k mapování kombinaci kláves klávesnice k příkazu název a popis tlačítka panelu nástrojů. Položka mapování klíčů je uložena v ovládacím prvku vnitřní seznam.  
   
- [in] *nItem*  
- Index založený na nule, který určuje, kam chcete vložit novou položku mapování klíčů v ovládacím prvku vnitřní seznam.  
+*nItem*<br/>
+[in] Index založený na nule, který určuje, kam chcete vložit novou položku mapování klíčů v ovládacím prvku vnitřní seznam.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *řadiče domény*  
- Kontext zařízení pro tiskárny.  
+*řadič domény*<br/>
+[in] Kontext zařízení pro tiskárny.  
   
- [in] *nPage*  
- Číslo stránky k tisku.  
+*nPage*<br/>
+[in] Číslo stránky k tisku.  
   
- [in] *cx*  
- Vodorovný posun záhlaví v pixelech.  
+*CX*<br/>
+[in] Vodorovný posun záhlaví v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěšného ověření výšku tištěných textu. Další informace najdete v části vrátit hodnotu z [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *řadiče domény*  
- Kontext zařízení tiskárny.  
+*řadič domény*<br/>
+[in] Kontext zařízení tiskárny.  
   
- [in] *nItem*  
- Index založený na nule položky k vytištění.  
+*nItem*<br/>
+[in] Index založený na nule položky k vytištění.  
   
- [in] *y*  
- Svislý posun mezi horní části stránky a pozici položky.  
+*y*<br/>
+[in] Svislý posun mezi horní části stránky a pozici položky.  
   
- [in] *cx*  
- Vodorovný posun mezi levé části stránky a pozici položky.  
+*CX*<br/>
+[in] Vodorovný posun mezi levé části stránky a pozici položky.  
   
- [in] *bCalcHeight*  
- TRUE, pokud chcete vypočítat nejlepší výška tisku položky; Došlo ke zkrácení tisku položky tak, aby místo výchozí hodnotu FALSE.  
+*bCalcHeight*<br/>
+[in] TRUE, pokud chcete vypočítat nejlepší výška tisku položky; Došlo ke zkrácení tisku položky tak, aby místo výchozí hodnotu FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výšku tištěných položky.  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e84b76f8079656da3ed19aa2c690bf240854015
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594353"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704884"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -41,14 +41,14 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-Chcete-li přidat o první číslo. Toto musí být typu T.
+*t*<br/>
+[in] Chcete-li přidat o první číslo. Toto musí být typu T.
 
-[in] *u*  
-Druhé číslo, které chcete přidat. Musí se jednat o typ U.
+*u*<br/>
+[in] Druhé číslo, které chcete přidat. Musí se jednat o typ U.
 
-[out] *výsledek*  
-Parametr kde **SafeAdd** výsledek je uložen.
+*výsledek*<br/>
+[out] Parametr kde **SafeAdd** výsledek je uložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 

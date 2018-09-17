@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707451"
 ---
 # <a name="multimap-class"></a>multimap – třída
 
@@ -120,18 +120,18 @@ class multimap;
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Datový typ klíče, který se uloží v objektu multimap.
+Datový typ klíče, který se uloží v objektu multimap.
 
 *Typ*<br/>
- Typ dat prvku, který bude uložen do objektu multimap.
+Typ dat prvku, který bude uložen do objektu multimap.
 
 *Osobnostní rysy*<br/>
- Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu multimap. Binární predikát `less<Key>` je výchozí hodnota.
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu multimap. Binární predikát `less<Key>` je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč prvky, které mají být odpovídat z objektu multimap.
+Klíč prvky, které mají být odpovídat z objektu multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -916,7 +916,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1003,16 +1003,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *kde*<br/>
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*<br/>
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*<br/>
- Klíč prvky, které mají být odebrány.
+Klíč prvky, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1038,7 +1038,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+Hodnota klíče k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1493,7 +1493,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2189,7 +2189,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap `left`.
+Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap `left`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2259,7 +2259,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 

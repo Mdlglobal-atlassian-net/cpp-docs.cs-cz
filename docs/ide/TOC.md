@@ -144,7 +144,6 @@
 ### [Řešení potíží s přizpůsobením sestavení](troubleshooting-build-customizations.md)
 ### [Formátovaní výstupu vlastního kroku sestavení nebo události sestavení](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Běžná makra pro příkazy a vlastnosti sestavení](common-macros-for-build-commands-and-properties.md)
-## [Sestavení externích projektů](building-external-projects.md)
 ## [Soubory projektu](project-files.md)
 ## [Návod: Kompilace programu C++ pro CLR v sadě Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)

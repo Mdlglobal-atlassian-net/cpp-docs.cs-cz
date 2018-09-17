@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709329"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider – třída
 `CMFCRibbonSlider` Třída implementuje posuvník, který můžete přidat na stavový panel pásu karet nebo panel pásu karet. V ovládacím prvku posuvník pásu karet se podobá posuvníkům pro zvětšení, které se zobrazují v aplikacích sady Office 2007.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID posuvníku.  
+*nID*<br/>
+[in] ID posuvníku.  
   
  [in]. *nWidth*  
  Posuvník šířka v pixelech.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPos –*  
- Určuje pozici pro posuvník. Pozice je relativní vzhledem k začátku posuvníku.  
+*nPos –*<br/>
+[in] Určuje pozici pro posuvník. Pozice je relativní vzhledem k začátku posuvníku.  
   
- [in] *bRedraw*  
- Pokud je hodnota TRUE, bude se měl překreslit posuvníku.  
+*bRedraw*<br/>
+[in] Pokud je hodnota TRUE, bude se měl překreslit posuvníku.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Nastavte rozsah hodnot pro ovládací prvek posuvník.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nminimum*  
- Určuje minimální hodnotu v ovládacím prvku posuvník.  
+*Nminimum*<br/>
+[in] Určuje minimální hodnotu v ovládacím prvku posuvník.  
   
- [in] *Nmaximum*  
- Určuje maximální hodnotu v ovládacím prvku posuvník.  
+*Nmaximum*<br/>
+[in] Určuje maximální hodnotu v ovládacím prvku posuvník.  
   
 ### <a name="remarks"></a>Poznámky  
  Určuje rozsah hodnot pro ovládací prvek posuvník tak, že nastavíte minimální a maximální hodnoty.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nZoomIncrement*  
- Určuje přírůstek zvětšení v ovládacím prvku posuvník.  
+*nZoomIncrement*<br/>
+[in] Určuje přírůstek zvětšení v ovládacím prvku posuvník.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

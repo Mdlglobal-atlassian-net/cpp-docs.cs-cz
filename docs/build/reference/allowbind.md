@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND | Microsoft Docs
+title: -ALLOWBIND | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4a9f3d898d0087f0e8e861ccfe72e4adadb1de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ce0a33ebb0b8b9ba34ac241c8335e9524dec08b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368912"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715569"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
-Určuje, zda mohou být vázány knihovny DLL.  
-  
-```  
-  
-/ALLOWBIND[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **/ALLOWBIND** možnost nastaví trochu v záhlaví knihovny DLL, která určuje Bind.exe, že bitovou kopii, může být vázána. Vazba můžete povolit bitovou kopii načíst rychleji, když zavaděč nemá rebase a provádět Oprava adres pro každou knihovnu DLL, odkazovaná. Je možné, knihovny DLL vázat, pokud byly digitálně podepsané – vazba se zruší platnost podpisu. Vazba nemá vliv, pokud adresa místa rozložení náhodné (technologie ASLR) je povolený pro bitovou kopii pomocí **/DYNAMICBASE** ve verzích systému Windows, které podporují technologie ASLR.  
-  
- Použití **/ALLOWBIND:NO** Bind.exe zabránit vytvoření vazby knihovnu DLL.  
-  
- Další informace najdete v tématu [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) – možnost linkeru.  
-  
-## <a name="see-also"></a>Viz také  
- [EDITBIN – možnosti](../../build/reference/editbin-options.md)
+
+Určuje, zda může být vázaný knihovny DLL.
+
+```
+
+/ALLOWBIND[:NO]
+```
+
+## <a name="remarks"></a>Poznámky
+
+**/ALLOWBIND** možnost nastaví bit v hlavičce knihovny DLL, které označuje Bind.exe, že image může být vázána. Vazby lze povolit obrázku, který má načítat rychleji, pokud není zavaděč přenesení změn a provádět opravy adresa pro každý odkazované knihovny DLL. Možná nebudete chtít knihovnu DLL, pokud je digitálně podepsané, vazba zneplatní podpis. Vazba nemá žádný vliv, pokud náhodného generování rozložení prostoru adres (ASLR) je povolený pro bitovou kopii pomocí **možnost/DynamicBase** ve verzích Windows, které podporují technologie ASLR.
+
+Použití **/ALLOWBIND:NO** Bind.exe zabránit vytvoření vazby knihovny DLL.
+
+Další informace najdete v tématu [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) – možnost linkeru.
+
+## <a name="see-also"></a>Viz také
+
+[EDITBIN – možnosti](../../build/reference/editbin-options.md)

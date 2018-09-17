@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207389"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714658"
 ---
 # <a name="cshellmanager-class"></a>Cshellmanager – třída
 Implementuje několik metod, které vám umožní pracovat s odkazy na seznamy identifikátorů (PIDLs).  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strOutFolder*  
- Řetězec použitý metodami metodu pro uložení této cesty do vybrané složky.  
+*strOutFolder*<br/>
+[out] Řetězec použitý metodami metodu pro uložení této cesty do vybrané složky.  
   
- [in] *pWndParent*  
- Ukazatel do nadřazeného okna.  
+*pWndParent*<br/>
+[in] Ukazatel do nadřazeného okna.  
   
- [in] *lplszInitialFolder*  
- Řetězec, který obsahuje složku, která je standardně vybraná, pokud se zobrazí dialogové okno.  
+*lplszInitialFolder*<br/>
+[in] Řetězec, který obsahuje složku, která je standardně vybraná, pokud se zobrazí dialogové okno.  
   
- [in] *lpszTitle*  
- Název pro dialogové okno.  
+*lpszTitle*<br/>
+[in] Název pro dialogové okno.  
   
- [in] *ulFlags*  
- Příznaky určující možnosti pro dialogové okno. Zobrazit [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) podrobný popis.  
+*ulFlags*<br/>
+[in] Příznaky určující možnosti pro dialogové okno. Zobrazit [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) podrobný popis.  
   
- [out] *piFolderImage*  
- Ukazatel na celočíselnou hodnotu, pokud metoda zapíše index bitové kopie vybrané složky.  
+*piFolderImage*<br/>
+[out] Ukazatel na celočíselnou hodnotu, pokud metoda zapíše index bitové kopie vybrané složky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud uživatel vybere složku v dialogovém okně. jinak 0.  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidl1*  
- První položka.  
+*pidl1*<br/>
+[in] První položka.  
   
- [in] *pidl2*  
- Druhá položka.  
+*pidl2*<br/>
+[in] Druhá položka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nový seznam položek, pokud je funkce úspěšná, jinak hodnota NULL.  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidlSource*  
- Původní seznam položek.  
+*pidlSource*<br/>
+[in] Původní seznam položek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořenou položku seznamu, v případě úspěchu; v opačném případě hodnota NULL.  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *cbSize*  
- Velikost položky seznamu.  
+*cbSize*<br/>
+[in] Velikost položky seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na seznam položek vytvořený v případě úspěchu; v opačném případě hodnota NULL.  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidl*  
- Seznam položek k odstranění.  
+*PIDL*<br/>
+[in] Seznam položek k odstranění.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Vrátí počet položek v seznamu položek.  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidl*  
- Ukazatel na seznam položek.  
+*PIDL*<br/>
+[in] Ukazatel na seznam položek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek v seznamu položek.  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidl*  
- Ukazatel na seznam položek.  
+*PIDL*<br/>
+[in] Ukazatel na seznam položek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost položky seznamu.  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pidl*  
- Seznam položek, které chcete iterovat.  
+*PIDL*<br/>
+[in] Seznam položek, které chcete iterovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na další položku v seznamu.  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpidl*  
- PIDL, jejíž nadřazený prvek budou načítat.  
+*lpidl*<br/>
+[in] PIDL, jejíž nadřazený prvek budou načítat.  
   
- [out] *lpidlParent*  
- Odkaz na PIDL, kde bude metoda uložený výsledek.  
+*lpidlParent*<br/>
+[out] Odkaz na PIDL, kde bude metoda uložený výsledek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Úroveň nadřazeného PIDL.  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPath*  
- Řetězec, který určuje cestu pro položku.  
+*lpszPath*<br/>
+[in] Řetězec, který určuje cestu pro položku.  
   
- [out] *pidl*  
- Odkaz na PIDL. Metoda používá tento PIDL k ukládání ukazatel na jeho návratovou hodnotu.  
+*PIDL*<br/>
+[out] Odkaz na PIDL. Metoda používá tento PIDL k ukládání ukazatel na jeho návratovou hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí NOERROR v případě úspěchu; OLE definované chybovou hodnotu.  

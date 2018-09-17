@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765342"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702595"
 ---
 # <a name="service-map-macros"></a>Makra Map služeb
 
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parametry
 
-[IN] *guidService*  
-Ukazatel na identifikátor služby (SID).
+*guidService*<br/>
+[in] Ukazatel na identifikátor služby (SID).
 
-[IN] *riid*  
-Identifikátor rozhraní, ke kterému volající získat přístup.
+*riid*<br/>
+[in] Identifikátor rozhraní, ke kterému volající získat přístup.
 
-[OUT] *ppvObj*  
-Nepřímé ukazatel na požadované rozhraní.
+*ppvObj*<br/>
+[out] Nepřímé ukazatel na požadované rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 

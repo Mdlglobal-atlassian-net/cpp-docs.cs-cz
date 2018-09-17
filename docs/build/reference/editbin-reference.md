@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 809d1d4f25611b2310d651702f01e1e98888ad4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699944"
 ---
 # <a name="editbin-reference"></a>EDITBIN – odkaz
-Microsoft COFF binární soubor Editor (EDITBIN. Soubor EXE) upraví binárních souborů Common Object File Format (COFF). Editbin – můžete použít k úpravě souborů objektů, spustitelných souborů a dynamické knihovny (DLL).  
-  
+
+Microsoft COFF binární soubor Editor (EDITBIN. Soubor EXE) upraví binárních souborů Common Object File Format (COFF). Editbin – můžete použít k úpravě souborů objektů, spustitelných souborů a dynamické knihovny (DLL).
+
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.  
-  
- Editbin – není k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru. Veškeré úpravy binární soubory, které jsou vytvořené pomocí/GL. muset dosáhnout při opětovné kompilaci a propojování.  
-  
--   [Editbin – příkazový řádek](../../build/reference/editbin-command-line.md)  
-  
--   [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+>  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+
+Editbin – není k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru. Veškeré úpravy binární soubory, které jsou vytvořené pomocí/GL. muset dosáhnout při opětovné kompilaci a propojování.
+
+- [Editbin – příkazový řádek](../../build/reference/editbin-command-line.md)
+
+- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+
+## <a name="see-also"></a>Viz také
+
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

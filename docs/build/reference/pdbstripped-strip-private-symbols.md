@@ -1,5 +1,5 @@
 ---
-title: -PDBSTRIPPED (Odstranit privátní symboly) | Microsoft Docs
+title: -PDBSTRIPPED (odstranění privátních symbolů) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,59 +21,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331e490512afe8e9267eb1d0d370cbcf99aa99aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0680f265214849c2e46c4ceb23dcb71bdff61c3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376634"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710837"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Odstranit privátní symboly)
-```  
-/PDBSTRIPPED:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *pdb_file_name*  
- Název zadaného uživatelem pro databázi odřapíkovaného programu (PDB), který vytváří linkeru.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /PDBSTRIPPED vytvoří druhý soubor databáze (PDB), programu při vytvoření bitové kopie programu s žádným z kompilátoru nebo linkeru možnosti, které generují soubor PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd nebo /Zi). Tento druhý soubor PDB vynechá znaky, které byste neměli chtít dodávat zákazníkům. Druhý soubor PDB bude obsahovat pouze:  
-  
--   Veřejné symboly  
-  
--   Seznam souborů objekt a části spustitelný soubor, ke kterému přispívají  
-  
--   Rámce ukazatel optimalizace (FPO) ladění záznamy používá k procházení zásobníku  
-  
- Odřapíkovaného soubor PDB nebude obsahovat:  
-  
--   Informace o typu  
-  
--   Informace o čísle řádku  
-  
--   Na objekt souboru CodeView symboly jsou pro funkce, místní a statických dat  
-  
- Celého souboru PDB přesto vygeneruje, když používáte /PDBSTRIPPED.  
-  
- Pokud nevytvoříte soubor PDB, /PDBSTRIPPED ignorována.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **ladění** stránku vlastností.  
-  
-4.  Změnit **Odstranit privátní symboly** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/PDBSTRIPPED:pdb_file_name
+```
+
+## <a name="arguments"></a>Arguments
+
+*pdb_file_name*<br/>
+Uživatelem zadaný název databáze odstraněnými příslušnými daty programu (PDB), který vytvoří linker.
+
+## <a name="remarks"></a>Poznámky
+
+Pdbstripped vytvoří druhý soubor databáze (PDB) programu při vytváření bitové kopie programu s žádným z kompilátoru nebo linkeru, které vytvářejí soubor PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd nebo /Zi). Tento druhý soubor PDB vynechává symboly, které není vhodné k odeslání vašich zákazníků. Druhý soubor PDB bude obsahovat pouze:
+
+- Veřejné symboly
+
+- Seznam souborů objektů a části spustitelný soubor, ke kterému přispívají
+
+- Rámec ukazatel optimalizace (FPO) ladění záznamy, použít k procházení zásobníku
+
+Neúplný soubor PDB nebude obsahovat:
+
+- Informace o typu
+
+- Informace o číslech řádků
+
+- Podle objektu souboru CodeView symboly třeba kroky týkající se funkce, místní hodnoty a statická data
+
+Úplný soubor PDB se bude i nadále vygenerována při použití /PDBSTRIPPED.
+
+Pokud nevytvoříte soubor PDB, /PDBSTRIPPED se ignoruje.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **ladění** stránku vlastností.
+
+1. Upravit **Odstranit privátní symboly** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

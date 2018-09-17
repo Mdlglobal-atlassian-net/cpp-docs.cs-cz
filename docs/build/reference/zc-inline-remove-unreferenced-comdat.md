@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: Inline (odebrat neodkazované sekvence COMDAT) | Microsoft Docs'
+title: '/ Zc: Inline (odebrat neodkazované sekvence COMDAT) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067ba5dad4e0751a86835ea56c536a5b7250485d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9f0ff58108328979b945b32af0c0b884998639
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379585"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708518"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (Odebrat neodkazované sekvence COMDAT)
 
-Odebere neregistrované funkce nebo data, která jsou COMDATs nebo mít pouze interní propojení. Když **/Zc: Inline** není zadaný, vyžaduje kompilátor, překlad jednotky, které používají data vložené nebo vložené funkce musí také obsahovat definice pro data nebo funkce.
+Odebere neodkazovaná funkce nebo data, která jsou sekvence Comdat nebo pouze mít interní vazbu. Když **/Zc: Inline** není zadán, kompilátor, vyžaduje jednotkách překladu, které používají vložená data nebo vložené funkce musí obsahovat také definice pro data nebo funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,15 +37,15 @@ Odebere neregistrované funkce nebo data, která jsou COMDATs nebo mít pouze in
 
 ## <a name="remarks"></a>Poznámky
 
-Když **/Zc: Inline** není zadaný, kompilátor není emitování informací o symbolu neodkazované sekvence COMDAT funkce nebo data, nebo pro funkce nebo data, která mají jenom vnitřní propojení. Tato optimalizace zjednodušuje část práce prováděné linkeru v sestavení pro vydání nebo když – možnost linkeru [/OPT:REF](../../build/reference/opt-optimizations.md) je zadán. Když kompilátor provede tyto optimalizace, může výrazně snížit velikost souboru .obj a vylepšení rychlostmi linkeru. Pokud jsou zakázány optimalizace není povolené toto – možnost kompilátoru ([/Od](../../build/reference/od-disable-debug.md)) nebo pokud [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) je zadán.
+Když **/Zc: Inline** není zadán, kompilátor negeneruje informace o symbolech pro neodkazované sekvence COMDAT funkce nebo data, nebo pro funkce nebo data, která mají jenom vnitřní vazby. Tato optimalizace zjednodušuje některé akce prováděné v linkeru v sestaveních pro vydání a kdy možností propojovacího programu [OPT](../../build/reference/opt-optimizations.md) je zadán. Když kompilátor provádí tyto optimalizace, může výrazně zmenšit velikost souboru .obj a zvýšení rychlosti linkeru. Tato možnost kompilátoru není povolena, pokud jsou zakázané optimalizace ([/Od](../../build/reference/od-disable-debug.md)) nebo když [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) určena.
 
-Ve výchozím nastavení, tato možnost je vypnuta (**/Zc:inline-**). [/ Projektovou-](permissive-standards-conformance.md) možnost neumožňuje **/Zc: Inline**.
+Ve výchozím nastavení, tato možnost je vypnuta (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) možnost nepovolíte **/Zc: Inline**.
 
-Pokud **/Zc: Inline** není zadaný, kompilátor vynucuje C ++ 11 požadavku, že všechny funkce deklarované `inline` musí mít k dispozici ve stejné jednotce překladu definice, pokud se používají. Pokud není zadána možnost, kompilátoru Microsoft umožňuje není vyhovující kód, který volá funkce deklarovaný `inline` i v případě, že je viditelná žádná definice. Další informace najdete v tématu C ++ 11 standard, v části 3.2 a části 7.1.2. Tato možnost kompilátoru byla zavedena v sadě Visual Studio 2013 Update 2.
+Pokud **/Zc: Inline** není zadána, vynucuje kompilátor C ++ 11 požadavku, že všechny funkce deklarované `inline` musejí obsahovat definici k dispozici ve stejné jednotce překladu, pokud jsou použity. Pokud není zadán parametr, kompilátor společnosti Microsoft umožňuje kódu nesplňuje podmínky shody, který vyvolá funkce deklarované `inline` i v případě, že je viditelná žádná definice. Další informace najdete v tématu standard C ++ 11, v části 3.2 a části 7.1.2. Tato možnost kompilátoru byla zavedena v aplikaci Visual Studio 2013 Update 2.
 
-Použít **/Zc: Inline** možnost nevyhovující kód aktualizace.
+Použít **/Zc: Inline** možnost aktualizace kódu nedodržující předpisy.
 
-Tento příklad ukazuje, jak nevyhovující použití deklarace vložené funkce bez definice stále zkompiluje a odkazy, kdy výchozí **/Zc:inline-** se používá možnost:
+Tento příklad ukazuje, jak nedodržující předpisy vloženou deklaraci funkce bez definice stále zkompiluje a propojí kdy výchozí **/Zc:inline-** možnost se používá:
 
 ```cpp
 // example.h
@@ -67,11 +67,11 @@ public:
 #include "example.h"
 
 void Example::inline_call() {
-   printf("inline_call was called.\n"); 
+   printf("inline_call was called.\n");
 }
 
 void Example::normal_call() {
-   printf("normal_call was called.\n"); 
+   printf("normal_call was called.\n");
    inline_call(); // with /Zc:inline-, inline_call forced into .obj file
 }
 ```
@@ -87,9 +87,9 @@ void main() {
 }
 ```
 
-Když **/Zc: Inline** je povoleno, stejný kód příčiny [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) chyby, protože kompilátor není emitování text-vložená kód pro `Example::inline_call` v example.obj. To způsobí, že není vložená volání v `main` Chcete-li nedefinované externí symbol.
+Když **/Zc: Inline** je povoleno, stejný kód způsobí, že [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) chybu, protože kompilátor negeneruje tělo-vložený kód pro `Example::inline_call` v example.obj. To způsobí, že není vložená volání v `main` k odkazování nedefinovaného symbolu externí.
 
-Chcete-li tuto chybu vyřešit, můžete odebrat `inline` – klíčové slovo z deklaraci `Example::inline_call`, přesunout definice `Example::inline_call` do záhlaví souboru nebo přesunout implementace `Example` do main.cpp. Další příklad přesune definici do soubor hlaviček, kde je viditelná pro všechny volající, který obsahuje hlavičku.
+Chcete-li vyřešit tuto chybu, můžete odebrat `inline` – klíčové slovo z deklarace `Example::inline_call`, definice typu přesuňte `Example::inline_call` do záhlaví souboru, nebo přesunout provádění `Example` do main.cpp. Následující příklad definice přesune do souboru hlaviček, ve kterém je viditelná pro všechny volající, který obsahuje hlavičku.
 
 ```cpp
 // example2.h
@@ -100,7 +100,7 @@ Chcete-li tuto chybu vyřešit, můžete odebrat `inline` – klíčové slovo z
 class Example2 {
 public:
    inline void inline_call() {
-      printf("inline_call was called.\n"); 
+      printf("inline_call was called.\n");
    }
    void normal_call();
    Example2() {};
@@ -113,8 +113,8 @@ public:
 #include "example2.h"
 
 void Example2::normal_call() {
-   printf("normal_call was called.\n"); 
-   inline_call(); 
+   printf("normal_call was called.\n");
+   inline_call();
 }
 ```
 
@@ -129,16 +129,16 @@ void main() {
 }
 ```
 
-Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **jazyk** stránku vlastností.
 
-1. Změnit **odebrat neodkazované kód a data** vlastnost a potom zvolte **OK**.
+1. Upravit **odebrat neodkazovaný kód a data** vlastnost a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>

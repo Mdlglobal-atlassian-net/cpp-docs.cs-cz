@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708666"
 ---
 # <a name="cl-command-files"></a>Soubory příkazů CL
 
@@ -37,25 +37,25 @@ Soubor příkazů je určená zavináč (**\@**) za nímž následuje název sou
 
 Například následující příkaz je do souboru s názvem odezvy:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 a zadejte následující příkaz CL:
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 příkaz do CL vypadá takto:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Mějte na paměti, efektivně kombinovat příkazového řádku a příkazy souboru příkazů.
 
 ## <a name="see-also"></a>Viz také
 
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
-[– možnosti kompilátoru](../../build/reference/compiler-options.md)
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)

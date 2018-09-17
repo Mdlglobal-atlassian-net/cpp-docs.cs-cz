@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680085"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706599"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Specifické pro Microsoft**  
@@ -41,8 +41,8 @@ void __svm_invlpga(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `Va`|Virtuální adresa stránky zrušit platnost.|  
-|[in] `ASID`|Adresa místa identifikátor (ASID) na stránce zrušit platnost.|  
+|*posouzení ohrožení zabezpečení*|[in] Virtuální adresa stránky zrušit platnost.|  
+|*ASID*|[in] Adresa místa identifikátor (ASID) na stránce zrušit platnost.|  
   
 ## <a name="remarks"></a>Poznámky  
  `__svm_invlpga` Funkce je ekvivalentní volání `INVLPGA` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.  

@@ -1,5 +1,5 @@
 ---
-title: -c (Kompilovat bez propojení) | Microsoft Docs
+title: -c (kompilace bez propojení) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,48 +20,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86bd1ddcb6d44cfa433d4119f90eb02695089aa4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de6fe291bde8652b772c7091c1919836f88960fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710343"
 ---
 # <a name="c-compile-without-linking"></a>/c (kompilovat bez propojení)
-Brání automatické volání odkaz.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/c  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Kompilování pomocí **/c** vytvoří pouze soubory .obj. ODKAZ musí volat explicitně s správné soubory a možnosti pro fázi vytváření sestavení.  
-  
- Používá interní projekt ve vývojovém prostředí **/c** možnost ve výchozím nastavení.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
--   Tato možnost není k dispozici ve vývojovém prostředí.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   Pokud chcete nastavit tuto možnost kompilátoru prostřednictvím kódu programu, najdete v části <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>.  
-  
-## <a name="example"></a>Příklad  
- Následující příkaz vytvoří objekt soubory FIRST.obj a SECOND.obj. THIRD.obj se ignoruje.  
-  
-```  
-CL /c FIRST.C SECOND.C THIRD.OBJ  
-```  
-  
- Pokud chcete vytvořit spustitelný soubor, je nutné vyvolat odkaz:  
-  
-```  
-LINK firsti.obj second.obj third.obj /OUT:filename.exe  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Brání automatické volání odkaz.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/c
+```
+
+## <a name="remarks"></a>Poznámky
+
+Kompilace s **/c** vytvoří pouze soubory .obj. ODKAZ musí explicitně volat s správné soubory a možnosti pro propojení fáze buildu.
+
+Všechny interní projekt vytvořili ve vývojovém prostředí používá **/c** možnost ve výchozím nastavení.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+- Tato možnost není k dispozici v rámci vývojového prostředí.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Programové nastavení tohoto parametru kompilátoru, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>.
+
+## <a name="example"></a>Příklad
+
+Následující příkaz vytvoří soubory objektů FIRST.obj a SECOND.obj. THIRD.obj se ignoruje.
+
+```
+CL /c FIRST.C SECOND.C THIRD.OBJ
+```
+
+Pro vytvoření spustitelného souboru, je nutné vyvolat odkaz:
+
+```
+LINK firsti.obj second.obj third.obj /OUT:filename.exe
+```
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

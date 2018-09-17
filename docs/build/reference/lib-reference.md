@@ -20,30 +20,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6d73237ac5b4b2ab549de5dba19116aa4e743514
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464924"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709420"
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
-Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektových souborů Common Object File Format (COFF). Lib – lze také vytvořit soubory exportu a importu knihovny odkaz exportovat definice.  
-  
+
+Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektových souborů Common Object File Format (COFF). Lib – lze také vytvořit soubory exportu a importu knihovny odkaz exportovat definice.
+
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.  
-  
--   [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)  
-  
--   [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
-  
--   [Spuštění knihovny LIB](../../build/reference/running-lib.md)  
-  
--   [Správa knihovny](../../build/reference/managing-a-library.md)  
-  
--   [Extrahování člena knihovny](../../build/reference/extracting-a-library-member.md)  
-  
--   [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+>  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+
+- [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)
+
+- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+
+- [Spuštění knihovny LIB](../../build/reference/running-lib.md)
+
+- [Správa knihovny](../../build/reference/managing-a-library.md)
+
+- [Extrahování člena knihovny](../../build/reference/extracting-a-library-member.md)
+
+- [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+## <a name="see-also"></a>Viz také
+
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

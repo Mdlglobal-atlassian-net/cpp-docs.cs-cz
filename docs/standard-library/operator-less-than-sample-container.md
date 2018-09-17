@@ -1,5 +1,5 @@
 ---
-title: operátor&lt; (&lt;ukázkový kontejner&gt;) | Microsoft Docs
+title: operátor&lt; (&lt;ukázkový kontejner&gt;) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c56a5b56cfa52affa48b02892734db74a41106
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd6e3343c4b0d64e16ce1d1a33d94ecaa7ef3fa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713531"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operátor&lt; (&lt;ukázkový kontejner&gt;)
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
 Přetížení **operátor <** k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
 
@@ -51,8 +51,8 @@ bool operator<(
 
 Vrátí `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
-[Začátek](../standard-library/container-class-begin.md)<br/>
-[End](../standard-library/container-class-end.md)  
+[začít](../standard-library/container-class-begin.md)<br/>
+[ukončení](../standard-library/container-class-end.md)

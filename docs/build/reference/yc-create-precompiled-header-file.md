@@ -1,5 +1,5 @@
 ---
-title: -Yc (Vytvořit předkompilovaný hlavičkový soubor) | Microsoft Docs
+title: -Yc (vytvoření předkompilovaného hlavičkového souboru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,71 +25,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5288e748956a405073697ddd7331a73b95d8650
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378659"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714243"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Vytvořit předkompilovaný hlavičkový soubor)
-Dá pokyn kompilátoru vytvořte soubor předkompilovaných hlaviček (.pch), který představuje stav kompilace v určitém místě.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Dává pokyn kompilátoru k vytvoření souboru předkompilované hlavičky (pch), který představuje stav kompilace v určitém bodě.
+
+## <a name="syntax"></a>Syntaxe
+
 > __/Yc__
->  __/Yc__*filename*  
-  
-  
-## <a name="arguments"></a>Arguments  
-*Název souboru*  
- Určuje soubor hlavičky (). Pokud se používá tento argument, kompilátor zkompiluje všechny kódu do a včetně souboru h.  
-  
-## <a name="remarks"></a>Poznámky  
- Když **/Yc** je zadán bez argument, kompilátor kompiluje všechny kód do konce základní zdrojového souboru, nebo do bodu v základního souboru kde [hdrstop –](../../preprocessor/hdrstop.md) – direktiva dojde. Výsledný soubor .pch má stejný název základní jako základní zdrojový soubor, pokud neurčíte název jiný soubor pomocí **hdrstop –** – Direktiva pragma nebo **/Fp** možnost.  
-  
- Předkompilované kód je uložená v souboru s názvem vytvořené z základní název souboru zadaný **/Yc** možnost a .pch rozšíření. Můžete také [/Fp (název. Soubor pch)](../../build/reference/fp-name-dot-pch-file.md) možnost zadat název předkompilovaný hlavičkový soubor.  
-  
- Pokud používáte __/Yc__*filename*, kompilátor kompiluje všechny kód do a včetně zadaný soubor pro pozdější použití s [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) možnost.  
-  
- Pokud možnosti __/Yc__*filename* a __/Yu__*filename* dojít na stejném příkazovém řádku a obě odkazovat, nebo implikují, stejný název souboru __/Yc__*filename* přednost. Tato funkce zjednodušuje zápis soubory pravidel.  
-  
- Další informace o předkompilovaných hlaviček najdete v tématu:  
-  
--   [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)  
-  
--   [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Vyberte soubor, sada. Souboru musí #include .h soubor, který obsahuje informace o předkompilovaných hlaviček. Projektu **/Yc** nastavení je možné přepsat na úrovni souborů.  
-  
-2.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-3.  Otevřete **vlastnosti konfigurace**, **C/C++**, **předkompilovaných hlaviček** stránku vlastností.  
-  
-4.  Změnit **předkompilovaných hlaviček** vlastnost.  
-  
-5.  Pokud chcete nastavit název souboru, upravte **předkompilovaný hlavičkový soubor** vlastnost.
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
-  
-## <a name="example"></a>Příklad  
- Vezměte v úvahu následující kód:  
-  
-```cpp  
+>  __/Yc__*název souboru*
+
+## <a name="arguments"></a>Arguments
+
+*Název souboru*<br/>
+Určuje soubor hlaviček (.h). Pokud tento argument se používá, kompilátor zkompiluje veškerého kódu až po a .h souborů.
+
+## <a name="remarks"></a>Poznámky
+
+Při **/Yc** je zadán bez argumentu, kompilátor zkompiluje veškerého kódu až po end základní zdrojového souboru nebo do bodu v souboru základní kde [hdrstop](../../preprocessor/hdrstop.md) vyvolá směrnice. Výsledný soubor .pch má stejný základní název jako základní zdrojový soubor, pokud neurčíte název jiného souboru pomocí **hdrstop** – Direktiva pragma nebo **/FP** možnost.
+
+Předkompilovaný kód je uloží do souboru s názvem vytvořené ze základní název souboru zadaný **/Yc** možnost a příponou .pch. Můžete také použít [/Fp (název. Soubor pch)](../../build/reference/fp-name-dot-pch-file.md) můžete zadat název předkompilovaného souboru hlaviček.
+
+Pokud používáte __/Yc__*filename*, kompilátor zkompiluje veškerého kódu do a včetně zadaného souboru pro pozdější použití s [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md) možnost.
+
+Pokud možnosti __/Yc__*filename* a __/Yu__*filename* vyskytovat na stejném příkazovém řádku a obě odkazovat, ani z nich nevyplývají stejný název souboru __/Yc__*filename* přednost. Tato funkce zjednodušuje psaní soubory pravidel.
+
+Další informace o předkompilovaných hlaviček naleznete v tématu:
+
+- [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)
+
+- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Vyberte soubor .cpp. Soubor .cpp musí #include souboru .h, který obsahuje informace pro předkompilované hlavičky. V projektu **/Yc** nastavení můžete přepsat na úrovni souboru.
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Otevřít **vlastnosti konfigurace**, **C/C++**, **předkompilované hlavičky** stránku vlastností.
+
+1. Upravit **předkompilovaných hlaviček** vlastnost.
+
+1. Pokud chcete nastavit název souboru, upravte **předkompilovaný soubor hlaviček** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
+
+## <a name="example"></a>Příklad
+
+Vezměte v úvahu následující kód:
+
+```cpp
 // prog.cpp
 // compile with: cl /c /Ycmyapp.h prog.cpp
-#include <afxwin.h>   // Include header for class library  
-#include "resource.h" // Include resource definitions  
-#include "myapp.h"    // Include information specific to this app  
-// ...  
-```  
-  
-Pokud je tento kód zkompilovat pomocí příkazu `CL /YcMYAPP.H PROG.CPP`, kompilátor uloží všechny předběžném zpracování pro AFXWIN.h RESOURCE.h, a názvem MYAPP.pch MYAPP.h v předkompilovaný hlavičkový soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md) [vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+#include <afxwin.h>   // Include header for class library
+#include "resource.h" // Include resource definitions
+#include "myapp.h"    // Include information specific to this app
+// ...
+```
+
+Když tento kód je zkompilován pomocí příkazu `CL /YcMYAPP.H PROG.CPP`, kompilátor uloží všechny předzpracování pro AFXWIN.h RESOURCE.h, a volá MYAPP.pch MYAPP.h v souboru předkompilované hlavičky.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)

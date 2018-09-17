@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702894"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
@@ -37,9 +37,9 @@ Podrobnosti o místo na disku a požadavky na operační systém, najdete v čá
 
 ## <a name="visual-studio-2015-installation"></a>Instalace sady Visual Studio 2015
 
- Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++. 
+Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++.
 
- Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
+Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
 
 ## <a name="visual-studio-2017-installation"></a>Instalace sady Visual Studio 2017
 
@@ -59,13 +59,13 @@ Podrobnosti o místo na disku a požadavky na operační systém, najdete v čá
 
    ![Vývoj desktopových aplikací pomocí C++](../build/media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
 
-    Pro jazyk C++, vyberte **vývoj desktopových aplikací pomocí C++** úloh a klikněte na tlačítko **nainstalovat**.
+   Pro jazyk C++, vyberte **vývoj desktopových aplikací pomocí C++** úloh a klikněte na tlačítko **nainstalovat**.
 
    ![Instalace vývoj desktopových aplikací pomocí úlohy pro C++](../build/media/vscpp-concierge-choose-workload.gif "instalace vývoj desktopových aplikací pomocí úlohy pro C++")
 
 1. Po dokončení instalace, zvolte **spuštění** tlačítko pro spuštění sady Visual Studio.
 
-   Při prvním spuštění aplikace Visual Studio, budete vyzváni k přihlášení pomocí pověření Account Microsoft. Pokud ho nemáte, můžete jeden vytvořit zdarma. Musíte také zvolit jen motiv. Nedělejte si starosti, pokud chcete ji můžete změnit později. 
+   Při prvním spuštění aplikace Visual Studio, budete vyzváni k přihlášení pomocí pověření Account Microsoft. Pokud ho nemáte, můžete jeden vytvořit zdarma. Musíte také zvolit jen motiv. Nedělejte si starosti, pokud chcete ji můžete změnit později.
 
    Visual Studio to trvat několik minut, než se připravit k použití při prvním spuštění. Zde je, jak to vypadá v rychlého časové závislosti:
 

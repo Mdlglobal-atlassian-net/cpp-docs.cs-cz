@@ -1,5 +1,5 @@
 ---
-title: -WINMDFILE (určení souboru klíče winmd) | Microsoft Docs
+title: -WINMDKEYFILE (určení souboru klíče winmd) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba19ddd7a9ca1c313cc9f72e6cc8b77b4b565ceb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d688db3039681fc684e6344e4a27ae7a64544757
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375633"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714440"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDFILE (Určení souboru klíče winmd)
-Určuje klíč nebo pár klíčů k podepsání souboru metadat Windows Runtime (.winmd).  
-  
-```  
-/WINMDKEYFILE:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Vypadá takto: [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) – možnost linkeru použitý pro soubor .winmd.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Vyberte **Linkeru** složky.  
-  
-3.  Vyberte **metadat Windows** stránku vlastností.  
-  
-4.  V **soubor klíče metadat Windows** zadejte umístění souboru.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Určuje klíč nebo dvojici klíčů k podepsání souboru Windows Runtime Metadata (.winmd).
+
+```
+/WINMDKEYFILE:filename
+```
+
+## <a name="remarks"></a>Poznámky
+
+Vypadá podobně jako [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) – možnost linkeru, které platí pro soubor winmd.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Vyberte **Linkeru** složky.
+
+1. Vyberte **metadat Windows** stránku vlastností.
+
+1. V **soubor klíče metadat Windows** zadejte umístění souboru.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

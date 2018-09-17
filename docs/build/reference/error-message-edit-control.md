@@ -1,5 +1,5 @@
 ---
-title: Chybová zpráva ovládacích prvků pro úpravy | Microsoft Docs
+title: Chybová zpráva ovládacích prvků pro úpravy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a0852b0b73adb3c70ba1b01b8c7f4805f80321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa0851f31487bf79ba3977bdedee86ce3b718f21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701894"
 ---
 # <a name="error-message-edit-control"></a>Chybová zpráva – textové pole
-**Chybová zpráva** pole s textem systému chybových zpráv nebo modul chybovou zprávu založenou na zadaná hodnota.  
-  
-## <a name="see-also"></a>Viz také  
- [Hodnota – textové pole](../../build/reference/value-edit-control.md)
+
+**Chybová zpráva** pole obsahuje text chybovou zprávu systému nebo modul chybová zpráva, která je založena na hodnotě zadané.
+
+## <a name="see-also"></a>Viz také
+
+[Hodnota – textové pole](../../build/reference/value-edit-control.md)

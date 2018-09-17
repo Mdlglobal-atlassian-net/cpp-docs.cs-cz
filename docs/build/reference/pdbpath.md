@@ -1,5 +1,5 @@
 ---
-title: -PDBPATH | Microsoft Docs
+title: -PDBPATH | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,44 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274c4a3742d99b1e4702ed332206b78dacebccbd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c9d93ef38ba444fd716bd3363a6605eae66dfec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699672"
 ---
 # <a name="pdbpath"></a>/PDBPATH
-```  
-/PDBPATH[:VERBOSE] filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Název souboru*  
- Název souboru .dll nebo .exe, pro kterou chcete najít odpovídající soubor PDB.  
-  
- VERBOSE (volitelné)  
- Všechny adresáře, kde byl proveden pokus o soubor .pdb vyhledejte sestavy.  
-  
-## <a name="remarks"></a>Poznámky  
- / PDBPATH hledat počítače podél stejné cesty, které by vyhledejte soubor .pdb ladicího programu a oznámí odpovídajících, pokud existuje, soubory PDB soubor zadaný v *filename*.  
-  
- Při použití ladicího programu sady Visual Studio, může dojít k potížím, vzhledem k tomu, že ladicí program používá soubor .pdb pro jinou verzi souboru, kterou ladíte.  
-  
- / PDBPATH bude hledat soubory PDB podél následující cesty:  
-  
--   Zkontrolujte umístění, kde je spustitelný soubor.  
-  
--   Zkontrolujte umístění PDB zapsána do spustitelného souboru. Je to obvykle umístění v době, kdy bylo propojeno bitovou kopii.  
-  
--   Zkontrolujte v cestě vyhledávání nakonfigurovaný v integrovaném vývojovém prostředí sady Visual Studio.  
-  
--   Zkontrolujte podél cesty v _NT_SYMBOL_PATH a _NT_ALT_SYMBOL_PATH proměnné prostředí.  
-  
--   Zkontrolujte v adresáři systému Windows.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti DUMPBIN](../../build/reference/dumpbin-options.md)   
- [/PDBALTPATH (použití alternativní cesty PDB)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+
+```
+/PDBPATH[:VERBOSE] filename
+```
+
+### <a name="parameters"></a>Parametry
+
+*Název souboru*<br/>
+Název souboru .dll nebo .exe, pro které chcete najít odpovídající soubor PDB.
+
+**: PODROBNÉ**<br/>
+(Volitelné) Oznámí všechny adresáře, ve kterém byl proveden pokus o najít soubor .pdb.
+
+## <a name="remarks"></a>Poznámky
+
+/ PDBPATH bude hledat podél stejné cesty, které ladicí program bude hledat soubor .pdb a oznámí odpovídajících, pokud existuje, soubory s příponou .pdb do souboru zadaného v počítači *filename*.
+
+Při používání ladicího programu sady Visual Studio, může dojít k potížím, skutečnost, že ladicí program používá soubor PDB pro jinou verzi souboru, který ladíte.
+
+/ PDBPATH bude hledat soubory s příponou .pdb v následujících umístěních:
+
+- Zkontrolujte umístění, ve které se nachází spustitelný soubor.
+
+- Zkontrolujte umístění zapsané do spustitelného souboru PDB. Toto je obvykle umístění v době, kdy byl propojený obrázek.
+
+- Zkontrolujte podél cesty pro hledání nakonfigurovaný v integrovaném vývojovém prostředí sady Visual Studio.
+
+- Zkontrolujte podél cest v _NT_SYMBOL_PATH a _NT_ALT_SYMBOL_PATH proměnné prostředí.
+
+- Zkontrolujte v adresáři Windows.
+
+## <a name="see-also"></a>Viz také
+
+[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)<br/>
+[/PDBALTPATH (použití alternativní cesty PDB)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

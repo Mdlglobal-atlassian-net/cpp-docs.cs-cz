@@ -1,7 +1,7 @@
 ---
 title: const_seg | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465003"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705208"
 ---
 # <a name="constseg"></a>const_seg
 Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uloženy v souboru .obj.  
@@ -34,33 +34,35 @@ Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uložen
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- 
+### <a name="parameters"></a>Parametry
+
+**push**<br/>
+(Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.  
+  
+**POP**<br/>
+(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.  
+  
+*identifikátor*<br/>
+(Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
+  
+Pomocí *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu.  
+  
+"*segment-name*"<br/>  
+(Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.  
+  
+"*segmentu třídy*"<br/>
+(Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
+  
+## <a name="remarks"></a>Poznámky
+
 Významy pojmů *segmentu* a *části* jsou v tomto tématu zaměnitelné.  
   
 Soubory OBJ lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Výchozím segmentem v souboru obj `const` proměnné je segment .rdata. Některé `const` proměnných, například skaláry, jsou automaticky vloženy do kódu. Vložený kód se v segmentu .rdata nezobrazí.  
   
 Definování vyžadující dynamická inicializace v objektu `const_seg` způsobí nedefinované chování.  
   
-`#pragma const_seg` bez parametrů obnoví segment .rdata.  
-  
-*push* (volitelné)  
-Vloží záznam do zásobníku vnitřního kompilátoru. A *nabízených* může mít *identifikátor* a *segment-name*.  
-  
-*POP* (volitelné)  
-Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
-  
-*identifikátor* (volitelné)  
-Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s *pop*, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
-  
-Pomocí *identifikátor* vyjmout několik záznamů lze jedním z jedné *pop* příkazu.  
-  
-"*segment-name*" (volitelné)  
-Název segmentu Při použití s *pop*, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.  
-  
-"*segmentu třídy*" (volitelné)  
-Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
-  
+`#pragma const_seg` bez parametrů obnoví segment .rdata.
+
 ## <a name="example"></a>Příklad  
   
 ```cpp  

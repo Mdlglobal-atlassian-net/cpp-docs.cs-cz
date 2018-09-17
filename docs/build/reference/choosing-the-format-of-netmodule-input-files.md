@@ -1,5 +1,5 @@
 ---
-title: Volba formátu .netmodule vstupní soubory | Microsoft Docs
+title: Výběr formátu .netmodule vstupních souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,36 +12,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62575d3e816bdc10587e7a4c9cebcea735329ec1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1eaa48769525a907ecdcc1d0612d67a169fb6cd1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372718"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715803"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Výběr formátu vstupních souborů .netmodule
-Soubor .obj MSIL (Kompilovat s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) lze také použít jako soubor .netmodule.  soubory .obj obsahovat metadata a nativní symboly.  .netmodules obsahují pouze metadata.  
-  
- Můžete předat souboru .obj MSIL do jiné sady Visual Studio kompilátoru prostřednictvím / addmodule – možnost kompilátoru (ale mějte na paměti, že stane součástí výsledné sestavení a musí být součástí sestavení v souboru .obj).  Visual C# a Visual Basic třeba mít / addmodule – možnost kompilátoru.  
-  
+
+Soubor .obj jazyka MSIL (zkompilovaná [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) může také sloužit jako soubor .netmodule.  soubory .obj obsahovat metadata a nativních symbolů.  modulů .NET obsahují pouze metadata.
+
+Můžete předat soubor .obj jazyka MSIL do jiných kompilátoru Visual Studio prostřednictvím možnost kompilátoru/addmodule (ale mějte na paměti, že soubor .obj stane součástí výsledného sestavení a musí být součástí sestavení).  Možnost kompilátoru/addmodule mít například Visual C# a Visual Basic.
+
 > [!NOTE]
->  Ve většině případů musíte předat linkeru souboru .obj z kompilace vytvořený modul .net.  Předání souboru .dll nebo .netmodule modulu MSIL do linkeru může mít za následek LNK1107.  
-  
- soubory .obj, spolu s jejich přidružené .h soubory, které odkazují prostřednictvím # zdroje include, povolí aplikací C++ využívat nativní typy v modulu, zatímco v souboru .netmodule, mohou být spotřebovávána pouze spravované typy aplikace C++.  Pokud se pokusíte předat souboru .obj na #using, informace o nativní typy nebude k dispozici. #include souborů .h souboru .obj místo.  
-  
- Kompilátory jiné sady Visual Studio může využít pouze spravované typy z modulu.  
-  
- Použijte následující postupy k určení, jestli je potřeba použít .netmodule nebo souboru .obj jako vstup modulu linkeru jazyka Visual C++:  
-  
--   Pokud vytváříte s kompilátoru Visual Studio než Visual C++, vytvářet .netmodule a používat .netmodule jako vstup linkeru.  
-  
--   Pokud používáte Visual C++ compiler k vytvoření moduly a pokud ve modulu nebo modulech se použije k vytvoření něco jiného než knihovny, použijte soubory .obj vyprodukované kompilátor jako vstup modulu linkeru; Nepoužívejte soubor .netmodule jako vstup.  
-  
--   Pokud moduly se použije pro sestavení (není spravované) nativní knihovny, použijte soubory .obj jako vstup linkeru modulu a generovat soubor knihovny LIB.  
-  
--   Pokud moduly se použije k vytvoření spravované knihovny, a pokud všechny modulu vstup linkeru bude ověřitelný (vytvořeného pomocí/clr: safe), použijte soubory .obj jako vstup linkeru modulu a vygenerujte .dll (sestavení) nebo soubor knihovny .netmodule (modulu).  
-  
--   Pokud moduly se použije k vytvoření spravované knihovny, a pokud jeden nebo více modulů vstup linkeru se vytváří pomocí jenom možnosti/CLR, použijte soubory .obj jako vstup linkeru modulu a generovat .dll (sestavení).  Pokud chcete vystavit spravované typy v knihovně, a pokud chcete aplikace C++ využívat nativní typy v knihovně, své knihovny bude obsahovat soubory .obj pro moduly součástí knihovny (také můžete pro odeslání souborů .h pro každý modul takže může být odkazováno s #include ze zdrojového kódu).  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)
+>  Ve většině případů je potřeba do propojovacího programu předat souboru .obj z kompilace, která vytvoří modul .net.  Předá linkeru soubor .dll nebo modul .NET MSIL modulu může mít za následek LNK1107.
+
+soubory .obj, včetně jejich přidružených .h souborů, které odkazují prostřednictvím #include zdroje, umožňují aplikacím C++ využívat nativní typy v modulu, zatímco v soubor .netmodule můžete využívat pouze spravované typy aplikace v jazyce C++.  Pokud se pokusíte předat soubor .obj, který chcete #using, informace o nativních typů nebude k dispozici. #include souboru .h soubor .obj místo.
+
+Jiné kompilátory sady Visual Studio může využívat pouze spravované typy z modulu.
+
+Použijte následující postup k určení, jestli je potřeba použít .netmodule nebo .obj souboru jako modul vstup do linkeru jazyka Visual C++:
+
+- Pokud vytváříte s kompilátorem Visual Studio než Visual C++, .netmodule vytvářet a používat .netmodule jako vstup do linkeru.
+
+- Používáte-li vytvořit moduly a pokud moduly se použije k vytvoření něco jiného než knihovny kompilátoru jazyka Visual C++, použijte soubory .obj jako vstup linkeru; modulu produkované kompilátorem Nepoužívejte soubor .netmodule jako vstup.
+
+- Pokud moduly se použije k vytvoření knihovny nativní (není spravované), použijte soubory .obj jako vstup modulu do linkeru a vygenerovat soubor knihovny LIB.
+
+- Pokud moduly se použije k vytvoření spravované knihovny a všech modulů vstup do linkeru bude ověřitelný (vytvořený pomocí/clr: safe), použijte soubory .obj jako vstup modulu do linkeru a generovat DLL (sestavení) nebo soubor knihovny .netmodule (modul).
+
+- Pokud moduly se použije k vytvoření spravované knihovny a jeden nebo více modulů vstup do linkeru se nevytvoří se jen parametrem/CLR, použijte soubory .obj jako vstup modulu do linkeru a generovat DLL (sestavení).  Pokud chcete vystavit spravované typy z knihovny a pokud chcete využívat nativní typy v knihovně aplikace C++, knihovny bude obsahovat soubory .obj pro moduly komponentu knihovny (budete také chtít odeslání souborů .h jednotlivých modulů takže může být odkazováno pomocí #include ze zdrojového kódu).
+
+## <a name="see-also"></a>Viz také
+
+[Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)

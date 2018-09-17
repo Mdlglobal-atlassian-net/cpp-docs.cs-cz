@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e04f2898caf1f62a9499096ffab09fce8da86ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464445"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700177"
 ---
 # <a name="fastfail"></a>__fastfail
 **Specifické pro Microsoft**  
@@ -31,8 +31,8 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `code`  
- A `FAST_FAIL_<description>` Symbolická konstanta ze souboru winnt.h nebo wdm.h, který označuje důvod ukončení procesu.  
+*kód*<br/>
+[in] A `FAST_FAIL_<description>` Symbolická konstanta ze souboru winnt.h nebo wdm.h, který označuje důvod ukončení procesu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  `__fastfail` Vnitřní nevrací.  

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201748"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712848"
 ---
 # <a name="moneyget-class"></a>money_get – třída
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Parametry
 
 *CharType*<br/>
- Typ používaný v rámci programu ke kódování znaků v národním prostředí.
+Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 *InputIterator*<br/>
- Typ iterátoru, ze kterého funkce get čtou svůj vstup.
+Typ iterátoru, ze kterého funkce get čtou svůj vstup.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *první*<br/>
- Vstupní iterátor adresující začátek sekvence má být převeden.
+Vstupní iterátor adresující začátek sekvence má být převeden.
 
 *poslední*<br/>
- Vstupní iterátor adresující konec sekvence má být převeden.
+Vstupní iterátor adresující konec sekvence má být převeden.
 
 *Intl*<br/>
- Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
 *iosbase*<br/>
- Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
+Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinný.
 
 *Stav*<br/>
- Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda operace proběhla úspěšně nebo ne.
+Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda operace proběhla úspěšně nebo ne.
 
 *Val*<br/>
- Řetězec převedený pořadí ukládání.
+Řetězec převedený pořadí ukládání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *první*<br/>
- Vstupní iterátor adresující začátek sekvence má být převeden.
+Vstupní iterátor adresující začátek sekvence má být převeden.
 
 *poslední*<br/>
- Vstupní iterátor adresující konec sekvence má být převeden.
+Vstupní iterátor adresující konec sekvence má být převeden.
 
 *Intl*<br/>
- Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
+Logická hodnota označující typ symbolu měny očekávání v pořadí: **true** pokud mezinárodní **false** Pokud domácí.
 
 *iosbase*<br/>
- Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
+Příznak formátu, který při nastavení znamená, že symbol měny je volitelná. v opačném případě je povinné
 
 *Stav*<br/>
- Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
+Nastaví prvky odpovídající bitové masky pro stav datového proudu podle Určuje, zda byla operace úspěšná.
 
 *Val*<br/>
- Řetězec převedený pořadí ukládání.
+Řetězec převedený pořadí ukládání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Parametry
 
 *_Refs*<br/>
- Celočíselná hodnota určuje typ Správa paměti pro objekt.
+Celočíselná hodnota určuje typ Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 

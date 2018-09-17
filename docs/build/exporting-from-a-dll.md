@@ -1,5 +1,5 @@
 ---
-title: Export z knihovny DLL | Microsoft Docs
+title: Export z knihovny DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,52 +20,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07efe3d73b3f78dfb30e85ffad6434e2907c36c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1beb36b76c54c585505f4d92b33a275e063318e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367950"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707977"
 ---
-# <a name="exporting-from-a-dll"></a>Export z knihovny DLL  
-  
-Soubor DLL má velmi podobné na soubor .exe s jedním důležité rozdílem rozložení – soubor knihovny DLL obsahuje exportní tabulka. Exportní tabulka obsahuje název každé funkce, který exportuje knihovnu DLL pro další spustitelné soubory. Tyto funkce jsou vstupní body do knihovny DLL; podle další spustitelné soubory jsou přístupné pouze tyto funkce v tabulce exportuje. Jiných funkcí v knihovně DLL jsou privátní na knihovnu DLL. Exportní tabulka knihovny DLL lze zobrazit pomocí [DUMPBIN](../build/reference/dumpbin-reference.md) nástroj s parametrem/EXPORTS.  
-  
- Funkce můžete exportovat z knihovny DLL pomocí dvou metod:  
-  
--   Vytvořte soubor modulu definice (.def) a při vytváření knihovny DLL pomocí souborů .def. Tuto metodu použijte, pokud chcete [export funkcí z knihovny DLL podle pořadových nikoli podle názvu](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
-  
--   Použití klíčového slova **__declspec(dllexport)** v definici funkcí.  
-  
- Při exportu funkce pomocí některé z metod, nezapomeňte použít [__stdcall](../cpp/stdcall.md) konvence volání.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
-  
--   [Export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Export z knihovny DLL pomocí deklarace __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Export a import pomocí třídy AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
-  
--   [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo jazyka C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
-  
--   [Export funkcí z knihovny DLL podle pořadových nikoli podle názvu](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
-  
--   [Určení použité metody exportu](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Rozhodování o způsobu vytváření použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
-  
--   [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
-  
--   [Import do aplikace](../build/importing-into-an-application.md)  
-  
--   [Import a export vložených funkcí](../build/importing-and-exporting-inline-functions.md)  
-  
--   [Vzájemné importy](../build/mutual-imports.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Import a export](../build/importing-and-exporting.md)
+# <a name="exporting-from-a-dll"></a>Export z knihovny DLL
+
+Soubor knihovny DLL má velmi podobně jako soubor .exe s jedním z důležitých rozdílů rozložení – soubor DLL obsahuje exportní tabulka. Exportní tabulka obsahuje název každé funkce, které knihovny DLL exportuje do další spustitelné soubory. Tyto funkce jsou vstupními body do knihovny DLL; Další spustitelné soubory je přístupný pouze funkcí v exportní tabulce. Další funkce v knihovně DLL jsou privátní pro knihovnu DLL. V tabulce exportů knihovny DLL lze zobrazit pomocí [DUMPBIN](../build/reference/dumpbin-reference.md) nástroje s možností/EXPORTS.
+
+Export funkcí z knihovny DLL pomocí dvou metod:
+
+- Vytvoření souboru modulu definice (.def) a použijte soubor .def při vytváření knihovny DLL. Tuto metodu použijte, pokud chcete [export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+
+- Pomocí klíčového slova **__declspec(dllexport)** v definici funkce.
+
+Při exportu funkcí pomocí některé z metod, je nutné použít [__stdcall](../cpp/stdcall.md) konvence volání.
+
+## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
+
+- [Export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Export z knihovny DLL pomocí __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Export a import pomocí AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+
+- [Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
+
+- [Určit, kterou exportovací metodu použít](../build/determining-which-exporting-method-to-use.md)
+
+- [Určit, kterou propojovací metodu použít](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+
+- [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+- [Import do aplikace](../build/importing-into-an-application.md)
+
+- [Import a export vložených funkcí](../build/importing-and-exporting-inline-functions.md)
+
+- [Vzájemné importy](../build/mutual-imports.md)
+
+## <a name="see-also"></a>Viz také
+
+[Import a export](../build/importing-and-exporting.md)

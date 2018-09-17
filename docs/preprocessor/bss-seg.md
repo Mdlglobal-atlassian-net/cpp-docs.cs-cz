@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464797"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711151"
 ---
 # <a name="bssseg"></a>bss_seg
 Určuje segment neinicializované proměnné, kde jsou uloženy v souboru .obj.  
@@ -35,27 +35,27 @@ Určuje segment neinicializované proměnné, kde jsou uloženy v souboru .obj.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- 
+
 Soubory obj lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Výchozí segment v souboru obj neinicializovaná data je .bss. V některých případech použití **bss_seg** můžete urychlit načítání časy seskupením neinicializovaná data do jednoho oddílu.  
   
 **bss_seg** bez parametrů obnoví nastavení segmentu na .bss.  
   
-*push* (volitelné)  
-Vloží záznam do zásobníku vnitřního kompilátoru. A *nabízených* může mít *identifikátor* a *segment-name*.  
+**push**<br/>
+(Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A *pu*TV * může mít *identifikátor* a *segment-name*.  
   
-*POP* (volitelné)  
-Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
+**POP**<br/>
+(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.  
   
-*identifikátor* (volitelné)  
-Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s *pop*, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
+*identifikátor*<br/>
+(Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
   
-*identifikátor* vyjmout několik záznamů lze jedním z jedné *pop* příkazu.  
+*identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu.  
   
-*"segment-name"*(volitelné)  
-Název segmentu Při použití s *pop*, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.  
+*"segment-name"*<br/>
+(Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.  
   
-*"segmentu třídy"* (volitelné)  
-Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
+*"segmentu třídy"*<br/>
+(Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
   
 ## <a name="example"></a>Příklad  
   

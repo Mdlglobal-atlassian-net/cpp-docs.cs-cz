@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686796"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703921"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Datový typ klíče, který se uloží v objektu map.
+Datový typ klíče, který se uloží v objektu map.
 
 *Typ*<br/>
- Typ dat prvku, který bude uložen v objektu map.
+Typ dat prvku, který bude uložen v objektu map.
 
 *Osobnostní rysy*<br/>
- Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` je výchozí hodnota.
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte std::less <> predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče prvků lze porovnat z mapy.
+Hodnota klíče prvků lze porovnat z mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
+Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *kde*<br/>
- Pozice prvku, který má být odebrán.
+Pozice prvku, který má být odebrán.
 
 *první*<br/>
- Pozice prvního prvku, který má být odebrán.
+Pozice prvního prvku, který má být odebrán.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
 *Key*<br/>
- Hodnota klíče prvků, které mají být odebrány.
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče k porovnání s klíči řazení prvek z mapy vyhledaly.
+Hodnota klíče k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
+Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Argument mapy poskytující prvky pro záměnu s cílová mapa.
+Argument mapy poskytující prvky pro záměnu s cílová mapa.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Hodnota klíče argumentu k porovnání s hodnotou klíče řazení prvek z mapy být vyhledán.
+Hodnota klíče argumentu k porovnání s hodnotou klíče řazení prvek z mapy být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
 

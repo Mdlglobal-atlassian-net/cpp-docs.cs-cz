@@ -1,5 +1,5 @@
 ---
-title: Konstanty potvrzení na disku | Microsoft Docs
+title: Konstanty potvrzení na disku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3a815948c127c5dec0fe6412ab3c358aa409e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d95aac86ebf5b278bc67fb3d7c92f1e0b19790c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391061"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702717"
 ---
 # <a name="commit-to-disk-constants"></a>Konstanty potvrzení na disku
-**Konkrétní Microsoft**  
+
+**Specifické pro Microsoft**  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #include <stdio.h>  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto specifické pro společnost Microsoft konstanty zadejte, zda vyrovnávací paměť přidružené k otevření souboru vyprázdní vyrovnávací paměti operačního systému nebo na disk. Režim je součástí řetězec určující typ přístup pro čtení a zápis (**"r"**, **"w"**, **"a"**, **"r +"**, **"w +"** , **"+"**).  
+
+Tyto konstanty specifické pro společnost Microsoft určit, zda vyrovnávací paměť přidružené k otevření souboru vyprázdní vyrovnávací paměť operačního systému nebo na disk. Režim je součástí řetězce, který specifikuje typ přístup pro čtení/zápis (**"r"**, **"w"**, **"a"**, **"r +"**, **"w +"** , **"a +"**).  
   
- Režimy potvrzení na disku jsou následující:  
+Režimy potvrzení na disku jsou následující:  
   
- **c**  
- Zapíše obsah unwritten zadané vyrovnávací paměti na disk. Tato funkce potvrzení disku dochází pouze v explicitní volání buď [fflush –](../c-runtime-library/reference/fflush.md) nebo [_flushall –](../c-runtime-library/reference/flushall.md) funkce. Tento režim je užitečné při plánování práce s důvěrnými osobními údaji. Například, pokud váš program ukončí po volání `fflush` nebo `_flushall`, můžete si být jisti, že vaše data dosaženo vyrovnávací paměti operačního systému. Ale pokud otevření souboru s **c** možnost, data může nikdy činit na disk v případě, že operační systém také ukončí.  
+- **c**  
+
+   Zapíše nepsaná obsah zadané vyrovnávací paměti na disk. Tato funkce potvrzení na disku dochází jenom explicitního volání na buď [fflush –](../c-runtime-library/reference/fflush.md) nebo [_flushall –](../c-runtime-library/reference/flushall.md) funkce. Tento režim je užitečný při práci s důvěrnými osobními údaji. Například, pokud váš program se ukončí po volání `fflush` nebo `_flushall`, můžete si být jistí, že vaše data dosáhla vyrovnávací paměť operačního systému. Nicméně pokud je soubor otevřen s **c** možnost, data může nikdy být na disk operačního systému také ukončí.  
   
- **n**  
- Zapíše unwritten obsah zadanou vyrovnávací paměť do vyrovnávací paměti operačního systému. Operační systém může ukládat data do mezipaměti a pak stanovit, že optimální čas k zápisu na disk. V mnoha podmínkách toto chování usnadňuje efektivní program chování. Ale pokud doba uchování dat je důležité (například bankovní transakce nebo informace lístku letecká společnost) zvažte použití **c** možnost. **n** režim je výchozí hodnota.  
+- **n**  
+
+   Zapíše nepsaná obsah zadané vyrovnávací paměti do vyrovnávací paměti operačního systému. Operační systém můžete ukládat data do mezipaměti a potom určit optimální doba na zápis na disk. Mnoho podmínek toto chování je pro efektivní program chování. Nicméně pokud uchovávání dat je velmi důležité (například bankovních transakcí nebo informace lístku letecká společnost) zvažte použití **c** možnost. **n** režim je výchozí hodnota.  
   
 > [!NOTE]
->  **c** a **n** možnosti nejsou součástí ANSI standard pro `fopen`, ale rozšíření Microsoft a neměl by se používat, kde je žádoucí přenositelnost ANSI.  
+> **c** a **n** možnosti, které nejsou součástí standardu ANSI `fopen`, ale jsou rozšíření společnosti Microsoft a neměl by se používat, kde je žádoucí přenositelnost ANSI.  
   
-## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>Funkce potvrzení na disku pomocí existujícího kódu  
- Ve výchozím nastavení, volá, aby se [fflush –](../c-runtime-library/reference/fflush.md) nebo [_flushall –](../c-runtime-library/reference/flushall.md) – funkce knihovny zápisu dat do vyrovnávací paměti udržuje v operačním systému. Operační systém určuje optimální dobu ve skutečnosti zapsat data na disk. Funkce běhové knihovny k potvrzení na disku umožňuje Ujistěte se, že je důležitá data zapsána přímo na disku, nikoli do vyrovnávací paměti operačního systému. Tato funkce můžete udělit do stávající aplikace bez přepisování pomocí jeho objekt soubory s COMMODE.OBJ propojení.  
+## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>Pomocí funkce potvrzení na Disk s existujícím kódem  
+
+Ve výchozím nastavení, volání [fflush –](../c-runtime-library/reference/fflush.md) nebo [_flushall –](../c-runtime-library/reference/flushall.md) funkce knihovny zapsat data do vyrovnávací paměti udržovány v operačním systému. Operačního systému určuje optimální čas, ve skutečnosti zapisovat data na disk. Funkce potvrzení na disku knihovny run-time umožňuje zajistit, že důležitá data se zapisují přímo na disk, nikoli do vyrovnávací paměti operačního systému. Tuto funkci můžete rozdat existující program bez přepsání propojením jeho objekt soubory s COMMODE.OBJ.  
   
- Ve výsledném spustitelného souboru, volá, aby se `fflush` zapsat obsah vyrovnávací paměti přímo na disku a volání `_flushall` zapisovat obsah všech vyrovnávací paměti na disk. Tyto dvě funkce jsou jediné vliv COMMODE.OBJ.  
+Výsledný spustitelný soubor volá do `fflush` zapsat obsah vyrovnávací paměti přímo na disk a volání `_flushall` zapisovat obsah všech vyrovnávací paměti na disk. Tyto dvě funkce jsou pouze ty, které jsou ovlivněny COMMODE.OBJ.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../c-runtime-library/stream-i-o.md)   
- [_fdopen –, _wfdopen –](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen –, _wfopen –](../c-runtime-library/reference/fopen-wfopen.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+[Stream vstupně-výstupních operací](../c-runtime-library/stream-i-o.md)<br/>
+[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
+[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

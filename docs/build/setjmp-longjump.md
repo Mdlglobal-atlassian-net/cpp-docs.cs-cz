@@ -1,5 +1,5 @@
 ---
-title: setjmp longjump | Microsoft Docs
+title: setjmp longjump | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55cf6a2503367777464f09f92e3e3614c3d9f11b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53160a5deeb3ea0db111fc0aae7429b19b7cc86
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379832"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703271"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
-Když zahrnete setjmpex.h nebo setjmp.h, veškerá volání [setjmp](../c-runtime-library/reference/setjmp.md) nebo [longjmp](../c-runtime-library/reference/longjmp.md) bude mít za následek unwind, které vyvolá destruktory a finally.  To se liší od x86, kde včetně výsledků setjmp.h finally – klauzule a destruktory.  
-  
- Volání `setjmp` zachová aktuální ukazatel zásobníku, nezávislé registry a registry MxCsr.  Volání `longjmp` vraťte se na nejnovější `setjmp` volání stránku a obnoví ukazatel zásobníku, nezávislé registry a MxCsr zaregistruje, zpátky do stavu voláním nejnovější `setjmp` volání.  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../build/calling-convention.md)
+
+Pokud zahrnete setjmpex.h nebo setjmp.h, veškerá volání [setjmp](../c-runtime-library/reference/setjmp.md) nebo [longjmp](../c-runtime-library/reference/longjmp.md) způsobí uvolnění, který vyvolá destruktory a finally.  Tím se liší od x86, včetně setjmp.h výsledků v klauzulích finally a destruktory.
+
+Volání `setjmp` zachová aktuální ukazatel zásobníku, bez registry a MxCsr registrů.  Volání `longjmp` vraťte se na nejnovější `setjmp` volání webu a obnoví ukazatel zásobníku, bez registry a MxCsr zaregistruje, zpět do stavu jako zachovaný nejnovější `setjmp` volání.
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../build/calling-convention.md)

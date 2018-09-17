@@ -1,5 +1,5 @@
 ---
-title: Možnosti kompilátoru | Microsoft Docs
+title: Možnosti kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,29 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea07361a292ee5e7cde99cedad2d5ac4c8a53aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 76ab322dc4573863a30092b296e87e90c41619ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374270"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716207"
 ---
 # <a name="compiler-options"></a>Možnosti kompilátoru
 
-cl.exe je nástroj, který řídí Microsoft Visual C++ (MSVC) C a C++ kompilátory a linkeru. cl.exe lze spustit pouze v operačních systémech, které podporují Microsoft Visual Studio pro Windows.
+cl.exe je nástroj, který řídí Microsoft Visual C++ (MSVC) C a kompilátory jazyka C++ a propojovací program. cl.exe lze spustit pouze v operačních systémech, které podporují Microsoft Visual Studio pro Windows.
 
-> [!NOTE]  
-> Tento nástroj můžete spustit pouze z příkazového řádku vývojáře Visual Studio. Nelze ji spustit z příkazového řádku systému nebo v Průzkumníku souborů. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../building-on-the-command-line.md).
+> [!NOTE]
+> Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../building-on-the-command-line.md).
 
-Kompilátory vytvořit soubory objektů (.obj) běžné objekt souboru formátu (COFF). Spustitelné soubory (.exe) nebo dynamické knihovny (DLL), který produkuje linkeru.
+Kompilátory vytvářejí soubory objektů (.obj) Common Object File Format (COFF). Propojovací program vytvoří spustitelné soubory (.exe) nebo dynamické knihovny (DLL).
 
-Všimněte si, že jsou všechny možnosti kompilátoru velká a malá písmena. Můžete použít buď lomítkem (`/`) nebo pomlčkou (`-`) k určení možnost kompilátoru.
+Všimněte si, že jsou všechny možnosti kompilátoru malá a velká písmena. Můžete použít buď lomítka (`/`) nebo pomlčky (`-`) zadat možnost kompilátoru.
 
 Chcete-li kompilovat bez propojení, použijte [/c](../../build/reference/c-compile-without-linking.md) možnost.
 
-## <a name="find-a-compiler-option"></a>Najít – možnost kompilátoru
+## <a name="find-a-compiler-option"></a>Najít možnost kompilátoru
 
-Možnost konkrétní kompilátoru naleznete v tématu jednu z následujících seznamů:
+K vyhledání konkrétního kompilátoru, najdete v jednom z následujících seznamů:
 
 - [Možnosti kompilátoru (abecední pořadí)](../../build/reference/compiler-options-listed-alphabetically.md)
 
@@ -48,7 +48,7 @@ Možnost konkrétní kompilátoru naleznete v tématu jednu z následujících s
 
 ## <a name="specify-compiler-options"></a>Zadejte možnosti kompilátoru
 
-Téma pro každý – možnost kompilátoru popisuje, jak lze nastavit ve vývojovém prostředí. Informace o zadání možností mimo vývojového prostředí najdete v tématu:
+Téma pro každou možnost kompilátoru popisuje, jak lze nastavit ve vývojovém prostředí. Informace o určení možnosti mimo vývojové prostředí najdete tady:
 
 - [Syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md)
 
@@ -56,13 +56,13 @@ Téma pro každý – možnost kompilátoru popisuje, jak lze nastavit ve vývoj
 
 - [Proměnné prostředí CL](../../build/reference/cl-environment-variables.md)
 
-## <a name="related-build-tools"></a>Související sestavovací nástroje
+## <a name="related-build-tools"></a>Nástroje pro související sestavení
 
-[Možnosti linkeru](../../build/reference/linker-options.md) ovlivní také, jak je integrovaná vašeho programu.
+[Možnosti linkeru](../../build/reference/linker-options.md) také ovlivňují, jak je sestaven program.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
-[Rychlá kompilace](../../build/reference/fast-compilation.md)  
-[CL vyvolává linker](../../build/reference/cl-invokes-the-linker.md)  
+[Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Rychlá kompilace](../../build/reference/fast-compilation.md)<br/>
+[CL vyvolává linker](../../build/reference/cl-invokes-the-linker.md)

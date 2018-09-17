@@ -1,5 +1,5 @@
 ---
-title: Volající volaný – uložené registry | Microsoft Docs
+title: Volající / volaný – uložené registry | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f65e88c8609d6a2097e9e54c3f52cbd27dce36d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8e877387dbb5b0be865e11017a3ac71a0c38faa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366793"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707652"
 ---
 # <a name="callercallee-saved-registers"></a>Volající/volaný – uložené registry
-Poškození registrů RAX, RCX, RDX, R8, R9, R10, R11 jsou považovány za volatile a je třeba zvážit při volání funkce (pokud bezpečnost dokázat analýza například optimalizace celého programu).  
-  
- Zaregistruje RBX, RBP, RDI, RSI, konfigurace, r 12, R13, R14 a R15 se považují za stálé a musí být uložena a obnoveny funkcí, která je používá.  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../build/calling-convention.md)
+
+Poškození registrů RAX RCX, RDX, R8, R9, R10, R11 jsou považovány za volatile a musíte vzít v úvahu při volání funkce (není-li jinak bezpečnost dokázat analýzou například celková optimalizace programu).
+
+Registry RBX RBP, RDI, RSI, RSP, r 12, R13, R14 a R15 jsou považovány za stálé a musí být uloženy a obnovit pomocí funkce, která je používá.
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../build/calling-convention.md)

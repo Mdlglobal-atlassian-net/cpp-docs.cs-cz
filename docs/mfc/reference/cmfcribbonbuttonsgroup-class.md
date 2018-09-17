@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848516"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709784"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Cmfcribbonbuttonsgroup – třída
 `CMFCRibbonButtonsGroup` Třída umožňuje uspořádat sadu tlačítek na pásu karet do skupiny. Všechna tlačítka ve skupině jsou přímo vedle sebe ve vodorovném směru a uzavřena do ohraničení.  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na tlačítko pro přidání.  
+*pButton*<br/>
+[in] Ukazatel na tlačítko pro přidání.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Seznam tlačítek, přidá do skupiny.  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lstButtons*  
- Seznam ukazatelů na tlačítka, který chcete přidat.  
+*lstButtons*<br/>
+[in] Seznam ukazatelů na tlačítka, který chcete přidat.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Vytvoří `CMFCRibbonButtonsGroup` objektu.  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Určuje tlačítko pro přidání do nově vytvořeného `CMFCRibbonButtonsGroup` objektu.  
+*pButton*<br/>
+[in] Určuje tlačítko pro přidání do nově vytvořeného `CMFCRibbonButtonsGroup` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *mi*  
- Index založený na nule tlačítko pro vrácení.  
+*i*<br/>
+[in] Index založený na nule tlačítko pro vrácení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na tlačítka, které se nachází na zadaném indexu. Hodnota NULL, pokud zadaný index je mimo rozsah.  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení ze skupiny pásu karet.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení ze skupiny pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení `CMFCRibbonButtonsGroup` objektu.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení `CMFCRibbonButtonsGroup` objektu.  
   
- [in] *rectImage*  
- Obdélník, ve kterém chcete-li nakreslit obrázek.  
+*rectImage*<br/>
+[in] Obdélník, ve kterém chcete-li nakreslit obrázek.  
   
- [in] *pButton*  
- Tlačítko, pro kterou chcete-li nakreslit obrázek.  
+*pButton*<br/>
+[in] Tlačítko, pro kterou chcete-li nakreslit obrázek.  
   
- [in] *nImageIndex*  
- Index bitové kopie na nakreslit tlačítko (v jednom z polí tři image u tlačítek, Normální, zvýrazněné nebo zakázáno).  
+*nImageIndex*<br/>
+[in] Index bitové kopie na nakreslit tlačítko (v jednom z polí tři image u tlačítek, Normální, zvýrazněné nebo zakázáno).  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pImages*  
- Běžných bitových kopií.  
+*pImages*<br/>
+[in] Běžných bitových kopií.  
   
- [in] *pHotImages*  
- Horkými obrázky.  
+*pHotImages*<br/>
+[in] Horkými obrázky.  
   
- [in] *pDisabledImages*  
- Zakázané imagí.  
+*pDisabledImages*<br/>
+[in] Zakázané imagí.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání `SetImages` předtím, než přidáte tlačítka do skupiny. Počet obrázků musí být větší nebo rovna počtu tlačítka Přidat do skupiny.  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCategory*  
- Ukazatel do nadřazené kategorie nastavení (skupin s kartami v ovládacích prvků pásu karet se nazývají kategorie).  
+*pCategory*<br/>
+[in] Ukazatel do nadřazené kategorie nastavení (skupin s kartami v ovládacích prvků pásu karet se nazývají kategorie).  
   
 ### <a name="remarks"></a>Poznámky  
   

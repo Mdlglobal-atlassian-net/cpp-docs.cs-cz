@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027177"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712488"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox – třída
 `CMFCRibbonCheckBox` Třída implementuje zaškrtávací políčko, které můžete přidat do nabídky pásu karet panelu, v panelu nástrojů Rychlý přístup nebo automaticky otevíraného okna.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje ID příkazu.  
+*nID*<br/>
+[in] Určuje ID příkazu.  
   
- [in] *lpszText*  
- Určuje textový popisek.  
+*lpszText*<br/>
+[in] Určuje textový popisek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vytvoří objekt zaškrtávacího políčka pásu karet.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na funkci CDC přidružené k zaškrtnutí políčka.  
+*primární řadič domény*<br/>
+[in] Ukazatel na funkci CDC přidružené k zaškrtnutí políčka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `CSize` objekt, který obsahuje compact velikost zaškrtávacího políčka.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na funkci CDC přidružené toto zaškrtávací políčko.  
+*primární řadič domény*<br/>
+[in] Ukazatel na funkci CDC přidružené toto zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který obsahuje zprostředkující velikost zaškrtávacího políčka.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na funkci CDC objekt přidružený k toto zaškrtávací políčko.  
+*primární řadič domény*<br/>
+[in] Ukazatel na funkci CDC objekt přidružený k toto zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `CSize` objekt, který obsahuje regulární velikost zaškrtávacího políčka.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na funkci CDC, ve kterém chcete-li nakreslit zaškrtávací políčko.  
+*primární řadič domény*<br/>
+[in] Ukazatel na funkci CDC, ve kterém chcete-li nakreslit zaškrtávací políčko.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Ukazatel na funkci CDC přidružené k zaškrtnutí políčka.  
   
- [in] *Crect –*  
- A `CRect` určující obdélník, ve kterém chcete-li nakreslit obrázek nabídky.  
+*Crect –*<br/>
+[in] A `CRect` určující obdélník, ve kterém chcete-li nakreslit obrázek nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, pokud byl nakreslen bitovou kopii nebo hodnotu NEPRAVDA, pokud tomu tak není.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení, ve kterém chcete-li nakreslit zaškrtávací políčko.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení, ve kterém chcete-li nakreslit zaškrtávací políčko.  
   
- [in] *strText*  
- Zobrazení textu.  
+*strText*<br/>
+[in] Zobrazení textu.  
   
- [in] *nTextOffset*  
- Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.  
+*nTextOffset*<br/>
+[in] Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.  
   
- [in] *rect*  
- Obdélník zobrazení pro zaškrtávací políčko.  
+*Rect*<br/>
+[in] Obdélník zobrazení pro zaškrtávací políčko.  
   
- [in] *bIsSelected*  
- TRUE, pokud je toto políčko vybrané, nebo hodnotu FALSE, pokud není.  
+*bIsSelected*<br/>
+[in] TRUE, pokud je toto políčko vybrané, nebo hodnotu FALSE, pokud není.  
   
- [in] *bHighlighted*  
- TRUE, pokud je toto políčko zvýrazněné nebo hodnotu NEPRAVDA, pokud tomu tak není.  
+*bHighlighted*<br/>
+[in] TRUE, pokud je toto políčko zvýrazněné nebo hodnotu NEPRAVDA, pokud tomu tak není.  
   
 ### <a name="remarks"></a>Poznámky  
   

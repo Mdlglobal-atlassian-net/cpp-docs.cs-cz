@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02051010741ff1f70f1be8d94dff0179b4d2aee2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ae2708069141c8ed78e4e736d1b0664a166b4da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465768"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715488"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset _bittestandset64
 **Specifické pro Microsoft**  
@@ -47,11 +47,11 @@ unsigned char _bittestandset64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `a`  
- Ukazatel paměti prozkoumat.  
+*a*<br/>
+[out v] Ukazatel paměti prozkoumat.  
   
- [in] `b`  
- Bitová pozice pro testování.  
+*b*<br/>
+[in] Bitová pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Bit na zadané pozici.  

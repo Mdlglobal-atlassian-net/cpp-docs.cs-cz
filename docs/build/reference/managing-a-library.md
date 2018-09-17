@@ -1,5 +1,5 @@
 ---
-title: Správa knihovny | Microsoft Docs
+title: Správa knihovny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,63 +50,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dd6fff812d200e16b82994f9f9bbe598aface547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379637"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713151"
 ---
 # <a name="managing-a-library"></a>Správa knihovny
-K vytvoření nebo úpravě knihovnu COFF objektů, které je výchozí režim pro LIB. LIB běží v tomto režimu, když zadáte/extract (Chcete-li zkopírovat do souboru objektu) nebo/def (k vytvoření knihovnu importu).  
-  
- Pokud chcete vytvořit knihovnu z objekty a knihovny, použijte následující syntaxi:  
-  
-```  
-LIB [options...] files...  
-```  
-  
- Tento příkaz vytvoří knihovnu z jednoho nebo více vstup *soubory*. *Soubory* mohou být soubory COFF objektu, 32bitové OMF – soubory objektů nebo existující knihoven COFF. LIB vytvoří jedna knihovna, která obsahuje všechny objekty v zadané soubory. Pokud vstupní soubor je soubor 32-bit OMF objektu, bude v LIB převede do COFF před vytvořením knihovny. LIB nelze přijmout objekt OMF 32-bit, který je uložený v knihovně vytvořená 16bitové verzi LIB. Je nutné nejprve použít LIB 16bitové extrahovat objekt; pak můžete soubor odděleného objektu jako vstup pro 32-bit LIB.  
-  
- Ve výchozím nastavení, LIB názvy výstupního souboru použitím základní název první soubor objekt nebo knihovny a rozšíření. lib. Výstupní soubor zprovozněn v aktuálním adresáři. Pokud soubor se stejným názvem již existuje, výstupní soubor nahradí existující soubor. Pokud chcete zachovat existující knihovnu, pomocí možnosti/out můžete zadat název souboru výstupního souboru.  
-  
- K vytváření a úprava knihovnu použít následující možnosti:  
-  
- / LIBPATH: `dir`  
- Přepíše danou cestu knihovny prostředí. Podrobnosti najdete v tématu Popis odkazu [/Libpath](../../build/reference/libpath-additional-libpath.md) možnost.  
-  
- NEBO JEJICH VÝPISU  
- Zobrazí informace o knihovně výstup standardním výstupu. Výstup můžete přesměrovat do souboru. / List můžete použít k určení obsahu existující knihovny bez provádění úprav.  
-  
- / NAME: *filename*  
- Při sestavování knihovnu importu, určuje název knihovny DLL, pro kterou je vytvořený knihovny importu.  
-  
- / NODEFAULTLIB  
- Odebere ze seznamu knihoven, které vyhledávání při rozpoznávání externí odkazy na jeden nebo více výchozí knihovny. V tématu [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Další informace.  
-  
- / OUT: *filename*  
- Přepíše výchozí název výstupního souboru. Ve výchozím nastavení, vytvoření knihovny výstup v aktuálním adresáři s základní název první knihovny nebo objekt soubor na příkazovém řádku a rozšíření. lib.  
-  
- Nebo odebrat: *objektu*  
- Vynechá zadaný *objekt* z knihovny výstup. LIB vytvoří výstupní knihovny kombinování všechny objekty (ať už v objektu soubory nebo knihovny) a pak odstranění objektů zadaným/remove.  
-  
- / SUBSYSTEM: {KONZOLY &AMP;#124; EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER &AMP;#124; NATIVNÍ &AMP;#124; POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [, #[. ##]]  
- Informuje operačního systému, jak spustit program vytvořené připojování ke knihovně výstup. Další informace najdete v tématu Popis odkazu [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) možnost.  
-  
- Možnosti LIB zadat na příkazovém řádku se nerozlišují malá a velká písmena.  
-  
- LIB můžete provádět následující úlohy správy knihovny:  
-  
--   Chcete-li přidat objekty do knihovny, zadejte název souboru pro existující knihovnu a názvy souborů pro všechny nové objekty.  
-  
--   Kombinování knihovny, zadejte názvy souborů knihovny. Můžete přidat objekty a kombinovat knihovny jedním příkazem LIB.  
-  
--   Pokud chcete nahradit člena knihovny nový objekt, zadejte název souboru pro nový objekt (nebo knihovnu, která obsahuje ho) a knihovna, která obsahuje objekt člena, který chcete nahradit. Když v více než jeden vstupní soubor existuje objekt, který má stejný název, uloží je LIB poslední objekt zadaný v příkazu LIB do knihovny výstup. Když nahradíte člena knihovny, je nutné zadat nový objekt nebo knihovny po knihovnu, která obsahuje původní objekt.  
-  
--   Pokud chcete odstranit člena z knihovny, použijte možnost/Remove. LIB zpracovává všechny specifikace/Remove po kombinování všechny vstupní objekty, bez ohledu na příkazový řádek pořadí.  
-  
+
+K vytvoření nebo úpravě knihovnu objektů COFF je výchozí režim pro LIB. LIB běží v tomto režimu, když zadáte/extract (Chcete-li zkopírovat do souboru objektu) nebo def (k sestavení knihovny importu).
+
+Pokud chcete vytvořit knihovnu z objektů nebo knihoven, použijte následující syntaxi:
+
+```
+LIB [options...] files...
+```
+
+Tento příkaz vytvoří knihovnu z jednoho nebo více vstupních *soubory*. *Soubory* může být soubory objektů COFF, 32 bitů omf – soubory objektů nebo existujících knihoven COFF. LIB vytvoří jedna knihovna, která obsahuje všechny objekty v zadaných souborů. Pokud vstupní soubor je soubor objektu omf – 32-bit, LIB převede ho na COFF před vytvořením knihovny. LIB nemůže přijmout objekt omf – 32-bit, který je uložený v knihovně vytvořené v 16bitové verzi produktu LIB. 16bitové LIB musíte nejprve použít k extrahování objekt. Soubor byl extrahován objektu můžete použít jako vstup pro nástroj LIB 32-bit.
+
+Ve výchozím nastavení, LIB názvy výstupního souboru pomocí základní název prvního souboru objektů nebo knihoven a příponou. lib. Výstupní soubor je umístěn v aktuálním adresáři. Pokud soubor se stejným názvem už existuje, výstupní soubor nahradí existující soubor. Pokud chcete zachovat existující knihovnu, použijte možnost parametr/out a zadat název výstupního souboru.
+
+Tyto možnosti platí pro vytváření a úpravy knihovny:
+
+**/ LIBPATH:** *dir*<br/>
+Přepíše cestu ke knihovně prostředí. Podrobnosti najdete v tématu Popis odkazu [/Libpath](../../build/reference/libpath-additional-libpath.md) možnost.
+
+**/ LIST**<br/>
+Zobrazí informace o výstupní knihovně na standardním výstupu. Výstup je možné přesměrovat do souboru. / List můžete zjistit obsah stávající knihovny bez její změny.
+
+**/ NAME:** *název souboru*<br/>
+Při sestavování knihovny importů Určuje název knihovny DLL pro kterou má být sestaven knihovny importu.
+
+**/ NODEFAULTLIB**<br/>
+Odebere jeden nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zobrazit [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Další informace.
+
+**/ OUT:** *název souboru*<br/>
+Přepíše výchozí název výstupního souboru. Ve výchozím nastavení je výstupní knihovně vytvoří v aktuálním adresáři se základním názvem první knihovny objektu souboru nebo na příkazovém řádku a rozšíření. lib.
+
+**/ REMOVE:** *objektu*<br/>
+Vynechá zadaný *objekt* z výstupní knihovně. LIB vytvoří výstupní knihovnu tak, že zkombinuje všechny objekty (ať už v souborech objektů nebo knihoven) a poté odstraní všechny objekty zadané pomocí parametru/remove.
+
+**/ SUBSYSTEM:**{**KONZOLY** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **BITOVÁ KOPIE EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVNÍ** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
+Říká operačnímu systému, jak spustit program vytvořil připojování ke knihovně výstup. Další informace naleznete v popisu odkaz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) možnost.
+
+Lib – možnosti zadané v příkazovém řádku se nerozlišují malá a velká písmena.
+
+Můžete provádět následující úlohy správy knihovny LIB:
+
+- Chcete-li přidat objekty do knihovny, zadejte název souboru pro existující knihovnu a názvy souborů pro nové objekty.
+
+- Kombinování knihovny, zadejte názvy souborů knihovny. Můžete přidat objekty a knihovny v kombinaci s jediným příkazem LIB.
+
+- Nahraďte členem knihovny nový objekt, zadejte knihovna, která obsahuje člen objektu, který chcete nahradit a název souboru pro nový objekt (nebo knihovnu, která ji obsahuje). Objekt, který má stejný název ve více než jeden vstupní soubor existuje, LIB vloží poslední objekt určený v příkazu LIB do výstupní knihovně. Když nahradíte člena knihovny, nezapomeňte zadat nový objekt nebo knihovny po knihovnu, která obsahuje původní objekt.
+
+- Pokud chcete odstranit člena z knihovny, použijte možnost/Remove. Lib – zpracovává všechny specifikace parametru/Remove po zkombinuje všechny objekty vstupní, bez ohledu na to, příkazového řádku pořadí.
+
 > [!NOTE]
->  Nelze jak odstranit členem a rozbalte ho do souboru do jednoho kroku. Nejdřív musíte extrahovat objektem člena pomocí/extract a potom spusťte LIB znovu s použitím/remove. Toto chování se liší od 16bitové LIB (pro knihovny OMF) uvedené v další produkty společnosti Microsoft.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+>  Nelze současně odstraní člena a rozbalte ho do souboru do jednoho kroku. Nejdřív musíte extrahovat členského objektu pomocí/extract a potom spusťte LIB znovu pomocí parametru/remove. Toto chování se liší od 16 bitů LIB (pro knihovny OMF) k dispozici v jiných produktů Microsoftu.
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

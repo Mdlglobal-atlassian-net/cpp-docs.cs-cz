@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711057"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchangePointer
 **Specifické pro Microsoft**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `Destination`  
- Ukazatel na ukazatel na cílové hodnoty. Znaménko se ignoruje.  
+*cíl*<br/>
+[out v] Ukazatel na ukazatel na cílové hodnoty. Znaménko se ignoruje.  
   
- [in] `Exchange`  
- Ukazatel na Exchange. Znaménko se ignoruje.  
+*Exchange*<br/>
+[in] Ukazatel na Exchange. Znaménko se ignoruje.  
   
- [in] `Comparand`  
- Ukazatel na porovnání do cíle. Znaménko se ignoruje.  
+*Operand porovnávání*<br/>
+[in] Ukazatel na porovnání do cíle. Znaménko se ignoruje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota je počáteční hodnota cíle.  

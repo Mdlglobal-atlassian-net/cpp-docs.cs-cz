@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690149"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705910"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 Poskytuje funkce pro ovládací prvek panelu průběhu běžné Windows.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *clrBar*|A [COLORREF](/windows/desktop/gdi/colorref) hodnota, která určuje novou barvu indikátoru průběhu. Zadejte CLR_DEFAULT způsobit indikátor průběhu používat výchozí barvy.|  
+|*clrBar*|[in] A [COLORREF](/windows/desktop/gdi/colorref) hodnota, která určuje novou barvu indikátoru průběhu. Zadejte CLR_DEFAULT způsobit indikátor průběhu používat výchozí barvy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|True pro zapnutí marquee režim on, nebo FALSE, pokud chcete vypnout režim výběr.|  
-|[in] *nInterval*|Doba v milisekundách mezi aktualizacemi animace běžícího textu.|  
+|*fMarqueeMode*|[in] True pro zapnutí marquee režim on, nebo FALSE, pokud chcete vypnout režim výběr.|  
+|*nInterval*|[in] Doba v milisekundách mezi aktualizacemi animace běžícího textu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vždy vrátí hodnotu TRUE.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iState*|Stav nastavení indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> -PBST_NORMAL – probíhá<br />-PBST_ERROR – chyba<br />-PBST_PAUSED – pozastaveno|  
+|*iState*|[in] Stav nastavení indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> -PBST_NORMAL – probíhá<br />-PBST_ERROR – chyba<br />-PBST_PAUSED – pozastaveno|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí stav aktuální ovládací prvek indikátoru průběhu.  

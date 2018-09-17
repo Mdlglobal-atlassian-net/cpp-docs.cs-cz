@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705688"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox – třída
 Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na panel pásu karet.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFontType*  
- Určuje písmo typ písma pro přidání.  
+*nFontType*<br/>
+[in] Určuje písmo typ písma pro přidání.  
   
- [in] *nCharSet*  
- Určuje znakovou sadu písma pro přidání.  
+*nCharSet*<br/>
+[in] Určuje znakovou sadu písma pro přidání.  
   
- [in] *nPitchAndFamily*  
- Určuje rozteč a rodiny písem pro přidání.  
+*nPitchAndFamily*<br/>
+[in] Určuje rozteč a rodiny písem pro přidání.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Vytvoří a inicializuje [cmfcribbonfontcombobox –](../../mfc/reference/cmfcribbonfontcombobox-class.md) objektu.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID příkazu, který se spustí, když uživatel vybere položku v poli se seznamem příkazu.  
+*nID*<br/>
+[in] ID příkazu, který se spustí, když uživatel vybere položku v poli se seznamem příkazu.  
   
- [in] *nFontType*  
- Určuje, které Písmo typy mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitová kombinace.  
+*nFontType*<br/>
+[in] Určuje, které Písmo typy mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitová kombinace.  
   
- [in] *nCharSet*  
- Filtry v poli se seznamem na ty, které patří do zadanou znakovou sadu písma...  
+*nCharSet*<br/>
+[in] Filtry v poli se seznamem na ty, které patří do zadanou znakovou sadu písma...  
   
- [in] *nPitchAndFamily*  
- Určuje, rozteč a rodiny písem, které se zobrazí v poli se seznamem.  
+*nPitchAndFamily*<br/>
+[in] Určuje, rozteč a rodiny písem, které se zobrazí v poli se seznamem.  
   
- [in] *nWidth*  
- Určuje šířku v pixelech, pole se seznamem.  
+*nWidth*<br/>
+[in] Určuje šířku v pixelech, pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci Windows SDK.  

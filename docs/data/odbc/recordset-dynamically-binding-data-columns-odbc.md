@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338808"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703118"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Sada záznamů: Dynamické vazby datových sloupců (ODBC)
 Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
@@ -91,19 +91,16 @@ Vytváření seznam sloupců k vytvoření dynamické vazby
      Jedním z přístupů je přidání smyčky do hlavních záznamů `DoFieldExchange` funkce, která prochází seznam nové sloupce, voláním příslušné funkce RFX pro každý sloupec v seznamu. Při každém volání funkce RFX předejte název sloupce z seznam názvů sloupců a umístění úložiště v odpovídající člen hodnotu seznamu výsledků.  
   
 ###  <a name="_core_lists_of_columns"></a> Seznam sloupců  
- V následující tabulce jsou uvedeny čtyři seznamy, které potřebujete k práci s.  
-  
- **Aktuální sloupců tabulky (seznam 1 na obrázku)** seznam sloupce v tabulce na zdroj dat. Tento seznam může odpovídat seznam sloupců, které jsou aktuálně vázána ve vaší sadě záznamů.  
-  
- **Mez sloupce sad záznamů (na obrázku 2 seznamu)**  
- Seznam sloupců hranice ve vaší sadě záznamů. Tyto sloupce již RFX příkazy ve vašich `DoFieldExchange` funkce.  
-  
- **Sloupce pro dynamickou vazbu (na obrázku 3 seznamu)**  
- Seznam sloupců v tabulce, ale ne do sady záznamů. Jedná se o sloupce, které chcete vytvořit vazbu dynamicky.  
-  
- **Dynamické hodnoty sloupců (na obrázku 4 seznamu)**  
- Seznam obsahující úložiště pro hodnoty ze sloupce, které můžete vytvořit vazbu dynamicky načíst. Elementy tohoto seznamu odpovídají těm v sloupce do dynamickou vazbu, 1: 1.  
-  
+
+V následující tabulce jsou uvedeny čtyři seznamy, které potřebujete k práci s.  
+
+|||
+|-|-|  
+**Aktuální sloupců tabulky**| (Seznam 1 na obrázku) Seznam sloupce v tabulce ve zdroji dat. Tento seznam může odpovídat seznam sloupců, které jsou aktuálně vázána ve vaší sadě záznamů.|
+|**Sloupce sad záznamů s vazbou**| (Obrázek seznamu 2) Seznam sloupců hranice ve vaší sadě záznamů. Tyto sloupce již RFX příkazy ve vašich `DoFieldExchange` funkce.|
+|**Sloupce pro dynamickou vazbu**| (Obrázek seznamu 3) Seznam sloupců v tabulce, ale ne do sady záznamů. Jedná se o sloupce, které chcete vytvořit vazbu dynamicky.|
+|**Dynamické hodnoty sloupců**| (Obrázek seznamu 4) Seznam obsahující úložiště pro hodnoty ze sloupce, které můžete vytvořit vazbu dynamicky načíst. Elementy tohoto seznamu odpovídají těm v sloupce do dynamickou vazbu, 1: 1.|
+
 ###  <a name="_core_building_your_lists"></a> Vytváření seznamů  
  Díky obecné strategii na paměti můžete zapnout v podrobnostech. Postupy ve zbývající části tohoto tématu ukazují, jak vytvářet seznamy ukazuje [seznamy sloupců](#_core_lists_of_columns). Postupy vás prostřednictvím:  
   

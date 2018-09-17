@@ -1,5 +1,5 @@
 ---
-title: / Qsafe_fp_loads | Microsoft Docs
+title: / Qsafe_fp_loads | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/24/2018
 ms.technology:
@@ -11,16 +11,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378282"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713658"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
-Vyžaduje pokyny pro přesunutí celé číslo s plovoucí desetinnou čárkou a zakáže optimalizace určité zatížení s plovoucí desetinnou čárkou.
+Vyžaduje instrukce přesunu celého čísla pro hodnoty s plovoucí desetinnou čárkou a zakáže některé optimalizace zátěže plovoucí desetinné čárky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,28 +28,28 @@ Vyžaduje pokyny pro přesunutí celé číslo s plovoucí desetinnou čárkou a
 
 ## <a name="remarks"></a>Poznámky
 
-**/ Qsafe_fp_loads** je dostupný jenom v kompilátory, cílový x86; není k dispozici v kompilátory, které cílí x64 nebo ARM.
+**/ Qsafe_fp_loads** je dostupná pouze v kompilátorech, jejichž cílem x86; není k dispozici v kompilátorech, které se zaměřují x64 nebo ARM.
 
-**/ Qsafe_fp_loads** vynutí kompilátor použijte pokyny pro přesunutí celé číslo místo s plovoucí desetinnou čárkou přesunutí pokynů pro přesun dat mezi pamětí a MMX zaregistruje. Tato možnost zakáže také zaregistrovat zatížení optimalizace pro hodnoty s plovoucí desetinnou čárkou, které je možné načíst v více cest řízení, pokud hodnota může způsobit výjimku na zatížení – například hodnotou NaN.
+**/ Qsafe_fp_loads** vynutí kompilátoru nahrazujícím instrukce přesunu celého čísla s plovoucí desetinnou čárkou přesunout pokyny pro přesun dat mezi pamětí a MMX zaregistruje. Tato možnost také zakáže optimalizaci zatížení registru pro hodnoty s plovoucí desetinnou čárkou, které lze načíst více cest ovládacího prvku, když hodnota může způsobit výjimku při načtení – například hodnotu NaN.
 
-Tato možnost je přepsat [/fp: kromě](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** určuje podmnožinu chování kompilátoru, která je zadána **/fp: kromě**.
+Tato možnost je přepsán [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** určuje podmnožinu chování kompilátoru, která je zadána **/FP: except**.
 
-**/ Qsafe_fp_loads** není kompatibilní s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) a [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md). Další informace o možnosti kompilátoru plovoucí bodu najdete v tématu [/fp (zadejte Floating-Point chování)](../../build/reference/fp-specify-floating-point-behavior.md).
+**/ Qsafe_fp_loads** není kompatibilní s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) a [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Další informace o možnostech kompilátoru plovoucího bodu najdete v tématu [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Zadejte možnost kompilátoru v **další možnosti** pole. Zvolte **OK** na použití změny.
+1. Zadáním možnosti kompilátoru v **další možnosti** pole. Zvolte **OK** na použití změny.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)  
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

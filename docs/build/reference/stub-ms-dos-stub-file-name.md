@@ -1,5 +1,5 @@
 ---
-title: -STUB (název souboru zástupného kódu MS-DOS) | Microsoft Docs
+title: -STUB (název souboru zástupného kódu MS-DOS zástupné procedury) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,53 +22,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4302040f7d18dcffc07ddd054c34b62c22e400d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c279d6f33befb4c308afe0c92b7dcca3d45ba66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707717"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (název souboru zástupného kódu MS-DOS)
-```  
-/STUB:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Název souboru*  
- Aplikace, MS-DOS.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost/stub připojí programu zástupného kódu MS-DOS Win32 programu.  
-  
- Program se zakázaným inzerováním je volána, pokud soubor je spuštěn v systému MS-DOS. Obvykle se zobrazí odpovídající zprávu; všechny platné MS-DOS aplikace však může být programem.  
-  
- Zadejte *filename* programu se zakázaným inzerováním po dvojtečkou (:) na příkazovém řádku. Kontroly linkeru *filename* a chybové zprávy v případě, že soubor není spustitelný soubor. Program musí být soubor .exe; soubor .com je neplatný pro programem.  
-  
- Pokud tato možnost se nepoužívá, připojí linkeru výchozí program se zakázaným inzerováním, která vydává se následující zpráva:  
-  
-```  
-This program cannot be run in MS-DOS mode.  
-```  
-  
- Při sestavování ovladač virtuálního zařízení *filename* umožňuje uživateli zadat název souboru, který obsahuje strukturu IMAGE_DOS_HEADER (definovanou v WINNT. H) pro použití v ovladače VXD, nikoli výchozí záhlaví.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Zadejte možnost do **další možnosti** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/STUB:filename
+```
+
+## <a name="arguments"></a>Arguments
+
+*Název souboru*<br/>
+Aplikace zástupného kódu MS-DOS.
+
+## <a name="remarks"></a>Poznámky
+
+/ Stub připojí k programu Win32 zástupný program MS-DOS.
+
+Program zástupné procedury je vyvolána, pokud soubor je spuštěn v systému MS-DOS. Obvykle se zobrazí odpovídající zprávu; libovolné platné zástupného kódu MS-DOS aplikace však může být program zástupné procedury.
+
+Zadejte *filename* pro zástupný program za dvojtečkou (:) na příkazovém řádku. Linker zkontroluje *filename* a vydává chybovou zprávu, pokud soubor není spustitelný soubor. Program musí být soubor s příponou .exe; .com soubor není platný pro program zástupné procedury.
+
+Pokud tato možnost se nepoužívá, linker připojí výchozí program zástupnou proceduru, která vydává se následující zpráva:
+
+```
+This program cannot be run in MS-DOS mode.
+```
+
+Při sestavování ovladač virtuálního zařízení *filename* umožňuje uživateli zadat název souboru, který obsahuje strukturu IMAGE_DOS_HEADER (definované v WINNT. H) pro použití v VXD, a ne výchozí záhlaví.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do **další možnosti** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

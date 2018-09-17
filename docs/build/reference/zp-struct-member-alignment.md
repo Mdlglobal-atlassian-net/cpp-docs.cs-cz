@@ -1,5 +1,5 @@
 ---
-title: -Zp (zarovnání členů struktury) | Microsoft Docs
+title: -Zp (zarovnání členů struktury) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/30/2018
 ms.technology:
@@ -21,41 +21,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1666da40f748d18c762eae19595692addcdbf78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0268f5c5d5d34d8fa244dc6260889bea6b1e837a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715907"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (zarovnání členů struktury)
 
-Řídí, jak jsou členy struktury zabaleny do paměti a určuje stejné okolních pro všechny struktury v modulu.
+Určuje, jak členy struktury jsou zkomprimována do paměti a určuje stejný komprimaci pro všechny struktury v modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/ Zp**[**1**|**2**|**4**|**8** | **16**]
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud zadáte **/Zp**_n_ možnost, každý člen struktura po uložení první velikost typ člena nebo *n*-hranice bajtů (kde *n* je 1, 2, 4, 8 nebo 16), než je menší.
+Pokud zadáte **/zp**_n_ možnost, každý člen struktury po prvním uložen velikosti typ člena nebo *n*-hranice (kde *n* je 1, 2, 4, 8 nebo 16), podle toho, co je menší.
 
-K dispozici okolních hodnoty jsou popsány v následující tabulce:
+K dispozici balení hodnoty jsou popsány v následující tabulce:
 
-|/Zp argument|Efekt|
+|Argument/zp|Efekt|
 |-|-|
-|1|Balíčky struktury v rozsahu 1bajtů. Stejné jako **/Zp**.|
-|2|Balíčky struktury na hranicích 2bajtová.|
-|4|Balíčky struktury na hranicích 4bajtový.|
-|8|Balíčky struktury na hranicích 8bajtový (výchozí).|
-|16| Balíčky struktury na hranicích 16 bajtů.|
+|1|Sbalí struktury na 1bajtových hranicích. Stejné jako **/zp**.|
+|2|Sbalí struktury na 2bajtových hranicích.|
+|4|Sbalí struktury na 4bajtových hranicích.|
+|8|Sbalí struktury na 8bajtových hranicích (výchozí).|
+|16| Sbalí struktury na 16bajtových hranicích.|
 
-Tuto možnost byste neměli používat, pokud máte požadavky na konkrétní souvislost.
+Tuto možnost nepoužívejte, pokud nemáte konkrétní souvislost požadavky.
 
-> [!WARNING]  
-> Předpokládejme hlavičky C++ v sadě Windows SDK **/Zp8** balení. Pokud může dojít k poškození paměti **/Zp** nastavení se změní, když pomocí sady Windows SDK hlavičky.
+> [!WARNING]
+> Předpokládejme hlaviček jazyka C++ v sadě Windows SDK **/zp8** balení. Pokud může dojít k poškození paměti **/zp** nastavení se změní při použití sady Windows SDK záhlaví.
 
-Můžete také použít [pack](../../preprocessor/pack.md) k okolních struktura ovládacího prvku. Další informace o zarovnání naleznete v následujících tématech:
+Můžete také použít [pack](../../preprocessor/pack.md) na balení struktury ovládacího prvku. Další informace o zarovnání naleznete v následujících tématech:
 
 - [align](../../cpp/align-cpp.md)
 
@@ -67,17 +67,17 @@ Můžete také použít [pack](../../preprocessor/pack.md) k okolních struktura
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **C/C++** > **generování kódu** stránku vlastností.
 
-1. Změnit **Strukturování členských přidružení** vlastnost.
+1. Upravit **zarovnání členů struktury** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
 - [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

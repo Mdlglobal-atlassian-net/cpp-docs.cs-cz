@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711798"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,8 +52,8 @@ Bloku knihovny definuje v souboru IDL.
 
 ### <a name="parameters"></a>Parametry
 
-*typ* (volitelné)  
-Může být jedna z následujících akcí:
+*Typ*  
+(Volitelné) Může být jedna z následujících akcí:
 
 - `dll` Přidá se funkcí a tříd, které umožňují výslednou knihovnu DLL, aby fungoval jako server COM v procesu. Jedná se o výchozí hodnotu.
 
@@ -63,11 +63,11 @@ Může být jedna z následujících akcí:
 
 - `unspecified` Zakáže injektáž kódu ATL související s atributem module: injektáž modulu ATL – třídy, globální instanci _AtlModule a vstupní bod funkce. Injektáž kódu ATL kvůli dalším atributům v projektu není zakázána.
 
-*Název* (volitelné)  
-Název bloku knihovny.
+*Jméno*  
+(Volitelné) Název bloku knihovny.
 
-*verze* (volitelné)  
-Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.
+*Verze*  
+(Volitelné) Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.
 
 *uuid*  
 Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Je nutné načíst *uuid* bloku knihovny, které vám pomůžou s použitím identifikátoru **__uuidof (** *NázevKnihovny* **)**.
@@ -75,32 +75,32 @@ Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automatic
 *lcid*  
 Parametr lokalizace. Zobrazit [lcid](/windows/desktop/Midl/lcid) Další informace.
 
-*ovládací prvek* (volitelné)  
-Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
+*control*  
+(Volitelné) Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
 
 *helpstring*  
 Určuje knihovnu typů.
 
-*helpstringdll –* (volitelné)  
-Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](/windows/desktop/Midl/helpstringdll) pro další informace.
+*helpstringdll*  
+(Volitelné) Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](/windows/desktop/Midl/helpstringdll) pro další informace.
 
-*HelpFile –* (volitelné)  
-Název **pomáhají** soubor pro knihovnu typů.
+*helpfile*  
+(Volitelné) Název **pomáhají** soubor pro knihovnu typů.
 
-*HelpContext* (volitelné)  
-**Pomáhají ID** pro tuto knihovnu typů.
+*helpcontext*  
+(Volitelné) **Pomáhají ID** pro tuto knihovnu typů.
 
-*helpstringcontext –* (volitelné)  
-Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.
+*helpstringcontext*  
+(Volitelné) Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.
 
-*skryté* (volitelné)  
-Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
+*hidden*  
+(Volitelné) Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
-*s omezeným přístupem* (volitelné)  
-Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
+*restricted*  
+(Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
-*vlastní* (volitelné)  
-Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
+*Vlastní*  
+(Volitelné) Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
