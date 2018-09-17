@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726359"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Vytvoří kanál a spustí příkaz.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrn
 
 **_Popen –** funkce vytvoří kanál a asynchronně spustí kopii příkazového procesoru pomocí zadaného řetězce vytvářené *příkaz*. Řetězec znaků *režimu* Určuje typ přístupu požadovaná následujícím způsobem.
 
-**"r"** volajícího procesu najdete na standardní výstup příkazu vytvářené pomocí vrácený datový proud.
-
-**"w"** volající proces může zapisovat do vytvářených příkaz standardní vstup pomocí vráceném datovém proudu.
-
-**"b"** otevřít v binárním režimu.
-
-**"t"** otevřít v textovém režimu.
+|Režim přístupu|Popis|
+|-|-|
+|**"r"**|Standardní výstup příkazu vytvářené pomocí vrácený datový proud může číst volající proces.|
+|**"w"**|Volající proces může zapisovat do nové kopie příkaz standardní vstup pomocí vráceném datovém proudu.|
+|**"b"**|Otevřít v binárním režimu.|
+|**"t"**|Otevřít v textovém režimu.|
 
 > [!NOTE]
 > Pokud se používá v programu Windows, **_popen –** funkce vrací neplatný ukazatel na soubor, který způsobí, že program přestane reagovat bez omezení. **_popen –** v konzolové aplikaci funguje správně. Vytvoření aplikace Windows v jazyce, který provede přesměrování vstupu a výstupu najdete v tématu [vytváření podřízeného procesu s přesměrování vstupu a výstupu](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) v sadě Windows SDK.

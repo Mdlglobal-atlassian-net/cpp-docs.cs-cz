@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726632"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 Poskytuje funkce pro Windows textové pole.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lpszText*  
- Ukazatel na řetězec, který obsahuje text upozornění.  
+*lpszText*<br/>
+[out] Ukazatel na řetězec, který obsahuje text upozornění.  
   
- [in] *cchText*  
- Počet znaků, které může být přijata. Toto číslo zahrnuje ukončující znak NULL.  
+*cchText*<br/>
+[in] Počet znaků, které může být přijata. Toto číslo zahrnuje ukončující znak NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pro první přetížení hodnotu TRUE, pokud je metoda úspěšná. v opačném případě FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pichStart*|Z nuly vycházející index prvního znaku v rozsahu text, který je zvýrazněn.|  
-|[out] *pichEnd*|Z nuly vycházející index posledního znaku v rozsahu text, který je zvýrazněn.|  
+|*pichStart*|[out] Z nuly vycházející index prvního znaku v rozsahu text, který je zvýrazněn.|  
+|*pichEnd*|[out] Z nuly vycházející index posledního znaku v rozsahu text, který je zvýrazněn.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Ukazatel na řetězec, který obsahuje upozornění zobrazíte v textovém poli.  
+*lpszText*<br/>
+[in] Ukazatel na řetězec, který obsahuje upozornění zobrazíte v textovém poli.  
   
- [in] *fDrawWhenFocused*  
- Pokud má hodnotu FALSE, startovací banner není vykresleno, když uživatel klikne do oblasti ovládacího prvku pro úpravy a poskytuje ovládací prvek fokus.  
+*fDrawWhenFocused*<br/>
+[in] Pokud má hodnotu FALSE, startovací banner není vykresleno, když uživatel klikne do oblasti ovládacího prvku pro úpravy a poskytuje ovládací prvek fokus.  
   
  Při hodnotě TRUE se banner startovací vykreslením i v případě, že ovládací prvek má fokus. Banner upozornění zmizí při spuštění uživatelem na typ v ovládacím prvku.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *ichStart*|Z nuly vycházející index prvního znaku v rozsahu text, abyste měli na očích.|  
-|[in] *ichEnd*|Z nuly vycházející index posledního znaku v rozsahu text, abyste měli na očích.|  
+|*ichStart*|[in] Z nuly vycházející index prvního znaku v rozsahu text, abyste měli na očích.|  
+|*ichEnd*|[in] Z nuly vycházející index posledního znaku v rozsahu text, abyste měli na očích.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) zprávu, která je popsána v sadě Windows SDK.  Tato metoda odesílá [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) zprávu, která je popsána v sadě Windows SDK. Obě `SetHighlight` a `GetHighlight` jde jenom sestavení kódování UNICODE. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Ukazatel [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktura, která popisuje tipu v bublině.|  
-|[in] *lpszTitle*|Ukazatel na řetězec znaků Unicode, který obsahuje název tipu v bublině.|  
-|[in] *lpszText*|Ukazatel na řetězec znaků Unicode, který obsahuje text tipu bublina.|  
-|[in] *ttiIcon*|**INT** , který určuje typ ikona spojená s tipu v bublině. Výchozí hodnota je TTI_NONE. Další informace najdete v tématu `ttiIcon` člena [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktury.|  
+|*pEditBalloonTip*|[in] Ukazatel [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktura, která popisuje tipu v bublině.|  
+|*lpszTitle*|[in] Ukazatel na řetězec znaků Unicode, který obsahuje název tipu v bublině.|  
+|*lpszText*|[in] Ukazatel na řetězec znaků Unicode, který obsahuje text tipu bublina.|  
+|*ttiIcon*|[in] **INT** , který určuje typ ikona spojená s tipu v bublině. Výchozí hodnota je TTI_NONE. Další informace najdete v tématu `ttiIcon` člena [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d108bab368b7be57d336aae345df1e25723363
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb60681f47a32e40bff744adaecfedfe4b247c64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466121"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726242"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty – třída
 A `CMFCPropertyGridProperty` objekt představuje položku ovládacího prvku seznamu vlastností.  
@@ -326,11 +326,11 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszOption*  
- Položka seznamu (Možnosti) přidejte.  
+*lpszOption*<br/>
+[in] Položka seznamu (Možnosti) přidejte.  
   
- [in] *bInsertUnique*  
- Hodnota TRUE pro přidání do seznamu položek, pouze pokud ještě neexistuje; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bInsertUnique*<br/>
+[in] Hodnota TRUE pro přidání do seznamu položek, pouze pokud ještě neexistuje; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, což znamená, že se přidá položka seznamu. V opačném případě hodnota FALSE, což znamená, že položka seznamu není přidat, protože *bInsertUnique* parametr má hodnotu TRUE a určené položky seznamu *lpszOption* parametr již existuje.  
@@ -345,8 +345,8 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Ukazatel na vlastnosti, které chcete přidat.  
+*pProp*<br/>
+[in] Ukazatel na vlastnosti, které chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud je zadaná vlastnost úspěšně přidán jako podřízený vlastnost. FALSE, pokud vlastnost se nepřidal, protože se již vyskytuje v nadřazené vlastnosti.  
@@ -380,11 +380,11 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectEdit*  
- Při návratu tato metoda obdélník, který určuje hranice textového pole pro hodnotu vlastnosti.  
+*rectEdit*<br/>
+[out] Při návratu tato metoda obdélník, který určuje hranice textového pole pro hodnotu vlastnosti.  
   
- [out] *rectSpin*  
- Při návratu tato metoda obdélník, který určuje hranice otočný ovládací prvek tlačítko pro hodnotu vlastnosti. Nebo, pokud vlastnost nepodporuje číselníku prázdného obdélník.  
+*rectSpin*<br/>
+[out] Při návratu tato metoda obdélník, který určuje hranice otočný ovládací prvek tlačítko pro hodnotu vlastnosti. Nebo, pokud vlastnost nepodporuje číselníku prázdného obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Oblast hodnoty vlastnosti se skládá z textového pole a případně *přepínač*, jako je například ovládací prvek číselníku. Tato metoda vypočítá dimenze textové pole a možnost tlačítko a pak vrátí tyto hodnoty v zadaných parametrů.  
@@ -397,8 +397,8 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAllow*  
- Hodnota TRUE pro nastavení vlastnosti upravitelné; FALSE, pokud chcete nastavit vlastnost jen pro čtení. Výchozí hodnota je TRUE.  
+*bAllow*<br/>
+[in] Hodnota TRUE pro nastavení vlastnosti upravitelné; FALSE, pokud chcete nastavit vlastnost jen pro čtení. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -423,32 +423,32 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strGroupName*  
- Název skupiny. A *skupiny* je kolekce souvisejících vlastností v ovládacím prvku mřížky vlastností. Pokud je ovládací prvek hierarchicky, zobrazí *název skupiny* se zobrazí jako název kategorie v řádku nad skupinou.  
+*strGroupName*<br/>
+[in] Název skupiny. A *skupiny* je kolekce souvisejících vlastností v ovládacím prvku mřížky vlastností. Pokud je ovládací prvek hierarchicky, zobrazí *název skupiny* se zobrazí jako název kategorie v řádku nad skupinou.  
   
- [in] *dwData*  
- Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
+*dwData*<br/>
+[in] Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [in] *%{strName/*  
- Název vlastnosti  
+*%{strName/*<br/>
+[in] Název vlastnosti.  
   
- [in] *varValue*  
- Hodnota vlastnosti.  
+*varValue*<br/>
+[in] Hodnota vlastnosti.  
   
- [in] *lpszDescr*  
- Vlastnost popis. Výchozí hodnota je NULL.  
+*lpszDescr*<br/>
+[in] Vlastnost popis. Výchozí hodnota je NULL.  
   
- [in] *lpszEditMask*  
- Maska úprav, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
+*lpszEditMask*<br/>
+[in] Maska úprav, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
   
- [in] *lpszEditTemplate*  
- Šablonu upravit, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
+*lpszEditTemplate*<br/>
+[in] Šablonu upravit, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
   
- [in] *lpszValidChars*  
- Seznam platné znaky, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
+*lpszValidChars*<br/>
+[in] Seznam platné znaky, pokud je vlastnost maskované textové pole. Výchozí hodnota je NULL.  
   
- [in] *bIsValueList*  
- Hodnota TRUE, pokud vlastnost představuje seznam hodnot. FALSE, pokud vlastnost představuje jedinou hodnotu. Výchozí hodnota je FALSE.  
+*bIsValueList*<br/>
+[in] Hodnota TRUE, pokud vlastnost představuje seznam hodnot. FALSE, pokud vlastnost představuje jedinou hodnotu. Výchozí hodnota je FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -462,11 +462,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Ukazatel do nadřazeného okna pole se seznamem.  
+*pWndParent*<br/>
+[in] Ukazatel do nadřazeného okna pole se seznamem.  
   
- [in] *rect*  
- Ohraničující obdélník pole se seznamem.  
+*Rect*<br/>
+[in] Ohraničující obdélník pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou [CComboBox](../../mfc/reference/ccombobox-class.md) objektu.  
@@ -483,11 +483,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectEdit*  
- Ohraničující obdélník upravitelný ovládací prvek.  
+*rectEdit*<br/>
+[in] Ohraničující obdélník upravitelný ovládací prvek.  
   
- [in] *bDefaultFormat*  
- TRUE, pokud chcete použít výchozí formát vlastnosti nastavit text ovládacího prvku upravitelné; v opačném případě hodnota FALSE.  
+*bDefaultFormat*<br/>
+[in] TRUE, pokud chcete použít výchozí formát vlastnosti nastavit text ovládacího prvku upravitelné; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na upravitelný ovládací prvek, pokud tato metoda bude úspěšná; v opačném případě hodnota NULL.  
@@ -505,8 +505,8 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectSpin*  
- Obdélník, který definuje, kde se vytvoří upravitelné otočný ovládací prvek tlačítko.  
+*rectSpin*<br/>
+[in] Obdélník, který definuje, kde se vytvoří upravitelné otočný ovládací prvek tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na novou [cmfcspinbuttonctrl –](../../mfc/reference/cmfcspinbuttonctrl-class.md) objekt, který je typovaná jako ukazatel [atributu CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) objektu.  
@@ -522,8 +522,8 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Hodnota TRUE pro povolení vlastnosti; FALSE, pokud chcete zakázat vlastnost. Zakázané vlastnosti neodpovídají myší nebo vstup z klávesnice. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] Hodnota TRUE pro povolení vlastnosti; FALSE, pokud chcete zakázat vlastnost. Zakázané vlastnosti neodpovídají myší nebo vstup z klávesnice. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -538,14 +538,14 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit otočný ovládací prvek tlačítka; FALSE, pokud chcete zakázat otočný ovládací prvek tlačítko. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit otočný ovládací prvek tlačítka; FALSE, pokud chcete zakázat otočný ovládací prvek tlačítko. Výchozí hodnota je TRUE.  
   
- [in] *Nminimum*  
- Minimální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.  
+*Nminimum*<br/>
+[in] Minimální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.  
   
- [in] *Nmaximum*  
- Maximální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.  
+*Nmaximum*<br/>
+[in] Maximální hodnota otočný ovládací prvek tlačítko. Výchozí hodnota je 0.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework automaticky vytvoří ovládací prvek číselníku, když je vlastnost bude upravován.  
@@ -560,8 +560,8 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bExpand*  
- TRUE, pokud chcete rozšířit vlastnosti; FALSE, pokud chcete sbalit vlastnost. Výchozí hodnota je TRUE.  
+*bExpand*<br/>
+[in] TRUE, pokud chcete rozšířit vlastnosti; FALSE, pokud chcete sbalit vlastnost. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|TRUE pro zahrnutí do počtu; skryté dílčí položky v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.|  
+|*bIncludeHidden*|[in] TRUE pro zahrnutí do počtu; skryté dílčí položky v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet rozbalené dílčí položky.  
@@ -734,8 +734,8 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule vlastnost, která má načíst. Tento parametr je neplatný, pokud je menší než nula nebo větší než nebo rovna počtu dílčí vlastnosti.  
+*nIndex*<br/>
+[in] Index založený na nule vlastnost, která má načíst. Tento parametr je neplatný, pokud je menší než nula nebo větší než nebo rovna počtu dílčí vlastnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na objekt vlastnost, která je podřízená položka této vlastnosti.  
@@ -810,17 +810,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Bod, který chcete otestovat, v souřadnicích klienta. Tento parametr je obvykle aktuální umístění ukazatele myši.  
+*Bod*<br/>
+[in] Bod, který chcete otestovat, v souřadnicích klienta. Tento parametr je obvykle aktuální umístění ukazatele myši.  
   
- [in] *pt*  
- Bod, který chcete otestovat, v souřadnicích klienta.  
+*PT*<br/>
+[in] Bod, který chcete otestovat, v souřadnicích klienta.  
   
- [out] *pnArea*  
- Po návratu tato metoda označuje oblast, která obsahuje zadaný bod. Další informace najdete v části poznámky. Výchozí hodnota je NULL.  
+*pnArea*<br/>
+[out] Po návratu tato metoda označuje oblast, která obsahuje zadaný bod. Další informace najdete v části poznámky. Výchozí hodnota je NULL.  
   
- [in] *bPropsOnly*  
- TRUE, pokud chcete otestovat všechny oblasti v ovládacím prvku vlastnosti; FALSE, pokud chcete otestovat pouze oblasti popisu. Výchozí hodnota je FALSE.  
+*bPropsOnly*<br/>
+[in] TRUE, pokud chcete otestovat všechny oblasti v ovládacím prvku vlastnosti; FALSE, pokud chcete otestovat pouze oblasti popisu. Výchozí hodnota je FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na objekt vlastnosti nebo hodnota NULL.  
@@ -951,8 +951,8 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Ukazatel na vlastnost.  
+*pProp*<br/>
+[in] Ukazatel na vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaná vlastnost je dílčí položky aktuální vlastnosti; v opačném případě hodnota FALSE.  
@@ -1025,8 +1025,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Bod, v souřadnicích klienta.  
+*Bod*<br/>
+[in] Bod, v souřadnicích klienta.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda nemá žádný účinek.  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *C*|Bod, v souřadnicích klienta.|  
+|*C*|[in] Bod, v souřadnicích klienta.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda nemá žádný účinek.  
@@ -1057,11 +1057,11 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMsg*  
- Zpráva myši.  
+*uiMsg*<br/>
+[in] Zpráva myši.  
   
- [in] *bodu*  
- Bod, v souřadnicích klienta.  
+*Bod*<br/>
+[in] Bod, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný myši zpráva se zpracuje touto metodou; v opačném případě hodnota FALSE.  
@@ -1088,11 +1088,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *nCtlColor*  
- (Tento parametr se nepoužívá.)  
+*nCtlColor*<br/>
+[in] (Tento parametr se nepoužívá.)  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač na štětec, pokud tato metoda je úspěšná. v opačném případě hodnota NULL.  
@@ -1107,8 +1107,8 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Bod, v souřadnicích klienta.  
+*Bod*<br/>
+[in] Bod, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1135,11 +1135,11 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectButton*  
- Ohraničující obdélník, který určuje, kde chcete-li nakreslit tlačítko.  
+*rectButton*<br/>
+[in] Ohraničující obdélník, který určuje, kde chcete-li nakreslit tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1153,11 +1153,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník, který určuje, kde chcete-li nakreslit vlastnost Popis.  
+*Rect*<br/>
+[in] Ohraničující obdélník, který určuje, kde chcete-li nakreslit vlastnost Popis.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda vykreslí vlastnosti název a popis v písmo použité nadřazený ovládací prvek seznamu vlastností. Popis vlastnosti je vykreslen v pravidelných styl a název vlastnosti je vykreslen v tučný styl.  
@@ -1172,11 +1172,11 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectExpand*  
- Ohraničující obdélník, který určuje, kde k vykreslení ovládacího prvku rozšířené pole.  
+*rectExpand*<br/>
+[in] Ohraničující obdélník, který určuje, kde k vykreslení ovládacího prvku rozšířené pole.  
   
 ### <a name="remarks"></a>Poznámky  
  Klepněte na ovládací prvek pole rozbalit rozbalit nebo sbalit seznam dílčí vlastnosti. Ovládací prvek pole rozbalení je určeno čtverec, která obsahuje znak plus (+) nebo mínus (-). Znaménko plus označuje, že vlastnost můžete rozbalit a zobrazit seznam dílčí vlastnosti. Znaménko mínus označuje, že v seznamu mohou být sbalena, chcete-li zobrazit pouze vlastnost.  
@@ -1191,11 +1191,11 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník, který určuje, kde stanovit název vlastnosti.  
+*Rect*<br/>
+[in] Ohraničující obdélník, který určuje, kde stanovit název vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1209,11 +1209,11 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník, který určuje, kde stanovit hodnotu vlastnosti.  
+*Rect*<br/>
+[in] Ohraničující obdélník, který určuje, kde stanovit hodnotu vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1225,8 +1225,8 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lptClick*  
- (Tento parametr se nepoužívá.) Ukazatel do bodu, v souřadnicích klienta.  
+*lptClick*<br/>
+[in] (Tento parametr se nepoužívá.) Ukazatel do bodu, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úspěšně; spustí operaci úprav v opačném případě hodnota FALSE.  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Nepoužívá.) Ukazatel na okno.|  
+|*CWnd*|[in] (Nepoužívá.) Ukazatel na okno.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vždy vrátí hodnotu TRUE.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *C*|Bod, v souřadnicích klienta.|  
+|*C*|[in] Bod, v souřadnicích klienta.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda nemá žádný účinek.  
@@ -1321,8 +1321,8 @@ virtual void OnRClickValue(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *C*|Bod, v souřadnicích klienta.|  
-|[in] *B*|Logická hodnota.|  
+|*C*|[in] Bod, v souřadnicích klienta.|  
+|*B*|[in] Logická hodnota.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda nemá žádný účinek a *B* parametr nemá žádný předdefinovaný účel.  
@@ -1383,8 +1383,8 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Znak.  
+*nChar*<br/>
+[in] Znak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je pokračování operace úprav; v opačném případě hodnota FALSE.  
@@ -1421,11 +1421,11 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Ukazatel na podřízenou položku Vlastnosti.  
+*pProp*<br/>
+[in] Ukazatel na podřízenou položku Vlastnosti.  
   
- [in] *bDelete*  
- Pokud vlastnost objektu, která je zadána *pProp* parametr; jinak hodnota FALSE. Výchozí hodnota je TRUE.  
+*bDelete*<br/>
+[in] Pokud vlastnost objektu, která je zadána *pProp* parametr; jinak hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1449,8 +1449,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Specifické pro aplikaci 32-bit hodnotu, například celé číslo nebo ukazatel na další data.  
+*dwData*<br/>
+[in] Specifické pro aplikaci 32-bit hodnotu, například celé číslo nebo ukazatel na další data.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCPropertyGridProperty::GetData](#getdata) metody k načtení hodnoty DWORD. Použití [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) metodu vyhledání položky seznamu vlastností, který je spojen se zadanou hodnotou DWORD.  
@@ -1463,8 +1463,8 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDescr*  
- Text, který popisuje aktuální vlastností.  
+*strDescr*<br/>
+[in] Text, který popisuje aktuální vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1478,11 +1478,11 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Název vlastnosti  
+*lpszName*<br/>
+[in] Název vlastnosti.  
   
- [in] *bRedraw*  
- TRUE, pokud chcete okamžitě; ho překreslit vlastnost v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bRedraw*<br/>
+[in] TRUE, pokud chcete okamžitě; ho překreslit vlastnost v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1494,8 +1494,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varValue*  
- Hodnota.  
+*varValue*<br/>
+[in] Hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) metoda obnovit původní hodnotu upravených vlastností.  
@@ -1508,8 +1508,8 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varValue*  
- Odkaz na hodnotu.  
+*varValue*<br/>
+[in] Odkaz na hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1523,11 +1523,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- TRUE, pokud chcete zobrazit aktuální vlastnost a její podřízené položky; FALSE, pokud chcete skrýt aktuální vlastnost a její podřízené položky. Výchozí hodnota je TRUE.  
+*bShow*<br/>
+[in] TRUE, pokud chcete zobrazit aktuální vlastnost a její podřízené položky; FALSE, pokud chcete skrýt aktuální vlastnost a její podřízené položky. Výchozí hodnota je TRUE.  
   
- [in] *bAdjustLayout*  
- TRUE, pokud chcete přepočítat vykreslení popisku a hodnotu vlastnosti a následně nakreslete vlastnost; FALSE pro existující výpočty, použijte, chcete-li nakreslit vlastnost. Výchozí hodnota je TRUE.  
+*bAdjustLayout*<br/>
+[in] TRUE, pokud chcete přepočítat vykreslení popisku a hodnotu vlastnosti a následně nakreslete vlastnost; FALSE pro existující výpočty, použijte, chcete-li nakreslit vlastnost. Výchozí hodnota je TRUE.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

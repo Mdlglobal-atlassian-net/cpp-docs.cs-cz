@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684954"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726814"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 Zapouzdřuje funkce ovládacího prvku"seznam zobrazení," které zobrazuje kolekci položek, z nichž každá se skládá z ikony (ze seznamu obrázků) a popisek.  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iIndex*|Index založený na nule skupiny.|  
-|[out] *pGroup*|Ukazatel na [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktura, která obdrží informace o skupinu určené *iIndex* parametru.<br /><br /> Volající zodpovídá za inicializaci členů [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury. Nastavte `cbSize` člen velikost struktury a příznaky z `mask` člena zadejte informace, které se mají načíst.|  
+|*iIndex*|[in] Index založený na nule skupiny.|  
+|*pGroup*|[out] Ukazatel na [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktura, která obdrží informace o skupinu určené *iIndex* parametru.<br /><br /> Volající zodpovídá za inicializaci členů [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury. Nastavte `cbSize` člen velikost struktury a příznaky z `mask` člena zadejte informace, které se mají načíst.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Určuje skupinu.|  
-|[out v] *lprect –*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|  
-|[in] *iCoords*|Určuje souřadnice obdélník k načtení. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP – (výchozí) souřadnice celý rozbalené skupiny.<br />-LVGGR_HEADER - souřadnice pouze záhlaví (sbalené skupiny).<br />-LVGGR_SUBSETLINK - koordinuje pouze podmnožina odkazu (je to podskupina značek).|  
+|*iGroupId*|[in] Určuje skupinu.|  
+|*lprect –*|[out v] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Pokud tato metoda je úspěšná, strukturu, obdrží obdélník souřadnice skupiny, která je určená *iGroupId*.|  
+|*iCoords*|[in] Určuje souřadnice obdélník k načtení. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP – (výchozí) souřadnice celý rozbalené skupiny.<br />-LVGGR_HEADER - souřadnice pouze záhlaví (sbalené skupiny).<br />-LVGGR_SUBSETLINK - koordinuje pouze podmnožina odkazu (je to podskupina značek).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Index založený na nule skupiny.|  
-|[in] *dwMask*|Maska, která určuje hodnotu stavu pro zadané skupiny. Další informace najdete v tématu `mask` člena [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury.|  
+|*iGroupId*|[in] Index založený na nule skupiny.|  
+|*dwMask*|[in] Maska, která určuje hodnotu stavu pro zadané skupiny. Další informace najdete v tématu `mask` člena [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Požadovaný stav pro zadanou skupinu nebo 0, pokud skupina nebyla nalezena.  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazenou položku podřízenou položku.<br /><br /> Volající zodpovídá za přidělování a nastavení členové [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže mít hodnotu NULL.|  
-|[in] *iColumn*|Z nuly vycházející index sloupce v ovládacím prvku.|  
-|[in] *rectType*|Část subitem zobrazení seznamu, pro který je načten ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> LVIR_BOUNDS – vrací ohraničující obdélník podřízenou položku včetně ikonu a popisek.<br /><br /> LVIR_ICON – vrací ohraničující obdélník ikonu nebo malé ikony podřízenou položku.<br /><br /> LVIR_LABEL – vrací ohraničující obdélník text podřízenou položku.|  
-|[out] *pRect*|Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obdrží informace o ohraničující obdélník podřízenou položku.<br /><br /> Volající zodpovídá za přidělování [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Tento parametr nemůže mít hodnotu NULL.|  
+|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazenou položku podřízenou položku.<br /><br /> Volající zodpovídá za přidělování a nastavení členové [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže mít hodnotu NULL.|  
+|*iColumn*|[in] Z nuly vycházející index sloupce v ovládacím prvku.|  
+|*rectType*|[in] Část subitem zobrazení seznamu, pro který je načten ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> LVIR_BOUNDS – vrací ohraničující obdélník podřízenou položku včetně ikonu a popisek.<br /><br /> LVIR_ICON – vrací ohraničující obdélník ikonu nebo malé ikony podřízenou položku.<br /><br /> LVIR_LABEL – vrací ohraničující obdélník text podřízenou položku.|  
+|*pRect*|[out] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obdrží informace o ohraničující obdélník podřízenou položku.<br /><br /> Volající zodpovídá za přidělování [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Tento parametr nemůže mít hodnotu NULL.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *fSmall*|Zobrazení, pro které se mají načíst rozestup položek. Zadejte hodnotu PRAVDA pro malou ikonu zobrazení, nebo hodnotu FALSE pro zobrazení ikon.|  
-|[out] *pnHorzSpacing*|Obsahuje vodorovné mezery mezi položkami.|  
-|[out] *pnVertSpacing*|Obsahuje svislé mezery mezi položkami.|  
+|*fSmall*|[in] Zobrazení, pro které se mají načíst rozestup položek. Zadejte hodnotu PRAVDA pro malou ikonu zobrazení, nebo hodnotu FALSE pro zobrazení ikon.|  
+|*pnHorzSpacing*|[out] Obsahuje vodorovné mezery mezi položkami.|  
+|*pnVertSpacing*|[out] Obsahuje svislé mezery mezi položkami.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out v] *pItemIndex*|Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky, kde začíná hledání nebo -1 pro na první položku, která odpovídá příznaky v *nFlags* parametru.<br /><br /> Pokud tato metoda je úspěšná, `LVITEMINDEX` struktura popisuje položky nalezené.|  
-|[in] *nFlags*|Bitová kombinace (OR) mezi příznaky, které určují, jak provést hledání.<br /><br /> Hledání může záviset na index, stavu nebo vzhled cílové položky nebo určená cílová položka fyzické umístění vzhledem k položce *pItemIndex* parametru. Další informace najdete v tématu *příznaky* parametr [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy.|  
+|*pItemIndex*|[out v] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky, kde začíná hledání nebo -1 pro na první položku, která odpovídá příznaky v *nFlags* parametru.<br /><br /> Pokud tato metoda je úspěšná, `LVITEMINDEX` struktura popisuje položky nalezené.|  
+|*nFlags*|[in] Bitová kombinace (OR) mezi příznaky, které určují, jak provést hledání.<br /><br /> Hledání může záviset na index, stavu nebo vzhled cílové položky nebo určená cílová položka fyzické umístění vzhledem k položce *pItemIndex* parametru. Další informace najdete v tématu *příznaky* parametr [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *indexu*|Z nuly vycházející index položky v ovládacím prvku aktuální zobrazení seznamu.|  
+|*index*|[in] Z nuly vycházející index položky v ovládacím prvku aktuální zobrazení seznamu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  TRUE, pokud zadaná položka je viditelný; jinak hodnota FALSE.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *id*|Jedinečné ID položky.|  
+|*id*|[in] Jedinečné ID položky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální index pro zadané ID.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *indexu*|Index založený na nule položky.|  
+|*index*|[in] Index založený na nule položky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jedinečné ID pro zadanou položku.  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *idItemFrom*  
- Index položky k přesunutí.  
+*idItemFrom*<br/>
+[in] Index položky k přesunutí.  
   
- [in] *idGroupTo*  
- Identifikátor skupiny položka bude přesunuta do.  
+*idGroupTo*<br/>
+[in] Identifikátor skupiny položka bude přesunuta do.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky. Volající zodpovídá za přidělování tuto strukturu a nastavení jeho členů.|  
-|[in] *dwState*|Stav, který má nastavit položku, která je bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states). Určete nula k obnovení nebo z nich se má nastavit stav.|  
-|[in] *dwMask*|Maska platné bity na stav zadaný ve *dwState* parametru. Zadejte (nebo) bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states).|  
+|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky. Volající zodpovídá za přidělování tuto strukturu a nastavení jeho členů.|  
+|*dwState*|[in] Stav, který má nastavit položku, která je bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states). Určete nula k obnovení nebo z nich se má nastavit stav.|  
+|*dwMask*|[in] Maska platné bity na stav zadaný ve *dwState* parametru. Zadejte (nebo) bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pfnCompare*  
- Adresa funkce porovnání definovaného aplikací.  
+*pfnCompare*<br/>
+[in] Adresa funkce porovnání definovaného aplikací.  
   
  Operace řazení volá funkci porovnání pokaždé, když je potřeba určit relativního pořadí dvou položek seznamu. Funkce porovnání musí být statický člen třídy nebo samostatné funkce, která není členem žádné třídy.  
   
- [in] *dwData*  
- Hodnotu definovanou uživatelem aplikace, který je předán do funkce porovnání.  
+*dwData*<br/>
+[in] Hodnotu definovanou uživatelem aplikace, který je předán do funkce porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; – metoda v opačném případě FALSE.  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pfnCompare*|Adresa funkce porovnání definovaného aplikací.<br /><br /> Operace řazení volá funkci porovnání pokaždé, když je potřeba určit relativního pořadí dvou položek seznamu. Funkce porovnání musí být statický člen třídy nebo samostatné funkce, která není členem žádné třídy.|  
-|[in] *dwData*|Funkce porovnání předána hodnota definovaného aplikací.|  
+|*pfnCompare*|[in] Adresa funkce porovnání definovaného aplikací.<br /><br /> Operace řazení volá funkci porovnání pokaždé, když je potřeba určit relativního pořadí dvou položek seznamu. Funkce porovnání musí být statický člen třídy nebo samostatné funkce, která není členem žádné třídy.|  
+|*dwData*|[in] Funkce porovnání předána hodnota definovaného aplikací.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  

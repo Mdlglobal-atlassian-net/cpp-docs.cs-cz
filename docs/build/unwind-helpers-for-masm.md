@@ -1,5 +1,5 @@
 ---
-title: Unwind pomocníci pro MASM | Microsoft Docs
+title: Unwind pomocníci pro MASM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7135802bdc91c611132760ebbee4e0619ba0de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dd43318d19bafa2f69514f81e82da6d303528d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725618"
 ---
 # <a name="unwind-helpers-for-masm"></a>Unwind pomocníci pro MASM
-Aby bylo možné zapsat řádné rutiny sestavení, existuje sada pseudo operací, které můžete použít souběžně s skutečné sestavení pokyny k vytvoření odpovídající .pdata a .xdata. Existují také sadu makra, které poskytují zjednodušenou použití pseudo operací pro jejich nejběžnější použití.  
-  
-## <a name="remarks"></a>Poznámky  
- V této části jsou v následujících tématech:  
-  
--   [Pseudooperace s nezpracovanými daty](../build/raw-pseudo-operations.md)  
-  
--   [MASM – makra](../build/masm-macros.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek (x64)](../build/exception-handling-x64.md)
+
+Chcete-li rutiny sestavení správná, představují sadu pseudo operací, které je možné souběžně s skutečné sestavení pokyny k vytvoření odpovídající .pdata a .xdata. Existují také sadu maker, která poskytuje zjednodušené použití pseudo operací pro jejich většiny běžných použití.
+
+## <a name="remarks"></a>Poznámky
+
+V této části jsou v následujících tématech:
+
+- [Pseudooperace s nezpracovanými daty](../build/raw-pseudo-operations.md)
+
+- [MASM – makra](../build/masm-macros.md)
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek (x64)](../build/exception-handling-x64.md)

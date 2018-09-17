@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb123f6ca46841b59d178bba88b97ca44b55f621
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725878"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Uložené vlastnosti, Průvodce ovládacím prvkem ATL
 
 Tato stránka průvodce identifikuje uložených vlastností pro ovládací prvek podporována. Ve výchozím nastavení nejsou označeny žádné vlastnosti.
 
-**Nepodporuje se**  
-Označuje dostupné vlastnosti, které nejsou aktuálně podporovány pro ovládací prvek.
+- **Nepodporuje se**
 
-**Podporované**  
-Určuje vlastnosti, které jsou aktuálně podporovány pro ovládací prvek.
+   Označuje dostupné vlastnosti, které nejsou aktuálně podporovány pro ovládací prvek.
+
+- **Podporované**
+
+   Určuje vlastnosti, které jsou aktuálně podporovány pro ovládací prvek.
 
 |Tlačítka převodu|Popis|
 |---------------------|-----------------|
 |**>**|Přidá **podporované** vlastnost název aktuálně vybraného v seznamu **nepodporuje** seznamu.|
 |**>>**|Přidá **podporované** všechny názvy vlastností k dispozici v seznamu **nepodporuje** seznamu.|
-|**<**|Odstraní aktuálně vybrané v název vlastnosti **podporované** seznamu.|
-|**<<**|Odebere všechny názvy vlastností, které jsou teď uvedená v **podporované** seznamu.|
+|**\<**|Odstraní aktuálně vybrané v název vlastnosti **podporované** seznamu.|
+|**\<\<**|Odebere všechny názvy vlastností, které jsou teď uvedená v **podporované** seznamu.|
 
 ## <a name="see-also"></a>Viz také
 

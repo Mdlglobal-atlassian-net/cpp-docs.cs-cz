@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684804"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726749"
 ---
 # <a name="ctooltipctrl-class"></a>Ctooltipctrl – třída
 Zapouzdřuje funkce ovládacího prvku"nástroj tip," malého vyskakovacího okna, která zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lpToolInfo*|Ukazatel [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktura, která obdrží informace o aktuální okno s popisem tlačítka.|  
+|*lpToolInfo*|[out] Ukazatel [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktura, která obdrží informace o aktuální okno s popisem tlačítka.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tyto informace se načítají úspěšně; v opačném případě hodnota FALSE.  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pttgt*|Ukazatel [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) strukturu, která obsahuje informace o ovládacím prvku ToolTip. Po návratu tato metoda *pszTitle* člena [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) struktury body textu nadpisu.|  
+|*pttgt*|[out] Ukazatel [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) strukturu, která obsahuje informace o ovládacím prvku ToolTip. Po návratu tato metoda *pszTitle* člena [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) struktury body textu nadpisu.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) zprávu, která je popsána v sadě Windows SDK.  

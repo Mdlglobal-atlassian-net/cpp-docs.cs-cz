@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687932"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726287"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary a AfxLoadLibrary
 
@@ -39,7 +39,7 @@ Pro aplikace MFC, které načítají rozšiřující knihovny MFC DLL, doporuču
 
 Pokud Windows nemůže načíst knihovnu DLL, proces se může pokusit obnovit z chyby. Například proces by mohl oznámit uživateli chybu a požádat uživatele o určení jiné cesty k souboru DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Nezapomeňte zadat úplnou cestu všech knihoven DLL. Aktuální adresář je nejprve prohledán, když jsou soubory načteny. Pokud nemáte kvalifikovanou cestu k souboru, může být načten soubor, který není určený. Dalším způsobem, jak tomu je použít [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) – možnost linkeru.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?

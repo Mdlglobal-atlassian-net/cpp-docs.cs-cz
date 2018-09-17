@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725982"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;vlákno&gt; operátory
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Levé straně `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Levé straně `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Levé straně `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Levé straně `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametry
 
-*Doleva*  
- Levé straně `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parametry
- 
-*Doleva*  
- Levé straně `thread::id` objektu.
 
-*Doprava*  
- Vpravo `thread::id` objektu.
+*doleva*<br/>
+Levé straně `thread::id` objektu.
+
+*doprava*<br/>
+Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr*  
- A [basic_ostream –](../standard-library/basic-ostream-class.md) objektu.
+*Ostr*<br/>
+A [basic_ostream –](../standard-library/basic-ostream-class.md) objektu.
 
-*ID*  
- A `thread::id` objektu.
+*ID*<br/>
+A `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

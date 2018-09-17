@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8376300f4234f355cce49c2aae90fdc0e67f9a18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725865"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Specifické pro Microsoft**  
@@ -56,11 +56,11 @@ void __writegsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Posun od začátku GS k zápisu.  
+*Posun*<br/>
+[in] Posun od začátku GS k zápisu.  
   
- [in] `Data`  
- Hodnota pro zápis  
+*Data*<br/>
+[in] Hodnota k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   

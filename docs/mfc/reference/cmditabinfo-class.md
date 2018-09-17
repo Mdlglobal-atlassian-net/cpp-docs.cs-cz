@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37522cc2eaaa57abd5c3c7a0986532bb47d73f5e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7cd0355c4d0ce203617729142e03860e9960190a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336452"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726606"
 ---
 # <a name="cmditabinfo-class"></a>Cmditabinfo – třída
 `CMDITabInfo` Třída se používá k předání parametrů [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metody. – Skupiny se záložkami nastavení členů této třídy můžete řídit chování MDI.  
@@ -235,8 +235,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ar*  
- A [CArchive – třída](../../mfc/reference/carchive-class.md) objektu určeného k serializaci.  
+*ar*<br/>
+[in] A [CArchive – třída](../../mfc/reference/carchive-class.md) objektu určeného k serializaci.  
   
 ## <a name="see-also"></a>Viz také  
  [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)   

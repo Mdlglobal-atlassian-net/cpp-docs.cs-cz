@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200343"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726021"
 ---
 # <a name="hashset-class"></a>hash_set – třída
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ dat prvku, který bude uložen do hash_set.
+Typ dat prvku, který bude uložen do hash_set.
 
 *Osobnostní rysy*<br/>
- Typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíčové hodnoty unární predikát mapování elementů na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
+Typ, který obsahuje dva objekty funkce, jeden z třídy porovnání, který je binární predikát moci porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a hashovací funkci, která je klíčové hodnoty unární predikát mapování elementů na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
 
 *Allocator –*<br/>
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_set –. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti hash_set –. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč prvky lze porovnat z hash_set.
+Klíč prvky lze porovnat z hash_set.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1030,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1117,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozice prvku, který chcete odebrat z hash_set.
+Pozice prvku, který chcete odebrat z hash_set.
 
 *první*<br/>
- Pozice prvního prvku odebrán hash_set.
+Pozice prvního prvku odebrán hash_set.
 
 *poslední*<br/>
- Pozice bezprostředně za posledním prvkem odebrán hash_set.
+Pozice bezprostředně za posledním prvkem odebrán hash_set.
 
 *Klíč*<br/>
- Klíč prvky, které mají být odebrány hash_set –.
+Klíč prvky, které mají být odebrány hash_set –.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1235,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1661,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2151,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>Parametry
 
 *doprava*<br/>
- Hash_set – argument poskytující prvky pro záměnu s hash_set – cíl.
+Hash_set – argument poskytující prvky pro záměnu s hash_set – cíl.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2227,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
- Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
+Klíč argumentu k porovnání s klíči řazení prvek z hash_set vyhledávaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 

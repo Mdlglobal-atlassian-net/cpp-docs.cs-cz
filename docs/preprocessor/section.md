@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464512"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726047"
 ---
 # <a name="section"></a>section
 V souboru .obj, vytvoří oddíl.  
@@ -43,30 +43,17 @@ Jakmile je definován oddíl, zůstane v platnosti pro zbývající část kompi
 *Název oddílu* je povinný parametr, který bude název oddílu. Název nesmí být v konfliktu s názvy oddíl standard. Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) seznam názvů byste neměli používat při tvorbě oddílu.  
   
 *atributy* je volitelný parametr, který se skládá z jednoho nebo více oddělených čárkou atributů, které chcete přiřadit k části. Je to možné *atributy* jsou:  
-  
-**read**  
-Umožňuje čtení operací s daty.  
-  
-**write**  
-Umožňuje operací zápisu na data.  
-  
-**Spuštění**  
-Umožňuje spuštění kódu.  
-  
-**Sdílet**  
-Sdílené složky v části mezi všechny procesy, které načíst obrázek.  
-  
-**nopage**  
-Označí oddíl jako nejsou stránkované; užitečné pro ovladače zařízení Win32.  
-  
-**NoCache**  
-Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.  
-  
-**Zahození**  
-Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.  
-  
-**remove**  
-Označí oddíl jako nejsou rezidentní; virtuální ovladače zařízení (V*x*D) pouze.  
+
+|Atribut|Popis|
+|-|-|
+|**read**|Umožňuje čtení operací s daty.|
+|**write**|Umožňuje operací zápisu na data.|
+|**Spuštění**|Umožňuje spuštění kódu.|
+|**Sdílet**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
+|**nopage**|Označí oddíl jako nejsou stránkované; užitečné pro ovladače zařízení Win32.|
+|**NoCache**|Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.|
+|**Zahození**|Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.|
+|**remove**|Označí oddíl jako nejsou rezidentní; virtuální ovladače zařízení (V*x*D) pouze.|
   
 Pokud nezadáte atributy, budou mít číst části a Zapisovat atributy.  
   

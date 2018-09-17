@@ -1,5 +1,5 @@
 ---
-title: Extrahování člena knihovny | Microsoft Docs
+title: Extrahování člena knihovny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dc0dc67a6d9e4a3ff61aa3b82ac10b9eabcb94b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9207a77868b3257d09f0d9efe38e4765cb8f4906
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371239"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726515"
 ---
 # <a name="extracting-a-library-member"></a>Extrahování člena knihovny
-Můžete vytvořit soubor objektu (.obj), který obsahuje kopii členem existující knihovny LIB. K extrakci kopii členem, použijte následující syntaxi:  
-  
-```  
-LIB library /EXTRACT:member /OUT:objectfile  
-```  
-  
- Tento příkaz vytvoří soubor .obj názvem *objectfile* obsahující kopii `member` z *knihovny*. `member` Název je malá a velká písmena. Můžete rozbalit pouze jednoho člena v jednom příkazu. / Out možnost je povinná; neexistuje žádný výchozí název výstupu. Pokud soubor nazývá *objectfile* již existuje v adresáři zadané (nebo aktuální adresář, je-li zadán žádný adresář s *objectfile*), extrahované *objectfile*nahradí existující soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+
+Lib – slouží k vytvoření souboru objektů (.obj), který obsahuje kopii členem existující knihovnu. Extrahujte kopii členem, použijte následující syntaxi:
+
+```
+LIB library /EXTRACT:member /OUT:objectfile
+```
+
+Tento příkaz vytvoří soubor .obj nazývá *objectfile* , který obsahuje kopii `member` z *knihovny*. `member` Název je velká a malá písmena. Můžete extrahovat jenom jeden člen stačí jediný příkaz. Parametr/out možnost je vyžadována; neexistuje žádný výchozí název výstupu. Pokud soubor s názvem *objectfile* již existuje v zadaném adresáři (nebo aktuálního adresáře, pokud není zadán žádný adresář s *objectfile*), extrahované *objectfile*nahradí existující soubor.
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

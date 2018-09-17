@@ -1,5 +1,5 @@
 ---
-title: -LARGEADDRESSAWARE (zpracování velkých adres) | Microsoft Docs
+title: -LARGEADDRESSAWARE (zpracování velkých adres) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f81424c49c5d67713cf478f69701c52504cfa8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a68b18f912d7e6ca0f0f642c85e8439be0e5b67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372123"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726322"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (zpracování velkých adres)
-```  
-/LARGEADDRESSAWARE[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost/LARGEADDRESSAWARE informuje linkeru, zda aplikace dokáže zvládat adresy větší než 2 GB. V 64bitových kompilátory je tato možnost povolená ve výchozím nastavení. V kompilátory 32-bit /LARGEADDRESSAWARE:NO je povoleno, pokud není uvedeno jinak/LARGEADDRESSAWARE na řádku linkeru.  
-  
- Pokud aplikace bylo propojeno s/LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) se zobrazí informace o tom.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **systému** stránku vlastností.  
-  
-4.  Změnit **povolit velkých adres** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/LARGEADDRESSAWARE[:NO]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Parametr/LARGEADDRESSAWARE přikazuje linkeru, že aplikace dokáže zpracovat adresy větší než 2 GB. V 64bitové kompilátory je tato možnost povolená ve výchozím nastavení. V 32bitové kompilátory je povoleno: no, pokud na řádku linkeru není zadán parametr/LARGEADDRESSAWARE.
+
+Pokud byla aplikace propojené s/LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) se zobrazí informace o tom.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **systému** stránku vlastností.
+
+1. Upravit **povolit velké adresy** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

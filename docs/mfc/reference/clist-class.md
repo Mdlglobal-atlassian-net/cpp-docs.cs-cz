@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726203"
 ---
 # <a name="clist-class"></a>CList – třída
 Podporuje seřazené seznam nejedinečných objektů dostupných postupně sekvenčně nebo podle hodnoty.  
@@ -115,7 +115,7 @@ class CList : public CObject
  *TYP*  
  Typ objektu, které jsou uloženy v seznamu.  
   
- *ARG* *_* *TYPU*  
+ *ARG_TYPE*  
  Typ slouží k odkazování objektů uložených v seznamu. Může být referencí.  
   
 ## <a name="remarks"></a>Poznámky  

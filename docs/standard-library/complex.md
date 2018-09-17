@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726697"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ Sada komplexní čísla s operacemi komplexní sčítání a násobení složit�
 
 Podle reprezentující komplexní čísla *z* = (*a*, *b*) ve formátu *z* = *a*  +  *bi*, kde *i*<sup>2</sup> = -1, pravidla pro algebra sadu reálná čísla můžete použít sadu komplexní čísla a jejich součástí. Příklad:
 
-   (1 + 2*můžu*) \* (2 + 3*můžu*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 – 6) + (3 + 4)*mi*  
-   = -4 + 7*i*
+   (1 + 2*můžu*) \* (2 + 3*můžu*) = 1 \* (2 + 3*můžu*) + 2*můžu* \* (2 + 3*i*) = (2 + 3*můžu*) + (4*můžu* + 6*můžu*<sup>2</sup>) = (2 až 6) + (3 a 4)*můžu* = -4 + 7*mi*
 
 Systém komplexní čísla je pole, ale není seřazené pole. Neexistuje žádné řazení komplexních čísel, protože není pro pole reálná čísla a její podskupiny, takže nerovností nelze použít pro komplexní čísla, jako jsou na reálná čísla.
 

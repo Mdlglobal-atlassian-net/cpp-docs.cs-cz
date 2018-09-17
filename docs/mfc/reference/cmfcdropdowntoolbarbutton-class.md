@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200651"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726580"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton – třída
 Typ tlačítka panelu nástrojů, který se při kliknutí chová jako běžné tlačítko. Otevře však rozevírací seznam nástrojů ( [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskne a podrží tlačítko panelu nástrojů.  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
+*src*<br/>
+[in] Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem kopírování jiné tlačítko panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCDropDownToolbarButton`.  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Výchozí text na tlačítku.  
+*lpszName*<br/>
+[in] Výchozí text na tlačítku.  
   
- [in] *pToolBar*  
- Ukazatel `CMFCDropDownToolBar` objekt, který se zobrazí, když uživatel stiskne tlačítko.  
+*pToolBar*<br/>
+[in] Ukazatel `CMFCDropDownToolBar` objekt, který se zobrazí, když uživatel stiskne tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Druhé přetížení konstruktoru zkopíruje k tlačítku rozevíracího seznamu na první tlačítko na panelu nástrojů, které *pToolBar* určuje.  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Nadřazené okno rámce rozevíracího seznamu nebo hodnota NULL pro použití nadřazené okno panelu nástrojů v rozevíracím seznamu.  
+*pWnd*<br/>
+[in] Nadřazené okno rámce rozevíracího seznamu nebo hodnota NULL pro použití nadřazené okno panelu nástrojů v rozevíracím seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je metoda úspěšná. jinak 0.  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *menuButton*  
- Odkaz na tlačítko nabídky Cíl.  
+*Tlačítko nabídky*<br/>
+[in] Odkaz na tlačítko nabídky Cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda uspěje; jinak 0.  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Kontext zařízení, která se zobrazí tlačítko.  
+*primární řadič domény*<br/>
+[in] Kontext zařízení, která se zobrazí tlačítko.  
   
- [in] *sizeDefault*  
- Výchozí velikost tlačítka.  
+*sizeDefault*<br/>
+[in] Výchozí velikost tlačítka.  
   
- [in] *bHorz*  
- Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je hodnotu TRUE, pokud je ukotven vodorovně panelu nástrojů nebo plovoucí nebo hodnotu NEPRAVDA, pokud se ukotví svisle.  
+*bHorz*<br/>
+[in] Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je hodnotu TRUE, pokud je ukotven vodorovně panelu nástrojů nebo plovoucí nebo hodnotu NEPRAVDA, pokud se ukotví svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `SIZE` strukturu, která obsahuje dimenze na tlačítko v pixelech.  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nové nadřazené okno.  
+*pWndParent*<br/>
+[in] Nové nadřazené okno.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje implementaci základní třídy ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) tím, že zrušíte textový popisek ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) a nastavení [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) a [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) datové členy na hodnotu FALSE.  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Nadřazené okno panelu nástrojů.  
+*pWnd*<br/>
+[in] Nadřazené okno panelu nástrojů.  
   
- [in] *bDelay*  
- TRUE, pokud zpráva by měla zpracovává se zpožděním.  
+*bDelay*<br/>
+[in] TRUE, pokud zpráva by měla zpracovává se zpožděním.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud na tlačítko zpracovává zprávy klikněte na tlačítko. jinak 0.  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Nadřazené okno panelu nástrojů.  
+*pWnd*<br/>
+[in] Nadřazené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud tlačítko zpracovává zprávy nápovědy. jinak 0.  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenu*  
- V nabídce Upravit.  
+*pMenu*<br/>
+[in] V nabídce Upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vrátí hodnotu TRUE.  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Kontext zařízení, která se zobrazí tlačítko.  
+*primární řadič domény*<br/>
+[in] Kontext zařízení, která se zobrazí tlačítko.  
   
- [in] *rect*  
- Ohraničující obdélník na tlačítko.  
+*Rect*<br/>
+[in] Ohraničující obdélník na tlačítko.  
   
- [in] *pImages*  
- Kolekce obrázků panelu nástrojů, který je přidružený k tlačítku.  
+*pImages*<br/>
+[in] Kolekce obrázků panelu nástrojů, který je přidružený k tlačítku.  
   
- [in] *bHorz*  
- Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je PRAVDA, pokud je ukotven tlačítka vodorovně a FALSE-li na tlačítko je ukotven svisle.  
+*bHorz*<br/>
+[in] Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je PRAVDA, pokud je ukotven tlačítka vodorovně a FALSE-li na tlačítko je ukotven svisle.  
   
- [in] *bCustomizeMode*  
- Určuje, zda je panel nástrojů v režimu úprav. Tento parametr má hodnotu TRUE, pokud panelu nástrojů je v režimu úprav a hodnotu FALSE, pokud panel nástrojů není v režimu úprav.  
+*bCustomizeMode*<br/>
+[in] Určuje, zda je panel nástrojů v režimu úprav. Tento parametr má hodnotu TRUE, pokud panelu nástrojů je v režimu úprav a hodnotu FALSE, pokud panel nástrojů není v režimu úprav.  
   
- [in] *bHighlight*  
- Určuje, zda se zvýrazní tlačítko. Tento parametr je hodnotu PRAVDA, pokud se zvýrazní tlačítko a hodnotu FALSE, pokud není zvýrazní tlačítko.  
+*bHighlight*<br/>
+[in] Určuje, zda se zvýrazní tlačítko. Tento parametr je hodnotu PRAVDA, pokud se zvýrazní tlačítko a hodnotu FALSE, pokud není zvýrazní tlačítko.  
   
- [in] *bDrawBorder*  
- Určuje, zda tlačítko zobrazí jeho ohraničení. Tento parametr je hodnota TRUE, pokud tlačítko zobrazeno jeho okraj a hodnotu FALSE při tlačítko by neměl zobrazit jeho ohraničení.  
+*bDrawBorder*<br/>
+[in] Určuje, zda tlačítko zobrazí jeho ohraničení. Tento parametr je hodnota TRUE, pokud tlačítko zobrazeno jeho okraj a hodnotu FALSE při tlačítko by neměl zobrazit jeho ohraničení.  
   
- [in] *bGrayDisabledButtons*  
- Určuje, jestli se má stín tlačítka Zakázané nebo použít kolekci zakázané imagí. Tento parametr je hodnota TRUE, pokud zakázané tlačítka by měl být označeno šedou barvou a hodnotu FALSE, když tato metoda by měla použít kolekci zakázané imagí.  
+*bGrayDisabledButtons*<br/>
+[in] Určuje, jestli se má stín tlačítka Zakázané nebo použít kolekci zakázané imagí. Tento parametr je hodnota TRUE, pokud zakázané tlačítka by měl být označeno šedou barvou a hodnotu FALSE, když tato metoda by měla použít kolekci zakázané imagí.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem přizpůsobení panelu nástrojů tlačítko Kreslení.  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Kontext zařízení, která se zobrazí tlačítko.  
+*primární řadič domény*<br/>
+[in] Kontext zařízení, která se zobrazí tlačítko.  
   
- [in] *rect*  
- Ohraničující obdélník na tlačítko.  
+*Rect*<br/>
+[in] Ohraničující obdélník na tlačítko.  
   
- [in] *bSelected*  
- Určuje, zda výběru tlačítka. Pokud tento parametr má hodnotu TRUE, výběru tlačítka. Pokud má parametr hodnotu FALSE, tlačítko není vybrané.  
+*bSelected*<br/>
+[in] Určuje, zda výběru tlačítka. Pokud tento parametr má hodnotu TRUE, výběru tlačítka. Pokud má parametr hodnotu FALSE, tlačítko není vybrané.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Šířka v pixelech, tlačítka v kontextu zadané zařízení.  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ar*  
- `CArchive` Objektu, ze které nebo která k serializaci.  
+*ar*<br/>
+[in] `CArchive` Objektu, ze které nebo která k serializaci.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) pomocí serializace ID prostředku nadřazeného panelu nástrojů. Při načítání archivu ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) vrací nenulovou hodnotu), tato metoda nastaví `m_pToolBar` datový člen na panelu nástrojů, který obsahuje ID serializovaných prostředku.  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- ID příkazu výchozí.  
+*uiCmd*<br/>
+[in] ID příkazu výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze zadat výchozí příkaz, který rozhraní provede, když uživatel klikne na tlačítko. Položku s Identifikátorem příkazu určené *uiCmd* se musí nacházet v rozevíracím seznamu nadřazeného panelu nástrojů.  

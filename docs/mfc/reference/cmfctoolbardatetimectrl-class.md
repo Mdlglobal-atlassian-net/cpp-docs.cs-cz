@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2b1ee8e1beb6022d6a940e7036d9673e3844f35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220431"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726723"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Cmfctoolbardatetimectrl – třída
 Tlačítka panelu nástrojů obsahující ovládací prvek pro výběr data a času.  
@@ -155,17 +155,17 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- ID ovládacího prvku.  
+*uiID*<br/>
+[in] ID ovládacího prvku.  
   
- [in] *iImage*  
- Index bitové kopie v panelu nástrojů `CMFCToolBarImages` objektu.  
+*iImage*<br/>
+[in] Index bitové kopie v panelu nástrojů `CMFCToolBarImages` objektu.  
   
- [in] *dwStyle*  
- Styl `CMFCToolBarDateTimeCtrlImpl` okno, které se vytvoří, když uživatel klikne na tlačítko.  
+*dwStyle*<br/>
+[in] Styl `CMFCToolBarDateTimeCtrlImpl` okno, které se vytvoří, když uživatel klikne na tlačítko.  
   
- [in] *iWidth*  
- Šířka ovládacího prvku v pixelech.  
+*iWidth*<br/>
+[in] Šířka ovládacího prvku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento objekt je inicializován na systémové datum a čas. Styl okna vnitřního `CMFCToolBarDateTimeCtrlImpl` objekt zahrnuje *dwStyle* parametr a WS_CHILD a WS_VISIBLE styly. Tyto styly nelze změnit pomocí `CMFCToolBarDateTimeCtrl::SetStyle`. Použití `SetStyle` změnit styl `CMFCToolBarDateTimeCtrl` ovládacího prvku.  
@@ -183,8 +183,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
+*src*<br/>
+[in] Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem kopírování jiné tlačítko panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCToolBarDateTimeCtrl`.  
@@ -197,8 +197,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *menuButton*  
- Odkaz na tlačítko nabídky Cíl.  
+*Tlačítko nabídky*<br/>
+[in] Odkaz na tlačítko nabídky Cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vrátí hodnotu TRUE.  
@@ -214,8 +214,8 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identifikátor příkazu tlačítka pro načtení.  
+*uiCmd*<br/>
+[in] Identifikátor příkazu tlačítka pro načtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První `CMFCToolBarDateTimeCtrl` objektu v aplikaci, která má ID zadaného příkazu nebo hodnota NULL, pokud žádné `CMFCToolBarDateTimeCtrl` objekty mají ID zadaného příkazu.  
@@ -259,11 +259,11 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *timeDest*  
- V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
+*timeDest*<br/>
+[out] V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
   
- [out] *pTimeDest*  
- Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
+*pTimeDest*<br/>
+[out] Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V první přetížení nenulové, pokud čas je úspěšně zapsána do [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objektu; jinak 0. V druhé a třetí přetížení, vrácená hodnota je typu DWORD, který je roven dwFlag člena, která byla nastavena v [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) struktury.  
@@ -289,14 +289,14 @@ static DWORD GetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje ID příkazu pro tlačítka panelu nástrojů.  
+*uiCmd*<br/>
+[in] Určuje ID příkazu pro tlačítka panelu nástrojů.  
   
- [out] *timeDest*  
- V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
+*timeDest*<br/>
+[out] V první přetížení [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhé přetížení [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.  
   
- [out] *pTimeDest*  
- Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
+*pTimeDest*<br/>
+[out] Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud rozhraní framework nemůže najít odpovídající Identifikátor příkazu tlačítka panelu nástrojů *uiCmd*, vrácená hodnota je nula v první přetížení a GDT_NONE v dalšími přetíženími. Pokud je nalezen tlačítka panelu nástrojů, vrácená hodnota je stejná jako návratová hodnota z volání [CMFCToolBarDateTimeCtrl::GetTime](#gettime) na toto tlačítko. Návratová hodnota nula nebo GDT_NONE může dojít, když tlačítko nenajde, což znamená, že volání `GetTime` nevrátil platné datum nějakého jiného důvodu.  
@@ -325,8 +325,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iNotifyCode*  
- Zprávy oznámení, který je přidružený příkaz.  
+*iNotifyCode*<br/>
+[in] Zprávy oznámení, který je přidružený příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tlačítko zpracovává wm_command – zprávy nebo hodnotu NEPRAVDA označuje, že zprávy by měl být zpracovány nadřazeného panelu nástrojů.  
@@ -356,8 +356,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nové nadřazené okno.  
+*pWndParent*<br/>
+[in] Nové nadřazené okno.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje implementaci základní třídy ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) prostřednictvím přetvoření vnitřní `CMFCToolBarDateTimeCtrlImpl` objektu.  
@@ -372,11 +372,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Nevyužité.  
+*pWnd*<br/>
+[in] Nevyužité.  
   
- [in] *bDelay*  
- Nevyužité.  
+*bDelay*<br/>
+[in] Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud na tlačítko zpracovává zprávy klikněte na tlačítko. jinak 0.  
@@ -394,11 +394,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Kontext zařízení, která se zobrazí tlačítko.  
+*primární řadič domény*<br/>
+[in] Kontext zařízení, která se zobrazí tlačítko.  
   
- [in] *nCtlColor*  
- Nevyužité.  
+*nCtlColor*<br/>
+[in] Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro globální štětec, který systém použije k vykreslení na pozadí tlačítka.  
@@ -438,8 +438,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Určuje, zda je viditelný na tlačítko. Pokud tento parametr má hodnotu TRUE, je viditelný na tlačítko. V opačném případě na tlačítko se nezobrazuje.  
+*bShow*<br/>
+[in] Určuje, zda je viditelný na tlačítko. Pokud tento parametr má hodnotu TRUE, je viditelný na tlačítko. V opačném případě na tlačítko se nezobrazuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) tím, že pokud se zobrazuje tlačítko *bShow* má hodnotu TRUE. Jinak tato metoda skryje tlačítko.  
@@ -452,8 +452,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iSize*  
- Novou šířku tlačítka v pixelech.  
+*iSize*<br/>
+[in] Novou šířku tlačítka v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepisuje výchozí implementaci třídy ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) aktualizací velikost a umístění vnitřního `CMFCToolBarDateTimeCtrlImpl` objektu.  
@@ -470,17 +470,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nadřazené okno.  
+*pWndParent*<br/>
+[in] Nadřazené okno.  
   
- [in] *iButtonIndex*  
- Index založený na nule tlačítko v nadřazené tlačítko kolekce.  
+*iButtonIndex*<br/>
+[in] Index založený na nule tlačítko v nadřazené tlačítko kolekce.  
   
- [in] *wndToolTip*  
- Ovládací prvek, který zobrazí text popisku.  
+*wndToolTip*<br/>
+[in] Ovládací prvek, který zobrazí text popisku.  
   
- [out] *str*  
- A `CString` objekt, který přijme aktualizovaná přejede myší.  
+*str*<br/>
+[out] A `CString` objekt, který přijme aktualizovaná přejede myší.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud metoda aktualizuje přejede myší; jinak 0.  
@@ -498,11 +498,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *timeNew*  
- V první verzi odkaz na [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+*timeNew*<br/>
+[in] V první verzi odkaz na [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
- [in] *pTimeNew*  
- Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+*pTimeNew*<br/>
+[in] Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -528,14 +528,14 @@ static BOOL SetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Určuje ID příkazu pro tlačítka panelu nástrojů.  
+*uiCmd*<br/>
+[in] Určuje ID příkazu pro tlačítka panelu nástrojů.  
   
- [in] *timeNew*  
- V první verzi [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+*timeNew*<br/>
+[in] V první verzi [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
- [in] *pTimeNew*  
- Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
+*pTimeNew*<br/>
+[in] Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje čas, ke kterému bude ovládací prvek nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  

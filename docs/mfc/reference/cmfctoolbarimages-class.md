@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 95d9da94e2fa7a79db6696649854fafa989941f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466119"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726268"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfctoolbarimages – třída
 Bitové kopie na panelu nástrojů. `CMFCToolBarImages` Třída spravuje obrázky panelu nástrojů načtené ze zdrojů aplikace nebo ze souborů.  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrBase*  
- [in] *clrTone*  
+*clrBase*<br/>
+[in] [in] *clrTone*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -297,11 +297,11 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hIcon*  
- Popisovač na ikonu se přidají.  
+*hIcon*<br/>
+[in] Popisovač na ikonu se přidají.  
   
- [in] *bAlphaBlend*  
- Hodnota TRUE, pokud tato ikona je použita s alfa míchání; v opačném případě FALSE.  
+*bAlphaBlend*<br/>
+[in] Hodnota TRUE, pokud tato ikona je použita s alfa míchání; v opačném případě FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule, který byl přidán, pokud je metoda úspěšná; Obrázek panelu nástrojů v opačném případě hodnota-1.  
@@ -320,17 +320,17 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hbmp*  
- Popisovač rastrový obrázek, který chcete přidat.  
+*hbmp*<br/>
+[in] Popisovač rastrový obrázek, který chcete přidat.  
   
- [in] *bSetBitPerPixel*  
- Hodnota TRUE, pokud `CMFCToolBarImages` objekt používá barevnou hloubku (bitů na pixel) novou image; FALSE v případě `CMFCToolbarImages` udržuje aktuální barevnou hloubku objektu.  
+*bSetBitPerPixel*<br/>
+[in] Hodnota TRUE, pokud `CMFCToolBarImages` objekt používá barevnou hloubku (bitů na pixel) novou image; FALSE v případě `CMFCToolbarImages` udržuje aktuální barevnou hloubku objektu.  
   
- [in] *imageList*  
- Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.  
+*Ovládací prvek ImageList*<br/>
+[in] Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.  
   
- [in] *nIndex*  
- Index ve zdroji `CMFCToolbarImages` objektu Image, který chcete přidat.  
+*nIndex*<br/>
+[in] Index ve zdroji `CMFCToolbarImages` objektu Image, který chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet nástrojů obrázky, které `CMFCToolBarImages` objekt uchovává po byl úspěšně; přidán nový rastrový obrázek hodnotu -1, pokud se operace nezdařila.  
@@ -397,8 +397,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *imageList*  
- Seznam obrázků použitého jako zdroj pro obrázky panelu nástrojů.  
+*Ovládací prvek ImageList*<br/>
+[in] Seznam obrázků použitého jako zdroj pro obrázky panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu TRUE.  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bmp*  
- [in] *clrTransparent*  
+*BMP*<br/>
+[in] [in] *clrTransparent*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -431,8 +431,8 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iImage*  
- Určuje index založený na nule bitové kopie odstranit.  
+*iImage*<br/>
+[in] Určuje index založený na nule bitové kopie odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě, že image byla úspěšně; odstraněna. FALSE, pokud není platný, index bitové kopie `CMFCToolbarImages` objektu je dočasný, `CMFCToolbarImages` objekt neobsahuje uživatelem definované obrázky, nebo pokud některých dalších došlo k chybě.  
@@ -455,35 +455,35 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *x*  
- Souřadnice X levé strany pravoúhelníku kde bitová kopie je potřeba vykreslit.  
+*x*<br/>
+[in] Souřadnice X levé strany pravoúhelníku kde bitová kopie je potřeba vykreslit.  
   
- [in] *y*  
- Souřadnice Y horní části obdélníku, kde má být vykreslen bitovou kopii.  
+*y*<br/>
+[in] Souřadnice Y horní části obdélníku, kde má být vykreslen bitovou kopii.  
   
- [in] *iImageIndex*  
- Z nuly vycházející index obrázku, který má být zobrazen.  
+*iImageIndex*<br/>
+[in] Z nuly vycházející index obrázku, který má být zobrazen.  
   
- [in] *bHilite*  
- Hodnota TRUE, pokud má zvýrazněný; bitová kopie v opačném případě FALSE.  
+*bHilite*<br/>
+[in] Hodnota TRUE, pokud má zvýrazněný; bitová kopie v opačném případě FALSE.  
   
- [in] *bDisabled*  
- Hodnota TRUE, pokud má být vykreslen v zakázaném styl; bitová kopie v opačném případě FALSE.  
+*bDisabled*<br/>
+[in] Hodnota TRUE, pokud má být vykreslen v zakázaném styl; bitová kopie v opačném případě FALSE.  
   
- [in] *bIndeterminate*  
- Hodnota TRUE, pokud má být vykreslen v neurčitém stavu styl; bitová kopie v opačném případě FALSE.  
+*bIndeterminate*<br/>
+[in] Hodnota TRUE, pokud má být vykreslen v neurčitém stavu styl; bitová kopie v opačném případě FALSE.  
   
- [in] *bShadow*  
- Hodnota TRUE, pokud se má obrázek lze nakreslit vrhá stín; v opačném případě FALSE.  
+*bShadow*<br/>
+[in] Hodnota TRUE, pokud se má obrázek lze nakreslit vrhá stín; v opačném případě FALSE.  
   
- [in] *bInactive*  
- Hodnota TRUE, pokud má být vykreslen v neaktivním stavu styl; bitová kopie v opačném případě FALSE.  
+*bInactive*<br/>
+[in] Hodnota TRUE, pokud má být vykreslen v neaktivním stavu styl; bitová kopie v opačném případě FALSE.  
   
- [in] *alphaSrc*  
- Hodnota alfa kanálu (neprůhlednost). Hodnotu 255 znamená, že na obrázku je nakreslené neprůhledné. Hodnota 0 znamená, že na obrázku je vykreslen transparentní. Tato hodnota se používá pouze pro 32bitový barva Image a Image, které se zobrazí styl skla Windows Vista.  
+*alphaSrc*<br/>
+[in] Hodnota alfa kanálu (neprůhlednost). Hodnotu 255 znamená, že na obrázku je nakreslené neprůhledné. Hodnota 0 znamená, že na obrázku je vykreslen transparentní. Tato hodnota se používá pouze pro 32bitový barva Image a Image, které se zobrazí styl skla Windows Vista.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; zobrazí zadaný obrázek FALSE, pokud byl neplatný index bitové kopie nebo došlo k nějaké chybě.  
@@ -506,14 +506,14 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *rect*  
- [in] *iImageIndex*  
- [in] *horzAlign*  
- [in] *vertAlign*  
- [in] *rectSrc*  
- [in] *0*  
- [in] *0)*  
+*primární řadič domény*<br/>
+[in] [in] *rect*  
+*iImageIndex*<br/>
+[in] [in] *horzAlign*  
+*vertAlign*<br/>
+[in] [in] *rectSrc*  
+*0*<br/>
+[in] [in] *0)*  
  [in] *alphaSrc*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -540,8 +540,8 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ds*  
- Odkaz na `CAfxDrawState` objekt, který byl předán `PrepareDrawImage` metody.  
+*adresářové služby*<br/>
+[in] Odkaz na `CAfxDrawState` objekt, který byl předán `PrepareDrawImage` metody.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  Vrátí ikonu, která má index zadané bitové kopie z obrázky panelu nástrojů.  
@@ -551,8 +551,8 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Index založený na nule v seznamu obrázků, ve kterém se nachází image extrahovat jako ikona.  
+*nIndex*<br/>
+[in] Index založený na nule v seznamu obrázků, ve kterém se nachází image extrahovat jako ikona.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A zpracování na ikonu extrahované nebo hodnota NULL, pokud *nIndex* je mimo rozsah.  
@@ -567,11 +567,11 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Souřadnice obdélník tak, aby vyplnil.  
+*Rect*<br/>
+[in] Souřadnice obdélník tak, aby vyplnil.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete vyplnit barvou, které je průměrem systémových barev COLOR_BTNFACE a COLOR_BTNHIGHLIGHT obdélníku. Pokud systém používá 256 nebo méně barev, obdélník bude vyplněn dithered pro bitové vzor tyto dvě barvy místo.  
@@ -629,8 +629,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDest*  
- TRUE, pokud chcete načíst velikost cílového; FALSE, pokud chcete načíst velikost bitové kopie zdroje.  
+*bDest*<br/>
+[in] TRUE, pokud chcete načíst velikost cílového; FALSE, pokud chcete načíst velikost bitové kopie zdroje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `SIZE` strukturu, která určuje velikost obrázku v pixelech.  
@@ -719,8 +719,8 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResId*  
- Identifikátor prostředku bitové kopie.  
+*uiResId*<br/>
+[in] Identifikátor prostředku bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index bitové kopie byla-li metoda úspěšná; -1, pokud bitovou kopii s ID zadaný prostředek neexistuje.  
@@ -744,8 +744,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGrayImageLuminancePercentage*  
- Procento světelnost.  
+*nGrayImageLuminancePercentage*<br/>
+[in] Procento světelnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byly úspěšně; šedý imagí v kolekci v opačném případě FALSE.  
@@ -844,20 +844,20 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- ID prostředku rastrového obrázku.  
+*uiResID*<br/>
+[in] ID prostředku rastrového obrázku.  
   
- [in] *hinstRes*  
- Instance knihovna DLL prostředků.  
+*hinstRes*<br/>
+[in] Instance knihovna DLL prostředků.  
   
- [in] *bAdd*  
- Hodnota TRUE, chcete-li přidat načíst bitmapu do existujícího rastrového obrázku, nebo hodnotu NEPRAVDA k nahrazení existujícího rastrového obrázku.  
+*bAdd*<br/>
+[in] Hodnota TRUE, chcete-li přidat načíst bitmapu do existujícího rastrového obrázku, nebo hodnotu NEPRAVDA k nahrazení existujícího rastrového obrázku.  
   
- [in] *lpszBmpFileName*  
- Cesta k souboru na disku pro načtení rastrového obrázku.  
+*lpszBmpFileName*<br/>
+[in] Cesta k souboru na disku pro načtení rastrového obrázku.  
   
- [in] *nMaxFileSize*  
- Maximální počet bajtů v souboru bitové mapy; nebo 0 pro načíst bitmapu bez ohledu na velikost souboru. Pokud velikost souboru překročí maximální velikost, tato metoda vrací hodnotu FALSE a nenačte rastrového obrázku.  
+*nMaxFileSize*<br/>
+[in] Maximální počet bajtů v souboru bitové mapy; nebo 0 pro načíst bitmapu bez ohledu na velikost souboru. Pokud velikost souboru překročí maximální velikost, tato metoda vrací hodnotu FALSE a nenačte rastrového obrázku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; načten rastrového obrázku v opačném případě FALSE.  
@@ -876,8 +876,8 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszResourceName*  
- [in] *hinstRes*  
+*lpszResourceName*<br/>
+[in] [in] *hinstRes*  
  [in] *bAdd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- [in] *bUseRGBQUAD*  
+*Barva*<br/>
+[in] [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -912,8 +912,8 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUseRGBQUAD*  
- [in] *clrSrc*  
+*bUseRGBQUAD*<br/>
+[in] [in] *clrSrc*  
  [in] *clrDest*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barva*  
- [in] *bUseRGBQUAD*  
+*Barva*<br/>
+[in] [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -974,11 +974,11 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out v] *hbmp*  
- Popisovač rastrový obrázek pro zrcadlení.  
+*hbmp*<br/>
+[out v] Popisovač rastrový obrázek pro zrcadlení.  
   
- [in] *cxImage*  
- Šířka obrázku v pixelech.  
+*cxImage*<br/>
+[in] Šířka obrázku v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě, že image byla úspěšně zrcadlena; v opačném případě FALSE.  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hbmp*  
- [in] *cyImage*  
+*hbmp*<br/>
+[in] [in] *cyImage*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hbmp*  
- [in] *bAutoCheckPremlt*  
+*hbmp*<br/>
+[in] [in] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1066,14 +1066,14 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ds*  
- Odkaz na `CAfxDrawState` struktura, která ukládá přidělené prostředky mezi jednotlivými fázemi vykreslování obrázků.  
+*adresářové služby*<br/>
+[in] Odkaz na `CAfxDrawState` struktura, která ukládá přidělené prostředky mezi jednotlivými fázemi vykreslování obrázků.  
   
- [in] *sizeImageDest*  
- Určuje velikost bitové kopie cílový.  
+*sizeImageDest*<br/>
+[in] Určuje velikost bitové kopie cílový.  
   
- [in] *bFadeInactive*  
- TRUE, pokud má vyblednout neaktivní Image chcete kreslit.  
+*bFadeInactive*<br/>
+[in] TRUE, pokud má vyblednout neaktivní Image chcete kreslit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud prostředky potřebné k vykreslení obrázku panelu nástrojů byly přiděleny úspěšně, jinak hodnota FALSE.  
@@ -1118,8 +1118,8 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHodnota*  
- Nová hodnota alfa kanálu.  
+*nHodnota*<br/>
+[in] Nová hodnota alfa kanálu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k nastavení vlastní hodnoty alfa zakázané imagí. Výchozí hodnota je 127, což způsobí, že Image zakázané tlačítko bude poloprůhledných. Pokud nastavíte hodnotu 0, bude zakázáno obrázky zcela transparentní. Pokud nastavíte hodnotu 255, bude zakázáno imagí stane zcela neprůhledný.  
@@ -1146,8 +1146,8 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeImage*  
- Nová velikost obrázků panelu nástrojů.  
+*sizeImage*<br/>
+[in] Nová velikost obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení velikost obrázku panelu nástrojů je 16 × 15 pixelů. Tuto metodu volejte, pokud chcete použít obrázky panelu nástrojů různé velikosti.  
@@ -1205,8 +1205,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrTransparent*  
- Hodnota RGB.  
+*clrTransparent*<br/>
+[in] Hodnota RGB.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí průhlednou barvu.  
@@ -1224,11 +1224,11 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iImage*  
- Z nuly vycházející index bitové kopie k aktualizaci.  
+*iImage*<br/>
+[in] Z nuly vycházející index bitové kopie k aktualizaci.  
   
- [in] *hbmp*  
- Popisovač rastrového obrázku ze kterého chcete aktualizovat image.  
+*hbmp*<br/>
+[in] Popisovač rastrového obrázku ze kterého chcete aktualizovat image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě, že image byla úspěšně aktualizována; FALSE, pokud seznam obrázků není definovaný uživatelem nebo dočasné.  

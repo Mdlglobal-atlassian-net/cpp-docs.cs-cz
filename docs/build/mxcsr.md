@@ -1,5 +1,5 @@
 ---
-title: MxCsr | Microsoft Docs
+title: MxCsr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,34 +12,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df2225526c20463bdbd618322d031c3245d9493
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d18a4247d36e6894230d74322d52cd5854e42fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368623"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726502"
 ---
 # <a name="mxcsr"></a>MxCsr
-Stav registru obsahuje také MxCsr. Konvence volání tento registr rozděluje volatile část a stálou část. Volatile část se skládá z příznaků 6 stavu, MXCSR [0:5], zatímco zbytek registru, MXCSR [6:15], je považován za stálý.  
-  
- Stálá část je nastaven na následující standardní hodnoty na začátku spuštění programu:  
-  
-```  
-MXCSR[6]         : Denormals are zeros - 0  
-MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)  
-MXCSR[13:14]   : Rounding  control - 0 (round to nearest)  
-MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
-```  
-  
- Volaný, který mění libovolná stálá pole v rámci MXCSR musí obnovit před vrácením jeho volajícího. Kromě toho volající, který změní některé z těchto polí musí obnovit na standardní hodnoty před vyvoláním volaného, pokud dohodou volaného očekává upravené hodnoty.  
-  
- Existují dvě výjimky pravidla týkající se bez volatility příznaky ovládacích prvků:  
-  
--   Ve funkcích, kde zdokumentovaných účel dané funkce stálé MxCsr příznaků.  
-  
--   Pokud je prokazatelně správné, že porušení těchto pravidel výsledky v programech, které se chovají/znamenají stejně jako program, kde nejsou porušena tato pravidla, například prostřednictvím analýzy celého programu.  
-  
- Žádné předpoklady nelze realizovat týkající se stavu služby volatile části MXCSR přes hranice funkce, pokud není výslovně uvedeno v dokumentaci funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Konvence volání](../build/calling-convention.md)
+
+Stav registrace také zahrnuje MxCsr. Konvence volání tento registr rozděluje volatile část a stálé část. Volatile část se skládá z příznaky 6 stavu MXCSR [0:5], zatímco zbytek do registru MXCSR [6:15], je považován za stálé.
+
+Stálé část je nastaven na následující standardní hodnoty na začátku spuštění programu:
+
+```
+MXCSR[6]         : Denormals are zeros - 0
+MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)
+MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
+MXCSR[15]      : Flush to zero for masked underflow - 0 (off)
+```
+
+Volaný, který změní libovolné stálé pole v rámci MXCSR musí obnovit před vrácením volající funkci. Kromě toho volající, který změní některé z těchto polí musí obnovit na standardní hodnoty před vyvoláním volaného Pokud smlouvou volaný očekává, že změněné hodnoty.
+
+Existují dvě výjimky k pravidlům týkající se jiných volatility příznaky ovládacích prvků:
+
+- Ve funkcích, kde zdokumentovaných účel danou funkci stálé MxCsr příznaků.
+
+- Pokud je prokazatelně správné, že porušení pravidla výsledky v programech, které se chová/znamená, že stejně jako program, ve kterém nejsou porušena tato pravidla, například prostřednictvím analýzy celého programu.
+
+Žádné předpoklady nelze realizovat týkající se stavu volatile část MXCSR přes hranice funkce, pokud není výslovně uvedeno v dokumentaci funkce.
+
+## <a name="see-also"></a>Viz také
+
+[Konvence volání](../build/calling-convention.md)

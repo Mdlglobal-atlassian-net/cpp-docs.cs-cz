@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208882"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726788"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 Při psaní aplikace, můžete vytvořit samostatný [CWinApp](../../mfc/reference/cwinapp-class.md)-odvozenému objektu. V některých případech můžete chtít získat informace o tomto objektu z mimo `CWinApp`-odvozenému objektu. Nebo pokud potřebujete přístup k jiným objektům globální "Manager".
@@ -406,8 +406,8 @@ Určuje, zda je daném okně Rozšířené orámovat objekt.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Ukazatel na objekt, který je odvozen z `CWnd`.  
+*pWnd*<br/>
+[in] Ukazatel na objekt, který je odvozen z `CWnd`.  
    
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaná okno je objekt rozšířeného rámce; v opačném případě FALSE.  
@@ -442,8 +442,8 @@ Určuje, zda je okno daný objekt panelu nástrojů.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Ukazatel na objekt, který je odvozen z `CWnd`.  
+*pWnd*<br/>
+[in] Ukazatel na objekt, který je odvozen z `CWnd`.  
    
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je okno zadaný objekt na panelu nástrojů v opačném případě FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Hodnota TRUE označuje, že informace registru během směřuje k uzlu HKCU; Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bEnable*<br/>
+[in] Hodnota TRUE označuje, že informace registru během směřuje k uzlu HKCU; Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Poznámky  
 

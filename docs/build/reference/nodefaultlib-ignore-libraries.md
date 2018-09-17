@@ -1,5 +1,5 @@
 ---
-title: -NODEFAULTLIB (Ignorovat knihovny) | Microsoft Docs
+title: -NODEFAULTLIB (ignorování knihoven) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,51 +23,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51caac10218d5f4d1787b2256875001ac32dc2b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae291677743cc05b0eeb85b41ebfa84e5a6e022e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375711"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726306"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Ignorovat knihovny)
-```  
-/NODEFAULTLIB[:library]   
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Knihovna*  
- Knihovna, která chcete linkeru ignorovat, pokud se přeloží externí odkazy.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /NODEFAULTLIB informuje linkeru odebrat jeden nebo více výchozí knihovny ze seznamu knihoven, které vyhledávání při rozpoznávání externí odkazy.  
-  
- K vytvoření souboru .obj, který nebude obsahovat odkazy na výchozí knihovny, použijte [/Zl (vypuštění názvu výchozí knihovny)](../../build/reference/zl-omit-default-library-name.md).  
-  
- Ve výchozím nastavení /NODEFAULTLIB odebere všechny výchozí knihovny ze seznamu knihoven, které vyhledávání při rozpoznávání externí odkazy. Volitelné *knihovny* parametr umožňuje odebrat ze seznamu knihoven vyhledávání při rozpoznávání externí odkazy uvedené knihovny nebo knihovny. Zadejte jednu možnost /NODEFAULTLIB pro každé knihovny, kterou chcete vyloučit.  
-  
- Linkeru přeloží odkazy na externí definice prohledáním nejprve v knihovnách, které explicitně zadáte, a potom ve výchozích knihovny zadán pomocí parametru /DEFAULTLIB a potom v výchozí knihovny s názvem v soubory .obj.  
-  
- / NODEFAULTLIB:*knihovny* přepsání [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*knihovny* při stejné *knihovny* název je zadán v obou.  
-  
- Pokud používáte /NODEFAULTLIB, například k sestavení vaší aplikace bez běhové knihovny jazyka C, může musíte také použít [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu (funkce) v programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **vstup**stránku vlastností.  
-  
-4.  Vyberte **ignorovat všechny výchozí knihovny** vlastnost nebo zadat seznam knihoven, které chcete ignorovat v **ignorovat konkrétní knihovny** vlastnost. **Příkazového řádku** zobrazí stránku vlastností účinku změny provádět tyto vlastnosti.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/NODEFAULTLIB[:library]
+```
+
+## <a name="arguments"></a>Arguments
+
+*Knihovna*<br/>
+Knihovna, která má linkeru, aby ignorovat při překladu externích odkazů.
+
+## <a name="remarks"></a>Poznámky
+
+Parametr/NODEFAULTLIB přikazuje linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů.
+
+Soubor .obj, který obsahuje odkazy na výchozích knihoven, které vytvoříte pomocí [/Zl (vynechání názvu výchozí knihovny)](../../build/reference/zl-omit-default-library-name.md).
+
+Ve výchozím nastavení odebere se: / NODEFAULTLIB všechny výchozí knihovny ze seznamu knihoven, které prohledává při překladu externích odkazů. Volitelný *knihovny* parametr umožňuje odebrat zadanou knihovnu nebo knihoven ze seznamu knihoven, které prohledává při překladu externích odkazů. Zadejte jednu z možností: / NODEFAULTLIB. pro každou knihovnu, kterou chcete vyloučit.
+
+Linker řeší odkazy na externí definice tak, že nejprve v knihovnách, která explicitně zadáte, pak ve výchozích knihoven zadaný pomocí možnosti /DEFAULTLIB a ve výchozích knihoven, které s názvem v souborech .obj.
+
+/ NODEFAULTLIB:*knihovny* přepíše [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*knihovny* při stejné *knihovny* název je zadán v obou.
+
+Pokud používáte parametr/NODEFAULTLIB, například k vytvoření programu bez knihovny run-time jazyka C, budete muset použít také [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu (funkce) ve svém programu. Další informace najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **vstup**stránku vlastností.
+
+1. Vyberte **ignorovat všechny výchozí knihovny** vlastnost, nebo zadejte seznam knihoven chcete ignorovat v **ignorovat konkrétní knihovnu** vlastnost. **Příkazového řádku** stránky vlastností zobrazí změny provedené v těchto vlastností.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

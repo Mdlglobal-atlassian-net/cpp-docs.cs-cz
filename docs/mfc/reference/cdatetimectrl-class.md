@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210184"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726658"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl – třída
 Zapouzdřuje funkce ovládací prvek pro výběr data a času.  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Ukazatel [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) struktura, která přijímá popis aktuální datum a čas pro výběr ovládacího prvku.<br /><br /> Volající zodpovídá za přidělování této struktury. Nicméně tato metoda inicializuje *cbSize* členu struktury.|  
+|*pDateTimePickerInfo*|[out] Ukazatel [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) struktura, která přijímá popis aktuální datum a čas pro výběr ovládacího prvku.<br /><br /> Volající zodpovídá za přidělování této struktury. Nicméně tato metoda inicializuje *cbSize* členu struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *psize*|Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturu, která obsahuje ideální velikost ovládacího prvku.|  
+|*psize*|[out] Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturu, která obsahuje ideální velikost ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota je vždy hodnotu TRUE.  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Na nový měsíc kalendář stylu ovládacího prvku, který je bitová kombinace (nebo) – styly ovládacích prvků kalendáře měsíce. Další informace najdete v tématu [– styly ovládacích prvků kalendáře měsíce](/windows/desktop/Controls/month-calendar-control-styles).|  
+|*dwStyle*|[in] Na nový měsíc kalendář stylu ovládacího prvku, který je bitová kombinace (nebo) – styly ovládacích prvků kalendáře měsíce. Další informace najdete v tématu [– styly ovládacích prvků kalendáře měsíce](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V předchozím stylu ovládací prvek rozevírací seznam měsíční kalendář.  

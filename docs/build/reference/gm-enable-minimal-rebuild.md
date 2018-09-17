@@ -1,5 +1,5 @@
 ---
-title: -Gm (povolit minimální opětovné sestavení) | Microsoft Docs
+title: -Gm (povolení minimálního opětovného sestavení) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,44 +23,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b83c34b0ff8cacbca9d21a40c6c9572f516d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f18881e79a3f82941f04dccbde210b2c62dcbca
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374567"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725761"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Povolit minimální opětovné sestavení)
-Umožňuje minimální opětovné sestavení, která určuje, jestli C++ zdrojové soubory, které zahrnují změněné definice tříd jazyka C++ (uložené v souborech hlavičky ()), který je potřeba zopakovat.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Gm  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Kompilátor ukládá informace o závislostech mezi zdrojové soubory a definice tříd v souboru projektu IDB během první kompilace. (Informace o závislostech určen, které zdrojový soubor je závislá na které definice třídy, a které .h soubor definice nachází ve.) Následné zkompiluje informace uložené v souboru IDB pomůže určit, zda zdrojový soubor musí být zkompilovány, i v případě, že obsahuje soubor upravené h.  
-  
+
+Povoluje minimální opětovné sestavení, která určuje, zda se musejí překompilovat zdrojové soubory C++ obsahující změněné definice tříd C++ (uložené v souborech hlaviček (.h)).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/Gm
+```
+
+## <a name="remarks"></a>Poznámky
+
+Kompilátor ukládá informace o závislostech mezi zdrojovými soubory a definice tříd v souboru IDB projektu během první kompilace. (Informace o závislostech říká, které zdrojový soubor je závislá na které definice třídy a které. h: soubor definice se nachází v.) Následné zkompiluje používat informace uložené v souboru IDB určit, zda zdrojový soubor musí ke kompilaci, i v případě obsahuje upravený. h: soubor.
+
 > [!NOTE]
->  Minimální opětovné sestavení spoléhá na – třída definice není změna mezi zahrnout soubory. Definice tříd musí být globální pro projekt (měla by existovat pouze jednu definici dané třídy), protože informace o závislostech v souboru IDB je vytvořena pro celý projekt. Pokud máte více než jednu definici pro třídu do projektu, zakažte minimální opětovné sestavení.  
-  
- Protože přírůstkové linkeru nepodporuje metadat Windows součástí soubory .obj pomocí [/ZW (kompilace Windows Runtime)](../../build/reference/zw-windows-runtime-compilation.md) možnost, **/Gm** možnost není kompatibilní s  **/ZW**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **generování kódu** stránku vlastností.  
-  
-4.  Změnit **povolit minimální opětovné sestavení** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+>  Minimální opětovné sestavení závisí na třídě definice se nemění, mezi soubory k zahrnutí. Definice tříd musí být globální pro projekt (měl by existovat pouze jedna definice z dané třídy), protože informace o závislostech v souboru IDB se vytvoří pro celý projekt. Pokud máte více než jednu definici pro třídu ve vašem projektu, zakažte minimálního opětovného sestavení.
+
+Protože přírůstkový linker nepodporuje metadat Windows zahrnuty v souborech .obj pomocí [/ZW (kompilace Windows Runtime)](../../build/reference/zw-windows-runtime-compilation.md) možnost, **/Gm** možnost není kompatibilní s  **/ZW**.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **generování kódu** stránku vlastností.
+
+1. Upravit **povolení minimálního opětovného sestavení** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

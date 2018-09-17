@@ -1,5 +1,5 @@
 ---
-title: Oprava verze sestavení problémy | Microsoft Docs
+title: Vydání opravy potíží se sestavením | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bb8f561d2611c2ee778aa4a0c6cbd1cc3dad2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b304fa6bcc9b0b248719ea44b28e9dae5c76a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372149"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726528"
 ---
 # <a name="fixing-release-build-problems"></a>Oprava problémů se sestavením pro vydání
-Pokud váš kód vygeneruje chyby při kompilaci po přepnutí z sestavení ladicí verze na sestavení pro vydání, nejsou některé oblasti, byste měli zkontrolovat.  
-  
- Může se zobrazit upozornění kompilátoru během vytváření sestavení optimalizované (verze), který jste neobdrželi během sestavení ladicí verze.  
-  
--   [Zkontrolujte ASSERT – příkazy](../../build/reference/using-verify-instead-of-assert.md)  
-  
--   [Přepíše použití ladění sestavení zkontrolujte paměti](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
-  
--   [Zapnout generování ladicích informací pro sestavení pro vydání](../../build/reference/how-to-debug-a-release-build.md)  
-  
--   [Kontrola přepisování paměti](../../build/reference/checking-for-memory-overwrites.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení pro vydání](../../build/reference/release-builds.md)   
- [Běžné problémy při vytváření sestavení pro vydání](../../build/reference/common-problems-when-creating-a-release-build.md)   
- [Optimalizace kódu](../../build/reference/optimizing-your-code.md)
+
+Pokud váš kód vygeneruje chyby při kompilaci po přepnutí ze sestavení pro ladění na sestavení pro vydání, existují některé oblasti, které byste měli počítač zkontrolovat.
+
+Při sestavování optimalizované (verze), který jste neobdrželi během sestavení pro ladění může se zobrazit upozornění kompilátoru.
+
+- [Prozkoumejte Assert – příkazy](../../build/reference/using-verify-instead-of-assert.md)
+
+- [Použití kontroly ladění sestavení pro přepisy paměti](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)
+
+- [Zapnutí generování ladicích informací pro sestavení pro vydání](../../build/reference/how-to-debug-a-release-build.md)
+
+- [Kontrola přepisování paměti](../../build/reference/checking-for-memory-overwrites.md)
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení pro vydání](../../build/reference/release-builds.md)<br/>
+[Běžné problémy při vytváření sestavení pro vydání](../../build/reference/common-problems-when-creating-a-release-build.md)<br/>
+[Optimalizace kódu](../../build/reference/optimizing-your-code.md)

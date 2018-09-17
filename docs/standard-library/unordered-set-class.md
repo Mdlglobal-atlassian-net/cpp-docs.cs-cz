@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726684"
 ---
 # <a name="unorderedset-class"></a>unordered_set – třída
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro mapování.
+*Keyval*<br/>
+Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
- Číslo kbelíku.
+*nbucket*<br/>
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*kde*  
- Pozice prvku, který má být odebrán.
+*kde*<br/>
+Pozice prvku, který má být odebrán.
 
-*první*  
- Pozice prvního prvku, který má být odebrán.
+*první*<br/>
+Pozice prvního prvku, který má být odebrán.
 
-*poslední*  
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+*poslední*<br/>
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*  
- Hodnota klíče prvků, které mají být odebrány.
+*Key*<br/>
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor*  
- Nové faktor maximálního zatížení.
+*faktor*<br/>
+Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
- Požadovaný počet kbelíků.
+*nbuckets*<br/>
+Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Kontejner se Prohodit s.
+*doprava*<br/>
+Kontejner se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2441,7 +2441,7 @@ unordered_set(
 |*Kompozice*|Objekt funkce porovnání, který se má uložit.|
 |*Hash*|Objekt hashovací funkce, který se má uložit.|
 |*bucket_count*|Minimální počet kbelíků.|
-|*Doprava*|Kontejner, který se má kopírovat.|
+|*doprava*|Kontejner, který se má kopírovat.|
 |*IList*|Objekt initializer_list obsahující prvky ke zkopírování.|
 
 ### <a name="remarks"></a>Poznámky

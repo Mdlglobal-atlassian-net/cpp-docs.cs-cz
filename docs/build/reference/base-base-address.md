@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725969"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
 
@@ -60,11 +60,11 @@ Na příkazovém řádku je další způsob, jak zadat základní adresu pomocí
 
 *Klíč* je řetězec alfanumerických znaků a není malá a velká písmena. To je obvykle název knihovny DLL, ale nemusí být. *Klíč* následuje základní *adresu* v jazyce C, hexadecimální nebo desítkové soustavě a volitelné maximální *velikost*. Všechny tři argumenty oddělené mezerami či tabulátory. Linker vydá upozornění, pokud zadaný *velikost* je menší než požadované programem virtuální adresní prostor. A *komentář* je určená středník (**;**) a může být na stejném nebo na samostatném řádku. Propojovací program ignoruje veškerý text z středník na konec řádku. Tento příklad ukazuje část takový soubor:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Pokud soubor, který obsahuje tyto řádky se nazývá DLLS.txt, příkaz v následujícím příkladu platí tyto informace:
 
@@ -88,5 +88,5 @@ Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argu
 
 ## <a name="see-also"></a>Viz také
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

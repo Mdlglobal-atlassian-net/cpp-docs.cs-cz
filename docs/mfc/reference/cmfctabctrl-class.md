@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680101"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726437"
 ---
 # <a name="cmfctabctrl-class"></a>Cmfctabctrl – třída
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTab*  
- Index založený na nule kartu k zobrazení nebo -1, k určení aktuálně aktivní karta.  
+*nTab*<br/>
+[in] Index založený na nule kartu k zobrazení nebo -1, k určení aktuálně aktivní karta.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAutoSize*  
- TRUE, pokud chcete automaticky změní velikost kartu ovládacího prvku systému windows. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bAutoSize*<br/>
+[in] TRUE, pokud chcete automaticky změní velikost kartu ovládacího prvku systému windows. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *styl*  
- Styl ovládacího prvku karta. Další informace najdete v části poznámky.  
+*Styl*<br/>
+[in] Styl ovládacího prvku karta. Další informace najdete v části poznámky.  
   
- [in] *rect*  
- Obdélník, který ovládací prvek karty za rozsahem.  
+*Rect*<br/>
+[in] Obdélník, který ovládací prvek karty za rozsahem.  
   
- [in] *pParentWnd*  
- Ukazatel do nadřazeného okna. Nesmí mít hodnotu NULL.  
+*pParentWnd*<br/>
+[in] Ukazatel do nadřazeného okna. Nesmí mít hodnotu NULL.  
   
- [in] *nID*  
- ID ovládacího prvku karta.  
+*nID*<br/>
+[in] ID ovládacího prvku karta.  
   
- [in] *umístění*  
- Umístění karty. Výchozí hodnota je LOCATION_BOTTOM. Další informace najdete v části poznámky.  
+*umístění*<br/>
+[in] Umístění karty. Výchozí hodnota je LOCATION_BOTTOM. Další informace najdete v části poznámky.  
   
- [in] *bCloseBtn*  
- TRUE, pokud chcete zobrazit tlačítko pro uzavření na kartě. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
+*bCloseBtn*<br/>
+[in] TRUE, pokud chcete zobrazit tlačítko pro uzavření na kartě. v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; v opačném případě hodnota FALSE.  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectEdit*  
- Obdélník, který určuje oblast karty.  
+*rectEdit*<br/>
+[in] Obdélník, který určuje oblast karty.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána, když se změní popisek karty. Tato metoda vyfoukne levé a pravé straně obdélníku zadaného polovina aktuální výška karty a vyfoukne horní a dolní jednu jednotku.  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete zobrazit tlačítko Zavřít na aktivní kartě. FALSE pro zobrazení tlačítka Zavřít v pravém horním rohu od oblasti karet. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zobrazit tlačítko Zavřít na aktivní kartě. FALSE pro zobrazení tlačítka Zavřít v pravém horním rohu od oblasti karet. Výchozí hodnota je TRUE.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Povolí nebo zakáže upravitelné kartu popisky.  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit popisky upravitelné kartu; FALSE, pokud chcete zakázat upravitelné kartu popisky.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit popisky upravitelné kartu; FALSE, pokud chcete zakázat upravitelné kartu popisky.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete zobrazit místní nabídka okno s kartami popisků; FALSE pro zobrazení tlačítka pro Posunutí vpřed a zpět. Výchozí hodnota je TRUE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete zobrazit místní nabídka okno s kartami popisků; FALSE pro zobrazení tlačítka pro Posunutí vpřed a zpět. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
  Po kliknutí na popisek karty, zobrazí rozhraní odpovídající okno s kartami. Pokud je zobrazen popisek karty, otevře okno s kartami beze změny jeho pozice. Pokud uživatel vybere dokument, který v místní nabídce a odpovídající okno s kartami je mimo obrazovku, stane se okno s kartami na první kartě.  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Index založený na nule karty.  
+*iTab*<br/>
+[in] Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je úspěšná. FALSE v případě *iTab* index parametru je neplatný.  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nCmdID*  
- ID příkazu karty v rozbalovací nabídce oken s kartami.  
+*nCmdID*<br/>
+[in] ID příkazu karty v rozbalovací nabídce oken s kartami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač rastrový obrázek.  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectTabAreaTop*  
- Po návratu tato metoda obsahuje tento odkaz obdélníku, který popisek oblasti horní kartě za rozsahem. Obdélníku je v souřadnicích klienta. Tento odkaz je prázdný, pokud neexistuje žádná oblast popisek karty v horní části ovládacího prvku karta.  
+*rectTabAreaTop*<br/>
+[out] Po návratu tato metoda obsahuje tento odkaz obdélníku, který popisek oblasti horní kartě za rozsahem. Obdélníku je v souřadnicích klienta. Tento odkaz je prázdný, pokud neexistuje žádná oblast popisek karty v horní části ovládacího prvku karta.  
   
- [out] *rectTabAreaBottom*  
- Po návratu tato metoda obsahuje tento odkaz obdélníku, který za rozsahem oblasti dolní části karty popisek. Obdélníku je v souřadnicích klienta. Tento odkaz je prázdný, pokud neexistuje žádná oblast popisek karty v dolní části ovládacího prvku karta.  
+*rectTabAreaBottom*<br/>
+[out] Po návratu tato metoda obsahuje tento odkaz obdélníku, který za rozsahem oblasti dolní části karty popisek. Obdélníku je v souřadnicích klienta. Tento odkaz je prázdný, pokud neexistuje žádná oblast popisek karty v dolní části ovládacího prvku karta.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k určení velikosti a pozice oblast karty v okně s kartami.  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rect*  
- Po návratu tato metoda *rect* parametr obsahuje obdélníku, který za rozsahem oblasti karet.  
+*Rect*<br/>
+[out] Po návratu tato metoda *rect* parametr obsahuje obdélníku, který za rozsahem oblasti karet.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Načte okrajem klientské oblasti aktuální ovládací prvek karty.  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out v] *rect*  
- Po návratu tato metoda obsahuje tento parametr obdélníku, který vazeb aktuální ovládací prvek karty.  
+*Rect*<br/>
+[out v] Po návratu tato metoda obsahuje tento parametr obdélníku, který vazeb aktuální ovládací prvek karty.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- Hodnota TRUE není zobrazíte neaktivního okna. FALSE pro zobrazení neaktivního okna. Výchozí hodnota je TRUE.  
+*bHide*<br/>
+[in] Hodnota TRUE není zobrazíte neaktivního okna. FALSE pro zobrazení neaktivního okna. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- TRUE, pokud chcete povolit vykreslování oblasti karet; FALSE, pokud chcete zakázat kreslení. Výchozí hodnota je TRUE.  
+*bHide*<br/>
+[in] TRUE, pokud chcete povolit vykreslování oblasti karet; FALSE, pokud chcete zakázat kreslení. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- TRUE, pokud chcete není vykreslení na kartě pro jednoho okna s kartami; FALSE pro kreslení jedné karty. Výchozí hodnota je TRUE.  
+*bHide*<br/>
+[in] TRUE, pokud chcete není vykreslení na kartě pro jednoho okna s kartami; FALSE pro kreslení jedné karty. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *styl*  
- Jedna z hodnot výčtu, která určuje vzhled ovládacího prvku karta. Další informace najdete v tabulce v poznámky.  
+*Styl*<br/>
+[in] Jedna z hodnot výčtu, která určuje vzhled ovládacího prvku karta. Další informace najdete v tabulce v poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy TRUE.  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDataObject*  
- Odkazuje na datový objekt, který obsahuje data, která uživatel přetáhne.  
+*pDataObject*<br/>
+[in] Odkazuje na datový objekt, který obsahuje data, která uživatel přetáhne.  
   
- [in] *dwKeyState*  
- Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Obsahuje informace o stavu modifikační klávesy. Tento parametr je bitová kombinace (nebo) z následujících hodnot: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu **parametry zpráv** část [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *bodu*  
- Obsahuje aktuální umístění kurzoru v souřadnicích klienta.  
+*Bod*<br/>
+[in] Obsahuje aktuální umístění kurzoru v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy DROPEFFECT_NONE, což znamená, že cíl přetažení nemůže přijmout data.  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDataObject*  
- Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objekt, který se přesune cíl přetažení.  
+*pDataObject*<br/>
+[in] Ukazatel [coledataobject –](../../mfc/reference/coledataobject-class.md) objekt, který se přesune cíl přetažení.  
   
- [in] *dwKeyState*  
- Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Stav modifikační klávesy, která je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v tématu "Parametry zpráv" [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *bodu*  
- Aktuální pozice myši.  
+*Bod*<br/>
+[in] Aktuální pozice myši.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy DROPEFFECT_NONE.  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- Souřadnice místa zobrazení místní nabídky.  
+*Bod*<br/>
+[in] Souřadnice místa zobrazení místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bActive*  
- TRUE, pokud chcete zobrazit aktuální kartu na aktivní kartě; FALSE, pokud chcete nastavit na aktuální kartě neaktivní.  
+*bActive*<br/>
+[in] TRUE, pokud chcete zobrazit aktuální kartu na aktivní kartě; FALSE, pokud chcete nastavit na aktuální kartě neaktivní.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete uspořádat několika okny dokumentů do obou skupin karet svislý nebo vodorovný a snadno shuffle dokumenty z jedné karty skupinu na jiný.  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Určuje index založený na nule kartě k aktivaci.  
+*iTab*<br/>
+[in] Určuje index založený na nule kartě k aktivaci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný kartu bylo provedeno aktivní; FALSE v případě zadaný *iTab* hodnota parametru je neplatný.  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsBold*  
- TRUE, pokud chcete použít k zobrazení popisku na aktivní kartě; tučným písmem FALSE, pokud chcete použít standardní písma k zobrazení popisku. Výchozí hodnota je TRUE.  
+*bIsBold*<br/>
+[in] TRUE, pokud chcete použít k zobrazení popisku na aktivní kartě; tučným písmem FALSE, pokud chcete použít standardní písma k zobrazení popisku. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDraw*  
- TRUE, pokud chcete zobrazit rámce obdélník kolem vložený řádek. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bDraw*<br/>
+[in] TRUE, pokud chcete zobrazit rámce obdélník kolem vložený řádek. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bFlat*  
- Chcete-li nakreslit paušální (2D) rámečku kolem oblasti karet; TRUE FALSE pro kreslení 3D rámce (3D). Výchozí hodnota je TRUE.  
+*bFlat*<br/>
+[in] Chcete-li nakreslit paušální (2D) rámečku kolem oblasti karet; TRUE FALSE pro kreslení 3D rámce (3D). Výchozí hodnota je TRUE.  
   
- [in] *bRepaint*  
- TRUE, pokud chcete okamžitě; ho překreslit okna v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
+*bRepaint*<br/>
+[in] TRUE, pokud chcete okamžitě; ho překreslit okna v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- ID prostředku rastrového obrázku, který obsahuje seznam obrázků.  
+*uiID*<br/>
+[in] ID prostředku rastrového obrázku, který obsahuje seznam obrázků.  
   
- [in] *cx*  
- Šířka jednotlivých obrázků v pixelech. Výchozí hodnota je 15.  
+*CX*<br/>
+[in] Šířka jednotlivých obrázků v pixelech. Výchozí hodnota je 15.  
   
- [in] *clrTransp*  
- Barva průhledný obrázek. Součástí image, které jsou tato barva bude průhledný. Výchozí hodnota je barva purpurová, RGB(255,0,255).  
+*clrTransp*<br/>
+[in] Barva průhledný obrázek. Součástí image, které jsou tato barva bude průhledný. Výchozí hodnota je barva purpurová, RGB(255,0,255).  
   
- [in] *hImageList*  
- Popisovač do seznamu předem image.  
+*hImageList*<br/>
+[in] Popisovač do seznamu předem image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. FALSE, pokud ovládací prvek karty se vytvoří pomocí styl ploché nebo pokud první přetížení metody nelze načíst rastrového obrázku, která je zadána *uiID* parametru.  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *resizeMode*  
- Jeden z `CMFCTabCtrl::ResizeMode` hodnot výčtu, která určuje, jak můžete změnit velikost ovládacího prvku karta. Seznam možných hodnot najdete v tabulce v poznámky.  
+*resizeMode*<br/>
+[in] Jeden z `CMFCTabCtrl::ResizeMode` hodnot výčtu, která určuje, jak můžete změnit velikost ovládacího prvku karta. Seznam možných hodnot najdete v tabulce v poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
  *ResizeMode* parametr může být jeden z následujících `ResizeMode` hodnot výčtu.  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTabMaxWidth*  
- Karta maximální šířka v pixelech.  
+*nTabMaxWidth*<br/>
+[in] Karta maximální šířka v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete omezit šířku každá karta v okně s kartami. Tato metoda je užitečná, pokud se tabulátory mají velmi dlouhé popisky. [Cmfctabctrl –](../../mfc/reference/cmfctabctrl-class.md) konstruktoru třídy inicializuje šířku maximální kartu na hodnotu 0, což ve skutečnosti znamená, že šířka není omezený.  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bCancel*  
- TRUE, pokud chcete opustit aktuální operace změny velikosti; FALSE, pokud chcete dokončit aktuální velikost operace. V obou případech se zastaví rozhraní kreslení obdélníku změny velikosti.  
+*bCancel*<br/>
+[in] TRUE, pokud chcete opustit aktuální operace změny velikosti; FALSE, pokud chcete dokončit aktuální velikost operace. V obou případech se zastaví rozhraní kreslení obdélníku změny velikosti.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Nakreslí vodorovný posuvník na ovládacím prvkem karta, která zobrazuje plochý karty.  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *pScrollInfo*  
- Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury nebo hodnota NULL. Po návratu tato metoda, a pokud tento parametr není NULL, struktura obsahuje všechny parametry posuvníku. Výchozí hodnota je NULL.  
+*pScrollInfo*<br/>
+[out] Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury nebo hodnota NULL. Po návratu tato metoda, a pokud tento parametr není NULL, struktura obsahuje všechny parametry posuvníku. Výchozí hodnota je NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  
