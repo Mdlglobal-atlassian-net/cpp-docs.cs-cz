@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721250"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox – třída
 `CVSListBox` Třída podporuje ovládací prvek upravovat seznam.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strIext*  
- Odkaz na řetězec.  
+*strIext*<br/>
+[in] Odkaz na řetězec.  
   
- [in] *dwData*  
- Hodnota 32-bit specifické pro aplikaci, která souvisí s řetězcem. Výchozí hodnota je 0.  
+*dwData*<br/>
+[in] Hodnota 32-bit specifické pro aplikaci, která souvisí s řetězcem. Výchozí hodnota je 0.  
   
- [in] *iIndex*  
- Z nuly vycházející index pozice, který bude obsahovat řetězec. Pokud *iIndex* -1 je parametr, řetězec je přidán na konec seznamu. Výchozí hodnota je -1.  
+*iIndex*<br/>
+[in] Z nuly vycházející index pozice, který bude obsahovat řetězec. Pokud *iIndex* -1 je parametr, řetězec je přidán na konec seznamu. Výchozí hodnota je -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Z nuly vycházející index pozice tohoto řetězce v ovládacím prvku seznamu.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Z nuly vycházející index položky ovládacího prvku seznamu.  
+*iIndex*<br/>
+[in] Z nuly vycházející index položky ovládacího prvku seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úspěšně; spustí operaci úprav v opačném případě hodnota FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položky ovládacího prvku seznam upravovat.  
+*iIndex*<br/>
+[in] Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota 32-bit, který je spojen se zadanou položku.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
- Index založený na nule položky ovládacího prvku seznam upravovat.  
+*iIndex*<br/>
+[in] Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje text zadané položky.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položky ovládacího prvku seznam upravovat.  
+*iIndex*<br/>
+[in] Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaná položka se odebere; v opačném případě hodnota FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *položky*  
- Index založený na nule položky ovládacího prvku seznam upravovat.  
+*Položky*<br/>
+[in] Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Index založený na nule položky ovládacího prvku seznam upravovat.  
+*iIndex*<br/>
+[in] Index založený na nule položky ovládacího prvku seznam upravovat.  
   
- [in] *dwData*  
- 32bitová hodnota. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na další data.  
+*dwData*<br/>
+[in] 32bitová hodnota. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na další data.  
   
 ### <a name="remarks"></a>Poznámky  
   

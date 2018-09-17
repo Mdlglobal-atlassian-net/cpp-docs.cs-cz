@@ -1,5 +1,5 @@
 ---
-title: -WX (zpracovávat upozornění Linkeru jako chyby) | Microsoft Docs
+title: -WX (zpracovávat upozornění Linkeru jako chyb) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686b17a3db00175340e3490241c6c2e9f9325225
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91f73af0c270be4452a4b556d2cb77c0d55bed33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377284"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722589"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Zpracovávat upozornění linkeru jako chyby)
-```  
-/WX[:NO]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- /WX způsobí, že žádná výstupní soubor do vyvolala v případě linkeru vygeneruje upozornění.  
-  
- Toto je podobná **wdn** pro kompilátor (najdete v části [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, nebo jsme /wo, /Wv, wdn (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md) Další informace). Ale zadání **wdn** pro kompilace není určeno, který **wdn** také bude platit pro fázi odkaz; je nutné explicitně zadat **wdn** pro jednotlivé nástroje.  
-  
- Ve výchozím nastavení **wdn** není funkční. Zacházet s upozornění linkeru jako chyby, zadejte **wdn**. **/WX:No** je stejný jako bez zadání **wdn**.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Zadejte možnost do **další možnosti** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
-1.  V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/WX[:NO]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Parametr /WX způsobí, že žádný výstupní soubor, který chcete vygenerovat, pokud linker vydá upozornění.
+
+To se podobá **/WX** kompilátor (naleznete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / jsme Wo, WV, /WX (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md) Další informace). Ale zadání **/WX** pro kompilaci, která neznamená **/WX** také bude platit pro fáze propojení; je nutné explicitně zadat **/WX** pro jednotlivé nástroje.
+
+Ve výchozím nastavení **/WX** není platná. Chcete-li zpracovávat upozornění linkeru jako chyby, zadejte **/WX**. **/WX:No** je stejné jako bez zadání **/WX**.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do **další možnosti** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

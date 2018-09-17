@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687984"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721731"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine – třída
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType*  
- Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*UIntType*<br/>
+Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*W*  
- **Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Krátká prodleva**. Počet hodnot typu integer. **Předběžná podmínka**: `0 < S < R`
+*S*<br/>
+**Krátká prodleva**. Počet hodnot typu integer. **Předběžná podmínka**: `0 < S < R`
 
-*R*  
- **Dlouhá zpoždění**. Určuje opakování v řadě vygenerována.
+*R*<br/>
+**Dlouhá zpoždění**. Určuje opakování v řadě vygenerována.
 
 ## <a name="members"></a>Členové
 

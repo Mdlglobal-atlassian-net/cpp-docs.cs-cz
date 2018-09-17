@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724755"
 ---
 # <a name="event--c-component-extensions"></a>event (rozšíření komponent C++)
 
@@ -157,7 +157,7 @@ Následující kroky musíte provést k vytvoření a používání událostí v
 
    - Události vytvořené z delegáta.
 
-   - (volitelné) Metoda, která ověřuje, že instance delegáta deklarovat s **události** – klíčové slovo existuje. V opačném případě tuto logiku musí být umístěn v kódu, který se aktivuje událost.
+   - (Volitelné) Metoda, která ověřuje, že instance delegáta deklarovat s **události** – klíčové slovo existuje. V opačném případě tuto logiku musí být umístěn v kódu, který se aktivuje událost.
 
    - Metody, které volají události. Tyto metody mohou být přepsání některé funkce základní třídy.
 

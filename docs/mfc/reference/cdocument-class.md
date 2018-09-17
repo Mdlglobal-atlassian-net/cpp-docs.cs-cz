@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337499"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722628"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 Poskytuje základní funkce pro třídy dokumentu definované uživatelem.  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *deEvent*  
- Výčtový datový typ, který popisuje typ události.  
+*deEvent*<br/>
+[in] Výčtový datový typ, který popisuje typ události.  
   
 ### <a name="remarks"></a>Poznámky  
  Události dokumentu může ovlivnit více tříd. Tato metoda je zodpovědná za zpracování událostí dokumentů, které ovlivňují tříd jiných než [CDocument – třída](../../mfc/reference/cdocument-class.md). V současné době je jedinou třídu, která musí reagovat na události dokumentu [cdatarecoveryhandler – třída](../../mfc/reference/cdatarecoveryhandler-class.md). `CDocument` Třída má jiné přepisovatelný metody zodpovědného za obsluhu vliv na `CDocument`.  

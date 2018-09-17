@@ -1,5 +1,5 @@
 ---
-title: 'Stránka vlastností vlastního sestavení krok: Obecná | Microsoft Docs'
+title: 'Stránka vlastností kroku vlastního sestavení: Obecná | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,42 +22,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df655f06d3b6d6b2b7b36f83f7c109adce758fef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325926"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721991"
 ---
 # <a name="custom-build-step-property-page-general"></a>Stránka vlastností vlastního kroku sestavení: Obecné
 Pro každou kombinaci konfigurace projektu a cílové platformy v projektu můžete zadat vlastní krok, který se má provést při sestavení projektu.  
 
-Linux verzi této stránce, naleznete v části [vlastní sestavení krok vlastnosti (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
+Verzi Linuxu na této stránce, najdete v části [vlastní krok vlastnosti sestavení (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Příkazový řádek**  
- Příkaz, který má vlastní krok sestavení provést.  
+- **Příkazový řádek**
+
+   Příkaz, který má vlastní krok sestavení provést.  
   
- **Popis**  
- Zpráva, která se zobrazí při spuštění vlastního kroku sestavení  
+- **Popis**
+
+   Zpráva, která se zobrazí při spuštění vlastního kroku sestavení  
   
- **Výstupy**  
- Výstupní soubor, který je vygenerován vlastním krokem sestavení. Toto nastavení je povinné, aby přírůstkové sestavení fungovalo správně.  
+- **výstupy**
+
+   Výstupní soubor, který je vygenerován vlastním krokem sestavení. Toto nastavení je povinné, aby přírůstkové sestavení fungovalo správně.  
   
- **Další závislosti**  
- Seznam případných dalších vstupních souborů, které se mají použít ve vlastním kroku sestavení, oddělených středníkem.  
+- **Další závislosti**
+
+   Seznam případných dalších vstupních souborů, které se mají použít ve vlastním kroku sestavení, oddělených středníkem.  
   
- **Po spuštění a provést před**  
- Tyto volby definují, kdy se vlastní krok v rámci procesu sestavení spustí. Zadávají se ve vztahu k cílům uvedeným v seznamu. Nejčastěji používané cíle jsou BuildGenerateSources, BuildCompile a BuildLink, které představují nejdůležitější kroky v procesu sestavení. Další často používané cíle jsou Midl, CLCompile a Link.  
+- **Po spuštění a provést před**
+
+   Tyto volby definují, kdy se vlastní krok v rámci procesu sestavení spustí. Zadávají se ve vztahu k cílům uvedeným v seznamu. Nejčastěji používané cíle jsou BuildGenerateSources, BuildCompile a BuildLink, které představují nejdůležitější kroky v procesu sestavení. Další často používané cíle jsou Midl, CLCompile a Link.  
   
- Považovat výstup za obsah  
- Tato možnost je pouze smysl pro univerzální platformu Windows nebo Windows Phone aplikací, které zahrnují všechny soubory obsahu v balíčku .appx.  
+- **Považovat výstup za obsah**
+
+   Tato možnost je jenom pro aplikace univerzální platformy Windows nebo Windows Phone, které zahrnují všechny soubory obsahu v balíčku .appx smysluplné.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Zadání vlastního kroku sestavení  
   
-1.  Na řádku nabídek zvolte **projektu**, **vlastnosti**. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+1.  V panelu nabídky zvolte **projektu**, **vlastnosti**. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
-2.  V **stránky vlastností** dialogové okno pole, přejděte **vlastnosti konfigurace**, **vlastní krok sestavení**, **Obecné** stránky.  
+2.  V **stránky vlastností** dialogové okno, přejděte na **vlastnosti konfigurace**, **vlastní krok sestavení**, **Obecné** stránky.  
   
 3.  Podle potřeby upravte nastavení.  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852991"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721861"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu – třída
 Představuje místní nabídka, která uživatelům umožňuje vybírat barvy v dokumentu nebo aplikace.  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *barvy*  
- Pole barvy, které zobrazí rozhraní v místní nabídce.  
+*Barvy*<br/>
+[in] Pole barvy, které zobrazí rozhraní v místní nabídce.  
   
- [in] *barva*  
- Výchozí vybraná barva.  
+*Barva*<br/>
+[in] Výchozí vybraná barva.  
   
- [in] *lpszAutoColor*  
- Textový popisek *automatické* tlačítko barvy (výchozí), nebo hodnota NULL.  
+*lpszAutoColor*<br/>
+[in] Textový popisek *automatické* tlačítko barvy (výchozí), nebo hodnota NULL.  
   
  Standardní popisek bude automatické tlačítka je **automatické**.  
   
- [in] *lpszOtherColor*  
- Textový popisek *jiných* tlačítko, které zobrazuje více volby barev, nebo hodnotu NULL.  
+*lpszOtherColor*<br/>
+[in] Textový popisek *jiných* tlačítko, které zobrazuje více volby barev, nebo hodnotu NULL.  
   
  Standardní popisek pro jiné tlačítko je **Další barvy...** .  
   
- [in] *lpszDocColors*  
- Textový popisek tlačítka pro barvy dokumentu. Barevná paleta dokumentu jsou uvedeny všechny barvy, které aktuálně používá dokumentu.  
+*lpszDocColors*<br/>
+[in] Textový popisek tlačítka pro barvy dokumentu. Barevná paleta dokumentu jsou uvedeny všechny barvy, které aktuálně používá dokumentu.  
   
- [in] *lstDocColors*  
- Seznam barvy, které se aktuálně používá dokumentu.  
+*lstDocColors*<br/>
+[in] Seznam barvy, které se aktuálně používá dokumentu.  
   
- [in] *nColumns*  
- Počet sloupců, které má škály barev.  
+*nColumns*<br/>
+[in] Počet sloupců, které má škály barev.  
   
- [in] *nHorzDockRows*  
- Počet řádků, které nemá pruhu barev, pokud je ukotven vodorovně.  
+*nHorzDockRows*<br/>
+[in] Počet řádků, které nemá pruhu barev, pokud je ukotven vodorovně.  
   
- [in] *nVertDockColumns*  
- Počet sloupců, které nemá pruhu barev, pokud je ukotven svisle.  
+*nVertDockColumns*<br/>
+[in] Počet sloupců, které nemá pruhu barev, pokud je ukotven svisle.  
   
- [in] *barvaAutomatická*  
- Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.  
+*barvaAutomatická*<br/>
+[in] Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.  
   
- [in] *uiCommandID*  
- ID příkazu pro ovládací prvek pruhu barev.  
+*uiCommandID*<br/>
+[in] ID příkazu pro ovládací prvek pruhu barev.  
   
- [in] *bStdColorDlg*  
- Logická hodnota, která určuje, jestli se má zobrazit dialogové okno Barva standardní systém nebo [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) dialogové okno.  
+*bStdColorDlg*<br/>
+[in] Logická hodnota, která určuje, jestli se má zobrazit dialogové okno Barva standardní systém nebo [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) dialogové okno.  
   
- [in] *pParentBtn*  
- Ukazatel na tlačítku nadřazené.  
+*pParentBtn*<br/>
+[in] Ukazatel na tlačítku nadřazené.  
   
- [in] *nID*  
- ID příkazu.  
+*nID*<br/>
+[in] ID příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
  Každý přetížení konstruktoru sady `m_bEnabledInCustomizeMode` člena na hodnotu FALSE.  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pWndMain*|Ukazatel na nadřazené okno přemístitelný panel.|  
-|[in] *uiID*|ID příkazu přemístitelný panel.|  
-|[in] *lpszName*|Text okna přemístitelný panel.|  
+|*pWndMain*|[in] Ukazatel na nadřazené okno přemístitelný panel.|  
+|*uiID*|[in] ID příkazu přemístitelný panel.|  
+|*lpszName*|[in] Text okna přemístitelný panel.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nový objekt panelu odtržených ovládacího prvku.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndList*  
- Ukazatel na objekt ovládacího prvku mřížky vlastností.  
+*pWndList*<br/>
+[in] Ukazatel na objekt ovládacího prvku mřížky vlastností.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

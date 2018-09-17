@@ -1,5 +1,5 @@
 ---
-title: SE ZAKÁZANÝM INZEROVÁNÍM | Microsoft Docs
+title: ZÁSTUPNÁ PROCEDURA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 385e073f877a938a3b73fa79036d27cf50c1e4ec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 151d7b425a7f397a05e3a06e9d94489a0c76f899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375198"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725111"
 ---
 # <a name="stub"></a>Zástupný procedura
-Při použití v souboru definice modulu, který sestaví ovladač virtuálního zařízení (VxD), můžete zadat název souboru, který obsahuje strukturu IMAGE_DOS_HEADER (definovanou v WINNT. H) pro použití v ovladač virtuálního zařízení (VxD), místo výchozí záhlaví.  
-  
-```  
-STUB:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ekvivalentní způsob, jak určit *filename* je pomocí [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) – možnost linkeru.  
-  
- Se zakázaným INZEROVÁNÍM je v souboru definice modulu platná, pouze při vytváření VxD –.  
-  
-## <a name="see-also"></a>Viz také  
- [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+
+Při použití v souboru definice modulu, který vytváří ovladač virtuální zařízení (VxD), můžete zadat název souboru, který obsahuje strukturu IMAGE_DOS_HEADER (definované v WINNT. H) pro použití v ovladač virtuální zařízení (VxD), namísto výchozí záhlaví.
+
+```
+STUB:filename
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ekvivalentní způsob, jak určit *filename* se [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) – možnost linkeru.
+
+Zástupné PROCEDURY je platný v souboru definice modulu pouze při sestavování VxD.
+
+## <a name="see-also"></a>Viz také
+
+[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)

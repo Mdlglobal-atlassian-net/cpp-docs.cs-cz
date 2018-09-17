@@ -1,5 +1,5 @@
 ---
-title: -KEYCONTAINER (zadat kontejner klíčů pro podepsání sestavení) | Microsoft Docs
+title: -KEYCONTAINER (určení kontejneru klíčů pro podpis sestavení) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,57 +19,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13058978b0833a17abbbfb68a2ed753aacfb6d49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 850a8173dba3e69eaf52fdf174674e1dba58a4d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723759"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Zadat kontejner klíčů pro podpis sestavení)
-```  
-/KEYCONTAINER:name  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde  
-  
- *Jméno*  
- Kontejner, který obsahuje klíč. Umístěte řetězec v uvozovkách ("") Pokud obsahuje mezeru.  
-  
-## <a name="remarks"></a>Poznámky  
- Linkeru vytvoří podepsané sestavení vložením veřejný klíč do manifestu a podepíše konečné sestavení s privátním klíčem. Chcete-li vygenerovat soubor klíče, zadejte [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* na příkazovém řádku. **sn -i** nainstaluje pár klíčů do kontejneru.  
-  
- Pokud je kompilovat s [/LN](../../build/reference/ln-create-msil-module.md), název souboru klíče je udržován v modulu a součástí sestavení, které se vytvoří při kompilaci sestavení obsahující explicitní odkaz na modul, prostřednictvím [#using](../../preprocessor/hash-using-directive-cpp.md), nebo při propojování s [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
-  
- Vaše informace šifrování můžete předat také kompilátoru s [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Použití [/delaysign](../../build/reference/delaysign-partially-sign-an-assembly.md) Pokud chcete, aby částečně podepsané sestavení. V tématu [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.  
-  
- Další možnosti linkeru, které mají vliv vytváření sestavení jsou:  
-  
--   [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
-  
--   [/ ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
-  
--   [/ ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
-  
--   [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
-  
--   [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Zadejte možnost do **další možnosti** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/KEYCONTAINER:name
+```
+
+## <a name="arguments"></a>Arguments
+
+*Jméno*<br/>
+Kontejner, který obsahuje klíč. Vložit do dvojitých uvozovek ("") Pokud obsahuje mezery.
+
+## <a name="remarks"></a>Poznámky
+
+Propojovací program vytvoří podepsané sestavení tak, že vloží veřejný klíč do manifestu sestavení a podepíše konečné sestavení soukromým klíčem. Chcete-li generovat soubor s klíčem, zadejte [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* na příkazovém řádku. **sériové číslo -i** nainstaluje pár klíčů do kontejneru.
+
+Pokud kompilujete s [/LN](../../build/reference/ln-create-msil-module.md), je název souboru klíče uložené v modulu a součástí sestavení, které se vytvoří, když kompilujete sestavení, které obsahuje explicitní odkaz na modul, prostřednictvím [#using](../../preprocessor/hash-using-directive-cpp.md), nebo při propojování s [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).
+
+Můžete také předat údaje o šifrování pro kompilátor [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Použití [/delaysign](../../build/reference/delaysign-partially-sign-an-assembly.md) potřebujete částečně podepsaného sestavení. Zobrazit [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Další informace o podepisování sestavení.
+
+Další možnosti linkeru, které ovlivňují generování sestavení jsou:
+
+- [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+
+- [/ ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+
+- [/ ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+
+- [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+
+- [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do **další možnosti** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Průvodce třídou MFC | Microsoft Docs
+title: Průvodce třídou MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,88 +17,101 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409fd7f0cde2090b84ed2a997fedc43b2ffd5db7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06353f7e0756cadb6ad05e1e5b35b3cd36b526c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370139"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725150"
 ---
 # <a name="mfc-class-wizard"></a>Průvodce třídou MFC
-Umožňuje přidat zprávy a obslužné rutiny zpráv do tříd ve vašem projektu. Můžete také spustit další průvodce nebo přidat třídu do projektu.  
+Umožňuje přidat zprávy a obslužné rutiny zpráv na třídy v projektu. Můžete také spustit další průvodce nebo přidání třídy do projektu.  
   
- Otevřete **Průvodce třídou MFC**na **projektu** nabídky, klikněte na tlačítko **Průvodce třídou**. Chcete-li průvodce spustit pomocí klávesové zkratky, stiskněte klávesy CTRL+SHIFT+X.  
+ Chcete-li otevřít **Průvodce třídami MFC**na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**. Chcete-li průvodce spustit pomocí klávesové zkratky, stiskněte klávesy CTRL+SHIFT+X.  
   
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Projekt**  
- Název projektu ve vašem řešení.  
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
+- **Projekt**
+
+   Název projektu v rámci vašeho řešení.  
   
- V řešení lze zvolit jiné projekty z rozevíracího seznamu.  
+   V řešení lze zvolit jiné projekty z rozevíracího seznamu.  
   
- **Název třídy**  
- Název třídy ve vašem projektu.  
+- **Název třídy**
+
+   Název třídy ve vašem projektu.  
   
- Pokud vyberete třídu v **název třídy** seznamu data z třídy naplní ovládacích prvků v **Průvodce třídou MFC**. Při změně hodnoty ovládacího prvku, má vliv data ve vybrané třídy.  
+   Pokud vyberete třídu v **název třídy** seznamu, data ze třídy naplní ovládací prvky **Průvodce třídami MFC**. Při změně hodnoty ovládacího prvku je data ve třídě vybrané ovlivněna.  
   
- **Přidání třídy**  
- Umožňuje přidat třídu z několika zdrojů.  
+- **Přidat třídu**
+
+   Umožňuje přidat třídu z jednoho z několika zdrojů.  
   
- V závislosti na váš výběr **Průvodce přidáním třídy MFC**, **přidat třídu z Průvodce Typelib**, **přidat třídu z ActiveX Průvodce ovládacím prvkem**, nebo **knihovny MFC rozhraní ODBC Průvodce příjemcem** je spuštěná.  
+   V závislosti na vašem výběru **Průvodce přidáním třídy MFC**, **přidání třídy z Průvodce knihovnou typů**, **třídy z ActiveX Průvodce přidáním ovládacího prvku**, nebo **knihovny MFC rozhraní ODBC Průvodce příjemcem** spuštění.  
   
- **Base – třída**  
- Základní třída třídy, která se zobrazí v **název třídy**.  
+- **Základní třída**
+
+   K základní třídě této třídy, která se zobrazí v **název třídy**.  
   
- **Deklarace třídy**  
- Třídy, ve které **název třídy** třída je deklarován.  
+- **Deklarace třídy**
+
+   Třídy, ve které **název třídy** třída je deklarována.  
   
- **Deklarace třídy** políčko se zobrazí jenom v případě, že název v ní se liší od názvu v **implementaci třídy**.  
+   **Deklarace třídy** pole se zobrazí pouze v případě, že název v ní se liší od názvu v **implementace třídy**.  
   
- **Prostředek**  
- ID prostředku v **název třídy**, pokud existuje. Jinak **prostředků** pole je prázdné.  
+- **prostředek**
+
+   ID prostředku v **název třídy**, pokud nějaké existují. V opačném případě **prostředků** pole je prázdné.  
   
- **Implementace – třída**  
- Název souboru, který obsahuje implementaci třídy v **název třídy**.  
+- **Implementace třídy**
+
+   Název souboru, který obsahuje implementaci třídy v **název třídy**.  
   
- Kliknutím na šipku můžete vybrat jinou implementaci souboru. V následující tabulce jsou uvedeny dostupné možnosti.  
+   Kliknutím na šipku, můžete vybrat různé implementační soubor. V následující tabulce jsou uvedeny dostupné možnosti.  
   
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Otevření souboru**|Ukončí průvodce třídami a otevře soubor implementace aktuální třídy.|  
-|**Otevřít složku**|Otevře složku, která obsahuje aktuální soubor implementace třídy.|  
-|**Úplná cesta kopírování do schránky**|Cestu k souboru aktuální implementace zkopíruje do schránky.|  
+   |Možnost|Popis|  
+   |------------|-----------------|  
+   |**Otevřít soubor**|Ukončí průvodce třídami a otevře soubor implementace aktuální třídy.|  
+   |**Otevřít nadřazenou složku**|Otevře složku obsahující soubor implementace aktuální třídy.|  
+   |**Kopírovat úplnou cestu do schránky**|Cesta aktuální implementační soubor zkopíruje do schránky.|  
   
- **Příkazy**  
- Umožňuje přidat, odstranit, upravit nebo Hledat příkazu a jeho popisovač zpráv.  
+- **Příkazy**
+
+   Umožňuje přidat, odstranit, upravit nebo vyhledání příkazu a jeho obslužné rutiny zpráv.  
   
- Chcete-li přidat obslužnou rutinu, klikněte na tlačítko **přidat obslužnou rutinu**, nebo dvakrát kliknout na položku v **ID objektů** seznamu nebo **zprávy** seznamu. Výsledný název funkce, ID a zprávy se zobrazují v **členské funkce** seznamu.  
+   Chcete-li přidat obslužnou rutinu, klikněte na tlačítko **přidat obslužnou rutinu**, nebo dvakrát klikněte na položku v **ID objektů** seznamu nebo **zprávy** seznamu. Výsledný název funkce, ID a zpráva se zobrazí v **členské funkce** seznamu.  
   
- Pokud chcete odstranit obslužnou rutinu, vyberte položku v **členské funkce** seznamu a pak klikněte na tlačítko **odstranit obslužná rutina**.  
+   Pokud chcete odstranit obslužnou rutinu, zvolit položku v **členské funkce** seznamu a potom klikněte na **odstranit obslužnou rutinu**.  
   
- Chcete-li upravit obslužnou rutinu, dvakrát klikněte na příslušnou položku v **členské funkce** seznamu. Nebo, vyberte položku v seznamu a pak klikněte na tlačítko **upravit kód**.  
+   Chcete-li změnit obslužnou rutinu, dvakrát klikněte na odpovídající položku v **členské funkce** seznamu. Nebo, v seznamu vyberte položku a pak klikněte na tlačítko **upravit kód**.  
   
- **Zprávy**  
- Umožňuje přidat, odstranit, upravit nebo vyhledejte zprávu a jejich popisovače zpráv.  
+- **Zprávy**
+
+   Umožňuje přidat, odstranit, upravit nebo vyhledejte zprávu a její obslužná rutina zprávy.  
   
- Chcete-li přidat obslužnou rutinu, klikněte na tlačítko **přidat obslužnou rutinu**, nebo dvakrát kliknout na položku v **zprávy** seznamu.  
+   Chcete-li přidat obslužnou rutinu, klikněte na tlačítko **přidat obslužnou rutinu**, nebo dvakrát klikněte na položku v **zprávy** seznamu.  
   
- Chcete-li přidat vlastní zprávu, klikněte na tlačítko **přidat vlastní zprávu** nebo stiskněte klávesu Enter a poté zadejte hodnoty v **přidat vlastní zprávu** dialogové okno. V tomto dialogu můžete také vybrat **zaregistrován zpráva** pro zpracování zpráv oken, který se musí být jedinečný v rámci operačního systému.  
+   Chcete-li přidat vlastní zprávu, klikněte na tlačítko **přidat vlastní zprávu** nebo stiskněte klávesu Enter a poté zadejte hodnoty v **přidat vlastní zprávu** dialogové okno. V tomto dialogovém okně můžete také vybrat **registrovanou zprávu** zpracovat zprávu okna, která je zaručeně jedinečná v celém operačním systému.  
   
- **Virtuální funkce**  
- Umožňuje přidat, odstranit, upravit nebo Hledat virtuální funkce nebo přepsané virtuální funkce.  
+- **Virtuální funkce**
+
+   Umožňuje přidat, odstranit, upravit nebo vyhledejte virtuální funkci nebo přepsané virtuální funkce.  
   
- **Členské proměnné**  
- Umožňuje přidat, odstranit, upravit nebo vyhledejte členské proměnné.  
+- **Členské proměnné**
+
+   Umožňuje přidat, odstranit, upravit nebo vyhledejte členské proměnné.  
   
- **Metody**  
- Umožňuje přidat, odstranit, nebo vyhledejte metodu a také přejít na definici nebo deklaraci metody.  
+- **Metody**
+
+   Umožňuje přidat, odstranit, nebo vyhledejte metodu a také myší přejít na definice nebo deklarace metody.  
   
- Chcete-li přidat metodu, klikněte na tlačítko **přidat metodu**a poté zadejte hodnoty v **přidat metodu** dialogové okno.  
+   Přidání metody, klikněte na tlačítko **přidat metodu**a poté zadejte hodnoty v **přidat metodu** dialogové okno.  
   
- Pokud chcete odstranit metodu, vyberte položku v **metody** seznamu a pak klikněte na tlačítko **odstranit metoda**.  
+   Pokud chcete metodu odstranit, vyberte položku v **metody** seznamu a potom klikněte na tlačítko **metodu Delete**.  
   
- Chcete-li zobrazit deklaraci, vyberte položku v **metody** seznamu a pak klikněte na tlačítko **přejít na deklaraci.**  
+   Chcete-li zobrazit prohlášení, zvolit položku v **metody** seznamu a potom klikněte na tlačítko **přejít na deklaraci.**  
   
- Chcete-li zobrazit definici, dvakrát klikněte na položku v **metody** seznamu. Nebo vyberte položku v **metody** seznamu a klikněte **přechod na definici** tlačítko.  
+   Chcete-li zobrazit definici, dvakrát klikněte na položku **metody** seznamu. Nebo vyberte položku **metody** seznamu a potom klikněte na tlačítko **přejít k definici** tlačítko.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)

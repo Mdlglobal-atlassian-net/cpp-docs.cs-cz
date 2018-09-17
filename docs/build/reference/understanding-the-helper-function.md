@@ -1,5 +1,5 @@
 ---
-title: Principy pomocné funkce | Microsoft Docs
+title: Základní informace o funkci pomocné rutiny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,57 +20,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ed331022c29ecc47d61bbcccbfac82000cb235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90ca214b28296417ab80341232c08a55b92adff4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379234"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725480"
 ---
 # <a name="understanding-the-helper-function"></a>Základní informace o podpůrné funkci
-Podpůrná funkce pro podporované linkeru zpožděné načítání je co ve skutečnosti knihovnu DLL načte, v době běhu. Pomocné funkce přizpůsobit své chování tak, že zápis vlastní funkce a propojení s vaším programem místo pomocí zadané pomocné funkce v Delayimp.lib, můžete upravit. Jeden pomocné funkce slouží všechny knihovny DLL načtené zpoždění.  
-  
- Pokud budete chtít provést zpracování specifické podle názvů knihovny DLL nebo importy, můžete zadat vlastní verzi pomocné funkce.  
-  
- Pomocné funkce provede následující akce:  
-  
--   Kontroluje uložené popisovač do knihovny a zjistěte, pokud již byl načten  
-  
--   Volání **LoadLibrary** k pokusu o načtení knihovny DLL  
-  
--   Volání **GetProcAddress** k pokusu o získání adresu procedury  
-  
--   Vrátí k importu zpoždění načíst převodu volat nyní načíst vstupního bodu  
-  
- Pomocné funkce můžete volat zpět k háku oznámení v programu po každém z následujících akcí:  
-  
--   Při spuštění pomocné funkce  
-  
--   Těsně před **LoadLibrary** je volána v podpůrné funkci  
-  
--   Těsně před **GetProcAddress** je volána v podpůrné funkci  
-  
--   Pokud volání **LoadLibrary** v pomocné funkce se nezdařilo  
-  
--   Pokud volání **GetProcAddress** v pomocné funkce se nezdařilo  
-  
--   Po pomocné rutiny funkce provádí zpracování  
-  
- Každá z těchto bodů napojit může vrátit hodnotu, která bude úpravu normálního zpracování pomocnou rutinou nějakým způsobem kromě návratu do převodu zatížení import zpoždění.  
-  
- Kód pomocného objektu výchozí naleznete v Delayhlp.cpp a Delayimp.h (v vc\include) a kompiluje v Delayimp.lib (v vc\lib). Je potřeba zahrnout do vaší kompilace této knihovny, pokud můžete psát vlastní pomocné funkce.  
-  
- Následující témata popisují pomocné funkce:  
-  
--   [Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
-  
--   [Konvence volání, parametry a návratový typ](../../build/reference/calling-conventions-parameters-and-return-type.md)  
-  
--   [Struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md)  
-  
--   [Výpočet nezbytných hodnot](../../build/reference/calculating-necessary-values.md)  
-  
--   [Uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Pomocná funkce pro linker nepodporuje opožděné načtení je, co skutečně knihovnu DLL načte, v době běhu. Pomocná funkce pro přizpůsobení své chování psaní vlastní funkce a propojením k aplikaci místo pomocí zadané pomocné rutiny funkce v Delayimp.lib můžete upravit. Jeden pomocnou funkci slouží všechny zpožděné načtení knihovny DLL.
+
+Pokud chcete provést konkrétní zpracování na základě názvů imports nebo knihovny DLL, můžete zadat vlastní verzi pomocnou funkci.
+
+Pomocná funkce provede následující akce:
+
+- Zkontroluje uložený popisovač do knihovny, které chcete zobrazit, pokud již byl načten
+
+- Volání **LoadLibrary** pokusu o načtení knihovny DLL
+
+- Volání **GetProcAddress** pokusu o získání adresy procedury
+
+- Vrátí se import odloženého načtení převodní rutina volat teď načíst vstupní bod
+
+Pomocná funkce můžete volat zpět hook oznámení ve svém programu po každé z následujících akcí:
+
+- Při spuštění funkce pomocné rutiny
+
+- Těsně před **LoadLibrary** je volána v pomocné funkce
+
+- Těsně před **GetProcAddress** je volána v pomocné funkce
+
+- Pokud volání **LoadLibrary** v pomocné funkce se nezdařilo
+
+- Pokud volání **GetProcAddress** v pomocné funkce se nezdařilo
+
+- Po pomocné funkce provádí zpracování
+
+Každá z těchto bodů připojení může vrátit hodnotu, která bude úpravu normálního zpracování pomocné rutiny způsobem s výjimkou vrácené výsledky na převodní rutina zpoždění importu zatížení.
+
+Kód pomocného objektu výchozí nacházely v Delayhlp.cpp a Delayimp.h (v vc\include) a je kompilován v Delayimp.lib (v vc\lib). Je potřeba zahrnout tuto knihovnu vaše kompilace Pokud napíšete vlastní pomocné funkce.
+
+Následující témata popisují pomocnou funkci:
+
+- [Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+
+- [Konvence volání, parametry a návratový typ](../../build/reference/calling-conventions-parameters-and-return-type.md)
+
+- [Struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md)
+
+- [Výpočet nezbytných hodnot](../../build/reference/calculating-necessary-values.md)
+
+- [Uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+
+## <a name="see-also"></a>Viz také
+
+[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

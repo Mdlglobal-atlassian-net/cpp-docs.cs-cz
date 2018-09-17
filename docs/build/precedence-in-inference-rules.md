@@ -1,5 +1,5 @@
 ---
-title: Priorita odvozených pravidel | Microsoft Docs
+title: Priorita odvozených pravidel | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368483"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725228"
 ---
 # <a name="precedence-in-inference-rules"></a>Priorita odvozených pravidel
-Pokud pravidlo odvození násobkem definované, používá NMAKE definici nejvyšší prioritou. V následujícím seznamu jsou uvedeny pořadí priorit od nejvyšší po nejnižší:  
-  
-1.  Pravidlo odvození definované v souboru pravidel; novější definice mají přednost před.  
-  
-2.  Pravidlo odvození definované v Tools.ini; novější definice mají přednost před.  
-  
-3.  Předdefinované odvozené pravidlo.  
-  
-## <a name="see-also"></a>Viz také  
- [Odvozená pravidla](../build/inference-rules.md)
+
+Pokud odvozené pravidlo je definovaná víckrát, používá NMAKE definici nejvyšší prioritu. Následující seznam uvádí pořadí dle priority od nejvyšší po nejnižší:
+
+1. Pravidlo odvození definované v souboru pravidel; novější definice mají přednost.
+
+1. Pravidlo odvození podle Tools.ini; novější definice mají přednost.
+
+1. Předdefinované odvozené pravidlo.
+
+## <a name="see-also"></a>Viz také
+
+[Odvozená pravidla](../build/inference-rules.md)

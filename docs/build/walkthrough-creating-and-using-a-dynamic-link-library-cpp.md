@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 535b0a0777c481a235f2a8999f004418e8d0eeb7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215421"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723245"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní dynamické propojení knihovny (C++)
 
@@ -409,7 +409,7 @@ Když nasadíte aplikaci, je nutné nasadit knihoven DLL, která používá. Nej
 
 ## <a name="see-also"></a>Viz také
 
-[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)  
-[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)  
-[Návod: Nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
-[Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Návod: Nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+[volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

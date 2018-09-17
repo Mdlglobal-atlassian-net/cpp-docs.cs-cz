@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721185"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – třída
 `CMFCShellListCtrl` Třída poskytuje funkce pro řízení seznamu Windows a umožňuje jeho rozšíření tím včetně možnost zobrazit seznam položek prostředí.  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPath*  
- Řetězec, který obsahuje cestu ke složce.  
+*lpszPath*<br/>
+[in] Řetězec, který obsahuje cestu ke složce.  
   
- [in] *lpItemInfo*  
- Ukazatel `LPAFX_SHELLITEMINFO` struktura, která popisuje složku k zobrazení.  
+*lpItemInfo*<br/>
+[in] Ukazatel `LPAFX_SHELLITEMINFO` struktura, která popisuje složku k zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK v případě úspěchu; Jinak E_FAIL.  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- Logická hodnota, která určuje, zda rozhraní umožňuje místní nabídce.  
+*bEnable*<br/>
+[in] Logická hodnota, která určuje, zda rozhraní umožňuje místní nabídce.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  Načte cestu v aktuálně vybrané složky [CMFCShellListCtrl –](../../mfc/reference/cmfcshelllistctrl-class.md) objektu.  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odkaz na parametr řetězce, kde Metoda zapíše cestu.  
+*strPath*<br/>
+[out] Odkaz na parametr řetězce, kde Metoda zapíše cestu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *%{strName/*  
- Odkaz na parametr řetězce, kde Metoda zapíše název.  
+*%{strName/*<br/>
+[out] Odkaz na parametr řetězce, kde Metoda zapíše název.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odkaz na řetězec, který přijímá cesty.  
+*strPath*<br/>
+[out] Odkaz na řetězec, který přijímá cesty.  
   
- [in] *položky*  
- Index položky seznamu.  
+*Položky*<br/>
+[in] Index položky seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě úspěchu; FALSE v opačném případě.  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lParam1*  
- [in] *lParam2*  
+*lParam1*<br/>
+[in] [in] *lParam2*  
  [in] *iColumn*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *tmFile*  
- Data asociovaná se souborem.  
+*tmFile*<br/>
+[in] Data asociovaná se souborem.  
   
- [out] *str*  
- Řetězec, který obsahuje datum formátovaného souboru.  
+*str*<br/>
+[out] Řetězec, který obsahuje datum formátovaného souboru.  
   
 ### <a name="remarks"></a>Poznámky  
  Když [CMFCShellListCtrl – třída](../../mfc/reference/cmfcshelllistctrl-class.md) objekt zobrazuje datum, které jsou přidružené k souboru, toto datum je nutné převést na řetězec formátu. `CMFCShellListCtrl` Tato metoda používá k vytvoření tohoto převodu. Ve výchozím nastavení tato metoda používá aktuální národní prostředí k formátování data do řetězce.  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lFileSize*  
- Velikost souboru, který se zobrazí rozhraní framework.  
+*lFileSize*<br/>
+[in] Velikost souboru, který se zobrazí rozhraní framework.  
   
- [out] *str*  
- Řetězec, který obsahuje velikost formátovaného souboru.  
+*str*<br/>
+[out] Řetězec, který obsahuje velikost formátovaného souboru.  
   
 ### <a name="remarks"></a>Poznámky  
  Když [CMFCShellListCtrl – třída](../../mfc/reference/cmfcshelllistctrl-class.md) objektu potřebuje rychle zobrazit velikost souboru, je potřeba převést velikost souboru do řetězce formátu. `CMFCShellListCtrl` Tato metoda používá k vytvoření tohoto převodu. Ve výchozím nastavení tato metoda převede velikost souboru z bajtů na kB a pak používá aktuální národní prostředí k formátování velikost do řetězce.  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *položky*  
- Index položky.  
+*Položky*<br/>
+[in] Index položky.  
   
- [in] *pItem*  
- LPAFX_SHELLITEMINFO parametr, který popisuje položku.  
+*pItem*<br/>
+[in] LPAFX_SHELLITEMINFO parametr, který popisuje položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index obrázku ikony v případě úspěchu; -1, pokud funkce selže.  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *položky*  
- Index položky.  
+*Položky*<br/>
+[in] Index položky.  
   
- [in] *iColumn*  
- Sloupec, které vás zajímají.  
+*iColumn*<br/>
+[in] Sloupec, které vás zajímají.  
   
- [in] *pItem*  
- LPAFX_SHELLITEMINFO parametr, který popisuje položku.  
+*pItem*<br/>
+[in] LPAFX_SHELLITEMINFO parametr, který popisuje položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CString` , který obsahuje text přidružený k položce.  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTypes*  
- Seznam položek typy, které `CMFCShellListCtrl` podporuje.  
+*nTypes*<br/>
+[in] Seznam položek typy, které `CMFCShellListCtrl` podporuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o seznamu typů položek najdete v tématu [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  

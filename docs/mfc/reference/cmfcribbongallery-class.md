@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465116"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724767"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
 Implementuje Galerie pásu karet Office 2007-style.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszGroupName*  
- Určuje název skupiny.  
+*lpszGroupName*<br/>
+[in] Určuje název skupiny.  
   
- [in] *uiImagesPaletteResID*  
- Určuje ID prostředku, který obsahuje Image pro skupinu seznamu obrázků.  
+*uiImagesPaletteResID*<br/>
+[in] Určuje ID prostředku, který obsahuje Image pro skupinu seznamu obrázků.  
   
- [in] *cxPaletteImage*  
- Určuje šířku v pixelech bitovou kopii.  
+*cxPaletteImage*<br/>
+[in] Určuje šířku v pixelech bitovou kopii.  
   
- [in] *imagesGroup*  
- Odkaz na seznam obrázků, který obsahuje skupiny imagí.  
+*imagesGroup*<br/>
+[in] Odkaz na seznam obrázků, který obsahuje skupiny imagí.  
   
- [in] *nIconsNum*  
- Určuje počet ikon ve skupině. Tento parametr musí být zadán pouze pro vlastní (vlastníkem vykreslované) skupiny.  
+*nIconsNum*<br/>
+[in] Určuje počet ikon ve skupině. Tento parametr musí být zadán pouze pro vlastní (vlastníkem vykreslované) skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
  Prostřednictvím položky z Galerie pásu karet lze rozdělit do několika skupin po zavolání metody. Každá skupina může mít popisek.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pSubItem*  
- Ukazatel na položku, kterou chcete přidat do nabídky.  
+*pSubItem*<br/>
+[in] Ukazatel na položku, kterou chcete přidat do nabídky.  
   
- [in] *nIndex*  
- Určuje index založený na nule umístění, kam chcete vložit položky.  
+*nIndex*<br/>
+[in] Určuje index založený na nule umístění, kam chcete vložit položky.  
   
- [in] *bOnTop*  
- TRUE, pokud chcete určit, že položka by měla být vložena před Galerie pásu karet; v opačném případě hodnota FALSE.  
+*bOnTop*<br/>
+[in] TRUE, pokud chcete určit, že položka by měla být vložena před Galerie pásu karet; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Automaticky otevírané okno Galerie můžete kombinovat pomocí položky místní nabídky zavoláním této metody. Položky nabídky, jde umístit před nebo po galerii.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete povolit změnu velikosti v nabídce; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete povolit změnu velikosti v nabídce; v opačném případě hodnota FALSE.  
   
- [in] *bVertcalOnly*  
- TRUE, pokud chcete určit, že v galerii velikost lze změnit pouze svisle; FALSE, pokud chcete určit, že galerie můžete změnit velikost vertikální i horizontální.  
+*bVertcalOnly*<br/>
+[in] TRUE, pokud chcete určit, že v galerii velikost lze změnit pouze svisle; FALSE, pokud chcete určit, že galerie můžete změnit velikost vertikální i horizontální.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete povolit nebo zakázat, změna velikosti Galerie pásu karet. Při změně velikosti je povoleno, galerie pásu karet zobrazí úchytu, který může uživatel používat ke změně jeho velikosti.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- TRUE, pokud chcete určit, zda je povoleno postranní panel; v opačném případě hodnota FALSE.  
+*bEnable*<br/>
+[in] TRUE, pokud chcete určit, zda je povoleno postranní panel; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem povolení nebo zakázání bočním panelu Office XP – vizuální styl v levé nabídce.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupIndex*  
- Určuje index o základu 0 pro skupinu, jehož název chcete načíst.  
+*nGroupIndex*<br/>
+[in] Určuje index o základu 0 pro skupinu, jehož název chcete načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Název skupiny nachází na zadaném indexu. Předání neplatný index způsobí neplatnost kontrolního výrazu.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItemIndex*  
- Určuje index založený na nule položky, pro které se mají načíst text popisku.  
+*nItemIndex*<br/>
+[in] Určuje index založený na nule položky, pro které se mají načíst text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na řetězec popisku, který je přiřazen jako položka v galerii pásu karet. To může mít hodnotu NULL, pokud žádný popisek je přiřazený k této položce.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Určuje Identifikátor příkazu položky nabídky, které se otevřelo Galerie pásu karet.  
+*uiCmdID*<br/>
+[in] Určuje Identifikátor příkazu položky nabídky, které se otevřelo Galerie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Když uživatel vybere všechny položky v galerii pásu karet, odešle knihovny wm_command – zprávy spolu s Identifikátorem příkazu nabídky tlačítka, které se otevřelo Galerie pásu karet.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení, která se používá pro vykreslování.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení, která se používá pro vykreslování.  
   
- [in] *rectIcon*  
- Určuje ohraničující obdélník ikony pro kreslení.  
+*rectIcon*<br/>
+[in] Určuje ohraničující obdélník ikony pro kreslení.  
   
- [in] *nIconIndex*  
- Určuje index založený na nule v seznamu obrázků ikon Galerie ikony pro kreslení.  
+*nIconIndex*<br/>
+[in] Určuje index založený na nule v seznamu obrázků ikon Galerie ikony pro kreslení.  
   
- [in] *pIcon*  
- Ukazatel na ikonu, které je cílem vykreslování.  
+*pIcon*<br/>
+[in] Ukazatel na ikonu, které je cílem vykreslování.  
   
- [in] *clrText*  
- Určuje barvu textu, předmětu k vykreslení.  
+*clrText*<br/>
+[in] Určuje barvu textu, předmětu k vykreslení.  
   
 ### <a name="remarks"></a>Poznámky  
  Mohou přepsat tuto metodu v odvozené třídě pro přizpůsobení vzhledu Galerie pásu karet.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Nadřazené okno okno Galerie pásu karet.  
+*pParent*<br/>
+[in] Nadřazené okno okno Galerie pásu karet.  
   
- [out] *dat*  
- A `CAccessibilityData` objekt, který přijímá data přístupnost z Galerie pásu karet.  
+*data*<br/>
+[out] A `CAccessibilityData` objekt, který přijímá data přístupnost z Galerie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSet*  
- TRUE, pokud chcete zobrazit v galerii pásu karet rozevírací nabídky tlačítka; FALSE pro zobrazení obsahu v galerii pásu karet přímo na pásu karet.  
+*bSet*<br/>
+[in] TRUE, pokud chcete zobrazit v galerii pásu karet rozevírací nabídky tlačítka; FALSE pro zobrazení obsahu v galerii pásu karet přímo na pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupIndex*  
- Určuje index o základu 0 pro skupinu, pro které se mění název.  
+*nGroupIndex*<br/>
+[in] Určuje index o základu 0 pro skupinu, pro které se mění název.  
   
- [in] *lpszGroupName*  
- Určuje nový název pro skupinu.  
+*lpszGroupName*<br/>
+[in] Určuje nový název pro skupinu.  
   
 ### <a name="remarks"></a>Poznámky  
  Skupiny, jejíž název je mění musí mít byly přidány pomocí [CMFCRibbonGallery::AddGroup](#addgroup) metody.  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIconsInRow*  
- Určuje počet položek v jednotlivých řádcích v galerii.  
+*nIconsInRow*<br/>
+[in] Určuje počet položek v jednotlivých řádcích v galerii.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete určit šířku Galerie pásu karet.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItemIndex*  
- Index založený na nule palety položky, ke které chcete přidružit popisek.  
+*nItemIndex*<br/>
+[in] Index založený na nule palety položky, ke které chcete přidružit popisek.  
   
- [in] *lpszToolTip*  
- Text, který se zobrazí na ovládacím prvku ToolStrip.  
+*lpszToolTip*<br/>
+[in] Text, který se zobrazí na ovládacím prvku ToolStrip.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *imagesPalette*  
- Určuje seznam obrázků, který obsahuje ikony se zobrazí v galerii.  
+*imagesPalette*<br/>
+[in] Určuje seznam obrázků, který obsahuje ikony se zobrazí v galerii.  
   
- [in] *uiImagesPaletteResID*  
- Určuje ID prostředku, který obsahuje ikony se zobrazí v galerii seznamu obrázků.  
+*uiImagesPaletteResID*<br/>
+[in] Určuje ID prostředku, který obsahuje ikony se zobrazí v galerii seznamu obrázků.  
   
- [in] *cxPaletteImage*  
- Určuje šířku v pixelech, Image v galerii.  
+*cxPaletteImage*<br/>
+[in] Určuje šířku v pixelech, Image v galerii.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Určuje ID příkazu, který se odešle do wm_command – zprávy, když uživatel vybere položku Galerie.  
+*nID*<br/>
+[in] Určuje ID příkazu, který se odešle do wm_command – zprávy, když uživatel vybere položku Galerie.  
   
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zjistit, konkrétní položku, uživatel vybral v galerii, zavolejte [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statické metody.  

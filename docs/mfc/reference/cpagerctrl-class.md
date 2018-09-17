@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 17136bbc1d914732871d256053acff20d78ab8b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688140"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724235"
 ---
 # <a name="cpagerctrl-class"></a>Cpagerctrl – třída
 `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|  
-|[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
-|[in] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
-|[in] *nID*|ID ovládacího prvku.|  
+|*dwStyle*|[in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|  
+|*Rect*|[in] Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
+|*pParentWnd*|[in] Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
+|*nID*|[in] ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|  
-|[in] *dwStyle*|Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|  
-|[in] *rect*|Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
-|[in] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
-|[in] *nID*|ID ovládacího prvku.|  
+|*dwExStyle*|[in] Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|  
+|*dwStyle*|[in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles) u ovládacího prvku.|  
+|*Rect*|[in] Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
+|*pParentWnd*|[in] Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
+|*nID*|[in] ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *bForward*|True pro zprávy týkající se myši dopředu, nebo hodnotu NEPRAVDA nelze předávat zprávy týkající se myši.|  
+|*bForward*|[in] True pro zprávy týkající se myši dopředu, nebo hodnotu NEPRAVDA nelze předávat zprávy týkající se myši.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse) zprávu, která je popsána v sadě Windows SDK.  
@@ -273,7 +273,7 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Stav tlačítka určené *iButton* parametru. Stav je buď PGF_INVISIBLE PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED či PGF_HOT. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) zprávy.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný tlačítko je ve stavu při stisknutí; v opačném případě hodnota FALSE.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je zadaný tlačítko v potlačených stavu; v opačném případě hodnota FALSE.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je zadaný tlačítko v horkém stavu; v opačném případě hodnota FALSE.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud zadaný tlačítko je ve stavu neviditelné; v opačném případě hodnota FALSE.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
+|*iButton*|[in] Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je zadaný tlačítko v normálním stavu; v opačném případě hodnota FALSE.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *clrBk*|A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku stránkování.|  
+|*clrBk*|[in] A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku stránkování.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [COLORREF](/windows/desktop/gdi/colorref) hodnotu, která obsahuje na předchozí barvu pozadí ovládacího prvku stránkování.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iBorder*|Nová velikost ohraničení měřená v pixelech. Pokud *iBorder* nachází záporný parametr, velikost ohraničení je nastavena na hodnotu nula.|  
+|*iBorder*|[in] Nová velikost ohraničení měřená v pixelech. Pokud *iBorder* nachází záporný parametr, velikost ohraničení je nastavena na hodnotu nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí velikost ohraničení měřená v pixelech.  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iButtonSize*|Nová velikost tlačítka měřená v pixelech.|  
+|*iButtonSize*|[in] Nová velikost tlačítka měřená v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí velikost tlačítka měřená v pixelech.  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *hwndChild*|Popisovač okna, které mají být obsažena.|  
+|*hwndChild*|[in] Popisovač okna, které mají být obsažena.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild) zprávu, která je popsána v sadě Windows SDK.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iPos*|Na nové pozici posunutí měřená v pixelech.|  
+|*iPos*|[in] Na nové pozici posunutí měřená v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) zprávu, která je popsána v sadě Windows SDK.  

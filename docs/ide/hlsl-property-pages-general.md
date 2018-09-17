@@ -1,5 +1,5 @@
 ---
-title: 'HLSL – stránky vlastností: Obecné | Microsoft Docs'
+title: 'Hlsl – stránky vlastností: Obecné | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,51 +20,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77cc9a44076999633fd17b049cbcfad75f65eb7e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 05f4beee7507ecba788e634634ca45eab91b4e7c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340135"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725137"
 ---
 # <a name="hlsl-property-pages-general"></a>HLSL – stránky vlastností: Obecné
-Chcete-li nakonfigurovat následující vlastnosti kompilátoru HLSL (fxc.exe), použijte jeho **Obecné** stránku vlastností. Informace o tom, jak získat přístup **Obecné** najdete v části stránky vlastností ve složce HLSL [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+Pokud chcete konfigurovat následující vlastnosti kompilátor HLSL (fxc.exe), použijte jeho **Obecné** stránku vlastností. Informace o tom, jak získat přístup **Obecné** zobrazit stránku vlastností ve složce HLSL [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Další zahrnuté adresáře**  
- Cesta zahrnutí přidá jeden nebo více adresářů. K oddělení adresáře použijte středníky.  
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
+- **Další adresáře souborů k zahrnutí**
+
+   Přidá jednu nebo více adresářů, do cesty zahrnutí. K oddělení adresářů použijte středníky.  
   
  Tato vlastnost odpovídá **/I [cesta]** argument příkazového řádku.  
   
- **Název vstupního bodu**  
- Určuje vstupní bod pro shaderu. Výchozí hodnota je **hlavní**.  
+- **Název vstupního bodu**
+
+   Určuje vstupního bodu pro shader. Výchozí hodnota je **hlavní**.  
   
- Tato vlastnost odpovídá **/E [name]** argument příkazového řádku.  
+ Tato vlastnost odpovídá **/E [název]** argument příkazového řádku.  
   
- **Zakázat optimalizace**  
- **Ano (/ Od)** zakázat optimalizace; jinak **ne**. Výchozí hodnota je **Ano (/ Od)** pro **ladění** konfigurace a **ne** pro **verze** konfigurace.  
+- **Zakázat optimalizace**
+
+   **Ano (/ Od)** zakázat optimalizace; v opačném případě **ne**. Výchozí hodnota je **Ano (/ Od)** pro **ladění** konfigurací a **ne** pro **vydání** konfigurace.  
   
- **/Od** argument příkazového řádku pro kompilátor HLSL implicitně vztahuje **/Gfp** argument příkazového řádku, ale výstup nemusí být stejný jako výstup, který vytváří předáním i **/Od**  a **/Gfp** argumenty příkazového řádku explicitně.  
+ **/Od** argument příkazového řádku pro kompilátor HLSL se implicitně týká **/gfp** argument příkazového řádku, ale výstup nemusí být stejný jako výstup, který je vytvořen pomocí předání i **/Od**  a **/gfp** argumenty příkazového řádku explicitně.  
   
- **Povolit ladění informace**  
- **Ano (/Zi)** povolit informace o ladění; jinak **ne**. Výchozí hodnota je **Ano (/Zi)** pro **ladění** konfigurace a **ne** pro **verze** konfigurace.  
+- **Povolit ladicí informace**
+
+   **Ano (/Zi)** povolit ladicí informace; v opačném případě **ne**. Výchozí hodnota je **Ano (/Zi)** pro **ladění** konfigurací a **ne** pro **vydání** konfigurace.  
   
- **Typ shaderu**  
- Určuje druh shaderu. Různé druhy shadery implementovat různé části grafiky kanálu. Jsou k dispozici jenom v modelech novější shaderu určité druhy shadery (které je určené vlastností **shaderu modelu** vlastnost) – například výpočetní shadery byly zavedeny v modelu shaderu 5.  
+- **Typ shaderu**
+
+   Určuje typ shaderu. Různé druhy shadery implementace různých součástí zřetězení grafiky. Některé typy shaderů jsou k dispozici jenom v novější modely shaderů (které je určené vlastností **Shader Model** vlastnost) – například výpočetní shadery byly zavedeny v model shaderu 5.  
   
- Tato vlastnost odpovídá **[typ]** část **_ /T [typ] [model]** argument příkazového řádku pro kompilátor HLSL. **Shaderu modely** určuje vlastnost **[model]** část argumentu.  
+   Tato vlastnost odpovídá  **\[typ]** část **/T \[typ] _\[modelu]** argument příkazového řádku pro kompilátor HLSL. **Modely shaderů** vlastnost určuje, **[model]** část argumentu.  
   
- **Model shaderu**  
- Určuje shaderu modelu. Různé shaderu modely mají různé možnosti. Obecně platí novější modely shaderu nabízí rozšířené možnosti, ale vyžadují více moderní grafiky hardware pro spuštění kódu shaderu. Určité druhy shadery (které jsou určené **shaderu typ** vlastnost) jsou k dispozici jenom v modelech novější shaderu – například výpočetní shadery byly zavedeny v modelu shaderu 5.  
+- **Model shaderu**
+
+   Určuje model shaderu. Shader různé modely mají různé možnosti. Obecně platí více modely shaderů nabízí rozšířené možnosti, ale i Modernější hardwarovou akceleraci ke spouštění kódu shaderu. Některé typy shaderů (které je určené vlastností **typ shaderu** vlastnosti) jsou k dispozici jenom v novější modely shaderů – například výpočetní shadery byly zavedeny v model shaderu 5.  
   
- Tato vlastnost odpovídá **[model]** část **_ /T [typ] [model]** argument příkazového řádku pro kompilátor HLSL. **Shaderu typ** určuje vlastnost **[typ]** část argumentu.  
+   Tato vlastnost odpovídá  **\[modelu]** část **/T \[typ] _\[modelu]** argument příkazového řádku pro kompilátor HLSL. **Typ shaderu** určuje vlastnost **[typ]** část argumentu.  
   
- **Definice preprocesoru**  
- Přidá jednu nebo víc definic – symbol preprocesoru, které chcete použít pro HLSL souboru se zdrojovým kódem. K oddělení definice symbolu použijte středníky.  
+- **Definice preprocesoru**
+
+   Přidá jednu nebo víc definic preprocesoru symbol má použít pro HLSL souboru se zdrojovým kódem. K oddělení definice symbolů použijte středníky.  
   
- Tato vlastnost odpovídá **/D [definice]** argument příkazového řádku pro kompilátor HLSL.  
+   Tato vlastnost odpovídá **/D \[definice]** argument příkazového řádku pro kompilátor HLSL.  
   
 ## <a name="see-also"></a>Viz také  
- [HLSL – stránky vlastností](../ide/hlsl-property-pages.md)   
- [HLSL – stránky vlastností: Upřesnit](../ide/hlsl-property-pages-advanced.md)   
+ [Hlsl – stránky vlastností](../ide/hlsl-property-pages.md)   
+ [Hlsl – stránky vlastností: Upřesnit](../ide/hlsl-property-pages-advanced.md)   
  [HLSL – stránky vlastností: Výstupní soubory](../ide/hlsl-property-pages-output-files.md)

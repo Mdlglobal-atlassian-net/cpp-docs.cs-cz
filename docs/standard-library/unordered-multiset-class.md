@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965484"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725904"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset – třída
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-keyval hodnotu klíče pro mapování.
+*Keyval*<br/>
+Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
- Číslo kbelíku.
+*nbucket*<br/>
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
- Číslo kbelíku.
+*nbucket*<br/>
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*kde*  
- Pozice prvku, který má být odebrán.
+*kde*<br/>
+Pozice prvku, který má být odebrán.
 
-*první*  
- Pozice prvního prvku, který má být odebrán.
+*první*<br/>
+Pozice prvního prvku, který má být odebrán.
 
-*poslední*  
- Pozice bezprostředně za posledním prvkem, který má být odebrán.
+*poslední*<br/>
+Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*  
- Hodnota klíče prvků, které mají být odebrány.
+*Key*<br/>
+Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Hodnota klíče pro hledání.
+*Keyval*<br/>
+Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor*  
- Nové faktor maximálního zatížení.
+*faktor*<br/>
+Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
- Požadovaný počet kbelíků.
+*nbuckets*<br/>
+Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Kontejner se Prohodit s.
+*doprava*<br/>
+Kontejner se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2495,8 +2496,8 @@ unordered_multiset(
 |*Al*|Objekt alokátoru, který se má uložit.|
 |*Kompozice*|Objekt funkce porovnání, který se má uložit.|
 |*Hash*|Objekt hashovací funkce, který se má uložit.|
-|*bucket_count –*|Minimální počet kbelíků.|
-|*Doprava*|Kontejner, který se má kopírovat.|
+|*Bucket_count –*|Minimální počet kbelíků.|
+|*doprava*|Kontejner, který se má kopírovat.|
 |*IList*|Seznam initializer_list, ze kterého chcete kopírovat.|
 
 ### <a name="remarks"></a>Poznámky
@@ -2505,7 +2506,7 @@ První konstruktor určuje kopii sekvence řízenou parametrem *vpravo*. Druhý 
 
 Všechny konstruktory také inicializují několik uložených hodnot. Pro konstruktor kopírování jsou hodnoty získány z *vpravo*. V opačném případě:
 
-minimální počet kbelíků je argument *bucket_count –*, pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
+Minimální počet kbelíků je argument *bucket_count –*, pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
 
 objekt hashovací funkce je argument *Hash*, pokud existuje; v opačném případě je `Hash()`.
 

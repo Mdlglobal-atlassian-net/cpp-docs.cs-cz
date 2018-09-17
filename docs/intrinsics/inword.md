@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc8ed68cad5ba6aa56a4040c62da4570981534d9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5895f8e4efd56ddcc9ab16a91a6242db443f0821
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464717"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722914"
 ---
 # <a name="inword"></a>__inword
 **Specifické pro Microsoft**  
@@ -39,8 +39,8 @@ unsigned short __inword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Port`  
- Port, který se má číst z.  
+*Port*<br/>
+[in] Port, který se má číst z.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Slovo data načtená.  

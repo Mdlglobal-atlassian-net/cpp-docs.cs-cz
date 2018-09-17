@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680536"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722316"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -394,8 +394,7 @@ C++ je volitelnou součástí úlohy Universal Windows App.  Upgrade projektů C
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nové možnosti jazyka C++ na univerzální platformu Windows (UPW)
 Teď máte nové možnosti pro zápis a balení aplikací pro univerzální platformu Windows a Windows Store v jazyce C++: přemostění na Desktop infrastruktury můžete zabalit existující aplikace klasické pracovní plochy nebo objekt modelu COM pro nasazení prostřednictvím Windows Store nebo prostřednictvím stávajících prodejních kanálů prostřednictvím zkušební načtení. Nové funkce ve Windows 10 vám umožňují přidat funkce UPW do aplikace klasické pracovní plochy různými způsoby. Další informace najdete v tématu [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017 verze 15.5**  
-A **projekt Windows Application Packaging** šablona projektu se přidá, což výrazně zjednodušuje práci při vytváření balíčků aplikací klasické pracovní plochy s využitím přemostění na Desktop. Je k dispozici v **soubor | Nové | Projekt | Instalaci | Visual C++ | Universal Windows Platform**. Další informace najdete v tématu [balíček aplikace pomocí sady Visual Studio (přemostění na Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 verze 15.5**: A **projekt Windows Application Packaging** šablona projektu se přidá, což výrazně zjednodušuje práci při vytváření balíčků aplikací klasické pracovní plochy s využitím přemostění na Desktop. Je k dispozici v **soubor | Nové | Projekt | Instalaci | Visual C++ | Universal Windows Platform**. Další informace najdete v tématu [balíček aplikace pomocí sady Visual Studio (přemostění na Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Pokud zapisujete nový kód, můžete nyní použít C + +/ WinRT, standardní projekce jazyka C++ prostředí Windows runtime implementována pouze v souborech hlaviček. Umožňuje oba Autor a používání rozhraní API Windows Runtime pomocí jakýkoli standardům kompilátor jazyka C++. C + +/ WinRT je navržené pro poskytování vývojáře v jazyce C++ s přístupem k prvotřídní moderní rozhraní Windows API. Další informace najdete v tématu [C + +/ WinRT dostupný na Githubu](https://moderncpp.com/).
 

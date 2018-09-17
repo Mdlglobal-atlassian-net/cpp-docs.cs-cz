@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace knihoven C++ Standard | Microsoft Docs
+title: Referenční dokumentace knihovny C++ Standard | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc6c665309f51044f00b05931500065ed087e774
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841203"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722602"
 ---
 # <a name="c-standard-library-reference"></a>Standardní knihovna C++ – referenční dokumentace
 
-Programu C++ můžete volat na velký počet funkcí z této vyhovující provedení standardní knihovny jazyka C++. Tyto funkce provádí základní služby jako vstup a výstup a poskytují efektivní implementace často používaných operací.
+Program jazyka C++ může volat na velký počet funkcí, které z této vyhovující implementace standardní knihovny C++. Tyto funkce provádí základní služby jako vstup a výstup a poskytují efektivní implementace často používaných operací.
 
-Další informace o běhové knihovny jazyka Visual C++, najdete v části [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
+Další informace o knihovnách runtime jazyka Visual C++, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Přehled standardní knihovny C++](../standard-library/cpp-standard-library-overview.md) poskytuje přehled implementace Microsoft standardní knihovny jazyka C++.
+[Přehled standardní knihovny C++](../standard-library/cpp-standard-library-overview.md) poskytuje přehled implementace standardní knihovny jazyka C++ společnosti Microsoft.
 
-[iostream – programování](../standard-library/iostream-programming.md) poskytuje přehled iostream – programování.
+[iostream – programování](../standard-library/iostream-programming.md) obsahuje základní informace o programování s iostream.
 
-[Hlavička soubory – referenční dokumentace](../standard-library/cpp-standard-library-header-files.md) obsahuje odkazy na referenční témata pojednávající o soubory hlaviček standardní knihovna C++, s příklady kódu.
+[Referenční příručka souborů záhlaví](../standard-library/cpp-standard-library-header-files.md) obsahuje odkazy na referenční témata o soubory hlaviček standardní knihovny C++, s příklady kódu.
 
 

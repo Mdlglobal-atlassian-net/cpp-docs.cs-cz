@@ -1,5 +1,5 @@
 ---
-title: Bitová pole | Microsoft Docs
+title: Bitová pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85db49f138cc733326e47a3008e79bae5ab4b7cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7451ea6afee81cc296fb091705bde48041ef5d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722485"
 ---
 # <a name="bitfields"></a>Bitová pole
-Struktura bitových polí jsou omezené na 64 bitů a může být typu int, int bez znaménka, int64 nebo unsigned int64 podepsané. Bitová pole, které překračují hranice typu přeskočí bits zarovnáním k dalším typem přidružení. Bitová pole celé číslo, například nemusí křížová 32bitovou hranici.  
-  
-## <a name="see-also"></a>Viz také  
- [Typy a úložiště](../build/types-and-storage.md)
+
+Struktura bitová pole jsou omezené na 64 bitů a nemůže být typu int, unsigned int, int64 nebo bez znaménka int64 podepsané. Bitová pole, které překračují hranice typu přeskočí bits zarovnáním zarovnání dalšího typu. Například bitová pole celé číslo nemusí napříč autonomního 32-bit.
+
+## <a name="see-also"></a>Viz také
+
+[Typy a úložiště](../build/types-and-storage.md)

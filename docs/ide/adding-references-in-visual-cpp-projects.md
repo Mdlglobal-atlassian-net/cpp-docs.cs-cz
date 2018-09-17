@@ -1,5 +1,5 @@
 ---
-title: Přidání odkazů v projektech Visual C++ | Microsoft Docs
+title: Přidání odkazů v projektech Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,109 +17,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1438b364dac817fe2dbe47f117d672165a7693d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722446"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Přidání odkazů v projektech v jazyce Visual C++
-Je velmi běžné programy provést volání do rozhraní API v jiné binární soubory, například knihovny DLL, komponent prostředí Windows Runtime, rozšíření sady SDK, komponenty modelu COM a sestavení .NET. Tak, aby váš program vyhledá tyto další binární soubory závisí typu projektu a typ binárního souboru.  
+Je velmi běžné, že aplikace provést volání do rozhraní API v jiných binárních souborů, jako je například knihovny DLL, součástí prostředí Windows Runtime, sady SDK rozšíření, komponenty modelu COM a sestavení .NET. Způsob, jakým váš program vyhledá tyto další binární soubory závisí na typu projektu a typ binárního souboru.  
   
- V nativním projektu jazyka C++ Pokud spotřebovávají nativní knihovny DLL nebo klasické komponenty COM, není vytvářen jiný projekt ve vašem řešení pomocí LoadLibrary nebo CoCreateInstance zadejte cestu k binárního souboru, jinak umožní systému, vyhledejte je podle konkrétní – Úvod definované l umístění.  
+ V nativních projektů C++ Pokud jsou využívání nativní knihovnu DLL nebo klasické komponenty COM, který není generovaná systémem jiného projektu ve vašem řešení pomocí LoadLibrary nebo funkce CoCreateInstance pro zadejte cestu k binárním souboru, jinak nechejte systém najít hledáním v konkrétní – Úvod umístění definice l.  
   
- V jiné typy projektů, jako jsou projekty UWP nebo C + +/ CLI projekty, nebo při binárního souboru je produkovaný jiného projektu ve vašem řešení, můžete přidat *odkaz* sestavení, komponenty nebo projektu.   Odkaz je v podstatě sada dat, která umožňuje váš program pro vyhledání a komunikaci s binárního souboru.       Když přidáte odkaz, Visual Studio zpracovává dolní úrovně podrobností. Lze nastavit odkazy z projektu jazyka C++ do .NET Frameworkassemblies (C + +/ CLI pouze), klikněte pravým tlačítkem na komponenty modelu COM, další projekty ve vašem řešení včetně sdílených projektů nebo připojení služby, **odkazy** uzlu v **Průzkumníku řešení** se zprovoznit **správce odkazů**. Co se zobrazí v správce odkazů se liší v závislosti na typu vašeho projektu.  
+ V ostatních typů projektů, jako jsou projekty UPW nebo C + +/ projekty rozhraní příkazového řádku, nebo když binární soubor vytvořil jiný projekt ve vašem řešení, přidejte *odkaz* k sestavení, komponenta nebo projektu.   Odkaz je v podstatě sadu dat, která umožňuje program k vyhledání a komunikaci s binárního souboru.       Když přidáte odkaz, Visual Studio zpracovává podrobnosti nízké úrovně. Nastavit odkazy z projektu C++ do .NET Frameworkassemblies (C + +/ CLI pouze), klikněte pravým tlačítkem na model COM, jiné projekty v vašeho řešení, včetně sdílených projektů nebo připojené služby, **odkazy** uzel v **Průzkumníka řešení** zobrazíte **správce odkazů**. Co se zobrazí v okně Správce odkazů se liší v závislosti na typu vašeho projektu.  
   
- V nativním projektu jazyka C++ (ATL) koncept z *odkazy* se vztahuje pouze na jiné projekty v řešení, včetně sdílených projektů tak, aby se všechny můžete vidět v **správce odkazů**:  
+ Nativní projekt C++ (ATL) koncept z *odkazy* platí jenom do jiných projektů v řešení, včetně sdílených projektů, takže to je všechno se zobrazí v **správce odkazů**:  
   
- ![Visual C&#43; &#43; správce odkazů &#40;projekty knihovny ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "správce odkazů Visual C++ (projekty knihovny ATL)")  
+ ![Visual C&#43; &#43; správce odkazů &#40;projektů knihovny ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "správce odkazů Visual C++ (ATL – projekty)")  
   
- V jazyce C + +/ CLI nebo univerzální platformu Windows projektu koncept odkazy se vztahuje na více druhů binárních souborů kromě jiných projekty v řešení.  Tyto jsou všechny přístupné **správce odkazů**.
+ V jazyce C + +/ projekt rozhraní příkazového řádku nebo univerzální platformu Windows, koncept odkazů se vztahuje na víc druhů binárních souborů kromě jiných projektů v řešení.  Tyto jsou všechny přístupné **správce odkazů**.
   
-## <a name="reference-properties"></a>Referenční dokumentace vlastnosti  
- Jednotlivé typy odkaz má vlastnosti. Vlastnosti můžete zobrazit výběrem odkaz v Průzkumníku řešení a stisknutím klávesy **Alt + Enter**, nebo klikněte pravým tlačítkem na a výběrem možnosti **vlastnosti**. Některé vlastnosti jsou jen pro čtení a nelze jej změnit některé. Však obvykle nemusíte ručně úpravou těchto vlastností.  
+## <a name="reference-properties"></a>Vlastnosti odkazu  
+ Každý druh odkazu má vlastnosti. Vlastnosti můžete zobrazit výběrem odkazu v Průzkumníku řešení a stisknutím klávesy **Alt + Enter**, nebo pravým tlačítkem myši a zvolíte možnost **vlastnosti**. Některé vlastnosti jsou jen pro čtení a některé je možné upravit. Však obvykle není nutné ručně upravit tyto vlastnosti.  
   
 ### <a name="activex-reference-properties"></a>Vlastnosti odkazu ActiveX  
- Vlastnosti odkazu ActiveX jsou k dispozici pouze pro odkazy na COM – součásti. Tyto vlastnosti se zobrazí jenom v případě, že je vybraný komponenty modelu COM v **odkazy** podokně. Vlastnosti nemůže být upraven.  
+ Vlastnosti odkazu ActiveX jsou dostupné pouze pro odkazy na komponenty modelu COM. Tyto vlastnosti se zobrazí, jenom když vyberete komponenty modelu COM v **odkazy** podokně. Vlastnosti nelze změnit.  
   
- **Úplná cesta ovládacích prvků**  
- Zobrazuje cestu k adresáři odkazovaný ovládací prvek.  
+- **Úplná cesta ovládacího prvku**
+
+   Zobrazuje cestu k adresáři odkazovaného ovládacího prvku.  
   
- **Ovládací prvek GUID**  
- Zobrazuje identifikátor GUID pro ovládací prvek ActiveX.  
+- **GUID ovládacího prvku**
+
+   Zobrazuje identifikátor GUID pro ovládací prvek ActiveX.  
   
- **Verze ovládacího prvku**  
- Zobrazí verzi odkazovaného ovládacího prvku ActiveX.  
+- **Verze ovládacího prvku**
+
+   Zobrazuje verze odkazovaného ovládacího prvku ActiveX.  
   
- **Název knihovny typů**  
- Zobrazuje název odkazovaného typu knihovny.  
+- **Název knihovny typů**
+
+   Zobrazí název odkazované knihovny typů.  
   
- **Nástroj obálky**  
- Zobrazí nástroj, který slouží k vytvoření sestavení vzájemné spolupráce z odkazovaného knihovny COM nebo ovládací prvek ActiveX.  
+- **Nástroj obálky**
+
+   Zobrazí nástroj, který se používá k vytvoření sestavení interop z odkazované knihovny COM nebo ovládacího prvku ActiveX.  
   
-### <a name="assembly-reference-properties"></a>Referenční dokumentace vlastnosti sestavení  
- Sestavení referenční dokumentace vlastnosti jsou k dispozici pouze pro odkazy na rozhraní .NET Frameworkassemblies v jazyce C + +/ CLI projekty. Tyto vlastnosti se zobrazí jenom v případě, že je vybraný .NET Frameworkassembly v **odkazy** podokně. Vlastnosti nemůže být upraven.  
+### <a name="assembly-reference-properties"></a>Vlastnosti odkazu na sestavení  
+ Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na Frameworkassemblies .NET v jazyce C + +/ CLI projekty. Tyto vlastnosti se zobrazí, jenom když vyberete .NET Frameworkassembly v **odkazy** podokně. Vlastnosti nelze změnit.  
   
- **Relativní cesta**  
- Zobrazuje relativní cestu z adresáře projektu na odkazované sestavení.  
+- **Relativní cesta**
+
+   Zobrazuje relativní cesta z adresáře projektu k odkazovanému sestavení.  
   
 ### <a name="build-properties"></a>Vlastnosti sestavení  
- Následující vlastnosti jsou k dispozici na různé druhy odkazy. Ty umožňují určit způsob sestavení s odkazy.  
+ Následující vlastnosti jsou k dispozici na různé typy odkazů. Umožňují určit, jak sestavení s odkazy.  
   
- **Zkopírujte místní**  
- Určuje, jestli se má automaticky kopírovat odkazované sestavení do cílového umístění během sestavení.  
+- **Kopírovat místní**
+
+   Určuje, jestli se mají automaticky kopírovat odkazované sestavení do cílového umístění během sestavení.  
   
- **Zkopírujte místní satelitní sestavení**  
- Určuje, jestli se má automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jen v případě **místní kopie** je `true`.  
+- **Zkopírovat místní satelitní sestavení**
+
+   Určuje, jestli se mají automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jenom v případě **Kopírovat místně** je `true`.  
   
- **Odkaz na sestavení výstupu**  
- Určuje, že je toto sestavení používá v procesu sestavení. Pokud `true`, sestavení se používá v příkazovém řádku kompilátoru během sestavení.  
+- **Výstup referenčního sestavení**
+
+   Určuje, že toto sestavení se používá v procesu sestavení. Pokud `true`, sestavení se používá na příkazový řádek kompilátoru během sestavení.  
   
-### <a name="project-to-project-reference-properties"></a>Odkaz na projekt na projekt vlastnosti  
- Zadejte následující vlastnosti *odkaz na projekt na projekt* z projektu, který je vybraný v **odkazy** podokně do jiného projektu ve stejném řešení. Další informace najdete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).  
+### <a name="project-to-project-reference-properties"></a>Vlastnosti odkazu typu projekt projekt  
+ Definujte následující vlastnosti *odkaz typu projekt projekt* z projektu, který je vybraný v **odkazy** podokno do jiného projektu ve stejném řešení. Další informace najdete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).  
   
- **Propojení závislosti knihoven**  
- Pokud je tato vlastnost **True**, odkazy systému projektu do projektu závislé soubory .lib, které vytváří nezávislé projektu. Obvykle zadáte **True**.  
+- **Propojit závislé položky knihoven**
+
+   Pokud je tato vlastnost **True**, systém projektu propojeny do závislý projekt lib souborů, které jsou vytvářeny nezávislé projektem. Obvykle můžete zadat **True**.  
   
- **Identifikátor projektu**  
- Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nelze změnit.  
+- **Identifikátor projektu**
+
+   Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nemůže být upraven.  
   
- **Použití vstupů závislosti knihovny**  
- Pokud je tato vlastnost **False**, systém projektu nepropojí do projektu závislé soubory .obj vyprodukované nezávislé projektu knihovny. Tato hodnota v důsledku toho zakáže přírůstkové propojování. Obvykle zadáte **False** vzhledem k tomu, že vytváření aplikace může trvat dlouhou dobu, pokud existují mnoha nezávislé projektů.  
+- **Použít vstupy závislých položek knihoven**
+
+   Pokud je tato vlastnost **False**, systém projektu nebude propojení do závislého projektu soubory .obj pro knihovnu vytvářených nezávislé projektu. V důsledku toho tato hodnota zakáže přírůstkové propojení. Obvykle můžete zadat **False** protože vytváření aplikace může trvat dlouhou dobu, pokud existují mnoho nezávislé projektů.  
   
-### <a name="reference-properties"></a>Referenční dokumentace vlastnosti  
- Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .NET a nemůže být upraven.  
+### <a name="reference-properties"></a>Vlastnosti odkazu  
+ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .NET a nejde změnit.  
   
- **Název sestavení**  
- Zobrazí název sestavení pro odkazované sestavení.  
+- **Název sestavení**
+
+   Zobrazí název sestavení pro odkazované sestavení.  
   
- **Jazyková verze**  
- Zobrazí jazykovou verzi vybraný odkaz.  
+- **Jazyková verze**
+
+   Zobrazí jazyková verze vybraného odkazu.  
   
- **Popis**  
- Zobrazí popis vybraný odkaz.  
+- **Popis**
+
+   Zobrazí popis vybraného odkazu.  
   
- **Úplná cesta**  
- Zobrazuje cestu k adresáři odkazované sestavení.  
+- **Úplná cesta**
+
+   Zobrazuje cestu k adresáři odkazovaných sestavení.  
   
- **Identita**  
- Pro rozhraní .NET Frameworkassemblies zobrazí úplnou cestu. Pro komponenty modelu COM zobrazuje identifikátor GUID.  
+- **Identita**
+
+   .NET Frameworkassemblies zobrazí úplnou cestu. Pro komponenty modelu COM zobrazuje identifikátor GUID.  
   
- **Popisek**  
- Zobrazí popisek odkazu.  
+- **Popisek**
+
+   Zobrazí popisek odkazu.  
   
- **Jméno**  
- Zobrazí název odkazu.  
+- **Jméno**
+
+   Zobrazí název odkazu.  
   
- **Token veřejného klíče**  
- Zobrazí token veřejného klíče, který se používá k identifikaci odkazované sestavení.  
+- **Token veřejného klíče**
+
+   Zobrazí token veřejného klíče, který se používá k identifikaci odkazovaného sestavení.  
   
- **Silné jméno**  
- `true` Pokud odkazované sestavení se silným názvem. Silně pojmenované sestavení je jednoznačně verzí.  
+- **Silným názvem**
+
+   `true` Pokud má odkazované sestavení silný název. Silně pojmenované sestavení mají je jedinečné verze.  
   
- **Verze**  
- Zobrazí verzi odkazované sestavení.  
+- **Verze**
+
+   Verze odkazovaného sestavení zobrazí.  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724071"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *idButton*|Identifikátor příkazu tlačítka, které obdrží nový rastrový obrázek.|  
-|[in] *iBitmap*|Z nuly vycházející index obrázku v seznamu obrázků aktuální prvek panelu nástrojů.|  
+|*idButton*|[in] Identifikátor příkazu tlačítka, které obdrží nový rastrový obrázek.|  
+|*iBitmap*|[in] Z nuly vycházející index obrázku v seznamu obrázků aktuální prvek panelu nástrojů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *idButton*|Identifikátor pro tlačítko Načíst jejichž zobrazení textu.|  
+|*idButton*|[in] Identifikátor pro tlačítko Načíst jejichž zobrazení textu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CString](../../atl-mfc-shared/using-cstring.md) , který obsahuje zobrazovaný text od určeného tlačítka.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která obdrží informace o barvě schéma. Po návratu tato metoda popisuje strukturu barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
+|*lpColorScheme*|[out] Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která obdrží informace o barvě schéma. Po návratu tato metoda popisuje strukturu barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
 Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Celé číslo, které přijímá vodorovné výplně ovládací prvek panelu nástrojů v pixelech.|  
-|[out] *pnVertPadding*|Celé číslo, které přijímá svislé výplně ovládací prvek panelu nástrojů v pixelech.|  
+|*pnHorzPadding*|[out] Celé číslo, které přijímá vodorovné výplně ovládací prvek panelu nástrojů v pixelech.|  
+|*pnVertPadding*|[out] Celé číslo, které přijímá svislé výplně ovládací prvek panelu nástrojů v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID příkazu pro tlačítka panelu nástrojů.  
+*nID*<br/>
+[in] ID příkazu pro tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Kladné celé číslo je-li na tlačítko se zvýrazní, 0, pokud není zvýrazní tlačítko nebo -1, pokud chybu vyvolá.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identifikátor příkazu tlačítka na panelu nástrojů.  
+*nID*<br/>
+[in] Identifikátor příkazu tlačítka na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Kladné celé číslo je-li na tlačítko je neurčité, nula, pokud tlačítko není neurčitý nebo nastane-1, pokud chybu.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Příkaz identifikátor tlačítko stisknutím klávesy nebo vydání.  
+*nID*<br/>
+[in] Příkaz identifikátor tlačítko stisknutím klávesy nebo vydání.  
   
- [in] *bPress*  
- TRUE, pokud chcete tlačítko zadaný; FALSE pro vydání určeného tlačítka. Výchozí hodnota je TRUE.  
+*bPress*<br/>
+[in] TRUE, pokud chcete tlačítko zadaný; FALSE pro vydání určeného tlačítka. Výchozí hodnota je TRUE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Ukazatel [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) struktura, která popisuje rastrový obrázek, které mají být nahrazeny a nový rastrový obrázek.|  
+|*pReplaceBitmap*|[in] Ukazatel [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) struktura, která popisuje rastrový obrázek, které mají být nahrazeny a nový rastrový obrázek.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *fAnchor*  
- Určuje, zda zvýraznění ukotvení je povolena nebo zakázána. Pokud je tato hodnota nenulová, zvýraznění ukotvení povolena. Pokud tato hodnota je nula, bude zakázán zvýraznění ukotvení  
+*fAnchor*<br/>
+[in] Určuje, zda zvýraznění ukotvení je povolena nebo zakázána. Pokud je tato hodnota nenulová, zvýraznění ukotvení povolena. Pokud tato hodnota je nula, bude zakázán zvýraznění ukotvení  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí nastavení ukotvení. Pokud je zvýraznění bylo povoleno, tato hodnota je nenulový. Pokud je zvýraznění nebylo povoleno, tato hodnota je nula.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která popisuje barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
+|*lpColorScheme*|[in] Ukazatel [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktura, která popisuje barvu zvýraznění a barvu stínu ovládacím prvkem panel nástrojů.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nemá žádný vliv, pokud je nastavena vizuální motiv Windows Vista.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Určuje vodorovné výplně ovládací prvek panelu nástrojů v pixelech.|  
-|[in] *nVertPadding*|Určuje svislé výplně ovládací prvek panelu nástrojů v pixelech.|  
+|*nHorzPadding*|[in] Určuje vodorovné výplně ovládací prvek panelu nástrojů v pixelech.|  
+|*nVertPadding*|[in] Určuje svislé výplně ovládací prvek panelu nástrojů v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  DWORD, jejichž dolní slovo, obsahuje hodnotu předchozí vodorovné výplně a jejichž vysoký Wordu obsahuje hodnotu předchozí svislé výplně. Výplň hodnoty se měří v pixelech.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *iImageID*|Index založený na nule v seznamu obrázků. Nastavte tento parametr na hodnotu nula, pokud používáte pouze jeden seznam obrázků.|  
-|[in] *pImageList*|Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) , která obsahuje nového seznamu obrázků.|  
+|*iImageID*|[in] Index založený na nule v seznamu obrázků. Nastavte tento parametr na hodnotu nula, pokud používáte pouze jeden seznam obrázků.|  
+|*pImageList*|[in] Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) , která obsahuje nového seznamu obrázků.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel [atributu CImageList](../../mfc/reference/cimagelist-class.md) , která obsahuje předchozí seznam obrázků pro aktuální ovládací prvek, nebo hodnota NULL, pokud byl nastaven žádný takový seznam obrázků.  

@@ -1,5 +1,5 @@
 ---
-title: -U, -u (nedefinované symboly) | Microsoft Docs
+title: -U, -u (nedefinované symboly) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,63 +23,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378324"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721549"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (nedefinované symboly)
-**/U** – možnost kompilátoru undefines zadaný symbol preprocesoru. **/U** – možnost kompilátoru undefines symboly specifické pro společnost Microsoft, které definuje kompilátoru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/U[ ]symbol  
-/u  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `symbol`  
- Symbol preprocesoru k nedefinované.  
-  
-## <a name="remarks"></a>Poznámky  
- Ani **/U** nebo **/u** možnost můžete nedefinované symbol vytvořili pomocí **#define** – direktiva.  
-  
- **/U** možnost můžete nedefinované symbol, který byl předtím definovaný s použitím **/D** možnost.  
-  
- Ve výchozím nastavení kompilátor definuje následující symboly specifické pro společnost Microsoft.  
-  
-|Symbol|Funkce|  
-|------------|--------------|  
-|_CHAR_UNSIGNED –|Výchozí znakový typ není přiřazen. Když definované [/J](../../build/reference/j-default-char-type-is-unsigned.md) je zadána možnost.|  
-|_CPPRTTI –|Pro kód kompilovat s definována [GR](../../build/reference/gr-enable-run-time-type-information.md) možnost.|  
-|_CPPUNWIND –|Pro kód kompilovat s definována [/EHsc](../../build/reference/eh-exception-handling-model.md) možnost.|  
-|_DLL –|Když definované [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|  
-|_M_IX86 –|Ve výchozím nastavení, definovaná na 600 pro x86 cíle.|  
-|_MSC_VER –|Další informace najdete v tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md).|  
-|_WIN32 –|Pro aplikace WIN32 definován. Vždy definována.|  
-|_MT|Když definované [/MD nebo/MT](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **Upřesnit** stránku vlastností.  
-  
-4.  Změnit **nedefinované Definice preprocesoru** nebo **nedefinované všechny definice preprocesoru** vlastnosti.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> nebo <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [/J (výchozí znakový typ není podepsán)](../../build/reference/j-default-char-type-is-unsigned.md)   
- [/GR (povolit informace běhového typu)](../../build/reference/gr-enable-run-time-type-information.md)   
- [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md)   
- [/MD, /MT, /LD (použití knihovny run-time)](../../build/reference/md-mt-ld-use-run-time-library.md)
+
+**/U** – možnost kompilátoru nedefinovaných hodnot preprocesoru zadaný symbol. **/U** – možnost kompilátoru nedefinovaných hodnot, které kompilátor definuje symboly specifické pro společnost Microsoft.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/U[ ]symbol
+/u
+```
+
+## <a name="arguments"></a>Arguments
+
+*Symbol*<br/>
+Symbol preprocesoru definice.
+
+## <a name="remarks"></a>Poznámky
+
+Ani **/U** nebo **/u** možnost můžete nedefinovat symbol vytvářeny instalační sadou **#define** směrnice.
+
+**/U** možnost můžete nedefinovat symbol, který byl předtím definovaný s použitím **/D** možnost.
+
+Ve výchozím nastavení kompilátor definuje následující symboly specifické pro společnost Microsoft.
+
+|Symbol|Funkce|
+|------------|--------------|
+|_CHAR_UNSIGNED|Výchozí znakový typ není podepsaný. Definováno, pokud [/J](../../build/reference/j-default-char-type-is-unsigned.md) je zadána možnost.|
+|_CPPRTTI|Definováno pro kód zkompilovaný s [GR](../../build/reference/gr-enable-run-time-type-information.md) možnost.|
+|_CPPUNWIND|Definováno pro kód zkompilovaný s [/EHsc](../../build/reference/eh-exception-handling-model.md) možnost.|
+|_DLL|Definováno, pokud [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|
+|_M_IX86|Ve výchozím nastavení, které jsou definované na 600 pro x86 cíle.|
+|_MSC_VER|Další informace najdete v tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md).|
+|_WIN32|Definováno pro aplikace WIN32. Vždy definováno.|
+|_MT|Definováno, pokud [/MD nebo/MT](../../build/reference/md-mt-ld-use-run-time-library.md) je zadána možnost.|
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **Upřesnit** stránku vlastností.
+
+1. Upravit **zrušit Definice preprocesoru** nebo **zrušit všechny definice preprocesoru** vlastnosti.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> nebo <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[/J (výchozí znakový typ není podepsán)](../../build/reference/j-default-char-type-is-unsigned.md)
+[/GR (povolení běhové informace o typu)](../../build/reference/gr-enable-run-time-type-information.md)
+[/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) 
+ [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md)

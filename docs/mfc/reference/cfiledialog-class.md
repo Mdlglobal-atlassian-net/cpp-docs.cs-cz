@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722706"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
 Zapouzdřuje běžných dialogových oken, která slouží k otevření souboru nebo souboru operace ukládání.  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bOpenFileDialog*  
- Parametr, který určuje, jaký typ dialogové okno vytvořit. Nastavte na hodnotu TRUE, chcete-li vytvořit **otevřít soubor** dialogové okno. Nastavte na FALSE, pokud chcete vytvořit **uložit jako** dialogové okno.  
+*bOpenFileDialog*<br/>
+[in] Parametr, který určuje, jaký typ dialogové okno vytvořit. Nastavte na hodnotu TRUE, chcete-li vytvořit **otevřít soubor** dialogové okno. Nastavte na FALSE, pokud chcete vytvořit **uložit jako** dialogové okno.  
   
- [in] *lpszDefExt*  
- Výchozí přípona názvu souboru. Pokud uživatel do pole název souboru neobsahuje známé rozšíření (jeden, který má asociace na počítači uživatele), rozšíření určená *lpszDefExt* se automaticky připojí k názvu souboru. Pokud má parametr hodnotu NULL, je připojen bez přípony.  
+*lpszDefExt*<br/>
+[in] Výchozí přípona názvu souboru. Pokud uživatel do pole název souboru neobsahuje známé rozšíření (jeden, který má asociace na počítači uživatele), rozšíření určená *lpszDefExt* se automaticky připojí k názvu souboru. Pokud má parametr hodnotu NULL, je připojen bez přípony.  
   
- [in] *lpszFileName*  
- Je původní název souboru, který se zobrazí v poli Název souboru. Pokud má hodnotu NULL, zobrazí se žádné počáteční název souboru.  
+*lpszFileName*<br/>
+[in] Je původní název souboru, který se zobrazí v poli Název souboru. Pokud má hodnotu NULL, zobrazí se žádné počáteční název souboru.  
   
- [in] *dwFlags*  
- Kombinace jeden nebo více příznaků, které vám umožní přizpůsobit dialogových oken. Popis těchto příznaků najdete v tématu [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktura v sadě Windows SDK. Pokud změníte `m_ofn.Flags` struktury člena, pomocí operátoru bitového operátoru OR své změny zachovat výchozí chování beze změny.  
+*dwFlags*<br/>
+[in] Kombinace jeden nebo více příznaků, které vám umožní přizpůsobit dialogových oken. Popis těchto příznaků najdete v tématu [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktura v sadě Windows SDK. Pokud změníte `m_ofn.Flags` struktury člena, pomocí operátoru bitového operátoru OR své změny zachovat výchozí chování beze změny.  
   
- [in] *lpszFilter*  
- Řadu dvojice řetězců, které určují filtry můžete použít k souboru. Pokud chcete zadat filtry souborů, zobrazí se pouze soubory, které splňují kritéria filtru v seznamu souborů. Další informace o tom, jak pracovat s filtry souborů v části poznámky.  
+*lpszFilter*<br/>
+[in] Řadu dvojice řetězců, které určují filtry můžete použít k souboru. Pokud chcete zadat filtry souborů, zobrazí se pouze soubory, které splňují kritéria filtru v seznamu souborů. Další informace o tom, jak pracovat s filtry souborů v části poznámky.  
   
- [in] *pParentWnd*  
- Ukazatel na okno nadřazené nebo vlastník dialogového okna souboru.  
+*pParentWnd*<br/>
+[in] Ukazatel na okno nadřazené nebo vlastník dialogového okna souboru.  
   
- [in] *dwSize*  
- Velikost `OPENFILENAME` struktury. Tato hodnota závisí na verzi operačního systému. MFC tento parametr slouží k určení odpovídající typ dialogové okno vytvořit. Výchozí velikost 0 znamená, že kód knihovny MFC určí správné rozměry dialogového okna pro použití podle verze operačního systému, na kterém je spuštěn program.  
+*dwSize*<br/>
+[in] Velikost `OPENFILENAME` struktury. Tato hodnota závisí na verzi operačního systému. MFC tento parametr slouží k určení odpovídající typ dialogové okno vytvořit. Výchozí velikost 0 znamená, že kód knihovny MFC určí správné rozměry dialogového okna pro použití podle verze operačního systému, na kterém je spuštěn program.  
   
- [in] *bVistaStyle*  
- **Poznámka:** tento parametr je k dispozici v sadě Visual Studio 2008 a novější a bude způsobit dialogového okna Nový styl a použít pouze v případě, že se systémem Windows Vista nebo novější.  
+*bVistaStyle*<br/>
+[in] **Poznámka** tento parametr je k dispozici v sadě Visual Studio 2008 a novější a bude způsobit dialogového okna Nový styl a použít pouze v případě, že se systémem Windows Vista nebo novější.  
   
  Parametr, který určuje typ dialogového okna souboru. Ho nastavte na hodnotu PRAVDA, použijte nový styl Vista souboru dialogová okna. V opačném případě se použije starý styl dialogových oknech. V části poznámky pro další informace běžící pod Vista.  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- ID ovládacího prvku, pro kterou chcete nastavit text.  
+*nID*<br/>
+[in] ID ovládacího prvku, pro kterou chcete nastavit text.  
   
- [in] *lpsz*  
- Ukazatel na řetězec, který obsahuje text, který má nastavit pro ovládací prvek.  
+*lpsz*<br/>
+[in] Ukazatel na řetězec, který obsahuje text, který má nastavit pro ovládací prvek.  
   
 ### <a name="remarks"></a>Poznámky  
  Obě verze této funkce jsou platné pro aplikace, které používají kódování Unicode. Pouze verze s typem LPCSTR však platí pro aplikace, které používají ANSI.  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWin3ID*  
- Obsahuje identifikační číslo prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
+*nWin3ID*<br/>
+[in] Obsahuje identifikační číslo prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
   
- [in] *nWin4ID*  
- Obsahuje identifikační číslo prostředku šablony pro Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
+*nWin4ID*<br/>
+[in] Obsahuje identifikační číslo prostředku šablony pro Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
   
- [in] *lpWin3ID*  
- Obsahuje název prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
+*lpWin3ID*<br/>
+[in] Obsahuje název prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
   
- [in] *lpWin4ID*  
- Obsahuje název prostředku šablony Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
+*lpWin4ID*<br/>
+[in] Obsahuje název prostředku šablony Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
  Systém bude používat jenom jeden z určené šablony. Systém zjistí, která šablona se má použít na základě přítomnosti OFN_EXPLORER stylu a operační systém, na kterém aplikace běží na. Zadáním jiné Explorer i stylem podobným Průzkumníku šablony je jednoduché podporovat Windows NT 3.51, aktualizace, Windows NT 4.0 a novější verze a Windows 95 a novějších verzích.  

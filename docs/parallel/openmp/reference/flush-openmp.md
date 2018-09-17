@@ -1,5 +1,5 @@
 ---
-title: Flush (OpenMP) | Microsoft Docs
+title: Flush (OpenMP –) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696237"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722056"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-Určuje, že všechna vlákna mají stejné zobrazení paměti pro všechny sdílené objekty.  
+Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,14 +32,13 @@ Určuje, že všechna vlákna mají stejné zobrazení paměti pro všechny sdí
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+## <a name="arguments"></a>Arguments
+
+*var*<br/>
+(Volitelné) Čárkou oddělený seznam proměnných, které představují objekty, které chcete synchronizovat. Pokud `var` není zadán, vyprázdní všechny paměti.  
   
- `var` (volitelné)  
- Seznam proměnných, které představují objekty, které chcete synchronizovat oddělených čárkami. Pokud `var` není zadán, je vyprázdněn všechny paměti.  
-  
 ## <a name="remarks"></a>Poznámky  
- **Vyprázdnění** – direktiva podporuje žádné OpenMP – klauzule.  
+ **Vyprázdnění** podporuje bez klauzule OpenMP – direktiva.  
   
  Další informace najdete v tématu [2.6.5 flush – direktiva](../../../parallel/openmp/2-6-5-flush-directive.md).  
   

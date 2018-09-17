@@ -1,5 +1,5 @@
 ---
-title: Zpracování chyb a oznámení | Microsoft Docs
+title: Zpracování chyb a upozornění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2edec23da89766a45545566b0a689001d3ca75f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17df0dfd57bf24c7cd442c296409530e521b28de
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723200"
 ---
 # <a name="error-handling-and-notification"></a>Zpracování chyb a oznámení
-Další informace o zpracování chyb a oznámení najdete v tématu [pochopení pomocné funkce](understanding-the-helper-function.md).  
-  
- Další informace o funkce háku najdete v tématu [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md).  
-  
- Pokud vaše aplikace používá knihovny DLL s odloženým načtením, se musí zpracovávají chyby vzhledem k tomu, ke kterým dochází při spuštění programu bude výsledkem neošetřených výjimek. Zpracování selhání se skládá ze dvou částí:  
-  
- Obnovení prostřednictvím háku.  
- Pokud váš kód potřebujete obnovit nebo zadejte alternativní knihovny nebo rutiny při selhání, háku lze zadat pomocné funkce, která můžete zadat nebo nápravě. Běžné potřeby háku vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC), nebo 0 k označení, že by měl být vyvolána výjimka. Také ho může vyvolat svou vlastní výjimku nebo **longjmp** mimo hák. Existují háky oznámení a selhání háků.  
-  
- Generování sestav prostřednictvím výjimku.  
- Pokud všechny, které jsou nezbytné pro zpracování chyby na zrušení postup, je nutné žádné háku, tak dlouho, dokud uživatelského kódu může zpracovat výjimku.  
-  
- Následující témata popisují zpracování chyb a oznámení:  
-  
--   [Háky oznámení](../../build/reference/notification-hooks.md)  
-  
--   [Selhání háků](../../build/reference/failure-hooks.md)  
-  
--   [Výjimky](../../build/reference/exceptions-c-cpp.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Další informace o zpracování chyb a oznámení, naleznete v tématu [základní informace o funkci pomocné rutiny](understanding-the-helper-function.md).
+
+Další informace o funkce háku najdete v tématu [struktura a definice konstant](../../build/reference/structure-and-constant-definitions.md).
+
+Pokud program používá odloženě zaváděné knihovny DLL, se musí zpracovávají chyby od neošetřené výjimky způsobí selhání, ke kterým je aplikace spuštěna. Zpracování selhání se skládá ze dvou částí:
+
+Obnovení prostřednictvím hák.
+Pokud váš kód potřebuje obnovit, nebo alternativní knihovny a/nebo rutiny při selhání, je možné poskytnout hák pomocná funkce, které můžete zadat nebo nápravě. Rutiny musí hook vraťte vhodnou hodnotu, aby se zpracování může pokračovat (HINSTANCE nebo FARPROC) nebo 0, která znamená, že by měl být vyvolána výjimka. Může také vyvolá vlastní výjimky nebo **longjmp** mimo zavěšení. Existují háky oznámení a selhání háků.
+
+Generování sestav prostřednictvím výjimku.
+Pokud vše, co je nezbytné pro zpracování chyby pro přerušení postup, je nezbytné žádný háček, tak dlouho, dokud uživatel kód může zpracovávat výjimky.
+
+Následující témata popisují zpracování chyb a oznámení:
+
+- [Háky oznámení](../../build/reference/notification-hooks.md)
+
+- [Selhání háků](../../build/reference/failure-hooks.md)
+
+- [Výjimky](../../build/reference/exceptions-c-cpp.md)
+
+## <a name="see-also"></a>Viz také
+
+[Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

@@ -1,5 +1,5 @@
 ---
-title: KNIHOVNA | Microsoft Docs
+title: KNIHOVNA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2fb7e69b0557bf96601666c390b3d59412b5a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43b14e8e8ff4871ba4319c7f4fac5545e72e710b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371161"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723551"
 ---
 # <a name="library"></a>KNIHOVNA
-Oznamuje odkaz pro vytvoření knihovny DLL. Ve stejnou dobu propojení vytvoří knihovnu importu, pokud soubor .exp není použit v sestavení.  
-  
-```  
-LIBRARY [library][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- *Knihovny* argument určuje název knihovny DLL. Můžete také [/OUT](../../build/reference/out-output-file-name.md) – možnost linkeru k zadání názvu výstupní knihovnu DLL.  
-  
- ZÁKLADNÍ =*adresu* argument nastaví základní adresu, která používá operační systém načíst knihovnu DLL. Tento argument přepíše výchozí umístění knihovny DLL 0x10000000. Viz popis [/základní](../../build/reference/base-base-address.md) možnost Podrobnosti o základní adresy.  
-  
- Nezapomeňte použít [/dll](../../build/reference/dll-build-a-dll.md) – možnost linkeru při sestavování knihovny DLL.  
-  
-## <a name="see-also"></a>Viz také  
- [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+
+Říká odkaz pro vytvoření knihovny DLL. Ve stejnou dobu propojení vytvoří knihovnu importu souboru .exp se používá v sestavení.
+
+```
+LIBRARY [library][BASE=address]
+```
+
+## <a name="remarks"></a>Poznámky
+
+*Knihovny* argument určuje název knihovny DLL. Můžete také použít [/OUT](../../build/reference/out-output-file-name.md) – možnost linkeru zadat název výstupní knihovnu DLL.
+
+ZÁKLADNÍ =*adresu* argument nastaví základní adresu, operační systém používá k načtení knihovny DLL. Tento argument přepíše výchozí umístění knihovny DLL 0x10000000. Viz popis [/základní](../../build/reference/base-base-address.md) možnost Podrobnosti o základní adresy.
+
+Nezapomeňte použít [/dll](../../build/reference/dll-build-a-dll.md) – možnost linkeru při sestavování knihovny DLL.
+
+## <a name="see-also"></a>Viz také
+
+[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)

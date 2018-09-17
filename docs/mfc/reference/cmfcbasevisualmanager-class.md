@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724825"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Cmfcbasevisualmanager – třída
 Vrstva mezi odvozené vizuální vedoucí a rozhraní API Windows motiv.  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení  
   
- [in] *rect*  
- Ohraničující obdélník zaškrtávací políčko.  
+*Rect*<br/>
+[in] Ohraničující obdélník zaškrtávací políčko.  
   
- [in] *bHighlighted*  
- Určuje, zda je zvýrazněn zaškrtávací políčko.  
+*bHighlighted*<br/>
+[in] Určuje, zda je zvýrazněn zaškrtávací políčko.  
   
- [in] *nInformace*  
- 0 pro není zaškrtnuto, 1 pro normální zaškrtnuté,  
+*nInformace*<br/>
+[in], 0 pro není zaškrtnuto, 1 pro normální zaškrtnuté,  
   
  2 pro smíšený normální.  
   
- [in] *bEnabled*  
- Určuje, zda zaškrtávací políčko je dostupné.  
+*bEnabled*<br/>
+[in] Určuje, zda zaškrtávací políčko je dostupné.  
   
- [in] *bPressed*  
- Určuje, zda se stiskne zaškrtávací políčko.  
+*bPressed*<br/>
+[in] Určuje, zda se stiskne zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník hranice pole se seznamem.  
+*Rect*<br/>
+[in] Ohraničující obdélník hranice pole se seznamem.  
   
- [in] *bDisabled*  
- Určuje, zda je zakázaný ohraničení pole se seznamem.  
+*bDisabled*<br/>
+[in] Určuje, zda je zakázaný ohraničení pole se seznamem.  
   
- [in] *bIsDropped*  
- Určuje, zda se rozbalil ohraničení pole se seznamem.  
+*bIsDropped*<br/>
+[in] Určuje, zda se rozbalil ohraničení pole se seznamem.  
   
- [in] *bIsHighlighted*  
- Určuje, zda je zvýrazněn ohraničení pole se seznamem.  
+*bIsHighlighted*<br/>
+[in] Určuje, zda je zvýrazněn ohraničení pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] *primárního řadiče domény*|Ukazatel na kontext zařízení.|  
-|[in] *rect*|Ohraničující obdélník tlačítko rozevíracího pole se seznamem.|  
-|[in] *bDisabled*|Určuje, zda je zakázaný tlačítko rozevíracího pole se seznamem.|  
-|[in] *bIsDropped*|Určuje, zda se rozbalil tlačítko rozevíracího pole se seznamem.|  
-|[in] *bIsHighlighted*|Určuje, zda se zvýrazní tlačítko rozevíracího pole se seznamem.|  
+|*primární řadič domény*|[in] Ukazatel na kontext zařízení.|  
+|*Rect*|[in] Ohraničující obdélník tlačítko rozevíracího pole se seznamem.|  
+|*bDisabled*|[in] Určuje, zda je zakázaný tlačítko rozevíracího pole se seznamem.|  
+|*bIsDropped*|[in] Určuje, zda se rozbalil tlačítko rozevíracího pole se seznamem.|  
+|*bIsHighlighted*|[in] Určuje, zda se zvýrazní tlačítko rozevíracího pole se seznamem.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník příkazové tlačítko.  
+*Rect*<br/>
+[in] Ohraničující obdélník příkazové tlačítko.  
   
- [in] *pButton*  
- Ukazatel [cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md) objektů pro kreslení.  
+*pButton*<br/>
+[in] Ukazatel [cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md) objektů pro kreslení.  
   
- [in] *uiState*  
- Ignorovat. Stav je převzata z *pButton*.  
+*uiState*<br/>
+[in] Ignorovat. Stav je převzata z *pButton*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rect*  
- Ohraničující obdélník přepínač.  
+*Rect*<br/>
+[in] Ohraničující obdélník přepínač.  
   
- [in] *bHighlighted*  
- Určuje, zda přepínač je zvýrazněn.  
+*bHighlighted*<br/>
+[in] Určuje, zda přepínač je zvýrazněn.  
   
- [in] *bChecked*  
- Určuje, jestli je zaškrtnuté políčko přepínač.  
+*bChecked*<br/>
+[in] Určuje, jestli je zaškrtnuté políčko přepínač.  
   
- [in] *bEnabled*  
- Určuje, zda je povoleno přepínač.  
+*bEnabled*<br/>
+[in] Určuje, zda je povoleno přepínač.  
   
- [in] *bPressed*  
- Určuje, zda se stiskne tlačítko přepínače.  
+*bPressed*<br/>
+[in] Určuje, zda se stiskne tlačítko přepínače.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *pStatusBar*  
- Ukazatel na stavovém řádku. Tato hodnota je ignorována.  
+*pStatusBar*<br/>
+[in] Ukazatel na stavovém řádku. Tato hodnota je ignorována.  
   
- [in] *rectProgress*  
- Ohraničující obdélník indikátor průběhu v *primárního řadiče domény* souřadnice.  
+*rectProgress*<br/>
+[in] Ohraničující obdélník indikátor průběhu v *primárního řadiče domény* souřadnice.  
   
- [in] *nProgressTotal*  
- Celkový průběh hodnotu.  
+*nProgressTotal*<br/>
+[in] Celkový průběh hodnotu.  
   
- [in] *nProgressCurr*  
- Aktuální hodnota průběhu.  
+*nProgressCurr*<br/>
+[in] Aktuální hodnota průběhu.  
   
- [in] *clrBar*  
- Počáteční barvu. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy lze použít pro barevné přechody.  
+*clrBar*<br/>
+[in] Počáteční barvu. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy lze použít pro barevné přechody.  
   
- [in] *clrProgressBarDest*  
- Koncová barva. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy lze použít pro barevné přechody.  
+*clrProgressBarDest*<br/>
+[in] Koncová barva. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy lze použít pro barevné přechody.  
   
- [in] *clrProgressText*  
- Barva textu průběh. `CMFCBaseVisualManager` to bude ignorovat. Barva textu je definován `afxGlobalData.clrBtnText`.  
+*clrProgressText*<br/>
+[in] Barva textu průběh. `CMFCBaseVisualManager` to bude ignorovat. Barva textu je definován `afxGlobalData.clrBtnText`.  
   
- [in] *bProgressText*  
- Určuje, jestli se mají zobrazovat text průběhu.  
+*bProgressText*<br/>
+[in] Určuje, jestli se mají zobrazovat text průběhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *pBar*  
- Ukazatel na podokno má být vykreslena jehož pozadí.  
+*pBar*<br/>
+[in] Ukazatel na podokno má být vykreslena jehož pozadí.  
   
- [in] *rectClient*  
- Ohraničující obdélník oblasti pro vyplnění.  
+*rectClient*<br/>
+[in] Ohraničující obdélník oblasti pro vyplnění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je povolená rozhraní API motiv; v opačném případě FALSE.  

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691507"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725306"
 ---
 # <a name="path-class"></a>path – třída
 
@@ -638,7 +638,7 @@ Pro `template<class InIt> path(InIt first, InIt last, const locale& loc)` je `my
 
 ## <a name="preferred_separator"></a> path::preferred_separator
 
-Objekt konstanty poskytuje upřednostňované znak pro oddělení součásti cesty, v závislosti na operačním systému hostitele. 
+Objekt konstanty poskytuje upřednostňované znak pro oddělení součásti cesty, v závislosti na operačním systému hostitele.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Všimněte si, že se jedná o stejnou měrou přípustné ve většině přípa
 
 ## <a name="relative_path"></a> path::RELATIVE_PATH –
 
-Vrátí komponentu relativní cesta `myname`. 
+Vrátí komponentu relativní cesta `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> path::replace_extension –
 
-Nahrazuje rozšíření `myname`. 
+Nahrazuje rozšíření `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> path::root_directory –
 
-Vrátí komponentu kořenové adresáře `myname`. 
+Vrátí komponentu kořenové adresáře `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ Komponenta může být prázdný.
 
 ## <a name="root_name"></a> path::root_name –
 
-Vrátí komponentu názvu kořenového `myname`. 
+Vrátí komponentu názvu kořenového `myname`.
 
 ```cpp
 path root_name() const;

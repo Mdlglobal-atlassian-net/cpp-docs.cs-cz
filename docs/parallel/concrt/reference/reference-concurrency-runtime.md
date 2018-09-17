@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace (Concurrency Runtime) | Microsoft Docs
+title: Referenční dokumentace (Concurrency Runtime) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723226"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenční dokumentace (Concurrency Runtime)
-Tato část obsahuje referenční informace pro Concurrency Runtime.
-**Poznámka:** jazyka C++ standardní rezerv použití identifikátorů, které začínají znakem podtržítka (_) pro implementace například knihovny. Nepoužívejte názvy těchto ve vašem kódu. Uvolní chování kódu elementy, jejichž názvy následují touto konvencí se nezaručuje a v budoucnu se mohou změnit. Z těchto důvodů jsou tyto elementy kódu vynechání v dokumentaci k Concurrency Runtime.
+Tato část obsahuje referenční informace k modulu Runtime souběžnosti.
+
+> [!Note]
+> Standard jazyka C++ vyhrazuje použití identifikátorů, které začínají znakem podtržítka (_), například pro implementaci knihoven. Nepoužívejte tyto názvy v kódu. Chování kódu elementy, jejichž názvy postupujte podle tohoto konvence není zaručeno a se může změnit v budoucích vydáních. Z těchto důvodů jsou takovéto prvky kódu vynechány v dokumentaci k modulu Runtime souběžnosti.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-[Concurrency Namespace](concurrency-namespace.md) concurrency – obor názvů obsahuje třídy a funkce, které získáte přístup k Concurrency Runtime, souběžné programování framework pro C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
 
-[obor názvů – std](std-namespace.md)
+[souběžnost Namespace](concurrency-namespace.md) obor názvů souběžnosti poskytuje třídy a funkce, které umožňují přístup k modulu Concurrency Runtime, souběžnému programovacímu rámci pro jazyk C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
+
+[obor názvů std](std-namespace.md)
+
 [stdx – obor názvů](stdx-namespace.md)
-
-

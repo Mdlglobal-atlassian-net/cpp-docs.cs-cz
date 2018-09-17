@@ -1,5 +1,5 @@
 ---
-title: -w,-W0,-W1, - W2,-W3, - W4,-w1,-w2,-w3,-w4,-Wall, -wd,-jsme -wo,. -Wv, - WX (úroveň upozornění) | Microsoft Docs
+title: -w, – W0, – W1, - W2,-W3, - W4,-w1,-w2,-w3,-w4,-Wall, -wd, – we, -wo, -Wv, - WX (úroveň upozornění) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/31/2018
 ms.technology:
@@ -67,89 +67,88 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60fc8072a95787f9e6f50e7e5c50408ef66e3261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0badc4359d399788d7c40f5d299132abca1fe922
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725215"
 ---
-# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, nebo jsme /wo, /Wv, wdn (úroveň upozornění)
+# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)
 
-Určuje, jak kompilátor generuje upozornění pro danou kompilace.
+Určuje, jak kompilátor vygeneruje upozornění pro dané kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/w**  
-> **/W0**  
-> **/W1**  
-> **/W2**  
-> **/W3**  
-> **/W4**  
-> **/ Wall**  
-> **/WV**\[**:**_verze_]  
-> **/WX**  
-> **/W1**_upozornění_  
-> **/W2**_upozornění_  
-> **/w3**_upozornění_  
-> **/W4**_upozornění_  
-> **/WD**_upozornění_  
-> **/we**_upozornění_  
-> **/wo**_upozornění_  
+> **/w**
+>  **/W0**
+>  **/W1**
+>  **/W2**
+> **w3** 
+>  **/W4**
+>  **/wall**
+>  **/WV:**\[**:**_verze _] **/WX**
+>  **/w1**_upozornění_
+>  **/w2** _ upozornění_
+> **w3**_upozornění_
+>  **/W4**_upozornění_ 
+>  **/wd**_upozornění_
+>  **/we**_upozornění_ 
+>  **/wo**_upozornění_
 
 ## <a name="remarks"></a>Poznámky
 
-Zadejte možnosti upozornění které kompilátoru upozornění k zobrazení a chování upozornění pro celý kompilace.
+Možnosti upozornění určují která kompilátoru upozornění k zobrazení a chování upozornění pro celý kompilace.
 
-V následující tabulce jsou popsány možnosti upozornění a související argumenty:
+Možnosti upozornění a související argumenty jsou popsány v následující tabulce:
 
 |Možnost|Popis|
 ------------|-----------------|
-|**/w**|Potlačí všechny upozornění kompilátoru.|
-|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Určuje úroveň upozornění, která má být vygenerován kompilátorem. Platný upozornění úrovně rozsahu od 0 do 4:<br />**/ W0** potlačí všechny výstrahy. Jde o ekvivalent **/w**.<br />**/ W1** zobrazí upozornění úrovně 1 (závažné). **/ W1** je výchozí nastavení v kompilátoru příkazového řádku.<br />**/ W2** zobrazí úroveň 1 a 2 (důležité) upozornění úrovně.<br />**/ W3** zobrazí úrovně 1, úroveň 2 a 3 (produkční kvality) upozornění úrovně. **/ W3** je výchozí nastavení v IDE.<br />**/ W4** zobrazí úrovně 1, úroveň 2 a 3 upozornění úrovně a všechny úrovně 4 (informativní) upozornění, která nejsou ve výchozím nastavení vypnuté. Doporučujeme, abyste pomocí této možnosti můžete zadat jako hadříkem upozornění. Pro nový projekt, může být nejvhodnější použít **/W4** v všechny kompilace; tím bude zajištěno, nejmenší počet defektů možné pevný najít kódu.|
-|**/ Wall**|Zobrazí všechny výstrahy zobrazuje **/W4** a všechny další upozornění, **/W4** nezahrnuje – například upozornění, které jsou ve výchozím nastavení vypnuté. Další informace najdete v tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|**/WV**\[**:**_verze_]|Zobrazí pouze upozornění uvedených ve verzi kompilátoru *verze* a starší. Tuto možnost můžete použít k potlačení nové upozornění v kódu při migraci na novější verzi kompilátoru a zachování stávajícího procesu sestavení během opravit je. Volitelný parametr *verze* podobu *nn*[. *mm*[. *bbbbb*]] kde *nn* je hlavní číslo verze, *mm* je číslo podverze volitelné a *bbbbb* je číslo volitelné sestavení kompilátor. Například použít */Wv:17* zobrazit upozornění zavedená v sadě Visual Studio 2012 (to znamená, všechny verze kompilátoru, která má hlavní číslo verze 17) nebo dřívější, ale potlačení upozornění zavedená v sadě Visual Studio 2013 (hlavní verze 18) a novější. Ve výchozím nastavení **/Wv** používá, které jsou potlačovány aktuální číslo verze kompilátoru a žádné upozornění. Informace o tom, které jsou potlačovány upozornění kompilátoru verze najdete v tématu [upozornění kompilátoru kompilátoru verzí](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Zpracovává všechny kompilátoru upozornění jako chyby. Pro nový projekt, může být nejvhodnější použít **wdn** všechny kompilace; vyřešení všech upozornění zajišťuje nejmenší počet defektů možné pevný najít kódu.<br /><br /> Linkeru má také **wdn** možnost. Další informace najdete v tématu [wdn (považovat upozornění Linkeru jako chyby)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|
-|**/W1**_nnnn_<br /><br /> **/W2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/W4**_nnnn_|Nastaví úroveň pro upozornění pro upozornění číslo zadané parametrem _nnnn_. Díky tomu můžete změnit chování kompilátoru pro upozornění, že pokud je konkrétní úroveň upozornění nastavena. Tyto možnosti můžete použít v kombinaci s jinými možnostmi upozornění k vynucení vlastní kódování standardy pro upozornění, místo výchozího pravidla stanovená v sadě Visual Studio.<br /><br /> Například **/w34326** způsobí, že C4326 má být vygenerován jako upozornění úroveň 3 místo úroveň 1. Pokud zkompilujete pomocí obou **/w34326** možnost a **/W2** možnost upozornění C4326 nevygenerovala.|
-|**/WD**_nnnn_|Upozornění kompilátoru, která je zadána potlačí _nnnn_.<br /><br /> Například **/wd4326** potlačí kompilátoru upozornění C4326.|
-|**/we**_nnnn_|Upozornění kompilátoru, která je zadána zpracovává _nnnn_ za chybu.<br /><br /> Například **/we4326** způsobí, že číslo upozornění C4326 kompilátorem považován za chybu.|
-|**/wo**_nnnn_|Sestavy kompilátoru se tedy upozornění určeného _nnnn_ pouze jednou.<br /><br /> Například **/wo4326** příčiny upozornění C4326 k nahlášena pouze jednou, první je došlo kompilátorem.|
+|**/w**|Potlačí všechna upozornění kompilátoru.|
+|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Určuje úroveň upozornění generovaný kompilátorem. Platné upozornění úrovně rozsahu od 0 do 4:<br />**/ W0** potlačí všechna upozornění. Jedná se o ekvivalent k **/w**.<br />**/ W1** zobrazí upozornění úrovně 1 (závažnost). **/ W1** je výchozí nastavení kompilátoru příkazového řádku.<br />**/ W2** zobrazí úrovně 1 a upozornění úrovně 2 (důležité).<br />**/ W3** zobrazí na úrovni 1, úroveň 2 a 3 (produkční kvality) upozornění úrovně. **/ W3** je výchozí nastavení v integrovaném vývojovém prostředí.<br />**/ W4** zobrazí na úrovni 1, 2, úroveň a úroveň upozornění 3 a všechny úrovně 4 (informativní) upozornění, které nejsou ve výchozím nastavení vypnuta. Doporučujeme, abyste pomocí této možnosti můžete zadat lint jako upozornění. Pro nový projekt, může být vhodné použít **/W4** při všech kompilacích; tím se zajistí nejmíň vad kódu možné obtížné najít.|
+|**/ Wall**|Zobrazí všechna upozornění zobrazený **/W4** a všechna ostatní upozornění, která **/W4** nezahrnuje – například upozornění, které jsou ve výchozím nastavení vypnuta. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|**/ WV:**\[**:**_verze_]|Zobrazí pouze upozornění zavedená ve verzi kompilátoru *verze* a starší. Tato možnost slouží k potlačení nová upozornění v kódu při migraci na novější verzi kompilátoru a zachovat existující procesu sestavení v době, kdy je. Volitelný parametr *verze* má podobu *nn*[. *mm*[. *bbbbb*]] Pokud *nn* je číslo hlavní verze *mm* je volitelné vedlejší číslo verze, a *bbbbb* je číslo volitelné sestavení kompilátor. Například použít */Wv:17* zobrazit upozornění zavedená v sadě Visual Studio 2012 (to znamená všechny verze kompilátoru, který obsahuje číslo hlavní verze 17) nebo starší, ale potlačit upozornění zavedená v sadě Visual Studio 2013 (hlavní verze 18) a novější. Ve výchozím nastavení **/WV:** používá aktuální číslo verze kompilátoru a žádné upozornění jsou potlačeny. Informace o tom, které jsou potlačovány upozornění podle verze kompilátoru najdete v tématu [upozornění kompilátoru podle verze kompilátoru](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
+|**/WX**|Zpracuje všechna upozornění kompilátoru jako chyby. Pro nový projekt, může být vhodné použít **/WX** při všech kompilacích; vyřešením všech upozornění zajistíte nejmíň vad kódu možné obtížné najít.<br /><br /> Propojovací program má také **/WX** možnost. Další informace najdete v tématu [/WX (zpracovávat upozornění Linkeru jako chyb)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|
+|**/W1**_nnnn_<br /><br /> **/W2**_nnnn_<br /><br /> **w3**_nnnn_<br /><br /> **/ W4**_nnnn_|Nastaví úroveň upozornění pro upozornění číslo určené parametrem _nnnn_. Tímto způsobem můžete změnit chování kompilátoru tohoto upozornění při nastavit konkrétní úroveň pro upozornění. Tyto možnosti můžete použít v kombinaci s jinými možnostmi upozornění k vynucení vlastní kódování standardy pro upozornění, místo výchozí hodnoty poskytovaný sadou Visual Studio.<br /><br /> Například **/w34326** způsobí, že C4326 generován jako upozornění úrovně 3 namísto úrovně 1. Pokud kompilujete pomocí **/w34326** možnost a **/W2** možnost C4326 negeneruje upozornění.|
+|**/WD**_nnnn_|Potlačí případná upozornění kompilátoru, která je zadána _nnnn_.<br /><br /> Například **/wd4326** potlačí upozornění C4326 kompilátoru.|
+|**/we**_nnnn_|Upozornění kompilátoru, která je zadána zpracovává _nnnn_ za chybu.<br /><br /> Například **/we4326** způsobí, že číslo upozornění C4326 zacházet jako chyba v kompilátoru.|
+|**/wo**_nnnn_|Sestavy upozornění kompilátoru, který je určený _nnnn_ pouze jednou.<br /><br /> Například **/wo4326** způsobí, že upozornění C4326 hlášeno pouze jednou, při prvním jeho zjištění kompilátorem.|
 
-Pokud použijete některou z možností upozornění při vytváření předkompilovaných hlaviček pomocí [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost jakékoli použití předkompilovaných hlaviček pomocí [/Yu](../../build/reference/yu-use-precompiled-header-file.md) možnost způsobí, že tyto stejné možnosti upozornění, pokud má být znovu. Můžete přepsat upozornění možnostmi nastavenými v předkompilovaných hlaviček pomocí jiné možnosti upozornění na příkazovém řádku.
+Pokud použijete některou z možností upozornění při vytváření předkompilované hlavičky s použitím [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost jakékoli použití předkompilované hlavičky s použitím [/Yu](../../build/reference/yu-use-precompiled-header-file.md) možnost způsobí, že tyto stejné možnosti upozornění platit znovu. Upozornění možnostmi nastavenými v předkompilované hlavičce pomocí jiné možnosti upozornění na příkazovém řádku můžete přepsat.
 
-Můžete použít [#pragma – upozornění](../../preprocessor/warning.md) – direktiva řídit úroveň upozornění, který je uvedený v době kompilace v konkrétní zdrojové soubory.
+Můžete použít [varování #pragma](../../preprocessor/warning.md) směrnice řídit úroveň upozornění, který je uvedena v době kompilace v konkrétní zdrojové soubory.
 
-Direktivy pragma upozornění ve zdrojovém kódu jsou nemá vliv **/w** možnost.
+Direktivy pragma upozornění ve zdrojovém kódu nejsou ovlivněny **/w** možnost.
 
-[Sestavení chyby dokumentaci](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) popisuje upozornění a úrovně varování a označuje, proč nemusí některé příkazy zkompilovat jako, který chcete.
+[Vytvářet dokumentaci chyby](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) popisuje upozornění a úrovně varování a označuje, proč nemusí zkompilovat určité příkazy tak, jak zamýšlíte.
 
-### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Nastavení možností kompilátoru ve vývojovém prostředí sady Visual Studio
+### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Chcete-li nastavit možnosti kompilátoru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Chcete-li nastavit **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, **/horní**m **/Wv**, **wdn** nebo **/WX-** možnosti, vyberte **vlastnosti konfigurace** > **C / C++** > **Obecné** stránku vlastností.
+1. Chcete-li nastavit **/W0**, **/W1**, **/W2**, **w3**, **/W4**, **/Wall**m **/WV:**, **/WX** nebo **/WX-** možnosti, vyberte **vlastnosti konfigurace** > **C / C++** > **Obecné** stránku vlastností.
 
-   - Chcete-li nastavit **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, nebo **/horní** upravit možnosti, **úroveň pro upozornění** vlastnost.
+   - Chcete-li nastavit **/W0**, **/W1**, **/W2**, **w3**, **/W4**, nebo **/Wall** upravit možnosti, **úroveň pro upozornění** vlastnost.
 
-   - Chcete-li nastavit **wdn** nebo **/WX-** upravit možnosti, **zpracování upozornění jako chyby** vlastnost.
+   - Chcete-li nastavit **/WX** nebo **/WX-** upravit možnosti, **zpracování upozornění jako chyby** vlastnost.
 
-   - Nastavit verzi **/Wv** možnost, zadejte číslo verze kompilátoru v **upozornění verze** vlastnost.
+   - Nastavení jsou ve verzi **/WV:** možnost, zadejte číslo verze kompilátoru **verze upozornění** vlastnost.
 
-1. Chcete-li nastavit **/wd** nebo **/we** možnosti, vyberte **vlastnosti konfigurace** > **C/C++**  >   **Rozšířené** stránku vlastností.
+1. Chcete-li nastavit **/wd** nebo **/we** možnosti, vyberte **vlastnosti konfigurace** > **C/C++**  >   **Pokročilé** stránku vlastností.
 
-   - Chcete-li nastavit **/wd** vyberte možnost **zakázat konkrétní varování** vlastnost rozevírací nabídku ovládací prvek a potom zvolte **upravit**. Do textového pole v **zakázat konkrétní varování** dialogové okno, zadejte číslo upozornění. Pokud chcete zadat více než jeden upozornění, oddělte hodnoty středník (**;**). Například pokud chcete zakázat C4001 a C4010, zadejte **4001; 4010**. Zvolte **OK** chcete uložit provedené změny a vrátit **stránky vlastností** dialogové okno.
+   - Chcete-li nastavit **/wd** možnosti, vyberte **zakázat specifická upozornění** vlastnost ovládací prvek rozevírací seznam a zvolte **upravit**. V textovém poli **zakázat specifická upozornění** dialogové okno, zadejte číslo varování. Pokud chcete zadat více než jedno upozornění, oddělte hodnoty středníky (**;**). Například chcete-li zakázat C4001 a C4010, zadejte **4001; 4010**. Zvolte **OK** uložte provedené změny a vraťte **stránky vlastností** dialogového okna.
 
-   - Chcete-li nastavit **/we** možnost, vyberte **považovat konkrétní upozornění jako chyby** vlastnost rozevírací nabídku ovládací prvek a potom zvolte **upravit**. Do textového pole v **považovat konkrétní upozornění jako chyby** dialogové okno, zadejte číslo upozornění. Pokud chcete zadat více než jeden upozornění, oddělte hodnoty středník (**;**). Například považovat za C4001 a C4010 chyby, zadejte **4001; 4010**. Zvolte **OK** chcete uložit provedené změny a vrátit **stránky vlastností** dialogové okno.
+   - Chcete-li nastavit **/we** volby, vyberte **považovat konkrétní upozornění jako chyby** vlastnost ovládací prvek rozevírací seznam a zvolte **upravit**. V textovém poli **považovat konkrétní upozornění jako chyby** dialogové okno, zadejte číslo varování. Pokud chcete zadat více než jedno upozornění, oddělte hodnoty středníky (**;**). Například C4001 a C4010 nakládat jako s chybami, zadejte **4001; 4010**. Zvolte **OK** uložte provedené změny a vraťte **stránky vlastností** dialogového okna.
 
-1. Chcete-li nastavit **/wo** vyberte možnost **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** Stránka vlastností. Zadejte možnost kompilátoru v **další možnosti** pole.
+1. Chcete-li nastavit **/wo** možnosti, vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** Stránka vlastností. Zadáním možnosti kompilátoru v **další možnosti** pole.
 
 1. Zvolte **OK** uložte provedené změny.
 
-### <a name="to-set-the-compiler-option-programmatically"></a>Nastavení možnosti kompilátoru prostřednictvím kódu programu
+### <a name="to-set-the-compiler-option-programmatically"></a>Programové nastavení parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A>, a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A>, a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

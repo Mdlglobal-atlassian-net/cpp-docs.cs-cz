@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4eddd4ce677adfb51192302357dfbd72be36df3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721497"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vektor&lt;bool&gt;:: reference::operator =
 
@@ -41,11 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Doprava*  
- Odkaz prvku, jehož hodnota má být přiřazena k bitu.
+*doprava*<br/>
+Odkaz prvku, jehož hodnota má být přiřazena k bitu.
 
-*Val*  
- Logická hodnota, která má být přiřazena k bitu.
+*Val*<br/>
+Logická hodnota, která má být přiřazena k bitu.
 
 ## <a name="example"></a>Příklad
 

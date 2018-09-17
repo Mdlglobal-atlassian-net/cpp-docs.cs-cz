@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686154"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725171"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox – třída
 `CMFCFontComboBox` Třída vytvoří ovládací prvek pole se seznamem, který obsahuje seznam písem.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDesc*  
- Odkazuje na objekt popisu písma.  
+*pDesc*<br/>
+[in] Odkazuje na objekt popisu písma.  
   
- [in] *lpszName*  
- Určuje název písma.  
+*lpszName*<br/>
+[in] Určuje název písma.  
   
- [in] *nCharSet*  
- Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
+*nCharSet*<br/>
+[in] Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud položka v poli se seznamem písma odpovídá určené písmo popis objektu nebo název písma a charset; v opačném případě hodnota FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFontType*  
- Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Určuje znakovou sadu písma. Výchozí hodnota je DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Určuje znakovou sadu písma. Výchozí hodnota je DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Určuje písmo rozteč a rodiny. Výchozí hodnota je DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Určuje písmo rozteč a rodiny. Výchozí hodnota je DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; inicializovat pole se seznamem písma v opačném případě hodnota FALSE.  

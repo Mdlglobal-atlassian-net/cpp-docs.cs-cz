@@ -1,5 +1,5 @@
 ---
-title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
+title: __popcnt16 __popcnt, __popcnt64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724731"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
-**Konkrétní Microsoft**  
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16 __popcnt, __popcnt64
+
+**Specifické pro Microsoft**  
   
- Spočítá počet jeden bitů (počet naplnění) 16 – 32- a 64 bajtů celé číslo bez znaménka.  
+ Spočítá počet jednu službu bits (počet naplnění) v 16, 32 nebo 64bajtové číslo bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,26 +49,26 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `value`  
- 16 –, 32- nebo 64bitové celé číslo bez znaménka pro kterou chceme počet naplnění.  
+*value*<br/>
+[in] 16 - 32 a 64-bit znaménka, pro kterou chceme, aby počet naplnění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Počet jeden bitů `value` parametr.  
+ Počet bitů, jeden v `value` parametru.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`__popcnt16`|Pokročilé bitové manipulace|  
 |`__popcnt`|Pokročilé bitové manipulace|  
-|`__popcnt64`|Pokročilé bitové manipulace v režimu 64-bit.|  
+|`__popcnt64`|Pokročilé zpracování Bit v 64bitovém režimu.|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Každý z těchto vnitřní funkce generuje `popcnt` instrukcí.  Velikost hodnoty, `popcnt` instrukce vrátí je stejná jako velikost jeho argumentem.  V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registrů, proto žádné 64-bit `popcnt`.  
+ Každá z těchto vnitřních objektů vygeneruje `popcnt` instrukce.  Velikost hodnoty, který `popcnt` instrukce vrátí je stejná jako velikost svého argumentu.  V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registry, tedy ne 64-bit `popcnt`.  
   
- K určení podporu hardwaru pro `popcnt` instrukce, volání `__cpuid` vnitřní s `InfoType=0x00000001` a zkontrolujte bit 23 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud je podporovaná pokyn a 0 jinak. Pokud jste spustili kód, který používá tento vnitřní hardware, který nepodporuje `popcnt` instrukce, nepředvídatelné výsledky.  
+ K určení hardwarovou podporu `popcnt` instrukce, volání `__cpuid` vnitřní s `InfoType=0x00000001` a zkontrolujte bit 23 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud podporované instrukce a 0 jinak. Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `popcnt` instrukce, výsledky nepředvídatelné.  
   
 ## <a name="example"></a>Příklad  
   
@@ -106,8 +107,9 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32  
 ```  
   
-**Konkrétní Microsoft END**  
- Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**  
+
+Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689189"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721510"
 ---
 # <a name="cmfcrebar-class"></a>Cmfcrebar – třída
 A `CMFCReBar` objekt je ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Ukazatel na podřízené okno, které má být vložen do matrice. Odkazovaný objekt musí mít **WS_CHILD** styl okna.  
   
- [in] *pszText*  
- Určuje text, který se zobrazí na matrice. Text není součástí podřízené okno. Místo toho se zobrazí na matrice, samotného.  
+*pszText*<br/>
+[in] Určuje text, který se zobrazí na matrice. Text není součástí podřízené okno. Místo toho se zobrazí na matrice, samotného.  
   
  [in] [out] *pbmp*  
  Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.  
   
- [in] *dwStyle*  
- Obsahuje styl pásma použít. Úplný seznam styly obsluhy vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktura v dokumentaci Windows SDK.  
+*dwStyle*<br/>
+[in] Obsahuje styl pásma použít. Úplný seznam styly obsluhy vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktura v dokumentaci Windows SDK.  
   
- [in] *clrFore*  
- Představuje barvu popředí matrice.  
+*clrFore*<br/>
+[in] Představuje barvu popředí matrice.  
   
- [in] *clrBack*  
- Představuje barvu pozadí matrice.  
+*clrBack*<br/>
+[in] Představuje barvu pozadí matrice.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je pásmo se úspěšně přidal do matrice; v opačném případě hodnota FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Ukazatel na nadřazené okno tohoto ovládacího prvku rebar.  
   
- [in] *dwCtrlStyle*  
- Určuje styl ovládacího prvku rebar. Výchozí hodnota stylu je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení sousední pruhy v ovládacím prvku matrice. Seznam platný stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v dokumentaci Windows SDK.  
+*dwCtrlStyle*<br/>
+[in] Určuje styl ovládacího prvku rebar. Výchozí hodnota stylu je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení sousední pruhy v ovládacím prvku matrice. Seznam platný stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v dokumentaci Windows SDK.  
   
- [in] *dwStyle*  
- Stylu okna ovládacího prvku rebar. Seznam platný stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Stylu okna ovládacího prvku rebar. Seznam platný stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- ID prvku matrice podřízené okno.  
+*nID*<br/>
+[in] ID prvku matrice podřízené okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; vytvořen matrice v opačném případě hodnota FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- [in] *pTI*  
+*Bod*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Poznámky  
   

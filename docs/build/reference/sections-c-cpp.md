@@ -1,5 +1,5 @@
 ---
-title: ODDÍLY (C/C++) | Microsoft Docs
+title: ODDÍLY (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecd8d6050df7a4d30b0a37cad28e030d1cd63cf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722890"
 ---
 # <a name="sections-cc"></a>ODDÍLY (C/C++)
-Představuje oddíl jednoho nebo více `definitions` , které jsou specifikátory přístupu v části v projektu na výstupní soubor.  
-  
-```  
-SECTIONS  
-definitions  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Každý definice musí být na samostatném řádku. `SECTIONS` – Klíčové slovo může být na stejném řádku jako první definice nebo na předchozí řádek. .Def soubor může obsahovat jednu nebo více `SECTIONS` příkazy.  
-  
- To `SECTIONS` příkaz nastaví atributy pro jeden nebo více oddílů v souboru bitové kopie a je možné přepsat výchozí atributy pro každý typ oddílu.  
-  
- Formát pro `definitions` je:  
-  
- `.section_name specifier`  
-  
- kde `.section_name` je název oddílu v bitové kopii programu a `specifier` je jeden nebo více následujících modifikátory přístupu:  
-  
-|Modifikátor|Popis|  
-|--------------|-----------------|  
-|`EXECUTE`|V části je spustitelný soubor|  
-|`READ`|Umožňuje operace čtení dat|  
-|`SHARED`|Sdílené složky v části mezi všechny procesy, které načíst obrázek|  
-|`WRITE`|Umožňuje operací zápisu na data|  
-  
- Specifikátor názvy oddělte mezerou. Příklad:  
-  
-```  
-SECTIONS  
-.rdata READ WRITE  
-```  
-  
- `SECTIONS` Označuje začátek seznam části `definitions`. Každý `definition` musí být na samostatném řádku. `SECTIONS` – Klíčové slovo může být na stejném řádku jako první `definition` nebo na předchozí řádek. .Def soubor může obsahovat jednu nebo více `SECTIONS` příkazy. `SEGMENTS` – Klíčové slovo je podporovaný jako synonymum pro `SECTIONS`.  
-  
- Podporuje starší verze aplikace Visual C++:  
-  
-```  
-section [CLASS 'classname'] specifier  
-```  
-  
- `CLASS` – Klíčové slovo je podporována pro kompatibility, ale je ignorován.  
-  
- Je ekvivalentní způsob určit atributy oddílu [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.  
-  
-## <a name="see-also"></a>Viz také  
- [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)
+
+Představuje část jednoho nebo více `definitions` , které jsou specifikátory přístupu na oddíly výstupního souboru projektu.
+
+```
+SECTIONS
+definitions
+```
+
+## <a name="remarks"></a>Poznámky
+
+Každá definice musí být na samostatném řádku. `SECTIONS` – Klíčové slovo může být na stejném řádku jako první definice nebo na předchozím řádku. Soubor .def může obsahovat jeden nebo více `SECTIONS` příkazy.
+
+To `SECTIONS` příkaz nastaví atributy pro jeden nebo více oddílů v souboru bitové kopie a je možné přepsat výchozí atributy pro každý typ části.
+
+Formát pro `definitions` je:
+
+`.section_name specifier`
+
+kde `.section_name` je název oddílu v bitové kopii programu a `specifier` je jeden nebo více následující modifikátory přístupu:
+
+|Modifikátor|Popis|
+|--------------|-----------------|
+|`EXECUTE`|V části je spustitelný|
+|`READ`|Umožňuje čtení operací s daty|
+|`SHARED`|Sdílené složky v části mezi všechny procesy, které načtení obrázku|
+|`WRITE`|Umožňuje operací zápisu na data|
+
+Specifikátor názvy oddělte mezerou. Příklad:
+
+```
+SECTIONS
+.rdata READ WRITE
+```
+
+`SECTIONS` Označuje začátek seznam části `definitions`. Každý `definition` musí být na samostatném řádku. `SECTIONS` – Klíčové slovo může být na stejném řádku jako první `definition` nebo na předchozím řádku. Soubor .def může obsahovat jeden nebo více `SECTIONS` příkazy. `SEGMENTS` – Klíčové slovo je podporovaný jako synonymum pro `SECTIONS`.
+
+Starší verze jazyka Visual C++ nepodporuje:
+
+```
+section [CLASS 'classname'] specifier
+```
+
+`CLASS` – Klíčové slovo je podporována z důvodu kompatibility, ale je ignorována.
+
+Je ekvivalentní umožňuje určit atributy oddílu [/SECTION](../../build/reference/section-specify-section-attributes.md) možnost.
+
+## <a name="see-also"></a>Viz také
+
+[Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)

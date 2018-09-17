@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315805"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722043"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Dialogové okno textový nástroj písma (C++) (Editor obrázků pro ikony)
 
@@ -34,20 +34,25 @@ Pomocí tohoto dialogového okna pro:
 
 Toto dialogové okno, klikněte na tlačítko **písmo** tlačítko **textový nástroj** dialogové okno.
 
-**Písma**  
-Zobrazí seznam dostupných písem.
+- **Písma**
 
-**Styl písma**  
-Zobrazí seznam dostupných stylů pro zadaný font.
+   Zobrazí seznam dostupných písem.
 
-**Velikost**  
-Umožňuje zobrazit seznam velikostí bod k dispozici pro zadaný font.
+- **Styl písma**
 
-**Ukázka**  
-Zobrazuje ukázku toho, jak se text zobrazí s nastavením zadaný font.
+   Zobrazí seznam dostupných stylů pro zadaný font.
 
-**skript**  
-Zobrazí seznam dostupný jazyk skriptů pro zadaný font. Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.
+- **Velikost**
+
+   Umožňuje zobrazit seznam velikostí bod k dispozici pro zadaný font.
+
+- **Ukázka**
+
+   Zobrazuje ukázku toho, jak se text zobrazí s nastavením zadaný font.
+
+- **skript**
+
+   Zobrazí seznam dostupný jazyk skriptů pro zadaný font. Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.
 
 ## <a name="requirements"></a>Požadavky
 

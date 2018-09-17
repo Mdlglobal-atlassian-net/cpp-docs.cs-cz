@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721445"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Přehled konvencí ARM32 ABI
 
@@ -64,16 +64,16 @@ Použití IT instrukcí v kód Thumb-2 je zakázáno, s výjimkou v takové situ
 - Instrukce cíl musí být jedna z následujících:
 
    |16bitové operační kódy|Třída|Omezení|
-    |---------------------|-----------|------------------|
-    |MOV MVN|Přesunutí|Správce prostředků! = počítače, VP! = PC|
-    |OMEZENĚ DISTRIBUOVATELNÝCH OPRAV, OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S] B, H OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S]|Načtení z paměti|Ale ne literál formulářů omezeně distribuovatelných oprav|
-    |STR STRB, STRH|Store do paměti.||
-    |PŘIDAT, ADC, RSB, ZAŘÍZENÍMI, SUB|Můžete přidávat nebo odebírat|Ale ne ADD/SUB SP, SP, imm7 formulářů<br /><br /> Správce prostředků! = PC, relativní rozlišující! = PC, Rdm! = PC|
-    |CMP CMN|Porovnat|Správce prostředků! = PC, Rn! = PC|
-    |MUL|Násobení||
-    |AZURE SITE RECOVERY, ZJEDNODUŠENÉHO NAČTENÍ ŘEŠENÍ, LSR, ZKOUŠENÉHO|Bitový posun||
-    |A BIC EOR, ORR TST|Aritmetický bitový||
-    |MX|Větev se má zaregistrovat|Správce prostředků! = PC|
+   |---------------------|-----------|------------------|
+   |MOV MVN|Přesunutí|Správce prostředků! = počítače, VP! = PC|
+   |OMEZENĚ DISTRIBUOVATELNÝCH OPRAV, OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S] B, H OMEZENĚ DISTRIBUOVATELNÝCH OPRAV [S]|Načtení z paměti|Ale ne literál formulářů omezeně distribuovatelných oprav|
+   |STR STRB, STRH|Store do paměti.||
+   |PŘIDAT, ADC, RSB, ZAŘÍZENÍMI, SUB|Můžete přidávat nebo odebírat|Ale ne ADD/SUB SP, SP, imm7 formulářů<br /><br /> Správce prostředků! = PC, relativní rozlišující! = PC, Rdm! = PC|
+   |CMP CMN|Porovnat|Správce prostředků! = PC, Rn! = PC|
+   |MUL|Násobení||
+   |AZURE SITE RECOVERY, ZJEDNODUŠENÉHO NAČTENÍ ŘEŠENÍ, LSR, ZKOUŠENÉHO|Bitový posun||
+   |A BIC EOR, ORR TST|Aritmetický bitový||
+   |MX|Větev se má zaregistrovat|Správce prostředků! = PC|
 
 I když aktuální ARMv7 procesorů nelze sestavy pomocí formulářů zakázaného instrukce budoucí generace se očekává. Pokud jsou zjištěny tyto formuláře, žádný program, který používá je může skončit s výjimkou nedefinované instrukce.
 
@@ -233,5 +233,5 @@ Procesory ARM se systémem Windows jsou potřebné k podpoře cyklu čítač, al
 
 ## <a name="see-also"></a>Viz také:
 
-[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[Zpracování výjimek ARM](../build/arm-exception-handling.md)  
+[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Zpracování výjimek ARM](../build/arm-exception-handling.md)

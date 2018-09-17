@@ -1,5 +1,5 @@
 ---
-title: -Og (globální optimalizace) | Microsoft Docs
+title: -Og (globální optimalizace) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377154"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722524"
 ---
 # <a name="og-global-optimizations"></a>/Og (globální optimalizace)
 
-Zastaralé Poskytuje místní a globální optimalizace, automatické registrace přidělení a cykly optimalizace. Doporučujeme použít buď [/O1 (minimalizovat velikost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo.
+Zastaralé Poskytuje místní a globální optimalizace, automatické registrace přidělení a optimalizace smyčky. Doporučujeme použít buď [/O1 (minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ Zastaralé Poskytuje místní a globální optimalizace, automatické registrace
 
 ## <a name="remarks"></a>Poznámky
 
-**/Og** je zastaralý. Tyto optimalizace jsou nyní obecně povolené ve výchozím nastavení. Další informace o optimalizace najdete v tématu [/O1, / O2 (velikost minimalizovat, maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (Povolit nejvíce rychlost optimalizace)](../../build/reference/ox-full-optimization.md).
+**/Og** je zastaralý. Tyto optimalizace jsou nyní obecně k dispozici ve výchozím nastavení. Další informace o optimalizaci, naleznete v tématu [/O1, / O2 (minimalizovat velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md).
 
-Nejsou k dispozici v následujících optimalizace **/Og**:
+Tyto optimalizace jsou k dispozici v rámci **/og**:
 
-- Místní a globální eliminace společných dílčích výrazů
+- Místní a globální eliminace společných dílčích
 
-     Hodnota běžné dílčím výrazu tato optimalizace je vypočítána jednou. V následujícím příkladu Pokud hodnoty `b` a `c` neměňte mezi tři výrazy, kompilátor můžete přiřadit výpočtu `b + c` dočasné proměnné a nahraďte proměnnou pro `b + c`:
+   Hodnota běžné dílčí výraz tato optimalizace se vypočítává jednou. V následujícím příkladu Pokud hodnoty `b` a `c` neměňte mezi tři výrazy, kompilátor může přiřadit výpočtu `b + c` k dočasné proměnné a nahraďte proměnnou pro `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ Nejsou k dispozici v následujících optimalizace **/Og**:
     e = b + c;
     ```
 
-     Pro místní běžné dílčím výrazu optimalizace kompilátoru prověří krátké sekcí kódu pro běžné podvýrazy. Pro globální běžné dílčím výrazu optimalizace kompilátoru vyhledá celý funkce pro běžné podvýrazy.
+   Pro místní běžné dílčí výraz optimalizace Kompilátor zkontroluje krátký části kódu pro běžné dílčích výrazů. Globální optimalizace běžné dílčí výraz kompilátor vyhledá celé funkce pro běžné dílčích výrazů.
 
 - Automatické přidělení registru
 
-     Tato optimalizace umožňuje kompilátoru často používané proměnné a podvýrazy v registrech; `register` – klíčové slovo je ignorována.
+   Tyto optimalizace umožňuje kompilátoru vytvořit úložiště často používaných proměnných a podvýrazů v registrech; `register` – klíčové slovo se ignoruje.
 
 - Optimalizace smyčky
 
-     Tato optimalizace odebere invariantní podvýrazy z textu smyčku. Smyčky optimální obsahuje pouze výrazy, jejichž hodnoty změnit prostřednictvím každé spuštění smyčky. V následujícím příkladu výraz `x + y` nezmění do těla smyčky:
+   Tato optimalizace odebere invariantní dílčích výrazů v těle smyčky. Optimální smyčka obsahuje pouze výrazy, jejichž hodnoty se mění prostřednictvím každým provedením smyčky. V následujícím příkladu výraz `x + y` nezmění v těle smyčky:
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ Nejsou k dispozici v následujících optimalizace **/Og**:
     }
     ```
 
-     Po optimalizace `x + y` se počítá jednou místo pokaždé, když se spustí smyčka:
+   Po optimalizaci `x + y` se počítá po ne při každém provedení smyčky je:
 
     ```C
     i = -100;
@@ -81,26 +81,26 @@ Nejsou k dispozici v následujících optimalizace **/Og**:
     }
     ```
 
-     Optimalizace smyčky je mnohem efektivnější, pokud kompilátor můžete předpokládat žádné aliasy, které nastavíte s [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), nebo [omezit](../../cpp/restrict.md).
+   Optimalizace smyčky je mnohem efektivnější, pokud kompilátor může převzít není zavedení aliasů, které jste nastavili [kvalifikátor __restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), nebo [omezit](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Můžete povolit nebo zakázat globální optimalizace na jednotlivých pomocí funkcí pomocí `optimize` – Direktiva pragma společně s `g` možnost.
+   > [!NOTE]
+   > Můžete povolit nebo zakázat globální optimalizaci na jednotlivých podle funkcí pomocí `optimize` – Direktiva pragma spolu s `g` možnost.
 
- Související informace najdete v tématu [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md) a [/Ox (Povolit nejvíce rychlost optimalizace)](../../build/reference/ox-full-optimization.md).
+Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md) a [/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Klikněte **C/C++** složky.
+1. Klikněte na tlačítko **C/C++** složky.
 
-1. Klikněte **příkazového řádku** stránku vlastností.
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
 
-1. Zadejte možnost kompilátoru v **další možnosti** pole.
+1. Zadáním možnosti kompilátoru v **další možnosti** pole.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

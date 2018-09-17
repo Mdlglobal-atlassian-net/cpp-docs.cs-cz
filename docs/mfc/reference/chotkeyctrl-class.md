@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681622"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722240"
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
 Poskytuje funkce ovládacího prvku Windows běžné výměně klíče.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *wVirtualKeyCode*  
- Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
+*wVirtualKeyCode*<br/>
+[out] Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
   
- [out] *wModifiers*  
- Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
+*wModifiers*<br/>
+[out] Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wVirtualKeyCode*  
- Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
+*wVirtualKeyCode*<br/>
+[in] Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
   
- [in] *wModifiers*  
- Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
+*wModifiers*<br/>
+[in] Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
   

@@ -1,5 +1,5 @@
 ---
-title: -await (povolit podporu coroutine) | Microsoft Docs
+title: -await (povolení podpory korutiny) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,40 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78a62195ca28be49ed8c00dacacce003281699f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371028"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725498"
 ---
-# <a name="await-enable-coroutine-support"></a>/ await (povolit podporu coroutine)  
-  
-Použití **/ await** – možnost kompilátoru povolit podpora kompilátoru pro coroutines.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-> / await  
-  
-## <a name="remarks"></a>Poznámky  
-  
-**/ Await** – možnost kompilátoru umožňuje podporu kompilátoru C++ coroutines a klíčová slova **co_await**, **co_yield**, a **co_return**. Tato možnost je ve výchozím nastavení vypnutý. Informace o podpoře pro coroutines v sadě Visual Studio najdete v tématu [blogu týmu Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Další informace o návrhu standardní coroutines najdete v tématu [N4628 práce koncept, technická specifikace pro rozšíření C++ pro Coroutines](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).  
+# <a name="await-enable-coroutine-support"></a>/ await (povolení podpory korutiny)
 
-**/ Await** možnost je k dispozici od verze sady Visual Studio 2015.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1. Otevřete váš projekt **stránky vlastností** dialogové okno.   
-  
-2. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **příkazového řádku** stránku vlastností.  
-  
-3. Zadejte **/ await** – možnost kompilátoru v **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
-  
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+Použití **/ await** – možnost kompilátoru povolení podpory korutiny kompilátoru.
+
+## <a name="syntax"></a>Syntaxe
+
+> / await
+
+## <a name="remarks"></a>Poznámky
+
+**/ Await** – možnost kompilátoru podporuje kompilátor C++ korutin a klíčová slova **co_await**, **co_yield**, a **co_return**. Tato možnost je ve výchozím nastavení vypnuta. Informace týkající se podpory korutiny v sadě Visual Studio, najdete v článku [blogu týmu Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Další informace o návrhu standardní korutiny, naleznete v tématu [N4628 práce koncept, technické specifikace pro rozšíření C++ pro Korutin](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).
+
+**/ Await** možnost je k dispozici od verze Visual Studio 2015.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete svůj projekt **stránky vlastností** dialogové okno.
+
+2. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **příkazového řádku** stránku vlastností.
+
+3. Zadejte **/ await** – možnost kompilátoru v **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

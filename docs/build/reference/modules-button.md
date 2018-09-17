@@ -1,5 +1,5 @@
 ---
-title: Moduly – tlačítko | Microsoft Docs
+title: Moduly – tlačítko | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ab09578b5d26d262784bcee49033538a45a4b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6d8bc890bba56835455960e706dea23c80cf395
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372240"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724722"
 ---
 # <a name="modules-button"></a>Moduly – tlačítko
-Klikněte na tlačítko **moduly** tlačítko zprovoznit **další moduly pro vyhledávání chyb** dialogové okno. Zadejte název požadované EXE nebo DLL do textového pole a klikněte na **přidat** zahrnout moduly hledání chybová zpráva. Odebere modul ze seznamu zvýraznění ho a klikněte na **odebrat** tlačítko.  
-  
-## <a name="see-also"></a>Viz také  
- [Hodnota – textové pole](../../build/reference/value-edit-control.md)
+
+Klikněte na tlačítko **moduly** tlačítko, abyste vyvolali **další moduly pro hledání chyb** dialogového okna. Zadejte název požadovaného souboru EXE nebo DLL do textového pole a klikněte na tlačítko **přidat** zahrnout moduly hledání chybová zpráva. Odebrání modulu ze seznamu tak, že ho zvýrazníte a kliknutím **odebrat** tlačítko.
+
+## <a name="see-also"></a>Viz také
+
+[Hodnota – textové pole](../../build/reference/value-edit-control.md)

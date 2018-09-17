@@ -1,5 +1,5 @@
 ---
-title: -GL (celková optimalizace programu) | Microsoft Docs
+title: -GL (celková optimalizace programu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,57 +20,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce972b6e7254ad7454f8e8799283588f0fdd5270
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97561a63a21550cc06f29a95f6ddf05687758b83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376270"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723655"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (celková optimalizace programu)
-Umožňuje optimalizace celého programu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/GL[-]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Optimalizace celého programu umožňuje kompilátoru k provedení optimalizace s informacemi o na všechny moduly v programu. Bez optimalizace celého programu optimalizace se provádí na na základě modulu (kompilace).  
-  
- Optimalizace celého programu ve výchozím nastavení a musí být explicitně povolené. Ale je také možné explicitně zakázat její **/GL-**.  
-  
- S informacemi o všechny moduly můžete kompilátor:  
-  
--   Optimalizujte použití registrů napříč hranicemi funkce.  
-  
--   Proveďte lépe sledování změny globálních dat, a umožňují snížení počtu zatížení a úložiště.  
-  
--   Se lépe daří sledování dereference možné sady položek upraveném ukazatel snížení počtu zatížení a úložiště.  
-  
--   Vložené funkce v modulu i v případě, že funkce je definována v jiný modul.  
-  
- soubory .obj vytvořeného s **/GL** nebudou k dispozici na takových nástrojů linkeru jako [nástroje EDITBIN](../../build/reference/editbin-reference.md) a [DUMPBIN](../../build/reference/dumpbin-reference.md).  
-  
- Pokud je váš program s **/GL** a [/c](../../build/reference/c-compile-without-linking.md), propojovacího/ltgc by měl použít k vytvoření výstupního souboru.  
-  
- [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) nelze použít s **/GL**  
-  
- Formát souborů vytvořeného s **/GL** v aktuální verzi nemusí být přečíst další verze Visual C++. By neměl dodávat soubor LIB tvořená .obj soubory, které byly vytvořeny s **/GL** Pokud jste ochotni dodávat kopie souboru .lib pro všechny verze aplikace Visual C++ očekáváte, aby uživatelé používali, teď a v budoucnu.  
-  
- soubory .obj vytvořeného s **/GL** a Předkompilované soubory hlaviček nesmí se použít k vytvoření souboru .lib, pokud soubor .lib bude propojený na stejný počítač, který vytváří **/GL** souboru .obj. Informace ze souboru .obj předkompilovaný hlavičkový soubor bude potřeba v době spojení.  
-  
- Další informace o optimalizace, které jsou k dispozici a omezení optimalizace celého programu najdete v tématu [/ltgc](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** také díky profil s průvodcem optimalizace, které jsou k dispozici; najdete v části/ltgc.  Při kompilaci pro optimalizace a pokud chcete, aby funkce řazení z váš profil na základě optimalizace na základě profilu, je nutné kompilovat s [/Gy](../../build/reference/gy-enable-function-level-linking.md) nebo možnost kompilátoru, která znamená /Gy.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  V tématu [/ltgc (vytváření kódu v době propojování)](../../build/reference/ltcg-link-time-code-generation.md) informace o tom, jak zadat **/GL** ve vývojovém prostředí.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
-1.  V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+Povolí optimalizaci celého programu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/GL[-]
+```
+
+## <a name="remarks"></a>Poznámky
+
+Optimalizace celého programu umožňuje kompilátoru provést optimalizace s informacemi o na všechny moduly v programu. Bez optimalizace celého programu optimalizace provádějí základě modulu (kompilace).
+
+Optimalizace celého programu je vypnuto ve výchozím nastavení a musí být explicitně povolené. Ale je také možné explicitně zakázat pomocí **/GL-**.
+
+Informace o všech modulů kompilátor může:
+
+- Optimalizujte využití registrů napříč hranicemi funkce.
+
+- Proveďte úlohu lepší sledování změny globálních dat, umožňuje snížení počtu zatížení a úložiště.
+
+- Proveďte úlohu lepší sledování možné sady položek upravil ukazatel přistoupit přes ukazatel, snížení počtu zatížení a úložiště.
+
+- Vložené funkce v modulu i v případě, že funkce je definována v jiném modulu.
+
+soubory .obj vytvořeného s **/GL** nebudou mít k dispozici takových nástrojů linkeru jako [EDITBIN](../../build/reference/editbin-reference.md) a [DUMPBIN](../../build/reference/dumpbin-reference.md).
+
+Pokud kompilujete aplikace s **/GL** a [/c](../../build/reference/c-compile-without-linking.md), by měl parametru/LTCG – možnost linkeru použijete k vytvoření výstupního souboru.
+
+[/ Zi](../../build/reference/z7-zi-zi-debug-information-format.md) nelze použít s   **/GL.**
+
+Formát souborů vytvořenými pomocí **/GL** v aktuální verzi nemusí být čitelný v dalších verzích Visual C++. Neměli dodávat .lib soubor sestává z soubory .obj, které byly vytvořeny s **/GL** Pokud se nechcete dodávat kopie .lib soubor pro všechny verze sady Visual C++ očekáváte, že uživatelé používali, teď a v budoucnu.
+
+soubory .obj vytvořeného s **/GL** a neměl by se předkompilované hlavičkové soubory .lib soubor sestavení, pokud bude propojena .lib soubor ve stejném počítači, který vytvořil **/GL** souboru .obj. Informace v souboru .obj předkompilovaného hlavičkového souboru bude potřeba v době spojení.
+
+Další informace o dostupných s optimalizací a omezení optimalizace celého programu, najdete v článku [parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** také vytvoří profil s asistencí optimalizace k dispozici; viz parametru/LTCG.  Při kompilaci pro optimalizace a pokud chcete, aby funkce řazení z optimalizace na základě profilu na základě profilu, je nutné kompilovat s [/Gy](../../build/reference/gy-enable-function-level-linking.md) nebo možnosti kompilátoru, který by naznačoval /Gy.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Zobrazit [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md) informace o tom, jak určit **/GL** ve vývojovém prostředí.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

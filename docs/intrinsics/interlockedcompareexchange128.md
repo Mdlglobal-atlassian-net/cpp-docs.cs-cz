@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721120"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Specifické pro Microsoft**  
   
- Provádí 128-bit propojené porovnání a záměna.  
+Provádí 128-bit propojené porovnání a záměna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out v] `Destination`  
- Ukazatel na cílový, což je pole dvou celých čísel 64-bit považují za 128bitového pole. Cíl dat musí být 16 bajtů v souladu, aby obecnou chybu ochrany.  
+*cíl*<br/>
+[out v] Ukazatel na cílový, což je pole dvou celých čísel 64-bit považují za 128bitového pole. Cíl dat musí být 16 bajtů v souladu, aby obecnou chybu ochrany.  
   
- [in] `ExchangeHigh`  
- 64bitové celé číslo, který možná bude vyměněn za horní část cílové.  
+*ExchangeHigh*<br/>
+[in] 64bitové celé číslo, který možná bude vyměněn za horní část cílové.  
   
- [in] `ExchangeLow`  
- 64bitové celé číslo, který možná bude vyměněn za dolní část cílové.  
+*ExchangeLow*<br/>
+[in] 64bitové celé číslo, který možná bude vyměněn za dolní část cílové.  
   
- [out v] `ComparandResult`  
- Ukazatel na pole dvou celých čísel 64-bit (považují za pole 128-bit) má být porovnán s cílem.  Na výstupu je přepsán s původní hodnotou cíl.  
+*ComparandResult*<br/>
+[out v] Ukazatel na pole dvou celých čísel 64-bit (považují za pole 128-bit) má být porovnán s cílem.  Na výstupu je přepsán s původní hodnotou cíl.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  1, pokud operand porovnávání 128bitové shodná s původní hodnota cíle. `ExchangeHigh` a `ExchangeLow` přepsat cílový 128 bitů.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Specifické pro END Microsoft**  
- Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
+**Specifické pro END Microsoft**
+
+Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

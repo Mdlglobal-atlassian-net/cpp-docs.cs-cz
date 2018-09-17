@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721172"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar – třída
 Implementuje kontextovou nabídku nástrojů.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRibbonBar*  
- Na panelu pásu karet, která hledá mini nástrojů pro tlačítka pro zobrazení.  
+*pRibbonBar*<br/>
+[in] Na panelu pásu karet, která hledá mini nástrojů pro tlačítka pro zobrazení.  
   
- [in] *lstCommands*  
- Seznam příkazů, který se má zobrazit na panelu nástrojů mini. Najít související tlačítka jsou prohledány všechny kategorie pásu karet.  
+*lstCommands*<br/>
+[in] Seznam příkazů, který se má zobrazit na panelu nástrojů mini. Najít související tlačítka jsou prohledány všechny kategorie pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete nastavit seznam příkazů, který se má zobrazit na panelu nástrojů zkrácené.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *x*  
- Určuje vodorovná pozice mini nástrojů v souřadnicovém systému obrazovky.  
+*x*<br/>
+[in] Určuje vodorovná pozice mini nástrojů v souřadnicovém systému obrazovky.  
   
- [in] *y*  
- Určuje svislé umístění mini nástrojů v souřadnicovém systému obrazovky.  
+*y*<br/>
+[in] Určuje svislé umístění mini nástrojů v souřadnicovém systému obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; zobrazí mini panel nástrojů v opačném případě hodnota FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *x*  
- Určuje vodorovné umístění v místní nabídce v souřadnicovém systému obrazovky.  
+*x*<br/>
+[in] Určuje vodorovné umístění v místní nabídce v souřadnicovém systému obrazovky.  
   
- [in] *y*  
- Určuje svislé umístění v místní nabídce v souřadnicovém systému obrazovky.  
+*y*<br/>
+[in] Určuje svislé umístění v místní nabídce v souřadnicovém systému obrazovky.  
   
- [in] *uiMenuResID*  
- Určuje ID prostředku v místní nabídce pro zobrazení.  
+*uiMenuResID*<br/>
+[in] Určuje ID prostředku v místní nabídce pro zobrazení.  
   
- [in] *pWndOwner*  
- Identifikuje okna, která přijímá zprávy z kontextové nabídky.  
+*pWndOwner*<br/>
+[in] Identifikuje okna, která přijímá zprávy z kontextové nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně; zobrazí místní nabídka v opačném případě hodnota FALSE.  

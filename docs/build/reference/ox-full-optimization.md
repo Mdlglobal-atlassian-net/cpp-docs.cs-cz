@@ -1,5 +1,5 @@
 ---
-title: -Ox (Povolit většinu optimalizace rychlost) | Microsoft Docs
+title: -Ox (povolení většiny optimalizací pro rychlost) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d93bfe44fab0400ce4c3c173473601745f85196c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721523"
 ---
-# <a name="ox-enable-most-speed-optimizations"></a>/OX (Povolit většinu rychlost optimalizace)
+# <a name="ox-enable-most-speed-optimizations"></a>/OX (povolení většiny optimalizací pro rychlost)
 
-**/Ox** – možnost kompilátoru umožňuje kombinaci optimalizace, které upřednostnit rychlost. Některé verze Visual Studio IDE a zprávy nápovědy kompilátoru tomu se říká *úplná optimalizace*, ale **/Ox** umožňuje pouze podmnožinu ve povolené možnosti optimalizace rychlost – možnost kompilátoru **/O2**.
+**/Ox** – možnost kompilátoru umožňuje kombinace optimalizací, které upřednostnit rychlost. V některých verzích sady Visual Studio IDE a zprávu nápovědy kompilátoru, tento postup se nazývá *úplná optimalizace*, ale **/Ox** umožňuje pouze podmnožinu zajišťuje možnosti optimalizace rychlost – možnost kompilátoru **/O2**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ ms.locfileid: "32378379"
 
 ## <a name="remarks"></a>Poznámky
 
-**/Ox** umožňuje – možnost kompilátoru **/O** kompilátoru možnosti upřednostnit rychlosti. **/Ox** – možnost kompilátoru nezahrnuje další [/GF (odstranění duplicitních řetězců)](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy (povolení propojení na úrovni funkcí)](../../build/reference/gy-enable-function-level-linking.md) ve povolenémožnosti[/O1 nebo/O2 (minimální velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). Další možnosti použít tak **/O1** a **/O2** může způsobit ukazatele na řetězce a funkce sdílet cílová adresa, která může ovlivnit ladění a striktní jazyk shoda. **/Ox** možnost je snadný způsob, jak povolit většinu optimalizace bez včetně **/GF** a **/Gy**. Další informace najdete v tématu popisy [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy](../../build/reference/gy-enable-function-level-linking.md) možnosti.
+**/Ox** umožňuje – možnost kompilátoru **/O** upřednostnit rychlost možností kompilátoru. **/Ox** – možnost kompilátoru neobsahuje další [/GF (odstranění duplicitní řetězce)](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy (povolení funkce propojení na úrovni)](../../build/reference/gy-enable-function-level-linking.md) možnosti umožněné [/O1 nebo/O2 (minimální velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). Další možnosti použil(a) **/O1** a **/O2** může způsobit, že ukazatele na řetězce nebo k funkcím sdílet cílovou adresu, která může mít vliv na ladění a striktní jazykem. **/Ox** možnost je snadný způsob, jak povolení většiny optimalizací pro bez zahrnutí **/GF** a **/Gy**. Další informace najdete v tématu popisy [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) a [/Gy](../../build/reference/gy-enable-function-level-linking.md) možnosti.
 
-**/Ox** – možnost kompilátoru je stejný jako v kombinaci pomocí následujících možností:
+**/Ox** – možnost kompilátoru je stejné jako v kombinaci s použitím následujících možností:
 
-- [/Ob (rozbalení vložené funkce)](../../build/reference/ob-inline-function-expansion.md), kde parametr option je 2 (**/Ob2**)
+- [/Ob (rozbalení vložené funkce)](../../build/reference/ob-inline-function-expansion.md), kde je parametr možnosti 2 (**/ob2**)
 
 - [/Og (globální optimalizace)](../../build/reference/og-global-optimizations.md)
 
@@ -49,34 +49,34 @@ ms.locfileid: "32378379"
 
 - [/Ot (upřednostnit rychlý kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
-- [/Oy (vynechání ukazatele)](../../build/reference/oy-frame-pointer-omission.md)
+- [/Oy (vynechání ukazatele na rámec)](../../build/reference/oy-frame-pointer-omission.md)
 
-**/Ox** se vzájemně vylučují z:
+**/Ox** se vzájemně vylučuje od:
 
-- [/ O1 (minimální velikost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O1 (pro minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
 - [/ O2 (maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
 - [/Od (zakázání (ladění))](../../build/reference/od-disable-debug.md)
 
-Posun směrem k rychlosti můžete zrušit **/Ox** – možnost kompilátoru zadáte-li **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s [/Os (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinovaná možnosti upřednostnit menší velikost kódu.
+Můžete je zrušit Posun směrem k rychlosti **/Ox** – možnost kompilátoru při zadání **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s  [ /OS (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinované možnosti upřednostnit menší velikost kódu.
 
-Pokud chcete nainstalovat všechny dostupné Optimalizace souborů pro sestavení pro vydání, doporučujeme zadáte [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo **/Ox**, a [/O1 (minimalizovat velikost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo z **/Oxs**. Pro i další optimalizace ve verzi sestavení, zvažte také [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru a [/ltgc (vytváření kódu v době propojování)](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru.
+Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných verzí, doporučujeme vám určit [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo **/Ox**, a [/O1 (minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo z **/Oxs**. Pro ještě více optimalizace ve verzi sestavení, zvažte také [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru a [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. V části **vlastnosti konfigurace**, otevřete **C/C++** a potom zvolte **optimalizace** stránku vlastností.
+1. V části **vlastnosti konfigurace**, otevřete **C/C++** a klikněte na tlačítko **optimalizace** stránku vlastností.
 
-1. Změnit **optimalizace** vlastnost.
+1. Upravit **optimalizace** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
 
 ## <a name="see-also"></a>Viz také
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)  
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
+[/O možnosti (Optimalizace kódu)](../../build/reference/o-options-optimize-code.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

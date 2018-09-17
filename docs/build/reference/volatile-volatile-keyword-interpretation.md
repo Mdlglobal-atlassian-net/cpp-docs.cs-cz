@@ -1,5 +1,5 @@
 ---
-title: -volatile (interpretace klíčového slova volatile) | Microsoft Docs
+title: -volatile (interpretace klíčového slova volatile) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccd36c5edaaab8577e5f278b25b51ce69e0633f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4204d602d1390bf30080a800174426513faf0467
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723629"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (Interpretace klíčového slova volatile)
 
@@ -36,34 +36,34 @@ Určuje, jak [volatile](../../cpp/volatile-cpp.md) – klíčové slovo se budou
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ volatile:**{**iso**|**ms**}  
+> **/ volatile:**{**iso**|**ms**}
 
 ## <a name="arguments"></a>Arguments
 
-**/volatile:ISO**  
-Vybere striktní `volatile` sémantiku podle jazyka C++ standardem ISO. Získání a verze sémantiku se nezaručuje, že na volatile přístupů. Pokud kompilátor cílem ARM, je to výchozí interpretaci `volatile`.
+**/volatile:ISO**<br/>
+Vybere striktní `volatile` sémantiku podle jazyka C++ podle standardu ISO jazyka. Sémantika získání nebo vydání není zaručena pro nestálé přístupy. Pokud se kompilátor zaměřuje na ARM, toto je výchozí výklad `volatile`.
 
-**/volatile:MS**  
-Vybere Microsoft rozšířené `volatile` sémantikou, které přidat paměti řazení záruky mimo jazyk C++ standardem ISO. Získání a verze sémantiku zaručeně na volatile přístupů. Tato možnost však vynutí kompilátoru generovat překážek paměti hardwaru, které může přidat významné režijní náklady na ARM a dalších slabé architektury řazení paměti. Pokud kompilátor cílem všechny platformy kromě ARM, je to výchozí interpretaci `volatile`.
+**/volatile:MS**<br/>
+Vybere Microsoft rozšířené `volatile` sémantiku, která nad rámec standardu ISO C++ jazyk zaručuje řazení paměti. Sémantika získání nebo vydání je zaručena pro nestálé přístupy. Tato možnost však způsobí kompilátor generuje hardwarové překážky paměti, které mohou přidat významné zatížení na ARM a jiné slabého řazení paměti architektury. Pokud se kompilátor zaměřuje na libovolnou platformu s výjimkou ARM, toto je výchozí výklad `volatile`.
 
 ## <a name="remarks"></a>Poznámky
 
-Důrazně doporučujeme použít **/volatile:iso** spolu s explicitní synchronizace primitiv a vnitřní funkce kompilátoru, když pracujete s pamětí, který je sdílen mezi vláken. Další informace najdete v tématu [volatile](../../cpp/volatile-cpp.md).
+Důrazně doporučujeme používat **/volatile:iso** spolu s explicitní synchronizací primitiv a vnitřních typů kompilátoru při jednání s pamětí, která je sdílena mezi vlákny. Další informace najdete v tématu [volatile](../../cpp/volatile-cpp.md).
 
-Pokud port existující kód nebo změňte tuto možnost uprostřed projektu, může být užitečné umožnit upozornění [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) k identifikaci kódu umístění, které jsou ovlivněné rozdíl ve smyslu sémantiky.
+Pokud portujete existující kód nebo měníte tuto možnost během projektu, může být užitečné povolit upozornění [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) k identifikaci umístění kódu, která jsou ovlivněna rozdíly v sémantice.
 
-Neexistuje žádné `#pragma` ekvivalentní k řízení tuto možnost.
+Neexistuje žádná `#pragma` ekvivalentní pro ovládání této možnosti.
 
-### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Chcete-li nastavit / volatile – možnost kompilátoru v sadě Visual Studio
+### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Chcete-li nastavit možnosti/volatilní – možnost kompilátoru v sadě Visual Studio
 
-1. Otevřete **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. V **další možnosti** přidejte **/volatile:iso** nebo **/volatile:ms** a potom zvolte **OK** nebo **použít** uložte provedené změny.
+1. V **další možnosti** přidejte **/volatile:iso** nebo **/volatile:ms** a klikněte na tlačítko **OK** nebo **použít** uložte provedené změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[volatile](../../cpp/volatile-cpp.md)  
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)  
+[volatile](../../cpp/volatile-cpp.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

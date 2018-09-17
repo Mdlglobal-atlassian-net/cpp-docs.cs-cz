@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319055"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724812"
 ---
 # <a name="valarray-class"></a>valarray – třída
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>Parametry
 
 *_Func(Type)*<br/>
- Objekt funkce, která se použije na každý prvek operand valarray.
+Objekt funkce, která se použije na každý prvek operand valarray.
 
 *_Func(const Type&)*<br/>
- Objekt funkce pro const použije na každý prvek operand valarray.
+Objekt funkce pro const použije na každý prvek operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*  
- Počet míst, které prvky jsou Posunutí vpřed.
+*Počet*<br/>
+Počet míst, které prvky jsou Posunutí vpřed.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota shodná s valarray operand, který je k rozdělení element-wise, operand valarray typu prvku.
+*doprava*<br/>
+Valarray – nebo hodnota shodná s valarray operand, který je k rozdělení element-wise, operand valarray typu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise podle logického `AND` s operand valarray.
+*doprava*<br/>
+Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise podle logického `AND` s operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
+*doprava*<br/>
+Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
+*doprava*<br/>
+Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota shodná s valarray operand, který se má vynásobit element-wise, operand valarray je typu prvku.
+*doprava*<br/>
+Valarray – nebo hodnota shodná s valarray operand, který se má vynásobit element-wise, operand valarray je typu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota shodná s valarray operand, který má být přidán element-wise, do operand valarray typu prvku.
+*doprava*<br/>
+Valarray – nebo hodnota shodná s valarray operand, který má být přidán element-wise, do operand valarray typu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota shodná s valarray operand, která se bude odečítat element-wise, od operand valarray typu prvku.
+*doprava*<br/>
+Valarray – nebo hodnota shodná s valarray operand, která se bude odečítat element-wise, od operand valarray typu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota shodná s valarray operand, který je možné rozdělit element-wise, do operand valarray typu prvku.
+*doprava*<br/>
+Valarray – nebo hodnota shodná s valarray operand, který je možné rozdělit element-wise, do operand valarray typu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – které se mají zkopírovat do operand valarray.
+*doprava*<br/>
+Valarray – které se mají zkopírovat do operand valarray.
 
-*Val*  
- Hodnota má být přiřazena k elementům operand valarray.
+*Val*<br/>
+Hodnota má být přiřazena k elementům operand valarray.
 
-*_Slicearray*  
- Slice_array – které se mají zkopírovat do operand valarray.
+*_Slicearray*<br/>
+Slice_array – které se mají zkopírovat do operand valarray.
 
-*_Gslicearray*  
- Gslice_array – které se mají zkopírovat do operand valarray.
+*_Gslicearray*<br/>
+Gslice_array – které se mají zkopírovat do operand valarray.
 
-*_Maskarray*  
- Mask_array – které se mají zkopírovat do operand valarray.
+*_Maskarray*<br/>
+Mask_array – které se mají zkopírovat do operand valarray.
 
-*_Indarray*  
- Indirect_array – které se mají zkopírovat do operand valarray.
+*_Indarray*<br/>
+Indirect_array – které se mají zkopírovat do operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*  
- Index prvku, který chcete přiřadit hodnotu.
+*_Off*<br/>
+Index prvku, který chcete přiřadit hodnotu.
 
-*_Slicearray*  
- Slice_array – z valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
+*_Slicearray*<br/>
+Slice_array – z valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
 
-*_Gslicearray*  
- Gslice_array – z valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
+*_Gslicearray*<br/>
+Gslice_array – z valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
 
-*_Boolarray*  
- Bool_array valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
+*_Boolarray*<br/>
+Bool_array valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
 
-*_Indarray*  
- Indirect_array – valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
+*_Indarray*<br/>
+Indirect_array – valarray –, který určuje podmnožinu vybrali, nebo se vrátí do nové valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise logické exkluzivní **XOR** s operand valarray.
+*doprava*<br/>
+Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise logické exkluzivní **XOR** s operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise pomocí bitového `OR` s operand valarray.
+*doprava*<br/>
+Valarray – nebo hodnota typu prvku shodná s valarray operand, který je možné kombinovat, element-wise pomocí bitového `OR` s operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize*  
- Počet prvků v změněnou valarray.
+*_Newsize*<br/>
+Počet prvků v změněnou valarray.
 
-*Val*  
- Hodnota má být poskytnut na elementy jehož velikost byla změněna valarray.
+*Val*<br/>
+Hodnota má být poskytnut na elementy jehož velikost byla změněna valarray.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*  
- Počet míst, které prvky jsou Posunutí vpřed.
+*Počet*<br/>
+Počet míst, které prvky jsou Posunutí vpřed.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*  
- Počet prvků, které mají být v valarray.
+*Počet*<br/>
+Počet prvků, které mají být v valarray.
 
-*Val*  
- Hodnota se použije při inicializaci prvků v valarray.
+*Val*<br/>
+Hodnota se použije při inicializaci prvků v valarray.
 
-*PTR*  
- Ukazatele na hodnoty, které se použijí k inicializaci prvků v valarray.
+*PTR*<br/>
+Ukazatele na hodnoty, které se použijí k inicializaci prvků v valarray.
 
-*doprava*  
- Existující valarray – inicializace nového valarray.
+*doprava*<br/>
+Existující valarray – inicializace nového valarray.
 
-*SliceArray*  
- Slice_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
+*SliceArray*<br/>
+Slice_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
 
-*GsliceArray*  
- Gslice_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
+*GsliceArray*<br/>
+Gslice_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
 
-*MaskArray*  
- Mask_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
+*MaskArray*<br/>
+Mask_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
 
-*IndArray*  
- Indirect_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
+*IndArray*<br/>
+Indirect_array –, jejichž hodnoty prvků se mají použít při inicializaci prvků valarray vytváří.
 
-*IList*  
- Objekt initializer_list obsahující prvky ke zkopírování.
+*IList*<br/>
+Objekt initializer_list obsahující prvky ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 

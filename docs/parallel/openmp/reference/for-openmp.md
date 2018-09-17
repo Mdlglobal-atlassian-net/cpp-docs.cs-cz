@@ -1,5 +1,5 @@
 ---
-title: pro (OpenMP) | Microsoft Docs
+title: pro (OpenMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721653"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Způsobí, že práci pro smyčky uvnitř paralelní oblast, kterou chcete rozdělit mezi vláken.  
+Způsobí, že během smyčky for uvnitř paralelní oblasti rozdělit mezi vlákny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,14 +33,13 @@ Způsobí, že práci pro smyčky uvnitř paralelní oblast, kterou chcete rozd�
    for_statement  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+## <a name="arguments"></a>Arguments
+
+*Klauzule*<br/>
+(Volitelné) Nula nebo více klauzulí. Naleznete v části poznámky pro seznam klauzule podporované službou **pro**.  
   
- `clause` (volitelné)  
- Nula nebo více klauzulích. Najdete v části poznámky seznam klauzulích nepodporuje **pro**.  
-  
- `for_statement`  
- A pro smyčky. Nedefinované chování dojde, pokud uživatel kódu v smyčky změny proměnnou index.  
+*for_statement*<br/>
+A smyčky for. Způsobí nedefinované chování, pokud uživatel kód v změny indexovaná proměnná smyčky.  
   
 ## <a name="remarks"></a>Poznámky  
  **Pro** podporuje následující klauzule OpenMP – direktiva:  
@@ -51,7 +50,7 @@ Způsobí, že práci pro smyčky uvnitř paralelní oblast, kterou chcete rozd�
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [řazení](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Řazení](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,7 +58,7 @@ Způsobí, že práci pro smyčky uvnitř paralelní oblast, kterou chcete rozd�
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Pokud **paralelní** rovněž je zadán, `clause` může všechny klauzule přijmout **paralelní** nebo **pro** direktivy, s výjimkou **nowait**.  
+ Pokud **paralelní** je také zadána, `clause` může být jakékoli klauzule přijal **paralelní** nebo **pro** direktivy, s výjimkou **nowait**.  
   
  Další informace najdete v tématu [2.4.1 for – konstrukce](../../../parallel/openmp/2-4-1-for-construct.md).  
   

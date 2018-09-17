@@ -1,5 +1,5 @@
 ---
-title: -MAPINFO (zahrnout informace do souboru mapování) | Microsoft Docs
+title: -MAPINFO (zahrnutí informaci do souboru mapování) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,35 +21,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c65a3c546b808b9a899280933c813422a967f78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f52e044962007c4a820bf234d45b5cb9ffd584f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373358"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723083"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Zahrnout informace do souboru mapování)
-```  
-/MAPINFO:EXPORTS  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /MAPINFO informuje linkeru zahrnout informace o zadaném v souboru mapování, která je vytvořena, pokud zadáte [/MAP](../../build/reference/map-generate-mapfile.md) možnost.  EXPORTUJE informuje linkeru zahrnout exportovaných funkcí.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **ladění** stránku vlastností.  
-  
-4.  Upravit z **mapy exportuje** vlastnosti:  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/MAPINFO:EXPORTS
+```
+
+## <a name="remarks"></a>Poznámky
+
+Parametr/MapInfo přikazuje linkeru, aby začlenil zadané informace do souboru mapování, která je vytvořena při zadání [/MAP](../../build/reference/map-generate-mapfile.md) možnost.  Parametr EXPORTS přikazuje linkeru začlenit exportované funkce.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **ladění** stránku vlastností.
+
+1. Změna **mapovat exporty** vlastnosti:
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: -Ob (rozšíření vložené funkce) | Microsoft Docs
+title: -Ob (rozbalení vložené funkce) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725254"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (rozbalení vložené funkce)
 
-Ovládací prvky vložené rozšíření funkcí.
+Řídí vložené rozšíření funkcí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,42 +51,42 @@ Ovládací prvky vložené rozšíření funkcí.
 
 ## <a name="arguments"></a>Arguments
 
-**0**  
-Zakáže vložené rozšíření. Ve výchozím nastavení, dojde k rozšíření uvážení kompilátoru na všechny funkce často označuje jako *automaticky vložené*.
+**0**<br/>
+Zakáže vložené rozšíření. Ve výchozím nastavení, rozbalení dojde podle uvážení kompilátoru pro všechny funkce často označuje jako *auto-inlining*.
 
-**1**  
-Umožňuje rozšíření jenom funkce, které jsou označeny [vložené](../../cpp/inline-functions-cpp.md), `__inline`, nebo `__forceinline`, nebo v členské funkce C++ definované v deklaraci třídy.
+**1**<br/>
+Umožňuje rozšíření pouze funkce označené [vložené](../../cpp/inline-functions-cpp.md), `__inline`, nebo `__forceinline`, nebo v C++ členské funkce definované v deklaraci třídy.
 
-**2**  
-Výchozí hodnota. Umožňuje rozšíření funkcí, které jsou označeny jako `inline`, `__inline`, nebo `__forceinline`a další funkce, která vybere kompilátoru.
+**2**<br/>
+Výchozí hodnota. Povolí rozšíření funkcí označených jako `inline`, `__inline`, nebo `__forceinline`a všechny další funkce, které kompilátor zvolí.
 
-**/ Ob2** je v ovlivňuje při [/O1, / O2 (velikost minimalizovat, maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (Povolit nejvíce rychlost optimalizace)](../../build/reference/ox-full-optimization.md) se používá.
+**/ Ob2** je v účinku po [/O1, / O2 (minimalizovat velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md) se používá.
 
-Tato možnost vyžaduje, abyste povolili optimalizace pomocí **/O1**, **/O2**, **/Ox**, nebo **/Og**.  
+Tato možnost vyžaduje, abyste povolili optimalizace pomocí **/O1**, **/O2**, **/Ox**, nebo **/og**.
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není zaručeno, že všechny funkce budou rozšířené vložené. Vložené rozšíření můžete zakázat, ale nemůže vynutit kompilátor vložené určitou funkci, i když se používá `__forceinline` – klíčové slovo.
+Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není zaručeno, že budou všechny funkce rozbalena po vložení. Vložené rozšíření můžete zakázat, ale nelze provést vynucení kompilátoru k vložení funkce, i když se používá `__forceinline` – klíčové slovo.
 
-Můžete použít `#pragma` [auto_inline –](../../preprocessor/auto-inline.md) – direktiva vyloučit funkce brány v úvahu jako kandidáty pro vložené rozšíření. Viz také `#pragma` [vnitřní](../../preprocessor/intrinsic.md) – direktiva.
+Můžete použít `#pragma` [auto_inline](../../preprocessor/auto-inline.md) směrnice pro vyloučení funkcí v úvahu jako kandidáty pro vložené rozšíření. Viz také `#pragma` [vnitřní](../../preprocessor/intrinsic.md) směrnice.
 
 > [!NOTE]
-> Informace získané z profilace testovací spouští přepsání optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete v tématu [Profile-Guided optimalizace](../../build/reference/profile-guided-optimizations.md).
+> Informace shromážděné z testovacích běhů profilování potlačení optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete v tématu [Profile-Guided optimalizace](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Rozbalte položku **vlastnosti konfigurace**, **C/C++** a vyberte **optimalizace**.
+1. Rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **optimalizace**.
 
-1. Změnit **vložené funkce rozšíření** vlastnost.
+1. Upravit **rozbalení vložených funkcí** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>.
 
 ## <a name="see-also"></a>Viz také
 
-[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)  
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)  
+[/O možnosti (Optimalizace kódu)](../../build/reference/o-options-optimize-code.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

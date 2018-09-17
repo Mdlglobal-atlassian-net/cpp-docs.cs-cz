@@ -1,5 +1,5 @@
 ---
-title: BscMake – odkaz | Microsoft Docs
+title: BscMake – referenční dokumentace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,39 +20,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8e71a448c71fd18ba9cba99cb9b7347598489c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9747d45f6593a689c8330b537945831735fb5e44
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724284"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE – odkaz
+
 > [!WARNING]
-> I když BSCMAKE je stále nainstalován pomocí sady Visual Studio, je již používána rozhraní IDE. Od verze Visual Studio 2008 Procházet a symbol informace jsou v soubor SDF SQL serveru ve složce řešení uloženy automaticky.  
-  
- Nástroj Údržba informací procházení Microsoft (BSCMAKE. Soubor EXE) vytvoří soubor informací o procházení (.bsc) z .sbr soubory vytvořené během kompilace. Některé nástroje třetích stran používají soubory .bsc pro analýzu kódu. 
-  
- Při sestavování vašeho programu vytvoříte soubor procházení informace k aplikaci automaticky, použití BSCMAKE k sestavení souboru. Nemusíte vědět, jak spustit BSCMAKE, pokud vytvoříte váš soubor s informacemi o procházení ve vývojovém prostředí Visual C++. Můžete ale, přečtěte si toto téma pochopit dostupné možnosti.  
-  
- Pokud sestavením programu mimo vývojového prostředí, můžete přesto vytvořit vlastní .bsc, který můžete zkontrolovat v prostředí. Spusťte BSCMAKE na .sbr soubory, které jste vytvořili během kompilace.  
-  
+> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
+
+Nástroj Údržba informací procházení Microsoft (BSCMAKE. (EXE) vytvoří soubor informací o procházení (.bsc) z soubory .sbr vytvořené během kompilace. Některé nástroje třetích stran soubory .bsc použít pro analýzu kódu.
+
+Když vytvoříte aplikaci, vytvoříte informačního souboru procházení pro váš program automaticky, pomocí nástroje BSCMAKE pro sestavení souboru. Nepotřebujete vědět, jak spustit nástroje BSCMAKE vytváření informačního souboru procházení ve vývojovém prostředí Visual C++. Můžete však chtít přečtěte si toto téma pochopit dostupné možnosti.
+
+Pokud vytváříte program mimo vývojové prostředí, můžete stále vytvořit vlastní .bsc, které můžete zkontrolovat v prostředí. BscMake – spouštět soubory .sbr, které jste vytvořili během kompilace.
+
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku Visual Studio Developer. Nelze ji spustit z příkazového řádku systému nebo v Průzkumníku souborů.  
-  
- Tento oddíl obsahuje následující témata:  
-  
--   [Sestavení souborů informací o procházení: Přehled](../../build/reference/building-browse-information-files-overview.md)  
-  
--   [Sestavení souboru BSC](../../build/reference/building-a-dot-bsc-file.md)  
-  
--   [Příkazový řádek BSCMAKE](../../build/reference/bscmake-command-line.md)  
-  
--   [Soubor příkazů BSCMAKE](../../build/reference/bscmake-command-file-response-file.md)  
-  
--   [Možnosti BSCMAKE](../../build/reference/bscmake-options.md)  
-  
--   [BscMake – kódy ukončení](../../build/reference/bscmake-exit-codes.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)
+>  Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+
+Tento oddíl obsahuje následující témata:
+
+- [Sestavení souborů informací o procházení: Přehled](../../build/reference/building-browse-information-files-overview.md)
+
+- [Sestavení souboru .bsc](../../build/reference/building-a-dot-bsc-file.md)
+
+- [BscMake – příkazový řádek](../../build/reference/bscmake-command-line.md)
+
+- [Soubor příkazů BSCMAKE](../../build/reference/bscmake-command-file-response-file.md)
+
+- [Možnosti BSCMAKE](../../build/reference/bscmake-options.md)
+
+- [BscMake – kódy ukončení](../../build/reference/bscmake-exit-codes.md)
+
+## <a name="see-also"></a>Viz také
+
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

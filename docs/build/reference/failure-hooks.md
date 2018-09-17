@@ -1,5 +1,5 @@
 ---
-title: Selhání háků | Microsoft Docs
+title: Selhání háků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be598a77ca48eeee03360a3b598b0567abc6ee4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4c69759034dbb7233970bd89616a062a369cc13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371782"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721276"
 ---
 # <a name="failure-hooks"></a>Selhání háků
-Je povoleno hák selhání stejným způsobem jako [oznámení háku](../../build/reference/notification-hooks.md). Běžné potřeby háku vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC), nebo 0 k označení, že by měl být vyvolána výjimka.  
-  
- Proměnné ukazatele, který odkazuje na uživatelem definované funkce je:  
-  
-```  
-// This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}  
-ExternC  
-PfnDliHook   __pfnDliFailureHook2;  
-```  
-  
- **DelayLoadInfo** struktura obsahuje všechny relevantní data potřebná pro přesné vytváření sestav v chybě, včetně hodnot z `GetLastError`.  
-  
- Pokud se oznámení o **dliFailLoadLib**, funkce háku může vrátit:  
-  
--   0, pokud ji nemůže zpracovat selhání.  
-  
--   HMODULE, pokud hák selhání opraven problém a načíst samotné knihovny.  
-  
- Pokud se oznámení o **dliFailGetProc**, funkce háku může vrátit:  
-  
--   0, pokud ji nemůže zpracovat selhání.  
-  
--   Adresu platný proc (import funkce adresy), pokud selhání připojení úspěšně získávání samotnou adresu.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)
+
+Selhání připojení je povoleno stejným způsobem jako [oznámení hook](../../build/reference/notification-hooks.md). Zavěšení rutinní musí vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC) nebo 0, která znamená, že by měl být vyvolána výjimka.
+
+Proměnné ukazatele, který odkazuje na uživatelem definované funkce je:
+
+```
+// This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}
+ExternC
+PfnDliHook   __pfnDliFailureHook2;
+```
+
+**DelayLoadInfo** struktura obsahuje všechny relevantní data potřebná pro přesné vytváření sestav v chybě, včetně hodnot z `GetLastError`.
+
+Pokud je oznámení **dliFailLoadLib**, funkce háku může vrátit:
+
+- 0, pokud nemůže zpracovat selhání.
+
+- HMODULE, pokud selhání hook opraven problém a načtení samotné knihovny.
+
+Pokud je oznámení **dliFailGetProc**, funkce háku může vrátit:
+
+- 0, pokud nemůže zpracovat selhání.
+
+- Adresa platnou proc (adresa funkce import), pokud selhání připojení bylo úspěšné při získávání adres samotné.
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)

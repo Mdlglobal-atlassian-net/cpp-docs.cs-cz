@@ -1,5 +1,5 @@
 ---
-title: hash – struktura | Microsoft Docs
+title: hash – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82684ac8f2dcd0b8e1b76f04ace8d51051681bd0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22a7ea0679e170051c9b242b61e6739fb461283a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843649"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721627"
 ---
 # <a name="hash-structure"></a>hash – struktura
 
-Šablony třídy definuje jeho metodu jako vrácení `val.hash_code()`. Definuje metodu funkce hash, která se používá k mapování hodnoty typu [type_index](../standard-library/type-index-class.md) k distribučnímu index hodnot.
+Třída šablony definuje svou metodu jako vracející `val.hash_code()`. Metoda definuje hashovací funkci, která se používá k mapování hodnot typu [type_index –](../standard-library/type-index-class.md) k distribuci hodnot indexu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,12 +31,12 @@ ms.locfileid: "33843649"
 template <>
 struct hash<type_index>
 : public unary_function<type_index, size_t>
- { // hashes a typeinfo object
+{ // hashes a typeinfo object
     size_t operator()(type_index val) const;
 
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<typeindex >](../standard-library/typeindex.md)<br/>

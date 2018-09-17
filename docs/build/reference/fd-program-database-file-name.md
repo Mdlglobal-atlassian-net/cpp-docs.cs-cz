@@ -1,5 +1,5 @@
 ---
-title: -Fd (název souboru databáze programu) | Microsoft Docs
+title: -Fd (název souboru databáze programu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,54 +24,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ab9f1d9c5c611b8da8b19860fe9e0c05351d75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64e047a832b3c097ced57f9d491b1344c51da495
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375620"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724409"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Název souboru databáze programu)
-Určuje název souboru pro soubor databáze (PDB) programu vytvořené [/Z7, / zi, /ZI (formát informace ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Fdpathname  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Bez **/Fd**, výchozí název souboru PDB VC*x*0.pdb, kde *x* je hlavní verzi Visual C++ v použití.  
-  
- Pokud zadáte název cesty, která neobsahuje název souboru (cesta končí v zpětné lomítko), kompilátor vytvoří soubor .pdb s názvem VC*x*pdb 0 v určeném adresáři.  
-  
- Pokud zadáte název souboru, který nezahrnuje rozšíření, kompilátor použije PDB jako rozšíření.  
-  
- Tato možnost také názvy soubor stavu (IDB) použitý pro minimální opětovné sestavení a přírůstkové kompilace.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **výstupní soubory** stránku vlastností.  
-  
-4.  Změnit **název souboru databáze programu** vlastnost.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.  
-  
-## <a name="example"></a>Příklad  
- Tento příkaz vytvoří soubor .pdb s názvem PROG.pdb a IDB soubor s názvem PROG.idb:  
-  
-```  
-CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Určení názvu cesty](../../build/reference/specifying-the-pathname.md)
+
+Určuje název souboru pro soubor databáze (PDB) program vytvořil [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/Fdpathname
+```
+
+## <a name="remarks"></a>Poznámky
+
+Bez **/Fd**, výchozí název souboru PDB VC*x*0.pdb, kde *x* je hlavní verze Visual C++ používá.
+
+Pokud zadáte název cesty, která neobsahuje název souboru (cestu končí zpětným lomítkem), kompilátor vytvoří soubor .pdb s názvem VC*x*0 pdb v zadaném adresáři.
+
+Pokud zadáte název souboru, který neobsahuje rozšíření, kompilátor používá .pdb jako rozšíření.
+
+Tato možnost také názvy souboru stavu (IDB) používá pro minimální opětovné sestavení a přírůstková kompilace.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **výstupní soubory** stránku vlastností.
+
+1. Upravit **název souboru databáze programu** vlastnost.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.
+
+## <a name="example"></a>Příklad
+
+Tento příkaz vytvoří soubor .pdb s názvem PROG.pdb a souboru IDB s názvem PROG.idb:
+
+```
+CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
+[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
+[Určení názvu cesty](../../build/reference/specifying-the-pathname.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: ladění sestavení pro vydání | Microsoft Docs'
+title: 'Postupy: ladění sestavení pro vydání | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e733375f01d4b2b8ec7090f7f70ad1ec5280cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2dcafe151edf907521c2db49b4ffacca38593e9b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723902"
 ---
 # <a name="how-to-debug-a-release-build"></a>Postupy: Ladění sestavení pro vydání
-Můžete ladit sestavení pro vydání aplikace.  
-  
-### <a name="to-debug-a-release-build"></a>K ladění sestavení pro vydání  
-  
-1.  Otevřete **stránky vlastností** dialogové okno pro projekt. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** uzlu. Nastavit **Debug Information Format** k [kompatibilní s C7 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md) nebo **databázi programu (/Zi)**.  
-  
-3.  Rozbalte položku **Linkeru** a klikněte na **Obecné** uzlu. Nastavit **Povolit přírůstkové propojování** k [ne (/ PŘÍRŮSTKOVÉ: Ne)](../../build/reference/incremental-link-incrementally.md).  
-  
-4.  Vyberte **ladění** uzlu. Nastavit **Generovat ladicí informace** k [Ano (/ DEBUG)](../../build/reference/debug-generate-debug-info.md).  
-  
-5.  Vyberte **optimalizace** uzlu. Nastavit **odkazy** k [/OPT:REF](../../build/reference/opt-optimizations.md) a **Povolit skládání sekvence COMDAT** k [/OPT:ICF](../../build/reference/opt-optimizations.md).  
-  
-6.  Nyní můžete ladit aplikace verzi sestavení. Najít problém, krok prostřednictvím code (nebo použijte pouze v době ladění), dokud zjistíte, kdy dojde k selhání, a pak určit nesprávné parametry nebo kódu.  
-  
-     Pokud aplikace funguje v sestavení ladicí verze, ale v sestavení pro vydání selže, může jedna optimalizace kompilátoru vystavení vadu ve zdrojovém kódu. A izolovat daný problém, zakážete vybrané optimalizace pro každého souboru se zdrojovým kódem, dokud vyhledat soubor a optimalizace, která je příčinou problému. (Urychlit proces, můžete rozdělit do dvou skupin souborů, zakázat optimalizace na jednu skupinu a když narazíte na potíže ve skupině, pokračovat dělení až izolovat soubor problém.)  
-  
-     Můžete použít [/RTC](../../build/reference/rtc-run-time-error-checks.md) pokusit vystavit takové chyby v sestavení pro ladění.  
-  
-     Další informace najdete v tématu [optimalizace si kód](../../build/reference/optimizing-your-code.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)
+
+Ladíte sestavení pro vydání aplikace.
+
+### <a name="to-debug-a-release-build"></a>Chcete-li ladit sestavení pro vydání
+
+1. Otevřít **stránky vlastností** dialogové okno pro projekt. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** uzlu. Nastavte **formát informací o ladění** k [kompatibilní s C7 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md) nebo **databázi programu (/Zi)**.
+
+1. Rozbalte **Linkeru** a klikněte na tlačítko **Obecné** uzlu. Nastavte **umožnil přírůstkové propojování** k [ne (/ INCREMENTAL: NO)](../../build/reference/incremental-link-incrementally.md).
+
+1. Vyberte **ladění** uzlu. Nastavte **Generovat ladicí informace** k [Ano (/ DEBUG)](../../build/reference/debug-generate-debug-info.md).
+
+1. Vyberte **optimalizace** uzlu. Nastavte **odkazy** k [OPT](../../build/reference/opt-optimizations.md) a **Povolit skládání sekvencí COMDAT** k [/OPT:ICF](../../build/reference/opt-optimizations.md).
+
+1. Teď můžete ladit aplikaci verzi sestavení. Chcete-li najít problém, krokovat kód (nebo ladění použití Just-In-Time), dokud nenajdete, kde dojde k selhání a potom určit nesprávné parametry nebo kódu.
+
+   Pokud aplikace funguje v sestavení pro ladění, ale selže v sestavení pro vydání, jeden z optimalizace kompilátoru může vystavení vadu ve zdrojovém kódu. A izolovat daný problém, zakážete vybrané optimalizace pro každý soubor zdrojového kódu, dokud nenajdete soubor a optimalizace, která je příčinou problému. (Pokud chcete tento proces urychlit, můžete rozdělit do dvou skupin souborů, zakáže optimalizaci na jednu skupinu a zjistíte problém ve skupině,-li pokračovat, dělení, dokud problém souboru.)
+
+   Můžete použít [/RTC](../../build/reference/rtc-run-time-error-checks.md) se pokouší vystavit takové chyby v sestavení ladění.
+
+   Další informace najdete v tématu [optimalizace kódu](../../build/reference/optimizing-your-code.md).
+
+## <a name="see-also"></a>Viz také
+
+[Oprava problémů se sestavením pro vydání](../../build/reference/fixing-release-build-problems.md)

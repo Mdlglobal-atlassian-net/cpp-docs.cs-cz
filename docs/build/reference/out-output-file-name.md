@@ -1,5 +1,5 @@
 ---
-title: -OUT (název výstupního souboru) | Microsoft Docs
+title: -OUT (název výstupního souboru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fd9ec1b1631104355e076071370f627a36b4037
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c4bfc79a257424820bed5f784cb0a83daf016d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725397"
 ---
 # <a name="out-output-file-name"></a>/OUT (Název výstupního souboru)
-```  
-/OUT:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Název souboru*  
- Název výstupního souboru zadaného uživatelem. Nahradí výchozí název.  
-  
-## <a name="remarks"></a>Poznámky  
- / Out možnost přepíše výchozí název a umístění program, který vytvoří linkeru.  
-  
- Ve výchozím nastavení tvoří linkeru pomocí základní název příslušné rozšíření (.exe nebo .dll) a první souboru .obj zadaný název souboru.  
-  
- Tato možnost Výchozí základní název pro knihovnu .mapfile nebo importovat. Podrobnosti najdete v tématu [generovat soubor mapování](../../build/reference/map-generate-mapfile.md) (/ MAP) a [/IMPLIB](../../build/reference/implib-name-import-library.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **Obecné** stránku vlastností.  
-  
-4.  Změnit **výstupní soubor** vlastnost.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/OUT:filename
+```
+
+## <a name="arguments"></a>Arguments
+
+*Název souboru*<br/>
+Uživatelem zadaný název výstupního souboru. Nahradí výchozí název.
+
+## <a name="remarks"></a>Poznámky
+
+Parametr/out přepisuje výchozí název a umístění programu, který vytvoří linker.
+
+Ve výchozím nastavení linker tvoří název souboru pomocí základní název první zadaný soubor .obj a příslušné rozšíření (.exe nebo .dll).
+
+Tato možnost Základní název výchozí knihovny .mapfile nebo import. Podrobnosti najdete v tématu [generovat soubor mapování](../../build/reference/map-generate-mapfile.md) (/ MAP) a [/IMPLIB](../../build/reference/implib-name-import-library.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **Obecné** stránku vlastností.
+
+1. Upravit **výstupní soubor** vlastnost.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

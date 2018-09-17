@@ -1,5 +1,5 @@
 ---
-title: -bigobj (zvýšit počet oddílů v. Soubor obj) | Microsoft Docs
+title: -bigobj (zvýšení počtu oddílů v. Soubor obj) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,43 +18,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8bc379462bf5937f463b464ea2972472c49808
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f10456bea8be552df42efe135818ac9c47393fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721484"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zvýšit počet oddílů v souboru .Obj)
-**/ bigobj** zvyšuje počet oddíly, které může obsahovat soubor objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/bigobj  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, soubor objekt může obsahovat až 65 536 (2 ^ 16) adresovatelné oddíly. Toto je případ, bez ohledu na to, která je zadána cílová platforma. **/ bigobj** zvyšuje tuto adresu kapacitu do 4 294 967 296 (2 ^ 32).  
-  
- Většina moduly nikdy vygeneruje soubor .obj, který obsahuje více než 65 536 části. Ale počítač generovaného kódu nebo kód, který výrazně využívá knihovny šablon můžou vyžadovat .obj soubory, které mohou být uloženy další části. **/ bigobj** je povolit ve výchozím nastavení v projektech univerzální platformu Windows (UWP), protože tento kód XAML generované počítač obsahuje velký počet hlaviček. Pokud tuto možnost na projekt aplikace UPW zakážete budete pravděpodobně dojde k chybě kompilátoru C1128.  
-  
- Linkers dodané před Visual C++ 2005 nelze číst soubory .obj, které byly vytvořeny s **/bigobj**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **C/C++** složky.  
-  
-3.  Klikněte **příkazového řádku** stránku vlastností.  
-  
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+
+**/ bigobj** zvyšuje počet oddílů, které mohou obsahovat soubor objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+/bigobj
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím objektový soubor může obsahovat až 65 536 (2 ^ 16) adresovatelných sekcí. To platí bez ohledu na to, která Cílová platforma je zvolena. **/ bigobj** zvyšuje kapacitu této adresy na 4 294 967 296 (2 ^ 32).
+
+Většina modulů nikdy nevygeneruje soubor .obj, který obsahuje více než 65 536 částí. Nicméně počítačem generovaný kód nebo kód, který značně používá knihovny šablon může vyžadovat soubory .obj, které mohou obsahovat další oddíly. **/ bigobj** je povolené ve výchozím nastavení v projektech univerzální platformy Windows (UPW), protože počítačem generovaný kód XAML obsahuje velký počet záhlaví. Pokud zakážete tuto možnost na projekt aplikace UPW budete pravděpodobně dojde k chybě kompilátoru C1128.
+
+Linkers, které byly dodány před Visual C++ 2005 nelze číst soubory .obj, které byly vytvořeny s **/bigobj**.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **C/C++** složky.
+
+1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+
+1. Zadejte možnost do kompilátoru **další možnosti** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

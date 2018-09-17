@@ -1,5 +1,5 @@
 ---
-title: Speciální znaky v makrech | Microsoft Docs
+title: Speciální znaky v makrech | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c271d2f39a4d81776c06a107616170192e82d40d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55a94001e2f912049518120911c25ae64afa24da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380170"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721421"
 ---
 # <a name="special-characters-in-macros"></a>Speciální znaky v makrech
-Číslo přihlásit (#), po definici určuje komentář. Pokud chcete zadat literálu znaménko čísla v makru, použijte šipka nahoru (^), jako v ^ #.  
-  
- Znak dolaru ($) určuje makro volání. Pokud chcete zadat literálu $, použijte $$.  
-  
- K rozšíření definice na nový řádek, ukončení řádku obráceným lomítkem (\\). Po vyvolání makro znak zpětného lomítka plus nový řádek nahrazuje mezerami. Pokud chcete zadat literálu zpětné lomítko na konci řádku, uveďte před ním šipka nahoru (^) nebo po ní následuje specifikátor komentář (#).  
-  
- K určení znaku literálu nový řádek, ukončete řádek s šipka nahoru (^), stejně jako na:  
-  
-```  
-CMDS = cls^  
-dir  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Definice makra NMAKE](../build/defining-an-nmake-macro.md)
+
+Po definici určuje komentář, přihlaste čísla (#). Pokud chcete zadat literální znak čísla v makru, použijte stříšky (^), stejně jako v ^ #.
+
+Znak dolaru ($) určuje volání makra. Pokud chcete nastavit literál $, použijte $$.
+
+Rozšíření definice na nový řádek, ukončení řádku zpětným lomítkem (\\). Při vyvolání makra zpětné lomítko a nový řádek znak je nahrazen mezerou. K určení literálu zpětné lomítko na konci řádku, před stříšky (^) nebo za ním specifikátor komentáře (#).
+
+K určení literálu znakem, končit řádek s stříšky (^), jako:
+
+```
+CMDS = cls^
+dir
+```
+
+## <a name="see-also"></a>Viz také
+
+[Definice makra NMAKE](../build/defining-an-nmake-macro.md)

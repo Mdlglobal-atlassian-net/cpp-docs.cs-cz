@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 114ddba64de255c0f034fb9dbcbe55a45ca72bba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723967"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex – třída
 `COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy. Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.   
@@ -216,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- [in] *bTail*  
+*pControlBar*<br/>
+[in] [in] *bTail*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -246,8 +246,8 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *nDockBarID*  
+*pBar*<br/>
+[in] [in] *nDockBarID*  
  [in] *lprect –*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -262,11 +262,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Ukazatel na panelu ukotvení.  
+*pBar*<br/>
+[in] Ukazatel na panelu ukotvení.  
   
- [in] *pLeftOf*  
- Ukazatel na podokno, které slouží jako zdroj.  
+*pLeftOf*<br/>
+[in] Ukazatel na podokno, které slouží jako zdroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu PRAVDA, pokud je operace úspěšná. V opačném případě vrátí hodnotu FALSE.  
@@ -316,12 +316,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEnable*  
- [in] *uiCustomizeCmd*  
- [in] *strCustomizeLabel*  
- [in] *uiViewToolbarsMenuEntryID*  
- [in] *bContextMenuShowsToolbarsOnly*  
- [in] *bViewMenuShowsToolbarsOnly*  
+*bEnable*<br/>
+[in] [in] *uiCustomizeCmd*  
+*strCustomizeLabel*<br/>
+[in] [in] *uiViewToolbarsMenuEntryID*  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -445,11 +445,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Ukazatel na tlačítku.  
+*pButton*<br/>
+[in] Ukazatel na tlačítku.  
   
- [in] *strTTText*  
- Ukazatel na text popisku.  
+*strTTText*<br/>
+[in] Ukazatel na text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace vrací 0.  
@@ -468,14 +468,14 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszRegEntry*  
- Položky registru, kde knihovny ukládá uživatelská nastavení panelu nástrojů.  
+*lpszRegEntry*<br/>
+[in] Položky registru, kde knihovny ukládá uživatelská nastavení panelu nástrojů.  
   
- [in] *uiUserToolbarFirst*  
- ID ovládacího prvku přiřazená první panel nástrojů definovaný uživatelem.  
+*uiUserToolbarFirst*<br/>
+[in] ID ovládacího prvku přiřazená první panel nástrojů definovaný uživatelem.  
   
- [in] *uiUserToolbarLast*  
- ID ovládacího prvku přiřazená poslední panel nástrojů definovaný uživatelem.  
+*uiUserToolbarLast*<br/>
+[in] ID ovládacího prvku přiřazená poslední panel nástrojů definovaný uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce slouží k inicializaci rozsah ID ovládacích prvků pro přiřazení na panely nástrojů, které uživatelé dynamicky definovat. Parametry *uiUserToolbarFirst* a *uiUserToolbarLast* definovat rozsah povolených toolbar – ovládací prvek ID. Chcete-li zakázat vytváření panelů nástrojů definovaný uživatelem, nastavte *uiUserToolbarFirst* nebo *uiUserToolbarLast* na hodnotu -1.  
@@ -491,8 +491,8 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- [in] *pTarget*  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
  [in] *bAfter*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -523,8 +523,8 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- [in] *dwBarAlignment*  
+*Bod*<br/>
+[in] [in] *dwBarAlignment*  
  [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -543,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIDResource*  
- [in] *dwDefaultStyle*  
- [in] *pParentWnd*  
- [in] *pContext*  
+*nIDResource*<br/>
+[in] [in] *dwDefaultStyle*  
+*pParentWnd*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -588,8 +588,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuPopup*  
- Ukazatel na objekt místní nabídky.  
+*pMenuPopup*<br/>
+[in] Ukazatel na objekt místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro příjem oznámení z `CMFCPopupMenu` objekty při jejich zpracování WM_DESTROY zpráv.  
@@ -606,10 +606,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -626,14 +626,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *pMenuButton*  
- Ukazatel na tlačítko nabídky.  
+*pMenuButton*<br/>
+[in] Ukazatel na tlačítko nabídky.  
   
- [in] *rectImage*  
- Obrázek přidružený k položce nabídky.  
+*rectImage*<br/>
+[in] Obrázek přidružený k položce nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace neprovede žádnou akci a vrátí hodnotu 0.  
@@ -652,14 +652,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *pMenu*  
- Ukazatel na objekt místní nabídky.  
+*pMenu*<br/>
+[in] Ukazatel na objekt místní nabídky.  
   
- [in] *rectLogo*  
- Ukazatel na logo pro zobrazení.  
+*rectLogo*<br/>
+[in] Ukazatel na logo pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepsáním této metody můžete zobrazovat logo v rozbalovací nabídce přidružený k řádku nabídek vlastníkem `COleIPFrameWndEx`-odvozenému objektu. Výchozí implementace nemá žádný účinek.  
@@ -710,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bPreview*  
- [in] *pState*  
+*bPreview*<br/>
+[in] [in] *pState*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -725,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuPane*  
- [in] *uiToolbarID*  
+*pMenuPane*<br/>
+[in] [in] *uiToolbarID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -754,8 +754,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuPopup*  
- Ukazatel na místní nabídky, který se má zobrazit.  
+*pMenuPopup*<br/>
+[in] Ukazatel na místní nabídky, který se má zobrazit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace neprovede žádnou akci a vrátí nenulovou hodnotu. Implementace by mělo vrátit hodnotu FALSE, pokud nelze zobrazit v rozbalovací nabídce.  
@@ -773,11 +773,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuPopup*  
- Ukazatel na místní nabídky, kterou uživatel vybral.  
+*pMenuPopup*<br/>
+[in] Ukazatel na místní nabídky, kterou uživatel vybral.  
   
- [in] *pBar*  
- Ukazatel na panelu, který je hostitelem v nabídce.  
+*pBar*<br/>
+[in] Ukazatel na panelu, který je hostitelem v nabídce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud chcete, aby rozhraní k aktivaci v rozbalovací nabídce; v opačném případě FALSE. Výchozí hodnota je TRUE.  
@@ -803,10 +803,10 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bodu*  
- [in] *nSensitivity*  
- [in] *bExactBar*  
- [in] *pRTCBarType*  
+*Bod*<br/>
+[in] [in] *nSensitivity*  
+*bExactBar*<br/>
+[in] [in] *pRTCBarType*  
  [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -852,10 +852,10 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- [in] *bDestroy*  
- [in] *bAdjustLayout*  
- [in] *bAutoHide*  
+*pControlBar*<br/>
+[in] [in] *bDestroy*  
+*bAdjustLayout*<br/>
+[in] [in] *bAutoHide*  
  [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>Poznámky  
@@ -868,8 +868,8 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *stavu*  
- Určuje stav ukotvení.  
+*Stav*<br/>
+[in] Určuje stav ukotvení.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete určit stav nové dokování pro podokna, které patří do `COleIPFrameWndEx` objektu.  
@@ -885,14 +885,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nabídky*  
- Odkaz na [cmenu –](../../mfc/reference/cmenu-class.md) objektu, který chcete upravit.  
+*Nabídky*<br/>
+[in] Odkaz na [cmenu –](../../mfc/reference/cmenu-class.md) objektu, který chcete upravit.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- Určuje první příkaz definovaný uživatelem.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Určuje první příkaz definovaný uživatelem.  
   
- [in] *uiViewUserToolbarCmdLast*  
- Určuje poslední příkaz definovaný uživatelem.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Určuje poslední příkaz definovaný uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -908,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -928,8 +928,8 @@ virtual void WinHelp(
  [in] dwData  
  Určuje data podle potřeby pro typ nápovědy určené *nCmd*.  
   
- [in] *nCmd*  
- Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) v sadě Windows SDK.  
+*nCmd*<br/>
+[in] Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
   

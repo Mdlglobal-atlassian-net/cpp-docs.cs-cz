@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765928"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721718"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton – třída
 Tlačítka panelu nástrojů, který obsahuje místní nabídku.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Existující `CMFCToolBarMenuButton` objektu, které se mají zkopírovat do tohoto `CMFCToolBarMenuButton` objektu.  
+*src*<br/>
+[in] Existující `CMFCToolBarMenuButton` objektu, které se mají zkopírovat do tohoto `CMFCToolBarMenuButton` objektu.  
   
- [in] *uiID*  
- ID příkazu ke spuštění, když uživatel klikne na tlačítko; nebo (UINT) -1 pro tlačítko nabídky, které nejsou přímo provedení příkazu.  
+*uiID*<br/>
+[in] ID příkazu ke spuštění, když uživatel klikne na tlačítko; nebo (UINT) -1 pro tlačítko nabídky, které nejsou přímo provedení příkazu.  
   
- [in] *hMenu*  
- Popisovač nabídky; nebo hodnota NULL, není-li na tlačítko nabídky.  
+*hMenu*<br/>
+[in] Popisovač nabídky; nebo hodnota NULL, není-li na tlačítko nabídky.  
   
- [in] *iImage*  
- Index obrázku pro tlačítko; nebo -1, pokud toto tlačítko nemá ikonu nebo používá ikonu pro příkaz určený *uiID*. Index je stejný pro všechny `CMFCToolBarImages` objektu v aplikaci.  
+*iImage*<br/>
+[in] Index obrázku pro tlačítko; nebo -1, pokud toto tlačítko nemá ikonu nebo používá ikonu pro příkaz určený *uiID*. Index je stejný pro všechny `CMFCToolBarImages` objektu v aplikaci.  
   
- [in] *lpszText*  
- Text tlačítka nabídky.  
+*lpszText*<br/>
+[in] Text tlačítka nabídky.  
   
- [in] *bUserButton*  
- Hodnota TRUE, pokud na tomto tlačítku zobrazí uživatelské image; FALSE, pokud na tomto tlačítku zobrazí předdefinovaného obrázku přidružený k příkazu určené *uiID*.  
+*bUserButton*<br/>
+[in] Hodnota TRUE, pokud na tomto tlačítku zobrazí uživatelské image; FALSE, pokud na tomto tlačítku zobrazí předdefinovaného obrázku přidružený k příkazu určené *uiID*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud *uiID* je platné ID příkazu, na tlačítko provádí příkaz, když na něj uživatel klikne. Pokud *hMenu* je popisovač platné nabídky tlačítko obsahuje rozevírací nabídka, když se objeví v panelu nástrojů nebo podnabídky, když se objeví v nabídce. Pokud mají oba *uiID* a *hMenu* jsou platné, tlačítko je tlačítko rozdělení s část, která provede příkaz, když uživatel klikne na ni a část s šipku dolů, která se rozevírací nabídka při uživatele kliknutí na ni. Nicméně pokud *hMenu* je platný, uživatel nebude možné kliknout na tlačítko provést příkaz při vložení do nabídky tlačítka.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Popisovač nabídky.  
+*hMenu*<br/>
+[in] Popisovač nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tlačítko nabídky panelu nástrojů můžete zobrazit podnabídky rozevíracího seznamu.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- Ukazatel na kontext zařízení.  
+*primární řadič domény*<br/>
+[in] Ukazatel na kontext zařízení.  
   
- [in] *rectImage*  
- Souřadnice image ohraničující obdélník.  
+*rectImage*<br/>
+[in] Souřadnice image ohraničující obdélník.  
   
- [in] *hIcon*  
- Popisovač na ikonu.  
+*hIcon*<br/>
+[in] Popisovač na ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá ikony dokumentu a vykreslí na tlačítko nabídky, zarovnání na střed v oblasti určené *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectImage*  
- Odkaz na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.  
+*rectImage*<br/>
+[out] Odkaz na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Vrátí počet řádků v rozevírací nabídce, když v nabídce je v režimu palety.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *sizeDefault*  
+*primární řadič domény*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *bDelay*  
+*pWnd*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*primární řadič domény*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *primárního řadiče domény*  
- [in] *rect*  
+*primární řadič domény*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Určuje, která přijímá příkazy rozevírací nabídky okna. To může mít hodnotu NULL jenom v případě, že nadřazené okno má tlačítko nabídky panelu nástrojů.  
+*pWnd*<br/>
+[in] Určuje, která přijímá příkazy rozevírací nabídky okna. To může mít hodnotu NULL jenom v případě, že nadřazené okno má tlačítko nabídky panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnotu TRUE při [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt byl a otevře se úspěšně; jinak vrátí hodnotu FALSE.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMenuOnly*  
- TRUE, pokud chcete toto tlačítko Zobrazit jako tlačítko nabídky, když má platný příkaz ID a podnabídky, FALSE toto tlačítko Zobrazit jako tlačítko rozdělení, když má platný příkaz ID a podnabídky.  
+*bMenuOnly*<br/>
+[in] TRUE, pokud chcete toto tlačítko Zobrazit jako tlačítko nabídky, když má platný příkaz ID a podnabídky, FALSE toto tlačítko Zobrazit jako tlačítko rozdělení, když má platný příkaz ID a podnabídky.  
   
 ### <a name="remarks"></a>Poznámky  
  Obvykle když tlačítka nabídky obsahuje podnabídku a ID příkazu, v nabídce se zdá být tlačítko rozdělení, který má hlavní tlačítko a připojené tlačítko se šipkou dolů. Pokud tuto metodu lze volat a *bMenuOnly* má hodnotu TRUE, na tlačítko se zobrazí místo toho na jediné tlačítko s šipkou dolů v seznamu. Když uživatel klepne na šipku v režimu, otevře se v podnabídce a po kliknutí na jiné šipku část tlačítka v režimu rozhraní vykoná příkaz.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMenuPaletteMode*  
- Určuje, zda v rozevírací nabídce je v režimu palety.  
+*bMenuPaletteMode*<br/>
+[in] Určuje, zda v rozevírací nabídce je v režimu palety.  
   
- [in] *nPaletteRows*  
- Počet řádků v paletě.  
+*nPaletteRows*<br/>
+[in] Počet řádků v paletě.  
   
 ### <a name="remarks"></a>Poznámky  
  V režimu palety všechny položky nabídky se zobrazují jako vícesloupcovém objektu palety. Zadejte počet řádků s použitím *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiBarID*  
- Určuje novou přemístitelný panel ID.  
+*uiBarID*<br/>
+[in] Určuje novou přemístitelný panel ID.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze zadat ID přemístitelný panel, který je vytvořen, když uživatel přetáhne tlačítko nabídky z řádku nabídek. Pokud *uiBarID* parametru je 0, uživatel nemůže odtrhnout nabídky tlačítka.  

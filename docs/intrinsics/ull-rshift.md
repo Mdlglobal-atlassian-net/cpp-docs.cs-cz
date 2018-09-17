@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ad07e225afbfe0c69b5115cfb566ef722eb81e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722656"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Specifické pro Microsoft**  
@@ -39,11 +39,11 @@ unsigned __int64 __ull_rshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `mask`  
- 64bitové celočíselné hodnoty posunutí doprava.  
+*Maska*<br/>
+[in] 64bitové celočíselné hodnoty posunutí doprava.  
   
- [in] `nBit`  
- Počet bitů, chcete-li posunout modulo 32 na x86 a modulo 64 na x64.  
+*nBit*<br/>
+[in] Počet bitů, chcete-li posunout modulo 32 na x86 a modulo 64 na x64.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Maska o `nBit` bits.  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c18a9b1e4a35a1089b8a7fb441161552bb3a3909
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217330"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724305"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 Základní třída použitá pro zobrazování dialogových oken na obrazovce.  
@@ -472,8 +472,8 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFont*  
- Určuje ukazatel na písma, která se použije jako výchozí písmo pro všechny ovládací prvky v tomto dialogu.  
+*pFont*<br/>
+[in] Určuje ukazatel na písma, která se použije jako výchozí písmo pro všechny ovládací prvky v tomto dialogu.  
   
 ### <a name="remarks"></a>Poznámky  
  Dialogové okno bude používat určené písmo jako výchozí pro všechny své ovládací prvky.  

@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8bfd7db4692b162ea603d91d7ca6174dddf4a3db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677325"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722894"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Nastavení aplikace, Průvodce projektem souboru pravidel 
 Zadejte informace pro projekt. Zadaných parametrů se projeví v projektu [stránku vlastností](../ide/working-with-project-properties.md). Po vytvoření projektu můžete zobrazit a upravit každé z následujících možností v **Nmake** stránky ze stránky vlastností projektu.  
   
- **Sestavení příkazového řádku**  
- Určuje příkazový řádek pro spuštění, když uživatel vybere **sestavení** z **sestavení** nabídky. Zobrazí v **příkazový řádek sestavení** pole na **Nmake** stránky ze stránky vlastností projektu.  
+- **Sestavení příkazového řádku**
+
+   Určuje příkazový řádek pro spuštění, když uživatel vybere **sestavení** z **sestavení** nabídky. Zobrazí v **příkazový řádek sestavení** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
- **Output**  
- Určuje název souboru, který bude obsahovat výstup do příkazového řádku. Ve výchozím nastavení tato možnost je podle názvu projektu. Zobrazí v **výstup** pole na **Nmake** stránky ze stránky vlastností projektu.  
+- **Output**
+
+   Určuje název souboru, který bude obsahovat výstup do příkazového řádku. Ve výchozím nastavení tato možnost je podle názvu projektu. Zobrazí v **výstup** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
- **Vyčištění příkazy**  
- Určuje příkazový řádek pro spuštění, když uživatel vybere **Vyčistit** z **sestavení** nabídky. Zobrazí v **příkazový řádek vyčištění** pole na **Nmake** stránky ze stránky vlastností projektu.  
+- **Vyčištění příkazy**
+
+   Určuje příkazový řádek pro spuštění, když uživatel vybere **Vyčistit** z **sestavení** nabídky. Zobrazí v **příkazový řádek vyčištění** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
- **Opětovné sestavení příkazového řádku**  
- Určuje příkazový řádek pro spuštění, když uživatel vybere **znovu sestavit** z **sestavení** nabídky. Zobrazí v **znovu sestavit všechny příkazového řádku** pole na **Nmake** stránky ze stránky vlastností projektu.  
+- **Opětovné sestavení příkazového řádku**
+
+   Určuje příkazový řádek pro spuštění, když uživatel vybere **znovu sestavit** z **sestavení** nabídky. Zobrazí v **znovu sestavit všechny příkazového řádku** pole na **Nmake** stránky ze stránky vlastností projektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Průvodce projektem souboru pravidel](../ide/makefile-project-wizard.md)   

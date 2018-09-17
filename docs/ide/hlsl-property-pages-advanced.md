@@ -1,5 +1,5 @@
 ---
-title: 'HLSL – stránky vlastností: Upřesnit | Microsoft Docs'
+title: 'Hlsl – stránky vlastností: Upřesnit | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725489"
 ---
 # <a name="hlsl-property-pages-advanced"></a>HLSL – stránky vlastností: Upřesnit
-Chcete-li nakonfigurovat následující vlastnosti kompilátoru HLSL (fxc.exe), použijte jeho **Upřesnit** stránku vlastností. Informace o tom, jak získat přístup **Upřesnit** najdete v části stránky vlastností ve složce HLSL [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+Pokud chcete konfigurovat následující vlastnosti kompilátor HLSL (fxc.exe), použijte jeho **Upřesnit** stránku vlastností. Informace o tom, jak získat přístup **Upřesnit** zobrazit stránku vlastností ve složce HLSL [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Potlačit úvodní nápis při spouštění**  
- **Ano (/ nologo)** zobrazování spuštění banner a informace o zprávy; potlačit, jinak hodnota **ne**. Výchozí hodnota je **Ano (/ nologo)**.  
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
+- **Potlačit úvodní nápis**
+
+   **Ano (/ nologo)** potlačí zobrazení nápisu a informačních zpráv při spuštění; v opačném případě **ne**. Výchozí hodnota je **Ano (/ nologo)**.  
   
- **Zpracovávat upozornění jako chyby**  
- **Ano (wdn)** do všech upozornění kompilátoru považovat za chyby; jinak **ne**.  
+- **Zpracovávat upozornění jako chyby**
+
+   **Ano (/WX)** považovat všechna upozornění kompilátoru jako chyby; v opačném případě **ne**.  
   
 ## <a name="see-also"></a>Viz také  
- [HLSL – stránky vlastností](../ide/hlsl-property-pages.md)   
- [HLSL – stránky vlastností: Obecné](../ide/hlsl-property-pages-general.md)   
+ [Hlsl – stránky vlastností](../ide/hlsl-property-pages.md)   
+ [Hlsl – stránky vlastností: Obecné](../ide/hlsl-property-pages-general.md)   
  [HLSL – stránky vlastností: Výstupní soubory](../ide/hlsl-property-pages-output-files.md)

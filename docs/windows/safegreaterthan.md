@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c67dbe68c26a306b59eaf20b741b6b061ac2192
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d17f464fd618f69279a5fe2e65c1abf8147eec9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596507"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724792"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 
@@ -40,11 +40,11 @@ inline bool SafeGreaterThan (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-První číslo k porovnání. Musí se jednat o typ `T`.
+*t*<br/>
+[in] První číslo k porovnání. Musí se jednat o typ `T`.
 
-[in] *u*  
-Druhé číslo k porovnání. Musí se jednat o typ `U`.
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ `U`.
 
 ## <a name="return-value"></a>Návratová hodnota
 

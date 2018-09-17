@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cd5341dc4d47740410df01feadbd9e6aa3926a23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464915"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721382"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Specifické pro Microsoft**  
@@ -60,11 +60,11 @@ void __addgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Posun od začátku `GS`.  
+*Posun*<br/>
+[in] Posun od začátku `GS`.  
   
- [in] `Data`  
- Hodnota k přidání do umístění v paměti.  
+*Data*<br/>
+[in] Hodnota k přidání do umístění v paměti.  
   
 ## <a name="requirements"></a>Požadavky  
   

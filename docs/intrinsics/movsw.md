@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb716f69a38b779c686bb07ac2af6240286b4a09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721581"
 ---
 # <a name="movsw"></a>__movsw
 **Specifické pro Microsoft**  
@@ -41,14 +41,14 @@ void __movsw(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Dest`  
- Cíl operace.  
+*cíl*<br/>
+[out] Cíl operace.  
   
- [in] `Source`  
- Zdroj operaci.  
+*Zdroj*<br/>
+[in] Zdroj operaci.  
   
- [in] `Count`  
- Počet slova, která chcete kopírovat.  
+*Počet*<br/>
+[in] Počet slova, která chcete kopírovat.  
   
 ## <a name="requirements"></a>Požadavky  
   

@@ -1,5 +1,5 @@
 ---
-title: Odvozená pravidla | Microsoft Docs
+title: Odvozená pravidla | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2baa4bdd749e7553d052600cc9efe524ec09910d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed45e5ad61ea1cc50172cd86716b357baa64fa39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368418"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724381"
 ---
 # <a name="inference-rules"></a>Odvozená pravidla
-Odvozená pravidla zadat příkazy aktualizaci cíle a odvození závislé objekty pro cíle. Rozšíření v pravidle odvození shodovat s jedním cílem a závislé, které mají stejné základní název. Odvozená pravidla jsou definované uživatelem nebo předdefinované; můžete jej předefinovat předdefinovaná pravidla.  
-  
- Pokud má zastaralé závislostí žádné příkazy a pokud [. PŘÍPONY](../build/dot-directives.md) obsahuje závislé na rozšíření, NMAKE používá pravidla, jejichž rozšíření odpovídají cíl a existující soubor v adresáři zadané nebo aktuální. Pokud existující soubory, odpovídá více než jedno pravidlo **. PŘÍPONY** seznamu určuje, který se použije; seznamu priority descends zleva doprava. Pokud závislý soubor neexistuje a není uvedena jako cíl v jiném popis bloku, odvozené pravidlo můžete vytvořit chybějící závislé z jiného souboru se stejným názvem základní. Pokud cílový blok popis nemá žádné závislosti nebo příkazy, můžete aktualizovat pravidlo odvození cíl. Odvozená pravidla můžete vytvořit cíl příkazového řádku, i v případě, že neexistuje žádný popis blok. NMAKE může vyvolat pravidlo pro odvozené závislé, i když je zadaný explicitní závislé.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
- [Definice pravidla](../build/defining-a-rule.md)  
-  
- [Pravidla dávkového režimu](../build/batch-mode-rules.md)  
-  
- [Předdefinovaná pravidla](../build/predefined-rules.md)  
-  
- [Odvozené závislé objekty a pravidla](../build/inferred-dependents-and-rules.md)  
-  
- [Priorita odvozených pravidel](../build/precedence-in-inference-rules.md)  
-  
-## <a name="see-also"></a>Viz také  
- [NMAKE – referenční zdroje](../build/nmake-reference.md)
+
+Odvozená pravidla zadat příkazy aktualizace cíle a odvodit závislé položky pro cíle. Odvozené pravidlo s rozšířeními shodovat s jedním cílem a závislé, které mají stejný základní název. Odvozená pravidla jsou definované uživatelem nebo předdefinovaný; Předdefinovaná pravidla lze předefinovat.
+
+Pokud zastaralý závislostí nemá žádné příkazy a pokud [. PŘÍPONY](../build/dot-directives.md) obsahuje vlastnost extension závislé položky, používá NMAKE pravidlo, jehož rozšíření odpovídají cíl a existující soubor v adresáři zadané nebo aktuální. Pokud více než jedno pravidlo odpovídá existující soubory **. PŘÍPONY** seznam určuje, která bude použita; seznamu priority dělí zleva doprava. Pokud závislý soubor buď neexistuje, není uveden jako cíl v jiném bloku popis odvozené pravidlo můžete vytvořit chybějící závislé z jiného souboru se stejným základním názvem. Pokud blok popis cíl neobsahuje žádné závislé položky nebo příkazy, odvozené pravidlo aktualizovat cíl. Odvozená pravidla můžete vytvořit jiný cíl příkazového řádku, i v případě, že neexistuje žádný blok popis. NMAKE může vyvolat pravidla pro odvozené závislé, i v případě, že je zadán explicitní závislé.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+[Definice pravidla](../build/defining-a-rule.md)
+
+[Pravidla dávkového režimu](../build/batch-mode-rules.md)
+
+[Předdefinovaná pravidla](../build/predefined-rules.md)
+
+[Odvozené závislé objekty a pravidla](../build/inferred-dependents-and-rules.md)
+
+[Priorita odvozených pravidel](../build/precedence-in-inference-rules.md)
+
+## <a name="see-also"></a>Viz také
+
+[NMAKE – referenční zdroje](../build/nmake-reference.md)

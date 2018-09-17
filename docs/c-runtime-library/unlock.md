@@ -1,5 +1,5 @@
 ---
-title: _Unlock – | Microsoft Docs
+title: _Unlock | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 478f942b489aa2350319b90da4c05c61925101f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcc842ef134d5f61cf634debe9dd16449b48bbb8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407919"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724019"
 ---
 # <a name="unlock"></a>_unlock
 Uvolní zámek více vláken.  
   
 > [!IMPORTANT]
->  Tato funkce je zastaralé. Od verze sady Visual Studio 2015, není k dispozici v CRT.  
+>  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,8 +52,8 @@ void __cdecl _unlock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `locknum`  
- Identifikátor zámek k uvolnění.  
+*locknum*<br/>
+[in] Identifikátor zámek k uvolnění.  
   
 ## <a name="requirements"></a>Požadavky  
  **Zdroj:** mlock.c  

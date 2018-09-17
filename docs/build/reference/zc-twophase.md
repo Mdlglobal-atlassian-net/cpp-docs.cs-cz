@@ -1,5 +1,5 @@
 ---
-title: /Zc:twoPhase-(zakázat dvoufázového název vyhledávání) | Microsoft Docs
+title: /Zc:twoPhase-(zakázání dvoufázového vyhledávání názvů) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723291"
 ---
-# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(zakázat dvoufázového název vyhledávání)
+# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(zakázání dvoufázového vyhledávání názvů)
 
-Když **/Zc:twoPhase-** je zadána možnost, kompilátor analyzuje a vytvoří instance šablony třídy a funkce nonkonformní stejně jako verze sady Visual Studio před Visual Studio 2017 verze 15.3. 
+Když **/Zc:twoPhase-** je zadána možnost, kompilátor analyzuje a vytvoří instanci třídy šablony a funkce nonkonformní stejně jako verze sady Visual Studio před Visual Studio 2017 verze 15.3.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,31 +36,31 @@ Když **/Zc:twoPhase-** je zadána možnost, kompilátor analyzuje a vytvoří i
 
 ## <a name="remarks"></a>Poznámky
 
-Ve Visual Studio 2017 verze 15.3 a novější, ve výchozím nastavení používá kompilátor vyhledávání dvoufázového názvu pro rozlišení názvu šablony. Pokud **/Zc:twoPhase-** není zadaný, kompilátor přejde do své předchozí nonkonformní třída šablony a funkce šablony název překlad IP adres a nahrazení chování.
+V sadě Visual Studio 2017 verze 15.3 nebo novější, ve výchozím nastavení používá kompilátor dvoufázové vyhledávání názvů pro překlad názvů šablony. Pokud **/Zc:twoPhase-** není zadán, kompilátor přejde do jeho předchozí nonkonformní třídy šablony a funkce šablony řešení a náhradní chování.
 
-**/Zc:twoPhase-** ve výchozím nastavení není nastavena možnost povolit nonkonformní chování. [/ Projektovou-](permissive-standards-conformance.md) možnost implicitně nastaví vyhovující chování kompilátoru dvoufázového vyhledávání, ale můžete přepsat pomocí **/Zc:twoPhase-**.
+**/Zc:twoPhase-** není ve výchozím nastavení nastavená možnost povolit nonkonformní chování. [/ Permissive-](permissive-standards-conformance.md) možnost implicitně nastaví vyhovující chování kompilátoru dvoufázového vyhledávání, ale lze přepsat pomocí **/Zc:twoPhase-**.
 
-Soubory hlaviček Windows SDK ve verzi 10.0.15063.0 (Creators aktualizace nebo Redstone 2) a starší verze v režimu shoda nefungují správně. Je nutné použít **/Zc:twoPhase-** zkompilovat kód pro tyto verze sady SDK, pokud používáte verzi Visual Studio 2017 15.3 a novější verze. Verze sady Windows SDK pro počínaje verzí 10.0.15254.0 (Redstone 3 nebo patří Creators aktualizace) v režimu shoda fungovat správně a nevyžadují **/Zc:twoPhase-** možnost.
+Soubory hlaviček sady Windows SDK ve verzi 10.0.15063.0 (Creators Update nebo Redstone 2) a předchozími verzemi nefungují správně v režim přizpůsobení. Je nutné použít **/Zc:twoPhase-** ke kompilaci kódu pro tyto verze sady SDK při použití sady Visual Studio 2017 verze 15.3 a novějších verzích. Verze sady SDK Windows od verze 10.0.15254.0 (Redstone 3 nebo Fall Creators Update) fungovat správně v režim přizpůsobení a nevyžadují, aby **/Zc:twoPhase-** možnost.
 
-Použití **/Zc:twoPhase-** Pokud kódu vyžaduje staré chování pro správnou kompilaci. Důrazně zvažte aktualizaci kódu tak, aby odpovídala standardní.
+Použití **/Zc:twoPhase-** Pokud váš kód vyžaduje staré chování pro správnou kompilaci. Důkladně zvážit možnost aktualizaci kódu tak, aby odpovídal standardu.
 
 ### <a name="compiler-behavior-under-zctwophase-"></a>Chování kompilátoru pod /Zc:twoPhase-
 
-Ve verzích kompilátoru před Visual Studio 2017 verze 15.3 a kdy **/Zc:twoPhase-** není zadaný, kompilátor použije toto chování:
+Ve verzích sady Visual Studio 2017 verze 15.3, kompilátor a kdy **/Zc:twoPhase-** není zadán, kompilátor používá toto chování:
 
-- Analyzuje jej pouze deklaraci šablony, head třídy a seznamu základní třídy. Šablona textu se zaznamená jako tokenu datového proudu. Žádné funkce subjekty, inicializátory, výchozí argumenty nebo noexcept argumenty jsou analyzovány. Šablona třídy je vytvořena instance pseudo ve typu předběžné ověření, zda deklarace v šabloně třídy jsou správné. Vezměte v úvahu tato šablona třídy:
+- Analyzuje pouze deklarace šablony, hlavní třídy a seznam základních tříd. Šablona textu zaznamená v podobě token datového proudu. Žádné těla funkcí, inicializátory, výchozí argumenty nebo argumenty noexcept jsou analyzovány. Šablona třídy je vytvořena instance pseudo nezávazně typu ověření, že deklarace v šabloně třídy jsou správné. Vezměte v úvahu tuto šablonu třídy:
 
    ```cpp
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   Deklaraci šablony `template <typename T`>, head – třída `class Derived`a seznam základní třídy `public Base<T>` jsou analyzovat, ale text šablony se zaznamená jako tokenu datového proudu.
+   Deklarace šablony `template <typename T`>, hlavní třída `class Derived`a seznamu základní třídy `public Base<T>` jsou analyzovány, ale text šablony zaznamená v podobě token datového proudu.
 
-- Při analýze šablonu funkce, kompilátor analyzuje pouze podpis funkce. Tělo funkce je nikdy analyzovat. Místo toho se zaznamená jako tokenu datového proudu.
+- Při analýze šablony funkce, kompilátor analyzuje pouze signatura funkce. Tělo funkce se nikdy analyzovat. Místo toho jsou zachyceny jako token datového proudu.
 
-Výsledkem je Pokud šablony text obsahuje chyby syntaxe a nikdy vytvoření instance šablony, chyby se nikdy diagnostice.
+V důsledku toho pokud text šablony obsahuje chyby syntaxe a nikdy vytvořena instance šablona, chyby se nikdy zjistit.
 
-Jiné účinku toto chování je rozlišení přetížení. Kvůli způsobu, kterým token datový proud je rozšířena v lokalitě vytváření instancí znaky, které nebyly viditelné v deklaraci šablony mohou být viditelné v okamžiku vytvoření instance a účastnit rozlišení přetížení. To může vést k šablony, které mění chování v závislosti na kód, který nebyl viditelné, když šablona byla definována rozporu s touto standardní.
+Jiný vliv tohoto chování je v řešení přetížení. Kvůli způsobu, jakým token datového proudu rozbalen v lokalitě vytváření instancí symboly, které nebyly viditelné v deklaraci šablony mohou být viditelné při vytváření instance a součástí řešení přetížení. To může vést k šablonám, které mění chování v závislosti na kód, který nebyl viditelný, při definování šablony, na rozdíl od standardu.
 
 Podívejte se například na tento kód:
 
@@ -76,17 +76,17 @@ template<typename T> void g(T x)
 
 void func(int) { std::puts("The call resolves to int"); }
 
-int main() 
+int main()
 {
     g(3.14);
 }
 ```
 
-Při kompilaci v části **/Zc:twoPhase-**, tento program vytiskne "volání řeší na celá čísla". V režimu shoda v rámci **/ projektovou-**, tento program vytiskne "volání přeloží na void *", protože druhý přetížení z `func` není viditelný, když kompilátor narazí šablony.
+Při kompilaci v rámci **/Zc:twoPhase-**, tento program zobrazí "volání překládá na celé číslo". V režimu shoda v rámci **/ permissive-**, tento program zobrazí "volání přeloží na void *", protože druhé přetížení `func` není viditelný, když kompilátor narazí šablonu.
 
-*Názvy závislých prvků*, názvy, které závisí na parametru šablony, mají chování vyhledávání, které se také liší pod **/Zc:twoPhase-**. V režimu shoda nejsou v místě definice šablony vázán názvy závislých prvků. Místo toho při vytváření instance šablony jsou vyhledávat tyto názvy. Pro volání funkce s názvem závislé funkce že název je svázaný sadu funkcí, které jsou viditelné v místě volání v definici šablony, jak je uvedeno výše. Další přetížení z závislého na argumentu vyhledávání jsou přidány na bod definice šablony a bod kde dojde k vytvoření instance šablony. Dvě fáze dvoufázového vyhledávání jsou vyhledávání pro názvy nezávislých v době definice šablony a vyhledávání pro názvy závislých prvků v době vytvoření instance šablony. V části **/Zc:twoPhase-**, kompilátor neprovádí vyhledávání závislého na argumentu samostatně z obyčejnou, neúplné vyhledávání (tedy nedělá dvoufázového vyhledávání), takže výsledky rozlišení přetížení se můžou lišit.
+*Názvy závislých prvků*, názvy, které jsou závislé na parametru šablony mají chování při vyhledávání, které se také liší podle **/Zc:twoPhase-**. V režimu přizpůsobení závislé názvy nejsou vázány Přejme během definice šablony. Místo toho tyto názvy jsou vyhledány při vytváření instance šablony. Pro volání funkce s názvem závislé funkce název je vázán na sadu funkcí, které jsou viditelné v místě volání v definici šablony, jak je uvedeno výše. Další přetížení z vyhledávání závislého na argumentech přidají v bodě definice šablony a místa, ve kterém je vytvořena instance šablony. Dvě fáze dvoufázového vyhledávání vyhledávání pro nezávislé názvy jsou v době definice šablony a vyhledávání nezávislých názvů v době vytváření instancí šablon. V části **/Zc:twoPhase-**, kompilátor neprovádí vyhledávání závislého na argumentech samostatně z běžných, nekvalifikované vyhledávání (to znamená, neumí dvoufázového vyhledávání), takže výsledky řešení přetížení může být jiný.
 
-Zde je další příklad:
+Tady je další příklad:
 
 ```cpp
 // zctwophase1.cpp
@@ -123,28 +123,28 @@ func(long)
 NS::func(NS::S)
 ```
 
-Když kompilujete s **/Zc:twoPhase-**, to vytiskne
+Při kompilaci s **/Zc:twoPhase-**, to vytiskne
 
 ```Output
 func(int)
 NS::func(NS::S)
 ```
 
-V režimu shoda v rámci **/ projektovou-**, volání `tfunc(1729)` přeloží na `void func(long)` přetížení není `void func(int)` přetížení jako v části **/Zc:twoPhase-**, protože neúplný `func(int)` je deklarovaný po definování šablony a prostřednictvím vyhledávání závislého na argumentu nebyl nalezen. Ale `void func(S)` účastnit závislého na argumentu vyhledávání, tak se přidá do přetížení nastavit pro volání `tfunc(s)` i když je deklarovaná po funkce šablony.
+V režimu shoda v rámci **/ permissive-**, volání `tfunc(1729)` přeloží na `void func(long)` přetížení není `void func(int)` přetížení podle **/Zc:twoPhase-**, protože neúplný `func(int)` se deklaroval po definici šablony a pomocí vyhledávání závislého na argumentu nebyl nalezen. Ale `void func(S)` účastnit vyhledávání závislého na argumentech, takže se přidá do nastavení pro volání přetížení `tfunc(s)` i v případě, že je deklarována za šablony funkcí.
 
-### <a name="update-your-code-for-two-phase-conformance"></a>Aktualizujte kód pro dvoufázového shoda
+### <a name="update-your-code-for-two-phase-conformance"></a>Aktualizujte svůj kód pro dvoufázové shody
 
-Starší verze kompilátoru nevyžadují klíčová slova `template` a `typename` všude, kde je C++ Standard vyžaduje. Tato klíčová slova jsou potřeba v některých pozice k rozlišení, jak analyzovat závislé název během první fáze vyhledávání kompilátory. Příklad:
+Starší verze kompilátoru nevyžadují klíčová slova `template` a `typename` všude, kde je vyžaduje Standard jazyka C++. Tato klíčová slova jsou potřeba v některých položek k rozlišení, jak by se měly kompilátory analyzovat závislé jméno během první fáze vyhledávání. Příklad:
 
 `T::Foo<a || b>(c);`
 
-Analyzuje vyhovující kompilátoru `Foo` jako proměnné v oboru `T`, což znamená, tento kód je logickou- nebo výraz s `T::foo < a` jako levý operand a `b > (c)` jako pravý operand. Pokud jste na mysli používat `Foo` jako šablona funkce, musí znamenat, že se šablona přidáním `template` – klíčové slovo:
+Vyhovující kompilátor analyzuje `Foo` jako proměnné v oboru `T`, takže tento kód je logické- nebo výraz s `T::foo < a` jako levý operand a `b > (c)` jako pravý operand. Pokud jste v úmyslu použít `Foo` jako šablony funkce, je třeba určit, že se jedná šablonu tak, že přidáte `template` – klíčové slovo:
 
 `T::template Foo<a || b>(c);`
 
-V verze starší než Visual Studio 2017 verze 15.3 a kdy **/Zc:twoPhase-** není zadaný, kompilátor umožňuje tento kód bez `template` – klíčové slovo a interpretuje ji jako volání šablony funkce s argumentem `a || b`, protože ji analyzuje šablony velmi omezená způsobem. Výše uvedený kód není vůbec analyzovat v první fázi. Během druhé fáze je dostatek kontextu říct, `T::Foo` je šablonu, nikoli proměnné, takže kompilátor nevynucuje použití klíčového slova.
+Ve verzích před Visual Studio 2017 verze 15.3 a kdy **/Zc:twoPhase-** není zadán, kompilátor umožňuje tento kód bez `template` – klíčové slovo a interpretuje jako volání šablony funkce s argumentem `a || b`, protože analyzuje šablony velmi omezená způsobem. Výše uvedený kód není vůbec analyzovat v první fázi. Ve druhé fázi je dostatečný kontext, který říct `T::Foo` je šablonu, nikoli proměnné, kompilátor nevynucuje použití klíčového slova.
 
-Toto chování se zobrazí také odstraněním klíčové slovo `typename` před názvy subjektů šablony funkce, inicializátory, výchozí argumenty a noexcept argumenty. Příklad:
+Toto chování je možné také prohlížet odstraněním klíčové slovo `typename` před názvy v těla funkcí šablony, inicializátory, výchozí argumenty a argumenty noexcept. Příklad:
 
 ```cpp
 template<typename T>
@@ -154,9 +154,9 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-Pokud použijete klíčové slovo `typename` v těle funkce tento kód zkompiloval pod **/Zc:twoPhase-**, ale není v **/ projektovou-**. `typename` – Klíčové slovo je potřeba určit, že `TYPE` závisí. Protože není v části analyzovat tělo **/Zc:twoPhase-**, položka hierarchyinfoguid kompilátoru vyžadují klíčové slovo. V **/ projektovou-** režimu shoda, kód bez `typename` – klíčové slovo generuje chyby. K migraci kódu pro Visual Studio 2017 verze 15.3 a i mimo vložit `typename` – klíčové slovo tam, kde je chybí.
+Pokud použijete klíčové slovo `typename` v těle funkce tento kód zkompiluje podle **/Zc:twoPhase-**, ale není v **/ permissive-**. `typename` – Klíčové slovo se vyžaduje k označení, že `TYPE` závisí. Protože obsah není analyzovat podle **/Zc:twoPhase-**, položka hierarchyinfoguid kompilátoru vyžadují klíčového slova. V **/ permissive-** režim přizpůsobení, kód bez `typename` – klíčové slovo generuje chyby. Migrace na Visual Studio 2017 verze 15.3 kódu a dalších fázích můžete využít, Vložit `typename` – klíčové slovo, ve kterém chybí.
 
-Podobně zvažte této ukázce kódu:
+Dále doporučujeme, abyste tato ukázka kódu:
 
 ```cpp
 template<typename T>
@@ -166,18 +166,18 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-V části **/Zc:twoPhase-** a starší kompilátory kompilátor pouze vyžaduje `template` – klíčové slovo na řádku 2. Ve výchozím nastavení a v režimu shoda, kompilátor teď taky vyžaduje `template` – klíčové slovo na řádku 4 k označení, že `T::X<T>` je šablonu. Vyhledejte kód, který chybí toto klíčové slovo a zadat, aby byl váš kód standardům.
+V části **/Zc:twoPhase-** a ve starších kompilátory, kompilátor vyžaduje pouze `template` – klíčové slovo na řádku 2. Ve výchozím nastavení a režim přizpůsobení, kompilátor nyní také vyžaduje `template` – klíčové slovo na řádku 4, která označuje, že `T::X<T>` je šablona. Vyhledejte kód, který neobsahuje toto klíčové slovo a zadat ho tak, aby váš kód se řídí standardem.
 
-Další informace o problémech s shoda najdete v tématu [vylepšení shoda C++ v sadě Visual Studio](../../cpp-conformance-improvements-2017.md) a [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení najdete v tématu [vylepšení shody C++ v sadě Visual Studio](../../cpp-conformance-improvements-2017.md) a [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc:twoPhase-** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc:twoPhase-** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>

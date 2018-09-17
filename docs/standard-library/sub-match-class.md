@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722719"
 ---
 # <a name="submatch-class"></a>sub_match – třída
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*  
- Typ iterátoru pro dílčí shody.
+*BidIt*<br/>
+Typ iterátoru pro dílčí shody.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*  
- Dílčí shoda pro porovnání.
+*doprava*<br/>
+Dílčí shoda pro porovnání.
 
-*str*  
- Řetězec, který má být porovnán s.
+*str*<br/>
+Řetězec, který má být porovnán s.
 
-*ptr*  
- Posloupnost zakončená hodnotou null pro porovnání.
+*ptr*<br/>
+Posloupnost zakončená hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 

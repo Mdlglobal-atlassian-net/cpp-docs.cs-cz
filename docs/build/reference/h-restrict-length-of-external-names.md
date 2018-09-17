@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895315"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724396"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Omezit délku externích názvů)
 
@@ -37,7 +37,7 @@ Zastaralé Omezí délku externích názvů.
 
 ## <a name="arguments"></a>Arguments
 
-*Číslo*  
+*Číslo*<br/>
 Určuje maximální délku externích názvů povolené v programu.
 
 ## <a name="remarks"></a>Poznámky
@@ -96,5 +96,5 @@ Použití **/H** není kompatibilní s [/GL (optimalizace celého programu)](../
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

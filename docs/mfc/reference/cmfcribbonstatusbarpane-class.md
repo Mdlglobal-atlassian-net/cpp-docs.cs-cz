@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464918"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725007"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane – třída
 `CMFCRibbonStatusBarPane` Třída implementuje prvek pásu karet, který lze přidat na stavový panel pásu karet.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nCmdID*  
- Určuje ID příkazového podokna.  
+*nCmdID*<br/>
+[in] Určuje ID příkazového podokna.  
   
- [in] *lpszText*  
- Určuje textový řetězec, který se má zobrazit v podokně.  
+*lpszText*<br/>
+[in] Určuje textový řetězec, který se má zobrazit v podokně.  
   
- [in] *bIsStatic*  
- Při hodnotě TRUE nelze podokně Stav zvýrazněny nebo vybrat kliknutím ji.  
+*bIsStatic*<br/>
+[in] Při hodnotě TRUE nelze podokně Stav zvýrazněny nebo vybrat kliknutím ji.  
   
- [in] *hIcon*  
- Určuje ikonu, která se zobrazí v podokně popisovač.  
+*hIcon*<br/>
+[in] Určuje ikonu, která se zobrazí v podokně popisovač.  
   
- [in] *lpszAlmostLargeText*  
- Určuje nejdelší textový řetězec, který lze zobrazit v podokně.  
+*lpszAlmostLargeText*<br/>
+[in] Určuje nejdelší textový řetězec, který lze zobrazit v podokně.  
   
- [in] *hBmpAnimationList*  
- Určuje popisovač, který se používá pro animaci seznamu obrázků.  
+*hBmpAnimationList*<br/>
+[in] Určuje popisovač, který se používá pro animaci seznamu obrázků.  
   
- [in] *cxAnimation*  
- Určuje šířku v pixelech, ikony v seznamu obrázků, který se používá pro animaci.  
+*cxAnimation*<br/>
+[in] Určuje šířku v pixelech, ikony v seznamu obrázků, který se používá pro animaci.  
   
- [in] *clrTrnsp*  
- Určuje průhlednou barvu imagí v seznamu obrázků, které se používají pro animaci.  
+*clrTrnsp*<br/>
+[in] Určuje průhlednou barvu imagí v seznamu obrázků, které se používají pro animaci.  
   
- [in] *uiAnimationListResID*  
- Určuje Identifikátor prostředku, který se používá pro animaci seznamu obrázků.  
+*uiAnimationListResID*<br/>
+[in] Určuje Identifikátor prostředku, který se používá pro animaci seznamu obrázků.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Načte nejdelší textový řetězec, který může zobrazit panelu stavového řádku stav.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszAlmostLargeText*  
- Určuje nejdelší řetězec, který lze zobrazit na panelu stavového stav bez zkrácení.  
+*lpszAlmostLargeText*<br/>
+[in] Určuje nejdelší řetězec, který lze zobrazit na panelu stavového stav bez zkrácení.  
   
 ### <a name="remarks"></a>Poznámky  
  Knihovny vypočítá velikost textu, který *lpszAlmostLargeText* určuje a změní velikost panelu odpovídajícím způsobem. Text bude zkrácen, pokud ho stále nevejde do podokna.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hBmpAnimationList*  
- Určuje popisovač seznamu obrázků.  
+*hBmpAnimationList*<br/>
+[in] Určuje popisovač seznamu obrázků.  
   
- [in] *cxAnimation*  
- Určuje šířku v pixelech, rámce v seznamu obrázků.  
+*cxAnimation*<br/>
+[in] Určuje šířku v pixelech, rámce v seznamu obrázků.  
   
- [in] *clrTransp*  
- Určuje průhlednou barvu ze seznamu obrázků.  
+*clrTransp*<br/>
+[in] Určuje průhlednou barvu ze seznamu obrázků.  
   
- [in] *uiAnimationListResID*  
- Určuje ID prostředku ze seznamu obrázků.  
+*uiAnimationListResID*<br/>
+[in] Určuje ID prostředku ze seznamu obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud seznam obrázků se úspěšně připojil k panelu stavového řádku stav; FALSE v opačném případě.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nAlign*  
- Určuje zarovnání textu.  
+*nAlign*<br/>
+[in] Určuje zarovnání textu.  
   
 ### <a name="remarks"></a>Poznámky  
  *nAlign* může mít jednu z následujících hodnot:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFrameDelay*  
- Určuje frekvenci snímků animace v milisekundách.  
+*nFrameDelay*<br/>
+[in] Určuje frekvenci snímků animace v milisekundách.  
   
- [in] *nDuration*  
- Určuje, jak dlouho přehrávání animace, v milisekundách. Použijte hodnotu -1 pro nekonečnou smyčku.  
+*nDuration*<br/>
+[in] Určuje, jak dlouho přehrávání animace, v milisekundách. Použijte hodnotu -1 pro nekonečnou smyčku.  
   
 ### <a name="remarks"></a>Poznámky  
  Před voláním, je nutné zadat popisovač seznamu obrázků `StartAnimation` pomocí `SetAnimationList`.  

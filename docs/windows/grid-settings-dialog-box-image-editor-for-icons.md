@@ -18,28 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52f6aea7bb934f3dd7b3c42c2c13ff7939a8b168
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 17f44f972482aefda0c65c7599fa6a83b49c36fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723241"
 ---
 # <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>Dialogové okno Nastavení mřížky (Editor obrázků pro ikony) (C++)
 
 Umožňuje zadat nastavení mřížky pro vaši image a zobrazí čáry mřížky upravený obrázek. Řádky jsou užitečné pro úpravy image, ale nejsou uloženy v rámci samotné.
 
-**Mřížka pixelů**  
-Pokud je zaškrtnuto, zobrazí v editoru obrázků do mřížky kolem každý pixel. Mřížky se zobrazí pouze na 4 x a vyšších rozlišení.
+- **Mřížka pixelů**
 
-**Mřížka dlaždic**  
-Při výběru zobrazí v editoru obrázků, určený hodnotami mezery mřížky mřížky kolem bloky v pixelech.
+   Pokud je zaškrtnuto, zobrazí v editoru obrázků do mřížky kolem každý pixel. Mřížky se zobrazí pouze na 4 x a vyšších rozlišení.
 
-**Šířka**  
-Určuje šířku každého bloku dlaždice. To je užitečné při kreslení rastrové obrázky, který obsahuje více bitových kopií, které jsou uspořádány v pravidelných intervalech.
+- **Mřížka dlaždic**
 
-**Výška**  
-Určuje výšku každého bloku dlaždice. To je užitečné při kreslení rastrové obrázky, který obsahuje více bitových kopií, které jsou uspořádány v pravidelných intervalech.
+   Při výběru zobrazí v editoru obrázků, určený hodnotami mezery mřížky mřížky kolem bloky v pixelech.
+
+- **Šířka**
+
+   Určuje šířku každého bloku dlaždice. To je užitečné při kreslení rastrové obrázky, který obsahuje více bitových kopií, které jsou uspořádány v pravidelných intervalech.
+
+- **Výška**
+
+   Určuje výšku každého bloku dlaždice. To je užitečné při kreslení rastrové obrázky, který obsahuje více bitových kopií, které jsou uspořádány v pravidelných intervalech.
 
 ## <a name="requirements"></a>Požadavky
 

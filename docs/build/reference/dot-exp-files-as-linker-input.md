@@ -1,5 +1,5 @@
 ---
-title: . Soubory Exp jako vstup Linkeru | Microsoft Docs
+title: . Soubory Exp jako vstup Linkeru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b5c118e81372bd57810a9472526909ed21f765
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4badc93f38d5ce76dcc294ad4ae216c8e3f6454c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371096"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724006"
 ---
 # <a name="exp-files-as-linker-input"></a>Soubory .Exp jako vstup linkeru
-Export (.exp) soubory obsahují informace o exportovaných funkcí a datové položky. Když LIB vytvoří knihovnu importu, také vytvoří soubor .exp. Můžete použít soubor .exp při propojení program, který exportuje do i importuje z jiné aplikace, buď přímo nebo nepřímo. Pokud jste se souborem .exp, odkaz nevytváří knihovnu importu, protože předpokládá, že LIB již vytvořili. Podrobnosti o soubory .exp a knihoven importovat najdete v tématu [práce knihoven importovat a exportovat soubory](../../build/reference/working-with-import-libraries-and-export-files.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Vstupní soubory LINK](../../build/reference/link-input-files.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Soubory exportu (.exp) obsahují informace o položkách exportované funkce a data. Když LIB vytvoří knihovnu importu, také vytvoří soubor .exp. Souboru .exp se použít, když propojíte svůj program, který exportuje a importuje z jiné aplikace přímo nebo nepřímo. Pokud jste pomocí souboru .exp, odkaz nevytváří knihovnu importu, protože předpokládá, že LIB už nějakou vytvořili. Podrobnosti o soubory .exp a importu knihovny najdete v tématu [práce s knihovnami importovat a exportovat soubory](../../build/reference/working-with-import-libraries-and-export-files.md).
+
+## <a name="see-also"></a>Viz také
+
+[Vstupní soubory LINK](../../build/reference/link-input-files.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

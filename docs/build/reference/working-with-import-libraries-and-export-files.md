@@ -1,5 +1,5 @@
 ---
-title: Práce s importovanými knihovnami a exportovanými soubory | Microsoft Docs
+title: Práce s importovanými knihovnami a exportovanými soubory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc2e5b6b1f2a459d7a00e48ff1aaafff38803871
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 28b4b94025c813ea526964ed6395a2e6af1ac0b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377929"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721237"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Práce s importovanými knihovnami a exportovanými soubory
-LIB s parametrem/DEF slouží k vytvoření knihovnu importu a souboru exportu. ODKAZ používá exportu souboru k vytvoření programu, který obsahuje vyexportuje (obvykle dynamické knihovny (DLL)) a používá knihovny importu odkazy na tyto exporty v jiných aplikacích.  
-  
- Všimněte si, že když vytvoříte své knihovny importu v předběžný krok před vytvořením vaší .dll, je nutné předat stejnou sadu soubory objektů při sestavování .dll, jako předaný při sestavení knihovny importu.  
-  
- Ve většině případů není potřeba použít k vytvoření knihovny importu LIB. Při propojení programu (spustitelného souboru nebo knihovny DLL), který obsahuje Exportuje odkaz automaticky vytvoří knihovnu importu, který popisuje exporty. Později když připojujete program, který odkazuje na tyto exporty, zadejte knihovnu, import.  
-  
- Ale při programu, který umožňuje importovat taková také z provede export knihovny DLL, jestli přímo ani nepřímo, používejte LIB k jeho vytvoření knihoven importovat. Když LIB vytvoří knihovnu importu, také vytvoří soubor exportu. Při propojování jednu z knihoven DLL, je nutné použít soubor exportu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)
+
+LIB se parametr/def slouží k vytvoření knihovny importu a souboru exportu. Exportuje používá odkaz vytvořit program, který obsahuje soubor exportu (obvykle dynamickou knihovnu (DLL)) a používá knihovnu importu přeložit odkazy na tyto exporty v jiných aplikacích.
+
+Všimněte si, že když vytvoříte knihovny importu v předběžný krok před vytvořením vaší knihovny DLL, je nutné předat stejnou sadu souborů objektů při sestavování knihovny DLL, jako úspěšný při sestavování knihovny importu.
+
+Ve většině případů není nutné používat k vytváření knihovny importu LIB. Při propojení programu (spustitelný soubor nebo knihovny DLL), který obsahuje exporty odkaz automaticky vytvoří knihovnu importu, který popisuje exporty. Později Když propojíte svůj program, který odkazuje na tyto exporty, zadejte knihovnu importu.
+
+Ale pokud knihovna DLL exportuje do programu, který také importy z, určuje, zda přímo nebo nepřímo, musí používáte LIB vytvořit jeden z knihovny importu. Když LIB vytvoří knihovnu importu, také vytvoří soubor exportu. Při propojování jednu z knihoven DLL, je nutné použít souboru exportu.
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

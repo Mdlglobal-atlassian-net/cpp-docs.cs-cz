@@ -1,5 +1,5 @@
 ---
-title: -LOADCONFIG | Microsoft Docs
+title: -LOADCONFIG | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83f418d0aaf82dbc9fefba5cbdc1bbf8b2c8bf94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 582a8d666570b974ed97aea5ce2c882e29e4be44
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372029"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723642"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
-```  
-/LOADCONFIG  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato možnost vypíše strukturu IMAGE_LOAD_CONFIG_DIRECTORY volitelné struktura, která je použita zavaděčem systému Windows NT a definované v WINNT. H.  
-  
- Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
-  
-## <a name="see-also"></a>Viz také  
- [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+
+```
+/LOADCONFIG
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato možnost vypíše struktuře IMAGE_LOAD_CONFIG_DIRECTORY volitelné strukturu, která se budou používat zavaděčem Windows NT a definované v WINNT. H.
+
+Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+
+## <a name="see-also"></a>Viz také
+
+[DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

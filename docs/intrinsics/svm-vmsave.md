@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680634"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722849"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Specifické pro Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmsave(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
+|*VmcbPhysicalAddress*|[in] Fyzickou adresu VMCB.|  
   
 ## <a name="remarks"></a>Poznámky  
  `__svm_vmsave` Funkce je ekvivalentní volání `VMSAVE` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování systému" dokument s číslem 24593, revize 3.11 nebo novější, na [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.  
