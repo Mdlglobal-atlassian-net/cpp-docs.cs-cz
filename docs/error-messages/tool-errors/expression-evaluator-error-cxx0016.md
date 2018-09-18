@@ -1,5 +1,5 @@
 ---
-title: CXX0016 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0016 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075413"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Chyba při vyhodnocování výrazu CXX0016
-Konstanta příliš velký.  
-  
- Vyhodnocovací filtr výrazů C nelze přijmout, nebo s plovoucí desetinnou čárkou konstanta, jejichž velikost je větší než přibližně 1.8E + 308 celé číslo bez znaménka konstanta, která je větší než 4 294 967 295 (0FFFFFFFF šestnáctkové).  
-  
- Tato chyba je stejný jako CAN0016.
+
+Konstanta je moc velká
+
+Chyba při vyhodnocování výrazů C nemůže přijmout konstantu celé číslo bez znaménka větší než 4 294 967 295 (0FFFFFFFF šestnáctkové) nebo s plovoucí desetinnou čárkou konstantu, jejíž velikost je větší než přibližně 1.8E + 308.
+
+Tato chyba se shoduje s CAN0016.

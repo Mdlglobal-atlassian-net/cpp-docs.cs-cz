@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::Attach | Microsoft Docs
+title: auto_gcroot::Attach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ddd11cf6c9fbc1b0a032a609f1315e581290c01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106489"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074978"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
-Připojte `auto_gcroot` k objektu.  
+Připojit `auto_gcroot` na objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,14 +46,14 @@ auto_gcroot<_element_type> & attach(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- Objekt, který chcete připojit, nebo `auto_gcroot` obsahující objekt, který chcete připojit.  
+*vp_ravo*<br/>
+Objekt, který chcete připojit, nebo `auto_gcroot` obsahující objekt, který chcete připojit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Aktuální `auto_gcroot`.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `_right` je `auto_gcroot`, se uvolní vlastnictví jeho objekt před objektu je připojen k aktuální `auto_gcroot`.  
+ Pokud `_right` je `auto_gcroot`, uvolní vlastnictví objektu, předtím, než objekt připojí k aktuální `auto_gcroot`.  
   
 ## <a name="example"></a>Příklad  
   

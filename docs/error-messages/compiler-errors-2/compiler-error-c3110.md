@@ -1,5 +1,5 @@
 ---
-title: C3110 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3110 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a0e21b964b8a9b38961de24c94aee3b69ade651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81a5ebca8b1ad4fcc93b57ba49bce64a554131a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077084"
 ---
-# <a name="compiler-error-c3110"></a>C3110 chyby kompilátoru
-'Název_funkce': nelze přetížení metody rozhraní COM  
-  
- Rozhraní, které je uvedena atributem rozhraní, jako například:  
-  
--   [Vlastní](../../windows/custom-cpp.md)  
-  
--   [dispinterface](../../windows/dispinterface.md)  
-  
--   [dual](../../windows/dual.md)  
-  
--   [object](../../windows/object-cpp.md)  
-  
- nemohou být přetíženy. Příklad:  
-  
-```  
-// C3110.cpp  
-#include <unknwn.h>  
-[ object, uuid= "4F98A180-EF37-11D1-978D-0000F805D73B" ]  
-__interface ITestInterface  
-{  
-   HRESULT mf1(void);  
-   HRESULT mf1(BSTR); // C3110  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3110"></a>Chyba kompilátoru C3110
+
+'Název_funkce': nejde přetížit metodu rozhraní COM.
+
+Rozhraní, která je uvedena atributem rozhraní, jako například:
+
+- [Vlastní](../../windows/custom-cpp.md)
+
+- [dispinterface](../../windows/dispinterface.md)
+
+- [dual](../../windows/dual.md)
+
+- [object](../../windows/object-cpp.md)
+
+nemohou být přetíženy. Příklad:
+
+```
+// C3110.cpp
+#include <unknwn.h>
+[ object, uuid= "4F98A180-EF37-11D1-978D-0000F805D73B" ]
+__interface ITestInterface
+{
+   HRESULT mf1(void);
+   HRESULT mf1(BSTR); // C3110
+};
+
+int main()
+{
+}
 ```

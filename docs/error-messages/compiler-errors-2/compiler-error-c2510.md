@@ -1,5 +1,5 @@
 ---
-title: C2510 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2510 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055959"
 ---
-# <a name="compiler-error-c2510"></a>C2510 chyby kompilátoru
-"identifikátor": nalevo od '::' musí být třída nebo struktura/sjednocení  
-  
- Třída, struktura nebo union název musí být uvedeny na levé straně operátor řešení rozsahu (`::`) operátor.
+# <a name="compiler-error-c2510"></a>Chyba kompilátoru C2510
+
+'identifier': Levá strana '::' musí být třída/struktura/sjednocení
+
+Třídy, struktury nebo sjednocení název musí být uvedena na levé straně operátoru rozlišení oboru (`::`) – operátor.

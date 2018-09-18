@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075225"
 ---
 # <a name="ipropertypageimpl-class"></a>Ipropertypageimpl – třída
 
@@ -58,13 +58,13 @@ Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IPropertyPageImpl`.
 
 ## <a name="members"></a>Členové
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Parametry
 
-*bDirty*  
+*bDirty*<br/>
 [in] Při hodnotě TRUE se stav na stránce vlastností je označen jako změnit. V opačném případě je označen jako beze změny.
 
 ### <a name="remarks"></a>Poznámky
@@ -368,7 +368,7 @@ Zobrazit [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-oci
 
 ## <a name="see-also"></a>Viz také
 
-[Ipropertypage2impl – třída](../../atl/reference/ipropertypage2impl-class.md)   
-[Iperpropertybrowsingimpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPage2Impl – třída](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C3880 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3880 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc36f3b5fb9571a707e4ffe4e75182e984e407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03cd1c953e4f0183fe71dcbcf4cc3bfb242b4f1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074354"
 ---
-# <a name="compiler-error-c3880"></a>C3880 chyby kompilátoru
-'příkaz var': nemůže být literál datový člen  
-  
- Typ [literálu](../../windows/literal-cpp-component-extensions.md) musí být atribut, nebo kompilaci převoditelné na jednu z následujících typů:  
-  
--   integrální typ.  
-  
--   odkazy řetězců  
-  
--   výčet se integrální nebo základní typ  
-  
- Následující ukázka generuje C3880:  
-  
-```  
-// C3880.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal System::Decimal staticConst1 = 10;   // C3880  
-   literal int staticConst2 = 10;   // OK  
-};  
+# <a name="compiler-error-c3880"></a>Chyba kompilátoru C3880
+
+'příkaz var': nelze literální datový člen
+
+Typ [literálu](../../windows/literal-cpp-component-extensions.md) musí být atribut, nebo kompilace lze převést na jednu z následujících typů:
+
+- celočíselný typ
+
+- odkazy řetězců
+
+- výčtu integrálního typu nebo základního typu
+
+Následující ukázka generuje C3880:
+
+```
+// C3880.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal System::Decimal staticConst1 = 10;   // C3880
+   literal int staticConst2 = 10;   // OK
+};
 ```

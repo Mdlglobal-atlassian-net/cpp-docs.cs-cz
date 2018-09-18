@@ -1,5 +1,5 @@
 ---
-title: C2723 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2723 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01476218683205d0fb06e81847cfe9727b733158
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b1be2d81ecec7eb96fd9c1cd7e9938ce509f71e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072014"
 ---
-# <a name="compiler-error-c2723"></a>C2723 chyby kompilátoru
-'function': 'specifikátor' specifikátor neplatný v definici funkce  
-  
- Specifikátor nelze vložit definici funkce mimo deklaraci třídy. `virtual` Specifikátor lze zadat pouze u deklaraci členské funkce v rámci deklaraci třídy.  
-  
- Následující ukázka generuje C2723 a ukazuje, jak to opravit:  
-  
-```  
-// C2723.cpp  
-struct X {  
-   virtual void f();  
-   virtual void g();  
-};  
-  
-virtual void X::f() {}   // C2723  
-  
-// try the following line instead  
-void X::g() {}  
+# <a name="compiler-error-c2723"></a>Chyba kompilátoru C2723
+
+'function': "specifikátor" specifikátor není platný v definici funkce
+
+Specifikátor nemůže být použit s definicí funkce mimo deklaraci třídy. `virtual` Specifikátor se dá nastavit jenom v deklaraci členské funkce v deklaraci třídy.
+
+Následující ukázka generuje C2723 a ukazuje, jak ho opravit:
+
+```
+// C2723.cpp
+struct X {
+   virtual void f();
+   virtual void g();
+};
+
+virtual void X::f() {}   // C2723
+
+// try the following line instead
+void X::g() {}
 ```

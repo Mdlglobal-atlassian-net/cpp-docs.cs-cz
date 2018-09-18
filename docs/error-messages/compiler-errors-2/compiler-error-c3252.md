@@ -1,5 +1,5 @@
 ---
-title: C3252 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3252 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc7ca0ccf3c973363e4427c89ccf497c20d1791
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70a38090bcbe1a984e643d6d995abe2c79339163
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080620"
 ---
-# <a name="compiler-error-c3252"></a>C3252 chyby kompilátoru
-"metody": usnadnění virtuální metoda ve spravovaných nebo typ WinRT nelze zmenšit.  
-  
- Třídu, která implementuje virtuální metodu ze základní třídy nebo libovolnou metodu z rozhraní nelze omezit přístup k této metody.  
-  
- Všimněte si, že jsou všechny metody v rozhraní veřejné.  
-  
- Následující ukázka generuje C3252 a ukazuje, jak to opravit:  
-  
-```  
-// C3252.cpp  
-// compile with: /clr /c  
-ref class A {  
-public:  
-   virtual void f1() {}  
-};  
-  
-ref class B : public A {  
-// To fix, uncomment the following line:   
-// public:      
-   virtual void f1() override sealed {}   // C3252, make this method public  
-};  
+# <a name="compiler-error-c3252"></a>Chyba kompilátoru C3252
+
+"metoda": nejde snížit přístupnost virtuální metody ve spravované nebo typ WinRT
+
+Třídu, která implementuje virtuální metodou ze základní třídy nebo jakoukoli metodu z rozhraní nemůže omezovat přístup této metody.
+
+Všimněte si, že všechny metody v rozhraní veřejná.
+
+Následující ukázka generuje C3252 a ukazuje, jak ho opravit:
+
+```
+// C3252.cpp
+// compile with: /clr /c
+ref class A {
+public:
+   virtual void f1() {}
+};
+
+ref class B : public A {
+// To fix, uncomment the following line:
+// public:
+   virtual void f1() override sealed {}   // C3252, make this method public
+};
 ```

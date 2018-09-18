@@ -1,5 +1,5 @@
 ---
-title: Mapování konstant a globálních proměnných | Microsoft Docs
+title: Mapování konstant a globálních proměnných | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,27 +24,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c30f939670931ab031349bc5e9ddcce54e1891
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94cee77f82f850560cc5fe50e13b85c58b7187ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077842"
 ---
 # <a name="constant-and-global-variable-mappings"></a>Mapování konstant a globálních proměnných
-Tyto obecného textu konstanta, globální proměnné a mapování typu standard jsou definovány v Tchar –. H a závisí na tom, zda konstanta `_UNICODE` nebo `_MBCS` byla definována v programu.  
-  
-### <a name="generic-text-constant-and-global-variable-mappings"></a>Mapování obecného textu konstant a globálních proměnných  
-  
-|Obecné textové – název objektu|SBCS (_UNICODE, není definována _MBCS)|_MBCS definováno|_UNICODE definováno|  
-|----------------------------------|--------------------------------------------|--------------------|-----------------------|  
-|`_TEOF`|`EOF`|`EOF`|`WEOF`|  
-|`_tenviron`|`_environ`|`_environ`|`_wenviron`|  
-|`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)   
- [Mapování datového typu](../c-runtime-library/data-type-mappings.md)   
- [Mapování rutiny](../c-runtime-library/routine-mappings.md)   
- [Ukázka programu obecného textu](../c-runtime-library/a-sample-generic-text-program.md)   
- [Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)
+
+Tyto konstantu obecného textu, globální proměnné a mapování typu standard jsou definovány v TCHAR. H a závisí na tom, zda konstanty `_UNICODE` nebo `_MBCS` je definována v programu.
+
+### <a name="generic-text-constant-and-global-variable-mappings"></a>Mapování obecného textu konstant a globálních proměnných
+
+|Obecné textové – název objektu|SBCS (_UNICODE, _MBCS nejsou definovány)|_MBCS definováno|_UNICODE definováno|
+|----------------------------------|--------------------------------------------|--------------------|-----------------------|
+|`_TEOF`|`EOF`|`EOF`|`WEOF`|
+|`_tenviron`|`_environ`|`_environ`|`_wenviron`|
+|`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
+
+## <a name="see-also"></a>Viz také
+
+[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapování datového typu](../c-runtime-library/data-type-mappings.md)<br/>
+[Mapování rutin](../c-runtime-library/routine-mappings.md)<br/>
+[Ukázka programu obecného textu](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)

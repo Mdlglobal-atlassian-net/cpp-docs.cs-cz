@@ -1,5 +1,5 @@
 ---
-title: C3461 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3461 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0b9349ed9450c6d74a9311d5b9265f57cc37b81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8027831810a8f95b8d72ef70e392d9984b5c2f3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077929"
 ---
-# <a name="compiler-error-c3461"></a>C3461 chyby kompilátoru
-'type': může být přeposílán spravovaného typu  
-  
- Předávání typů může dojít pouze pro typy CLR.  V tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md) Další informace.  
-  
- Další informace najdete v tématu [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří komponentu.  
-  
-```  
-// C3461.cpp  
-// compile with: /clr /LD  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3461.  
-  
-```  
-// C3461b.cpp  
-// compile with: /clr /c  
-#using "C3461.dll"  
-class N {};  
-[assembly:TypeForwardedTo(N::typeid)];   // C3461  
-[assembly:TypeForwardedTo(R::typeid)];   // OK  
+# <a name="compiler-error-c3461"></a>Chyba kompilátoru C3461
+
+'type': předávat dál se dají jenom spravovaného typu
+
+Předávání typů může vyskytovat jenom u typů CLR.  Zobrazit [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md) Další informace.
+
+Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad vytvoří komponentu.
+
+```
+// C3461.cpp
+// compile with: /clr /LD
+public ref class R {};
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3461.
+
+```
+// C3461b.cpp
+// compile with: /clr /c
+#using "C3461.dll"
+class N {};
+[assembly:TypeForwardedTo(N::typeid)];   // C3461
+[assembly:TypeForwardedTo(R::typeid)];   // OK
 ```

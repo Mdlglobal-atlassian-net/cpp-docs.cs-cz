@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4116 | Microsoft Docs
+title: Upozornění (úroveň 1) C4116 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17a61dd39c458091216bc2bde89c84ec2307956
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f91892bd28733761c187705b8f576007862027b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080698"
 ---
-# <a name="compiler-warning-level-1-c4116"></a>C4116 kompilátoru upozornění (úroveň 1)
-definice nepojmenované typu v závorkách  
-  
- Struktury, sjednocení nebo výčtového typu bez názvu je definována v výraz v závorkách. Definice typu je smysl.  
-  
- Definice ve volání funkce C, má globální obor. Ve volání funkce C++ má definice stejný obor jako funkce volána.
+# <a name="compiler-warning-level-1-c4116"></a>Kompilátor upozornění (úroveň 1) C4116
+
+Nepojmenovaná definice typu v závorkách
+
+Struktury, sjednocení nebo výčtového typu bez názvu je definována v výraz v závorkách. Definice typu je nemá význam.
+
+Definici ve volání funkce jazyka C, má globální obor. Ve volání funkce C++ má tato definice ve stejném rozsahu jako volané funkce.

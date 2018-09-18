@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1209 | Microsoft Docs
+title: Závažná chyba C1209 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081491"
 ---
 # <a name="fatal-error-c1209"></a>Závažná chyba C1209
-Přátelská sestavení nepodporuje verzi modulu runtime nainstalován  
-  
- C1208 nastane, když máte kompilátoru pro aktuální verzi, ale CLR z předchozí verze.  
-  
- Některé funkce kompilátoru nemusí fungovat na předchozí verzi čas spuštění.  
-  
- Vyřešit C1209, nainstalujte modul common language runtime, který se dodává s kompilátoru, který používáte.  
-  
- Další informace najdete v tématu [přátelských sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+Sestavení Friend nejsou podporovaná ve verzi modulu runtime nainstalovaný
+
+C1208 nastane, pokud máte pro aktuální verzi, ale společného jazykového modulu runtime z předchozí verze kompilátoru.
+
+Některé funkce kompilátoru nemusí fungovat v době běhu předchozí verze.
+
+Pokud chcete vyřešit C1209, nainstalujte modul common language runtime, dodávané s kompilátorem, který používáte.
+
+Další informace najdete v tématu [přátelská sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).

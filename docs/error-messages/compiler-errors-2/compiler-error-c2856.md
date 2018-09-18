@@ -1,5 +1,5 @@
 ---
-title: C2856 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2856 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac67538a10d39bc68059b0a7d1aaf73a381abb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6226bfd2fc11f05f894091f4ff02c145d09e11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072708"
 ---
-# <a name="compiler-error-c2856"></a>C2856 chyby kompilátoru
-\#uvnitř bloku #if nemůže být hdrstop – Direktiva pragma  
-  
- `hdrstop` – Direktiva pragma nemůže být umístěn uvnitř těla Podmíněná kompilace bloku.  
-  
- Přesunout `#pragma hdrstop` příkaz, který má oblast, která není součástí `#if/#endif` bloku.
+# <a name="compiler-error-c2856"></a>Chyba kompilátoru C2856
+
+\#hdrstop – Direktiva pragma nemůže být uvnitř bloku #if.
+
+`hdrstop` – Direktiva pragma nelze umístit uvnitř těla bloku podmíněné kompilace.
+
+Přesunout `#pragma hdrstop` příkazu, který není obsažen v oblasti `#if/#endif` bloku.

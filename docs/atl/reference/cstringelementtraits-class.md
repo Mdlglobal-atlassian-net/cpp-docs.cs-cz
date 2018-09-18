@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074055"
 ---
 # <a name="cstringelementtraits-class"></a>Cstringelementtraits – třída
 
@@ -38,13 +38,13 @@ Tato třída poskytuje statické funkce, které používají třídy kolekcí uk
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="members"></a>Členové
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Ukazatel na první prvek, který bude příjemcem zkopírovaná data.
 
-*pSrc*  
+*pSrc*<br/>
 Ukazatel na první prvek ke kopírování.
 
-*nElements*  
+*nElements*<br/>
 Počet prvků ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Element řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Ukazatel na první prvek, který bude příjemcem přemisťování dat.
 
-*pSrc*  
+*pSrc*<br/>
 Ukazatel na první prvek pro přemístění.
 
-*nElements*  
+*nElements*<br/>
 Počet prvků, které mají přemístění.
 
 ### <a name="remarks"></a>Poznámky
@@ -203,6 +203,6 @@ Tato statická funkce volá [memmove](../../c-runtime-library/reference/memmove-
 
 ## <a name="see-also"></a>Viz také
 
-[Celementtraitsbase – třída](../../atl/reference/celementtraitsbase-class.md)   
-[Cstringelementtraitsi – třída](../../atl/reference/cstringelementtraitsi-class.md)   
+[CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)<br/>
+[CStringElementTraitsI – třída](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

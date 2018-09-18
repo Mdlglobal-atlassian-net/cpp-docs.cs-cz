@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4229 | Microsoft Docs
+title: Upozornění (úroveň 1) C4229 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c902bf397d5906645a9310da337561627d7c443
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e485f4e49859a12b17eac5dd378853bb3795bd7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064039"
 ---
-# <a name="compiler-warning-level-1-c4229"></a>C4229 kompilátoru upozornění (úroveň 1)
-použít anachronism: Modifikátory na data jsou ignorovány.  
-  
- Pomocí modifikátoru Microsoft, jako třeba `__cdecl` u datových deklarace je zastaralé praxi.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4229.cpp  
-// compile with: /W1 /LD  
-int __cdecl counter;   // C4229 cdecl ignored  
+# <a name="compiler-warning-level-1-c4229"></a>Kompilátor upozornění (úroveň 1) C4229
+
+anachronismus: Modifikátory pro data se ignorují.
+
+Pomocí modifikátoru Microsoft, například `__cdecl` na datové deklarace je zastaralý postup.
+
+## <a name="example"></a>Příklad
+
+```
+// C4229.cpp
+// compile with: /W1 /LD
+int __cdecl counter;   // C4229 cdecl ignored
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2528 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2528 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072599"
 ---
-# <a name="compiler-error-c2528"></a>C2528 chyby kompilátoru
-"název": ukazatel na odkaz je neplatný  
-  
- Ukazatel na odkaz nelze deklarovat. Dereference proměnnou než prohlásí ukazatel na ni.  
-  
- Následující ukázka generuje C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+# <a name="compiler-error-c2528"></a>Chyba kompilátoru C2528
+
+"name": ukazatel na odkaz je neplatný
+
+Nelze deklarovat ukazatel na odkaz. Před deklarací ukazatele k němu přistoupit přes ukazatel proměnnou.
+
+Následující ukázka generuje C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

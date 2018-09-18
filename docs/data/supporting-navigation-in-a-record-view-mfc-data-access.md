@@ -1,5 +1,5 @@
 ---
-title: Podpora navigace v zobrazení záznamu (MFC Data Access) | Microsoft Docs
+title: Podpora navigace v zobrazení záznamu (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22a3e59a441c6724676521cb50daa523b84d9ee3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1cb1b6bb4fa69bb89dd7ddd6b9483b36ea5552a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078839"
 ---
-# <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Podpora navigace v zobrazení záznamu (Data MFC Access)
-Toto téma vysvětluje, jak pro podporu přesun mezi záznamy v vaše [CRecordView](../mfc/reference/crecordview-class.md) třídy, včetně informací o:  
+# <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Podpora navigace v zobrazení záznamu (přístup k datům MFC)
+
+Toto téma vysvětluje, jak podporovat přesunu mezi záznamy v vaše [CRecordView](../mfc/reference/crecordview-class.md) třídy, včetně informací o:  
   
--   [Zpracování příkazů](../data/command-handlers-for-record-scrolling-mfc-data-access.md) pro příkazy pohybu záznamu.  
+- [Zpracování příkazů](../data/command-handlers-for-record-scrolling-mfc-data-access.md) pro příkazů pro posouvání záznamů.  
   
--   [Obslužné rutiny aktualizace uživatelského rozhraní pro posouvání](../data/user-interface-updating-for-record-views-mfc-data-access.md) příkazy.  
+- [Obslužné rutiny aktualizace uživatelského rozhraní pro posouvání](../data/user-interface-updating-for-record-views-mfc-data-access.md) příkazy.  
   
 ## <a name="see-also"></a>Viz také  
- [Zobrazení záznamů (Data MFC Access)](../data/record-views-mfc-data-access.md)   
- [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)
+
+[Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

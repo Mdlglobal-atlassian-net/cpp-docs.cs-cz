@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4672 | Microsoft Docs
+title: Upozornění (úroveň 4) C4672 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d084a85a57afc530536c7e5dc6305b4390dc6cd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc31e2bad7a7d00f137611327f818341d28fbae1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075200"
 ---
-# <a name="compiler-warning-level-4-c4672"></a>C4672 kompilátoru upozornění (úroveň 4)
-'identifier1': nejednoznačný. První považovat za 'identifier2.  
-  
- Zadaný objekt, který má být vyvolána v **zkuste** blok je nejednoznačný. Objekt nelze jednoznačně rozlišit, pokud je vyvolána výjimka.
+# <a name="compiler-warning-level-4-c4672"></a>Kompilátor upozornění (úroveň 4) C4672
+
+'identifier1': nejednoznačné. Poprvé zaznamenáno jako "identifier2.
+
+Určený objekt do být vyvolána v **zkuste** blok je nejednoznačný. Objekt nelze jednoznačně rozlišit, pokud je vyvolána.

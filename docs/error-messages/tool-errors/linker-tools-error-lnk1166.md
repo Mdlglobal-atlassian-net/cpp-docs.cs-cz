@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1166 | Microsoft Docs
+title: Chyba Linkerů LNK1166 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 474d4ad146edf4411bd9734a6ec4482273c065dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aa86a9fd3c2d6d19482ba5ce5c866ab660e742e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073080"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Chyba linkerů LNK1166
-nelze upravit kód na posunu = posun va = hodnota  
-  
- ODKAZ se nepodařilo odsadí kód podle potřeby.  
-  
- Některé pokyny nejsou povoleny pro různé stránky hranice u některých procesorů. ODKAZ se pokusí přidat dotyková zařízení a opravte tuto situaci. ODKAZ nelze v tomto případě obejít problém.
+
+nelze upravit kód na posunu = posun, posouzení ohrožení zabezpečení = hodnota
+
+ODKAZ se nepodařilo pro vyplnění kód podle potřeby.
+
+Některé pokyny nemohou překračují hranice stránky na některých procesorech. ODKAZ se pokusí přidat dotyková zařízení chcete-li této situaci. V takovém případě odkaz nelze vyřešit problém.

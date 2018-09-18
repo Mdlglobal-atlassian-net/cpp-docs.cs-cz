@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0014 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0014 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074727"
 ---
 # <a name="project-build-error-prj0014"></a>Chyba sestavení projektu PRJ0014
-Použít k řízení procesů, které jsou vytvořeny objektu úlohy se nezdařilo.  Sestavení nemůže pokračovat.  
-  
- Došlo k chybě ve vývojovém prostředí.  
-  
- Pokud chcete tuto chybu vyřešit, zavřít a znovu načíst projekt. V případě potřeby, ukončete a restartujte Visual Studio.
+
+V objektu úkolu použitého k řízení vytvořených podřízených procesů se nezdařila.  Sestavování nemůže pokračovat.
+
+Ve vývojovém prostředí došlo k chybě.
+
+Chcete-li vyřešit tuto chybu, zavřete a znovu načíst projekt. V případě potřeby, ukončete a restartujte aplikaci Visual Studio.

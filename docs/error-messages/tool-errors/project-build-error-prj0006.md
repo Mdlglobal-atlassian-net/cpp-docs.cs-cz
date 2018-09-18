@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0006 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0006 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 151c22bf13c13de21e89a5c96185cf1c4c1ca349
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264b2f90a2d778b1545117ce5c3b1272626ebad6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073249"
 ---
 # <a name="project-build-error-prj0006"></a>Chyba sestavení projektu PRJ0006
-Nelze otevřít dočasný soubor 'file'. Ujistěte se, že soubor existuje a že adresář není chráněna proti zápisu.  
-  
- Visual C++ nelze vytvořit dočasný soubor během procesu vytváření. Příčiny tohoto stavu:  
-  
--   Žádné dočasného adresáře.  
-  
--   Jen pro čtení dočasný adresář.  
-  
--   Nedostatek místa na disku.  
-  
--   $(Intdir) – složka je buď jen pro čtení nebo obsahuje dočasné soubory, které jsou jen pro čtení.  
-  
- Tato chyba nastane také následující chyba PRJ0007: Nelze vytvořit adresář' výstupní adresář". Chyba PRJ0007 znamená, že nelze vytvořit adresář $(IntDir), zdání vytváření dočasně souborů se také nezdaří.  
-  
- Dočasné soubory se vytvoří vždy, když zadáte:  
-  
--   Soubor odezvy.  
-  
--   Vlastní krok sestavení.  
-  
--   Události sestavení.
+
+Nepovedlo se otevřít dočasný soubor 'file'. Ujistěte se, že soubor existuje a že adresář není chráněn proti zápisu.
+
+Visual C++ nelze vytvořit dočasný soubor během procesu sestavení. Možné důvody zahrnují:
+
+- Žádný adresář temp.
+
+- Jen pro čtení dočasného adresáře.
+
+- Nedostatek místa na disku.
+
+- Složka $(IntDir) je buď jen pro čtení nebo obsahuje dočasné soubory, které jsou jen pro čtení.
+
+Tato chyba se vrátí taky následující chybu PRJ0007: Nelze vytvořit výstupní adresář 'directory'. Chyba PRJ0007 znamená, že nelze vytvořit adresář $(IntDir) zdání vytvoření dočasné soubory se také nezdaří.
+
+Dočasné soubory jsou vytvořeny vždy, když zadáte:
+
+- Soubor odpovědí.
+
+- Vlastní krok sestavení.
+
+- Události sestavení.

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071728"
 ---
 # <a name="array-class"></a>array – třída
 Představuje datový kontejner, který se používá k přesunutí dat na akcelerátor.
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Typ elementu data.
 
-`_Rank`  
+*_Rank*<br/>
 Řád objektu array.
 
 ## <a name="members"></a>Členové
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Associated_Av`  
+*_Associated_Av*<br/>
 Objekt typu accelerator_view určující preferované cílové umístění pole.
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md) objekt, který určuje umístění pole.
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 Požadovaný [access_type](concurrency-namespace-enums-amp.md#access_type) pro toto pole na CPU. Tento parametr má výchozí hodnotu `access_type_auto` byste museli opustit procesoru `access_type` určení modulu runtime. Aktuálního procesoru `access_type` pro pole může být dotázán pomocí `get_cpu_access_type` metody.
 
-`_Extent`  
+*_Extent*<br/>
 Rozsah v každém rozměru pole.
 
-`_E0`  
+*_E0*<br/>
 Nejvýznamnější komponenta rozsahu tohoto oddílu.
 
-`_E1`  
+*_E1*<br/>
 Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
 
-`_E2`  
+*_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
 
-`_InputIterator`  
+*_InputIterator*<br/>
 Typ vstupního iterátoru.
 
-`_Src`  
+*_Src*<br/>
 Kopírovaný objekt.
 
-`_Src_first`  
+*_Src_first*<br/>
 Počáteční iterátor do zdrojového kontejneru.
 
-`_Src_last`  
+*_Src_last*<br/>
 Koncový iterátor do zdrojového kontejneru.
 
-`_Other`  
+*Ji_né*<br/>
 Jiný zdroj dat.
 
-`_Rank`  
+*_Rank*<br/>
 Řád oddílu.
 
-`value_type`  
+*value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view –
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md) do kterého chcete zkopírovat.
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Datový typ prvků objektu vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*_Index*<br/>
 Umístění elementu.
 
-`_I0`  
+*_I0*<br/>
 Nejvýznamnější komponenta počátku tohoto oddílu.
 
-`_I1`  
+*_I1*<br/>
 Další na nejvýznamnější komponenta počátku tohoto oddílu.
 
-`_I2`  
+*_I2*<br/>
 Nejméně významná komponenta počátku tohoto oddílu.
 
-`_I`  
+*_I*<br/>
 Umístění elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*_Index*<br/>
 Index.
 
-`_I`  
+*_I*<br/>
 Index.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Other`  
+*Ji_né*<br/>
 `array` Objektu, který chcete kopírovat.
 
-`_Src`  
+*_Src*<br/>
 `array` Objektu, který chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_E0`  
+*_E0*<br/>
 Nejvýznamnější komponenta rozsahu tohoto oddílu.
 
-`_E1`  
+*_E1*<br/>
 Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
 
-`_E2`  
+*_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
 
-`_Ext`  
+*_Ext*<br/>
 [Rozsahu](extent-class.md) určující rozsah oddílu. Počátek je 0.
 
-`_Idx`  
+*_Idx*<br/>
 [Index](index-class.md) určující umístění počátku. Dílčím oddílem je zbytek rozsahu.
 
-`_I0`  
+*_I0*<br/>
 Nejvýznamnější komponenta počátku tohoto oddílu.
 
-`_I1`  
+*_I1*<br/>
 Další na nejvýznamnější komponenta počátku tohoto oddílu.
 
-`_I2`  
+*_I2*<br/>
 Nejméně významná komponenta počátku tohoto oddílu.
 
-`_Rank`  
+*_Rank*<br/>
 Řád oddílu.
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [Rozsahu](extent-class.md) určující rozsah oddílu.
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [Index](index-class.md) určující umístění počátku.
 
-`value_type`  
+*value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_New_rank`  
+*_New_rank*<br/>
 Řád objektu `extent` objekt předán jako parametr.
 
-`_View_extent`  
+*_View_extent*<br/>
 Rozsah, který se používá pro tvorbu nového [array_view](array-view-class.md) objektu.
 
-`value_type`  
+*value_type*<br/>
 Datový typ prvků v původním `array` objektu a ve vráceném `array_view` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota

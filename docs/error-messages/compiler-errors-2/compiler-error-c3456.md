@@ -1,5 +1,5 @@
 ---
-title: C3456 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3456 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a01c5bcb431f790d04526b6e8d20e9632eb7b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b0b98f62613bfec653375516e8e4157f239acd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075030"
 ---
-# <a name="compiler-error-c3456"></a>C3456 chyby kompilátoru
-[source_annotation_attribute] nejsou povoleny na spravované nebo deklaraci třídy WinRT  
-  
- source_annotation_attribute se používá k definování vlastní atributy pro použití nástroje Analýza kódu.  
-  
- Tyto vlastní atributy jsou pouze užitečné, pokud neexistuje odpovídající modul plug-in, který rozumí atribut.
+# <a name="compiler-error-c3456"></a>Chyba kompilátoru C3456
+
+[source_annotation_attribute] není povolené pro spravované nebo deklarace třídy WinRT
+
+source_annotation_attribute slouží k definování vlastních atributů, které mají být použity nástrojem code analysis.
+
+Tyto vlastní atributy jsou užitečné pouze, pokud neexistuje odpovídající modul plug-in, které rozumí atribut.

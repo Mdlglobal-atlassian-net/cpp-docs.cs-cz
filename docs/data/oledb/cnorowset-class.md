@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074835"
 ---
 # <a name="cnorowset-class"></a>CNoRowset – třída
+
 Můžete použít jako argument šablony (`TRowset`) pro [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Syntaxe
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
+
+*TAccessor*<br/>
+Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CNoRowset` jako argument šablony, pokud příkaz nevrací sadu řádků.  
+
+Použití `CNoRowset` jako argument šablony, pokud příkaz nevrací sadu řádků.  
   
- `CNoRowset` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
+`CNoRowset` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
   
--   `BindFinished` -Určuje po dokončení vazby (vrátí `S_OK`).  
+- `BindFinished` -Určuje po dokončení vazby (vrátí `S_OK`).  
   
--   `Close` -Uvolní řádků a aktuální IRowset rozhraní.  
+- `Close` -Uvolní řádků a aktuální IRowset rozhraní.  
   
--   `GetIID` -Načte rozhraní ID bodu připojení.  
+- `GetIID` -Načte rozhraní ID bodu připojení.  
   
--   `GetInterface` -Načte rozhraní.  
+- `GetInterface` -Načte rozhraní.  
   
--   `GetInterfacePtr` -Načte zapouzdřený ukazatel rozhraní.  
+- `GetInterfacePtr` -Načte zapouzdřený ukazatel rozhraní.  
   
--   `SetAccessor` – Nastaví ukazatel na přistupujícím objektu.  
+- `SetAccessor` – Nastaví ukazatel na přistupujícím objektu.  
   
--   `SetupOptionalRowsetInterfaces` – Nastaví volitelné rozhraní pro sadu řádků.  
+- `SetupOptionalRowsetInterfaces` – Nastaví volitelné rozhraní pro sadu řádků.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1067 | Microsoft Docs
+title: Závažná chyba C1067 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ac7084e92f7f2ed496a4c1572e94a4fa46862f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f267e58617fbc68835fd3a387c4b635de4fd0530
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077669"
 ---
 # <a name="fatal-error-c1067"></a>Závažná chyba C1067
-omezení kompilátoru: byl překročen limit 64 kB na velikost, typ záznamu  
-  
- Tato chyba mohla nastat, pokud symbol má upravený název překročení 247 znaků.  Pokud chcete vyřešit, zkraťte název symbolu.  
-  
- Pokud kompilátor vygeneruje informace o ladění, vysílá záznamů typu k definování typů došlo ve zdrojovém kódu.  Například záznamů typu zahrnují jednoduché struktury a seznamy argumentů funkcí.  Některé z těchto typů záznamů může být velký seznamy.  
-  
- Je omezena na 64 kB na velikost libovolného typu záznamu.  Pokud dojde k překročení tohoto limitu 64 tisíc této chybě dojde.  
-  
- C1067 může také nastat, pokud existuje mnoho symbolů s dlouhé názvy nebo pokud třída, struktura nebo union má příliš mnoho členů.
+
+limit kompilátoru: došlo k překročení 64 kB omezení velikosti záznamu typu
+
+K této chybě může dojít, pokud symbol má upravený název delší než 247 znaků.  Pokud chcete vyřešit, zkraťte název symbolu.
+
+Když kompilátor generuje informace o ladění, vysílá záznamů typu k definování typů vyskytne ve zdrojovém kódu.  Například záznamů typu obsahovat jednoduchý struktury a seznamy argumentů funkce.  Některé z těchto záznamů typu mohou být dlouhé seznamy.
+
+Je 64 kB omezení velikosti u všech typů záznamů.  Pokud se překročí tento limit 64K této chybě dojde.
+
+C1067 může také dojít, pokud existuje mnoho symbolů s dlouhými názvy, nebo pokud se třída, struktura nebo sjednocení má příliš mnoho členů.

@@ -1,5 +1,5 @@
 ---
-title: Vložené funkce | Microsoft Docs
+title: Vložené funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/16/2017
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078579"
 ---
 # <a name="inline-functions"></a>Vložené funkce
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
 Klíčové slovo `__inline` přikazuje kompilátoru nahradit kód uvnitř definice funkce pro každou instanci jejího volání. K nahrazení však dochází pouze dle rozhodnutí kompilátoru. Kompilátor například nevloží funkci, je-li její adresa použita nebo je-li pro vložení příliš velká.
 
@@ -33,7 +33,7 @@ Aby byla funkce považována za vhodnou k vložení, musí pro svou definici pou
 
 Chcete-li zadat vloženou funkci, použijte tento tvar:
 
-> **__inline** *typ*<sub>opt</sub> *definice funkce*
+> **__inline** *typ*<sub>optimalizované</sub> *definice funkce*
 
 Použití vložených funkcí generuje rychlejší a někdy i menší kód, než jaký generuje ekvivalentní volání funkce, a to z následujících důvodů:
 
@@ -43,11 +43,11 @@ Použití vložených funkcí generuje rychlejší a někdy i menší kód, než
 
 - Funkce generované jako vložené jsou předmětem optimalizací kódu, které nejsou běžným funkcím dostupné, protože kompilátor neprovádí meziprocedurální optimalizace.
 
-Funkce používající klíčové slovo `__inline` by neměly být zaměněny s vloženým kódem assembleru. V tématu [vloženého assembleru](../c-language/inline-assembler-c.md) Další informace.
+Funkce používající klíčové slovo `__inline` by neměly být zaměněny s vloženým kódem assembleru. Zobrazit [vložený Assembler](../c-language/inline-assembler-c.md) Další informace.
 
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také
 
-[vložené, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
+[inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
 

@@ -1,5 +1,5 @@
 ---
-title: C2227 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2227 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a23d055dec45693f292978039c5c5108e34e7a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f446cc09ab8799714141aefb45fa4aefc8b940e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078449"
 ---
-# <a name="compiler-error-c2227"></a>C2227 chyby kompilátoru
-nalevo od '-> člen, musíte přejít do třídy nebo struktura/sjednocení nebo obecného typu  
-  
- Operand nalevo od `->` není ukazatel na třídy, struktury nebo union.  
-  
- Následující ukázka generuje C2227:  
-  
-```  
-// C2227.cpp  
-int *pInt;  
-struct S {  
-public:  
-    int member;  
-} s, *pS = &s;  
-  
-int main() {  
-   pInt->member = 0;   // C2227 pInt points to an int  
-   pS->member = 0;   // OK  
-}  
+# <a name="compiler-error-c2227"></a>Chyba kompilátoru C2227
+
+vlevo-> člen musí odkazovat na třídu/strukturu/sjednocení/obecný typ.
+
+Operand nalevo od `->` není ukazatel na třídu, strukturu nebo sjednocení.
+
+Následující ukázka generuje C2227:
+
+```
+// C2227.cpp
+int *pInt;
+struct S {
+public:
+    int member;
+} s, *pS = &s;
+
+int main() {
+   pInt->member = 0;   // C2227 pInt points to an int
+   pS->member = 0;   // OK
+}
 ```

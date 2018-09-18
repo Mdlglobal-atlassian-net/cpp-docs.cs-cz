@@ -1,5 +1,5 @@
 ---
-title: C2092 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2092 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b33680258358648737a9ae235c6f45f3592992
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a0b8f65f58ffe65abee0f15eb511f7857657597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072482"
 ---
-# <a name="compiler-error-c2092"></a>C2092 chyby kompilátoru
-Typ elementu pole "název pole" nemůže být – funkce  
-  
- Pole funkce nejsou povoleny. Pomocí pole ukazatelé na funkce.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2092:  
-  
-```  
-// C2092.cpp  
-typedef void (F) ();  
-typedef F AT[10];   // C2092  
-```  
-  
-## <a name="example"></a>Příklad  
- Možná řešení:  
-  
-```  
-// C2092b.cpp  
-// compile with: /c  
-typedef void (F) ();  
-typedef F * AT[10];  
+# <a name="compiler-error-c2092"></a>Chyba kompilátoru C2092
+
+Typ prvku pole 'pole name' nemůže být – funkce
+
+Pole funkcí nejsou povolené. Použijte pole ukazatelů na funkce.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2092:
+
+```
+// C2092.cpp
+typedef void (F) ();
+typedef F AT[10];   // C2092
+```
+
+## <a name="example"></a>Příklad
+
+Možná řešení:
+
+```
+// C2092b.cpp
+// compile with: /c
+typedef void (F) ();
+typedef F * AT[10];
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3254 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3254 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081179"
 ---
-# <a name="compiler-error-c3254"></a>C3254 chyby kompilátoru
-'explicitní override': třída obsahuje explicitní přepsání přepsat, ale není odvozen z rozhraní, které obsahuje deklarace funkce  
-  
- Pokud jste [explicitně přepsat](../../cpp/explicit-overrides-cpp.md) metodu, třídu, která obsahuje přepsání musí být odvozeny, přímo ani nepřímo, z typ, který obsahuje funkci přepíšete.  
-  
- Následující ukázka generuje C3254:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3254"></a>Chyba kompilátoru C3254
+
+'explicitní přepsání': třída obsahuje explicitní přepsání 'override', ale není odvozen z rozhraní, která obsahuje deklaraci funkce
+
+Pokud jste [explicitně přepsat](../../cpp/explicit-overrides-cpp.md) metodu, třídu, která obsahuje přepsání musí být odvozen, přímo nebo nepřímo, z typu, který obsahuje funkce jsou přepisování.
+
+Následující ukázka generuje C3254:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4819 | Microsoft Docs
+title: Upozornění (úroveň 1) C4819 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718e0783c3f7afcc9af958f7940f437ac4c944b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac468bc605c261b66f47fdf40efd1a01a5383d58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074276"
 ---
-# <a name="compiler-warning-level-1-c4819"></a>C4819 kompilátoru upozornění (úroveň 1)
-Tento soubor obsahuje znak, který není možné vyjádřit v aktuální znakové stránky (number). Uložte soubor ve formátu Unicode, aby se zabránilo ztrátě dat.  
-  
- C4819 nastane, když kompiluje soubor zdroj ANSI v systému pomocí znakové stránky, které nelze vyjádřit všechny znaky v souboru.  
-  
- Chcete-li vyřešit C4819, uložte soubor ve formátu Unicode. V sadě Visual Studio, vyberte **soubor**, **rozšířené možnosti ukládání**. V **rozšířené možnosti ukládání** dialogovém okně vyberte kódování, které může představovat všechny znaky v souboru – například UTF-8 – a potom zvolte **OK**.
+# <a name="compiler-warning-level-1-c4819"></a>Kompilátor upozornění (úroveň 1) C4819
+
+Tento soubor obsahuje znak, který nemůže být reprezentovaný v aktuální znakové stránce (číslo). Uložte soubor ve formátu Unicode, aby se zabránilo ztrátě dat.
+
+C4819 vyvolá při kompilaci zdrojového souboru ANSI v systému, znakovou stránku, která nemůže představovat všechny znaky v souboru.
+
+Chcete-li vyřešit C4819, uložte soubor ve formátu Unicode. V sadě Visual Studio, zvolte **souboru**, **pokročilé nastavení uložení**. V **pokročilé nastavení uložení** dialogové okno Vyberte kódování, které mohou představovat všechny znaky v souboru, například UTF-8 – a klikněte na tlačítko **OK**.

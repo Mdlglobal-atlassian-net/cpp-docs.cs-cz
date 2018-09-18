@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: d3e7603bfe2074022cdaa0e99024627c32452b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072794"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 
@@ -174,33 +174,21 @@ Ovládací prvky jsou primární architektura pro vývoj programovatelný softwa
 ## <a name="displaying-a-control-on-a-web-page"></a>Zobrazení ovládacího prvku na webové stránce  
  Tady je příklad značka objektu a atributů pro vložení ovládacího prvku na webové stránce.  
   
- `<OBJECT`  
-  
- `CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"`  
-  
- `CODEBASE="/ie/download/activex/iechart.ocx"`  
-  
- `ID=chart1`  
-  
- `WIDTH=400`  
-  
- `HEIGHT=200`  
-  
- `ALIGN=center`  
-  
- `HSPACE=0`  
-  
- `VSPACE=0`  
-  
- `>`  
-  
- `<PARAM NAME="BackColor" value="#ffffff">`  
-  
- `<PARAM NAME="ForeColor" value="#0000ff">`  
-  
- `<PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt">`  
-  
- `</OBJECT>`  
+```xml
+<OBJECT
+  CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"
+  CODEBASE="/ie/download/activex/iechart.ocx"
+  ID=chart1
+  WIDTH=400
+  HEIGHT=200
+  ALIGN=center
+  HSPACE=0
+  VSPACE=0>
+  <PARAM NAME="BackColor" value="#ffffff"/>
+  <PARAM NAME="ForeColor" value="#0000ff"/>
+  <PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt"/>
+</OBJECT>
+```
   
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Aktualizace existujícího ovládacího prvku OLE používat nové funkce ovládacího prvku ActiveX  
  Pokud váš ovládací prvek OLE byl vytvořen s verzí jazyka Visual C++ před 4.2, existují kroky, které můžete provést při jeho výkon a zvýšit jeho funkce. Podrobné informace o těchto změnách najdete v části [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).  

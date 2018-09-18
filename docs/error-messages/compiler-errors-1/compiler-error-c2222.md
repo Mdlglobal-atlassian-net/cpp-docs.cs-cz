@@ -1,5 +1,5 @@
 ---
-title: C2222 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2222 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072586"
 ---
-# <a name="compiler-error-c2222"></a>C2222 chyby kompilátoru
-Neočekávaný typ 'type': byl očekáván základní třída nebo člen  
-  
- Inicializátoru seznamu lze inicializovat pouze základní třídy nebo členy typu. Odstranění této chyby, ověřte, že v seznamu inicializátoru inicializovat pouze základní třídy nebo členy typu.
+# <a name="compiler-error-c2222"></a>Chyba kompilátoru C2222
+
+Neočekávaný typ 'type': byl očekáván základní třídu nebo člen
+
+Seznam inicializátorů lze inicializovat pouze základní třídy nebo členy typu. Chcete-li vyřešit tuto chybu, ověřte, že v seznamu inicializátorů jsou inicializovány pouze základní třídy nebo členy typu.

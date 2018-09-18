@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9ee4c25932064ddb76078701a1a6606f27cb1a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075151"
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 
@@ -72,13 +72,13 @@ inline bool AtlGetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, pro které chcete načíst informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*pDacl*  
+*pDacl*<br/>
 Ukazatel na objekt DACL, který bude obsahovat informace o načtených zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -106,16 +106,16 @@ inline bool AtlSetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*rDacl*  
+*rDacl*<br/>
 Seznam DACL, který obsahuje nové informace o zabezpečení.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Řízení toku dědičnosti. Tato hodnota může být 0 (výchozí), PROTECTED_DACL_SECURITY_INFORMATION nebo UNPROTECTED_DACL_SECURITY_INFORMATION.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -124,7 +124,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.  
+V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlsecurity.h 
@@ -145,13 +145,13 @@ inline bool AtlGetGroupSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*psid má*  
+*psid má*<br/>
 Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -178,13 +178,13 @@ inline bool AtlSetGroupSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Objekt, který obsahuje nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -211,13 +211,13 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*psid má*  
+*psid má*<br/>
 Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -244,13 +244,13 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Objekt, který obsahuje nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -278,16 +278,16 @@ inline bool AtlGetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*pSacl*  
+*pSacl*<br/>
 Ukazatel na objekt SACL, která bude obsahovat informace o načtených zabezpečení.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -320,19 +320,19 @@ inline bool AtlSetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
 
-*rSacl*  
+*rSacl*<br/>
 SACL, který obsahuje nové informace o zabezpečení.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Řízení toku dědičnosti. Tato hodnota může být 0 (výchozí), PROTECTED_SACL_SECURITY_INFORMATION nebo UNPROTECTED_SACL_SECURITY_INFORMATION.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -369,19 +369,19 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pszObjectName*  
+*pszObjectName*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název objektu, ze kterého se má načíst informace o zabezpečení.
 
-*ObjectType*  
+*ObjectType*<br/>
 Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *pszObjectName* parametru.
 
-*pSecurityDescriptor*  
+*pSecurityDescriptor*<br/>
 Objekt, který přijímá požadovanou v popisovači.
 
-*requestedInfo*  
+*requestedInfo*<br/>
 Sada [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitové příznaky, které označují typ informací o zabezpečení pro načtení. Tento parametr může být kombinací těchto hodnot.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota

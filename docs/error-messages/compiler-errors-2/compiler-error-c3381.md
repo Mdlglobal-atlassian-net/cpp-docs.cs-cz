@@ -1,5 +1,5 @@
 ---
-title: C3381 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3381 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27961694bc5fad4080d8aceaf2f1cb65404319c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bd6c1d641f7476d3c372939b948931a306e0f80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080711"
 ---
-# <a name="compiler-error-c3381"></a>C3381 chyby kompilátoru
-'assembly': přístup ke specifikátorům sestavení jsou dostupné jenom v kódu kompilovat s možností/CLR  
-  
- Nativní typy může být viditelné mimo sestavení, ale můžete zadat jenom sestavení přístupu pro nativní typy v **/CLR** kompilace.  
-  
- Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3381.  
-  
-```  
-// C3381.cpp  
-// compile with: /c  
-public class A {};   // C3381  
+# <a name="compiler-error-c3381"></a>Chyba kompilátoru C3381
+
+'assembly': sestavení specifikátory přístupu jsou dostupné pouze v kódu zkompilovaném s parametrem/CLR.
+
+Nativní typy mohou být viditelný mimo sestavení, ale můžete nastavit jenom přístup k sestavení pro nativní typy v **/CLR** kompilace.
+
+Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3381.
+
+```
+// C3381.cpp
+// compile with: /c
+public class A {};   // C3381
 ```

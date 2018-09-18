@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076655"
 ---
 # <a name="ccomobjectglobal-class"></a>Ccomobjectglobal – třída
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ## <a name="members"></a>Členové
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován iid, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -174,7 +174,7 @@ Ve výchozím nastavení `Release` volání `_Module::Unlock`, kde `_Module` je 
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomobjectstack – třída](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)   
-[CComObject – třída](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack – třída](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -21,20 +21,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82bb280036bf8ad1886d2943c3ec3e546c2eaff2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cac6b61176b1559ea5810dc061638642926b3969
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077071"
 ---
 # <a name="wildcard-expansion"></a>Rozšíření zástupného znaku
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- K zadávání argumentů názvů souborů a cest v příkazovém řádku lze používat zástupné znaky – otazník (?) a hvězdičku (*).  
-  
- Argumenty příkazového řádku jsou zpracovány rutinou s názvem `_setargv` (nebo `_wsetargv` v prostředí širokých znaků), která standardně Nerozbaluje zástupné znaky do samostatných řetězců v `argv` pole řetězců. Další informace o povolení rozbalování zástupných znaků, najdete [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md).  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [main: spuštění programu](../cpp/main-program-startup.md)
+
+## <a name="microsoft-specific"></a>Specifické pro Microsoft
+
+K zadávání argumentů názvů souborů a cest v příkazovém řádku lze používat zástupné znaky – otazník (?) a hvězdičku (*).
+
+Argumenty příkazového řádku jsou zpracovány rutinou s názvem `_setargv` (nebo `_wsetargv` v prostředí širokých znaků), která standardně Nerozbaluje zástupné znaky do samostatných řetězců v `argv` pole řetězců. Další informace o povolení rozbalování zástupných znaků, najdete [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md).
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[main: spuštění programu](../cpp/main-program-startup.md)

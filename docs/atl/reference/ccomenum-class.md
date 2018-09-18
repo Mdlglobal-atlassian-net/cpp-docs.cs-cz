@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f9dff61a62eec37a503b1c0018ead6dce33065a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077110"
 ---
 # <a name="ccomenum-class"></a>Ccomenum – třída
 
@@ -32,7 +32,7 @@ Tato třída definuje objekt enumerátoru modelu COM na základě pole.
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 T,
     Copy>,
@@ -41,19 +41,19 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Enumerátor rozhraní modelu COM. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
 
-*piid*  
+*piid*<br/>
 Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
 
-*T*  
+*T*<br/>
 Typ položky, které jsou vystavené rozhraní enumerátor.
 
-*kopírování*  
+*kopírování*<br/>
 Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Model vláken třídy. Tento parametr výchozí hodnota je globální objektový model vláken použitých v projektu.
 
 ## <a name="remarks"></a>Poznámky
@@ -102,7 +102,7 @@ Tento kód vytvoří **typedef** pro `CComEnum` , která zveřejní vektor varia
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
-[Ccomenumimpl – třída](../../atl/reference/ccomenumimpl-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[CComEnumImpl – třída](../../atl/reference/ccomenumimpl-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)

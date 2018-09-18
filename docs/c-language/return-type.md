@@ -20,28 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f76c8c5db7771eff303b750e85e1264a06311da
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 08c81333d599411b180ebf5f0a00e1ab61536903
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076850"
 ---
 # <a name="return-type"></a>Návratový typ
-Návratový typ funkce se zavádí velikost a typ hodnoty vrácené funkcí a odpovídá specifikátoru typů ve níže uvedené syntaxe:  
-  
+
+Návratový typ funkce se zavádí velikost a typ hodnoty vrácené funkcí a odpovídá specifikátoru typů ve níže uvedené syntaxe:
+
 ## <a name="syntax"></a>Syntaxe
 
 *definice funkce*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*<sub>optimalizované</sub> *sekvence atributů*<sub>optimalizované</sub> *deklarátor* *seznam deklarací*  <sub>optimalizované</sub> *compound-statement*
 
 /\* *sekvence atributů* je specifické pro Microsoft \*/
-  
+
 *specifikátory deklarace*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+
 *Specifikátor typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
@@ -60,51 +61,52 @@ Návratový typ funkce se zavádí velikost a typ hodnoty vrácené funkcí a od
 &nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
 
-*Specifikátor typu* můžete zadat všechny základní struktura nebo sjednocení. Pokud není zadána *specifikátor typu*, návratový typ `int` se předpokládá, že.  
-  
-Návratový typ zadaný v definici funkce musí odpovídat návratový typ v deklaracích funkce jinde v programu. Funkce vrací hodnotu při `return` je proveden příkaz, který obsahuje výraz. Výraz je vyhodnocen, převést na typ vrácené hodnoty, pokud potřebné a vrátilo do bodu, ve kterém byla volána funkce. Pokud funkce je deklarovaná s návratovým typem `void`, návratový příkaz, který obsahuje výraz vygeneruje upozornění a tento výraz není vyhodnocen.  
-  
-Následující příklady znázorňují – návratové hodnoty funkce.  
-  
+*Specifikátor typu* můžete zadat všechny základní struktura nebo sjednocení. Pokud není zadána *specifikátor typu*, návratový typ `int` se předpokládá, že.
+
+Návratový typ zadaný v definici funkce musí odpovídat návratový typ v deklaracích funkce jinde v programu. Funkce vrací hodnotu při `return` je proveden příkaz, který obsahuje výraz. Výraz je vyhodnocen, převést na typ vrácené hodnoty, pokud potřebné a vrátilo do bodu, ve kterém byla volána funkce. Pokud funkce je deklarovaná s návratovým typem `void`, návratový příkaz, který obsahuje výraz vygeneruje upozornění a tento výraz není vyhodnocen.
+
+Následující příklady znázorňují – návratové hodnoty funkce.
+
 ```C
-typedef struct    
-{  
-    char name[20];  
-    int id;  
-    long class;  
-} STUDENT;  
-  
-/* Return type is STUDENT: */  
-  
-STUDENT sortstu( STUDENT a, STUDENT b )  
-{  
-    return ( (a.id < b.id) ? a : b );  
-}  
-```  
-  
-Tento příklad definuje `STUDENT` typ s `typedef` prohlášení a definuje funkci `sortstu` mít `STUDENT` návratového typu. Funkce vybere a vrátí jeden z jejích argumentů dvě struktury. V následných voláních funkce, kompilátor kontroluje, ujistěte se, že typy argumentů jsou `STUDENT`.  
-  
+typedef struct
+{
+    char name[20];
+    int id;
+    long class;
+} STUDENT;
+
+/* Return type is STUDENT: */
+
+STUDENT sortstu( STUDENT a, STUDENT b )
+{
+    return ( (a.id < b.id) ? a : b );
+}
+```
+
+Tento příklad definuje `STUDENT` typ s `typedef` prohlášení a definuje funkci `sortstu` mít `STUDENT` návratového typu. Funkce vybere a vrátí jeden z jejích argumentů dvě struktury. V následných voláních funkce, kompilátor kontroluje, ujistěte se, že typy argumentů jsou `STUDENT`.
+
 > [!NOTE]
-> By se zvýšila efektivita předáním ukazatele na strukturu, nikoli celou jejich strukturu.  
-  
+> By se zvýšila efektivita předáním ukazatele na strukturu, nikoli celou jejich strukturu.
+
 ```C
-char *smallstr( char s1[], char s2[] )  
-{  
-    int i;  
-  
-    i = 0;  
-    while ( s1[i] != '\0' && s2[i] != '\0' )  
-        i++;  
-    if ( s1[i] == '\0' )  
-        return ( s1 );  
-    else  
-        return ( s2 );  
-}  
-```  
-  
-Tento příklad definuje funkci, která vrací ukazatel na pole znaků. Funkce přebírá dva znakových polí (řetězec) jako argumenty a vrací ukazatel na kratší dvou řetězců. Ukazatel na pole odkazuje na první prvky pole a jeho typ; Proto je návratový typ funkce na ukazatel na typ `char`.  
-  
-Není nutné deklarovat funkce s `int` návratový typ před voláním, i když prototypy doporučují tak, aby správný typ kontroly pro argumenty a návratové hodnoty je povolená.  
-  
-## <a name="see-also"></a>Viz také  
+char *smallstr( char s1[], char s2[] )
+{
+    int i;
+
+    i = 0;
+    while ( s1[i] != '\0' && s2[i] != '\0' )
+        i++;
+    if ( s1[i] == '\0' )
+        return ( s1 );
+    else
+        return ( s2 );
+}
+```
+
+Tento příklad definuje funkci, která vrací ukazatel na pole znaků. Funkce přebírá dva znakových polí (řetězec) jako argumenty a vrací ukazatel na kratší dvou řetězců. Ukazatel na pole odkazuje na první prvky pole a jeho typ; Proto je návratový typ funkce na ukazatel na typ `char`.
+
+Není nutné deklarovat funkce s `int` návratový typ před voláním, i když prototypy doporučují tak, aby správný typ kontroly pro argumenty a návratové hodnoty je povolená.
+
+## <a name="see-also"></a>Viz také
+
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

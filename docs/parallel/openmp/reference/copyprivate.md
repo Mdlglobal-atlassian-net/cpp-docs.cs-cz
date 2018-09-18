@@ -1,5 +1,5 @@
 ---
-title: copyprivate | Microsoft Docs
+title: copyprivate | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071130"
 ---
 # <a name="copyprivate"></a>copyprivate
-Určuje, že jeden nebo více proměnných by měl sdílen všechna vlákna.  
+Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,14 +32,13 @@ Určuje, že jeden nebo více proměnných by měl sdílen všechna vlákna.
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Jeden nebo více proměnných ke sdílení. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
+*var*<br/>
+Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
   
 ## <a name="remarks"></a>Poznámky  
- `copyprivate` platí pro [jeden](../../../parallel/openmp/reference/single.md) – direktiva.  
+ `copyprivate` platí pro [jeden](../../../parallel/openmp/reference/single.md) směrnice.  
   
  Další informace najdete v tématu [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).  
   

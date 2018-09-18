@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4122 | Microsoft Docs
+title: Upozornění (úroveň 1) C4122 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41f8547bc75c013a59ebd3ac8e1682049da54e3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37f7928b1aa89eb66da95b4383084b2011387e0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075409"
 ---
-# <a name="compiler-warning-level-1-c4122"></a>C4122 kompilátoru upozornění (úroveň 1)
-'function': alloc_text – platí pouze pro funkce C propojení  
-  
- **Alloc_text –** – Direktiva pragma se vztahuje pouze na funkce deklarovat s **extern c**. Nelze zadat pomocí externích funkcí jazyka C++.  
-  
- – Direktiva pragma se ignoruje.
+# <a name="compiler-warning-level-1-c4122"></a>Kompilátor upozornění (úroveň 1) C4122
+
+'function': alloc_text se dá jenom pro funkce s C-linkage
+
+**Alloc_text** – Direktiva pragma se vztahuje pouze na funkce deklarované s **extern c**. Nelze zadat s externí funkce jazyka C++.
+
+Tato direktiva pragma se ignoruje.

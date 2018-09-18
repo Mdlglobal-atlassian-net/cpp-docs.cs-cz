@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071355"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 
@@ -42,24 +42,25 @@ Ve výchozím nastavení [Windows 8.1, winmdidl.exe a midlrt.exe se nacházejí 
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Zakazuje zobrazení konzoly winmdidl zprávu o autorských právech a čísla verze.
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Nepoužívá se.
 
-`/time`  
+**/ čas**<br/>
 Celková doba spuštění se zobrazí ve výstupu konzoly.
 
-/OutDir:\<dir > Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je  *\<jednotku >*: \Users\\*\<uživatelské jméno >* \AppData\Local\VirtualStore\Program soubory (x86) \Microsoft Visual Studio 12.0\\.
+**/OutDir:**<em>dir</em><br/>
+Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je  *\<jednotku >*: \Users\\*\<uživatelské jméno >* \AppData\Local\VirtualStore\Program soubory (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ banner:**<em>souboru</em><br/>
 Určuje soubor, který obsahuje vlastní text předřaďte na výchozí zprávu o autorských právech a čísla verze winmdidl v horní části souboru generovaného IDL. Pokud cesta obsahuje mezery, použijte uvozovky.
 
-`/utf8`  
+**/UTF8**<br/>
 Způsobí, že soubor, který má být ve formátu UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Název souboru .winmd analyzovat. Pokud cesta obsahuje mezery, použijte uvozovky.
 
 ## <a name="midlrt-command-line-arguments"></a>Argumenty příkazového řádku Midlrt

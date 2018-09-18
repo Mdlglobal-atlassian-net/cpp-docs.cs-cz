@@ -1,5 +1,5 @@
 ---
-title: Úložiště adres | Microsoft Docs
+title: Úložiště adres | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d892aac81efa8c2628c8662558b52cc1eb2e21c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fe77d3775c489399bb8b9032e645eee17d70b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076590"
 ---
 # <a name="storage-of-addresses"></a>Úložiště adres
-Velikost úložiště potřebná pro adresu a její význam závisí na implementaci kompilátoru. Není zaručeno, že ukazatele na různé typy budou mít stejnou délku. Proto **sizeof (char \*)** není nutně roven **sizeof (int \*)**.  
-  
- **Konkrétní Microsoft**  
-  
- Pro kompilátor Microsoft C **sizeof (char \*)** rovná **sizeof (int \*)**.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarace ukazatelů](../c-language/pointer-declarations.md)
+
+Velikost úložiště potřebná pro adresu a její význam závisí na implementaci kompilátoru. Není zaručeno, že ukazatele na různé typy budou mít stejnou délku. Proto **sizeof (char \*)** , nemusí být nutně roven **sizeof (int \*)**.
+
+**Specifické pro Microsoft**
+
+Kompilátor Microsoft C **sizeof (char \*)** rovná **sizeof (int \*)**.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace ukazatelů](../c-language/pointer-declarations.md)

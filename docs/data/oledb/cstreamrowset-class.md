@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071546"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset – třída
+
 Používáno `CCommand` nebo `CTable` deklarace.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -56,11 +57,13 @@ class CStreamRowset
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Třídu přistupujícího objektu.  
+
+*TAccessor*<br/>
+Třídu přistupujícího objektu.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -72,24 +75,26 @@ class CStreamRowset
 |[Zavřít](#close)|Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) ukazatel rozhraní ve třídě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:  
+
+Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:  
   
- [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
- or  
+or  
   
- [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:  
+`ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:  
   
- [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.  
+SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.  
   
 > [!NOTE]
 >  Tato funkce funguje pouze s SQL Server 2000.  
   
 ## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+
 Vytvoří a inicializuje `CStreamRowset` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -99,6 +104,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> CStreamRowset::Close
+
 Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) ukazatel rozhraní ve třídě.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -108,5 +114,6 @@ void Close();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

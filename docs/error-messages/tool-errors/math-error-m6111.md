@@ -1,5 +1,5 @@
 ---
-title: Chyba matematické operace M6111 | Microsoft Docs
+title: Chyba matematické operace M6111 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074822"
 ---
 # <a name="math-error-m6111"></a>Chyba matematické operace M6111
-podtečení zásobníku  
-  
- Operaci s plovoucí desetinnou čárkou výsledkem podtečení zásobníku na koprocesor 287 8087. 387 nebo emulátor.  
-  
- Tato chyba je způsobená často volání `long double` funkce, která nevrátí hodnotu. Například následující vygeneruje tuto chybu při kompilované a spusťte:  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- Program se ukončí s ukončovacím kódem 139.
+
+podtečení zásobníku
+
+Operaci s plovoucí desetinnou čárkou výsledkem podtečení zásobníku na koprocesoru 287 8087. 387 nebo emulátoru.
+
+Tato chyba je často způsobeno volání `long double` funkce, která nevrací hodnotu. Například následující vygeneruje tuto chybu, pokud kompilované a spusťte:
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+Program se ukončí s ukončovacím kódem 139.

@@ -1,5 +1,5 @@
 ---
-title: C3803 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3803 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d720e2f94cc4a480122413e31b897ec1718ebc15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a841dbaae4142e92d8e0987b0618285e4f71f60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075862"
 ---
-# <a name="compiler-error-c3803"></a>C3803 chyby kompilátoru
-'vlastnost': vlastnost má typ, který není kompatibilní s jedním z jeho přístupové objekty 'přistupujícího objektu.  
-  
- Typ vlastnosti definované s [vlastnost](../../cpp/property-cpp.md) neodpovídá návratový typ pro jednu ze svých funkcí přistupujícího objektu.  
-  
- Následující ukázka generuje C3803:  
-  
-```  
-// C3803.cpp  
-struct A  
-{  
-   __declspec(property(get=GetIt)) int i;  
-   char GetIt()  
-   {  
-      return 0;  
-   }  
-  
-   /*  
-   // try the following definition instead  
-   int GetIt()  
-   {  
-      return 0;  
-   }  
-   */  
-}; // C3803  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3803"></a>Chyba kompilátoru C3803
+
+'property': vlastnost má typ, který je kompatibilní s jednou z jeho přístupových objektů "objekt"
+
+Typ vlastnosti definované pomocí [vlastnost](../../cpp/property-cpp.md) neodpovídá návratový typ pro jeden z jeho přístupových funkcí.
+
+Následující ukázka generuje C3803:
+
+```
+// C3803.cpp
+struct A
+{
+   __declspec(property(get=GetIt)) int i;
+   char GetIt()
+   {
+      return 0;
+   }
+
+   /*
+   // try the following definition instead
+   int GetIt()
+   {
+      return 0;
+   }
+   */
+}; // C3803
+
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2469 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2469 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37decb55a2f24f7f29d28519e2f87eba90ff56bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f9a8a8a25190163432d5f0dd7826840e7ef7c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076902"
 ---
-# <a name="compiler-error-c2469"></a>C2469 chyby kompilátoru
-'operátor': Nelze přidělit objekt "typ"  
-  
- Operátor byl předán neplatný typ.  
-  
- Následující ukázka generuje C2469:  
-  
-```  
-// C2469.cpp  
-int main() {  
-   int *i = new void;   // C2469  
-   int *i = new int;   // OK  
-}  
+# <a name="compiler-error-c2469"></a>Chyba kompilátoru C2469
+
+'operator': Nelze přidělit objekt 'type'
+
+Operátor byl předán neplatný typ.
+
+Následující ukázka generuje C2469:
+
+```
+// C2469.cpp
+int main() {
+   int *i = new void;   // C2469
+   int *i = new int;   // OK
+}
 ```

@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b27eead70963665e1dd3079cf5c2b49bcfda863
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8b09683592ca7fe897c8477a17c14fbc72d11f7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079957"
 ---
 # <a name="subtraction--"></a>Odčítání (-)
-Operátor odčítání (**-**) odečte druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.  
-  
-Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost této celočíselné hodnoty je definována typem **ptrdiff_t** ve standardním vloženém souboru STDDEF. H. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledkem je zaručeno smysl pro dva prvky stejného pole, jak je popsáno v [aritmetické operace ukazatele](../c-language/pointer-arithmetic.md).  
-  
-Pokud celočíselná hodnota odečtena od hodnoty ukazatele, převede operátor odčítání celočíselnou hodnotu (*můžu*) pomocí vynásobení velikost hodnoty, kterou tento ukazatel odkazuje. Po převodu představuje celočíselná hodnota *můžu* pozice v paměti, kde má každá pozice délku určený typem ukazatele. Když je převedená celočíselná hodnota odečtena od hodnoty ukazatele, výsledkem je adresa paměti *můžu* pozic před původní adresou. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.  
-  
-## <a name="see-also"></a>Viz také  
+
+Operátor odčítání (**-**) odečte druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.
+
+Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost této celočíselné hodnoty je definována typem **ptrdiff_t** ve standardním vloženém souboru STDDEF. H. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledkem je zaručeno smysl pro dva prvky stejného pole, jak je popsáno v [aritmetické operace ukazatele](../c-language/pointer-arithmetic.md).
+
+Pokud celočíselná hodnota odečtena od hodnoty ukazatele, převede operátor odčítání celočíselnou hodnotu (*můžu*) pomocí vynásobení velikost hodnoty, kterou tento ukazatel odkazuje. Po převodu představuje celočíselná hodnota *můžu* pozice v paměti, kde má každá pozice délku určený typem ukazatele. Když je převedená celočíselná hodnota odečtena od hodnoty ukazatele, výsledkem je adresa paměti *můžu* pozic před původní adresou. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.
+
+## <a name="see-also"></a>Viz také
+
 [Sčítací operátory jazyka C](../c-language/c-additive-operators.md)

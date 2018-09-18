@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2111 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2111 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47c83c75a9bdb62bf0cb6594399e5a551bb76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e0e0f153b5eed21f906dd228072a4239dec63e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076447"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Chyba kompilátoru prostředků RC2111
-Neplatný ovládací prvek typu  
-  
- Každý příkaz ovládacího PRVKU v **dialogové okno** příkaz musí být jeden z následujících: 3STATE AUTO3 AUTOCHECK, AUTORADIO, BEDIT, zaškrtávací políčko, COMBOBOX, ovládacího PRVKU, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, ikona, IEDIT, LISTBOX, LTEXT, PUSHBOX, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR, USERBUTTON.  
-  
- Zkontrolujte, zda že jsou správně zadané tyto řídicí příkazy.
+
+Neplatný ovládací prvek typu
+
+Každý příkaz ovládacího PRVKU v **dialogové okno** příkazu musí být jedna z následujících akcí: 3STATE AUTO3, AUTOCHECK, AUTORADIO, BEDIT, zaškrtávací políčko, pole se SEZNAMEM, ovládací PRVEK, CTEXT, DEFPUSHBUTTON, EDITTEXT, skupinový RÁMEČEK, HEDIT, ikony, IEDIT, LISTBOX, LTEXT, PUSHBOX PUSHBUTTON, OVLÁDACÍHO PRVKU RADIOBUTTON, RTEXT, POSUVNÍK, USERBUTTON.
+
+Ujistěte se, že se že tyto řídicí příkazy jsou zadány správně.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d52b51de263be8f6de82a38e4d774c669dbef9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073457"
 ---
 # <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection – třída
 
@@ -88,6 +88,6 @@ Volání destruktoru [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-sy
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomfakecriticalsection – třída](../../atl/reference/ccomfakecriticalsection-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[CComFakeCriticalSection – třída](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)

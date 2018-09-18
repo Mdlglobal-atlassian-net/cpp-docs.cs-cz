@@ -1,5 +1,5 @@
 ---
-title: C2490 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2490 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071795"
 ---
-# <a name="compiler-error-c2490"></a>C2490 chyby kompilátoru
-'– klíčové slovo' není povolen ve funkci atributem "holé"  
-  
- Funkci definovanou jako [holé](../../cpp/naked-cpp.md) nelze použít strukturované zpracování výjimek.  
-  
- Následující ukázka generuje C2490:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+# <a name="compiler-error-c2490"></a>Chyba kompilátoru C2490
+
+! – klíčové slovo' není povoleno ve funkci s atributem naked.
+
+Funkce definovaná jako [naked](../../cpp/naked-cpp.md) nelze použít strukturované zpracování výjimek.
+
+Následující ukázka generuje C2490:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

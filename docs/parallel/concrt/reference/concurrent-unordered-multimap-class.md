@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: af143e4c195c419155b2e23fd61195ccfe11c60f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073693"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap – třída
 `concurrent_unordered_multimap` Třídy je kontejner bezpečné souběžnosti, který řídí různé délky sekvence elementů typu `std::pair<const K, _Element_type>`. Sekvence je reprezentována způsobem, který umožňuje bezpečné na souběžnosti, přístup k prvkům, přístup k iterátoru a operace procházení iterátoru připojit.  
@@ -55,20 +55,20 @@ template <typename K,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `K`  
- Klíčový typ  
+*K*<br/>
+Klíčový typ  
   
- `_Element_type`  
- Mapovaný typ  
+*_Element_type*<br/>
+Mapovaný typ  
   
- `_Hasher`  
- Typ objektu hashovací funkce Tento argument je nepovinný a výchozí hodnota je `std::hash<K>`.  
+*_Hasher*<br/>
+Typ objektu hashovací funkce Tento argument je nepovinný a výchozí hodnota je `std::hash<K>`.  
   
- `key_equality`  
- Typ objektu funkce porovnání rovnosti Tento argument je nepovinný a výchozí hodnota je `std::equal_to<K>`.  
+*key_equality*<br/>
+Typ objektu funkce porovnání rovnosti Tento argument je nepovinný a výchozí hodnota je `std::equal_to<K>`.  
   
- `_Allocator_type`  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro souběžný vektor. Tento argument je nepovinný a výchozí hodnota je `std::allocator<std::pair<K`, `_Element_type>>`.  
+*_Allocator_type*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro souběžný vektor. Tento argument je nepovinný a výchozí hodnota je `std::allocator<std::pair<K`, `_Element_type>>`.  
   
 ## <a name="members"></a>Členové  
   
@@ -207,29 +207,29 @@ concurrent_unordered_multimap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ vstupního iterátoru.  
+*_Iterator*<br/>
+Typ vstupního iterátoru.  
   
- `_Number_of_buckets`  
- Počáteční počet kbelíků pro tento neuspořádanou multimapu.  
+*_Number_of_buckets*<br/>
+Počáteční počet kbelíků pro tento neuspořádanou multimapu.  
   
- `_Hasher`  
- Funkce hash pro tuto neuspořádanou multimapu.  
+*_Hasher*<br/>
+Funkce hash pro tuto neuspořádanou multimapu.  
   
- `key_equality`  
- Funkce porovnání rovnosti pro tento neuspořádanou multimapu.  
+*key_equality*<br/>
+Funkce porovnání rovnosti pro tento neuspořádanou multimapu.  
   
- `_Allocator`  
- Alokátor pro tento neuspořádanou multimapu.  
+*_Allocator*<br/>
+Alokátor pro tento neuspořádanou multimapu.  
   
- `_Begin`  
- Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.  
+*_Zahájit*<br/>
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.  
   
- `_End`  
- Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.  
+*_Ukončit*<br/>
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.  
   
- `_Umap`  
- Zdroj `concurrent_unordered_multimap` objekt pro kopírování prvků z.  
+*_Umap*<br/>
+Zdroj `concurrent_unordered_multimap` objekt pro kopírování prvků z.  
   
 ### <a name="remarks"></a>Poznámky  
  Všechny konstruktory ukládají objekt alokátoru `_Allocator` a inicializovat neuspořádanou multimapu.  
@@ -253,8 +253,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klíč k vyhledání.  
+*KVal*<br/>
+Klíč k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet opakování, kolikrát se zobrazí klíče v kontejneru.  
@@ -301,8 +301,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Hodnota klíče pro hledání.  
+*KVal*<br/>
+Hodnota klíče pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [pár](../../../standard-library/pair-structure.md) kde první prvek je iterace na začátek a druhý prvek je iterátor na konec rozsahu.  
@@ -321,8 +321,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Hodnota klíče pro hledání.  
+*KVal*<br/>
+Hodnota klíče pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na umístění prvního prvku, který odpovídá klíči poskytovaném nebo iterátor `end()` Pokud žádný takový prvek neexistuje.  
@@ -378,23 +378,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ iterátoru, který se používá pro vložení.  
+*_Iterator*<br/>
+Typ iterátoru, který se používá pro vložení.  
   
- `V`  
- Typ hodnoty vložen do objektu map.  
+*V*<br/>
+Typ hodnoty vložen do objektu map.  
   
- `value`  
- Hodnota má být vložen.  
+*value*<br/>
+Hodnota má být vložen.  
   
- `_Where`  
- Výchozí umístění pro vyhledávání pro kurzor.  
+*_Where*<br/>
+Výchozí umístění pro vyhledávání pro kurzor.  
   
- `first`  
- Začátek rozsahu, který chcete vložit.  
+*první*<br/>
+Začátek rozsahu, který chcete vložit.  
   
- `last`  
- Konec rozsahu, který chcete vložit.  
+*poslední*<br/>
+Konec rozsahu, který chcete vložit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na umístění kurzoru.  
@@ -471,8 +471,8 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Umap`  
- Zdroj `concurrent_unordered_multimap` objektu.  
+*_Umap*<br/>
+Zdroj `concurrent_unordered_multimap` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na tento `concurrent_unordered_multimap` objektu.  
@@ -489,8 +489,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Buckets`  
- Požadovaný počet kbelíků.  
+*_Buckets*<br/>
+Požadovaný počet kbelíků.  
   
 ### <a name="remarks"></a>Poznámky  
  Členská funkce mění počet kbelíků nejméně `_Buckets` a znovu vytvoří hashovací tabulku podle potřeby. Počet kbelíků musí být mocninou čísla 2. Pokud není mocninou čísla 2, ho budou zaokrouhleny nahoru na další největší mocninu 2.  
@@ -520,8 +520,8 @@ void swap(concurrent_unordered_multimap& _Umap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Umap`  
- `concurrent_unordered_multimap` Objektu, který chcete Prohodit s.  
+*_Umap*<br/>
+`concurrent_unordered_multimap` Objektu, který chcete Prohodit s.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin – 
 
@@ -534,8 +534,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -549,8 +549,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klíč elementu, vyhledaly.  
+*KVal*<br/>
+Klíč elementu, vyhledaly.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index kontejneru klíče v tomto kontejneru.  
@@ -575,8 +575,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Interval pro hledání.  
+*_Bucket*<br/>
+Interval pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet kbelíků, v tomto kontejneru.  
@@ -590,8 +590,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -605,8 +605,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -622,8 +622,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátorem ukazujícím na konec bloku.  
@@ -645,14 +645,15 @@ iterator unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Where`  
- Pozice iterátoru, který chcete smazat.  
+*_Where*<br/>
+Pozice iterátoru, který chcete smazat.  
   
- `KVal`  
- Hodnota klíče vymazat.  
+*KVal*<br/>
+Hodnota klíče vymazat.  
   
- `first`  
- `last`  
+*první*<br/>
+*poslední*<br/>
+Iterátory.
   
 ### <a name="return-value"></a>Návratová hodnota  
  První dvě členské funkce vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `concurrent_unordered_multimap::end`(), pokud žádný takový prvek neexistuje. Třetí členská funkce vrátí počet prvků, které odebere.  

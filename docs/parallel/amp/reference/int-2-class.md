@@ -1,5 +1,5 @@
 ---
-title: int_2 – třída | Microsoft Docs
+title: int_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7c3e3d61179717648c50709dc219038956438f3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080295"
 ---
 # <a name="int2-class"></a>int_2 – třída
-Představuje krátký Vektor dvě celá čísla.  
+Představuje krátký vektor dvou celých čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class int_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class int_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[int_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[int_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -94,7 +94,7 @@ class int_2;
 |int_2::operator%=||  
 |int_2::operator&=||  
 |int_2::operator*=||  
-|/ int_2::Operator = – operátor||  
+|int_2::Operator / =||  
 |int_2::operator^=||  
 |int_2::operator&#124;=||  
 |int_2::operator~||  
@@ -109,7 +109,7 @@ class int_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#int_2__size)||  
+|[velikost – konstanta](#int_2__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -132,9 +132,9 @@ class int_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> int_2 
+##  <a name="ctor"></a> int_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 int_2() restrict(amp,
@@ -183,17 +183,17 @@ explicit inline int_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="int_2__size"></a> Velikost 
 

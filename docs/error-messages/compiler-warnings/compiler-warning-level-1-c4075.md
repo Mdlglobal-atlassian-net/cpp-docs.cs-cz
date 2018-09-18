@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4075 | Microsoft Docs
+title: Upozornění (úroveň 1) C4075 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a0d9fb3808af9ed05454b5b07d471303abc654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5056c4bbca66b47ca991daf4c65485e80e43e0db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073028"
 ---
-# <a name="compiler-warning-level-1-c4075"></a>C4075 kompilátoru upozornění (úroveň 1)
-Inicializátory put v oblasti nerozpoznané inicializace  
-  
- A [init_seg – #pragma](../../preprocessor/init-seg.md) používá název nerozpoznané části. Kompilátor ignoruje **– Direktiva pragma** příkaz.  
-  
- Následující ukázka generuje C4075:  
-  
-```  
-// C4075.cpp  
-// compile with: /W1  
-#pragma init_seg("mysegg")   // C4075  
-  
-// try..  
-// #pragma init_seg(user)  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4075"></a>Kompilátor upozornění (úroveň 1) C4075
+
+Inicializátory jsou vložené v nerozpoznané inicializační oblasti.
+
+A [init_seg – #pragma](../../preprocessor/init-seg.md) používá název Neznámá část. Kompilátor ignoruje **– Direktiva pragma** příkazu.
+
+Následující ukázka generuje C4075:
+
+```
+// C4075.cpp
+// compile with: /W1
+#pragma init_seg("mysegg")   // C4075
+
+// try..
+// #pragma init_seg(user)
+
+int main() {
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: invalid_operation – třída | Microsoft Docs
+title: invalid_operation – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6d1152bb1f9a9c5671d1f7f0cdf0e426c02575
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c189649447b318a651957c82b8cfab8cd11fb60a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054828"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation – třída
-Tato třída popisuje výjimka vyvolána v případě, že se provádí na neplatnou operaci, která není popsat přesněji jiný typ výjimky vyvolané Concurrency Runtime.  
+Tato třída popisuje výjimku vyvolanou při provádění neplatné operace, která není přesněji popsána jako jiný typ výjimky vyvolané modulem Runtime souběžnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ class invalid_operation : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[invalid_operation](#ctor)|Přetíženo. Vytvoří `invalid_operation` objektu.|  
+|[invalid_operation –](#ctor)|Přetíženo. Vytvoří `invalid_operation` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Různé metody, které throw tato výjimka se obecně dokumentů za jakých okolností bude vyvolají ho.  
+ Různé metody, které vyvolávají tuto výjimku, většinou dokumentují za jakých okolností se vyvolá ji.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -55,7 +55,7 @@ class invalid_operation : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> invalid_operation 
+##  <a name="ctor"></a> invalid_operation – 
 
  Vytvoří `invalid_operation` objektu.  
   
@@ -66,8 +66,8 @@ invalid_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

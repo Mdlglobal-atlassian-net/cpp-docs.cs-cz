@@ -1,5 +1,5 @@
 ---
-title: Konstanty atributu souboru | Microsoft Docs
+title: Konstanty atributu souboru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077045"
 ---
 # <a name="file-attribute-constants"></a>Konstanty atributu souboru
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto konstanty zadejte aktuální atributy soubor nebo adresář zadaný funkce.  
-  
- Atributy jsou reprezentované pomocí následující konstanty manifestu:  
-  
- `_A_ARCH`  
- Archivu. Nastavte vždy, když je soubor změnit a vymazat příkazem BACKUP. Hodnota: 0x20  
-  
- `_A_HIDDEN`  
- Skrytého souboru. Se seznámili s obvykle pomocí příkazu DIR, pokud se používá možnost /AH. Vrací informace o normální soubory, jakož i soubory s tímto atributem. Hodnota: 0x02  
-  
- `_A_NORMAL`  
- Normální. Soubor můžou číst nebo zapisovat do bez omezení. Hodnota: 0x00  
-  
- `_A_RDONLY`  
- Jen pro čtení. Soubor nelze otevřít pro zápis a nedá se vytvořit soubor se stejným názvem. Hodnota: 0x01  
-  
- `_A_SUBDIR`  
- Podadresář. Hodnota: 0x10  
-  
- `_A_SYSTEM`  
- Systémový soubor. Se seznámili s obvykle pomocí příkazu DIR, pokud se používá možnost /AS. Hodnota: 0x04  
-  
- Je možné kombinovat více konstant s operátor OR (&#124;).  
-  
-## <a name="see-also"></a>Viz také  
- [Název souboru – funkce hledání](../c-runtime-library/filename-search-functions.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty určit aktuální atributy souboru nebo adresáři určeném funkce.
+
+Atributy jsou reprezentované prostřednictvím následujících konstant manifestu:
+
+|Konstanta|Popis|
+|-|-|
+|`_A_ARCH`| Archivovat. Nastavte vždy, když je soubor změněn a vymazat příkazem BACKUP. Hodnota: 0x20|
+|`_A_HIDDEN`| Skrytý soubor. Program používá obvykle u příkazu DIR, pokud se nepoužije možnost /AH. Vrátí informace o normální soubory, jakož i soubory k tomuto atributu. Hodnota: 0x02|
+|`_A_NORMAL`| Normální. Soubor může číst nebo zapsat bez omezení. Hodnota: 0x00|
+|`_A_RDONLY`| Jen pro čtení. Soubor nelze otevřít pro zápis a soubor se stejným názvem nejde vytvořit. Hodnota: 0x01|
+|`_A_SUBDIR`| Podadresář. Hodnota: 0x10|
+|`_A_SYSTEM`| Systém souborů. Program používá obvykle u příkazu DIR, pokud se nepoužije možnost /AS. Hodnota: 0x04|
+
+Je možné kombinovat více konstant s operátor OR (&#124;).
+
+## <a name="see-also"></a>Viz také
+
+[Funkce hledání názvů souborů](../c-runtime-library/filename-search-functions.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

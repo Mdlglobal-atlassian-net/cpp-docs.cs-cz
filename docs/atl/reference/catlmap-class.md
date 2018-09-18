@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075719"
 ---
 # <a name="catlmap-class"></a>Catlmap – třída
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče prvku.
 
-*V* typ elementu hodnota.
+*V*<br/>
+Typ elementu hodnota.
 
-*KTraits*  
+*KTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
 
-*VTraits*  
+*VTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ## <a name="members"></a>Členové
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Počet přihrádek poskytuje odkazy na prvky uložené. Viz poznámky níže v tomto tématu pro vysvětlení intervalů.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Poměr optimální zatížení.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Nižší prahová hodnota pro poměr zatížení.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Horní prahová hodnota pro poměr zatížení.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klíč*  
+*Klíč*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*value*  
+*value*<br/>
 Parametr šablony určující typ hodnoty na mapě.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klíč*  
+*Klíč*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*value*  
+*value*<br/>
 Parametr šablony určující typ hodnoty na mapě.
 
 ### <a name="remarks"></a>Poznámky
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Počet přihrádek používá zatřiďovací tabulku. Zobrazit [CAtlMap::CAtlMap](#catlmap) vysvětlení.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Příznak uvedení, když by měla být paměť přidělena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
 
-*value*  
+*value*<br/>
 Proměnná, která přijímá hodnotu vyhledaných.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč elementu, který chcete přidat nebo nahradit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Nový počet přihrádek používat v zatřiďovací tabulce. Zobrazit [CAtlMap::CAtlMap](#catlmap) vysvětlení.
 
 ### <a name="remarks"></a>Poznámky
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Poznámky
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč odpovídající dvojice elementů chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Hodnotu klíče pro přidání do `CAtlMap` objektu.
 
-*value*  
+*value*<br/>
 Hodnota k přidání do `CAtlMap` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Parametry
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Poměr optimální zatížení.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Nižší prahová hodnota pro poměr zatížení.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Horní prahová hodnota pro poměr zatížení.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Příznak označující, jestli by měly být přepočítány zatřiďovací tabulku.
 
 ### <a name="remarks"></a>Poznámky
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*value*  
+*value*<br/>
 Hodnota k přidání do `CAtlMap` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče prvku.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Parametry
 
-*V*  
+*V*<br/>
 Typ elementu hodnota.
 
 ## <a name="see-also"></a>Viz také
 
-[Výběr ukázky](../../visual-cpp-samples.md)   
-[Příklad UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Výběr ukázky](../../visual-cpp-samples.md)<br/>
+[Příklad UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

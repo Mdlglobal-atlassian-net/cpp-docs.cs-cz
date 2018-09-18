@@ -1,5 +1,5 @@
 ---
-title: C2381 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2381 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bd5f5edcf95144333524c41b803c24b728a621f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f09cd8c16eeb5ec797643cb6653d069df41b136
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076941"
 ---
-# <a name="compiler-error-c2381"></a>C2381 chyby kompilátoru
-'function': předefinování; __declspec(noreturn) se liší.  
-  
- Funkci byl deklarován a pak definované ale jako definice použitá [noreturn](../../cpp/noreturn.md) `__declspec` modifikátor. Použití `noreturn` předefinování funkce se považuje za; deklarace a definice muset ke shodě o použití `noreturn`.  
-  
- Následující ukázka generuje C2381:  
-  
-```  
-// C2381.cpp  
-// compile with: /c  
-void f1();  
-void __declspec(noreturn) f1() {}   // C2381  
-void __declspec(noreturn) f2() {}   // OK  
+# <a name="compiler-error-c2381"></a>Chyba kompilátoru C2381
+
+'function': předefinování; __declspec(noreturn) se liší.
+
+Funkce byla deklarována a potom definované ale definice použitá [noreturn](../../cpp/noreturn.md) `__declspec` modifikátor. Použití `noreturn` nová definice funkce se považuje za; deklarace a definice musí shodnout na použití `noreturn`.
+
+Následující ukázka generuje C2381:
+
+```
+// C2381.cpp
+// compile with: /c
+void f1();
+void __declspec(noreturn) f1() {}   // C2381
+void __declspec(noreturn) f2() {}   // OK
 ```

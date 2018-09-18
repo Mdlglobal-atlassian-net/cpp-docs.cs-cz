@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076343"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Ithreadpoolconfig – rozhraní
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
 Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,5 +151,5 @@ Zobrazit [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>Viz také
 
-[Třídy](../../atl/reference/atl-classes.md)   
+[Třídy](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool – třída](../../atl/reference/cthreadpool-class.md)

@@ -1,5 +1,5 @@
 ---
-title: soukromé (OpenMP) | Microsoft Docs
+title: privátní (OpenMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071234"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
-Určuje, že každé vlákno má mít svou vlastní instanci proměnné.  
+Určuje, že každé vlákno má svoji vlastní instanci proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Určuje, že každé vlákno má mít svou vlastní instanci proměnné.
 private(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Proměnná mít instancí v každé vlákno.  
+*var*<br/>
+U instancí v každém vlákně proměnné.  
   
 ## <a name="remarks"></a>Poznámky  
  **privátní** platí pro následující direktivy:  
@@ -53,7 +52,7 @@ private(var)
   
 ## <a name="example"></a>Příklad  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

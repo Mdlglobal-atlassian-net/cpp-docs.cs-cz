@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7130146ceb0031224304cb41fd9264956e5fba61
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d255a64fbbf820c5c1fcaa63608bc453e276b5e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072001"
 ---
 # <a name="comptrt-operators"></a>Operátory jazyka _com_ptr_t
-Informace o tom, `_com_ptr_t` operátory, naleznete v tématu [_com_ptr_t – třída](../cpp/com-ptr-t-class.md).  
-  
-## <a name="see-also"></a>Viz také:  
- [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)
+
+Informace o tom, `_com_ptr_t` operátory, naleznete v tématu [_com_ptr_t – třída](../cpp/com-ptr-t-class.md).
+
+## <a name="see-also"></a>Viz také:
+
+[_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

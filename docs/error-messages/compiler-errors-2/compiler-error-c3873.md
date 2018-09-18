@@ -1,5 +1,5 @@
 ---
-title: C3873 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3873 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bec37b8fb00aedd83d91f1d001d77c42679ec038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83580d8202dada0b650b1703dcadf9b99e6771d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072807"
 ---
-# <a name="compiler-error-c3873"></a>C3873 chyby kompilátoru
-"char": Tento znak není povolen jako první znak identifikátoru  
-  
- Kompilátor C++ odpovídá C ++ 11 standard na povolených znaků v identifikátor. V identifikátoru jsou povoleny pouze určitý rozsah znaků a univerzální názvy znaků. Další omezení se použijí na počáteční znak identifikátoru. Další informace a seznam povolených a rozsahy název universal znaků najdete v tématu [identifikátory](../../cpp/identifiers-cpp.md).  
-  
- Rozsah znaků povolených v identifikátoru je méně omezující při kompilování C + +/ CLI kódu. Postupujte podle identifikátory v kódu zkompilovat pomocí/CLR [standardní standardy ECMA-335: společné jazykové infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
-  
- Následující ukázka generuje C3873:  
-  
-```  
-// C3873.cpp  
-int main() {  
-   int \u036F_abc;   // C3873, not in allowed range for initial character  
-   int abc_\u036F;   // OK, in allowed range for non-initial character  
-}  
+# <a name="compiler-error-c3873"></a>Chyba kompilátoru C3873
+
+! char': Tento znak není povolený jako první znak identifikátoru
+
+Kompilátor C++ 11 standard C ++ následuje na znaky v identifikátoru povolený. Jenom určitých rozsahů znaků a univerzální názvy znaků jsou v identifikátoru povolený. Další omezení se použijí pro počáteční znak identifikátoru. Další informace a seznam povolených znaků a název rozsahy univerzálních znaků naleznete v tématu [identifikátory](../../cpp/identifiers-cpp.md).
+
+Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C + +/ CLI kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+
+Následující ukázka generuje C3873:
+
+```
+// C3873.cpp
+int main() {
+   int \u036F_abc;   // C3873, not in allowed range for initial character
+   int abc_\u036F;   // OK, in allowed range for non-initial character
+}
 ```

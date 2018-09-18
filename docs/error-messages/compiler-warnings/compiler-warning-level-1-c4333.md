@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4333 | Microsoft Docs
+title: Upozornění (úroveň 1) C4333 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fb838ecbf34f1fb09242a93f6943d81fd0de1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0813b39e607f5aee1a9a6f5e133216247d8573c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074198"
 ---
-# <a name="compiler-warning-level-1-c4333"></a>C4333 kompilátoru upozornění (úroveň 1)
-'operátor': posunutí doprava o příliš velké množství, ztráty dat  
-  
- Posunutí doprava operaci byla příliš velká dobu.  Všechny významných bitů posunuty a výsledek bude vždy nula.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4333.  
-  
-```  
-// C4333.cpp  
-// compile with: /c /W1  
-unsigned shift8 (unsigned char c) {  
-   return c >> 8;   // C4333  
-  
-   // try the following line instead  
-   // return c >> 4;   // OK  
-}  
+# <a name="compiler-warning-level-1-c4333"></a>Kompilátor upozornění (úroveň 1) C4333
+
+'operator': posunutí doprava o moc velkou hodnotu, ztráta dat
+
+Operaci posunutí doprava byla příliš velké množství.  Všechny významných bitů posunuty navýšení kapacity a výsledek bude vždy nula.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4333.
+
+```
+// C4333.cpp
+// compile with: /c /W1
+unsigned shift8 (unsigned char c) {
+   return c >> 8;   // C4333
+
+   // try the following line instead
+   // return c >> 4;   // OK
+}
 ```

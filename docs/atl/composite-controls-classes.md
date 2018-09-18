@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e3c7c930df13c09afc48f17e7042f2fe846b095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075277"
 ---
 # <a name="composite-controls-classes"></a>Třídy složených ovládacích prvků
 
@@ -36,7 +36,7 @@ Následující třída poskytuje podporu pro vytváření složených prvků
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../atl/atl-class-overview.md)   
-[Makra složených ovládacích prvků](../atl/reference/composite-control-macros.md)   
+[Přehled tříd](../atl/atl-class-overview.md)<br/>
+[Makra složených ovládacích prvků](../atl/reference/composite-control-macros.md)<br/>
 [Globální funkce složených ovládacích prvků](../atl/reference/composite-control-global-functions.md)
 

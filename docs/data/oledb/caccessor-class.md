@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b3adc22d940e79a4f86fec45c0d0e4fc3969f1a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071416"
 ---
 # <a name="caccessor-class"></a>CAccessor – třída
+
 Představuje jeden z typů přistupujícího objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,19 +40,23 @@ class CAccessor : public CAccessorBase, public T
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída uživatelského záznamu.  
+
+*T*<br/>
+Třída uživatelského záznamu.  
   
 ## <a name="remarks"></a>Poznámky  
- Používá se při záznamu je staticky svázán se zdrojem dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.  
+
+Používá se při záznamu je staticky svázán se zdrojem dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.  
   
- Pomocí tohoto typu přístupového objektu, když víte, struktury a typ databáze.  
+Pomocí tohoto typu přístupového objektu, když víte, struktury a typ databáze.  
   
- Pokud váš přístupový objekt obsahuje pole, které odkazují na paměť (například `BSTR` nebo rozhraní), který musí být uvolněn zavolat členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před další záznam pro čtení.  
+Pokud váš přístupový objekt obsahuje pole, které odkazují na paměť (například `BSTR` nebo rozhraní), který musí být uvolněn zavolat členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před další záznam pro čtení.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

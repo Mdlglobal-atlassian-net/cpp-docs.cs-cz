@@ -1,5 +1,5 @@
 ---
-title: _Cilog10 – | Microsoft Docs
+title: _CIlog10 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 615a8818c6204298d06054ef77a1b95ab603b548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1d78967c8cff8933ac16af9333bb4e000f686f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078592"
 ---
 # <a name="cilog10"></a>_CIlog10
-Provede `log10` operace na nejvyšší hodnotu v zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIlog10();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato verze `log10` funkce má specializované konvence volání, která funguje s technologií kompilátoru. Funkce urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.  
-  
- Výsledná hodnota se posune do horní části zásobníku.  
-  
-## <a name="requirements"></a>Požadavky  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Provádí `log10` operace na nejvyšší hodnotu v zásobníku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIlog10();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato verze `log10` funkce má specializované konvence volání, které kompilátor rozpozná. Funkce urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+
+Výsledná hodnota je vloženy do horní části zásobníku.
+
+## <a name="requirements"></a>Požadavky
+ **Platforma:** x86
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

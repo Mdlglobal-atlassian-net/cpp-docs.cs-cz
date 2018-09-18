@@ -35,14 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a74d2c06f5de9956056c9d8e82d35b64c65cb16f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071819"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP – třída
+
 Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
   
 ## <a name="syntax"></a>Syntaxe
@@ -58,20 +59,22 @@ class IRowsetNotifyCP :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída odvozená z `IRowsetNotifyCP`.  
+
+*T*<br/>
+Třída odvozená z `IRowsetNotifyCP`.  
   
- *ReentrantEventSync*  
- Mutex – třída, která podporuje vícenásobného přístupu (výchozí hodnota je `CComSharedMutex`). Objekt mutex je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.  
+*ReentrantEventSync*<br/>
+Mutex – třída, která podporuje vícenásobného přístupu (výchozí hodnota je `CComSharedMutex`). Objekt mutex je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.  
   
- *piid*  
- Ukazatel rozhraní s ID (`IID*`) pro `IRowsetNotify` rozhraní bodu připojení. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.  
+*piid*<br/>
+Ukazatel rozhraní s ID (`IID*`) pro `IRowsetNotify` rozhraní bodu připojení. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.  
   
- *DynamicUnkArray*  
- Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), která je dynamicky přiřazeného pole `IUnknown` ukazatele na klienta jímka rozhraní. 
+*DynamicUnkArray*<br/>
+Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), která je dynamicky přiřazeného pole `IUnknown` ukazatele na klienta jímka rozhraní. 
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h   
+
+**Záhlaví:** atldb.h   
   
 ## <a name="members"></a>Členové  
   
@@ -84,13 +87,15 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](#onrowsetchange)|Upozorní příjemce změny, které mají vliv celá sada řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.  
+
+`IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.  
   
- Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako "jímka") pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.  
+Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako "jímka") pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.  
   
- Podrobné informace o implementaci oznámení, naleznete v části "Podpora oznámení" v [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).  
+Podrobné informace o implementaci oznámení, naleznete v části "Podpora oznámení" v [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
+
 Vysílá [onfieldchange –](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) událost oznámení příjemci změnu hodnoty sloupce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,9 +111,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+
+Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
+
 Vysílá [onrowchange –](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -123,9 +130,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
+
 Vysílá [onrowsetchange –](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -138,13 +147,15 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
+
+Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Oznámení (COM)](/windows/desktop/com/notifications)   
- [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
- [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
- [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   
- [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Oznámení (COM)](/windows/desktop/com/notifications)<br/>
+[BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
+[END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
+[CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
+[Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)

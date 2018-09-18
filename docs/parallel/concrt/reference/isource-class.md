@@ -1,5 +1,5 @@
 ---
-title: ISource – třída | Microsoft Docs
+title: Isource – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 14593161512e56d39b77bb0cc5af88a3ff849409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071884"
 ---
 # <a name="isource-class"></a>ISource – třída
-`ISource` Třída je rozhraní pro všechny zdrojové bloky. Zdroj bloky rozšířit zprávy a pokuste se `ITarget` bloky.  
+`ISource` Třídy je rozhraní pro všechny zdrojové bloky. Zdrojové bloky šíření zpráv `ITarget` bloky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,36 +44,36 @@ class ISource;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Datový typ datové části v rámci zprávy vyprodukované zdrojového bloku.  
+*T*<br/>
+Datový typ datové části v rámci zprávy vytvářené zdrojovým blokem.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`source_type`|Typ aliasu pro `T`.|  
+|`source_type`|Alias typu pro `T`.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[~ ISource – destruktor](#dtor)|Zničí `ISource` objektu.|  
+|[~ ISource – destruktor](#dtor)|Odstraní `ISource` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Přijmout](#accept)|Při přepisu v odvozené třídě, přijme zprávu, která byla nabízí to `ISource` bloku, přenos vlastnictví volajícímu.|  
-|[acquire_ref](#acquire_ref)|Při přepisu v odvozené třídě, získá počet odkazů v tomto `ISource` bloku, aby se zabránilo odstranění.|  
-|[Využívat](#consume)|Při přepisu v odvozené třídě, využívá zprávu dříve nabízí to `ISource` blokovat a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
-|[link_target](#link_target)|Při přepisu v odvozené třídě, odkazuje na tato cílový blok `ISource` bloku.|  
-|[Verze](#release)|Při přepisu v odvozené třídě, uvolní předchozí rezervace úspěšné zprávy.|  
-|[release_ref](#release_ref)|Při přepisu v odvozené třídě, uvolní počet odkazů v tomto `ISource` bloku.|  
-|[Rezervovat](#reserve)|Při přepisu v odvozené třídě, vyhrazuje zprávu dříve nabízí to `ISource` bloku.|  
-|[unlink_target](#unlink_target)|Při přepisu v odvozené třídě, zruší propojení cílový blok z tohoto `ISource` blokování, pokud nalezen dříve propojení.|  
-|[unlink_targets](#unlink_targets)|Při přepisu v odvozené třídě, zruší propojení všech bloků cílový z tohoto `ISource` bloku.|  
+|[Přijmout](#accept)|Při přepisu v odvozené třídě, přijímá zprávy, které byly nabízeny situace `ISource` bloku, přenos vlastnictví volajícímu.|  
+|[acquire_ref](#acquire_ref)|Při přepisu v odvozené třídě, získá počet odkazů na tomto `ISource` bloku, abyste zabránili odstranění.|  
+|[využívání](#consume)|Při přepisu v odvozené třídě, využívá zprávu nabízely dříve v tomto `ISource` blokovat a úspěšně vyhrazená v cíli, přenos vlastnictví volajícímu.|  
+|[link_target](#link_target)|Při přepisu v odvozené třídě, odkazuje na tento cílový blok `ISource` bloku.|  
+|[Vydání verze](#release)|Při přepisu v odvozené třídě, uvolní předchozí vyhrazení úspěšné zprávy.|  
+|[release_ref](#release_ref)|Při přepisu v odvozené třídě, uvolní počet odkazů na tomto `ISource` bloku.|  
+|[Rezervovat](#reserve)|Při přepisu v odvozené třídě, vyhradí zprávu nabízely dříve v tomto `ISource` bloku.|  
+|[unlink_target](#unlink_target)|Při přepisu v odvozené třídě, nebude odpojen cílový blok z tohoto `ISource` blokovat, pokud nalezen dříve propojení.|  
+|[unlink_targets](#unlink_targets)|Při přepisu v odvozené třídě, nebude odpojen všem cílovým blokům z tohoto `ISource` bloku.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -88,7 +88,7 @@ class ISource;
   
 ##  <a name="accept"></a> Přijmout 
 
- Při přepisu v odvozené třídě, přijme zprávu, která byla nabízí to `ISource` bloku, přenos vlastnictví volajícímu.  
+ Při přepisu v odvozené třídě, přijímá zprávy, které byly nabízeny situace `ISource` bloku, přenos vlastnictví volajícímu.  
   
 ```
 virtual message<T>* accept(
@@ -97,36 +97,36 @@ virtual message<T>* accept(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` Nabízených `message` objektu.  
+*_MsgId*<br/>
+`runtime_object_identity` Nabízených `message` objektu.  
   
- `_PTarget`  
- Ukazatel na cílový blok, který volá `accept` metoda.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který volá `accept` metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na zprávu, která má volající teď vlastnictví.  
+ Ukazatel na zprávu, která má volající nyní vlastnictví.  
   
 ### <a name="remarks"></a>Poznámky  
- `accept` Metoda je volána cíl při zprávu nabízený to `ISource` bloku. Ukazatel zpráva vrácená může být jiný než předaný do `propagate` metodu `ITarget` blokování, pokud se tento zdroj rozhodne vytvořit kopii zprávy.  
+ `accept` Metoda je volána metodou cíl, zatímco zpráva nabízí situace `ISource` bloku. Vrácený ukazatel zpráva může být jiný než ten, předán `propagate` metodu `ITarget` blokovat, pokud se tento zdroj rozhodne vytvořit kopii zprávy.  
   
 ##  <a name="acquire_ref"></a> acquire_ref – 
 
- Při přepisu v odvozené třídě, získá počet odkazů v tomto `ISource` bloku, aby se zabránilo odstranění.  
+ Při přepisu v odvozené třídě, získá počet odkazů na tomto `ISource` bloku, abyste zabránili odstranění.  
   
 ```
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Ukazatel na cílový blok, který je voláním této metody.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který je volání této metody.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána `ITarget` objekt, který je propojena k tomuto zdroji během `link_target` metoda.  
+ Tato metoda je volána `ITarget` objekt, který se odkazuje tento zdroj během `link_target` metody.  
   
-##  <a name="consume"></a> Využívat 
+##  <a name="consume"></a> využívání 
 
- Při přepisu v odvozené třídě, využívá zprávu dříve nabízí to `ISource` blokovat a úspěšně rezervován cíl, přenos vlastnictví volajícímu.  
+ Při přepisu v odvozené třídě, využívá zprávu nabízely dříve v tomto `ISource` blokovat a úspěšně vyhrazená v cíli, přenos vlastnictví volajícímu.  
   
 ```
 virtual message<T>* consume(
@@ -135,21 +135,21 @@ virtual message<T>* consume(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z vyhrazených `message` objektu.  
+*_MsgId*<br/>
+`runtime_object_identity` z vyhrazených `message` objektu.  
   
- `_PTarget`  
- Ukazatel na cílový blok, který volá `consume` metoda.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který volá `consume` metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `message` objektu volající má nyní vlastnictví.  
+ Ukazatel `message` volající má teď vlastnictví objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `consume` Metoda je podobná `accept`, ale musí být vždy uvedeny volání `reserve` vrácená `true`.  
+ `consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená `true`.  
   
-##  <a name="dtor"></a> ~ ISource 
+##  <a name="dtor"></a> ~ Isource – 
 
- Zničí `ISource` objektu.  
+ Odstraní `ISource` objektu.  
   
 ```
 virtual ~ISource();
@@ -157,19 +157,19 @@ virtual ~ISource();
   
 ##  <a name="link_target"></a> link_target – 
 
- Při přepisu v odvozené třídě, odkazuje na tato cílový blok `ISource` bloku.  
+ Při přepisu v odvozené třídě, odkazuje na tento cílový blok `ISource` bloku.  
   
 ```
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Ukazatel na cílový blok propojovaném tomuto `ISource` bloku.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, na které se odkazuje na tuto `ISource` bloku.  
   
-##  <a name="release"></a> Verze 
+##  <a name="release"></a> Vydání verze 
 
- Při přepisu v odvozené třídě, uvolní předchozí rezervace úspěšné zprávy.  
+ Při přepisu v odvozené třídě, uvolní předchozí vyhrazení úspěšné zprávy.  
   
 ```
 virtual void release(
@@ -178,30 +178,30 @@ virtual void release(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z vyhrazených `message` objektu.  
+*_MsgId*<br/>
+`runtime_object_identity` z vyhrazených `message` objektu.  
   
- `_PTarget`  
- Ukazatel na cílový blok, který volá `release` metoda.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který volá `release` metody.  
   
 ##  <a name="release_ref"></a> release_ref – 
 
- Při přepisu v odvozené třídě, uvolní počet odkazů v tomto `ISource` bloku.  
+ Při přepisu v odvozené třídě, uvolní počet odkazů na tomto `ISource` bloku.  
   
 ```
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Ukazatel na cílový blok, který je voláním této metody.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který je volání této metody.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána `ITarget` objekt, který je právě odpojení z tohoto zdroje. Chcete-li uvolnit všechny prostředky, které jsou vyhrazené pro cílový blok je povoleno zdrojového bloku.  
+ Tato metoda je volána `ITarget` objekt, který je právě byl odpojen od tohoto zdroje. Zdrojový blok může uvolnit všechny prostředky, které jsou vyhrazené pro cílový blok.  
   
 ##  <a name="reserve"></a> Rezervovat 
 
- Při přepisu v odvozené třídě, vyhrazuje zprávu dříve nabízí to `ISource` bloku.  
+ Při přepisu v odvozené třídě, vyhradí zprávu nabízely dříve v tomto `ISource` bloku.  
   
 ```
 virtual bool reserve(
@@ -210,38 +210,38 @@ virtual bool reserve(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` Nabízených `message` objektu.  
+*_MsgId*<br/>
+`runtime_object_identity` Nabízených `message` objektu.  
   
- `_PTarget`  
- Ukazatel na cílový blok, který volá `reserve` metoda.  
+*_PTarget*<br/>
+Ukazatel na cílový blok, který volá `reserve` metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů, včetně: zpráva již byla vyhrazena nebo přijali jiný cíl, zdroj může odepřít rezervace a tak dále.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.  
   
 ### <a name="remarks"></a>Poznámky  
- Po zavolání metody `reserve`, pokud se aktivace podaří, musíte buď zavolat `consume` nebo `release` za účelem trvat nebo uvolňovat u sebe zprávy, v uvedeném pořadí.  
+ Po zavolání `reserve`, pokud je úspěšná, musí buď volat `consume` nebo `release` aby bylo možné provést nebo vzdát vlastnictví zprávy, v uvedeném pořadí.  
   
 ##  <a name="unlink_target"></a> unlink_target – 
 
- Při přepisu v odvozené třídě, zruší propojení cílový blok z tohoto `ISource` blokování, pokud nalezen dříve propojení.  
+ Při přepisu v odvozené třídě, nebude odpojen cílový blok z tohoto `ISource` blokovat, pokud nalezen dříve propojení.  
   
 ```
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Ukazatel na cílový blok Probíhá odpojení z tohoto `ISource` bloku.  
+*_PTarget*<br/>
+Ukazatel na cílový blok se byl odpojen od to `ISource` bloku.  
   
 ##  <a name="unlink_targets"></a> unlink_targets – 
 
- Při přepisu v odvozené třídě, zruší propojení všech bloků cílový z tohoto `ISource` bloku.  
+ Při přepisu v odvozené třídě, nebude odpojen všem cílovým blokům z tohoto `ISource` bloku.  
   
 ```
 virtual void unlink_targets() = 0;
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [ITarget – třída](itarget-class.md)

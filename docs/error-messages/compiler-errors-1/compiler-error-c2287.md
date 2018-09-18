@@ -1,5 +1,5 @@
 ---
-title: C2287 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2287 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b78dd6d7ffc44822cdff383f88b11a6cd899adf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a57d2738ba55d4964274c3c25038b8ebf248b24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072573"
 ---
-# <a name="compiler-error-c2287"></a>C2287 chyby kompilátoru
-'class': reprezentace dědičnosti: 'representation1' je obecné menší než požadované representation2  
-  
- Třída je deklarovaný s znázornění jednodušší než vyžaduje.  
-  
- Následující ukázka generuje C2287:  
-  
-```  
-// C2287.cpp  
-// compile with: /vmg /c  
-class __single_inheritance X;  
-class __single_inheritance Y;  
-  
-struct A { };  
-struct B { };  
-struct X : A, B { };  // C2287  X uses multiple inheritance  
-struct Y : A { };  // OK  
+# <a name="compiler-error-c2287"></a>Chyba kompilátoru C2287
+
+'class': reprezentace dědění: "representation1" je míň obecná než požadované representation2
+
+Třída je deklarována s reprezentaci jednodušší, než se požaduje.
+
+Následující ukázka generuje C2287:
+
+```
+// C2287.cpp
+// compile with: /vmg /c
+class __single_inheritance X;
+class __single_inheritance Y;
+
+struct A { };
+struct B { };
+struct X : A, B { };  // C2287  X uses multiple inheritance
+struct Y : A { };  // OK
 ```

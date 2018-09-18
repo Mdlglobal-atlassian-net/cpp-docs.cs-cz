@@ -19,65 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: df75602dec8b27d12535e41b14fb2d7ca64061d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076460"
 ---
 # <a name="cleaning-up-resources"></a>Vymazání prostředků
-Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, **__try** bloku příkazu byl přerušen dříve, než byly veškeré prostředky přiděleny, tak, aby všechny prostředky byly otevřeny.  
-  
- Proto byste dříve, než přikročíte k zpracování vyčištění při ukončení, měli z důvodu bezpečnosti zkontrolovat, které prostředky jsou skutečně otevřené. Doporučený postup je:  
-  
-1.  Inicializovat popisovače na hodnotu NULL.  
-  
-2.  V **__try** příkaz blokovat, přidělit prostředky. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.  
-  
-3.  V **__finally** blok příkazů, uvolněte každý prostředek, jehož odpovídající popisovač nebo proměnná příznaku je nenulová nebo not NULL.  
-  
-## <a name="example"></a>Příklad  
- Například následující kód používá popisovač ukončení pro uzavření tří souborů a bloku paměti, které byly přiděleny v **__try** blok příkazů. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.  
-  
-```cpp 
-// exceptions_Cleaning_up_Resources.cpp  
-#include <stdlib.h>  
-#include <malloc.h>  
-#include <stdio.h>  
-#include <windows.h>  
-  
-void fileOps() {  
-   FILE  *fp1 = NULL,  
-         *fp2 = NULL,  
-         *fp3 = NULL;  
-   LPVOID lpvoid = NULL;  
-   errno_t err;  
-  
-   __try {  
-      lpvoid = malloc( BUFSIZ );  
-  
-      err = fopen_s(&fp1, "ADDRESS.DAT", "w+" );  
-      err = fopen_s(&fp2, "NAMES.DAT", "w+" );  
-      err = fopen_s(&fp3, "CARS.DAT", "w+" );  
-   }  
-   __finally {  
-      if ( fp1 )  
-         fclose( fp1 );  
-      if ( fp2 )  
-         fclose( fp2 );  
-      if ( fp3 )  
-         fclose( fp3 );  
-      if ( lpvoid )  
-         free( lpvoid );  
-   }  
-}  
-  
-int main() {  
-   fileOps();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
- [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, **__try** bloku příkazu byl přerušen dříve, než byly veškeré prostředky přiděleny, tak, aby všechny prostředky byly otevřeny.
+
+Proto byste dříve, než přikročíte k zpracování vyčištění při ukončení, měli z důvodu bezpečnosti zkontrolovat, které prostředky jsou skutečně otevřené. Doporučený postup je:
+
+1. Inicializovat popisovače na hodnotu NULL.
+
+1. V **__try** příkaz blokovat, přidělit prostředky. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.
+
+1. V **__finally** blok příkazů, uvolněte každý prostředek, jehož odpovídající popisovač nebo proměnná příznaku je nenulová nebo not NULL.
+
+## <a name="example"></a>Příklad
+
+Například následující kód používá popisovač ukončení pro uzavření tří souborů a bloku paměti, které byly přiděleny v **__try** blok příkazů. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.
+
+```cpp
+// exceptions_Cleaning_up_Resources.cpp
+#include <stdlib.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <windows.h>
+
+void fileOps() {
+   FILE  *fp1 = NULL,
+         *fp2 = NULL,
+         *fp3 = NULL;
+   LPVOID lpvoid = NULL;
+   errno_t err;
+
+   __try {
+      lpvoid = malloc( BUFSIZ );
+
+      err = fopen_s(&fp1, "ADDRESS.DAT", "w+" );
+      err = fopen_s(&fp2, "NAMES.DAT", "w+" );
+      err = fopen_s(&fp3, "CARS.DAT", "w+" );
+   }
+   __finally {
+      if ( fp1 )
+         fclose( fp1 );
+      if ( fp2 )
+         fclose( fp2 );
+      if ( fp3 )
+         fclose( fp3 );
+      if ( lpvoid )
+         free( lpvoid );
+   }
+}
+
+int main() {
+   fileOps();
+}
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
+[Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

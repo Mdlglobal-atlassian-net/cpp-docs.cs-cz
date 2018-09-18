@@ -1,5 +1,5 @@
 ---
-title: C2824 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2824 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc654f60d9494480e0551f4de3ec1e041938cea2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 310156e82f69622a5c4a2315e204ccaa146e2c00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077409"
 ---
-# <a name="compiler-error-c2824"></a>C2824 chyby kompilátoru
-Návratový typ pro operátor nové musí být ' void *.  
-  
- S – na základě ukazatele přetížení operátoru `new` musí vracet `void *`.  
-  
- Následující ukázka generuje C2824:  
-  
-```  
-// C2824.cpp  
-// compile with: /c  
-class   A {  
-   A* operator new(size_t i, char *m);   // C2824  
-   // try the following line instead  
-   // void* operator new(size_t i, char *m);  
-};  
+# <a name="compiler-error-c2824"></a>Chyba kompilátoru C2824
+
+Návratový typ pro operátor new musí být "void *.
+
+– Na základě ukazateli přetížení operátoru `new` musí vracet `void *`.
+
+Následující ukázka generuje C2824:
+
+```
+// C2824.cpp
+// compile with: /c
+class   A {
+   A* operator new(size_t i, char *m);   // C2824
+   // try the following line instead
+   // void* operator new(size_t i, char *m);
+};
 ```

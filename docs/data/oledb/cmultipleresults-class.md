@@ -1,5 +1,5 @@
 ---
-title: CMultipleResults – třída | Microsoft Docs
+title: CMultipleResults – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2b4f147943e09c0203f863d7514566de8466acf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071559"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults – třída
-Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte `CMultipleResults` pro `CCommand` šablony argument *TMultiple*.  
+
+Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte `CMultipleResults` pro `CCommand` argument šablony *TMultiple*.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,11 +37,14 @@ class CMultipleResults
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pro zpracování více výsledků nastaví, [CCommand](../../data/oledb/ccommand-class.md) musí dědit z této třídy.  
+
+Pro zpracování více výsledku nastaví, [CCommand](../../data/oledb/ccommand-class.md) musí dědit z této třídy.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldbcli  
+
+**Záhlaví:** atldbcli  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

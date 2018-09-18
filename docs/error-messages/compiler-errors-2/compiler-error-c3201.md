@@ -1,5 +1,5 @@
 ---
-title: C3201 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3201 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ebf253a1d1e5963ff05aa343295e133a0641c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 466899de89e1f8760ec78e7d346ef949fab667be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074250"
 ---
-# <a name="compiler-error-c3201"></a>C3201 chyby kompilátoru
-Seznam parametrů šablony pro třídu šablony, šablony, neodpovídá seznamu parametrů šablony pro parametr šablony, šablony.  
-  
- Byl předán šablona třídy v argumentu šablona třídy, které nevyžaduje parametr šablony, nebo předán neodpovídající počet argumentů šablony pro argument výchozí šablony.  
-  
-```  
-// C3201.cpp  
-template<typename T1, typename T2>  
-class X1  
-{  
-};  
-  
-template<template<typename T> class U = X1>   // C3201  
-class X2  
-{  
-};  
-  
-template<template<typename T, typename V> class U = X1>   // OK  
-class X3  
-{  
-};  
+# <a name="compiler-error-c3201"></a>Chyba kompilátoru C3201
+
+Seznam parametrů šablony pro šablonu tříd 'template' neodpovídá seznamu parametrů šablony pro parametr šablony "template.
+
+Byl předán šablony třídy v argumentu šablony třídy, který nepřijímá parametr šablony, nebo jste předali neodpovídající počet argumentů šablony pro výchozí argument šablony.
+
+```
+// C3201.cpp
+template<typename T1, typename T2>
+class X1
+{
+};
+
+template<template<typename T> class U = X1>   // C3201
+class X2
+{
+};
+
+template<template<typename T, typename V> class U = X1>   // OK
+class X3
+{
+};
 ```

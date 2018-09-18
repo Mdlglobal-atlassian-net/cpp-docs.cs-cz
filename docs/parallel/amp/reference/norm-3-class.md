@@ -1,5 +1,5 @@
 ---
-title: norm_3 – třída | Microsoft Docs
+title: norm_3 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074380"
 ---
 # <a name="norm3-class"></a>norm_3 – třída
-Představuje krátký vektoru tři normální čísel.  
+Představuje krátký vektor tří normálních čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ class norm_3;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class norm_3;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[norm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[norm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -160,7 +160,7 @@ class norm_3;
 |norm_3::operator-||  
 |norm_3::operator--||  
 |norm_3::operator*=||  
-|/ norm_3::Operator = – operátor||  
+|norm_3::Operator / =||  
 |norm_3::operator++||  
 |norm_3::operator+=||  
 |norm_3::operator=||  
@@ -170,7 +170,7 @@ class norm_3;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#size)||  
+|[velikost – konstanta](#size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -216,7 +216,7 @@ class norm_3;
  **Namespace:** Concurrency::graphics  
 
 ## <a name="ctor"></a> norm_3 – konstruktor
-Výchozí konstruktor, inicializuje všechny prvky s 0.  
+Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -264,22 +264,22 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
-## <a name="a-namesize-size-constant"></a><a name="size"> Size – konstanta
+## <a name="a-namesize-size-constant"></a><a name="size"> velikost – konstanta
 ### <a name="syntax"></a>Syntaxe  
   
 ```  

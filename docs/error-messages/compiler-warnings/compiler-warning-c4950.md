@@ -1,5 +1,5 @@
 ---
-title: C4950 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4950 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55221cc233c74e612dd4a521641be90a6dbf9314
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 750295da5d2da42ae4c2aac4fbb04dd208a7f32c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072209"
 ---
-# <a name="compiler-warning-c4950"></a>C4950 upozornění kompilátoru
-'typ nebo člen': označené jako zastaralé  
-  
-Typ nebo člena byla označena jako zastaralé, se <xref:System.ObsoleteAttribute> atribut.  
-  
-C4950 je vždy vydané jako chyba. Toto upozornění můžete vypnout pomocí [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C4950:  
-  
-```cpp  
-// C4950.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// Any reference to Func3 should generate an error with message  
-[System::ObsoleteAttribute("Will be removed in next version", true)]  
-Int32 Func3(Int32 a, Int32 b) {  
-   return (a + b);  
-}  
-  
-int main() {  
-   Int32 MyInt3 = ::Func3(2, 2);   // C4950  
-}  
+# <a name="compiler-warning-c4950"></a>Upozornění kompilátoru C4950
+
+'typ nebo člen': označené jako zastaralé
+
+Člen nebo typ byl označený jako zastaralý s <xref:System.ObsoleteAttribute> atribut.
+
+C4950 je vždy vyvoláno jako chyba. Toto upozornění můžete vypnout pomocí [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4950:
+
+```cpp
+// C4950.cpp
+// compile with: /clr
+using namespace System;
+
+// Any reference to Func3 should generate an error with message
+[System::ObsoleteAttribute("Will be removed in next version", true)]
+Int32 Func3(Int32 a, Int32 b) {
+   return (a + b);
+}
+
+int main() {
+   Int32 MyInt3 = ::Func3(2, 2);   // C4950
+}
 ```

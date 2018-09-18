@@ -1,5 +1,5 @@
 ---
-title: C2170 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2170 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d19dff10d04d155d8071ffb349664f6b3104e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75d4c54bc6ec24cb182f3b6fb37ff4b8cd1ddfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055725"
 ---
-# <a name="compiler-error-c2170"></a>C2170 chyby kompilátoru
-"identifikátor": není deklarován jako funkce, nemůže být vnitřní funkce  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Direktiva pragma `intrinsic` se používá pro položku než funkce.  
-  
-2.  Direktiva pragma `intrinsic` se používá pro funkci s žádný vnitřní formulář.
+# <a name="compiler-error-c2170"></a>Chyba kompilátoru C2170
+
+'identifier': není deklarované jako funkce, nemůže jít o vnitřní typ.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Direktivy pragma `intrinsic` se používá pro položky než funkce.
+
+1. Direktivy pragma `intrinsic` se používá pro funkce s žádná vnitřní formuláře.

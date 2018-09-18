@@ -1,5 +1,5 @@
 ---
-title: unorm – třída | Microsoft Docs
+title: unorm – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071221"
 ---
 # <a name="unorm-class"></a>unorm – třída
-Představují unorm číslo. Každý prvek je plovoucí bodu číslo v rozsahu [0, 0f, 1.0f].  
+Představují unorm číslo. Každý prvek je plovoucí bodu číslo v rozsahu [0,0 f, 1.0f].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ class unorm;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[unorm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor. Inicializace na 0, 0f.|  
+|[unorm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor. Inicializujte na 0,0 f.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |unorm::Operator--||  
-|unorm::Operator float|Operátor převodu. Převést unorm číslo na plovoucí bodu hodnotu.|  
+|unorm::Operator float|Operátor převodu. Převést unorm číslo plovoucí desetinnou čárkou.|  
 |unorm::Operator * =||  
-|/ unorm::Operator = – operátor||  
+|unorm::Operator / =||  
 |unorm::Operator ++||  
 |unorm::Operator +=||  
 |unorm::Operator =||  
@@ -63,7 +63,7 @@ class unorm;
   
 ##  <a name="ctor"></a> unorm 
 
- Výchozí konstruktor. Inicializace na 0, 0f.  
+ Výchozí konstruktor. Inicializujte na 0,0 f.  
   
 ```  
 unorm(
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V`  
- Hodnota určená k chybě při inicializaci.  
+*_V*<br/>
+Hodnoty použité k inicializaci.  
   
- `_Other`  
- Norm objekt použitý k inicializaci.  
+*Ji_né*<br/>
+Norm objekt použitý k inicializaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

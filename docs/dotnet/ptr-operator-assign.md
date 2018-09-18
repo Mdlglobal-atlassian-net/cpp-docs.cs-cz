@@ -1,5 +1,5 @@
 ---
-title: PTR::Operator = | Microsoft Docs
+title: PTR::Operator = | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075074"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-Připojí do objekt COM `com::ptr`.  
+Připojí objektu modelu COM `com::ptr`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- Ukazatel rozhraní COM připojit.  
+*vp_ravo*<br/>
+Ukazatele rozhraní modelu COM pro připojení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Sledovací odkaz na `com::ptr`.  
+ Odkaz sledování na `com::ptr`.  
   
 ## <a name="exceptions"></a>Výjimky  
- Pokud `com::ptr` již vlastní odkaz na objekt COM `operator=` vyvolá <xref:System.InvalidOperationException>.  
+ Pokud `com::ptr` již vlastní odkaz na objekt modelu COM `operator=` vyvolá <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Poznámky  
- Přiřazení do objekt COM `com::ptr` odkazuje na objekt COM ale neuvolní volajícího odkazy na ni.  
+ Přiřazení objektu modelu COM `com::ptr` odkazuje na objekt modelu COM, ale neuvolní na ni odkaz volajícího.  
   
  Tento operátor má stejný účinek jako `Attach`.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu.  `ReplaceDocument` První volání funkce člen `Release` na všech dříve vlastní objekt a pak používá `operator=` připojit nový objekt dokumentu.  
+ V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `ReplaceDocument` První volání členských funkcí `Release` na žádném dříve vlastněn objekt a potom použije `operator=` připojit nový objekt dokumentu.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -134,7 +134,7 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>Viz také  
- [PTR – členové](../dotnet/ptr-members.md)   
+ [PTR – členy](../dotnet/ptr-members.md)   
  [PTR::Attach](../dotnet/ptr-attach.md)   
  [PTR::detach](../dotnet/ptr-detach.md)   
  [ptr::Release](../dotnet/ptr-release.md)

@@ -1,5 +1,5 @@
 ---
-title: C3010 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3010 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3421a7611bd7e749670c62e52526e296fd3f6c14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68be11a510ba41197cb9645484a10ca8dae6d77
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075121"
 ---
-# <a name="compiler-error-c3010"></a>C3010 chyby kompilátoru
-"štítek": přejít z OpenMP strukturovaných bloku není povoleno  
-  
- Kód nelze přejít do nebo z bloku OpenMP.  
-  
- Následující ukázka generuje C3010:  
-  
-```  
-// C3010.c  
-// compile with: /openmp  
-int main() {  
-   #pragma omp parallel   
-   {  
-      #pragma omp parallel  
-      {  
-         goto lbl3;  
-      }  
-   }  
-   lbl3:;   // C3010  
-}  
+# <a name="compiler-error-c3010"></a>Chyba kompilátoru C3010
+
+"štítek": přejít mimo strukturovaný blok OpenMP není povolený.
+
+Kód nelze přejít do nebo z něj blok OpenMP.
+
+Následující ukázka generuje C3010:
+
+```
+// C3010.c
+// compile with: /openmp
+int main() {
+   #pragma omp parallel
+   {
+      #pragma omp parallel
+      {
+         goto lbl3;
+      }
+   }
+   lbl3:;   // C3010
+}
 ```

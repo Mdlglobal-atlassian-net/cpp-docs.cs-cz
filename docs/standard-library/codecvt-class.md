@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f02f6a2810f5ac3a51abb80245c22a7f0c2df434
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074146"
 ---
 # <a name="codecvt-class"></a>codecvt – třída
 
@@ -91,21 +91,24 @@ Verze šablony [do_in](#do_in) a [do_out](#do_out) vždy vrátí `codecvt_base::
 
 Standardní knihovny C++ definuje několik explicitních specializací:
 
-`template<>`
-
-`codecvt<wchar_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<wchar_t, char, mbstate_t>
+```
 
 převádí mezi **wchar_t** a **char** pořadí.
 
-`template<>`
-
-`codecvt<char16_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char16_t, char, mbstate_t>
+```
 
 převádí mezi `char16_t` kódováním UTF-16 a **char** kódováním UTF-8.
 
-`template<>`
-
-`codecvt<char32_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char32_t, char, mbstate_t>
+```
 
 převádí mezi `char32_t` kódováním UTF-32 (UCS-4) a **char** kódováním UTF-8.
 

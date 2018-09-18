@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4024 | Microsoft Docs
+title: Upozornění (úroveň 1) C4024 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef0ac6699057c2232d92ee42296269f39afd7b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aba997619a60073834b94690d3c6ab53d63d42a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074211"
 ---
-# <a name="compiler-warning-level-1-c4024"></a>C4024 kompilátoru upozornění (úroveň 1)
-'function': různé typy pro formální a aktuální parametr "číslo"  
-  
- Odpovídající formální a aktuální parametry mají různé typy. Kompilátor předá skutečný parametr beze změny. Přijímající funkce převede na typ očekávaný typ parametru.
+# <a name="compiler-warning-level-1-c4024"></a>Kompilátor upozornění (úroveň 1) C4024
+
+'function': 'number' formální a skutečný parametr mají odlišné typy
+
+Odpovídající formální a skutečné parametry mají různé typy. Kompilátor předá skutečný parametr beze změny. Přijímající funkce převede na typ očekávaný typ parametru.

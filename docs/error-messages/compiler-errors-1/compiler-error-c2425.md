@@ -1,5 +1,5 @@
 ---
-title: C2425 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2425 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9984273ba689bdabe6d1ad6c3c4eb96e151227
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30f0bf6fb90a08647c9547108c17040fbf4c09ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071354"
 ---
-# <a name="compiler-error-c2425"></a>C2425 chyby kompilátoru
-"tokenu": není konstantní výraz ve "context"  
-  
- Token je součástí není konstantní výraz v tomto kontextu.  
-  
- Chcete-li tento problém vyřešit, nahraďte token s konstantní literál nebo výpočtu.  
-  
- Následující ukázka generuje C2425:  
-  
-```  
-// C2425.cpp  
-// processor: x86  
-int main() {  
-   int i = 3;  
-   __asm {  
-      mov eax, [ebp - i]   // C2425  
-      mov eax, [ebp - 3]   // OK  
-   }  
-}  
+# <a name="compiler-error-c2425"></a>Chyba kompilátoru C2425
+
+"token": nekonstantní výraz v "context"
+
+Token, který je součástí nekonstantní výraz v tomto kontextu.
+
+Chcete-li vyřešit tento problém, nahraďte token konstantní literál nebo výpočtu.
+
+Následující ukázka generuje C2425:
+
+```
+// C2425.cpp
+// processor: x86
+int main() {
+   int i = 3;
+   __asm {
+      mov eax, [ebp - i]   // C2425
+      mov eax, [ebp - 3]   // OK
+   }
+}
 ```

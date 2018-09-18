@@ -1,5 +1,5 @@
 ---
-title: C2647 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2647 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5de79746876a60cc9a64c4bf8f91e468b4d379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14187f7b74096a3a863798053ab260177d2f378b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045884"
 ---
-# <a name="compiler-error-c2647"></a>C2647 chyby kompilátoru
-'operátor': 'type1' na 'type2' nelze dereference.  
-  
- Levý operand operátoru ukazatele na člena ( `->*` nebo `.*` ) nelze implicitně převést na typ související s správné operátor.  
-  
- Následující ukázka generuje C2647:  
-  
-```  
-// C2647.cpp  
-class C {};  
-class D {};  
-  
-int main() {  
-   D d, *pd;  
-   C c, *pc = 0;  
-   int C::*pmc = 0;  
-   pd->*pmc = 0;   // C2647  
-   d.*pmc = 0;   // C2647  
-  
-   // OK  
-   pc->*pmc = 0;  
-   c.*pmc = 0;  
-}  
+# <a name="compiler-error-c2647"></a>Chyba kompilátoru C2647
+
+'operator': Nelze přistoupit přes ukazatel 'type1' na 'type2'
+
+Levý operand operátoru pointer-to-member ( `->*` nebo `.*` ) nejde implicitně převést na typ související s správný operátor.
+
+Následující ukázka generuje C2647:
+
+```
+// C2647.cpp
+class C {};
+class D {};
+
+int main() {
+   D d, *pd;
+   C c, *pc = 0;
+   int C::*pmc = 0;
+   pd->*pmc = 0;   // C2647
+   d.*pmc = 0;   // C2647
+
+   // OK
+   pc->*pmc = 0;
+   c.*pmc = 0;
+}
 ```

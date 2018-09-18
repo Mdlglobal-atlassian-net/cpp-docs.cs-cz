@@ -1,5 +1,5 @@
 ---
-title: C3071 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3071 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163cb170953c444789e39b906ff4d408739f7514
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f004de3ed133ea77d543014ae1adcdc4e1eddef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077799"
 ---
-# <a name="compiler-error-c3071"></a>C3071 chyby kompilátoru
-operátor 'operátor' lze použít pouze na instanci třídy ref nebo typ hodnoty  
-  
- Operátor CLR nelze použít v nativním typu. Operátor dají nativní typ například System::Int32 na třídu ref nebo ref struct (typ hodnoty), ale není nativní typu například int nebo alias. Tyto typy nelze do pole z kódu C++ způsobem, který odkazuje na proměnnou nativní proto nelze použít operátor.  
-  
- Další informace najdete v tématu [sledování Reference – operátor](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3071.  
-  
-```  
-// C3071.cpp  
-// compile with: /clr  
-class N {};  
-ref struct R {};  
-  
-int main() {  
-   N n;  
-   %n;   // C3071  
-  
-   R r;  
-   R ^ r2 = %r;   // OK  
-}  
+# <a name="compiler-error-c3071"></a>Chyba kompilátoru C3071
+
+operátor 'operator' může používat jedině pro instanci ref class nebo value-type.
+
+Operátor CLR nelze použít v nativním typu. Operátor, který lze použít na třídy ref class nebo ref struct (typu hodnoty), ale nejsou nativní typ například int nebo alias pro nativní typ, jako je například System::Int32. Tyto typy nemůže být pevně určený z kódu jazyka C++ způsobem, který odkazuje na nativní proměnnou, takže se nedá použít operátor.
+
+Další informace najdete v tématu [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3071.
+
+```
+// C3071.cpp
+// compile with: /clr
+class N {};
+ref struct R {};
+
+int main() {
+   N n;
+   %n;   // C3071
+
+   R r;
+   R ^ r2 = %r;   // OK
+}
 ```

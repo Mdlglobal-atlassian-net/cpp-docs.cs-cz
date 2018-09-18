@@ -1,5 +1,5 @@
 ---
-title: C2394 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2394 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a31a43e50a19765d7d5a07ca61f3195099793ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfb1db7ab7cb1b44ff61d4cf6d5a22d5365da4b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051682"
 ---
-# <a name="compiler-error-c2394"></a>C2394 chyby kompilátoru
-'your_type::operator'op' ": CLR nebo WinRToperator není platný. Minimálně jeden parametr musí být z následujících typů: 'T ^', se ^ %', se ^ & ", kde T = 'your_type'  
-  
- Operátor v prostředí Windows Runtime nebo spravovaný typ neměl minimálně jeden parametr, jehož typ je stejný jako typ vrácené hodnoty operátor.  
-  
- Následující ukázka generuje C2394:  
-  
-```  
-// C2394.cpp  
-// compile with: /clr /c  
-ref struct Y {  
-   static Y^ operator -(int i, char c);   // C2394  
-  
-   // OK  
-   static Y^ operator -(Y^ hY, char c);  
-   // or  
-   static Y^ operator -(int i, Y^& rhY);  
-};  
+# <a name="compiler-error-c2394"></a>Chyba kompilátoru C2394
+
+"your_type::operator'op" ": CLR nebo WinRToperator není platný. Nejméně jeden parametr musí být z následujících typů: nejde ^ ", nejde ^ %', 'T ^ &", kde T = "your_type"
+
+Operátor v prostředí Windows Runtime nebo spravovaný typ neměl nejmíň jeden parametr, jehož typ je stejný jako typ vrácené hodnoty operátor.
+
+Následující ukázka generuje C2394:
+
+```
+// C2394.cpp
+// compile with: /clr /c
+ref struct Y {
+   static Y^ operator -(int i, char c);   // C2394
+
+   // OK
+   static Y^ operator -(Y^ hY, char c);
+   // or
+   static Y^ operator -(int i, Y^& rhY);
+};
 ```

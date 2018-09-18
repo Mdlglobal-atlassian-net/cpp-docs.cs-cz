@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef93476e669b923d642f79f480c602229d6a4322
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071156"
 ---
 # <a name="interfaces-atl"></a>Rozhraní (ATL)
 
@@ -35,6 +35,6 @@ Každé rozhraní je rovněž jedinečné ID rozhraní (IID). Tuto jedinečnost 
 
 ## <a name="see-also"></a>Viz také
 
-[Úvod do modelu COM](../atl/introduction-to-com.md)   
+[Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
 [Objekty COM a rozhraní](/windows/desktop/com/com-objects-and-interfaces)
 

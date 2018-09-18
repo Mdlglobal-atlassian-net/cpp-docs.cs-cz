@@ -1,5 +1,5 @@
 ---
-title: SchedulerPolicy – třída | Microsoft Docs
+title: Schedulerpolicy – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d7cf95898afa5e669d52b8bf18ad0cfc8733cb37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691778"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076265"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy – třída
-`SchedulerPolicy` Třída obsahuje sadu páry klíč/hodnota, jeden pro každý prvek zásady, které řídí chování instance plánovače.  
+`SchedulerPolicy` Třída obsahuje sadu párů klíč/hodnota, jeden pro každý prvek zásad, které řídí chování instance plánovače.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,25 +43,25 @@ class SchedulerPolicy;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SchedulerPolicy](#ctor)|Přetíženo. Vytvoří novou zásadu Plánovač a naplní s hodnotami pro [zásad klíče](concurrency-namespace-enums.md) nepodporuje plánovače Concurrency Runtime a správce prostředků.|  
-|[~SchedulerPolicy Destructor](#dtor)|Zničí zásad plánovače.|  
+|[Schedulerpolicy –](#ctor)|Přetíženo. Vytvoří novou zásadu plánovače a naplní ji hodnotami pro [klíče zásad](concurrency-namespace-enums.md) podporované plánovači Concurrency Runtime a správce prostředků.|  
+|[~SchedulerPolicy Destructor](#dtor)|Odstraní zásadu plánovače.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Getpolicyvalue –](#getpolicyvalue)|Načte hodnotu klíče zásad zadán jako `key` parametr.|  
-|[Setconcurrencylimits –](#setconcurrencylimits)|Současně nastaví `MinConcurrency` a `MaxConcurrency` zásad na `SchedulerPolicy` objektu.|  
-|[Setpolicyvalue –](#setpolicyvalue)|Nastaví jako zadána hodnota klíče zásad `key` parametr a vrátí původní hodnotu.|  
+|[Getpolicyvalue –](#getpolicyvalue)|Načte hodnotu klíče zásad zadaný jako `key` parametru.|  
+|[Setconcurrencylimits –](#setconcurrencylimits)|Zároveň nastaví `MinConcurrency` a `MaxConcurrency` zásady `SchedulerPolicy` objektu.|  
+|[Setpolicyvalue –](#setpolicyvalue)|Nastaví hodnotu klíče zásad zadaný jako `key` parametr a vrátí původní hodnotu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Přiřadí zásady plánovače z jiné zásady plánovače.|  
+|[operátor =](#operator_eq)|Přiřadí zásadu plánovače z jiné zásady plánovače.|  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace o zásady, které se dá řídit pomocí `SchedulerPolicy` třídy najdete v tématu [PolicyElementKey](concurrency-namespace-enums.md).  
+ Další informace o zásadách, které se dá řídit pomocí `SchedulerPolicy` najdete v tématu [policyelementkey –](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SchedulerPolicy`  
@@ -73,43 +73,43 @@ class SchedulerPolicy;
   
 ##  <a name="getpolicyvalue"></a> Getpolicyvalue – 
 
- Načte hodnotu klíče zásad zadán jako `key` parametr.  
+ Načte hodnotu klíče zásad zadaný jako `key` parametru.  
   
 ```
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
- Klíč zásad načíst hodnotu.  
+*Klíč*<br/>
+Klíč zásad načíst hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud klíč určeného `key` je podporován, hodnota zásady pro klíč přetypovat `unsigned int`.  
+ Pokud klíč určené `key` je podporován, zásady hodnotu pro klíč přetypovat na `unsigned int`.  
   
 ### <a name="remarks"></a>Poznámky  
- Vyvolá metodu [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pro klíčem neplatná zásada.  
+ Metoda vyvolá výjimku [invalid_scheduler_policy_key –](invalid-scheduler-policy-key-class.md) neplatná zásada klíče.  
   
 ##  <a name="operator_eq"></a> operátor = 
 
- Přiřadí zásady plánovače z jiné zásady plánovače.  
+ Přiřadí zásadu plánovače z jiné zásady plánovače.  
   
 ```
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_RhsPolicy`  
- Zásada přiřazení k této zásadě.  
+*_RhsPolicy*<br/>
+Zásady, které chcete přiřadit tuto zásadu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na zásady plánovače.  
+ Odkaz na zásadu plánovače.  
   
 ### <a name="remarks"></a>Poznámky  
- Často je nejpohodlnější způsob, jak definovat nové zásady plánovače zkopírujte existující zásady a upravit pomocí `SetPolicyValue` nebo `SetConcurrencyLimits` metody.  
+ Často je nejpohodlnější způsob, jak definovat novou zásadu plánovače zkopírovat existující zásadu a upravit ji pomocí `SetPolicyValue` nebo `SetConcurrencyLimits` metody.  
   
-##  <a name="ctor"></a> SchedulerPolicy 
+##  <a name="ctor"></a> Schedulerpolicy – 
 
- Vytvoří novou zásadu Plánovač a naplní s hodnotami pro [zásad klíče](concurrency-namespace-enums.md) nepodporuje plánovače Concurrency Runtime a správce prostředků.  
+ Vytvoří novou zásadu plánovače a naplní ji hodnotami pro [klíče zásad](concurrency-namespace-enums.md) podporované plánovači Concurrency Runtime a správce prostředků.  
   
 ```
 SchedulerPolicy();
@@ -123,22 +123,22 @@ SchedulerPolicy(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PolicyKeyCount`  
- Počet klíč/hodnota páry následujících `_PolicyKeyCount` parametr.  
+*_PolicyKeyCount*<br/>
+Dvojice klíč/hodnota číslo, které následují `_PolicyKeyCount` parametru.  
   
- `_SrcPolicy`  
- Zdrojová zásada pro kopírování.  
+*_SrcPolicy*<br/>
+Zdrojové zásady ke kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- První konstruktoru vytvoří nové zásady plánovače, kde všechny zásady, budou inicializována na jejich výchozí hodnoty.  
+ První konstruktor vytvoří novou zásadu plánovače, kde všechny zásady budou inicializovány na výchozí hodnoty.  
   
- Druhý konstruktor vytvoří novou zásadu scheduler, která používá styl s názvem parametru inicializace. Hodnoty po `_PolicyKeyCount` je zadán parametr jako páry klíč/hodnota. Žádné zásady klíč, který není zadaný v tomto konstruktoru bude mít výchozí hodnotu. Tento konstruktor může vyvolat výjimky [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) nebo [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).  
+ Druhý konstruktor vytvoří novou zásadu plánovače, která používá styl inicializace s pojmenovaným parametrem. Hodnoty po `_PolicyKeyCount` parametru jsou dodávány jako dvojice klíč/hodnota. Všechny klíče zásad, které není zadané v tomto konstruktoru bude mít výchozí hodnotu. Tento konstruktor může vyvolat výjimky [invalid_scheduler_policy_key –](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md) nebo [invalid_scheduler_policy_thread_specification –](invalid-scheduler-policy-thread-specification-class.md).  
   
- Třetí konstruktor je kopírovacího konstruktoru. Často je nejpohodlnější způsob, jak definovat nové zásady plánovače zkopírujte existující zásady a upravit pomocí `SetPolicyValue` nebo `SetConcurrencyLimits` metody.  
+ Třetí konstruktor je kopírovací konstruktor. Často je nejpohodlnější způsob, jak definovat novou zásadu plánovače zkopírovat existující zásadu a upravit ji pomocí `SetPolicyValue` nebo `SetConcurrencyLimits` metody.  
   
-##  <a name="dtor"></a> ~ SchedulerPolicy 
+##  <a name="dtor"></a> ~ Schedulerpolicy – 
 
- Zničí zásad plánovače.  
+ Odstraní zásadu plánovače.  
   
 ```
 ~SchedulerPolicy();
@@ -146,7 +146,7 @@ SchedulerPolicy(
   
 ##  <a name="setconcurrencylimits"></a> Setconcurrencylimits – 
 
- Současně nastaví `MinConcurrency` a `MaxConcurrency` zásad na `SchedulerPolicy` objektu.  
+ Zároveň nastaví `MinConcurrency` a `MaxConcurrency` zásady `SchedulerPolicy` objektu.  
   
 ```
 void SetConcurrencyLimits(
@@ -155,20 +155,20 @@ void SetConcurrencyLimits(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MinConcurrency`  
- Hodnota `MinConcurrency` klíč zásad.  
+*_MinConcurrency*<br/>
+Hodnota `MinConcurrency` klíče zásad.  
   
- `_MaxConcurrency`  
- Hodnota `MaxConcurrency` klíč zásad.  
+*_MaxConcurrency*<br/>
+Hodnota `MaxConcurrency` klíče zásad.  
   
 ### <a name="remarks"></a>Poznámky  
- Metoda vyvolá výjimku [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Pokud je hodnota zadaná u `MinConcurrency` je větší než zadaná pro zásady `MaxConcurrency` zásad.  
+ Metoda vyvolá výjimku [invalid_scheduler_policy_thread_specification –](invalid-scheduler-policy-thread-specification-class.md) Pokud je hodnota zadaná u `MinConcurrency` je větší než zadaná pro zásady `MaxConcurrency` zásad.  
   
- Můžete také vyvolat metodu [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pro ostatní neplatné hodnoty.  
+ Můžete také vyvolat metodu [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md) další neplatné hodnoty.  
   
 ##  <a name="setpolicyvalue"></a> Setpolicyvalue – 
 
- Nastaví jako zadána hodnota klíče zásad `key` parametr a vrátí původní hodnotu.  
+ Nastaví hodnotu klíče zásad zadaný jako `key` parametr a vrátí původní hodnotu.  
   
 ```
 unsigned int SetPolicyValue(
@@ -177,26 +177,26 @@ unsigned int SetPolicyValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
- Zásady klíč k nastavení hodnoty.  
+*Klíč*<br/>
+Klíč zásad a nastavit hodnotu pro.  
   
- `value`  
- Hodnota k nastavení zásad klíč.  
+*value*<br/>
+Hodnota k nastavení klíče zásad pro.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud klíč určeného `key` je podporován, stará hodnota zásady pro klíč přetypovat `unsigned int`.  
+ Pokud klíč určené `key` je podporován, původní hodnota zásady pro klíč přetypovat na `unsigned int`.  
   
 ### <a name="remarks"></a>Poznámky  
- Vyvolá metodu [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) klíčem neplatná zásada nebo všechny zásady klíč, jehož hodnota nemůže být nastavena pomocí `SetPolicyValue` metoda.  
+ Metoda vyvolá výjimku [invalid_scheduler_policy_key –](invalid-scheduler-policy-key-class.md) klíčem neplatná zásada nebo všechny klíče zásad, jehož hodnota nelze nastavit `SetPolicyValue` metody.  
   
- Vyvolá metodu [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pro hodnotu, která není podporována pro klíč zadaný pomocí `key` parametr.  
+ Metoda vyvolá výjimku [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md) na hodnotu, která není podporována pro určený klíč `key` parametru.  
   
- Všimněte si, že tato metoda není možné nastavit `MinConcurrency` nebo `MaxConcurrency` zásady. Pokud chcete nastavit tyto hodnoty, použijte [setconcurrencylimits –](#setconcurrencylimits) metoda.  
+ Všimněte si, že tato metoda není možné nastavit `MinConcurrency` nebo `MaxConcurrency` zásady. Chcete-li nastavit tyto hodnoty, použijte [setconcurrencylimits –](#setconcurrencylimits) metody.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
- [PolicyElementKey](concurrency-namespace-enums.md)   
- [CurrentScheduler – třída](currentscheduler-class.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
+ [Policyelementkey –](concurrency-namespace-enums.md)   
+ [Currentscheduler – třída](currentscheduler-class.md)   
  [Scheduler – třída](scheduler-class.md)   
  [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 

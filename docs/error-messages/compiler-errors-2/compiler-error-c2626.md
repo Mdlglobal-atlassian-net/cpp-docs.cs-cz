@@ -1,5 +1,5 @@
 ---
-title: C2626 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2626 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b7b2ea1473b4226382e9aa3bd17b0bfc092f5cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9929da1f0cf9ffd9c70048017fdef1d854c1fcc9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074679"
 ---
-# <a name="compiler-error-c2626"></a>C2626 chyby kompilátoru
-"identifikátor": privátní nebo chráněný datový člen není povolen v anonymní struktura nebo sjednocení  
-  
- Člen anonymní struktura nebo sjednocení musí mít veřejný přístup.  
-  
- Následující ukázka generuje C2626:  
-  
-```  
-// C2626.cpp  
-int main() {  
-   union {  
-   protected:  
-      int j;     // C2626, j is protected  
-   private:  
-      int k;     // C2626, k is private  
-   };  
-}  
-```  
-  
- Pokud chcete tento problém vyřešit, odeberte všechny soukromé nebo chráněné značky:  
-  
-```  
-// C2626b.cpp  
-int main() {  
-   union {  
-   public:  
-      int i;   // OK, i is public  
-   };  
-}  
+# <a name="compiler-error-c2626"></a>Chyba kompilátoru C2626
+
+'identifier': privátními nebo chráněnými datovými člen není povolený v anonymní struktury nebo sjednocení
+
+Člen anonymní struktury nebo sjednocení musí mít veřejný přístup.
+
+Následující ukázka generuje C2626:
+
+```
+// C2626.cpp
+int main() {
+   union {
+   protected:
+      int j;     // C2626, j is protected
+   private:
+      int k;     // C2626, k is private
+   };
+}
+```
+
+Chcete-li vyřešit tento problém, odeberte žádné soukromé nebo chráněné značky:
+
+```
+// C2626b.cpp
+int main() {
+   union {
+   public:
+      int i;   // OK, i is public
+   };
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Signal – konstanty akce | Microsoft Docs
+title: Signal – konstanty akce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6f645d474e697bf662a5dd63973dd54c329eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f2cb8e8ca907081e85be03d7576d0252cdf20ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081311"
 ---
 # <a name="signal-action-constants"></a>signal – konstanty akce
-Akce prováděné při doručení signál přerušení závisí na hodnotu `func`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `func` Argument musí být buď adresu funkce nebo jeden z manifestu konstanty uvedené níže a definované v SIGNÁL. H.  
-  
- `SIG_DFL`  
- Použije systém výchozí odpověď. Pokud volací program používá vstupně-výstupní datový proud, nejsou vyprázdněna vytvořen běhové knihovny vyrovnávací paměti.  
-  
- `SIG_IGN`  
- Ignoruje signál přerušení. Tato hodnota má být poskytnut nikdy pro `SIGFPE`, protože je ponechán s plovoucí desetinnou čárkou stav procesu definován.  
-  
- `SIG_SGE`  
- Označuje, že došlo k chybě v signál.  
-  
- `SIG_ACK`  
- Označuje, že bylo přijato potvrzení.  
-  
- `SIG_ERR`  
- Návratový typ z signál, který chybu došlo k chybě.  
-  
-## <a name="see-also"></a>Viz také  
- [Signál](../c-runtime-library/reference/signal.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Akce provedená při přijetí signál přerušení závisí na hodnotu `func`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+`func` Argument musí být adresa funkce nebo jednu z konstant manifestu uvedené níže a podle SIGNÁLU. H.
+
+|||
+|-|-|
+| `SIG_DFL`  | Použije výchozí systémové nastavení odpověď. Pokud volající program používá vstupně-výstupní datový proud, nejsou vyprázdní vyrovnávací paměti vytvořené pomocí knihovny run-time.  |
+| `SIG_IGN`  | Ignoruje signál přerušení. Tato hodnota by měly mít nikdy pro `SIGFPE`, protože je ponecháno stav s plovoucí desetinnou čárkou procesu nedefinovaný.  |
+| `SIG_SGE`  | Označuje, že signál, který se stala chyba.  |
+| `SIG_ACK`  | Označuje, že bylo přijato potvrzení.  |
+| `SIG_ERR`  | Návratový typ z signál udávající chybu došlo k chybě.  |
+
+## <a name="see-also"></a>Viz také
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

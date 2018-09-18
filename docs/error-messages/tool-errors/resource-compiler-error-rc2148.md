@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2148 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2148 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10e18eef4691c0a018feb583ffb93499e86ccb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78bf8e9eb9ebe86dae75856ea3c0b6f5d34a26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075902"
 ---
 # <a name="resource-compiler-error-rc2148"></a>Chyba kompilátoru prostředků RC2148
-ID dílčího jazyka příliš velký  
-  
- Hodnota ID dílčího jazyka je mimo rozsah.  
-  
- **Jazyk** příkaz musíte použít následující syntaxi:  
-  
- **JAZYK** *primary_language_ID*,*secondary_language_ID*  
-  
- Platné ID dílčího jazyka jsou definovány jako **SUBLANG_** konstanty v souboru WINNT.h souboru.
+
+ID DÍLČÍHO moc velká
+
+ID DÍLČÍHO hodnot byla mimo rozsah.
+
+**Jazyk** příkaz musíte použít následující syntaxi:
+
+**JAZYK** *primary_language_ID*,*secondary_language_ID*
+
+Platné ID DÍLČÍHO jsou definované jako **SUBLANG_** konstanty v souboru WINNT.h souboru.

@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4104 | Microsoft Docs
+title: Upozornění Linkerů LNK4104 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ea3e074cc0db9591cd0ffe9329ff7f1936563f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6304f3ea928c89f4756a4594270ebb7914324f85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057259"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Upozornění linkerů LNK4104
-Export symbolu 'symbol' by měl být PRIVÁTNÍ  
-  
- `symbol` Může být jedna z následujících akcí:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllGetDocumentation`  
-  
--   `DllInitialize`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllRegisterServerExW`  
-  
--   `DllUnload`  
-  
--   `DllUnregisterServer`  
-  
--   `RasCustomDeleteEntryNotify`  
-  
--   `RasCustomDial`  
-  
--   `RasCustomDialDlg`  
-  
--   `RasCustomEntryDlg`  
-  
- Toto upozornění je vygenerované při vytváření knihovnu importu pro knihovny DLL a exportování jedné z výše uvedených funkcí bez zadání jako SOUKROMÝ v souboru definice modulu. Obecně platí tyto funkce jsou exportovány pro použití pouze technologie OLE. Umístění do knihovny importu může vést k neobvyklé chování, když program propojené s knihovnou nesprávně provádí volání k nim. Další informace o PRIVATE – klíčové slovo najdete v tématu [EXPORTUJE](../../build/reference/exports.md).
+
+Export symbolu 'symbol' by měl být PRIVATE.
+
+`symbol` Může být jedna z následujících akcí:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllGetDocumentation`
+
+- `DllInitialize`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllRegisterServerExW`
+
+- `DllUnload`
+
+- `DllUnregisterServer`
+
+- `RasCustomDeleteEntryNotify`
+
+- `RasCustomDial`
+
+- `RasCustomDialDlg`
+
+- `RasCustomEntryDlg`
+
+Toto upozornění je vygenerován, když jsou sestavování knihovny importů pro knihovnu DLL a exportovat jedné z výše uvedených funkcí bez zadání jako SOUKROMÝ v souboru definice modulu. Obecně tyto funkce jsou exportovány pro použití pouze technologie OLE. Uvedení v knihovně importu může vést k neobvyklé chování při nesprávně propojené ke knihovně program provede volání na ně. Další informace o klíčového slova PRIVATE, naleznete v tématu [EXPORTY](../../build/reference/exports.md).

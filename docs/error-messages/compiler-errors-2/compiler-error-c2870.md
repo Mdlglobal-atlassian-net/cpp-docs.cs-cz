@@ -1,5 +1,5 @@
 ---
-title: C2870 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2870 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fe9f47a96422493d6d731a18add8c23ff683f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47101cbc2fb1be48ba54166b9c6ef99fc0c6c35e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073873"
 ---
-# <a name="compiler-error-c2870"></a>C2870 chyby kompilátoru
-"název": definice oboru názvů musí být v rozsahu souboru nebo okamžitě v jiné definici oboru názvů  
-  
- Jste definovali obor názvů `name` nesprávně. Obory názvů musí být definován v oboru souboru (mimo všechny bloky a třídy) nebo bezprostředně v jiném oboru názvů.  
-  
- Následující ukázka generuje C2870:  
-  
-```  
-// C2870.cpp  
-// compile with: /c  
-int main() {  
-   namespace A { int i; };   // C2870  
-}  
+# <a name="compiler-error-c2870"></a>Chyba kompilátoru C2870
+
+"name": definice oboru názvů musí být buď v rozsahu souboru, nebo v bezprostředně jiné definici oboru názvů
+
+Definice oboru názvů `name` nesprávně. Obory názvů musí být definován v rozsahu souboru (mimo všechny bloky a třídy) nebo přímo v jiném oboru názvů.
+
+Následující ukázka generuje C2870:
+
+```
+// C2870.cpp
+// compile with: /c
+int main() {
+   namespace A { int i; };   // C2870
+}
 ```

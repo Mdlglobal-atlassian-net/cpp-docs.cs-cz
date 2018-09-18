@@ -1,5 +1,5 @@
 ---
-title: C2928 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2928 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e88e3c86bb88f8b46c6e88f55cb57799ccf42bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f1b71d47ecd8cbf110367ccf00ed0f936978ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241801"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076031"
 ---
-# <a name="compiler-error-c2928"></a>C2928 chyby kompilátoru
-Explicitní vytvoření instance; "identifikátor" není funkce nebo statických dat člena třídy šablony 'class'.  
-  
- Nelze explicitně doložit členem `class` tedy není funkcí nebo `static` proměnné.
+# <a name="compiler-error-c2928"></a>Chyba kompilátoru C2928
+
+explicitní vytváření instancí; 'identifier' není funkce nebo statický datový člen template-class 'class'
+
+Člena nelze explicitně doložit `class` tedy není funkcí nebo `static` proměnné.

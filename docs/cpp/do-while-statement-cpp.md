@@ -19,52 +19,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5db832a7c6c380e43fcf5edb3f36ce1a1bf692e6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 37155be11caaee9c609a0e11ddbfeb5d62856903
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071195"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C++)
-Spustí *příkaz* opakovaně, dokud není zadaná ukončovací podmínka ( *výraz*) vyhodnocen jako nula.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-do  
-   statement  
-while ( expression ) ;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Podmínka ukončení zkoušky se provádí po každém spuštění smyčky; Proto **proveďte – zatímco** cyklus se opakuje, jednou nebo vícekrát, v závislosti na hodnotě výrazu ukončení. **Proveďte-při** příkaz může také skončit při [přerušení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) je proveden příkaz v rámci těla příkazu.  
-  
- *Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:  
-  
-1.  Provede se tělo příkazu.  
-  
-2.  Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, **proveďte-při** příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje **proveďte – zatímco** – příkaz:  
-  
-```cpp 
-// do_while_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i = 0;  
-    do  
-    {  
-        printf_s("\n%d",i++);  
-    } while (i < 3);  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [klíčová slova](../cpp/keywords-cpp.md)   
- [while – příkaz (C++)](../cpp/while-statement-cpp.md)   
- [for – příkaz (C++)](../cpp/for-statement-cpp.md)   
- [Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)
+
+Spustí *příkaz* opakovaně, dokud není zadaná ukončovací podmínka ( *výraz*) vyhodnocen jako nula.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+do
+   statement
+while ( expression ) ;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Podmínka ukončení zkoušky se provádí po každém spuštění smyčky; Proto **proveďte – zatímco** cyklus se opakuje, jednou nebo vícekrát, v závislosti na hodnotě výrazu ukončení. **Proveďte-při** příkaz může také skončit při [přerušení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) je proveden příkaz v rámci těla příkazu.
+
+*Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:
+
+1. Provede se tělo příkazu.
+
+1. Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, **proveďte-při** příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje **proveďte – zatímco** – příkaz:
+
+```cpp
+// do_while_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        printf_s("\n%d",i++);
+    } while (i < 3);
+}
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Příkazy iterace](../cpp/iteration-statements-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[while – příkaz (C++)](../cpp/while-statement-cpp.md)<br/>
+[for – příkaz (C++)](../cpp/for-statement-cpp.md)<br/>
+[Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)

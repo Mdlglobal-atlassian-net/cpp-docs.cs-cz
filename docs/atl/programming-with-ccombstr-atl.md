@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476dd8b3eeb7174c7584a58ccb5d53bf251adbcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6a2e6c334016c79f02dc43e9790d7dfc4645212
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43768005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075615"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programování pomocí třídy CComBSTR (ATL)
 
@@ -88,8 +88,8 @@ Všimněte si, že stejný kód by způsobit, že pokud byl parametr funkce **[v
 
 ## <a name="see-also"></a>Viz také
 
-[Koncepty](../atl/active-template-library-atl-concepts.md)   
-[Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md)   
-[wstring](../standard-library/basic-string-class.md)   
+[Koncepty](../atl/active-template-library-atl-concepts.md)<br/>
+[CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[wstring](../standard-library/basic-string-class.md)<br/>
 [Makra převodu řetězců](../atl/reference/string-conversion-macros.md)
 

@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078891"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura šablon zprostředkovatele OLE DB
+
 ## <a name="data-sources-and-sessions"></a>Zdroje dat a relace  
- Architektura zprostředkovatele OLE DB zahrnuje objekt zdroje dat a jednu nebo více relací. Objekt zdroje dat je počáteční objekt, který musí vytvořit instanci každý zprostředkovatele. Když aplikace příjemce vyžaduje data, společně vytvoří objekt zdroje dat spustit zprostředkovatele. Objekt zdroje dat vytvoří objekt relace (pomocí `IDBCreateSession` rozhraní) přes který uživatel připojí k objektu zdroje dat. Programátoři rozhraní ODBC si můžete představit jako ekvivalentní objekt zdroje dat `HENV` a objekt relace jako ekvivalentní `HDBC`.  
+
+Architektura zprostředkovatele OLE DB zahrnuje objekt zdroje dat a jednu nebo více relací. Objekt zdroje dat je počáteční objekt, který musí vytvořit instanci každý zprostředkovatele. Když aplikace příjemce vyžaduje data, společně vytvoří objekt zdroje dat spustit zprostředkovatele. Objekt zdroje dat vytvoří objekt relace (pomocí `IDBCreateSession` rozhraní) přes který uživatel připojí k objektu zdroje dat. Programátoři rozhraní ODBC si můžete představit jako ekvivalentní objekt zdroje dat `HENV` a objekt relace jako ekvivalentní `HDBC`.  
   
- ![Architektura zprostředkovatele](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![Architektura zprostředkovatele](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Šablony technologie OLE DB spolu s zdrojové soubory vytvořené průvodcem zprostředkovatele OLE DB, implementovat objekt zdroje dat. Relace je objekt, který odpovídá OLE DB `TSession`.  
+Šablony technologie OLE DB spolu s zdrojové soubory vytvořené průvodcem zprostředkovatele OLE DB, implementovat objekt zdroje dat. Relace je objekt, který odpovídá OLE DB `TSession`.  
   
 ## <a name="mandatory-and-optional-interfaces"></a>Povinné a nepovinné rozhraní  
- Šablony zprostředkovatele OLE DB poskytují předpřipravenou implementace pro všechna požadovaná rozhraní. Povinné a volitelné rozhraní jsou definovány OLE DB pro několik typů objektů:  
+
+Šablony zprostředkovatele OLE DB poskytují předpřipravenou implementace pro všechna požadovaná rozhraní. Povinné a volitelné rozhraní jsou definovány OLE DB pro několik typů objektů:  
   
--   [Zdroj dat](../../data/oledb/data-source-object-interfaces.md)  
+- [Zdroj dat](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Relace](../../data/oledb/session-object-interfaces.md)  
+- [Relace](../../data/oledb/session-object-interfaces.md)  
   
--   [Sady řádků](../../data/oledb/rowset-object-interfaces.md)  
+- [Sady řádků](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Příkaz](../../data/oledb/command-object-interfaces.md)  
+- [Příkaz](../../data/oledb/command-object-interfaces.md)  
   
--   [Transakce](../../data/oledb/transaction-object-interfaces.md)  
+- [Transakce](../../data/oledb/transaction-object-interfaces.md)  
   
- Všimněte si, že šablony zprostředkovatele OLE DB neimplementují řádek a úložiště objektů.  
+Všimněte si, že šablony zprostředkovatele OLE DB neimplementují řádek a úložiště objektů.  
   
- Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Součást|Rozhraní|Komentář|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684287"
 |[Příkaz](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[povinné] `IAccessor`<br /><br /> [povinné] `IColumnsInfo`<br /><br /> [povinné] `ICommand`<br /><br /> [povinné] `ICommandProperties`<br /><br /> [povinné] `ICommandText`<br /><br /> [povinné] `IConvertType`<br /><br /> [volitelné] `IColumnsRowset`<br /><br /> [volitelné] `ICommandPersist`<br /><br /> [volitelné] `ICommandPrepare`<br /><br /> [volitelné] `ICommandWithParameters`<br /><br /> [volitelné] `ISupportErrorInfo`<br /><br /> [volitelné] `ICommandStream`|Objekt příkazu zpracovává operace s daty, jako jsou dotazy. Dokáže zpracovat parametrizované nebo parametrizované příkazy.<br /><br /> Objekt příkazu je také zodpovědná za zpracování vazby pro parametry a výstupní sloupce. Vazba je struktura, která obsahuje informace o tom, jak by mělo být získáno sloupec, v sadě řádků. Obsahuje informace, jako je pořadí, datový typ, délku a stav.|  
 |[Transakce](../../data/oledb/transaction-object-interfaces.md) (volitelné)|[povinné] `IConnectionPointContainer`<br /><br /> [povinné] `ITransaction`<br /><br /> [volitelné] `ISupportErrorInfo`|Objekt transakce definuje atomickou jednotku práce na zdroji dat a určuje, jak tyto jednotky práce vzájemně souvisí. Tento objekt není přímo podporován šablonami zprostředkovatele OLE DB (to znamená, že vytvoříte vlastní objekt).|  
   
- Další informace naleznete v následujících tématech:  
+Další informace naleznete v následujících tématech:  
   
--   [Mapy vlastností](../../data/oledb/property-maps.md)  
+- [Mapy vlastností](../../data/oledb/property-maps.md)  
   
--   [Uživatelský záznam](../../data/oledb/user-record.md)  
+- [Uživatelský záznam](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Rozhraní OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Rozhraní OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

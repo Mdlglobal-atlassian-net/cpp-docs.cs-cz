@@ -1,5 +1,5 @@
 ---
-title: C2338 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2338 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156074f20517c1d2e2f4fdb4ac5c54d6cf014276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77bc98afdad36e0505abb58ee06ec1c7e7654ae5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071572"
 ---
-# <a name="compiler-error-c2338"></a>C2338 chyby kompilátoru  
-  
-> *Chybová zpráva*  
-  
-Tato chyba může být způsobeno `static_assert` došlo k chybě během kompilace. Zpráva poskytuje `static_assert` parametry.   
-  
-Tato chybová zpráva může být generována také externí zprostředkovatelé kompilátoru. Ve většině případů tyto chyby jsou hlášených poskytovatele atribut knihovny DLL, jako je například ATLPROV. Některé běžné formuláře této zprávy patří:
+# <a name="compiler-error-c2338"></a>Chyba kompilátoru C2338
 
-> '*atribut*' Atl atribut zprostředkovatele: Chyba ATL*číslo* *zpráv*  
-  
+> *Chybová zpráva*
+
+Tuto chybu může způsobovat `static_assert` chyby během kompilace. Poskytl se zpráva `static_assert` parametry.
+
+Tato chybová zpráva může být také generován externí zprostředkovatele pro kompilátor. Ve většině případů jsou tyto chyby ohlásil podle poskytovatele atributu knihovny DLL, jako je například ATLPROV. Některé běžné formuláře této zprávy zahrnout:
+
+> "*atribut*" atribut poskytovatele Atl: Chyba ATL*číslo* *zprávy*
+
 > Nesprávné použití atributu '*atribut*.
-  
-> '*využití*': správný formát pro atribut 'využití.  
-  
-Tyto chyby jsou často neopravitelné a může následovat kompilátoru závažné chybě.  
-  
-Chcete-li tyto problémy vyřešit, opravte použití atributu. V některých případech, například musí být atribut parametry deklarován předtím, než mohou být použity. Pokud je k dispozici číslo ATL chyby, zkontrolujte v dokumentaci k této chybě podrobnější informace.  
+
+> "*využití*': nesprávný formát pro atribut 'využití.
+
+Tyto chyby jsou často neopravitelné a může být následován znakem závažná chyba kompilátoru.
+
+Chcete-li vyřešit tyto problémy, opravte použití atributu. V některých případech, například musí být parametry atributu deklarována před jejich použitím. Pokud číslo chyby knihovny ATL naleznete v dokumentaci k této chybě konkrétnější informace.

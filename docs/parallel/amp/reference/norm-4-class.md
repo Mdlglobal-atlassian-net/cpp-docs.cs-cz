@@ -1,5 +1,5 @@
 ---
-title: norm_4 – třída | Microsoft Docs
+title: norm_4 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058091"
 ---
 # <a name="norm4-class"></a>norm_4 – třída
-Představuje krátký vektoru čtyři normální čísel.  
+Představuje krátký vektor čtyř normálních čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -296,7 +296,7 @@ class norm_4;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class norm_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[norm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[norm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -456,7 +456,7 @@ class norm_4;
 |norm_4::operator-||  
 |norm_4::operator--||  
 |norm_4::operator*=||  
-|/ norm_4::Operator = – operátor||  
+|norm_4::Operator / =||  
 |norm_4::Operator ++||  
 |norm_4::operator+=||  
 |norm_4::Operator =||  
@@ -466,7 +466,7 @@ class norm_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#norm_4__size)||  
+|[velikost – konstanta](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -609,9 +609,9 @@ class norm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> norm_4 
+##  <a name="ctor"></a> norm_4 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 norm_4() restrict(amp,
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V3`  
- Hodnota k chybě při inicializaci element 3.  
+*_V3*<br/>
+Hodnota inicializace element 3.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="norm_4__size"></a> Velikost 
 

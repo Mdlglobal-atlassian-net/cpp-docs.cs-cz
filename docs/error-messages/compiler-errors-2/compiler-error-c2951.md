@@ -1,5 +1,5 @@
 ---
-title: C2951 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2951 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0883b0942fdfbe3d55a540fbed35a0affc73be5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6757256f08c5c1ed0a35fbf1c2a70776a4f2936
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074666"
 ---
-# <a name="compiler-error-c2951"></a>C2951 chyby kompilátoru
-Typ deklarace jsou povolená jenom na globální, obor názvů nebo třídy oboru  
-  
- Nelze deklarovat obecného nebo třídu šablony mimo globální nebo oboru názvů. Pokud provedete deklaracích obecného nebo šablony do souboru zahrnout, ujistěte se, že soubor je v globálním oboru.  
-  
- Následující ukázka generuje C2951:  
-  
-```  
-// C2951.cpp  
-template <class T>  
-class A {};  
-  
-int main() {  
-   template <class T>   // C2951  
-   class B {};  
-}  
-```  
-  
- C2951 může dojít také při použití obecných typů:  
-  
-```  
-// C2951b.cpp  
-// compile with: /clr /c  
-  
-// OK  
-generic <class T>   
-ref class GC { };  
-  
-int main() {  
-   generic <class T> ref class GC2 {};   // C2951  
-}  
+# <a name="compiler-error-c2951"></a>Chyba kompilátoru C2951
+
+Typ deklarace jsou povolené jenom v globálním, oboru názvů nebo třídy
+
+Nelze deklarovat obecného nebo šablony třídy mimo globální nebo obor názvů. Pokud v zahrnutém souboru deklaracích rozvrhy generic nebo šablonu, ujistěte se, že tento soubor je v globálním oboru.
+
+Následující ukázka generuje C2951:
+
+```
+// C2951.cpp
+template <class T>
+class A {};
+
+int main() {
+   template <class T>   // C2951
+   class B {};
+}
+```
+
+C2951 může dojít také při použití obecných typů:
+
+```
+// C2951b.cpp
+// compile with: /clr /c
+
+// OK
+generic <class T>
+ref class GC { };
+
+int main() {
+   generic <class T> ref class GC2 {};   // C2951
+}
 ```

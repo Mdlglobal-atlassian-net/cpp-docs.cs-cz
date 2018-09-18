@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405867"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076291"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Použití `__declspec(align(#))` pro přesné řízení zarovnání dat definova
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (zarovnání (** *#* **))** *deklarátorů*  
+> **__declspec (zarovnání (** *#* **))** *deklarátorů*
 
 ## <a name="remarks"></a>Poznámky
 
@@ -251,6 +251,7 @@ Posun objektu je založeno na posunu na předchozí objekt a aktuální nastaven
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
-[__declspec](../cpp/declspec.md)  
-[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  
-[Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
+[Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)

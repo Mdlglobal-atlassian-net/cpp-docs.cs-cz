@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1102 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1102 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f92c7faf3c5c2d58aabba5ecf4d8d401470cfc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2be0a62b08b361f1cfa423fa3999a440e2fe4709
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073179"
 ---
 # <a name="resource-compiler-fatal-error-rc1102"></a>Závažná chyba kompilátoru prostředků RC1102
-Vnitřní chyba: příliš mnoho argumentů pro RCPP  
-  
- Kompilátor prostředků preprocesor bylo předáno příliš mnoho argumentů. Snižte počet symboly definované se symboly definování (/ d) možnost definováním ve zdroji. Tuto chybu mohl způsobit také tak, že zadáte příliš mnoho zahrnout cesty pro hledání souborů pomocí možnosti zahrnují cesty pro hledání (/ i).
+
+Vnitřní chyba: příliš mnoho argumentů RCPP
+
+Preprocesor kompilátor prostředků bylo předáno příliš mnoho argumentů. Snižte počet symbolů definovaných se definovat symboly (/ d) možnost tak, že definujete ve zdroji. Tato chyba může taky způsobovat zadání příliš mnoho obsahuje vyhledávací cesty k souborům pomocí možností zahrnout cestu vyhledávání (/ i).

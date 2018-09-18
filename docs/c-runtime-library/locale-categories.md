@@ -1,5 +1,5 @@
 ---
-title: Kategorie národního prostředí | Microsoft Docs
+title: Kategorie národního prostředí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,42 +31,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5087fd42a5fd1c104d8587091996e58f78442b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12162e7d6eabfc60b3b4c028b990b720a502f516
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077877"
 ---
 # <a name="locale-categories"></a>Kategorie národního prostředí
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <locale.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Kategorie národního prostředí se používá k určení, jaká část informací o národním prostředí program bude používat rutiny lokalizace manifestu konstanty. Národní prostředí odkazuje na polohu (nebo země nebo oblast), pro který lze přizpůsobit některé aspekty vašeho programu. Oblasti závislých na národním prostředí obsahovat, například formátování kalendářních dat nebo formát zobrazení pro peněžní hodnoty.  
-  
-|Kategorie národního prostředí|Součástí program vliv|  
-|---------------------|-------------------------------|  
-|`LC_ALL`|Všechny chování specifické národního prostředí (všechny kategorie)|  
-|`LC_COLLATE`|Chování `strcoll` a `strxfrm` funkce|  
-|`LC_CTYPE`|Chování funkce znak zpracování (s výjimkou **IsDigit –**, `isxdigit`, `mbstowcs`, a `mbtowc`, které jsou poškozena)|  
-|`LC_MAX`|Stejné jako `LC_TIME`|  
-|`LC_MIN`|Stejné jako `LC_ALL`|  
-|`LC_MONETARY`|Měnovou formátování informace o vrácené `localeconv` – funkce|  
-|`LC_NUMERIC`|Desetinnou znak pro formátovaný výstup rutiny (například `printf`), rutiny převodu dat a Neměnové formátování informace o vrácené `localeconv` – funkce|  
-|`LC_TIME`|Chování `strftime` – funkce|  
-  
- V tématu [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) příklad.  
-  
-## <a name="see-also"></a>Viz také  
- [localeconv –](../c-runtime-library/reference/localeconv.md)   
- [setlocale –, _wsetlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcoll – funkce](../c-runtime-library/strcoll-functions.md)   
- [STRFTIME –, wcsftime –, _strftime_l –, _wcsftime_l –](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <locale.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Kategorie národního prostředí jsou konstanty manifestu používané rutiny lokalizace k určení, jaká část informací o národním prostředí programu se použije. Národní prostředí odkazuje na umístění (nebo zemi nebo oblast), pro které je možné přizpůsobit některé aspekty programu. Oblasti závislé na národním prostředí patří, například formátování kalendářních dat nebo zobrazovací formát pro peněžní hodnoty.
+
+|Kategorie národního prostředí|Části programu vliv|
+|---------------------|-------------------------------|
+|`LC_ALL`|Všechny chování specifické pro národní prostředí (všechny kategorie)|
+|`LC_COLLATE`|Chování `strcoll` a `strxfrm` funkce|
+|`LC_CTYPE`|Chování funkce zpracování znaků (s výjimkou **isdigit**, `isxdigit`, `mbstowcs`, a `mbtowc`, které nejsou ovlivněny)|
+|`LC_MAX`|Stejné jako `LC_TIME`|
+|`LC_MIN`|Stejné jako `LC_ALL`|
+|`LC_MONETARY`|Vrácené informace o formátování měny `localeconv` – funkce|
+|`LC_NUMERIC`|Znak pro rutiny formátovaného výstupu desetinné čárky (například `printf`), rutiny převodu dat a Neměnové informace o formátování vrácené `localeconv` – funkce|
+|`LC_TIME`|Chování `strftime` – funkce|
+
+Zobrazit [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) příklad.
+
+## <a name="see-also"></a>Viz také
+
+[localeconv](../c-runtime-library/reference/localeconv.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[strcoll – funkce](../c-runtime-library/strcoll-functions.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

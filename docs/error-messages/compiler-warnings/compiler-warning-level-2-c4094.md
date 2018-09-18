@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4094 | Microsoft Docs
+title: C4094 kompilátoru (úroveň 2) upozornění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9deae6a0e21fcb7dd4f09de07e65445dc9595932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b9317cbc31ef8bddb14da11af1087a148fd3188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078709"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>C4094 kompilátoru upozornění (úroveň 2)
-vyžadující 'tokenu' deklarovaný žádné symboly  
-  
- Kompilátor zjištěna deklarace prázdný využitím vyžadující struktury, sjednocení nebo třída. Deklaraci se ignoruje.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4094.cpp  
-// compile with: /W2  
-struct  
-{  
-};   // C4094  
-  
-int main()  
-{  
-}  
-```  
-  
- Tato podmínka, vygeneruje se chyba pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-2-c4094"></a>Kompilátor C4094 upozornění (úroveň 2)
+
+neoznačených "token" nedeklarovalo žádné symboly
+
+Kompilátor zjistil deklaraci prázdný pomocí neoznačených struktury, sjednocení nebo třídy. Deklarace se ignoruje.
+
+## <a name="example"></a>Příklad
+
+```
+// C4094.cpp
+// compile with: /W2
+struct
+{
+};   // C4094
+
+int main()
+{
+}
+```
+
+Tato podmínka dojde k chybě v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

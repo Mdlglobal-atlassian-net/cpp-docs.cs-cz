@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073666"
 ---
 # <a name="ole-db-programming"></a>OLE DB – programování
+
 Microsoft OLE DB je starou technologií; pro nové aplikace je požadovaná data přístup k rozhraní API pro propojené servery SQL. Všechny nové aplikace by měl použití rozhraní ODBC. Aktuální zprostředkovatel OLE DB pro SQL Server je SQLNCLI11. KNIHOVNY DLL. Zprostředkovatel se stále dodává v SQL serveru 2016. Tato dokumentace je určená pro vývojáře, kteří jsou udržování existujících aplikací, které už používají OLE DB.
   
- Šablony technologie OLE DB jsou šablony jazyka C++, které usnadňují databázové technologie OLE DB výkonné použití tím, že poskytuje třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Tato knihovna šablon je rozdělen na poskytovatele šablony a – šablony příjemce.  
+Šablony technologie OLE DB jsou šablony jazyka C++, které usnadňují databázové technologie OLE DB výkonné použití tím, že poskytuje třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Tato knihovna šablon je rozdělen na poskytovatele šablony a – šablony příjemce.  
   
- Visual C++ obsahuje také podpora průvodce pro vytváření aplikací OLE DB starter.  
+Visual C++ obsahuje také podpora průvodce pro vytváření aplikací OLE DB starter.  
   
- Kromě toho můžete použít atributy k implementaci šablony příjemců OLE DB.  
+Kromě toho můžete použít atributy k implementaci šablony příjemců OLE DB.  
   
 |Další informace o|Další informace naleznete v tématu|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB je starou technologií; pro nové aplikace je požadovaná data
 |Koncepční témata ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům](../data-access-in-cpp.md)
+
+[Přístup k datům](../data-access-in-cpp.md)

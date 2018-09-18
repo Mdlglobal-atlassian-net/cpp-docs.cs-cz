@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076317"
 ---
 # <a name="fatal-error-c1113"></a>Závažná chyba C1113
-\#selhalo na 'file'  
-  
- Pouze soubor ve formátu Microsoft Intermediate Language (MSIL) mohou být předány [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru umožňuje vytvořit výstupní soubor jazyka MSIL. Další jazyky sady Visual Studio také vytvářejí soubory MSIL.
+
+\#selhalo na 'file'
+
+Pouze soubor ve formátu Microsoft Intermediate Language (MSIL) mohou být předány [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru umožňuje vytvořit výstupní soubor jazyka MSIL. Další jazyky sady Visual Studio také vytvářejí soubory MSIL.

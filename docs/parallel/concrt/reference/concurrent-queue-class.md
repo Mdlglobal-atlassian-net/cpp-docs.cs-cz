@@ -1,5 +1,5 @@
 ---
-title: concurrent_queue – třída | Microsoft Docs
+title: concurrent_queue – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d211d94903e411db5755bd57873b9d3e33ee54fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076486"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue – třída
-`concurrent_queue` Třída je pořadí kontejneru třídu, která umožňuje first in, první ven přístup k jeho elementy. Umožňuje omezenou sadu souběžnosti bezpečných operace, jako například `push` a `try_pop`.  
+`concurrent_queue` Třída je sekvence kontejner – třída, která umožňuje first-in, FIFO přístup k jeho prvkům. Umožňuje omezenou sadu operace bezpečné na souběžnosti, jako například `push` a `try_pop`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,46 +44,46 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Datový typ prvky, které mají být uloženy ve frontě.  
+*T*<br/>
+Datový typ prvků, které mají být uloženy ve frontě.  
   
- `_Ax`  
- Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o přidělení a zrušení přidělení paměti pro tuto frontu souběžných. Tento argument je volitelný a výchozí hodnota je `allocator<T>`.  
+*_Ax*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro tuto frontu souběžných. Tento argument je nepovinný a výchozí hodnota je `allocator<T>`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`allocator_type`|Typ, který reprezentuje allocator – třída souběžných fronty.|  
-|`const_iterator`|Typ, který reprezentuje bez bezpečného přístupu `const` iterator přes elementů v souběžných fronty.|  
-|`const_reference`|Typ, který obsahuje odkaz na `const` element uložené v souběžných fronty pro čtení a provádění `const` operace.|  
-|`difference_type`|Typ, který poskytuje podepsaný vzdálenost mezi dvěma prvky v souběžných fronty.|  
-|`iterator`|Typ, který reprezentuje není bezpečná pro přístup z více vláken iterator přes elementů v souběžných fronty.|  
-|`reference`|Typ, který obsahuje odkaz na element uložené v souběžných fronty.|  
-|`size_type`|Typ, který udává počet elementů v souběžných fronty.|  
-|`value_type`|Typ, který představuje typ dat uložených v souběžných frontě.|  
+|`allocator_type`|Typ, který představuje třídu alokátoru pro souběžná fronta.|  
+|`const_iterator`|Typ, který představuje jiných – bezpečné pro vlákna `const` iterátoru přes prvky v souběžná fronta.|  
+|`const_reference`|Typ, který poskytuje odkaz na `const` prvek uložený v souběžná fronta pro čtení a provádění `const` operace.|  
+|`difference_type`|Typ, který poskytuje podepsaný vzdálenosti mezi dvěma prvky v souběžná fronta.|  
+|`iterator`|Typ, která představuje iterátor vláknově bezpečné přes prvky v souběžná fronta.|  
+|`reference`|Typ, který poskytuje odkaz na prvek uložený v souběžná fronta.|  
+|`size_type`|Typ, který vrátí počet prvků v souběžná fronta.|  
+|`value_type`|Typ, který představuje typ dat uložených v souběžná fronta.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[concurrent_queue](#ctor)|Přetíženo. Vytvoří souběžných fronty.|  
-|[~concurrent_queue Destructor](#dtor)|Zničí souběžných fronty.|  
+|[concurrent_queue](#ctor)|Přetíženo. Sestaví souběžná fronta.|  
+|[~concurrent_queue Destructor](#dtor)|Zničí souběžná fronta.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zrušte zaškrtnutí](#clear)|Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.|  
-|[prázdný](#empty)|Testy, pokud v tuto chvíli je souběžných fronta prázdná tato metoda je volána. Tato metoda je bezpečné souběžnosti.|  
-|[get_allocator](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných fronty. Tato metoda je bezpečné souběžnosti.|  
-|[push](#push)|Přetíženo. Enqueues položku na konci tail souběžných fronty. Tato metoda je bezpečné souběžnosti.|  
-|[try_pop](#try_pop)|Pokud je k dispozici, dequeues položky z fronty. Tato metoda je bezpečné souběžnosti.|  
-|[unsafe_begin](#unsafe_begin)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
-|[unsafe_end](#unsafe_end)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
-|[unsafe_size](#unsafe_size)|Vrátí počet položek ve frontě. Tato metoda není bezpečná souběžnosti.|  
+|[Vymazat](#clear)|Vymaže souběžná fronta zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná pro souběžnost.|  
+|[prázdný](#empty)|Testuje, zda je v tuto chvíli je prázdný souběžná fronta tato metoda je volána. Tato metoda je bezpečná pro souběžnost.|  
+|[get_allocator](#get_allocator)|Vrátí kopii objektu Alokátor použitý k vytvoření souběžná fronta. Tato metoda je bezpečná pro souběžnost.|  
+|[push](#push)|Přetíženo. Zařadí položku na konci ocáskem souběžná fronta. Tato metoda je bezpečná pro souběžnost.|  
+|[try_pop](#try_pop)|Dequeues položky z fronty, pokud je k dispozici. Tato metoda je bezpečná pro souběžnost.|  
+|[unsafe_begin](#unsafe_begin)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` začátek souběžná fronta. Tato metoda není bezpečná pro souběžnost.|  
+|[unsafe_end](#unsafe_end)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` konec souběžná fronta. Tato metoda není bezpečná pro souběžnost.|  
+|[unsafe_size](#unsafe_size)|Vrátí počet položek ve frontě. Tato metoda není bezpečná pro souběžnost.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -96,17 +96,17 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** souběžnosti  
   
-##  <a name="clear"></a> Zrušte zaškrtnutí 
+##  <a name="clear"></a> Vymazat 
 
- Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.  
+ Vymaže souběžná fronta zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ctor"></a> concurrent_queue 
+##  <a name="ctor"></a> concurrent_queue – 
 
- Vytvoří souběžných fronty.  
+ Sestaví souběžná fronta.  
   
 ```
 explicit concurrent_queue(
@@ -126,35 +126,35 @@ concurrent_queue(_InputIterator _Begin,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_InputIterator`  
- Typ vstupu iterator, který určuje rozsah hodnot.  
+*_InputIterator*<br/>
+Typ vstupního iterátoru, který určuje rozsah hodnot.  
   
- `_Al`  
- Třída alokátoru, která se má použít s tímto objektem.  
+*_Al*<br/>
+Třída alokátoru, která se má použít s tímto objektem.  
   
- `_OtherQ`  
- Zdroj `concurrent_queue` objekt, který chcete zkopírovat nebo přesunout elementy z.  
+*_OtherQ*<br/>
+Zdroj `concurrent_queue` objektu, který chcete zkopírovat nebo přesunout elementy ze.  
   
- `_Begin`  
- Pozice první prvek v rozsahu elementy, které se mají zkopírovat.  
+*_Zahájit*<br/>
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.  
   
- `_End`  
- Pozice první prvek mimo rozsah elementy, které se mají zkopírovat.  
+*_Ukončit*<br/>
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny konstruktory uložit objekt allocator `_Al` a inicializace fronty.  
+ Všechny konstruktory ukládají objekt alokátoru `_Al` a inicializace fronty.  
   
- První konstruktor určuje prázdné frontě počáteční a explicitně určuje typ allocator má být použit.  
+ První konstruktor určí prázdný počáteční fronty a explicitně určuje typ alokátoru, který se má použít.  
   
- Druhý konstruktor určuje kopii souběžných fronty `_OtherQ`.  
+ Druhý konstruktor určuje kopii souběžná fronta `_OtherQ`.  
   
- Třetí konstruktor určuje přesunu souběžných fronty `_OtherQ`.  
+ Třetí konstruktor určuje pohyb souběžná fronta `_OtherQ`.  
   
- Čtvrtý konstruktor určuje poskytl iterator rozsah hodnot [ `_Begin`, `_End`).  
+ Čtvrtý konstruktor určuje hodnoty poskytnuté rozsahem iterátoru [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a> ~ concurrent_queue 
+##  <a name="dtor"></a> ~ concurrent_queue – 
 
- Zničí souběžných fronty.  
+ Zničí souběžná fronta.  
   
 ```
 ~concurrent_queue();
@@ -162,32 +162,32 @@ concurrent_queue(_InputIterator _Begin,
   
 ##  <a name="empty"></a> prázdný 
 
- Testy, pokud v tuto chvíli je souběžných fronta prázdná tato metoda je volána. Tato metoda je bezpečné souběžnosti.  
+ Testuje, zda je v tuto chvíli je prázdný souběžná fronta tato metoda je volána. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud v tuto chvíli jsme hledá, byla prázdná souběžných fronty `false` jinak.  
+ `true` Pokud v tuto chvíli jsme se podívali, byla prázdná souběžná fronta `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Když tato metoda je souběžnosti bezpečných s ohledem na volání metod `push`, `try_pop`, a `empty`, hodnota vrácená můžou být nesprávné doby se prozkoumá volající vlákno.  
+ Zatímco tato metoda je bezpečná pro souběžnost s ohledem na volání metody `push`, `try_pop`, a `empty`, vrácená hodnota může být nesprávný podle času je prozkoumat volajícího vlákna.  
   
-##  <a name="get_allocator"></a> get_allocator – 
+##  <a name="get_allocator"></a> get_allocator 
 
- Vrátí kopii allocator použitý k vytvoření souběžných fronty. Tato metoda je bezpečné souběžnosti.  
+ Vrátí kopii objektu Alokátor použitý k vytvoření souběžná fronta. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Kopie allocator použitý k vytvoření souběžných fronty.  
+ Kopie Alokátor použitý k vytvoření souběžná fronta.  
   
-##  <a name="push"></a> Push 
+##  <a name="push"></a> nabízených oznámení 
 
- Enqueues položku na konci tail souběžných fronty. Tato metoda je bezpečné souběžnosti.  
+ Zařadí položku na konci ocáskem souběžná fronta. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 void push(const T& _Src);
@@ -196,35 +196,35 @@ void push(T&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
- Položka, která má být přidán do fronty.  
+*_Src*<br/>
+Položky, které chcete přidat do fronty.  
   
 ### <a name="remarks"></a>Poznámky  
- `push` je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
+ `push` je bezpečné na souběžnosti s ohledem na volání metody `push`, `try_pop`, a `empty`.  
   
 ##  <a name="try_pop"></a> try_pop – 
 
- Pokud je k dispozici, dequeues položky z fronty. Tato metoda je bezpečné souběžnosti.  
+ Dequeues položky z fronty, pokud je k dispozici. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 bool try_pop(T& _Dest);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Dest`  
- Odkaz na umístění pro uložení dequeued položky.  
+*_Dest*<br/>
+Odkaz na umístění pro uložení dequeued položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud byla položka úspěšně dequeued `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud byla položka úspěšně dequeued parametr `_Dest` obdrží dequeued hodnota zničena původní hodnotu do fronty, a vrátí tato funkce `true`. Pokud se žádná položka vyřazení z fronty, funkce vrátí hodnotu `false` bez blokování a obsah `_Dest` parametr nejsou definovány.  
+ Pokud byla položka úspěšně dequeued parametr `_Dest` přijímá dequeued hodnotu, původní hodnota uložená ve frontě je zničen, a tato funkce vrací `true`. Pokud se žádné položky k odstranění z fronty, tato funkce vrací `false` bez blokování a obsah `_Dest` parametr nejsou definovány.  
   
- `try_pop` je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
+ `try_pop` je bezpečné na souběžnosti s ohledem na volání metody `push`, `try_pop`, a `empty`.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin – 
 
- Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných fronty. Tato metoda není bezpečná souběžnosti.  
+ Vrátí iterátor typu `iterator` nebo `const_iterator` začátek souběžná fronta. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 iterator unsafe_begin();
@@ -233,14 +233,14 @@ const_iterator unsafe_begin() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Iterace typu `iterator` nebo `const_iterator` na začátek objekt souběžných fronty.  
+ Iterátor typu `iterator` nebo `const_iterator` začátek souběžná fronta objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Iterátory pro `concurrent_queue` třídy jsou primárně určený pro ladění, jako jsou pomalé a iterace není bezpečné souběžnosti s ohledem na jiné operace fronty.  
+ Iterátory pro `concurrent_queue` třídy jsou primárně určeny pro ladění, jako jsou pomalé a iterace není bezpečná pro souběžnost s ohledem na ostatní operace fronty.  
   
 ##  <a name="unsafe_end"></a> unsafe_end – 
 
- Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných fronty. Tato metoda není bezpečná souběžnosti.  
+ Vrátí iterátor typu `iterator` nebo `const_iterator` konec souběžná fronta. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 iterator unsafe_end();
@@ -249,24 +249,24 @@ const_iterator unsafe_end() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Iterace typu `iterator` nebo `const_iterator` na konec souběžných fronty.  
+ Iterátor typu `iterator` nebo `const_iterator` konec souběžná fronta.  
   
 ### <a name="remarks"></a>Poznámky  
- Iterátory pro `concurrent_queue` třídy jsou primárně určený pro ladění, jako jsou pomalé a iterace není bezpečné souběžnosti s ohledem na jiné operace fronty.  
+ Iterátory pro `concurrent_queue` třídy jsou primárně určeny pro ladění, jako jsou pomalé a iterace není bezpečná pro souběžnost s ohledem na ostatní operace fronty.  
   
 ##  <a name="unsafe_size"></a> unsafe_size – 
 
- Vrátí počet položek ve frontě. Tato metoda není bezpečná souběžnosti.  
+ Vrátí počet položek ve frontě. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 size_type unsafe_size() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Velikost souběžných fronty.  
+ Velikost souběžná fronta.  
   
 ### <a name="remarks"></a>Poznámky  
- `unsafe_size` není bezpečné souběžného zpracování a může způsobit nesprávné výsledky, pokud volána souběžně volání metod `push`, `try_pop`, a `empty`.  
+ `unsafe_size` není bezpečná pro souběžnost a může poskytovat nesprávné výsledky, pokud současně volání metod volá `push`, `try_pop`, a `empty`.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

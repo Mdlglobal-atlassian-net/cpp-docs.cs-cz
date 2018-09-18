@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f1be2c862775c76bbaad36f84c871eff5a38d5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1f7306e11bd1cc23e4de17e67f0941d2b3ee8473
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055284"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet::Run – funkce
 
@@ -37,9 +37,9 @@ Po zabezpečení není zadána, objekt je registrován s modelem COM tak, aby no
 
 ## <a name="see-also"></a>Viz také
 
-[Služby](../atl/atl-services.md)   
-[Csecuritydesc – třída](../atl/reference/csecuritydesc-class.md)   
-[CSID – třída](../atl/reference/csid-class.md)   
-[Cdacl – třída](../atl/reference/cdacl-class.md)   
+[Služby](../atl/atl-services.md)<br/>
+[CSecurityDesc – třída](../atl/reference/csecuritydesc-class.md)<br/>
+[CSid – třída](../atl/reference/csid-class.md)<br/>
+[CDacl – třída](../atl/reference/cdacl-class.md)<br/>
 [Catlservicemodulet::Run –](../atl/reference/catlservicemodulet-class.md#run)
 

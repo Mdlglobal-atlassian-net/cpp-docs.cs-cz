@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078787"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;Param&gt; (Visual C++)
 \<Param > značky byste měli použít ve komentář pro deklaraci metody, popisující jeden z parametrů pro metodu.  
@@ -35,11 +35,11 @@ ms.locfileid: "43686418"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `name`  
- Název parametru metody.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.  
+*Jméno*<br/>
+Název parametru metody.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.  
   
- `description`  
- Popis pro parametr.  
+*Popis*<br/>
+Popis pro parametr.  
   
 ## <a name="remarks"></a>Poznámky  
  Text \<param > značky se zobrazí v IntelliSense, [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code)a v sestavě webového kódu komentář.  
@@ -48,7 +48,7 @@ ms.locfileid: "43686418"
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

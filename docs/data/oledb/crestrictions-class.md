@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466322"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072066"
 ---
 # <a name="crestrictions-class"></a>CRestrictions – třída
+
 Obecná třída, která vám umožní zadat omezení pro sad řádků schématu.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída použitá pro přistupující objekt.  
+
+*T*<br/>
+Třída použitá pro přistupující objekt.  
   
- *nRestrictions*  
- Počet sloupců omezení pro sadu řádků schématu.  
+*nRestrictions*<br/>
+Počet sloupců omezení pro sadu řádků schématu.  
   
- *pguid*  
- Ukazatel na identifikátor GUID schématu.  
+*pguid*<br/>
+Ukazatel na identifikátor GUID schématu.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldbsch.h 
+
+**Záhlaví:** atldbsch.h 
   
 ## <a name="members"></a>Členové  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Otevřít](#open)|Vrací sadu podle uživatelem zadané omezení výsledků.|   
 
 ## <a name="open"></a> CRestrictions::Open
+
 Vrací sadu podle uživatelem zadané omezení výsledků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Relace*  
- [in] Určuje existující relaci objekt používaný pro připojení ke zdroji dat.  
+
+*Relace*<br/>
+[in] Určuje existující relaci objekt používaný pro připojení ke zdroji dat.  
   
- *lpszParam*  
- [in] Určuje omezení na sadu řádků schématu.  
+*lpszParam*<br/>
+[in] Určuje omezení na sadu řádků schématu.  
   
- *bBind*  
- [in] Určuje, jestli se má svázat mapy sloupce automaticky. Výchozí hodnota je **true**, což způsobí, že mapování sloupce vázat automaticky. Nastavení *bBind* k **false** brání automatické vazby mapy sloupce tak, aby mohl vytvořit vazbu ručně. (Ruční vazba je zajímavé především uživatelům OLAP).  
+*bBind*<br/>
+[in] Určuje, jestli se má svázat mapy sloupce automaticky. Výchozí hodnota je **true**, což způsobí, že mapování sloupce vázat automaticky. Nastavení *bBind* k **false** brání automatické vazby mapy sloupce tak, aby mohl vytvořit vazbu ručně. (Ruční vazba je zajímavé především uživatelům OLAP).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden standardní hodnoty HRESULT.  
+
+Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete zadat maximálně sedm omezení pro sadu řádků schématu.  
+
+Můžete zadat maximálně sedm omezení pro sadu řádků schématu.  
   
- Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informace o definovaných omezení na jednotlivých řádků schématu.  
+Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informace o definovaných omezení na jednotlivých řádků schématu.  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

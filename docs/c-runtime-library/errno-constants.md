@@ -51,29 +51,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6636b25addb7b385abf9811bc5b6e59c6524044
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa28ef07617d100e0a4071ed0878372d95f03597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073756"
 ---
 # <a name="errno-constants"></a>errno – konstanty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <errno.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **Errno** hodnoty jsou konstanty, které jsou přiřazeny [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) v případě různé chybové stavy.  
-  
- KÓD CHYBY. H obsahuje definice **errno** hodnoty. Ale ne všechny definice podle ERRNO. H se používají v operačních systémech Windows 32-bit. Některé hodnoty v ERRNO. H jsou k dispozici pro zachování kompatibility se systémem UNIX řady operačních systémů.  
-  
- **Errno** podmnožinu hodnoty jsou hodnoty v operačním systému Windows 32-bit **errno** XENIX systémy. To znamená **errno** hodnota není nutně stejný jako skutečný chybový kód vrácený voláním systému od operačních systémů Windows. Chcete-li získat přístup k kód chyby skutečné operačního systému, použijte [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) proměnnou, která obsahuje tuto hodnotu.  
-  
- Následující **errno** hodnoty jsou podporovány:  
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <errno.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+**Errno** hodnoty jsou konstanty, které jsou přiřazeny [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) v případě různé chybové stavy.
+
+KÓD CHYBY. H obsahuje definice **errno** hodnoty. Ale ne všechny definice podle ERRNO. H se používají v operačních systémech Windows 32-bit. Některé hodnoty v ERRNO. H jsou k dispozici pro zachování kompatibility se systémem UNIX řady operačních systémů.
+
+**Errno** podmnožinu hodnoty jsou hodnoty v operačním systému Windows 32-bit **errno** XENIX systémy. To znamená **errno** hodnota není nutně stejný jako skutečný chybový kód vrácený voláním systému od operačních systémů Windows. Chcete-li získat přístup k kód chyby skutečné operačního systému, použijte [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) proměnnou, která obsahuje tuto hodnotu.
+
+Následující **errno** hodnoty jsou podporovány:
 
 |Konstanta|Popis|
 |-|-|
@@ -94,91 +96,92 @@ ms.locfileid: "45714972"
 |**ENOSPC**|Není dostatek místa. na zařízení. Žádné další místo pro zápis je k dispozici na zařízení (třeba při zaplnění disku).|
 |**ERANGE**|Výsledek je příliš velký. Argument matematické funkce je moc velká, čímž částečné nebo úplné dojde ke ztrátě významu výsledku. Této chybě může dojít také v dalších funkcí, pokud argument je větší, než bylo očekáváno (například když *vyrovnávací paměti* argument **_getcwd** je delší, než se očekávalo).|
 |**EXDEV**|Odkaz mezi zařízeními. Byl proveden pokus o přesunutí souboru do různých zařízení (pomocí **přejmenovat** funkce).|
-|**STRUNCATE**|Výsledkem zkrácený řetězec je řetězec kopírování nebo zřetězení. Zobrazit [_TRUNCATE](../c-runtime-library/truncate.md).  
+|**STRUNCATE**|Výsledkem zkrácený řetězec je řetězec kopírování nebo zřetězení. Zobrazit [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Následující hodnoty jsou podporovány pro kompatibilitu s Posix. Jsou požadované hodnoty v systémech bez Posix.  
-  
-```C  
-#define E2BIG /* argument list too long */  
-#define EACCES /* permission denied */  
-#define EADDRINUSE /* address in use */  
-#define EADDRNOTAVAIL /* address not available */  
-#define EAFNOSUPPORT /* address family not supported */  
-#define EAGAIN /* resource unavailable try again */  
-#define EALREADY /* connection already in progress */  
-#define EBADF /* bad file descriptor */  
-#define EBADMSG /* bad message */  
-#define EBUSY /* device or resource busy */  
-#define ECANCELED /* operation canceled */  
-#define ECHILD /* no child process */  
-#define ECONNABORTED /* connection aborted */  
-#define ECONNREFUSED /* connection refused */  
-#define ECONNRESET /* connection reset */  
-#define EDEADLK /* resource deadlock would occur */  
-#define EDESTADDRREQ /* destination address required */  
-#define EDOM /* argument out of domain */  
-#define EEXIST /* file exists */  
-#define EFAULT /* bad address */  
-#define EFBIG /* file too large */  
-#define EHOSTUNREACH /* host unreachable */  
-#define EIDRM /* identifier removed */  
-#define EILSEQ /* illegal byte sequence */  
-#define EINPROGRESS /* operation in progress */  
-#define EINTR /* interrupted */  
-#define EINVAL /* invalid argument */  
-#define EIO /* io error */  
-#define EISCONN /* already connected */  
-#define EISDIR /* is a directory */  
-#define ELOOP /* too many synbolic link levels */  
-#define EMFILE /* too many files open */  
-#define EMLINK /* too many links */  
-#define EMSGSIZE /* message size */  
-#define ENAMETOOLONG /* filename too long */  
-#define ENETDOWN /* network down */  
-#define ENETRESET /* network reset */  
-#define ENETUNREACH /* network unreachable */  
-#define ENFILE /* too many files open in system */  
-#define ENOBUFS /* no buffer space */  
-#define ENODATA /* no message available */  
-#define ENODEV /* no such device */  
-#define ENOENT /* no such file or directory */  
-#define ENOEXEC /* executable format error */  
-#define ENOLCK /* no lock available */  
-#define ENOLINK /* no link */  
-#define ENOMEM /* not enough memory */  
-#define ENOMSG /* no message */  
-#define ENOPROTOOPT /* no protocol option */  
-#define ENOSPC /* no space on device */  
-#define ENOSR /* no stream resources */  
-#define ENOSTR /* not a stream */  
-#define ENOSYS /* function not supported */  
-#define ENOTCONN /* not connected */  
-#define ENOTDIR /* not a directory */  
-#define ENOTEMPTY /* directory not empty */  
-#define ENOTRECOVERABLE /* state not recoverable */  
-#define ENOTSOCK /* not a socket */  
-#define ENOTSUP /* not supported */  
-#define ENOTTY /* inappropriate io control operation */  
-#define ENXIO /* no such device or address */  
-#define EOPNOTSUPP /* operation not supported */  
-#define EOTHER /* other */  
-#define EOVERFLOW /* value too large */  
-#define EOWNERDEAD /* owner dead */  
-#define EPERM /* operation not permitted */  
-#define EPIPE /* broken pipe */  
-#define EPROTO /* protocol error */  
-#define EPROTONOSUPPORT /* protocol not supported */  
-#define EPROTOTYPE /* wrong protocol type */  
-#define ERANGE /* result out of range */  
-#define EROFS /* read only file system */  
-#define ESPIPE /* invalid seek */  
-#define ESRCH /* no such process */  
-#define ETIME /* stream timeout */  
-#define ETIMEDOUT /* timed out */  
-#define ETXTBSY /* text file busy */  
-#define EWOULDBLOCK /* operation would block */  
-#define EXDEV /* cross device link */  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+Následující hodnoty jsou podporovány pro kompatibilitu s Posix. Jsou požadované hodnoty v systémech bez Posix.
+
+```C
+#define E2BIG /* argument list too long */
+#define EACCES /* permission denied */
+#define EADDRINUSE /* address in use */
+#define EADDRNOTAVAIL /* address not available */
+#define EAFNOSUPPORT /* address family not supported */
+#define EAGAIN /* resource unavailable try again */
+#define EALREADY /* connection already in progress */
+#define EBADF /* bad file descriptor */
+#define EBADMSG /* bad message */
+#define EBUSY /* device or resource busy */
+#define ECANCELED /* operation canceled */
+#define ECHILD /* no child process */
+#define ECONNABORTED /* connection aborted */
+#define ECONNREFUSED /* connection refused */
+#define ECONNRESET /* connection reset */
+#define EDEADLK /* resource deadlock would occur */
+#define EDESTADDRREQ /* destination address required */
+#define EDOM /* argument out of domain */
+#define EEXIST /* file exists */
+#define EFAULT /* bad address */
+#define EFBIG /* file too large */
+#define EHOSTUNREACH /* host unreachable */
+#define EIDRM /* identifier removed */
+#define EILSEQ /* illegal byte sequence */
+#define EINPROGRESS /* operation in progress */
+#define EINTR /* interrupted */
+#define EINVAL /* invalid argument */
+#define EIO /* io error */
+#define EISCONN /* already connected */
+#define EISDIR /* is a directory */
+#define ELOOP /* too many synbolic link levels */
+#define EMFILE /* too many files open */
+#define EMLINK /* too many links */
+#define EMSGSIZE /* message size */
+#define ENAMETOOLONG /* filename too long */
+#define ENETDOWN /* network down */
+#define ENETRESET /* network reset */
+#define ENETUNREACH /* network unreachable */
+#define ENFILE /* too many files open in system */
+#define ENOBUFS /* no buffer space */
+#define ENODATA /* no message available */
+#define ENODEV /* no such device */
+#define ENOENT /* no such file or directory */
+#define ENOEXEC /* executable format error */
+#define ENOLCK /* no lock available */
+#define ENOLINK /* no link */
+#define ENOMEM /* not enough memory */
+#define ENOMSG /* no message */
+#define ENOPROTOOPT /* no protocol option */
+#define ENOSPC /* no space on device */
+#define ENOSR /* no stream resources */
+#define ENOSTR /* not a stream */
+#define ENOSYS /* function not supported */
+#define ENOTCONN /* not connected */
+#define ENOTDIR /* not a directory */
+#define ENOTEMPTY /* directory not empty */
+#define ENOTRECOVERABLE /* state not recoverable */
+#define ENOTSOCK /* not a socket */
+#define ENOTSUP /* not supported */
+#define ENOTTY /* inappropriate io control operation */
+#define ENXIO /* no such device or address */
+#define EOPNOTSUPP /* operation not supported */
+#define EOTHER /* other */
+#define EOVERFLOW /* value too large */
+#define EOWNERDEAD /* owner dead */
+#define EPERM /* operation not permitted */
+#define EPIPE /* broken pipe */
+#define EPROTO /* protocol error */
+#define EPROTONOSUPPORT /* protocol not supported */
+#define EPROTOTYPE /* wrong protocol type */
+#define ERANGE /* result out of range */
+#define EROFS /* read only file system */
+#define ESPIPE /* invalid seek */
+#define ESRCH /* no such process */
+#define ETIME /* stream timeout */
+#define ETIMEDOUT /* timed out */
+#define ETXTBSY /* text file busy */
+#define EWOULDBLOCK /* operation would block */
+#define EXDEV /* cross device link */
+```
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

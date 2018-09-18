@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4551 | Microsoft Docs
+title: Upozornění (úroveň 1) C4551 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ae77139e46e63946e4bb0402d3a697839d6fc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5dc8852ccaee1d2b07fbf35e57885b863afef921
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075563"
 ---
-# <a name="compiler-warning-level-1-c4551"></a>C4551 kompilátoru upozornění (úroveň 1)
-Seznam argumentů chybí volání funkce  
-  
- Volání funkce musí obsahovat dát do závorek za název funkce i v případě, že funkce nepřijímá žádné parametry.  
-  
- Následující ukázka generuje C4551:  
-  
-```  
-// C4551.cpp  
-// compile with: /W1  
-void function1() {  
-}  
-  
-int main() {  
-   function1;   // C4551  
-   function1();   // OK  
-}  
+# <a name="compiler-warning-level-1-c4551"></a>Kompilátor upozornění (úroveň 1) C4551
+
+Chybí seznam argumentů funkce volání
+
+Volání funkce musí obsahovat otevírací a uzavírací závorka za názvem funkce, i v případě, funkce nepřebírá žádné parametry.
+
+Následující ukázka generuje C4551:
+
+```
+// C4551.cpp
+// compile with: /W1
+void function1() {
+}
+
+int main() {
+   function1;   // C4551
+   function1();   // OK
+}
 ```

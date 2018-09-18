@@ -27,14 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070896"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl – třída
+
 Poskytuje implementaci [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -46,14 +47,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Vaši třídu odvozenou z  
+
+*T*<br/>
+Vaši třídu odvozenou z  
   
- *PropClass*  
- Vaše vlastnosti třídy.  
+*PropClass*<br/>
+Vaše vlastnosti třídy.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -65,9 +68,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[SetProperties –](#setproperties)|Nastaví vlastnosti ve skupině vlastností sady řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je povinná na příkazy. Implementace poskytuje statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) – makro.  
+
+Toto je povinná na příkazy. Implementace poskytuje statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) – makro.  
 
 ## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+
 Vrátí všechny požadované vlastnosti sady pomocí příkazu Vlastnosti mapy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -80,12 +85,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Zobrazit [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+
 Nastaví vlastnosti pro objekt příkazu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -96,8 +104,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

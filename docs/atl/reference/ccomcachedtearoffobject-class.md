@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075706"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Ccomcachedtearoffobject – třída
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parametry
 
-`contained`  
+*obsažené*<br/>
 Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.
 
 ## <a name="members"></a>Členové
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*  
+*PV*<br/>
 [in] Ukazatel `IUnknown` z `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Poznámky
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*obsažené*  
+*obsažené*<br/>
 [in] Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.
 
 ### <a name="remarks"></a>Poznámky
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,6 +215,6 @@ V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrát
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomtearoffobject – třída](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject – třída](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

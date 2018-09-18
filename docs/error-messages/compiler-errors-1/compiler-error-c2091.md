@@ -1,5 +1,5 @@
 ---
-title: C2091 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2091 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c115ea47f87a59c7412ed057675ccf893467cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c47d7e99099632313fd561a4e08af52644693c95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077006"
 ---
-# <a name="compiler-error-c2091"></a>C2091 chyby kompilátoru
-Funkce vrátí – funkce  
-  
- Funkce nemohou vrátit funkce. Místo toho vrátí ukazatel na funkci.
+# <a name="compiler-error-c2091"></a>Chyba kompilátoru C2091
+
+funkce vrací funkci.
+
+Funkce nemůže vracet funkci. Místo toho vrátí ukazatel na funkci.

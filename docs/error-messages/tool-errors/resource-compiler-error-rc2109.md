@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2109 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2109 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072963"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Chyba kompilátoru prostředků RC2109
-Konstanta očekávané číselné dialogové okno  
-  
- A **dialogové okno** příkaz vyžaduje celočíselné hodnoty *x, y, šířka*, a *výška* pole. Zajistěte, aby tyto hodnoty jsou zahrnuty po **dialogové okno** – klíčové slovo a že nejsou záporné.
+
+byl očekáván číselný dialogové okno – konstanta
+
+A **dialogové okno** příkazu vyžaduje celočíselné hodnoty *x, y, šířka*, a *výška* pole. Ujistěte se, že tyto hodnoty jsou zahrnuty po **dialogové okno** – klíčové slovo a že nejsou záporné.

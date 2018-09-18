@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1035 | Microsoft Docs
+title: Závažná chyba C1035 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52a17357d869608b523b7e645d0d0898f364143
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55e4a063fb0ea94acda43be8896e09ae028a0df9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062327"
 ---
 # <a name="fatal-error-c1035"></a>Závažná chyba C1035
-výraz je příliš složitý; zjednodušení výraz  
-  
- Kompilátor nelze generovat kód pro složitý výraz. Rozdělení výraz do jednodušší výrazy a znovu zkompilovat.
+
+výraz je příliš složitý; zjednodušit výraz
+
+Kompilátor nelze generovat kód pro složitý výraz. Rozdělit výraz, který jednodušší výrazy a znovu zkompilovat.

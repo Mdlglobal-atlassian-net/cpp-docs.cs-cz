@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27d327fbac5e92ddb2fee50c30d57a46658e889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28404c4f8dddeafb624b873448d4dc7aaa5dc0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076811"
 ---
 # <a name="iolecontrolimpl-class"></a>Iolecontrolimpl – třída
 
@@ -44,7 +44,7 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IOleControlImpl`.
 
 ## <a name="members"></a>Členové
@@ -138,6 +138,6 @@ Zobrazit [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontr
 
 ## <a name="see-also"></a>Viz také
 
-[Ioleobjectimpl – třída](../../atl/reference/ioleobjectimpl-class.md)   
-[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[IOleObjectImpl – třída](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

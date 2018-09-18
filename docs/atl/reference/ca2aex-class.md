@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071208"
 ---
 # <a name="ca2aex-class"></a>Ca2aex – třída
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.
 
 ## <a name="members"></a>Členové
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Textový řetězec, který má být převeden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Nepoužívané v této třídě.
 
 ### <a name="remarks"></a>Poznámky
@@ -161,9 +161,9 @@ Vrátí textový řetězec jako typu LPSTR.
 
 ## <a name="see-also"></a>Viz také
 
-[Ca2caex – třída](../../atl/reference/ca2caex-class.md)   
-[Ca2wex – třída](../../atl/reference/ca2wex-class.md)   
-[Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
-[Cw2cwex – třída](../../atl/reference/cw2cwex-class.md)   
-[Cw2wex – třída](../../atl/reference/cw2wex-class.md)   
+[CA2CAEX – třída](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX – třída](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX – třída](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX – třída](../../atl/reference/cw2wex-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)
