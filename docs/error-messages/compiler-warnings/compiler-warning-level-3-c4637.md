@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4637 | Microsoft Docs
+title: Upozornění (úroveň 3) C4637 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192cec5940cb813ab5057cf179b7f67feb1d0f78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 094182dd0e438a89ce3652130b411ab1ca1a0bd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111781"
 ---
-# <a name="compiler-warning-level-3-c4637"></a>C4637 kompilátoru upozornění (úroveň 3)
-Cíl komentář dokumentu XML: \<zahrnují > Značka zahozeny.  Důvod  
-  
- Syntaxe [ \<zahrnují >](../../ide/include-visual-cpp.md) značky nebyl zadán správně.  
-  
- Následující ukázka generuje C4637:  
-  
-```  
-// C4637.cpp  
-// compile with: /clr /doc /LD /W3  
-using namespace System;  
-  
-/// Text for class MyClass.  
-public ref class MyClass {   
-public:  
-   /// <include file="c:\davedata\jtest\xml_include.doc"/>  
-   // Try the following line instead:  
-   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />  
-   void MyMethod() {  
-   }  
-};   // C4637  
+# <a name="compiler-warning-level-3-c4637"></a>Kompilátor upozornění (úroveň 3) C4637
+
+Cíl komentáře dokumentu XML: \<zahrnout > značky zahozeny.  Důvod
+
+Syntaxe [ \<zahrnout >](../../ide/include-visual-cpp.md) značky není správný.
+
+Následující ukázka generuje C4637:
+
+```
+// C4637.cpp
+// compile with: /clr /doc /LD /W3
+using namespace System;
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <include file="c:\davedata\jtest\xml_include.doc"/>
+   // Try the following line instead:
+   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />
+   void MyMethod() {
+   }
+};   // C4637
 ```

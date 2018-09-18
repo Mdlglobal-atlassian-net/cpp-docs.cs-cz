@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4662 | Microsoft Docs
+title: Upozornění (úroveň 1) C4662 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60739959a6c26e0a1674b287ebf0a4605966e09b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1f1744e0bcefd8b17c39677d7f8266403d8f8ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109358"
 ---
-# <a name="compiler-warning-level-1-c4662"></a>C4662 kompilátoru upozornění (úroveň 1)
-Explicitní vytvoření instance; šablony třídy 'identifier1' neobsahuje žádnou definici ze kterého se specializují 'identifier2.  
-  
- Pro zadanou třídu šablony byla deklarována, ale není definován.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4662.cpp  
-// compile with: /W1 /LD  
-template<class T, int i> class MyClass; // no definition  
-template MyClass< int, 1>;              // C4662  
+# <a name="compiler-warning-level-1-c4662"></a>Kompilátor upozornění (úroveň 1) C4662
+
+explicitní vytváření instancí; Třída šablony 'identifier1' nemá žádnou definici, ze kterého chcete specializovat "identifier2.
+
+Zadanou třídu šablony byla deklarována, ale není definovaný.
+
+## <a name="example"></a>Příklad
+
+```
+// C4662.cpp
+// compile with: /W1 /LD
+template<class T, int i> class MyClass; // no definition
+template MyClass< int, 1>;              // C4662
 ```

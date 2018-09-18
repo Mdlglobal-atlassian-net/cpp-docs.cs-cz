@@ -1,5 +1,5 @@
 ---
-title: Call – třída | Microsoft Docs
+title: Call – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109714"
 ---
 # <a name="call-class"></a>Třída call
-A `call` zasílání zpráv blok je více zdroje, seřazené `target_block` , který spustí zadaná funkce při přijímání zprávy.  
+A `call` blok zpráv je zdroj více seřazené `target_block` zadanou funkci, která vyvolá při přijímání zprávy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ datové části zprávy rozšíří do tohoto bloku.  
+*T*<br/>
+Typ datové části zprávy šířeny do tohoto bloku.  
   
- `_FunctorType`  
- Podpis funkce, které může přijmout tento blok.  
+*_FunctorType*<br/>
+Signatura funkce, které může přijmout tento blok.  
   
 ## <a name="members"></a>Členové  
   
@@ -53,26 +53,26 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Volání](#ctor)|Přetíženo. Vytvoří `call` zasílání zpráv bloku.|  
-|[~ call – destruktor](#dtor)|Zničí `call` zasílání zpráv bloku.|  
+|[Volání](#ctor)|Přetíženo. Vytvoří `call` blok zpráv.|  
+|[~ call – destruktor](#dtor)|Odstraní `call` blok zpráv.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Provede volání funkce na vstupní zprávy.|  
-|[process_message –](#process_message)|Zpracuje zprávu, která byla přijata to `call` zasílání zpráv bloku.|  
-|[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[process_message –](#process_message)|Zpracuje zprávu, která byla přijata situace `call` blok zpráv.|  
+|[propagate_message](#propagate_message)|Asynchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|  
+|[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|  
+|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [ITarget](itarget-class.md)  
+ [Itarget –](itarget-class.md)  
   
- [target_block](target-block-class.md)  
+ [target_block –](target-block-class.md)  
   
  `call`  
   
@@ -83,7 +83,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ##  <a name="ctor"></a> Volání 
 
- Vytvoří `call` zasílání zpráv bloku.  
+ Vytvoří `call` blok zpráv.  
   
 ```
 call(
@@ -113,28 +113,28 @@ call(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Func`  
- Funkce, která bude volána pro každou zprávu přijala.  
+*_Func*<br/>
+Funkce, která bude volána pro každé přijaté zprávy.  
   
- `_Filter`  
- Filtr funkce, která určuje, zda mají být přijímány nabízený zprávy.  
+*_Filtrovat*<br/>
+Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.  
   
- `_PScheduler`  
- `Scheduler` Objektu, ve kterém šíření úkolů `call` je naplánováno zasílání zpráv bloku.  
+*_PScheduler*<br/>
+`Scheduler` Objekt v rámci kterého Úloha šíření pro `call` naplánovaný zasílání zpráv bloku.  
   
- `_PScheduleGroup`  
- `ScheduleGroup` Objektu, ve kterém šíření úkolů `call` je naplánováno zasílání zpráv bloku. `Scheduler` Objekt použitý je zahrnuto v plánu skupiny.  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `call` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.  
   
 ### <a name="remarks"></a>Poznámky  
  Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PScheduleGroup` parametry.  
   
- Typ `_Call_method` je functor podpisem `void (T const &)` který lze vyvolat to `call` zasílání zpráv bloku ke zpracování zprávy.  
+ Typ `_Call_method` je funktor s podpisem `void (T const &)` která je vyvolána situace `call` blok zpráv ke zpracování zprávy.  
   
- Typ `filter_method` je functor podpisem `bool (T const &)` který lze vyvolat to `call` zasílání zpráv blok k určení, zda by měl přijímat nabízený zprávy.  
+ Typ `filter_method` je funktor s podpisem `bool (T const &)` která je vyvolána situace `call` blok zpráv k určení, zda by měla přijímat nabízená zpráva.  
   
 ##  <a name="dtor"></a> ~ volání 
 
- Zničí `call` zasílání zpráv bloku.  
+ Odstraní `call` blok zpráv.  
   
 ```
 ~call();
@@ -149,23 +149,24 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
+*_PMessage*<br/>
+Ukazatel na zprávu, která má být zpracována.  
   
 ##  <a name="process_message"></a> process_message – 
 
- Zpracuje zprávu, která byla přijata to `call` zasílání zpráv bloku.  
+ Zpracuje zprávu, která byla přijata situace `call` blok zpráv.  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel na zprávu, která má být zpracována.  
+*_PMessage*<br/>
+Ukazatel na zprávu, která má být zpracována.  
   
-##  <a name="propagate_message"></a> propagate_message – 
+##  <a name="propagate_message"></a> propagate_message 
 
- Asynchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.  
+ Asynchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel `message` objektu.  
+*_PMessage*<br/>
+Ukazatel `message` objektu.  
   
- `_PSource`  
- Ukazatele na blok zdroje nabídky zprávy.  
+*_PSource*<br/>
+Ukazatele na blok zdroje nabídky zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
-##  <a name="send_message"></a> send_message – 
+##  <a name="send_message"></a> send_message 
 
- Synchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
+ Synchronně předává zprávy ze `ISource` bloku k tomuto `call` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.  
   
 ```
 virtual message_status send_message(
@@ -194,26 +195,26 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel `message` objektu.  
+*_PMessage*<br/>
+Ukazatel `message` objektu.  
   
- `_PSource`  
- Ukazatele na blok zdroje nabídky zprávy.  
+*_PSource*<br/>
+Ukazatele na blok zdroje nabídky zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source – 
 
- Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu.  
+ Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený.  
   
 ```
 virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` protože blok není odložit nabízené zprávy.  
+ `true` protože bloku není odložit nabízené zprávy.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [transformer – třída](transformer-class.md)

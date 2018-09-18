@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4286 | Microsoft Docs
+title: Upozornění (úroveň 1) C4286 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dab6c5c28809108e178ec7792a68a570ece14ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1a796ee1956de0795f677afec90dd2a65bb3d1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099522"
 ---
-# <a name="compiler-warning-level-1-c4286"></a>C4286 kompilátoru upozornění (úroveň 1)
-'type1': je zachytila základní třídy ('type2') na číslo řádku  
-  
- Typ zadaný výjimky jsou zpracována předchozí obslužná rutina. Pro druhý catch je odvozen z typu první. Výjimky pro základní třídu catch výjimky pro odvozené třídy.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-//C4286.cpp  
-// compile with: /W1  
-#include <eh.h>  
-class C {};  
-class D : public  C {};  
-int main()  
-{  
-    try  
-    {  
-        throw "ooops!";  
-    }  
-    catch( C ) {}  
-    catch( D ) {}  // warning C4286, D is derived from C  
-}  
+# <a name="compiler-warning-level-1-c4286"></a>Kompilátor upozornění (úroveň 1) C4286
+
+'type1': se zachycuje prostřednictvím základní třídy ('type2') na číslo řádku
+
+Typ Zadaná výjimka je zpracována předchozí obslužnou rutinou. Typ pro druhý catch je odvozen z typu prvního. Výjimky pro základní třídu zachytit výjimky pro odvozenou třídu.
+
+## <a name="example"></a>Příklad
+
+```
+//C4286.cpp
+// compile with: /W1
+#include <eh.h>
+class C {};
+class D : public  C {};
+int main()
+{
+    try
+    {
+        throw "ooops!";
+    }
+    catch( C ) {}
+    catch( D ) {}  // warning C4286, D is derived from C
+}
 ```

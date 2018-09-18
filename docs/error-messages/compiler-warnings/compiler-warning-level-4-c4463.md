@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4463 | Microsoft Docs
+title: Upozornění (úroveň 4) C4463 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 388f18ce1bc2e3a4279510ad6dc1a6938ab6f0e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109428"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>C4463 kompilátoru upozornění (úroveň 4)  
-  
-> přetečení; přiřazení *hodnotu* bitová pole, které může obsahovat pouze hodnoty z *low_value* k *high_value*  
-  
-Přiřazená *hodnota* je mimo rozsah hodnoty, které mohou být uloženy pole verze. Typy signed bitové pole použijte nejvyšších bit pro přihlášení, takže když *n* se velikost pole bit rozsahu podepsaný bitová pole-2<sup>n-1</sup> 2<sup>n-1</sup>-1, zatímco bez znaménka Bitová pole mají rozsahu od 0 do 2<sup>n</sup>-1.  
-  
-## <a name="example"></a>Příklad  
-  
-Tento příklad vytvoří C4463, protože se pokouší přiřadit hodnotu 3 bitová pole typu `int` s velikostí 2, který má rozmezí -2 a 1.  
-  
-Chcete-li tento problém vyřešit, můžete změnit přiřazené hodnoty na něco v povoleném rozsahu. Pokud pole bit slouží k uložení nepodepsané hodnoty v rozsahu od 0 do 3, můžete změnit typ deklarace k `unsigned`. Pokud toto pole je určena pro uložení hodnoty v rozsahu -4 až 3, můžete změnit velikost pole bit do 3.  
-  
-```cpp  
+# <a name="compiler-warning-level-4-c4463"></a>Kompilátor upozornění (úroveň 4) C4463
+
+> přetečení; přiřazení *hodnotu* bitové pole, které můžou ukládat jenom hodnoty z *low_value* k *high_value*
+
+Přiřazená *hodnotu* je mimo rozsah hodnot, které mohou obsahovat bitového pole. Typy signed bitového pole použít nejvyšším bit pro přihlašování, takže když *n* je velikost bitového pole, rozsah -2 je podepsaný bitová pole<sup>n-1</sup> na 2<sup>n-1</sup>-1, zatímco bez znaménka Bitová pole mají rozsah od 0 do 2<sup>n</sup>-1.
+
+## <a name="example"></a>Příklad
+
+Tento příklad vygeneruje C4463, protože se pokouší přiřadit hodnotu 3 pro bitové pole typu `int` s velikostí 2, který má rozsahu od -2 na 1.
+
+Chcete-li vyřešit tento problém, můžete změnit hodnotu přiřazenou na něco v povoleném rozsahu. Pokud bitového pole je určený pro uchování hodnoty bez znaménka v rozsahu od 0 do 3, můžete změnit typ deklarace k `unsigned`. Pokud je pole pro uchování hodnoty v rozsahu -4 až 3, můžete změnit velikost bitového pole na 3.
+
+```cpp
 // C4463_overflow.cpp
 // compile with: cl /W4 /EHsc C4463_overflow.cpp
-struct S { 
+struct S {
     int x : 2; // int type treats high-order bit as sign
-}; 
+};
 
-int main() { 
-    S s; 
-    s.x = 3; // warning C4463: overflow; assigning 3 
-    // to bit-field that can only hold values from -2 to 1 
+int main() {
+    S s;
+    s.x = 3; // warning C4463: overflow; assigning 3
+    // to bit-field that can only hold values from -2 to 1
     // To fix, change assigned value to fit in range,
-    // increase size of bitfield, and/or change base type 
+    // increase size of bitfield, and/or change base type
     // to unsigned.
-} 
-```  
+}
+```

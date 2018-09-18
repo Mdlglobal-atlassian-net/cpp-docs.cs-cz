@@ -1,5 +1,5 @@
 ---
-title: C3506 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3506 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca6da46887cf6c521563334d06ba53958c3b4c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b3adfa271cc5e076a00232c8f54c32e6b459f79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112197"
 ---
-# <a name="compiler-error-c3506"></a>C3506 chyby kompilátoru
-neexistuje žádné typelib zaregistrovat pro ID KNIHOVNY 'id.  
-  
- Specifikace typelib nebyla správně zaregistrovány. Použijte regsvr32.exe k registraci knihovny typů.
+# <a name="compiler-error-c3506"></a>Chyba kompilátoru C3506
+
+neexistuje žádné knihovny typů zaregistrovaný pro LIBID 'id'
+
+Tabulku typelib nebyl správně registrován. Regsvr32.exe použijte k registraci knihovny typů.

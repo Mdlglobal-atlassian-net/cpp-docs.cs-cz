@@ -1,5 +1,5 @@
 ---
-title: invalid_scheduler_policy_key – třída | Microsoft Docs
+title: invalid_scheduler_policy_key – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78bc955b43f3b6650f7a2fe654e5920c9cac971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e7dc90ce1ff04d3d02aed13927f137a2b4f7f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113289"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key – třída
-Tato třída popisuje výjimka vyvolaná při neplatný nebo je předán neznámý klíč `SchedulerPolicy` konstruktoru objektu, nebo `SetPolicyValue` metodu `SchedulerPolicy` klíč, který je třeba změnit pomocí jiným způsobem, jako je předán objekt `SetConcurrencyLimits` metoda.  
+Tato třída popisuje výjimku vyvolanou při neplatný nebo je předán neznámý klíč `SchedulerPolicy` konstruktor objektu nebo `SetPolicyValue` metodu `SchedulerPolicy` objekt je předán klíč, který musí být změněno pomocí jiným způsobem, jako `SetConcurrencyLimits` – metoda.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> invalid_scheduler_policy_key 
+##  <a name="ctor"></a> invalid_scheduler_policy_key – 
 
  Vytvoří `invalid_scheduler_policy_key` objektu.  
   
@@ -63,9 +63,9 @@ invalid_scheduler_policy_key() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [SchedulerPolicy – třída](schedulerpolicy-class.md)

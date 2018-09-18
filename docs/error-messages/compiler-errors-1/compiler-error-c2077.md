@@ -1,5 +1,5 @@
 ---
-title: C2077 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2077 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba9395bd783307ae184cf7f23f187d4425523968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a9025a61f9ca32679f5041256a2972ab1eaeea0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100653"
 ---
-# <a name="compiler-error-c2077"></a>C2077 chyby kompilátoru
-pole neskalární inicializátoru "identifikátor"  
-  
- Pokusili jste se inicializovat bitová pole s nonscalar (struktura, union, pole nebo třídy). Použijte celé číslo nebo číslo s plovoucí desetinnou čárkou.
+# <a name="compiler-error-c2077"></a>Chyba kompilátoru C2077
+
+Inicializátor neskalárního pole 'identifier'
+
+Pokusili jste se inicializovat bitového pole s nonscalar (struktura, sjednocení, pole nebo třída). Použijte celé číslo nebo číslo s plovoucí desetinnou čárkou.

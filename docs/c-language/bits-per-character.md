@@ -1,5 +1,5 @@
 ---
-title: Bity na znak | Microsoft Docs
+title: Bity na znak | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504af8f743818965773157f7162f2dc697c44463
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5e0c06963792cb3904f8f1f612c67d210f704fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107754"
 ---
 # <a name="bits-per-character"></a>Bity na znak
-**ANSI 2.2.4.2.1** počet bitů v znak  
-  
- Počet bitů v znak je reprezentována manifestu konstanta **char_bit –**. OMEZENÍ. Soubor H definuje **char_bit –** jako 8.  
-  
-## <a name="see-also"></a>Viz také  
- [Znaky](../c-language/characters.md)
+
+**ANSI 2.2.4.2.1** počet bitů ve znaku
+
+Počet bitů ve znaku je reprezentována konstanta manifestu **CHAR_BIT**. OMEZENÍ. H soubor definuje **CHAR_BIT** jako 8.
+
+## <a name="see-also"></a>Viz také
+
+[Znaky](../c-language/characters.md)

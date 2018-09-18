@@ -1,5 +1,5 @@
 ---
-title: C3809 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3809 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b9fabec4da63bfe881e0020e99cd5c49a51789
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b99cda2ab1790ce63ecbd0f6c5a3dc4d916d34c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104215"
 ---
-# <a name="compiler-error-c3809"></a>C3809 chyby kompilátoru
-'class': spravované nebo WinRT typ nemůže mít žádné friend funkce nebo třídy nebo rozhraní  
-  
- Spravované typy a typy prostředí Windows Runtime neumožňují přátel. Chcete-li tuto chybu opravit nedeklarujte přátel uvnitř spravovanou nebo prostředí Windows Runtime typy.  
-  
- Následující ukázka generuje C3809:  
-  
-```  
-// C3809a.cpp  
-// compile with: /clr  
-ref class A {};  
-  
-ref class B  
-{  
-public:  
-   friend ref class A;   // C3809  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3809"></a>Chyba kompilátoru C3809
+
+'class': spravované nebo typ WinRT nemůže mít žádné spřátelené funkce/třídy/rozhraní
+
+Spravované typy a typy Windows Runtime neumožňují přátel. Tuto chybu opravit, nedeklarujte přátel ve spravovaném nebo typy Windows Runtime.
+
+Následující ukázka generuje C3809:
+
+```
+// C3809a.cpp
+// compile with: /clr
+ref class A {};
+
+ref class B
+{
+public:
+   friend ref class A;   // C3809
+};
+
+int main()
+{
+}
 ```

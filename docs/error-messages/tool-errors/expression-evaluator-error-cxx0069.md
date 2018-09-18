@@ -1,5 +1,5 @@
 ---
-title: CXX0069 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0069 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cf468ebd2d8d40f306a2fa80a0331d7667d0d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a3efb6432f536ecb929c8ff8670d31030b569b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112730"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>Chyba při vyhodnocování výrazu CXX0069
-Proměnná musí rámce zásobníku  
-  
- Vyhodnocení výrazu nelze vyhodnotit proměnné, protože nedojde v rámci zásobníku. Příčinou může být proměnných deklarovaných jako součást vložená funkce.
+
+Proměnná musí rámec zásobníku
+
+Chyba při vyhodnocování výrazu nelze vyhodnotit proměnné, protože nedochází v bloku zásobníku. To může být způsobeno proměnné deklarované jako součást vloženou funkci.

@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1240 | Microsoft Docs
+title: Chyba Linkerů LNK1240 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f21d12e9d3b2673e5dfcf65dc726e9d3cc6a36
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0aa394d11726597bd720bfd2d206f41ab9e077e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111885"
 ---
 # <a name="linker-tools-error-lnk1240"></a>Chyba linkerů LNK1240
-IDL obsah kompilace se nezdařila.  
-  
- Linkeru vytvořený MIDL zkompilovat embedded IDL, ale došlo k potížím. Podívejte se na chyby určeného MIDL.
+
+nepovedlo se zkompilovat obsah IDL.
+
+Propojovací program vytvoří podřízený proces MIDL pro kompilaci vložené IDL, ale došlo k potížím. Zkontrolujte chyby určené MIDL.

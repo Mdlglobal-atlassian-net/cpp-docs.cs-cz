@@ -1,5 +1,5 @@
 ---
-title: C2517 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2517 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ae07d3585b3d2f281e8dd639b8361cea873bfb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4209f0ababf6262af3f273b9e76e2bb2dfaa68fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110910"
 ---
-# <a name="compiler-error-c2517"></a>C2517 chyby kompilátoru
-"identifikátor": napravo od '::' není definován  
-  
- Identifikátor na pravé straně operátor řešení rozsahu (`::`) musí být definované členem třídy, struktury nebo sjednocení na levé straně. Pokud je název žádné třídy, struktury nebo union, musí být deklarován identifikátor na pravé straně s globálním rozsahem.
+# <a name="compiler-error-c2517"></a>Chyba kompilátoru C2517
+
+'identifier': napravo od '::' není definován
+
+Identifikátor na pravé straně operátoru rozlišení oboru (`::`) musí být definované členem třídy, struktury nebo sjednocení na levé straně. Pokud je název žádné třídy, struktury nebo sjednocení, identifikátor na pravé straně musí být deklarován s globálním oboru.

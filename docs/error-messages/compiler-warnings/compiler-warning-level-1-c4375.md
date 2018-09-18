@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4375 | Microsoft Docs
+title: Upozornění (úroveň 1) C4375 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ff084da77768e4e5a4abd153c5c96d91e738a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd7fa14b1ff7b0925dad5eed2e2d84f3531ad599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114212"
 ---
-# <a name="compiler-warning-level-1-c4375"></a>C4375 kompilátoru upozornění (úroveň 1)
-Metoda neveřejný 'method2' nepřepisuje 'method1.  
-  
- Typ, který implementuje jiný typ definované metodu přepsat, ale přepsání nebyla veřejné. Metoda proto nemůže přepsat metodu základního typu.
+# <a name="compiler-warning-level-1-c4375"></a>Kompilátor upozornění (úroveň 1) C4375
+
+oprávnění neveřejné metody "method2" nepřepisuje "– metoda1.
+
+Typ, který implementuje jiný typ definovaný to metoda override, ale přepsání není veřejný. Metoda proto nepřepisuje metodu základního typu.

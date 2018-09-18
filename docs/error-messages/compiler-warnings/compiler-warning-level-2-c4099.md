@@ -1,5 +1,5 @@
 ---
-title: Upozornění (úroveň 2) C4099 kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru (úroveň 2) C4099 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecb3fb2420d27bedf16c81894f224a1119a67b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d7ffee02e8e5414a0e06cc4ba0da77a50c75f53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33309465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110169"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Upozornění kompilátoru (úroveň 2) C4099
-"identifikátor": název typu nejprve zobrazit pomocí objecttype1 nyní zobrazit pomocí 'objecttype2.  
-  
- Objekt deklarován jako strukturou je definovaný jako třída nebo deklarován jako třída objektu je definována jako struktury. Kompilátor používá typ zadaný v definici.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4099.  
-  
-```  
-// C4099.cpp  
-// compile with: /W2 /c  
-struct A;  
-class A {};   // C4099, use different identifer or use same object type  
+
+'identifier': název typu se nejdřív zaznamenal s použitím objecttype1 nyní zaznamenal s použitím "objecttype2.
+
+Objekt deklarovaný jako struktura je definována jako třída nebo objekt deklarovaný jako třída je definována jako struktury. Kompilátor používá typ zadaný v definici.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4099.
+
+```
+// C4099.cpp
+// compile with: /W2 /c
+struct A;
+class A {};   // C4099, use different identifer or use same object type
 ```

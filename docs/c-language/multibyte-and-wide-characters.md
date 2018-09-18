@@ -1,5 +1,5 @@
 ---
-title: Vícebajtové a široké znaky | Microsoft Docs
+title: Vícebajtové a široké znaky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc259a75ab12352a7d0029241496aea22803152a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2522761389a7f97acf4157683f8fce19e94429d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100524"
 ---
 # <a name="multibyte-and-wide-characters"></a>Vícebajtové a široké znaky
-Vícebajtový znak je znak složený ze sekvencí jednoho nebo více bajtů. Každá sekvence bajtů představuje jeden znak rozšířené sady znaků. Vícebajtové znaky se používají v sadách znaků jako Kanji.  
-  
- Široké znaky jsou vícejazykové kódy znaků, které jsou vždy 16 bitů široké. Typem znakové konstanty je `char`. Široké znaky jsou typu `wchar_t`. Protože mají široké znaky vždy pevnou velikost, zjednodušuje použití širokých znaků programování mezinárodních znakových sad.  
-  
- Řetězcový literál s širokými znaky `L"hello"` se stává polem o šesti celých číslech typu `wchar_t`.  
-  
-```  
-{L'h', L'e', L'l', L'l', L'o', 0}  
-```  
-  
- Specifikací pro široké znaky je specifikace Unicode. Mezi rutiny knihovny runtime pro převod mezi vícebajtovými a širokými znaky patří rutiny `mbstowcs`, `mbtowc`, `wcstombs` a `wctomb`.  
-  
-## <a name="see-also"></a>Viz také  
- [Identifikátory jazyka C](../c-language/c-identifiers.md)
+
+Vícebajtový znak je znak složený ze sekvencí jednoho nebo více bajtů. Každá sekvence bajtů představuje jeden znak rozšířené sady znaků. Vícebajtové znaky se používají v sadách znaků jako Kanji.
+
+Široké znaky jsou vícejazykové kódy znaků, které jsou vždy 16 bitů široké. Typem znakové konstanty je `char`. Široké znaky jsou typu `wchar_t`. Protože mají široké znaky vždy pevnou velikost, zjednodušuje použití širokých znaků programování mezinárodních znakových sad.
+
+Řetězcový literál s širokými znaky `L"hello"` se stává polem o šesti celých číslech typu `wchar_t`.
+
+```
+{L'h', L'e', L'l', L'l', L'o', 0}
+```
+
+Specifikací pro široké znaky je specifikace Unicode. Mezi rutiny knihovny runtime pro převod mezi vícebajtovými a širokými znaky patří rutiny `mbstowcs`, `mbtowc`, `wcstombs` a `wctomb`.
+
+## <a name="see-also"></a>Viz také
+
+[Identifikátory jazyka C](../c-language/c-identifiers.md)

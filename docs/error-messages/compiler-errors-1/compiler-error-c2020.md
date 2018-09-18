@@ -1,5 +1,5 @@
 ---
-title: C2020 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2020 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267c71d987587ce1b4308a80f40cdc4fa9ecefc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b79bc9340e39d5cdc886db4b81d220bbfe88bbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099795"
 ---
-# <a name="compiler-error-c2020"></a>C2020 chyby kompilátoru
-"člen": předefinování člen 'class'.  
-  
- Je členem zděděn ze základní třídu nebo strukturu předefinovat. Zděděné členy nelze jej předefinovat, pokud deklarovaný jako `virtual` v základní třídě.
+# <a name="compiler-error-c2020"></a>Chyba kompilátoru C2020
+
+'member': předefinování členu 'class'
+
+Předefinovalo se člen zděděný ze základní třídy nebo struktury. Zděděné členy nelze předefinovat, pokud nejsou deklarovány jako `virtual` v základní třídě.

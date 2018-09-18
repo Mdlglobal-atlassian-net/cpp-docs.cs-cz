@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0cfe0c64a0029282cfe157e525886279d8d60cb9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101680"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset – třída
 `concurrent_unordered_multiset` Třídy je kontejner bezpečné souběžnosti, který řídí různé délky sekvence elementů typu K. Sekvence je reprezentována způsobem, který umožňuje bezpečné na souběžnosti, přístup k prvkům, přístup k iterátoru a operace procházení iterátoru připojit.  
@@ -51,17 +51,17 @@ template <typename K,
 ```   
   
 #### <a name="parameters"></a>Parametry  
- `K`  
- Klíčový typ  
+*K*<br/>
+Klíčový typ  
   
- `_Hasher`  
- Typ objektu hashovací funkce Tento argument je nepovinný a výchozí hodnota je `std::hash<K>`.  
+*_Hasher*<br/>
+Typ objektu hashovací funkce Tento argument je nepovinný a výchozí hodnota je `std::hash<K>`.  
   
- `key_equality`  
- Typ objektu funkce porovnání rovnosti Tento argument je nepovinný a výchozí hodnota je `std::equal_to<K>`.  
+*key_equality*<br/>
+Typ objektu funkce porovnání rovnosti Tento argument je nepovinný a výchozí hodnota je `std::equal_to<K>`.  
   
- `_Allocator_type`  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro souběžný vektor. Tento argument je nepovinný a výchozí hodnota je `std::allocator<K>`.  
+*_Allocator_type*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro souběžný vektor. Tento argument je nepovinný a výchozí hodnota je `std::allocator<K>`.  
   
 ## <a name="members"></a>Členové  
   
@@ -199,25 +199,25 @@ concurrent_unordered_multiset(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ vstupního iterátoru.  
+*_Iterator*<br/>
+Typ vstupního iterátoru.  
   
- `_Number_of_buckets`  
- Počáteční počet kbelíků pro tento neuspořádanou multisadu.  
+*_Number_of_buckets*<br/>
+Počáteční počet kbelíků pro tento neuspořádanou multisadu.  
   
- `_Hasher`  
- Funkce hash pro tuto neuspořádanou multisadu.  
+*_Hasher*<br/>
+Funkce hash pro tuto neuspořádanou multisadu.  
   
- `key_equality`  
- Funkce porovnání rovnosti pro tento neuspořádanou multisadu.  
+*key_equality*<br/>
+Funkce porovnání rovnosti pro tento neuspořádanou multisadu.  
   
- `_Allocator`  
- Alokátor pro tento neuspořádanou multisadu.  
+*_Allocator*<br/>
+Alokátor pro tento neuspořádanou multisadu.  
   
- `first`  
- `last`  
- `_Uset`  
- Zdroj `concurrent_unordered_multiset` se mají přesunout prvky z objektu.  
+*první*<br/>
+*poslední*<br/>
+*_Uset*<br/>
+Zdroj `concurrent_unordered_multiset` se mají přesunout prvky z objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Všechny konstruktory ukládají objekt alokátoru `_Allocator` a inicializovat neuspořádanou multisadu.  
@@ -241,8 +241,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klíč k vyhledání.  
+*KVal*<br/>
+Klíč k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet opakování, kolikrát se zobrazí klíče v kontejneru.  
@@ -289,8 +289,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Hodnota klíče pro hledání.  
+*KVal*<br/>
+Hodnota klíče pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [pár](../../../standard-library/pair-structure.md) kde první prvek je iterace na začátek a druhý prvek je iterátor na konec rozsahu.  
@@ -309,8 +309,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Hodnota klíče pro hledání.  
+*KVal*<br/>
+Hodnota klíče pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na umístění prvního prvku, který odpovídá klíči poskytovaném nebo iterátor `end()` Pokud žádný takový prvek neexistuje.  
@@ -366,23 +366,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ iterátoru, který se používá pro vložení.  
+*_Iterator*<br/>
+Typ iterátoru, který se používá pro vložení.  
   
- `V`  
- Typ hodnoty vložené.  
+*V*<br/>
+Typ hodnoty vložené.  
   
- `value`  
- Hodnota má být vložen.  
+*value*<br/>
+Hodnota má být vložen.  
   
- `_Where`  
- Výchozí umístění pro vyhledávání pro kurzor.  
+*_Where*<br/>
+Výchozí umístění pro vyhledávání pro kurzor.  
   
- `first`  
- Začátek rozsahu, který chcete vložit.  
+*první*<br/>
+Začátek rozsahu, který chcete vložit.  
   
- `last`  
- Konec rozsahu, který chcete vložit.  
+*poslední*<br/>
+Konec rozsahu, který chcete vložit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na umístění kurzoru.  
@@ -459,8 +459,8 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Uset`  
- Zdroj `concurrent_unordered_multiset` objektu.  
+*_Uset*<br/>
+Zdroj `concurrent_unordered_multiset` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na tento `concurrent_unordered_multiset` objektu.  
@@ -477,8 +477,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Buckets`  
- Požadovaný počet kbelíků.  
+*_Buckets*<br/>
+Požadovaný počet kbelíků.  
   
 ### <a name="remarks"></a>Poznámky  
  Členská funkce mění počet kbelíků nejméně `_Buckets` a znovu vytvoří hashovací tabulku podle potřeby. Počet kbelíků musí být mocninou čísla 2. Pokud není mocninou čísla 2, ho budou zaokrouhleny nahoru na další největší mocninu 2.  
@@ -508,8 +508,8 @@ void swap(concurrent_unordered_multiset& _Uset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Uset`  
- `concurrent_unordered_multiset` Objektu, který chcete Prohodit s.  
+*_Uset*<br/>
+`concurrent_unordered_multiset` Objektu, který chcete Prohodit s.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin – 
 
@@ -522,8 +522,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -537,8 +537,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klíč elementu, vyhledaly.  
+*KVal*<br/>
+Klíč elementu, vyhledaly.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index kontejneru klíče v tomto kontejneru.  
@@ -563,8 +563,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Interval pro hledání.  
+*_Bucket*<br/>
+Interval pro hledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet kbelíků, v tomto kontejneru.  
@@ -578,8 +578,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -593,8 +593,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na začátku bloku.  
@@ -610,8 +610,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Index kontejneru.  
+*_Bucket*<br/>
+Index kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátorem ukazujícím na konec bloku.  
@@ -633,13 +633,13 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Where`  
- Pozice iterátoru, který chcete smazat.  
+*_Where*<br/>
+Pozice iterátoru, který chcete smazat.  
   
- `first`  
- `last`  
- `KVal`  
- Hodnota klíče vymazat.  
+*první*<br/>
+*poslední*<br/>
+*KVal*<br/>
+Hodnota klíče vymazat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První dvě členské funkce vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo [end](#end)(), pokud žádný takový prvek neexistuje. Třetí členská funkce vrátí počet prvků, které odebere.  

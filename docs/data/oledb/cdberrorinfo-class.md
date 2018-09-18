@@ -55,14 +55,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7eaba589e729230c0392ac67eff2389d430f842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2669f7ff0756c0450e64b1b37624bb95f2c1216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111287"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo – třída
+
 Poskytuje podporu pro zpracování chyb technologie OLE DB pomocí rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -72,7 +73,8 @@ class CDBErrorInfo
 ``` 
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h 
+
+**Záhlaví:** také atldbcli.h 
   
 ## <a name="members"></a>Členové  
   
@@ -88,9 +90,11 @@ class CDBErrorInfo
 |[GetErrorRecords](#geterrorrecords)|Získá záznamy o chybách pro zadaný objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní vrátí jeden nebo více záznamů chybě uživatele. Volání [CDBErrorInfo::GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) první zobrazíte počet záznamů chyb. Pak jednu z přístupu funkce, jako volání [CDBErrorInfo::GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), načíst informace o chybě pro každý záznam.  
+
+Toto rozhraní vrátí jeden nebo více záznamů chybě uživatele. Volání [CDBErrorInfo::GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) první zobrazíte počet záznamů chyb. Pak jednu z přístupu funkce, jako volání [CDBErrorInfo::GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), načíst informace o chybě pro každý záznam.  
   
 ## <a name="getallerrorinfo"></a> CDBErrorInfo::GetAllErrorInfo
+
 Vrátí všechny typy s informacemi o chybě obsažené v záznamu o chybě.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -105,38 +109,42 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *ulRecordNum*  
- [in] Číslo od nuly záznam, pro které se mají vracet informace o chybě.  
+
+*ulRecordNum*<br/>
+[in] Číslo od nuly záznam, pro které se mají vracet informace o chybě.  
   
- *lcid*  
- [in] ID národního prostředí pro informace o chybě se mají vrátit.  
+*lcid*<br/>
+[in] ID národního prostředí pro informace o chybě se mají vrátit.  
   
- *pbstrDescription*  
- [out] Ukazatel na textový popis chyby nebo hodnota NULL, pokud není podporované národní prostředí. Viz poznámky.  
+*pbstrDescription*<br/>
+[out] Ukazatel na textový popis chyby nebo hodnota NULL, pokud není podporované národní prostředí. Viz poznámky.  
   
- *pbstrSource*  
- [out] Ukazatel na řetězec obsahující název komponenty, který vytvořil chybu.  
+*pbstrSource*<br/>
+[out] Ukazatel na řetězec obsahující název komponenty, který vytvořil chybu.  
   
- *pguid*  
- [out] Ukazatel na identifikátor GUID rozhraní definované chyba.  
+*pguid*<br/>
+[out] Ukazatel na identifikátor GUID rozhraní definované chyba.  
   
- *pdwHelpContext*  
- [out] Ukazatel na ID kontextové nápovědy k chybě.  
+*pdwHelpContext*<br/>
+[out] Ukazatel na ID kontextové nápovědy k chybě.  
   
- *pbstrHelpFile*  
- [out] Ukazatel na řetězec obsahující cestu k souboru nápovědy, popisující chybu.  
+*pbstrHelpFile*<br/>
+[out] Ukazatel na řetězec obsahující cestu k souboru nápovědy, popisující chybu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného ověření. Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) v *OLE DB referenční informace pro programátory* pro ostatní vrácené hodnoty.  
+
+S_OK v případě úspěšného ověření. Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) v *OLE DB referenční informace pro programátory* pro ostatní vrácené hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
- Výstupní hodnota z *pbstrDescription* je interně získán voláním `IErrorInfo::GetDescription`, která nastaví hodnotu na NULL Pokud není podporovaná národní prostředí, nebo pokud jsou splněny obě následující podmínky:  
+
+Výstupní hodnota z *pbstrDescription* je interně získán voláním `IErrorInfo::GetDescription`, která nastaví hodnotu na NULL Pokud není podporovaná národní prostředí, nebo pokud jsou splněny obě následující podmínky:  
   
-1.  Hodnota *lcid* není USA Angličtina a  
+1. Hodnota *lcid* není USA Angličtina a  
   
-2.  Hodnota *lcid* se nerovná hodnotě vrácené GetUserDefaultLCID. 
+1. Hodnota *lcid* se nerovná hodnotě vrácené GetUserDefaultLCID. 
 
 ## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
+
 Volání [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) vrátit základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -147,12 +155,15 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="getcustomerrorobject"></a> CDBErrorInfo::GetCustomErrorObject
+
 Volání [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) k vrací ukazatel rozhraní na objekt vlastních chyb.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -163,12 +174,15 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="geterrorinfo"></a> CDBErrorInfo::GetErrorInfo
+
 Volání [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) se vraťte [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) ukazatel rozhraní na zadaný záznam.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -179,12 +193,15 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="geterrorparameters"></a> CDBErrorInfo::GetErrorParameters
+
 Volání [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) vrátit parametry chyby.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -195,12 +212,15 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="geterrorrecords"></a> CDBErrorInfo::GetErrorRecords
+
 Získá záznamy o chybách pro zadaný objekt.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -214,22 +234,26 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pUnk*  
- [in] Rozhraní pro objekt, pro které chcete získat záznamy o chybách.  
+
+*pUnk*<br/>
+[in] Rozhraní pro objekt, pro které chcete získat záznamy o chybách.  
   
- *identifikátor IID*  
- [in] Identifikátor IID rozhraní přidružené k chybě.  
+*identifikátor IID*<br/>
+[in] Identifikátor IID rozhraní přidružené k chybě.  
   
- *pcRecords*  
- [out] Ukazatel na počet záznamů, chyba (základem 1).  
+*pcRecords*<br/>
+[out] Ukazatel na počet záznamů, chyba (základem 1).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete zkontrolovat získat informace o chybě, ze které rozhraní, použijte formuláři první funkce. V opačném případě použijte druhý formulář.  
+
+Pokud chcete zkontrolovat získat informace o chybě, ze které rozhraní, použijte formuláři první funkce. V opačném případě použijte druhý formulář.  
   
 ## <a name="see-also"></a>Viz také  
- [DBViewer](../../visual-cpp-samples.md)   
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

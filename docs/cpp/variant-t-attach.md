@@ -19,32 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e680f4f42881ea89510048f43d657d1579686527
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109259"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Specifické pro Microsoft**  
-  
- Připojí `VARIANT` objektu do **_variant_t** objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void Attach(VARIANT& varSrc);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *varSrc*  
- A `VARIANT` objektu, který chcete připojit k tomuto **_variant_t** objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Převezme vlastnictví `VARIANT` zapouzdřením ho. Tato členská funkce uvolní všechny existující zapouzdřené `VARIANT`, pak zkopíruje zadané `VARIANT`a nastaví její `VARTYPE` VT_EMPTY Ujistěte se, že její prostředky lze pouze budou vydány **_variant_t** destruktor.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_variant_t – třída](../cpp/variant-t-class.md)
+
+**Specifické pro Microsoft**
+
+Připojí `VARIANT` objektu do **_variant_t** objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void Attach(VARIANT& varSrc);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*varSrc*<br/>
+A `VARIANT` objektu, který chcete připojit k tomuto **_variant_t** objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Převezme vlastnictví `VARIANT` zapouzdřením ho. Tato členská funkce uvolní všechny existující zapouzdřené `VARIANT`, pak zkopíruje zadané `VARIANT`a nastaví její `VARTYPE` VT_EMPTY Ujistěte se, že její prostředky lze pouze budou vydány **_variant_t** destruktor.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_variant_t – třída](../cpp/variant-t-class.md)

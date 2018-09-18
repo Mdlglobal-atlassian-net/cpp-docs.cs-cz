@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099695"
 ---
 # <a name="catlautothreadmodulet-class"></a>Catlautothreadmodulet – třída
 
@@ -35,21 +35,21 @@ Tato třída poskytuje metody pro implementaci serveru ve fondu vláken, apartme
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Třída, která implementuje serveru COM.
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 Třídy správy výběr vlákna. Výchozí hodnota je [ccomsimplethreadallocator –](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-*dwWait*  
+*dwWait*<br/>
 Určuje interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, což znamená, že interval časového limitu metody nikdy vypaří.
 
 ## <a name="members"></a>Členové
@@ -95,7 +95,7 @@ Potlačí tuto metodu, pokud chcete použít jinou metodu pro výpočet počtu v
 
 ## <a name="see-also"></a>Viz také
 
-[Iatlautothreadmodule – třída](../../atl/reference/iatlautothreadmodule-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Iatlautothreadmodule – třída](../../atl/reference/iatlautothreadmodule-class.md)   
+[IAtlAutoThreadModule – třída](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[IAtlAutoThreadModule – třída](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4530 | Microsoft Docs
+title: Upozornění (úroveň 1) C4530 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74804aa3ea0450c08710a5d0818eae67ce9b556e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbfbc67377dd48eeb692bdd4cac1f113fbdf7f6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283322"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110455"
 ---
-# <a name="compiler-warning-level-1-c4530"></a>C4530 kompilátoru upozornění (úroveň 1)
-Obslužná rutina výjimky C++ používá, ale unwind sémantiku nejsou povoleny. Zadejte /EHsc  
-  
- Zpracovávání výjimek v jazyce C++ byl použit ale [/EHsc](../../build/reference/eh-exception-handling-model.md) nebyla vybrána.  
-  
- Pokud možnost /EHsc nebylo povoleno, nebude objekt s automatické úložiště v rámci mezi funkce provádění throw a funkce zachytávání throw, zničena. Však vytvořen objekt s automatické úložiště v **zkuste** nebo **catch** bloku budou zničena.  
-  
- Následující ukázka generuje C4530:  
-  
-```  
-// C4530.cpp  
-// compile with: /W1  
-int main() {  
-   try{} catch(int*) {}   // C4530  
-}  
-```  
-  
- Zkompilujte ukázkový s /EHsc k vyřešení upozornění.
+# <a name="compiler-warning-level-1-c4530"></a>Kompilátor upozornění (úroveň 1) C4530
+
+Obslužná rutina výjimky C++, které používá, ale sémantiku odvíjení nejsou povolené. Zadejte/EHsc
+
+Zpracování výjimek jazyka C++ se použil, ale [/EHsc](../../build/reference/eh-exception-handling-model.md) nebyla vybrána.
+
+Když není povolená možnost/EHsc, nebude objekt s automatickým úložištěm v rámci mezi způsobem throw funkce a funkce zachytávání throw, zničeny. Ale v vytvoří objekt s automatickým úložištěm **zkuste** nebo **catch** zničí bloku.
+
+Následující ukázka generuje C4530:
+
+```
+// C4530.cpp
+// compile with: /W1
+int main() {
+   try{} catch(int*) {}   // C4530
+}
+```
+
+Příklad s/EHsc k vyřešení upozornění kompilace.

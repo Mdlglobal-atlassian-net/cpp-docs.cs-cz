@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru upozornění (úrovně 2 a 4) C4200 | Microsoft Docs
+title: Upozornění kompilátoru (úrovně 2 a 4) C4200 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ffc789c3c4da5caf50f0657e17ddabe40a5773c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34e0befb93db742bb2d132b2092414a1a167b87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100718"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Upozornění kompilátoru (úrovně 2 a 4) C4200
-nestandardní rozšíření používané: nulovou velikostí pole v struktura/sjednocení  
-  
- Označuje, že struktura nebo union obsahuje pole, které má nulové velikost.  
-  
- Deklarace pole nulovou velikostí je rozšíření Microsoft. To způsobí, že Level 2 upozornění při kompilaci souboru C++ a úroveň 4 upozornění při kompilaci souboru C. Kompilace C++ také poskytuje toto upozornění: "Nelze vygenerovat operátor konstruktor Copy nebo kopírování přiřazení při UDT obsahuje pole nulovou velikostí." Tento příklad vytvoří upozornění C4200:  
-  
-```cpp  
-// C4200.cpp  
-// compile by using: cl /W4 c4200.cpp  
-struct A {  
-    int a[0];  // C4200  
-};  
-int main() {  
-}  
-```  
-  
- Toto nestandardní rozšíření se často používá ke kódu rozhraní s externí datové struktury, které mají proměnlivou délkou. Pokud se tento scénář se vztahuje na kód, můžete zakázat upozornění:  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// C4200b.cpp  
-// compile by using: cl /W4 c4200a.cpp  
-#pragma warning(disable : 4200)  
-struct A {  
-    int a[0];  
-};  
-int main() {  
-}  
+
+používá se nestandardní rozšíření: pole nulové velikosti ve struktuře/sjednocení
+
+Označuje, že struktura nebo sjednocení obsahuje pole, které má nulovou velikost.
+
+Deklarace pole s nulovou velikostí je rozšířením společnosti Microsoft. To způsobí, že upozornění úrovně 2 při kompilaci souboru jazyka C++ a upozornění úrovně 4 při kompilaci souboru jazyka C. Kompilace jazyka C++ nabízí také toto upozornění: "Nelze generovat konstruktor Copy nebo přiřazení kopie operátor při UDT obsahuje pole s nulovou velikostí." Tento příklad generuje upozornění C4200:
+
+```cpp
+// C4200.cpp
+// compile by using: cl /W4 c4200.cpp
+struct A {
+    int a[0];  // C4200
+};
+int main() {
+}
+```
+
+Toto nestandardní rozšíření se často používá ke kódu rozhraní s externích datových struktur, které mají s proměnnou délkou. Pokud se tento scénář se vztahuje na váš kód, můžete zakázat upozornění:
+
+## <a name="example"></a>Příklad
+
+```cpp
+// C4200b.cpp
+// compile by using: cl /W4 c4200a.cpp
+#pragma warning(disable : 4200)
+struct A {
+    int a[0];
+};
+int main() {
+}
 ```

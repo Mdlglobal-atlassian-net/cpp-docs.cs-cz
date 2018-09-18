@@ -43,14 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59bc14040e9dfc7ba69d95525bae7ad795de43b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 223b00f49a04cbc4305bdd14b26cd47bd8afb114
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104880"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor – třída
+
 Představuje typ přístupového objektu určený pro pokročilé uživatele.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -60,7 +61,8 @@ class CManualAccessor : public CAccessorBase
 ```  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -74,9 +76,11 @@ class CManualAccessor : public CAccessorBase
 |[Createparameteraccessor –](#createparameteraccessor)|Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pomocí `CManualAccessor`, můžete zadat parametr a výstupní vazba sloupce voláním funkce modulu runtime.  
+
+Pomocí `CManualAccessor`, můžete zadat parametr a výstupní vazba sloupce voláním funkce modulu runtime.  
 
 ## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+
 Přidá položku vazby výstupní sloupce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -90,30 +94,33 @@ void AddBindEntry(DBORDINAL nOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
- *nOrdinal*  
- [in] Číslo sloupce.  
+*nOrdinal*<br/>
+[in] Číslo sloupce.  
   
- *wType*  
- [in] Datového typu.  
+*wType*<br/>
+[in] Datového typu.  
   
- *nColumnSize*  
- [in] Sloupec velikost v bajtech.  
+*nColumnSize*<br/>
+[in] Sloupec velikost v bajtech.  
   
- *pData*  
- [in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
+*pData*<br/>
+[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
   
- *pLength*  
- [in] Ukazatel na délku pole, podle potřeby.  
+*pLength*<br/>
+[in] Ukazatel na délku pole, podle potřeby.  
   
- *pStatus*  
- [in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
+*pStatus*<br/>
+[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete používat tuto funkci, nejprve je třeba volat [CreateAccessor –](../../data/oledb/cmanualaccessor-createaccessor.md). Nelze přidat více položek než počet sloupců zadaný v `CreateAccessor`. 
+
+Pokud chcete používat tuto funkci, nejprve je třeba volat [CreateAccessor –](../../data/oledb/cmanualaccessor-createaccessor.md). Nelze přidat více položek než počet sloupců zadaný v `CreateAccessor`. 
   
 ## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+
 Přidá položku parametr struktury vstupní parametr.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -128,33 +135,36 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
- *nOrdinal*  
- [in] Počet parametrů.  
+*nOrdinal*<br/>
+[in] Počet parametrů.  
   
- *wType*  
- [in] Datového typu.  
+*wType*<br/>
+[in] Datového typu.  
   
- *nColumnSize*  
- [in] Sloupec velikost v bajtech.  
+*nColumnSize*<br/>
+[in] Sloupec velikost v bajtech.  
   
- *pData*  
- [in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
+*pData*<br/>
+[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
   
- *pLength*  
- [in] Ukazatel na délku pole, podle potřeby.  
+*pLength*<br/>
+[in] Ukazatel na délku pole, podle potřeby.  
   
- *pStatus*  
- [in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
+*pStatus*<br/>
+[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
   
- *eParamIO*  
- [in] Určuje, zda je parametr, ke kterému je přidružené vazby vstupní, vstup/výstup nebo výstupní parametr.  
+*eParamIO*<br/>
+[in] Určuje, zda je parametr, ke kterému je přidružené vazby vstupní, vstup/výstup nebo výstupní parametr.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete používat tuto funkci, nejprve je třeba volat [createparameteraccessor –](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+
+Pokud chcete používat tuto funkci, nejprve je třeba volat [createparameteraccessor –](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
 
 ## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+
 Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -166,22 +176,26 @@ HRESULT CreateAccessor(int nBindEntries,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nBindEntries*  
- [in] Počet sloupců. Tato hodnota by měla odpovídat počet volání [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) funkce.  
+
+*nBindEntries*<br/>
+[in] Počet sloupců. Tato hodnota by měla odpovídat počet volání [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) funkce.  
   
- *pBuffer*  
- [in] Ukazatel do vyrovnávací paměti, kde se ukládají výstupní sloupce.  
+*pBuffer*<br/>
+[in] Ukazatel do vyrovnávací paměti, kde se ukládají výstupní sloupce.  
   
- *nBufferSize*  
- [in] Velikost vyrovnávací paměti v bajtech.  
+*nBufferSize*<br/>
+[in] Velikost vyrovnávací paměti v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden standardní hodnoty HRESULT.  
+
+Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této funkce před voláním `CManualAccessor::AddBindEntry` funkce.  
+
+Voláním této funkce před voláním `CManualAccessor::AddBindEntry` funkce.  
 
 ## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+
 Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -193,25 +207,29 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nBindEntries*  
- [in] Počet sloupců.  
+
+*nBindEntries*<br/>
+[in] Počet sloupců.  
   
- *pBuffer*  
- [in] Ukazatel do vyrovnávací paměti, kde jsou uložené vstupní sloupce.  
+*pBuffer*<br/>
+[in] Ukazatel do vyrovnávací paměti, kde jsou uložené vstupní sloupce.  
   
- *nBufferSize*  
- [in] Velikost vyrovnávací paměti v bajtech.  
+*nBufferSize*<br/>
+[in] Velikost vyrovnávací paměti v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden standardní hodnoty HRESULT.  
+
+Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Před voláním této funkce musíte volat [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+
+Před voláním této funkce musíte volat [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
 ## <a name="see-also"></a>Viz také  
- [DBViewer](../../visual-cpp-samples.md)   
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor – třída](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor – třída](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)

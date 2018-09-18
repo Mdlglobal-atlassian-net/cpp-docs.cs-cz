@@ -1,5 +1,5 @@
 ---
-title: PTR::PTR | Microsoft Docs
+title: PTR::PTR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107023"
 ---
 # <a name="ptrptr"></a>ptr::ptr
-Vytvoří `com::ptr` zabalit objektu COM.  
+Vytvoří `com::ptr` zabalit objekt modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `P`  
- Ukazatel rozhraní COM.  
+*P*<br/>
+Ukazatele rozhraní modelu COM.  
   
 ## <a name="remarks"></a>Poznámky  
- Konstruktor bez argumentů přiřadí `nullptr` na základní popisovač objektu. Následující volání `com::ptr` budou ověření interního objektu a bezobslužně nezdaří, dokud objekt je ve skutečnosti vytvořit nebo připojit.  
+ Konstruktor bez argumentů přiřadí `nullptr` na podkladové popisovač objektu. Následující volání `com::ptr` ověření na vnitřní objekt, který se tiše skončit neúspěchem, dokud nebude objekt skutečně vytvořili nebo připojené.  
   
- Jeden argument konstruktoru přidá odkaz na objekt COM ale neuvolní odkaz volajícího, aby volající musí volat `Release` na objekt COM skutečně uvolňovat ovládacího prvku. Když `com::ptr`na destruktoru automaticky vydá jeho odkazuje na objekt COM.  
+ Konstruktor jednoargumentové přidá odkaz na objekt modelu COM, ale neuvolní odkaz volajícího, aby volající musí zavolat `Release` u objektu COM skutečně ztratit kontrolu. Při `com::ptr`zavolán destruktor automaticky vydá jejich odkazů na objekt modelu COM.  
   
- Předávání `NULL` pro tento konstruktor je stejná jako verze bez argumentů volání.  
+ Předání `NULL` pro tento konstruktor je stejná jako verze bez argumentů volání.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu. Ukazuje použití obě verze konstruktoru.  
+ V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. Ukazuje použití obě verze konstruktoru.  
   
 ```  
 // comptr_ptr.cpp  
@@ -118,6 +118,6 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>Viz také  
- [PTR – členové](../dotnet/ptr-members.md)   
+ [PTR – členy](../dotnet/ptr-members.md)   
  [PTR::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

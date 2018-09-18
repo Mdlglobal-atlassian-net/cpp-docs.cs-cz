@@ -1,5 +1,5 @@
 ---
-title: Datový typ mapování | Microsoft Docs
+title: Mapování datových typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,35 +39,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a469ed8b5e6f026eecf5d8df88eee12b0e0fe74
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d11f6fd60cb85406f729fc337054858fbed73f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100473"
 ---
 # <a name="data-type-mappings"></a>Mapování datového typu
-Tato mapování datového typu jsou definovány v Tchar –. H a závisí na tom, zda konstanta `_UNICODE` nebo `_MBCS` byla definována v programu.  
-  
- Související informace najdete v tématu [pomocí Tchar –. Datové typy H s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md).  
-  
-### <a name="generic-text-data-type-mappings"></a>Mapování obecného textu datového typu  
-  
-|Obecného textu<br /><br /> Název datového typu|SBCS (_UNICODE,<br /><br /> _MBCS není<br /><br /> definovaná)|_MBCS<br /><br /> definováno|_UNICODE<br /><br /> definováno|  
-|--------------------------------------|----------------------------------------------------|------------------------|---------------------------|  
-|`_TCHAR`|`char`|`char`|`wchar_t`|  
-|`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|  
-|`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|  
-|`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|  
-|`_TINT`|`int`|`int`|`wint_t`|  
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` Nebo `_TEXT`|Neplatí (odebraná pomocí preprocessor)|Neplatí (odebraná pomocí preprocessor)|`L` (převede následující znak nebo řetězec k jeho protějšku Unicode)|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)   
- [Mapování konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Mapování rutiny](../c-runtime-library/routine-mappings.md)   
- [Ukázka programu obecného textu](../c-runtime-library/a-sample-generic-text-program.md)   
- [Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)
+
+Tato mapování datového typu jsou definovány v TCHAR. H a závisí na tom, zda konstanty `_UNICODE` nebo `_MBCS` je definována v programu.
+
+Související informace naleznete v tématu [pomocí TCHAR. H datové typy s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md).
+
+### <a name="generic-text-data-type-mappings"></a>Mapování obecného textu datových typů
+
+|Obecného textu<br /><br /> Název datového typu|SBCS (_UNICODE,<br /><br /> _MBCS nejsou<br /><br /> definice)|_MBCS<br /><br /> definováno|_UNICODE<br /><br /> definováno|
+|--------------------------------------|----------------------------------------------------|------------------------|---------------------------|
+|`_TCHAR`|`char`|`char`|`wchar_t`|
+|`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|
+|`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|
+|`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|
+|`_TINT`|`int`|`int`|`wint_t`|
+|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
+|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
+|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_T` Nebo `_TEXT`|Žádný vliv (odebral preprocesoru)|Žádný vliv (odebral preprocesoru)|`L` (převede následující znak nebo řetězec k jeho protějšku Unicode)|
+
+## <a name="see-also"></a>Viz také
+
+[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapování konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Mapování rutin](../c-runtime-library/routine-mappings.md)<br/>
+[Ukázka programu obecného textu](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)

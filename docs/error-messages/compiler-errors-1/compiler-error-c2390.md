@@ -1,5 +1,5 @@
 ---
-title: C2390 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2390 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a32a9ca77ba43e5f2866baed91b99103224dbc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de5a9af8f8aa04219f0a7d61162336745fd4bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098209"
 ---
-# <a name="compiler-error-c2390"></a>C2390 chyby kompilátoru
-"identifikátor": Třída nesprávné úložiště 'specifikátor.  
-  
- Třídy úložiště není platný pro identifikátor globální obor. Místo neplatná třída se používá výchozí třídu úložiště.  
-  
- Možná řešení:  
-  
--   Pokud je identifikátor funkci, deklarujte ji s `extern` úložiště.  
-  
--   Pokud je identifikátor formální parametr nebo místní proměnné, deklarujte ji s úložištěm automaticky.  
-  
--   Pokud je identifikátor globální proměnné, deklarujte ji s neexistuje žádná třída úložiště (automatické úložiště).  
-  
-## <a name="example"></a>Příklad  
-  
--   Následující ukázka generuje C2390:  
-  
-```  
-// C2390.cpp  
-register int i;   // C2390  
-  
-int main() {  
-   register int j;   // OK  
-}  
+# <a name="compiler-error-c2390"></a>Chyba kompilátoru C2390
+
+'identifier': nesprávná třída úložiště "specifikátor"
+
+Třída úložiště není platný pro identifikátor globální obor. Místo neplatná třída se používá výchozí třídou úložiště.
+
+Možná řešení:
+
+- Pokud identifikátor je funkce, deklarujte ho s `extern` úložiště.
+
+- Pokud identifikátor je formální parametr nebo lokální proměnné, ji deklarujte pomocí automatického úložiště.
+
+- Identifikátor je globální proměnné, deklarujte ho pomocí bez třídy úložiště (automatické úložiště).
+
+## <a name="example"></a>Příklad
+
+- Následující ukázka generuje C2390:
+
+```
+// C2390.cpp
+register int i;   // C2390
+
+int main() {
+   register int j;   // OK
+}
 ```

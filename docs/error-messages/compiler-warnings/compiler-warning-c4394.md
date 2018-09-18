@@ -1,5 +1,5 @@
 ---
-title: C4394 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4394 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05535621443770a2b414f1c4312efbc46e6be858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d99200dd01db610aa558e8a9df18b7afacdf3d7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099502"
 ---
-# <a name="compiler-warning-c4394"></a>C4394 upozornění kompilátoru
-'function': symbol na appdomain by nemělo být označené jako __declspec(dllexport)  
-  
- Označené jako funkci [appdomain](../../cpp/appdomain.md) `__declspec` modifikátor kompiluje MSIL (ne na nativní) a export tabulek ([exportovat](../../windows/export.md) `__declspec` modifikátor) nejsou podporovány pro spravované funkce.  
-  
- Je možné deklarovat spravované funkce, která se mají veřejnou dostupnost. Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [viditelnost členů](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).  
-  
- C4394 je vždy vydané jako chyba.  Toto upozornění se můžete vypnout `#pragma warning` nebo **/wd**; najdete v části [upozornění](../../preprocessor/warning.md) nebo [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, nebo jsme /wo, /Wv, wdn (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md)Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4394.  
-  
-```  
-// C4394.cpp  
-// compile with: /clr /c  
-__declspec(dllexport) __declspec(appdomain) int g1 = 0;   // C4394  
-__declspec(dllexport) int g2 = 0;   // OK  
+# <a name="compiler-warning-c4394"></a>Upozornění kompilátoru C4394
+
+'function': symbol na úrovni appdomain nemůže být označena jako pomocí deklarace __declspec(dllexport)
+
+Funkce označené [appdomain](../../cpp/appdomain.md) `__declspec` Modifikátor je kompilováno do jazyka MSIL (ne na nativní) a export tabulek ([exportovat](../../windows/export.md) `__declspec` modifikátor) nejsou podporovány pro spravované funkce.
+
+Je možné deklarovat spravované funkce mít přístupnost public. Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [viditelnost členu](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).
+
+C4394 je vždy vyvoláno jako chyba.  Můžete vypnout toto upozornění se `#pragma warning` nebo **/wd**; naleznete v tématu [upozornění](../../preprocessor/warning.md) nebo [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md)Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4394.
+
+```
+// C4394.cpp
+// compile with: /clr /c
+__declspec(dllexport) __declspec(appdomain) int g1 = 0;   // C4394
+__declspec(dllexport) int g2 = 0;   // OK
 ```

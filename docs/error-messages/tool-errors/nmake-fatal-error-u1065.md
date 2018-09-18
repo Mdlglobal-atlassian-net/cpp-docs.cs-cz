@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1065 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1065 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a0d5c202320d7dd7eded32e1a2c326b7bf8c5f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f37a654fec1783a8aecb6a6cf7f3dc84ca75840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103948"
 ---
 # <a name="nmake-fatal-error-u1065"></a>Závažná chyba nástroje NMAKE U1065
-Neplatná možnost "možnost"  
-  
- Možnost není platná pro NMAKE.
+
+Neplatná možnost "možnost"
+
+Možnost není platná pro NMAKE.

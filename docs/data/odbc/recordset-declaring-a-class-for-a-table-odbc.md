@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Deklarování třídy pro tabulku (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Deklarování třídy pro tabulku (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107643"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Sada záznamů: Deklarování třídy pro tabulku (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Nejběžnější třída sady záznamů otevře jednu tabulku. K deklarování třídy sady záznamů pro jednu tabulku, použijte [průvodce příjemcem knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** a zvolte každý sloupec chcete pojmenováním odpovídající sady záznamů pole datových členů.  
+Nejběžnější třídy sady záznamů se otevře jedné tabulky. Chcete-li deklarovat třídu sady záznamů pro jednu tabulku, použijte [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** a vyberte každý sloupec, který má být pojmenováním odpovídající sady záznamů pole datových členů.  
   
- Použití jiné sady záznamů patří:  
+Další způsoby využití sady záznamů patří:  
   
--   Spojení dvou nebo více tabulek.  
+- Spojování dvou nebo více tabulek.  
   
--   Obsahující výsledky předdefinovaný dotaz.  
+- Obsahující výsledky předdefinovaný dotaz.  
   
 ## <a name="see-also"></a>Viz také  
- [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Sada záznamů: Deklarace třídy předdefinovaného dotazu (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

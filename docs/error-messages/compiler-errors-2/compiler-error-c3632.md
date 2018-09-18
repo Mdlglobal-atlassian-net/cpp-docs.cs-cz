@@ -1,5 +1,5 @@
 ---
-title: C3632 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3632 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7f41465cf8181b7f19aa4267fd680e49a04b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdacb6463e99d4cb125199a32dfc5ef01ea76e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110078"
 ---
-# <a name="compiler-error-c3632"></a>C3632 chyby kompilátoru
-'událost': neplatný styl události for – konstrukce  
-  
- [__Event](../../cpp/event.md) nejsou platné ve všech konstrukce deklarace.  
-  
- C3632 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3632"></a>Chyba kompilátoru C3632
+
+'událost': neplatný styl události for – konstrukce
+
+[__Event](../../cpp/event.md) deklarace nejsou platné v všechny konstrukty.
+
+C3632 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

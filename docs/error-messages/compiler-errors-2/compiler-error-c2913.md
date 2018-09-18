@@ -1,5 +1,5 @@
 ---
-title: C2913 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2913 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb587be189b83ba4804fd90440c98161fd5710a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6da5d739c4dd9ccec71c26a3fc9101cde1535ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103112"
 ---
-# <a name="compiler-error-c2913"></a>C2913 chyby kompilátoru
-explicitní specializace; "prohlášení" není specializace šablony třídy  
-  
- Nelze specialize třídu bez šablony.  
-  
- Následující ukázka generuje C2913:  
-  
-```  
-// C2913.cpp  
-// compile with: /c  
-class X{};  
-template <class T> class Y{};  
-  
-template<> class X<int> {};   // C2913  
-template<> class Y<int> {};  
+# <a name="compiler-error-c2913"></a>Chyba kompilátoru C2913
+
+explicitní specializace; "deklarace" není specializací šablony třídy
+
+Nejde specializovat nešablonové třídy.
+
+Následující ukázka generuje C2913:
+
+```
+// C2913.cpp
+// compile with: /c
+class X{};
+template <class T> class Y{};
+
+template<> class X<int> {};   // C2913
+template<> class Y<int> {};
 ```

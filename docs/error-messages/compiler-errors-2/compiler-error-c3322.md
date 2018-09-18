@@ -1,5 +1,5 @@
 ---
-title: C3322 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3322 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc9ad0604bfed9cfabdc2ab2f180d3db3ef804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9447dde4c20d2c29a2894d810a73d1db3997d237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104243"
 ---
-# <a name="compiler-error-c3322"></a>C3322 chyby kompilátoru
-'vlastnost': není platnou vlastností pro atribut "atribut"  
-  
- Atribut byl předán neplatný nebo nerozpoznaný vlastnost (nebo parametr). Podívejte se do dokumentace pro atribut.
+# <a name="compiler-error-c3322"></a>Chyba kompilátoru C3322
+
+'property': není platná vlastnost pro atribut 'attribute'
+
+Atribut byl předán neplatný nebo nerozpoznaný vlastnost (nebo parametr). V dokumentaci pro atribut.

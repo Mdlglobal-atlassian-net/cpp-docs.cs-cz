@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4900 | Microsoft Docs
+title: Upozornění (úroveň 1) C4900 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e58076b070860b31706b4b55a13b881df51db33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c27df56ab38224020e9be88787dfaa038ba8f0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103101"
 ---
-# <a name="compiler-warning-level-1-c4900"></a>C4900 kompilátoru upozornění (úroveň 1)
-Převodní jazyk neshody mezi 'tool1' verze 'version1' a 'tool2' verze 'version2.  
-  
- Převodní jazyk použít v *tool1* a *tool2* neodpovídá. Zkontrolujte, zda byla nainstalována nejnovější verze každého nástroje.
+# <a name="compiler-warning-level-1-c4900"></a>Kompilátor upozornění (úroveň 1) C4900
+
+Převodní jazyk Neshoda mezi "tool1" verze "version1" a "tool2" verze "větev version2.
+
+Převodní jazyk používaný v *tool1* a *tool2* se neshodují. Zkontrolujte, že je nainstalovaná nejnovější verze jednotlivých nástrojích.

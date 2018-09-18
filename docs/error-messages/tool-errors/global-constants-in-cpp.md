@@ -1,5 +1,5 @@
 ---
-title: Globální konstanty v jazyku C++ | Microsoft Docs
+title: Globální konstanty v jazyku C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ee5fdf3d50f30e02bd48fe3664c10d26a8449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00d033c1c4fc8fc3e534c8e4ee0c3d7867b83834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103164"
 ---
 # <a name="global-constants-in-c"></a>Globální konstanty v jazyku C++
-Globální konstanty C++ mít statické propojení. Liší se od C. Pokud se pokusíte použít globální konfiguraci konstant v jazyce C++ ve více souborech získáte nerozpoznané externí chyby. Kompilátor optimalizuje globální konstanty out nezbývá vyhrazeno pro proměnnou místo.  
-  
- Jeden způsob, jak tuto chybu vyřešit, je const inicializacích zahrnout soubor hlaviček a zahrnutí této hlavičky do CPP souborů, pokud je to nezbytné, stejně, jako kdyby byl prototyp funkce. Další možností je vytvořit proměnnou nekonstantní a použít odkaz na konstantní při posuzování ho.  
-  
- Následující ukázka generuje C2019:  
-  
-```  
-// global_constants.cpp  
-// LNK2019 expected  
-void test(void);  
-const int lnktest1 = 0;  
-  
-int main() {  
-   test();  
-}  
-```  
-  
- A pak  
-  
-```  
-// global_constants_2.cpp  
-// compile with: global_constants.cpp  
-extern int lnktest1;  
-  
-void test() {  
-  int i = lnktest1;   // LNK2019  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Chyba linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+
+Globální konstanty jazyka C++ mají statické propojení. To se liší od C. Pokud se pokusíte použít globální konstanty v jazyce C++ ve více souborech získáte nevyřešené externí chyby. Kompilátor optimalizuje globální konstanty, nezbývá místo vyhrazena pro proměnnou.
+
+Jedním ze způsobů pro vyřešení této chyby je zahrnout soubor hlaviček const inicializace a včetně této hlavičky v rámci souborů CPP, pokud je to nezbytné, tak, jako kdyby byla prototypu funkce. Další možností je vytvořit proměnnou, která není konstantní a použití konstantní odkaz při posuzování ho.
+
+Následující ukázka generuje C2019:
+
+```
+// global_constants.cpp
+// LNK2019 expected
+void test(void);
+const int lnktest1 = 0;
+
+int main() {
+   test();
+}
+```
+
+a pak,
+
+```
+// global_constants_2.cpp
+// compile with: global_constants.cpp
+extern int lnktest1;
+
+void test() {
+  int i = lnktest1;   // LNK2019
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Chyba linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

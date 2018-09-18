@@ -1,5 +1,5 @@
 ---
-title: C3104 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3104 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,66 +16,69 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded5185e3f87ce7f1b5a4a7015ce3c4476c949b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9bce4d47658b012824087f62eb55ccd7ddf669
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111144"
 ---
-# <a name="compiler-error-c3104"></a>C3104 chyby kompilátoru
-argument neplatný atribut  
-  
- Zadali jste neplatný argument atributu.  
-  
- V tématu [typy parametrů atributů](../../windows/attribute-parameter-types-cpp-component-extensions.md) Další informace.  
-  
- Tato chyba může vygenerovaného jako výsledek kompilátoru shoda práci, kterou bylo provedeno pro Visual C++ 2005: při předávání spravovaná pole vlastních atributů, je ze seznamu inicializace agregace už odvodit typ pole. Kompilátor teď vyžaduje, abyste zadejte typ pole, jakož i inicializátoru seznamu.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3104.  
-  
-```  
-// C3104a.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[AttributeUsage(AttributeTargets::Class)]  
-public ref struct ABC : public Attribute {  
-   ABC(array<int>^){}  
-   array<double> ^ param;  
-};  
-  
-[ABC( {1,2,3}, param = {2.71, 3.14})]   // C3104  
-// try the following line instead  
-// [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]   
-ref struct AStruct{};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3104.  
-  
-```  
-// C3104b.cpp  
-// compile with: /clr /c  
-// C3104 expected  
-using namespace System;  
-  
-int func() {  
-   return 0;   
-}  
-  
-[attribute(All)]  
-ref class A {  
-public:   
-   A(int) {}  
-};  
-  
-// Delete the following 2 lines to resolve.  
-[A(func())]  
-ref class B {};  
-  
-// OK  
-[A(0)]  
-ref class B {};  
-```  
+# <a name="compiler-error-c3104"></a>Chyba kompilátoru C3104
+
+Neplatný argument atributu
+
+Zadali jste neplatný argument pro atribut.
+
+Zobrazit [typy parametrů atributů](../../windows/attribute-parameter-types-cpp-component-extensions.md) Další informace.
+
+Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: při předávání spravovaná pole vlastních atributů, typ pole je už odvodit ze seznamu inicializace agregace. Kompilátor nyní vyžaduje zadání typu pole, jakož i seznam inicializátorů.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3104.
+
+```
+// C3104a.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::Class)]
+public ref struct ABC : public Attribute {
+   ABC(array<int>^){}
+   array<double> ^ param;
+};
+
+[ABC( {1,2,3}, param = {2.71, 3.14})]   // C3104
+// try the following line instead
+// [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]
+ref struct AStruct{};
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3104.
+
+```
+// C3104b.cpp
+// compile with: /clr /c
+// C3104 expected
+using namespace System;
+
+int func() {
+   return 0;
+}
+
+[attribute(All)]
+ref class A {
+public:
+   A(int) {}
+};
+
+// Delete the following 2 lines to resolve.
+[A(func())]
+ref class B {};
+
+// OK
+[A(0)]
+ref class B {};
+```

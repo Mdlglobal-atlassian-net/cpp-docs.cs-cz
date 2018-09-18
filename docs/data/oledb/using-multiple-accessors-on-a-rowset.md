@@ -18,23 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3d6d41bb705559711187b58243772b668734b16
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 56dd2e864fa7a0e01b618fcc4143bde74b3a46ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110754"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Použití více přístupových objektů pro sadu řádků
+
 Existují tři základní scénáře, ve kterých je potřeba použít několik přístupových objektů:  
   
--   **Více sad řádků pro čtení a zápisu.** V tomto scénáři máte tabulku s primárním klíčem. Chcete být schopni číst všechny sloupce v řádku, včetně primární klíč. Chcete být schopni zapisovat data pro všechny sloupce kromě primárního klíče (protože nelze zapisovat do sloupec primárního klíče). V takovém případě můžete nastavit dva přistupující objekty:  
+- **Více sad řádků pro čtení a zápisu.** V tomto scénáři máte tabulku s primárním klíčem. Chcete být schopni číst všechny sloupce v řádku, včetně primární klíč. Chcete být schopni zapisovat data pro všechny sloupce kromě primárního klíče (protože nelze zapisovat do sloupec primárního klíče). V takovém případě můžete nastavit dva přistupující objekty:  
   
     -   Přistupující objekt 0 obsahuje všechny sloupce.  
   
     -   Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.  
   
--   **Výkon.** Jeden nebo více sloupců v tomto scénáři obsahovat velké množství dat, například grafika, zvuk nebo video soubory. Pokaždé, když se přesunete na řádek, pravděpodobně nechcete k načtení sloupec se souborem velkých objemů dat, protože to uděláte tak by zpomalit výkon vaší aplikace.  
+- **Výkon.** Jeden nebo více sloupců v tomto scénáři obsahovat velké množství dat, například grafika, zvuk nebo video soubory. Pokaždé, když se přesunete na řádek, pravděpodobně nechcete k načtení sloupec se souborem velkých objemů dat, protože to uděláte tak by zpomalit výkon vaší aplikace.  
   
      Můžete nastavit samostatný přístupové objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkými daty a automaticky; načítá data z těchto sloupců Toto je automaticky přistupujícího objektu. Druhý přístupový objekt načte pouze sloupec obsahující velkých objemů dat, ale nenačítá data z tohoto sloupce automaticky. Může mít jiné metody, aktualizaci nebo načítání velkých dat na vyžádání.  
   
@@ -44,17 +45,17 @@ Existují tři základní scénáře, ve kterých je potřeba použít několik 
   
      Argument automaticky použijte k určení, zda je automaticky přistupujícího objektu.  
   
--   **Více ISequentialStream sloupců.** V tomto scénáři máte více než jeden sloupec obsahující `ISequentialStream` data. Každý přistupující objekt je však omezená na jednu `ISequentialStream` datového proudu. Pokud chcete tento problém vyřešit, nastavte několik přístupových objektů, každý obsahující jednu `ISequentialStream` ukazatele.  
+- **Více ISequentialStream sloupců.** V tomto scénáři máte více než jeden sloupec obsahující `ISequentialStream` data. Každý přistupující objekt je však omezená na jednu `ISequentialStream` datového proudu. Pokud chcete tento problém vyřešit, nastavte několik přístupových objektů, každý obsahující jednu `ISequentialStream` ukazatele.  
   
- Obvykle vytvoříte pomocí přístupových objektů [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Můžete také použít [db_accessor](../../windows/db-accessor.md) atribut. (Přístupové objekty jsou popsány dále v [uživatelských záznamů](../../data/oledb/user-records.md).) Makra nebo atribut určete, jestli má přistupující objekt automatické nebo přístupový objekt bez automaticky:  
+Obvykle vytvoříte pomocí přístupových objektů [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Můžete také použít [db_accessor](../../windows/db-accessor.md) atribut. (Přístupové objekty jsou popsány dále v [uživatelských záznamů](../../data/oledb/user-records.md).) Makra nebo atribut určete, jestli má přistupující objekt automatické nebo přístupový objekt bez automaticky:  
   
--   Automatické přístupového objektu, přesunutí metody `MoveFirst`, `MoveLast`, `MoveNext`, a `MovePrev` načíst data pro všechny sloupce zadané automaticky. Přistupující objekt 0 by měla být automatická přistupujícího objektu.  
+- Automatické přístupového objektu, přesunutí metody `MoveFirst`, `MoveLast`, `MoveNext`, a `MovePrev` načíst data pro všechny sloupce zadané automaticky. Přistupující objekt 0 by měla být automatická přistupujícího objektu.  
   
--   V přístupový objekt bez automatické načítání nedojde dokud explicitně volání metody, jako `Update`, `Insert`, `Fetch`, nebo `Delete`. Ve scénářích je popsáno výše nebudete chtít načíst všechny sloupce v každém přesunu. Můžete umístit jeden nebo více sloupců v samostatných přístupového objektu a zkontrolujte, zda neautomatický přistupující objekt, jak je znázorněno níže.  
+- V přístupový objekt bez automatické načítání nedojde dokud explicitně volání metody, jako `Update`, `Insert`, `Fetch`, nebo `Delete`. Ve scénářích je popsáno výše nebudete chtít načíst všechny sloupce v každém přesunu. Můžete umístit jeden nebo více sloupců v samostatných přístupového objektu a zkontrolujte, zda neautomatický přistupující objekt, jak je znázorněno níže.  
   
- Následující příklad používá několik přístupových objektů číst a zapisovat do tabulky databáze pubs systému SQL Server, použití více přístupových objektů úloh. Toto je nejběžnější použití více přístupových objektů; Podívejte se na výše uvedeném scénáři "více sad řádků pro čtení a zápisu".  
+Následující příklad používá několik přístupových objektů číst a zapisovat do tabulky databáze pubs systému SQL Server, použití více přístupových objektů úloh. Toto je nejběžnější použití více přístupových objektů; Podívejte se na výše uvedeném scénáři "více sad řádků pro čtení a zápisu".  
   
- Třída uživatelského záznamu je následujícím způsobem. Nastaví dva přistupující objekty: přístupový objekt 0 obsahuje pouze sloupec primárního klíče (ID) a přístupového objektu 1 obsahuje další sloupce.  
+Třída uživatelského záznamu je následujícím způsobem. Nastaví dva přistupující objekty: přístupový objekt 0 obsahuje pouze sloupec primárního klíče (ID) a přístupového objektu 1 obsahuje další sloupce.  
   
 ```cpp  
 class CJobs  
@@ -89,7 +90,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Hlavní kódu vypadá takto. Volání `MoveNext` automaticky načte data z ID sloupec primárního klíče pomocí přístupového objektu 0. Poznámka: Jak `Insert` metoda poblíž používá koncový přístupového objektu 1, aby zápis na sloupec primárního klíče.  
+Hlavní kódu vypadá takto. Volání `MoveNext` automaticky načte data z ID sloupec primárního klíče pomocí přístupového objektu 0. Poznámka: Jak `Insert` metoda poblíž používá koncový přístupového objektu 1, aby zápis na sloupec primárního klíče.  
   
 ```cpp  
 int main(int argc, char* argv[])  
@@ -167,5 +168,6 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití přístupových objektů](../../data/oledb/using-accessors.md)   
- [Uživatelské záznamy](../../data/oledb/user-records.md)
+
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)<br/>
+[Uživatelské záznamy](../../data/oledb/user-records.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106906"
 ---
 # <a name="window-class-macros"></a>Makra třídy okna
 
@@ -29,8 +29,8 @@ Tato makra definují nástroje třídy okna.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Můžete zadat název nové třídy okna.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Můžete zadat název nové třídy okna a jejichž proceduru okna používat nové třídy nadřazené třídy.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Můžete zadat název nové třídy okna.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Můžete zadat název nové třídy okna a jejichž proceduru okna používat nové třídy nadřazené třídy.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umožňuje zadat parametry třídy.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] Název třídy okna, která vloží nové třídy okna. Nemůže mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Název okna třídy této nadřazené třídy bude *OrigWndClassName*. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] Název existující třídy okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
 
-*Styl*  
+*Styl*<br/>
 [in] Styl okna.
 
-*pozadí –*  
+*pozadí –*<br/>
 [in] Barva pozadí okna.
 
 ### <a name="remarks"></a>Poznámky

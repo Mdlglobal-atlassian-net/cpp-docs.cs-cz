@@ -1,5 +1,5 @@
 ---
-title: norm_2 – třída | Microsoft Docs
+title: norm_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bcdb86d63af4f920e1df3dffd920195aa7a00d8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cc1e6d499c5e02c32a7df02c91b012f9440e7cbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104449"
 ---
 # <a name="norm2-class"></a>norm_2 – třída
-Představuje krátký vektoru normální dvou čísel.  
+Představuje krátký vektor dvou normálních čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class norm_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class norm_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[norm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[norm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -92,17 +92,17 @@ class norm_2;
 |norm_2::Operator-||  
 |norm_2::operator--||  
 |norm_2::Operator * =||  
-|/ norm_2::Operator = – operátor||  
+|norm_2::Operator / =||  
 |norm_2::Operator ++||  
 |norm_2::Operator +=||  
 |norm_2::Operator =||  
-|norm_2::Operator-=||  
+|operátor norm_2::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#norm_2__size)||  
+|[velikost – konstanta](#norm_2__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -125,9 +125,9 @@ class norm_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> norm_2 
+##  <a name="ctor"></a> norm_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 norm_2() restrict(amp,
@@ -193,17 +193,17 @@ explicit inline norm_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="norm_2__size"></a> Velikost 
 

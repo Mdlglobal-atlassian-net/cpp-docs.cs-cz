@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101342"
 ---
 # <a name="character-classification"></a>Klasifikace znaků
 
 Každá z těchto rutin testuje zadaný jednobajtový znak, široký znak nebo vícebajtový znaků na splnění podmínky. (Podle definice je znaková sada ASCII mezi 0 a 127 podmnožinou všech vícebajtových znakových sad jsou. Například japonská katakana zahrnuje ASCII i další ne ASCII znaky.)
 
- Testovací podmínku jsou ovlivněny nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v.
+Testovací podmínku jsou ovlivněny nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v.
 
- Tyto rutiny obvykle provádějí rychleji než testy, které můžete napíšete a musí jim být dána přednost. Například následující kód se provádí pomaleji, než volání `isalpha(c)`:
+Tyto rutiny obvykle provádějí rychleji než testy, které můžete napíšete a musí jim být dána přednost. Například následující kód se provádí pomaleji, než volání `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

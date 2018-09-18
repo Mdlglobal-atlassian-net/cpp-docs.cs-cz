@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099535"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Vytváření Noncreatable objektu ATL
 
@@ -46,10 +46,10 @@ Atributy objektu COM založený na knihovně ATL můžete změnit tak, aby klien
 
 ## <a name="see-also"></a>Viz také
 
-[Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)   
-[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
-[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

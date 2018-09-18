@@ -1,5 +1,5 @@
 ---
-title: C3510 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3510 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb58d8d4fb9008b07579ef7fbc0066d00bcea57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cc134823abf2657426b0c1be9cfbe6d92a74035
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111321"
 ---
-# <a name="compiler-error-c3510"></a>C3510 chyby kompilátoru
-Nelze najít type_lib' závislého typu knihovny.  
-  
- [no_registry –](../../preprocessor/no-registry.md) a [auto_search –](../../preprocessor/auto-search.md) bylo předáno `#import` ale kompilátor se nepodařilo najít knihovnu odkazovaného typu.  
-  
- Pokud chcete tuto chybu vyřešit, ujistěte se, že všechny knihovny typů a odkazovaného typu knihovny jsou k dispozici pro kompilátor.  
-  
- Následující ukázka generuje C3510:  
-  
- Předpokládají, že byly vytvořeny následující dva typy knihovny a že C3510a.tlb byla odstraněna nebo není v cestě.  
-  
-```  
-// C3510a.idl  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]  
-library C3510aLib  
-{  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]  
-   enum E_C3510  
-   {  
-      one, two, three  
-   };  
-};  
-```  
-  
- A pak zdrojový kód pro druhý knihovny typů:  
-  
-```  
-// C3510b.idl  
-// post-build command: del /f C3510a.tlb  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]  
-library C3510bLib  
-{  
-   importlib ("C3510a.tlb");  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]  
-   struct S_C3510 {  
-      enum E_C3510 e;  
-   };  
-};  
-```  
-  
- A pak kód klienta:  
-  
-```  
-// C3510.cpp  
-#import "c3510b.tlb" no_registry auto_search   // C3510  
-int main() {  
-   C3510aLib::S_C4336 ccc;  
-}  
+# <a name="compiler-error-c3510"></a>Chyba kompilátoru C3510
+
+Nelze najít závislý typ knihovny 'type_lib.
+
+[no_registry s: %](../../preprocessor/no-registry.md) a [auto_search –](../../preprocessor/auto-search.md) bylo předáno `#import` , ale kompilátor nebyl schopen najít odkazovanou knihovnu typů.
+
+Chcete-li vyřešit tuto chybu, ujistěte se, že všechny knihovny typů a odkazované knihovny typů jsou k dispozici pro kompilátor.
+
+Následující ukázka generuje C3510:
+
+Předpokládají, že byly vytvořeny následující knihovny dvou typů a že C3510a.tlb byl odstraněn nebo není v cestě.
+
+```
+// C3510a.idl
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]
+library C3510aLib
+{
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]
+   enum E_C3510
+   {
+      one, two, three
+   };
+};
+```
+
+A pak zdrojový kód pro druhý knihovny typů:
+
+```
+// C3510b.idl
+// post-build command: del /f C3510a.tlb
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]
+library C3510bLib
+{
+   importlib ("C3510a.tlb");
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]
+   struct S_C3510 {
+      enum E_C3510 e;
+   };
+};
+```
+
+A pak kód klienta:
+
+```
+// C3510.cpp
+#import "c3510b.tlb" no_registry auto_search   // C3510
+int main() {
+   C3510aLib::S_C4336 ccc;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1351 | Microsoft Docs
+title: Závažná chyba C1351 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a700734cc2fb860d9d3ad8143aed817809ab69f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bd76b164e24834f22cc4654873559e340efcb79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100453"
 ---
 # <a name="fatal-error-c1351"></a>Závažná chyba C1351
 
-> Chyba při načítání knihovny dll,*dll*': nekompatibilní verze  
+> Chyba při načítání knihovny dll '*dll*': nekompatibilní verze
 
-Byl nalezen nesprávná verze knihovny DLL.
+Bylo zjištěno nesprávné verze knihovny DLL.
 
 To znamená problém s instalací a měli byste ho nainstalovat Visual Studio.

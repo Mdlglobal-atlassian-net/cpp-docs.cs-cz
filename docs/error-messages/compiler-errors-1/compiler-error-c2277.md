@@ -1,5 +1,5 @@
 ---
-title: C2277 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2277 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7338efab684e9812704673ece8585cd58c850b23
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 212ae84917e664116c83df3135577e00cda19446
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101935"
 ---
-# <a name="compiler-error-c2277"></a>C2277 chyby kompilátoru
-"identifikátor": nelze zpracovat adresu tento – členská funkce  
-  
- Nelze provést na adresu členské funkce.  
-  
- Následující ukázka generuje C2277:  
-  
-```  
-// C2277.cpp  
-class A {  
-public:  
-   A();  
-};  
-(*pctor)() = &A::A;   // C2277   
+# <a name="compiler-error-c2277"></a>Chyba kompilátoru C2277
+
+'identifier': nejde adresovat tato členská funkce
+
+Nejde převzít adresu členské funkce.
+
+Následující ukázka generuje C2277:
+
+```
+// C2277.cpp
+class A {
+public:
+   A();
+};
+(*pctor)() = &A::A;   // C2277
 ```

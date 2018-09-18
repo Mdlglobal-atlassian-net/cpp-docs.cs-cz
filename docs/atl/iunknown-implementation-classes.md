@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 42c42b43fdc04978fabe36b0ea64f39b9a5d333f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098482"
 ---
 # <a name="iunknown-implementation-classes"></a>Implementace třídy IUnknown
 
@@ -55,8 +55,8 @@ Následující třídy implementují `IUnknown` a související metody:
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../atl/atl-class-overview.md)   
-[Agregace a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)   
-[Makra COM Map](../atl/reference/com-map-macros.md)   
+[Přehled tříd](../atl/atl-class-overview.md)<br/>
+[Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
+[Makra map COM](../atl/reference/com-map-macros.md)<br/>
 [Globální funkce mapy modelu COM](../atl/reference/com-map-global-functions.md)
 

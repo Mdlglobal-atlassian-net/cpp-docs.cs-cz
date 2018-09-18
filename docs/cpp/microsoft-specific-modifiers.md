@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110611"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
-Tato část popisuje rozšíření specifické pro společnost Microsoft pro jazyk C++ v následujících oblastech:  
-  
--   [Základní adresování](based-addressing.md), praxe používání ukazatele jako základ, ze kterého mohou být posouvány jiné ukazatele  
-  
--   [Konvence volání funkce](calling-conventions.md)  
-  
--   Rozšířené atributy tříd úložiště deklarované s [__declspec](declspec.md) – klíčové slovo  
-  
--   [__W64](w64.md) – klíčové slovo  
 
-### <a name="microsoft-specific-keywords"></a>Klíčová slova specifická pro společnost Microsoft  
+Tato část popisuje rozšíření specifické pro společnost Microsoft pro jazyk C++ v následujících oblastech:
 
-Mnoho klíčových slov specifických pro společnost Microsoft umožňuje změnit deklarace odvozených typů formulářů. Další informace o deklarátorech naleznete v tématu [Deklarátory](overview-of-declarators.md).  
+- [Základní adresování](based-addressing.md), praxe používání ukazatele jako základ, ze kterého mohou být posouvány jiné ukazatele
+
+- [Konvence volání funkce](calling-conventions.md)
+
+- Rozšířené atributy tříd úložiště deklarované s [__declspec](declspec.md) – klíčové slovo
+
+- [__W64](w64.md) – klíčové slovo
+
+### <a name="microsoft-specific-keywords"></a>Klíčová slova specifická pro společnost Microsoft
+
+Mnoho klíčových slov specifických pro společnost Microsoft umožňuje změnit deklarace odvozených typů formulářů. Další informace o deklarátorech naleznete v tématu [Deklarátory](overview-of-declarators.md).
 
 |Klíčové slovo|Význam|Použít k vytvoření odvozených typů?|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ Mnoho klíčových slov specifických pro společnost Microsoft umožňuje změn
 |[__vectorcall](vectorcall.md)|Název, který následuje, deklaruje funkci, která používá registry, včetně registrů SSE, pokud je k dispozici, namísto zásobníku pro předání argumentu.|Ano|      
     
 ## <a name="see-also"></a>Viz také     
- [Referenční dokumentace jazyka C++](cpp-language-reference.md)
+
+[Referenční dokumentace jazyka C++](cpp-language-reference.md)

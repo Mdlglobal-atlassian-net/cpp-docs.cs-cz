@@ -1,5 +1,5 @@
 ---
-title: C3890 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3890 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc1bfbba9cfb8991491bcbb42d2e13c586c7fc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e599150c1e8d62d751f9dca67cffc99fb079bd32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104919"
 ---
-# <a name="compiler-error-c3890"></a>C3890 chyby kompilátoru
-'příkaz var': nelze převést na adresu literálu datový člen  
-  
- Literál datového člena existuje v haldě uvolňování paměti.  Objekt v haldě uvolňování paměti můžete přesunout, takže trvá adresu není užitečné.  
-  
- Následující ukázka generuje C3890:  
-  
-```  
-// C3890.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   int p = &Y1::staticConst;   // C3890  
-   int p2 = Y1::staticConst;   // OK  
-}  
+# <a name="compiler-error-c3890"></a>Chyba kompilátoru C3890
+
+'příkaz var': Nelze převzít adresu proměnné literální datový člen
+
+Datový člen literal existuje na haldě uvolňování paměti.  Objekt na haldě uvolňování je možné přesunout, takže převzetí adresy není užitečné.
+
+Následující ukázka generuje C3890:
+
+```
+// C3890.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   int p = &Y1::staticConst;   // C3890
+   int p2 = Y1::staticConst;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4743 | Microsoft Docs
+title: Upozornění (úroveň 1) C4743 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84b4d5f3aa465257d7efcf9f95584612214165b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6387c1b4b02902fdb3eec468c753ff08de6e91f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111157"
 ---
-# <a name="compiler-warning-level-1-c4743"></a>C4743 kompilátoru upozornění (úroveň 1)
-'*typ*, má jinou velikost v'*file1*'a'*file2*': *číslo* a *číslo* bajtů  
-  
- Proměnná externí odkazuje nebo definované v dva soubory obsahuje různé typy v těchto souborů a kompilátor určili, že velikost proměnné v *file1* se liší od velikost proměnné v *file2*.  
-  
- Se důležité nestane, pokud toto upozornění můžete vygenerované jazyka C++. Pokud je deklarovat stejné typy se stejným názvem ve dvou různých souborů, pokud tyto deklarace obsahovat virtuální funkce a deklarací nejsou stejné, můžete kompilátor emitování upozornění C4744 pro tabulky virtuální funkce. Upozornění dojde, protože existují dvě různé velikostí virtuální funkce tabulky pro stejného typu a linkeru musíte zvolit jeden z nich začlenit do spustitelného souboru.  Je možné, že to může způsobit v programu volání nesprávný virtuální funkce.  
-  
- Chcete-li vyřešit toto upozornění, použijte stejné definice typu nebo použijte odlišné názvy pro typy nebo proměnné.  
-  
-## <a name="example"></a>Příklad  
- Tato ukázka obsahuje jednu definici typu.  
-  
-```  
-// C4743a.cpp  
-// compile with: /c  
-class C {  
-public:  
-    virtual void f1(void);  
-    virtual void f2(void);  
-    virtual void f3(void);  
-};  
-  
-void C::f1(void) {}  
-void C::f2(void) {}  
-void C::f3(void) {}  
-C q;  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4743.  
-  
-```  
-// C4743b.cpp  
-// compile with: C4743a.cpp /W1 /GL /O2  
-// C4743 expected  
-class C {  
-public:  
-    virtual void f1(void);  
-    virtual void f2(void);  
-    virtual void f3(void);  
-    virtual void f4(void);  
-    virtual void f5(void);  
-};  
-  
-void C::f4(void) {}  
-void C::f5(void) {}  
-C x;  
-  
-int main() {}   
+# <a name="compiler-warning-level-1-c4743"></a>Kompilátor upozornění (úroveň 1) C4743
+
+"*typ*"má jinou velikost v"*file1*"a"*file2*': *číslo* a *číslo* bajtů
+
+Externí proměnné odkazovat nebo definované ve dvou souborech má různé typy v těchto souborech a kompilátor určili, že velikost proměnné v *file1* se liší od velikost proměnné v *file2*.
+
+To se důležité nestane, pokud toto upozornění může být generována pro jazyk C++. Pokud deklarujete stejné typy se stejným názvem ve dvou různých souborech, pokud tyto deklarace obsahovat virtuální funkce, a pokud deklarace nejsou stejné, kompilátor může vygenerovat upozornění C4744 pro tabulky virtuálních funkcí. Upozornění dochází, protože existují dvě tabulky různé velikosti virtuálních funkcí pro stejného typu a linkeru musíte zvolit jeden z nich začlenit do spustitelného souboru.  Je možné, že může dojít k programu volání nesprávné virtuální funkce.
+
+Pokud chcete vyřešit toto upozornění, použijte stejné definice typu nebo používat jiné názvy typů nebo proměnné.
+
+## <a name="example"></a>Příklad
+
+Tato ukázka obsahuje jednu definici typu.
+
+```
+// C4743a.cpp
+// compile with: /c
+class C {
+public:
+    virtual void f1(void);
+    virtual void f2(void);
+    virtual void f3(void);
+};
+
+void C::f1(void) {}
+void C::f2(void) {}
+void C::f3(void) {}
+C q;
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4743.
+
+```
+// C4743b.cpp
+// compile with: C4743a.cpp /W1 /GL /O2
+// C4743 expected
+class C {
+public:
+    virtual void f1(void);
+    virtual void f2(void);
+    virtual void f3(void);
+    virtual void f4(void);
+    virtual void f5(void);
+};
+
+void C::f4(void) {}
+void C::f5(void) {}
+C x;
+
+int main() {}
 ```

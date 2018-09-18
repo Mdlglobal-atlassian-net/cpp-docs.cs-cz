@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114251"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>deklarace funkcí extern "C" a extern "C++"
 
- V jazyce C++ při použití s řetězcem **extern** Určuje, že propojovací konvence jiného jazyka se používají pro deklarátory. Funkce a data jazyka C mohou být zpřístupněny pouze v případě, že byly dříve deklarovány s propojením jazyka C. Musí však být definovány v odděleně kompilované jednotce překladu.
+V jazyce C++ při použití s řetězcem **extern** Určuje, že propojovací konvence jiného jazyka se používají pro deklarátory. Funkce a data jazyka C mohou být zpřístupněny pouze v případě, že byly dříve deklarovány s propojením jazyka C. Musí však být definovány v odděleně kompilované jednotce překladu.
 
- Microsoft C++ podporuje řetězce **"C"** a **"C++"** v *řetězcový literál* pole. Všechny standardní vložené soubory používají **extern** syntaxe "C" Povolit funkce knihovny run-time, který se má použít v programech jazyka C++.
+Microsoft C++ podporuje řetězce **"C"** a **"C++"** v *řetězcový literál* pole. Všechny standardní vložené soubory používají **extern** syntaxe "C" Povolit funkce knihovny run-time, který se má použít v programech jazyka C++.
 
 ## <a name="example"></a>Příklad
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- Pokud funkce obsahuje více specifikací propojení, musejí tato propojení souhlasit. U deklarace funkcí, které mají propojení jazyka C i C++, se jedná o chybu. Pokud se navíc v jednom programu vyskytují dvě deklarace funkce – jedna se specifikací propojení a jedna bez ní – musí být deklarace se specifikací propojení jako první. Jakékoli nadbytečné deklarace funkcí, které již specifikaci propojení obsahují, obdrží propojení zadané v první deklaraci. Příklad:
+Pokud funkce obsahuje více specifikací propojení, musejí tato propojení souhlasit. U deklarace funkcí, které mají propojení jazyka C i C++, se jedná o chybu. Pokud se navíc v jednom programu vyskytují dvě deklarace funkce – jedna se specifikací propojení a jedna bez ní – musí být deklarace se specifikací propojení jako první. Jakékoli nadbytečné deklarace funkcí, které již specifikaci propojení obsahují, obdrží propojení zadané v první deklaraci. Příklad:
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>Viz také:
- [Klíčová slova](../cpp/keywords-cpp.md)  
- [Program a propojení](program-and-linkage-cpp.md)  
- [extern – specifikátor třídy úložiště v jazyce C](../c-language/extern-storage-class-specifier.md)  
- [Chování identifikátorů v jazyce C](../c-language/behavior-of-identifiers.md)  
- [Propojení v jazyce C](../c-language/linkage.md)
+
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Program a propojení](program-and-linkage-cpp.md)<br/>
+[extern – specifikátor třídy úložiště v jazyce C](../c-language/extern-storage-class-specifier.md)<br/>
+[Chování identifikátorů v jazyce C](../c-language/behavior-of-identifiers.md)<br/>
+[Propojení v jazyce C](../c-language/linkage.md)

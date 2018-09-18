@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4938 | Microsoft Docs
+title: Upozornění (úroveň 4) C4938 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b069e233072e653f848da61423411875d817cef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e140f3885aec66d01d5f7e28245c10e952bedde3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107439"
 ---
-# <a name="compiler-warning-level-4-c4938"></a>C4938 kompilátoru upozornění (úroveň 4)
-'příkaz var': plovoucí redukční proměnnou bod může způsobit nekonzistentní výsledky v rámci /fp: striktní nebo fenv_access – #pragma  
-  
- Neměli byste používat [/fp: striktní](../../build/reference/fp-specify-floating-point-behavior.md) nebo [fenv_access –](../../preprocessor/fenv-access.md) s OpenMP s plovoucí desetinnou čárkou snížení, protože součet je vypočítán v jiném pořadí. Výsledky se proto může lišit od výsledky bez/OpenMP.  
-  
- Následující ukázka generuje C4938:  
-  
-```  
-// C4938.cpp  
-// compile with: /openmp /W4 /fp:strict /c  
-// #pragma fenv_access(on)  
-extern double *a;   
-  
-double test(int first, int last) {   
-   double sum = 0.0;   
-   #pragma omp parallel for reduction(+: sum)   // C4938  
-   for (int i = first ; i <= last ; ++i)   
-      sum += a[i];   
-   return sum;   
-}  
-```  
-  
- Bez explicitní paralelizace součet vypočítán takto:  
-  
-```  
-sum = a[first] + a[first + 1] + ... + a[last];   
-```  
-  
- Explicitní paralelizace (a dvěma vlákny) je součet vypočítán takto:  
-  
-```  
-sum1 = a[first] + ... a[first + last / 2];   
-sum2 = a[(first + last / 2) + 1] + ... a[last];   
-sum = sum1 + sum2;  
+# <a name="compiler-warning-level-4-c4938"></a>Kompilátor upozornění (úroveň 4) C4938
+
+'příkaz var': plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
+
+Neměli byste používat [/FP: strict](../../build/reference/fp-specify-floating-point-behavior.md) nebo [fenv_access](../../preprocessor/fenv-access.md) s OpenMP snížení s plovoucí desetinnou čárkou, protože součet je vypočítán v jiném pořadí. Výsledky se díky tomu se může lišit od výsledky bez/OpenMP.
+
+Následující ukázka generuje C4938:
+
+```
+// C4938.cpp
+// compile with: /openmp /W4 /fp:strict /c
+// #pragma fenv_access(on)
+extern double *a;
+
+double test(int first, int last) {
+   double sum = 0.0;
+   #pragma omp parallel for reduction(+: sum)   // C4938
+   for (int i = first ; i <= last ; ++i)
+      sum += a[i];
+   return sum;
+}
+```
+
+Bez explicitní paralelizace součet vypočítat následujícím způsobem:
+
+```
+sum = a[first] + a[first + 1] + ... + a[last];
+```
+
+Explicitní paralelizace (a dvěma vlákny) součet vypočítat následujícím způsobem:
+
+```
+sum1 = a[first] + ... a[first + last / 2];
+sum2 = a[(first + last / 2) + 1] + ... a[last];
+sum = sum1 + sum2;
 ```

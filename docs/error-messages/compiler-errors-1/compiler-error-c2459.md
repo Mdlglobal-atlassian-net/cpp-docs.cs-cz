@@ -1,5 +1,5 @@
 ---
-title: C2459 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2459 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113211"
 ---
-# <a name="compiler-error-c2459"></a>C2459 chyby kompilátoru
-"identifikátor": je definovaný; Nelze přidat jako člena anonymní  
-  
- Třída, struktura nebo sjednocení je předefinovat v jeho vlastní oboru členem anonymní sjednocení.  
-  
- Následující ukázka generuje C2459:  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+# <a name="compiler-error-c2459"></a>Chyba kompilátoru C2459
+
+'identifier': definuje se; Nelze přidat jako anonymní člen
+
+Třída, struktura nebo sjednocení je předefinovat v vlastní rozsah člena anonymního sjednocení.
+
+Následující ukázka generuje C2459:
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

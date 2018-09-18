@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42aea64c0a6881dcc3ca9a3465a436b33f19ad6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f38fc3499ecc5956369a78c37f94358a1006cc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108687"
 ---
 # <a name="ccomcontainedobject-class"></a>Ccomcontainedobject – třída
 
@@ -41,13 +41,13 @@ Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunkn
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class Base>  
+template<class Base>
 class CComContainedObject : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Členové
@@ -104,7 +104,7 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*  
+*PV*<br/>
 [in] Objekt vlastníka `IUnknown`.
 
 ### <a name="remarks"></a>Poznámky
@@ -151,13 +151,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*  
+*str*<br/>
 [out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota

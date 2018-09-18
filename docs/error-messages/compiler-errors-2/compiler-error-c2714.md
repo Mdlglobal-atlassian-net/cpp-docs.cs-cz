@@ -1,5 +1,5 @@
 ---
-title: C2714 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2714 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b012acdebd5ccddb056d9558bb1034ac2ba0b49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a5a8a2157fc574b9a43688bfc8fa9adcbcb676f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108492"
 ---
-# <a name="compiler-error-c2714"></a>C2714 chyby kompilátoru
-__alignof(void) není povolen.  
-  
- Byla předána neplatná hodnota pro operátor.  
-  
- V tématu [__alignof – operátor](../../cpp/alignof-operator.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2714.  
-  
-```  
-// C2714.cpp  
-int main() {  
-   return __alignof(void);   // C2714  
-   return __alignof(char);   // OK  
-}  
+# <a name="compiler-error-c2714"></a>Chyba kompilátoru C2714
+
+__alignof(void) není povolený.
+
+Byla předána neplatná hodnota pro operátor.
+
+Zobrazit [__alignof – operátor](../../cpp/alignof-operator.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2714.
+
+```
+// C2714.cpp
+int main() {
+   return __alignof(void);   // C2714
+   return __alignof(char);   // OK
+}
 ```

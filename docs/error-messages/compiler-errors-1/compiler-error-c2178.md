@@ -1,5 +1,5 @@
 ---
-title: C2178 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2178 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/08/2017
 ms.technology:
@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3727a66554b2e128061820df160c02a1370ebb74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af9efdb3258e6793a17a26b552df8ba4e63c9107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102332"
 ---
-# <a name="compiler-error-c2178"></a>C2178 chyby kompilátoru  
-  
-'*identifikátor*'nelze deklarovat s'*specifikátor*' – specifikátor  
-  
-A `mutable` specifikátor byla použita v deklaraci, ale specifikátor není v tomto kontextu povolen.  
-  
-`mutable` Specifikace lze použít pouze na názvy členy třídy data a nelze použít pro názvy deklarovaný `const` nebo `static`a nelze ji použít k odkazování členů.  
-  
-## <a name="example"></a>Příklad  
-  
-Následující příklad ukazuje, jak může dojít, C2178 a jeho řešení.  
-  
-```  
+# <a name="compiler-error-c2178"></a>Chyba kompilátoru C2178
+
+"*identifikátor*"se nedá deklarovat pomocí"*specifikátor*" specifikátor
+
+A `mutable` byl použit specifikátor v deklaraci, ale specifikátor není povolený v tomto kontextu.
+
+`mutable` Specifikátor lze použít pouze u názvů datové členy třídy a nejde použít pro názvy deklarované `const` nebo `static`a nedá se použít k odkazování členů.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak může dojít k C2178 a jak ho opravit.
+
+```
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 
@@ -46,4 +46,4 @@ class S {
 
 mutable int x = 4; // C2178
 // To fix, remove mutable keyword
-```  
+```

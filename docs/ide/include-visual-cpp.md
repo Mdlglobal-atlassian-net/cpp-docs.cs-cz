@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100744"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;zahrnout&gt; (Visual C++)
 
@@ -37,16 +37,16 @@ ms.locfileid: "43894445"
 
 #### <a name="parameters"></a>Parametry
 
-`filename`  
+*Název souboru*<br/>
 Název souboru, který obsahuje dokumentaci. Název souboru může být kvalifikovány s cestou.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `filename`.
 
-`tagpath`  
+*tagpath*<br/>
 Platný výraz XPath, který vybere požadované sadě uzlů obsažené v souboru.
 
-`name`  
+*Jméno*<br/>
 Specifikátor názvem ve značce, který předchází komentáře; `name` bude mít `id`.
 
-`id`  
+*id*<br/>
 ID značky, které předchází komentáře.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
 
 ## <a name="remarks"></a>Poznámky

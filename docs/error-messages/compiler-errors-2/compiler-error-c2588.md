@@ -1,5 +1,5 @@
 ---
-title: C2588 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2588 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67eb6362ff55e09b05349d10fcdc2377d8ff2996
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d656dbde06d6052fd10611675f2cff8818cdb6e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108567"
 ---
-# <a name="compiler-error-c2588"></a>C2588 chyby kompilátoru
-':: ~ identifikátor ': Neplatný globální – destruktor  
-  
- Destruktoru je určená pro něco jiného než třídy, struktury nebo sjednocení. Toto není povoleno.  
-  
- Tato chyba může být způsobeno chybějící třída, struktura nebo union název na levé straně řešení rozsahu (`::`) operátor.  
-  
- Následující ukázka generuje C2588:  
-  
-```  
-// C2588.cpp  
-~F();   // C2588  
+# <a name="compiler-error-c2588"></a>Chyba kompilátoru C2588
+
+':: ~ identifikátor ': Neplatná globální – destruktor
+
+Destruktor je definována pro něco jiného než třída, struktura nebo sjednocení. Toto není povoleno.
+
+Tuto chybu může způsobovat chybějící třídy, struktury nebo sjednocení název na levé straně rozlišení oboru (`::`) – operátor.
+
+Následující ukázka generuje C2588:
+
+```
+// C2588.cpp
+~F();   // C2588
 ```

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1001 | Microsoft Docs
+title: Závažná chyba C1001 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f605dd7e4892c4a8b57e544ed857257be72f020d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6363694dbd7f1a7ebfcd58cad030dfecf7f38397
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098196"
 ---
 # <a name="fatal-error-c1001"></a>Závažná chyba C1001
 
-> INTERNÍ ERROR(compiler file *file*, line *number*) KOMPILÁTORU  
-  
-Kompilátor nemůže generovat správný kód for – konstrukce, často kvůli kombinace konkrétní výraz a možnost optimalizace nebo o problém při analýze. Pokud v uvedeném souboru kompilátoru utc nebo segment cesty C2, je pravděpodobně chyba optimalizace. Pokud soubor obsahuje segment cesty cxxfe nebo c1xx nebo je msc1.cpp, je pravděpodobně chybě analyzátoru. Pokud je soubor s názvem cl.exe, nejsou žádné další informace k dispozici.  
+> VNITŘNÍ KOMPILÁTOR ERROR(compiler file *file*, line *number*)
 
-Často můžete opravit problém s optimalizace odebrání jednoho nebo více možností optimalizace. Určete, které možnosti se na chyby, odeberte možnosti, jeden v době a pak ji znovu zkompilovat, dokud vyčkat, chybová zpráva. Jsou nejčastěji zodpovědná možnosti [/Og (globální optimalizace)](../../build/reference/og-global-optimizations.md) a [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md). Jakmile zjistíte, kterou možnost optimalizace zodpovídá, můžete ji zakázat kolem funkce, kde dojde k chybě pomocí [optimalizovat](../../preprocessor/optimize.md) – Direktiva pragma a nadále používat možnost pro zbytek modul. Další informace o možnostech optimalizace najdete v tématu [doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md).
+Kompilátor nelze generovat správný kód konstrukce, často kvůli kombinaci konkrétní výraz a možnosti optimalizace nebo problému při analýze. Pokud má soubor kompilátoru uvedené utc nebo segment cesty C2, je pravděpodobně chyba optimalizace. Pokud soubor obsahuje cxxfe nebo c1xx segment cesty nebo je msc1.cpp, je pravděpodobně Chyba analyzátoru. Pokud je soubor s názvem cl.exe, nejsou žádné informace k dispozici.
 
-Pokud není optimalizace zodpovědná za chyba, zkuste přepisování řádku, kde je chybě nebo několika řádků kódu, které obaluje daného řádku. Chcete-li zobrazit kód způsob kompilátor uvidí ho po předběžného zpracování, můžete použít [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) možnost.
+Optimalizaci problém můžete vyřešit často odebráním jedné nebo více možností optimalizace. Pokud chcete zjistit, která možnost je při selhání, odeberte možnosti v době a překompilujte, dokud zmizet, chybová zpráva. Jsou nejčastěji odpovídá možnosti [/Og (globální optimalizace)](../../build/reference/og-global-optimizations.md) a [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md). Jakmile určíte, jakou možnost optimalizace zodpovídá, můžete jej zakázat kolem funkce, kde dojde k chybě s použitím [optimalizovat](../../preprocessor/optimize.md) – Direktiva pragma a nadále používat možnost pro zbytek modulu. Další informace o možnostech optimalizace najdete v tématu [doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md).
 
-Další informace o zdroji této chyby izolovat a vnitřní chyba kompilátoru nahlásit společnosti Microsoft najdete v tématu [postup nahlásit problém s sady nástrojů Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Není-li optimalizace způsobily chybu, zkuste přepisování řádku, kde je Chyba hlášená nebo několik řádků kódu tento řádek. Chcete-li zobrazit kód tak, jak kompilátor narazí po předběžném zpracování, můžete použít [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) možnost.
+
+Další informace o tom, jak izolovat příčiny chyby a hlášení vnitřní chyba kompilátoru Microsoftu, najdete v části [postup ohlášení problému se sadou nástrojů Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).

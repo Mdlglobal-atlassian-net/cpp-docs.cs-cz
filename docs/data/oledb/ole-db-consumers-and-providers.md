@@ -1,5 +1,5 @@
 ---
-title: A zprostředkovatele OLE DB | Microsoft Docs
+title: Příjemci knihovny OLE DB a poskytovatelé | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 170f45a3581846dc588abf06aec170d66aa0d545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b37a06ec89f0e2e21c4332a480e58c605f0d161f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110715"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Příjemci a zprostředkovatelé technologie OLE DB
-Architektura technologie OLE DB používá model příjemci a zprostředkovatelé. Příjemce vytváří požadavky na data. Zprostředkovatel reaguje na tyto požadavky uvedení v tabulkovém formátu data a vrátit k příjemce. Žádném volání, které uplatnit musí být implementované ve zprostředkovateli.  
+
+Architektura technologie OLE DB využívá model příjemci a zprostředkovatelé. Příjemce provede žádostí o data. Poskytovatel reaguje na tyto žádosti o umístění dat v tabelárním formátu a jeho vrácením příjemci. Každé volání, které může spotřebitel musí být implementované ve zprostředkovateli.  
   
- Technicky definované, příjemce je všechny systém nebo aplikace, kód (nikoli nutně komponenta technologie OLE DB), který používá data prostřednictvím rozhraní OLE DB. Rozhraní jsou implementované ve zprostředkovateli. Proto zprostředkovatele je softwarová součást, který implementuje rozhraní OLE DB pro zapouzdření přístup k datům a umístěte ho do jiné objekty (příjemci).  
+Technicky definované příjemce je jakýkoli systém nebo aplikace, kód (ne tedy nutně komponentu technologie OLE DB), který přistupuje k datům prostřednictvím rozhraní OLE DB. Rozhraní jsou implementované ve zprostředkovateli. Díky tomu se zprostředkovatel je softwarová součást, která implementuje rozhraní technologie OLE DB pro zapouzdření přístup k datům a zveřejníte ho na jiné objekty (tedy spotřebitelé).  
   
- Z hlediska role příjemce volá metody rozhraní OLE DB; zprostředkovatele OLE DB implementuje potřebné rozhraní OLE DB.  
+Z hlediska role příjemce volá metody v rozhraní OLE DB; zprostředkovatele OLE DB implementuje rozhraní potřebných OLE DB.  
   
- OLE DB zabraňuje podmínky klient a server, protože tyto role vždy smysl, hlavně v situacích, n vrstvá. Vzhledem k příjemce může být součást na vrstvu, která má jiné komponenty, při volání klienta součásti být matoucí. Navíc poskytovatele někdy pracuje jako ovladač databáze, než server.  
+Protože pracovníci v těchto rolích vždy smysl, zejména v situacích, n vrstvá se vyhnete OLE DB podmínky klientem a serverem. Vzhledem k tomu, že příjemce může být součást na vrstvu, která slouží jiné součásti, volání klienta komponenty by bylo matoucí. Navíc zprostředkovatele někdy pracuje jako ovladač databáze, než server.  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
- [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)
+
+[Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

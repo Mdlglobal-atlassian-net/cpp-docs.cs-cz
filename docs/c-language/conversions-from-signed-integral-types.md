@@ -1,5 +1,5 @@
 ---
-title: Převody z podepsaných integrálních typů | Microsoft Docs
+title: Převody z podepsaných integrálních typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,65 +18,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8747f6c1bfde3f076101cc9330d73b1c76c1055b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fc38fd8b1ab4bc84898704218b2da5722514cea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101381"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Převody z podepsaných integrálních typů
-Když znaménkem je převést na celé číslo bez znaménka s stejné nebo větší velikosti a není záporná hodnota podepsaná hodnota typu integer, hodnota je beze změny. Převod přišla tím, že přihlašovací rozšíří číslo se znaménkem. Znaménkem jsou převedeny na kratší znaménkem zkrácením nejvyšších bitů. Výsledek interpretována jako hodnotu bez znaménka, jak je znázorněno v tomto příkladu.  
-  
-```  
-int i = -3;  
-unsigned short u;  
-  
-u = i;   
-printf_s( "%hu\n", u );  // Prints 65533  
-  
-```  
-  
- Žádné informace bude ztracena, jakmile znaménkem jsou převedeny na hodnotu plovoucí s tím rozdílem, že některé přesnost může dojít ke ztrátě při **dlouho int** nebo **nepodepsané dlouho int** je převést hodnotu **float** hodnotu.  
-  
- Následující tabulka shrnuje převody z podepsaných integrálních typů. Tato tabulka předpokládá, že **char** ve výchozím nastavení je podepsaný typu. Pokud použijete možnost kompilaci, chcete-li změnit výchozí nastavení pro **char** převody uvedenému v typu na nepodepsané, [převody z nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md) tabulky pro **nepodepsané char**  typu použít místo převody v následující tabulce, převody z podepsané integrálních typů.  
-  
-### <a name="conversions-from-signed-integral-types"></a>Převody z podepsaných integrálních typů  
-  
-|From|Chcete-li|Metoda|  
-|----------|--------|------------|  
-|**Char**1|**short**|Rozšíření přihlášení|  
-|**char**|**long**|Rozšíření přihlášení|  
-|**char**|**unsigned char**|Zachovat vzor; bit horní ztratí funkce jako přihlašovací bit|  
-|**char**|**short bez znaménka**|Přihlašovací rozšíření na **krátké**; převést **krátké** k **prostě bez znaménka**|  
-|**char**|**dlouho bez znaménka**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **dlouho bez znaménka**|  
-|**char**|**float**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **float**|  
-|**char**|**double**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **double**|  
-|**char**|**dlouhé double**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **double**|  
-|**short**|**char**|Zachovat nejnižší bajtů|  
-|**short**|**long**|Rozšíření přihlášení|  
-|**short**|**unsigned char**|Zachovat nejnižší bajtů|  
-|**short**|**short bez znaménka**|Zachovat bitový; bit horní ztratí funkce jako přihlašovací bit|  
-|**short**|**dlouho bez znaménka**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **dlouho bez znaménka**|  
-|**short**|**float**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **float**|  
-|**short**|**double**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **double**|  
-|**short**|**dlouhé double**|Přihlašovací rozšíření na **dlouho**; převést **dlouho** k **double**|  
-|**long**|**char**|Zachovat nejnižší bajtů|  
-|**long**|**short**|Zachovat nejnižší aplikace word|  
-|**long**|**unsigned char**|Zachovat nejnižší bajtů|  
-|**long**|**short bez znaménka**|Zachovat nejnižší aplikace word|  
-|**long**|**dlouho bez znaménka**|Zachovat bitový; bit horní ztratí funkce jako přihlašovací bit|  
-|**long**|**float**|Představují jako **float**. Pokud **dlouho** nemůže být reprezentovaný přesně, některé je ztráta přesnosti.|  
-|**long**|**double**|Představují jako **dvojité**. Pokud **dlouho** nelze reprezentovat přesně tak jako **dvojité**, dojde ke ztrátě některých přesnost.|  
-|**long**|**dlouhé double**|Představují jako **dvojité**. Pokud **dlouho** nelze reprezentovat přesně tak jako **dvojité**, dojde ke ztrátě některých přesnost.|  
-  
- 1. Všechny **char** položky předpokládat, že **char** ve výchozím nastavení je podepsaný typu.  
-  
- **Konkrétní Microsoft**  
-  
- Pro kompilátor C Microsoft 32bitové celé číslo se rovná **dlouho**. Převod **int** hodnota stejná jako u pokračuje **dlouho**.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Převody přiřazení](../c-language/assignment-conversions.md)
+
+Když celé číslo se znaménkem je převést na celé číslo bez znaménka s roven nebo větší velikostí, hodnota celé číslo se znaménkem není záporná hodnota se nezmění. Převod je proveden tím, že znak rozšíří celé číslo se znaménkem. Celé číslo se znaménkem je převést na kratší celé číslo se znaménkem zkrácením nejvyšších bitů. Výsledkem je interpretován jako hodnoty bez znaménka, jak je znázorněno v tomto příkladu.
+
+```C
+int i = -3;
+unsigned short u;
+
+u = i;
+printf_s( "%hu\n", u );  // Prints 65533
+```
+
+Žádné informace jsou ztraceny, pokud celé číslo se znaménkem je převedena na hodnotu s plovoucí desetinnou čárkou s tím rozdílem, že mohou být ztraceny některé přesnosti, když **long int** nebo **unsigned long int** hodnota je převedena na **float** hodnotu.
+
+Následující tabulka shrnuje převody z podepsaných integrálních typů. Tato tabulka předpokládá, že **char** ve výchozím nastavení je typ podepsaný. Chcete-li změnit výchozí nastavení pro možnost kompilace použijete **char** typ bez znaménka, převody uvedené v [převody z nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md) tabulky pro **unsigned char**  typ použít namísto převody v následující tabulce, převody z celočíselných typů se znaménkem.
+
+### <a name="conversions-from-signed-integral-types"></a>Převody z podepsaných integrálních typů
+
+|From|Chcete-li|Metoda|
+|----------|--------|------------|
+|**Char**1|**short**|Znak rozšíření|
+|**char**|**long**|Znak rozšíření|
+|**char**|**unsigned char**|Zachovat vzor; bit vyššího řádu jako bit znaménka ztratí – funkce|
+|**char**|**short bez znaménka**|Rozšíření přihlašování do **krátký**; převod **krátký** k **unsigned short**|
+|**char**|**unsigned long**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **unsigned long**|
+|**char**|**float**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **plovoucí desetinnou čárkou**|
+|**char**|**double**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **double**|
+|**char**|**typ long double**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **double**|
+|**short**|**char**|Zachovat dolní bajty.|
+|**short**|**long**|Znak rozšíření|
+|**short**|**unsigned char**|Zachovat dolní bajty.|
+|**short**|**short bez znaménka**|Zachovat bitový vzor; bit vyššího řádu jako bit znaménka ztratí – funkce|
+|**short**|**unsigned long**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **unsigned long**|
+|**short**|**float**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **plovoucí desetinnou čárkou**|
+|**short**|**double**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **double**|
+|**short**|**typ long double**|Rozšíření přihlašování do **dlouhé**; převést **dlouhé** k **double**|
+|**long**|**char**|Zachovat dolní bajty.|
+|**long**|**short**|Zachovat nižší řád slova|
+|**long**|**unsigned char**|Zachovat dolní bajty.|
+|**long**|**short bez znaménka**|Zachovat nižší řád slova|
+|**long**|**unsigned long**|Zachovat bitový vzor; bit vyššího řádu jako bit znaménka ztratí – funkce|
+|**long**|**float**|Znázornění jako **float**. Pokud **dlouhé** se nedá přesně prezentovat některé je ztráta přesnosti.|
+|**long**|**double**|Znázornění jako **double**. Pokud **dlouhé** nemůže být reprezentován přesně jako **double**, dojde ke ztrátě některých přesnosti.|
+|**long**|**typ long double**|Znázornění jako **double**. Pokud **dlouhé** nemůže být reprezentován přesně jako **double**, dojde ke ztrátě některých přesnosti.|
+
+1. Všechny **char** položky se předpokládá, že **char** ve výchozím nastavení je typ podepsaný.
+
+**Specifické pro Microsoft**
+
+Pro kompilátor jazyka C společnosti Microsoft 32-bit integer je ekvivalentní **dlouhé**. Převod **int** hodnotu pokračuje stejné jako v případě **dlouhé**.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Převody přiřazení](../c-language/assignment-conversions.md)

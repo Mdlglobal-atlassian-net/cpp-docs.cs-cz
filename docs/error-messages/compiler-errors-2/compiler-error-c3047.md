@@ -1,5 +1,5 @@
 ---
-title: C3047 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3047 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ab5f13a898d3f1c200e493d386fb59727e022c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ecc39ae2659416def6faf9903efb66a75e0afcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105476"
 ---
-# <a name="compiler-error-c3047"></a>C3047 chyby kompilátoru
-Strukturované blok v OpenMP oblast 'částech' musí předcházet '#pragma omp – část.  
-  
- Žádný kód v bloku kódu zaváděné [části](../../parallel/openmp/reference/sections-openmp.md) – direktiva musí být v bloku kódu zaváděné `section` – direktiva.  
-  
- Následující ukázka generuje C3047:  
-  
-```  
-// C3047.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-  
-int main() {  
-   int n2 = 2, n3 = 3;  
-  
-   #pragma omp parallel  
-   {  
-      ++n2;  
-  
-      #pragma omp sections  
-      {  
-  
-         #pragma omp section  
-         {  
-            ++n3;  
-         }  
-  
-         ++n2;   // C3047 not enclosed in #pragma omp section  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3047"></a>Chyba kompilátoru C3047
+
+Strukturovaný blok v OpenMP 'sections' oblast musí být předcházen '#pragma omp section'.
+
+Žádný kód v bloku kódu zavedené [oddíly](../../parallel/openmp/reference/sections-openmp.md) direktiva musí být v bloku kódu zavedené `section` – direktiva.
+
+Následující ukázka generuje C3047:
+
+```
+// C3047.cpp
+// compile with: /openmp /c
+#include "omp.h"
+
+int main() {
+   int n2 = 2, n3 = 3;
+
+   #pragma omp parallel
+   {
+      ++n2;
+
+      #pragma omp sections
+      {
+
+         #pragma omp section
+         {
+            ++n3;
+         }
+
+         ++n2;   // C3047 not enclosed in #pragma omp section
+      }
+   }
+}
 ```

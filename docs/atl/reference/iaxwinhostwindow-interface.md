@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099770"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Iaxwinhostwindow – rozhraní
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Ukazatel `IUnknown` rozhraní připojené k hostitelský objekt ovládacího prvku.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (předchází **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (s předponou **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` rozhraní vytvořený ovládací prvek. Může mít hodnotu NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Identifikátor rozhraní odchozí rozhraní v obsažený objekt. Může mít hodnotu IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Ukazatel `IUnknown` rozhraní jímky objektu k připojení k bodu připojení na obsaženého objektu určeného `iidSink`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 [in] ID rozhraní na ovládací prvek požaduje.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Adresa ukazatel, který se zobrazí zadané rozhraní vytvořený ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ukazatel `IDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ukazatel `IDocHostUIHandlerDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -229,7 +229,7 @@ Tato funkce používá ovládací prvky (jako je například ovládací prvek we
 
 ## <a name="see-also"></a>Viz také
 
-[Iaxwinambientdispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f878633e29fe2ea7bcb065f9851a907d81f6d20f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: af20b6d406b0e2119df04d5348c554b3405e8597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103370"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -47,4 +47,5 @@ U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek,
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)
+
+[Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)

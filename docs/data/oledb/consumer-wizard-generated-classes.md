@@ -21,27 +21,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106178"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
+
 Při použití průvodce příjemcem ATL OLE DB pro vygenerování příjemce, máte na výběr mezi používáním atributů šablony technologie OLE DB nebo OLE DB. V obou případech průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů obsahuje kód pro otevření zdroje dat a sady řádků, které jste zadali v průvodci. Třída záznamu uživatele obsahuje mapování sloupců pro tabulku databáze, kterou jste vybrali. Generovaný kód se však liší v každém případě:  
   
--   Pokud vyberete příjemce bez vizuálního vzhledu, průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů bude mít název, který zadáte v poli třídy v průvodci (například `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (například `CProductsAccessor`). Obě třídy jsou umístěny v souboru hlaviček příjemce.  
+- Pokud vyberete příjemce bez vizuálního vzhledu, průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů bude mít název, který zadáte v poli třídy v průvodci (například `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (například `CProductsAccessor`). Obě třídy jsou umístěny v souboru hlaviček příjemce.  
   
--   Pokud vyberete s atributy uživatelů, třída záznamů uživatele bude mít název ve tvaru "_*ClassName*přístupového objektu" a budou vloženy. To znamená budete moci zobrazit pouze třídu příkazu v textovém editoru; Třída záznamů uživatele můžete zobrazit pouze jako vložený kód. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
+- Pokud vyberete s atributy uživatelů, třída záznamů uživatele bude mít název ve tvaru "_*ClassName*přístupového objektu" a budou vloženy. To znamená budete moci zobrazit pouze třídu příkazu v textovém editoru; Třída záznamů uživatele můžete zobrazit pouze jako vložený kód. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Následující příklady používají třídy příkazu vytvořit na tabulce produktů v databázi Northwind k předvedení generované v Průvodci uživatelský kód pro třídu příkazu a třída uživatelského záznamu.  
+Následující příklady používají třídy příkazu vytvořit na tabulce produktů v databázi Northwind k předvedení generované v Průvodci uživatelský kód pro třídu příkazu a třída uživatelského záznamu.  
   
 ## <a name="templated-user-record-classes"></a>Třídy bez vizuálního vzhledu uživatelského záznamu  
- Pokud vytvoříte příjemce technologie OLE DB pomocí šablony technologie OLE DB (nikoli atributy technologie OLE DB), průvodce vygeneruje kód, jak je popsáno v této části.  
+
+Pokud vytvoříte příjemce technologie OLE DB pomocí šablony technologie OLE DB (nikoli atributy technologie OLE DB), průvodce vygeneruje kód, jak je popsáno v této části.  
   
 ### <a name="column-data-members"></a>Sloupce datové členy  
- První část třída záznamu uživatele obsahuje deklarace členů dat a datové členy stavu a délky pro jednotlivé sloupce vázané na data. Informace o těchto datových členů, najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+
+První část třída záznamu uživatele obsahuje deklarace členů dat a datové členy stavu a délky pro jednotlivé sloupce vázané na data. Informace o těchto datových členů, najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
 >  Pokud změníte název třídy záznamu uživatele nebo napsat vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
@@ -93,7 +96,8 @@ public:
 ```  
   
 ### <a name="rowset-properties"></a>Vlastnosti sady řádků  
- V dalším kroku průvodce nastaví vlastnosti sady řádků. Pokud jste vybrali **změnu**, **vložit**, nebo **odstranit** v Průvodci příjemce knihovny ATL technologie OLE DB příslušných vlastností nastavené, tady (DBPROP_IRowsetChange vždy nastavena, pak jeden nejmíň DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT nebo DBPROPVAL_UP_DELETE, v uvedeném pořadí).  
+
+V dalším kroku průvodce nastaví vlastnosti sady řádků. Pokud jste vybrali **změnu**, **vložit**, nebo **odstranit** v Průvodci příjemce knihovny ATL technologie OLE DB příslušných vlastností nastavené, tady (DBPROP_IRowsetChange vždy nastavena, pak jeden nejmíň DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT nebo DBPROPVAL_UP_DELETE, v uvedeném pořadí).  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -106,7 +110,8 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ### <a name="command-or-table-class"></a>Příkaz nebo třída tabulky  
- Pokud chcete zadat třídu příkazu, Průvodce deklaruje třídu příkazu; pro kódu s použitím šablon příkaz vypadá takto:  
+
+Pokud chcete zadat třídu příkazu, Průvodce deklaruje třídu příkazu; pro kódu s použitím šablon příkaz vypadá takto:  
   
 ```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
@@ -125,7 +130,8 @@ SELECT \
 ```  
   
 ### <a name="column-map"></a>Mapování sloupce  
- Průvodce poté vygeneruje vazeb sloupců nebo mapování sloupců. Chcete-li vyřešit několik výhrad někteří poskytovatelé, následující kód může vytvořit vazbu sloupce v jiném pořadí, než který ohlásil zprostředkovatelem.  
+
+Průvodce poté vygeneruje vazeb sloupců nebo mapování sloupců. Chcete-li vyřešit několik výhrad někteří poskytovatelé, následující kód může vytvořit vazbu sloupce v jiném pořadí, než který ohlásil zprostředkovatelem.  
   
 ```  
    BEGIN_COLUMN_MAP(CProductsAccessor)  
@@ -144,18 +150,20 @@ SELECT \
 ```  
   
 ### <a name="class-declaration"></a>Deklarace třídy  
- A konečně Průvodce generuje deklaraci třídy příkazu například následující:  
+
+A konečně Průvodce generuje deklaraci třídy příkazu například následující:  
   
 ```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Třídy atributově uživatelských záznamů  
- Pokud vytvoříte příjemce technologie OLE DB použitím atributů databáze ([db_command](../../windows/db-command.md) nebo [db_table](../../windows/db-table.md)), vloží atributy třídy uživatelského záznamu s názvem ve formátu "_*ClassName*Přistupujícího objektu. " Například pokud pojmenujete vaší třídy příkazu `COrders`, třída záznamů uživatele bude `_COrdersAccessor`. Přestože třída záznamů uživatele se zobrazí v zobrazení tříd, dvojitým kliknutím na třídu příkazu nebo tabulky v hlavičkovém souboru místo toho. V těchto případech můžete jenom zobrazit skutečné deklarace třídy uživatelského záznamu zobrazením atributově kódu.  
+
+Pokud vytvoříte příjemce technologie OLE DB použitím atributů databáze ([db_command](../../windows/db-command.md) nebo [db_table](../../windows/db-table.md)), vloží atributy třídy uživatelského záznamu s názvem ve formátu "_*ClassName*Přistupujícího objektu. " Například pokud pojmenujete vaší třídy příkazu `COrders`, třída záznamů uživatele bude `_COrdersAccessor`. Přestože třída záznamů uživatele se zobrazí v zobrazení tříd, dvojitým kliknutím na třídu příkazu nebo tabulky v hlavičkovém souboru místo toho. V těchto případech můžete jenom zobrazit skutečné deklarace třídy uživatelského záznamu zobrazením atributově kódu.  
   
- Může existovat možných komplikací Pokud přidáte nebo přepsání metod s atributy uživatelů. Například můžete přidat `_COrdersAccessor` konstruktoru `COrders` deklaraci, ale Všimněte si, že ve skutečnosti to přidá konstruktor do vložené `COrdersAccessor` třídy. Takový konstruktor lze inicializovat sloupce/parametry, ale nelze vytvořit konstruktor kopie tímto způsobem, protože jej nelze doložit přímo `COrdersAccessor` objektu. Pokud potřebujete konstruktoru (nebo jiné metody) přímo na `COrders` třídy, se doporučuje definovat novou třídu odvozenou z `COrders` a přidat nezbytné metody.  
+Může existovat možných komplikací Pokud přidáte nebo přepsání metod s atributy uživatelů. Například můžete přidat `_COrdersAccessor` konstruktoru `COrders` deklaraci, ale Všimněte si, že ve skutečnosti to přidá konstruktor do vložené `COrdersAccessor` třídy. Takový konstruktor lze inicializovat sloupce/parametry, ale nelze vytvořit konstruktor kopie tímto způsobem, protože jej nelze doložit přímo `COrdersAccessor` objektu. Pokud potřebujete konstruktoru (nebo jiné metody) přímo na `COrders` třídy, se doporučuje definovat novou třídu odvozenou z `COrders` a přidat nezbytné metody.  
   
- V následujícím příkladu, Průvodce generuje deklaraci pro třídu `COrders`, ale třída uživatelského záznamu `COrdersAccessor` nezobrazí, protože vloží atributy.  
+V následujícím příkladu, Průvodce generuje deklaraci pro třídu `COrders`, ale třída uživatelského záznamu `COrdersAccessor` nezobrazí, protože vloží atributy.  
   
 ```cpp  
 #define _ATL_ATTRIBUTES  
@@ -177,15 +185,16 @@ public:
    };  
 ```  
   
- Deklarace třídy vloženého příkaz vypadá takto:  
+Deklarace třídy vloženého příkaz vypadá takto:  
   
 ```  
 class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
- Většina kódu injektovaného je stejná jako nebo podobný bez vizuálního vzhledu verze. Hlavní rozdíly jsou v rámci vloženého metod, které jsou popsány v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
+Většina kódu injektovaného je stejná jako nebo podobný bez vizuálního vzhledu verze. Hlavní rozdíly jsou v rámci vloženého metod, které jsou popsány v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
   
- Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
+Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -1,5 +1,5 @@
 ---
-title: C3728 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3728 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae204db616db9e7d7e04cfd62d53374b0793aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e412824bd2afdadfc21d71b73f38eb8ba5ace82d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108414"
 ---
-# <a name="compiler-error-c3728"></a>C3728 chyby kompilátoru
-'událost': událostí nemá vyvolat metodu  
-  
- Metadata vytvořeny s jazykem, například C#, který neumožňuje událost má být aktivována z mimo třídu, ve které byla definována, byla zahrnuta [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice a program Visual C++ pomocí CLR – programování se pokusil vyvolání události.  
-  
- Třída obsahující událost vyvolat událost v programu vyvinuté v jazyce, například C#, musí také definovat veřejnou metodu, která vyvolává událost.
+# <a name="compiler-error-c3728"></a>Chyba kompilátoru C3728
+
+'událost': událost nemá metodu raise
+
+Metadata vytvořené pomocí jazyka, jako je C#, který neumožňuje událost vyvolána z vně třídy, ve kterém byl definován, je součástí [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice a program Visual C++ pomocí CLR programování došlo k pokusu vyvolání události.
+
+K vyvolání události aplikace vyvinuté v jazyce, jako je C#, je potřeba také definovat veřejnou metodu, která vyvolává událost třídy obsahující události.

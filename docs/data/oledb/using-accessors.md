@@ -1,5 +1,5 @@
 ---
-title: Použití přístupových objektů | Microsoft Docs
+title: Použití přístupových objektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 066e963cfe551173088f6d78efaf2057f29d05fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099749"
 ---
 # <a name="using-accessors"></a>Použití přístupových objektů
-Následující témata popisují, jak určit typu přistupujícího objektu je nejvhodnější pro data aplikací a použití různé typy přístupových objektů, které jsou k dispozici:  
+
+Následující témata popisují, jak určit, jaký typ přístupového objektu je nejvhodnější pro vaše data aplikace a jak použít různé typy přístupových objektů, které jsou k dispozici:  
   
--   [Určení, které přístupového objektu](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+- [Určení, které přístupový objekt pro použití](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [Použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
+- [Použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
--   [Použití dynamických přístupových objektů](../../data/oledb/using-dynamic-accessors.md)  
+- [Použití dynamických přístupových objektů](../../data/oledb/using-dynamic-accessors.md)  
   
--   [Použití ručních přístupových objektů](../../data/oledb/using-manual-accessors.md)  
+- [Použití ručních přístupových objektů](../../data/oledb/using-manual-accessors.md)  
   
--   [Přístup k datům XML](../../data/oledb/accessing-xml-data.md)  
+- [Přístup k datům XML](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

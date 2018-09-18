@@ -1,5 +1,5 @@
 ---
-title: C2845 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2845 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e0d74548ff546993c5c8f752709de7418c62965
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4314a6e79a5052d3e9e05aa453ce3ae842ded74c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107777"
 ---
-# <a name="compiler-error-c2845"></a>C2845 chyby kompilátoru
-'operátor': není povoleno pro tento typ aritmetika ukazatele  
-  
- Nelze inkrementovat má ukazatel na spravovanou třídou.  
+# <a name="compiler-error-c2845"></a>Chyba kompilátoru C2845
+
+'operator': není povolené pro tento typ aritmetika ukazatele
+
+Ukazatel na spravovanou třídu nejde zvýšit.

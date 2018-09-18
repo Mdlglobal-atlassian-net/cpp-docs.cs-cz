@@ -8,24 +8,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824beed4c49556f564ff933575d1bbd0d844e2d7
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: c9bb4a84b42cadeb2e076548a220725f1e867fe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099699"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Triviální, standardního rozložení, POD a typy literálu
 
 Termín *rozložení* odkazuje na tom, jak členům v objektu typu třídy, struktury nebo sjednocení jsou uspořádáni v paměti. V některých případech je dobře definovaných ve specifikaci jazyka rozložení. Ale když třída nebo struktura obsahuje určitých funkcí jazyka C++, jako jsou virtuální základní třídy, virtuální funkce, členy s různá řízení přístupu, pak kompilátoru je umožněno vybrat rozložení. Toto rozložení se mohou lišit v závislosti na tom, jaké optimalizace provádění a v mnoha případech nemusí objekt i zabírat souvislých oblasti paměti. Například pokud třída má virtuální funkce, všechny instance této třídy může sdílet tabulku jedné virtuální funkce. Tyto typy jsou samozřejmě velmi užitečné, ale mají omezení. Vzhledem k tomu, že není definováno rozložení nejde jim předat programy napsané v jiných jazycích, jako je C, a protože ty můžou být nesouvislé, nelze zkopírovat spolehlivě pomocí funkce rychle nízké úrovně, jako `memcopy` nebo serializovali přes síť.
 
- Umožňuje kompilátory stejně jako programy v jazyce C++ a metaprograms argumentovat o vhodnosti daného typu pro operace, které jsou závislé na rozložení konkrétní paměťové zavedené C ++ 14 tři kategorie jednoduché třídy a struktury: *triviální*, *standardního rozložení*, a *POD* nebo obyčejná stará Data. Standardní knihovna obsahuje šablony funkcí `is_trivial<T>`, `is_standard_layout<T>` a `is_pod<T>` určující, zda daného typu patří k dané kategorie.
+Umožňuje kompilátory stejně jako programy v jazyce C++ a metaprograms argumentovat o vhodnosti daného typu pro operace, které jsou závislé na rozložení konkrétní paměťové zavedené C ++ 14 tři kategorie jednoduché třídy a struktury: *triviální*, *standardního rozložení*, a *POD* nebo obyčejná stará Data. Standardní knihovna obsahuje šablony funkcí `is_trivial<T>`, `is_standard_layout<T>` a `is_pod<T>` určující, zda daného typu patří k dané kategorie.
 
 ## <a name="trivial-types"></a>Triviální typy
 
- Když třídy nebo struktury v jazyce C++ má zadaná kompilátoru nebo explicitně nastavena jako výchozí speciálních členských funkcí, pak se o typ jednoduchého dotazu. Zabírá oblasti souvislé paměti. Může mít členy s jinou přístup ke specifikátorům. V jazyce C++ kompilátoru je umožněno vybrat způsob řazení členů v této situaci. Proto můžete memcopy tyto objekty ale nebudete moci spotřebovat spolehlivě je z jazyka C programu. Triviální typu T můžete zkopírovat do pole char nebo unsigned char a bezpečně zkopírovat zpět do proměnné T. Všimněte si, že z důvodu požadavků na přiřazení, může být bajtů odsazení mezi členy typu.
+Když třídy nebo struktury v jazyce C++ má zadaná kompilátoru nebo explicitně nastavena jako výchozí speciálních členských funkcí, pak se o typ jednoduchého dotazu. Zabírá oblasti souvislé paměti. Může mít členy s jinou přístup ke specifikátorům. V jazyce C++ kompilátoru je umožněno vybrat způsob řazení členů v této situaci. Proto můžete memcopy tyto objekty ale nebudete moci spotřebovat spolehlivě je z jazyka C programu. Triviální typu T můžete zkopírovat do pole char nebo unsigned char a bezpečně zkopírovat zpět do proměnné T. Všimněte si, že z důvodu požadavků na přiřazení, může být bajtů odsazení mezi členy typu.
 
- Triviální typy mít triviální výchozí konstruktor, triviální kopírovací konstuktor, triviální kopírovacího operátoru přiřazení a triviální destruktor. V obou případech *triviální* znamená, že konstruktor nebo operátor/destruktor není uživatelem zadaný a že patří do třídy, která má
+Triviální typy mít triviální výchozí konstruktor, triviální kopírovací konstuktor, triviální kopírovacího operátoru přiřazení a triviální destruktor. V obou případech *triviální* znamená, že konstruktor nebo operátor/destruktor není uživatelem zadaný a že patří do třídy, která má
 
 - žádné virtuální funkce nebo virtuální základní třídy
 
@@ -40,7 +40,7 @@ struct Trivial
 {
       int i;
 private:
-   int j;  
+   int j;
    };
 
 struct Trivial2
@@ -55,7 +55,7 @@ struct Trivial2
 
 ## <a name="standard-layout-types"></a>Typy standardního rozložení
 
- Když třídy nebo struktury neobsahuje určitých funkcí jazyka C++, jako je například virtuální funkce, což není k dispozici v jazyce C a všichni členové mají stejné řízení přístupu, je typ standardního rozložení. Je možné memcopy a rozložení je dostatečně definován, že mohou být spotřebovány aplikacemi C. Typy standardního rozložení mohou mít uživatelem definované speciálních členských funkcí. Typy standardního rozložení kromě toho mají tyto charakteristiky:
+Když třídy nebo struktury neobsahuje určitých funkcí jazyka C++, jako je například virtuální funkce, což není k dispozici v jazyce C a všichni členové mají stejné řízení přístupu, je typ standardního rozložení. Je možné memcopy a rozložení je dostatečně definován, že mohou být spotřebovány aplikacemi C. Typy standardního rozložení mohou mít uživatelem definované speciálních členských funkcí. Typy standardního rozložení kromě toho mají tyto charakteristiky:
 
 - žádné virtuální funkce nebo virtuální základní třídy
 
@@ -85,7 +85,7 @@ struct SL
 };
 ```
 
- Poslední dva požadavky lze případně lépe ukázat s kódem. V následujícím příkladu, i když Base je standardního rozložení, `Derived` není standardní rozložení, protože obě it (nejvíce odvozená třída) a `Base` mají nestatické datové členy:
+Poslední dva požadavky lze případně lépe ukázat s kódem. V následujícím příkladu, i když Base je standardního rozložení, `Derived` není standardní rozložení, protože obě it (nejvíce odvozená třída) a `Base` mají nestatické datové členy:
 
 ```cpp
 struct Base
@@ -103,7 +103,7 @@ struct Derived : public Base
 
 ```
 
- V tomto příkladu `Derived` je standardního rozložení protože `Base` nemá žádné nestatické datové členy:
+V tomto příkladu `Derived` je standardního rozložení protože `Base` nemá žádné nestatické datové členy:
 
 ```cpp
 struct Base
@@ -119,11 +119,11 @@ struct Derived : public Base
 };
 ```
 
- Odvozené by také standardního rozložení Pokud `Base` měl datové členy a `Derived` měli jenom členské funkce.
+Odvozené by také standardního rozložení Pokud `Base` měl datové členy a `Derived` měli jenom členské funkce.
 
 ## <a name="pod-types"></a>Typy POD
 
- Třídy nebo struktury je jednoduché a standardního rozložení, je typ POD (Plain Old Data). Je rozložení paměti stejné typy POD se proto souvislých a každý člen má adresu vyšší než člena, který byl deklarován dříve, než se, aby bytech zkopíruje a binární vstupně-výstupní operace lze provést u těchto typů.  Skalární typy, například int jsou také typy POD. Typy POD, které jsou třídy může mít pouze typy POD jako nestatické datové členy.
+Třídy nebo struktury je jednoduché a standardního rozložení, je typ POD (Plain Old Data). Je rozložení paměti stejné typy POD se proto souvislých a každý člen má adresu vyšší než člena, který byl deklarován dříve, než se, aby bytech zkopíruje a binární vstupně-výstupní operace lze provést u těchto typů.  Skalární typy, například int jsou také typy POD. Typy POD, které jsou třídy může mít pouze typy POD jako nestatické datové členy.
 
 ## <a name="example"></a>Příklad
 
@@ -201,4 +201,5 @@ Typ literálu je jedním jehož rozložení se dá určit v době kompilace. Tot
 - Třída, která má destruktor triviální a jeden nebo více constexpr konstruktorů, které nejsou přesuňte nebo zkopírujte konstruktory. Kromě toho všechny nestatické datové členy a základních tříd musí být typy literálu a není typu volatile.
 
 ## <a name="see-also"></a>Viz také:
- [Základní koncepty](../cpp/basic-concepts-cpp.md)
+
+[Základní koncepty](../cpp/basic-concepts-cpp.md)

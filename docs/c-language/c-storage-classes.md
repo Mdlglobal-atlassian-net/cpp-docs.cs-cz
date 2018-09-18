@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111703"
 ---
 # <a name="c-storage-classes"></a>Třídy úložiště jazyka C
 
@@ -60,6 +60,6 @@ Přesné význam jednotlivých – specifikátor třídy úložiště závisí n
 
 [Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují *storage-class-specifier* terminály v každý druh deklarace a výchozí chování při *storage-class-specifier* je vynecháno z proměnné. [Specifikátory třídy úložiště s deklaracemi funkce](../c-language/storage-class-specifiers-with-function-declarations.md) popisuje specifikátory třídy úložiště použít s funkcemi.
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také
 
-[Deklarace a typy](../c-language/declarations-and-types.md)  
+[Deklarace a typy](../c-language/declarations-and-types.md)

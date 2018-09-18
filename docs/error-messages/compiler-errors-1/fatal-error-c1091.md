@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1091 | Microsoft Docs
+title: Závažná chyba C1091 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48c9dca72bddc844e94fb7978cb6414aa8fecf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e93c2e6c26f8704e700465fb706867129847a460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104235"
 ---
 # <a name="fatal-error-c1091"></a>Závažná chyba C1091
-omezení kompilátoru: řetězec překračuje délku bajtů 'délka.  
-  
- Řetězcová konstanta překročil aktuální limit délky řetězce.  
-  
- Můžete chtít rozdělením statický řetězec proměnné dva (nebo více) a použít [strcpy_s –](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) připojení výsledek jako součást deklarace nebo při běhu.
+
+limit kompilátoru: řetězec přesahuje délku bajtů 'délka.
+
+Řetězcová konstanta překročil aktuální limit délky řetězce.
+
+Můžete chtít statický řetězec rozdělit do dvou (nebo více) proměnné a používat [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) k připojení výsledku jako součást deklarace nebo za běhu.

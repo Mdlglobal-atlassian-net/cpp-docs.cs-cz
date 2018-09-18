@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4651 | Microsoft Docs
+title: Upozornění (úroveň 1) C4651 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0015102a44b71f342b125532d20849590157ee0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b516ef86372901d00dd20d94ed10d5e361bbab8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099461"
 ---
-# <a name="compiler-warning-level-1-c4651"></a>C4651 kompilátoru upozornění (úroveň 1)
-definice zadány pro předkompilovaných hlaviček, ale ne pro aktuální kompilace  
-  
- Definice byla zadána při generování předkompilovaných hlaviček, ale není v této kompilace.  
-  
- Definice bude platit uvnitř předkompilovaných hlaviček, ale není ve zbývající části kódu.  
-  
- Pokud předkompilovaných hlaviček byl sestaven s /DSYMBOL, kompilátor vygeneruje toto upozornění, pokud kompilace /Yu nemá /DSYMBOL.  Přidání /DSYMBOL do příkazového řádku /Yu přeloží toto upozornění.
+# <a name="compiler-warning-level-1-c4651"></a>Kompilátor upozornění (úroveň 1) C4651
+
+zadaná pro předkompilovanou hlavičku, ale ne pro aktuální kompilaci definice
+
+Definice byl zadán při generování předkompilované hlavičky, ale není v této kompilaci.
+
+Definice, nebudou platit uvnitř předkompilované hlavičky, ale ne ve zbývající části kódu.
+
+Předkompilované hlavičky byl sestaven s /DSYMBOL, kompilátor vygeneruje toto upozornění v případě kompilace/YU nemá /DSYMBOL.  Přidání do příkazového řádku/YU /DSYMBOL řeší toto upozornění.

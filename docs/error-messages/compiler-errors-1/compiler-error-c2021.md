@@ -1,5 +1,5 @@
 ---
-title: C2021 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2021 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1c3640b4fbe5b1473c2e678406321f5533e586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31169c59ba9731d8eda52f22644294b8bb680bf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101984"
 ---
-# <a name="compiler-error-c2021"></a>C2021 chyby kompilátoru
-očekávala se hodnota exponentu, není znak  
-  
- Znak použitý jako exponent s plovoucí desetinnou čárkou konstanta není platné číslo. Nezapomeňte použít exponentem, která je v dosahu.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2021:  
-  
-```  
-// C2021.cpp  
-float test1=1.175494351E;   // C2021  
-```  
-  
-## <a name="example"></a>Příklad  
- Možná řešení:  
-  
-```  
-// C2021b.cpp  
-// compile with: /c  
-float test2=1.175494351E8;  
+# <a name="compiler-error-c2021"></a>Chyba kompilátoru C2021
+
+očekávala se hodnota exponent, ne znak
+
+Znak použitý jako exponent konstanty s plovoucí desetinnou čárkou není platné číslo. Nezapomeňte použít exponent, který je v dosahu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2021:
+
+```
+// C2021.cpp
+float test1=1.175494351E;   // C2021
+```
+
+## <a name="example"></a>Příklad
+
+Možná řešení:
+
+```
+// C2021b.cpp
+// compile with: /c
+float test2=1.175494351E8;
 ```

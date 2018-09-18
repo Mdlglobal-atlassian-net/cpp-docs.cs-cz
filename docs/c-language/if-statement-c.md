@@ -1,5 +1,5 @@
 ---
-title: Pokud Statement (C) | Microsoft Docs
+title: Pokud Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,63 +21,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f307860ce71e8c9fc74b2ab97e88ced02e08332f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98b01db4d842775dcb239aef9d40c661328d1544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107875"
 ---
 # <a name="if-statement-c"></a>if – příkaz (C)
-**Pokud** příkaz Ovládací prvky podmíněného větvení. Text **Pokud** je spustit příkaz, pokud je hodnota výrazu nenulové hodnoty. Syntaxe **Pokud** příkaz má dva formuláře.  
-  
-## <a name="syntax"></a>Syntaxe  
- *Výběr příkaz*:  
- **Pokud (***výraz***)***– příkaz*  
-  
- **Pokud (***výraz***)***příkaz***else***– příkaz*  
-  
- V obou formy **Pokud** příkaz výrazy, což může mít libovolnou hodnotu kromě strukturu, jsou vyhodnoceny, včetně všech vedlejší účinky.  
-  
- Ve formuláři první syntaxe Pokud *výraz* hodnotu true (nenulové hodnoty), *příkaz* se spustí. Pokud *výraz* je nastavena hodnota false, *příkaz* je ignorována. Formulář syntaxe, který používá **else**, druhý *příkaz* se spustí, pokud *výraz* je false. Obě forms kontrolu potom předává z **Pokud** příkaz, který má další příkaz v programu Pokud jeden z příkazy obsahuje **zalomení**, **pokračovat**, nebo `goto`.  
-  
- Následují příklady **Pokud** příkaz:  
-  
-```  
-if ( i > 0 )  
-    y = x / i;  
-else   
-{  
-    x = i;  
-    y = f( x );  
-}  
-```  
-  
- V tomto příkladu příkaz `y = x/i;` se spustí, pokud `i` je větší než 0. Pokud `i` je menší než nebo rovna 0, `i` je přiřazena k `x` a `f( x )` je přiřazena k `y`. Všimněte si, že příkaz, které tvoří **Pokud** klauzule končí středníkem.  
-  
- Při vnoření **Pokud** příkazy a **else** klauzule, použít složené závorky k seskupení příkazů a klauzule do složené příkazy, které vysvětlení vašich představ. Pokud nejsou žádné složené závorky, kompilátor řeší tím, že přidružíte každý nejednoznačnosti **else** s nejbližší **Pokud** , chybí **else**.  
-  
-```  
-if ( i > 0 )           /* Without braces */  
-    if ( j > i )  
-        x = j;  
-    else  
-        x = i;  
-```  
-  
- **Else** klauzule souvisí s vnitřní **Pokud** příkaz v tomto příkladu. Pokud `i` je menší než nebo rovna 0, není přiřazena žádná hodnota k `x`.  
-  
-```  
-if ( i > 0 )   
-{                      /* With braces */  
-    if ( j > i )  
-        x = j;  
-}  
-else  
-    x = i;  
-```  
-  
- Složené závorky, které obaluje vnitřní **Pokud** Zkontrolujte příkaz v tomto příkladu **else** část klauzule vnějšího **Pokud** příkaz. Pokud `i` je menší než nebo rovna 0, `i` je přiřazena k `x`.  
-  
-## <a name="see-also"></a>Viz také  
- [if-else – příkaz (C++)](../cpp/if-else-statement-cpp.md)
+
+**Pokud** příkaz ovládá podmíněné větvení. Text **Pokud** je proveden příkaz, pokud je hodnota výrazu nenulovou hodnotu. Syntaxe **Pokud** příkaz má dva formuláře.
+
+## <a name="syntax"></a>Syntaxe
+
+*příkaz výběru*: **Pokud (***výraz***)***– příkaz* 
+
+**Pokud (***výraz***)***příkaz***else***– příkaz* 
+
+V obou formách příkazu **Pokud** prohlášení, výrazy, které může mít libovolnou hodnotu, s výjimkou struktury, jsou vyhodnocovány, včetně všech vedlejších účinků.
+
+V první forma syntaxe Pokud *výraz* hodnotu true (nenulovou), *příkaz* provádí. Pokud *výraz* má hodnotu false, *příkaz* se ignoruje. Ve druhé formě syntaxe, která používá **else**, druhý *příkaz* se spustí, pokud *výraz* má hodnotu false. S obě formy ovládací prvek pak předá z **Pokud** příkaz dalšímu příkazu v programu Pokud obsahuje některý z příkazů **přerušení**, **pokračovat**, nebo `goto`.
+
+Následují příklady **Pokud** – příkaz:
+
+```
+if ( i > 0 )
+    y = x / i;
+else
+{
+    x = i;
+    y = f( x );
+}
+```
+
+V tomto příkladu příkaz `y = x/i;` se spustí, pokud `i` je větší než 0. Pokud `i` je menší než nebo rovno 0, `i` přiřazen `x` a `f( x )` přiřazen `y`. Všimněte si, že příkaz tvořící **Pokud** klauzule končí středníkem.
+
+Při vnoření **Pokud** příkazy a **else** klauzule, pomocí složených závorek k seskupení příkazů a klauzule do složených příkazů, které objasňují vaším záměrem. Pokud neexistují žádné složené závorky, přeloží kompilátor nejednoznačnosti tím, že přidružíte každý **else** k nejbližšímu **Pokud** , která nemá **else**.
+
+```
+if ( i > 0 )           /* Without braces */
+    if ( j > i )
+        x = j;
+    else
+        x = i;
+```
+
+**Else** klauzule souvisí s vnitřní **Pokud** příkaz v tomto příkladu. Pokud `i` je menší než nebo rovna 0, není přiřazena žádná hodnota pro `x`.
+
+```
+if ( i > 0 )
+{                      /* With braces */
+    if ( j > i )
+        x = j;
+}
+else
+    x = i;
+```
+
+Složené závorky kolem vnitřního **Pokud** proveďte příkaz v tomto příkladu **else** část klauzule vnějšího **Pokud** příkaz. Pokud `i` je menší než nebo rovno 0, `i` přiřazen `x`.
+
+## <a name="see-also"></a>Viz také
+
+[if-else – příkaz (C++)](../cpp/if-else-statement-cpp.md)

@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 193ba8b853fbdbe16f906e1cdf82dd22a40f36bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba0487716a24e75ec2fccfa9dc7803bff9a5cfcf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098846"
 ---
 # <a name="external-definitions"></a>Externí definice
 
 *translation-unit*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jednotka překladu* *externí deklarace*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*jednotka překladu* *externí deklarace*
+
 *externí deklarace*: /\* povolený jenom v oboru externí (soubor) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace*

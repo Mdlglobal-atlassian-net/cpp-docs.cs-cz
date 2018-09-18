@@ -1,5 +1,5 @@
 ---
-title: C2480 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2480 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 987cefa42b3f3f8d9588e446ca181c0b7cd48f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b5d8f80293c05b651ad01e725ae501288005dfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102580"
 ---
-# <a name="compiler-error-c2480"></a>C2480 chyby kompilátoru
-"identifikátor": 'přístup z více vláken' platí pouze pro datové položky statický rozsah  
-  
- Nelze použít `thread` atribut se automatické proměnné, nestatické datový člen, parametr funkce nebo funkce deklarace nebo definice.  
-  
- Použití `thread` atribut pro globální proměnné, členy statických dat a pouze místní statické proměnné.  
-  
- Následující ukázka generuje C2480:  
-  
-```  
-// C2480.cpp  
-// compile with: /c  
-__declspec( thread ) void func();   // C2480  
-__declspec( thread ) static int i;   // OK  
+# <a name="compiler-error-c2480"></a>Chyba kompilátoru C2480
+
+'identifier': "vlákna" je platná pouze pro položky dat statického kontextu
+
+Nelze použít `thread` atribut s předplatným automatickou proměnnou, nestatický datový člen, parametr funkce, nebo na deklaracích nebo definicích funkce.
+
+Použití `thread` atribut pro globální proměnné, statické datové členy a místní pouze statické proměnné.
+
+Následující ukázka generuje C2480:
+
+```
+// C2480.cpp
+// compile with: /c
+__declspec( thread ) void func();   // C2480
+__declspec( thread ) static int i;   // OK
 ```

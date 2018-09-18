@@ -1,5 +1,5 @@
 ---
-title: improper_lock – třída | Microsoft Docs
+title: improper_lock – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106191"
 ---
 # <a name="improperlock-class"></a>improper_lock – třída
-Tato třída popisuje výjimku vyvolá, když je nesprávně získat zámek.  
+Tato třída popisuje výjimku vyvolanou při nesprávně získán zámek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Přetíženo. Vytvoří `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato výjimka se obvykle vyvolá, když je proveden pokus o získání zámku nejsou vícenásobně přístupné rekurzivně na stejný kontext.  
+ Obvykle tato výjimka je vyvolána při pokusu o získání zámku mimo reentrant rekurzivně na stejném kontextu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -55,7 +55,7 @@ class improper_lock : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> improper_lock 
+##  <a name="ctor"></a> improper_lock – 
 
  Vytvoří `improper_lock exception`.  
   
@@ -66,10 +66,10 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [critical_section – třída](critical-section-class.md)   
  [reader_writer_lock – třída](reader-writer-lock-class.md)

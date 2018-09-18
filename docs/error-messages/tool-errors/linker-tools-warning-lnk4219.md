@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4219 | Microsoft Docs
+title: Upozornění Linkerů LNK4219 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105205"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Upozornění linkerů LNK4219
-Oprava název oprava přetečení. Cíl "název cílové symbol" je mimo rozsah, vkládání převodu  
-  
- Linkeru vložit jinou bitovou šířku v situaci, kdy se nepodařilo vhodná pro dané pokyn, protože symbol cíl je příliš daleko od umístění tuto instrukci adresu nebo offset.  
-  
- Možná budete chtít změnit pořadí bitovou kopii (pomocí [/pořadí](../../build/reference/order-put-functions-in-order.md) volby, například) předejdete úroveň dereference.
+
+Oprava název opravou přetečení. Cílový "název symbolu cíl" je mimo rozsah. vkládá se převodní rutina
+
+Linker vloží převodní rutina v situaci, kdy se nepodařilo přizpůsobit do uvedené instrukce, protože cílový symbol je příliš daleko od umístění instrukce adresy nebo posun.
+
+Možná budete chtít změnit pořadí bitovou kopii (pomocí [/ORDER](../../build/reference/order-put-functions-in-order.md) volby, například), aby úroveň dereference.

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1077 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1077 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144fa1d85e4dd63fdb9a381fd4285ba905817851
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113029"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Závažná chyba nástroje NMAKE U1077
-'program': návratový kód 'Hodnota'  
-  
- Daný příkaz nebo program volány NMAKE se nezdařila a vrátila dané ukončovací kód.  
-  
- Pro potlačení této chyby a pokračovat v relaci NMAKE použijete možnost /I **. Ignorovat** – direktiva tečkou nebo čárka (**-**) modifikátor příkaz. Chcete-li pokračovat NMAKE relace pro které nejsou součástí strom závislosti, použijte možnost /K.
+
+'program': návratový kód 'value'
+
+Zadaný příkaz nebo program volá NMAKE se nezdařila a vrátila dané ukončovací kód.
+
+Pro potlačení této chyby a pokračovat v relaci NMAKE, použijte možnost /I **. Ignorovat** direktivy s tečkou nebo pomlčku (**-**) příkaz modifikátor. Chcete-li pokračovat v relaci NMAKE nesouvisejících částí stromu závislostí, použijte možnost /K.

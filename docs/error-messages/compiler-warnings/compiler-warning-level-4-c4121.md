@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4121 | Microsoft Docs
+title: Upozornění kompilátoru (úroveň 4) upozornění C4121 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1cda66d120278034fc8c19ba0221be047a75eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bfd0c3c2ad4f0382867a4728a4e1f8748c02cad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098989"
 ---
-# <a name="compiler-warning-level-4-c4121"></a>C4121 kompilátoru upozornění (úroveň 4)
-Symbol: zarovnání člena záleželo na balení  
-  
- Kompilátor přidal odsazení, aby zarovnal člena struktury na hranici balení, ale hodnota balení je menší než velikost člena. Například následující fragment kódu vygeneruje upozornění C4121:  
-  
-```  
-// C4121.cpp  
-// compile with: /W4 /c  
-#pragma pack(2)  
-struct s  
-{  
-   char a;  
-   int b; // C4121  
-   long long c;  
-};  
-```  
-  
- Chcete-li tento problém vyřešit, proveďte jednu z následujících změn:  
-  
--   Změňte velikosti balení tak, aby byla stejná nebo větší než velikost člena, který způsobil toto upozornění. Můžete například změnit v tento fragment kódu `pack(2)` k `pack(4)` nebo `pack(8)`.  
-  
--   Změňte pořadí deklarací členů podle velikosti od největšího po nejmenší. V tomto fragmentu kódu, změnit pořadí členů struktury tak, aby `long long` předchází členských `int`a `int` předchází `char`.  
-  
- Toto upozornění se zobrazí pouze v případě, že kompilátor přidává před datové členy odsazení. Nezobrazí se, pokud jsou při balení data umístěna do místa v paměti, které není zarovnáno pro tento datový typ, ale před datový člen nebylo vloženo žádné odsazení. Pokud data nejsou zarovnána na hranicích, které jsou násobkem velikosti dat, může dojít ke snížení výkonu. Čtení a zápisy nezarovnaných dat způsobují u některých architektur chyby procesoru a vyřešení těchto chyb může trvat řádově dva až třikrát déle. Přístupy k nezarovnaným datům nelze portovat na některé architektury RISC.  
-  
- Můžete použít [#pragma pack](../../preprocessor/pack.md) nebo [/Zp](../../build/reference/zp-struct-member-alignment.md) k určení zarovnání struktury. (Kompilátor negeneruje toto upozornění, když **/Zp1** je zadán.)
+# <a name="compiler-warning-level-4-c4121"></a>Upozornění kompilátoru (úroveň 4) upozornění C4121
+
+Symbol: zarovnání člena záleželo na balení
+
+Kompilátor přidal odsazení, aby zarovnal člena struktury na hranici balení, ale hodnota balení je menší než velikost člena. Například následující fragment kódu vygeneruje upozornění C4121:
+
+```
+// C4121.cpp
+// compile with: /W4 /c
+#pragma pack(2)
+struct s
+{
+   char a;
+   int b; // C4121
+   long long c;
+};
+```
+
+Chcete-li tento problém vyřešit, proveďte jednu z následujících změn:
+
+- Změňte velikosti balení tak, aby byla stejná nebo větší než velikost člena, který způsobil toto upozornění. Například v tomto fragmentu kódu změňte `pack(2)` k `pack(4)` nebo `pack(8)`.
+
+- Změňte pořadí deklarací členů podle velikosti od největšího po nejmenší. V tomto fragmentu kódu převraťte pořadí členů struktury tak, aby `long long` předchází člena `int`a `int` předchází `char`.
+
+Toto upozornění se zobrazí pouze v případě, že kompilátor přidává před datové členy odsazení. Nezobrazí se, pokud jsou při balení data umístěna do místa v paměti, které není zarovnáno pro tento datový typ, ale před datový člen nebylo vloženo žádné odsazení. Pokud data nejsou zarovnána na hranicích, které jsou násobkem velikosti dat, může dojít ke snížení výkonu. Čtení a zápisy nezarovnaných dat způsobují u některých architektur chyby procesoru a vyřešení těchto chyb může trvat řádově dva až třikrát déle. Přístupy k nezarovnaným datům nelze portovat na některé architektury RISC.
+
+Můžete použít [#pragma pack](../../preprocessor/pack.md) nebo [/zp](../../build/reference/zp-struct-member-alignment.md) k určení zarovnání struktury. (Kompilátor negeneruje toto upozornění, když **/Zp1** určena.)

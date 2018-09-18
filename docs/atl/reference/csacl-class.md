@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f42d90fa2fb04c75f6c45db8d099d4a1a9a74c2a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d408ab5d0575984fb597cec28f01484d9b878ebf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108388"
 ---
 # <a name="csacl-class"></a>Csacl – třída
 
@@ -110,25 +110,25 @@ bool AddAuditAce(
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.
 
-*AccessMask*  
+*AccessMask*<br/>
 Určuje masku přístupová práva, které se budou auditovat pro zadaný rozbočovač `CSid` objektu.
 
-*bSuccess*  
+*bSuccess*<br/>
 Určuje, zda mají být zaznamenávány pokusů o přístup povolený. Nastavit tento příznak, který true pro povolení auditování; jinak ji nastavte na hodnotu false.
 
-*bFailure*  
+*bFailure*<br/>
 Určuje, zda pokusy o odepření přístupu budou auditovány. Nastavit tento příznak, který true pro povolení auditování; jinak ji nastavte na hodnotu false.
 
-*AceFlags*  
+*AceFlags*<br/>
 Sadu bitových příznaků, které řídí ACE dědičnosti.
 
-*pObjectType*  
+*pObjectType*<br/>
 Typ objektu.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Typ zděděných objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -152,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Existující `ACL` struktury (seznamu řízení přístupu).
 
 ### <a name="remarks"></a>Poznámky
@@ -193,7 +193,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `ACL` (Seznam řízení přístupu) přiřadit existující objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -210,7 +210,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index položky ACE odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -231,8 +231,8 @@ Odebere všechny `ACE` strukturu (pokud existuje) v `CSacl` objektu.
 
 ## <a name="see-also"></a>Viz také
 
-[Cacl – třída](../../atl/reference/cacl-class.md)   
-[Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)   
-[Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[CAcl – třída](../../atl/reference/cacl-class.md)<br/>
+[Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

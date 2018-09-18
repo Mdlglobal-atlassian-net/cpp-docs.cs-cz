@@ -1,5 +1,5 @@
 ---
-title: C2619 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2619 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05f02026dac06647a8fda1eeb7e67cc3eaa586b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3bbf372e615c727a619d83daa6b673490edc4172
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109155"
 ---
-# <a name="compiler-error-c2619"></a>C2619 chyby kompilátoru
-"identifikátor": statických dat člena není povolena v anonymní struktura nebo sjednocení  
-  
- Člen anonymní struktura nebo sjednocení je deklarovaná `static`.  
-  
- Následující ukázka generuje C2619 a ukazuje, jak opravit odebráním static – klíčové slovo.  
-  
-```  
-// C2619.cpp  
-int main() {  
-   union { static int j; };  // C2619  
-   union { int j; };  // OK  
-}  
+# <a name="compiler-error-c2619"></a>Chyba kompilátoru C2619
+
+'identifier': Statický datový člen není povolený v anonymní struktury nebo sjednocení
+
+Člen anonymní struktury nebo sjednocení je deklarovaný `static`.
+
+Následující ukázka generuje C2619 a ukazuje, jak ho opravit tak, že odeberete static – klíčové slovo.
+
+```
+// C2619.cpp
+int main() {
+   union { static int j; };  // C2619
+   union { int j; };  // OK
+}
 ```

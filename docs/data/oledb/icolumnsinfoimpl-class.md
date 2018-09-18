@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bde6a3947d7afa836d93387e80c9b7885b1bc15c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099405"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl – třída
+
 Poskytuje implementaci [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -58,11 +59,13 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `IColumnsInfoImpl`.  
+
+*T*<br/>
+Vaše třída odvozena od `IColumnsInfoImpl`.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[Mapcolumnids –](#mapcolumnids)|Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Povinné rozhraní sady řádků a příkazy. Chcete změnit chování váš poskytovatel `IColumnsInfo` implementace, budete muset upravit mapování sloupce poskytovatele.  
+
+Povinné rozhraní sady řádků a příkazy. Chcete změnit chování váš poskytovatel `IColumnsInfo` implementace, budete muset upravit mapování sloupce poskytovatele.  
 
 ## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+
 Vrátí metadata sloupce vyžadované většina uživatelů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -88,9 +93,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+
 Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -102,8 +109,10 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

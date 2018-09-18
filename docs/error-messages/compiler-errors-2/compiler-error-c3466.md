@@ -1,5 +1,5 @@
 ---
-title: C3466 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3466 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94029b227864defdb2d4ff7e5bb54736c6a32518
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b851a9ae24b315aded5cd545ede77fd920a2b63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252576"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105229"
 ---
-# <a name="compiler-error-c3466"></a>C3466 chyby kompilátoru
-'type': nemůže být předán specializace obecné třídy  
-  
- Nelze použít typ předávání na specializace obecné třídy.  
-  
- Další informace najdete v tématu [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří komponentu.  
-  
-```  
-// C3466.cpp  
-// compile with: /clr /LD  
-generic<typename T>  
-public ref class GR {};  
-  
-public ref class GR2 {};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3466.  
-  
-```  
-// C3466_b.cpp  
-// compile with: /clr /c  
-#using "C3466.dll"  
-[assembly:TypeForwardedTo(GR<int>::typeid)];   // C3466  
-[assembly:TypeForwardedTo(GR2::typeid)];   // OK  
+# <a name="compiler-error-c3466"></a>Chyba kompilátoru C3466
+
+'type': specializace obecné třídy nejde předat dál
+
+Typ přesměrování na specializace obecné třídy nelze použít.
+
+Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad vytvoří komponentu.
+
+```
+// C3466.cpp
+// compile with: /clr /LD
+generic<typename T>
+public ref class GR {};
+
+public ref class GR2 {};
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3466.
+
+```
+// C3466_b.cpp
+// compile with: /clr /c
+#using "C3466.dll"
+[assembly:TypeForwardedTo(GR<int>::typeid)];   // C3466
+[assembly:TypeForwardedTo(GR2::typeid)];   // OK
 ```

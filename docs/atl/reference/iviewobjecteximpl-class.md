@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108427"
 ---
 # <a name="iviewobjecteximpl-class"></a>Iviewobjecteximpl – třída
 
@@ -49,14 +49,14 @@ Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci [IViewOb
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IViewObjectExImpl`.
 
 ## <a name="members"></a>Členové
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hHandle*  
+*hHandle*<br/>
 Obslužná rutina bude uzavřen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam*  
+*dwParam*<br/>
 Tento parametr.
 
-*hObject*  
+*hObject*<br/>
 Obslužná rutina, která má být signalizovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -358,8 +358,8 @@ Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::Execu
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
-[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)   
-[Kurz](../../atl/active-template-library-atl-tutorial.md)   
-[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)   
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Kurz](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C3159 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3159 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e77311823977522952d4fe1ca79c41f7edc6b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc9cd34233fdc508d24a295495c4442ab16b7a9c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105008"
 ---
-# <a name="compiler-error-c3159"></a>C3159 chyby kompilátoru
-'ukazatel': nelze deklarovat pole ukazatelé na typ hodnoty  
-  
- Ukazatelé na typ hodnoty pole nelze deklarovat.  
-  
- C3159 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3159"></a>Chyba kompilátoru C3159
+
+'ukazatel': nelze použít deklaraci pole ukazatelů na hodnotový typ.
+
+Nejde použít deklaraci pole ukazatelů na typ hodnoty.
+
+C3159 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

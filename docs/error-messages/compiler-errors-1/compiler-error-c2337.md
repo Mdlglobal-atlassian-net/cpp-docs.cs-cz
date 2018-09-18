@@ -1,5 +1,5 @@
 ---
-title: C2337 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2337 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af10023a044e8f4f602ca6a018139d557b99dffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1b3ed1193d7a5c81e84a152bd01a26bfd04bab0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195123"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105513"
 ---
-# <a name="compiler-error-c2337"></a>C2337 chyby kompilátoru
-"název atributu": atribut nebyl nalezen  
-  
- Použili jste atribut, který není podporován v této verzi systému Visual C++.  
-  
- Následující ukázka generuje C2337:  
-  
-```  
-// C2337.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name="x")];  
-[grasshopper]   // C2337, not a supported attribute  
-class a{};  
+# <a name="compiler-error-c2337"></a>Chyba kompilátoru C2337
+
+'název atributu': atribut nebyl nalezen
+
+Použili jste atribut, který se nepodporuje v této verzi systému Visual C++.
+
+Následující ukázka generuje C2337:
+
+```
+// C2337.cpp
+// compile with: /c
+[emitidl];
+[module(name="x")];
+[grasshopper]   // C2337, not a supported attribute
+class a{};
 ```

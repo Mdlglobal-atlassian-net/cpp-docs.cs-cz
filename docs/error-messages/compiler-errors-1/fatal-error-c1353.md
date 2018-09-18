@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1353 | Microsoft Docs
+title: Závažná chyba C1353 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb2d51d9b6c228d0f0fe245cd9788a329a6e11c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f414e98315a0fc43f3f4d4d21b93c1d0cd714aaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198843"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108375"
 ---
 # <a name="fatal-error-c1353"></a>Závažná chyba C1353
-metadata operace se nezdařila: není nainstalován modul runtime nebo Neshoda verzí  
-  
- Přeinstalujte CLR nebo Visual Studio.
+
+Operace metadat se nepovedla: modul runtime není nainstalovaný nebo nesouhlasí jeho verze
+
+Přeinstalujte CLR nebo Visual Studio.

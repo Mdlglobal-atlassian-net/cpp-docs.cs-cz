@@ -1,5 +1,5 @@
 ---
-title: __setusermatherr | Microsoft Docs
+title: __setusermatherr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,34 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4384d67060d2f5d992c098841f76a6b858b78c15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c118cc5537690e8978ed2fd96b7727054ce5920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101491"
 ---
 # <a name="setusermatherr"></a>__setusermatherr
-Určuje uživatelem zadané rountine se budou zpracovávat chyby matematické, místo [_matherr –](../c-runtime-library/reference/matherr.md) rutiny.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void __setusermatherr(  
-   _HANDLE_MATH_ERROR pf   
-   )  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `pf`  
- Ukazatel na implementaci `_matherr` který je zadaný uživatelem.  
-  
- Typ `pf` parametr je deklarován jako `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
+
+Určuje uživatelem zadané rountine k matematické chyby ošetřit místo [_matherr](../c-runtime-library/reference/matherr.md) rutiny.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void __setusermatherr(
+   _HANDLE_MATH_ERROR pf
+   )
+```
+
+#### <a name="parameters"></a>Parametry
+
+*PF*<br/>
+Ukazatel na implementaci `_matherr` , která je zadaná uživatelem.
+
+Typ *pf* parametr je deklarován jako `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.
+
+## <a name="remarks"></a>Poznámky
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
 |__setusermatherr|matherr.c|

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110143"
 ---
 # <a name="caxwindow-class"></a>Caxwindow – třída
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*  
+*pControl*<br/>
 [in] Ukazatel `IUnknown` ovládacího prvku.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Ukazatel `IUnknown` hostitele ( `AxWin` objekt).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Popisovač na existující objekt okna.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -155,13 +155,13 @@ Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v j
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace. Na platformách Windows Mobile jsou podporovány pouze ProgID a CLSID. Windows CE vložené platformy, než mobilní zařízení Windows s podporou pro podporu CE IE všechny typy včetně ProgID, CLSID, adresa URL, odkaz na aktivní dokument a fragment HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
-*dwResID*  
+*dwResID*<br/>
 ID prostředku prostředek ve formátu HTML. Ovládací prvek WebBrowser bude vytvořena a načíst pomocí zadaného prostředku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -222,22 +222,22 @@ Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v j
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace. Na platformách Windows Mobile jsou podporovány pouze ProgID a CLSID. Windows CE vložené platformy, než mobilní zařízení Windows s podporou pro podporu CE IE všechny typy včetně ProgID, CLSID, adresa URL, odkaz na aktivní dokument a fragment HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` ovládacího prvku. Může mít hodnotu NULL.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Identifikátor rozhraní odchozí rozhraní v obsažený objekt. Může mít hodnotu IID_NULL.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Ukazatel `IUnknown` rozhraní jímky objektu k připojení k bodu připojení na obsaženého objektu určeného *iidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] ID prostředku prostředek ve formátu HTML. Ovládací prvek WebBrowser bude vytvořena a načíst pomocí zadaného prostředku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Popisovač k existujícímu oknu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Určuje identifikátor IID rozhraní ovládacího prvku.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ukazatel na rozhraní ovládacího prvku. V této metody na verzi šablony není nutné pro ID odkazu tak dlouho, dokud se předá zadané rozhraní s přidružený identifikátor UUID.
 
-*Q*  
+*Q*<br/>
 [in] Rozhraní, která je dotazována pro.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Určuje identifikátor IID rozhraní ovládacího prvku.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ukazatel rozhraní na hostiteli. V této metody na verzi šablony není nutné pro ID odkazu tak dlouho, dokud se předá zadané rozhraní s přidružený identifikátor UUID.
 
-*Q*  
+*Q*<br/>
 [in] Rozhraní, která je dotazována pro.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ukazatel `IDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Parametry
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Ukazatel `IDocHostUIHandlerDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -377,9 +377,9 @@ Externí `IDocHostUIHandlerDispatch` rozhraní používá ovládací prvky, kter
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka ATLCON](../../visual-cpp-samples.md)   
-[Cwindow – třída](../../atl/reference/cwindow-class.md)   
-[Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka ATLCON](../../visual-cpp-samples.md)<br/>
+[CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
+[Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Nejčastější dotazy k používání kontejnerů ovládacích prvků](../../atl/atl-control-containment-faq.md)
 

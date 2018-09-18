@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107824"
 ---
 # <a name="catldllmodulet-class"></a>Catldllmodulet – třída
 
@@ -38,13 +38,13 @@ Tato třída reprezentuje modulu pro knihovnu DLL.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CAtlDllModuleT`.
 
 ## <a name="members"></a>Členové
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*rclsid*  
+*rclsid*<br/>
 Identifikátor CLSID objektu, který má být vytvořen.
 
-*riid*  
+*riid*<br/>
 Identifikátor IID požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr dwReason*  
+*Parametr dwReason*<br/>
 Pokud je nastavený na DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH a DLL_THREAD_DETACH případně oznámení volání jsou zakázána.
 
-*lpReserved*  
+*lpReserved*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE, pokud knihovna typů je k registraci. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE, pokud knihovna typů má být odebrán z registru. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*rclsid*  
+*rclsid*<br/>
 Identifikátor CLSID objektu, který má být vytvořen.
 
-*riid*  
+*riid*<br/>
 Identifikátor IID požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -231,7 +231,7 @@ Tato metoda je volána metodou [CAtlDllModuleT::DllGetClassObject](#dllgetclasso
 
 ## <a name="see-also"></a>Viz také
 
-[Catlmodulet – třída](../../atl/reference/catlmodulet-class.md)   
-[Catlexemodulet – třída](../../atl/reference/catlexemodulet-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[CAtlModuleT – třída](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlExeModuleT – třída](../../atl/reference/catlexemodulet-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

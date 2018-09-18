@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4002 | Microsoft Docs
+title: Upozornění Linkerů LNK4002 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107628"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>Upozornění linkerů LNK4002
-symbol definovaného v objektu  
-  
- Symbol, zobrazí v jeho dekorované formuláře, byla zadaná v jeho upraveného formuláře `object`, ale nebyl nalezen jedinečný shoda pro dekorované symbol. Toto upozornění je vždy uvedeny upozornění [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) , za kterými by došlo k závažné chybě [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+symbol definovaný v objektu
+
+Byl zadán symbolu zobrazeny v upravené podobě, v jeho nedekorovaných formulář v nástrojích pro `object`, ale unikátní shoda upravený symbol se nenašel. Toto upozornění je vždy předchází upozornění [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) a za nímž následuje závažná chyba [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).

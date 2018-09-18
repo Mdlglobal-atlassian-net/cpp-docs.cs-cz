@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1086 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1086 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9d314f523706ae6b4a18070f51341eba43984e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 300dac81a55a07f163f0fe6bb01646403517b554
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107634"
 ---
 # <a name="nmake-fatal-error-u1086"></a>Závažná chyba nástroje NMAKE U1086
-**Odvozená pravidla nemůže mít závislé objekty**  
-  
- Dvojtečkou (**:**) v odvození pravidlo musí být následováno jednu z těchto:  
-  
--   Znak nového řádku  
-  
--   Středník (**;**), který může následovat příkaz  
-  
--   Počet přihlášení (**#**), který může následovat komentář
+
+**odvozené pravidlo nemůže mít závislé položky**
+
+Dvojtečka (**:**) v odvození pravidlo musí být následováno jednu z těchto:
+
+- Znak nového řádku
+
+- Středník (**;**), který může být následován příkaz
+
+- Znak (**#**), který může být následován komentář

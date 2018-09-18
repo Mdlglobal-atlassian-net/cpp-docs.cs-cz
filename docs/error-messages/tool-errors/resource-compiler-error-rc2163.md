@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2163 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2163 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2cd0e4f2e800d9922a6e1820d6e4141cefc7a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6230cd50c621a37f0c2dd8f9e56bda8b0a20eb68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098859"
 ---
 # <a name="resource-compiler-error-rc2163"></a>Chyba kompilátoru prostředků RC2163
-Typ akcelerátoru vyžadovaný [ASCII nebo VIRTKEY]  
-  
- `type` Pole **AKCELERÁTORŮ** příkazu musí obsahovat buď ASCII nebo VIRTKEY hodnotu.
+
+Typ akcelerátoru vyžaduje [ASCII nebo VIRTKEY]
+
+`type` Pole **AKCELERÁTORY** příkazu musí obsahovat hodnotu ASCII nebo VIRTKEY.

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a1c08e8e50e8ef1236b253d471c2332c4e6e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1479ced25a741e27a195b529b6bf8825b47ce41e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099600"
 ---
 # <a name="ipersiststorageimpl-class"></a>Ipersiststorageimpl – třída
 
@@ -42,13 +42,13 @@ Tato třída implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objid
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IPersistStorageImpl`.
 
 ## <a name="members"></a>Členové
@@ -185,7 +185,7 @@ Zobrazit [IPersistStorage:SaveCompleted](/windows/desktop/api/objidl/nf-objidl-i
 
 ## <a name="see-also"></a>Viz také
 
-[Úložiště a datové proudy](/windows/desktop/Stg/storages-and-streams)   
-[Ipersiststreaminitimpl – třída](../../atl/reference/ipersiststreaminitimpl-class.md)   
-[Ipersistpropertybagimpl – třída](../../atl/reference/ipersistpropertybagimpl-class.md)   
+[Úložiště a datové proudy](/windows/desktop/Stg/storages-and-streams)<br/>
+[IPersistStreamInitImpl – třída](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[IPersistPropertyBagImpl – třída](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

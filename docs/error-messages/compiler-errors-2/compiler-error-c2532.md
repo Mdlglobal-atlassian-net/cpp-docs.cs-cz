@@ -1,5 +1,5 @@
 ---
-title: C2532 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2532 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106996"
 ---
-# <a name="compiler-error-c2532"></a>C2532 chyby kompilátoru
-"identifikátor": Neplatný modifikátor pro – referenční informace  
-  
- Odkaz byl změněn. Odkazy na nemůže být upraven odkazovat na jiný objekt. Místo toho použijte ukazatel.
+# <a name="compiler-error-c2532"></a>Chyba kompilátoru C2532
+
+'identifier': Neplatný modifikátor pro odkaz
+
+Odkaz byl změněn. Odkazy, nelze změnit pro odkazování na jiný objekt. Místo toho použijte ukazatel.

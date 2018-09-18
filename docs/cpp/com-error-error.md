@@ -17,31 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ddaefcf3bd46bf40b03c03d2d1fb00cf8fbbb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9d56fcf7faaee9d3b0e02964163aa62372a30a78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109289"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
-**Specifické pro Microsoft**  
-  
- Načte hodnotu HRESULT předaný konstruktoru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-HRESULT Error( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Nezpracovaná položka HRESULT předaná do konstruktoru.  
-  
-## <a name="remarks"></a>Poznámky  
- Načte položku zapouzdřený HRESULT v `_com_error` objektu.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_com_error – třída](../cpp/com-error-class.md)
+
+**Specifické pro Microsoft**
+
+Načte hodnotu HRESULT předaný konstruktoru.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+HRESULT Error( ) const throw( );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Nezpracovaná položka HRESULT předaná do konstruktoru.
+
+## <a name="remarks"></a>Poznámky
+
+Načte položku zapouzdřený HRESULT v `_com_error` objektu.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_com_error – třída](../cpp/com-error-class.md)

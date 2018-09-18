@@ -68,14 +68,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df5a93ae8b646eb0b4f012484ef8c13d07d328da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106308"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
+
 Objekt zdroje dat OLE DB, což představuje prostřednictvím poskytovatele připojení ke zdroji dat odpovídá.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -85,7 +86,8 @@ class CDataSource
 ```  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h 
+
+**Záhlaví:** také atldbcli.h 
   
 ## <a name="members"></a>Členové  
   
@@ -104,11 +106,13 @@ class CDataSource
 |[Openwithservicecomponents –](#openwithservicecomponents)|Otevře objekt zdroje dat pomocí dialogového okna dat propojení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jednu nebo více relací databázi lze vytvořit pro jedno připojení. Tyto relace jsou reprezentovány `CSession`. Je nutné volat [CDataSource::Open](../../data/oledb/cdatasource-open.md) k otevření připojení před vytvořením relace s `CSession::Open`.  
+
+Jednu nebo více relací databázi lze vytvořit pro jedno připojení. Tyto relace jsou reprezentovány `CSession`. Je nutné volat [CDataSource::Open](../../data/oledb/cdatasource-open.md) k otevření připojení před vytvořením relace s `CSession::Open`.  
   
- Příklad použití `CDataSource`, najdete v článku [CatDB](../../visual-cpp-samples.md) vzorku.  
+Příklad použití `CDataSource`, najdete v článku [CatDB](../../visual-cpp-samples.md) vzorku.  
 
 ## <a name="close"></a> CDataSource::Close
+
 Ukončí připojení uvolněním `m_spInit` ukazatele.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -118,6 +122,7 @@ void Close() throw();
 ``` 
 
 ## <a name="getinitializationstring"></a> CDataSource::GetInitializationString
+
 Načte inicializačního řetězce zdroje dat, který je momentálně otevřený.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -128,19 +133,23 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pInitializationString*  
- [out] Ukazatel na řetězec inicializace.  
+
+*pInitializationString*<br/>
+[out] Ukazatel na řetězec inicializace.  
   
- *bIncludePassword*  
- [in] **true** Pokud řetězec obsahuje heslo; v opačném případě **false**.  
+*bIncludePassword*<br/>
+[in] **true** Pokud řetězec obsahuje heslo; v opačném případě **false**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Výsledný řetězec inicializace je možné později znovu toto připojení ke zdroji dat. 
+
+Výsledný řetězec inicializace je možné později znovu toto připojení ke zdroji dat. 
  
 ## <a name="getproperties"></a> CDataSource::GetProperties
+
 Vrátí informace o vlastnosti požadované pro objekt zdroje dat připojených.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -153,15 +162,19 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
+
+Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- K získání jedné vlastnosti, použijte [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+
+K získání jedné vlastnosti, použijte [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
 ## <a name="getproperty"></a> CDataSource::GetProperty
+
 Vrátí hodnotu zadané vlastnosti pro objekt připojené datové zdroje.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -173,22 +186,26 @@ HRESULT GetProperty(const GUID& guid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identifikátor GUID*  
- [in] Identifikátor GUID identifikující vlastnost, pro které se má vrátit vlastnost nastavit.  
+
+*identifikátor GUID*<br/>
+[in] Identifikátor GUID identifikující vlastnost, pro které se má vrátit vlastnost nastavit.  
   
- *číslo PropId*  
- [in] Vlastnost ID pro vlastnost vrátit.  
+*číslo PropId*<br/>
+[in] Vlastnost ID pro vlastnost vrátit.  
   
- *pVariant*  
- [out] Ukazatel na varianty kde `GetProperty` vrátí hodnotu vlastnosti.  
+*pVariant*<br/>
+[out] Ukazatel na varianty kde `GetProperty` vrátí hodnotu vlastnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li získat více vlastností, použijte [GetProperties](../../data/oledb/cdatasource-getproperties.md).
+
+Chcete-li získat více vlastností, použijte [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
 ## <a name="open"></a> CDataSource::Open
+
 Otevře připojení ke zdroji dat pomocí `CLSID`, `ProgID`, nebo `CEnumerator` moniker nebo se zobrazí výzva s dialogovým oknem Lokátor.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -234,53 +251,58 @@ HRESULT Open(LPCSTR szProgID,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identifikátor CLSID*  
- [in] `CLSID` Data zprostředkovatele.  
+
+*identifikátor CLSID*<br/>
+[in] `CLSID` Data zprostředkovatele.  
   
- *pPropSet*  
- [in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
+*pPropSet*<br/>
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
   
- *nPropertySets*  
- [in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
+*nPropertySets*<br/>
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
   
- *pName*  
- [in] Název databáze pro připojení.  
+*pName*<br/>
+[in] Název databáze pro připojení.  
   
- *pUserName*  
- [in] Jméno uživatele.  
+*pUserName*<br/>
+[in] Jméno uživatele.  
   
- *pPassword*  
- [in] Heslo uživatele.  
+*pPassword*<br/>
+[in] Heslo uživatele.  
   
- *nInitMode*  
- [in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](/previous-versions/windows/desktop/ms723127\(v=vs.85\))v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.  
+*nInitMode*<br/>
+[in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](/previous-versions/windows/desktop/ms723127\(v=vs.85\))v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.  
   
- *szProgID*  
- [in] Identifikátor programu.  
+*szProgID*<br/>
+[in] Identifikátor programu.  
   
- *Enumerátor*  
- [in] A [CEnumerator](../../data/oledb/cenumerator-class.md) objekt použitý k získání monikeru pro otevření připojení, pokud volající neurčuje `CLSID`.  
+*Enumerátor*<br/>
+[in] A [CEnumerator](../../data/oledb/cenumerator-class.md) objekt použitý k získání monikeru pro otevření připojení, pokud volající neurčuje `CLSID`.  
   
- *hWnd*  
- [in] Popisovač okna, který má být nadřazená dialogového okna. Pomocí funkce přetížení, která používá *hWnd* parametr se automaticky vyvolá součásti služby; podrobnosti najdete v části poznámky.  
+*hWnd*<br/>
+[in] Popisovač okna, který má být nadřazená dialogového okna. Pomocí funkce přetížení, která používá *hWnd* parametr se automaticky vyvolá součásti služby; podrobnosti najdete v části poznámky.  
   
- *dwPromptOptions*  
- [in] Určuje styl Lokátor dialogové okno k zobrazení. Možné hodnoty najdete v článku Msdasc.h.  
+*dwPromptOptions*<br/>
+[in] Určuje styl Lokátor dialogové okno k zobrazení. Možné hodnoty najdete v článku Msdasc.h.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Přetížení metody, která používá *hWnd* parametr otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci součásti služby funkcí, jako je třeba sdílení prostředků ve fondech, automaticky Zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+
+Přetížení metody, která používá *hWnd* parametr otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci součásti služby funkcí, jako je třeba sdílení prostředků ve fondech, automaticky Zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
- Přetížení metody, které nepoužívají *hWnd* parametr otevřít objekt zdroje dat bez použití v oledb32.dll součásti služby. A [CDataSource](../../data/oledb/cdatasource-class.md) objekt otevřené se tyto funkce přetížení se nebudete moct využívat některé funkce součásti služby.  
+Přetížení metody, které nepoužívají *hWnd* parametr otevřít objekt zdroje dat bez použití v oledb32.dll součásti služby. A [CDataSource](../../data/oledb/cdatasource-class.md) objekt otevřené se tyto funkce přetížení se nebudete moct využívat některé funkce součásti služby.  
   
 ### <a name="example"></a>Příklad  
- Následující kód ukazuje, jak otevřít zdroj dat Jet 4.0 s šablonami technologie OLE DB. Je považovat za zdroj dat Jet zdroji dat OLE DB. Nicméně volání `Open` potřebuje dvě sady vlastností: jednu pro DBPROPSET_DBINIT a druhou pro DBPROPSET_JETOLEDB_DBINIT, tak, že nastavíte DBPROP_JETOLEDB_DATABASEPASSWORD.  
+
+Následující kód ukazuje, jak otevřít zdroj dat Jet 4.0 s šablonami technologie OLE DB. Je považovat za zdroj dat Jet zdroji dat OLE DB. Nicméně volání `Open` potřebuje dvě sady vlastností: jednu pro DBPROPSET_DBINIT a druhou pro DBPROPSET_JETOLEDB_DBINIT, tak, že nastavíte DBPROP_JETOLEDB_DATABASEPASSWORD.  
   
- [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]  
 
 ## <a name="openfromfilename"></a> CDataSource::OpenFromFileName
+
 Otevře se zdroji dat ze souboru určeném názvem souboru zadaný uživatelem.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -290,18 +312,22 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *szFileName*  
- [in] Název souboru, obvykle připojení ke zdroji dat (. Soubor UDL).  
+
+*szFileName*<br/>
+[in] Název souboru, obvykle připojení ke zdroji dat (. Soubor UDL).  
   
- Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) v sadě Windows SDK.  
+Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+
+Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
+
 Otevře se zdroji dat určené uživatelem zadané inicializačního řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -312,21 +338,25 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *szInitializationString*  
- [in] Inicializační řetězec.  
+
+*szInitializationString*<br/>
+[in] Inicializační řetězec.  
   
- *fPromptForInfo*  
- [in] Pokud tento argument je nastavená na **true**, pak `OpenFromInitializationString` nastaví vlastnost DBPROP_INIT_PROMPT DBPROMPT_COMPLETEREQUIRED, která určuje, že se uživateli výzva, pouze pokud je zapotřebí více informací. To je užitečné v situacích, ve kterých inicializačního řetězce určuje databázi, která vyžaduje heslo, ale řetězec neobsahuje heslo. Uživatel bude vyzván k heslo (nebo všechny chybějící informace) při pokusu o připojení k databázi.  
+*fPromptForInfo*<br/>
+[in] Pokud tento argument je nastavená na **true**, pak `OpenFromInitializationString` nastaví vlastnost DBPROP_INIT_PROMPT DBPROMPT_COMPLETEREQUIRED, která určuje, že se uživateli výzva, pouze pokud je zapotřebí více informací. To je užitečné v situacích, ve kterých inicializačního řetězce určuje databázi, která vyžaduje heslo, ale řetězec neobsahuje heslo. Uživatel bude vyzván k heslo (nebo všechny chybějící informace) při pokusu o připojení k databázi.  
   
- Výchozí hodnota je **false**, která určuje, zda uživatel nikdy výzvami (sady DBPROP_INIT_PROMPT k DBPROMPT_NOPROMPT).  
+Výchozí hodnota je **false**, která určuje, zda uživatel nikdy výzvami (sady DBPROP_INIT_PROMPT k DBPROMPT_NOPROMPT).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále.  
+
+Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále.  
 
 ## <a name="openwithpromptfilename"></a> CDataSource::OpenWithPromptFileName
+
 Tato metoda se zobrazí výzva se dialogové okno a potom otevře zdroj dat s využitím souboru zadaný uživatelem.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -338,22 +368,26 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hWnd*  
- [in] Popisovač okna, který má být nadřazená dialogového okna.  
+
+*hWnd*<br/>
+[in] Popisovač okna, který má být nadřazená dialogového okna.  
   
- *dwPromptOptions*  
- [in] Určuje styl Lokátor dialogové okno k zobrazení. Možné hodnoty najdete v článku Msdasc.h.  
+*dwPromptOptions*<br/>
+[in] Určuje styl Lokátor dialogové okno k zobrazení. Možné hodnoty najdete v článku Msdasc.h.  
   
- *szInitialDirectory*  
- [in] Počáteční adresář, který má zobrazit v dialogovém okně Lokátor.  
+*szInitialDirectory*<br/>
+[in] Počáteční adresář, který má zobrazit v dialogovém okně Lokátor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+
+Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
+
 Otevře objekt zdroje dat pomocí služby komponent v oledb32.dll.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -369,24 +403,28 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identifikátor CLSID*  
- [in] `CLSID` Data zprostředkovatele.  
+
+*identifikátor CLSID*<br/>
+[in] `CLSID` Data zprostředkovatele.  
   
- *szProgID*  
- [in] ID programu zprostředkovatele dat  
+*szProgID*<br/>
+[in] ID programu zprostředkovatele dat  
   
- *pPropset*  
- [in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.  
+*pPropset*<br/>
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.  
   
- *ulPropSets*  
- [in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.  
+*ulPropSets*<br/>
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+
+Tato metoda se otevře objekt zdroje dat pomocí služby komponent v oledb32.dll; Tato knihovna DLL obsahuje implementaci funkce součásti služby, jako je sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB programátora odkaz na [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

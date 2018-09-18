@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4164 | Microsoft Docs
+title: Upozornění (úroveň 1) C4164 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5f29a0161f07a204aeffb170cf5d99941ff552
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea443f43fc72688dd2eaa2d7c0f79fcd0c490c6f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115135"
 ---
-# <a name="compiler-warning-level-1-c4164"></a>C4164 kompilátoru upozornění (úroveň 1)
-"identifikátor": není deklarován – vnitřní funkce  
-  
- Vnitřní zadaná funkce není deklarovaný; budete muset #include na příslušný soubor hlaviček.
+# <a name="compiler-warning-level-1-c4164"></a>Kompilátor upozornění (úroveň 1) C4164
+
+'identifier': není deklarovaná vnitřní funkce
+
+Zadanou vnitřní funkci není deklarován; Možná budete muset #include na příslušný soubor hlaviček.

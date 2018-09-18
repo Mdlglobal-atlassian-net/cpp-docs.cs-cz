@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1014 | Microsoft Docs
+title: Závažná chyba C1014 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52f0d998e124412c3cf81de4efa762d1c0c346e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c85cff5895326b9a96e9254cebb27fc267550f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103968"
 ---
 # <a name="fatal-error-c1014"></a>Závažná chyba C1014
-příliš mnoho souborů patří: hloubka = úroveň  
-  
- Vnořené `#include` direktivy je příliš hluboké. Vnořené direktivy může zahrnovat otevřených souborů. Zdrojový soubor obsahující direktivu počítá jako jeden soubor.
+
+moc velký počet vložených souborů: hloubka = úroveň
+
+Vnořené `#include` direktivy je příliš hluboká. Vnořené direktivy může zahrnovat otevřených souborů. Zdrojový soubor obsahující direktivu se počítá jako jeden soubor.

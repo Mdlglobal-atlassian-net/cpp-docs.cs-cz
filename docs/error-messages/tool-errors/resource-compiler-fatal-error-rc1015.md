@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1015 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1015 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7744242e44ecfc72ee57ab979969ad81b209e57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100759"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Závažná chyba kompilátoru prostředků RC1015
-Nelze otevřít vložený soubor filename  
-  
- Daný soubor neexistuje, nelze otevřít nebo nebyl nalezen.  
-  
- Zajistěte, aby nastavení, prostředí musí být platný a zda je zadán správnou cestu k souboru. Zajistěte, aby dostatečná obslužných rutin souborů k dispozici pro kompilátor prostředků. Pokud je soubor na síťové jednotce, ujistěte se, zda máte oprávnění k otevření souboru.  
-  
- RC1015 může dojít i v případě, že soubor existuje v adresáři, zadaný jako další zahrnout adresář ve vlastnostech konfigurace -> prostředků -> Stránka Obecné vlastnosti; Zadejte úplnou cestu k souboru zahrnout.  
-  
- Další informace najdete v článku znalostní báze Knowledge Base Q326987: RC1015 chyby při použití prostředků zobrazení Pokud cesta zahrnutí je příliš dlouhý.
+
+nejde otevřít vložený soubor 'filename'
+
+Daný vloženého souboru neexistuje, nelze otevřít nebo se nenašel.
+
+Ujistěte se, že nastavení prostředí jsou platná a zda je zadán správnou cestu k souboru. Ujistěte se, že jsou k dispozici pro kompilátor prostředků dostatek popisovačů souborů. Pokud je soubor na síťové jednotce, ujistěte se, že máte oprávnění k otevření souboru.
+
+RC1015 může dojít i v případě, že tento soubor existuje v adresáři zadaném jako další zahrnout adresář ve vlastnosti konfigurace -> prostředků -> stránce Obecné vlastnosti; Zadejte úplnou cestu k souboru include.
+
+Další informace najdete v článku znalostní báze Q326987: RC1015 chyby při použití prostředků zobrazení Pokud cesty zahrnutí je příliš dlouhý.

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4983984c8bf1cad2996818625091b60cdb732a9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1aecfcb493bfc35e0d6f059c296af1b358eee93f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103206"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Cdefaultcomparetraits – třída
 
@@ -33,13 +33,13 @@ Tato třída poskytuje výchozí element porovnání funkcí.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultCompareTraits
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="members"></a>Členové
@@ -71,10 +71,10 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parametry
 
-*element1*  
+*element1*<br/>
 První prvek.
 
-*element2*  
+*element2*<br/>
 Druhý prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -95,10 +95,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parametry
 
-*element1*  
+*element1*<br/>
 První prvek.
 
-*element2*  
+*element2*<br/>
 Druhý prvek.
 
 ### <a name="return-value"></a>Návratová hodnota

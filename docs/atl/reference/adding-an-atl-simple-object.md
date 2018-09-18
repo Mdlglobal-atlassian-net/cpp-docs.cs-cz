@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109766"
 ---
 # <a name="adding-an-atl-simple-object"></a>Přidání jednoduchého objektu ATL
 
@@ -45,10 +45,10 @@ Můžete definovat rozhraní modelu COM pro nový objekt knihovny ATL při vytvo
 
 ## <a name="see-also"></a>Viz také
 
-[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
-[Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)   
-[Přidání metody](../../ide/adding-a-method-visual-cpp.md)   
-[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Přidání metody](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)
 

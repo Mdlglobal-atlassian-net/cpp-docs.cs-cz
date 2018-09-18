@@ -1,5 +1,5 @@
 ---
-title: C2996 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2996 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70665a767a9ab428336fbfd0cd03bc3da1ff7ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c76c72a3bb9694536a9c5ae60f60a87ba9b455c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108664"
 ---
-# <a name="compiler-error-c2996"></a>C2996 chyby kompilátoru
-'function': definice šablony rekurzivní funkce  
-  
- Definice funkce se pokusí vytvořit instanci jeho kořenová třída podle šablony. Rekurzivní šablony konkretizací nejsou povoleny.
+# <a name="compiler-error-c2996"></a>Chyba kompilátoru C2996
+
+'function': rekurzivní definice šablony funkcí
+
+Definice funkce se pokusí vytvořit instanci jeho kořenová třída bez vizuálního vzhledu. Nejsou povoleny rekurzivní instance šablon.

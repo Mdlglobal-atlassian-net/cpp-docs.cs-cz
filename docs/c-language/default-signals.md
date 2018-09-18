@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c369665d398d4b326cf8d27ad0944a594fe1a4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ff2612538cd6953672d9f91dcb603b4676be100
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098924"
 ---
 # <a name="default-signals"></a>Výchozí signály
 
 **ANSI 4.7.1.1** Pokud ekvivalent `signal(sig, SIG_DFL)` není spuštěn před voláním popisovače signálu, blokování signál, který se provádí
 
-Jakmile je program spuštěn, jsou signály nastaveny na výchozí stav.  
-  
+Jakmile je program spuštěn, jsou signály nastaveny na výchozí stav.
+
 ## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: C4961 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4961 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68027aa11bedc6e9ad94fddc71a217a5e91bd2ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397ada023e5640cacd53fe45ffd0d250c5799d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105116"
 ---
-# <a name="compiler-warning-c4961"></a>C4961 upozornění kompilátoru
-Žádná data profilu se sloučí .pgd souboru, zakázat optimalizace na základě profilu  
-  
- Žádná data profilu (soubory .pgc) nebyly k dispozici, takže optimalizace na základě profilu nelze provést.
+# <a name="compiler-warning-c4961"></a>Upozornění kompilátoru C4961
+
+Žádná data profilu se nesloučila do .pgd souboru, optimalizace na základě profilu zakázáno
+
+Žádná data profilu (soubory .pgc) nebyly k dispozici, tak na základě profilu – optimalizace nelze provést.

@@ -1,5 +1,5 @@
 ---
-title: unorm_2 – třída | Microsoft Docs
+title: unorm_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 678cb8a782d07b64b93f87963b0ead500136fbcf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6f49d51fc939df8fc26000627552afc19a0208d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106204"
 ---
 # <a name="unorm2-class"></a>unorm_2 – třída
-Představuje krátký vektoru dvou čísel bez znaménka normální.  
+Představuje krátký vektor dvou normálních čísel bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class unorm_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class unorm_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[unorm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[unorm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -91,11 +91,11 @@ class unorm_2;
 |----------|-----------------|  
 |unorm_2::Operator--||  
 |unorm_2::Operator * =||  
-|/ unorm_2::Operator = – operátor||  
+|unorm_2::Operator / =||  
 |unorm_2::Operator ++||  
 |unorm_2::Operator +=||  
 |unorm_2::Operator =||  
-|unorm_2::Operator-=||  
+|operátor unorm_2::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -124,9 +124,9 @@ class unorm_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> unorm_2 
+##  <a name="ctor"></a> unorm_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 unorm_2() restrict(amp,
@@ -186,17 +186,17 @@ explicit inline unorm_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="unorm_2__size"></a> Velikost 
 

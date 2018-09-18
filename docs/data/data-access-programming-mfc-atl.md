@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e897f5d0c234141cd0c690de96557e8c81a0d7b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f48413ced50a2b7f086d67f910a7a8135129a2dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111001"
 ---
 # <a name="data-access-programming-mfcatl"></a>Přístup k datům programování knihovny MFC nebo ATL)
+
 V průběhu let Visual C++ poskytuje několik způsobů, jak pracovat s databází. V roce 2011 společnost Microsoft oznámila, že to je zarovnání na rozhraní ODBC jako preferované technologie pro přístup k systému SQL Server produkty z nativního kódu. ODBC je oborový standard, a pomocí něj získat maximální přenositelnost kódu nad velkým množstvím platforem a zdroje dat. Většinu produktů, které databáze SQL a NoSQL výrobky podpora rozhraní ODBC. Rozhraní ODBC můžete použít přímo pomocí volání rozhraní ODBC API nízké úrovně, nebo můžete použít obálkové třídy knihovny MFC rozhraní ODBC nebo knihovny třetích stran obálky C++. 
 
 OLE DB je nízké úrovně, vysoce výkonné rozhraní API podle specifikace modelu COM a je podporován pouze na Windows. Použít technologie OLE DB, pokud je přístup k programu [propojené servery](/sql/relational-databases/linked-servers/linked-servers-database-engine). Knihovna ATL poskytuje šablony technologie OLE DB, které usnadňují vytvářel Vlastní zprostředkovatelé technologie OLE DB a spotřebitele. Překopírujte nejnovější verzi technologie OLE DB poskytuje nativní klient 11 SQL.  
@@ -37,9 +38,12 @@ Komponentu Nativní klient systému SQL (SNAC), které balíčky OLE DB a ovlada
 
 Pokud používáte C + +/ CLI, které můžete dál používat ADO.NET jako vždy. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), a [přístup k datům v sadě Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
--   Kromě obálkové třídy ODBC MFC také poskytuje přístup objektů DAO (Data) obálkové třídy pro připojení k přístupu k databázím.  Rozhraní DAO, ale je zastaralé. Jakýkoli kód, na základě CDaoDatabase nebo CDaoRecordset by měl upgradovat. 
+- Kromě obálkové třídy ODBC MFC také poskytuje přístup objektů DAO (Data) obálkové třídy pro připojení k přístupu k databázím.  Rozhraní DAO, ale je zastaralé. Jakýkoli kód, na základě CDaoDatabase nebo CDaoRecordset by měl upgradovat. 
 
 Další informace o historii technologií přístupu k datům v Microsoft Windows najdete v tématu [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
 
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům](data-access-in-cpp.md) [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [podrobný popis technologie pro přístup k datům](https://msdn.microsoft.com/library/ms810810.aspx)
+
+[Přístup k datům](data-access-in-cpp.md)<br/>
+[Připojení k databázi Microsoft Open (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
+[Data Access technologie podrobný popis](https://msdn.microsoft.com/library/ms810810.aspx)

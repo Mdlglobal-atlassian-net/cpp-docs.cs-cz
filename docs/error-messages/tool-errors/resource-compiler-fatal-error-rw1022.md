@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RW1022 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RW1022 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099840"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Závažná chyba kompilátoru prostředků RW1022
-**Vstupně-výstupní chyba zápisu do souboru**  
-  
- Kompilátor prostředků nemůže zapisovat do souboru.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Nedostatek místa na disku. Volné místo se musí rovnat hodnotě alespoň dvojnásobku velikosti spustitelného souboru, který vytvoříte.  
-  
-2.  Svazek je určen jen pro čtení.  
-  
-3.  Chybné sektory.  
-  
-4.  Narušení sdílení.
+
+**Vstupně-výstupní chyba zápisu do souboru**
+
+Nástroj Resource Compiler nemůže zapisovat do souboru.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Nedostatek místa na disku. Volné místo se musí rovnat minimálně dvojnásobek velikosti spustitelného souboru, který vytváříte.
+
+1. Svazek je jen pro čtení.
+
+1. Chybné sektory.
+
+1. Narušení sdílení.

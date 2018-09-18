@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f59e43bbc1d5f11d1582bad577cc0d8eb971d121
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108583"
 ---
 # <a name="dual-interfaces-and-atl"></a>Duální rozhraní a ATL
 
@@ -29,21 +29,21 @@ Duální rozhraní umožňuje její metody přístupný jako dispinterface metod
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Implementace duálního rozhraní](../atl/implementing-a-dual-interface.md)  
+[Implementace duálního rozhraní](../atl/implementing-a-dual-interface.md)<br/>
 Tento článek popisuje třídy a průvodců součástí implementace duálního rozhraní.
 
-[Více duálních rozhraní](../atl/multiple-dual-interfaces.md)  
+[Více duálních rozhraní](../atl/multiple-dual-interfaces.md)<br/>
 Popisuje, jak vystavit více duálních rozhraní u jednoho objektu.
 
-[Nonextensible – atribut](../atl/nonextensible-attribute.md)  
+[Nonextensible – atribut](../atl/nonextensible-attribute.md)<br/>
 Popisuje použití **nerozšiřitelnou kategorii** atribut na vaše definice rozhraní.
 
-[Duální rozhraní a události](../atl/dual-interfaces-and-events.md)  
+[Duální rozhraní a události](../atl/dual-interfaces-and-events.md)<br/>
 Tento článek popisuje důvody návrh události rozhraní duální rozhraní se nedá postupovat.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
 ## <a name="see-also"></a>Viz také

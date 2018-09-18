@@ -1,5 +1,5 @@
 ---
-title: C3029 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3029 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b715aca8baa2a232433d9930763bdade90171807
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeacd011f4df88820de6746707ec6b1300795c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108713"
 ---
-# <a name="compiler-error-c3029"></a>C3029 chyby kompilátoru
-'symbol': může být pouze jednou v sdílení dat klauzule v OpenMP – direktiva  
-  
- Symbol byl v jedné nebo více klauzulích v direktivě použit více než jednou. Symbol lze použít pouze jednou v direktivu.  
-  
- Následující ukázka generuje C3029:  
-  
-```  
-// C3029.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include "omp.h"  
-  
-int g_i;  
-  
-int main() {  
-   int i, x;  
-  
-   #pragma omp parallel reduction(+ : x, x)   // C3029  
-      ;  
-  
-   #pragma omp parallel reduction(+ : x)   // OK  
-      ;  
-  
-   #pragma omp parallel private(x) reduction(+ : x)   // C3029  
-      ;  
-  
-   #pragma omp parallel reduction(+ : x)   // OK  
-      ;  
-}  
+# <a name="compiler-error-c3029"></a>Chyba kompilátoru C3029
+
+'symbol': může být pouze jednou v data-sharing v direktivě OpenMP – klauzule
+
+Symbol byl použit více než jednou v jedné či více klauzulí v direktivě. Symbol jde použít jenom jednou v direktivě.
+
+Následující ukázka generuje C3029:
+
+```
+// C3029.cpp
+// compile with: /openmp /link vcomps.lib
+#include "omp.h"
+
+int g_i;
+
+int main() {
+   int i, x;
+
+   #pragma omp parallel reduction(+ : x, x)   // C3029
+      ;
+
+   #pragma omp parallel reduction(+ : x)   // OK
+      ;
+
+   #pragma omp parallel private(x) reduction(+ : x)   // C3029
+      ;
+
+   #pragma omp parallel reduction(+ : x)   // OK
+      ;
+}
 ```

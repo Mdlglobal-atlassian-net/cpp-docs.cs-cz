@@ -1,5 +1,5 @@
 ---
-title: float_4 – třída | Microsoft Docs
+title: float_4 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd4de23a4395d8e09a51e8df4a8c101132b4ae7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104813"
 ---
 # <a name="float4-class"></a>float_4 – třída
-Představuje krátký vektor čtyři obtékaných objektů.  
+Představuje krátký vektor čtyř hodnot float.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -296,7 +296,7 @@ class float_4;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class float_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[float_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[float_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -456,7 +456,7 @@ class float_4;
 |float_4::Operator-||  
 |float_4::operator--||  
 |float_4::operator*=||  
-|/ float_4::Operator = – operátor||  
+|float_4::Operator / =||  
 |float_4::Operator ++||  
 |float_4::operator+=||  
 |float_4::Operator =||  
@@ -466,7 +466,7 @@ class float_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#float_4__size)||  
+|[velikost – konstanta](#float_4__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -609,9 +609,9 @@ class float_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> float_4 
+##  <a name="ctor"></a> float_4 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 float_4() restrict(amp,
@@ -662,23 +662,23 @@ explicit inline float_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V3`  
- Hodnota k chybě při inicializaci element 3.  
+*_V3*<br/>
+Hodnota inicializace element 3.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="float_4__size"></a> Velikost 
 

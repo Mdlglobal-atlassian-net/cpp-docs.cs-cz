@@ -1,5 +1,5 @@
 ---
-title: C2243 chyby kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2243 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16bc95540488b0723869c735b7fc80b15f6e763b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5d3a6c20ff147ac2a4b765c7779cec9f19627e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102226"
 ---
-# <a name="compiler-error-c2243"></a>C2243 chyby kompilátoru
-převod 'Převod type' z 'type1' na 'type2' existuje, ale je nedostupná  
-  
- Přístup k ochrany (`protected` nebo `private`) nebylo možné provést převod ukazatel na odvozené třídy na ukazatel na základní třídy.  
-  
- Následující ukázka generuje C2243:  
-  
-```  
-// C2243.cpp  
-// compile with: /c  
-class B {};  
-class D : private B {};  
-class E : public B {};  
-  
-D d;  
-B *p = &d;   // C2243  
-  
-E e;  
-B *p2 = &e;  
-```  
-  
- Základní třídy s `protected` nebo `private` přístup nejsou přístupné pro klienty odvozené třídy. Tyto úrovně řízení přístupu slouží k označení, že je základní třídy implementaci podrobností, která by měla být neviditelná klientům. Veřejné odvození použijte, pokud chcete klientům odvozené třídy mají přístup k implicitní převod odvozené třídy ukazatele na ukazatel na základní třídy.
+# <a name="compiler-error-c2243"></a>Chyba kompilátoru C2243
+
+"typ převodu: převod z 'type1' na 'type2' existuje, ale je nedostupný
+
+Přístup k ochraně (`protected` nebo `private`) nemůže převod z ukazatele na odvozenou třídu na ukazatel na základní třídu.
+
+Následující ukázka generuje C2243:
+
+```
+// C2243.cpp
+// compile with: /c
+class B {};
+class D : private B {};
+class E : public B {};
+
+D d;
+B *p = &d;   // C2243
+
+E e;
+B *p2 = &e;
+```
+
+Základní třídy s `protected` nebo `private` přístupu nejsou dostupné pro klienty odvozené třídy. Tyto úrovně řízení přístupu slouží k označení, že je základní třídy, která by měla být viditelná klientům podrobnosti implementace. Použijte veřejnou odvození, pokud mají klienti mají přístup k implicitní převod ukazatele na odvozenou třídu na ukazatel na základní třídu odvozené třídy.

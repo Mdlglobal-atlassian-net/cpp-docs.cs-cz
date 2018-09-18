@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4168 | Microsoft Docs
+title: Upozornění (úroveň 1) C4168 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f361dfd86cc32d246cb749da14d79543dd494e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e76f5e59e91639514ccd05a71b1cefc4154040
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113406"
 ---
-# <a name="compiler-warning-level-1-c4168"></a>C4168 kompilátoru upozornění (úroveň 1)
-omezení kompilátoru: mimo ladicí program typy, odstraňte program databáze, databáze a znovu sestavit  
-  
- Soubor databáze programu je třeba znovu vytvořit, aby dokázala pojmout všechny typy v programu.
+# <a name="compiler-warning-level-1-c4168"></a>Kompilátor upozornění (úroveň 1) C4168
+
+limit kompilátoru: mimo ladicí program typy, odstraňte databázi programu 'databáze' a znovu sestavte
+
+Soubor databáze programu musí znovu vytvořit tak, aby vyhovovaly všechny typy v programu.

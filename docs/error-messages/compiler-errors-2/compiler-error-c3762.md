@@ -1,5 +1,5 @@
 ---
-title: C3762 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3762 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40134353b713c855199ae0b062e263d31c37522
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4c9f5dc1c270f59dafa9e1076e3641cd1cd2c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103344"
 ---
-# <a name="compiler-error-c3762"></a>C3762 chyby kompilátoru
-nelze zpracovat atribut 'atribut'  
-  
- Uživatelem definované atribut, který dědí z `System.Security.Permissions.SecurityAttribute` se používá k definování atribut zabezpečení. Takového atributu nelze použít ve stejném sestavení, kde je definován.
+# <a name="compiler-error-c3762"></a>Chyba kompilátoru C3762
+
+nejde zpracovat atribut 'attribute'
+
+Atribut definovaný uživatelem, který dědí z `System.Security.Permissions.SecurityAttribute` se používá k definování atributu zabezpečení. Takový atribut nelze použít ve stejném sestavení, kde je definován.

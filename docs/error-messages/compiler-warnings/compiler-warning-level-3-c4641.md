@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4641 | Microsoft Docs
+title: Upozornění (úroveň 3) C4641 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112106"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>C4641 kompilátoru upozornění (úroveň 3)
-Má komentář dokumentu XML nejednoznačný křížových odkazů  
-  
- Kompilátor se nepodařilo vyřešit jednoznačně odkaz. Toto upozornění vyřešit, určete nezbytné provést jednoznačným odkaz na informace o parametrech.  
-  
- Další informace najdete v tématu [dokumentace XML](../../ide/xml-documentation-visual-cpp.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4641.  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+# <a name="compiler-warning-level-3-c4641"></a>Kompilátor upozornění (úroveň 3) C4641
+
+Komentář k dokumentu XML má nejednoznačný křížový odkaz
+
+Kompilátor nemohl jednoznačně přeložení odkazu. Pokud chcete vyřešit toto upozornění, zadejte informace o parametrech, která je potřeba provést jednoznačný odkaz.
+
+Další informace najdete v tématu [dokumentace XML](../../ide/xml-documentation-visual-cpp.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4641.
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

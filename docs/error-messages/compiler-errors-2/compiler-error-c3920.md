@@ -1,5 +1,5 @@
 ---
-title: C3920 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3920 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ced0a0f8fa2b6694de4dd901d71f6721e12493b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b85638907f350eb3545a858f1319e56b2459f09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112704"
 ---
-# <a name="compiler-error-c3920"></a>C3920 chyby kompilátoru
-' operátor '': nelze definovat operátory přírůstek nebo snížení WinRT nebo CLR operátor volání operátory operátor WinRT nebo CLR bude volat předponu odpovídající WinRT nebo CLR – operátor (op_Increment op_Decrement), ale s sémantiku operátory  
-  
- Prostředí Windows Runtime a CLR nepodporují operátor operátory a operátory uživatelem definované operátory nejsou povoleny.  Můžete definovat předponu operátor a operátor předpona se použije pro operace před a po přírůstku.  
-  
- Následující ukázka generuje C3920 a ukazuje, jak to opravit:  
-  
-```  
-// C3920.cpp  
-// compile with: /clr /LD  
-public value struct V {  
-   static V operator ++(V me, int)  
-   // try the following line instead  
-   // static V operator ++(V me)  
-   {   // C3920  
-      me.m_i++;  
-      return me;  
-   }  
-  
-   int m_i;  
-};  
-  
+# <a name="compiler-error-c3920"></a>Chyba kompilátoru C3920
+
+' operator ": nejde definovat přírůstek a snížení přípony WinRT nebo volání příponový operátor CLR operátor WinRT nebo CLR bude volat odpovídající předpona WinRT nebo CLR – operátor (op_Increment/op_Decrement), ale s příponou sémantikou
+
+Modul Windows Runtime a CLR nepodporují příponového operátoru a uživatelem definované Příponové operátory nejsou povoleny.  Můžete definovat operátor předpony a prefixový operátor se použije pro operace před a po přírůstku.
+
+Následující ukázka generuje C3920 a ukazuje, jak ho opravit:
+
+```
+// C3920.cpp
+// compile with: /clr /LD
+public value struct V {
+   static V operator ++(V me, int)
+   // try the following line instead
+   // static V operator ++(V me)
+   {   // C3920
+      me.m_i++;
+      return me;
+   }
+
+   int m_i;
+};
+
 ```

@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0050 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0050 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100588"
 ---
 # <a name="project-build-error-prj0050"></a>Chyba sestavení projektu PRJ0050
-Nepodařilo se zaregistrovat výstup. Zkontrolujte, zda že máte příslušná oprávnění k úpravě registru.  
-  
- Sestavení systému Visual C++ se nepodařilo zaregistrovat výstup sestavení (dll nebo .exe). Je třeba být přihlášen jako správce s úpravou registru.  
-  
- Pokud vytváříte ve formátu .dll, můžete se pokusit zaregistrovat .dll ručně pomocí regsvr32.exe, to by měl zobrazit informace o nezdaru sestavení.  
-  
- Pokud nejsou sestavování ve formátu .dll, naleznete v protokolu sestavení pro příkaz, který má za následek chyby.
+
+Registrace výstupu se nezdařila. Ujistěte se prosím, že máte příslušná oprávnění k úpravám registru.
+
+Systém sestavení Visual C++ nebyl schopen registrovat výstup sestavení (knihovna dll nebo .exe). Musíte být přihlášeni jako správce k úpravám registru.
+
+Pokud vytváříte soubor .dll, můžete se pokusit zaregistrovat ručně pomocí regsvr32.exe soubor .dll, mělo by se zobrazit informace o sestavení o příčině selhání.
+
+Pokud vytváříte nejsou ve formátu .dll, podívejte se na příkaz, který způsobí chybu v protokolu sestavení.

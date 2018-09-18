@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100575"
 ---
 # <a name="typedef-declarations"></a>Typedef – deklarace
+
 Deklarace typedef je deklarace pomocí direktivy typedef jako třídy úložiště. Deklarátor stane nového typu. TypeDef – deklarace můžete použít k vytvoření kratších nebo výstižnějších názvů pro typy, které jsou již definovány pomocí jazyka C nebo pro typy, které je deklarován. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.
 
 Deklarace typedef je interpretován stejným způsobem jako proměnnou nebo deklarace funkce, ale tento identifikátor, ne za předpokladu, že zadaný typ deklarací, je synonymum pro typ.
@@ -113,6 +114,7 @@ pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
 ## <a name="examples"></a>Příklady
+
 Následující příklady znázorňují TypeDef – deklarace:
 
 ```C

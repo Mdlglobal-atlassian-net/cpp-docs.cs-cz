@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;paramref&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a63caea7186114244927b9ede4c63ed97871d6e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111261"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-\<Paramref > Značka poskytuje způsob, jak znamenat, že slovo parametr. Pro tento parametr nějakým způsobem odlišné lze zpracovat soubor .xml.  
+\<Paramref > značky poskytuje způsob, jak určit, že je slovo parametru. Soubor XML mohou být zpracovány k nějakým způsobem odlišné formátování tento parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,8 @@ ms.locfileid: "33326580"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `name`  
- Název parametru, který bude odkazovat na.  Uzavřete název v jednoduchých nebo dvojitých uvozovek.  Kompilátor vydá upozornění, pokud jej nenalezne `name`.  
+*Jméno*<br/>
+Název parametru jako reference.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  

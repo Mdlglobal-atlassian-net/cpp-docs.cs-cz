@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4044 | Microsoft Docs
+title: Upozornění Linkerů LNK4044 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b921f07638751b9e0702517b125b0f9de828f81b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3341c5b883e3476467cf4e214f632f84d805e70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098891"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>Upozornění linkerů LNK4044
-Nerozpoznaný možnost "možnost"; Ignorovat  
-  
- Danou možnost není platná možnost pro tento nástroj. Nástroj ignorovat možnost.  
-  
- Pokud chcete zobrazit seznam platné možnosti, spusťte nástroj bez argumentů a možnosti.
+
+Nerozpoznaná možnost "možnost"; Ignorovat
+
+Dané možnosti není platná možnost pro tento nástroj. Nástroj ignoruje možnost.
+
+Pokud chcete zobrazit seznam platných, spusťte nástroj žádné argumenty nebo možnosti.

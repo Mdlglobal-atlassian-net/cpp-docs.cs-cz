@@ -1,5 +1,5 @@
 ---
-title: Operátory přetypování | Microsoft Docs
+title: Operátory přetypování | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe1001c4a35e40b10abefd60faedcbcb6398445
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abb4b84519b943d02eca277c9372a128f7d6c2fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098499"
 ---
 # <a name="cast-operators"></a>Operátory přetypování
-Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétní situaci.  
-  
-## <a name="syntax"></a>Syntaxe  
- *výraz CAST*:  
- *Unární výraz*  
-  
- **(***název typu***)***výraz cast*  
-  
- Kompilátor zpracovává *výraz cast* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Přetypování typu explicitní jsou omezeny stejné pravidla, která určují důsledky implicitní převody, popsané v [převody přiřazení](../c-language/assignment-conversions.md). Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů. V tématu [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o skutečné velikosti integrální typy. Další informace o přetypování typu, najdete v části [převody přetypování](../c-language/type-cast-conversions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Operátor přetypování: ()](../cpp/cast-operator-parens.md)
+
+Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétní situaci.
+
+## <a name="syntax"></a>Syntaxe
+
+*výraz CAST*: *unární výraz*
+
+**(***název typu***)***výrazem přetypování.*
+
+Kompilátor zpracovává *výrazem přetypování* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezena stejnými pravidly, která určují účinky implicitních převodů, popsané v [převody přiřazení](../c-language/assignment-conversions.md). Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů. Zobrazit [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o skutečných velikostech celočíselných typů. Další informace o přetypováních naleznete v tématu [převody přetypování](../c-language/type-cast-conversions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Operátor přetypování: ()](../cpp/cast-operator-parens.md)

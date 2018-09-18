@@ -1,5 +1,5 @@
 ---
-title: C2427 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2427 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98f04dd02b4881f3177afd93b2acf74a304b7fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27d18dff26d98adb0dada58271c4ec20fde73755
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104787"
 ---
-# <a name="compiler-error-c2427"></a>C2427 chyby kompilátoru
-'class': v tomto rozsahu nelze definovat – třída  
-  
- Byl proveden pokus o zadat vnořené třídy, ale je členem skupiny základní třídy, ne na třídu nejvíce obsahující vnořené třídy.  
-  
- Následující ukázka generuje C2427:  
-  
-```  
-// C2427.cpp  
-// compile with: /c  
-template <class T>   
-struct S {  
-   struct Inner;   
-};   
-  
-struct Y : S<int> {};   
-  
-struct Y::Inner {};   // C2427  
-  
-// OK  
-template<typename T>  
-struct S<T>::Inner {};  
+# <a name="compiler-error-c2427"></a>Chyba kompilátoru C2427
+
+'class': v tomto oboru nejde definovat třídu
+
+Byl proveden pokus o vnořené třídy, ale je vnořená třída člena základní třídy, nikoli nejvíce obsahující třídu.
+
+Následující ukázka generuje C2427:
+
+```
+// C2427.cpp
+// compile with: /c
+template <class T>
+struct S {
+   struct Inner;
+};
+
+struct Y : S<int> {};
+
+struct Y::Inner {};   // C2427
+
+// OK
+template<typename T>
+struct S<T>::Inner {};
 ```

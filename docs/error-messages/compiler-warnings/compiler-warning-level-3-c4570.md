@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4570 | Microsoft Docs
+title: Upozornění (úroveň 3) C4570 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a79b6afae4bc14e5fcd2dc4979ebd29c60c15b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 063c976915e744df8eda3604bdfa121ba21ef36d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099443"
 ---
-# <a name="compiler-warning-level-3-c4570"></a>C4570 kompilátoru upozornění (úroveň 3)
-'type': není explicitně deklarovány jako abstraktní, ale nemá abstraktní funkce  
-  
- Typ, který obsahuje [abstraktní](../../windows/abstract-cpp-component-extensions.md) funkce by měla být označena jako abstraktní.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4570.  
-  
-```  
-// C4570.cpp  
-// compile with: /clr /W3 /c  
-ref struct X {   // C4570  
-// try the following line instead  
-// ref class X abstract {  
-   virtual void f() abstract;  
-};  
+# <a name="compiler-warning-level-3-c4570"></a>Kompilátor upozornění (úroveň 3) C4570
+
+'type': není explicitně deklarované jako abstraktní, ale má abstraktní funkce
+
+Typ, který obsahuje [abstraktní](../../windows/abstract-cpp-component-extensions.md) funkce by měla být označena jako abstraktní.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4570.
+
+```
+// C4570.cpp
+// compile with: /clr /W3 /c
+ref struct X {   // C4570
+// try the following line instead
+// ref class X abstract {
+   virtual void f() abstract;
+};
 ```

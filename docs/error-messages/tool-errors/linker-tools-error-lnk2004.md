@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2004 | Microsoft Docs
+title: Chyba Linkerů LNK2004 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2619ebc3fcf997574628354a951619cd18a81b46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ade04a6315a8e0193ac882d795ef416d406c1ddb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100763"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Chyba linkerů LNK2004
-přetečení relativní oprava GP ' cílit '; krátký ' sekce ' je příliš velký, nebo mimo rozsah.  
-  
- V části byla příliš velká.  
-  
- Pokud chcete tuto chybu vyřešit, zmenšete velikost oddílu krátké buď explicitně ukládání dat v částech dlouho prostřednictvím části #pragma (".sectionname", čtení, zápisu, long) a použitím `__declspec(allocate(".sectionname"))` na data definice a deklarace.  Například  
-  
-```  
-#pragma section(".data$mylong", read, write, long)  
-__declspec(allocate(".data$mylong"))  
-char    rg0[1] = { 1 };  
-char    rg1[2] = { 1 };  
-char    rg2[4] = { 1 };  
-char    rg3[8] = { 1 };  
-char    rg4[16] = { 1 };  
-char    rg5[32] = { 1 };  
-```  
-  
- Také můžete přesunout data logicky seskupeny do vlastní struktury, která bude kolekci dat, které jsou větší než 8 bajtů, které kompilátor přidělí dlouho datové části.  Například  
-  
-```  
-// from this...  
-int     w1  = 23;  
-int     w2 = 46;  
-int     w3 = 23*3;  
-int     w4 = 23*4;  
-  
-// to this...  
-struct X {  
-    int     w1;  
-    int     w2;  
-    int     w3;  
-    int     w4;  
-} x  = { 23, 23*2, 23*3, 23*4 };  
-  
-```  
-  
- Tato chyba je následován závažná chyba `LNK1165`.
+
+přetečení relativní opravy GP na "cíl"; krátký ' sekce ' je příliš velká nebo je mimo rozsah.
+
+Část byla moc velká.
+
+Chcete-li vyřešit tuto chybu, zmenšete velikost krátký oddíl, buď explicitně ukládání dat v části dlouhé prostřednictvím #pragma část (".sectionname", čtení, zápisu, long) a použitím `__declspec(allocate(".sectionname"))` na data definice a deklarace.  Například
+
+```
+#pragma section(".data$mylong", read, write, long)
+__declspec(allocate(".data$mylong"))
+char    rg0[1] = { 1 };
+char    rg1[2] = { 1 };
+char    rg2[4] = { 1 };
+char    rg3[8] = { 1 };
+char    rg4[16] = { 1 };
+char    rg5[32] = { 1 };
+```
+
+Logicky seskupeny data můžete také přesunout do vlastní struktury, které se bude kolekce dat větší než 8 bajtů, které kompilátor přidělí dlouhé datové části.  Například
+
+```
+// from this...
+int     w1  = 23;
+int     w2 = 46;
+int     w3 = 23*3;
+int     w4 = 23*4;
+
+// to this...
+struct X {
+    int     w1;
+    int     w2;
+    int     w3;
+    int     w4;
+} x  = { 23, 23*2, 23*3, 23*4 };
+
+```
+
+Tato chyba je následována závažná chyba `LNK1165`.

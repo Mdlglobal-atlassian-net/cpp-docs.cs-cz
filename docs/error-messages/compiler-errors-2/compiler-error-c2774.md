@@ -1,5 +1,5 @@
 ---
-title: C2774 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2774 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6fc100bf7cd4a57c5c23630b28c41d92cf43d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 500dc43dbc4e8d3c5768c6cc71226e5f1025564a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110468"
 ---
-# <a name="compiler-error-c2774"></a>C2774 chyby kompilátoru
-"identifikátor": žádná, put, metoda souvisí s touto vlastností  
-  
- Datový člen deklarovat s [vlastnost](../../cpp/property-cpp.md) neobsahuje žádné `put` funkce, ale výraz pokusí nastavení jeho hodnoty.  
-  
- Následující ukázka generuje C2774:  
-  
-```  
-// C2774.cpp  
-struct A {  
-   __declspec(property(get=GetProp)) int prop;  
-   int GetProp(void);  
-  
-   __declspec(property(get=GetProp2, put=PutProp2)) int prop2;  
-   int GetProp2(void);  
-   void PutProp2(int);  
-};  
-  
-int main() {  
-   A* pa = new A;  
-   int val = 0;  
-   pa->prop = val;   // C2774  
-   pa->prop++;   // C2774  
-}  
+# <a name="compiler-error-c2774"></a>Chyba kompilátoru C2774
+
+'identifier': je tato vlastnost přidružená žádná metoda put.
+
+Datový člen deklarovaný s [vlastnost](../../cpp/property-cpp.md) nemá žádné `put` funkce, ale výraz pokusí nastavení jeho hodnoty.
+
+Následující ukázka generuje C2774:
+
+```
+// C2774.cpp
+struct A {
+   __declspec(property(get=GetProp)) int prop;
+   int GetProp(void);
+
+   __declspec(property(get=GetProp2, put=PutProp2)) int prop2;
+   int GetProp2(void);
+   void PutProp2(int);
+};
+
+int main() {
+   A* pa = new A;
+   int val = 0;
+   pa->prop = val;   // C2774
+   pa->prop++;   // C2774
+}
 ```

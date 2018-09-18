@@ -1,5 +1,5 @@
 ---
-title: Informace o (MFC Data Access) v katalogu | Microsoft Docs
+title: Informace o (přístup k datům MFC) v katalogu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af8fd53122dcad71fb5ff20298cbd35b4d8ba31c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb66b1068e20f4bfc8936e592afbcb5183974a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110949"
 ---
-# <a name="catalog-information--mfc-data-access"></a>Informace o katalogu (Data MFC Access)
-Informace o tabulky ve zdroji dat můžete zahrnout názvy tabulek a sloupců v, tabulka oprávnění, názvy primárních a cizích klíčů, informace o předdefinované dotazy nebo uložené procedury, informace o indexů v tabulkách, a Statistika týkající se tabulky.  
+# <a name="catalog-information--mfc-data-access"></a>Informace katalogu (přístup k datům MFC)
+
+Informace o tabulkách ve zdroji dat můžete zahrnout názvy tabulek a sloupců, oprávnění tabulky, názvy primární a cizí klíče, informace o předdefinované dotazy nebo uložené procedury, informace o u tabulek, indexů a Statistika tabulky.  
   
- Další informace najdete v tématu [zdroj dat: Stanovení schématu ze zdroje dat (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
+Další informace najdete v tématu [zdroj dat: Stanovení schématu ze zdroje dat (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
   
   
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům programování (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103233"
 ---
 # <a name="ctokengroups-class"></a>Ctokengroups – třída
 
@@ -92,19 +92,19 @@ class CTokenGroups
 Přidá `CSid` nebo existující `TOKEN_GROUPS` struktury na `CTokenGroups` objektu.
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 A [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Atributy pro přidružení k `CSid` objektu.
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 A [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -117,13 +117,13 @@ Konstruktor
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CTokenGroups` Objektu nebo [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) strukturu, pomocí kterého se má vytvořit `CTokenGroups` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu, pro který by měl odebrán identifikátor zabezpečení (SID) a atributy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>Parametry
 
-*pSids*  
+*pSids*<br/>
 Ukazatel na pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.
 
-*pAttributes*  
+*pAttributes*<br/>
 Ukazatel na pole typu DWORD. Pokud je tento parametr vynechán nebo mít hodnotu NULL, nejsou načíst atributy.
 
 ### <a name="remarks"></a>Poznámky
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Ukazatel na DWORD, který bude přijímat `CSid` objektu atributu. Pokud vynechán nebo hodnotu NULL, nebude možné načíst atribut.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -256,13 +256,13 @@ Nastavení *pdwAttributes* na NULL poskytuje způsob, jak potvrzují se existenc
 Operátor přiřazení.
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CTokenGroups` Objektu nebo [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struktura přiřadit `CTokenGroups` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,7 +273,7 @@ Vrátí aktualizovaný `CTokenGroups` objektu.
 
 Přetypování na ukazatel na hodnotu `TOKEN_GROUPS` struktury.
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ Přetypování na ukazatel na hodnotu [TOKEN_GROUPS](/windows/desktop/api/winnt/
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[CSID – třída](../../atl/reference/csid-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[CSid – třída](../../atl/reference/csid-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

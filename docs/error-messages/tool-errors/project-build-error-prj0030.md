@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0030 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0030 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099899"
 ---
 # <a name="project-build-error-prj0030"></a>Chyba sestavení projektu PRJ0030
-Makro rozšíření došlo k chybě. Vyhodnoťte rekurze překročena 32 úrovně pro $(makro).  
-  
- Tato chyba je způsobená rekurze v makrech. Například pokud nastavíte **zprostředkující Directory** vlastnost (najdete v části [Obecná stránka vlastností (projekt)](../../ide/general-property-page-project.md)) pro $(IntDir), bude mít rekurze.  
-  
- Pokud chcete tuto chybu vyřešit, nejsou definovány vlastnosti z hlediska makra, které se používají k definování nebo makra.
+
+Rozšiřování makra došlo k chybě. Vyhodnocení překročil rekurze 32 úrovní pro $(makra).
+
+Tato chyba je způsobena rekurzi v makrech. Pokud nastavíte například **zprostředkující adresář** vlastnosti (naleznete v tématu [Obecná stránka vlastností (projekt)](../../ide/general-property-page-project.md)) $ (IntDir), budete mít rekurze.
+
+Chcete-li vyřešit tuto chybu, nemá definován makra nebo vlastnosti z hlediska makra, které se používají k definování.

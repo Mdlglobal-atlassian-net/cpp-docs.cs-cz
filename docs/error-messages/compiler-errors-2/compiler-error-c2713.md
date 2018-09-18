@@ -1,5 +1,5 @@
 ---
-title: C2713 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2713 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eab5ee25df49355e82cede0f03d633f13ac20bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40c248226cd8f863bb099d16272dfa149f1dc2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102708"
 ---
-# <a name="compiler-error-c2713"></a>C2713 chyby kompilátoru
-pouze jednu formu povolený na základě funkce zpracování výjimek  
-  
- Nelze použít strukturované zpracování výjimek (`__try`/`__except`) a zpracovávání výjimek v jazyce C++ (`try`/`catch`) ve stejné funkci.
+# <a name="compiler-error-c2713"></a>Chyba kompilátoru C2713
+
+jednu funkci je povolená jenom jedna podoba ošetření výjimky
+
+Nelze používat zpracování strukturovaných výjimek (`__try`/`__except`) a zpracování výjimek jazyka C++ (`try`/`catch`) ve stejné funkci.

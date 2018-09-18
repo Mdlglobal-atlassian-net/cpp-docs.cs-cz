@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109680"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hWndNew*  
+*hWndNew*<br/>
 [in] Popisovač okna.
 
 ### <a name="example"></a>Příklad
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in] Popisovač okna, proti kterému na střed. Pokud má parametr hodnotu NULL (výchozí hodnota), nastaví metodu *hWndCenter* do nadřazeného okna okna. Pokud je podřízené okno. V opačném případě bude nastavení *hWndCenter* do okna nadřazenému oknu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in] Ukazatel na třídu okna.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač okna nadřazené nebo vlastníka.
 
-*Rect*  
+*Rect*<br/>
 [in] Proměnné typu [_u_rect –](../../atl/reference/u-rect-class.md) určující pozici okna. Výchozí hodnota je NULL. Pokud tento parametr hodnotu NULL, hodnota `CWindow::rcDefault` se používá.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Určuje název okna. Výchozí hodnota je NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Styl okna. Je zadaná že výchozí hodnota je 0, to znamená žádný styl. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu je zadán. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Proměnné typu [_u_menuorid –](../../atl/reference/u-menuorid-class.md) určující popisovač nabídky nebo identifikátor okna. Výchozí hodnota je 0U.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 Ukazatel na vytvoření okna data obsažená v [soubor CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 [in] Identifikátor potomků okno se má načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 [in] ID prostředku Probíhá načítání ovládacího prvku.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] ID rozhraní, které chcete získat z ovládacího prvku.
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out] Ukazatel na rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 [in] ID prostředku Probíhá načítání ovládacího prvku.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] ID rozhraní, které chcete získat z ovládacího prvku.
 
-*ppHost*  
+*ppHost*<br/>
 [out] Ukazatel na rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Při hodnotě TRUE (výchozí hodnota) metoda vrátí velké ikony. V opačném případě vrátí na ikonu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Vyrovnávací paměť do nějž budou zapsány text okna.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Velikost vyrovnávací paměti ve znacích; také maximální počet znaků k zápisu.
 
-*bstrText*  
+*bstrText*<br/>
 BSTR, ve které se má uložit text okna.
 
-*strText*  
+*strText*<br/>
 A `CString` ve které se má uložit text okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*  
+*Blok*<br/>
 [in] Pokud hodnotu TRUE (výchozí hodnota), v okně se uzamkne. V opačném případě je odemknuté.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Parametry
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Určuje styly oken odeberou během úpravy stylu.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Určuje styly oken, které budou přidány během úpravy stylu.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Určuje rozšířený styly odeberou během úpravy stylu.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Určuje rozšířené styly, které budou přidány během úprav stylu.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Umístění okno příznaky. Seznam možných hodnot, najdete v článku [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkce v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1963,7 +1963,7 @@ Zobrazit [Modul OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipb
 
 Převede `CWindow` objekt popisovačem HWND.
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*  
+*hDC*<br/>
 [in] Popisovač kontextu zařízení.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Určuje možnosti vykreslování. Můžete kombinovat nejméně jeden z následujících příznaků:
 
 - PRF_CHECKVISIBLE nakreslete okna pouze v případě, že je viditelná.
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*  
+*hDC*<br/>
 [in] Popisovač kontextu zařízení.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Určuje možnosti vykreslování. Můžete kombinovat nejméně jeden z následujících příznaků:
 
 - PRF_CHECKVISIBLE nakreslete okna pouze v případě, že je viditelná.
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*  
+*nWidth*<br/>
 Nové šířku okna v pixelech.
 
-*nHeight*  
+*nHeight*<br/>
 Nové výšku okna v pixelech.
 
-*bRedraw*  
+*bRedraw*<br/>
 Příznak označující, zda překreslení změny. Výchozí hodnota je FALSE, oznamující, že v okně není ho překreslit změny.
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 [in] Zprávy k odeslání.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*bDeep*  
+*bDeep*<br/>
 [in] Při hodnotě TRUE (výchozí hodnota), se pošle zpráva do všech podřízených oken; v opačném případě se pošle jenom na okamžitý podřízená okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 [in] Nová hodnota pro identifikátor v okně nastavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hFont*  
+*hFont*<br/>
 [in] Popisovač pro nové písmo.
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Pokud hodnotu TRUE (výchozí hodnota), okno se překreslí. V opačném případě není.
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in] Virtuální kód klávesovou zkratku. Seznam kódů standardní virtuální klíče najdete v tématu winuser.
 
-*wModifiers*  
+*wModifiers*<br/>
 [in] Modifikátory klávesovou zkratku. Seznam možných hodnot najdete v tématu WM_SETHOTKEY v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*  
+*hIcon*<br/>
 [in] Popisovač na ikonu nový.
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Pokud hodnotu TRUE (výchozí hodnota), metoda nastaví velké ikony. Jinak nastaví malé ikony.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Určuje stav příznaku redraw. Pokud hodnotu TRUE (výchozí hodnota), je nastavený příznak redraw; Pokud má hodnotu FALSE, se vymaže příznak.
 
 ### <a name="remarks"></a>Poznámky

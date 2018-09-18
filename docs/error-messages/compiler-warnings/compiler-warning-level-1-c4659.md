@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4659 | Microsoft Docs
+title: Upozornění (úroveň 1) C4659 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643b599cd11d0935f1769ad37dca4e764f0418e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c54fa77d68722b2e47a9d49832911b398deca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110053"
 ---
-# <a name="compiler-warning-level-1-c4659"></a>C4659 kompilátoru upozornění (úroveň 1)
-\#Direktiva pragma '– Direktiva pragma': použití vyhrazené segment 'segmentu, má undefined chování, použijte komentář #pragma (linker,...)  
-  
- Možnost .drectve byl použit k předání možností linkeru. Místo toho použijte – Direktiva pragma [komentář](../../preprocessor/comment-c-cpp.md) pro předávání – možnost linkeru.  
-  
-```  
-// C4659.cpp  
-// compile with: /W1 /LD  
-#pragma code_seg(".drectve")   // C4659  
+# <a name="compiler-warning-level-1-c4659"></a>Kompilátor upozornění (úroveň 1) C4659
+
+\#pragma – direktiva "pragma": používání vyhrazeného segmentu 'segmentu' má nedefinované chování, použijte #pragma comment (linker,...)
+
+Možnost .drectve byla použita k předání možností do linkeru. Místo toho použít direktivu pragma [komentář](../../preprocessor/comment-c-cpp.md) pro předávání možností propojovacího programu.
+
+```
+// C4659.cpp
+// compile with: /W1 /LD
+#pragma code_seg(".drectve")   // C4659
 ```

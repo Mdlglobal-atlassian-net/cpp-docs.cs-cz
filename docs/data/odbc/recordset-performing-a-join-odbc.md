@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Provedení spojení (rozhraní ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Provedení spojení (rozhraní ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0be740a57f5c455b971dd23575401c666bf0723c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e033a300a023b3460fb27ced7cd4bae99ebd0b92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097884"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>Sada záznamů: Provedení spojení (rozhraní ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
 ## <a name="what-a-join-is"></a>Co je spojení  
- Operace spojení, běžné úlohy přístupu k datům, umožňuje pracovat s daty z více než jedné tabulky pomocí objektu jedné sady záznamů. Spojení dvou nebo více tabulek přinese sady záznamů, které může obsahovat sloupce z každé tabulky, ale zobrazí se jako jednu tabulku do vaší aplikace. Někdy spojení používá všechny sloupce ze všech tabulek, ale někdy SQL **vyberte** klauzule ve spojení se používá pouze některé sloupce z každé tabulky. Databázové třídy podporují jen pro čtení spojení, ale není možné spojení aktualizovat.  
+
+Operace spojení, přístup k datům běžném, vám umožní pracovat s daty z více než jedné tabulky pomocí objektu jedné sady záznamů. Spojování dvou nebo více tabulek vrací záznamů, který může obsahovat sloupce z tabulek spolu, ale zobrazí se jako jedné tabulky do vaší aplikace. Někdy spojení používá všechny sloupce všech tabulek, ale někdy SQL **vyberte** klauzule ve spojení se používá jenom některé sloupce z každé tabulky. Databázové třídy podporují jen pro čtení spojení, ale není možné aktualizovat spojení.  
   
- Chcete-li vybrat záznamy obsahující sloupce z spojené tabulky, je třeba následující položky:  
+Vyberte záznamy obsahující sloupce z tabulky připojené k doméně, potřebujete následující položky:  
   
--   Seznam tabulky obsahující názvy všech spojených tabulek.  
+- Tabulkový seznam obsahující názvy všech tabulek, které jsou připojené.  
   
--   Seznam sloupců, který obsahuje názvy všech zúčastněných sloupců. Sloupce se stejným názvem, ale z různých tabulek jsou kvalifikovaný název tabulky.  
+- Sloupec seznamu obsahujícího názvy všech zúčastněných sloupců. Sloupce se stejným názvem, ale z různých tabulek jsou kvalifikovány podle názvu tabulky.  
   
--   Filtr (SQL **kde** klauzule), který určuje sloupce, na kterých jsou spojeny tabulky. Tento filtr má podobu "Table1.KeyCol = Table2.KeyCol" a spojení.  
+- Filtr (SQL **kde** klauzule), který určuje sloupce, na kterých se propojují tabulky. Tento filtr má podobu "Table1.KeyCol = Table2.KeyCol" a spojení.  
   
- Srovnáním několika párů sloupců, každý pár připojí pomocí klíčového slova SQL můžete spojit více než dvě tabulky stejným způsobem **a**.  
+Stejným způsobem můžete spojit více než dvě tabulky srovnáním více párů sloupců, každý pár připojí pomocí klíčového slova SQL **a**.  
   
 ## <a name="see-also"></a>Viz také  
- [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+
+[Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Sada záznamů: Deklarace třídy předdefinovaného dotazu (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

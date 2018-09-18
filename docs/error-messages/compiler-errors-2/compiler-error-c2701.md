@@ -1,5 +1,5 @@
 ---
-title: C2701 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2701 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42529b3cd6e0fae7ff47ef47b60bc0a0acb42b53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671381cdd6ec7a9d2ed21fe194b7a123a114632b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107837"
 ---
-# <a name="compiler-error-c2701"></a>C2701 chyby kompilátoru
-'function': šablonu funkce nesmí být friend místní třídy  
-  
- Místní třídy nemůže mít jako funkce friend funkce šablony.  
-  
- Následující ukázka generuje C2701:  
-  
-```  
-// C2701.cpp  
-// compile with: /c  
-template<typename T>   // OK  
-void f1(const T &);  
-  
-void MyFunction() {  
-   class MyClass {  
-      template<typename T> friend void f2(const T &);   // C2701  
-   };  
-}  
+# <a name="compiler-error-c2701"></a>Chyba kompilátoru C2701
+
+'function': Šablona funkcí nemůže být funkce friend lokální třídy
+
+Místní třída nemůže mít šablony funkce jako spřátelená funkce.
+
+Následující ukázka generuje C2701:
+
+```
+// C2701.cpp
+// compile with: /c
+template<typename T>   // OK
+void f1(const T &);
+
+void MyFunction() {
+   class MyClass {
+      template<typename T> friend void f2(const T &);   // C2701
+   };
+}
 ```

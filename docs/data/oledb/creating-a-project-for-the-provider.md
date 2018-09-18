@@ -17,29 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 573cfdf3abda8f8190ceb7bca447e40130ea8610
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103318"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Vytvoření projektu pro zprostředkovatele
+
 ### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Chcete-li vytvořit projekt, ve kterém se bude nacházet zprostředkovatele OLE DB  
   
-1.  Z **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
+1. Z **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
      **Nový projekt** zobrazí se dialogové okno.  
   
-2.  V podokně typy projektů klikněte na složku projekty Visual C++. V podokně šablon, klikněte na tlačítko **projekt knihovny ATL**.  
+1. V podokně typy projektů klikněte na složku projekty Visual C++. V podokně šablon, klikněte na tlačítko **projekt knihovny ATL**.  
   
-3.  V **název** pole, zadejte název projektu a pak klikněte na tlačítko **OK**.  
+1. V **název** pole, zadejte název projektu a pak klikněte na tlačítko **OK**.  
   
      Zobrazí se Průvodce projektem ATL.  
   
-4.  V Průvodci projektem ATL, zvolte **dynamická knihovna (DLL)** pro **typ serveru**.  
+1. V Průvodci projektem ATL, zvolte **dynamická knihovna (DLL)** pro **typ serveru**.  
   
-5.  Klikněte na tlačítko **Dokončit**.  
+1. Klikněte na tlačítko **Dokončit**.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

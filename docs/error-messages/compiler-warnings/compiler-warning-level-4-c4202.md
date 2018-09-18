@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4202 | Microsoft Docs
+title: Upozornění (úroveň 4) C4202 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea55835c75a0ac1d5646a542675eefa2c5e5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fd44b436369e908d471ff56d193f3afab97a769
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103305"
 ---
-# <a name="compiler-warning-level-4-c4202"></a>C4202 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: ""...": Parametr prototypu v seznamu neplatný název  
-  
- Definici funkce starého obsahuje proměnné argumenty. Tyto definice k chybě v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4202.c  
-// compile with: /W4  
-void func( a, b, ...)   // C4202  
-int a, b;  
-{}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4202"></a>Kompilátor upozornění (úroveň 4) C4202
+
+používá se nestandardní rozšíření: '...': Parametr prototype v seznamu názvů je neplatný
+
+Definice funkcí starého typu obsahuje argumenty proměnných. Tyto definice vygenerují chybu podle kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Příklad
+
+```
+// C4202.c
+// compile with: /W4
+void func( a, b, ...)   // C4202
+int a, b;
+{}
+
+int main()
+{
+}
 ```

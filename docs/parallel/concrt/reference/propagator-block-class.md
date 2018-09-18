@@ -1,5 +1,5 @@
 ---
-title: propagator_block – třída | Microsoft Docs
+title: propagator_block – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8423985b1c6b7497d332e792af2f6bf67a4a0bbe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110286"
 ---
 # <a name="propagatorblock-class"></a>propagator_block – třída
-`propagator_block` Třída je abstraktní základní třídu pro bloky zpráv, které jsou zdrojovém i cílovém. Kombinuje funkci i `source_block` a `target_block` třídy.  
+`propagator_block` Třída je abstraktní základní třída pro bloky zpráv, které jsou zdrojovém i cílovém. Kombinuje funkce i `source_block` a `target_block` třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,61 +50,61 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_TargetLinkRegistry`  
- Odkaz registru který se má použít pro uložení cílové odkazy.  
+*_TargetLinkRegistry*<br/>
+Odkaz registru, který má být použit pro obsahující cílové odkazy.  
   
- `_SourceLinkRegistry`  
- Odkaz registru který se má použít pro uložení zdroje odkazy.  
+*_SourceLinkRegistry*<br/>
+Odkaz registru se použije pro uchování odkazy zdroje.  
   
- `_MessageProcessorType`  
- Typ procesoru pro zpracování zprávy.  
+*_MessageProcessorType*<br/>
+Typ procesoru pro zpracování zpráv.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`source_iterator`|Typ iterator pro `source_link_manager` pro tento `propagator_block`.|  
+|`source_iterator`|Typ iterátoru pro `source_link_manager` to `propagator_block`.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[propagator_block](#ctor)|Vytvoří `propagator_block` objektu.|  
-|[~propagator_block Destructor](#dtor)|Zničí `propagator_block` objektu.|  
+|[~propagator_block Destructor](#dtor)|Odstraní `propagator_block` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[propagate](#propagate)|Asynchronně předá zprávu z bloku zdroj tento cílový blok.|  
-|[Odeslat](#send)|Synchronně zahájí zprávu, která tento blok. Voláno rozhraním `ISource` bloku. Po dokončení této funkce bude mít zpráva již rozšíří do bloku.|  
+|[propagate](#propagate)|Asynchronně předává zprávy z zdrojový blok pro tento cílový blok.|  
+|[Odeslat](#send)|Inicializuje synchronně zprávy do tohoto bloku. Volané `ISource` bloku. Po dokončení této funkce bude zpráva již rozšíření do bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[decline_incoming_messages –](#decline_incoming_messages)|Označuje do bloku, musí být odmítnuta nové zprávy.|  
-|[initialize_source_and_target –](#initialize_source_and_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializován.|  
-|[link_source –](#link_source)|Blok zadaný zdroj odkazuje na tato `propagator_block` objektu.|  
-|[process_input_messages](#process_input_messages)|Zpracování vstupu zpráv. To je vhodné pro Šiřitel bloků, které jsou odvozeny od source_block (přepíše [source_block::process_input_messages –](source-block-class.md#process_input_messages).)|  
-|[propagate_message](#propagate_message)|Při přepisu v odvozené třídě, tato metoda asynchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[register_filter –](#register_filter)|Zaregistruje metodu filtru, která bude volána pro všechny přijaté zprávy.|  
+|[decline_incoming_messages –](#decline_incoming_messages)|Na blok označuje, že by měl odmítnuty nové zprávy.|  
+|[initialize_source_and_target –](#initialize_source_and_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializována.|  
+|[link_source –](#link_source)|Odkazuje na tento blok zadaný zdroj `propagator_block` objektu.|  
+|[process_input_messages](#process_input_messages)|Zprávy o zadávání procesu. Tím se zajistí Šiřitel bloků, které jsou odvozeny z source_block – (přepíše [source_block::process_input_messages –](source-block-class.md#process_input_messages).)|  
+|[propagate_message](#propagate_message)|Při přepisu v odvozené třídě, tato metoda asynchronně předává zprávy ze `ISource` bloku k tomuto `propagator_block` objektu. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|  
+|[register_filter –](#register_filter)|Zaregistruje filtr metodu, která se vyvolá u každé přijaté zprávy.|  
 |[remove_network_links](#remove_network_links)|Odebere všechny zdrojové a cílové sítě odkazy z tohoto `propagator_block` objektu.|  
-|[send_message –](#send_message)|Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[unlink_source](#unlink_source)|Zruší propojení blok zadaného zdroje. z tohoto `propagator_block` objektu.|  
-|[unlink_sources –](#unlink_sources)|Zruší všechny bloky zdroje z tohoto propojení `propagator_block` objektu. (Přepisuje [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
+|[send_message](#send_message)|Při přepisu v odvozené třídě, tato metoda synchronně předává zprávy ze `ISource` bloku k tomuto `propagator_block` objektu. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|  
+|[unlink_source](#unlink_source)|Zruší se propojení z tohoto bloku zadaný zdrojový `propagator_block` objektu.|  
+|[unlink_sources –](#unlink_sources)|Zruší všechny zdrojové bloky z tohoto propojení `propagator_block` objektu. (Přepíše [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
   
 ## <a name="remarks"></a>Poznámky  
- Aby se zabránilo vícenásobná dědičnost `propagator_block` třída dědí z `source_block` – třída a `ITarget` abstraktní třídy. Většina funkcí v `target_block` třídy se replikují sem.  
+ Aby se zabránilo vícenásobné dědičnosti `propagator_block` třída dědí z `source_block` třídy a `ITarget` abstraktní třídy. Většina funkcí portálu `target_block` tříd replikovány tady.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [ISource](isource-class.md)  
+ [Isource –](isource-class.md)  
   
- [ITarget](itarget-class.md)  
+ [Itarget –](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block –](source-block-class.md)  
   
  `propagator_block`  
   
@@ -115,18 +115,18 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 ##  <a name="decline_incoming_messages"></a> decline_incoming_messages – 
 
- Označuje do bloku, musí být odmítnuta nové zprávy.  
+ Na blok označuje, že by měl odmítnuty nové zprávy.  
   
 ```
 void decline_incoming_messages();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána destruktor zajistit nové zprávy jsou odmítnuta, když probíhá odstraňování.  
+ Tato metoda je volán destruktor zajistit, že nové zprávy jsou odmítnuta, Probíhá odstraňování.  
   
 ##  <a name="initialize_source_and_target"></a> initialize_source_and_target – 
 
- Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializován.  
+ Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializována.  
   
 ```
 void initialize_source_and_target(
@@ -135,38 +135,39 @@ void initialize_source_and_target(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PScheduler`  
- Plánovač má být použit pro plánování úloh.  
+*_PScheduler*<br/>
+Plánovač má být použit pro plánování úloh.  
   
- `_PScheduleGroup`  
- Skupina plán má být použit pro plánování úloh.  
+*_PScheduleGroup*<br/>
+Plánu skupiny, která má být použit pro plánování úloh.  
   
 ##  <a name="link_source"></a> link_source – 
 
- Blok zadaný zdroj odkazuje na tato `propagator_block` objektu.  
+ Odkazuje na tento blok zadaný zdroj `propagator_block` objektu.  
   
 ```
 virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PSource`  
- Ukazatel `ISource` blok, který má být propojena.  
+*_PSource*<br/>
+Ukazatel `ISource` blok, který je spojen.  
   
 ##  <a name="process_input_messages"></a> process_input_messages – 
 
- Zpracování vstupu zpráv. To je vhodné pro Šiřitel bloků, které jsou odvozeny od source_block  
+ Zprávy o zadávání procesu. Tím se zajistí Šiřitel bloků, které jsou odvozeny z source_block –  
   
 ```
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
+*_PMessage*<br/>
+Ukazatel na zprávu, která má být zpracována.  
   
 ##  <a name="propagate"></a> rozšíření 
 
- Asynchronně předá zprávu z bloku zdroj tento cílový blok.  
+ Asynchronně předává zprávy z zdrojový blok pro tento cílový blok.  
   
 ```
 virtual message_status propagate(
@@ -175,23 +176,23 @@ virtual message_status propagate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel `message` objektu.  
+*_PMessage*<br/>
+Ukazatel `message` objektu.  
   
- `_PSource`  
- Ukazatele na blok zdroje nabídky zprávy.  
+*_PSource*<br/>
+Ukazatele na blok zdroje nabídky zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- `propagate` Metoda je volána, cílový blok podle blok propojený zdroj. Se zařadí do fronty asynchronní úlohu pro zpracování zprávy, pokud už jedna není ve frontě nebo provádění.  
+ `propagate` Vyvolání metody na cílový blok blokem propojený zdroj. Zařadí do fronty je asynchronní úloha pro zpracování zpráv, pokud jeden není již ve frontě nebo provádění.  
   
- Vyvolá metoda [invalid_argument](../../../standard-library/invalid-argument-class.md) Pokud buď `_PMessage` nebo `_PSource` parametr `NULL`.  
+ Metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimku, pokud buď `_PMessage` nebo `_PSource` parametr je `NULL`.  
   
-##  <a name="propagate_message"></a> propagate_message – 
+##  <a name="propagate_message"></a> propagate_message 
 
- Při přepisu v odvozené třídě, tato metoda asynchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `propagate` metoda, když volá blok zdroje.  
+ Při přepisu v odvozené třídě, tato metoda asynchronně předává zprávy ze `ISource` bloku k tomuto `propagator_block` objektu. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.  
   
 ```
 virtual message_status propagate_message(
@@ -200,16 +201,16 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel `message` objektu.  
+*_PMessage*<br/>
+Ukazatel `message` objektu.  
   
- `_PSource`  
- Ukazatele na blok zdroje nabídky zprávy.  
+*_PSource*<br/>
+Ukazatele na blok zdroje nabídky zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
-##  <a name="ctor"></a> propagator_block 
+##  <a name="ctor"></a> propagator_block – 
 
  Vytvoří `propagator_block` objektu.  
   
@@ -217,9 +218,9 @@ virtual message_status propagate_message(
 propagator_block();
 ```  
   
-##  <a name="dtor"></a> ~ propagator_block 
+##  <a name="dtor"></a> ~ propagator_block – 
 
- Zničí `propagator_block` objektu.  
+ Odstraní `propagator_block` objektu.  
   
 ```
 virtual ~propagator_block();
@@ -227,15 +228,15 @@ virtual ~propagator_block();
   
 ##  <a name="register_filter"></a> register_filter – 
 
- Zaregistruje metodu filtru, která bude volána pro všechny přijaté zprávy.  
+ Zaregistruje filtr metodu, která se vyvolá u každé přijaté zprávy.  
   
 ```
 void register_filter(filter_method const& _Filter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Filter`  
- Metoda filtru.  
+*_Filtrovat*<br/>
+Metoda filtru.  
   
 ##  <a name="remove_network_links"></a> remove_network_links – 
 
@@ -247,7 +248,7 @@ void remove_network_links();
   
 ##  <a name="send"></a> Odeslat 
 
- Synchronně zahájí zprávu, která tento blok. Voláno rozhraním `ISource` bloku. Po dokončení této funkce bude mít zpráva již rozšíří do bloku.  
+ Inicializuje synchronně zprávy do tohoto bloku. Volané `ISource` bloku. Po dokončení této funkce bude zpráva již rozšíření do bloku.  
   
 ```
 virtual message_status send(
@@ -256,21 +257,21 @@ virtual message_status send(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Ukazatel `message` objektu.  
+*_PMessage*<br/>
+Ukazatel `message` objektu.  
   
- `_PSource`  
- Ukazatele na blok zdroje nabídky zprávy.  
+*_PSource*<br/>
+Ukazatele na blok zdroje nabídky zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) Pokud buď `_PMessage` nebo `_PSource` parametr `NULL`.  
+ Tato metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimku, pokud `_PMessage` nebo `_PSource` parametr je `NULL`.  
   
-##  <a name="send_message"></a> send_message – 
+##  <a name="send_message"></a> send_message 
 
- Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.  
+ Při přepisu v odvozené třídě, tato metoda synchronně předává zprávy ze `ISource` bloku k tomuto `propagator_block` objektu. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.  
   
 ```
 virtual message_status send_message(
@@ -279,32 +280,32 @@ virtual message_status send_message(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
+ A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, tento blok vrátí `declined` přepsána odvozenou třídou.  
+ Ve výchozím nastavení, vrátí tento blok `declined` přepsána odvozenou třídou.  
   
 ##  <a name="unlink_source"></a> unlink_source – 
 
- Zruší propojení blok zadaného zdroje. z tohoto `propagator_block` objektu.  
+ Zruší se propojení z tohoto bloku zadaný zdrojový `propagator_block` objektu.  
   
 ```
 virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PSource`  
- Ukazatel `ISource` blok, který se má odpojit.  
+*_PSource*<br/>
+Ukazatel `ISource` blok, který se má odpojit.  
   
 ##  <a name="unlink_sources"></a> unlink_sources – 
 
- Zruší všechny bloky zdroje z tohoto propojení `propagator_block` objektu.  
+ Zruší všechny zdrojové bloky z tohoto propojení `propagator_block` objektu.  
   
 ```
 virtual void unlink_sources();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [source_block – třída](source-block-class.md)   
  [ITarget – třída](itarget-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Povolení a zákaz služeb OLE DB | Microsoft Docs
+title: Povolení a zákaz služeb OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 785997cafec76bfa438382ace6930d53c31c4dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6edd507edc21d58d17435b1d31d918a965db624a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100731"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Povolení a zákaz služeb OLE DB
-OLE DB služby Component Manager porovná zadány uživatelem těm, které jsou podporované poskytovatelem k určení, jestli jednotlivé komponenty služby může být volána pro uspokojení rozšířené funkce požadoval příjemce vlastnosti. Například pokud aplikace požaduje posuvný kurzor a poskytovatel podporuje jen dopředné kurzoru, že správce součástí služby vyvolá součást služby klientský kurzor stroj pro poskytnutí posuvného. Pokud se aplikace spoléhá na rozšířené funkce podporované ve výchozím nastavení v sadě řádků zprostředkovatele a aplikace explicitně nenastaví vlastností do žádosti o funkce, funkce nemusí zobrazit v sada řádků vrácená klientem Modul kurzoru. Být umožňuje vzájemnou spolupráci, musí aplikace vždy nastavená vlastností explicitní žádost o rozšířené funkce tam, kde je potřeba.  
+
+OLE DB služby Component Manager porovná vlastnosti určené spotřebitele, které jsou podporovány poskytovatelem k určení, zda mohou být volány jednotlivé komponenty služby, tím se uspokojí rozšířené funkce požadoval uživatel. Například pokud aplikace požaduje posuvný kurzoru a zprostředkovatel podporuje pouze dopředné kurzor, služba Component Manager vyvolá komponentu služby klientský kurzor stroj posuvný nakonfigurovánu. Pokud aplikace se spoléhá na rozšířené funkce podporované ve výchozím nastavení pro poskytovatele řádků a aplikace není nastaveno explicitně vlastnosti, které chcete požádat o funkce, funkce nemusí zobrazit v dané sadě řádků vrácených klienta Modul kurzoru. Pokud chcete interoperabilní, by měla aplikace vždy nastavit vlastnosti explicitní žádost o rozšířené funkce místech.  
   
- V některých případech může být potřeba zakázat jednotlivé služby rozhraní OLE DB pro práci s existující aplikacemi, které počítají týkající se vlastností poskytovatele. Služby rozhraní OLE DB zadejte možnost zakázat některé nebo všechny služby, na základě připojení připojení nebo pro všechny aplikace pomocí jednoho zprostředkovatele.  
+V některých případech může být potřeba zakázat jednotlivých služeb OLE DB pro práci i se stávajícími aplikacemi, které počítají informace o vlastnosti zprostředkovatele. Služby rozhraní OLE DB poskytují možnost zakázat jednotlivé služby nebo všech služeb, a to na základě připojení pomocí připojení nebo pro všechny aplikace pomocí jednoho zprostředkovatele.  
   
 ## <a name="see-also"></a>Viz také  
- [Sdružování prostředků OLE DB a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+[Sdružování prostředků OLE DB a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)

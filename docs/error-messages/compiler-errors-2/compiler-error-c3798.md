@@ -1,5 +1,5 @@
 ---
-title: C3798 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3798 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da4ca81f2110ff1f76fdc9d0377234087a532017
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 217aa46cdd643361fed16f8a69de7f8ec75214fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099836"
 ---
-# <a name="compiler-error-c3798"></a>C3798 chyby kompilátoru
-'specifikátor': deklarace vlastnosti nemůže mít specifikátor override (musí být umístěny na vlastnost metody get/set místo)  
-  
- Vlastnost byla deklarována nesprávně. Další informace naleznete v tématu  
-  
--   [property](../../windows/property-cpp-component-extensions.md)  
-  
--   [abstract](../../windows/abstract-cpp-component-extensions.md)  
-  
--   [sealed](../../windows/sealed-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3798  
-  
-```  
-// C3798.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   property int Prop_1 abstract;   // C3798  
-   property int Prop_2 sealed;   // C3798  
-  
-   // OK  
-   property int Prop_3 {  
-      virtual int get() abstract;  
-      virtual void set(int i) abstract;  
-   }  
-  
-   property int Prop_4 {  
-      virtual int get() sealed;  
-      virtual void set(int i) sealed;  
-   }  
-};  
+# <a name="compiler-error-c3798"></a>Chyba kompilátoru C3798
+
+"specifikátor": deklarace vlastnosti nemůže mít specifikátor přepsání (měl umístit pro metody get/set místo toho vlastnost)
+
+Vlastnost byl deklarován nesprávně. Další informace naleznete v tématu
+
+- [property](../../windows/property-cpp-component-extensions.md)
+
+- [abstract](../../windows/abstract-cpp-component-extensions.md)
+
+- [sealed](../../windows/sealed-cpp-component-extensions.md)
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3798
+
+```
+// C3798.cpp
+// compile with: /clr /c
+ref struct A {
+   property int Prop_1 abstract;   // C3798
+   property int Prop_2 sealed;   // C3798
+
+   // OK
+   property int Prop_3 {
+      virtual int get() abstract;
+      virtual void set(int i) abstract;
+   }
+
+   property int Prop_4 {
+      virtual int get() sealed;
+      virtual void set(int i) sealed;
+   }
+};
 ```

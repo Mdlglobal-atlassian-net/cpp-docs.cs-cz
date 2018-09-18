@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4297 | Microsoft Docs
+title: Upozornění (úroveň 1) C4297 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2c37f82b646902d08c8fc2ce633948969d0755f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f615df5933cfc93918b05758f042c8cf47aa92f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099431"
 ---
-# <a name="compiler-warning-level-1-c4297"></a>C4297 kompilátoru upozornění (úroveň 1)
-'function': funkce předpokládá, že není však výjimku  
-  
- (Pravděpodobně implicitní) obsahuje deklaraci funkce `noexcept` specifikátor, prázdnou `throw` specifikátor výjimky nebo [__declspec(nothrow)](../../cpp/nothrow-cpp.md) atribut a definice obsahuje jeden nebo více [throw ](../../cpp/try-throw-and-catch-statements-cpp.md) příkazy. Chcete-li vyřešit C4297, nepokoušejte se generování výjimek ve funkcích, které jsou deklarovány `__declspec(nothrow)`, `noexcept(true)` nebo `throw()`. Případně odebrat `noexcept`, `throw()`, nebo `__declspec(nothrow)` specifikace.  
-  
- Ve výchozím nastavení, kompilátor vygeneruje implicitní `noexcept(true)` specifikátory pro uživatelem definované destruktory a deallocator funkce generované kompilátorem speciální členské funkce. To je v souladu s bitovou kopií ISO C ++ 11 standardní. Chcete-li zabránit generování specifikátory implicitních noexcept a obnovit kompilátoru nestandardní chování Visual Studio 2013, použijte **/Zc:implicitNoexcept-** – možnost kompilátoru. Další informace najdete v tématu [/Zc: implicitnoexcept (specifikátory implicitních výjimek)](../../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md).  
-  
- Další informace o specifikace výjimek najdete v tématu [specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md). Další informace naleznete v [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) informace o tom, jak změnit chování při kompilaci zpracování výjimek.  
-  
- Toto upozornění je také vygenerované __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funkce označeny extern "C", i když jsou funkcí jazyka C++.  
-  
- Následující ukázka generuje C4297:  
-  
-```  
-// C4297.cpp  
-// compile with: /W1 /LD  
-void __declspec(nothrow) f1()   // declared nothrow  
-// try the following line instead  
-// void f1()  
-{  
-   throw 1;   // C4297  
-}  
+# <a name="compiler-warning-level-1-c4297"></a>Kompilátor upozornění (úroveň 1) C4297
+
+'function': funkce předpokládá, že nechcete vytvořit výjimku, ale neobsahuje
+
+Obsahuje deklarace funkce (možná implicitně) `noexcept` specifikátor, prázdná `throw` specifikátor výjimky nebo [__declspec(nothrow)](../../cpp/nothrow-cpp.md) atribut a definice obsahuje jeden nebo více [throw ](../../cpp/try-throw-and-catch-statements-cpp.md) příkazy. Chcete-li vyřešit C4297, nepokoušejte se vyvolat výjimky ve funkcích, které jsou deklarovány `__declspec(nothrow)`, `noexcept(true)` nebo `throw()`. Odebrat také, `noexcept`, `throw()`, nebo `__declspec(nothrow)` specifikace.
+
+Ve výchozím nastavení, kompilátor vygeneruje implicitní `noexcept(true)` specifikátory pro destruktory a funkce dealokátor a kompilátorem generované zvláštní členské funkce. To odpovídá ISO standardu C ++ 11. Chcete-li zabránit generace operaci implicit noexcept specifikátorů a obnovit kompilátor nestandardní chování sady Visual Studio 2013, použijte **/Zc:implicitNoexcept-** – možnost kompilátoru. Další informace najdete v tématu [/Zc: implicitnoexcept (specifikátory implicitních výjimek)](../../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md).
+
+Další informace o specifikacích výjimek naleznete v tématu [specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md). Viz také [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) informace o tom, jak změnit chování v době kompilace zpracování výjimek.
+
+Toto upozornění je také generovány pro __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funkce označené extern "C", i když jsou funkce jazyka C++.
+
+Následující ukázka generuje C4297:
+
+```
+// C4297.cpp
+// compile with: /W1 /LD
+void __declspec(nothrow) f1()   // declared nothrow
+// try the following line instead
+// void f1()
+{
+   throw 1;   // C4297
+}
 ```

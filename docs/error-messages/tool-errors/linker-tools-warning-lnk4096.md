@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4096 | Microsoft Docs
+title: Upozornění Linkerů LNK4096 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6dedf18989341df82cacfde14f358c778d141e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264bbff052be7b37af1525392ffe0289fddef6d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104086"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Upozornění linkerů LNK4096
-/ BASE hodnota "číslo" je neplatná. pro systém Windows 95 a Windows 98; bitová kopie nemusí fungovat.  
-  
- Základní adresu, kterou jste zadali, je neplatný. Systém Windows 95 a Windows 98 spustitelné soubory musí mít větší než 0x400000 základní adresu. Další informace o základní adresy najdete v tématu [/základní](../../build/reference/base-base-address.md) – možnost linkeru.
+
+/ BASE hodnota "cislo" není platná pro Windows 95 a Windows 98; bitové kopie se možná nespustí.
+
+Základní adresa, kterou jste zadali, je neplatný. Windows 95 a Windows 98 spustitelné soubory musí mít základní adresu vyšší než 0x400000. Další informace o základní adresy, najdete v článku [/základní](../../build/reference/base-base-address.md) – možnost linkeru.

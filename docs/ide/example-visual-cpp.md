@@ -1,5 +1,5 @@
 ---
-title: '&lt;Příklad&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Příklad&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110962"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;Příklad&gt; (Visual C++)
-\<Příklad > značka umožňuje určit příklad použití metody nebo jiné knihovny člen. Běžně, to by také zahrnovat použití [ \<kód >](../ide/code-visual-cpp.md) značky.  
+\<Příklad > značky vám umožní určit příklad použití metody nebo jiný člen knihovny. Obvykle to by také zahrnovat použití [ \<kód >](../ide/code-visual-cpp.md) značky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,8 @@ ms.locfileid: "33321428"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Popis ukázka kódu.  
+*Popis*<br/>
+Popis ukázky kódu.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  

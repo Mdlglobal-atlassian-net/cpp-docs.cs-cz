@@ -1,5 +1,5 @@
 ---
-title: C3640 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3640 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ec2e22033ea4cc1b475ab1f838bb77d96916e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f032f96d4e7af48ad98a75f2bf62058121f135d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109194"
 ---
-# <a name="compiler-error-c3640"></a>C3640 chyby kompilátoru
-"člen": odkazované nebo virtuální členské funkce místní třídy musí být definován.  
-  
- Kompilátor vyžaduje určité funkce, aby byla definována.  
-  
- Následující ukázka generuje C3640:  
-  
-```  
-// C3640.cpp  
-void f()   
-{  
-   struct S  
-   {  
-      virtual void f1();   // C3640  
-      // Try the following line instead:  
-      // virtual void f1(){}  
-   };  
-}  
+# <a name="compiler-error-c3640"></a>Chyba kompilátoru C3640
+
+'member': musí být definována odkazovaná nebo virtuální členská funkce lokální třídy
+
+Kompilátor, vyžaduje určité funkce, aby byla definována.
+
+Následující ukázka generuje C3640:
+
+```
+// C3640.cpp
+void f()
+{
+   struct S
+   {
+      virtual void f1();   // C3640
+      // Try the following line instead:
+      // virtual void f1(){}
+   };
+}
 ```

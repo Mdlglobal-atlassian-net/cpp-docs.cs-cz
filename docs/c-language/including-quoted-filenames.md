@@ -1,5 +1,5 @@
 ---
-title: Včetně názvů souboru v uvozovkách | Microsoft Docs
+title: Včetně názvů souboru v uvozovkách | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f6afbc503b52d1ef620050bf5592eb84e75fa9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3e865df95d92dcad6b414da11677b5212e9a9f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109935"
 ---
 # <a name="including-quoted-filenames"></a>Zahrnutí názvů souboru v uvozovkách
-**ANSI 3.8.2** podporu uvozovkách názvy pro includable zdrojové soubory  
-  
- Pokud zadáte jednoznačnou kompletní specifikaci cesty k souboru zahrnutí mezi dvě sady dvojitých uvozovek (" "), preprocesor prohledá pouze specifikaci cesty a ignoruje standardní adresáře.  
-  
- Pro zadané jako soubory zahrnout [#include](../preprocessor/hash-include-directive-c-cpp.md) "cesta specifikace", adresář hledání začíná adresáře nadřazeném souboru a potom pokračuje prostřednictvím adresáře všechny soubory nadřazený. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdrojový soubor, který se právě zpracovává. Pokud není dostupný žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání bude pokračovat, jako kdyby měla název souboru uzavřené v lomených závorkách.  
-  
-## <a name="see-also"></a>Viz také  
- [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.2** podpora pro názvy v uvozovkách u zahrnutelných zdrojových souborů
+
+Pokud zadáte jednoznačnou kompletní specifikaci cesty k souboru zahrnutí mezi dvě sady dvojitých uvozovek (" "), preprocesor prohledá pouze specifikaci cesty a ignoruje standardní adresáře.
+
+Při zahrnutí souborů zadaných jako [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec" hledání začne s adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdrojový soubor, který se právě zpracovává. Pokud není žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání pokračuje, jako by název souboru byl uzavřen do lomených závorek.
+
+## <a name="see-also"></a>Viz také
+
+[Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

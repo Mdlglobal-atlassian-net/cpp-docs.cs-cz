@@ -1,5 +1,5 @@
 ---
-title: C2665 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2665 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18cc99d6ea0a45e7c096a13cfe57dc841ca351bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b442e1de0481ef3d00742ed201575526332decff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109142"
 ---
-# <a name="compiler-error-c2665"></a>C2665 chyby kompilátoru
-'function': Parametr číslo2 žádné přetížení Číslo1 můžete převést z typu "typ"  
-  
- Parametr přetížené funkce nelze převést na požadovaný typ.  Možná řešení:  
-  
--   Zadejte operátora převodu.  
-  
--   Použijte explicitní převod.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2665.  
-  
-```  
-// C2665.cpp  
-void func(short, char*){}  
-void func(char*, char*){}  
-  
-int main() {  
-   func(0, 1);   // C2665  
-   func((short)0, (char*)1);   // OK  
-}  
+# <a name="compiler-error-c2665"></a>Chyba kompilátoru C2665
+
+'function': Parametr číslo2 žádná přetížení Číslo1 lze převést z typu 'type'
+
+Parametr přetížené funkce nelze převést na požadovaný typ.  Možná řešení:
+
+- Zadejte operátor převodu.
+
+- Použijte explicitní převod.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2665.
+
+```
+// C2665.cpp
+void func(short, char*){}
+void func(char*, char*){}
+
+int main() {
+   func(0, 1);   // C2665
+   func((short)0, (char*)1);   // OK
+}
 ```

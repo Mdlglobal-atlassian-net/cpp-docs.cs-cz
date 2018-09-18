@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100601"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel – třída
 
@@ -99,7 +99,7 @@ Kromě `AutoCriticalSection`, můžete použít **typedef** název [criticalsect
 
 Následující kód je Modelováno podle [CComObjectRootEx](ccomobjectrootex-class.md)a ukazuje `AutoCriticalSection` používá v prostředí vláken.
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Ukazatel na proměnnou chcete snížit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Ukazatel na proměnnou se zvýší.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -233,7 +233,7 @@ Zobrazit [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ## <a name="see-also"></a>Viz také
 
-[CComSingleThreadModel – třída](ccomsinglethreadmodel-class.md)   
-[Ccomautocriticalsection – třída](ccomautocriticalsection-class.md)   
-[Ccomautocriticalsection – třída](ccomcriticalsection-class.md)   
+[CComSingleThreadModel – třída](ccomsinglethreadmodel-class.md)<br/>
+[CComAutoCriticalSection – třída](ccomautocriticalsection-class.md)<br/>
+[CComAutoCriticalSection – třída](ccomcriticalsection-class.md)<br/>
 [Přehled tříd](../atl-class-overview.md)

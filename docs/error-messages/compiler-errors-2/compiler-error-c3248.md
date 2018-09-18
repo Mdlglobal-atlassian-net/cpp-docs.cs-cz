@@ -1,5 +1,5 @@
 ---
-title: C3248 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3248 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88a11f9d85d3e4885fd7c4aacf6d71b00a3e32ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b273f116c473b73a0cf3e9a5f2184d4dfbf89bd9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251776"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109740"
 ---
-# <a name="compiler-error-c3248"></a>C3248 chyby kompilátoru
-"function1": "funkce2" nelze přepsat deklarován jako __sealed – funkce  
-  
-Odvozené třídy pokusil přepsat **__sealed** virtuální metoda.  
-  
-C3248 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3248"></a>Chyba kompilátoru C3248
+
+"function1": 'function2' nemůže přepsat funkci deklarovanou jako __sealed
+
+Odvozené třídy se pokusila o přepsání **__sealed** virtuální metody.
+
+C3248 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

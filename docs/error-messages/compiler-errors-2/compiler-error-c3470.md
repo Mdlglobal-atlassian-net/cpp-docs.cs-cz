@@ -1,5 +1,5 @@
 ---
-title: C3470 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3470 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa84934a4f2b072bcc55f325e69549718897aec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e9d09e421b7a38a99f70f0ee8fa158127787cae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107536"
 ---
-# <a name="compiler-error-c3470"></a>C3470 chyby kompilátoru
-'type': třída nemůže mít obě indexer (Výchozí indexované vlastnosti) a [] – operátor  
-  
- Typ nelze definovat výchozí indexeru a [] – operátor.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3470  
-  
-```  
-// C3470.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class R {  
-public:  
-   property int default[int] {  
-      int get(int i) {  
-         return i+1;  
-      }  
-   }  
-  
-   int operator[](String^ s) { return Convert::ToInt32(s); }   // C3470  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   // return r[9] + r["32"] - 42;  
-}  
+# <a name="compiler-error-c3470"></a>Chyba kompilátoru C3470
+
+'type': třída nemůže mít jak indexer (výchozí indexovanou vlastnost) a taky operator]
+
+Typ nejde definovat jak výchozímu indexeru tak taky operator [].
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3470
+
+```
+// C3470.cpp
+// compile with: /clr
+using namespace System;
+
+ref class R {
+public:
+   property int default[int] {
+      int get(int i) {
+         return i+1;
+      }
+   }
+
+   int operator[](String^ s) { return Convert::ToInt32(s); }   // C3470
+};
+
+int main() {
+   R ^ r = gcnew R;
+   // return r[9] + r["32"] - 42;
+}
 ```

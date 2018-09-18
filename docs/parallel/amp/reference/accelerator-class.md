@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106765"
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 Akcelerátor je funkce hardwaru, která je optimalizovaná pro paralelní výpočty. Akcelerátor může být zařízení připojené k sběrnici PCIe (například GPU), nebo může být rozšířená instrukční sada v hlavním CPU.  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Device_path`  
- Cesta fyzického zařízení.  
+*_Device_path*<br/>
+Cesta fyzického zařízení.  
   
- `_Other`  
- Akcelerátor, který má kopírovat.  
+*Ji_né*<br/>
+Akcelerátor, který má kopírovat.  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator – 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `qmode`  
- Režim zařazování do fronty.  
+*qmode*<br/>
+Režim zařazování do fronty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nový `accelerator_view` objektu na tomto akcelerátoru, pomocí zadané režim zařazování do fronty.  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Objekt k porovnání s touto položkou.  
+*Ji_né*<br/>
+`accelerator` Objekt k porovnání s touto položkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `false` Pokud dvě `accelerator` jsou objekty stejné; jinak `true`.  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Objektu, který chcete kopírovat.  
+*Ji_né*<br/>
+`accelerator` Objektu, který chcete kopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na tento `accelerator` objektu.  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Objekt k porovnání s touto položkou.  
+*Ji_né*<br/>
+`accelerator` Objekt k porovnání s touto položkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud druhá `accelerator` objekt je stejné jako to `accelerator` objektu; v opačném případě `false`.  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Path`  
- Cesta k akcelerátoru.  
+*Cesta z_pětného*<br/>
+Cesta k akcelerátoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je volání úspěšné při nastavování výchozího akcelerátoru. V opačném případě `false`.  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Default_cpu_access_type`  
- Výchozí access_type procesoru pro přidělení paměti pro array/array_view na tomto akcelerátoru.  
+*_Default_cpu_access_type*<br/>
+Výchozí access_type procesoru pro přidělení paměti pro array/array_view na tomto akcelerátoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Logická hodnota označující, pokud byl úspěšně nastaven výchozí objekt access_type pro akcelerátor.  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Objektu, který chcete zkopírovat.  
+*Ji_né*<br/>
+`accelerator_view` Objektu, který chcete zkopírovat.  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Objekt k porovnání s touto položkou.  
+*Ji_né*<br/>
+`accelerator_view` Objekt k porovnání s touto položkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `false` Pokud jsou oba objekty stejné. v opačném případě `true`.  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Objektu, který chcete kopírovat.  
+*Ji_né*<br/>
+`accelerator_view` Objektu, který chcete kopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na upravené `accelerator_view` objektu.  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Objekt k porovnání s touto položkou.  
+*Ji_né*<br/>
+`accelerator_view` Objekt k porovnání s touto položkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud jsou oba objekty stejné. v opačném případě `false`.  

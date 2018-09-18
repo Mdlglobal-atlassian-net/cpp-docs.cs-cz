@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106347"
 ---
 # <a name="property-map-macros"></a>Makra Map vlastností
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Určuje třídu obsahující mapy vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Vlastnost popis.
 
-*Člen*  
+*Člen*<br/>
 [in] Datový člen obsahující míry; například `m_sizeExtent`.
 
-*vt*  
+*vt*<br/>
 [in] Určuje typ varianty vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Vlastnost popis.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 [in] Vlastnosti DISPID.
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.
 
-*vt*  
+*vt*<br/>
 [in] Typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Vlastnost popis.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 [in] Vlastnosti DISPID.
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID stránky vlastností. Zvláštní hodnota CLSID_NULL použijte pro vlastnost, která nemá stránku přidružené vlastnosti.
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in] Identifikátor IID definující vlastnost duální rozhraní.
 
-*vt*  
+*vt*<br/>
 [in] Typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky

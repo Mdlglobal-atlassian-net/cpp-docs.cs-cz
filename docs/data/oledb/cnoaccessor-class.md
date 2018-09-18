@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f383b79c8130501773c56db47c08b9449b259a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111430"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor – třída
+
 Můžete použít jako argument šablony (`TAccessor`) pro šablony třídy, jako například `CCommand` a `CTable`, přístupového objektu argumentu třídy, které vyžadují.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -36,37 +37,40 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CNoAccessor` jako argument šablony, když nechcete, aby třídu tak, aby podporovala parametry nebo výstupní sloupce.  
+
+Použití `CNoAccessor` jako argument šablony, když nechcete, aby třídu tak, aby podporovala parametry nebo výstupní sloupce.  
   
- `CNoAccessor` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
+`CNoAccessor` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
   
--   `BindColumns` -Váže sloupce pro přistupující objekty.  
+- `BindColumns` -Váže sloupce pro přistupující objekty.  
   
--   `BindParameters` -Vytvoří vazbu vytvořené parametry sloupce.  
+- `BindParameters` -Vytvoří vazbu vytvořené parametry sloupce.  
   
--   `Bind` -Vytváří vazby.  
+- `Bind` -Vytváří vazby.  
   
--   `Close` -Zavře přistupujícího objektu.  
+- `Close` -Zavře přistupujícího objektu.  
   
--   `ReleaseAccessors` -Uvolní přistupující objekty vytvořené třídy.  
+- `ReleaseAccessors` -Uvolní přistupující objekty vytvořené třídy.  
   
--   `FreeRecordMemory` -Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.  
+- `FreeRecordMemory` -Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.  
   
--   `GetColumnInfo` -Získá informace o sloupci z otevřené sady řádků.  
+- `GetColumnInfo` -Získá informace o sloupci z otevřené sady řádků.  
   
--   `GetNumAccessors` -Načte počet přistupující objekty vytvořené třídy.  
+- `GetNumAccessors` -Načte počet přistupující objekty vytvořené třídy.  
   
--   `IsAutoAccessor` -Vrátí true, pokud je během operace přesunu automaticky načíst data pro přistupující objekt.  
+- `IsAutoAccessor` -Vrátí true, pokud je během operace přesunu automaticky načíst data pro přistupující objekt.  
   
--   `GetHAccessor` -Načte popisovač přistupujícího objektu zadaného přístupového objektu.  
+- `GetHAccessor` -Načte popisovač přistupujícího objektu zadaného přístupového objektu.  
   
--   `GetBuffer` -Načte ukazatel na záložku vyrovnávací paměti.  
+- `GetBuffer` -Načte ukazatel na záložku vyrovnávací paměti.  
   
--   `NoBindOnNullRowset` -Brání vytváření datových vazeb na prázdné sady řádků.  
+- `NoBindOnNullRowset` -Brání vytváření datových vazeb na prázdné sady řádků.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

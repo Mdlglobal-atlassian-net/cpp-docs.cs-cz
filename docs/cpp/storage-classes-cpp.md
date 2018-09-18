@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107457"
 ---
-# <a name="storage-classes-c"></a>Třídy úložiště (C++)  
-  
-A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifikátor typu, který řídí životnost, propojení a paměti umístění objektů. Předaný objekt může mít pouze jednu třídu úložiště. Proměnné definované v rámci bloku mají automatického úložiště, pokud není stanoveno jinak pomocí **extern**, **statické**, nebo `thread_local` specifikátorů. Automatické objekty a proměnné nemají žádné propojení; nejsou viditelné pro kód mimo blok.  
-  
-**Poznámky**  
-  
-1.  [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.  
-  
-2.  **Visual C++ 2010 nebo novějším:** **automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo se odebere z jazyka C++.
+# <a name="storage-classes-c"></a>Třídy úložiště (C++)
+
+A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifikátor typu, který řídí životnost, propojení a paměti umístění objektů. Předaný objekt může mít pouze jednu třídu úložiště. Proměnné definované v rámci bloku mají automatického úložiště, pokud není stanoveno jinak pomocí **extern**, **statické**, nebo `thread_local` specifikátorů. Automatické objekty a proměnné nemají žádné propojení; nejsou viditelné pro kód mimo blok.
+
+**Poznámky**
+
+1. [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.
+
+1. **Visual C++ 2010 nebo novějším:** **automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo se odebere z jazyka C++.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ Následující kód ukazuje dva **extern** deklarace, `DefinedElsewhere` (odkazu
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ Co je třeba mít na paměti `thread_local` specifikátor:
 
 -  Můžete použít `thread_local` jenom pro deklarace a definice; dat `thread_local` nelze použít v deklaracích nebo definicích funkce.
 
--  Můžete zadat `thread_local` pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Všechny místní proměnná deklarovaná `thread_local` je implicitně statická, není-li zadána žádná jiná třída úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`. 
+-  Můžete zadat `thread_local` pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Všechny místní proměnná deklarovaná `thread_local` je implicitně statická, není-li zadána žádná jiná třída úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`.
 
 -  Je nutné zadat `thread_local` pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejný soubor nebo samostatné soubory.
 
@@ -232,7 +232,7 @@ Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cp
 
 ##  <a name="register"></a>  Registrace
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo již není podporovanou třídou úložiště. Klíčové slovo je stále vyhrazené ve standardu pro budoucí použití. 
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo již není podporovanou třídou úložiště. Klíčové slovo je stále vyhrazené ve standardu pro budoucí použití.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Existuje několik bodů vědět o program:
 - Nakonec statické lokální proměnné jako `I3` zachovat jejich hodnoty doby trvání programu, ale jsou zničeny při ukončení programu.
 
 ## <a name="see-also"></a>Viz také:
- [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)
+
+[Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)

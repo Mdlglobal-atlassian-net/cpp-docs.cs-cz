@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104319"
 ---
 # <a name="assume"></a>__assume
 **Specifické pro Microsoft**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `expression`  
- Libovolný výraz, který předpokládá, že je vyhodnocen na hodnotu true.  
+*Výraz*<br/>
+Libovolný výraz, který předpokládá, že je vyhodnocen na hodnotu true.  
   
 ## <a name="remarks"></a>Poznámky  
  Optimalizátor předpokládá, že podmínka reprezentována `expression` má hodnotu true v místě, kde klíčové slovo se zobrazí a bude platit až do pořád `expression` (například voláním přiřazení k proměnné). Předaný selektivní použití pomocných parametrů optimalizace podle `__assume` může zlepšit optimalizace.  

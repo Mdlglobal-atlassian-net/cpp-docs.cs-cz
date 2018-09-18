@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109684"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,10 +53,10 @@ void longjmp(
 
 ### <a name="parameters"></a>Parametry
 
-*env*  
+*env*<br/>
 Proměnná, ve kterém je uložené prostředí.
 
-*value*  
+*value*<br/>
 Hodnota, která má být vrácen `setjmp` volání.
 
 ## <a name="remarks"></a>Poznámky
@@ -83,7 +83,7 @@ Podívejte se na následující omezení při použití **longjmp**:
 
 **Specifické pro END Microsoft**
 
-> [!NOTE]  
+> [!NOTE]
 > V přenositelném kódu C++ nelze předpokládat `setjmp` a `longjmp` podporovat sémantiku objektu C++. Konkrétně `setjmp` / `longjmp` pár má nedefinované chování, pokud nahrazení volání `setjmp` a `longjmp` podle **catch** a **throw** by měl vyvolat nejsou v netriviálních destruktory všech automatických objektů. V programech jazyka C++ doporučujeme že použít mechanismus zpracování výjimek jazyka C++.
 
 Další informace najdete v tématu [použití funkcí setjmp a longjmp](../../cpp/using-setjmp-longjmp.md).
@@ -102,5 +102,5 @@ Podívejte se na příklad pro [_fpreset –](fpreset.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)  
-[setjmp](setjmp.md)  
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)

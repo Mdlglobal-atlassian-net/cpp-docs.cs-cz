@@ -1,5 +1,5 @@
 ---
-title: C2768 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2768 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ee0fd3fa213639e70199cfe5653ee2034bc39b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c76173f99dbc2fb415b60212109242845501694
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109103"
 ---
-# <a name="compiler-error-c2768"></a>C2768 chyby kompilátoru
-'function': Neplatné použití explicitní šablony argumenty  
-  
- Kompilátor nemohl určete, jestli definici funkce měla být explicitní specializace šablony funkcí, nebo pokud byl v definici funkce měla být pro novou funkci.  
-  
- Tato chyba byla zavedena v Visual Studio .NET 2003 jako součást vylepšení shoda kompilátoru.  
-  
- Následující ukázka generuje C2768:  
-  
-```  
-// C2768.cpp  
-template<typename T>  
-void f(T) {}  
-  
-void f<int>(int) {}   // C2768  
-  
-// an explicit specialization  
-template<>  
-void f<int>(int) {}   
-  
-// global nontemplate function overload  
-void f(int) {}  
+# <a name="compiler-error-c2768"></a>Chyba kompilátoru C2768
+
+'function': Neplatné použití explicitních argumentů šablony
+
+Kompilátor nebyl schopen určit, jestli definici funkce, byl by mělo být explicitní specializace šablony funkcí nebo pokud definice funkce měla být pro novou funkci.
+
+Tato chyba byla zavedena v Visual Studio .NET 2003, vylepšení kompilátoru shoda v rámci.
+
+Následující ukázka generuje C2768:
+
+```
+// C2768.cpp
+template<typename T>
+void f(T) {}
+
+void f<int>(int) {}   // C2768
+
+// an explicit specialization
+template<>
+void f<int>(int) {}
+
+// global nontemplate function overload
+void f(int) {}
 ```

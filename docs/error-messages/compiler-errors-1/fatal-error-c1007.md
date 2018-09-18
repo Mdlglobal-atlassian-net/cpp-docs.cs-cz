@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1007 | Microsoft Docs
+title: Závažná chyba C1007 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443dd1c48b7ce1d3c5c1173f6832d08d71508cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01a9ebad83f3b0596dbf21809f91c11fd73fda2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102435"
 ---
 # <a name="fatal-error-c1007"></a>Závažná chyba C1007
-Příznak nebyl rozpoznán řetězec v možnosti  
-  
- Tuto možnost příkazového řádku obsahuje neplatný řetězec. Zkontrolujte **CL** příkazového řádku a proměnnou prostředí pro chyby.
+
+nerozpoznaný příznak řetězec v možnosti
+
+Možnost příkazového řádku obsahuje neplatný řetězec. Zkontrolujte, **CL** příkazový řádek a proměnné prostředí pro chyby.

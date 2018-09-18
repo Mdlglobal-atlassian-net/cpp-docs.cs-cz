@@ -1,5 +1,5 @@
 ---
-title: C3896 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3896 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc60c09d6fd99e56f0261409099e56713604a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6714d356fa2f09bdfce2750ff31432b5b4e14461
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109727"
 ---
-# <a name="compiler-error-c3896"></a>C3896 chyby kompilátoru
-"člen": nesprávné inicializační: Tento člen literálové datové lze inicializovat pouze s 'nullptr.  
-  
- A [literálu](../../windows/literal-cpp-component-extensions.md) – datový člen byl nesprávně inicializován.  V tématu [nullptr](../../windows/nullptr-cpp-component-extensions.md) Další informace.  
-  
- Následující ukázka generuje C3896:  
-  
-```  
-// C3896.cpp  
-// compile with: /clr /c  
-ref class R{};  
-  
-value class V {  
-   literal R ^ r = "test";   // C3896  
-   literal R ^ r2 = nullptr;   // OK  
-};  
+# <a name="compiler-error-c3896"></a>Chyba kompilátoru C3896
+
+'member': nesprávný inicializátor: Tento datový člen literálu se dá inicializovat jenom s "nullptr"
+
+A [literálu](../../windows/literal-cpp-component-extensions.md) datový člen byl inicializován nesprávně.  Zobrazit [nullptr](../../windows/nullptr-cpp-component-extensions.md) Další informace.
+
+Následující ukázka generuje C3896:
+
+```
+// C3896.cpp
+// compile with: /clr /c
+ref class R{};
+
+value class V {
+   literal R ^ r = "test";   // C3896
+   literal R ^ r2 = nullptr;   // OK
+};
 ```

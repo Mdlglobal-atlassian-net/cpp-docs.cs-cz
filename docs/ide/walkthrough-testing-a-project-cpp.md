@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Testování projektu (C++) | Microsoft Docs'
+title: 'Návod: Testování projektu (C++) | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -16,57 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef6f2534ca0415ea8b8a17445e9cf9441026f669
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110598"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
-Když spustíte program v režimu ladění, můžete pozastavit program, který chcete zkontrolovat stav proměnné a objekty zarážky.  
+Když spustíte program v režimu ladění, můžete používat zarážky pro pozastavení programu a kontrolu stavu proměnných a objektů.  
   
- V tomto návodu sledovat hodnotu proměnné, jak program se spustí a zjistit, proč je hodnota neodpovídá vašim očekáváním.  
+V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a zjistit, proč je hodnota, které jste očekávali.  
   
 ## <a name="prerequisites"></a>Požadavky  
   
--   Tento návod předpokládá, že rozumíte základy jazyka C++.  
+- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.  
   
--   Také předpokládá, že jste dokončili dříve související návodů, které jsou uvedeny v [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-run-a-program-in-debug-mode"></a>Spuštění programu v režimu ladění  
   
-1.  Testgames otevřete pro úpravy.  
+1. Games.cpp otevřete pro úpravy.  
   
-2.  Vyberte tento řádek kódu:  
+1. Vyberte tento řádek kódu:  
   
      `Cardgame.solitaire(1);`  
   
-3.  Chcete-li nastavit zarážky daného řádku v řádku nabídek zvolte **ladění**, **Přepnout zarážku**, nebo zvolte F9 klíč. Červené kolečko se zobrazí vlevo řádku; Označuje, že je nastavit zarážky. Pokud chcete odebrat bod přerušení, můžete příkaz nabídky nebo F9 klíč znovu.  
+1. Chcete-li nastavit zarážku na tomto řádku, na panelu nabídek zvolte **ladění** > **Přepnout zarážku**, nebo zvolte **F9** klíč. Zobrazí se červený kruh vlevo od řádku; znamená to, že byla nastavena zarážka. Chcete-li odebrat zarážku, můžete použít příkaz nabídky nebo **F9** klíč znovu.  
   
-     Pokud používáte myši, můžete také nastavit nebo odebrat zarážku kliknutím na levém okraji.  
+     Pokud používáte myš, můžete také nastavit nebo odebrat zarážku kliknutím do levého okraje.  
   
-4.  Na řádku nabídek zvolte **ladění**, **spustit ladění**, nebo zvolte klávesy F5.  
+1. V panelu nabídky zvolte **ladění** > **spustit ladění**, nebo zvolte **F5** klíč.  
   
-     Když program dosáhne řádku, který má zarážkou, provádění zastaví dočasně, aplikace je v režimu pozastavení. Žlutý šipku nalevo od řádek kódu naznačuje, že je na další řádek má být proveden.  
+     Když program dosáhne řádku se zarážkou, provádění se dočasně zastaví, protože aplikace je v režimu pozastavení. Žlutá šipka vlevo od řádku kódu označuje, že je na další řádek, který se spustí.  
   
-5.  K prozkoumání hodnotu `Cardgame::totalParticipants` proměnnou, přesuňte ukazatel myši `Cardgame` a poté ho přesuňte přes rozšíření řízení na levé straně okna popisku. Název proměnné `totalParticipants` a jeho hodnota 12 jsou zobrazeny.  
+1. Chcete-li zkoumat hodnoty `Cardgame::totalParticipants` proměnnou, přesuňte ukazatel nad `Cardgame` a poté ho přesuňte nad rozšiřující ovládací prvek vlevo od okna popisu. Název proměnné `totalParticipants` a její hodnota **12** jsou zobrazeny.  
   
-     Otevřete místní nabídku pro `Cardgame::totalParticipants` proměnné a pak zvolte **Přidat kukátko** zobrazíte tuto proměnnou v **kukátko 1** okno. Můžete také vybrat proměnnou a přetáhněte ji do **kukátko 1** okno.  
+     Otevřete místní nabídku `Cardgame::totalParticipants` proměnné a pak zvolte **Přidat kukátko** zobrazíte danou proměnnou v **kukátko 1** okna. Můžete také zvýraznit proměnné a přetáhněte ji do **kukátko 1** okna.  
   
-6.  Chcete-li krok na další řádek kódu na řádku nabídek zvolte **ladění**, **Krokovat s přeskočením**, nebo zvolte F10 klíč.  
+1. Chcete-li na další řádek kódu na řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.  
   
-     Hodnota `Cardgame::totalParticipants` v **kukátko 1** okno se nyní zobrazí jako 13.  
+     Hodnota `Cardgame::totalParticipants` v **kukátko 1** okno se teď zobrazí jako **13**.  
   
-7.  Otevřete místní nabídku pro `return 0;` příkaz a potom zvolte **spustit ke kurzoru**. Žlutý šipku nalevo od kód odkazuje na další příkaz má být proveden.  
+1. Otevřete místní nabídku `return 0;` příkaz a klikněte na tlačítko **spustit ke kurzoru**. Žlutá šipka nalevo od kód odkazuje na další příkaz, který se spustí.  
   
-8.  `Cardgame::totalParticipants` Číslo by měl snížit při Cardgame ukončí. V tomto okamžiku `Cardgame::totalParticipants` musí rovnat 0, protože byly odstraněny všechny instance Cardgame, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná 18. To znamená, že je chyba v kód, který lze zjistit a opravit provedením další návod, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).  
+1. `Cardgame::totalParticipants` Čísla by měla snížit při `Cardgame` ukončí. V tomto okamžiku `Cardgame::totalParticipants` by se měl rovnat 0, protože všechny `Cardgame` instancí se odstranily, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná **18**. To znamená, že je chyba v kódu, který lze rozpoznat a opravit provedením dalšího názorného postupu, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).  
   
-9. Chcete-li zastavit programu, v panelu nabídek, zvolte **ladění**, **Zastavte ladění**, nebo zvolte stiskněte kombinaci kláves Shift + F5.  
+1. Chcete-li ukončit program, na panelu nabídek, zvolte **ladění** > **Zastavit ladění**, nebo zvolte **Shift**+**F5**klávesové zkratky.  
   
 ## <a name="next-steps"></a>Další kroky  
- **Předchozí:** [návod: sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Další:**[návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
+
+**Předchozí:** [návod: sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Další krok:** [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
   
-## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

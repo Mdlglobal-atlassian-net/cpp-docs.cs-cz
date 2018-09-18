@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108440"
 ---
 # <a name="atlmodule70-structure"></a>_Atl_module70 – struktura
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>Členové
 
-`cbSize`  
+`cbSize`<br/>
 Velikost struktury, použít pro správu verzí.
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 Chcete-li zjistit, jak dlouho modul by mělo zůstat naživu počet referenční.
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 Sleduje funkce, které byly zaregistrovány, která se má volat při vypnutí ATL.
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 Umožňuje koordinovat přístup k interní data v situacích s více vlákny.
 
 ## <a name="remarks"></a>Poznámky

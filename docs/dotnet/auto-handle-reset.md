@@ -1,5 +1,5 @@
 ---
-title: auto_handle::Reset | Microsoft Docs
+title: auto_handle::Reset | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e63d93134d48b1f429b097562805c967911e608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7596829cc89dcfa335b38d24a57666a430507e27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111716"
 ---
 # <a name="autohandlereset"></a>auto_handle::reset
-Odstraňte aktuální vlastní objekt a volitelně převzít nový objekt.  
+Odstranit aktuální vlastní objekt a volitelně převzít nový objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ void reset();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_new_ptr`  
- (Volitelné) Nový objekt.  
+*_new_ptr*<br/>
+(Volitelné) Nový objekt.  
   
 ## <a name="example"></a>Příklad  
   
@@ -99,5 +99,5 @@ done
  **Namespace** msclr –  
   
 ## <a name="see-also"></a>Viz také  
- [auto_handle – členové](../dotnet/auto-handle-members.md)   
+ [auto_handle – členy](../dotnet/auto-handle-members.md)   
  [auto_handle::release](../dotnet/auto-handle-release.md)

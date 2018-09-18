@@ -14,106 +14,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1c0d7a50be0ab940ebff82cd8a21fb5ac3aed075
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106990"
 ---
 # <a name="member-function-templates"></a>Šablony členských funkcí
 
-Výraz šablona členu odkazuje na šablony členské funkce a šablony vnořené třídy. Šablony členské funkce jsou funkcemi šablony, které jsou členy třídy nebo šablony třídy.  
-  
- Členské funkce mohou být šablonami funkce v několika kontextech. Všechny funkce šablon třídy jsou obecné, ale nejsou uvedeny jako šablony členu nebo šablony členské funkce. Pokud tyto členské funkce přijímají své vlastní argumenty šablon, jsou považovány za šablony členské funkce.  
-  
+Výraz šablona členu odkazuje na šablony členské funkce a šablony vnořené třídy. Šablony členské funkce jsou funkcemi šablony, které jsou členy třídy nebo šablony třídy.
+
+Členské funkce mohou být šablonami funkce v několika kontextech. Všechny funkce šablon třídy jsou obecné, ale nejsou uvedeny jako šablony členu nebo šablony členské funkce. Pokud tyto členské funkce přijímají své vlastní argumenty šablon, jsou považovány za šablony členské funkce.
+
 ## <a name="example"></a>Příklad
 
- Šablony členské funkce nešablonových nebo šablonových tříd jsou deklarovány jako šablony funkce s jejich parametry šablony.  
-  
+Šablony členské funkce nešablonových nebo šablonových tříd jsou deklarovány jako šablony funkce s jejich parametry šablony.
+
 ```cpp
-// member_function_templates.cpp  
-struct X  
-{  
-   template <class T> void mf(T* t) {}  
-};  
-  
-int main()  
-{  
-   int i;  
-   X* x = new X();  
-   x->mf(&i);  
-}  
-```  
-  
+// member_function_templates.cpp
+struct X
+{
+   template <class T> void mf(T* t) {}
+};
+
+int main()
+{
+   int i;
+   X* x = new X();
+   x->mf(&i);
+}
+```
+
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje šablonu členské funkce třídy šablony.  
-  
+Následující příklad ukazuje šablonu členské funkce třídy šablony.
+
 ```cpp
-// member_function_templates2.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="example"></a>Příklad
-  
-```cpp
-// defining_member_templates_outside_class.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u);  
-};  
-  
-template<typename T> template <typename U>  
-void X<T>::mf(const U &u)  
-{  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+// member_function_templates2.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u)
+   {
+   }
+};
+
+int main()
+{
+}
+```
+
 ## <a name="example"></a>Příklad
 
- Místní třídy nemohou mít členské šablony.  
-  
- Šablony členské funkce nemohou být virtuálními funkcemi a nemohou přepsat virtuální funkce ze základní třídy, pokud jsou deklarovány pomocí stejného názvu jako virtuální funkce základní třídy.  
-  
-Následující příklad ukazuje bez vizuálního vzhledu uživatelem definovaného převodu:  
-  
 ```cpp
-// templated_user_defined_conversions.cpp  
-template <class T>  
-struct S  
-{  
-   template <class U> operator S<U>()  
-   {  
-      return S<U>();  
-   }  
-};  
-  
-int main()  
-{  
-   S<int> s1;  
-   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.  
-}  
-```  
-  
+// defining_member_templates_outside_class.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u);
+};
+
+template<typename T> template <typename U>
+void X<T>::mf(const U &u)
+{
+}
+
+int main()
+{
+}
+```
+
+## <a name="example"></a>Příklad
+
+Místní třídy nemohou mít členské šablony.
+
+Šablony členské funkce nemohou být virtuálními funkcemi a nemohou přepsat virtuální funkce ze základní třídy, pokud jsou deklarovány pomocí stejného názvu jako virtuální funkce základní třídy.
+
+Následující příklad ukazuje bez vizuálního vzhledu uživatelem definovaného převodu:
+
+```cpp
+// templated_user_defined_conversions.cpp
+template <class T>
+struct S
+{
+   template <class U> operator S<U>()
+   {
+      return S<U>();
+   }
+};
+
+int main()
+{
+   S<int> s1;
+   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.
+}
+```
+
 ## <a name="see-also"></a>Viz také:
- [Šablony funkcí](../cpp/function-templates.md)
+
+[Šablony funkcí](../cpp/function-templates.md)

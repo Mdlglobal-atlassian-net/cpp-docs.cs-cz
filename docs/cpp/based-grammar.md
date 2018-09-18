@@ -14,36 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d1713b0cc8e1d5d53d3b30f3dd48a0b54a3782
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 43e9074de25d8cb914432123478f5f338ff4ba1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103761"
 ---
 # <a name="based-grammar"></a>__based – gramatika
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Na základě adresování je užitečné, když je nutné mít naprostou kontrolu nad segment, ve kterém jsou objekty přidělovány (statické a dynamické na základě dat).  
-  
- Jedinou formou adresování podle přijatelný v 32bitových a 64bitových kompilacích je "na základě ukazatel", který definuje typ, který obsahuje 32bitové nebo 64bitové posunutí se základní 32bitová nebo 64bitová verze nebo na základě **void**.  
-  
-## <a name="grammar"></a>Gramatika  
- *na základě modifikátoru rozsahu*:  
- **__based (***výraz base***)**   
-  
- *výraz Base*:  
- *Based-variablebased-Abstract-declaratorsegment-namesegment-CAST*  
-  
- *na základě proměnná*:  
- *identifikátor*  
-  
- *na základě abstraktní declarator*:  
- *abstraktní deklarátor*  
-  
- *Základní typ*:  
- *Název typu*  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [Základní ukazatele](../cpp/based-pointers-cpp.md)
+
+## <a name="microsoft-specific"></a>Specifické pro Microsoft
+
+Na základě adresování je užitečné, když je nutné mít naprostou kontrolu nad segment, ve kterém jsou objekty přidělovány (statické a dynamické na základě dat).
+
+Jedinou formou adresování podle přijatelný v 32bitových a 64bitových kompilacích je "na základě ukazatel", který definuje typ, který obsahuje 32bitové nebo 64bitové posunutí se základní 32bitová nebo 64bitová verze nebo na základě **void**.
+
+## <a name="grammar"></a>Gramatika
+
+*na základě modifikátoru rozsahu*: **__based (***výraz base***)** 
+
+*výraz Base*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
+
+*na základě proměnné*: *identifikátor*
+
+*na základě abstraktní declarator*: *abstraktní deklarátor*
+
+*Základní typ*: *název typu*
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Základní ukazatele](../cpp/based-pointers-cpp.md)

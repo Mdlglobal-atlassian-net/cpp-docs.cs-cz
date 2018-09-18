@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4222 | Microsoft Docs
+title: Upozornění Linkerů LNK4222 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359af4c4d3b1079b2d56f108bff0ee1488ea71f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106922"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Upozornění linkerů LNK4222
-exportovaný symbol "značkou" by neměl přiřazené pořadí  
-  
- Následující symboly nesmí exportovat podle pořadí:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllUnregisterServer`  
-  
- Tyto funkce jsou vždy umístěny podle názvu, pomocí `GetProcAddress`. Linkeru upozorňuje na to je druh exportu, protože to může způsobit větší bitové kopie. Toto může nastat, pokud rozsahu vaší ordinální exporty velká s relativně málo export. Například  
-  
-```  
-EXPORTS  
-   DllGetClassObject   @1  
-   MyOtherAPI      @100  
-```  
-  
- bude vyžadovat, že 100 přihrádek v tabulce export adresa s 98 z nich jenom výplň (2-99). Na druhou stranu  
-  
-```  
-EXPORTS  
-   DllGetClassObject  
-   MyOtherAPI      @100  
-```  
-  
- bude vyžadovat dva sloty. (Upozorňujeme, že můžete také exportovat pomocí [/EXPORT](../../build/reference/export-exports-a-function.md) – možnost linkeru.)
+
+exportovanému symbolu 'symbol' by se nemělo přiřadit ordinální číslo.
+
+Podle pořadových čísel nesmí exportovat těchto symbolů:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllUnregisterServer`
+
+Tyto funkce jsou vždy umístěny podle názvu, používat `GetProcAddress`. Linker upozorňuje na tento druh export je, protože by mohlo způsobit větší obrázek. To může dojít, pokud je velká s relativně málo exporty oblasti ordinální exporty. Například
+
+```
+EXPORTS
+   DllGetClassObject   @1
+   MyOtherAPI      @100
+```
+
+bude vyžadovat 100 sloty v exportní tabulce adresu s 98 z nich stačí přednastavené (2 až 99). Na druhou stranu
+
+```
+EXPORTS
+   DllGetClassObject
+   MyOtherAPI      @100
+```
+
+bude vyžadovat dvěma sloty. (Mějte na paměti, že můžete také exportovat s [/EXPORT](../../build/reference/export-exports-a-function.md) – možnost linkeru.)

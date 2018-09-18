@@ -1,5 +1,5 @@
 ---
-title: C3039 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3039 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdcfa36d270dc842eec0508969c650e7b30bee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b225103cf45331688a65d4528cadb39e730c75c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098092"
 ---
-# <a name="compiler-error-c3039"></a>C3039 chyby kompilátoru
-'příkaz var': index proměnné v OpenMP pro příkaz nemůže být redukční proměnnou  
-  
- Proměnná index je implicitně privátní, takže proměnnou nelze použít v [snížení](../../parallel/openmp/reference/reduction.md) klauzuli v uzavření [paralelní](../../parallel/openmp/reference/parallel.md) – direktiva.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3039:  
-  
-```  
-// C3039.cpp  
-// compile with: /openmp /c  
-int g_i;  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel reduction(+: i)  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; ++i)   // C3039  
-         g_i += i;  
-   }  
-}  
+# <a name="compiler-error-c3039"></a>Chyba kompilátoru C3039
+
+'příkaz var': indexovaná proměnná v OpenMP for – příkaz nemůže být redukční proměnná
+
+Indexovaná proměnná je implicitně soukromé, tak proměnnou nelze použít v [snížení](../../parallel/openmp/reference/reduction.md) klauzule nadřazený [paralelní](../../parallel/openmp/reference/parallel.md) směrnice.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3039:
+
+```
+// C3039.cpp
+// compile with: /openmp /c
+int g_i;
+
+int main() {
+   int i;
+
+   #pragma omp parallel reduction(+: i)
+   {
+      #pragma omp for
+      for (i = 0; i < 10; ++i)   // C3039
+         g_i += i;
+   }
+}
 ```

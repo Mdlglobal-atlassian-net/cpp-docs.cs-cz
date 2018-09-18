@@ -1,5 +1,5 @@
 ---
-title: C3537 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3537 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f03f02062e61e4034f0a809784ba571ce532e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f04500998adf132594b91fc38f82c8bec4b1c5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107682"
 ---
-# <a name="compiler-error-c3537"></a>C3537 chyby kompilátoru
-'type': nejde přetypovat na typ, který obsahuje 'auto'  
-  
- Proměnné pro zadaný typ nejde přetypovat, protože obsahuje typ `auto` – klíčové slovo a ve výchozím nastavení [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) – možnost kompilátoru je v platnosti.  
-  
-## <a name="example"></a>Příklad  
- Následující kód vypočítá C3537, protože jsou proměnné přetypovat na typ, který obsahuje `auto` – klíčové slovo.  
-  
-```  
-// C3537.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   int value = 123;  
-   auto(value);                        // C3537  
-   (auto)value;                        // C3537  
-   auto x1 = auto(value);              // C3537  
-   auto x2 = (auto)value;              // C3537  
-   auto x3 = static_cast<auto>(value); // C3537  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Auto – klíčové slovo](../../cpp/auto-keyword.md)
+# <a name="compiler-error-c3537"></a>Chyba kompilátoru C3537
+
+'type': nelze přetypovat na typ, který obsahuje nastavení auto.
+
+Nelze převést proměnnou pro zadaný typ, protože obsahuje typ `auto` – klíčové slovo a ve výchozím nastavení [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) – možnost kompilátoru je v platnosti.
+
+## <a name="example"></a>Příklad
+
+Následující kód provede C3537, protože proměnné jsou přetypovat na typ, který obsahuje `auto` – klíčové slovo.
+
+```
+// C3537.cpp
+// Compile with /Zc:auto
+int main()
+{
+   int value = 123;
+   auto(value);                        // C3537
+   (auto)value;                        // C3537
+   auto x1 = auto(value);              // C3537
+   auto x2 = (auto)value;              // C3537
+   auto x3 = static_cast<auto>(value); // C3537
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Auto – klíčové slovo](../../cpp/auto-keyword.md)

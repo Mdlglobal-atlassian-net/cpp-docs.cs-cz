@@ -1,5 +1,5 @@
 ---
-title: C2558 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2558 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7db417edebf0a1fff6ef87bf8ae407889a0e0af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100835"
 ---
-# <a name="compiler-error-c2558"></a>C2558 chyby kompilátoru
-Identifikátor: není k dispozici konstruktor kopie nebo je konstruktor kopie deklarován explicitně  
-  
- Konstruktor kopie inicializuje objekt z jiného objektu stejného typu. (Vytvoří kopii tohoto objektu.) Pokud nedefinujete žádné konstruktory, vygeneruje kompilátor výchozí kopii.  
-  
-### <a name="to-fix-this-error"></a>Odstranění této chyby  
-  
-1.  Problému může dojít, když je proveden pokus o zkopírování třídu, jejíž kopírovací konstruktor je `private`. Ve většině případů třídy, který má `private` kopírovat kopírovacího konstruktoru. Běžné programovací technika deklaruje `private` kopírovacího konstruktoru zabránit přímé používání třídy. Tato třída může být sama o sobě nepoužitelná nebo ke správné funkci vyžaduje jinou třídu.  
-  
-     Pokud zjistíte, že je bezpečné použití třídy, která má `private` kopírovací konstruktor, novou třídu odvozena od třídy, která má `private` konstruktor a zkontrolujte `public` nebo `protected` kopírovacího konstruktoru, které jsou k dispozici v nové třídy. Použijte odvozenou třídu namísto původní.  
-  
-2.  Problému může dojít, když je proveden pokus o zkopírování třídu, jejíž kopírovací konstruktor je explicitní. Deklarování kopírovacího konstruktoru jako `explicit` brání předávání nebo vrácení objekty třídy do nebo z funkcí. Další informace o explicitní konstruktory najdete v tématu [uživatelem definované převody typů](../../cpp/user-defined-type-conversions-cpp.md).  
-  
-3.  Problému může dojít, když je proveden pokus o kopírování instance třídy deklarován `const` pomocí kopírovacího konstruktoru, které nevyžaduje `const` odkazovat na parametr. Vaše kopie konstruktor s deklarovat `const` odkaz místo bez const typu odkaz na typ.
+# <a name="compiler-error-c2558"></a>Chyba kompilátoru C2558
+
+Identifikátor: není k dispozici konstruktor kopie nebo je konstruktor kopie deklarován explicitně
+
+Konstruktor kopie inicializuje objekt z jiného objektu stejného typu. (Vytvoří kopii tohoto objektu.) Pokud nedefinujete žádné konstruktory, vygeneruje kompilátor výchozí kopii.
+
+### <a name="to-fix-this-error"></a>Odstranění této chyby
+
+1. Tento problém může dojít, když je kopie třídy, jejíž konstruktor kopie je proveden pokus o `private`. Ve většině případů třídu, která má `private` kopírovací konstuktor neměla kopírovat. Běžně deklaruje `private` kopírovací konstruktor, aby se zabránilo přímému použití třídy. Tato třída může být sama o sobě nepoužitelná nebo ke správné funkci vyžaduje jinou třídu.
+
+     Pokud zjistíte, že je bezpečné používat třídu, která má `private` kopírovací konstruktor, odvodit novou třídu od třídy, který má `private` a zpřístupněte `public` nebo `protected` k dispozici v této nové třídě konstruktor kopie. Použijte odvozenou třídu namísto původní.
+
+1. Tento problém může dojít při pokusu o kopie třídy, jejíž konstruktor kopie je explicitní. Deklarování konstruktoru kopie jako `explicit` zabraňuje předávání/vracení objektů třídy do/z funkce. Další informace o explicitní konstruktory, naleznete v tématu [uživatelem definovaných převodů typu](../../cpp/user-defined-type-conversions-cpp.md).
+
+1. Tento problém může dojít, když je proveden pokus o zkopírování instance třídy deklarované jako `const` pomocí kopírovací konstruktor, který nemá `const` odkazovat na parametr. Deklarujte konstruktor kopie s `const` zadejte místo odkazu na nekonstantní typ odkazu.

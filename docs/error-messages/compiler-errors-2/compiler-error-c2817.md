@@ -1,5 +1,5 @@
 ---
-title: C2817 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2817 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb442bbe3252574afd37cac3b0e83fe90aac0da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd2f979524187dfe5fd5b18872a6927413ff512e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108453"
 ---
-# <a name="compiler-error-c2817"></a>C2817 chyby kompilátoru
-Návratový typ pro operátor odstranit musí být 'void.  
-  
-Přetížené [delete – operátor](../../standard-library/new-operators.md#op_delete) funkce nelze vrátit hodnotu.
+# <a name="compiler-error-c2817"></a>Chyba kompilátoru C2817
+
+Návratový typ pro operátor delete musí být void.
+
+Přetížený [operátor delete](../../standard-library/new-operators.md#op_delete) funkce nemůže vracet hodnotu.

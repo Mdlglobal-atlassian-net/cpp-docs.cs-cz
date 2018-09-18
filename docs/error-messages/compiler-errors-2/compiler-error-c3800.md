@@ -1,5 +1,5 @@
 ---
-title: C3800 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3800 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d90b35cddda138144c231080e3430a454748f6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4b8a86199057f7e4b936200a82615db899a8d1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113302"
 ---
-# <a name="compiler-error-c3800"></a>C3800 chyby kompilátoru
-"prohlášení": nelze kombinovat vlastností a událostí  
-  
- Konstrukce vlastnosti a události nelze deklarovat.  
-  
- C3800 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3800"></a>Chyba kompilátoru C3800
+
+"deklarace": nejde směšovat vlastnosti a události
+
+Nelze deklarovat konstrukci vlastnosti a události.
+
+C3800 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

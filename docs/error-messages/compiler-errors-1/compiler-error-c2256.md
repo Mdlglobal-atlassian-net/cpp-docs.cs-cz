@@ -1,5 +1,5 @@
 ---
-title: C2256 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2256 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2571d13d08d368bf974b0c283c7d676eab6b56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d4b32021b5c0688cfe51601722006e9741bfa4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108327"
 ---
-# <a name="compiler-error-c2256"></a>C2256 chyby kompilátoru
-Neplatné použití friend specifikátor na 'function'.  
-  
- Destruktor nebo konstruktor nelze zadat jako [friend](../../cpp/friend-cpp.md).  
-  
- Následující ukázka generuje C2256:  
-  
-```  
-// C2256.cpp  
-// compile with: /c  
-class C {  
-public:  
-   friend ~C();   // C2256  
-   ~C();   // OK  
-};  
+# <a name="compiler-error-c2256"></a>Chyba kompilátoru C2256
+
+Neplatné použití specifikátoru friend pro 'function'
+
+Konstruktor a destruktor nemůže být zadán jako [friend](../../cpp/friend-cpp.md).
+
+Následující ukázka generuje C2256:
+
+```
+// C2256.cpp
+// compile with: /c
+class C {
+public:
+   friend ~C();   // C2256
+   ~C();   // OK
+};
 ```

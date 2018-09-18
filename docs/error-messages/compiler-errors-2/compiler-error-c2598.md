@@ -1,5 +1,5 @@
 ---
-title: C2598 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2598 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb41e0072f319c701f5f0cf13670a5f8f7051a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11747df117ea714ea3c4d7ce41e9229c79becc93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102694"
 ---
-# <a name="compiler-error-c2598"></a>C2598 chyby kompilátoru
-Specifikace propojení se musí nacházet v globálním oboru  
-  
- Specifikátor propojení je deklarovat na místní obor.  
-  
- Následující ukázka generuje C2598:  
-  
-```  
-// C2598.cpp  
-// compile with: /c  
-void func() {  
-   extern "C" int func2();   // C2598  
-}  
-  
-extern "C" int func( int i );  
+# <a name="compiler-error-c2598"></a>Chyba kompilátoru C2598
+
+Specifikace propojení musí být v globálním oboru
+
+Specifikátor propojení je deklarována v místním oboru.
+
+Následující ukázka generuje C2598:
+
+```
+// C2598.cpp
+// compile with: /c
+void func() {
+   extern "C" int func2();   // C2598
+}
+
+extern "C" int func( int i );
 ```

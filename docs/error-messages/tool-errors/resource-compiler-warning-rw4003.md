@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru prostředků RW4003 | Microsoft Docs
+title: Upozornění kompilátoru prostředků RW4003 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101121"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Upozornění kompilátoru prostředků RW4003
-Klávesy SHIFT nebo ovládací PRVEK použitý bez VIRTKEY  
-  
- V tabulce prostředek akcelerátoru vyžaduje VIRTKEY klávesu SHIFT nebo CTRL. Protože SHIFT a řízení jsou vypsány jako příznak bitů akcelerátor VIRTKEY typu, nelze existují nezávisle VIRTKEY.
+
+SHIFT nebo ovládací PRVEK použitý bez VIRTKEY
+
+V tabulce prostředku akcelerátoru SHIFT nebo ovládací PRVEK vyžaduje VIRTKEY. Protože SHIFT a řízení jsou označeny jako příznak bitů v akcelerátoru typ VIRTKEY, nelze existují nezávisle VIRTKEY.

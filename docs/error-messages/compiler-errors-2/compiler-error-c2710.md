@@ -1,5 +1,5 @@
 ---
-title: C2710 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2710 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc182527aeb349fb91d098133c4545b95a93ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94b95ce0a87a2ba894dde2ba41c0e7d704c477b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112795"
 ---
-# <a name="compiler-error-c2710"></a>C2710 chyby kompilátoru
-'vytvořit': '__declspec(modifier)' lze použít pouze na funkci vrácení ukazatele  
-  
- Funkce, jejíž návratovou hodnotu. je zde ukazatel je pouze konstrukce, ke kterému `modifier` lze použít.  
-  
- Následující ukázka generuje C2710:  
-  
-```  
-// C2710.cpp  
-__declspec(restrict) void f();   // C2710  
-// try the following line instead  
-__declspec(restrict) int * g();  
+# <a name="compiler-error-c2710"></a>Chyba kompilátoru C2710
+
+"vytvořit": "__declspec(modifier)" může používat jedině pro funkci vracející ukazatel
+
+Pouze konstrukce, ke kterému je funkce, vrácená hodnota je ukazatel `modifier` lze použít.
+
+Následující ukázka generuje C2710:
+
+```
+// C2710.cpp
+__declspec(restrict) void f();   // C2710
+// try the following line instead
+__declspec(restrict) int * g();
 ```

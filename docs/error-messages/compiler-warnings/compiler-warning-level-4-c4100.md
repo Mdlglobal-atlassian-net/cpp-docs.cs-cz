@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4100 | Microsoft Docs
+title: Upozornění (úroveň 4) C4100 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3cf831590af2e1f2f7cd13d93c9d13ba217e11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ad1b8bab287f4c16b00781e90351bbb204aa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099460"
 ---
-# <a name="compiler-warning-level-4-c4100"></a>C4100 kompilátoru upozornění (úroveň 4)
-"identifikátor": neregistrované formální parametr  
-  
- Typ formálního parametru neodkazuje v těle funkce. Parametr neregistrované se ignoruje.  
-  
- C4100 může být při kód volání destruktoru na vydaný jinak které se neodkazuje parametr primitivního typu.  Jedná se o omezení kompilátoru Visual C++.  
-  
- Následující ukázka generuje C4100:  
-  
-```  
-// C4100.cpp  
-// compile with: /W4  
-void func(int i) {   // C4100, delete the unreferenced parameter to  
-                     //resolve the warning  
-   // i;   // or, add a reference like this  
-}  
-  
-int main()  
-{  
-   func(1);  
-}  
+# <a name="compiler-warning-level-4-c4100"></a>Kompilátor upozornění (úroveň 4) C4100
+
+'identifier': formální parametr nevolaný odkazem
+
+Formální parametr se neodkazuje v těle funkce. Neodkazovaný parametr je ignorován.
+
+C4100 může také vydat, když kód volá destruktor na jinak neodkazovaném parametru primitivního typu.  Jedná se omezení kompilátoru jazyka Visual C++.
+
+Následující ukázka generuje upozornění C4100:
+
+```
+// C4100.cpp
+// compile with: /W4
+void func(int i) {   // C4100, delete the unreferenced parameter to
+                     //resolve the warning
+   // i;   // or, add a reference like this
+}
+
+int main()
+{
+   func(1);
+}
 ```

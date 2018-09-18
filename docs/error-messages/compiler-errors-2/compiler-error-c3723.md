@@ -1,5 +1,5 @@
 ---
-title: C3723 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3723 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,69 +16,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1692ee4fcd2a3ac31350dcacf568cfe132ff028
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c4a10ad3f6f4ff96c56cbed56662a42d8cc5bea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112262"
 ---
-# <a name="compiler-error-c3723"></a>C3723 chyby kompilátoru
-'function': nebylo možné přeložit událostí  
-  
- `function` Nelze přeložit, která událost se má volat.  
-  
- Následující ukázka generuje C3723:  
-  
-```  
-// C3723.cpp  
-struct A {  
-   // To resolve, comment void f(int); and uncomment the __event function  
-   void f(int);  
-   // __event void f(int);  
-   void f(float);  
-  
-};  
-  
-struct B {  
-   void g(int);  
-   B(A* a) {  
-   __hook(&A::f, a, &B::g);   // C3723  
-   }  
-};  
-  
-int main() {  
-}  
-```  
-  
- `__hook` a `__unhook` nejsou kompatibilní s programováním/CLR.  Místo toho použijte += a-= operátory.  
-  
- Následující ukázka generuje C3723:  
-  
-```  
-// C3723b.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public delegate void delegate1();  
-  
-public ref class CPSource {  
-public:  
-   event delegate1^ event1;  
-};  
-  
-public ref class CReceiver {  
-public:  
-   void Handler1() {  
-   }  
-  
-   void UnhookAll(CPSource^ pSrc) {  
-      __unhook(&CPSource::event1, pSrc, &CReceiver::Handler1); // C3723  
-      // Try the following line instead.  
-      // pSrc->event1 -= gcnew delegate1(this, &CReceiver::Handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3723"></a>Chyba kompilátoru C3723
+
+'function': nepovedlo se přeložit událost
+
+`function` nepovedlo se přeložit které událost k volání.
+
+Následující ukázka generuje C3723:
+
+```
+// C3723.cpp
+struct A {
+   // To resolve, comment void f(int); and uncomment the __event function
+   void f(int);
+   // __event void f(int);
+   void f(float);
+
+};
+
+struct B {
+   void g(int);
+   B(A* a) {
+   __hook(&A::f, a, &B::g);   // C3723
+   }
+};
+
+int main() {
+}
+```
+
+`__hook` a `__unhook` nejsou kompatibilní s/CLR programování.  Místo toho použijte operátory += a-=.
+
+Následující ukázka generuje C3723:
+
+```
+// C3723b.cpp
+// compile with: /clr
+using namespace System;
+
+public delegate void delegate1();
+
+public ref class CPSource {
+public:
+   event delegate1^ event1;
+};
+
+public ref class CReceiver {
+public:
+   void Handler1() {
+   }
+
+   void UnhookAll(CPSource^ pSrc) {
+      __unhook(&CPSource::event1, pSrc, &CReceiver::Handler1); // C3723
+      // Try the following line instead.
+      // pSrc->event1 -= gcnew delegate1(this, &CReceiver::Handler1);
+   }
+};
+
+int main() {
+}
 ```

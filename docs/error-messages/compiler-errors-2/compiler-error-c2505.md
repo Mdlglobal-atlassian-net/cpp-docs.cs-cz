@@ -1,5 +1,5 @@
 ---
-title: C2505 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2505 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac405fc13b7696f752ea6455dcbf464318dca56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6bd22d7a25311b14ed599c6693bfa0c7913b304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109168"
 ---
-# <a name="compiler-error-c2505"></a>C2505 chyby kompilátoru
-'symbol': '__declspec(modifer)' lze použít pouze deklarace nebo definice globální objekty nebo členy statických dat  
-  
- A `__declspec` modifikátor, který je navržený pro lze použít pouze v globálním oboru byla použita ve funkci.  
-  
- Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [proces](../../cpp/process.md).  
-  
- Následující ukázka generuje C2505:  
-  
-```  
-// C2505.cpp  
-// compile with: /clr  
-  
-// OK  
-__declspec(process) int ii;  
-__declspec(appdomain) int jj;  
-  
-int main() {  
-   __declspec(process) int i;   // C2505  
-   __declspec(appdomain) int j;   // C2505  
-}  
+# <a name="compiler-error-c2505"></a>Chyba kompilátoru C2505
+
+'symbol': "__declspec(modifer)" dá používat jedině pro deklarace nebo definice globálních objektů nebo statických datových členů
+
+A `__declspec` modifikátor, který je navržený pro použití pouze v globálním oboru byla použita ve funkci.
+
+Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [procesu](../../cpp/process.md).
+
+Následující ukázka generuje C2505:
+
+```
+// C2505.cpp
+// compile with: /clr
+
+// OK
+__declspec(process) int ii;
+__declspec(appdomain) int jj;
+
+int main() {
+   __declspec(process) int i;   // C2505
+   __declspec(appdomain) int j;   // C2505
+}
 ```

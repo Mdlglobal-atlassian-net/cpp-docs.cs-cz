@@ -1,5 +1,5 @@
 ---
-title: Vytvoření jednoduchého zprostředkovatele pouze pro čtení | Microsoft Docs
+title: Vytvoření jednoduchého zprostředkovatele pouze pro čtení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2662a071f443967b921c4a8db27713bc7c3e8bb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f951fba45b23b7e4dde92fc11f2faabb53bd43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101563"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Vytvoření jednoduchého zprostředkovatele pouze pro čtení
-Po vytvoření zprostředkovatele OLE DB pomocí Průvodce projektu knihovny ATL a Průvodce zprostředkovatele ATL technologie OLE DB, můžete přidat další funkce, které chcete podporovat. Spusťte návrhu svého poskytovatele tak, že prověří jaký typ dat budete odesílat k příjemce a za jakých podmínek. Je velmi důležité určit, jestli potřebujete podporovat příkazy, transakce a další volitelné objekty. Dobrý návrh předem bude rychlost implementace a testování.  
+
+Po vytvoření zprostředkovatele OLE DB pomocí Průvodce projektem ATL a Průvodce zprostředkovatelem ATL OLE DB, můžete přidat další funkce, které chcete podporovat. Začněte vytvářet poskytovatele prozkoumáním dat budete odesílat příjemci a za jakých podmínek. To je obzvláště důležité určit, jestli je potřeba podporovat příkazy, transakce a další volitelné objekty. Dobrý návrh ještě před zahájením bude rychlost implementace a testování.  
   
- V příkladu se zobrazí ve dvou částech:  
+V příkladu se zobrazí ve dvou částech:  
   
--   První část ukazuje postup [vytvoření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md) , který čte dvojici řetězců.  
+- V první části se dozvíte postupy [vytvoření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md) , který přečte dvojice řetězců.  
   
--   Druhá část ukazuje postup [Vylepšení jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md) přidáním `IRowsetLocate` rozhraní.  
+- Druhá část ukazuje jak [vylepšit jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md) tak, že přidáte `IRowsetLocate` rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

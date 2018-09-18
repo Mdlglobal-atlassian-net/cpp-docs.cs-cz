@@ -1,5 +1,5 @@
 ---
-title: C2696 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2696 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ccdd6d2c8c34c360811b80d5a93abe76f5ef8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6e76b0c11d329c734b0609c540aca4315c7ed9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108739"
 ---
-# <a name="compiler-error-c2696"></a>C2696 chyby kompilátoru
-Nelze vytvořit dočasný objekt spravovaného typu "typ"  
-  
-Odkazuje na `const` v nespravované program způsobit kompilátoru volání konstruktoru a vytvořit dočasný objekt v zásobníku. V zásobníku však lze nikdy vytvořit spravovanou třídou.  
-  
-C2696 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c2696"></a>Chyba kompilátoru C2696
+
+Nelze vytvořit dočasný objekt spravovaného typu 'type'
+
+Odkazy na `const` v nespravované aplikaci způsobit, že kompilátor volání konstruktoru a vytvořit dočasný objekt v zásobníku. Ale spravovanou třídu nikdy se dají vytvořit na zásobníku.
+
+C2696 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

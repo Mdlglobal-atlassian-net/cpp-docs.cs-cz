@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RW2002 | Microsoft Docs
+title: Chyba kompilátoru prostředků RW2002 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,158 +16,159 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50d2993c4f8e7053867aa0757e90a0f7f1b1190c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112899"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Chyba kompilátoru prostředků RW2002
-Při analýze  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  **Typ akcelerátoru vyžadovaný (ASCII nebo VIRTKEY)**  
-  
-     `type` Pole **AKCELERÁTORŮ** příkazu musí obsahovat buď ASCII nebo VIRTKEY hodnotu.  
-  
-2.  **V tabulce akcelerátorů byl očekáván začátek**  
-  
-     **Začít** okamžitě postupujte – klíčové slovo **AKCELERÁTORŮ** – klíčové slovo.  
-  
-3.  **V dialogovém okně byl očekáván začátek**  
-  
-     **Začít** okamžitě postupujte – klíčové slovo **dialogové okno** – klíčové slovo.  
-  
-4.  **V nabídce byl očekáván začátek**  
-  
-     **Začít** okamžitě postupujte – klíčové slovo **nabídky** – klíčové slovo.  
-  
-5.  **V RCData byl očekáván začátek**  
-  
-     **Začít** okamžitě postupujte – klíčové slovo **RCDATA** – klíčové slovo.  
-  
-6.  **BEGIN – klíčové slovo očekává v tabulce řetězců**  
-  
-     **Začít** okamžitě postupujte – klíčové slovo **STRINGTABLE** – klíčové slovo.  
-  
-7.  **nelze znovu použít řetězcové konstanty**  
-  
-     Používáte stejnou hodnotu dvakrát v **STRINGTABLE** příkaz. Ujistěte se, že nejsou kombinování překrývání desetinné hodnoty, šestnáctkové hodnoty. V každé ID **STRINGTABLE** musí být jedinečný. Pro maximální účinnost použijte souvislý konstanty, které začínají na více 16.  
-  
-8.  **Řízení znak mimo rozsah [^ A - ^ Z]**  
-  
-     Řídicí znak v **AKCELERÁTORŮ** příkaz je neplatný. Znak následující pomocí kurzoru (**^**) musí být v rozsahu A a Z, včetně.  
-  
-9. **není povolen prázdný nabídky**  
-  
-     **END** – klíčové slovo se nachází před všechny položky nabídky, jsou definovány v **nabídky** příkaz. Kompilátor prostředků nepovoluje prázdný nabídky. Zajistěte, aby všechny otevřené uvozovky, v rámci nemáte **nabídky** příkaz.  
-  
-10. **V dialogovém okně byl očekáván END**  
-  
-     **END** – klíčové slovo musí dojít na konci **dialogové okno** příkaz. Zajistěte, aby neexistují žádné otevřete uvozovky, ponecháno z předchozí příkaz.  
-  
-11. **V nabídce byl očekáván END**  
-  
-     **END** – klíčové slovo musí být na konci **nabídky** příkaz. Ujistěte se, máte všechny uvozovky, otevřete nebo pár neodpovídající **začít** a **END** příkazy.  
-  
-12. **Očekávaný čárkami v tabulce akcelerátorů**  
-  
-     Kompilátor prostředků vyžaduje čárka oddělující `event` a *idvalue* polí v **AKCELERÁTORŮ** příkaz.  
-  
-13. **Název třídy očekávané ovládacího prvku**  
-  
-     `class` Pole z **ovládací PRVEK** příkaz v **dialogové okno** příkaz musí mít jednu z následujících typů: tlačítko, COMBOBOX, upravit, LISTBOX, SCROLLBAR, statické, nebo definované uživatelem. Ujistěte se, že třída je napsán správně.  
-  
-14. **Byl očekáván název řez písma**  
-  
-     *Řez písma* pole možnosti písma ve **dialogové okno** příkaz musí být řetězec znaků ASCII, který je uzavřena v uvozovkách. Toto pole určuje název písma.  
-  
-15. **Očekávaná hodnota ID pro menuitem**  
-  
-     **Nabídky** příkaz musí obsahovat *menuID* pole, které určuje název nebo číslo, které identifikuje prostředek nabídky.  
-  
-16. **Řetězec očekávané nabídky**  
-  
-     Každý **MENUITEM** a **místní** příkaz musí obsahovat *text* pole, která je uzavřena v uvozovkách řetězec, který určuje název položky nabídky nebo automaticky otevírané okno nabídky. A **MENUITEM ODDĚLOVAČE** příkaz vyžaduje žádné řetězec v uvozovkách.  
-  
-17. **byla očekávána hodnota číselného příkaz**  
-  
-     Kompilátor prostředků očekával jednu číslici *idvalue* pole **AKCELERÁTORŮ** příkaz. Ujistěte se, že jste použili `#define` Konstanta zadejte hodnotu a že konstanta je napsán správně.  
-  
-18. **Očekávaný číselnou konstantu v tabulce řetězců**  
-  
-     Číselnou konstantu, definované v `#define` okamžitě prohlášení, postupujte **začít** – klíčové slovo v **STRINGTABLE** příkaz.  
-  
-19. **Očekávaný číselná velikost**  
-  
-     *Pointsize* pole možnosti písma ve **dialogové okno** příkaz musí být celočíselná hodnota velikost bodu.  
-  
-20. **Konstanta očekávané číselné dialogové okno**  
-  
-     A **dialogové okno** příkaz vyžaduje celočíselné hodnoty *x, y, šířka*, a *výška* pole. Ujistěte se, že tyto hodnoty jsou zahrnuty po **dialogové okno** – klíčové slovo a že nejsou záporné.  
-  
-21. **Očekávaný řetězec v STRINGTABLE**  
-  
-     Je očekáván řetězec po každém z nich *řetězců* hodnotu **STRINGTABLE** příkaz.  
-  
-22. **Očekávaný řetězec nebo konstantní akcelerátor – příkaz**  
-  
-     Kompilátor prostředků se nepodařilo určit, jaký typ klíče se nastavuje pro akcelerátor. `event` Pole **AKCELERÁTORŮ** příkaz může být neplatný.  
-  
-23. **byla očekávána číslo pro ID**  
-  
-     Byla očekávána počet `id` pole příkazu ovládací prvek v **dialogové okno** příkaz. Zajistěte, aby byla číslo nebo `#define` údajů pro ID ovládacího prvku.  
-  
-24. **Byl očekáván řetězec v uvozovkách ve třídě dialog**  
-  
-     `class` Pole možnosti třídy ve **dialogové okno** příkaz musí být celé číslo nebo řetězec, uzavřena v uvozovkách.  
-  
-25. **V dialogovém okně název je očekáván řetězec v uvozovkách**  
-  
-     `captiontext` Pole TITULKU možnosti ve **dialogové okno** příkaz musí být řetězec znaků ASCII, který je uzavřena v uvozovkách.  
-  
-26. **Soubor nebyl nalezen: název souboru**  
-  
-     Nebyl nalezen v souboru určeném v příkazovém řádku kompilátoru prostředků. Zkontrolujte, zda soubor byl přesunut do jiného adresáře a zda název souboru nebo cesta zadána správně. Prohledají se soubory pro použití **zahrnout** proměnné prostředí nebo nastavení Visual Workbench, pokud je k dispozici.  
-  
-27. **Názvy písma musí být řadové číslovky**  
-  
-     *Pointsize* pole v příkazu písma musí být celé číslo, není řetězec.  
-  
-28. **Neplatný akcelerátoru**  
-  
-     `event` Pole **AKCELERÁTORŮ** příkaz nebyl rozpoznán nebo byl více než dva znaky.  
-  
-29. **Neplatný akcelerátoru typu (ASCII nebo VIRTKEY)**  
-  
-     `type` Pole **AKCELERÁTORŮ** příkazu musí obsahovat buď ASCII nebo VIRTKEY hodnotu.  
-  
-30. **Neplatný řídicí znak**  
-  
-     Řídicí znak v **AKCELERÁTORŮ** příkaz je neplatný. Neplatný řídicí znak tvořený jedním písmenem (pouze) následující šipka nahoru (^).  
-  
-31. **Neplatný ovládací prvek typu**  
-  
-     Každý příkaz ovládacího prvku v **dialogové okno** příkaz musí být jeden z následujících: zaškrtávací políčko, COMBOBOX, řízení, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ikona, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Zajistěte, aby tyto řídicí příkazy jsou správně zadané.  
-  
-32. **Neplatný typ**  
-  
-     Typ prostředku nebyl mezi typy definované v souboru odkazující na Windows.  
-  
-33. **Textový řetězec nebo pořadí očekává v ovládacím prvku**  
-  
-     *Text* pole z **řízení** příkaz v **dialogové okno** příkaz musí být textový řetězec nebo odkaz na pořadovém místě pro typ ovládacího prvku. Pokud pomocí pořadí, ujistěte se, že máte `#define` příkaz pro ovládací prvek.  
-  
-34. **Nesprávné závorky**  
-  
-     Zkontrolujte všechny otevřené závorky zavřeli **dialogové okno** příkaz.  
-  
-35. **Neočekávaná hodnota v RCData**  
-  
-     *Nezpracovaná data* hodnoty ve **RCDATA** příkaz musí být celá čísla nebo řetězce, oddělených čárkou. Ujistěte se, že jste vynechte čárkou nebo vynechte uvozovky kolem řetězec.  
-  
-36. **Podtyp neznámé nabídky**  
-  
-     *Definice položky* pole z **nabídky** příkaz může obsahovat pouze **MENUITEM** a **místní** příkazy.
+
+Chyba parsování
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. **Typ akcelerátoru povinná (ASCII nebo VIRTKEY)**
+
+     `type` Pole **AKCELERÁTORY** příkazu musí obsahovat hodnotu ASCII nebo VIRTKEY.
+
+1. **ZAČÁTEK očekávání v tabulce akcelerátorů**
+
+     **Začít** – klíčové slovo musí následovat bezprostředně **AKCELERÁTORY** – klíčové slovo.
+
+1. **V dialogovém okně očekáván začátek**
+
+     **Začít** – klíčové slovo musí následovat bezprostředně **dialogové okno** – klíčové slovo.
+
+1. **V nabídce byl očekáván začátek**
+
+     **Začít** – klíčové slovo musí následovat bezprostředně **nabídky** – klíčové slovo.
+
+1. **Byl očekáván v RCData BEGIN**
+
+     **Začít** – klíčové slovo musí následovat bezprostředně **RCDATA** – klíčové slovo.
+
+1. **Byl očekáván v tabulce řetězců – klíčové slovo BEGIN**
+
+     **Začít** – klíčové slovo musí následovat bezprostředně **STRINGTABLE** – klíčové slovo.
+
+1. **nelze znovu použít řetězcové konstanty**
+
+     Používáte dvakrát na stejnou hodnotu **STRINGTABLE** příkazu. Ujistěte se, že nejsou kombinování překrývající se desetinných míst a šestnáctkové hodnoty. V každé ID **STRINGTABLE** musí být jedinečný. Maximální účinnost použijte souvislých konstanty, které začínají na násobkem 16.
+
+1. **Řídící znaku mimo rozsah [^ A - ^ Z]**
+
+     Řídicí znak v **AKCELERÁTORY** příkaz je neplatný. Znak po znaku stříšky (**^**) musí být v rozmezí A a vykreslování (včetně).
+
+9. **prázdné nabídky není povolená.**
+
+     **END** – klíčové slovo se nachází před všechny položky nabídky jsou definovány v **nabídky** příkazu. Nástroj Resource Compiler neumožňuje prázdné nabídky. Ujistěte se, že nemáte žádné otevřené uvozovek v rámci **nabídky** příkazu.
+
+10. **END očekává v dialogovém okně**
+
+     **END** – klíčové slovo se musí vyskytovat na konci **dialogové okno** příkazu. Ujistěte se, že neexistují žádné otevřené nabídky vlevo od předchozího příkazu.
+
+11. **END očekává v nabídce**
+
+     **END** – klíčové slovo musí být na konci **nabídky** příkazu. Ujistěte se, že máte všechny otevřené uvozovky nebo neshoda dvojice **začít** a **END** příkazy.
+
+12. **Očekávaný čárka v tabulce akcelerátorů**
+
+     Nástroj Resource Compiler vyžaduje čárkou `event` a *idvalue* pole v **AKCELERÁTORY** příkazu.
+
+13. **Název třídy očekávané ovládacího prvku**
+
+     `class` Pole **ovládací PRVEK** příkaz v **dialogové okno** příkazu musí být jedna z následujících typů: tlačítko, pole se SEZNAMEM, úpravy, LISTBOX, POSUVNÍK, STATICKÝ, nebo uživatelem definovaný. Ujistěte se, že třída je napsán správně.
+
+14. **Očekával se název písma pro rozpoznávání tváře**
+
+     *Řez písma* pole možnosti písma ve **dialogové okno** příkazu musí být řetězec znaků ASCII, který je uzavřen do dvojitých uvozovek. Toto pole určuje název písma.
+
+15. **Očekávaná hodnota ID pro položku nabídky**
+
+     **Nabídky** musí obsahovat prohlášení *menuID* pole, který určuje název nebo číslo, která identifikuje prostředek nabídky.
+
+16. **Řetězec očekávaný nabídky**
+
+     Každý **MENUITEM** a **automaticky otevírané okno** musí obsahovat příkaz *text* pole, který je uzavřen do dvojitých uvozovek řetězec, který určuje název položky nabídky nebo automaticky otevírané okno nabídka. A **MENUITEM ODDĚLOVAČ** příkaz vyžaduje žádný řetězec v uvozovkách.
+
+17. **byl očekáván příkaz číselnou hodnotu**
+
+     Nástroj Resource Compiler očekávala číselnou *idvalue* pole **AKCELERÁTORY** příkazu. Ujistěte se, že jste použili `#define` – konstanta určíte hodnotu a konstanty není napsaný špatně.
+
+18. **Byl očekáván číselnou konstantu v tabulce řetězců**
+
+     Číselné konstanty definované v `#define` příkaz, musí následovat bezprostředně **začít** – klíčové slovo v **STRINGTABLE** příkazu.
+
+19. **Byl očekáván číselný velikost**
+
+     *Pointsize* pole možnosti písma ve **dialogové okno** příkazu musí být celočíselná hodnota velikosti bodu.
+
+20. **byl očekáván číselný dialogové okno – konstanta**
+
+     A **dialogové okno** příkazu vyžaduje celočíselné hodnoty *x, y, šířka*, a *výška* pole. Ujistěte se, že tyto hodnoty jsou zahrnuty po **dialogové okno** – klíčové slovo a že nejsou záporné.
+
+21. **Očekávaný řetězec v STRINGTABLE**
+
+     Očekává se řetězec po každém z nich *stringid* hodnotu **STRINGTABLE** příkazu.
+
+22. **Očekával se řetězcový nebo konstantní akcelerátor – příkaz**
+
+     Nástroj Resource Compiler nebyl schopen určit, jaký typ klíče se nastavuje pro akcelerátor. `event` Pole **AKCELERÁTORY** příkaz může být neplatný.
+
+23. **Očekává se číslo ID**
+
+     Očekává se číslo pro `id` pole v příkazu ovládacího prvku **dialogové okno** příkaz. Ujistěte se, že máte více nebo `#define` příkazu pro ID ovládacího prvku.
+
+24. **Očekává se řetězec v uvozovkách ve třídě dialog**
+
+     `class` Možnost třídy v poli **dialogové okno** příkazu musí být celé číslo nebo řetězec v dvojitých uvozovkách.
+
+25. **Očekává se řetězec v uvozovkách v název dialogového okna**
+
+     `captiontext` Pole možnosti TITULKŮ ve **dialogové okno** příkazu musí být řetězec znaků ASCII, který je uzavřen do dvojitých uvozovek.
+
+26. **Soubor nebyl nalezen: název souboru**
+
+     Nebyl nalezen zadaný soubor na příkazovém řádku pro kompilátor prostředků. Zkontrolujte, zda soubor byl přesunut do jiného adresáře a určuje, zda název souboru nebo cesta zadána správně. Soubory se vyhledávají pomocí **zahrnout** proměnné prostředí nebo nastavení Visual aplikace Workbench, pokud je k dispozici.
+
+27. **Názvy musí být řadové číslovky**
+
+     *Pointsize* pole v příkazu písma musí být celé číslo, není řetězec.
+
+28. **Neplatný akcelerátoru**
+
+     `event` Pole **AKCELERÁTORY** příkaz nebyl rozpoznán nebo byl více než dva znaky.
+
+29. **Typ akcelerátoru neplatný (ASCII nebo VIRTKEY)**
+
+     `type` Pole **AKCELERÁTORY** příkazu musí obsahovat hodnotu ASCII nebo VIRTKEY.
+
+30. **Neplatný řídicí znak**
+
+     Řídicí znak v **AKCELERÁTORY** příkaz je neplatný. Neplatný řídicí znak se skládá z jednoho písmeno (pouze) poté, co stříšky (^).
+
+31. **Neplatný ovládací prvek typu**
+
+     Každý příkaz ovládacího prvku v **dialogové okno** příkazu musí být jedna z následujících akcí: zaškrtávací políčko, pole se SEZNAMEM, ovládací PRVEK, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ikony, LISTBOX, LTEXT, PUSHBUTTON, ovládacího prvku RADIOBUTTON, RTEXT, POSUVNÍK. Ujistěte se, že tyto řídicí příkazy jsou zadány správně.
+
+32. **Neplatný typ**
+
+     Typ prostředku nebyl mezi typy definované v souboru WINDOWS.h.
+
+33. **Textový řetězec nebo řádu očekávání v ovládacím prvku**
+
+     *Text* pole **ovládací PRVEK** příkaz v **dialogové okno** příkazu musí být textový řetězec nebo odkaz na pořadovém místě pro typ ovládacího prvku. Pokud pomocí ordinální číslo, ujistěte se, že máte `#define` příkaz pro ovládací prvek.
+
+34. **Závorky**
+
+     Ujistěte se, že každý levou (otevírací) byly uzavřeny **dialogové okno** příkazu.
+
+35. **Neočekávaná hodnota v RCData**
+
+     *Nezpracovaná data* hodnoty v **RCDATA** příkaz musí být celá čísla nebo řetězce, každé oddělené čárkou. Ujistěte se, že jste nepřešly vynechte čárku nebo vynechte uvozovky kolem řetězec.
+
+36. **Nabídka Neznámý podtyp**
+
+     *Definice položky* pole **nabídky** příkaz může obsahovat pouze **MENUITEM** a **automaticky otevírané okno** příkazy.

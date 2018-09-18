@@ -1,5 +1,5 @@
 ---
-title: swap – funkce (auto_handle) | Microsoft Docs
+title: swap – funkce (auto_handle) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103229"
 ---
 # <a name="swap-function-autohandle"></a>swap – funkce (auto_handle)
-Prohození objektů mezi jeden `auto_handle` a další.  
+Zamění objektů mezi `auto_handle` a další.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_left`  
- `auto_handle`.  
+*_vlevo*<br/>
+`auto_handle`.  
   
- `_right`  
- Jiné `auto_handle`.  
+*vp_ravo*<br/>
+Jiné `auto_handle`.  
   
 ## <a name="example"></a>Příklad  
   

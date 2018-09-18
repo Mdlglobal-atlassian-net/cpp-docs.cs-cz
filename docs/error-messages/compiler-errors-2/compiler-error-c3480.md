@@ -1,5 +1,5 @@
 ---
-title: C3480 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3480 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eff58b09fe1f2bbfe8a7629594399e8ca6b22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fd58a8c38ee6dc5f77ef280ba3b7a546a666cd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107855"
 ---
-# <a name="compiler-error-c3480"></a>C3480 chyby kompilátoru
-'příkaz var': zachycená proměnná lambda musí být ze nadřazených oboru – funkce  
-  
- Zachycená proměnná lambda není ze nadřazených oboru funkce.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Proměnná odeberte ze seznamu zachycení výrazu lambda.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří C3480, protože proměnná `global` není ze nadřazených oboru funkce:  
-  
-```  
-// C3480a.cpp  
-  
-int global = 0;  
-int main()  
-{  
-   [&global] { global = 5; }(); // C3480  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad přeloží C3480 odebráním proměnnou `global` ze seznamu zachycení výrazu lambda:  
-  
-```  
-// C3480b.cpp  
-  
-int global = 0;  
-int main()  
-{  
-   [] { global = 5; }();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3480"></a>Chyba kompilátoru C3480
+
+'příkaz var': proměnná zachycení lambda musí být z nadřazeného oboru – funkce
+
+Proměnná zachycení lambda není v ohraničujícím oboru funkce.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Proměnnou můžete odeberte ze seznamu zachycení výrazu lambda.
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C3480, protože proměnná `global` nepochází z nadřazeného oboru funkce:
+
+```
+// C3480a.cpp
+
+int global = 0;
+int main()
+{
+   [&global] { global = 5; }(); // C3480
+}
+```
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu řeší C3480 odebráním proměnné `global` ze seznamu zachycení výrazu lambda:
+
+```
+// C3480b.cpp
+
+int global = 0;
+int main()
+{
+   [] { global = 5; }();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

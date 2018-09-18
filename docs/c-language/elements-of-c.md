@@ -1,5 +1,5 @@
 ---
-title: Elementy jazyka C | Microsoft Docs
+title: Elementy jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bccc930f7ca06a421b8b0d62c7d29f8ed468fa4a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8f6c6ff371d1c0a3d889abed1a55a8cfbe629fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099883"
 ---
 # <a name="elements-of-c"></a>Elementy jazyka C
-Tato část popisuje elementy jazyka C programovací jazyk, včetně názvů, číslice a znaky použitý k vytvoření programu C. Syntaxe ANSI C popisků tyto součásti tokeny.  
-  
- Tato část vysvětluje, jak definovat tokeny a jak kompilátor vyhodnocuje je.  
-  
- Jsou popsané v následujících tématech:  
-  
--   [Tokeny](../c-language/c-tokens.md)  
-  
--   [Komentáře](../c-language/c-comments.md)  
-  
--   [Klíčová slova](../c-language/c-keywords.md)  
-  
--   [Identifikátory](../c-language/c-identifiers.md)  
-  
--   [Konstanty](../c-language/c-constants.md)  
-  
--   [Textové literály](../c-language/c-string-literals.md)  
-  
--   [Interpunkce a speciální znaky](../c-language/punctuation-and-special-characters.md)  
-  
- V části také zahrnuje referenční tabulky pro [trigraph](../c-language/trigraphs.md), [omezení Floating-Point konstanty](../c-language/limits-on-floating-point-constants.md), [omezení typu Integer C++](../c-language/cpp-integer-limits.md), a [řídicí sekvence ](../c-language/escape-sequences.md).  
-  
- Operátory jsou znaky (jeden znaků a kombinace znaků), které určují, jak se mají-li upravit hodnoty. Každý symbol interpretována jako jedné jednotky, názvem token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
+
+Tato část popisuje elementy programovací jazyk C, včetně názvů, číslice a znaky použitý k vytvoření programu v jazyce C. Tyto tokeny součásti syntaxe standardu ANSI C popisků
+
+Tato část vysvětluje, jak definovat tokeny a způsob, jak je kompilátor vyhodnocuje.
+
+Jsou popsány v následujících tématech:
+
+- [Tokeny](../c-language/c-tokens.md)
+
+- [Komentáře](../c-language/c-comments.md)
+
+- [Klíčová slova](../c-language/c-keywords.md)
+
+- [Identifikátory](../c-language/c-identifiers.md)
+
+- [Konstanty](../c-language/c-constants.md)
+
+- [Řetězcové literály](../c-language/c-string-literals.md)
+
+- [Interpunkce a speciální znaky](../c-language/punctuation-and-special-characters.md)
+
+Část také obsahuje referenční tabulky pro [Trigraphs](../c-language/trigraphs.md), [omezení konstant s plovoucí desetinné čárky s](../c-language/limits-on-floating-point-constants.md), [omezení typu Integer jazyka C++](../c-language/cpp-integer-limits.md), a [řídicí sekvence ](../c-language/escape-sequences.md).
+
+Operátory jsou znaky (jednotlivé znaky a kombinace znaků), které určují, jak se hodnoty manipulovat. Každý symbol je interpretován jako celek, volá se token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

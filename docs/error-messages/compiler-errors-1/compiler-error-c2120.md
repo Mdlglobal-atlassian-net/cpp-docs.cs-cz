@@ -1,5 +1,5 @@
 ---
-title: C2120 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2120 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f977f3a0ffda275a0819f01f8c99f12236babd5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4f4247d8e752e71b86829ea61756f2f04d26762
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105987"
 ---
-# <a name="compiler-error-c2120"></a>C2120 chyby kompilátoru
-void neplatná ve všech typech  
-  
- `void` Typ se používá v deklaraci s jiným typem.  
-  
- Následující ukázka generuje C2120:  
-  
-```  
-// C2120.cpp  
-int main() {  
-   void int i;   // C2120  
-   int j;   // OK  
-}  
+# <a name="compiler-error-c2120"></a>Chyba kompilátoru C2120
+
+void neplatná se všemi typy
+
+`void` Typ se používá v deklaraci jiného typu.
+
+Následující ukázka generuje C2120:
+
+```
+// C2120.cpp
+int main() {
+   void int i;   // C2120
+   int j;   // OK
+}
 ```

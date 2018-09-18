@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru C2300 chyba | Microsoft Docs
+title: Chyba kompilátoru C2300 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94133b45b4836888a3a0ef7075058cfc57b87cd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a521e9eefff501656c5d6192a98b95a35926b84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168565"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111898"
 ---
-# <a name="compiler-error-c2300"></a>C2300 chyby kompilátoru
-"identifikátor": Třída nemá destruktor volat. ~ identifikátor.  
-  
- Třída nemá destruktor s požadovaným názvem.
+# <a name="compiler-error-c2300"></a>Chyba kompilátoru C2300
+
+'identifier': Třída nemá destruktor volá ' ~ identifikátor.
+
+Třída nemá destruktor s požadovaným názvem.

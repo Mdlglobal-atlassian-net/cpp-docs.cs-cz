@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1188 | Microsoft Docs
+title: Chyba Linkerů LNK1188 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e31943ae253a332576fba73102db410b103a0096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b31590d94d809c16ed64d16071db0919f60238
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098937"
 ---
 # <a name="linker-tools-error-lnk1188"></a>Chyba linkerů LNK1188
-BADFIXUPSECTION:: cíl neplatná oprava 'symbol'; možné nula délku části  
-  
- Cíl přemístění během VxD – odkaz, neměl oddíl. S LINK386 (starší verze), záznamu skupiny OMF (generované direktivu MASM skupiny) pravděpodobně byl použit kombinovat nulové délky oddíl s jinou část nulová délka. Formát COFF nepodporuje GROUP – direktiva a části nulové délky. Při propojení automaticky převede tento typ objektu OMF COFF, této chybě může dojít.
+
+BADFIXUPSECTION:: Neplatný cíl opravy 'symbol'; je to možné nula délku části
+
+Při odkazu VxD cíl přemístění nemá oddíl. S LINK386 (starší verze), vytvoří se záznam omf – skupina (generovaných MASM GROUP – direktiva) pravděpodobně byl použit zkombinovat oddíl s nulovou délkou s jinou část nenulovou délkou. Formátu COFF nepodporuje skupiny směrnice a nulové délky oddílů. Pokud odkaz automaticky převede tento typ omf – objektů COFF, může dojít k této chybě.

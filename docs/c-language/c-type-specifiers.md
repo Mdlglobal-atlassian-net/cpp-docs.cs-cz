@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103357"
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
@@ -28,19 +28,7 @@ Specifikátory typu v deklaracích definování typu deklarace proměnné nebo f
 
 ## <a name="syntax"></a>Syntaxe
 
-*Specifikátor typu*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Typ void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**krátké**  
-&nbsp;&nbsp;&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Long**  
-&nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Double**  
-&nbsp;&nbsp;&nbsp;&nbsp;**podepsané**  
-&nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**  
-&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*  
-&nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*  
-&nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*  
+*Specifikátor typu*: &nbsp; &nbsp; &nbsp; &nbsp; **void** &nbsp; &nbsp; &nbsp; &nbsp; **char** &nbsp; &nbsp; &nbsp; &nbsp; **krátký** &nbsp; &nbsp; &nbsp; &nbsp; **int** &nbsp; &nbsp; &nbsp; &nbsp; **dlouhé** &nbsp; &nbsp; &nbsp; &nbsp; **float** &nbsp; &nbsp; &nbsp; &nbsp; **double** &nbsp; &nbsp; &nbsp; &nbsp; **podepsané** &nbsp; &nbsp; &nbsp; &nbsp; **bez znaménka** &nbsp; &nbsp; &nbsp; &nbsp; *struct nebo sjednocení – specifikátor* &nbsp; &nbsp; &nbsp; &nbsp; *specifikátoru výčtu* &nbsp; &nbsp; &nbsp; &nbsp; *název typedef*
 
 **Podepsané char**, **znaménkem**, **podepsané krátká celočíselná**, a **podepsané long int** typy, společně s jejich **bez znaménka**  protějšky a **výčtu**, se nazývají *integrální* typy. **Float**, **double**, a **long double** specifikátory typu jsou označovány jako *s plovoucí desetinnou čárkou* nebo *splovoucídesetinnoučárkou* typy. Můžete použít libovolný typ s plovoucí desetinnou čárkou nebo celočíselné specifikátor v deklaraci proměnné nebo funkce. Pokud *specifikátor typu* není k dispozici v deklaraci, je slov za **int**.
 
@@ -87,4 +75,4 @@ Můžete vytvořit další typ specifikátory s **typedef** deklarace, jak je po
 
 ## <a name="see-also"></a>Viz také:
 
-[Deklarace a typy](../c-language/declarations-and-types.md)  
+[Deklarace a typy](../c-language/declarations-and-types.md)

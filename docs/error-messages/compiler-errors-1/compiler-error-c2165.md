@@ -1,5 +1,5 @@
 ---
-title: C2165 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2165 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8d434993ad913efca3fdff58fb7ed9cc0715e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e9047b7f096c855bbefec745b454e2289c05e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101108"
 ---
-# <a name="compiler-error-c2165"></a>C2165 chyby kompilátoru
-'– klíčové slovo': ukazatele na data nelze upravit.  
-  
- `__stdcall`, `__cdecl`, Nebo `__fastcall` – klíčové slovo pokusí změnit ukazatel na data.  
-  
- Následující ukázka generuje C2165:  
-  
-```  
-// C2165.cpp  
-// compile with: /c  
-char __cdecl *p;   // C2165  
-char *p;   // OK  
+# <a name="compiler-error-c2165"></a>Chyba kompilátoru C2165
+
+! – klíčové slovo': nejdou upravovat ukazatele na data
+
+`__stdcall`, `__cdecl`, Nebo `__fastcall` – klíčové slovo se pokusí upravit ukazatel na data.
+
+Následující ukázka generuje C2165:
+
+```
+// C2165.cpp
+// compile with: /c
+char __cdecl *p;   // C2165
+char *p;   // OK
 ```

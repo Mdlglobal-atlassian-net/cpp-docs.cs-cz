@@ -1,5 +1,5 @@
 ---
-title: C3383 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3383 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b54eda0e29a9876da83b9e3da384a39b9345d5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e35aa05dd037c7d8a5dfd9f7e8328f3644b901e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109389"
 ---
-# <a name="compiler-error-c3383"></a>C3383 chyby kompilátoru
-operátor nové nepodporuje/CLR: safe  
-  
- Výstupní soubor **/CLR: safe** kompilace je soubor, který je prokazatelně typově bezpečný a ukazatele nejsou podporovány.  
-  
- Další informace najdete v tématu,  
-  
--   [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Obecné problémy migrace v 64bitovém prostředí Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3383.  
-  
-```  
-// C3383.cpp  
-// compile with: /clr:safe  
-int main() {  
-   char* pCharArray = new char[256];  // C3383  
-}  
+# <a name="compiler-error-c3383"></a>Chyba kompilátoru C3383
+
+operator new není podporovaná s/clr: safe
+
+Výstupní soubor **/CLR: safe** kompilace je soubor, který je prokazatelně typově bezpečný a ukazatele nejsou podporovány.
+
+Další informace najdete v tématu,
+
+- [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Obecné problémy migrace v 64bitovém prostředí Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3383.
+
+```
+// C3383.cpp
+// compile with: /clr:safe
+int main() {
+   char* pCharArray = new char[256];  // C3383
+}
 ```

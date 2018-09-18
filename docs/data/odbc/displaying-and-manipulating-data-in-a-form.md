@@ -1,5 +1,5 @@
 ---
-title: Zobrazení a manipulace dat ve formuláři | Microsoft Docs
+title: Zobrazení a manipulace s daty ve formě | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b86c58c8e5afb53cb02174beb3553378dd0efc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d09245bdf05f770e6b0e3161cf71902944b608c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103643"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Zobrazení dat ve formuláři a manipulace s nimi
-Mnoho aplikací přístup k datům vyberte data a zobrazit ji v pole ve formuláři. Třída databáze [CRecordView](../../mfc/reference/crecordview-class.md) vám dává [CFormView](../../mfc/reference/cformview-class.md) objekt připojení přímo na objekt sady záznamů. Zobrazení záznamu používá [výměna dialogových dat (DDX)](../../mfc/dialog-data-exchange-and-validation.md) přesunutí hodnoty polí na aktuální záznam ze sady záznamů ovládacích prvků na formuláři a přesouvá aktualizované informace zpět do sady záznamů. Sady záznamů se pak používá výměna pole záznamu (RFX) pro přesun dat mezi její pole datových členů a odpovídající sloupce v tabulce na datovém zdroji.  
+
+Mnoho aplikací přístup k datům vyberte data a zobrazit je pole ve formuláři. Třída database [CRecordView](../../mfc/reference/crecordview-class.md) vám [CFormView](../../mfc/reference/cformview-class.md) objektu přímo připojen k objektu sady záznamů. Zobrazení záznamu používá [výměna dat dialogových oken (DDX)](../../mfc/dialog-data-exchange-and-validation.md) přesunout hodnoty polí aktuální záznam ze záznamů pro ovládací prvky ve formuláři a přesuňte aktualizované informace zpět do sady záznamů. Sady záznamů pro přesun dat mezi její datové členy a odpovídající sloupce v tabulce ve zdroji dat. pak dále používá výměna pole záznamu (RFX).  
   
- Můžete použít Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) k vytvoření třídy zobrazení a jeho přidružené třídy sady záznamů ve spojení.  
+Můžete použít Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) Chcete-li vytvořit třídu zobrazení a jeho přidružené třídy sady záznamů ve spojení.  
   
- Zobrazení záznamu a jeho sady záznamů jsou zničen po zavření dokumentu. Další informace o zobrazení záznamů najdete v tématu [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+Zobrazení záznamu a jeho sady záznamů jsou zničeny při zavření dokumentu. Další informace o zobrazení záznamů najdete v tématu [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)
+
+[Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

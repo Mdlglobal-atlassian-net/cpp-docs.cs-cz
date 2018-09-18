@@ -1,5 +1,5 @@
 ---
-title: Rozsah této příručky | Microsoft Docs
+title: Rozsah této příručky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50352e68c8481023a6e419bc9fc436e7abbb3797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd91696a1b04f34ea3c3d7e40dc07d450b1f191b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106815"
 ---
 # <a name="scope-of-this-manual"></a>Rozsah této příručky
-Jazyk C je flexibilní jazyk, který mnoho rozhodnutí o programování nechává na programátorovi. V souladu s touto filozofií zavádí jazyk C několik omezení v oblastech jako převod typů. Ačkoli tato charakteristika jazyka může programování usnadnit, je zapotřebí jazyk dobře znát, abyste porozuměli, jak se program bude chovat. Tato kniha poskytuje informace o součástech jazyka C a vlastnostech implementace společnosti Microsoft. Syntaxe pro jazyk C je z X3.159 ANSI-1989, *American National standardní systémů informace - programovací jazyk – C* (dále jen ANSI C – standard), i když není součástí standardu ANSI C. [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) syntaxe a popis toho, jak číst a používat definice syntaxe.  
-  
- Tato kniha nepojednává o programování v jazyce C++. V tématu [referenční příručka jazyka C++](../cpp/cpp-language-reference.md) informace o jazyka C++.  
-  
-## <a name="see-also"></a>Viz také  
- [Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)
+
+Jazyk C je flexibilní jazyk, který mnoho rozhodnutí o programování nechává na programátorovi. V souladu s touto filozofií zavádí jazyk C několik omezení v oblastech jako převod typů. Ačkoli tato charakteristika jazyka může programování usnadnit, je zapotřebí jazyk dobře znát, abyste porozuměli, jak se program bude chovat. Tato kniha poskytuje informace o součástech jazyka C a vlastnostech implementace společnosti Microsoft. Syntaxe jazyka C je z ANSI X3.159-1989, *americký národní Standard pro informační systémy – programovací jazyk – C* (dále jen standard ANSI C), i když není součástí standardu ANSI C. [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) poskytuje syntaxi a popis toho, jak číst a používat definice syntaxe.
+
+Tato kniha nepojednává o programování v jazyce C++. Zobrazit [referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md) informace o jazyce C++.
+
+## <a name="see-also"></a>Viz také
+
+[Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)

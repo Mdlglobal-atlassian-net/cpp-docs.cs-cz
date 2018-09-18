@@ -1,5 +1,5 @@
 ---
-title: C2151 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2151 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101550"
 ---
-# <a name="compiler-error-c2151"></a>C2151 chyby kompilátoru
-více než jeden atribut language  
-  
- Funkce, která má více klíčových slov ( `__cdecl`, `__stdcall`, nebo `__fastcall`) určující konvence volání.
+# <a name="compiler-error-c2151"></a>Chyba kompilátoru C2151
+
+více než jeden atribut language
+
+Funkce, která má více než jedno klíčové slovo ( `__cdecl`, `__stdcall`, nebo `__fastcall`) určující konvence volání.

@@ -22,82 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099778"
 ---
 # <a name="alignof-operator"></a>__alignof – operátor
-C ++ 11 zavádí **alignof** operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro zajištění maximální přenositelnosti používali operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.  
-  
- **Specifické pro Microsoft**  
-  
- Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+C ++ 11 zavádí **alignof** operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro zajištění maximální přenositelnosti používali operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.
+
+**Specifické pro Microsoft**
+
+Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
   __alignof( type )
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Příklad:  
-  
-|Výraz|Hodnota|  
-|----------------|-----------|  
-|**__alignof (char)**|1|  
-|**__alignof (krátký)**|2|  
-|**__alignof (int).**|4|  
-|**__alignof ( \__int64)**|8|  
-|**__alignof (float)**|4|  
-|**__alignof (double)**|8|  
-|**__alignof (char\* )**|4|  
-  
- **__Alignof** hodnota je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:  
-  
-```cpp 
-typedef struct { int a; double b; } S;  
-// __alignof(S) == 8  
-```  
-  
- V takovém případě **__alignof** hodnota je požadavkem zarovnání největšího prvku ve struktuře.  
-  
- Podobně pro  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; } S;  
-```  
-  
- `__alignof(S)` je rovno `32`.  
-  
- Jedním použitím **__alignof** by bylo parametrem pro jednu z vlastních rutin přidělení paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; double b; } S;  
-int n = 50; // array size  
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
-```  
-  
- Další informace o úpravách zarovnání naleznete v:  
-  
--   [pack](../preprocessor/pack.md)  
-  
--   [align](../cpp/align-cpp.md)  
-  
--   [__unaligned](../cpp/unaligned.md)  
-  
--   [/Zp (zarovnání členů struktury)](../build/reference/zp-struct-member-alignment.md)  
-  
--   [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)  
-  
- Další informace o rozdílech v souladu v kódu pro x86 a x64 najdete v tématu:  
-  
--   [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)
+```
+
+## <a name="remarks"></a>Poznámky
+
+Příklad:
+
+|Výraz|Hodnota|
+|----------------|-----------|
+|**__alignof (char)**|1|
+|**__alignof (krátký)**|2|
+|**__alignof (int).**|4|
+|**__alignof ( \__int64)**|8|
+|**__alignof (float)**|4|
+|**__alignof (double)**|8|
+|**__alignof (char\* )**|4|
+
+**__Alignof** hodnota je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:
+
+```cpp
+typedef struct { int a; double b; } S;
+// __alignof(S) == 8
+```
+
+V takovém případě **__alignof** hodnota je požadavkem zarovnání největšího prvku ve struktuře.
+
+Podobně pro
+
+```cpp
+typedef __declspec(align(32)) struct { int a; } S;
+```
+
+`__alignof(S)` je rovno `32`.
+
+Jedním použitím **__alignof** by bylo parametrem pro jednu z vlastních rutin přidělení paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.
+
+```cpp
+typedef __declspec(align(32)) struct { int a; double b; } S;
+int n = 50; // array size
+S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+```
+
+Další informace o úpravách zarovnání naleznete v:
+
+- [pack](../preprocessor/pack.md)
+
+- [align](../cpp/align-cpp.md)
+
+- [__unaligned](../cpp/unaligned.md)
+
+- [/Zp (zarovnání členů struktury)](../build/reference/zp-struct-member-alignment.md)
+
+- [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)
+
+Další informace o rozdílech v souladu v kódu pro x86 a x64 najdete v tématu:
+
+- [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)

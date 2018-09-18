@@ -1,5 +1,5 @@
 ---
-title: default_scheduler_exists – třída | Microsoft Docs
+title: default_scheduler_exists – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c18bf2a747cdedda2c9ce2ea6162e5a92e3b36
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 488f1d08c089b159971834729596d74b4e3dab22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106042"
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists – třída
-Tato třída popisuje výjimka vyvolaná při `Scheduler::SetDefaultSchedulerPolicy` metoda je volána, když plánovače výchozí již existuje v rámci procesu.  
+Tato třída popisuje výjimku vyvolána, když `Scheduler::SetDefaultSchedulerPolicy` metoda se volá, když je výchozím plánovačem již existuje v rámci procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class default_scheduler_exists : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> default_scheduler_exists 
+##  <a name="ctor"></a> default_scheduler_exists – 
 
  Vytvoří `default_scheduler_exists` objektu.  
   
@@ -63,8 +63,8 @@ default_scheduler_exists() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: C3168 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3168 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83f0d6c6b35d863ee200798bd4c6a8bcd08d88ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2a70af70af5b31ef9a3bf2fe939eef28783369a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106451"
 ---
-# <a name="compiler-error-c3168"></a>C3168 chyby kompilátoru
-'type': Neplatná základní typ pro příkaz enum  
-  
-Základní typ zadaný pro `enum` typu nebyla platná. Základní typ musí být typ integrální C++ nebo odpovídající typ CLR.  
-  
-Následující ukázka generuje C3168:  
-  
-```  
-// C3168.cpp  
-// compile with: /clr /c  
-ref class G{};  
-  
-enum class E : G { e };   // C3168  
-enum class F { f };   // OK  
-```  
+# <a name="compiler-error-c3168"></a>Chyba kompilátoru C3168
+
+'type': Neplatný podkladový typ pro výčet
+
+Podkladový typ zadaný pro `enum` typu nebyl platný. Základní typ musí být celočíselného typu jazyka C++ nebo odpovídající typ CLR.
+
+Následující ukázka generuje C3168:
+
+```
+// C3168.cpp
+// compile with: /clr /c
+ref class G{};
+
+enum class E : G { e };   // C3168
+enum class F { f };   // OK
+```

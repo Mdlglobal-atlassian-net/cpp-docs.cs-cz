@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a20eb3db99ce87b2de51aa1ef7602f7b5a36a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d7ac74d1b310f4db7bfc4a558db5b89df5d8df5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109844"
 ---
 # <a name="atl-project-wizard"></a>Průvodce projektem ATL
 
@@ -58,10 +58,10 @@ Můžete určit vlastnosti projektu (například [, jestli se má propojit stati
 
 ## <a name="see-also"></a>Viz také
 
-[Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
-[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
-[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Kurz](../../atl/active-template-library-atl-tutorial.md)
 

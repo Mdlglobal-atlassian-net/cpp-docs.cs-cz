@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106230"
 ---
 # <a name="marshaling-global-functions"></a>Zařazení globálních funkcí
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel `IStream` rozhraní na datový proud použitý k zařazování.
 
 ### <a name="example"></a>Příklad
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel rozhraní k zařadit.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní se zařadit.
 
-*ppStream*  
+*ppStream*<br/>
 [out] Ukazatel `IStream` rozhraní u nového objektu datového proudu, který se používá pro zařazování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud se zařazeny.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní jsou zařazeny.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ukazatel na rozhraní zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -1,5 +1,5 @@
 ---
-title: C3507 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3507 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008267fddbd1d83574081d7b257e6627b32a1f58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8375f96c0a35e01a2a93866157c0156cf22a4993
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252914"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105129"
 ---
-# <a name="compiler-error-c3507"></a>C3507 chyby kompilátoru
-ProgID může mít maximálně 39 znaků 'id'; ani obsahovat žádné interpunkce kromě '.'; ani začínat číslice.  
-  
- [Progid](../../windows/progid.md) atribut má omezení na hodnotách, které může trvat.  
-  
- Následující ukázka generuje C3507:  
-  
-```  
-// C3507.cpp  
-[module(name="x")];  
-[  
-coclass,  
-progid("0123456789012345678901234567890123456789"),  
-uuid("00000000-0000-0000-0000-000000000001") // C3507 expected  
-]  
-struct CMyStruct {  
-};  
-int main() {  
-}  
+# <a name="compiler-error-c3507"></a>Chyba kompilátoru C3507
+
+ProgID může mít maximálně 39 znaků 'id'; ani obsahovat interpunkci smí z '.'; nesmí začínat číslicí
+
+[Progid](../../windows/progid.md) atribut má omezení na hodnoty, které může trvat.
+
+Následující ukázka generuje C3507:
+
+```
+// C3507.cpp
+[module(name="x")];
+[
+coclass,
+progid("0123456789012345678901234567890123456789"),
+uuid("00000000-0000-0000-0000-000000000001") // C3507 expected
+]
+struct CMyStruct {
+};
+int main() {
+}
 ```

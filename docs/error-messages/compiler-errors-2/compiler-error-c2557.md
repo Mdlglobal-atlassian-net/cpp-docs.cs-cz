@@ -1,5 +1,5 @@
 ---
-title: C2557 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2557 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5402cb98d2cf315861ccb27aad3233b3bd370f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f975bdacf4db0460f6b12cd4f340c72e50f01a8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102603"
 ---
-# <a name="compiler-error-c2557"></a>C2557 chyby kompilátoru
-"identifikátor": privátní a chráněné členy nelze inicializovat bez konstruktor  
-  
- Pouze členové a přátel můžete přiřadit hodnotu privátní nebo chráněného člena. Neveřejní členové se musí inicializovat v konstruktoru třídy.
+# <a name="compiler-error-c2557"></a>Chyba kompilátoru C2557
+
+'identifier': soukromým a chráněným členům nelze inicializovat bez konstruktoru
+
+Pouze členové a přátelé přiřadit hodnotu členu soukromé nebo chráněné. Neveřejní Členové by měl inicializována v konstruktoru třídy.

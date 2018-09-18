@@ -16,41 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107907"
 ---
 # <a name="conditional-expression-operator"></a>Operátor podmíněného výrazu
+
 C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).
 
 ## <a name="syntax"></a>Syntaxe
 
 *podmíněného výrazu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR***?**   *výraz***:***podmíněného výrazu* 
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR***?**  *výraz***:***podmíněného výrazu*
 
 *Logického výrazu OR* musí mít typ integral, plovoucí nebo ukazatel. Vyhodnotí se z hlediska jeho ekvivalence na hodnotu 0. Následuje bod sekvence *logického výrazu OR*. Probíhá vyhodnocování operandů následujícím způsobem:
 
--   Pokud *logického výrazu OR* není roven 0, *výraz* vyhodnocena. Výsledek vyhodnocení výrazu je dán neterminálu *výraz*. (To znamená, že *výraz* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu true.)
+- Pokud *logického výrazu OR* není roven 0, *výraz* vyhodnocena. Výsledek vyhodnocení výrazu je dán neterminálu *výraz*. (To znamená, že *výraz* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu true.)
 
--   Pokud *logického výrazu OR* rovná 0, *podmíněného výrazu* vyhodnocena. Výsledek výrazu je hodnota *podmíněného výrazu*. (To znamená, že *podmíněného výrazu* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu false.)
+- Pokud *logického výrazu OR* rovná 0, *podmíněného výrazu* vyhodnocena. Výsledek výrazu je hodnota *podmíněného výrazu*. (To znamená, že *podmíněného výrazu* je vyhodnocen pouze v případě *logického výrazu OR* má hodnotu false.)
 
 Všimněte si, že buď *výraz* nebo *podmíněného výrazu* je Vyhodnocená, ale ne obojí.
 
 Typ výsledku podmíněné operace závisí na typu *výraz* nebo *podmíněného výrazu* operand, následujícím způsobem:
 
--   Pokud *výraz* nebo *podmíněného výrazu* má integral nebo s plovoucí desetinnou čárkou typu (jejich typy mohou být jiné), operátor provádí běžné aritmetické převody. Typ výsledku je typ operandu po převodu.
+- Pokud *výraz* nebo *podmíněného výrazu* má integral nebo s plovoucí desetinnou čárkou typu (jejich typy mohou být jiné), operátor provádí běžné aritmetické převody. Typ výsledku je typ operandu po převodu.
 
--   Pokud mají oba *výraz* a *podmíněného výrazu* stejnou strukturu, sjednocení nebo typ ukazatele, typ výsledku je stejný typ struktury, sjednocení nebo ukazatel.
+- Pokud mají oba *výraz* a *podmíněného výrazu* stejnou strukturu, sjednocení nebo typ ukazatele, typ výsledku je stejný typ struktury, sjednocení nebo ukazatel.
 
--   Pokud mají oba operandy typu `void`, výsledek je typu `void`.
+- Pokud mají oba operandy typu `void`, výsledek je typu `void`.
 
--   Pokud některý operand je ukazatel na objekt jakéhokoli typu, a druhý operand je ukazatel na `void`, ukazatele na objekt je převést na ukazatel na `void` a výsledkem je ukazatel na `void`.
+- Pokud některý operand je ukazatel na objekt jakéhokoli typu, a druhý operand je ukazatel na `void`, ukazatele na objekt je převést na ukazatel na `void` a výsledkem je ukazatel na `void`.
 
--   Pokud *výraz* nebo *podmíněného výrazu* ukazatel a druhý operand je konstantní výraz s hodnotou 0, typ výsledku je typ ukazatele.
+- Pokud *výraz* nebo *podmíněného výrazu* ukazatel a druhý operand je konstantní výraz s hodnotou 0, typ výsledku je typ ukazatele.
 
 Typ porovnání ukazatelů, jakýkoli typ kvalifikátory (**const** nebo `volatile`) v typu, na který ukazatel ukazuje jsou neplatné, ale typ výsledku kvalifikátory dědí z obou součásti zásad správy.
 

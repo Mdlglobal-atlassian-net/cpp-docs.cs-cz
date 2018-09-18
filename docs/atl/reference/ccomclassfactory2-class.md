@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099498"
 ---
 # <a name="ccomclassfactory2-class"></a>Ccomclassfactory2 – třída
 
@@ -36,7 +36,7 @@ Tato třída implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-i
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parametry
 
-*Licence*  
+*Licence*<br/>
 Třída, která implementuje následující statické funkce:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
 
-*riid*  
+*riid*<br/>
 [in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in] Nepoužívá se. Musí mít hodnotu NULL.
 
-*riid*  
+*riid*<br/>
 [in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
 
-*bstrKey*  
+*bstrKey*<br/>
 [in] Za běhu licenční klíč dříve získány z volání `RequestLicKey`. Tento klíč se vyžaduje k vytvoření objektu.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní určené *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out] Ukazatel `LICINFO` struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*hejna*  
+*hejna*<br/>
 [in] Při hodnotě TRUE se zvýší počet zámků; v opačném případě je snížen počet zámků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*  
+*dwReserved*<br/>
 [in] Nepoužívá se. Musí být nula.
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out] Ukazatel na licenční klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -233,8 +233,8 @@ Volání [GetLicInfo](#getlicinfo) k načtení hodnoty z `fRuntimeKeyAvail`.
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomclassfactoryautothread – třída](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[Ccomclassfactorysingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComClassFactoryAutoThread – třída](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComClassFactorySingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

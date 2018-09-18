@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9027 | Microsoft Docs
+title: Upozornění příkazového řádku D9027 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112522"
 ---
 # <a name="command-line-warning-d9027"></a>Upozornění příkazového řádku D9027
-zdrojový soubor se\<filename >' ignorovat  
-  
- CL.exe ignorovat vstupní zdrojový soubor.  
-  
- Toto upozornění může být způsobeno mezeru mezi možnost /Fo a výstupní soubor na příkazovém řádku s parametrem /c. Příklad:  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- Protože je mezera mezi /Fo a `output.obj`, trvá CL.exe `output.obj` jako název souboru vstupního souboru. Chcete-li problém vyřešit, odeberte místo:  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+zdrojový soubor '\<název souboru > se ignoruje
+
+CL.exe ignoruje vstupní zdrojový soubor.
+
+Toto upozornění může být způsobeno mezeru mezi možností /Fo a název výstupního souboru na příkazovém řádku s parametrem /c. Příklad:
+
+```
+cl /c /Fo output.obj input.c
+```
+
+Protože je mezera mezi /Fo a `output.obj`, trvá CL.exe `output.obj` jako název výstupního souboru. Chcete-li problém vyřešit, odeberte místo:
+
+```
+cl /c /Fooutput.obj input.c
 ```

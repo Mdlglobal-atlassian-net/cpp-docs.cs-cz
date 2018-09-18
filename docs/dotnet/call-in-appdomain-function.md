@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain – funkce | Microsoft Docs
+title: call_in_appdomain – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105242"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain – funkce
-Provede funkci v doméně zadané aplikace.  
+Spustí funkci v doméně zadané aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,23 +49,23 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `appdomainId`  
- Doména appdomain, ve kterém se má volat funkci.  
+*appdomainId*<br/>
+Domény aplikace 00Z pro volání funkce.  
   
- `voidFunc`  
- Ukazatel na `void` funkce, která přebírá parametry N (0 < = N < = 15).  
+*voidFunc*<br/>
+Ukazatel `void` funkci, která přijímá parametry N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Ukazatel jinou hodnotu než`void` funkce, která přebírá parametry N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Ukazatel na non -`void` funkci, která přijímá parametry N (0 < = N < = 15).  
   
- `arg1...argN`  
- Nula 15 parametry mají být předány `voidFunc` nebo `nonvoidFunc` do jiné domény aplikace.  
+*arg1... argN*<br/>
+0 až 15 parametry, které se mají předat `voidFunc` nebo `nonvoidFunc` v jiné doméně aplikace.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Výsledek provedení `voidFunc` nebo `nonvoidFunc` v doméně zadané aplikace.  
   
 ## <a name="remarks"></a>Poznámky  
- Argumenty funkce předaný `call_in_appdomain` nesmí být typy CLR.  
+ Argumenty funkci předané `call_in_appdomain` nesmí být typy CLR.  
   
 ## <a name="example"></a>Příklad  
   

@@ -1,5 +1,5 @@
 ---
-title: Specifikátory třídy úložiště s deklaracemi funkce | Microsoft Docs
+title: Specifikátory třídy úložiště s deklaracemi funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f84455dd29023194e64fa4e594419630ef2656e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8816ac8917281ed19dfc1afe9e12d302a3423f74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111404"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specifikátory třídy úložiště s deklaracemi funkce
-Můžete použít buď **statické** nebo `extern` specifikátor třídy úložiště v deklaracích funkce. Funkce mají vždy globální životnost.  
-  
- **Konkrétní Microsoft**  
-  
- Deklarace funkce na vnitřní úrovni mají stejný význam jako deklarace funkce na vnější úrovni. To znamená, že funkce je viditelná z místa deklarace ve zbytku jednotky překladu i v případě, že je deklarována v místním oboru.  
-  
- **Konkrétní Microsoft END**  
-  
- Pravidla viditelnosti pro funkce se mírně liší od pravidel pro proměnné, a to takto:  
-  
--   Funkce deklarován jako **statické** je viditelná pouze v rámci zdrojový soubor, ve kterém je definovaný. Můžete volat funkce ve stejném souboru zdroje **statické** funkce, ale funguje v jiných zdrojových souborů nelze přistupovat přímo podle názvu. Je možné deklarovat jiné **statické** funkce se stejným názvem v různých zdrojového souboru bez konfliktů.  
-  
--   Funkce deklarované jako `extern` jsou zobrazována prostřednictvím všechny zdrojové soubory v programu (Pokud později redeclare funkce, jako **statické**). Jakákoli funkce může volat funkci deklarovanou jako `extern`.  
-  
--   Deklarace funkce, které vynechávají specifikátor třídy úložiště, jsou ve výchozím nastavení deklarovány jako `extern`.  
-  
- **Konkrétní Microsoft**  
-  
- Microsoft umožňuje předefinování `extern` identifikátor jako **statické**.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)
+
+Můžete použít buď **statické** nebo `extern` specifikátor třídy úložiště v deklaracích funkcí. Funkce mají vždy globální životnost.
+
+**Specifické pro Microsoft**
+
+Deklarace funkce na vnitřní úrovni mají stejný význam jako deklarace funkce na vnější úrovni. To znamená, že funkce je viditelná z místa deklarace ve zbytku jednotky překladu i v případě, že je deklarována v místním oboru.
+
+**Specifické pro END Microsoft**
+
+Pravidla viditelnosti pro funkce se mírně liší od pravidel pro proměnné, a to takto:
+
+- Funkce deklarovaná jako **statické** je viditelná pouze v rámci zdrojového souboru, ve kterém je definována. Funkce ve stejném zdrojovém souboru mohou volat **statické** , ale funkce v jiných zdrojových souborech nelze přistupovat přímo podle názvu. Lze deklarovat jinou **statické** funkce se stejným názvem v odlišném zdrojovém souboru bez konfliktu.
+
+- Funkce deklarované jako `extern` jsou viditelné ve všech zdrojových souborech programu (Pokud je později nepředeklarujete jako **statické**). Jakákoli funkce může volat funkci deklarovanou jako `extern`.
+
+- Deklarace funkce, které vynechávají specifikátor třídy úložiště, jsou ve výchozím nastavení deklarovány jako `extern`.
+
+**Specifické pro Microsoft**
+
+Společnost Microsoft umožňuje předefinování `extern` identifikátor jako **statické**.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Třídy úložiště jazyka C](../c-language/c-storage-classes.md)

@@ -18,48 +18,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3122cb3622469adeda3b8c0a2437fe4db7dfca62
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a8967861ab6ac4e6b6fafd11eea22e67de339ea8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111378"
 ---
 # <a name="bitwise-and-operator-amp"></a>Bitový operátor AND: &amp;
 
-## <a name="syntax"></a>Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe
+
 ```
-expression & expression  
+expression & expression
 ```
-  
-## <a name="remarks"></a>Poznámky  
- Výrazy mohou být jiné a výrazů, nebo (na základě práv subjektů k omezení typů, které jsou uvedené níže) výrazy rovnosti, relační výrazy, sčítání výrazy, násobení výrazy, ukazatel na člen výrazy, výrazy přetypování, unární výrazy, výrazy přípony nebo primární výrazy.  
-  
- Bitový operátor AND (**&**) porovnává každý bit prvního operandu s odpovídajícím bitem druhého operandu. Pokud i službu bits 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.  
-  
- Oba operandy bitového operátoru AND musí být integrální typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md), jsou na operandy použity.  
-  
-## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor &  
- **Bitand** operátor je textový ekvivalent operátoru **&**. Existují dva způsoby přístupu k **bitand** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp 
-// expre_Bitwise_AND_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate bitwise AND  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   unsigned short a = 0xFFFF;      // pattern 1111 ...  
-   unsigned short b = 0xAAAA;      // pattern 1010 ...  
-  
-   cout  << hex << ( a & b ) << endl;   // prints "aaaa", pattern 1010 ...  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Integrované operátory C++, jejich priorita a asociativita](cpp-built-in-operators-precedence-and-associativity.md)  
- [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Bitové operátory jazyka C](../c-language/c-bitwise-operators.md)
+
+## <a name="remarks"></a>Poznámky
+
+Výrazy mohou být jiné a výrazů, nebo (na základě práv subjektů k omezení typů, které jsou uvedené níže) výrazy rovnosti, relační výrazy, sčítání výrazy, násobení výrazy, ukazatel na člen výrazy, výrazy přetypování, unární výrazy, výrazy přípony nebo primární výrazy.
+
+Bitový operátor AND (**&**) porovnává každý bit prvního operandu s odpovídajícím bitem druhého operandu. Pokud i službu bits 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.
+
+Oba operandy bitového operátoru AND musí být integrální typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md), jsou na operandy použity.
+
+## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor &
+
+**Bitand** operátor je textový ekvivalent operátoru **&**. Existují dva způsoby přístupu k **bitand** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).
+
+## <a name="example"></a>Příklad
+
+```cpp
+// expre_Bitwise_AND_Operator.cpp
+// compile with: /EHsc
+// Demonstrate bitwise AND
+#include <iostream>
+using namespace std;
+int main() {
+   unsigned short a = 0xFFFF;      // pattern 1111 ...
+   unsigned short b = 0xAAAA;      // pattern 1010 ...
+
+   cout  << hex << ( a & b ) << endl;   // prints "aaaa", pattern 1010 ...
+}
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Integrované operátory C++, jejich priorita a asociativita](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Bitové operátory jazyka C](../c-language/c-bitwise-operators.md)

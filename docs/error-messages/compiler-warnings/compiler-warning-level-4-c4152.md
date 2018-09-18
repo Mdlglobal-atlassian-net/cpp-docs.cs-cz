@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4152 | Microsoft Docs
+title: Upozornění (úroveň 4) C4152 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa258b7dbd965f0aaa76d4b60bb5c043df1187f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cab4d812c91239f277dbacede6db43f669908b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099626"
 ---
-# <a name="compiler-warning-level-4-c4152"></a>C4152 kompilátoru upozornění (úroveň 4)
-bez standardní příponou, převod ptr funkce nebo dat ve výrazu  
-  
- Ukazatel na funkci je převést na nebo z dat ukazatel. Tento převod je povolena v rámci rozšíření Microsoft (/Ze), ale nikoli v rámci ANSI c
+# <a name="compiler-warning-level-4-c4152"></a>Kompilátor upozornění (úroveň 4) C4152
+
+nestandardní rozšíření, převod ptr funkce/dat ve výrazu
+
+Ukazatel na funkci je převést na ukazatel na data. Tento převod je povolený v rámci rozšíření společnosti Microsoft (/Ze), ale ne v standard ANSI C.

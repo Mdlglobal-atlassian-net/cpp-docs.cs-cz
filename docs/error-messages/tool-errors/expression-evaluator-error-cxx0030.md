@@ -1,5 +1,5 @@
 ---
-title: CXX0030 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0030 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669c585c637129c1fb6a480d91b31e5a1264fd22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2921013d116b7d8f02e1e29380ca3cd14086b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102806"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Chyba při vyhodnocování výrazu CXX0030
-výraz není evaluatable  
-  
- Vyhodnocení výrazu ladicím programu nelze získat hodnotu výrazu, protože do něj zapisuje. Jeden pravděpodobnou příčinou je, že výraz odkazuje na paměti, která je mimo program adresního prostoru (vyhodnocení ukazatele null je jedním z příkladů). Windows neumožňuje přístup k paměti, která je mimo program adresní prostor.  
-  
- Můžete chtít přepište výraz pomocí závorek řídit pořadí vyhodnocování.  
-  
- Tato chyba je stejný jako CAN0030.
+
+výraz není evaluatable
+
+Chyba při vyhodnocování výrazů ladicího programu nelze získat hodnotu výrazu, jak je uvedená. Pravděpodobnou příčinou je, že výraz odkazuje na paměti, která je mimo Adresní prostor programu (přesměrování ukazatele null je jedním z příkladů). Windows neumožňuje přístup k paměti, která je mimo Adresní prostor virtuálních programu.
+
+Můžete chtít přepsat pomocí závorek k řízení pořadí vyhodnocení výrazu.
+
+Tato chyba se shoduje s CAN0030.

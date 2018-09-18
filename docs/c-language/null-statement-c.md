@@ -1,5 +1,5 @@
 ---
-title: Hodnota Null, Statement (C) | Microsoft Docs
+title: Hodnota Null, Statement (C) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e120fa412481a8313809bd5cdaf748de498bde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4428852dd3b949bea75961d3878fc23d27a2b4f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106275"
 ---
 # <a name="null-statement-c"></a>Null – příkaz (C)
-„Příkaz null“ je příkaz obsahující pouze středník. Může se objevit všude, kde se očekává příkaz. Když je příkaz null vykonáván, nic se nestane. Správným způsobem zápisu příkazu null je:  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-;  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Příkazy, jako **provést**, **pro**, **Pokud**, a `while` vyžadují, aby spustitelného souboru příkazu zobrazí jako text příkazu. Příkaz null splňuje požadavek syntaxe v případech, které nepotřebují důležité tělo příkazu.  
-  
- Stejně jako u jiných příkazů jazyka C lze před příkaz null umístit popisek. Chcete-li položce, která není příkazem, například složené závorce složeného příkazu, dát popisek, lze příkaz null popsat a vložit jej těsně před položku, čímž docílíte stejného efektu.  
-  
- Následující příklad znázorňuje příkaz null:  
-  
-```  
-for ( i = 0; i < 10; line[i++] = 0 )  
-     ;  
-```  
-  
- V tomto příkladu výraz smyčky **pro** příkaz `line[i++] = 0` inicializuje prvních 10 elementy `line` na hodnotu 0. Tělo příkazu je příkaz null, protože žádné další příkazy nejsou nezbytné.  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy](../c-language/statements-c.md)
+
+„Příkaz null“ je příkaz obsahující pouze středník. Může se objevit všude, kde se očekává příkaz. Když je příkaz null vykonáván, nic se nestane. Správným způsobem zápisu příkazu null je:
+
+## <a name="syntax"></a>Syntaxe
+
+> **;**
+
+## <a name="remarks"></a>Poznámky
+
+Příkazy, jako **proveďte**, **pro**, **Pokud**, a `while` vyžadují, aby byl spustitelný příkaz zobrazí jako těla příkazu. Příkaz null splňuje požadavek syntaxe v případech, které nepotřebují důležité tělo příkazu.
+
+Stejně jako u jiných příkazů jazyka C lze před příkaz null umístit popisek. Chcete-li položce, která není příkazem, například složené závorce složeného příkazu, dát popisek, lze příkaz null popsat a vložit jej těsně před položku, čímž docílíte stejného efektu.
+
+Následující příklad znázorňuje příkaz null:
+
+```C
+for ( i = 0; i < 10; line[i++] = 0 )
+     ;
+```
+
+V tomto příkladu výraz smyčky **pro** příkaz `line[i++] = 0` inicializuje prvních 10 prvků pole `line` na hodnotu 0. Tělo příkazu je příkaz null, protože žádné další příkazy nejsou nezbytné.
+
+## <a name="see-also"></a>Viz také
+
+[Příkazy](../c-language/statements-c.md)

@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a819c435135d2ee9c310f8fd4a5628d2d9d0acb1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a873ca82fc51c2f08e3788f9ec3c59c199961105
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111872"
 ---
 # <a name="comments-c"></a>Komentáře (C++)
-Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Můžete použít komentáře při testování nastavit některé řádky kódu jako neaktivní; ale `#if` / `#endif` direktivy preprocesoru fungují lépe, protože je možné ohraničit kód, který obsahuje komentáře, ale komentáře nelze vnořovat.  
-  
-Komentář v jazyce C++ je zapsán některým z následujících způsobů:  
-  
--   Znaky `/*` (lomítko, hvězdička) následované libovolnou posloupností znaků (včetně nových řádků) jsou následovány znaky `*/`. Tato syntaxe je stejná jako standard ANSI C.  
-  
--   Znaky `//` (dvě lomítka) jsou následovány libovolnou posloupností znaků. Nový řádek, kterému bezprostředně nepředchází zpětné lomítko, ukončí tento typ komentáře. Proto se běžně nazývá „jednořádkový komentář“.  
-  
- Znaky komentáře (`/*`, `*/` a `//`) nemají žádný zvláštní význam v rámci znakové konstanty, textového literálu ani komentáře. Komentáře zapsané pomocí první syntaxe proto nelze vnořovat.  
-  
-## <a name="see-also"></a>Viz také:  
- [Lexikální konvence](../cpp/lexical-conventions.md)
+
+Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Můžete použít komentáře při testování nastavit některé řádky kódu jako neaktivní; ale `#if` / `#endif` direktivy preprocesoru fungují lépe, protože je možné ohraničit kód, který obsahuje komentáře, ale komentáře nelze vnořovat.
+
+Komentář v jazyce C++ je zapsán některým z následujících způsobů:
+
+- Znaky `/*` (lomítko, hvězdička) následované libovolnou posloupností znaků (včetně nových řádků) jsou následovány znaky `*/`. Tato syntaxe je stejná jako standard ANSI C.
+
+- Znaky `//` (dvě lomítka) jsou následovány libovolnou posloupností znaků. Nový řádek, kterému bezprostředně nepředchází zpětné lomítko, ukončí tento typ komentáře. Proto se běžně nazývá „jednořádkový komentář“.
+
+Znaky komentáře (`/*`, `*/` a `//`) nemají žádný zvláštní význam v rámci znakové konstanty, textového literálu ani komentáře. Komentáře zapsané pomocí první syntaxe proto nelze vnořovat.
+
+## <a name="see-also"></a>Viz také:
+
+[Lexikální konvence](../cpp/lexical-conventions.md)

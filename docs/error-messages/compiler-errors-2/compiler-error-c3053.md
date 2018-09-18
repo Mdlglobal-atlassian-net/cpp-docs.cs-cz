@@ -1,5 +1,5 @@
 ---
-title: C3053 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3053 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e140e2da535ebebbc332a8342d8970ff61a528d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c50112be2650c4b379b6de93acaa73a9cb285687
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112028"
 ---
-# <a name="compiler-error-c3053"></a>C3053 chyby kompilátoru
-'symbol': "threadprivate" je platná pouze pro globální nebo statické datových položek  
-  
- Symboly předaný [threadprivate](../../parallel/openmp/reference/threadprivate.md) musí být buď globální nebo statické.  
-  
- Následující ukázka generuje C3053:  
-  
-```  
-// C3053.cpp  
-// compile with: /openmp  
-void Test() {  
-   int x, y;  
-   #pragma omp threadprivate(x, y)   // C3053  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3053b.cpp  
-// compile with: /openmp /LD  
-int x, y;  
-#pragma omp threadprivate(x, y)  
-  
-void Test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+# <a name="compiler-error-c3053"></a>Chyba kompilátoru C3053
+
+'symbol': 'threadprivate' platí pouze pro globální nebo statické datové položky
+
+Symboly předán [threadprivate](../../parallel/openmp/reference/threadprivate.md) musí být globální nebo statická.
+
+Následující ukázka generuje C3053:
+
+```
+// C3053.cpp
+// compile with: /openmp
+void Test() {
+   int x, y;
+   #pragma omp threadprivate(x, y)   // C3053
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Možná řešení:
+
+```
+// C3053b.cpp
+// compile with: /openmp /LD
+int x, y;
+#pragma omp threadprivate(x, y)
+
+void Test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

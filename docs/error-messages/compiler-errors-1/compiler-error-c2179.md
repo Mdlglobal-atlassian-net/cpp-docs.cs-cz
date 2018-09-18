@@ -1,5 +1,5 @@
 ---
-title: C2179 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2179 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12d7235cc146f080d74ffb09361dd691f7e1ba9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b56437dfe5b9be75ae93dea46890d408ea2dc66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111626"
 ---
-# <a name="compiler-error-c2179"></a>C2179 chyby kompilátoru
-'type': argument atributu nelze použít parametry typu  
-  
- Parametr obecného typu vyřešen za běhu. Atribut parametru však musí být vyřešen v době kompilace. Parametr obecného typu proto nelze použít jako argument pro atribut.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2179.  
-  
-```  
-// C2179.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public ref struct Attr : Attribute {  
-   Attr(Type ^ a) {  
-      x = a;  
-   }  
-  
-   Type ^ x;  
-};  
-  
-ref struct G {};  
-  
-generic<typename T>   
-public ref class Z {   
-public:  
-   Type ^ d;  
-   [Attr(T::typeid)]   // C2179  
-   // try the following line instead  
-   // [Attr(G::typeid)]  
-   T t;  
-};  
+# <a name="compiler-error-c2179"></a>Chyba kompilátoru C2179
+
+'type': argument atributu nemůže používat parametry typu
+
+Parametr obecného typu se vyřeší v době běhu. Parametr atributu však musí být vyřešené v době kompilace. Parametr obecného typu, proto nelze použít jako argument pro atribut.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2179.
+
+```
+// C2179.cpp
+// compile with: /clr
+using namespace System;
+
+public ref struct Attr : Attribute {
+   Attr(Type ^ a) {
+      x = a;
+   }
+
+   Type ^ x;
+};
+
+ref struct G {};
+
+generic<typename T>
+public ref class Z {
+public:
+   Type ^ d;
+   [Attr(T::typeid)]   // C2179
+   // try the following line instead
+   // [Attr(G::typeid)]
+   T t;
+};
 ```

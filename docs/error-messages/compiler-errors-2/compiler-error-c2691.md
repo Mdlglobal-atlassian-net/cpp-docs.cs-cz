@@ -1,5 +1,5 @@
 ---
-title: C2691 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2691 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc6a20aaf3cf9d634d7426b0b7b59f624e184d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe048537ca1d504587fe64fdd5f9b5a43af7c6e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100562"
 ---
-# <a name="compiler-error-c2691"></a>C2691 chyby kompilátoru
-datový typ: spravované nebo WinRTarray nemůže mít tento typ elementu  
-  
- Typ spravované nebo element pole WinRT může být hodnota typu nebo typu odkazu.  
-  
- Následující ukázka generuje C2691:  
-  
-```  
-// C2691a.cpp  
-// compile with: /clr  
-class A {};  
-  
-int main() {  
-   array<A>^ a1 = gcnew array<A>(20);   // C2691  
-   array<int>^ a2 = gcnew array<int>(20);   // value type OK  
-}  
-```  
+# <a name="compiler-error-c2691"></a>Chyba kompilátoru C2691
+
+datový typ: spravované nebo WinRTarray nemůže mít tento typ elementu
+
+Spravovaný typ nebo element pole WinRT může být typem hodnoty nebo typ odkazu.
+
+Následující ukázka generuje C2691:
+
+```
+// C2691a.cpp
+// compile with: /clr
+class A {};
+
+int main() {
+   array<A>^ a1 = gcnew array<A>(20);   // C2691
+   array<int>^ a2 = gcnew array<int>(20);   // value type OK
+}
+```
