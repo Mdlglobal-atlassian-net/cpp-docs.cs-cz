@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RW1004 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RW1004 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a4b5f25678f3bb3fa961ffe794cdb0cf57977c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73f97c1ecf95adfe64cfa08967f4067f42fbae59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016232"
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>Závažná chyba kompilátoru prostředků RW1004
-Neočekávaný konec souboru  
-  
- Tato chyba může být způsobeno chybějící konce řádku a znaky návratu na posledním řádku textového souboru.
+
+Neočekávaný konec souboru.
+
+Tuto chybu může způsobovat chybějící znak odřádkování a znaky pro návrat na začátek řádku na posledním řádku z textového souboru.

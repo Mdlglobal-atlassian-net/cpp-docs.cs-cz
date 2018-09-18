@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4820 | Microsoft Docs
+title: Upozornění (úroveň 4) C4820 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99ca177a90281ca02e44265f603045b72845f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c27466912956988a2396b8e3c52fc41ed2caa604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016336"
 ---
-# <a name="compiler-warning-level-4-c4820"></a>C4820 kompilátoru upozornění (úroveň 4)
-odsazení 'bytes' bajtů přidáno po vytvoření 'member_name'  
-  
- Typ a pořadí prvků způsobila kompilátoru přidat odsazení na konec struktury. V tématu [zarovnat](../../cpp/align-cpp.md) Další informace o odsazení v struktury.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4820:  
-  
-```  
-// C4820.cpp  
-// compile with: /W4 /c  
-#pragma warning(default : 4820)   
-  
-// Delete the following 4 lines to resolve.  
-__declspec(align(2)) struct MyStruct {  
-   char a;  
-   int i;   // C4820  
-};  
-  
-// OK  
-#pragma pack(1)  
-__declspec(align(1)) struct MyStruct2 {  
-   char a;  
-   int i;  
-};  
+# <a name="compiler-warning-level-4-c4820"></a>Kompilátor upozornění (úroveň 4) C4820
+
+odsazení 'bytes' bajtů přidáno po vytvoření 'member_name'
+
+Typ a pořadí prvků způsobila kompilátoru odsazení přidat na konec struktury. Zobrazit [zarovnat](../../cpp/align-cpp.md) Další informace o odsazení struktury.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4820:
+
+```
+// C4820.cpp
+// compile with: /W4 /c
+#pragma warning(default : 4820)
+
+// Delete the following 4 lines to resolve.
+__declspec(align(2)) struct MyStruct {
+   char a;
+   int i;   // C4820
+};
+
+// OK
+#pragma pack(1)
+__declspec(align(1)) struct MyStruct2 {
+   char a;
+   int i;
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4342 | Microsoft Docs
+title: Upozornění (úroveň 1) C4342 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df710912338aa540dd2a29f859fc4533445b09b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aeb582ff891cc9d186604af5d2ca2c2844b1cb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016257"
 ---
-# <a name="compiler-warning-level-1-c4342"></a>C4342 kompilátoru upozornění (úroveň 1)
-Změna v chování: '*funkce*se volá, ale byla zavolána operátor členů v předchozích verzích  
-  
- Ve verzích Visual C++ před Visual Studio 2002 členem byla volána, ale toto chování se změnil a kompilátor teď vyhledá nejlepší shodu v oboru názvů.  
-  
- Pokud byl nalezen operátor členů, kompilátor nebude dříve zvažte obor názvů operátory oboru. Pokud je lepší shodu v oboru názvů, aktuální kompilátor správně volá, zatímco předchozí kompilátory nebude považuje.  
-  
- Toto upozornění je třeba zakázat po úspěšně portu kódu na aktuální verzi.  Kompilátor může poskytnout falešně pozitivních zjištění generování toto upozornění pro kód tam, kde není žádná změna v chování.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. Další informace najdete v tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
- Následující ukázka generuje C4342:  
-  
-```cpp  
-// C4342.cpp  
-// compile with: /EHsc /W1  
-#include <fstream>  
-#pragma warning(default: 4342)  
-using namespace std;  
-struct X : public ofstream {  
-   X();  
-};  
-  
-X::X() {  
-   open( "ofs_bug_ev.txt." );  
-   if ( is_open() ) {  
-      *this << "Text" << "<-should be text" << endl;   // C4342  
-      *this << ' ' << "<-should be space symbol" << endl;   // C4342  
-   }  
-}  
-  
-int main() {  
-   X b;  
-   b << "Text" << "<-should be text" << endl;  
-   b << ' ' << "<-should be space symbol" << endl;  
-}  
+# <a name="compiler-warning-level-1-c4342"></a>Kompilátor upozornění (úroveň 1) C4342
+
+Změna chování: "*funkce*" volá se, ale operátor členu byl zavolán v předchozích verzích
+
+Ve verzích Visual C++ před Visual Studio 2002 byla volána členem, ale toto chování nebylo změněno a kompilátor nyní vyhledá nejlepší shodu v oboru názvů.
+
+Pokud operátor členu byl nalezen, kompilátor by dříve zvažte libovolný obor názvů operátory oboru. Pokud je lepší shodu v oboru názvů, aktuální kompilátor správně volá, že předchozí kompilátory by považujte jej.
+
+Po úspěšném přeneste kód do aktuální verze je třeba zakázat toto upozornění.  Kompilátor může dát počet falešně pozitivních výsledků, generuje toto upozornění pro kód tam, kde není žádná změna chování.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+Následující ukázka generuje C4342:
+
+```cpp
+// C4342.cpp
+// compile with: /EHsc /W1
+#include <fstream>
+#pragma warning(default: 4342)
+using namespace std;
+struct X : public ofstream {
+   X();
+};
+
+X::X() {
+   open( "ofs_bug_ev.txt." );
+   if ( is_open() ) {
+      *this << "Text" << "<-should be text" << endl;   // C4342
+      *this << ' ' << "<-should be space symbol" << endl;   // C4342
+   }
+}
+
+int main() {
+   X b;
+   b << "Text" << "<-should be text" << endl;
+   b << ' ' << "<-should be space symbol" << endl;
+}
 ```

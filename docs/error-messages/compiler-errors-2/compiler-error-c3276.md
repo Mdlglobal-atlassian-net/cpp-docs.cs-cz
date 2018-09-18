@@ -1,5 +1,5 @@
 ---
-title: C3276 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3276 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337418220b31fc9bad82dce46eef1047ac16f4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bae371b0e50dca96da49b66d8c9226ba9c25ef06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016310"
 ---
-# <a name="compiler-error-c3276"></a>C3276 chyby kompilátoru
-'– klíčové slovo': přechod z __finally/finally bloku má undefined chování při ukončení zpracování  
-  
- Tato chyba je stejný jako [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) upozornění. Ale při použití režimu kompilace/CLR, tuto podmínku nelze zakázat pomocí [upozornění](../../preprocessor/warning.md) – Direktiva pragma.
+# <a name="compiler-error-c3276"></a>Chyba kompilátoru C3276
+
+! – klíčové slovo': skok z bloku __finally/finally má během zpracování ukončení nedefinované chování
+
+Tato chyba je stejné jako [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) upozornění. Ale při použití/CLR. tuto podmínku nelze zakázat s [upozornění](../../preprocessor/warning.md) direktivy pragma.

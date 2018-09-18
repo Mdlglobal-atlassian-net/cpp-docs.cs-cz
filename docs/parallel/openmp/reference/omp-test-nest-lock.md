@@ -1,5 +1,5 @@
 ---
-title: omp_test_nest_lock – | Microsoft Docs
+title: omp_test_nest_lock – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc1bc552de1ee781e4d1e87f4b1d0d49f080fdfa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4fdc3f89f4f12873a10a1d66349c6ac9efd56f71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017040"
 ---
 # <a name="omptestnestlock"></a>omp_test_nest_lock
-Pokusí se nastavit zámek nestable ale neblokuje provádění vlákna.  
+Pokusí se nastavit, vnořitelných zámek, ale neblokuje vlákno provádění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,11 +34,10 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `lock`  
- Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) který byl inicializován s [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+*lock*<br/>
+Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , který byl inicializován s [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [3.2.5 omp_test_lock a omp_test_nest_lock – funkce](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
