@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039059"
 ---
 # <a name="cdebugreporthook-class"></a>Cdebugreporthook – třída
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName*  
+*szMachineName*<br/>
 Název počítače, na které mají být odesílána výstupu ladění. Výchozí hodnota je v místním počítači.
 
-*szPipeName*  
+*szPipeName*<br/>
 Název pojmenovaného kanálu, které mají posílat výstup ladění.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.
 
 ##  <a name="dtor"></a>  Cdebugreporthook –:: ~ cdebugreporthook –
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parametry
 
-*reportType*  
+*reportType*<br/>
 Typ sestavy (_CRT_WARN, _CRT_ERROR nebo _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 Řetězec zprávy.
 
-*returnValue*  
+*returnValue*<br/>
 Hodnota, která má být vrácen podle [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName*  
+*szMachineName*<br/>
 Název počítače, na které mají být odesílána výstupu ladění.
 
-*szPipeName*  
+*szPipeName*<br/>
 Název pojmenovaného kanálu, které mají posílat výstup ladění.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parametry
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.
 
 ## <a name="see-also"></a>Viz také

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028334"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registrace a TypeLib
 
@@ -72,8 +72,8 @@ Tato funkce slouží k určení, zda aplikace přesměrovává přístup k regis
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -101,22 +101,22 @@ Vytvoří zadaného klíče registru.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název klíče, který tato funkce se otevře, nebo vytvoří.
 
-*phkResult*  
+*phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač klíče otevřená nebo je vytvořený.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -133,19 +133,19 @@ Odstraní zadaný klíč registru.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název klíče, která se má odstranit.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -162,19 +162,19 @@ Pomocné rutiny zaregistrovat obslužnou rutinu ve verzi preview.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Určuje identifikátor CLSID obslužné rutiny.
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 Určuje identifikátor ProgID obslužné rutiny.
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 Určuje, přípona souboru registrovaná s touto obslužnou rutinou.
 
 ### <a name="requirements"></a>Požadavky
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Popisovač instance modulu.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Řetězec ve formátu "\\\N", kde N je celočíselný index zdroj knihovny typů. Může mít hodnotu NULL, pokud žádný index je povinný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -203,7 +203,8 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) a [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
+Tato pomocná funkce je využíváno [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) a [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
@@ -214,22 +215,22 @@ Otevře zadaný klíč registru.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název klíče, který tato funkce se otevře, nebo vytvoří.
 
-*phkResult*  
+*phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač vytvořený klíč.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -246,28 +247,28 @@ Otevře zadaný klíč registru.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název klíče, který tato funkce se otevře, nebo vytvoří.
 
-*ulOptions*  
+*ulOptions*<br/>
 Tento parametr je vyhrazen a musí být nula.
 
-*samDesired*  
+*samDesired*<br/>
 Maska, která určuje požadované přístupová práva ke klíči.
 
-*phkResult*  
+*phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač otevřené klíč.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -284,13 +285,13 @@ Pomocné rutiny se zrušit registraci obslužné rutiny náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Určuje identifikátor CLSID obslužné rutiny pro odstranění registrace.
 
 ### <a name="requirements"></a>Požadavky
@@ -303,13 +304,13 @@ Nastaví, zda aplikace přesměrovává přístup k registru do **HKEY_CURRENT_U
 
 ### <a name="syntax"></a>Syntaxe
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 [in] Hodnota TRUE označuje, že informace registru během směrována **HKCU** uzel. Hodnota FALSE označuje, že aplikace zapíše informace registru do uzlu výchozí. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -321,6 +322,7 @@ S_OK, pokud je metoda úspěšná, jinak chyba HRESULT kódu pokud dojde k chyb�
 Ve výchozím nastavení není povoleno přesměrování registru. Pokud tuto možnost povolíte, přístup k registru je přesměrován na **HKEY_CURRENT_USER\Software\Classes**.
 
 Přesměrování není globální. Pouze rozhraní MFC a ATL se vztahuje toto přesměrování registru.  
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Popisovač instance modulu.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Řetězec ve formátu "\\\N", kde N je celočíselný index zdroj knihovny typů. Může mít hodnotu NULL, pokud žádný index je povinný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,6 +354,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 ### <a name="remarks"></a>Poznámky
 
 Tato pomocná funkce je využíváno [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Zpracování do modulu přidružené ke knihovně typů.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Řetězec ve formátu "\\\N", kde N je celočíselný index zdroj knihovny typů. Může mít hodnotu NULL, pokud žádný index je povinný.
 
-*pbstrPath*  
+*pbstrPath*<br/>
 Při návratu úspěšné obsahuje úplnou cestu modulu přidružené ke knihovně typů.
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 Při návratu úspěšné obsahuje ukazatel na ukazatel na knihovnu typů načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 Ukazatel na aktuální objekt.
 
-*rdxOp*  
+*rdxOp*<br/>
 Hodnotu výčtu, která označuje, které operace by měl provádět funkce. V tabulce v části poznámky povolených hodnot.
 
-*pItem*  
+*pItem*<br/>
 Ukazatel na data, která se má číst nebo zapsat do registru. Data můžete také představovat klíč k odstranění z registru. Výchozí hodnota je NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -446,5 +449,5 @@ V následující tabulce jsou uvedeny možné výčtu hodnoty, které označují
 
 ## <a name="see-also"></a>Viz také
 
-[Funkce](atl-functions.md)   
+[Funkce](atl-functions.md)<br/>
 [Makra výměny dat registru](registry-data-exchange-macros.md)

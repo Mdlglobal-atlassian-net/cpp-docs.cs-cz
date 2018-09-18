@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043934"
 ---
 # <a name="ctabctrl-class"></a>Ctabctrl – třída
 Poskytuje funkce pro ovládací prvek běžné karty Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Poznámky  
  Při odeslání zprávy `mask` člen Určuje, jaké atributy se mají vrátit. Pokud `mask` člen Určuje hodnotu TCIF_TEXT `pszText` člen musí obsahovat adresu vyrovnávací paměti, která bude přijímat textové položky a `cchTextMax` člena nutné zadat velikost vyrovnávací paměti.  
   
- `mask`  
- Hodnotu určující, které `TCITEM` načíst nebo nastavit členy struktury. Tento člen může být nula nebo kombinaci těchto hodnot:  
+- `mask`
+
+   Hodnotu určující, které `TCITEM` načíst nebo nastavit členy struktury. Tento člen může být nula nebo kombinaci těchto hodnot:  
   
-- TCIF_TEXT `pszText` člena je neplatný.  
+   - TCIF_TEXT `pszText` člena je neplatný.  
   
-- TCIF_IMAGE `iImage` člena je neplatný.  
+   - TCIF_IMAGE `iImage` člena je neplatný.  
   
-- TCIF_PARAM `lParam` člena je neplatný.  
+   - TCIF_PARAM `lParam` člena je neplatný.  
   
-- TCIF_RTLREADING text z `pszText` se zobrazí pomocí pořadí čtení zprava doleva v systémech hebrejština nebo arabštině.  
+   - TCIF_RTLREADING text z `pszText` se zobrazí pomocí pořadí čtení zprava doleva v systémech hebrejština nebo arabštině.  
   
-- TCIF_STATE `dwState` člena je neplatný.  
+   - TCIF_STATE `dwState` člena je neplatný.  
   
- `pszText`  
- Ukazatel na řetězec zakončený hodnotou null obsahující text karty, pokud struktura obsahuje informace o kartě. Pokud struktura přijímá informace, určuje tento člen Adresa vyrovnávací paměti, která přijímá textem karty.  
+- `pszText`  
+
+   Ukazatel na řetězec zakončený hodnotou null obsahující text karty, pokud struktura obsahuje informace o kartě. Pokud struktura přijímá informace, určuje tento člen Adresa vyrovnávací paměti, která přijímá textem karty.  
   
- `cchTextMax`  
- Velikost vyrovnávací paměti, na které odkazuje `pszText`. Tento člen se ignoruje, pokud strukturu, nadále nepřijímá informace.  
+- `cchTextMax`  
+
+   Velikost vyrovnávací paměti, na které odkazuje `pszText`. Tento člen se ignoruje, pokud strukturu, nadále nepřijímá informace.  
   
- `iImage`  
+- `iImage`  
  Index do ovládacího prvku karta seznam obrázků nebo - 1, pokud neexistuje žádný obrázek karty.  
   
- lParam  
- Definované aplikací data související s kartou. Pokud existuje více než čtyři bajty dat definované aplikací na kartě, aplikace musí definovat strukturu a použít místo něj `TCITEM` struktury. Musí být prvním členem struktury definované aplikací [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struktury. `TCITEMHEADER` Struktura je stejné jako `TCITEM` struktury, ale bez `lParam` člena. Rozdíl mezi velikost struktury a velikost `TCITEMHEADER` struktury by se měl rovnat počtu bajtů navíc na kartu.  
+- `lParam`  
+
+   Definované aplikací data související s kartou. Pokud existuje více než čtyři bajty dat definované aplikací na kartě, aplikace musí definovat strukturu a použít místo něj `TCITEM` struktury. Musí být prvním členem struktury definované aplikací [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struktury. `TCITEMHEADER` Struktura je stejné jako `TCITEM` struktury, ale bez `lParam` člena. Rozdíl mezi velikost struktury a velikost `TCITEMHEADER` struktury by se měl rovnat počtu bajtů navíc na kartu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

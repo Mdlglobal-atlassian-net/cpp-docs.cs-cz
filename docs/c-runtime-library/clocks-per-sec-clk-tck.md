@@ -1,5 +1,5 @@
 ---
-title: CLOCKS_PER_SEC, CLK_TCK – | Microsoft Docs
+title: CLOCKS_PER_SEC, CLK_TCK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbcc64419a34ff763f3e116474687fbadf055f42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3c7eac1db91abf7a84e424f7166402f346d3e4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033573"
 ---
 # <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC, CLK_TCK
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <time.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Doba v sekundách je hodnoty vrácené `clock` funkce, dělený `CLOCKS_PER_SEC`. `CLK_TCK` je ekvivalentní, ale považují za zastaralé.  
-  
-## <a name="see-also"></a>Viz také  
- [Hodiny](../c-runtime-library/reference/clock.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <time.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+Čas v sekundách je hodnoty vrácené `clock` funkce dělený `CLOCKS_PER_SEC`. `CLK_TCK` je ekvivalentní, ale považují za zastaralé.
+
+## <a name="see-also"></a>Viz také
+
+[clock](../c-runtime-library/reference/clock.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

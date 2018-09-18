@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1208 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1208 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039735"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Závažná chyba kompilátoru prostředků RC1208
-vstupní soubor obsahuje. RES rozšíření  
-  
- Na. RES rozšíření se používá pro výstup kompilátoru prostředků. Na. RC rozšíření by měl být použito pro kompilátor prostředků skripty.
+
+vstupní soubor obsahuje. RES rozšíření
+
+Na. RES rozšíření se používá pro výstup kompilátoru prostředků. Na. RC rozšíření by měl být použito pro kompilátor prostředků skripty.

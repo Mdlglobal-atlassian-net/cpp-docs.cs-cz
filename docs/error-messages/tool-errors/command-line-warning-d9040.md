@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9040 | Microsoft Docs
+title: Upozornění příkazového řádku D9040 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc360d0bc3c1266dc6de2b8ff2a33e1e60944989
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5eae8b471a631ed6191b9d93e72b8e5f5c240e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040840"
 ---
 # <a name="command-line-warning-d9040"></a>Upozornění příkazového řádku D9040
-možnost je ignorována, / analyze'; Upozornění analýzy kódu nejsou k dispozici v této edici kompilátoru  
-  
- **/ Analyze** možnost příkazového řádku není k dispozici ve všech edicích sady Visual Studio. Chcete-li opravit toto upozornění, přejděte na podporované edice sady Visual Studio, nebo odeberte možnost příkazového řádku.  
-  
-## <a name="see-also"></a>Viz také  
- [Chyby příkazového řádku D8000 až D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
+
+ignoruje se parametr '/ analyze'; Upozornění analýzy kódu nejsou v této edici kompilátoru dostupná
+
+**/ Analyze** možnost příkazového řádku není k dispozici ve všech edicích sady Visual Studio. Pro nápravu tohoto upozornění, přepněte na podporované edice sady Visual Studio, nebo odeberte možnost příkazového řádku.
+
+## <a name="see-also"></a>Viz také
+
+[Chyby příkazového řádku D8000 až D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2c15021b6de6f2979fa29dae700fb7ab526ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044246"
 ---
 # <a name="umenuorid-class"></a>_U_menuorid – třída
 
@@ -78,16 +78,16 @@ HMENU m_hMenu;
 UINT argumentu je stačí přetypován na HMENU v konstruktoru a výsledek uložený v single – datový člen třídy, [m_hMenu](#_u_menuorid__m_hmenu).
 
 ```
-_U_MENUorID(UINT nID);  
+_U_MENUorID(UINT nID);
 _U_MENUorID(HMENU hMenu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Identifikátor podřízené okno.
 
-*hMenu*  
+*hMenu*<br/>
 Popisovač nabídky.
 
 ### <a name="remarks"></a>Poznámky

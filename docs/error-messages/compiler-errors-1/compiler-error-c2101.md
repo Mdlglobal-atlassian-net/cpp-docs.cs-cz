@@ -1,5 +1,5 @@
 ---
-title: C2101 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2101 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16402a2e49d1a71ba7b246569a77a65aee7ff3bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247bd168e1ea82d4533c794ae5c14d34a49064d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041360"
 ---
-# <a name="compiler-error-c2101"></a>C2101 chyby kompilátoru
-' &' na konstanta  
-  
- Address-of – operátor ( `&` ) musí mít hodnotu l jako operand.  
-  
- Následující ukázka generuje C2101:  
-  
-```  
-// C2101.cpp  
-int main() {  
-   char test;  
-   test = &'a';   // C2101  
-   test = 'a';   // OK  
-}  
+# <a name="compiler-error-c2101"></a>Chyba kompilátoru C2101
+
+' &' na – konstanta
+
+Operátor address-of ( `&` ) musí být l hodnotou jako operand.
+
+Následující ukázka generuje C2101:
+
+```
+// C2101.cpp
+int main() {
+   char test;
+   test = &'a';   // C2101
+   test = 'a';   // OK
+}
 ```

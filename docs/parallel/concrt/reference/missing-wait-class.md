@@ -1,5 +1,5 @@
 ---
-title: missing_wait – třída | Microsoft Docs
+title: missing_wait – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2a44cbdb5abeed7d5dbd7be7dfaba37ba1d0145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024944"
 ---
 # <a name="missingwait-class"></a>missing_wait – třída
-Tato třída popisuje výjimka vyvolaná při stále naplánované úlohy `task_group` nebo `structured_task_group` objektu v době tento objekt destruktor. Tato výjimka bude vyvolána nikdy Pokud destruktoru je dostupný z důvodu unwinding v důsledku výjimky zásobníku.  
+Tato třída popisuje výjimku vyvolanou při stále naplánované úlohy `task_group` nebo `structured_task_group` objektu v době tento objekt destruktor. Tato výjimka bude vyvolána nikdy destruktor při dosažení z důvodu výjimky v důsledku uvolnění zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ class missing_wait : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[missing_wait](#ctor)|Přetíženo. Vytvoří `missing_wait` objektu.|  
+|[missing_wait –](#ctor)|Přetíženo. Vytvoří `missing_wait` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Chybějící výjimka tok, jste odpovědni za volání buď `wait` nebo `run_and_wait` metodu `task_group` nebo `structured_task_group` objekt před povolením tento objekt, který chcete destruct. Modul runtime vyvolá výjimku jako znamená, že jste zapomněli k volání `wait` nebo `run_and_wait` metoda.  
+ Chybějící výjimka toku, zodpovídáte za volání buď `wait` nebo `run_and_wait` metodu `task_group` nebo `structured_task_group` objekt předtím, než tento objekt k destrukci. Modul runtime vyvolá tuto výjimku jako znamením, že jste zapomněli volání `wait` nebo `run_and_wait` metody.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -55,7 +55,7 @@ class missing_wait : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> missing_wait 
+##  <a name="ctor"></a> missing_wait – 
 
  Vytvoří `missing_wait` objektu.  
   
@@ -66,11 +66,11 @@ missing_wait() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [task_group – třída](task-group-class.md)   
  [Počkej](task-group-class.md)   
  [run_and_wait –](task-group-class.md)   

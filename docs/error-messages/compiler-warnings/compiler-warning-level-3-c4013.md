@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4013 | Microsoft Docs
+title: Upozornění (úroveň 3) C4013 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d5c15f10afeaba377fc37af244bd49568e3667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b491406111c7c5ba994bc0af6128b7f0578d52b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046495"
 ---
-# <a name="compiler-warning-level-3-c4013"></a>C4013 kompilátoru upozornění (úroveň 3)
-funkce není definována; za předpokladu, že extern vrácení int  
-  
- Kompilátor došlo k volání nedefinované funkce.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Nesprávný správnost názvu – funkce  
-  
-2.  Externí funkce není deklaraci jako `extern`
+# <a name="compiler-warning-level-3-c4013"></a>Kompilátor upozornění (úroveň 3) C4013
+
+'function' nedefinované; předpokládá se extern vracející int.
+
+Kompilátoru došlo k volání nedefinované funkce.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Překlep název funkce
+
+1. Externí funkce jako není prototypem. `extern`

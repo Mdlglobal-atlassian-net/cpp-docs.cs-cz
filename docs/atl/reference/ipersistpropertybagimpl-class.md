@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9ec437be7c719c4ba65b31465f9112fa250284d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e104b5d471302b614852d98b379f941b2d9b7ead
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024936"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl – třída
 
@@ -38,13 +38,13 @@ Tato třída implementuje `IUnknown` a umožňuje uložit do kontejneru objektů
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IPersistPropertyBagImpl`.
 
 ## <a name="members"></a>Členové
@@ -137,5 +137,5 @@ Zobrazit [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207
 
 ## <a name="see-also"></a>Viz také
 
-[BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
+[BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

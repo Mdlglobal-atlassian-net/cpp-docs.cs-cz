@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1241 | Microsoft Docs
+title: Chyba Linkerů LNK1241 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b02b1d9d06706c70478d958dd3c2af8dbc9c2c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4c11a97dd99515ff7623b77ff31de5fb8577b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040619"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Chyba linkerů LNK1241
-soubor prostředků zdrojového souboru, který již zadán.  
-  
- Tato chyba je generována, pokud spustíte **cvtres** ručně z příkazového řádku a pokud výsledný .obj pak předejte do souboru linkeru kromě na jiné soubory .res.  
-  
- Pokud chcete zadat víc soubory .res, předat je do linkeru jako soubory .res není uvnitř soubory .obj vytvořené **cvtres**.
+
+soubor prostředků zdroj souboru, který již zadán
+
+Tato chyba je generována při spuštění **cvtres** ručně z příkazového řádku a pokud se pak předejte výsledný .obj souborů v linkeru kromě na jiné soubory .res.
+
+Pokud chcete zadat více souborů res, předat je vše do linkeru jako soubory res, není v rámci soubory .obj vytvořil **cvtres**.

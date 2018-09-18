@@ -1,5 +1,5 @@
 ---
-title: C2730 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2730 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bfa49d1aaf2de316e247438bb63a33379e57aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f510ed75de3c4f29993429bdd1ed2c366cc3840e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036602"
 ---
-# <a name="compiler-error-c2730"></a>C2730 chyby kompilátoru
-'class': nemůže být základní třídu sám sebe  
-  
- Třídy base rekurzivní jsou neplatné. Zadejte jiné třídy jako základní třídy.
+# <a name="compiler-error-c2730"></a>Chyba kompilátoru C2730
+
+'class': nemůže být základní třídou sebe sama
+
+Rekurzivní základní třídy jsou neplatné. Zadejte jinou třídu jako základní třídy.

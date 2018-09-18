@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e6570e82c7cd50c03530b085ee9497fbc974fd58
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8643b8150f08191fa041107fa4a88e3cbcf2964a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042257"
 ---
 # <a name="using-bookmarks"></a>Použití záložek
+
 Před otevřením v sadě řádků musí sdělte poskytovateli, že chcete používat záložky. Chcete-li to provést, nastavte `DBPROP_BOOKMARKS` vlastnost **true** ve vaší vlastnost nastavit. Zprostředkovatel načte záložky jako sloupec nula, je nutné použít speciální makro BOOKMARK_ENTRY a `CBookmark` třídy, pokud používáte statického následovníka. `CBookmark` je třída šablony, kde je argument délku vyrovnávací paměti záložek v bajtech. Délka vyrovnávací paměti vyžadované pro záložku závisí na poskytovateli. Pokud používáte zprostředkovatele ODBC OLE DB, jak je znázorněno v následujícím příkladu, musí být vyrovnávací paměti 4 bajty.  
   
 ```cpp  
@@ -48,7 +49,7 @@ CTable<CAccessor<CProducts>> product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Pokud používáte `CDynamicAccessor`, vyrovnávací paměti se přidělí dynamicky za běhu. V takovém případě můžete použít speciální verzi `CBookmark` pro kterou nezadáte velikost vyrovnávací paměti. Použijte funkci `GetBookmark` načíst záložky z aktuální záznam, jak je znázorněno v této ukázce kódu:  
+Pokud používáte `CDynamicAccessor`, vyrovnávací paměti se přidělí dynamicky za běhu. V takovém případě můžete použít speciální verzi `CBookmark` pro kterou nezadáte velikost vyrovnávací paměti. Použijte funkci `GetBookmark` načíst záložky z aktuální záznam, jak je znázorněno v této ukázce kódu:  
   
 ```cpp  
 CTable<CDynamicAccessor> product;  
@@ -65,7 +66,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Informace o podpoře záložky ve zprostředkovatelích najdete v tématu [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md).  
+Informace o podpoře záložky ve zprostředkovatelích najdete v tématu [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Použití přístupových objektů](../../data/oledb/using-accessors.md)
+
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)

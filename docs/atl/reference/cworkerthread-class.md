@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040229"
 ---
 # <a name="cworkerthread-class"></a>Cworkerthread – třída
 
@@ -42,13 +42,13 @@ Tato třída vytvoří pracovní vlákno nebo použije existující předplatné
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Třída poskytující funkce vytvoření vláken, jako například [crtthreadtraits –](../../atl/reference/crtthreadtraits-class.md) nebo [win32threadtraits –](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Členové
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Popisovač na generický objekt.
 
-*pClient*  
+*pClient*<br/>
 Ukazatel [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md) rozhraní na objekt, který má volat, pokud je signalizována popisovač.
 
-*dwParam*  
+*dwParam*<br/>
 Parametr má být předán [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizován popisovač.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Parametry
 
-*dwInterval*  
+*dwInterval*<br/>
 Určuje dobu, po časovače v milisekundách.
 
-*pClient*  
+*pClient*<br/>
 Ukazatel [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md) rozhraní na objekt, který má volat, pokud je signalizována popisovač.
 
-*dwParam*  
+*dwParam*<br/>
 Parametr má být předán [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizován popisovač.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Adresa proměnné POPISOVAČ, který v případě úspěchu, obdrží popisovač do nově vytvořeného časovače.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pThread*  
+*pThread*<br/>
 Existující pracovní vlákno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Obslužná rutina pro odebrání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwWait*  
+*dwWait*<br/>
 Čas v milisekundách pro čekání pracovního vlákna, vypnout. ATL_WORKER_THREAD_WAIT výchozí hodnota je 10 sekund. V případě potřeby můžete definovat vlastní hodnotu pro tento symbol před zahrnutím atlutil.h.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -285,7 +285,7 @@ Všimněte si, že volání `Shutdown` na objekt inicializován pomocí ukazatel
 
 ## <a name="see-also"></a>Viz také
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Třídy](../../atl/reference/atl-classes.md)   
-[Multithreading: Vytváření pracovních vláken](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Třídy](../../atl/reference/atl-classes.md)<br/>
+[Multithreading: Vytváření pracovních vláken](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient – rozhraní](../../atl/reference/iworkerthreadclient-interface.md)

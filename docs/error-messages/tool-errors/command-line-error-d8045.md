@@ -1,5 +1,5 @@
 ---
-title: Chyba příkazového řádku D8045 | Microsoft Docs
+title: Chyba příkazového řádku D8045 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf1248c072374cbe65d74136dfd1a8680e483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6838202178e8012df61d17e2434461d6f4858bf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022783"
 ---
 # <a name="command-line-error-d8045"></a>Chyba příkazového řádku D8045
-Nelze zkompilovat soubor C 'file' s parametrem/CLR  
-  
- Pouze soubory zdrojového kódu C++ se dá předat do kompilace, která používá **/CLR**.  Použití **/TP** zkompilovat soubor .c jako soubor sada; najdete v části [/Tc, /Tp /TC, /TP (zadejte zdrojový soubor typu)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) Další informace.  
-  
- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- D8045 může také nastat, pokud kompilaci pomocí Visual C++ ATL aplikace. V tématu [postupy: přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md) Další informace.
+
+Soubor C 'file' s možností/CLR nelze zkompilovat.
+
+Mohou být předány pouze soubory zdrojového kódu C++ kompilaci, která používá **/CLR**.  Použití **/TP** ke kompilaci souboru .c jako souboru s příponou .cpp, naleznete v tématu [/Tc /Tp /TC, /TP (určení typu zdrojového souboru)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) Další informace.
+
+Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+D8045 může také dojít, pokud kompilujete aplikace ATL s použitím Visual C++. Zobrazit [postupy: přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md) Další informace.

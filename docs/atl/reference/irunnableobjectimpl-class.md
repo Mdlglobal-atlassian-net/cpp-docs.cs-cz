@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ad1efa3badf310a78b69d3abba5b9874e01daf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020963"
 ---
 # <a name="irunnableobjectimpl-class"></a>Irunnableobjectimpl – třída
 
@@ -43,13 +43,13 @@ Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class IRunnableObjectImpl
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Členové
@@ -162,5 +162,5 @@ Zobrazit [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-ob
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040853"
 ---
 # <a name="csocketaddr-class"></a>Csocketaddr – třída
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Název hostitele nebo tečkovaná IP adresu.
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 Číslo portu nebo názvu služby na hostiteli.
 
-*nPortNo*  
+*nPortNo*<br/>
 Číslo portu.
 
-*příznaky*  
+*příznaky*<br/>
 0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.
 
-*addr_family*  
+*addr_family*<br/>
 Rodina (například PF_INET) adres.
 
-*sock_type*  
+*sock_type*<br/>
 Typ soketu (například SOCK_STREAM).
 
-*ai_proto*  
+*ai_proto*<br/>
 Protokol (například IPPROTO_IP nebo IPPROTO_IPV6).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Název hostitele nebo tečkovaná IP adresu.
 
-*nPortNo*  
+*nPortNo*<br/>
 Číslo portu.
 
-*příznaky*  
+*příznaky*<br/>
 0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Typ soketu (například SOCK_STREAM).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Název hostitele nebo tečkovaná IP adresu.
 
-*nPortNo*  
+*nPortNo*<br/>
 Číslo portu.
 
-*příznaky*  
+*příznaky*<br/>
 0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Typ soketu (například SOCK_STREAM).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Odkaz na konkrétní elementu v [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota

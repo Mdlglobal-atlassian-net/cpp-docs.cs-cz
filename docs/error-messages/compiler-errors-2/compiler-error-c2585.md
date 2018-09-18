@@ -1,5 +1,5 @@
 ---
-title: C2585 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2585 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab812a4b6621acb28a4df636056598047f5c21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec7b1e9c1e5e7894740cc80f9c030fa1ee26ec0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028841"
 ---
-# <a name="compiler-error-c2585"></a>C2585 chyby kompilátoru
-explicitní převod na "typ" je nejednoznačný  
-  
- Převod typů může vytvářet více než jeden výsledek.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Převod z typu třídu nebo strukturu podle vícenásobná dědičnost. Pokud typ dědí stejnou základní třídu více než jednou, musíte použít funkci pro převod nebo operátor řešení rozsahu (`::`) Chcete-li určit, které zděděné třídy použít v převodu.  
-  
-2.  Operátor převodu a konstruktor nebyly definovány provedení stejné převod.
+# <a name="compiler-error-c2585"></a>Chyba kompilátoru C2585
+
+explicitní převod na "typ" je nejednoznačný
+
+Převod typu může vytvořit více než jeden výsledek.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Převod z typu třídy nebo struktury podle vícenásobnou dědičnost. Pokud typ dědí stejné základní třídy více než jednou, musíte použít funkce převodu nebo operátor rozlišení oboru (`::`) k určení zděděné třídy používané k převodu.
+
+1. Operátor převodu a konstruktor byly definovány provádění stejný převod.

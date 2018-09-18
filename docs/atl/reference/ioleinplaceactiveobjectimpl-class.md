@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e74df913b22684a61ab4f45ade561e55db18544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044506"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Ioleinplaceactiveobjectimpl – třída
 
@@ -49,7 +49,7 @@ class IOleInPlaceActiveObjectImpl
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Členové
@@ -201,6 +201,6 @@ Zobrazit [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/ol
 
 ## <a name="see-also"></a>Viz také
 
-[CComControl – třída](../../atl/reference/ccomcontrol-class.md)  
-[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)  
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

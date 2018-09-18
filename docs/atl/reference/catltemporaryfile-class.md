@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034925"
 ---
 # <a name="catltemporaryfile-class"></a>Catltemporaryfile – třída
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*szNewName*  
+*szNewName*<br/>
 Název pro nový soubor pro uložení obsahu dočasný soubor v. Pokud tento argument je NULL, odstraní se obsah bude dočasný soubor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>Parametry
 
-*pszDir*  
+*pszDir*<br/>
 Cesta pro dočasný soubor. Pokud je hodnota NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) bude volána k přiřazení cesty.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*  
+*nPos –*<br/>
 Pozice v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nLen*  
+*nLen*<br/>
 Počet bajtů v souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*  
+*nPos –*<br/>
 Pozice v souboru, ve kterém chcete spustit zámek.
 
-*nCount*  
+*nCount*<br/>
 Délka rozsahu bajtů uzamčení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -289,7 +289,7 @@ Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy
 
 Vrátí popisovač do dočasného souboru.
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Parametry
 
-*pBuffer*  
+*pBuffer*<br/>
 Ukazatel do vyrovnávací paměti, která bude přijímat data načtená ze souboru.
 
-*nBufSize*  
+*nBufSize*<br/>
 Velikost vyrovnávací paměti v bajtech.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Počet přečtených bajtů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nOffset*  
+*nOffset*<br/>
 Posun v bajtech od počátečního bodu *dwFrom.*
 
-*dwFrom*  
+*dwFrom*<br/>
 Počáteční bod (FILE_BEGIN, FILE_CURRENT nebo FILE_END).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nNewLen*  
+*nNewLen*<br/>
 Novou velikost souboru v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPos –*  
+*nPos –*<br/>
 Pozice v souboru, ve kterém chcete spustit odemknout.
 
-*nCount*  
+*nCount*<br/>
 Délka rozsahu bajtů k odemknutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -421,7 +421,7 @@ Volání [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockran
 Volání této metody zapsat data do dočasného souboru začínající na pozici ukazatele souboru.
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Parametry
 
-*pBuffer*  
+*pBuffer*<br/>
 Vyrovnávací paměť obsahující data, která mají být zapsána do souboru.
 
-*nBufSize*  
+*nBufSize*<br/>
 Počet bajtů, které mají být přeneseny z vyrovnávací paměti.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Počet zapsaných bajtů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -452,5 +452,5 @@ Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltempo
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CAtlFile – třída](../../atl/reference/catlfile-class.md)

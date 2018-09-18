@@ -16,28 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d5a4598a83c448a36750dc1aac6b4a22ef3513f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6ac5fb523e1b1340d031cd5256995568b9b9e2a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034119"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C)
-`switch` a **případ** příkazy nápovědy komplexní větvení a podmíněného operace u ovládacího prvku. `switch` Příkaz přenese ovládací prvek v rámci svého těla příkazu.  
-  
+
+`switch` a **případ** příkazy nápovědy komplexní větvení a podmíněného operace u ovládacího prvku. `switch` Příkaz přenese ovládací prvek v rámci svého těla příkazu.
+
 ## <a name="syntax"></a>Syntaxe
 
 *příkaz výběru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*
+
 *příkaz s popiskem*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**případ***konstantní výraz***:***– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:***– příkaz*  
-  
-Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* odpovídá hodnotě **přepnout (** *výraz* **)**. `switch` Výraz může obsahovat libovolný počet **případ** instancí, ale žádné dvě konstanty velikosti písmen v rámci stejného `switch` může obsahovat stejnou hodnotu. Spuštění těla příkazu začíná u příkazu, vybrané a pokračuje až do konce subjektu, nebo dokud **přerušení** příkaz předává řízení mimo tělo.  
-  
-Použití `switch` příkaz obvykle vypadá nějak takto:  
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:***– příkaz*
+
+Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* odpovídá hodnotě **přepnout (** *výraz* **)**. `switch` Výraz může obsahovat libovolný počet **případ** instancí, ale žádné dvě konstanty velikosti písmen v rámci stejného `switch` může obsahovat stejnou hodnotu. Spuštění těla příkazu začíná u příkazu, vybrané a pokračuje až do konce subjektu, nebo dokud **přerušení** příkaz předává řízení mimo tělo.
+
+Použití `switch` příkaz obvykle vypadá nějak takto:
 
 ```C
 switch ( expression )
@@ -96,29 +97,29 @@ switch( i )
 }
 ```
 
-V tomto příkladu **přerušení** příkaz následuje každý příkaz `switch` textu. **Přerušení** příkaz vynutí východ z těla příkazu po provedení jednoho příkazu. Pokud `i` je roven -1, pouze `n` se zvýší. **Přerušení** příkazem `n++;` způsobí, že řízení provádění předat mimo tělo příkazu, vynechání zbývající příkazy. Podobně pokud `i` se rovná 0, pouze `z` se zvýší; Pokud `i` je rovno 1 pouze `p` se zvýší. Finální **přerušení** příkaz není nezbytně nutné, protože řízení se předá z textu na konci složeného příkazu, ale je součástí pro zajištění konzistence.  
-  
-Jeden příkaz může obsahovat více **případ** popisky, jako v následujícím příkladu:  
-  
+V tomto příkladu **přerušení** příkaz následuje každý příkaz `switch` textu. **Přerušení** příkaz vynutí východ z těla příkazu po provedení jednoho příkazu. Pokud `i` je roven -1, pouze `n` se zvýší. **Přerušení** příkazem `n++;` způsobí, že řízení provádění předat mimo tělo příkazu, vynechání zbývající příkazy. Podobně pokud `i` se rovná 0, pouze `z` se zvýší; Pokud `i` je rovno 1 pouze `p` se zvýší. Finální **přerušení** příkaz není nezbytně nutné, protože řízení se předá z textu na konci složeného příkazu, ale je součástí pro zajištění konzistence.
+
+Jeden příkaz může obsahovat více **případ** popisky, jako v následujícím příkladu:
+
 ```C
-case 'a' :  
-case 'b' :  
-case 'c' :  
-case 'd' :  
-case 'e' :  
-case 'f' :  hexcvt(c);  
-```  
-  
-V tomto příkladu Pokud *konstantní výraz* rovná žádné písmeno mezi `'a'` a `'f'`, `hexcvt` funkce je volána.  
-  
-**Specifické pro Microsoft**  
-  
-Microsoft C neomezuje počet případových hodnoty v `switch` příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v `switch` příkazu.  
-  
-Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Pomocí možnosti kompilátoru /Za pro zákaz těchto rozšíření.  
-  
-**Specifické pro END Microsoft**  
-  
+case 'a' :
+case 'b' :
+case 'c' :
+case 'd' :
+case 'e' :
+case 'f' :  hexcvt(c);
+```
+
+V tomto příkladu Pokud *konstantní výraz* rovná žádné písmeno mezi `'a'` a `'f'`, `hexcvt` funkce je volána.
+
+**Specifické pro Microsoft**
+
+Microsoft C neomezuje počet případových hodnoty v `switch` příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v `switch` příkazu.
+
+Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Pomocí možnosti kompilátoru /Za pro zákaz těchto rozšíření.
+
+**Specifické pro END Microsoft**
+
 ## <a name="see-also"></a>Viz také
 
 [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

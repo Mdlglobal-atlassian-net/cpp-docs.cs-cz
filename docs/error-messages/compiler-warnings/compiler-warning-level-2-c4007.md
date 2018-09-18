@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4007 | Microsoft Docs
+title: Upozornění (úroveň 2) C4007 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e902b3e2f18332ac6a9804a14c1c39b58d74c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3c9903af3537e9e4003a913fc12412c9b87d614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044415"
 ---
-# <a name="compiler-warning-level-2-c4007"></a>C4007 kompilátoru upozornění (úroveň 2)
-'function': musí být 'atributu.  
-  
- Povinný atribut pro funkci není výslovně uvedeny. Například funkce **hlavní** musí mít `__cdecl` atribut. Kompilátor vynutí atribut.
+# <a name="compiler-warning-level-2-c4007"></a>Kompilátor upozornění (úroveň 2) C4007
+
+'function': musí být "atribut"
+
+Požadovaný atribut typu funkce není explicitně nastavená. Například funkce **hlavní** musí mít `__cdecl` atribut. Kompilátor vynutí atribut.

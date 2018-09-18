@@ -1,5 +1,5 @@
 ---
-title: C3398 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3398 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b870479977bfb49ff39d5a15fe19fc700ed66b8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 336494ea9581289efd9a41e604a28984125ae61a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018129"
 ---
-# <a name="compiler-error-c3398"></a>C3398 chyby kompilátoru
-'operátor': nelze převést na 'function_pointer' 'function_signature'. Zdroj výraz musí být symbol – funkce  
-  
- Když [__clrcall](../../cpp/clrcall.md) konvence volání není zadán, když kompilujete s **/CLR**, kompilátor vygeneruje dva vstupní body (adresy) pro jednotlivé funkce, nativní vstupní bod a spravovaný vstupní bod.  
-  
- Ve výchozím nastavení kompilátoru vrátí nativní vstupní bod, ale existují případy, kdy se vyžaduje spravovaný vstupní bod (například při přiřazování adresa `__clrcall` – ukazatel na funkci). Aby kompilátoru spolehlivě zvolte spravovaný vstupní bod v přiřazení musí být pravé straně symbol funkce.
+# <a name="compiler-error-c3398"></a>Chyba kompilátoru C3398
+
+'operator': nelze převést z "function_signature" na "function_pointer". Zdrojový výraz musí být symbol funkce
+
+Když [__clrcall](../../cpp/clrcall.md) konvence volání není specifikovat při kompilaci s **/CLR**, kompilátor generuje dva vstupní body (adresy) pro každou funkci, nativní vstupní bod a spravovaný vstupní bod.
+
+Ve výchozím nastavení kompilátor vrací nativní vstupní bod, ale existují případy, kde je požadován spravovaný vstupní bod (například při přiřazování adres, které jsou `__clrcall` ukazatel na funkci). Aby kompilátor, aby spolehlivě zvolte spravovaný vstupní bod v přiřazení pravou stranu musí být symbol funkce.

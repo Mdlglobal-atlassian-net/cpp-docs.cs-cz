@@ -1,5 +1,5 @@
 ---
-title: Externí propojení | Microsoft Docs
+title: Externí propojení. | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43301686d5bdb964cf08e8123ff4c55475228567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be268dbc153ad0bb140a2adfcfd8ec6385716c48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027548"
 ---
 # <a name="external-linkage"></a>Externí propojení
-Pokud první deklaraci na úrovni souboru rozsah pro identifikátor nepoužívá **statické** specifikátor třídy úložiště, objekt má externí propojení.  
-  
- Pokud deklarace identifikátoru pro funkci neobsahuje žádné *specifikátor třídy úložiště*, jeho propojení je určeno přesně, jako kdyby byly deklarovat s *specifikátor třídy úložiště* `extern`. Pokud deklarace identifikátoru objektu obsahuje rozsah souboru a neexistuje žádný *specifikátor třídy úložiště*, jeho propojení je externí.  
-  
- Název identifikátoru s vnějším propojením na stejnou funkci nebo objekt dat provádí ostatní deklarace pro stejný název pomocí vnějšího propojení. Ve stejné jednotce překladu nebo v různých jednotkách překladu mohou být dvě deklarace. Pokud má objekt nebo funkce také globální životnost, jsou funkce nebo objekt sdíleny napříč celým programem.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)
+
+Pokud první deklarace na úrovni rozsahu souboru identifikátoru nepoužívá **statické** specifikátor třídy úložiště, objekt má vnější propojení.
+
+Pokud deklarace identifikátoru funkce nemá žádné *storage-class-specifier*, jeho propojení určeno stejně, jako kdyby byly deklarovány s *storage-class-specifier* `extern`. Pokud má deklarace identifikátoru objektu rozsah souboru a ne *storage-class-specifier*, je její propojení externí.
+
+Název identifikátoru s vnějším propojením na stejnou funkci nebo objekt dat provádí ostatní deklarace pro stejný název pomocí vnějšího propojení. Ve stejné jednotce překladu nebo v různých jednotkách překladu mohou být dvě deklarace. Pokud má objekt nebo funkce také globální životnost, jsou funkce nebo objekt sdíleny napříč celým programem.
+
+## <a name="see-also"></a>Viz také
+
+[Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

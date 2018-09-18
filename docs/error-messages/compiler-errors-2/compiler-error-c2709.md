@@ -1,5 +1,5 @@
 ---
-title: C2709 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2709 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea21e5344b9eb20cc4dfd10103f4535f666c437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2962303eeb32f6aae33c08fc7e9be31af03f880
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035679"
 ---
-# <a name="compiler-error-c2709"></a>C2709 chyby kompilátoru
-"identifikátor": formální parametr délka v bajtech se liší od předchozí deklarace  
-  
- Podpis v volání zadaná funkce se liší od prototypu.
+# <a name="compiler-error-c2709"></a>Chyba kompilátoru C2709
+
+'identifier': délka formálních parametrů v bajtech se liší od předchozí deklarace
+
+Podpis ve volání do určené funkce se liší od prototypu.

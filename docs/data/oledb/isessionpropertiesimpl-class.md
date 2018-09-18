@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019026"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
+
 Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `ISessionPropertiesImpl`.  
+
+*T*<br/>
+Vaše třída odvozena od `ISessionPropertiesImpl`.  
   
- *PropClass*  
- Uživatelská vlastnost třídy, která výchozí hodnota je *T*.  
+*PropClass*<br/>
+Uživatelská vlastnost třídy, která výchozí hodnota je *T*.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[SetProperties –](#setproperties)|Nastaví vlastnosti ve skupině vlastností relace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Povinné rozhraní na relace. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapy sady vlastností](../../data/oledb/begin-propset-map.md). Mapa set vlastnosti musí být zadán v třídě relace.  
+
+Povinné rozhraní na relace. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapy sady vlastností](../../data/oledb/begin-propset-map.md). Mapa set vlastnosti musí být zadán v třídě relace.  
   
 ## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+
 Vrátí seznam vlastností v `DBPROPSET_SESSION` skupiny vlastností, které jsou aktuálně nastavená na relaci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+
+Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+
 Nastaví vlastnosti `DBPROPSET_SESSION` skupiny vlastností.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

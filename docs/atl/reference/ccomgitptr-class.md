@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703843"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033950"
 ---
 # <a name="ccomgitptr-class"></a>Ccomgitptr – třída
 
@@ -38,13 +38,13 @@ Tato třída poskytuje metody pro práci s ukazatele rozhraní a tabulky globál
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ ukazatel rozhraní, který bude uložen do GITU.
 
 ## <a name="members"></a>Členové
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel rozhraní, které mají být přidány do GITU.
 
-*dwCookie*  
+*dwCookie*<br/>
 Soubor cookie, který slouží k identifikaci ukazatel rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Ukazatel, který je pro příjem rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -262,7 +262,7 @@ Přiřadí novou hodnotu `CComGITPtr` objektu, z existujícího objektu nebo z o
 
 Vrátí hodnotu souboru cookie, přidružené `CComGITPtr` objektu.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Rozhraní se odebere z GITU.
 
 ## <a name="see-also"></a>Viz také
 
-[Volné zařazování vláken](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Přístup k rozhraní napříč objekty apartment](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Kdy použít tabulky globálního rozhraní](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Volné zařazování vláken](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Přístup k rozhraní napříč objekty apartment](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Kdy použít tabulky globálního rozhraní](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

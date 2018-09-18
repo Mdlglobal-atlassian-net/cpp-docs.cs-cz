@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035744"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase – třída
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 Popisovač okna přidružený k ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 Identifikátor GUID se požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="remarks"></a>Poznámky
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Hodnota udává akci prováděnou `DoVerb`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Hodnota udává akci prováděnou `DoVerb`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 Vyhrazená.
 
-*hwndParent*  
+*hwndParent*<br/>
 Popisovač okna obsahující ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*nAppearance*  
+*nAppearance*<br/>
 Vlastnost DISPID_AMBIENT_APPEARANCE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>Parametry
 
-*bAutoClip*  
+*bAutoClip*<br/>
 Vlastnost DISPID_AMBIENT_AUTOCLIP.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva pozadí*  
+*Barva pozadí*<br/>
 Vlastnost DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 Vlastnost DISPID_AMBIENT_CHARSET.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>Parametry
 
-*ulCodePage*  
+*ulCodePage*<br/>
 Vlastnost DISPID_AMBIENT_CODEPAGE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 Vlastnost DISPID_AMBIENT_DISPLAYASDEFAULT.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 Vlastnost DISPID_AMBIENT_DISPLAYNAME.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*  
+*ppFont*<br/>
 Ukazatele do kontejneru v okolí [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*  
+*ppFont*<br/>
 Ukazatele do kontejneru v okolí [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) rozhraní odbavení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva popředí*  
+*Barva popředí*<br/>
 Vlastnost DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>Parametry
 
-*lcid*  
+*lcid*<br/>
 Vlastnost DISPID_AMBIENT_LOCALEID.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 Vlastnost DISPID_AMBIENT_MESSAGEREFLECT.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>Parametry
 
-*hPalette*  
+*hPalette*<br/>
 Vlastnost DISPID_AMBIENT_PALETTE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 Identifikátor vlastnosti kontejneru se má načíst.
 
-*var*  
+*var*<br/>
 Proměnné k získání vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>Parametry
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 Vlastnost DISPID_AMBIENT_RIGHTTOLEFT. Nastavte na hodnotu TRUE, pokud obsah se zobrazí zprava doleva, FALSE, pokud se zobrazí zleva doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 Vlastnost DISPID_AMBIENT_SCALEUNITS.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>Parametry
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 Vlastnost DISPID_AMBIENT_SHOWGRABHANDLES.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>Parametry
 
-*bShowHatching*  
+*bShowHatching*<br/>
 Vlastnost DISPID_AMBIENT_SHOWHATCHING.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>Parametry
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 Vlastnost DISPID_AMBIENT_SUPPORTSMNEMONICS.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>Parametry
 
-*nTextAlign*  
+*nTextAlign*<br/>
 Vlastnost DISPID_AMBIENT_TEXTALIGN.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>Parametry
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 Vlastnost DISPID_AMBIENT_TOPTOBOTTOM. Nastavte na hodnotu TRUE, pokud se zobrazí text shora dolů, dolní FALSE, pokud se zobrazí nahoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>Parametry
 
-*bUIDead*  
+*bUIDead*<br/>
 Vlastnost DISPID_AMBIENT_UIDEAD.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*bUserMode*  
+*bUserMode*<br/>
 Vlastnost DISPID_AMBIENT_USERMODE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Struktura, která bude obsahovat čitatelem a jmenovatelem na faktor zvětšování. Další informace najdete v tématu [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Hodnotu, která akce, která má být provedena [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).
 
-*prcPosRect*  
+*prcPosRect*<br/>
 Ukazatel pozice ovládacího prvku na místě.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor IID rozhraní ukazatel, který má být vrácen v *ppUnkSite*.
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 Adresa proměnné ukazatele, která přijímá ukazatel rozhraní požadované *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Odkaz na [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md) strukturu, která obsahuje výkresu informace, jako je aspekt kreslení, hranice ovládacího prvku a určuje, zda je výkresu optimalizovaná nebo ne.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Odkaz na [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md) strukturu, která obsahuje výkresu informace, jako je aspekt kreslení, hranice ovládacího prvku a určuje, zda je výkresu optimalizovaná nebo ne.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Vyhrazená.
 
-*wParam*  
+*wParam*<br/>
 Vyhrazená.
 
-*lParam*  
+*lParam*<br/>
 Vyhrazená.
 
-*bHandled*  
+*bHandled*<br/>
 Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Vyhrazená.
 
-*wParam*  
+*wParam*<br/>
 Vyhrazená.
 
-*lParam*  
+*lParam*<br/>
 Vyhrazená.
 
-*bHandled*  
+*bHandled*<br/>
 Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Vyhrazená.
 
-*wParam*  
+*wParam*<br/>
 Existující HDC.
 
-*lParam*  
+*lParam*<br/>
 Vyhrazená.
 
-*lResult*  
+*lResult*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Vyhrazená.
 
-*wParam*  
+*wParam*<br/>
 Vyhrazená.
 
-*lParam*  
+*lParam*<br/>
 Vyhrazená.
 
-*bHandled*  
+*bHandled*<br/>
 Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Vyhrazená.
 
-*hRet*  
+*hRet*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*advf*  
+*advf*<br/>
 Pomocné příznaky, které určují, jak volání [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) tvoří. Hodnoty jsou od [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parametry
 
-*životnosti klíče PMK*  
+*životnosti klíče PMK*<br/>
 Ukazatel na novou zástupný název ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*dwAspect*  
+*dwAspect*<br/>
 Aspekt nebo zobrazení ovládacího prvku.
 
-*index*  
+*index*<br/>
 Část zobrazení, které se změnily. Je platný pouze hodnotu -1.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>Parametry
 
-*bGrab*  
+*bGrab*<br/>
 Při hodnotě TRUE se nastaví fokus klávesnice na ovládacím prvku volání. Pokud má hodnotu FALSE, zruší fokus klávesnice volání ovládacího prvku, pokud má fokus.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Parametry
 
-*bDirty*  
+*bDirty*<br/>
 Hodnota datový člen [CComControlBase::m_bRequiresSave](#m_brequiressave).
 
 ### <a name="remarks"></a>Poznámky
@@ -1578,5 +1578,5 @@ Hodnota datový člen [CComControlBase::m_bRequiresSave](#m_brequiressave).
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

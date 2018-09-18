@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;para&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034717"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
-\<Para > Značka je pro použití uvnitř značky, jako například [ \<souhrnné >](../ide/summary-visual-cpp.md), [ \<Poznámky >](../ide/remarks-visual-cpp.md), nebo [ \<vrátí >](../ide/returns-visual-cpp.md)a umožňuje přidat struktura na text.  
+\<Para > Značka je určen pro použití uvnitř značky, například [ \<summary >](../ide/summary-visual-cpp.md), [ \<remarks >](../ide/remarks-visual-cpp.md), nebo [ \<vrátí >](../ide/returns-visual-cpp.md)a umožňuje přidání struktury textu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ ms.locfileid: "33325114"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `content`  
- Text odstavce.  
+*Obsah*<br/>
+Text odstavce.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   
 ## <a name="example"></a>Příklad  
- V tématu [ \<souhrnné >](../ide/summary-visual-cpp.md) příklad použití \<para >.  
+ Zobrazit [ \<summary >](../ide/summary-visual-cpp.md) pro příklad použití \<para >.  
   
 ## <a name="see-also"></a>Viz také  
  [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

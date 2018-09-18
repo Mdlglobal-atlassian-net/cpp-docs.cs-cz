@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4302 | Microsoft Docs
+title: Upozornění (úroveň 2) C4302 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f9a94e75b0d2ce522c2ec9f45d8a2386e85b136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31ff3bebf07d87b507a18998658966b2c5a789b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291801"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025578"
 ---
-# <a name="compiler-warning-level-2-c4302"></a>C4302 kompilátoru upozornění (úroveň 2)
-'Převod': zkrácení z "typ 1" na "typ 2.  
-  
- Kompilátor zjištěna převod z typu větší typu menší. Informace mohou být ztraceny.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4302:  
-  
-```  
-// C4302.cpp  
-// compile with: /W2  
-#pragma warning(default : 4302)  
-int main() {  
-   int i;  
-   char c = (char) &i;     // C4302  
-   short s = (short) &i;   // C4302  
-}  
+# <a name="compiler-warning-level-2-c4302"></a>Kompilátor upozornění (úroveň 2) C4302
+
+'conversion': zkrácení z 'typ 1"na"typ 2.
+
+Kompilátor zjistil převod z větší typu na menší typ. Informace mohou být ztraceny.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4302:
+
+```
+// C4302.cpp
+// compile with: /W2
+#pragma warning(default : 4302)
+int main() {
+   int i;
+   char c = (char) &i;     // C4302
+   short s = (short) &i;   // C4302
+}
 ```

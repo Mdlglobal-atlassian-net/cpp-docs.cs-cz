@@ -1,5 +1,5 @@
 ---
-title: setvbuf – konstanty | Microsoft Docs
+title: setvbuf – konstanty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,33 +23,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4292ae29602b5890a167a3e2c29e460d65373f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a367522c2f22007abcf24cdf74ada467d94b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032819"
 ---
 # <a name="setvbuf-constants"></a>setvbuf – konstanty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto konstanty představují typ vyrovnávací paměti pro `setvbuf`.  
-  
- Možné hodnoty jsou uvedeny následující konstantami manifestu:  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_IOFBF`|Úplné ukládání do vyrovnávací paměti: vyrovnávací paměti zadané ve volání do `setvbuf` se používá a jeho velikost je jako zadaný v `setvbuf` volání. Pokud je ukazatel vyrovnávací paměti **NULL**, automaticky přiděleného zadaná velikost vyrovnávací paměti se používá.|  
-|`_IOLBF`|Stejné jako `_IOFBF`.|  
-|`_IONBF`|Bez vyrovnávací paměti se používá, bez ohledu na to argumenty volání `setvbuf`.|  
-  
-## <a name="see-also"></a>Viz také  
- [setbuf –](../c-runtime-library/reference/setbuf.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty představují typ vyrovnávací paměti pro `setvbuf`.
+
+Možné hodnoty jsou uvedeny následující konstanty manifestu:
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_IOFBF`|Úplné ukládání do vyrovnávací paměti: zadané vyrovnávací paměti při volání funkce `setvbuf` se používá a jeho velikost je jako zadané v poli `setvbuf` volání. Pokud je vyrovnávací paměť ukazatele **NULL**, automaticky přidělené vyrovnávací paměti o zadané velikosti se používá.|
+|`_IOLBF`|Stejné jako `_IOFBF`.|
+|`_IONBF`|Bez vyrovnávací paměti se používá, bez ohledu na to argumentů ve volání `setvbuf`.|
+
+## <a name="see-also"></a>Viz také
+
+[setbuf](../c-runtime-library/reference/setbuf.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

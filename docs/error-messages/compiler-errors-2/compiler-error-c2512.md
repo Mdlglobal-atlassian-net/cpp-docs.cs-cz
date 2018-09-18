@@ -1,5 +1,5 @@
 ---
-title: C2512 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2512 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036915"
 ---
-# <a name="compiler-error-c2512"></a>C2512 chyby kompilátoru
+# <a name="compiler-error-c2512"></a>Chyba kompilátoru C2512
 
-> '*identifikátor*': žádný odpovídající výchozí konstruktor k dispozici  
+> "*identifikátor*': žádný odpovídající konstruktor default k dispozici
 
-A *výchozí konstruktor*, není k dispozici pro určité třídy, struktury nebo sjednocení konstruktor, který vyžaduje žádné argumenty. Kompilátor poskytuje výchozí konstruktor pouze v případě, že jsou k dispozici žádné uživatelem definované konstruktory.
+A *výchozí konstruktor*, konstruktor, který nevyžaduje argumenty, není k dispozici pro zadanou třídu, strukturu nebo sjednocení. Pouze v případě, že jsou k dispozici žádné uživatelem definované konstruktory, kompilátor poskytuje výchozí konstruktor.
 
-Pokud zadáte konstruktor, který přebírá parametr není void a chcete povolit vlastní třídy, který bude vytvořen bez parametrů (například jako elementy pole), je nutné také zadat výchozí konstruktor. Výchozí konstruktor může být konstruktor se výchozí hodnoty pro všechny parametry.
+Pokud zadáte konstruktor, který přijímá parametr typ jiný než void a budete chtít povolit vaší třídy, který bude vytvořen bez parametrů (například jako prvky pole), musíte taky zadat výchozí konstruktor. Výchozí konstruktor může být konstruktor s použitím výchozích hodnot pro všechny parametry.
 
 ## <a name="example"></a>Příklad
 
-Obvyklou příčinou chyby C2512 je při definování třídě nebo struktuře konstruktor, který přebírá argumenty a poté pokusíte deklarujte instanci vaší třídě nebo struktuře bez argumentů. Například `struct B` níže deklaruje konstruktor, který vyžaduje `char *` argument, ale není jednou, který nemá žádné argumenty. V `main`, deklarována instance B, ale nebude zadán žádný argument. Kompilátor generuje C2512, protože nelze nalézt výchozí konstruktor pro B.
+Běžnou příčinou chyby C2512 je při definování třídy nebo struktury konstruktor, který přebírá argumenty a potom se pokusíte o deklaraci instance třídy nebo struktury bez argumentů. Například `struct B` níže deklaruje konstruktor, který vyžaduje `char *` argument, ale ne ten, který nepřijímá žádné argumenty. V `main`, je deklarována instance b, ale není zadaný žádný argument. Kompilátor generuje C2512, protože nelze najít výchozí konstruktor pro služby serveru B.
 
 ```cpp
 // C2512.cpp
@@ -50,4 +50,4 @@ int main() {
 }
 ```
 
-Tento problém můžete vyřešit tak, že definujete výchozí konstruktor pro třídy, nebo struktury, jako `B() {}`, nebo konstruktor, kde všechny argumenty mají výchozí hodnoty, jako například `B (char * = nullptr) {}`.
+Tento problém můžete opravit tak, že definujete výchozí konstruktor pro struktury nebo třídy, jako například `B() {}`, nebo pokud všechny argumenty mají výchozí hodnoty, jako například konstruktor `B (char * = nullptr) {}`.

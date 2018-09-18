@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1017 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1017 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 557a5a13656837c513313e4cf52e69d9a417ed4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 372f61f9c07c47a005ec66a88b73895301221e6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030268"
 ---
 # <a name="resource-compiler-fatal-error-rc1017"></a>Závažná chyba kompilátoru prostředků RC1017
-Neplatný celočíselný konstantní výraz.  
-  
- Výraz v `#if` – direktiva složka neexistuje nebo nelze vyhodnotit na konstantní.
+
+Neplatný celočíselný konstantní výraz
+
+Výraz v `#if` direktiva neexistuje nebo není vyhodnocen na konstantu.

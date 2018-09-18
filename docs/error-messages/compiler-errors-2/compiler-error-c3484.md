@@ -1,5 +1,5 @@
 ---
-title: C3484 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3484 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5de302987e4ea56e9ee6f29bed1b5842579a8f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19a79574f85d05c6b1ac32416509ba1f8c05e26b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019183"
 ---
-# <a name="compiler-error-c3484"></a>C3484 chyby kompilátoru
-Očekávaný '->' než návratový typ  
-  
- Je nutné zadat `->` před návratový typ výrazu lambda.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Zadejte `->` před návratový typ.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad generuje C3484:  
-  
-```  
-// C3484a.cpp  
-  
-int main()  
-{  
-   return []() . int { return 42; }(); // C3484  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad přeloží C3484 tím, že poskytuje `->` před návratový typ výrazu lambda:  
-  
-```  
-// C3484b.cpp  
-  
-int main()  
-{  
-   return []() -> int { return 42; }();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3484"></a>Chyba kompilátoru C3484
+
+očekávalo: ->"před návratový typ
+
+Je nutné zadat `->` před návratový typ výrazu lambda.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Zadejte `->` před návratovým typem.
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C3484:
+
+```
+// C3484a.cpp
+
+int main()
+{
+   return []() . int { return 42; }(); // C3484
+}
+```
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu řeší tím, že poskytuje C3484 `->` před návratový typ výrazu lambda:
+
+```
+// C3484b.cpp
+
+int main()
+{
+   return []() -> int { return 42; }();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Interpunkční znaky jazyka | Microsoft Docs
+title: Interpunkční znaky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29fea11f4dd36353afd50d1ced8542cb92eed378
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0dbc2583cff995b32e6ed3a4da463f671923b1c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036654"
 ---
 # <a name="punctuators"></a>Interpunkční znaky
-`punctuator`: jeden z  
- **[ ]   ( )   { }   \*   ,   :   =   ;   ...   #**  
-  
-## <a name="see-also"></a>Viz také  
- [Gramatika slov](../c-language/lexical-grammar.md)
+
+`punctuator`: jeden z **() [] {} \* ,: =;   ...   #**
+
+## <a name="see-also"></a>Viz také
+
+[Gramatika slov](../c-language/lexical-grammar.md)

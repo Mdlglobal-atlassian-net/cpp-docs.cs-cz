@@ -1,5 +1,5 @@
 ---
-title: C3551 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3551 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9f69adcf071415d3c1760294bdaaaec7b71f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b45a6f66ab7cf2a5ebb7ae6b2a2f78e664092604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035731"
 ---
-# <a name="compiler-error-c3551"></a>C3551 chyby kompilátoru
-"očekává, že že pozdní zadán návratový typ"  
-  
- Pokud použijete `auto` – klíčové slovo jako zástupný symbol pro návratový typ funkce, je nutné zadat návratový typ pozdní zadaný. V následujícím příkladu pozdní určených pro návratový typ funkce `myFunction` ukazatel na pole čtyři elementy typu `int`.  
-  
-```  
-auto myFunction()->int(*)[4];   
-```  
-  
-## <a name="see-also"></a>Viz také  
- [auto](../../cpp/auto-cpp.md)
+# <a name="compiler-error-c3551"></a>Chyba kompilátoru C3551
+
+"očekává, že že pozdně zadaný návratový typ"
+
+Pokud používáte `auto` – klíčové slovo jako zástupný symbol pro návratový typ funkce, je nutné zadat pozdně zadaný návratový typ. V následujícím příkladu je pozdně zadaný návratový typ funkce `myFunction` je ukazatel na pole čtyři prvky typu `int`.
+
+```
+auto myFunction()->int(*)[4];
+```
+
+## <a name="see-also"></a>Viz také
+
+[auto](../../cpp/auto-cpp.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020717"
 ---
 # <a name="taskgroup-class"></a>task_group – třída
 `task_group` Třída reprezentuje kolekci paralelní práce, které mohou čekat nebo bylo zrušeno.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ objektu funkce, která bude volána k provedení tělo popisovač úkolu.  
+*_Function*<br/>
+Typ objektu funkce, která bude volána k provedení tělo popisovač úkolu.  
   
- `_Func`  
- Funkce, která bude volána k vyvolání tělo úkolu. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
+*_Func*<br/>
+Funkce, která bude volána k vyvolání tělo úkolu. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
   
- `_Placement`  
- Odkaz na umístění, ve kterém úloha reprezentována `_Func` parametrů by se měl spustit.  
+*_Umístění.*<br/>
+Odkaz na umístění, ve kterém úloha reprezentována `_Func` parametrů by se měl spustit.  
   
- `_Task_handle`  
- Popisovač se plánované práce. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude očekávat, že chcete za provozu, dokud buď `wait` nebo `run_and_wait` byla volána metoda v tomto `task_group` objektu.  
+*_Task_handle*<br/>
+Popisovač se plánované práce. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude očekávat, že chcete za provozu, dokud buď `wait` nebo `run_and_wait` byla volána metoda v tomto `task_group` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Modul runtime plánuje spouštění na pozdější dobu, což může být po volání funkce vrátí zadaný pracovní funkce. Tato metoda používá [task_handle –](task-handle-class.md) objekt pro uložení kopie zadané pracovní funkce. Proto změny stavu, ke kterým dochází v objekt funkce, který můžete předat této metodě se nezobrazí v kopii tohoto objektu funkce. Kromě toho Ujistěte se, že doba platnosti objektů, které můžete předat ukazatelem nebo odkazem na pracovní funkce nadále platné, dokud pracovní funkce vrátí.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ objektu funkce, která bude volána k provedení tělo úkolu.  
+*_Function*<br/>
+Typ objektu funkce, která bude volána k provedení tělo úkolu.  
   
- `_Task_handle`  
- Popisovač pro úlohy, které se používají ke spouštění vložený kontext volání. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude pokračovat očekávat, že živé až `run_and_wait` metoda dokončí provádění.  
+*_Task_handle*<br/>
+Popisovač pro úlohy, které se používají ke spouštění vložený kontext volání. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude pokračovat očekávat, že živé až `run_and_wait` metoda dokončí provádění.  
   
- `_Func`  
- Funkce, která bude volána k vyvolání tělo práce. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
+*_Func*<br/>
+Funkce, která bude volána k vyvolání tělo práce. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Údaj o tom, jestli bylo čekání uspokojeno nebo skupina úloh se zrušila, kvůli operaci zrušit explicitní nebo výjimky z jednoho z jejích úkolů. Další informace najdete v tématu [task_group_status –](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_CancellationToken`  
- Token zrušení pro přidružení k této skupině úloh. Skupiny úloh se zruší, pokud je token zrušen.  
+*_CancellationToken*<br/>
+Token zrušení pro přidružení k této skupině úloh. Skupiny úloh se zruší, pokud je token zrušen.  
   
 ### <a name="remarks"></a>Poznámky  
  Vytvoří konstruktor, který přijímá token zrušení `task_group` , která budou zrušeny při zrušení zdroje přidružené k tokenu. Také poskytuje explicitní rušícího tokenu izoluje této skupiny úloh ze implicitní zrušení z nadřazené skupiny s tokenem jiný nebo žádný token.  

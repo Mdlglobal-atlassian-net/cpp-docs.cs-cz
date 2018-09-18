@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1121 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1121 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d89b217e5cca5abc4a352a05722bd4d0d53a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fd83298e9a1afcaa318c8bbc333b77f3b2da61c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019895"
 ---
 # <a name="resource-compiler-fatal-error-rc1121"></a>Závažná chyba kompilátoru prostředků RC1121
-Vstupně-výstupní operace při čtení souboru  
-  
- Kompilátor prostředků nemohl přečíst soubor. Zkontrolujte, že jednotce, která obsahuje soubor je k dispozici a zda je soubor platný.
+
+Vstupně-výstupní chyba při čtení souboru
+
+Nástroj Resource Compiler nemohl přečíst soubor. Zkontrolujte, že jednotce, která obsahuje soubor je k dispozici a že je soubor platný.

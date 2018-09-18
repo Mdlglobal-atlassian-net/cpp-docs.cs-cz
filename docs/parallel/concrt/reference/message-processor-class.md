@@ -1,5 +1,5 @@
 ---
-title: message_processor – třída | Microsoft Docs
+title: message_processor – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026917"
 ---
 # <a name="messageprocessor-class"></a>message_processor – třída
-`message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka řazení zpráv v.  
+`message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka na pořadí zpráv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +39,16 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Datový typ datové části v rámci zpráv zpracovávají to `message_processor` objektu.  
+*T*<br/>
+Datový typ datové části v rámci zprávy zpracovává situace `message_processor` objektu.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`type`|Typ aliasu pro `T`.|  
+|`type`|Alias typu pro `T`.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -62,7 +62,7 @@ class message_processor;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[process_incoming_message –](#process_incoming_message)|Při přepisu v odvozené třídě, provede dopředného zpracování zpráv do bloku. Volá se jednou pokaždé, když je přidána nové zprávy a fronty se zjistí, být prázdný.|  
+|[process_incoming_message –](#process_incoming_message)|Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `message_processor`  
@@ -81,15 +81,15 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Msg`  
- A `message` objekt, který chcete odeslat asynchronně.  
+*_Msg*<br/>
+A `message` objektu k odesílání asynchronně.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace zpracovatelů by měly přepsat tuto metodu.  
+ Implementace by měly přepsat tuto metodu.  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message – 
 
- Při přepisu v odvozené třídě, provede dopředného zpracování zpráv do bloku. Volá se jednou pokaždé, když je přidána nové zprávy a fronty se zjistí, být prázdný.  
+ Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.  
   
 ```
 virtual void process_incoming_message() = 0;
@@ -107,11 +107,11 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Msg`  
- A `message` objekt, který chcete odeslat synchronně.  
+*_Msg*<br/>
+A `message` objekt se má poslat synchronně.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace zpracovatelů by měly přepsat tuto metodu.  
+ Implementace by měly přepsat tuto metodu.  
   
 ##  <a name="wait"></a> Počkej 
 
@@ -122,8 +122,8 @@ virtual void wait() = 0;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace zpracovatelů by měly přepsat tuto metodu.  
+ Implementace by měly přepsat tuto metodu.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [ordered_message_processor – třída](ordered-message-processor-class.md)

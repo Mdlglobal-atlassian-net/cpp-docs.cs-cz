@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0bd7d57d0678744243356a0565e10cbe4065f8d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032528"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,7 +53,7 @@ int setjmp(
 
 ### <a name="parameters"></a>Parametry
 
-*env*  
+*env*<br/>
 Proměnná, ve kterém je uložené prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -74,7 +74,7 @@ V kódu C++ společnosti Microsoft na Windows **longjmp** používá stejnou sé
 
 **Specifické pro END Microsoft**
 
-> [!NOTE]  
+> [!NOTE]
 > V přenositelném kódu C++ nelze předpokládat `setjmp` a `longjmp` podporovat sémantiku objektu C++. Konkrétně `setjmp` / `longjmp` pár má nedefinované chování, pokud nahrazení volání `setjmp` a `longjmp` podle **catch** a **throw** by měl vyvolat nejsou v netriviálních destruktory všech automatických objektů. V programech jazyka C++ doporučujeme že použít mechanismus zpracování výjimek jazyka C++.
 
 Další informace najdete v tématu [použití funkcí setjmp a longjmp](../../cpp/using-setjmp-longjmp.md).
@@ -93,5 +93,5 @@ Podívejte se na příklad pro [_fpreset –](fpreset.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)  
-[longjmp](longjmp.md)  
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[longjmp](longjmp.md)

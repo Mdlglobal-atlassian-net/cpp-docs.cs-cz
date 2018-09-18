@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1035 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1035 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bb32f815345b933ad6a65a0c8c1ec8ad59cbe81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0383bf4742d637d669070efa5370ebda0c7ab159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019858"
 ---
 # <a name="nmake-fatal-error-u1035"></a>Závažná chyba nástroje NMAKE U1035
-Chyba syntaxe: očekáváno ':' nebo '=' oddělovač  
-  
- Buď dvojtečkou (**:**) nebo symbol rovná (**=**) byl očekáván.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Dvojtečkou nesledovala cíl.  
-  
-2.  Dvojtečkou a žádné místo (například a:) a cíl jedním písmenem. NMAKE ji interpretovat jako určení jednotky.  
-  
-3.  Dvojtečkou nesledovala odvozené pravidlo.  
-  
-4.  Symbol rovná nenásledovala definici makra.  
-  
-5.  Znak, a potom zpětné lomítko (**\\**), který byl použit pokračujte příkazu, který bude nový řádek.  
-  
-6.  Řetězec zobrazovaly který nesledovala žádné pravidlo NMAKE syntaxe.  
-  
-7.  Souboru pravidel byl formátován pomocí textový editor.
+
+Chyba syntaxe: byl očekáván ':' nebo '=' oddělovač
+
+Buď dvojtečkou (**:**) nebo znaménko rovná se (**=**) byl očekáván.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Dvojtečka neřídil cíl.
+
+1. Dvojtečka a žádná mezera (například a:) a potom písmeno jeden cíl. NMAKE je interpretován jako specifikaci jednotky.
+
+1. Dvojtečka neřídil odvozené pravidlo.
+
+1. Definice makra nenásledovala znaménko rovná se.
+
+1. Znak za zpětným lomítkem (**\\**), která byla použita pokračujte příkaz na nový řádek.
+
+1. Řetězec, který neřídil jakékoli pravidlo syntaxe NMAKE se objevil.
+
+1. Souboru pravidel se formátované textový procesor.

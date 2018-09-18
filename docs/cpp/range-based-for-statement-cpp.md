@@ -12,117 +12,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0e4486bc3106bd438c7a963ca241465cbc167710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035199"
 ---
 # <a name="range-based-for-statement-c"></a>Příkaz For založený na rozsahu (C++)
-Vykoná příkaz `statement` opakovaně a sekvenčně pro každý prvek výrazu `expression`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-for ( for-range-declaration : expression )  
-   statement   
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Použít rozsahový **pro** příkaz k vytvoření smyček, které jsou vykonány skrze "rozsah", který je definován jako cokoli, co lze iterovat – například `std::vector`, nebo všechny ostatní standardní knihovny C++ pořadí rozsahem je definován `begin()` a `end()`. Název, který je deklarován v `for-range-declaration` je lokální pro **pro** příkazu a nemůže být předeklarováno ve `expression` nebo `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) je preferováno klíčové slovo `for-range-declaration` část příkazu. 
 
- **Novinka v sadě Visual Studio 2017:** Range-based pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
-  
- Tento kód ukazuje, jak použít rozsahový **pro** smyčky pro iteraci polem a vektorem:  
-  
-```cpp  
-// range-based-for.cpp  
-// compile by using: cl /EHsc /nologo /W4  
-#include <iostream>  
-#include <vector>  
-using namespace std;  
-  
-int main()   
-{  
-    // Basic 10-element integer array.  
-    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };  
-  
-    // Range-based for loop to iterate through the array.  
-    for( int y : x ) { // Access by value using a copy declared as a specific type.   
-                       // Not preferred.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    // The auto keyword causes type inference to be used. Preferred.  
-  
-    for( auto y : x ) { // Copy of 'x', almost always undesirable  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    for( auto &y : x ) { // Type inference by reference.  
-        // Observes and/or modifies in-place. Preferred when modify is needed.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    for( const auto &y : x ) { // Type inference by const reference.  
-        // Observes in-place. Preferred when no modify is needed.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-    cout << "end of integer array test" << endl;  
-    cout << endl;  
-  
-    // Create a vector object that contains 10 elements.  
-    vector<double> v;  
-    for (int i = 0; i < 10; ++i) {  
-        v.push_back(i + 0.14159);  
-    }  
-  
-    // Range-based for loop to iterate through the vector, observing in-place.  
-    for( const auto &j : v ) {  
-        cout << j << " ";  
-    }  
-    cout << endl;  
-    cout << "end of vector test" << endl;  
-}  
-```  
-  
- Zde je výstup:  
+Vykoná příkaz `statement` opakovaně a sekvenčně pro každý prvek výrazu `expression`.
 
-```Output
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- `end of integer array test`  
-  
- `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
-  
- `end of vector test`  
+## <a name="syntax"></a>Syntaxe
+
+```
+for ( for-range-declaration : expression )
+   statement
 ```
 
- Range-based **pro** smyčky skončí, když jeden z těchto `statement` provádí: [přerušení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) k s popiskem příkaz mimo rozsahový **pro** smyčky. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz v možnosti range-based **pro** smyčku ukončí pouze aktuální iteraci.  
-  
- Mějte na paměti tyto skutečnosti o založený na rozsahu **pro**:  
-  
--   Automaticky rozpozná pole.  
-  
--   Rozpozná kontejnery, které mají `.begin()` a `.end()`.  
-  
--   Pro vše ostatní používá vyhledávání závislé na argumentu `begin()` a `end()`.  
-  
-## <a name="see-also"></a>Viz také:  
- [Automaticky](../cpp/auto-cpp.md)   
- [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [klíčová slova](../cpp/keywords-cpp.md)   
- [while – příkaz (C++)](../cpp/while-statement-cpp.md)   
- [Proveďte-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)   
- [for – příkaz (C++)](../cpp/for-statement-cpp.md)
+## <a name="remarks"></a>Poznámky
+
+Použít rozsahový **pro** příkaz k vytvoření smyček, které jsou vykonány skrze "rozsah", který je definován jako cokoli, co lze iterovat – například `std::vector`, nebo všechny ostatní standardní knihovny C++ pořadí rozsahem je definován `begin()` a `end()`. Název, který je deklarován v `for-range-declaration` je lokální pro **pro** příkazu a nemůže být předeklarováno ve `expression` nebo `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) je preferováno klíčové slovo `for-range-declaration` část příkazu.
+
+**Novinka v sadě Visual Studio 2017:** Range-based pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
+
+Tento kód ukazuje, jak použít rozsahový **pro** smyčky pro iteraci polem a vektorem:
+
+```cpp
+// range-based-for.cpp
+// compile by using: cl /EHsc /nologo /W4
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Basic 10-element integer array.
+    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    // Range-based for loop to iterate through the array.
+    for( int y : x ) { // Access by value using a copy declared as a specific type.
+                       // Not preferred.
+        cout << y << " ";
+    }
+    cout << endl;
+
+    // The auto keyword causes type inference to be used. Preferred.
+
+    for( auto y : x ) { // Copy of 'x', almost always undesirable
+        cout << y << " ";
+    }
+    cout << endl;
+
+    for( auto &y : x ) { // Type inference by reference.
+        // Observes and/or modifies in-place. Preferred when modify is needed.
+        cout << y << " ";
+    }
+    cout << endl;
+
+    for( const auto &y : x ) { // Type inference by const reference.
+        // Observes in-place. Preferred when no modify is needed.
+        cout << y << " ";
+    }
+    cout << endl;
+    cout << "end of integer array test" << endl;
+    cout << endl;
+
+    // Create a vector object that contains 10 elements.
+    vector<double> v;
+    for (int i = 0; i < 10; ++i) {
+        v.push_back(i + 0.14159);
+    }
+
+    // Range-based for loop to iterate through the vector, observing in-place.
+    for( const auto &j : v ) {
+        cout << j << " ";
+    }
+    cout << endl;
+    cout << "end of vector test" << endl;
+}
+```
+
+Zde je výstup:
+
+```Output
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+end of integer array test
+
+0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159
+end of vector test
+```
+
+Range-based **pro** smyčky skončí, když jeden z těchto `statement` provádí: [přerušení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) k s popiskem příkaz mimo rozsahový **pro** smyčky. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz v možnosti range-based **pro** smyčku ukončí pouze aktuální iteraci.
+
+Mějte na paměti tyto skutečnosti o založený na rozsahu **pro**:
+
+- Automaticky rozpozná pole.
+
+- Rozpozná kontejnery, které mají `.begin()` a `.end()`.
+
+- Pro vše ostatní používá vyhledávání závislé na argumentu `begin()` a `end()`.
+
+## <a name="see-also"></a>Viz také:
+
+[auto](../cpp/auto-cpp.md)<br/>
+[Příkazy iterace](../cpp/iteration-statements-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[while – příkaz (C++)](../cpp/while-statement-cpp.md)<br/>
+[do-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[for – příkaz (C++)](../cpp/for-statement-cpp.md)

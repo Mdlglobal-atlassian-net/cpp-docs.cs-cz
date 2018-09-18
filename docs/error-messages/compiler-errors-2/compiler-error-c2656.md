@@ -1,5 +1,5 @@
 ---
-title: C2656 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2656 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e4dbae6232f50b9241f5542928311e8944501e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4b0e4ee89bc2cd2c31e476bdc4ee19bfb8a3aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043765"
 ---
-# <a name="compiler-error-c2656"></a>C2656 chyby kompilátoru
-'function': funkce nejsou povoleny jako bitová pole  
-  
- Funkce je deklarován jako člen skupiny bitové pole.  
-  
- Tato chyba může být způsobeno chyby syntaxe v seznamu inicializátoru konstruktoru.
+# <a name="compiler-error-c2656"></a>Chyba kompilátoru C2656
+
+'function': funkce není povolená jako bitové pole.
+
+Funkce je deklarovaná jako člen bitového pole.
+
+Tuto chybu může způsobovat chyby syntaxe v seznamu inicializátorů konstruktoru.

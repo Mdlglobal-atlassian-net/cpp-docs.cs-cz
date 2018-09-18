@@ -1,5 +1,5 @@
 ---
-title: CXX0062 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0062 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b812a269b5acc383cbdd185e06ecb92f1c63d2a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 509d33be45f26f7dbf2de85969b90e253e0d5228
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019146"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Chyba při vyhodnocování výrazu CXX0062
-volá konstruktor není podporován  
-  
- Výraz provedených volání konstruktoru. Výrazy nelze explicitní volání konstruktory nebo převody, které vyžadují volání konstruktoru.  
-  
- Tato chyba je stejný jako CAN0062.
+
+volání konstruktoru není podporován
+
+Výraz provedla volání konstruktoru. Výrazy nelze provést explicitní volání konstruktorů nebo nastavit jako převody, které vyžaduje volání konstruktoru.
+
+Tato chyba se shoduje s CAN0062.

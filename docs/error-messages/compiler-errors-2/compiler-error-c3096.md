@@ -1,5 +1,5 @@
 ---
-title: C3096 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3096 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 781d032875a0edc042eb8f8031d5d035c1ab40eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84d2b1a51073c49f0300e6b43a4575309a0dfc17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026345"
 ---
-# <a name="compiler-error-c3096"></a>C3096 chyby kompilátoru
-'atribut': atribut je povoleno v datové členy pouze atribut třídy  
-  
- Atribut použila správně.  
-  
- Další informace najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md).
+# <a name="compiler-error-c3096"></a>Chyba kompilátoru C3096
+
+'attribute': atribut je povolený pro datové členy tříd atributů pouze
+
+Atribut se použijí nesprávně.
+
+Další informace najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md).

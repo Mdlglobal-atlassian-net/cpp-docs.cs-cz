@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b16605b8cd0b5855d7a6cc1f5ceac9f46ad495f4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017170"
 ---
 # <a name="provider-support-for-bookmarks"></a>Podpora zprostředkovatele pro záložky
+
 V příkladu v tomto tématu je přidán `IRowsetLocate` rozhraní při `CMyProviderRowset` třídy. V téměř všech případech je spustit tak, že přidáte na existující objekt modelu COM rozhraní. Potom ji můžete otestovat tak, že přidáte další volání z šablony příjemce. Tento příklad ukazuje, jak:  
   
--   Přidání rozhraní ke zprostředkovateli.  
+- Přidání rozhraní ke zprostředkovateli.  
   
--   Dynamické určování sloupců se vraťte do příjemce.  
+- Dynamické určování sloupců se vraťte do příjemce.  
   
--   Přidání podpory záložek.  
+- Přidání podpory záložek.  
   
- `IRowsetLocate` Rozhraní zdědí `IRowset` rozhraní. Chcete-li přidat `IRowsetLocate` rozhraní, dědí `CMyProviderRowset` z [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+`IRowsetLocate` Rozhraní zdědí `IRowset` rozhraní. Chcete-li přidat `IRowsetLocate` rozhraní, dědí `CMyProviderRowset` z [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
- Přidávání `IRowsetLocate` rozhraní se trochu liší od většiny rozhraní. Aby bylo možné řádek tabulky vtable nahoru, OLE DB poskytovatele šablony mají parametru šablony pro zpracování odvozené rozhraní. Následující kód ukazuje nový seznam dědičnosti:  
+Přidávání `IRowsetLocate` rozhraní se trochu liší od většiny rozhraní. Aby bylo možné řádek tabulky vtable nahoru, OLE DB poskytovatele šablony mají parametru šablony pro zpracování odvozené rozhraní. Následující kód ukazuje nový seznam dědičnosti:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,9 +51,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- Čtvrtý, pátý a šestý parametry jsou přidány všechny. Tento příklad používá výchozí hodnoty pro čtvrtý a pátý parametry, ale uvedete `IRowsetLocateImpl` jako šestého parametru. `IRowsetLocateImpl` je třída šablony technologie OLE DB, který přebírá dva parametry šablony: Toto připojení `IRowsetLocate` rozhraní při `CMyProviderRowset` třídy. Přidání Většina rozhraní, můžete tento krok přeskočit a přejít k dalšímu. Pouze `IRowsetLocate` a `IRowsetScroll` rozhraní musí být spravovány tímto způsobem.  
+Čtvrtý, pátý a šestý parametry jsou přidány všechny. Tento příklad používá výchozí hodnoty pro čtvrtý a pátý parametry, ale uvedete `IRowsetLocateImpl` jako šestého parametru. `IRowsetLocateImpl` je třída šablony technologie OLE DB, který přebírá dva parametry šablony: Toto připojení `IRowsetLocate` rozhraní při `CMyProviderRowset` třídy. Přidání Většina rozhraní, můžete tento krok přeskočit a přejít k dalšímu. Pouze `IRowsetLocate` a `IRowsetScroll` rozhraní musí být spravovány tímto způsobem.  
   
- Bude potřeba zjistit, `CMyProviderRowset` volat `QueryInterface` pro `IRowsetLocate` rozhraní. Přidejte řádek `COM_INTERFACE_ENTRY(IRowsetLocate)` do mapy. Mapu rozhraní pro `CMyProviderRowset` by se měla objevit, jak je znázorněno v následujícím kódu:  
+Bude potřeba zjistit, `CMyProviderRowset` volat `QueryInterface` pro `IRowsetLocate` rozhraní. Přidejte řádek `COM_INTERFACE_ENTRY(IRowsetLocate)` do mapy. Mapu rozhraní pro `CMyProviderRowset` by se měla objevit, jak je znázorněno v následujícím kódu:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -66,11 +67,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- Je také potřeba připojit mapu do `CRowsetImpl` třídy. Přidat připojení v makru COM_INTERFACE_ENTRY_CHAIN `CRowsetImpl` mapy. Také vytvořit typu nazvanou `RowsetBaseClass` , který obsahuje informace o dědičnosti. Tato definice typedef je volitelný a můžete ignorovat.  
+Je také potřeba připojit mapu do `CRowsetImpl` třídy. Přidat připojení v makru COM_INTERFACE_ENTRY_CHAIN `CRowsetImpl` mapy. Také vytvořit typu nazvanou `RowsetBaseClass` , který obsahuje informace o dědičnosti. Tato definice typedef je volitelný a můžete ignorovat.  
   
- A konečně, zpracovat `IColumnsInfo::GetColumnsInfo` volání. Obvykle by k tomu použít makra PROVIDER_COLUMN_ENTRY. Příjemce však může být vhodné použít záložky. Musíte změnit sloupce, které vrátí poskytovateli v závislosti na tom, zda uživatel požádá o záložku.  
+A konečně, zpracovat `IColumnsInfo::GetColumnsInfo` volání. Obvykle by k tomu použít makra PROVIDER_COLUMN_ENTRY. Příjemce však může být vhodné použít záložky. Musíte změnit sloupce, které vrátí poskytovateli v závislosti na tom, zda uživatel požádá o záložku.  
   
- Pro zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte `PROVIDER_COLUMN` si namapují `CTextData` třídy. Makro Provider Column Map definuje funkci `GetColumnInfo`. Je třeba definovat vlastní `GetColumnInfo` funkce. Deklarace funkce by měl vypadat nějak takto:  
+Pro zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte `PROVIDER_COLUMN` si namapují `CTextData` třídy. Makro Provider Column Map definuje funkci `GetColumnInfo`. Je třeba definovat vlastní `GetColumnInfo` funkce. Deklarace funkce by měl vypadat nějak takto:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -88,7 +89,7 @@ class CTextData
 };  
 ```  
   
- Pak implementovat `GetColumnInfo` funkce v souboru MyProviderRS.cpp následujícím způsobem:  
+Pak implementovat `GetColumnInfo` funkce v souboru MyProviderRS.cpp následujícím způsobem:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -159,11 +160,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo` nejprve zkontroluje, zda vlastnost s názvem `DBPROP_IRowsetLocate` nastavena. OLE DB má vlastnosti pro každý volitelný rozhraní mimo objektu sady řádků. Pokud chcete použít jeden z těchto volitelných rozhraní chce příjemce, nastaví vlastnost na hodnotu true. Zprostředkovatel můžete zkontrolovat tuto vlastnost a zvláštní akci na jejím základě.  
+`GetColumnInfo` nejprve zkontroluje, zda vlastnost s názvem `DBPROP_IRowsetLocate` nastavena. OLE DB má vlastnosti pro každý volitelný rozhraní mimo objektu sady řádků. Pokud chcete použít jeden z těchto volitelných rozhraní chce příjemce, nastaví vlastnost na hodnotu true. Zprostředkovatel můžete zkontrolovat tuto vlastnost a zvláštní akci na jejím základě.  
   
- Ve vaší implementaci získat vlastnost pomocí ukazatele na objekt příkazu. `pThis` Ukazatel představuje třídu příkazu nebo sady řádků. Vzhledem k tomu, že používáte šablony, musíte předat to jako `void` ukazatel nebo kód nebude zkompilován.  
+Ve vaší implementaci získat vlastnost pomocí ukazatele na objekt příkazu. `pThis` Ukazatel představuje třídu příkazu nebo sady řádků. Vzhledem k tomu, že používáte šablony, musíte předat to jako `void` ukazatel nebo kód nebude zkompilován.  
   
- Zadejte statického pole obsahující informace o sloupci. Pokud uživatel nechce sloupec záložky, položky v poli nevyužité. Můžou dynamicky alokovat toto pole, ale je třeba Ujistěte se, že ke zničení správně. Tento příklad definuje a používá makra ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX vložení informací do pole. Makra můžete přidat do souboru MyProviderRS.H, jak je znázorněno v následujícím kódu:  
+Zadejte statického pole obsahující informace o sloupci. Pokud uživatel nechce sloupec záložky, položky v poli nevyužité. Můžou dynamicky alokovat toto pole, ale je třeba Ujistěte se, že ke zničení správně. Tento příklad definuje a používá makra ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX vložení informací do pole. Makra můžete přidat do souboru MyProviderRS.H, jak je znázorněno v následujícím kódu:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -194,7 +195,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Chcete-li otestovat kód v příjemci, budete muset provést několik změn do `OnRun` obslužné rutiny. První změnit funkci je, že přidáte kód pro přidání vlastnosti do sady vlastností. Nastaví kód `DBPROP_IRowsetLocate` vlastnost na hodnotu true, proto sděluje zprostředkovatele, který má sloupec záložky. `OnRun` Kód obslužné rutiny by měl vypadat následovně:  
+Chcete-li otestovat kód v příjemci, budete muset provést několik změn do `OnRun` obslužné rutiny. První změnit funkci je, že přidáte kód pro přidání vlastnosti do sady vlastností. Nastaví kód `DBPROP_IRowsetLocate` vlastnost na hodnotu true, proto sděluje zprostředkovatele, který má sloupec záložky. `OnRun` Kód obslužné rutiny by měl vypadat následovně:  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -246,9 +247,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
- While smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Kód, který máte by měly vždy předat, protože při porovnávání přesně stejné záložky. Uložte také jednu záložku v dočasné proměnné tak, že můžete používat dál po while smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.  
+While smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Kód, který máte by měly vždy předat, protože při porovnávání přesně stejné záložky. Uložte také jednu záložku v dočasné proměnné tak, že můžete používat dál po while smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.  
   
- Také musíte aktualizovat záznam uživatele v příjemci. Přidejte záznam do třídy pro zpracování záložky a položky v `COLUMN_MAP`:  
+Také musíte aktualizovat záznam uživatele v příjemci. Přidejte záznam do třídy pro zpracování záložky a položky v `COLUMN_MAP`:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -273,7 +274,8 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Když jste aktualizovali kód, byste měli moct sestavit a spustit poskytovatele se `IRowsetLocate` rozhraní.  
+Když jste aktualizovali kód, byste měli moct sestavit a spustit poskytovatele se `IRowsetLocate` rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
- [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)
+
+[Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

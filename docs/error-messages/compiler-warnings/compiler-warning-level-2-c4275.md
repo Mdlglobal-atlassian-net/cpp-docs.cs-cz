@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4275 | Microsoft Docs
+title: Upozornění (úroveň 2) C4275 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5d2a3cd7c4b937f8bee1b8f8e37e0619cc224ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7cb8f397243bb6531f33ac5e444914cfa36e5fe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022629"
 ---
-# <a name="compiler-warning-level-2-c4275"></a>C4275 kompilátoru upozornění (úroveň 2)
-bez – knihovny DLL rozhraní classkey "identifikátor" použitý jako základní položka pro knihovnu DLL rozhraní classkey "identifikátor"  
-  
- Třídu exportovaný odvozený od třídy, který nebyl exportován.  
-  
- Aby se minimalizovala možnost poškození dat při exportu tříd se [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), ujistěte se, že:  
-  
--   Všechny statických dat přistupuje prostřednictvím funkce, které byly exportovány z knihovny DLL.  
-  
--   Žádné vložená metody vaší třídy můžete upravit statických dat.  
-  
--   Žádné vložená metody vaší třídy použijte funkcí CRT nebo jiné funkce knihovny použijte statických dat.  
-  
--   Žádné funkce vložená tříd použít CRT – funkce nebo další funkce knihovny, například odkud statických dat.  
-  
--   Žádné metody vaší třídy (bez ohledu na vložené) můžete použít typy, kde instance v EXE a soubor DLL mají statických dat rozdíly.  
-  
- Export tříd, které knihovny DLL, která definuje třídu s virtuální funkce a funkce, které můžete volat k vytvoření instance definováním a odstranit objekty typu se můžete vyhnout.  Potom můžete stačí zavolat virtuální funkce na typu.  
-  
- Další informace o exportování šablony naleznete v tématu [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
-  
- C4275 můžete ignorovat v jazyce Visual C++, pokud jsou odvozování z typu v standardní knihovna C++ kompilování ladicí verze (**/MTd**) a kde se chybová zpráva kompilátoru odkazuje na _Container_base.  
-  
-```  
-// C4275.cpp  
-// compile with: /EHsc /MTd /W2 /c  
-#include <vector>  
-using namespace std;  
-class Node;  
-class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4275  
+# <a name="compiler-warning-level-2-c4275"></a>Kompilátor upozornění (úroveň 2) C4275
+
+jiné – rozhraní DLL classkey 'identifier' používá jako základ pro rozhraní DLL classkey 'identifier'
+
+Exportované třídy byla odvozena ze třídy, který nebyl exportován.
+
+Aby se minimalizovala možnost poškození dat při exportu třída s atributem [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), ujistěte se, že:
+
+- Všechna statická data se přistupuje prostřednictvím funkce, které jsou exportovány z knihovny DLL.
+
+- Žádné vložené metody třídy můžete upravit statická data.
+
+- Žádné vložené metody třídy použijte funkce CRT nebo jiné funkce knihovny používají statická data.
+
+- Žádné vložené třídy funkce pomocí funkce CRT nebo jiné funkce knihovny, kde, například k statická data.
+
+- Žádné metody třídy (bez ohledu na to vkládání) můžete použít typy, kde instance v souboru EXE a DLL obsahuje rozdíly ve statická data.
+
+Export tříd, které knihovny DLL, která definuje třídu s virtuálními funkcemi a funkce, které můžete volat k vytvoření instance definováním a odstranit objekty typu se můžete vyhnout.  Pak můžete pouze volání virtuálních funkcí na typu.
+
+Další informace o exportování šablony najdete v tématu [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
+
+C4275 můžete ignorovat v jazyce Visual C++, pokud je odvozený od typu ve standardní knihovně C++ kompilaci ladění vydání (**/MTD**) a kde se chybová zpráva kompilátoru odkazuje na _Container_base.
+
+```
+// C4275.cpp
+// compile with: /EHsc /MTd /W2 /c
+#include <vector>
+using namespace std;
+class Node;
+class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4275
 ```

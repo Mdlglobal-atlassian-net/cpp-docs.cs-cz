@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4346 | Microsoft Docs
+title: Upozornění (úroveň 1) C4346 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,69 +16,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090c7ba576973c2dfb2e5fd7e117cddc379b4dfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49e749ac4878098cf3800915de4838285150c2fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276260"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024837"
 ---
-# <a name="compiler-warning-level-1-c4346"></a>C4346 kompilátoru upozornění (úroveň 1)
-"název": závislé název není typu  
-  
- [Typename](../../cpp/typename.md) – klíčové slovo je povinný, pokud má být zpracována jako typ závislé název. Kód, který funguje stejně ve všech verzích Visual C++, přidejte `typename` k deklaraci.  
-  
- Následující ukázka generuje C4346:  
-  
-```  
-// C4346.cpp  
-// compile with: /WX /LD  
-template<class T>  
-struct C {  
-   T::X* x;   // C4346  
-   // try the following line instead  
-   // typename T::X* x;  
-};  
-```  
-  
- Následující ukázky ukazuje další příklady kde **typename** je požadováno klíčové slovo:  
-  
-```  
-// C4346b.cpp  
-// compile with: /LD /W1  
-template<class T>  
-const typename T::X& f(typename T::Z* p);   // Required in both places  
-  
-template<class T, int N>  
-struct L{};  
-  
-template<class T>  
-struct M : public L<typename T::Type, T::Value>   
-{   // required on type argument, not on non-type argument  
-   typedef typename T::X   Type;  
-   Type f();   // OK: "Type" is a type-specifer  
-   typename T::X g();   // typename required  
-   operator typename T::Z();   // typename required      
-};  
-```  
-  
- to,  
-  
-```  
-// C4346c.cpp  
-// compile with: /LD /WX  
-struct Y {  
-   typedef int Y_t;  
-};  
-  
-template<class T>  
-struct A {  
-   typedef Y A_t;  
-};  
-  
-template<class T>  
-struct B {  
-   typedef /*typename*/ A<T>::A_t B_t;   // C4346 typename needed here  
-   typedef /*typename*/ B_t::Y_t  B_t2;   // typename also needed here  
-};  
+# <a name="compiler-warning-level-1-c4346"></a>Kompilátor upozornění (úroveň 1) C4346
+
+"name": závislý název není typ
+
+[Typename](../../cpp/typename.md) – klíčové slovo je vyžadována, pokud má být zpracována jako typ závislý název. Pro kód, který funguje stejně ve všech verzích aplikace Visual C++, přidejte `typename` deklarace.
+
+Následující ukázka generuje C4346:
+
+```
+// C4346.cpp
+// compile with: /WX /LD
+template<class T>
+struct C {
+   T::X* x;   // C4346
+   // try the following line instead
+   // typename T::X* x;
+};
+```
+
+Následující ukázky jsou uvedeny další příklady kde **typename** je požadováno klíčové slovo:
+
+```
+// C4346b.cpp
+// compile with: /LD /W1
+template<class T>
+const typename T::X& f(typename T::Z* p);   // Required in both places
+
+template<class T, int N>
+struct L{};
+
+template<class T>
+struct M : public L<typename T::Type, T::Value>
+{   // required on type argument, not on non-type argument
+   typedef typename T::X   Type;
+   Type f();   // OK: "Type" is a type-specifer
+   typename T::X g();   // typename required
+   operator typename T::Z();   // typename required
+};
+```
+
+a to,
+
+```
+// C4346c.cpp
+// compile with: /LD /WX
+struct Y {
+   typedef int Y_t;
+};
+
+template<class T>
+struct A {
+   typedef Y A_t;
+};
+
+template<class T>
+struct B {
+   typedef /*typename*/ A<T>::A_t B_t;   // C4346 typename needed here
+   typedef /*typename*/ B_t::Y_t  B_t2;   // typename also needed here
+};
 ```

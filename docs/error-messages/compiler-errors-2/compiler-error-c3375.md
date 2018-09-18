@@ -1,5 +1,5 @@
 ---
-title: C3375 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3375 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11805b7ef714c65ff9816828aeea10baa2217ff6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f63d7eb7ef4633f01b65337c9546af260ca50fb4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044064"
 ---
-# <a name="compiler-error-c3375"></a>C3375 chyby kompilátoru
-'function': funkce nejednoznačný delegáta  
-  
- Vytváření instancí delegáta může byli funkce statický člen nebo jako delegáta nepřipojená do instance funkce kompilátoru vydaný této chybě.  
-  
- Další informace najdete v tématu [delegáta (rozšíření komponent C++)](../../windows/delegate-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3375.  
-  
-```  
-// C3375.cpp  
-// compile with: /clr  
-ref struct R {  
-   static void f(R^) {}  
-   void f() {}  
-};  
-  
-delegate void Del(R^);  
-  
-int main() {  
-   Del ^ a = gcnew Del(&R::f);   // C3375  
-}  
+# <a name="compiler-error-c3375"></a>Chyba kompilátoru C3375
+
+'function': nejednoznačná funkce delegate
+
+Vytvoření instance delegáta mohlo být statickou členskou funkci nebo jako delegáta bez vazby na instance funkce, proto kompilátor vydané k této chybě.
+
+Další informace najdete v tématu [delegate (rozšíření komponent C++)](../../windows/delegate-cpp-component-extensions.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3375.
+
+```
+// C3375.cpp
+// compile with: /clr
+ref struct R {
+   static void f(R^) {}
+   void f() {}
+};
+
+delegate void Del(R^);
+
+int main() {
+   Del ^ a = gcnew Del(&R::f);   // C3375
+}
 ```

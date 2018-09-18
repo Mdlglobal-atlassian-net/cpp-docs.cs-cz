@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1205 | Microsoft Docs
+title: Závažná chyba C1205 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb1e32843c7c8c47589d4b75fd2613a1d73f135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70be77c224b8c1c6039a908d38e8e482ab36259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035562"
 ---
 # <a name="fatal-error-c1205"></a>Závažná chyba C1205
-Obecné typy nejsou podporovány ve verzi nainstalovat modul runtime  
-  
- Verze modulu CLR, který používá kompilátor není verzi modulu runtime, podporuje aktuální kompilátoru.  Například funkce obecných typů vyžaduje modul runtime, který je nalezena shoda s kompilátoru.  
-  
- Cesta specifikaci možná muset upravit.
+
+Obecné typy nejsou podporovány verzí modulu runtime nainstalovaného
+
+Verze common language runtime, který kompilátor používá není verze modulu runtime podporována aktuální kompilátorem.  Například funkci obecných typů vyžaduje modul runtime, který je nalezena shoda kompilátoru.
+
+Zadání cesty možná muset upravit.

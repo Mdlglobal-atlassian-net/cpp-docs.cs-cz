@@ -1,5 +1,5 @@
 ---
-title: C2436 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2436 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7ca7d92a99092e6c0daf63378ff9bff89c4283
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f32b94f0e68de893897a5bdf48977a47417e6729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032988"
 ---
-# <a name="compiler-error-c2436"></a>C2436 chyby kompilátoru
-"identifikátor": členská funkce nebo vnořené třídy v seznamu inicializátoru konstruktoru  
-  
- Členské funkce nebo místní třídy v seznamu inicializátoru konstruktoru nelze inicializovat.  
-  
- Následující ukázka generuje C2436:  
-  
-```  
-// C2436.cpp  
-struct S{  
-   int f();  
-   struct Inner{  
-      int i;  
-   };  
-   S():f(10), Inner(0){}   // C2436  
-};  
+# <a name="compiler-error-c2436"></a>Chyba kompilátoru C2436
+
+'identifier': členská funkce nebo vnořená třída seznamu inicializátorů konstruktu
+
+Členské a lokální třídy v seznamu inicializátorů konstruktoru nelze inicializovat.
+
+Následující ukázka generuje C2436:
+
+```
+// C2436.cpp
+struct S{
+   int f();
+   struct Inner{
+      int i;
+   };
+   S():f(10), Inner(0){}   // C2436
+};
 ```

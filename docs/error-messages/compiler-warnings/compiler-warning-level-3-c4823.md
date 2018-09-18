@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4823 | Microsoft Docs
+title: Upozornění (úroveň 3) C4823 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c29499a82601dcf653ff2f003441935f1d6841a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c3a6f24a32267f221dbc37e242bae48c0056af5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044649"
 ---
-# <a name="compiler-warning-level-3-c4823"></a>C4823 kompilátoru upozornění (úroveň 3)
-'function': používá přídavných ukazatelů ale unwind sémantiku nejsou povoleny. Zvažte použití/EHa  
-  
-Odepnout objektu na spravovaná halda ukazuje Připnutí ukazatel deklarován v oboru bloku, kompilátor simuluje chování destruktory místní třídy "předstírají, že" Připnutí ukazatelů má destruktor nichž ukazatele. Chcete-li povolit volání destruktoru po vyvolání výjimky, je nutné povolit objekt unwinding, což lze provést pomocí [/EHsc](../../build/reference/eh-exception-handling-model.md).  
-  
-Můžete také ručně Odepnout objekt a upozornění ignorovat.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C4823.  
-  
-```  
-// C4823.cpp  
-// compile with: /clr /W3 /EHa-  
-using namespace System;  
-  
-ref struct G {  
-   int m;  
-};  
-  
-void f(G ^ pG) {  
-   try {  
-      pin_ptr<int> p = &pG->m;  
-      // manually unpin, ignore warning  
-      // p = nullptr;  
-      throw gcnew Exception;  
-   }  
-   catch(Exception ^) {}  
-}   // C4823 warning  
-  
-int main() {  
-   f( gcnew G );  
-}  
-```  
+# <a name="compiler-warning-level-3-c4823"></a>Kompilátor upozornění (úroveň 3) C4823
+
+'function': používá ukazatele Připnutí ale unwind není povolená sémantika. Zvažte použití možnosti/EHa
+
+Odepnout objektu na spravované haldě, který ukazuje ukazatel Připnutí deklarovány v oboru bloku, kompilátor simuluje chování destruktory místní třídy "že se maskují", že má destruktor nichž ukazatel na ukazatel Připnutí. Pokud chcete povolit volání destruktoru po vyvolání výjimky, je nutné povolit uvolnění objektu, což lze provést pomocí [/EHsc](../../build/reference/eh-exception-handling-model.md).
+
+Můžete také ručně Odepnout objektu a upozornění ignorovat.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4823.
+
+```
+// C4823.cpp
+// compile with: /clr /W3 /EHa-
+using namespace System;
+
+ref struct G {
+   int m;
+};
+
+void f(G ^ pG) {
+   try {
+      pin_ptr<int> p = &pG->m;
+      // manually unpin, ignore warning
+      // p = nullptr;
+      throw gcnew Exception;
+   }
+   catch(Exception ^) {}
+}   // C4823 warning
+
+int main() {
+   f( gcnew G );
+}
+```

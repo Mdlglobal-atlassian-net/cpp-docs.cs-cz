@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5244990d720cd36e0a040e9243067e49716d2549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 537785bab555bffb5278da27926b4adbb1a6f226
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022016"
 ---
 # <a name="ccrtheap-class"></a>Ccrtheap – třída
 
@@ -77,7 +77,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Požadovaný počet bajtů v nového bloku paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -100,7 +100,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.
 
 ### <a name="remarks"></a>Poznámky
@@ -117,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -138,10 +138,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
-*nBytes*  
+*nBytes*<br/>
 Požadovaný počet bajtů v nového bloku paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,9 +154,9 @@ Volání [CCRTHeap::Free](#free) k uvolnění paměti přidělené touto metodou
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Ccomheap – třída](../../atl/reference/ccomheap-class.md)   
-[Cwin32heap – třída](../../atl/reference/cwin32heap-class.md)   
-[Clocalheap – třída](../../atl/reference/clocalheap-class.md)   
-[Cglobalheap – třída](../../atl/reference/cglobalheap-class.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[CComHeap – třída](../../atl/reference/ccomheap-class.md)<br/>
+[CWin32Heap – třída](../../atl/reference/cwin32heap-class.md)<br/>
+[CLocalHeap – třída](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap – třída](../../atl/reference/cglobalheap-class.md)<br/>
 [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)

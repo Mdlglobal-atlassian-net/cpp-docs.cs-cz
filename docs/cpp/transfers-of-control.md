@@ -15,48 +15,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2bd8542bf13aa34efea3ffad2007b0f5eb672f79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031415"
 ---
 # <a name="transfers-of-control"></a>Přenosy ovládacích prvků
-Můžete použít **goto** příkazu nebo **případ** popisku v **přepnout** příkaz k určení programu, která je rozvětvena kolem inicializátoru. Takový kód je neplatný, dokud není deklarace, která obsahuje inicializátor v bloku, ohraničená blokem, v němž se nachází příkaz jump.  
-  
- Následující příklad zobrazuje smyčku, která deklaruje a inicializuje objekty `total`, `ch` a `i`. Je zde také chybný **goto** příkaz, který předává řízení kolem inicializátoru.  
-  
-```cpp 
-// transfers_of_control.cpp  
-// compile with: /W1  
-// Read input until a nonnumeric character is entered.  
-int main()  
-{  
-   char MyArray[5] = {'2','2','a','c'};  
-   int i = 0;  
-   while( 1 )  
-   {  
-      int total = 0;  
-  
-      char ch = MyArray[i++];  
-  
-      if ( ch >= '0' && ch <= '9' )  
-      {  
-         goto Label1;  
-  
-         int i = ch - '0';  
-      Label1:  
-         total += i;   // C4700: transfers past initialization of i.  
-      } // i would be destroyed here if  goto error were not present  
-   else  
-      // Break statement transfers control out of loop,  
-      //  destroying total and ch.  
-      break;  
-   }  
-}  
-```  
-  
- V předchozím příkladu **goto** příkaz se pokusí přenést řízení kolem inicializace `i`. Pokud však byly `i` deklarovány, ale nebyly inicializovány, byl by převod platný.  
-  
- Objekty `total` a `ch`, které jsou deklarovány v bloku, která slouží jako *příkaz* z **při** prohlášení, jsou zničeny, když tento blok ukončen pomocí  **Konec** příkazu.  
+
+Můžete použít **goto** příkazu nebo **případ** popisku v **přepnout** příkaz k určení programu, která je rozvětvena kolem inicializátoru. Takový kód je neplatný, dokud není deklarace, která obsahuje inicializátor v bloku, ohraničená blokem, v němž se nachází příkaz jump.
+
+Následující příklad zobrazuje smyčku, která deklaruje a inicializuje objekty `total`, `ch` a `i`. Je zde také chybný **goto** příkaz, který předává řízení kolem inicializátoru.
+
+```cpp
+// transfers_of_control.cpp
+// compile with: /W1
+// Read input until a nonnumeric character is entered.
+int main()
+{
+   char MyArray[5] = {'2','2','a','c'};
+   int i = 0;
+   while( 1 )
+   {
+      int total = 0;
+
+      char ch = MyArray[i++];
+
+      if ( ch >= '0' && ch <= '9' )
+      {
+         goto Label1;
+
+         int i = ch - '0';
+      Label1:
+         total += i;   // C4700: transfers past initialization of i.
+      } // i would be destroyed here if  goto error were not present
+   else
+      // Break statement transfers control out of loop,
+      //  destroying total and ch.
+      break;
+   }
+}
+```
+
+V předchozím příkladu **goto** příkaz se pokusí přenést řízení kolem inicializace `i`. Pokud však byly `i` deklarovány, ale nebyly inicializovány, byl by převod platný.
+
+Objekty `total` a `ch`, které jsou deklarovány v bloku, která slouží jako *příkaz* z **při** prohlášení, jsou zničeny, když tento blok ukončen pomocí  **Konec** příkazu.

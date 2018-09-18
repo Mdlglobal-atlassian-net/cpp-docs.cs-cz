@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6032 C | Microsoft Docs
+title: Chyba modulu Runtime R6032 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82690dd9b8f7c224db473b15627b632dcc96d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43155f24411fb5206a03d607f0551c2d34294aeb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024200"
 ---
-# <a name="c-runtime-error-r6032"></a>R6032 Chyba za běhu C
-Není dostatek místa pro informace o národním prostředí  
-  
+# <a name="c-runtime-error-r6032"></a>Chyba modulu Runtime R6032 C
+
+Není dostatek místa pro informace o národním prostředí
+
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má problém s interní paměť. Existuje několik možných příčin této chyby, avšak často je způsobeno podmínku velmi málo paměti, nebo chyby v programu.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Ukončete ostatní spuštěné aplikace nebo restartujte počítač k uvolnění paměti.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory v jazyce**  
-  
- Modul runtime uchovává informace o národním prostředí na každé vlákno tak, aby ji může zpracovat volání funkcí závislé na národním prostředí. V případě selhání přidělení paměti pro tyto informace se nemůže pokračovat, protože na ní závisí příliš mnoho jeho základní funkce modulu runtime.
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobeno podmínku velmi málo paměti, nebo chybu v programu.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+Modul runtime uchovává informace o národním prostředí v každém vláknu tak, že dokáže zpracovat volání funkcí citlivé na národní prostředí. Selhání přidělení paměti pro tyto informace je modul runtime nemůže pokračovat, protože na ní závisí příliš mnoho jeho základní funkce.

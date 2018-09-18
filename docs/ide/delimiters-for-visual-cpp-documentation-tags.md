@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033911"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Oddělovače pro dokumentační značky ve Visual C++
 Použití dokumentační značky vyžaduje oddělovače, které označují kompilátoru kde Dokumentační komentář začíná a končí.  
   
  Můžete použít následující typy oddělovače se značkami dokumentace XML:  
+|||
+|-|-|
+|`///`  | Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  |
+| `/** */`  | Jedná se o Víceřádkový oddělovače.  |
   
- `///`  
- Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  
-  
- `/** */`  
- Jedná se o Víceřádkový oddělovače.  
-  
- Existují některé formátování při použití pravidla `/** */` oddělovače:  
+Existují některé formátování při použití pravidla `/** */` oddělovače:  
   
 -   Pro řádek, který obsahuje `/**` oddělovač, pokud zbytek řádku je prázdný znak řádku není zpracovávána pro poznámky. Pokud je první znak prázdným znakem, že znak bílého prostoru řádku je ignorován a zbytek řádku je zpracovat. V opačném případě celý text řádku po `/**` oddělovač zpracovávány jako součást komentář.  
   
@@ -40,7 +38,7 @@ Použití dokumentační značky vyžaduje oddělovače, které označují kompi
   
 -   Pro řádky za ten, který začíná `/**` oddělovač, hledá kompilátor běžný vzor na začátku každého řádku, který se skládá z volitelné prázdné místo a hvězdičku (`*`) a po něm další volitelné prázdné znaky. Pokud kompilátor najde společnou sadu znaků na začátku každého řádku, bude ignorovat tento vzor pro všechny řádky za `/**` oddělovač, až po a pravděpodobně včetně řádek, který obsahuje `*/` oddělovač.  
   
- Příklady:  
+Příklady:  
   
 -   Řádek, který začíná je jediná součást následující komentář, který se zpracuje `<summary>`. Následující dvě značky formáty vytvoří stejný komentáře:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2865 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2865 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035160"
 ---
-# <a name="compiler-error-c2865"></a>C2865 chyby kompilátoru
-'function': Neplatný porovnání pro handle_or_pointer  
-  
- Můžete porovnat odkazy na [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md) nebo spravovaná odkazové typy pouze rovnosti chcete zobrazit, pokud se vztahují ke stejnému objektu (==) nebo k různým objektům (! =).  
-  
- Nelze porovnáním k řazení, protože modul runtime rozhraní .NET může přesunout spravované objekty v každém okamžiku změna výsledek testu.
+# <a name="compiler-error-c2865"></a>Chyba kompilátoru C2865
+
+'function': Neplatné porovnání pro handle_or_pointer
+
+Můžete porovnat odkazy na [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md) nebo spravované odkazové typy pouze pro rovnost zobrazíte, pokud se odkazují na stejný objekt (==) nebo k různým objektům (! =).
+
+Nelze porovnávat je pro řazení, protože modul .NET runtime může být přesunout spravované objekty v okamžiku, změna výsledek testu.

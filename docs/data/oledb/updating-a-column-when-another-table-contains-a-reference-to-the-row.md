@@ -1,5 +1,5 @@
 ---
-title: Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek | Microsoft Docs
+title: Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17d260f522432a78729c9998c518398dfa41275a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d2d3509b51d083290339514083a541ef9a86b64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030656"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek
-Někteří poskytovatelé může zjistit, které sloupce v řádku změn, ale nelze mnoho poskytovatelů. V důsledku toho aktualizace sloupce, může mít za následek chybu, pokud je odkaz na řádek, který se pokoušíte aktualizovat. Chcete-li tento problém vyřešit, vytvořte samostatně přistupující objekt obsahující pouze sloupce, které chcete změnit. Předat číslo přistupujícího objektu do `SetData`.  
+
+Někteří poskytovatelé dokáže detekovat sloupce, které při změně řádku, ale nikoli mnoho poskytovatelů. V důsledku toho aktualizace sloupce, může mít za následek chybu, pokud je odkaz na řádek, který se pokoušíte aktualizovat. Pokud chcete tento problém vyřešit, vytvořte samostatné přístupový objekt obsahující pouze sloupce, které chcete změnit. Předejte počet přistupujícího objektu do `SetData`.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití přístupových objektů](../../data/oledb/using-accessors.md)
+
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)

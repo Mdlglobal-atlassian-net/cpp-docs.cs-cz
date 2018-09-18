@@ -1,5 +1,5 @@
 ---
-title: C3911 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3911 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfff502e5dc4a9628f11fbcd46129646ed720ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98b2b1b4712d71c5baa7179ce3c348ace3761bb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037382"
 ---
-# <a name="compiler-error-c3911"></a>C3911 chyby kompilátoru
-'event_accessor_method': funkce musí být typ podpisu  
-  
- Metoda přístupového objektu události nebyl deklarován správně.  
-  
- Další informace najdete v tématu [událostí](../../windows/event-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3911:  
-  
-```  
-// C3911.cpp  
-// compile with: /clr  
-using namespace System;  
-delegate void H(String^, int);  
-  
-ref class X {  
-   event H^ E1 {  
-      void add() {}   // C3911  
-      // try the following line instead  
-      // void add(H ^ h) {}  
-  
-      void remove(){}  
-      // try the following line instead  
-      // void remove(H ^ h) {}  
-  
-      void raise(){}  
-      // try the following line instead  
-      // void raise(String ^ s, int i) {}  
-   };  
-};  
+# <a name="compiler-error-c3911"></a>Chyba kompilátoru C3911
+
+'event_accessor_method': funkce musí mít typ podpisu
+
+Metoda přístupového objektu události nebyl deklarován správně.
+
+Další informace najdete v tématu [události](../../windows/event-cpp-component-extensions.md).
+
+Následující ukázka generuje C3911:
+
+```
+// C3911.cpp
+// compile with: /clr
+using namespace System;
+delegate void H(String^, int);
+
+ref class X {
+   event H^ E1 {
+      void add() {}   // C3911
+      // try the following line instead
+      // void add(H ^ h) {}
+
+      void remove(){}
+      // try the following line instead
+      // void remove(H ^ h) {}
+
+      void raise(){}
+      // try the following line instead
+      // void raise(String ^ s, int i) {}
+   };
+};
 ```

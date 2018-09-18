@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1095 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1095 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c819d18149e61bca71f6a4cb10ea851a2d485d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964ec1d029e56a5d9d78659ad919c71a4e44506d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039878"
 ---
 # <a name="nmake-fatal-error-u1095"></a>Závažná chyba nástroje NMAKE U1095
-Rozšířené příkazového řádku "commandline' příliš dlouhý  
-  
- Po rozšíření makra na daném řádku příkaz překročil limit na délce příkazových řádků pro operační systém.  
-  
- MS-DOS povoluje maximálně 128 znaků na příkazovém řádku.  
-  
- Pokud je příkaz pro program, který může přijmout příkazového řádku vstup ze souboru, změňte příkaz a zadejte vstup ze souboru na disku nebo vloženého souboru. Například odkaz a LIB přijmout vstup z soubor odezvy.
+
+Rozbalený příkazový řádek "příkazového řádku" příliš dlouhý
+
+Po rozšíření makra na daném řádku příkaz překročil limit délky příkazových řádků pro operační systém.
+
+Zástupného kódu MS-DOS umožňuje až 128 znaků v příkazovém řádku.
+
+Pokud je příkaz pro program, který může přijmout příkazového řádku vstup ze souboru, změňte příkaz a zadejte vstup ze souboru na disku nebo vložený soubor. Například odkaz a LIB přijímat vstup ze souboru odpovědí.

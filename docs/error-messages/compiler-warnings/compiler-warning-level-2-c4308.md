@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4308 | Microsoft Docs
+title: Upozornění (úroveň 2) C4308 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3daff15f8e6eee179f04fd466f3595af1154e035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddb57d4d603be3182be8a77dc020ce0e0a673115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039631"
 ---
-# <a name="compiler-warning-level-2-c4308"></a>C4308 kompilátoru upozornění (úroveň 2)
-záporné integrální konstanta převést na typu bez znaménka  
-  
- Výraz převede konstanta záporné celé číslo bez znaménka typu. Výsledkem výrazu je pravděpodobně smysl.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4308.cpp  
-// compile with: /W2  
-unsigned int u = (-5 + 3U);   // C4308  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-2-c4308"></a>Kompilátor upozornění (úroveň 2) C4308
+
+Záporná integrální konstantou je převést na typ bez znaménka
+
+Výraz převede konstanty záporné celé číslo pro typ bez znaménka. Výsledek výrazu je pravděpodobně nemá význam.
+
+## <a name="example"></a>Příklad
+
+```
+// C4308.cpp
+// compile with: /W2
+unsigned int u = (-5 + 3U);   // C4308
+
+int main()
+{
+}
 ```

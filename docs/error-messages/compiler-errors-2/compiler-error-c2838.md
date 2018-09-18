@@ -1,5 +1,5 @@
 ---
-title: C2838 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2838 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a170e869a2d8869424b23fb154cd23f0ed26c9fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5607df86a44174536f58242c5c0a98f7fe5e7dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045273"
 ---
-# <a name="compiler-error-c2838"></a>C2838 chyby kompilátoru
-"člen": Neplatný kvalifikovaný název do deklarace členů  
-  
- Třída, struktura nebo sjednocení používá plně kvalifikovaný název do redeclare členem jiné třídy, struktury nebo sjednocení.  
-  
- Následující ukázka generuje C2838:  
-  
-```  
-// C2838.cpp  
-// compile with: /c  
-class Bellini {  
-public:  
-    void Norma();  
-};  
-  
-class Bottesini {  
-   Bellini::Norma();  // C2838  
-};  
+# <a name="compiler-error-c2838"></a>Chyba kompilátoru C2838
+
+'member': Neplatný kvalifikovaný název v deklaraci člena
+
+Třída, struktura nebo sjednocení používá plně kvalifikovaný název ke změně deklarace člena jiné třídy, struktury nebo sjednocení.
+
+Následující ukázka generuje C2838:
+
+```
+// C2838.cpp
+// compile with: /c
+class Bellini {
+public:
+    void Norma();
+};
+
+class Bottesini {
+   Bellini::Norma();  // C2838
+};
 ```

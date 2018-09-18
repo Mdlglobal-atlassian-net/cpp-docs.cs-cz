@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1352 | Microsoft Docs
+title: Závažná chyba C1352 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524b0bf5d25953c5c38cbe0e23dc5c7d9f3cb7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4f1f062e11651e4d851231e16569412f95b90d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042933"
 ---
 # <a name="fatal-error-c1352"></a>Závažná chyba C1352
-Neplatný nebo poškozený MSIL ve funkci 'function' z modulu 'file'  
-  
- .netmodule byl předán pro kompilátor, ale kompilátor zjistil poškození v souboru.  Požádejte uživatele, který vytváří .netmodule prozkoumat.  
-  
- Kompilátor nekontroluje .netmodule soubory pro všechny typy poškození.  Nicméně, zkontrolujte, zda všechny cesty ovládacího prvku ve funkci obsahovat příkaz return.  
-  
- Další informace najdete v tématu [.netmodule soubory jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).
+
+Neplatný nebo poškozený kód MSIL ve funkci 'function' z modulu 'file'
+
+.Netmodule byl předán kompilátoru, ale kompilátor zjistil poškození v souboru.  Požádejte uživatele, který vytváří modul .NET k prozkoumání.
+
+Kompilátor nekontroluje souborů .netmodule pro všechny typy poškození.  , Ale zkontrolujte, že všechny cesty ovládacích prvků ve funkci obsahuje příkaz return.
+
+Další informace najdete v tématu [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).

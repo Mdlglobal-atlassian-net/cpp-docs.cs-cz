@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Nasazení programu (C++) | Microsoft Docs'
+title: 'Návod: Nasazení programu (C++) | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -19,82 +19,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 07939e7f0983e83b936d06cc871cba022d387d78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031389"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
-Teď, když jste vytvořili vaší aplikace pomocí dříve související názorné postupy, které jsou uvedeny v [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalační program tak, aby mohou ostatní uživatelé Nainstalujte aplikaci na svých počítačích. K tomuto účelu přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který bude instalovat aplikaci na jiném počítači.  
+Teď, když jste vytvořili aplikaci provedením dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalátoru, mohli ostatní uživatelé Nainstalujte aplikaci na svých počítačích. Provedete to tak, přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který nainstaluje vaši aplikaci na jiném počítači.  
   
- Tento návod ukazuje způsob použití Instalační služby systému Windows pro nasazení aplikace. Můžete taky ClickOnce k nasazení aplikace. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Další informace o nasazení obecně platí, najdete v části [nasazení aplikací, služeb a komponent](/visualstudio/deployment/deploying-applications-services-and-components).  
+ Tento názorný postup ukazuje, jak nasadit aplikaci pomocí Instalační služby systému Windows. Můžete také použít ClickOnce k nasazení aplikace. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Další informace o nasazení, najdete v části [nasazování aplikací, služeb a komponent](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="prerequisites"></a>Požadavky  
   
--   Tento návod předpokládá, že rozumíte základy jazyka C++.  
+- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.  
   
--   Také předpokládá, že jste dokončili dříve související návodů, které jsou uvedeny v [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
--   Tento názorný postup nemůže být dokončena v edice Express sady Visual Studio.  
+- Tento návod nelze dokončit v edicích Express sady Visual Studio.  
   
--   Pokud jste tak již neučinili, stáhněte si InstallShield Limited Edition (MANSKÁ), jak je popsáno v krocích později v tomto článku. MANSKÁ je zdarma pro vývojáře v sadě Visual Studio a nahrazuje funkci instalace a nasazení projektu šablony v dřívějších vydání sady Visual Studio.  
+- Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio, jak je popsáno v postupu dále v tomto článku. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio.  
   
-### <a name="to-install-the-isle-setup-and-deployment-project-template"></a>Chcete-li nainstalovat ostrov instalace a nasazení v šabloně projektů  
+### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Chcete-li nainstalovat Visual Studio šablona projektu instalace a nasazení  
+
+1. Pokud jste připojeni k Internetu, v sadě Visual Studio, zvolte **nástroje** > **rozšíření a aktualizace**.
+
+1. V části **rozšíření a aktualizace**, vyberte **Online** kartu a typ *projektů instalačního programu sady Visual Studio Microsoft* do vyhledávacího pole. Spuštění **Enter**vyberte **Microsoft Visual Studio 2017 instalační program projekty**a klikněte na tlačítko **Stáhnout**.
+
+1. Zvolte možnost nainstalovat rozšíření a pak restartujte sadu Visual Studio. 
   
-1.  Po připojení k Internetu, v řádku nabídek zvolte **soubor**, **nový**, **projektu** otevřete **nový projekt** dialogové okno.  
+1. V panelu nabídky zvolte **souboru** > **poslední projekty a řešení**a klikněte na tlačítko **hru** řešení, které ho znovu otevřít.  
   
-2.  V levém podokně dialogového okna, rozbalte **nainstalovaná**, **šablony**, a **jiné typy projektů** uzly a potom vyberte **instalace a nasazení**. V prostředním podokně vyberte **Povolit InstallShield Limited Edition** a potom zvolte **OK** tlačítko.  
+### <a name="to-create-a-setup-project-and-install-your-program"></a>Vytvoření projektu instalace a instalace aplikace  
   
-3.  Postupujte podle pokynů k instalaci pro Visual Studio (ostrov) InstallShield Limited Edition.  
+1. Změňte konfiguraci aktivního řešení na Release. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **nástroje Configuration Manager** dialogovém okně **konfigurace aktivního řešení** rozevíracího seznamu vyberte **vydání**. Zvolte **Zavřít** tlačítko, čímž konfiguraci uložíte.  
   
-4.  Po stáhnout, nainstalovat a aktivovat ostrov, zavřete Visual Studio a znovu ho otevřete.  
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **nový projekt** dialogové okno.  
   
-5.  Na řádku nabídek zvolte **soubor**, **poslední projekty a řešení**a potom zvolte **herní** řešení, aby ho znovu otevřít.  
+1. V levém podokně dialogového okna rozbalte **nainstalováno** > **ostatní typy projektů** uzly a pak vyberte **instalační program sady Visual Studio**. V prostředním podokně vyberte **projektu instalace**.  
   
-### <a name="to-create-a-setup-project-and-install-your-program"></a>K vytvoření projektu Instalační program a instalace programu  
+1. Zadejte název projektu instalace v **název** pole. V tomto příkladu zadejte *instalátor hry*. V **řešení** rozevíracího seznamu vyberte **přidat do řešení**. Zvolte **OK** pro vytvoření projektu instalace. A **Pomocník souboru (instalátor hry)** kartě se otevře v okně editoru.  
+
+1. Klikněte pravým tlačítkem myši **složky aplikace** uzel a vyberte možnost **přidat** > **výstup projektu** otevřete **Přidat výstupní skupinu projektu**dialogové okno.
+
+1. V dialogovém okně vyberte **primární výstup** a klikněte na tlačítko **OK**. Nová položka s názvem **primární výstup ze hry (aktivní)** se zobrazí.  
+
+1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)**. Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
+
+1. Přejmenovat položku místní *hru*, pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
+
+1. V **Průzkumníka řešení** vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
+
+1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http://www.contoso.com* pro **SupportUrl**.
+
+1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u **instalátor hry**. Klikněte na tlačítko **Zavřít**.
   
-1.  Změňte konfiguraci aktivního řešení na verzi. Na řádku nabídek zvolte **sestavení**, **nástroje Configuration Manager**. V **nástroje Configuration Manager** v dialogovém **aktivní konfigurace řešení** rozevíracího seznamu vyberte **verze**. Vyberte **Zavřít** tlačítko Uložit konfiguraci.  
+1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** sestavit projekt hry a projektu instalátor hry.  
   
-2.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu** otevřete **nový projekt** dialogové okno.  
-  
-3.  V levém podokně dialogového okna, rozbalte **nainstalovaná**, **šablony**, a **jiné typy projektů** uzly a potom vyberte **instalace a nasazení**. V prostředním podokně vyberte **projekt InstallShield Limited Edition**.  
-  
-4.  Zadejte název projektu instalace v **název** pole. V tomto příkladu zadejte **instalační program herní**. V **řešení** rozevíracího seznamu vyberte **přidat do řešení**. Vyberte **OK** tlačítko pro vytvoření projektu instalace. A **projektu Assistant (herní instalační program)** kartě se otevře v okně editoru.  
-  
-5.  V dolní části **projektu Assistant (herní instalační program)** , zvolte **informace o aplikaci** odkaz.  
-  
-6.  Na **informace o aplikaci** stránky, zadejte název společnosti, jak se bude zobrazovat v instalačním programu. Můžete použít vlastní název společnosti, nebo v tomto příkladu použijte **Contoso**. Zadejte název aplikace; v tomto příkladu zadejte **herní**. Zadejte webovou adresu společnosti nebo v tomto příkladu použijte **http://www.contoso.com**.  
-  
-7.  V dolní části **projektu Assistant (herní instalační program)** , zvolte **instalace rozhovoru** odkaz.  
-  
-8.  Na **instalace rozhovoru** v části **chcete zobrazit dialogové okno licenční smlouvy**, vyberte **ne** tlačítko. V části **chcete vyzvat uživatele k zadání názvu společnosti a uživatelské jméno**, vyberte **ne** tlačítko.  
-  
-9. V **Průzkumníku řešení**, rozbalte **herní instalační program** projektu, rozbalte položku **uspořádání vaše instalace** uzel a potom otevřete **obecné informace** stránky.  
-  
-10. Na **obecné informace (herní instalační program)** kartě v okně editor, zadejte **ID značky Creator**, například **regid.2012 12.com.Contoso**.  
-  
-11. V **Průzkumníku řešení**v části **herní instalační program** projektu, rozbalte **zadejte Data aplikací** uzel a potom otevřete **soubory** stránka.  
-  
-12. Na **soubory (herní instalační program)** kartě v okně editoru v části **zdrojové soubory počítače**, otevřete místní nabídku pro **primární výstup z herního** a zvolte **Kopie**.  
-  
-13. Otevřete místní nabídky v prostoru ve skupinovém rámečku **název** sloupec v **soubory v cílovém počítači**a zvolte **vložení**. Nová položka s názvem **Game.Primary výstup** se zobrazí.  
-  
-14. V **Průzkumníku řešení**v části **zadejte Data aplikací** uzlu, otevřete **Redistributables** stránky.  
-  
-15. Na **Redistributables (herní instalační program)** v okně editor, vyberte kartu **Visual C++ 11.0 CRT (x86)** zaškrtávací políčko.  
-  
-16. Na řádku nabídek zvolte **sestavení**, **sestavit řešení** k sestavení herní projekt a projekt herní Instalační služby.  
-  
-17. Ve složce řešení vyhledejte program setup.exe, který byl vytvořený z projektu herní instalační program a spusťte ho k instalaci herní aplikace ve vašem počítači. Můžete zkopírovat tento soubor k instalaci aplikace a její soubory požadované knihovny na jiném počítači.  
-  
-18. Mnoho možností můžete nastavit v nastavení projektu podle svých potřeb. Další informace najdete v **Průzkumníku řešení**v části **instalační program herní** projekt, otevřete **Začínáme** stránky a potom zvolte Otevřít knihovnu MANSKÁ nápovědy klávesy F1.  
+1. Ve složce řešení vyhledejte program setup.exe vytvořený z projektu instalátor hry a pak jeho spuštěním nainstalujte hru ve vašem počítači. Můžete zkopírovat tento soubor (a nalezněte) k instalaci aplikace a jeho požadovaných souborů knihovny v jiném počítači.   
   
 ## <a name="next-steps"></a>Další kroky  
- **Předchozí:** [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
+
+**Předchozí:** [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
- [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/> 
+[Sestavování programů jazyka C/C++](../build/building-c-cpp-programs.md)<br/>
+[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>

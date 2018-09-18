@@ -1,5 +1,5 @@
 ---
-title: context_unblock_unbalanced – třída | Microsoft Docs
+title: context_unblock_unbalanced – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037473"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced – třída
-Tato třída popisuje výjimka vyvolaná při volání `Block` a `Unblock` metody `Context` objekt nejsou spárovány správně.  
+Tato třída popisuje výjimku vyvolanou při volání `Block` a `Unblock` metody `Context` nejsou správně spárované objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Přetíženo. Vytvoří `context_unblock_unbalanced` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Volání `Block` a `Unblock` metody `Context` objekt musí vždy správně spárovat. Concurrency Runtime umožňuje operace, provést v buď pořadí. Například volání `Block` může následovat volání `Unblock`, nebo naopak. Tato výjimka by vyvolat, je-li například dva volá, aby se `Unblock` metoda byly provedeny v řádku, na `Context` objekt, který nebyl blokován.  
+ Volání `Block` a `Unblock` metody `Context` objekt musí být vždy správně párovaný. Modul Concurrency Runtime umožňuje operace v obou pořadí chtěli. Například volání `Block` může být následován volání `Unblock`, nebo naopak. Tato výjimka by být vyvolána, pokud například dvě volání `Unblock` metoda byly provedeny v řádku, na `Context` objekt, který se zablokoval.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -55,7 +55,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> context_unblock_unbalanced 
+##  <a name="ctor"></a> context_unblock_unbalanced – 
 
  Vytvoří `context_unblock_unbalanced` objektu.  
   
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

@@ -25,45 +25,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f9a45fcfaaff02cfb7cf765857957f20c41ba1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95cb1ac663607f26c4f168c2e98910f5b41963c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040144"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t – relační operátory
-**Specifické pro Microsoft**  
-  
- Porovnat dva `_variant_t` objekty a zjistí rovnost či nerovnost.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-bool operator==(  
-   const VARIANT& varSrc) const;  
-bool operator==(  
-   const VARIANT* pSrc) const;  
-bool operator!=(  
-   const VARIANT& varSrc) const;  
-bool operator!=(  
-   const VARIANT* pSrc) const;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *varSrc*  
- A `VARIANT` která bude porovnána `_variant_t` objektu.  
-  
- *pSrc*  
- Ukazatel `VARIANT` k porovnání s `_variant_t` objektu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** pokud obsahuje porovnání **false** Pokud tomu tak není.  
-  
-## <a name="remarks"></a>Poznámky  
- Porovná `_variant_t` objektu `VARIANT`, testování a zjistí rovnost či nerovnost.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_variant_t – třída](../cpp/variant-t-class.md)
+
+**Specifické pro Microsoft**
+
+Porovnat dva `_variant_t` objekty a zjistí rovnost či nerovnost.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+bool operator==(
+   const VARIANT& varSrc) const;
+bool operator==(
+   const VARIANT* pSrc) const;
+bool operator!=(
+   const VARIANT& varSrc) const;
+bool operator!=(
+   const VARIANT* pSrc) const;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*varSrc*<br/>
+A `VARIANT` která bude porovnána `_variant_t` objektu.
+
+*pSrc*<br/>
+Ukazatel `VARIANT` k porovnání s `_variant_t` objektu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí **true** pokud obsahuje porovnání **false** Pokud tomu tak není.
+
+## <a name="remarks"></a>Poznámky
+
+Porovná `_variant_t` objektu `VARIANT`, testování a zjistí rovnost či nerovnost.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_variant_t – třída](../cpp/variant-t-class.md)

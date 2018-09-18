@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2147 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2147 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434e61f701bf74ad77b5a8a210ebf1002bb95e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f3ca510dfd61e92a33f599c7ef261e03b8ad2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032838"
 ---
 # <a name="resource-compiler-error-rc2147"></a>Chyba kompilátoru prostředků RC2147
-ID dílčího jazyka není číslo  
-  
- Hodnota ID dílčího jazyka musí být číslo.  
-  
- **Jazyk** příkaz musíte použít následující syntaxi:  
-  
- **JAZYK** *primary_language_ID*,*secondary_language_ID*  
-  
- Platné ID dílčího jazyka jsou definovány jako **SUBLANG_** konstanty v souboru WINNT.h souboru.
+
+ID DÍLČÍHO není číslo
+
+Hodnota ID DÍLČÍHO musí být číslo.
+
+**Jazyk** příkaz musíte použít následující syntaxi:
+
+**JAZYK** *primary_language_ID*,*secondary_language_ID*
+
+Platné ID DÍLČÍHO jsou definované jako **SUBLANG_** konstanty v souboru WINNT.h souboru.

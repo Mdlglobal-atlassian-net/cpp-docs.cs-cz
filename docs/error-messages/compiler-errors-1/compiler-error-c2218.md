@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2218 | Microsoft Docs
+title: Chyba kompilátoru C2218 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efda7258616862efc464b493b51ada2c6bd7674
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52c449381c6e8a7391706ed6097bc38576bc69fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041282"
 ---
 # <a name="compiler-error-c2218"></a>Chyba kompilátoru C2218
-'__vectorcall' nelze použít s ' / architektura: IA32.  
-  
- `__vectorcall` Konvence volání je podporována pouze v nativním kódu na x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Další informace najdete v tématu [__vectorcall](../../cpp/vectorcall.md).  
-  
- Chcete-li tuto chybu opravit, změnit možnosti kompilátoru cíl instrukcí SSE2, AVX nebo AVX2 nastaví. Další informace najdete v tématu [/arch (x86)](../../build/reference/arch-x86.md).
+
+'__vectorcall' nelze použít s "/ arch: IA32.
+
+`__vectorcall` Konvence volání je podporována pouze v nativním kódu x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Další informace najdete v tématu [__vectorcall](../../cpp/vectorcall.md).
+
+Chcete-li vyřešit tuto chybu, změňte možnosti kompilátoru na cíl SSE2, AVX a AVX2 instrukční sadu. Další informace najdete v tématu [/arch (x86)](../../build/reference/arch-x86.md).

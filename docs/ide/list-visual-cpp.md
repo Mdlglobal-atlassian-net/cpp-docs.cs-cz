@@ -1,5 +1,5 @@
 ---
-title: '&lt;seznam&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;seznam&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046404"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;seznam&gt; (Visual C++)
-\<Listheader > blokování se používá k definování řádek záhlaví tabulky nebo definice seznamu. Při definování tabulku, stačí zadat položku termín v záhlaví.  
+\<Listheader – > blokování se používá k definování řádek záhlaví tabulky nebo definice seznamu. Při definování tabulku, stačí zadat položky pro výraz v záhlaví.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ ms.locfileid: "33323976"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `term`  
- Termín, definovat, které budou určené v `description`.  
+*Termín*<br/>
+Termín, který chcete definovat, které budou určené v `description`.  
   
- `description`  
- Buď položku v odrážku nebo číslovaný seznam nebo definice `term`.  
+*Popis*<br/>
+Buď položku v odrážkami nebo číslovaný seznam nebo definici `term`.  
   
 ## <a name="remarks"></a>Poznámky  
- Každá položka v seznamu je definován s \<položky > bloku. Při vytváření definice seznamu, budete muset zadat oba seznamy `term` a `description`. Ale pro tabulku, seznamu s odrážkami nebo číslovaný seznam, stačí zadat položku pro `description`.  
+ Každá položka v seznamu není zadán s \<položky > bloku. Při vytváření definice seznamu, budete muset zadat současně `term` a `description`. Ale pro tabulku, seznam s odrážkami nebo číslovaného seznamu, stačí zadat položku pro `description`.  
   
- Seznam nebo tabulka může mít jako mnoho \<položky > blokuje podle potřeby.  
+ Seznam nebo tabulku můžete mít kolik \<položky > blokuje podle potřeby.  
   
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  

@@ -1,5 +1,5 @@
 ---
-title: CXX0065 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0065 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c25c9c6bde27219f10e4047dc7a6ab416f55d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c100b1edbd36f4384e8deb1abf5b36465e8da479
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024161"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Chyba při vyhodnocování výrazu CXX0065
-Proměnná musí rámce zásobníku  
-  
- Výraz obsahuje proměnné, která existuje v aktuálním oboru, ale ještě nebyl vytvořen.  
-  
- Této chybě může dojít, když máte stupeň do prologu funkce ale ještě nebyla nastavení rámce zásobníku pro funkci, nebo pokud máte stupeň do ukončovací kód pro funkci.  
-  
- Procházet kód prologu, dokud rámce zásobníku byl nastavený před vyhodnocení výrazu.  
-  
- Tato chyba je stejný jako CAN0065.
+
+Proměnná musí rámec zásobníku
+
+Výraz obsahuje proměnné, která existuje v aktuálním oboru, ale ještě nebyl vytvořen.
+
+Této chybě může dojít, když jste vkročili prologu funkce ale ještě není nastavení rámce zásobníku pro funkci, nebo pokud jste vkročili ukončovací kód pro funkci.
+
+Krokovat kód prologu, dokud rámce zásobníku je nastavený před vyhodnocením výrazu.
+
+Tato chyba se shoduje s CAN0065.

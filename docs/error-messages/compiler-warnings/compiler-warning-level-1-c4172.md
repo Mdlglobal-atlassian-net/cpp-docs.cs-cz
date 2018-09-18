@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4172 | Microsoft Docs
+title: Upozornění (úroveň 1) C4172 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746442638820d0c81144611a678996dc4c8483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f606b48fb060472dd67d34800c06946bc41712
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043505"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>C4172 kompilátoru upozornění (úroveň 1)
-Vrátí adresu místní proměnné nebo dočasné  
-  
- Funkce vrátí adresu místní proměnné nebo dočasný objekt. Místní proměnné a dočasné objekty jsou zničený, když se vrátí funkci, tak vrátila adresa není platná.  
-  
- Změnit návrh funkci tak, aby se nevrátí na adresu místního objektu.  
-  
- Následující ukázka generuje C4172:  
-  
-```  
-// C4172.cpp  
-// compile with: /W1 /LD  
-float f = 10;  
-  
-const double& bar() {  
-// try the following line instead  
-// const float& bar() {  
-   return f;   // C4172  
-}  
+# <a name="compiler-warning-level-1-c4172"></a>Kompilátor upozornění (úroveň 1) C4172
+
+Vrací adresu lokální proměnné nebo dočasné
+
+Funkce vrátí adresu místní proměnné nebo dočasný objekt. Lokálních proměnných a dočasné objekty jsou zničeny při návratu funkce, takže adresu vrácenou není platný.
+
+Změnit návrh funkce tak, aby nevrací adresu místního objektu.
+
+Následující ukázka generuje C4172:
+
+```
+// C4172.cpp
+// compile with: /W1 /LD
+float f = 10;
+
+const double& bar() {
+// try the following line instead
+// const float& bar() {
+   return f;   // C4172
+}
 ```

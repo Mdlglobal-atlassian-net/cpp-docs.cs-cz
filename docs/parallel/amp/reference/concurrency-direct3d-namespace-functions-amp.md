@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099bd36908ef12d2cd4c6b4603dc047d7ed6e74f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aefb11f8028aa2af9822bc6433e85d06d0609a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107600"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039163"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce oboru názvů Concurrency::Direct3D (AMP)
 ||||
@@ -60,7 +60,7 @@ inline int abs(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -83,13 +83,13 @@ inline int clamp(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota, která má být přichycena
 
-`_Min`  
+*_Min*<br/>
 Dolní mez rozsahu upnutí.
 
-`_Max`  
+*_Maximální*<br/>
 Horní mez rozsahu upnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -103,7 +103,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota celé číslo bez znaménka
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -126,16 +126,16 @@ accelerator_view create_accelerator_view(
 ```  
 
 #### <a name="parameters"></a>Parametry
-`_Accelerator`  
+*_Accelerator*<br/>
 Akcelerátor, na kterém má být vytvořen nový objekt accelerator_view.
 
-`_D3D_device`  
+*_D3D_device*<br/>
 Ukazatel na rozhraní zařízení Direct3D.
 
-`_Disable_timeout`  
+*_Disable_timeout*<br/>
 Parametr logické hodnoty, která určuje, zda by mělo být zakázáno časový limit pro nově vytvořený objekt accelerator_view. To odpovídá příznaku D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pro vytváření zařízení Direct3D a slouží k označení, pokud operační systém by měl umožnit pracovní vytížení, které trvat déle než 2 sekundy bez resetování zařízení za časový limit Windows mechanismus detekce a obnovení. Použití tohoto příznaku se doporučuje, když potřebujete provádět časově náročné úlohy v zobrazení accelerator_view.
 
-`_Qmode`  
+*_Qmode*<br/>
 [Queuing_mode –](concurrency-namespace-enums-amp.md#queuing_mode) má být použit pro nově vytvořený objekt accelerator_view. Tento parametr má výchozí hodnotu `queuing_mode_automatic`.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -157,7 +157,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Av`  
+*_Av*<br/>
 Accelerator_view pro uzamčení.
 
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
@@ -168,7 +168,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Av`  
+*_Av*<br/>
 Accelerator_view pro uzamčení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -182,7 +182,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Av`  
+*_Av*<br/>
 Accelerator_view, pro kterou má uvolní zámek.
 
 ##  <a name="firstbithigh"></a>  firstbithigh –
@@ -193,7 +193,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -207,7 +207,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -226,13 +226,13 @@ IUnknown *get_buffer(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Typ prvků v poli.
 
-`_Rank`  
+*_Rank*<br/>
 Řád objektu array.
 
-`_Array`  
+*_Pole*<br/>
 Pole accelerator_view rozhraní Direct3D, pro který je vrácen základní vyrovnávací paměti rozhraní Direct3D.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -263,10 +263,10 @@ inline int imax(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
-`_Y`  
+*_Y*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -282,10 +282,10 @@ inline int imin(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
-`_Y`  
+*_Y*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -299,7 +299,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Accelerator_view`  
+*_Accelerator_view*<br/>
 Accelerator_view, pro který nastavení deaktivovaného časového limitu, je možné dotazovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -334,13 +334,13 @@ inline unsigned int mad(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Prvního zadaného argumentu.
 
-`_Y`  
+*_Y*<br/>
 Druhý zadaný argument.
 
-`_Z`  
+*_Z*<br/>
 Třetí zadaný argument.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -361,19 +361,19 @@ array<value_type, _Rank> make_array(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Typ elementu pole, které chcete vytvořit.
 
-`_Rank`  
+*_Rank*<br/>
 Řád objektu array má být vytvořen.
 
-`_Extent`  
+*_Extent*<br/>
 Objekt extent popisující tvar množiny pole.
 
-`_Rv`  
+*_Rv*<br/>
 Zobrazení akcelerátoru D3D, na kterém se má vytvořit pole.
 
-`_D3D_buffer`  
+*_D3D_buffer*<br/>
 Ukazatel na rozhraní IUnknown vyrovnávací paměti rozhraní D3D k vytvoření pole z.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -387,7 +387,7 @@ inline float noise(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 S plovoucí desetinnou čárkou, ze kterého se má generovat Perlinova šumu
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -401,7 +401,7 @@ inline float radians(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -418,7 +418,7 @@ inline double rcp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota, pro které chcete vypočítat převrácenou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -432,7 +432,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota celé číslo bez znaménka
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -446,7 +446,7 @@ inline float saturate(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -460,7 +460,7 @@ inline int sign(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -477,13 +477,13 @@ inline float smoothstep(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Min`  
+*_Min*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-`_Max`  
+*_Maximální*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -499,10 +499,10 @@ inline float step(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Y`  
+*_Y*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Hodnota s plovoucí desetinnou čárkou
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -518,10 +518,10 @@ inline unsigned int umax(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
-`_Y`  
+*_Y*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -537,10 +537,10 @@ inline unsigned int umin(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_X`  
+*PROMĚNNÉ _X*<br/>
 Celočíselná hodnota
 
-`_Y`  
+*_Y*<br/>
 Celočíselná hodnota
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4602 | Microsoft Docs
+title: Upozornění (úroveň 1) C4602 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c25fd983f1ac7cebcc568a0b47c06c4d8e23a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cae5810f94ed9c3feb22de145c7e12e1a7d813b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033313"
 ---
-# <a name="compiler-warning-level-1-c4602"></a>C4602 kompilátoru upozornění (úroveň 1)
-\#pop_macro – Direktiva pragma: "makro název" žádné předchozí push_macro – #pragma tohoto identifikátoru  
-  
- Pokud používáte [pop_macro –](../../preprocessor/pop-macro.md) pro konkrétní makro, musíte nejprve předané tento název makra pro [push_macro –](../../preprocessor/push-macro.md). Například následující ukázka generuje C4602:  
-  
-```  
-// C4602.cpp  
-// compile with: /W1  
-int main()  
-{  
-   #pragma pop_macro("x")   // C4602 x is not on the stack  
-}  
+# <a name="compiler-warning-level-1-c4602"></a>Kompilátor upozornění (úroveň 1) C4602
+
+\#pop_macro – Direktiva pragma: 'název makra' žádné předchozí #pragma push_macro pro tento identifikátor
+
+Pokud používáte [pop_macro](../../preprocessor/pop-macro.md) pro konkrétní – makro, kterou musí nejprve jste předali tímto názvem makra na [push_macro](../../preprocessor/push-macro.md). Například následující ukázka generuje C4602:
+
+```
+// C4602.cpp
+// compile with: /W1
+int main()
+{
+   #pragma pop_macro("x")   // C4602 x is not on the stack
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2065 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2065 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/01/2017
 ms.technology:
@@ -16,54 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e67fcac9593dc4ad11dbff0cc479ac24d624110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30fa9500ad7df934643c606be4f29925e2d18676
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042504"
 ---
-# <a name="compiler-error-c2065"></a>C2065 chyby kompilátoru
+# <a name="compiler-error-c2065"></a>Chyba kompilátoru C2065
 
-> '*identifikátor*': nedeklarovaný identifikátor
+> "*identifikátor*': nedeklarovaný identifikátor
 
-Kompilátor nelze najít deklaraci pro identifikátor. Existuje mnoho možných příčin této chyby. Nejběžnější příčiny C2065 jsou, identifikátor nebyla deklarována, identifikátor je zadáno chybně, záhlaví, kde je deklarovaná identifikátor není součástí souboru nebo chybí identifikátor kvalifikátor oboru, například `cout` místo `std::cout`. Další informace o deklarace v C++ najdete v tématu [deklarace a definice (C++)](../../cpp/declarations-and-definitions-cpp.md).
+Kompilátor nemůže najít deklarace identifikátoru. Existuje mnoho možných příčin této chyby. Nejběžnější příčiny C2065 se, že nebyla deklarována identifikátor, identifikátor je zadáno chybně, záhlaví, ve kterém je deklarována identifikátor není zahrnut do souboru nebo chybí identifikátor obor kvalifikátoru, například `cout` místo `std::cout`. Další informace o deklarace v C++, naleznete v tématu [deklarace a definice (C++)](../../cpp/declarations-and-definitions-cpp.md).
 
 Tady jsou některé běžné problémy a řešení podrobněji.
 
-## <a name="the-identifier-is-undeclared"></a>Identifikátor, který je nebyla deklarována
+## <a name="the-identifier-is-undeclared"></a>Nedeklarovaný identifikátor
 
-Pokud je identifikátor proměnné nebo název funkce, musí deklarovat před použitím. Deklaraci funkce musí také obsahovat typy jeho parametry před použitím funkce. Pokud je proměnná deklarováno s použitím `auto`, kompilátor musí být schopen odvození typu z jeho inicializátor.
+Pokud se identifikátor proměnnou nebo název funkce, musíte ji deklarovat před jeho použitím. Deklarace funkce musí obsahovat také typy jeho parametrů před použitím funkce. Pokud je proměnná deklarována pomocí `auto`, kompilátor musí mít k odvození typu z jeho vlastním inicializátoru.
 
-Pokud identifikátor je členem třídě nebo struktuře nebo deklarované v oboru názvů, musí být kvalifikovaný názvem třídě nebo struktuře, nebo název oboru názvů, při použití mimo obor struktura, třída nebo obor názvů. Alternativně obor názvů musí být uvedena do obor dle `using` direktivy, jako `using namespace std;`, nebo název člena musí být uvedena do oboru ve `using` deklarace, například `using std::string;`. Neúplný název, jinak se považuje za nedeklarovaný identifikátor v aktuálním oboru.
+Pokud identifikátor je členem třídy nebo struktury nebo deklarované v oboru názvů, musí být určeny podle názvu třídy nebo struktury, nebo název oboru názvů, když se používá mimo obor struktury, třídy nebo oboru názvů. Alternativně obor názvů musí být přeneseny do rozsahu pomocí `using` direktivy, jako `using namespace std;`, nebo název člena musí být přeneseny do rozsahu pomocí `using` deklarace, jako `using std::string;`. V opačném případě neúplný název se považuje za nedeklarovaný identifikátor v aktuálním oboru.
 
-Pokud je identifikátor značky pro uživatelem definovaný typ, například `class` nebo `struct`, typ značky musí být deklarován před použitím. Například deklaraci `struct SomeStruct { /*...*/ };` musí existovat lze deklarovat proměnnou `SomeStruct myStruct;` v kódu.
+Pokud se identifikátor značky pro uživatelem definovaný typ, například `class` nebo `struct`, typ značky musí být deklarován, před jeho použitím. Například, deklarace `struct SomeStruct { /*...*/ };` musí existovat předtím, než je možné deklarovat proměnnou `SomeStruct myStruct;` ve vašem kódu.
 
-Pokud je identifikátor typ alias, typ musí být deklarován pomocí `using` deklarace nebo `typedef` před použitím. Například musíte deklarovat `using my_flags = std::ios_base::fmtflags;` před použitím `my_flags` jako typ aliasu pro `std::ios_base::fmtflags`.
+Pokud se identifikátor alias typu, typ musí být deklarovány s použitím `using` prohlášení nebo `typedef` předtím, než je možné. Například musíte deklarovat `using my_flags = std::ios_base::fmtflags;` před použitím `my_flags` jako alias typu pro `std::ios_base::fmtflags`.
 
-## <a name="example-misspelled-identifier"></a>Příklad: Chybný identifikátor
+## <a name="example-misspelled-identifier"></a>Příklad: chybně identifikátor
 
-K této chybě dochází běžně, když je nesprávně uveden název identifikátor nebo identifikátor se používá nesprávný malá a velká písmena. Název v deklaraci musí přesně odpovídat názvu, který používáte.
+K této chybě dochází běžně, když název identifikátoru je zadáno chybně nebo identifikátor používá nesprávný malá a velká písmena. Název v deklaraci musí přesně odpovídat názvu, který používáte.
 
 ```cpp
 // C2065_spell.cpp
-// compile with: cl /EHsc C2065_spell.cpp 
-#include <iostream> 
-using namespace std; 
-int main() { 
-    int someIdentifier = 42; 
-    cout << "Some Identifier: " << SomeIdentifier << endl; 
-    // C2065: 'SomeIdentifier': undeclared identifier 
+// compile with: cl /EHsc C2065_spell.cpp
+#include <iostream>
+using namespace std;
+int main() {
+    int someIdentifier = 42;
+    cout << "Some Identifier: " << SomeIdentifier << endl;
+    // C2065: 'SomeIdentifier': undeclared identifier
     // To fix, correct the spelling:
-    // cout << "Some Identifier: " << someIdentifier << endl; 
+    // cout << "Some Identifier: " << someIdentifier << endl;
 }
 ```
 
 ## <a name="example-use-an-unscoped-identifier"></a>Příklad: použití bez ohledu na obor identifikátor
 
-Této chybě může dojít, pokud vaše identifikátor není správně obor. Pokud se zobrazí C2065 při použití `cout`, to je důvod. Když funkce standardní knihovny C++ a operátory nejsou plně kvalifikovaná pomocí oboru názvů, nebo nebyly začlenění `std` oboru názvů do aktuální obor pomocí `using` direktivy, kompilátor nelze najít je. Pokud chcete tento problém vyřešit, musíte buď plně kvalifikovat identifikátor názvy, nebo zadejte obor názvů s `using` – direktiva.
+K této chybě může dojít, pokud vaše identifikátor není v oboru správně. Pokud se zobrazí při použití C2065 `cout`, je to příčina. Když funkce standardní knihovny C++ a operátory nejsou plně kvalifikován pomocí oboru názvů, nebo nebyly režimu `std` oboru názvů v aktuálním oboru s použitím `using` direktiv, kompilátor nemůže najít je. Chcete-li vyřešit tento problém, musíte buď plně kvalifikovat názvy identifikátorů, nebo zadejte obor názvů se `using` směrnice.
 
-V tomto příkladu se nepovede zkompilovat, protože `cout` a `endl` jsou definovány v `std` obor názvů:
+V tomto příkladu se nepodaří zkompilovat, protože `cout` a `endl` jsou definovány v `std` obor názvů:
 
 ```cpp
 // C2065_scope.cpp
@@ -72,20 +72,20 @@ V tomto příkladu se nepovede zkompilovat, protože `cout` a `endl` jsou defino
 // using namespace std;   // Uncomment this line to fix
 
 int main() {
-    cout << "Hello" << endl;   // C2065 'cout': undeclared identifier 
+    cout << "Hello" << endl;   // C2065 'cout': undeclared identifier
                                // C2065 'endl': undeclared identifier
     // Or try the following line instead
     std::cout << "Hello" << std::endl;
 }
 ```
 
-Identifikátory, které jsou deklarované uvnitř `class`, `struct`, nebo `enum class` typy musí být kvalifikovaný názvem jejich vymezeném oboru také, při použití mimo tento rozsah.
+Identifikátory, které jsou deklarované uvnitř `class`, `struct`, nebo `enum class` typy musí být kvalifikovaný podle názvu jejich nadřazených rámců také. při použití mimo tento rozsah.
 
-## <a name="example-precompiled-header-isnt-first"></a>Příklad: není první předkompilovaných hlaviček
+## <a name="example-precompiled-header-isnt-first"></a>Příklad: není první předkompilované hlavičky
 
-Této chybě může dojít, když vložíte preprocesor – direktivy, například #include, #define, nebo #pragma, než #include předkompilovaný hlavičkový soubor. Pokud váš zdrojový soubor používá předkompilovaný hlavičkový soubor (tj. Pokud je kompilován s použitím **/Yu** – možnost kompilátoru) a jsou ignorovány všechny direktivy preprocesoru před předkompilovaný hlavičkový soubor.
+K této chybě může dojít, pokud například umístit všechny direktivy preprocesoru, #include, #define, nebo #pragma, než #include souboru předkompilované hlavičky. Pokud zdrojový soubor používá soubor předkompilované hlavičky (tj. Pokud je zkompilován s použitím **/Yu** – možnost kompilátoru) pak budou ignorovány všechny direktivy preprocesoru před předkompilovaného souboru hlaviček.
 
-V tomto příkladu se nepovede zkompilovat, protože `cout` a `endl` jsou definovány v \<iostream > hlavičky, která se ignoruje, protože je zahrnutá před předkompilovaný hlavičkový soubor. K sestavení v tomto příkladu, vytvořte všechny tři soubory, pak zkompilovat stdafx.cpp pak zkompilovat C2065_pch.cpp.
+V tomto příkladu se nepodaří zkompilovat, protože `cout` a `endl` jsou definovány v \<iostream – > hlavičky, která se ignoruje, protože je zahrnutý před předkompilovaného souboru hlaviček. Sestavení tohoto příkladu, vytvořit všechny tři soubory, poté zkompilovat stdafx.cpp a kompilaci C2065_pch.cpp.
 
 ```cpp
 // stdafx.h
@@ -111,71 +111,71 @@ int main() {
 }
 ```
 
-Chcete-li tento problém vyřešit, přidejte #include \<iostream > do předkompilovaný hlavičkový soubor nebo přesunutí po předkompilovaný hlavičkový soubor je součástí zdrojového souboru.
+Chcete-li tento problém vyřešit, přidejte #include \<iostream – > do souboru předkompilované hlavičky nebo přesunutí souboru předkompilované hlavičky je zahrnutá ve zdrojovém souboru.
 
 ## <a name="example-missing-header-file"></a>Příklad: chybí soubor hlaviček
 
-Nebyly zahrnout soubor hlaviček, který deklaruje identifikátor. Ujistěte se, že soubor, který obsahuje deklaraci pro identifikátor je zahrnuta v každé zdrojový soubor, který se používá.
+Hlavičkový soubor, který deklaruje identifikátor nebyly zahrnuty. Ujistěte se, že soubor obsahující deklarace pro identifikátor je součástí každý zdrojový soubor, který ji používá.
 
 ```cpp
 // C2065_header.cpp
-// compile with: cl /EHsc C2065_header.cpp 
+// compile with: cl /EHsc C2065_header.cpp
 
-//#include <stdio.h> 
-int main() { 
-    fpos_t file_position = 42; // C2065: 'fpos_t': undeclared identifier 
+//#include <stdio.h>
+int main() {
+    fpos_t file_position = 42; // C2065: 'fpos_t': undeclared identifier
     // To fix, uncomment the #include <stdio.h> line
     // to include the header where fpos_t is defined
-} 
+}
 ```
 
-Další možnou příčinou je, pokud použijete inicializačním seznam bez včetně \<initializer_list > záhlaví.
+Další možnou příčinou je, pokud použijete seznam inicializátorů bez zahrnutí \<initializer_list > záhlaví.
 
 ```cpp
 // C2065_initializer.cpp
-// compile with: cl /EHsc C2065_initializer.cpp 
+// compile with: cl /EHsc C2065_initializer.cpp
 
-// #include <initializer_list> 
-int main() { 
+// #include <initializer_list>
+int main() {
     for (auto strList : {"hello", "world"})
-        if (strList == "hello") // C2065: 'strList': undeclared identifier 
-            return 1; 
+        if (strList == "hello") // C2065: 'strList': undeclared identifier
+            return 1;
     // To fix, uncomment the #include <initializer_list> line
-} 
+}
 ```
 
-Pokud definujete, mohou se zobrazit tato chyba ve zdrojových souborech aplikace Windows Desktop `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, nebo `WIN32_EXTRA_LEAN`. Tyto makra preprocesoru vyloučit některé soubory hlaviček z odkazující na Windows a afxv\_zkompiluje w32.h pro rychlejší. Vyhledejte v odkazující na Windows a afxv_w32.h aktuální popis co je vyloučen.
+Pokud definujete, může se zobrazit tato chyba ve zdrojových souborech aplikace Windows Desktop `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, nebo `WIN32_EXTRA_LEAN`. Tato makra preprocesoru vyloučit některé soubory s hlavičkami z windows.h a afxv\_zkompiluje w32.h rychlost. Hledejte v windows.h a afxv_w32.h aktuální popis co je vyloučený.
 
-## <a name="example-missing-closing-quote"></a>Příklad: chybí ukončovací uvozovky
+## <a name="example-missing-closing-quote"></a>Příklad: chybí koncová uvozovka
 
-Této chybě může dojít, pokud jsou za konstantu řetězce chybí ukončovací uvozovky. Toto je snadný způsob, jak matou kompilátoru. Všimněte si, že chybí ukončovací uvozovky může být Víceřádkový před umístění oznámenou chybu. 
+K této chybě může dojít, pokud jsou za konstantu řetězce chybí ukončovací uvozovky. Toto je snadný způsob, jak kompilátor zmást. Všimněte si, že chybí uzavírací uvozovky mohou být Víceřádkový před umístění oznámenou chybu.
 
 ```cpp
 // C2065_quote.cpp
-// compile with: cl /EHsc C2065_quote.cpp 
+// compile with: cl /EHsc C2065_quote.cpp
 #include <iostream>
 
-int main() { 
+int main() {
     // Fix this issue by adding the closing quote to "Aaaa"
-    char * first = "Aaaa, * last = "Zeee"; 
-    std::cout << "Name: " << first 
-        << " " << last << std::endl; // C2065: 'last': undeclared identifier 
-} 
+    char * first = "Aaaa, * last = "Zeee";
+    std::cout << "Name: " << first
+        << " " << last << std::endl; // C2065: 'last': undeclared identifier
+}
 ```
 
-## <a name="example-use-iterator-outside-for-loop-scope"></a>Příklad: použití iterator mimo pro obor cyklu for
+## <a name="example-use-iterator-outside-for-loop-scope"></a>Příklad: použití iterátoru mimo pro obor cyklu for
 
-Této chybě může dojít, pokud je deklarovat proměnnou iterator v `for` smyčky a potom zkuste tuto proměnnou iterator použít mimo obor `for` smyčky. Kompilátor umožňuje [/Zc:forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru ve výchozím nastavení. V tématu [podpora ladění iterátorů](../../standard-library/debug-iterator-support.md) Další informace.
+K této chybě může dojít, pokud deklarujete proměnnou iterátor v `for` smyčky a pak zkuste použít tato proměnná iterátoru mimo obor `for` smyčky. Umožňuje kompilátoru [/Zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru ve výchozím nastavení. Zobrazit [Debug Iterator Support](../../standard-library/debug-iterator-support.md) Další informace.
 
 ```cpp
 // C2065_iter.cpp
-// compile with: cl /EHsc C2065_iter.cpp 
-#include <iostream> 
-#include <string> 
+// compile with: cl /EHsc C2065_iter.cpp
+#include <iostream>
+#include <string>
 
 int main() {
-    // char last = '!'; 
-    std::string letters{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }; 
+    // char last = '!';
+    std::string letters{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" };
     for (const char& c : letters) {
         if ('Q' == c) {
             std::cout << "Found Q!" << std::endl;
@@ -186,14 +186,14 @@ int main() {
     // Fix by using a variable declared in an outer scope.
     // Uncomment the lines that declare and use 'last' for an example.
     // std::cout << "Last letter was " << last << std::endl; // C2065
-} 
+}
 ```
 
 ## <a name="example-preprocessor-removed-declaration"></a>Příklad: preprocesoru odebrané deklarace
 
-Této chybě může dojít, pokud vyhledáváte funkce nebo proměnná, která je v podmíněně zkompilovaný kód, který není sestaven pro aktuální konfiguraci. Tato situace může také nastat při volání funkce v záhlaví souboru, který není aktuálně podporován ve vašem prostředí sestavení. Pokud určité proměnné nebo funkce jsou k dispozici, pouze pokud je definován konkrétní makro preprocesoru, ujistěte se, že kód, který volá tyto funkce mohou být zkompilovány pouze pokud je definován stejný makro preprocesoru. Tento problém je snadné spot v prostředí IDE, protože je šedé deklaraci pro funkci, pokud nejsou požadované makra preprocesoru definovaný pro aktuální konfiguraci sestavení.
+K této chybě může dojít, pokud odkazujete na funkci nebo proměnnou, která je v podmíněně zkompilovaný kód, který se zkompiluje pro vaši aktuální konfiguraci. To může vzniknout také při volání funkce v hlavičkovém souboru, který není aktuálně podporován ve vašem prostředí sestavení. Pokud určité proměnné nebo funkce jsou k dispozici, pouze když je definována konkrétní preprocesorové makro, ujistěte se, že kód, který volá tyto funkce mohou být zkompilovány pouze pokud je definován stejný preprocesor makro. Tento problém je snadné sledovat v integrovaném vývojovém prostředí, protože deklarace funkce zašedlé Pokud požadované makra preprocesoru nejsou definovány pro aktuální konfiguraci sestavení.
 
-Jedná se o příklad kódu, který funguje, když jste sestavení v ladění, ale není maloobchodní:
+Toto je příklad kódu, který funguje v případě sestavení v ladění, ale ne maloobchod:
 
 ```cpp
 // C2065_defined.cpp
@@ -204,7 +204,7 @@ Jedná se o příklad kódu, který funguje, když jste sestavení v ladění, a
     _CrtMemState oldstate;
 #endif
 int main() {
-    _CrtMemDumpStatistics(&oldstate); 
+    _CrtMemDumpStatistics(&oldstate);
     std::cout << "Total count " << oldstate.lTotalCount; // C2065
     // Fix by guarding references the same way as the declaration:
     // #ifdef _DEBUG
@@ -215,11 +215,11 @@ int main() {
 
 ## <a name="example-ccli-type-deduction-failure"></a>Příklad: C + +/ CLI chyba odvození typu
 
-Této chybě může dojít při volání metody obecné funkce, pokud argument určený typu nelze odvodit z použité parametry. Další informace najdete v tématu [obecné funkce (C + +/ CLI)](../../windows/generic-functions-cpp-cli.md).
+Této chybě může dojít při volání obecné funkce, pokud argument určený typ nelze odvodit z parametrů použitých. Další informace najdete v tématu [obecné funkce (C + +/ CLI)](../../windows/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
-// compile with: cl /clr C2065_b.cpp 
+// compile with: cl /clr C2065_b.cpp
 generic <typename ItemType>
 void G(int i) {}
 
@@ -232,7 +232,7 @@ int main() {
 
 ## <a name="example-ccli-attribute-parameters"></a>Příklad: C + +/ CLI atribut parametry
 
-Tato chyba může být také vygenerovaného jako výsledek kompilátoru shoda práci, kterou bylo provedeno pro Visual C++ 2005: Parametr kontrola atributy Visual C++.
+Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: kontroly parametrů pro atributy Visual C++.
 
 ```cpp
 // C2065_attributes.cpp

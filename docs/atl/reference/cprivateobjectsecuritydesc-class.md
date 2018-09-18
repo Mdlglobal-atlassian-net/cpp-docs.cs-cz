@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029010"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc – třída
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*  
+*pParent*<br/>
 Ukazatel [csecuritydesc –](../../atl/reference/csecuritydesc-class.md) objekt odkazující na nadřazený kontejner objektu. Pokud se nadřazený kontejner nepoužívá, je tento parametr hodnotu NULL.
 
-*ObjectType*  
+*ObjectType*<br/>
 Ukazatel `GUID` struktura, která identifikuje typ objekt přidružený k aktuálnímu objektu. Nastavte *ObjectType* na hodnotu NULL, pokud objekt nemá identifikátor GUID.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Určuje, zda nový objekt může obsahovat další objekty. Hodnota true označuje, že tento nový objekt je kontejner. Hodnota false označuje, že nový objekt není kontejner.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Ukazatel [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struktura, která určuje mapování z obecných práv u konkrétní práva pro objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*  
+*pParent*<br/>
 Ukazatel [csecuritydesc –](../../atl/reference/csecuritydesc-class.md) objekt odkazující na nadřazený adresář, ve kterém se vytváří nový objekt. Nastavte na hodnotu NULL, pokud není žádný nadřazený adresář.
 
-*pCreator*  
+*pCreator*<br/>
 Ukazatel do popisovače zabezpečení poskytované tvůrce objektu. Pokud tvůrce objektu informací o zabezpečení pro nový objekt explicitně nepředá, nastavte tento parametr na hodnotu NULL.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Určuje, zda nový objekt může obsahovat další objekty. Hodnota true označuje, že tento nový objekt je kontejner. Hodnota false označuje, že nový objekt není kontejner.
 
-*Token*  
+*Token*<br/>
 Odkaz [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekt pro proces, jehož jménem se vytváří objekt.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Ukazatel [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struktura, která určuje mapování z obecných práv u konkrétní práva pro objekt.
 
-*ObjectType*  
+*ObjectType*<br/>
 Ukazatel `GUID` struktura, která identifikuje typ objekt přidružený k aktuálnímu objektu. Nastavte *ObjectType* na hodnotu NULL, pokud objekt nemá identifikátor GUID.
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 Určuje, zda nový objekt může obsahovat další objekty. Hodnota true označuje, že tento nový objekt je kontejner. Hodnota false označuje, že nový objekt není kontejner.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Sadu bitových příznaků, které řídí, jak jsou zděděné položky řízení přístupu (ACE) z *pParent*. Zobrazit [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) další podrobnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>Parametry
 
-*si*  
+*si*<br/>
 Sadu bitových příznaků, které označují součásti popisovač zabezpečení pro načtení. Tato hodnota může být kombinací [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitové příznaky.
 
-*pResult*  
+*pResult*<br/>
 Ukazatel [csecuritydesc –](../../atl/reference/csecuritydesc-class.md) objekt, který přijímá kopii požadované informace z Zadaný popisovač zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CPrivateObjectSecurityDesc` Objektu, který chcete přiřadit k aktuálnímu objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>Parametry
 
-*si*  
+*si*<br/>
 Sadu bitových příznaků, které označují části nastavit popisovač zabezpečení. Tato hodnota může být kombinací [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitové příznaky.
 
-*Úpravy*  
+*Úpravy*<br/>
 Ukazatel [csecuritydesc –](../../atl/reference/csecuritydesc-class.md) objektu. Součástí tohoto popisovače zabezpečení indikován *si* parametrů se použijí pro popisovač zabezpečení objektu.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Ukazatel [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struktura, která určuje mapování z obecných práv u konkrétní práva pro objekt.
 
-*Token*  
+*Token*<br/>
 Odkaz [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekt pro proces, jehož jménem se vytváří objekt.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Sadu bitových příznaků, které řídí, jak jsou zděděné položky řízení přístupu (ACE) z *pParent*. Zobrazit [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) další podrobnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -287,7 +287,7 @@ Druhá metoda umožňuje určit typ objektu identifikátor GUID objektu nebo ř�
 
 ## <a name="see-also"></a>Viz také
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc – třída](../../atl/reference/csecuritydesc-class.md)

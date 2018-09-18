@@ -1,5 +1,5 @@
 ---
-title: ScheduleGroup – třída | Microsoft Docs
+title: Schedulegroup – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039985"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup – třída
-Představuje abstrakci pro skupinu plánu. Skupiny plánů uspořádání sady souvisejících pracovních této výhody z naplánován blízko sebe, buď dočasně, a to spuštěním jiná úloha ve stejné skupině před přesunutím do jiné skupiny, nebo jinými objekty, spuštěním více položek v jedné skupině na stejné Nebo soket fyzického uzlu NUMA.  
+Představuje abstrakci pro skupinu plánování. Skupiny plánování organizují sadu souvisejících prací, které mají výhody z plánovány blízko sebe, buď časově, prováděním jiné úlohy ve stejné skupině před přesunutím do jiné skupiny, nebo prostorově, prováděním více položek ve stejné skupině na stejném Uzel NUMA nebo fyzickém soketu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,10 +49,10 @@ class ScheduleGroup;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ID](#id)|Vrátí identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.|  
+|[ID](#id)|Vrátí identifikátor plánu skupiny, který je jedinečný v rámci plánovače, do kterého skupina patří.|  
 |[Referenční informace](#reference)|Zvýší počet odkazů skupiny plánu.|  
-|[Vydaná verze](#release)|Snižuje počet referenční příručka skupiny plánovače.|  
-|[Scheduletask –](#scheduletask)|Naplánuje úlohu šedé – v rámci skupiny pro plán.|  
+|[Vydaná verze](#release)|Sníží počet referenční skupiny plánovače.|  
+|[Scheduletask –](#scheduletask)|Naplánuje lehký úkol ve skupině plánování.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ScheduleGroup`  
@@ -64,18 +64,18 @@ class ScheduleGroup;
   
 ##  <a name="id"></a> ID 
 
- Vrátí identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.  
+ Vrátí identifikátor plánu skupiny, který je jedinečný v rámci plánovače, do kterého skupina patří.  
   
 ```
 virtual unsigned int Id() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.  
+ Identifikátor plánu skupiny, který je jedinečný v rámci plánovače, do kterého skupina patří.  
   
 ##  <a name="operator_delete"></a> delete – operátor 
 
- A `ScheduleGroup` objekt zničena interně modulem runtime při vydání všechny externí odkazy na ni. Nelze explicitně odstranit.  
+ A `ScheduleGroup` objekt je zničen interně modulem runtime při vydání všechny externí odkazy na něj. Nelze odstranit explicitně.  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Parametry  
- `_PObject`  
- Ukazatel na objekt, který má být odstraněna.  
+*_PObject*<br/>
+Ukazatel na objekt, který má být odstraněna.  
   
 ##  <a name="reference"></a> Referenční dokumentace 
 
@@ -104,25 +104,25 @@ virtual unsigned int Reference() = 0;
  Počet nově zvýšena odkazů.  
   
 ### <a name="remarks"></a>Poznámky  
- To se obvykle používá ke správě životnost skupině plán pro složení. Když počet odkazů skupiny plánu klesne na nulu, je plán skupinu odstranit modulem runtime. Plán skupinu vytvořit buď pomocí [currentscheduler::createschedulegroup –](currentscheduler-class.md#createschedulegroup) metody nebo [Scheduler::createschedulegroup –](scheduler-class.md#createschedulegroup) metoda začíná se odkaz započítává jako jeden.  
+ To se obvykle používá ke správě životnosti skupiny plánu složení. Když počet odkazů skupiny plánu klesne na nulu, plán skupina se odstranila modulem runtime. Plán skupiny vytvořené pomocí buď [currentscheduler::createschedulegroup –](currentscheduler-class.md#createschedulegroup) metodu, nebo [Scheduler::createschedulegroup –](scheduler-class.md#createschedulegroup) metoda začíná počet odkazů jednoho.  
   
-##  <a name="release"></a> Verze 
+##  <a name="release"></a> Vydání verze 
 
- Snižuje počet referenční příručka skupiny plánovače.  
+ Sníží počet referenční skupiny plánovače.  
   
 ```
 virtual unsigned int Release() = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet nově odečte odkazů.  
+ Odkaz na nově snížen počet.  
   
 ### <a name="remarks"></a>Poznámky  
- To se obvykle používá ke správě životnost skupině plán pro složení. Když počet odkazů skupiny plánu klesne na nulu, je plán skupinu odstranit modulem runtime. Po můžete volat `Release` metoda konkrétní počet opakování odebrat vytvoření odkazovat počet a všechny další odkazy umístěna pomocí `Reference` metoda, nemůže využít další skupině plán. Díky tomu bude mít za následek nedefinované chování.  
+ To se obvykle používá ke správě životnosti skupiny plánu složení. Když počet odkazů skupiny plánu klesne na nulu, plán skupina se odstranila modulem runtime. Poté, co jste volali `Release` konkrétní počet, kolikrát se odebrat vytváření odkaz na metodu počet a všechny další odkazy umístěna pomocí `Reference` metody, nemůže využít další skupinu plánu. To způsobí nedefinované chování.  
   
- Skupinu plán je přidružen instance konkrétní plánovače. Je nutné zajistit, že všechny odkazy na skupiny plán uvolnění před všechny odkazy na Plánovač vydávají, vzhledem k tomu může dojít v Plánovači bude zrušeno. Provádění jinak za následek nedefinované chování.  
+ Skupinu plánování souvisí s instance určitého plánovače. Ujistěte se, že všechny odkazy na skupinu plánu se vydávají před jsou všechny odkazy na Plánovač, protože může dojít v Plánovači rušení. Provádí se jinak za následek nedefinované chování.  
   
-##  <a name="dtor"></a> ~ ScheduleGroup 
+##  <a name="dtor"></a> ~ Schedulegroup – 
 
 ```
 virtual ~ScheduleGroup();
@@ -130,7 +130,7 @@ virtual ~ScheduleGroup();
   
 ##  <a name="scheduletask"></a> Scheduletask – 
 
- Naplánuje úlohu šedé – v rámci skupiny pro plán.  
+ Naplánuje lehký úkol ve skupině plánování.  
   
 ```
 virtual void ScheduleTask(
@@ -139,18 +139,18 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Proc`  
- Ukazatel na funkci provést k provedení úkolu šedé –.  
+*_Proc*<br/>
+Ukazatel na funkci, která se má spustit provádění těla lehký úkol.  
   
- `_Data`  
- Neplatný ukazatel na data, která se předají jako parametr k tělu úlohy.  
+*_Data*<br/>
+Ukazatel void data, která se předá jako parametr do těla úkolu.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání `ScheduleTask` metoda implicitně umístí počet odkazů na skupině plán, který je odebraný modulem runtime v příslušnou dobu, po provedení úlohy.  
+ Volání `ScheduleTask` metoda implicitně umístí počet odkazů skupiny plánu, který bude odebrán modulem runtime v příslušnou dobu, po spuštění úlohy.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
- [CurrentScheduler – třída](currentscheduler-class.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
+ [Currentscheduler – třída](currentscheduler-class.md)   
  [Scheduler – třída](scheduler-class.md)   
  [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 

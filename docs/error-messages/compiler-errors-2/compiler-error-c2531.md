@@ -1,5 +1,5 @@
 ---
-title: C2531 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2531 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af944c56dfd579c608edd48b22925480f16d05c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05af2bd4f1dc3403f5ecbb3254564292698624aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045091"
 ---
-# <a name="compiler-error-c2531"></a>C2531 chyby kompilátoru
-"identifikátor": odkaz na trochu neplatné pole  
-  
- Odkazy na bitová pole nejsou povoleny.  
-  
- Následující ukázka generuje C2531:  
-  
-```  
-// C2531.cpp  
-// compile with: /c  
-class P {  
-   int &b1 : 10;   // C2531  
-   int b2 : 10;   // OK  
-};  
+# <a name="compiler-error-c2531"></a>Chyba kompilátoru C2531
+
+'identifier': odkaz na neplatné bitové pole
+
+Odkazy na bitová pole nejsou povolené.
+
+Následující ukázka generuje C2531:
+
+```
+// C2531.cpp
+// compile with: /c
+class P {
+   int &b1 : 10;   // C2531
+   int b2 : 10;   // OK
+};
 ```

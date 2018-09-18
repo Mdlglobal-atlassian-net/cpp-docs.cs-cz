@@ -1,5 +1,5 @@
 ---
-title: C3752 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3752 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcc71d7e7418571b606be96e571c2b855f8497f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d12ae854e54080fe0b80c3e4ffd2d4b3f514651f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041724"
 ---
-# <a name="compiler-error-c3752"></a>C3752 chyby kompilátoru
-třídy atributů: nelze klasifikovat atributu. '– klíčové slovo' by neměl být v tomto kontextu použít.  
-  
- Atribut uživatelem definované použila správně.
+# <a name="compiler-error-c3752"></a>Chyba kompilátoru C3752
+
+třídy atributů: nejde klasifikovat atribut; ! – klíčové slovo' by neměl v tomto kontextu použít.
+
+Atribut definované uživatelem se použijí nesprávně.

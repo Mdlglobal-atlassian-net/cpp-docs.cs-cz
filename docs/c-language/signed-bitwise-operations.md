@@ -1,5 +1,5 @@
 ---
-title: Podepsané bitové operace | Microsoft Docs
+title: Podepsané bitové operace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ddd1c32beb5660fd1fa3c0160756734b4c1923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 184fd5a0e6c12cb58e9fed759459e7b8172896f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038292"
 ---
 # <a name="signed-bitwise-operations"></a>Podepsané bitové operace
-**ANSI 3.3** výsledky bitové operace na podepsaná celá čísla  
-  
- Bitové operace s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` může být vyjádřený v binární soubor jako  
-  
-```  
-  11111111 11110000  
-& 00000000 01100011  
-  _________________  
-  00000000 01100000  
-```  
-  
- Výsledkem bitové operace AND je 96.  
-  
-## <a name="see-also"></a>Viz také  
- [Celá čísla](../c-language/integers.md)
+
+**ANSI 3.3** výsledky bitových operací s celými čísly se znaménkem
+
+Bitové operace s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` může být vyjádřena v binárním souboru jako
+
+```
+  11111111 11110000
+& 00000000 01100011
+  _________________
+  00000000 01100000
+```
+
+Výsledkem bitové operace AND je 96.
+
+## <a name="see-also"></a>Viz také
+
+[Celá čísla](../c-language/integers.md)

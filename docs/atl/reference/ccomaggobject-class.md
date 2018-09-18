@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039826"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject – třída
 
@@ -41,14 +41,14 @@ Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunkn
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*obsažené*  
+*obsažené*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ## <a name="members"></a>Členové
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*  
+*PV*<br/>
 [in] Vnější neznámá.
 
 ### <a name="remarks"></a>Poznámky
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 [out] Ukazatel **CComAggObject\<**<em>obsažené</em> **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*obsažené*  
+*obsažené*<br/>
 [in] Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*  
+*str*<br/>
 [out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -245,9 +245,9 @@ V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro 
 
 ## <a name="see-also"></a>Viz také
 
-[CComObject – třída](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

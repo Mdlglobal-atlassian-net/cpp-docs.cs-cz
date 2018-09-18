@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031454"
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
+
 Ovládá podmíněné větvení. Příkazy v *blok if* jsou spouštěny pouze v případě *výraz if* vyhodnotí jako nenulové hodnoty (nebo TRUE). Pokud hodnota *výraz* nenulové, *statement1* další příkazy v bloku jsou vykonány a else bloku, pokud jsou k dispozici, se přeskočí. Pokud hodnota *výraz* je nula, pak se přeskočila blok if a else bloku, pokud jsou k dispozici, je proveden. Jsou výrazy, které vedou na nenulovou
 - HODNOTA TRUE
 - nenulový ukazatel
-- žádné jiné hodnoty než nula aritmetické, nebo 
-- Zadejte typ třídy definující jednoznačný převod na aritmetický, logickou hodnotu nebo ukazatele. (Informace o převodech naleznete v tématu [standardní převody](../cpp/standard-conversions.md).)   
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-if ( expression )  
+- žádné jiné hodnoty než nula aritmetické, nebo
+- Zadejte typ třídy definující jednoznačný převod na aritmetický, logickou hodnotu nebo ukazatele. (Informace o převodech naleznete v tématu [standardní převody](../cpp/standard-conversions.md).)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>Příklad  
+## <a name="example"></a>Příklad
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> Pokud příkaz pomocí inicializátoru
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Pokud** příkaz může také obsahovat výraz, který deklaruje a inicializuje proměnnou s názvem. Používejte tento formulář příkaz if proměnné je potřeba pouze v rámci oboru bloku if. 
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Pokud** příkaz může také obsahovat výraz, který deklaruje a inicializuje proměnnou s názvem. Používejte tento formulář příkaz if proměnné je potřeba pouze v rámci oboru bloku if.
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- Ve všech typech **Pokud** příkazu *výraz*, což může mít libovolnou hodnotu, s výjimkou struktury, vyhodnocen včetně všechny vedlejší účinky. Ovládání přejde z **Pokud** příkaz dalšímu příkazu v programu není-li jeden z *příkaz*neobsahuje [přerušení](../cpp/break-statement-cpp.md), [pokračovat](../cpp/continue-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md).  
-  
- **Else** klauzuli `if...else` je přidružena k nejbližšímu příkazu předchozí **Pokud** příkaz ve stejném oboru, který nemá odpovídající **else** příkaz.   
+Ve všech typech **Pokud** příkazu *výraz*, což může mít libovolnou hodnotu, s výjimkou struktury, vyhodnocen včetně všechny vedlejší účinky. Ovládání přejde z **Pokud** příkaz dalšímu příkazu v programu není-li jeden z *příkaz*neobsahuje [přerušení](../cpp/break-statement-cpp.md), [pokračovat](../cpp/continue-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md).
+
+**Else** klauzuli `if...else` je přidružena k nejbližšímu příkazu předchozí **Pokud** příkaz ve stejném oboru, který nemá odpovídající **else** příkaz.
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Pokud se příkazy constexpr.
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci šablony funkce, můžete použít **Pokud constexpr** příkaz, větvení rozhodování kompilaci bez nutnosti uchýlit se k více přetížení funkce. Můžete například napsat jedinou funkci tohoto popisovače parametru při rozbalování (je vyžadována žádná přetížená metoda parametr nula): 
+
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci šablony funkce, můžete použít **Pokud constexpr** příkaz, větvení rozhodování kompilaci bez nutnosti uchýlit se k více přetížení funkce. Můžete například napsat jedinou funkci tohoto popisovače parametru při rozbalování (je vyžadována žádná přetížená metoda parametr nula):
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Viz také:  
- [Příkazy výběru](../cpp/selection-statements-cpp.md)   
- [klíčová slova](../cpp/keywords-cpp.md)   
- [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Viz také:
+
+[Příkazy výběru](../cpp/selection-statements-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

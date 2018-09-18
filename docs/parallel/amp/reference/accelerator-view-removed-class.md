@@ -1,5 +1,5 @@
 ---
-title: accelerator_view_removed – třída | Microsoft Docs
+title: accelerator_view_removed – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020251"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed – třída
-Výjimka, která se vyvolá, když je základní volání rozhraní DirectX nezdaří z důvodu vypršení časového limitu Windows mechanismus detekce a obnovení.  
+Výjimka, která je vyvolána, když podkladové volání rozhraní DirectX selže z důvodu vypršení časového limitu Windows mechanismus detekce a obnovení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Vrátí kód chyby HRESULT určující příčinu `accelerator_view` odebrání objektu.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Vrátí kód chyby HRESULT označující příčinu `accelerator_view` odebírání příslušného objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -61,9 +61,9 @@ class accelerator_view_removed : public runtime_exception;
   
  **Namespace:** souběžnosti  
 
-## <a name="ctor"></a> accelerator_view_removed 
+## <a name="ctor"></a> accelerator_view_removed – 
 
-Inicializuje novou instanci třídy [accelerator_view_removed](accelerator-view-removed-class.md) třídy.  
+Inicializuje novou instanci třídy [accelerator_view_removed –](accelerator-view-removed-class.md) třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -77,18 +77,18 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popis chyby.  
+*_TEXT*<br/>
+Popis chyby.  
   
- `_View_removed_reason`  
- Chybový kód HRESULT určující příčinu odebrání `accelerator_view` objektu.  
+*_View_removed_reason*<br/>
+Kód chyby HRESULT označující důvod odebrání `accelerator_view` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Novou instanci třídy accelerator_view_removed.  
+ Vytvoření nové instance třídy accelerator_view_removed –.  
   
 ## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
 
-Vrátí kód chyby HRESULT určující příčinu `accelerator_view` odebrání objektu.  
+Vrátí kód chyby HRESULT označující příčinu `accelerator_view` odebírání příslušného objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   

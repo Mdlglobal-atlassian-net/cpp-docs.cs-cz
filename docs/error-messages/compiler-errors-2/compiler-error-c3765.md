@@ -1,5 +1,5 @@
 ---
-title: C3765 Chyba kompilátoru | Microsoft Docs
+title: C3765 Chyba kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8370a5c9c25fee211636214a82f22c05ccb311
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cac3930e4f5ec42587a9f557adc7a82d750b3819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042127"
 ---
 # <a name="compiler-error-c3765"></a>C3765 chyby kompilátoru
-'událost': nelze definovat událost v "typ" označeno event_receiver – třída/struktury  
-  
- Pokud je označené jako třídu [event_receiver –](../../windows/event-receiver.md) atribut, nemůže obsahovat třídu [__event](../../cpp/event.md) deklarace.  
-  
- Následující ukázka generuje C3765:  
-  
-```  
-// C3765.cpp  
-[event_receiver(native)]  
-struct ER2 {  
-   __event void f();   // C3765  
-   __event void b(int);   // C3765  
-};  
+
+'událost': nelze definovat událost ve třídě nebo struktuře "typ" označené jako event_receiver
+
+Pokud má třída označení s [event_receiver](../../windows/event-receiver.md) atribut, nesmí obsahovat třídu [__event](../../cpp/event.md) deklarace.
+
+Následující ukázka generuje C3765:
+
+```
+// C3765.cpp
+[event_receiver(native)]
+struct ER2 {
+   __event void f();   // C3765
+   __event void b(int);   // C3765
+};
 ```

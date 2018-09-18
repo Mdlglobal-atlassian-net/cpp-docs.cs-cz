@@ -1,5 +1,5 @@
 ---
-title: C2829 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2829 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091e8ad9238b0f4281b3afc900663ca487d4eada
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04798056b25d09ad78f5da0e85b47345db5608dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034990"
 ---
-# <a name="compiler-error-c2829"></a>C2829 chyby kompilátoru
-"provozovatelem operátor" nemůže mít seznam proměnných parametrů  
-  
- Pouze dva operátory může trvat seznamy proměnné parametrů:  
-  
--   Volání funkce `()`  
-  
--   `new`
+# <a name="compiler-error-c2829"></a>Chyba kompilátoru C2829
+
+'operator operátor' nemůže mít seznam parametrů proměnných
+
+Seznamy parametrů proměnných může mít pouze dva operátory:
+
+- Volání funkce `()`
+
+- `new`

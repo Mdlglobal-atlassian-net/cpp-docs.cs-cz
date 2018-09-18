@@ -1,5 +1,5 @@
 ---
-title: Ukládání sjednocení | Microsoft Docs
+title: Ukládání sjednocení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a741444aa9b0e9af1e1eb344a8ac7029127af3f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 516de9411a91f4bb8dd5f8775544ef32e7863bb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038266"
 ---
 # <a name="storage-of-unions"></a>Ukládání sjednocení
-Úložiště přidružené k proměnné sjednocení je místo na disku požadované pro největšího člena sjednocení. Při uložení menšího člena sjednocení může proměnná sjednocení obsahovat nevyužitý paměťový prostor. Všichni členové jsou uloženi ve stejném paměťovém prostoru a začínají na stejné adrese. Uložená hodnota je přepsána pokaždé, když je hodnota přiřazena k jinému členu. Příklad:  
-  
-```  
-union         /* Defines a union named x */  
-{  
-    char *a, b;  
-    float f[20];  
-} x;  
-```  
-  
- Členové `x` union jsou v pořadí podle jejich deklarace ukazatel na `char` hodnotu, `char` hodnota a pole **float** hodnoty. Úložiště přidělené prvku `x` je požadované místo na disku pro pole o 20 prvcích `f`, jelikož `f` je nejdelším členem sjednocení. Vzhledem k tomu, že ke sjednocení není přidružena žádná značka, jeho typ je nepojmenovaný nebo „anonymní“.  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarace sjednocení](../c-language/union-declarations.md)
+
+Úložiště přidružené k proměnné sjednocení je místo na disku požadované pro největšího člena sjednocení. Při uložení menšího člena sjednocení může proměnná sjednocení obsahovat nevyužitý paměťový prostor. Všichni členové jsou uloženi ve stejném paměťovém prostoru a začínají na stejné adrese. Uložená hodnota je přepsána pokaždé, když je hodnota přiřazena k jinému členu. Příklad:
+
+```
+union         /* Defines a union named x */
+{
+    char *a, b;
+    float f[20];
+} x;
+```
+
+Členové `x` sjednocení jsou v pořadí podle své deklarace, ukazatel na `char` hodnotu, `char` hodnotu a pole **float** hodnoty. Úložiště přidělené prvku `x` je požadované místo na disku pro pole o 20 prvcích `f`, jelikož `f` je nejdelším členem sjednocení. Vzhledem k tomu, že ke sjednocení není přidružena žádná značka, jeho typ je nepojmenovaný nebo „anonymní“.
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace sjednocení](../c-language/union-declarations.md)

@@ -1,5 +1,5 @@
 ---
-title: C2879 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2879 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba1738da7d349ecafd9f10f31d8f05ac1f12df0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 632142ea0efd8a9d009f18b898213cfa92514b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042473"
 ---
-# <a name="compiler-error-c2879"></a>C2879 chyby kompilátoru
-'symbol': pouze existujícího oboru názvů lze zadat alternativní název podle definice alias oboru názvů  
-  
- Nelze vytvořit [alias oboru názvů](../../cpp/namespaces-cpp.md#namespace_aliases) na symbol než obor názvů.  
-  
- Následující ukázka generuje C2879:  
-  
-```  
-// C2879.cpp  
-int main() {  
-   int i;  
-   namespace A = i;   // C2879 i is not a namespace  
-}  
+# <a name="compiler-error-c2879"></a>Chyba kompilátoru C2879
+
+'symbol': pouze existujícího oboru názvů může být dán alternativní název definice aliasu oboru názvů
+
+Nelze vytvořit [aliasu oboru názvů](../../cpp/namespaces-cpp.md#namespace_aliases) symbol než obor názvů.
+
+Následující ukázka generuje C2879:
+
+```
+// C2879.cpp
+int main() {
+   int i;
+   namespace A = i;   // C2879 i is not a namespace
+}
 ```

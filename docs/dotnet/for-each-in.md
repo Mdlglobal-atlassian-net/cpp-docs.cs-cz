@@ -1,5 +1,5 @@
 ---
-title: pro každou v | Microsoft Docs
+title: u každé v | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040688"
 ---
 # <a name="for-each-in"></a>for each, in
-Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k dispozici v projektech v jazyce C++/CLI a v nativním jazyce C++. Jeho použití se však nedoporučuje. Zvažte použití standardního [na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md) místo.  
+Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k dispozici v projektech v jazyce C++/CLI a v nativním jazyce C++. Jeho použití se však nedoporučuje. Zvažte použití standardního [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) místo.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
  **Syntaxe**  
@@ -43,23 +43,23 @@ Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k di
   
  **Parametry**  
   
- `type`  
- Typ `identifier`.  
+*Typ*<br/>
+Typ `identifier`.  
   
- `identifier`  
- Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [sledování Reference – operátor](../windows/tracking-reference-operator-cpp-component-extensions.md), můžete upravit elementu.  
+*identifikátor*<br/>
+Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), lze tento prvek upravit.  
   
- `expression`  
- Výraz pole nebo kolekce. Element kolekcí musí být tak, aby kompilátor můžete převeďte ho na `identifier` typu.  
+*Výraz*<br/>
+Výraz pole nebo kolekce. Prvek kolekce musí být tak, aby kompilátor mohl převést tak, `identifier` typu.  
   
- `statements`  
- Jeden nebo více příkazů ke spuštění.  
+*Příkazy*<br/>
+Jeden nebo více příkazů ke spuštění.  
   
  **Poznámky**  
   
- `for each` Příkaz je použít k iteraci v rámci kolekce. Prvky v kolekci je možné měnit, ale nelze je přidávat ani odstraňovat.  
+ `for each` Prohlášení se používá k iteraci v kolekci. Prvky v kolekci je možné měnit, ale nelze je přidávat ani odstraňovat.  
   
- *Příkazy* jsou provést pro každý prvek v poli nebo kolekce. Po dokončení iterace pro všechny elementy v kolekci, je ovládací prvek přenesen do příkazu, který odpovídá `for each` bloku.  
+ *Příkazy* jsou spouštěny pro každý prvek v poli nebo kolekci. Po dokončení iterace u všech prvků v kolekci je kontrola předána příkazu následujícímu `for each` bloku.  
   
  `for each` a `in` jsou [kontextově závislá klíčová slova](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
@@ -79,7 +79,7 @@ Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k di
  – Možnost kompilátoru: **/ZW**  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak používat `for each` k iteraci v rámci řetězce.  
+ Tento příklad ukazuje způsob použití `for each` k iteraci v rámci řetězce.  
   
 ```  
 // for_each_string1.cpp  
@@ -118,18 +118,18 @@ Testing
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  **Poznámky**  
   
- Syntaxe CLR je stejný jako **všechny moduly runtime** syntaxe, s výjimkou následujícím způsobem.  
+ Syntaxe CLR je stejná jako **všechny moduly runtime** syntaxe, s výjimkou následujícího.  
   
- *výraz*  
- Výraz spravovaného pole nebo kolekce. Element kolekcí musí být tak, aby kompilátor můžete převést z <xref:System.Object> k *identifikátor* typu.  
+ *Výraz*  
+ Výraz spravovaného pole nebo kolekce. Prvek kolekce musí být tak, aby kompilátor mohl převést z <xref:System.Object> k *identifikátor* typu.  
   
- *výraz* vyhodnocen jako typ, který implementuje <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, nebo typ, který definuje `GetEnumerator` metoda, že buď vrátí typ, který implementuje <xref:System.Collections.IEnumerator> nebo deklaruje všechny metody, které jsou definovány v `IEnumerator`.  
+ *výraz* vyhodnocen jako typ, který implementuje <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, nebo typ, který definuje `GetEnumerator` metody, aby buď vrátil typ, který implementuje <xref:System.Collections.IEnumerator> nebo deklaruje všechny metody, které jsou definovány v `IEnumerator`.  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak používat `for each` k iteraci v rámci řetězce.  
+ Tento příklad ukazuje způsob použití `for each` k iteraci v rámci řetězce.  
   
 ```  
 // for_each_string2.cpp  

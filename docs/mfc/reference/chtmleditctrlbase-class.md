@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031506"
 ---
 # <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase – třída
 Představuje součást úprav jazyka HTML.  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Přepne aktuální výběr až bloku normální formátu uspořádaného seznamu.|  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Název odvozené třídy.  
+*T*<br/>
+Název odvozené třídy.  
   
 ## <a name="remarks"></a>Poznámky  
  `CHtmlEditCtrlBase` Poskytuje členské funkce pro ovládací prvek WebBrowser HTML úpravy příkazy, jako například [tučné](#bold). (Alternativně můžete volat [ExecCommand](#execcommand) ke spuštění příkazu IDM_BOLD.)  

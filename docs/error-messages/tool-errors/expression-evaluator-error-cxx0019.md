@@ -1,5 +1,5 @@
 ---
-title: CXX0019 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0019 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031805"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Chyba při vyhodnocování výrazu CXX0019
-Chybný typ přetypování  
-  
- Vyhodnocovací filtr výrazů C nelze provést typ přetypování jako zapsána.  
-  
- Tato chyba je stejný jako CAN0019.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Zadaný typ neznámý.  
-  
-2.  Nebyly k dispozici příliš mnoho úrovní typů ukazatele. Například typ přetypování  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
-     Nelze vyhodnotit ve vyhodnocovací filtr výrazů C.
+
+Chybný typ přetypování
+
+Chyba při vyhodnocování výrazů C nelze provést přetypování, jak je uvedená typu.
+
+Tato chyba se shoduje s CAN0019.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Zadaný typ neznámý.
+
+1. Došlo k příliš mnoho úrovní typy ukazatelů. Například přetypování typu
+
+    ```
+    (char **)h_message
+    ```
+
+     nejde vyhodnotit ve vyhodnocovací filtr výrazů C.

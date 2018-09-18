@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036166"
 ---
 # <a name="ccomcontrol-class"></a>Ccomcontrol – třída
 
@@ -46,17 +46,17 @@ Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvk
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Třída implementace ovládacího prvku.
 
-*WinBase*  
+*WinBase*<br/>
 Základní třída, která implementuje okny. Výchozí hodnota je [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Členové
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="remarks"></a>Poznámky
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač okna nadřazené nebo vlastníka. Je potřeba zadat popisovač okna platný. Okno ovládacího prvku je omezena na oblasti nezašle nadřazenému oknu.
 
-*rcPos*  
+*rcPos*<br/>
 [in] Počáteční velikost a umístění okna, který se má vytvořit.
 
 ### <a name="remarks"></a>Poznámky
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*  
+*dispID*<br/>
 [in] Identifikátor vlastnosti, které se změnily.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*  
+*dispID*<br/>
 [in] Identifikátor vlastnosti Chystáte se změnit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -203,7 +203,7 @@ Jeden standardní hodnoty HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný vlastnosti ovládacího prvku je změnit. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK.  
+Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný vlastnosti ovládacího prvku je změnit. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK.
 
 Tato metoda je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*  
+*lpszText*<br/>
 Text, který se má zobrazit v okně se zprávou.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Pole Název dialogového okna. Pokud hodnotu NULL (výchozí), název se používá "Chyba".
 
-*nTyp*  
+*nTyp*<br/>
 Určuje obsah a chování dialogového okna. Zobrazit [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) položku v dokumentaci Windows SDK pro seznam k dispozici různé zprávami. Výchozí hodnota poskytuje jednoduchý **OK** tlačítko.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -243,7 +243,7 @@ Vrátí celočíselnou hodnotu určující jednu z hodnot položky nabídky v č
 
 ## <a name="see-also"></a>Viz také
 
-[Cwindowimpl – třída](../../atl/reference/cwindowimpl-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[CComControlBase – třída](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[CComControlBase – třída](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl – třída](../../atl/reference/ccomcompositecontrol-class.md)

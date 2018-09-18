@@ -1,5 +1,5 @@
 ---
-title: C2095 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2095 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7214862ba35c627987c6dace2d5d4c8c4d042fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42fa7432dce465257b8179ba8a52b2654e0e5507
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032462"
 ---
-# <a name="compiler-error-c2095"></a>C2095 chyby kompilátoru
-'function': skutečný parametr obsahuje typ void: parametr "číslo"  
-  
- Parametr předaný funkci je typ `void`, což není povolené. Použijte ukazatel na void ( `void *`) místo.  
-  
- `number` Určuje, které parametr `void`.
+# <a name="compiler-error-c2095"></a>Chyba kompilátoru C2095
+
+'function': skutečný parametr má typ void: Parametr 'number'
+
+Parametr předaný funkci je typ `void`, což není povoleno. Použije ukazatel na void ( `void *`) místo toho.
+
+`number` Označuje, který parametr `void`.

@@ -1,5 +1,5 @@
 ---
-title: C2097 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2097 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b867c7f043d796f208fdc7100509893147daf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2da955f5382a1ebacdb507a69ed02627b11462e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021860"
 ---
-# <a name="compiler-error-c2097"></a>C2097 chyby kompilátoru
-Neplatný inicializace  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Inicializace pomocí nonconstant hodnotu proměnné.  
-  
-2.  Inicializace krátké adresy se dlouho adresou.  
-  
-3.  Inicializace místní struktury, sjednocení nebo pole s výraz nonconstant při kompilaci s **/Za**.  
-  
-4.  Inicializace s výrazem, který obsahuje operátor čárka.  
-  
-5.  Inicializace s výrazem, který není konstantní ani symbolický.
+# <a name="compiler-error-c2097"></a>Chyba kompilátoru C2097
+
+Neplatná inicializace
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Inicializace proměnné pomocí nekonstantním hodnoty.
+
+1. Inicializace krátké adresy s Dlouhá adresa.
+
+1. Inicializace místní struktury, sjednocení nebo pole s nekonstantním výrazem při kompilaci s **/Za**.
+
+1. Inicializace pomocí výrazu obsahujícím operátor čárky.
+
+1. Inicializace s výrazem, který není konstantní ani symbolické.

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022991"
 ---
 # <a name="csid-class"></a>CSID – třída
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Existující `CSid` objektu nebo `SID` strukturu (security identifier).
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 Oprávnění.
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 Počet podautority.
 
-*pszAccountName*  
+*pszAccountName*<br/>
 Název účtu.
 
-*pszSystem*  
+*pszSystem*<br/>
 Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
 
-*psid má*  
+*psid má*<br/>
 Ukazatel `SID` struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` Strukturu (security identifier) nebo `CSid` objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 Podautority.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>Parametry
 
-*pszAccountName*  
+*pszAccountName*<br/>
 Název účtu.
 
-*pszSystem*  
+*pszSystem*<br/>
 Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
 
-*psid má*  
+*psid má*<br/>
 Ukazatel [SID](/windows/desktop/api/winnt/ns-winnt-_sid) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -385,13 +385,13 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE. Chc
 Operátor přiřazení.
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` přiřadit `CSid` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně == – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně == – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -534,7 +534,7 @@ Hodnota TRUE v případě *lhs* je větší než nebo rovna hodnotě *zarovnán�
 
 Přetypování `CSid` na ukazatel na objekt `SID` strukturu (security identifier).
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ Volání [CSid::LoadAccount](#loadaccount) aktualizovat `CSid` objekt před vol�
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)<br/>
 [Operátory](../../atl/reference/atl-operators.md)

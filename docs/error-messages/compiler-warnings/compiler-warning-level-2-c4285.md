@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4285 | Microsoft Docs
+title: Upozornění (úroveň 2) C4285 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4366142c14ec77c1c344312e50e7295c71ca93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ad828e25f647bddcc8a9ebe9662e2ba61f48d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040687"
 ---
-# <a name="compiler-warning-level-2-c4285"></a>C4285 kompilátoru upozornění (úroveň 2)
-Návratový typ pro -> identifier::operator je rekurzivní, pokud se aplikují pomocí notace zaváděcí  
-  
- Zadaný **operátor -> ()** funkce nemůže vrátit je typu, pro která je definována, nebo odkaz na typ, pro který je definován.  
-  
- Následující ukázka generuje C4285:  
-  
-```  
-// C4285.cpp  
-// compile with: /W2  
-class C  
-{  
-public:  
-    C operator->();   // C4285  
-   // C& operator->();  C4285, also  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-2-c4285"></a>Kompilátor upozornění (úroveň 2) C4285
+
+Návratový typ pro -> identifier::operator je rekurzivní, pokud se použije infixová notace.
+
+Zadaný **operator -> ()** funkce nemůže vracet typ, pro který je definován nebo odkaz na typ, pro který je definován.
+
+Následující ukázka generuje C4285:
+
+```
+// C4285.cpp
+// compile with: /W2
+class C
+{
+public:
+    C operator->();   // C4285
+   // C& operator->();  C4285, also
+};
+
+int main()
+{
+}
 ```

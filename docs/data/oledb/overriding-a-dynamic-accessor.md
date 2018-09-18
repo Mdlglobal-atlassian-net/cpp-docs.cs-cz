@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035536"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Přepsání dynamického přístupového objektu
+
 Při použití dynamického přístupového objektu jako `CDynamicAccessor`, příkaz `Open` metoda vytvoří přístupový objekt automaticky, založeného na informace o sloupci otevřené sady řádků. Můžete přepsání dynamického přístupového objektu k řízení, přesně jak jsou vázané sloupce.  
   
- Přepsání dynamického přístupového objektu, předejte **false** jako poslední parametr `CCommand::Open` metody. To zabraňuje `Open` od vytvoření automaticky přistupujícího objektu. Potom můžete zavolat `GetColumnInfo` a volat `AddBindEntry` pro každý sloupec, který chcete vytvořit vazbu. Následující kód ukazuje, jak to udělat:  
+Přepsání dynamického přístupového objektu, předejte **false** jako poslední parametr `CCommand::Open` metody. To zabraňuje `Open` od vytvoření automaticky přistupujícího objektu. Potom můžete zavolat `GetColumnInfo` a volat `AddBindEntry` pro každý sloupec, který chcete vytvořit vazbu. Následující kód ukazuje, jak to udělat:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití přístupových objektů](../../data/oledb/using-accessors.md)
+
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)

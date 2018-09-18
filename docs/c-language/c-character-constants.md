@@ -1,5 +1,5 @@
 ---
-title: Konstanty znaků jazyka C | Microsoft Docs
+title: Konstanty znaků jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0009f795936da7eb0c2ff69aa192e8f609638d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9908bfd8be662a53727e9c833626f329dd45c04
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038578"
 ---
 # <a name="c-character-constants"></a>Konstanty znaků jazyka C
-"Konstanta znaků" je vytvořen uzavřením jeden znak z reprezentovat znakovou sadu do jednoduchých uvozovek (**' '**). Konstanty znaků se používají k vyjádření znaků [znaková sada spuštění](../c-language/execution-character-set.md).  
-  
-## <a name="syntax"></a>Syntaxe  
- *Konstanta znaků*:  
- **'** *c-char pořadí* **.**  
-  
- **L "** *c-char pořadí* **.**  
-  
- *c – znak pořadí*:  
- *c – znak*  
-  
- *c – znak pořadí c-char*  
-  
- *c – znak*:  
- Nastavit kteréhokoli člena znak zdroje, s výjimkou jednoduché uvozovky (**'**), zpětné lomítko (**\\**), nebo znak nového řádku  
-  
- *řídicí sekvence*  
-  
- *řídicí sekvence*:  
- *jednoduché – řídicí sekvence*  
-  
- *osmičková řídicí sekvence*  
-  
- *hexadecimální – řídicí sekvence*  
-  
- *jednoduché – řídicí sekvence*: jeden z  
- **\a \b \f \n \r \t \V**  
-  
- **\\' \\" \\\ \\?**  
-  
- *osmičková řídicí sekvence*:  
- **\\**  *osmičková číslice*  
-  
- **\\**  *osmičková číslice osmičková číslice*  
-  
- **\\**  *osmičková číslice osmičková osmičková číslice číslic*  
-  
- *hexadecimální – řídicí sekvence*:  
- **\x***šestnáctková číslice*   
-  
- *hexadecimální číslice hexadecimální – řídicí sekvence*  
-  
-## <a name="see-also"></a>Viz také  
- [Konstanty jazyka C](../c-language/c-constants.md)
+
+"Znaková konstanta" je tvořena uzavřením jednoho znaku reprezentovatelné znakové sady do jednoduchých uvozovek (**""**). Znakové konstanty se používají k vyjádření znaků ve [znaková sada spuštění](../c-language/execution-character-set.md).
+
+## <a name="syntax"></a>Syntaxe
+
+*Znaková konstanta*: **"** *c-char pořadí* **.**
+
+**L "** *c-char pořadí* **.**
+
+*c – znak sekvence*: *c-char*
+
+*c – znak sekvence jazyka c-char*
+
+*c – znak*: žádný člen zdrojové znakové sady kromě jednoduché uvozovky (**"**), zpětného lomítka (**\\**), nebo znak nového řádku
+
+*řídicí sekvence*
+
+*řídicí sekvence*: *simple-escape-sequence*
+
+*osmičková řídicí sekvence*
+
+*šestnáctková řídicí sekvence*
+
+*Simple-escape-sequence*: jeden z **\a \b \f \n \r \t \v**
+
+**\\' \\" \\\ \\?**
+
+*osmičková řídicí sekvence*: **\\** *uveden jako osmičková číslice* 
+
+**\\**  *uveden jako osmičková číslice osmičkovými číslicemi*
+
+**\\**  *uveden jako osmičková číslice uveden jako osmičková číslice osmičkovými číslicemi*
+
+*šestnáctková řídicí sekvence*: **\x***šestnáctkové číslice* 
+
+*šestnáctková řídicí sekvence šestnáctkové číslice*
+
+## <a name="see-also"></a>Viz také
+
+[Konstanty jazyka C](../c-language/c-constants.md)

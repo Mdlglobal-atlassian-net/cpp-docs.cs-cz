@@ -1,5 +1,5 @@
 ---
-title: Pravidla a omezení pro používání holých funkcí | Microsoft Docs
+title: Pravidla a omezení pro používání holých funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b09facc452aa74c0e6030985ba9d9e87bbfab1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e57021007c2df52cafd2143605bb81521eba323a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033885"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Pravidla a omezení pro používání holých funkcí
-Informace o pravidla a omezení pro používání holých funkcí, naleznete v tématu odpovídající v referenční příručka jazyka C++: [pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Holé funkce](../c-language/naked-functions.md)
+
+Informace o pravidlech a omezeních použití neviditelných funkcí naleznete v tématu odpovídajícím tématu v referenční dokumentaci jazyka C++: [pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Holé funkce](../c-language/naked-functions.md)

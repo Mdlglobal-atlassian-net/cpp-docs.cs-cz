@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033976"
 ---
 # <a name="cheapptr-class"></a>Cheapptr – třída
 
@@ -37,16 +37,16 @@ Třída inteligentní ukazatel pro správu haldy ukazatele.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ objektu ukládaly na haldě.
 
-*Allocator –*  
+*Allocator –*<br/>
 Třída přidělení paměti pro použití.
 
 ## <a name="members"></a>Členové
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Počet prvků, které slouží k výpočtu velikosti paměti k přidělení. Výchozí hodnota je 1.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Stávajícího ukazatele haldy nebo `CHeapPtr`.
 
 ### <a name="remarks"></a>Poznámky
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Existující objekt `CHeapPtr`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Nový počet prvků, které slouží k výpočtu velikosti paměti k přidělení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -177,6 +177,6 @@ Vrátí hodnotu PRAVDA, pokud je paměť byla úspěšně přidělena false při
 
 ## <a name="see-also"></a>Viz také
 
-[Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
-[Ccrtallocator – třída](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase – třída](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator – třída](../../atl/reference/ccrtallocator-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

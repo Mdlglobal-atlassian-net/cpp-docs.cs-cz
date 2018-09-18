@@ -55,14 +55,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: af73571661e816f3e4ef10d3f0e9d33899cda99e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033170"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+
 Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [vsprintf_s – _vsprintf_s_l –, vswprintf_s – _vswprintf_s_l –](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4606 | Microsoft Docs
+title: Upozornění (úroveň 1) C4606 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f0a954b48e2c8bd036651efa3e8a3e65b8e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcdaba046f495dc3a29a7c9228edc561674f568f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035991"
 ---
-# <a name="compiler-warning-level-1-c4606"></a>C4606 kompilátoru upozornění (úroveň 1)
-\#– Direktiva pragma upozornění: warning_number ignorován; Upozornění analýzy kódu nejsou přidružené úrovně varování  
-  
- Analýza kódu, pouze upozornění `error`, `once`, a `default` jsou podporovány [upozornění](../../preprocessor/warning.md) – Direktiva pragma.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4606.  
-  
-```  
-// C4606.cpp  
-// compile with: /c /W1  
-#pragma warning(1: 6001)   // C4606  
-#pragma warning(once: 6001)   // OK  
+# <a name="compiler-warning-level-1-c4606"></a>Kompilátor upozornění (úroveň 1) C4606
+
+\#– Direktiva pragma upozornění: ignoruje; warning_number Upozornění analýzy kódu nejsou přidružená k úrovním upozornění
+
+Pro upozornění analýzy kódu, pouze `error`, `once`, a `default` jsou podporovány [upozornění](../../preprocessor/warning.md) direktivy pragma.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4606.
+
+```
+// C4606.cpp
+// compile with: /c /W1
+#pragma warning(1: 6001)   // C4606
+#pragma warning(once: 6001)   // OK
 ```

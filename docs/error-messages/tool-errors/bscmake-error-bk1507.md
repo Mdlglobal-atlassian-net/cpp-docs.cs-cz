@@ -1,5 +1,5 @@
 ---
-title: Chyba nástroje BSCMAKE BK1507 | Microsoft Docs
+title: Chyba nástroje BSCMAKE BK1507 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024785"
 ---
 # <a name="bscmake-error-bk1507"></a>Chyba nástroje BSCMAKE BK1507
-Nelze otevřít dočasný soubor filename [: Důvod]  
-  
- BscMake – nelze otevřít dočasný soubor.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  **TMP** prostředí proměnná není nastavená na platnou jednotku a adresáře.  
-  
-2.  Celého disku.
+
+Nelze otevřít dočasný soubor 'filename' [: z důvodu]
+
+BscMake – nelze otevřít dočasný soubor.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. **TMP** proměnná prostředí není nastavená na platnou jednotku a adresáře.
+
+1. Celého disku.

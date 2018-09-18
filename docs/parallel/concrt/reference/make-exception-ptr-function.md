@@ -1,5 +1,5 @@
 ---
-title: Funkce make_exception_ptr | Microsoft Docs
+title: make_exception_ptr – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f437695e8c0062f9a40f99ac75485101a65fe2e3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3f483d266b8150dfd4aaa5299ffec280d447157
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695717"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037616"
 ---
 # <a name="makeexceptionptr-function"></a>Funkce make_exception_ptr
 ## <a name="syntax"></a>Syntaxe  
@@ -30,15 +30,18 @@ exception_ptr make_exception_ptr(_E _Except);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_E`  
- `_Except`  
+*_E*<br/>
+Typ výjimky.
+
+*_Except*<br/>
+Hodnota výjimky.
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ppltasks.h  
   
- **Namespace:** – std  
+ **Namespace:** std  
   
 ## <a name="see-also"></a>Viz také  
  [std – obor názvů](std-namespace.md)

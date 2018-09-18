@@ -1,5 +1,5 @@
 ---
-title: Ladění zprostředkovatele | Microsoft Docs
+title: Ladění zprostředkovatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040196"
 ---
 # <a name="debugging-your-provider"></a>Ladění zprostředkovatele
-Existují dva způsoby, jak ladit svého poskytovatele:  
+
+Chcete-li ladit poskytovatele dvěma způsoby:  
   
--   Protože poskytovatelé jsou vytvářeny v procesu, můžete vytvořit některé příjemce kódu použitím šablony příjemce technologie OLE DB a krokování s vnořením zprostředkovatele normálně.  
+- Protože zprostředkovatelé jsou vytvářeny v procesu, můžete vytvořit příjemce kódu s využitím technologie OLE DB – šablony příjemce a krokování s vnořením poskytovateli normálně.  
   
--   Můžete použít nástroj ITEST, která se dodává s Visual C++.  
+- Můžete použít nástroj ITEST, která se dodává s jazykem Visual C++.  
   
 ### <a name="to-use-the-itest-utility"></a>Chcete-li použít nástroj ITEST  
   
-1.  Otevřete projekt zprostředkovatele.  
+1. Otevřete projekt zprostředkovatele.  
   
-2.  Na **projekty** nabídky, klikněte na tlačítko **nastavení**.  
+1. Na **projekty** nabídky, klikněte na tlačítko **nastavení**.  
   
-3.  V **stránky vlastností** dialogové okno, klikněte **ladění** kartě.  
+1. V **stránky vlastností** dialogové okno, klikněte na tlačítko **ladění** kartu.  
   
-4.  V **spustitelný soubor pro relaci ladění** vyberte ITEST aplikaci.  
+1. V **spustitelný soubor pro relaci ladění** vyberte ITEST aplikaci.  
   
-5.  Nastavte zarážky a pak ladění jako obvykle.  
+1. Nastavit zarážky a ladění obvyklým způsobem.  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

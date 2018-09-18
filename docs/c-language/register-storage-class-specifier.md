@@ -1,5 +1,5 @@
 ---
-title: zaregistrovat – specifikátor třídy úložiště | Microsoft Docs
+title: registrace – specifikátor třídy úložiště | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 211f623923286e598f495920bcbdac3a9321b13a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e15b6bd4136e2644dbd040ac509b35af772ae4c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028321"
 ---
 # <a name="register-storage-class-specifier"></a>register – specifikátor třídy úložiště
-**Konkrétní Microsoft**  
-  
- Kompilátor jazyka C/C++ společnosti Microsoft nerespektuje požadavky uživatele na proměnné registru. Všechny ostatní sémantiku pro přenositelnost však spojené s **zaregistrovat** – klíčové slovo berou v úvahu kompilátoru. Například nemůžete použít unární address-of – operátor (**&**) zaregistrovat objekt ani může **zaregistrovat** – klíčové slovo použije na pole.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+
+**Specifické pro Microsoft**
+
+Kompilátor jazyka C/C++ společnosti Microsoft nerespektuje požadavky uživatele na proměnné registru. Ale pro přenositelnost všechny ostatní sémantiky přidružené **zaregistrovat** – klíčové slovo jsou kompilátorem respektovány. Například nelze použít unární address-of – operátor (**&**) na objekt registru ani použít **zaregistrovat** klíčové slovo se používá pro pole.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

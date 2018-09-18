@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4197 | Microsoft Docs
+title: Upozornění (úroveň 3) C4197 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa119e0b1afd3f660dd04040965006f1b52cad01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e3651a305b8654b9d7d36238885233b8e583f27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043609"
 ---
-# <a name="compiler-warning-level-3-c4197"></a>C4197 kompilátoru upozornění (úroveň 3)
-'type': nejvyšší úrovně volatile v přetypování je ignorována.  
-  
- Kompilátor zjistil přetypování na typ r-value, což je kvalifikovaný s [volatile](../../cpp/volatile-cpp.md), nebo přetypování typu r-value na nějaký typ, který je kvalifikovaný s volatile. Podle C standardní (6.5.3) dávat smysl jenom pro výrazy hodnot l vlastnosti související s kvalifikovaný typy.  
-  
- Následující ukázka generuje C4197:  
-  
-```  
-// C4197.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-#include <signal.h>  
-#include <stdlib.h>  
-  
-void sigproc(int);  
-struct S  
-{  
-   int i;  
-} s;  
-  
-int main()  
-{  
-   signal(SIGINT, sigproc);  
-   s.i = 1;  
-   S *pS = &s;  
-   for ( ; (volatile int)pS->i ; )   // C4197  
-      break;  
-   // for ( ; *(volatile int *)&pS->i ; )   // OK  
-   //    break;  
-}  
-  
-void sigproc(int) // ctrl-C  
-{  
-   signal(SIGINT, sigproc);  
-   s.i = 0;  
-}  
-  
+# <a name="compiler-warning-level-3-c4197"></a>Kompilátor upozornění (úroveň 3) C4197
+
+'type': volatile na nejvyšší úrovni v přetypování se ignoruje.
+
+Kompilátor zjistil přetypování na r-value typu, který je kvalifikován [volatile](../../cpp/volatile-cpp.md), nebo výraz přetypování r-value typu pro nějaký typ, který je kvalifikován volatile. Podle jazyka C standard (6.5.3) jsou vlastnosti související s typy kvalifikovaný smysl jenom pro výrazy l hodnotou.
+
+Následující ukázka generuje C4197:
+
+```
+// C4197.cpp
+// compile with: /W3
+#include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+
+void sigproc(int);
+struct S
+{
+   int i;
+} s;
+
+int main()
+{
+   signal(SIGINT, sigproc);
+   s.i = 1;
+   S *pS = &s;
+   for ( ; (volatile int)pS->i ; )   // C4197
+      break;
+   // for ( ; *(volatile int *)&pS->i ; )   // OK
+   //    break;
+}
+
+void sigproc(int) // ctrl-C
+{
+   signal(SIGINT, sigproc);
+   s.i = 0;
+}
+
 ```

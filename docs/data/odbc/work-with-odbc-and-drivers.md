@@ -1,5 +1,5 @@
 ---
-title: Práce s rozhraním ODBC a ovladači | Microsoft Docs
+title: Práce s rozhraním ODBC a ovladači | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37888b735e76c42aaca20b3519efe381f3d7578c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038786"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Práce s rozhraním ODBC a ovladači
-ODBC umožňuje psát aplikace, které nejsou závislé na jenom jednom systému správy databáze (databázového systému). Můžete napsat jednu aplikaci, která může pracovat na více systémech DBMS, pro které mají vaši uživatelé správný ovladač ODBC specifické databázového systému.  
+
+Rozhraní ODBC můžete psát aplikace, které nejsou závislé na jediného systému správy databáze (DBMS). Můžete napsat jednu aplikaci, která může fungovat v několika systémech DBMS, pro které mají vaši uživatelé správný ovladač ODBC specifická pro DBMS.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [Určení schématu zdroje dat ODBC za běhu](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+- [Určit schématu zdroje dat rozhraní ODBC za běhu](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
--   [Načtení popisu ovladače pomocí Správce rozhraní ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Získat popis ovladače pomocí Správce rozhraní ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Získat online nápovědu pro ovladač rozhraní ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Získání online nápovědy pro ovladač rozhraní ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Programové vytvoření tabulky ve zdroji dat rozhraní ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+- [Programové vytvoření tabulky ve zdroji dat rozhraní ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Volání funkcí rozhraní API ODBC přímo v prostředí MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [Volání funkcí rozhraní API ODBC přímo v prostředí MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9028 | Microsoft Docs
+title: Upozornění příkazového řádku D9028 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044129"
 ---
 # <a name="command-line-warning-d9028"></a>Upozornění příkazového řádku D9028
-minimální opětovné sestavení selhání, návrat k normální sestavení  
-  
- Soubor projektu IDB je poškozen. Odstraňte soubor a znovu vytvořit.  
-  
- Další informace o minimální znovu sestaví a souboru IDB, najdete v článku [/Gm – možnost kompilátoru](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Chyba minimálního opětovného sestavení, obnovuje se normální sestavení
+
+IDB soubor projektu je poškozen. Stejný soubor odstranit také a znovu sestavte.
+
+Další informace o minimální znovu sestaví a souboru IDB, najdete v článku [/Gm – možnost kompilátoru](../../build/reference/gm-enable-minimal-rebuild.md).

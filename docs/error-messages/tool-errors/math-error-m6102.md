@@ -1,5 +1,5 @@
 ---
-title: Chyba matematické operace M6102 | Microsoft Docs
+title: Chyba matematické operace M6102 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037499"
 ---
 # <a name="math-error-m6102"></a>Chyba matematické operace M6102
-denormal  
-  
- Operace generované velmi malé čísla s plovoucí desetinnou čárkou, který není platná z důvodu ztráty násobek. Denormal jsou s plovoucí desetinnou čárkou výjimky obvykle maskována, způsobuje zachycení a ovládání.  
-  
- Program se ukončí s ukončovacím kódem 130.
+
+denormal
+
+Operace generované velmi malé číslo s plovoucí desetinnou čárkou, které je neplatná kvůli ke ztrátě významu. Denormal výjimky s plovoucí desetinnou čárkou jsou obvykle maskované způsobuje zachycena a kterou se pracuje.
+
+Program se ukončí s ukončovacím kódem 130.

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039540"
 ---
 # <a name="connection-point-macros"></a>Makra bodů připojení
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název třídy, který obsahuje spojovací body.
 
 ### <a name="remarks"></a>Poznámky
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní se přidávají do mapy bodu připojení. 
 
-*piid*  
+*piid*<br/>
 [in] Ukazatel na identifikátor GUID rozhraní se adde.
 
 ### <a name="remarks"></a>Poznámky
@@ -111,5 +111,5 @@ Další informace o spojovacích bodů ve ATL naleznete v článku [spojovací b
 
 ## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce bodů připojení](../../atl/reference/connection-point-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Prostředí | Microsoft Docs
+title: Prostředí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c39696c921825dfe199c270b3cbe52f407e2da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d099be8201d061f104c729239f988a751c50168a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038253"
 ---
 # <a name="environment"></a>Prostředí
--   [Argumenty operace main](../c-language/arguments-to-main.md)  
-  
--   [Interaktivní zařízení](../c-language/interactive-devices.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Chování definované implementací](../c-language/implementation-defined-behavior.md)
+
+- [Argumenty operace main](../c-language/arguments-to-main.md)
+
+- [Interaktivní zařízení](../c-language/interactive-devices.md)
+
+## <a name="see-also"></a>Viz také
+
+[Chování definované implementací](../c-language/implementation-defined-behavior.md)

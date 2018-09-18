@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045078"
 ---
 # <a name="catlfilemappingbase-class"></a>Catlfilemappingbase – třída
 
@@ -89,13 +89,13 @@ Další informace najdete v tématu [mapování souboru](/windows/desktop/Memory
 Konstruktor
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Původní objekt mapování souboru ke zkopírování do vytvoření nového objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Původní objekt mapování souboru bude kopírováno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*  
+*hfile –*<br/>
 Popisovač souboru, ve kterém chcete vytvořit objekt mapování. *hfile –* musí být platný a nejde ji nastavit na INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti souboru identifikovaný *hfile –.*
 
-*nOffset*  
+*nOffset*<br/>
 Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Ochrana požadovanou pro zobrazení souborů při mapování souboru. Zobrazit *flProtect* v [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) v sadě Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Parametry
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti objekt mapování souboru identifikovaný *szName*.
 
-*szName*  
+*szName*<br/>
 Název objektu mapování.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Odkazuje na hodnotu BOOL, která je nastavena na hodnotu TRUE, pokud objekt mapování již existuje.
 
-*lpsa*  
+*lpsa*<br/>
 Ukazatel `SECURITY_ATTRIBUTES` struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Zobrazit *lpAttributes* v [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) v sadě Windows SDK.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Ochrana požadovaného pro zobrazení souborů, když je namapován soubor. Zobrazit *flProtect* v `CreateFileMapping` v sadě Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Parametry
 
-*szName*  
+*szName*<br/>
 Název objektu mapování. Pokud není otevřený popisovač pro objekt mapování souboru s tímto názvem a popisovač zabezpečení pro objekt mapování není v konfliktu s *dwViewDesiredAccess* parametru, otevřených operace úspěšná.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti objekt mapování souboru identifikovaný *szName*.
 
-*nOffset*  
+*nOffset*<br/>
 Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Aktuální objekt mapování souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -328,5 +328,5 @@ Zobrazit [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa
 
 ## <a name="see-also"></a>Viz také
 
-[Catlfilemapping – třída](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping – třída](../../atl/reference/catlfilemapping-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

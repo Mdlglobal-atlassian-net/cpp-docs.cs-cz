@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4162 | Microsoft Docs
+title: Upozornění (úroveň 1) C4162 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2789f6aa63c8a547a34ec6adfd89c1e1163c68e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a36fa6a63443bf2272df7ce6125fd77afedf100f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027177"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>C4162 kompilátoru upozornění (úroveň 1)
-"identifikátor": žádná funkce s C propojení nalezen  
-  
- Funkce C propojení je deklarován, ale nebyl nalezen.  
-  
- Toto upozornění vyřešíte kompilovat v souboru .c (vyvolání kompilátor jazyka C).  Pokud je nutné vyvolat C++ compiler, umístíte extern "C" před deklarace funkce.  
-  
- Následující ukázka generuje C4162  
-  
-```  
-// C4162.cpp  
-// compile with: /c /W1  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)   // C4162  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C4162b.cpp  
-// compile with: /c  
-extern "C"  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
+# <a name="compiler-warning-level-1-c4162"></a>Kompilátor upozornění (úroveň 1) C4162
+
+'identifier': žádná funkce s C-linkage nalezen
+
+Funkce s C-linkage je deklarovaná, ale nebyl nalezen.
+
+Pokud chcete vyřešit toto upozornění, kompilaci v souboru .c (vyvolání kompilátor jazyka C).  Pokud je nutné vyvolat kompilátor C++, umístěte před deklarací funkce extern "C".
+
+Následující ukázka generuje C4162
+
+```
+// C4162.cpp
+// compile with: /c /W1
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)   // C4162
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
+```
+
+Možná řešení:
+
+```
+// C4162b.cpp
+// compile with: /c
+extern "C"
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
 ```

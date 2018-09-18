@@ -1,5 +1,5 @@
 ---
-title: Soubory s nulovou délkou | Microsoft Docs
+title: Soubor o nulové délce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78a71ab42f466e16868ccb25f8082a27366b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6352723cc65ba1ed87d867fd1a9938269cc84832
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033586"
 ---
 # <a name="zero-length-files"></a>Pole s nulovou délkou
-**ANSI 4.9.3** jestli skutečně existuje soubor nulovou délkou  
-  
- Soubory s nulovou délkou jsou povoleny.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce knihovny](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Určuje, zda skutečně existuje soubor nulové délky
+
+Soubory s nulovou délkou jsou povoleny.
+
+## <a name="see-also"></a>Viz také
+
+[Funkce knihovny](../c-language/library-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: C3872 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3872 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3259e87eb8939129ebc84c0a08acab2c7d7c509
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ec6450dca0faa86f3cf27452eff6df9851742d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018831"
 ---
-# <a name="compiler-error-c3872"></a>C3872 chyby kompilátoru
-"char": Tento znak není povolen v identifikátoru  
-  
- Kompilátor C++ odpovídá C ++ 11 standard na povolených znaků v identifikátor. V identifikátoru jsou povoleny pouze určitý rozsah znaků a univerzální názvy znaků. Další omezení se použijí na počáteční znak identifikátoru. Další informace a seznam povolených a rozsahy název universal znaků najdete v tématu [identifikátory](../../cpp/identifiers-cpp.md).  
-  
- Rozsah znaků povolených v identifikátoru je méně omezující při kompilování C + +/ CLI kódu. Postupujte podle identifikátory v kódu zkompilovat pomocí/CLR [standardní standardy ECMA-335: společné jazykové infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
-  
- Následující ukázka generuje C3872:  
-  
-```  
-// C3872.cpp  
-int main() {  
-   int abc_\u0040;   // C3872, U+0040 is in base char set  
-   int abc_\u3001;   // C3872, U+3001 is not in allowed range  
-   int \u30A2_abc_\u3042;   // OK, UCNs in allowed range  
-}  
+# <a name="compiler-error-c3872"></a>Chyba kompilátoru C3872
+
+! char': Tento znak není v identifikátoru povolený.
+
+Kompilátor C++ 11 standard C ++ následuje na znaky v identifikátoru povolený. Jenom určitých rozsahů znaků a univerzální názvy znaků jsou v identifikátoru povolený. Další omezení se použijí pro počáteční znak identifikátoru. Další informace a seznam povolených znaků a název rozsahy univerzálních znaků naleznete v tématu [identifikátory](../../cpp/identifiers-cpp.md).
+
+Rozsah znaků v identifikátoru povolený je méně omezující při kompilaci C + +/ CLI kódu. Identifikátory v kódu zkompilovaném pomocí/CLR by měly dodržovat [Standard ECMA-335: Common Language infrastruktury (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+
+Následující ukázka generuje C3872:
+
+```
+// C3872.cpp
+int main() {
+   int abc_\u0040;   // C3872, U+0040 is in base char set
+   int abc_\u3001;   // C3872, U+3001 is not in allowed range
+   int \u30A2_abc_\u3042;   // OK, UCNs in allowed range
+}
 ```

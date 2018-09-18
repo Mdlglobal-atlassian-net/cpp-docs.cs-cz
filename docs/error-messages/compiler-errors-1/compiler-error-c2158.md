@@ -1,5 +1,5 @@
 ---
-title: C2158 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2158 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1a7151b58d02b582bf0c73fb4bb185f2b3c0ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e853e5915756b71b96e50374224b003eca412d99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034899"
 ---
-# <a name="compiler-error-c2158"></a>C2158 chyby kompilátoru
-'type': #pragma make_public – direktiva v současné době podporuje nativní bez šablony pouze pro typy  
-  
- [Make_public –](../../preprocessor/make-public.md) – Direktiva pragma lze použít pouze na typ nativní, bez šablony.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2158.  
-  
-```  
-// C2158.cpp  
-// compile with: /clr /c  
-ref class A {};  
-#pragma make_public(A)   // C2158  
-  
-template< typename T >  
-class B {};  
-#pragma make_public(B)   // C2158  
-#pragma make_public(B<int>)   // C2158  
-  
-void C () {}  
-#pragma make_public(C)   // C2158  
-  
-class D {};  
-#pragma make_public(D)   // OK  
+# <a name="compiler-error-c2158"></a>Chyba kompilátoru C2158
+
+'type': #pragma make_public directive je momentálně podporována pro pouze nativní nešablonové typy
+
+[Make_public](../../preprocessor/make-public.md) – Direktiva pragma lze použít pouze pro nativní nešablonové typu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2158.
+
+```
+// C2158.cpp
+// compile with: /clr /c
+ref class A {};
+#pragma make_public(A)   // C2158
+
+template< typename T >
+class B {};
+#pragma make_public(B)   // C2158
+#pragma make_public(B<int>)   // C2158
+
+void C () {}
+#pragma make_public(C)   // C2158
+
+class D {};
+#pragma make_public(D)   // OK
 ```

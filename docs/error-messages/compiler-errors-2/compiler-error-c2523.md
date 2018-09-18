@@ -1,5 +1,5 @@
 ---
-title: C2523 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2523 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f440bf282d6159af3a96bfeb1aa7db8941e87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022796"
 ---
-# <a name="compiler-error-c2523"></a>C2523 chyby kompilátoru
-' třída:: ~ identifikátor ': Neshoda značky destruktor/finalizační metodu  
-  
- Název destruktoru musí být název třídy sebou tildou (`~`). Konstruktor a destruktor jsou pouze členové, které mají stejný název jako třída.  
-  
- Následující ukázka generuje C2523:  
-  
-```  
-// C2523.cpp  
-// compile with: /c  
-class A {  
-   ~B();    // C2523  
-   ~A();   // OK  
-};  
+# <a name="compiler-error-c2523"></a>Chyba kompilátoru C2523
+
+' třída:: ~ identifikátor ': Neshoda značek destruktor nebo finalizační metodu
+
+Název destruktoru musí být název třídy předchází tildou (`~`). Konstruktor a destruktor se pouze členy, které mají stejný název jako třída.
+
+Následující ukázka generuje C2523:
+
+```
+// C2523.cpp
+// compile with: /c
+class A {
+   ~B();    // C2523
+   ~A();   // OK
+};
 ```

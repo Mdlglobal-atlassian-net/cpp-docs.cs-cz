@@ -1,5 +1,5 @@
 ---
-title: C2379 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2379 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1016bedfa9df0e9dfacb56734ee60397108d046
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec340a5a48705eb91bf5bf72ec20ad382f4b262c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032442"
 ---
-# <a name="compiler-error-c2379"></a>C2379 chyby kompilátoru
-formální parametr číslo je jiného typu povýšení  
-  
- Typ zadaného parametru není kompatibilní, prostřednictvím výchozí povýšení s typem v předchozí deklaraci. Jedná se o chybu v ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a upozornění s rozšíření Microsoft (**/Ze**).  
-  
- Následující ukázka generuje C2379:  
-  
-```  
-// C2379.c  
-// compile with: /Za  
-void func();  
-void func(char);   // C2379, char promotes to int  
+# <a name="compiler-error-c2379"></a>Chyba kompilátoru C2379
+
+počet formálních parametrů je jiného typu, pokud se zobrazí výzva
+
+Typ zadaného parametru není kompatibilní, prostřednictvím výchozí povýšení typu v předchozí deklaraci. Jedná se o chybu ve standardu ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a upozornění s rozšířeními společnosti Microsoft (**/Ze**).
+
+Následující ukázka generuje C2379:
+
+```
+// C2379.c
+// compile with: /Za
+void func();
+void func(char);   // C2379, char promotes to int
 ```

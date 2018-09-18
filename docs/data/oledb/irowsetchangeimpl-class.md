@@ -43,14 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3cac23621959fb71247b649171309ec9d12cf35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038733"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
+
 Šablony technologie OLE DB provádění [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) rozhraní ve specifikaci OLE DB.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -66,23 +67,25 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída odvozená z `IRowsetChangeImpl`.  
+
+*T*<br/>
+Třída odvozená z `IRowsetChangeImpl`.  
   
- *Úložiště*  
- Záznam uživatele.  
+*Úložiště*<br/>
+Záznam uživatele.  
   
- *BaseInterface*  
- Základní třídu pro rozhraní, jako například `IRowsetChange`.  
+*BaseInterface*<br/>
+Základní třídu pro rozhraní, jako například `IRowsetChange`.  
   
- *RowClass*  
- Jednotky úložiště pro popisovač řádku.  
+*RowClass*<br/>
+Jednotky úložiště pro popisovač řádku.  
   
- *MapClass*  
- Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.  
+*MapClass*<br/>
+Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -101,22 +104,24 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 |[FlushData](#flushdata)|Overidden poskytovatelem se zapsat data do svého úložiště.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní je zodpovědná za operace okamžitou zápisu do úložiště dat. "Ihned možných" znamená, že pokud koncový uživatel (uživatel příjemce) odešle všechny změny, tyto změny se okamžitě přenáší data uložit (a není možné vrátit zpět).  
+
+Toto rozhraní je zodpovědná za operace okamžitou zápisu do úložiště dat. "Ihned možných" znamená, že pokud koncový uživatel (uživatel příjemce) odešle všechny změny, tyto změny se okamžitě přenáší data uložit (a není možné vrátit zpět).  
   
- `IRowsetChangeImpl` implementuje rozhraní OLE DB `IRowsetChange` rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
+`IRowsetChangeImpl` implementuje rozhraní OLE DB `IRowsetChange` rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
   
- Šablony technologie OLE DB implementace podporuje všechny základní metody (`SetData`, `InsertRow`, a `DeleteRows`).  
+Šablony technologie OLE DB implementace podporuje všechny základní metody (`SetData`, `InsertRow`, a `DeleteRows`).  
   
 > [!IMPORTANT]
 >  Důrazně doporučujeme, abyste si přečetli následující dokumentace před pokusem o implementaci poskytovatele:  
   
--   [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)  
+- [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Kapitola 6 *odkaz programátora technologie OLE DB*  
+- Kapitola 6 *odkaz programátora technologie OLE DB*  
   
--   Také naleznete v tématu Jak `RUpdateRowset` třída se používá [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku.  
+- Také naleznete v tématu Jak `RUpdateRowset` třída se používá [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+
 Odstraní řádky ze sady řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -129,9 +134,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) v *referenční informace pro OLE DB programátory*. 
+
+Zobrazit [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+
 Vytvoří a inicializuje nový řádek v dané sadě řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -144,9 +151,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+
+Zobrazit [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
+
 Nastaví hodnoty dat v jedné nebo více sloupců.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -158,9 +167,11 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+
+Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+
 Overidden poskytovatelem se zapsat data do svého úložiště.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -171,15 +182,18 @@ HRESULT FlushData(HROW hRowToFlush,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hRowToFlush*  
- [in] Popisovač řádků pro data. Typ tohoto řádku je určen z *RowClass* argument šablony `IRowsetImpl` třídy (`CSimpleRow` ve výchozím nastavení).  
+
+*hRowToFlush*<br/>
+[in] Popisovač řádků pro data. Typ tohoto řádku je určen z *RowClass* argument šablony `IRowsetImpl` třídy (`CSimpleRow` ve výchozím nastavení).  
   
- *hAccessorToFlush*  
- [in] Popisovač přistupujícího objektu, který obsahuje informace o vazbě a informace o typu v jeho `PROVIDER_MAP` (viz [IAccessorImpl –](../../data/oledb/iaccessorimpl-class.md)).  
+*hAccessorToFlush*<br/>
+[in] Popisovač přistupujícího objektu, který obsahuje informace o vazbě a informace o typu v jeho `PROVIDER_MAP` (viz [IAccessorImpl –](../../data/oledb/iaccessorimpl-class.md)).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

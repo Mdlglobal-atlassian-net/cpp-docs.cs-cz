@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020252"
 ---
 # <a name="ca2wex-class"></a>Ca2wex – třída
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.
 
 ## <a name="members"></a>Členové
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Textový řetězec, který má být převeden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Znaková stránka používá k provedení převodu. Viz diskuze parametr stránky kód pro funkci Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) další podrobnosti.
 
 ### <a name="remarks"></a>Poznámky
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 Operátor převodu.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ Vrátí textový řetězec psaní LPWSTR.
 
 ## <a name="see-also"></a>Viz také
 
-[Ca2aex – třída](../../atl/reference/ca2aex-class.md)   
-[Ca2caex – třída](../../atl/reference/ca2caex-class.md)   
-[Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
-[Cw2cwex – třída](../../atl/reference/cw2cwex-class.md)   
-[Cw2wex – třída](../../atl/reference/cw2wex-class.md)   
+[CA2AEX – třída](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX – třída](../../atl/reference/ca2caex-class.md)<br/>
+[CW2AEX – třída](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX – třída](../../atl/reference/cw2wex-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

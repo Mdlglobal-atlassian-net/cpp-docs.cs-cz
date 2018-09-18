@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044272"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL – kolekce a výčty
 
@@ -36,21 +36,21 @@ Přečtěte si další informace o rozhraní pro výčty v článku odkazovat na
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[ATL – třídy kolekcí a výčtů](../atl/atl-collection-and-enumerator-classes.md)  
+[ATL – třídy kolekcí a výčtů](../atl/atl-collection-and-enumerator-classes.md)<br/>
 Stručně popisuje a obsahuje odkazy na ATL – třídy, které vám pomůže implementovat kolekce a výčty.
 
-[Principy návrhu rozhraní kolekce a výčtů](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[Principy návrhu rozhraní kolekce a výčtů](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 Tento článek popisuje různé zásady za každý typ rozhraní.
 
-[Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)  
+[Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
 Rozšířený příklad, který vás provede implementace kolekce založené na standardní knihovny C++.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
-[Ukázka ATLCollections](../visual-cpp-samples.md)  
+[Ukázka ATLCollections](../visual-cpp-samples.md)<br/>
 Ukázka, která demonstruje použití `ICollectionOnSTLImpl` a `CComEnumOnSTL`a implementaci vlastních tříd zásad kopírování.
 
 ## <a name="see-also"></a>Viz také

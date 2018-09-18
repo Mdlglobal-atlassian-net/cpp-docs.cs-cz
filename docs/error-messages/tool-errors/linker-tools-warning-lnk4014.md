@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4014 | Microsoft Docs
+title: Upozornění Linkerů LNK4014 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb86efbdc70342861a87a233ab687f7564cb48b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0a3b6f30733413a0f27c0b8daa07394bb04b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023108"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>Upozornění linkerů LNK4014
-Nelze najít objekt člen "objectname"  
-  
- Nelze najít LIB `objectname` v knihovně.  
-  
- **/Odebrat** a **/EXTRACT** možnosti vyžadují úplný název objektu člen, který má být odstraněn, nebo zkopíruje do souboru. Úplný název obsahuje cestu k souboru původní objekt. Pokud chcete zobrazit úplné názvy objektů člen v knihovně, použijte nástroje DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) nebo LIB [/LIST](../../build/reference/managing-a-library.md).
+
+nejde najít členský objekt "objectname"
+
+Nelze najít LIB `objectname` v knihovně.
+
+**/REMOVE** a **/EXTRAHOVAT** možnosti vyžadují celý název člena objektu, který je odstraněn, nebo se zkopíruje do souboru. Úplný název obsahuje cestu k souboru původní objekt. Chcete-li zobrazit úplné názvy členské objekty v knihovně, použijte DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) nebo LIB [/LIST](../../build/reference/managing-a-library.md).

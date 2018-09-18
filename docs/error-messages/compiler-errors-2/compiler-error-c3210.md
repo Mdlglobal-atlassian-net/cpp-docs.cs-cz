@@ -1,5 +1,5 @@
 ---
-title: C3210 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3210 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24146139fce7a1e42e112f913ab35ca425a9d5d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 804586a866f6a4d2c3cf206af14e0e2f907ed1b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037109"
 ---
-# <a name="compiler-error-c3210"></a>C3210 chyby kompilátoru
-'type': deklarace přístup můžete použít pouze pro člena základní třídy  
-  
- A [pomocí deklarace](../../cpp/using-declaration.md) byl nesprávně zadán.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3210.  
-  
-```  
-// C3210.cpp  
-// compile with: /c  
-struct A {  
-protected:  
-   int i;  
-};  
-  
-struct B {  
-   using A::i;   // C3210  
-};  
-  
-struct C : public A {  
-   using A::i;   // OK  
-};  
+# <a name="compiler-error-c3210"></a>Chyba kompilátoru C3210
+
+'type': deklarace přístupu může používat jedině pro člena základní třídy.
+
+A [using – deklarace](../../cpp/using-declaration.md) byl nesprávně zadán.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3210.
+
+```
+// C3210.cpp
+// compile with: /c
+struct A {
+protected:
+   int i;
+};
+
+struct B {
+   using A::i;   // C3210
+};
+
+struct C : public A {
+   using A::i;   // OK
+};
 ```

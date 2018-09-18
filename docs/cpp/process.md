@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdad177231c02d2e6f6fad171ae1811ecb9ccc6c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65ae8eef828a8abd4bf726c99850089c0f30b71b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032561"
 ---
 # <a name="process"></a>zpracování
 
@@ -37,5 +37,6 @@ Pokud chcete, aby každá doména aplikace měla vlastní kopii globální prom�
 Zobrazit [aplikačních doménách a Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.
 
 ## <a name="see-also"></a>Viz také:
- [__declspec](../cpp/declspec.md)  
- [Klíčová slova](../cpp/keywords-cpp.md)
+
+[__declspec](../cpp/declspec.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)

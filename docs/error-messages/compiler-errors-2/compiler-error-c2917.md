@@ -1,5 +1,5 @@
 ---
-title: C2917 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2917 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecc5f8634505dc8b63cb4cbdbbb9aa31973e7475
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d2747b001cc81da4edde21f201cd34392c2dcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020885"
 ---
-# <a name="compiler-error-c2917"></a>C2917 chyby kompilátoru
-"název": Neplatný parametr šablony  
-  
- Seznam parametrů šablony obsahuje identifikátor, který nebyl parametr šablony.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2917.  
-  
-```  
-// C2917.cpp  
-// compile with: /c  
-template<class T> class Vector {  
-   void sort();  
-};  
-  
-template<class T*> void Vector<T>::sort() {}   // C2917  
-// try the following line instead  
-// template<class T> void Vector<T>::sort() {}  
+# <a name="compiler-error-c2917"></a>Chyba kompilátoru C2917
+
+"name": Neplatné zadání template-parameter
+
+Seznam parametrů šablony obsahuje identifikátor, který nebyl parametru šablony.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2917.
+
+```
+// C2917.cpp
+// compile with: /c
+template<class T> class Vector {
+   void sort();
+};
+
+template<class T*> void Vector<T>::sort() {}   // C2917
+// try the following line instead
+// template<class T> void Vector<T>::sort() {}
 ```

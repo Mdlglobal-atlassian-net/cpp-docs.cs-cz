@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040476"
 ---
 # <a name="ccontainedwindowt-class"></a>Ccontainedwindowt – třída
 
@@ -49,16 +49,16 @@ Tato třída implementuje oken obsažených v rámci jiného objektu.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Tčíslice*  
+*Tčíslice*<br/>
 Základní třídy novou třídu. Výchozí základní třída je `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Třída vlastností, která definuje styly pro okno. Výchozí hodnota je `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Název existující třídy okna, na které bude založená obsaženého okna.
 
-*odstraněný objekt*  
+*odstraněný objekt*<br/>
 [in] Ukazatel na nadřazený objekt, který deklaruje mapování zprávy. Tento objekt třídy musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Určuje, který bude zpracovávat zprávy obsaženého okna mapování zprávy. Výchozí hodnota je 0, určuje výchozí mapování zpráv deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Použijte mapu alternativní zpráva deklarována s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předejte `msgMapID`.
 
 ### <a name="remarks"></a>Poznámky
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Název existující třídy okna, na které bude založená obsaženého okna.
 
-*odstraněný objekt*  
+*odstraněný objekt*<br/>
 [in] Ukazatel na nadřazený objekt, který deklaruje mapování zprávy. Tento objekt třídy musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Určuje, který bude zpracovávat zprávy obsaženého okna mapování zprávy. Výchozí hodnota je 0, určuje výchozí mapování zpráv deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Použijte mapu alternativní zpráva deklarována s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předejte `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač okna nadřazené nebo vlastníka.
 
-*Rect*  
+*Rect*<br/>
 [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Určuje název okna. Výchozí hodnota je NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Styl okna. Výchozí hodnota je WS_CHILD &#124; WS_VISIBLE. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Styl rozšířené okna. Výchozí hodnota je 0, to znamená bez rozšířeného stylu. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna se rozčlenit do podtříd.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifikátor mapování zprávy. Použít výchozí mapování zpráv deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), předejte nula. Použijte mapu alternativní zpráva deklarována s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předejte `msgMapID`.
 
 ### <a name="remarks"></a>Poznámky
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-*bForce*  
+*bForce*<br/>
 [in] Nastavte na hodnotu PRAVDA, platnost obnovit původní proceduru okna i v případě proceduru okna pro tuto `CContainedWindowT` objekt není aktuálně aktivní. Pokud *bForce* je nastavena na hodnotu FALSE a proceduru okna pro tuto `CContainedWindowT` objekt není aktuálně aktivní, nebude možné obnovit původní proceduru okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -472,9 +472,9 @@ Výsledek zpracování zprávy.
 
 ## <a name="see-also"></a>Viz také
 
-[Cwindow – třída](../../atl/reference/cwindow-class.md)   
-[Cwindowimpl – třída](../../atl/reference/cwindowimpl-class.md)   
-[Cmessagemap – třída](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap – třída](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1509 | Microsoft Docs
+title: Závažná chyba C1509 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec83f6b6138eacc613e560b9da4557079d6677d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 837ab5b7cf76b724726c6c52fbfe974d4da6ca85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033131"
 ---
 # <a name="fatal-error-c1509"></a>Závažná chyba C1509
-omezení kompilátoru: příliš mnoho stavy obslužné rutiny výjimek ve funkci 'function'. zjednodušení – funkce  
-  
- Kód překračuje vnitřní limit na stavy obslužné rutiny výjimek (32 768 stavy).  
-  
- Nejčastější příčinou je, že funkce obsahuje složitý výraz uživatelsky definované třídy, proměnných a aritmetické operátory.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Výrazy Zjednodušte přiřazením běžné podvýrazy dočasné proměnné.  
-  
-2.  Funkce rozdělení na menší funkce.
+
+limit kompilátoru: moc velký počet stavů obslužné rutiny výjimek v funkce 'function'. zjednodušení – funkce
+
+Kód překračuje vnitřní limit o stavech obslužné rutiny výjimek (32 768 státy).
+
+Nejčastější příčinou je, že funkce obsahuje složitý výraz uživatelsky definované třídy, proměnné a aritmetické operátory.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Zjednodušte přiřazování běžné podvýrazy k dočasné proměnné výrazů.
+
+1. Funkce rozdělte na menší funkce.

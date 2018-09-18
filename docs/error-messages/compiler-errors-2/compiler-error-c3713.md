@@ -1,5 +1,5 @@
 ---
-title: C3713 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3713 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f0e919add44075516deedfb339c8e1d7487f6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8028a82895d9194a44ca844b628e6a0d96ef4811
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042621"
 ---
-# <a name="compiler-error-c3713"></a>C3713 chyby kompilátoru
-"metody": metodu obslužné rutiny události musí mít stejné parametry funkce jako zdroj 'metodu.  
-  
- Jste definovali metodu obslužné rutiny události, který jako metodu zdroj události nepoužili stejnými parametry. Pro tuto chybu opravit, získat obslužná rutina události stejnými parametry jako metodu zdroje událostí.  
-  
- Následující ukázka generuje C3713:  
-  
-```  
-// C3713.cpp  
-// compile with: /c  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void event1(int nValue);  
-   // try the following line instead  
-   // __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void handler1() {}  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3713  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3713  
-   }  
-};  
+# <a name="compiler-error-c3713"></a>Chyba kompilátoru C3713
+
+"metoda": metoda obslužné rutiny události musí mít stejné parametry funkce jako zdroj "metodu.
+
+Definujete metodu obslužné rutiny události, která nepoužívá stejné parametry jako metodu zdroje události. Chcete-li vyřešit tuto chybu, poskytněte metodu obslužné rutiny události stejné parametry jako metodu zdroje události.
+
+Následující ukázka generuje C3713:
+
+```
+// C3713.cpp
+// compile with: /c
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void event1(int nValue);
+   // try the following line instead
+   // __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void handler1() {}
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3713
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3713
+   }
+};
 ```

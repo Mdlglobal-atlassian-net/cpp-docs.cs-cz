@@ -1,5 +1,5 @@
 ---
-title: scheduler_not_attached – třída | Microsoft Docs
+title: scheduler_not_attached – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0bf7f9e9467b35391034dafcbd48044b6229d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c980115496e70cf0c767ce0592ef5ac9fd1fd239
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027021"
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached – třída
-Tato třída popisuje výjimku vyvolá, když se provádí operace, který vyžaduje plánovače připojí se k aktuální kontext a jedna není.  
+Tato třída popisuje výjimku vyvolána, když probíhá operace vyžadující plánovače bude připojený k aktuálnímu kontextu a není spuštěná.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class scheduler_not_attached : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> scheduler_not_attached 
+##  <a name="ctor"></a> scheduler_not_attached – 
 
  Vytvoří `scheduler_not_attached` objektu.  
   
@@ -63,9 +63,9 @@ scheduler_not_attached() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Scheduler – třída](scheduler-class.md)

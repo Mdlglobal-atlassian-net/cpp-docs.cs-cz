@@ -1,5 +1,5 @@
 ---
-title: C3175 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3175 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199895ecba509b291d3853f0adabb2b68eee1e49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b4ba372dd542bfb2c38435b6084b55d95b1bdf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043271"
 ---
-# <a name="compiler-error-c3175"></a>C3175 chyby kompilátoru
-'function1': z nespravovaných funkce "funkce2" nelze volat metodu spravovaného typu  
-  
- Nespravované funkce nelze volat členské funkce spravované třídy.  
-  
- Následující ukázka generuje C3175:  
-  
-```  
-// C3175_2.cpp  
-// compile with: /clr  
-  
-ref struct A {  
-   static void func() {  
-   }  
-};  
-  
-#pragma unmanaged   // remove this line to resolve  
-  
-void func2() {  
-   A::func();   // C3175  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   A ^a = gcnew A;  
-   func2();  
-}  
-```  
+# <a name="compiler-error-c3175"></a>Chyba kompilátoru C3175
+
+'function1': nelze volat metodu spravovaného typu z nespravované funkce "function2.
+
+Nespravované funkce nelze volat členské funkce spravované třídy.
+
+Následující ukázka generuje C3175:
+
+```
+// C3175_2.cpp
+// compile with: /clr
+
+ref struct A {
+   static void func() {
+   }
+};
+
+#pragma unmanaged   // remove this line to resolve
+
+void func2() {
+   A::func();   // C3175
+}
+
+#pragma managed
+
+int main() {
+   A ^a = gcnew A;
+   func2();
+}
+```

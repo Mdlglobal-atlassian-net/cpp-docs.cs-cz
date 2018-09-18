@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1082 | Microsoft Docs
+title: Závažná chyba C1082 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ec81258606cc7af67e8e9e4708a056cccb7eea5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12b722c6c36c600acc5c098c1e4907386cd7c3c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044454"
 ---
 # <a name="fatal-error-c1082"></a>Závažná chyba C1082
-Nelze zavřít soubor typ souboru: 'file': zpráva  
-  
- Pokud zpráva říká "chybného souboru číslo", soubor může mít byla zavření v popředí při kompilování na pozadí.
+
+Nelze zavřít soubor filetype: 'file': zpráva
+
+Pokud zpráva "Chybné číslo souboru", soubor může mít byla zavření v popředí při kompilaci na pozadí.

@@ -1,5 +1,5 @@
 ---
-title: Operátory přírůstku a snížení předpony | Microsoft Docs
+title: Operátory přírůstku a snížení předpony | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116921ea46418db5c8eff3327de73a40aa42533c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7077e1b40701f8586ce8322ac9922517ac77b22b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018285"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operátory přírůstku a snížení předpony
-Unární operátory (`++` a **--**) se označují jako "předponu" přírůstek nebo snížení operátory, jakmile se zobrazí operátory zvýšení nebo snížení hodnoty před operand. Operátory přírůstku a snížení má vyšší prioritu než předpony přírůstek a snížení. Operand musí být celé číslo, číslo s plovoucí čárkou nebo ukazatel typu a musí být výraz upravitelnými l-value (výraz bez **const** atributu). Výsledkem je, l hodnota.  
-  
- Když operátor se zobrazí před jeho operand, operand je zvýšena nebo snížena a jeho nová hodnota je výsledkem výrazu.  
-  
- Operand typu integrální nebo plovoucí je zvýšena nebo snížena na celé číslo 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatele je zvýšena nebo snížena velikost objektu, který ho adresy. Body zvýšena ukazatele na další objekt; odečte ukazatel odkazuje na objekt předchozí.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad ukazuje unární operátor snížení předpony:  
-  
-```  
-if( line[--i] != '\n' )  
-    return;  
-```  
-  
- V tomto příkladu proměnná `i` se odečte, než bude použit jako dolní index k `line`.  
-  
-## <a name="see-also"></a>Viz také  
- [Unární operátory jazyka C](../c-language/c-unary-operators.md)
+
+Unární operátory (`++` a **--**) se nazývají "předponu" Inkrementace nebo dekrementace operátory, když se objeví před operand operátorů zvýšení nebo snížení. Přípona Inkrementace a dekrementace má vyšší prioritu než předpony Inkrementace a dekrementace. Operand musí mít typ integral, plovoucí nebo ukazatel a musí být výraz upravitelná l hodnota (výraz bez **const** atributu). Výsledkem je l hodnotou.
+
+Pokud se operátor vyskytuje před jeho operandu, operand je zvýšena nebo snížena a její nová hodnota je výsledek výrazu.
+
+Typ s plovoucí desetinnou čárkou nebo celočíselné operandy je zvýšena nebo snížena celočíselnou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatel, je zvýšena nebo snížena velikost objektu, který se zaměřuje. Zvýšena ukazatel odkazuje na další objekt. snížen ukazatel odkazuje na předchozí objekt.
+
+## <a name="example"></a>Příklad
+
+Tento příklad ukazuje unární operátor dekrementace předpony:
+
+```
+if( line[--i] != '\n' )
+    return;
+```
+
+V tomto příkladu je proměnná `i` je snížen, než bude použit jako index do `line`.
+
+## <a name="see-also"></a>Viz také
+
+[Unární operátory jazyka C](../c-language/c-unary-operators.md)

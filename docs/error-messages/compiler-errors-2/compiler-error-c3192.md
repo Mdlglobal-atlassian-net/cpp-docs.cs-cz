@@ -1,5 +1,5 @@
 ---
-title: C3192 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3192 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e014e9ad54963212ef580e14870138273e882a47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50b639335e0a8ce2f55bb327f3a6a475b1fb770e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031155"
 ---
-# <a name="compiler-error-c3192"></a>C3192 chyby kompilátoru
-Chyba syntaxe: ' ^' není operátor předpony (měli jste na mysli ' *'?)  
-  
- Popisovač nelze použít jako operátor dereference.  
-  
- Následující ukázka generuje C3192:  
-  
-```  
-// C3192.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class MyClass {  
-public:  
-   MyClass () {}  
-   MyClass(MyClass%) {}  
-};  
-  
-int main() {  
-   MyClass ^ s = gcnew MyClass;   
-   MyClass b = ^s;   // C3192  
-  
-   // OK  
-   MyClass b2 = *s;  
-}  
+# <a name="compiler-error-c3192"></a>Chyba kompilátoru C3192
+
+Chyba syntaxe: ' ^' není prefixový operátor (měli jste na mysli ' *'?)
+
+Popisovač nelze použít jako operátor zrušení odkazu.
+
+Následující ukázka generuje C3192:
+
+```
+// C3192.cpp
+// compile with: /clr
+using namespace System;
+
+ref class MyClass {
+public:
+   MyClass () {}
+   MyClass(MyClass%) {}
+};
+
+int main() {
+   MyClass ^ s = gcnew MyClass;
+   MyClass b = ^s;   // C3192
+
+   // OK
+   MyClass b2 = *s;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4146 | Microsoft Docs
+title: Upozornění (úroveň 2) C4146 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a94d2aed0b455fda646214f4488c53045b7f6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41d21f2be76e67c58599e214df764316dc845e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044623"
 ---
-# <a name="compiler-warning-level-2-c4146"></a>C4146 kompilátoru upozornění (úroveň 2)
-Unární mínus – operátor u typu bez znaménka, výsledek stále bez znaménka  
-  
- Typy bez znaménka mohou být uloženy pouze kladné hodnoty, takže Unární minus (negace) nemá smysl obvykle při použití typu bez znaménka. Operand a výsledek je záporný.  
-  
- Prakticky k tomu dochází, když se pokouší programátorů express minimální celočíselná hodnota, která je -2147483648. Tuto hodnotu nelze zapsat jako -2147483648, protože výraz je zpracován ve dvou fázích:  
-  
-1.  Číslo 2147483648 vyhodnotí. Protože je větší než maximální celočíselnou hodnotu 2147483647, typ 2147483648 není [int](../../c-language/integer-types.md), ale `unsigned int`.  
-  
-2.  Unární minus se použije na hodnotu s nepodepsané výsledek, který se stane také být 2147483648.  
-  
- Úroveň typu bez znaménka výsledku může způsobit neočekávané chování. Pokud v porovnání se používá výsledek a pak nepodepsané porovnání může použít, například při dalších operand `int`. Tato část popisuje, proč uvedený příklad program vytiskne pouze jeden řádek.  
-  
- Očekávaný druhý řádek `1 is greater than the most negative int`, není vytisknout, protože `((unsigned int)1) > 2147483648` je false.  
-  
- C4146 můžete vyhnout použitím int_min – z Limits.h –, která má typ **podepsané int**.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4146:  
-  
-```  
-// C4146.cpp  
-// compile with: /W2  
-#include <stdio.h>  
-  
-void check(int i)   
-{  
-    if (i > -2147483648)   // C4146  
-        printf_s("%d is greater than the most negative int\n", i);  
-}  
-  
-int main()   
-{  
-    check(-100);  
-    check(1);  
-}  
+# <a name="compiler-warning-level-2-c4146"></a>Kompilátor upozornění (úroveň 2) C4146
+
+Unární operátor minus použitý pro typ bez znaménka, výsledkem bude i bez znaménka
+
+Typy bez znaménka může obsahovat pouze záporné hodnoty, takže Unární minus (negace) nemá smysl obvykle při použití pro typ bez znaménka. Operand a výsledek je záporná.
+
+Prakticky proběhne, když se pokouší programátor express minimální celočíselná hodnota, která je -2147483648. Tuto hodnotu nelze zapsat jako -2147483648, protože výraz zpracovává ve dvou fázích:
+
+1. Číslo 2147483648 vyhodnocena. Protože je větší než maximální celočíselnou hodnotu 2147483647, není typu 2147483648 [int](../../c-language/integer-types.md), ale `unsigned int`.
+
+1. Unární minus je použité pro hodnotu, se výsledek bez znaménka, který se také být 2147483648.
+
+Bez znaménka typu výsledku může způsobit neočekávané chování. Pokud v porovnání se použije výsledky, je porovnávání bez znaménka může použít, například pokud je druhý operand je `int`. To vysvětluje, proč níže uvedený program příklad vytiskne pouze jeden řádek.
+
+Očekávaný druhý řádek `1 is greater than the most negative int`, není vytisknout, protože `((unsigned int)1) > 2147483648` má hodnotu false.
+
+C4146 můžete vyhnout použitím INT_MIN z limits.h, která má typ **znaménkem**.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4146:
+
+```
+// C4146.cpp
+// compile with: /W2
+#include <stdio.h>
+
+void check(int i)
+{
+    if (i > -2147483648)   // C4146
+        printf_s("%d is greater than the most negative int\n", i);
+}
+
+int main()
+{
+    check(-100);
+    check(1);
+}
 ```

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043232"
 ---
 # <a name="ccomheapptr-class"></a>Ccomheapptr – třída
 
@@ -32,13 +32,13 @@ Třída inteligentní ukazatel pro správu haldy ukazatele.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ objektu ukládaly na haldě.
 
 ## <a name="members"></a>Členové
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 Existující objekt `CComHeapPtr`.
 
 ### <a name="remarks"></a>Poznámky
@@ -85,7 +85,7 @@ Ukazatel haldy lze vytvořit volitelně pomocí existující `CComHeapPtr` objek
 
 ## <a name="see-also"></a>Viz také
 
-[Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
-[Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
-[Ccomallocator – třída](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrBase – třída](../../atl/reference/cheapptrbase-class.md)<br/>
+[CComAllocator – třída](../../atl/reference/ccomallocator-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

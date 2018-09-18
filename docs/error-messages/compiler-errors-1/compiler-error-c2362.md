@@ -1,5 +1,5 @@
 ---
-title: C2362 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2362 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b0b77930acba6ecf2d0f3c6748ba52e9b28e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f78b850f95614255fed372570742a0f88a9e30e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035978"
 ---
-# <a name="compiler-error-c2362"></a>C2362 chyby kompilátoru
-Inicializace "identifikátor" bylo přeskočeno, goto popiskem.  
-  
- Při kompilaci s [/Za](../../build/reference/za-ze-disable-language-extensions.md), přechodu na návěští zabrání inicializaci identifikátor.  
-  
- Nelze přejít po deklaraci s inicializátoru Pokud deklaraci je uzavřené v bloku, která není zadaný, nebo proměnnou již byl inicializován.  
-  
- Následující ukázka generuje C2326:  
-  
-```  
-// C2362.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   int i = 1;      // C2362, initialization skipped  
-label1:;  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2362b.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   {  
-      int j = 1;   // OK, this block is never entered  
-   }  
-label1:;  
-}  
+# <a name="compiler-error-c2362"></a>Chyba kompilátoru C2362
+
+Inicializace 'identifier' je přeskočených 'goto popisek.
+
+Při kompilaci s [/Za](../../build/reference/za-ze-disable-language-extensions.md), přechod na popisek zabrání inicializaci identifikátor.
+
+Nelze přejít po deklaraci s inicializátorem Pokud deklarace je uzavřen v bloku, který není zadán nebo již byl inicializován proměnné.
+
+Následující ukázka generuje C2326:
+
+```
+// C2362.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   int i = 1;      // C2362, initialization skipped
+label1:;
+}
+```
+
+Možná řešení:
+
+```
+// C2362b.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   {
+      int j = 1;   // OK, this block is never entered
+   }
+label1:;
+}
 ```

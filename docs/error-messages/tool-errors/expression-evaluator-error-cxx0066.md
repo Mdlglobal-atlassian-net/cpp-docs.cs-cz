@@ -1,5 +1,5 @@
 ---
-title: CXX0066 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0066 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4e2f71de2f883e54a17a08aa4735f63f167915
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2985583b24decfbfd2da1a1a4bfb1344f57bac49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026736"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>Chyba při vyhodnocování výrazu CXX0066
-statický člen nejsou k dispozici  
-  
- Statický člen třídy nebyl nalezen nebo není definovaný. K této chybě může dojít z statická třída člena, který je ale není deklarován definované, nebo je pouze definované a odkazovat z modulů, které neobsahují informace o ladění.  
-  
- Tato chyba je stejný jako CAN0066.
+
+statický člen není k dispozici.
+
+Statický člen třídy, se nenašla nebo nebyla definována. K této chybě může dojít k ze statické třídy člena, který je deklarován ale není definovaný, nebo pouze definovaná a odkazovat z modulů, které neobsahují informace o ladění.
+
+Tato chyba se shoduje s CAN0066.

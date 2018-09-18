@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037356"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identifikuje okna, který vlastní dialogové okno.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -100,9 +100,9 @@ Jeden standardní hodnoty HRESULT.
 
 Použití `AtlAxDialogBox` pomocí šablony dialogového okna, která obsahuje ovládací prvek ActiveX, zadejte platný identifikátor CLSID, APPID nebo adresy URL řetězec jako *text* pole **ovládací PRVEK** oddílu prostředku dialogového okna, spolu s " AtlAxWin80 "jako *název třídy* pole v rámci stejného oddílu. Ukazuje, jaké platný následující **ovládací PRVEK** části může vypadat takto:
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 Další informace o úpravách skripty prostředků najdete v tématu [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](/windows/desktop/menurc/common-control-parameters) v rámci sady Windows SDK *: SDK Tools*.
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identifikuje okna, který vlastní dialogové okno.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -179,13 +179,13 @@ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v 
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna, který ovládací prvek bude připojen k.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -231,22 +231,22 @@ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v 
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna, který ovládací prvek bude připojen k.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` vytvořený ovládacího prvku. Může mít hodnotu NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Identifikátor rozhraní odchozí rozhraní v obsažený objekt.
 
-*punkSink*  
+*punkSink*<br/>
 Ukazatel `IUnknown` rozhraní jímky objektu k připojení k připojení bodu určeného *iidSink* na obsaženého objektu po úspěšném vytvoření obsažený objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -290,16 +290,16 @@ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v 
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.
 
-*hWnd*  
+*hWnd*<br/>
 Popisovač okna, který ovládací prvek bude připojen k.
 
-*pStream*  
+*pStream*<br/>
 Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR obsahující licenci pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:
 
 - ProgID jako je například "MSCAL. Calendar.7 "
@@ -344,25 +344,25 @@ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v 
    > [!NOTE]
    > "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.
 
-*hWnd*  
+*hWnd*<br/>
 Popisovač okna, který ovládací prvek bude připojen k.
 
-*pStream*  
+*pStream*<br/>
 Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` vytvořený ovládacího prvku. Může mít hodnotu NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Identifikátor rozhraní odchozí rozhraní v obsažený objekt.
 
-*punkSink*  
+*punkSink*<br/>
 Ukazatel `IUnknown` rozhraní jímky objektu k připojení k připojení bodu určeného *iidSink* na obsaženého objektu po úspěšném vytvoření obsažený objekt.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR obsahující licenci pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*  
+*pControl*<br/>
 [in] Ukazatel `IUnknown` ovládacího prvku.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna, který bude hostitelem ovládacího prvku.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Ukazatel na ukazatel `IUnknown` objektu kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 [in] Popisovač okna, které je hostitelem ovládacího prvku.
 
-*str*  
+*str*<br/>
 [out] `IUnknown` Kontejneru ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 [in] Popisovač okna, které je hostitelem ovládacího prvku.
 
-*str*  
+*str*<br/>
 [out] `IUnknown` Hostované ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>Parametry
 
-*punkChild*  
+*punkChild*<br/>
 [in] Ukazatel `IUnknown` rozhraní podřízeného.
 
-*punkParent*  
+*punkParent*<br/>
 [in] Ukazatel `IUnknown` rozhraní nadřazeného prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*punkObj*  
+*punkObj*<br/>
 [in] Ukazatel na objekt, pro který má být vrácen informace.
 
-*plibid*  
+*plibid*<br/>
 [out] Ukazatel na LIBID knihovnu typů obsahující definice zdrojové rozhraní.
 
-*piid*  
+*piid*<br/>
 [out] Ukazatel na Identifikátor rozhraní objektu výchozím zdrojovém rozhraní.
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out] Ukazatel na číslo hlavní verze knihovny typů obsahující definice zdrojové rozhraní.
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out] Ukazatel na číslo podverze knihovnu typů obsahující definice zdrojové rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -553,5 +553,5 @@ Následující příklad ukazuje, jak můžete třeba definovat třídu jímky u
 
 ## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)   
+[Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra složených ovládacích prvků](../../atl/reference/composite-control-macros.md)

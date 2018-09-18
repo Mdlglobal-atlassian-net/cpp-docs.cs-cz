@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042881"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač klíče registru.
 
 ### <a name="remarks"></a>Poznámky
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Popisovač otevřít klíč.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Určuje třídu klíč, který má být vytvořen nebo otevřen. Výchozí hodnota je REG_NONE.
 
-*dwOptions*  
+*dwOptions*<br/>
 Možnosti pro klíč. Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možných hodnot a popisy najdete v tématu [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) v sadě Windows SDK.
 
-*samDesired*  
+*samDesired*<br/>
 Zabezpečený přístup ke klíči. Výchozí hodnota je KEY_READ &#124; KEY_WRITE. Seznam možných hodnot a popisy najdete v tématu `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Ukazatel [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která označuje, zda popisovač klíče mohou být zděděny podřízený proces. Ve výchozím nastavení tento parametr hodnotu NULL (tj. nemůže být zděděn popisovač).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Pokud není NULL, načte REG_CREATED_NEW_KEY (Pokud klíč neexistuje a vytvořila) nebo REG_OPENED_EXISTING_KEY (Pokud klíč existuje a byl otevřen).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Odkaz na `CRegKey` objektu.
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač klíče registru.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="remarks"></a>Poznámky
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Určuje název klíče odstranit. Tento název musí být podklíč [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszValue*  
+*lpszValue*<br/>
 Určuje hodnotu pole odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Podklíč indexu. Tento parametr musí být nula první volání a poté zvýšen pro pozdější volání
 
-*pszName*  
+*pszName*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá název podklíče, včetně ukončujícího znaku null. Pouze název podklíče zkopírován do vyrovnávací paměti, ne celý klíč hierarchie.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Ukazatel na proměnnou, která určuje velikost v TCHARs vyrovnávací paměti určené *pszName* parametru. Tato velikost by měla obsahovat ukončujícího znaku null. Když metoda vrátí, proměnné, na které odkazuje *pnNameLength* obsahuje počet znaků, které jsou uloženy ve vyrovnávací paměti. Vrátí počet nezahrnuje ukončující znak null.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Ukazovat na proměnnou, která přijímá čas Výčtový podklíč posledního zápisu do.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parametry
 
-*si*  
+*si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) hodnotu, která určuje požadované informace zabezpečení.
 
-*PSD*  
+*PSD*<br/>
 Ukazatel do vyrovnávací paměti, která obdrží kopii popisovače požadované zabezpečení.
 
-*pnBytes*  
+*pnBytes*<br/>
 Velikost v bajtech, vyrovnávací paměti, na které odkazuje *psd*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Parametry
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Určuje příznak, který označuje, jestli se oznámit změny v se zadaným klíčem a všem příslušným podklíčům nebo jenom se zadaným klíčem. Pokud tento parametr má hodnotu TRUE, metoda sestavy změny do klíče a jeho podklíčů. Pokud má parametr hodnotu FALSE, metoda hlásí změn pouze v klíči.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Určuje, že by se měly hlásit sada příznaků, které řídí, jaké změny. Tento parametr může být kombinací následujícího:
 
 |Hodnota|Význam|
@@ -431,10 +431,10 @@ Určuje, že by se měly hlásit sada příznaků, které řídí, jaké změny.
 |REG_NOTIFY_CHANGE_LAST_SET|Oznámit volajícímu změn na hodnotu klíče. To může zahrnovat přidávání nebo odstraňování hodnotu nebo změnit stávající hodnotu.|
 |REG_NOTIFY_CHANGE_SECURITY|Oznámit volajícímu změn do popisovače zabezpečení klíče.|
 
-*hEvent*  
+*hEvent*<br/>
 Zpracování události. Pokud *bAsync* parametr má hodnotu TRUE, vrátí metoda okamžitě a změny jsou hlášeny sadou signalizace události. Pokud *bAsync* má hodnotu FALSE, *hEvent* se ignoruje.
 
-*bAsync*  
+*bAsync*<br/>
 Určuje příznak, který určuje, jak metoda hlásí změny. Pokud tento parametr má hodnotu TRUE, metoda vrátí hodnotu okamžitě a hlásí změny podle signalizace zadané události. Pokud tento parametr hodnotu FALSE, metoda nevrátí dokud došlo ke změně. Pokud *hEvent* neurčuje platnou událost *bAsync* parametr nemůže mít hodnotu TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Popisovač otevřít klíč.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 Zabezpečený přístup ke klíči. Výchozí hodnota je KEY_ALL_ACCESS. Seznam možných hodnot a popisy najdete v tématu [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -484,7 +484,7 @@ Na rozdíl od [CRegKey::Create](#create), `Open` nevytvoří se zadaným klíče
 
 Převede `CRegKey` objekt HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč zkopírujte.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*pValue*  
+*pValue*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá hodnotu data.
 
-*pnBytes*  
+*pnBytes*<br/>
 Ukazatel na proměnnou, která určuje velikost v bajtech, vyrovnávací paměti, na které odkazují *pValue* parametru. Po návratu metody obsahuje tato proměnná velikost data kopírovaná do vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*dwValue*  
+*dwValue*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá DWORD.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*guidValue*  
+*guidValue*<br/>
 Ukazovat na proměnnou, která přijímá identifikátor GUID.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*pszValue*  
+*pszValue*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá nahrazován data. Řetězci FixedLength multistring je pole zakončené znakem null řetězců, ukončeny dva znaky s hodnotou null.
 
-*pnChars*  
+*pnChars*<br/>
 Velikost v TCHARs vyrovnávací paměti, na které odkazuje *pszValue*. Po návratu metody *pnChars* obsahuje velikost v TCHARs nástroje řetězci FixedLength multistring načíst, včetně ukončujícího znaku null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*qwValue*  
+*qwValue*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá QWORD.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu.
 
-*pszValue*  
+*pszValue*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá data řetězce.
 
-*pnChars*  
+*pnChars*<br/>
 Velikost v TCHARs vyrovnávací paměti, na které odkazuje *pszValue*. Po návratu metody *pnChars* obsahuje velikost v TCHARs řetězce načíst, včetně ukončujícího znaku null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty dotazu. Pokud *pszValueName* má hodnotu NULL nebo prázdný řetězec "", metoda načte typ a data klíče uživatele nepojmenované nebo výchozí hodnotu, pokud existuje.
 
-*pdwType*  
+*pdwType*<br/>
 Ukazovat na proměnnou, která přijímá kódem, který označuje typ dat uložených v zadané hodnotě. *PdwType* parametr může mít hodnotu NULL, pokud typ kódu se nevyžaduje.
 
-*pData*  
+*pData*<br/>
 Ukazatel do vyrovnávací paměti, která přijímá hodnotu data. Tento parametr může mít hodnotu NULL, pokud data se nevyžaduje.
 
-*pnBytes*  
+*pnBytes*<br/>
 Ukazatel na proměnnou, která určuje velikost v bajtech, vyrovnávací paměti, na které odkazují *pData* parametru. Po návratu metody obsahuje tato proměnná velikost data kopírovaná do *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Pole hodnoty číselná data.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Určuje pole hodnoty tak, aby se dalo dotazovat.
 
-*szValue*  
+*szValue*<br/>
 Pole hodnoty dat řetězce.
 
-*pdwCount*  
+*pdwCount*<br/>
 Velikost dat řetězců. Jeho hodnota nastavená na velikost zpočátku *szValue* vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszKey*  
+*lpszKey*<br/>
 Určuje název klíče odstranit. Tento název musí být podklíč [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*pValue*  
+*pValue*<br/>
 Ukazatel do vyrovnávací paměti, obsahující data uloží v rámci zadaný název hodnoty.
 
-*nBytes*  
+*nBytes*<br/>
 Určuje velikost v bajtech, informace, na které odkazují *pValue* parametru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*dwValue*  
+*dwValue*<br/>
 DWORD data, která mají být uloženy se zadaným názvem hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*guidValue*  
+*guidValue*<br/>
 Odkaz na identifikátor GUID k uložení se zadaným názvem hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč [m_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Určuje data, která mají být uloženy. Tento parametr musí mít hodnotu NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*si*  
+*si*<br/>
 Určuje součásti nastavit popisovač zabezpečení. Hodnota může být kombinací následujícího:
 
 |Hodnota|Význam|
@@ -904,7 +904,7 @@ Určuje součásti nastavit popisovač zabezpečení. Hodnota může být kombin
 |OWNER_SECURITY_INFORMATION|Nastaví SID vlastníka klíče. Klíč musí mít přístup zápis_vlastníka, nebo musí být vlastníka objektu nebo mít povolené oprávnění SE_TAKE_OWNERSHIP_NAME volající proces.|
 |SACL_SECURITY_INFORMATION|Nastaví seznam klíče systému řízení přístupu (SACL). Klíč musí mít ACCESS_SYSTEM_SECURITY přístup. Správný způsob, jak získat tento přístup je povolit SE_SECURITY_NAME [oprávnění](https://msdn.microsoft.com/library/windows/desktop/aa379306) v přístupovém tokenu aktuální volajícího otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a potom zakažte oprávnění.|
 
-*PSD*  
+*PSD*<br/>
 Ukazatel [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struktura, která určuje atributy zabezpečení k nastavení pro zadaný klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*pszValue*  
+*pszValue*<br/>
 Ukazatel na nahrazován data uloží v rámci zadaný název hodnoty. Řetězci FixedLength multistring je pole zakončené znakem null řetězců, ukončeny dva znaky s hodnotou null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*qwValue*  
+*qwValue*<br/>
 QWORD data, která mají být uloženy se zadaným názvem hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
 
-*pszValue*  
+*pszValue*<br/>
 Ukazatel na řetězec data uloží v rámci zadaný název hodnoty.
 
-*dwType*  
+*dwType*<br/>
 Typ řetězce pro zápis do registru: REG_SZ (výchozí) nebo REG_EXPAND_SZ (pro vícenásobné řetězce).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Ukazatel na řetězec obsahující název hodnoty nastavení. Pokud hodnota s tímto názvem již není k dispozici v klíči, metoda ji přidá do klíče. Pokud *pszValueName* má hodnotu NULL nebo prázdný řetězec "", nastaví typ metody a datové klíče uživatele nepojmenované nebo výchozí hodnotu.
 
-*dwType*  
+*dwType*<br/>
 Určuje kód označující typ dat, na které odkazují *pValue* parametru.
 
-*pValue*  
+*pValue*<br/>
 Ukazatel do vyrovnávací paměti, obsahující data uloží v rámci zadaný název hodnoty.
 
-*nBytes*  
+*nBytes*<br/>
 Určuje velikost v bajtech, informace, na které odkazují *pValue* parametru. Pokud jsou data typu REG_SZ, REG_EXPAND_SZ nebo REG_MULTI_SZ, *nBytes* musí obsahovat velikost ukončujícího znaku null.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Popisovač otevřít klíč.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Určuje data, která mají být uloženy. Tento parametr musí mít hodnotu NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.
 
-*dwValue*  
+*dwValue*<br/>
 Určuje data, která mají být uloženy.
 
-*bMulti*  
+*bMulti*<br/>
 Pokud má hodnotu false, označuje, že řetězec má typ REG_SZ. Hodnota true určuje to, že je řetězci FixedLength multistring typu REG_MULTI_SZ.
 
-*nValueLen*  
+*nValueLen*<br/>
 Pokud *bMulti* má hodnotu true, *nValueLen* je délka *lpszValue* řetězec znaků. Pokud *bMulti* má hodnotu false, hodnota -1 znamená, že metoda automaticky vypočítá délku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1068,5 +1068,5 @@ Třetí volání metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-re
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázkový model DCOM](../../visual-cpp-samples.md)   
+[Ukázkový model DCOM](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

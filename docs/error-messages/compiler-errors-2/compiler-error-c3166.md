@@ -1,5 +1,5 @@
 ---
-title: C3166 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3166 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1996da7bb937fd00a4283ad94a4885432a9d47a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c568f1732a4be5d890a5a654b09638828385383
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035510"
 ---
-# <a name="compiler-error-c3166"></a>C3166 chyby kompilátoru
-'ukazatel': ukazatel na ukazatel vnitřními __gc – nelze deklarovat jako člen skupiny "typ"  
-  
-Kompilátor nalezena deklarace neplatný ukazatel ( `__nogc` ukazatel na `__gc` ukazatele.). 
-  
-C3166 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3166"></a>Chyba kompilátoru C3166
+
+'ukazatel': nelze deklarovat ukazatel na __gc vnitřní ukazatel jako člena 'type'
+
+Kompilátor nalezena deklarace neplatný ukazatel ( `__nogc` ukazatel `__gc` ukazatel.).
+
+C3166 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

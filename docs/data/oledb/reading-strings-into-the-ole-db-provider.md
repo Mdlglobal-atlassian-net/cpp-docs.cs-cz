@@ -15,22 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034847"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
+
 `RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
   
- Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
+Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Upravený `Execute` funkce vypadá takto:  
+
+Upravený `Execute` funkce vypadá takto:  
   
 ### <a name="code"></a>Kód  
   
@@ -107,4 +109,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752785"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043414"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregace a makra objektu pro vytváření tříd
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název třídy, kterou definujete jako agregovatelné.
 
 ### <a name="remarks"></a>Poznámky
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametry
 
-*CF*  
+*CF*<br/>
 [in] Název třídy, která implementuje třída objektu factory.
 
 ### <a name="remarks"></a>Poznámky
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametry
 
-*– Licenční smlouva*  
+*– Licenční smlouva*<br/>
 [in] Třídu, která implementuje `VerifyLicenseKey`, `GetLicenseKey`, a `IsLicenseValid`.
 
 ### <a name="remarks"></a>Poznámky
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametry
 
-*Licence*  
+*Licence*<br/>
 Třída, která implementuje následující statické funkce:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parametry
 
-*obj*  
+*obj*<br/>
 [in] Název třídy objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Třída.
 
 `CComClassFactorySingleton` je odvozen od [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu. Každé volání `CreateInstance` metoda jednoduše dotazuje tohoto objektu pro ukazatel rozhraní.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název objektu třídy, které definujete jako neagregovatelný.
 
 ### <a name="remarks"></a>Poznámky
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název objektu třídy, které definujete jako pouze agregovatelné.
 
 ### <a name="remarks"></a>Poznámky
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název objektu třídy, které definujete jako agregovatelné nebo neagregovatelný.
 
 ### <a name="remarks"></a>Poznámky
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parametry
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] KTERÉ příznaky. Zobrazit [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) seznam příznaky.
 
 ### <a name="example"></a>Příklad

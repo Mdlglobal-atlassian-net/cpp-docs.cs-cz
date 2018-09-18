@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032429"
 ---
 # <a name="cinterfacelist-class"></a>Cinterfacelist – třída
 
@@ -32,7 +32,7 @@ Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parametry
 
-*I*  
+*I*<br/>
 Rozhraní modelu COM zadání typu ukazatel na Uložit.
 
-*piid*  
+*piid*<br/>
 Ukazatel na IID *můžu*.
 
 ## <a name="members"></a>Členové
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku, výchozí hodnota je 10.
 
 ### <a name="remarks"></a>Poznámky
@@ -89,7 +89,7 @@ Velikost bloku je míra množství paměti přidělené, pokud je nutné použí
 
 ## <a name="see-also"></a>Viz také
 
-[Catllist – třída](../../atl/reference/catllist-class.md)   
-[CComQIPtr – třída](../../atl/reference/ccomqiptr-class.md)   
-[Ccomqiptrelementtraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr – třída](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

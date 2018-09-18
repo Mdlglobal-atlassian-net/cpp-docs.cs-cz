@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa5f96b8937168126509025735d20fab7b35c2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019196"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Cprimitiveelementtraits – třída
 
@@ -33,13 +33,13 @@ Tato třída poskytuje výchozí metody a funkce pro třídy kolekce tvořené p
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci objektu třídy.
 
 ## <a name="members"></a>Členové
@@ -91,5 +91,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Viz také
 
-[Cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

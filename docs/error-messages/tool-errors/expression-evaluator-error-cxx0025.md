@@ -1,5 +1,5 @@
 ---
-title: CXX0025 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0025 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843de39120cee18b01d17d88fb2759bebb9d2dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd89faa4de7b296d6a6771f857f3d16dbe2f94f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043700"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Chyba při vyhodnocování výrazu CXX0025
-operátor musí struktura/sjednocení  
-  
- Operátor, který přebírá výrazu `struct` nebo **sjednocení** typu bylo použito pro výraz, který není `struct` nebo **sjednocení**.  
-  
- Plně kvalifikovaný název musí mít komponenty třída, struktura nebo union proměnné. Součásti nelze zadat bez úplné specifikaci.  
-  
- Tato chyba je stejný jako CAN0025.
+
+operátor musí struktury nebo sjednocení.
+
+Operátor, který přijímá výraz `struct` nebo **sjednocení** typu byla použita ve výrazu, který není `struct` nebo **sjednocení**.
+
+Součástí třídy, struktury nebo sjednocení proměnných musí mít plně kvalifikovaný název. Součásti nelze zadat bez úplnou specifikaci.
+
+Tato chyba se shoduje s CAN0025.

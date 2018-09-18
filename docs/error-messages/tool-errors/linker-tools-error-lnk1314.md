@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1314 | Microsoft Docs
+title: Chyba Linkerů LNK1314 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a4afa4d5cd0be19163204d48e0a29b3b359a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042946"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Chyba linkerů LNK1314
-poškozený nebo neplatný tabulky symbolů COFF (nedefinované statické nebo symbol popisku)  
-  
- Generované kompilátorem obsah pro oddíl v daný objekt je zřejmě poškozen.  
-  
- Tato chyba může představovat selhání kompilátoru.
+
+poškozená nebo neplatná tabulka symbolů COFF (není definovaný statický symbol nebo symbol návěstí)
+
+Obsah generovaný kompilátorem pro oddíl v daný objekt je pravděpodobně poškozen.
+
+Tato chyba může představovat chybu kompilátoru.

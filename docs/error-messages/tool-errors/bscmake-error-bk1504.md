@@ -1,5 +1,5 @@
 ---
-title: Chyba nástroje BSCMAKE BK1504 | Microsoft Docs
+title: Chyba nástroje BSCMAKE BK1504 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81520f8acbfb623f5b732402eacbd2b355481bf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70ae80cc0b7bf1725dc0b91f9d74ecfd87358886
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016868"
 ---
 # <a name="bscmake-error-bk1504"></a>Chyba nástroje BSCMAKE BK1504
-nelze umístit v souboru 'název souboru' [: Důvod]  
-  
- BSCMAKE nelze přesunout do umístění v souboru.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Celého disku.  
-  
-2.  Chyba hardwaru.  
-  
-3.  Zkrácení souborů z důvodu nedostatku místa na disku nebo přerušení kompilátoru při vytváření souboru .sbr.
+
+nelze umístit v soubor 'filename' [: z důvodu]
+
+BscMake – nelze přesunout do umístění v souboru.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Celého disku.
+
+1. Chyba hardwaru.
+
+1. Zkrácení souborů z důvodu nedostatku místa na disku nebo přerušení kompilátor při vytvoření souboru .sbr

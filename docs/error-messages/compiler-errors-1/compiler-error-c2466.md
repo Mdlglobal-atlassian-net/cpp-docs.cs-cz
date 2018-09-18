@@ -1,5 +1,5 @@
 ---
-title: C2466 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2466 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55e5c130b0a0454577a7155b704a18933b86198
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d43ee9d09fba77db022177a06c6ebe95c65ff79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037837"
 ---
-# <a name="compiler-error-c2466"></a>C2466 chyby kompilátoru
-Nelze přidělit pole konstantní velikost 0  
-  
- Pole je přidělen nebo deklarovat s velikost nula. Konstantní výraz pro velikost pole musí být celé číslo větší než nula. Deklarace pole s nulovou dolní index je povoleno pouze pro třídy, struktury nebo členů sjednocení a pouze s rozšíření Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
- Následující ukázka generuje C2466:  
-  
-```  
-// C2466.cpp  
-// compile with: /c  
-int i[0];   // C2466  
-int j[1];   // OK  
-char *p;  
+# <a name="compiler-error-c2466"></a>Chyba kompilátoru C2466
+
+nejde přidělit pole s konstantní velikostí 0
+
+Pole je přidělena nebo deklarované s nulovou velikostí. Konstantní výraz pro velikost pole musí být celé číslo větší než nula. Deklarace pole s nulovou dolní index je platný pouze pro třídy, struktury nebo člen sjednocení a pouze s rozšířeními společnosti Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+Následující ukázka generuje C2466:
+
+```
+// C2466.cpp
+// compile with: /c
+int i[0];   // C2466
+int j[1];   // OK
+char *p;
 ```

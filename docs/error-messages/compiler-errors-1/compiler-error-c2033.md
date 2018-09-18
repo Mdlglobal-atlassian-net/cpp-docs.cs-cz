@@ -1,5 +1,5 @@
 ---
-title: C2033 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2033 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc9e70ce000fe69876888ec94684d48d2ee9531
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05ed1274f94c1df8e9654622ec059ea9707cdf87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043024"
 ---
-# <a name="compiler-error-c2033"></a>C2033 chyby kompilátoru
-"identifikátor": bit pole nemůže mít indirection  
-  
- Bitová pole byla deklarována jako ukazatel, což není povoleno.  
-  
- Následující ukázka generuje C2033:  
-  
-```  
-// C2033.cpp  
-struct S {  
-   int *b : 1;  // C2033  
-};  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2033b.cpp  
-// compile with: /c  
-struct S {  
-   int b : 1;  
-};  
+# <a name="compiler-error-c2033"></a>Chyba kompilátoru C2033
+
+'identifier': bitové pole nemůže mít indirekci
+
+Bitové pole se deklaroval jako ukazatel, který není povolen.
+
+Následující ukázka generuje C2033:
+
+```
+// C2033.cpp
+struct S {
+   int *b : 1;  // C2033
+};
+```
+
+Možná řešení:
+
+```
+// C2033b.cpp
+// compile with: /c
+struct S {
+   int b : 1;
+};
 ```

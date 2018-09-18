@@ -1,5 +1,5 @@
 ---
-title: CXX0023 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0023 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034600"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>Chyba při vyhodnocování výrazu CXX0023
-základ chybný –  
-  
- Vyhodnocovací filtr výrazů C nerozpoznal základ – zadán. Platné jsou pouze decimal, hexadecimální a osmičková radixes.  
-  
- Tato chyba je stejný jako CAN0023.
+
+Chybný základ číselné soustavy
+
+Chyba při vyhodnocování výrazů C určeném nerozpozná. Pouze desítkové, hexadecimální a interpretace osmičková radixes jsou platné.
+
+Tato chyba se shoduje s CAN0023.

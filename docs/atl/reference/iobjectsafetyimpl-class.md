@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019415"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Iobjectsafetyimpl – třída
 
@@ -40,16 +40,16 @@ Tato třída poskytuje výchozí implementaci třídy `IObjectSafety` rozhraní 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IObjectSafetyImpl`.
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 Určuje možnosti podporované zabezpečení pro ovládací prvek. Může být jedna z následujících hodnot:
 
 - INTERFACESAFE_FOR_UNTRUSTED_CALLER rozhraní identifikován [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parametr `riid` třeba bezpečné pro skriptování.
@@ -139,5 +139,5 @@ Zobrazit [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/l
 
 ## <a name="see-also"></a>Viz také
 
-[IObjectSafety rozhraní](https://msdn.microsoft.com/library/aa768224.aspx)   
+[IObjectSafety rozhraní](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

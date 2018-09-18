@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3500c2bd8a0245f0ecf5db1337502f05699a6509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040333"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
 
@@ -36,8 +36,8 @@ Bitové operátory posunutí jsou operátor pravého posunutí (**&gt;&gt;**), k
 
 ## <a name="syntax"></a>Syntaxe
 
-> *SHIFT-expression* `<<` *additive-expression*  
-> *SHIFT-expression* `>>` *additive-expression*
+> *SHIFT-expression* `<<` *additive-expression*
+> *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Poznámky
 
@@ -178,7 +178,7 @@ int main() {
 
     short neg5 = neg1 >> 5; // -1
     bitset<16> bn5(neg5);
-    cout << bn5 << endl;  // 0b11111111'11111111  
+    cout << bn5 << endl;  // 0b11111111'11111111
 }
 ```
 
@@ -240,5 +240,5 @@ Hodnota `E1 >> E2` je `E1` posunuta doprava `E2` bitových pozic. Pokud `E1` má
 
 ## <a name="see-also"></a>Viz také:
 
-[Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)  
-[Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+[Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)<br/>
+[Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

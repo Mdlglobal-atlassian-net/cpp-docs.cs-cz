@@ -1,5 +1,5 @@
 ---
-title: CXX0064 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0064 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025890"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Chyba při vyhodnocování výrazu CXX0064
-Nelze nastavit bod přerušení na člena vázané virtuální funkce  
-  
- Zarážku byl nastaven na člena virtuální funkce prostřednictvím ukazatele na objekt, jako například:  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- Zarážky můžete nastavit na virtuální funkci zadáním třídy, jako například:  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- Tato chyba je stejný jako CAN0064.
+
+Nelze nastavit zarážku na vázaná virtuální členská funkce
+
+Zarážka byla nastavena na virtuální členská funkce prostřednictvím ukazatele na objekt, jako například:
+
+```
+pClass->vfunc( int );
+```
+
+Zarážku lze nastavit na virtuální funkce tak, že zadáte třídy, jako například:
+
+```
+Class::vfunc( int );
+```
+
+Tato chyba se shoduje s CAN0064.

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042440"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager – třída
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>Parametry
 
-*bFallback*  
+*bFallback*<br/>
 Hodnota TRUE označuje podporu použití náhradní lokality. Pokud počet zrušených zpracovaných funkce selže, třída automaticky volá funkci "beztransakční". Hodnota FALSE označuje žádný "základní" volání.
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 Hodnota TRUE označuje, že obslužná rutina transakce se vytvoří automaticky v konstruktoru. Hodnota FALSE označuje, že není.
 
 ### <a name="remarks"></a>Poznámky
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Název objektu má být vytvořen nebo otevřen.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Přístup k objektu, který lze shrnout jako čtení, zápis, obou nebo ani jedna (nula). Nejčastěji používanými hodnotami jsou všeobecné_čtení či GENERIC_WRITE: všeobecné_čtení &#124; ke GENERIC_WRITE.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 Režim sdílení objektu, který může být čtení, zápisu a obě, odstranění, všechny z nich, nebo žádný: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Ukazatel na strukturu SECURITY_ATTRIBUTES, která obsahuje popisovač volitelné zabezpečení a také určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Tento parametr může mít hodnotu NULL.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Akce na souborech, které existují a neexistují. Tento parametr musí být jedna z následujících hodnot, které nelze kombinovat: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING nebo TRUNCATE_EXISTING.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Atributy souboru a příznaky. Tento parametr může obsahovat libovolnou kombinaci atributů k dispozici souboru (FILE_ATTRIBUTE_ *). Všechny ostatní atributy souboru přepsat FILE_ATTRIBUTE_NORMAL. Tento parametr může obsahovat také kombinace příznaků (FILE_FLAG_\*) pro řízení chování ukládání do vyrovnávací paměti, přístup k režimech a další příznaky zvláštní účely. Tyto se kombinují s jakékoli FILE_ATTRIBUTE_\* hodnoty.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Platný popisovač do souboru šablony s všeobecné_čtení přístupové právo. Soubor šablony, který poskytuje atributy souboru a rozšířených atributů souboru, který se vytváří. Tento parametr může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Název souboru, který má být odstraněna.
 
 ### <a name="remarks"></a>Poznámky
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Adresář nebo cesta a název souboru, který chcete vyhledat. Tento parametr může obsahovat zástupné znaky, jako je hvězdička (*) nebo (otazník).
 
-*pNextInfo*  
+*pNextInfo*<br/>
 Ukazatel na strukturu WIN32_FIND_DATA, která přijímá informace týkající se nenašel soubor nebo podadresáře.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Název souboru nebo adresáře.
 
 ### <a name="remarks"></a>Poznámky
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Název souboru nebo adresáře.
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 Úroveň atribut informace se mají načíst.
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 Ukazatel do vyrovnávací paměti, která bude přijímat informace o atributu. Typ atributu informací, které jsou uloženy do této vyrovnávací paměti je určen hodnotou *fInfoLevelId*. Pokud *fInfoLevelId* parametr je GetFileExInfoStandard pak tento parametr odkazuje na strukturu WIN32_FILE_ATTRIBUTE_DATA.
 
 ### <a name="remarks"></a>Poznámky
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 Aktuální název existující soubor nebo adresář v místním počítači.
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 Nový název pro soubor nebo adresář. Tento název nesmí existovat. Nový soubor může být na jiný systém souborů nebo disku. Nový adresář musí být na stejné jednotce.
 
 ### <a name="remarks"></a>Poznámky
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název, který tato funkce se otevře, nebo vytvoří podklíč.
 
-*dwReserved*  
+*dwReserved*<br/>
 Tento parametr je vyhrazen a musí být nula.
 
-*lpClass*  
+*lpClass*<br/>
 Uživatelsky definované třídy tohoto klíče. Tento parametr může být ignorován. Tento parametr může mít hodnotu NULL.
 
-*dwOptions*  
+*dwOptions*<br/>
 Tento parametr může být jedna z následujících hodnot: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE nebo REG_OPTION_VOLATILE.
 
-*samDesired*  
+*samDesired*<br/>
 Maska, která určuje přístupová práva pro klíč.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Ukazatel na strukturu SECURITY_ATTRIBUTES, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *lpSecurityAttributes* má hodnotu NULL, nelze dědit popisovač.
 
-*phkResult*  
+*phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač klíče otevřená nebo je vytvořený. Pokud klíč není jeden z klíčů registru předdefinované, zavolejte `RegCloseKey` funkční i po dokončení pomocí popisovač.
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 Ukazatel na proměnnou, která přijme některý z následujících hodnot dispozice: REG_CREATED_NEW_KEY nebo REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*podstrom hKey*  
+*podstrom hKey*<br/>
 Popisovač otevřít klíč registru.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Název podklíče registru otevřít.
 
-*ulOptions*  
+*ulOptions*<br/>
 Tento parametr je vyhrazen a musí být nula.
 
-*samDesired*  
+*samDesired*<br/>
 Maska, která určuje přístupová práva pro klíč.
 
-*phkResult*  
+*phkResult*<br/>
 Ukazovat na proměnnou, která přijímá popisovač klíče otevřená nebo je vytvořený. Pokud klíč není jeden z klíčů registru předdefinované, zavolejte `RegCloseKey` funkční i po dokončení pomocí popisovač.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*  
+*lpFileName*<br/>
 Název souboru nebo adresáře.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Atributy souboru, který se mají nastavit pro soubor. Další informace najdete v tématu [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).
 
 ### <a name="remarks"></a>Poznámky

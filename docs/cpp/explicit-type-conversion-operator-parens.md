@@ -18,121 +18,124 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 451901d595a91189fea1f8c1364ccd6cbd151a17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043193"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operátor převodu explicitního typu: ()
-Jazyk C++ umožňuje explicitní převod typu pomocí syntaxe podobné syntaxi volání funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-simple-type-name ( expression-list )  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- A *simple-type-name* následovaný *seznam výrazů* uzavřeným v závorkách vytvoří objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:  
-  
-```cpp 
-int i = int( d );  
-```  
-  
- Následující příklad ukazuje `Point` třídy.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp 
-// expre_Explicit_Type_Conversion_Operator.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-class Point  
-{  
-public:  
-    // Define default constructor.  
-    Point() { _x = _y = 0; }  
-    // Define another constructor.  
-    Point( int X, int Y ) { _x = X; _y = Y; }  
-  
-    // Define "accessor" functions as  
-    // reference types.  
-    unsigned& x() { return _x; }  
-    unsigned& y() { return _y; }  
-    void Show()   { cout << "x = " << _x << ", "  
-                         << "y = " << _y << "\n"; }  
-private:  
-    unsigned _x;  
-    unsigned _y;  
-};  
-  
-int main()  
-{  
-    Point Point1, Point2;  
-  
-    // Assign Point1 the explicit conversion  
-    //  of ( 10, 10 ).  
-    Point1 = Point( 10, 10 );  
-  
-    // Use x() as an l-value by assigning an explicit  
-    //  conversion of 20 to type unsigned.  
-    Point1.x() = unsigned( 20 );  
-    Point1.Show();  
-  
-    // Assign Point2 the default Point object.  
-    Point2 = Point();  
-    Point2.Show();  
-}  
-```  
-  
-## <a name="output"></a>Výstup  
-  
-```Output  
-x = 20, y = 10  
-x = 0, y = 0  
-```  
-  
- Ačkoli předchozí příklad ukazuje explicitní převod typu s použitím konstant, stejný postup funguje při provádění těchto převodů s objekty. Následující fragment kódu to demonstruje:  
-  
-```cpp 
-int i = 7;  
-float d;  
-  
-d = float( i );  
-```  
-  
- Explicitní převody typu lze zadat také pomocí syntaxe „přetypování“. Předchozí příklad přepsaný pomocí syntaxe přetypování je:  
-  
-```cpp
-d = (float)i;  
-```  
-  
- Při převodu z jedné hodnoty vrací převody pomocí přetypování a převody stylu funkce stejné výsledky. Avšak u syntaxe stylu funkce lze zadat více než jeden argument převodu. Tento rozdíl je důležitý pro uživatelské typy. Vezměte v úvahu třídu `Point` a její převody:  
-  
-```cpp
-struct Point  
-{  
-    Point( short x, short y ) { _x = x; _y = y; }  
-    ...  
-    short _x, _y;  
-};  
-...  
-Point pt = Point( 3, 10 );  
+
+Jazyk C++ umožňuje explicitní převod typu pomocí syntaxe podobné syntaxi volání funkce.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
-  
- V předchozím příkladu, který používá převod stylu funkce, ukazuje, jak převést dvě hodnoty (jeden pro *x* a jeden pro *y*) pro uživatelem definovaný typ `Point`.  
-  
+simple-type-name ( expression-list )
+```
+
+## <a name="remarks"></a>Poznámky
+
+A *simple-type-name* následovaný *seznam výrazů* uzavřeným v závorkách vytvoří objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:
+
+```cpp
+int i = int( d );
+```
+
+Následující příklad ukazuje `Point` třídy.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// expre_Explicit_Type_Conversion_Operator.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+class Point
+{
+public:
+    // Define default constructor.
+    Point() { _x = _y = 0; }
+    // Define another constructor.
+    Point( int X, int Y ) { _x = X; _y = Y; }
+
+    // Define "accessor" functions as
+    // reference types.
+    unsigned& x() { return _x; }
+    unsigned& y() { return _y; }
+    void Show()   { cout << "x = " << _x << ", "
+                         << "y = " << _y << "\n"; }
+private:
+    unsigned _x;
+    unsigned _y;
+};
+
+int main()
+{
+    Point Point1, Point2;
+
+    // Assign Point1 the explicit conversion
+    //  of ( 10, 10 ).
+    Point1 = Point( 10, 10 );
+
+    // Use x() as an l-value by assigning an explicit
+    //  conversion of 20 to type unsigned.
+    Point1.x() = unsigned( 20 );
+    Point1.Show();
+
+    // Assign Point2 the default Point object.
+    Point2 = Point();
+    Point2.Show();
+}
+```
+
+## <a name="output"></a>Výstup
+
+```Output
+x = 20, y = 10
+x = 0, y = 0
+```
+
+Ačkoli předchozí příklad ukazuje explicitní převod typu s použitím konstant, stejný postup funguje při provádění těchto převodů s objekty. Následující fragment kódu to demonstruje:
+
+```cpp
+int i = 7;
+float d;
+
+d = float( i );
+```
+
+Explicitní převody typu lze zadat také pomocí syntaxe „přetypování“. Předchozí příklad přepsaný pomocí syntaxe přetypování je:
+
+```cpp
+d = (float)i;
+```
+
+Při převodu z jedné hodnoty vrací převody pomocí přetypování a převody stylu funkce stejné výsledky. Avšak u syntaxe stylu funkce lze zadat více než jeden argument převodu. Tento rozdíl je důležitý pro uživatelské typy. Vezměte v úvahu třídu `Point` a její převody:
+
+```cpp
+struct Point
+{
+    Point( short x, short y ) { _x = x; _y = y; }
+    ...
+    short _x, _y;
+};
+...
+Point pt = Point( 3, 10 );
+```
+
+V předchozím příkladu, který používá převod stylu funkce, ukazuje, jak převést dvě hodnoty (jeden pro *x* a jeden pro *y*) pro uživatelem definovaný typ `Point`.
+
 > [!CAUTION]
->  Explicitní převody typu používejte opatrně, protože přepisují vestavěnou kontrolu typů kompilátoru jazyka C++.  
-  
- [Přetypování](../cpp/cast-operator-parens.md) musí být použit zápis převody na typy, které nemají *simple-type-name* (typy ukazatelů nebo odkazů, třeba). Převod na typy, které lze vyjádřit pomocí *simple-type-name* může být napsán v obou tvarech.  
-  
- Definice typu v rámci přetypování je neplatná.  
-  
-## <a name="see-also"></a>Viz také:  
- [Výrazy přípony](../cpp/postfix-expressions.md)   
- [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+>  Explicitní převody typu používejte opatrně, protože přepisují vestavěnou kontrolu typů kompilátoru jazyka C++.
+
+[Přetypování](../cpp/cast-operator-parens.md) musí být použit zápis převody na typy, které nemají *simple-type-name* (typy ukazatelů nebo odkazů, třeba). Převod na typy, které lze vyjádřit pomocí *simple-type-name* může být napsán v obou tvarech.
+
+Definice typu v rámci přetypování je neplatná.
+
+## <a name="see-also"></a>Viz také:
+
+[Výrazy přípony](../cpp/postfix-expressions.md)<br/>
+[Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

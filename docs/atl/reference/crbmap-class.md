@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019481"
 ---
 # <a name="crbmap-class"></a>Crbmap – třída
 
@@ -38,22 +38,22 @@ Tato třída reprezentuje strukturu mapování pomocí binárního stromu Red Bl
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče prvku.
 
-*V*  
+*V*<br/>
 Typ elementu hodnota.
 
-*KTraits*  
+*KTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
 
-*VTraits*  
+*VTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ## <a name="members"></a>Členové
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
 
-*value*  
+*value*<br/>
 Proměnná, která přijímá hodnotu vyhledaných.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč odpovídající dvojice elementů chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Hodnotu klíče pro přidání do `CRBMap` objektu.
 
-*value*  
+*value*<br/>
 Hodnota k přidání do `CRBMap` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -223,7 +223,7 @@ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/c
 
 ## <a name="see-also"></a>Viz také
 
-[Crbtree – třída](../../atl/reference/crbtree-class.md)   
-[Catlmap – třída](../../atl/reference/catlmap-class.md)   
-[Crbmultimap – třída](../../atl/reference/crbmultimap-class.md)   
+[CRBTree – třída](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap – třída](../../atl/reference/catlmap-class.md)<br/>
+[CRBMultiMap – třída](../../atl/reference/crbmultimap-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

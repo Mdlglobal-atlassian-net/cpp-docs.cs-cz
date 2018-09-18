@@ -1,5 +1,5 @@
 ---
-title: Třída zprávy | Microsoft Docs
+title: Message – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042218"
 ---
 # <a name="message-class"></a>message – třída
-Obálku základní zprávu obsahující datovou předávány mezi bloky zasílání zpráv.  
+Obálky základní zprávy obsahující datovou část předávaný mezi bloky zasílání zpráv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,37 +40,37 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Datový typ datové části v rámci zprávy.  
+*T*<br/>
+Datový typ datové části v rámci zprávy.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`type`|Typ aliasu pro `T`.|  
+|`type`|Alias typu pro `T`.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[message](#ctor)|Přetíženo. Vytvoří `message` objektu.|  
-|[~ message – destruktor](#dtor)|Zničí `message` objektu.|  
+|[~ message – destruktor](#dtor)|Odstraní `message` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Přidá do počet odkazů pro `message` objektu. Použít pro bloky zpráv, které je třeba určit životnosti zpráva při počítání referencí.|  
+|[add_ref](#add_ref)|Přidá počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.|  
 |[msg_id](#msg_id)|Vrátí ID `message` objektu.|  
-|[remove_ref](#remove_ref)|Odečítá od počet odkazů pro `message` objektu. Použít pro bloky zpráv, které je třeba určit životnosti zpráva při počítání referencí.|  
+|[remove_ref](#remove_ref)|Odečte od počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[datová část](#payload)|Datovou část `message` objektu.|  
+|[datová část](#payload)|Datová část `message` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -85,7 +85,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a> add_ref – 
 
- Přidá do počet odkazů pro `message` objektu. Použít pro bloky zpráv, které je třeba určit životnosti zpráva při počítání referencí.  
+ Přidá počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.  
   
 ```
 long add_ref();
@@ -114,21 +114,21 @@ message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_P`  
- Datová část této zprávy.  
+*_P*<br/>
+Datová část této zprávy.  
   
- `_Id`  
- Jedinečný Identifikátor této zprávy.  
+*ID _ovládacího*<br/>
+Jedinečné ID této zprávy.  
   
- `_Msg`  
- Odkaz nebo ukazatel na `message` objektu.  
+*_Msg*<br/>
+Odkaz nebo ukazatel `message` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Konstruktor, který přebírá ukazatel `message` objektu jako argument, vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka Pokud parametr `_Msg` je `NULL`.  
+ Konstruktor, který bere ukazatel na `message` jak argument vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka Pokud parametr `_Msg` je `NULL`.  
   
-##  <a name="dtor"></a> ~ zpráv 
+##  <a name="dtor"></a> ~ zprávy 
 
- Zničí `message` objektu.  
+ Odstraní `message` objektu.  
   
 ```
 virtual ~message();
@@ -147,7 +147,7 @@ runtime_object_identity msg_id() const;
   
 ##  <a name="payload"></a> datová část 
 
- Datovou část `message` objektu.  
+ Datová část `message` objektu.  
   
 ```
 T const payload;
@@ -155,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref – 
 
- Odečítá od počet odkazů pro `message` objektu. Použít pro bloky zpráv, které je třeba určit životnosti zpráva při počítání referencí.  
+ Odečte od počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.  
   
 ```
 long remove_ref();

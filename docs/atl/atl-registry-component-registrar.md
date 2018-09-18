@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041035"
 ---
 # <a name="atl-registry-component-registrar"></a>Komponenta knihovny ATL pro přístup k registru (Registrar)
 
@@ -36,14 +36,14 @@ Doménový Registrátor ATL poskytuje optimalizované přístup do systémového
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)  
+[Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)<br/>
 Příručka k vytváření skriptů registrátoru. Obsahuje témata o syntaxi BNF, stromů analýzy registru skriptování příklady použití nahraditelných parametrů a volání skriptů.
 
-[Nastavení statického odkazu na kód registrátoru (pouze C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Nastavení statického odkazu na kód registrátoru (pouze C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Jsou uvedené kroky k nastavení statické propojení na doménový Registrátor.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 

@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1140 | Microsoft Docs
+title: Chyba Linkerů LNK1140 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044701"
 ---
 # <a name="linker-tools-error-lnk1140"></a>Chyba linkerů LNK1140
-příliš mnoho modulů pro databázi programu; odkaz s/pdb: žádné  
-  
- Projekt obsahuje více než 4096 moduly.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Znovu připojit pomocí [/pdb: žádný](../../build/reference/pdb-use-program-database.md).  
-  
-2.  Některé moduly kompilovat bez ladění informace.  
-  
-3.  Snižte počet modulů.
+
+příliš moc modulů pro databáze programu. Propojte pomocí/pdb: NONE
+
+Projekt obsahuje více než 4096 moduly.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Znovu propojit pomocí [/pdb: NONE](../../build/reference/pdb-use-program-database.md).
+
+1. Některé moduly kompilaci bez informací o ladění.
+
+1. Snížit počet modulů.

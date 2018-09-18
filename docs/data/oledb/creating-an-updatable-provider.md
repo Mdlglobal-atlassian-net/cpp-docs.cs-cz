@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043297"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 
 Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředkovatele, které můžete aktualizovat (zápis do) úložiště. Toto téma popisuje, jak vytvořit aktualizovatelní zprostředkovatelé pomocí šablony technologie OLE DB.  
   
- Toto téma předpokládá, že začínáte s funkční zprostředkovatele. Existují dva kroky k vytvoření aktualizovatelného zprostředkovatele. Nejprve musíte rozhodnout, jak poskytovatel provede změny úložiště dat; Určuje, zda konkrétně změny jsou okamžitě provést nebo odložena až do vydání příkazu k aktualizaci. V části "[provádění aktualizovat poskytovatele](#vchowmakingprovidersupdatable)" popisuje změny a nastavení, musíte udělat v kódu zprostředkovatele.  
+Toto téma předpokládá, že začínáte s funkční zprostředkovatele. Existují dva kroky k vytvoření aktualizovatelného zprostředkovatele. Nejprve musíte rozhodnout, jak poskytovatel provede změny úložiště dat; Určuje, zda konkrétně změny jsou okamžitě provést nebo odložena až do vydání příkazu k aktualizaci. V části "[provádění aktualizovat poskytovatele](#vchowmakingprovidersupdatable)" popisuje změny a nastavení, musíte udělat v kódu zprostředkovatele.  
   
- V dalším kroku je nutné zajistit, aby že váš poskytovatel obsahuje všechny funkce pro podporu všechno, co ho může požádat příjemce. Pokud chce aktualizujte úložiště dat příjemce, musí obsahovat kód, který přenese data do úložiště dat zprostředkovatele. Například můžete provádět tyto operace na zdroj dat použít knihovny Run-Time jazyka C nebo MFC. V části "[zápisu do zdroje dat](#vchowwritingtothedatasource)" popisuje, jak zapsat do zdroje dat, řešení s hodnotou NULL a výchozí hodnoty a nastavit příznaky sloupce.  
+V dalším kroku je nutné zajistit, aby že váš poskytovatel obsahuje všechny funkce pro podporu všechno, co ho může požádat příjemce. Pokud chce aktualizujte úložiště dat příjemce, musí obsahovat kód, který přenese data do úložiště dat zprostředkovatele. Například můžete provádět tyto operace na zdroj dat použít knihovny Run-Time jazyka C nebo MFC. V části "[zápisu do zdroje dat](#vchowwritingtothedatasource)" popisuje, jak zapsat do zdroje dat, řešení s hodnotou NULL a výchozí hodnoty a nastavit příznaky sloupce.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) je příkladem aktualizovatelného zprostředkovatele. UpdatePV je stejný jako MyProv, ale s podporou.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Vytváření zprostředkovatelů aktualizovat  
 
- Klíčem k tvorbě aktualizovatelného zprostředkovatele se ke zjištění, jaké operace, které má váš poskytovatel provádět v úložišti dat a jak chcete poskytovatele provádět tyto operace. Konkrétně je závažný problém, jestli jsou aktualizace do úložiště dat provést okamžitě, nebo odloženo (dávkované) až do vydání příkazu k aktualizaci.  
+Klíčem k tvorbě aktualizovatelného zprostředkovatele se ke zjištění, jaké operace, které má váš poskytovatel provádět v úložišti dat a jak chcete poskytovatele provádět tyto operace. Konkrétně je závažný problém, jestli jsou aktualizace do úložiště dat provést okamžitě, nebo odloženo (dávkované) až do vydání příkazu k aktualizaci.  
   
- Je třeba nejprve rozhodnout, jestli se má dědit z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl` ve své třídě sady řádků. V závislosti na tom, který z nich rozhodnete implementovat, bude mít vliv funkce tři metody: `SetData`, `InsertRows`, a `DeleteRows`.  
+Je třeba nejprve rozhodnout, jestli se má dědit z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl` ve své třídě sady řádků. V závislosti na tom, který z nich rozhodnete implementovat, bude mít vliv funkce tři metody: `SetData`, `InsertRows`, a `DeleteRows`.  
   
 - Pokud je zděděn z [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), tyto tři metody volání okamžitě změní úložišti.  
   
 - Pokud je zděděn z [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), metody odložit změny do úložiště dat, dokud nezavoláte `Update`, `GetOriginalData`, nebo `Undo`. Pokud aktualizace zahrnuje několik změn, jsou provedeny v dávkovém režimu (Poznámka: dávkování změny můžete přidat režijní náklady na značnou paměť).  
   
- Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto `IRowsetUpdateImpl` umožňuje změnit možnosti a funkce služby batch.  
+Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto `IRowsetUpdateImpl` umožňuje změnit možnosti a funkce služby batch.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Chcete-li podporovat ve zprostředkovateli  
   
@@ -72,21 +72,21 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
     > [!NOTE]
     >  Měli byste odebrat `IRowsetChangeImpl` řádek z vašeho řetězu dědičnosti. Jedinou výjimkou je to výše zmíněné musí obsahovat kód `IRowsetChangeImpl`.  
   
-2.  Přidejte následující do mapy modelu COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
+1. Přidejte následující do mapy modelu COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
     |Pokud se rozhodnete implementovat|Přidejte do mapy modelu COM.|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  V příkazu, přidejte následující mapy set vlastnosti (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
+1. V příkazu, přidejte následující mapy set vlastnosti (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
   
     |Pokud se rozhodnete implementovat|Přidejte do mapy sady vlastností|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  V mapě sadu vlastností měli byste také zahrnout všechna následující nastavení, jak se objeví pod:  
+1. V mapě sadu vlastností měli byste také zahrnout všechna následující nastavení, jak se objeví pod:  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
         >  Pokud podporujete oznámení, může být také některé také další vlastnosti; naleznete v části `IRowsetNotifyCP` pro tento seznam.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Zápis do zdroje dat.  
- Chcete-li načíst ze zdroje dat, zavolejte `Execute` funkce. Chcete-li zapsat do zdroje dat, zavolejte `FlushData` funkce. (V obecném smyslu vyprázdněte znamená, že se uložit změny provedené u tabulky nebo indexu na disk.)  
+
+Chcete-li načíst ze zdroje dat, zavolejte `Execute` funkce. Chcete-li zapsat do zdroje dat, zavolejte `FlushData` funkce. (V obecném smyslu vyprázdněte znamená, že se uložit změny provedené u tabulky nebo indexu na disk.)  
 
 ```cpp
 
@@ -158,6 +159,7 @@ Popisovač (HACCESSOR) argumenty a popisovač řádku (HROW) vám umožňují ur
 `FlushData` Metoda zapisuje data ve formátu, ve kterém byla původně uložena. Pokud funkci nelze přepsat, váš poskytovatel bude program fungovat správně, ale změny se nebudou vyprázdní na úložiště dat.
 
 ### <a name="when-to-flush"></a>Když se nezdařil
+
 Šablony zprostředkovatele volání FlushData pokaždé, když se data musí být zapsána do úložiště dat; obvykle (ale ne vždy) dochází k tomu následkem volání následující funkce:
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ Jako vývojář poskytovatele musíte zvážit jak budete ukládat data, jak bud
 Prohlédněte si kód v ukázce UpdatePV; ukazuje, jak zprostředkovatele můžete zpracovávat data hodnotu NULL. V UpdatePV zprostředkovatel ukládá NULL data napsáním řetězec "NULL" dat v úložišti. Při čtení dat NULL z úložiště dat, uvidí tento řetězec a pak vyprázdní vyrovnávací paměť, vytváření řetězec s hodnotou NULL. Je také přepsání `IRowsetImpl::GetDBStatus` ve kterém se vrátí DBSTATUS_S_ISNULL, pokud tato hodnota dat je prázdný.
 
 ### <a name="marking-nullable-columns"></a>Označení sloupce s možnou hodnotou Null
+
 Pokud implementujete sad řádků schématu (viz `IDBSchemaRowsetImpl`), vaše implementace by měl určit v sadě řádků DBSCHEMA_COLUMNS (obvykle označeny ve zprostředkovateli CxxxSchemaColSchemaRowset), že je sloupec s možnou hodnotou Null.
 
 Musíte také určit, že všechny sloupce s možnou hodnotou NULL obsahovat hodnotu DBCOLUMNFLAGS_ISNULLABLE ve vaší verzi `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Tento kód určuje, mimo jiné, že sloupec podporuje výchozí hodnotu 0, že být zapisovatelná, a že všechna data ve sloupci mít stejnou délku. Pokud chcete data ve sloupci mít proměnné délky, nebude tento příznak nastavit.
 
 ## <a name="see-also"></a>Viz také
+
 [Vytvoření zprostředkovatele OLE DB](creating-an-ole-db-provider.md)

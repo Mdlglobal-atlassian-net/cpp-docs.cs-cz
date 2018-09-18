@@ -1,5 +1,5 @@
 ---
-title: Lock::Operator! = | Microsoft Docs
+title: Lock::Operator! = | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043011"
 ---
 # <a name="lockoperator"></a>lock::operator!= – operátor
 Operátor nerovnosti.  
@@ -39,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t`  
- Objekt k porovnání nerovnost.  
+*t*<br/>
+Objekt k porovnání nerovnost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `true` Pokud `t` se liší od zámek objektu `false` jinak.  
+ Vrátí `true` Pokud `t` se liší od zamknout objekt `false` jinak.  
   
 ## <a name="example"></a>Příklad  
   
@@ -76,5 +76,5 @@ Inequal!
  **Namespace** msclr –  
   
 ## <a name="see-also"></a>Viz také  
- [Lock – členy třídy](../dotnet/lock-members.md)   
+ [Lock – členy](../dotnet/lock-members.md)   
  [lock::operator==](../dotnet/lock-operator-equality.md)

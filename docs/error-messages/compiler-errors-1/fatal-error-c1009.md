@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1009 | Microsoft Docs
+title: Závažná chyba C1009 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665d868aeacbaf5c62bf59a4400baa2b31569972
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1fbd8994be6fd86a764db400d8761a5d697079b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037330"
 ---
 # <a name="fatal-error-c1009"></a>Závažná chyba C1009
-omezení kompilátoru: makra vnořeny příliš hluboko  
-  
- Kompilátor se pokusil rozšířit příliš mnoho makra ve stejnou dobu. Kompilátor může obsahovat maximálně 256 úrovní vnořených makra. Vnořené makra rozdělením jednodušší makra.
+
+limit kompilátoru: makra jsou vnořená moc hluboko
+
+Kompilátor se pokusil rozšířit příliš mnoho makra ve stejnou dobu. Kompilátor může obsahovat maximálně 256 úrovní vnořených makra. Vnořené makra rozdělte jednodušší makra.

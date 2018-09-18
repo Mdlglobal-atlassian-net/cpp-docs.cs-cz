@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4459 | Microsoft Docs
+title: Upozornění (úroveň 4) C4459 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bdbfe6cceff664e7b7a5f8cee20e8df51e2fb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca0fc86be746bafdf4987a7492c59d9686535cef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040892"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>C4459 kompilátoru upozornění (úroveň 4)
-  
-> prohlášení o '*identifikátor*' skryje globální deklarace
-  
-Prohlášení o *identifikátor* v oboru místní skryje deklaraci stejně jako názvem *identifikátor* v globálním oboru. Toto upozornění informacemi o tom, který odkazuje na *identifikátor* v tomto rozsahu odkazující na lokálně deklarovaný verze, ne globální verzi, která mohou nebo nemusí být vašich představ. Obecně platí doporučujeme, abyste že minimalizujete použití globální proměnné dobrý technického hlediska. Chcete-li minimalizovat znečištění globálního oboru názvů, doporučujeme použít s názvem oboru názvů pro globální proměnné.  
-  
-Toto upozornění se nové v sadě Visual Studio 2015, v jazyce Visual C++ verze kompilátoru 18.00 hodin. Chcete-li potlačit upozornění z této verze kompilátoru nebo později během migrace kódu, použijte [/Wv:18](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. 
+# <a name="compiler-warning-level-4-c4459"></a>Kompilátor upozornění (úroveň 4) C4459
+
+> deklarace "*identifikátor*' skryje globální deklaraci
+
+Deklarace *identifikátor* v místním oboru skrývá deklaraci nazvanými *identifikátor* v globálním oboru. Toto upozornění umožňuje zjistit, která odkazuje na *identifikátor* v tomto oboru vyřešit lokálně deklarované verzi není globální verze, který může nebo nemusí být vašich představ. Obecně doporučujeme, abyste že minimalizovali použití globální proměnné podle osvědčené technické praxe. Chcete-li minimalizovat znečištění globální obor názvů, doporučujeme používat s názvem oboru názvů pro globální proměnné.
+
+Toto upozornění byla nová v sadě Visual Studio 2015 v jazyce Visual C++ verze kompilátoru 18.00 hodin. Chcete-li potlačit upozornění z této verze kompilátoru nebo později při migraci kódu, použijte [/WV: 18](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
 
 ## <a name="example"></a>Příklad
-  
- Následující ukázka generuje C4459:  
-  
-```cpp  
+
+Následující ukázka generuje C4459:
+
+```cpp
 // C4459_hide.cpp
 // compile with: cl /W4 /EHsc C4459_hide.cpp
 int global_or_local = 1;
 
-int main() { 
-    int global_or_local; // warning C4459 
+int main() {
+    int global_or_local; // warning C4459
     global_or_local = 2;
-} 
-```  
-  
-Jedním ze způsobů řešení tohoto problému je vytvoření oboru názvů pro vaše globals, ale nechcete použít `using` – direktiva tím tento obor názvů, do oboru, proto musíte použít všechny odkazy jednoznačným kvalifikovaný názvy:  
-  
-```cpp  
+}
+```
+
+Jedním ze způsobů řešení tohoto problému je vytvoření oboru názvů pro váš globální parametry, ale velmi riskantní používat `using` směrnice přivádí daného oboru názvů do oboru, takže všechny odkazy musí použít jednoznačný kvalifikované názvy:
+
+```cpp
 // C4459_namespace.cpp
 // compile with: cl /W4 /EHsc C4459_namespace.cpp
 namespace globals {
     int global_or_local = 1;
 }
 
-int main() { 
-    int global_or_local; // OK 
+int main() {
+    int global_or_local; // OK
     global_or_local = 2;
     globals::global_or_local = 3;
-} 
-```  
+}
+```

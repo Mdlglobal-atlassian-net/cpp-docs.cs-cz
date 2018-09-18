@@ -1,5 +1,5 @@
 ---
-title: C2804 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2804 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a0c9a785ae47e6df00b1303553228521d20d00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987176753d9c9dcd21ddbe06ef2e5b59c24dd79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036940"
 ---
-# <a name="compiler-error-c2804"></a>C2804 chyby kompilátoru
-binární 'operátor operátor' má příliš mnoho parametrů  
-  
- Funkce člena přetížená binární operátor je deklarovaný s více než jeden parametr. První operand parametr binární operátor členské funkce, jejíž typ je obsluhy nadřazený typ, je implicitní.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2804 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2804.cpp  
-// compile by using: cl /c /W4 C2804.cpp  
-class X {  
-public:  
-   X& operator+= (const X &left, const X &right);   // C2804  
-   X& operator+= (const X &right);   // OK - left operand implicitly *this  
-};  
-  
-int main() {  
-   X x, y;  
-   x += y;   // equivalent to x.operator+=(y)  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2804 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2804_2.cpp  
-// compile with: /clr /c  
-ref struct Y {  
-   Y^ operator +(Y^ hY, int i);   // C2804  
-   static Y^ operator +(Y^ hY, int i);   // OK  
-   Y^ operator +(int i);   // OK  
-};  
+# <a name="compiler-error-c2804"></a>Chyba kompilátoru C2804
+
+binární 'operátor operator' má moc velký počet parametrů
+
+Přetěžovaný binární operátor členská funkce je deklarována s více než jeden parametr. První parametr operand binárního operátoru členské funkce, jejíž typ je obsluhy nadřazený typ, je vyjádřena.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2804 a ukazuje, jak ho opravit.
+
+```
+// C2804.cpp
+// compile by using: cl /c /W4 C2804.cpp
+class X {
+public:
+   X& operator+= (const X &left, const X &right);   // C2804
+   X& operator+= (const X &right);   // OK - left operand implicitly *this
+};
+
+int main() {
+   X x, y;
+   x += y;   // equivalent to x.operator+=(y)
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2804 a ukazuje, jak ho opravit.
+
+```
+// C2804_2.cpp
+// compile with: /clr /c
+ref struct Y {
+   Y^ operator +(Y^ hY, int i);   // C2804
+   static Y^ operator +(Y^ hY, int i);   // OK
+   Y^ operator +(int i);   // OK
+};
 ```

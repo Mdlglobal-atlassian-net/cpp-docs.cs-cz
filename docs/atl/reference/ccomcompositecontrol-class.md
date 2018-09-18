@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021132"
 ---
 # <a name="ccomcompositecontrol-class"></a>Ccomcompositecontrol – třída
 
@@ -43,13 +43,13 @@ Tato třída poskytuje metody potřebnou k implementaci složeného ovládacího
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat složeného ovládacího prvku.
 
 ## <a name="members"></a>Členové
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*bAdvise*  
+*bAdvise*<br/>
 Hodnota TRUE, pokud všechny ovládací prvky mají být doporučujeme; naopak hodnota false.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK  
-Všechny ovládací prvky v případě jímky mapy byly připojené nebo úspěšně připojený k jejich zdroji událostí.
-
-E_FAIL  
-Ne všechny ovládací prvky v případě jímky mapa může být připojení nebo odpojení z jejich zdroje událostí úspěšně.
-
-E_POINTER  
-Tato chyba obvykle znamená problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony používané `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.
-
-CONNECT_E_ADVISELIMIT  
-Spojovací bod už dosáhla svého limitu připojení a nemůže přijímat nic dalšího.
-
-CONNECT_E_CANNOTCONNECT  
-Jímka nepodporuje rozhraní vyžaduje tento bod připojení.
-
-CONNECT_E_NOCONNECTION  
-Hodnota souboru cookie nepředstavuje platné připojení. Tato chyba obvykle znamená problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony používané `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.
+|||
+|-|-|
+|S_OK  |Všechny ovládací prvky v případě jímky mapy byly připojené nebo úspěšně připojený k jejich zdroji událostí.|
+|E_FAIL  |Ne všechny ovládací prvky v případě jímky mapa může být připojení nebo odpojení z jejich zdroje událostí úspěšně.|
+|E_POINTER  |Tato chyba obvykle znamená problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony používané `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.|
+|CONNECT_E_ADVISELIMIT  |Spojovací bod už dosáhla svého limitu připojení a nemůže přijímat nic dalšího.|
+|CONNECT_E_CANNOTCONNECT  |Jímka nepodporuje rozhraní vyžaduje tento bod připojení.|
+|CONNECT_E_NOCONNECTION  |Hodnota souboru cookie nepředstavuje platné připojení. Tato chyba obvykle znamená problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony používané `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
+*Velikost*<br/>
 Odkaz na `SIZE` strukturu pro vyplnění touto metodou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Popisovač pro nadřazené okno ovládacího prvku.
 
-*rcPos*  
+*rcPos*<br/>
 Vyhrazená.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Data mají být předána do ovládacího prvku během vytvoření ovládacího prvku. Data předána jako *dwInitParam* se zobrazí jako parametr LPARAM [nezavěsíte](/windows/desktop/dlgbox/wm-initdialog) zprávu, která budou odeslána do složeného ovládacího prvku, když se vytvoří.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Popisovač pro nadřazené okno ovládacího prvku.
 
-*rcPos*  
+*rcPos*<br/>
 Pozici obdélníku složeného ovládacího prvku v klientovi koordinuje vzhledem k *hWndParent*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -280,6 +271,6 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
-[Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Principy vytváření složených prvků](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

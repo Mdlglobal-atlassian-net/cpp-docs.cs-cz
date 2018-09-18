@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464911"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036186"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl – třída
+
 Implementuje rozhraní OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) rozhraní, které umožňují testování pro řádek identitu.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -44,14 +45,16 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída odvozená z `IRowsetIdentityImpl`.  
+
+*T*<br/>
+Třída odvozená z `IRowsetIdentityImpl`.  
   
- *RowClass*  
- Jednotka pro ukládání `HROW`.  
+*RowClass*<br/>
+Jednotka pro ukládání `HROW`.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -62,6 +65,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |[Issamerow –](#issamerow)|Porovná dvě popisovačů řádků zjistěte odkazují na stejný řádek.|  
   
 ## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+
 Porovná dvě popisovačů řádků zjistěte odkazují na stejný řádek.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -72,11 +76,14 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete porovnat popisovačů řádků, tato metoda přetypování `HROW` popisovače `RowClass` členy a volání `memcmp` na ukazatelů.  
+
+Pokud chcete porovnat popisovačů řádků, tato metoda přetypování `HROW` popisovače `RowClass` členy a volání `memcmp` na ukazatelů.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

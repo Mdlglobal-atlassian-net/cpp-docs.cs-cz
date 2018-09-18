@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022354"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -135,7 +135,7 @@ Volitelné části deklarace funkce jsou:
 
 Následující obrázek ukazuje části definice funkce. Vystínovaná oblast představuje tělo funkce.
 
- ![Části definice funkce](../cpp/media/vc38ru1.gif "vc38RU1") části definice funkce
+![Části definice funkce](../cpp/media/vc38ru1.gif "vc38RU1") části definice funkce
 
 ## <a name="function-definitions"></a>Definice funkcí
 
@@ -205,7 +205,7 @@ Pokud funkce upraví argument, který se předá odkazem, upraví původní obje
 void DoSomething(const std::string& input){...}
 ```
 
- **Jazyk C++ 11:** explicitně zpracování argumentů, které jsou předávány odkaz rvalue nebo odkaz na lvalue, pomocí double-ampersand u parametru určíte univerzální odkaz:
+**Jazyk C++ 11:** explicitně zpracování argumentů, které jsou předávány odkaz rvalue nebo odkaz na lvalue, pomocí double-ampersand u parametru určíte univerzální odkaz:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
         return 0;
     }
     ```
-    
+
 1. Vrátí objekt std::tuple nebo std::pair:
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. Kromě použití samotnou návratovou hodnotu, můžete "vrátit" hodnoty tak, že definujete libovolný počet parametry se mají použít pass-by-reference, takže můžete upravit nebo inicializace hodnoty objekty, které poskytuje volající funkci. Další informace najdete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Ukazatele na funkce
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 Předchozí deklarace je ekvivalentem deklarace pomocí direktivy typedef výše.
 
 ## <a name="see-also"></a>Viz také:
- [Přetížení funkce](../cpp/function-overloading.md)  
- [Funkce se seznamy argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [Explicitně přednastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [Výchozí argumenty](../cpp/default-arguments.md)  
- [Vložené funkce](../cpp/inline-functions-cpp.md)
+
+[Přetížení funkce](../cpp/function-overloading.md)<br/>
+[Funkce se seznamy argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[Explicitně přednastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[Výchozí argumenty](../cpp/default-arguments.md)<br/>
+[Vložené funkce](../cpp/inline-functions-cpp.md)

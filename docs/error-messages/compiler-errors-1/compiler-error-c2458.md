@@ -1,5 +1,5 @@
 ---
-title: C2458 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2458 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0822c12e109cd5a89a8e1050197367b12a24efa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94a95ab1eab00424774d5117e3ae37685a2ac1fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035461"
 ---
-# <a name="compiler-error-c2458"></a>C2458 chyby kompilátoru
-"identifikátor": předefinování v rámci definice  
-  
- Třídy, struktury, sjednocení nebo – výčet je předefinovat v jeho vlastní deklarace.  
-  
- Následující ukázka generuje C2458:  
-  
-```  
-// C2458.cpp  
-class C {  
-   enum i { C };   // C2458  
-};  
+# <a name="compiler-error-c2458"></a>Chyba kompilátoru C2458
+
+'identifier': předefinování v rámci definice
+
+Třída, struktura, unie nebo výčtu redefinována ve své vlastní prohlášení.
+
+Následující ukázka generuje C2458:
+
+```
+// C2458.cpp
+class C {
+   enum i { C };   // C2458
+};
 ```

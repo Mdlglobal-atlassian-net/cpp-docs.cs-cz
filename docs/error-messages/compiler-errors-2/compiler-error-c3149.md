@@ -1,5 +1,5 @@
 ---
-title: C3149 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3149 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0441a7aebf86139aedbd5e45a7645db0a90b37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a522bfd3ba236661f206d8d4e4b550179c06b3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033118"
 ---
-# <a name="compiler-error-c3149"></a>C3149 chyby kompilátoru
-'type': nemůžete použít tento typ zde bez nejvyšší úrovně "char"  
-  
- Deklaraci nebyl zadán správně.  
-  
- Například můžete mít definovaný typ CLR v globálním oboru a pokusu o vytvoření proměnné typu jako součást definice. Protože globální proměnné typy CLR nejsou povoleny, vygeneruje kompilátor C3149.  
-  
- Pokud chcete tuto chybu vyřešit, deklarujte proměnné typů CLR v definici funkce nebo typu.  
-  
- Následující ukázka generuje C3149:  
-  
-```  
-// C3149.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   // declare an array of value types   
-   array< Int32 ^> IntArray;   // C3149  
-   array< Int32>^ IntArray2;   // OK  
-}  
-```  
-  
- Následující ukázka generuje C3149:  
-  
-```  
-// C3149b.cpp  
-// compile with: /clr /c  
-delegate int MyDelegate(const int, int);  
-void Test1(MyDelegate m) {}   // C3149  
-void Test2(MyDelegate ^ m) {}   // OK  
-```  
+# <a name="compiler-error-c3149"></a>Chyba kompilátoru C3149
+
+'type': nelze použít tento typ tady bez nejvyšší úrovně 'char'.
+
+Deklarace nebyl správně zadán.
+
+Například můžete mít definovaný typ CLR v globálním oboru a pokusu o vytvoření proměnné typu jako součást definice. Protože globální proměnné typy CLR nejsou povoleny, bude kompilátor generovat C3149.
+
+Chcete-li vyřešit tuto chybu, deklarujte proměnné typů CLR uvnitř definice funkce nebo typ.
+
+Následující ukázka generuje C3149:
+
+```
+// C3149.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   // declare an array of value types
+   array< Int32 ^> IntArray;   // C3149
+   array< Int32>^ IntArray2;   // OK
+}
+```
+
+Následující ukázka generuje C3149:
+
+```
+// C3149b.cpp
+// compile with: /clr /c
+delegate int MyDelegate(const int, int);
+void Test1(MyDelegate m) {}   // C3149
+void Test2(MyDelegate ^ m) {}   // OK
+```

@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru prostředků RW4001 | Microsoft Docs
+title: Upozornění kompilátoru prostředků RW4001 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74ff4164d1e0ace3fced51df4f8028b782e62d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e430dd0c42ced94fb01c2d29fff0270e090dc6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040346"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Upozornění kompilátoru prostředků RW4001
-. Možnosti zpracování EXE (/ l /M /P /T /K /E /31 nebo /30)  
-  
- Zadaný soubor EXE zpracování možnosti, ale došlo ke zpracování žádný spustitelný soubor. Nepoužívejte tyto možnosti se souborem .res.
+
+. Možnosti zpracování EXE (/ l /M /P /T /K /E /31 nebo /30)
+
+Zadaný soubor EXE možností zpracování, ale došlo ke zpracování žádná spustitelný soubor. Nepoužívejte tyto možnosti se soubor .res.

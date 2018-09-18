@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace nástroje XDCMake | Microsoft Docs
+title: Referenční dokumentace nástroje XDCMake | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: caf28f01778bea31bc84a57fa74fed3221673dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039956"
 ---
 # <a name="xdcmake-reference"></a>Referenční dokumentace nástroje XDCMake
-xdcmake.exe je program, který se zkompiluje soubory do souboru .xml. Projektový soubor je vytvoří – kompilátor Visual C++ pro každého souboru se zdrojovým kódem, když zdrojový kód je kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) a když souboru se zdrojovým kódem obsahuje označené značky XML – dokumentační komentáře.  
+xdcmake.exe je program, který se zkompiluje soubory do souboru XML. Je vytvořen soubor .xdc kompilátorem jazyka Visual C++ pro každý zdrojový soubor kódu při kompilaci zdrojového kódu s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) a pokud obsahuje komentáře k dokumentaci označené značky XML souboru se zdrojovým kódem.  
   
-### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Chcete-li použít xdcmake.exe ve vývojovém prostředí sady Visual Studio  
+### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Použití xdcmake.exe ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
   
-2.  Otevřete **vlastnosti konfigurace** složky.  
+2.  Otevřít **vlastnosti konfigurace** složky.  
   
-3.  Klikněte **komentářů k dokumentu XML** stránku vlastností.  
+3.  Klikněte na tlačítko **komentáře dokumentu XML** stránku vlastností.  
   
 > [!NOTE]
->  Při xdcmake.exe se používá ve vývojovém prostředí (stránky vlastností), se liší od možnosti xdcmake.exe možnosti příkazového řádku. Informace o použití xdcmake.exe ve vývojovém prostředí najdete v tématu [stránky vlastností nástroje Generátor dokumentů XML](../ide/xml-document-generator-tool-property-pages.md).  
+>  Při použití xdcmake.exe ve vývojovém prostředí (stránky vlastností), se liší od možností xdcmake.exe možnosti příkazového řádku. Informace o používání xdcmake.exe ve vývojovém prostředí najdete v tématu [stránky vlastností nástroje Generátor dokumentů XML](../ide/xml-document-generator-tool-property-pages.md).  
   
 ## <a name="syntax"></a>Syntaxe  
- xdcmake `input_filename options`  
+ xdcmake – `input_filename options`  
   
 ## <a name="parameters"></a>Parametry  
- kde:  
   
- `input_filename`  
- Název souboru používá jako vstup pro xdcmake.exe soubory. Zadejte jeden nebo více soubory nebo použijte *.xdc používat všechny soubory v aktuálním adresáři.  
+*input_filename*<br/>
+Název souboru .xdc soubory sloužící jako vstup pro xdcmake.exe. Zadejte jeden nebo více souborů .xdc nebo použijte *.xdc používat všechny soubory v aktuálním adresáři.  
   
- `options`  
- Nula nebo více následujících akcí:  
+*Možnosti*<br/>
+Nula nebo více z následujících akcí:  
   
 |Možnost|Popis|  
 |------------|-----------------|  
 |/?, / help|Zobrazit nápovědu pro xdcmake.exe.|  
-|/Assembly:*filename*|Umožňuje zadat hodnotu \<sestavení > značky v souboru .xml.  Výchozí hodnota \<sestavení > Značka je stejný jako název souboru .xml.|  
-|/nologo|Potlačíte zpráva o autorských právech.|  
-|/ out:*filename*|Umožňuje zadat název souboru .xml.  Ve výchozím nastavení je název souboru .xml název souboru zpracovává xdcmake.exe první projektový soubor.|  
+|/ Assembly:*název souboru*|Umožňuje zadat hodnotu \<sestavení > značky v souboru XML.  Výchozí hodnota \<sestavení > Značka je stejný jako název souboru XML.|  
+|/nologo|Potlačí zprávu o autorských právech.|  
+|/ out:*název souboru*|Umožňuje zadat název souboru XML.  Ve výchozím nastavení název souboru XML je název prvního souboru .xdc zpracovány xdcmake.exe.|  
   
 ## <a name="remarks"></a>Poznámky  
- Visual Studio bude vyvolán xdcmake.exe automaticky při sestavení projektu. Můžete také vyvolat xdcmake.exe na příkazovém řádku.  
+ Visual Studio se vyvolá xdcmake.exe automaticky při sestavování projektu. Můžete také vyvolat xdcmake.exe na příkazovém řádku.  
   
- V tématu [doporučené značky pro dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pro další informace o přidání komentáře dokumentace pro soubory zdrojového kódu.  
+ Zobrazit [doporučené značky pro dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pro další informace o přidání komentáře k dokumentaci souborů se zdrojovým kódem.  
   
 ## <a name="see-also"></a>Viz také  
  [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

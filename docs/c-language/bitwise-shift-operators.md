@@ -1,5 +1,5 @@
 ---
-title: Operátory bitového posunutí | Microsoft Docs
+title: Operátory bitového posunutí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,56 +17,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb6c0470117cde185a9087b3fa11d054df4deae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020118"
 ---
 # <a name="bitwise-shift-operators"></a>Operátory bitového posunutí
-Operátory posunutí posunutí doleva jejich první operand (`<<`) nebo doprava (`>>`) podle počtu pozic Druhý operand určuje.  
-  
-## <a name="syntax"></a>Syntaxe  
- *SHIFT – výraz*:  
- *doplňkové – výraz*  
-  
- *výraz SHIFT*`<<`*doplňkové výraz shift výraz*`>>`*doplňkové – výraz*   
-  
- Oba operandy musí být celočíselné hodnoty. Obvyklé aritmetické převody; provést tyto operátory Typ výsledku je typ levý operand po převodu.  
-  
- U leftward posuny vacated správných bitů nastavení na hodnotu 0. Pro rightward posuny jsou vyplněny vacated levé bits na základě typu první operand po převodu. Pokud je typ `unsigned`, jsou nastavené na hodnotu 0. Jinak jsou naplní se přihlašovací bitové kopie. Pro operátory posunutí doleva bez přetečení, příkaz  
-  
-```  
-expr1 << expr2   
-```  
-  
- je ekvivalentní násobení 2<sup>Výraz2</sup>. Pro operátory posunutí doprava  
-  
-```  
-expr1 >> expr2   
-```  
-  
- je ekvivalentní dělení 2<sup>Výraz2</sup> Pokud `expr1` je bez znaménka nebo má hodnotu nezáporné.  
-  
- Výsledek operace posunutí není definován, pokud druhý operand je záporný nebo pokud pravý operand je větší než nebo rovna šířce v bitech propagovaných levý operand.  
-  
- Vzhledem k tomu, že převody provést pomocí k posunu neposkytují operátory přetečení nebo podtečení podmínky, informace mohou být ztracena, pokud výsledek operace posunutí není možné vyjádřit v typ první operand po převodu.  
-  
-```  
-unsigned int x, y, z;  
-  
-x = 0x00AA;  
-y = 0x5500;  
-  
-z = ( x << 8 ) + ( y >> 8 );  
-```  
-  
- V tomto příkladu `x` přesunuty zbývajících osm pozic a `y` je posunuté právo osm pozic. Přidání posunuté hodnot, udělíte 0xAA55 a přiřazení `z`.  
-  
- Záporná s posunem vpravo výsledkem poloviční původní hodnota zaokrouhlí směrem dolů. Například-253 (binární 11111111 00000011) zapuštěno správné jeden bit vytváří-127 (binární 11111111 10000001). Pozitivní 253 posuny doprava k vytvoření +126.  
-  
- Posun doprava zachovává bit znaménka. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán.  
-  
-## <a name="see-also"></a>Viz také  
- [Operátory posunu vlevo a vpravo (>> a <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
+
+Operátory posunutí posunutí prvního operandu vlevo (`<<`) nebo doprava (`>>`) počet pozic určuje druhého operandu.
+
+## <a name="syntax"></a>Syntaxe
+
+*SHIFT-expression*: *additive-expression*
+
+*SHIFT-expression*`<<`*additive-expression shift-expression*`>>`*additive-expression* 
+
+Oba operandy musí být integrální hodnoty. Tyto operátory provádějí obvyklé aritmetické převody Typ výsledku je typ levého operandu po převodu.
+
+Pro leftward staffhubu uvolněných správných bitů nastavené na hodnotu 0. Pro rightward staffhubu jsou vyplněny uvolněných bitů vlevo na základě typu prvního operandu po převodu. Pokud je typ `unsigned`, jsou nastaveny na hodnotu 0. V opačném případě jsou vyplněny hodnotou kopie na bit znaménka. Pro operátory posunutí doleva bez přetečení, příkaz
+
+```
+expr1 << expr2
+```
+
+je ekvivalentní k násobení hodnotou 2<sup>Výraz2</sup>. Pro operátory posunutí doprava
+
+```
+expr1 >> expr2
+```
+
+je ekvivalentní k dělení 2<sup>Výraz2</sup> Pokud `expr1` je bez znaménka nebo má nezápornou hodnotu.
+
+Výsledek operace posunutí není definován, pokud je druhý operand je záporný nebo pokud pravý operand je větší než nebo rovna šířce v bitech povýšeného operandu vlevo.
+
+Protože převody provést podle přesun neposkytují operátory přetečení nebo podmínky podtečení, informace mohou být ztraceny, pokud výsledek operace posunutí nelze reprezentovat v typu prvního operandu po převodu.
+
+```
+unsigned int x, y, z;
+
+x = 0x00AA;
+y = 0x5500;
+
+z = ( x << 8 ) + ( y >> 8 );
+```
+
+V tomto příkladu `x` je posunuta doleva osm pozic a `y` je posunuté přímo osm pozic. Přidání posunuté hodnot, poskytuje 0xAA55 a přiřazená `z`.
+
+Posunutí záporné hodnoty doprava dává polovinu původní hodnoty zaokrouhlené dolů. Například-253 (binární 11111111 00000011 posunutá) posunuta jeden bit doprava vytvoří-127 (binárně 11111111 10000001). Pozitivní 253 se posune doprava a vytvoří hodnotu + 126.
+
+Posun doprava zachovává bit znaménka. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán.
+
+## <a name="see-also"></a>Viz také
+
+[Operátory posunu vlevo a vpravo (>> a <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

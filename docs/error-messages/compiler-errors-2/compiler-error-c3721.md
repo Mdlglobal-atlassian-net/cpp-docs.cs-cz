@@ -1,5 +1,5 @@
 ---
-title: C3721 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3721 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039553"
 ---
-# <a name="compiler-error-c3721"></a>C3721 chyby kompilátoru
-'podpis': nekompatibilní podpis pro událost  
-  
- Událost byla deklarována nesprávně. Další informace najdete v tématu [__event](../../cpp/event.md).  
-  
- C3721 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3721"></a>Chyba kompilátoru C3721
+
+'podpis': nekompatibilní podpis pro událost
+
+Událost je deklarován nesprávně. Další informace najdete v tématu [__event](../../cpp/event.md).
+
+C3721 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4381 | Microsoft Docs
+title: Upozornění (úroveň 1) C4381 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cb72c373b5c0808b4b1600871cd8148bcc9c9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61dcbf49beeb41780cdaeff669cf21bfffee9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037824"
 ---
-# <a name="compiler-warning-level-1-c4381"></a>C4381 kompilátoru upozornění (úroveň 1)
-'function1': nesmí být implementována metoda rozhraní metodou neveřejný "funkce2"  
-  
- Třída musí implementovat rozhraní všechny funkce. Třída může stát odpovědí tuto podmínku, pokud jeden z jeho základních tříd implementuje funkce. Funkce však musí být implementované jako veřejné funkce.
+# <a name="compiler-warning-level-1-c4381"></a>Kompilátor upozornění (úroveň 1) C4381
+
+'function1': metoda rozhraní se nebude implementovat neveřejnou metodu "function2"
+
+Třída musí implementovat všechny funkce v rozhraní. Třídu můžete k tomuto stavu odpovídají, pokud jeden z jejích základních tříd implementuje funkci. Funkce však musí být implementován jako veřejné funkce.

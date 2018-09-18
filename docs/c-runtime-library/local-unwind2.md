@@ -29,36 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4774156f36e5f929db1c5ddd35f423caa5cf7831
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 47227d4be0ad1c5145a9064d11b4ea633c7d7fc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035783"
 ---
 # <a name="localunwind2"></a>_local_unwind2
-Vnitřní funkce CRT. Spustí všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void _local_unwind2(  
-   PEXCEPTION_REGISTRATION xr,  
-   int stop  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+Vnitřní funkce CRT. Spustí všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void _local_unwind2(
+   PEXCEPTION_REGISTRATION xr,
+   int stop
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *XR*<br/>
-[in] Registrační záznam, který je přidružený jeden rozsah tabulky.  
-  
+[in] Registrační záznam, který je přidružený jeden rozsah tabulky.
+
 *Stop*<br/>
-[in] Lexikální úroveň, která označuje, kde `_local_unwind2` by se měla zastavit.  
-  
-## <a name="remarks"></a>Poznámky  
- Tato metoda se používá pouze pomocí prostředí za běhu. Nevolejte metodu v kódu.  
-  
- Když tato metoda se spouští obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje směrem nahoru lexikální úrovní, dokud nebude dosaženo úrovně, který je označen `stop`. Nespouští obslužné rutiny ukončení na úrovni, který je označen `stop`.  
-  
-## <a name="see-also"></a>Viz také  
- [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+[in] Lexikální úroveň, která označuje, kde `_local_unwind2` by se měla zastavit.
+
+## <a name="remarks"></a>Poznámky
+
+Tato metoda se používá pouze pomocí prostředí za běhu. Nevolejte metodu v kódu.
+
+Když tato metoda se spouští obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje směrem nahoru lexikální úrovní, dokud nebude dosaženo úrovně, který je označen `stop`. Nespouští obslužné rutiny ukončení na úrovni, který je označen `stop`.
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

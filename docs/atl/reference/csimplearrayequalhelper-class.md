@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2613a885dd5399c3655ecb853f3977be71928526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021054"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Csimplearrayequalhelper – třída
 
@@ -32,13 +32,13 @@ Tato třída je pomocné rutiny pro [csimplearray –](../../atl/reference/csimp
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelper
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Odvozené třídy.
 
 ## <a name="members"></a>Členové
@@ -69,10 +69,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Parametry
 
-*T1*  
+*T1*<br/>
 Objekt typu T.
 
-*T2.*  
+*T2.*<br/>
 Objekt typu T.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -81,6 +81,6 @@ Vrátí true, pokud prvky jsou stejné, jinak hodnota false.
 
 ## <a name="see-also"></a>Viz také
 
-[Csimplearray – třída](../../atl/reference/csimplearray-class.md)   
-[Csimplearrayequalhelperfalse – třída](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[CSimpleArray – třída](../../atl/reference/csimplearray-class.md)<br/>
+[CSimpleArrayEqualHelperFalse – třída](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

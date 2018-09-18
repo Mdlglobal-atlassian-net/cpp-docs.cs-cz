@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b445a0e1a2668047d34f18424f44b0dc7cc55f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10e5a6fda373c79b85dac5cfcf19739276a5c12f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039514"
 ---
 # <a name="iregistrar-interface"></a>Iregistrar – rozhraní
 
@@ -147,7 +147,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 
 ## <a name="see-also"></a>Viz také
 
-[Použití nahraditelných parametrů (preprocesor registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Třídy modulů](../../atl/atl-module-classes.md)   
+[Použití nahraditelných parametrů (preprocesor registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Třídy modulů](../../atl/atl-module-classes.md)<br/>
 [Komponenta registru (Registrar)](../../atl/atl-registry-component-registrar.md)

@@ -1,5 +1,5 @@
 ---
-title: C2086 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2086 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1a21c06adeeda5d9db428e984da51f06addb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e0d8b105d58b0585bc31b8d340d3d7ba5fb29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029842"
 ---
-# <a name="compiler-error-c2086"></a>C2086 chyby kompilátoru
-"identifikátor": předefinování  
-  
- Identifikátor je definován více než jednou, nebo následné deklarace se liší od předchozího.  
-  
- C2086 může být také výsledek přírůstkové sestavování pro odkazované sestavení C#. Znovu sestavte sestavení C# k vyřešení této chyby.  
-  
- Následující ukázka generuje C2086:  
-  
-```  
-// C2086.cpp  
-main() {  
-  int a;  
-  int a;   // C2086 not an error in ANSI C  
-}  
+# <a name="compiler-error-c2086"></a>Chyba kompilátoru C2086
+
+'identifier': předefinování
+
+Identifikátor je definován více než jednou a následnou deklarací se liší od předchozího.
+
+C2086 může být také výsledkem přírůstková sestavení pro odkazované sestavení C#. Znovu sestavte sestavení C# pro vyřešení této chyby.
+
+Následující ukázka generuje C2086:
+
+```
+// C2086.cpp
+main() {
+  int a;
+  int a;   // C2086 not an error in ANSI C
+}
 ```

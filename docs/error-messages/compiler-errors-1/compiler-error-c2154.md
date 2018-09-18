@@ -1,5 +1,5 @@
 ---
-title: C2154 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2154 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e712a683e703bc277b82931dedcddba38a77c317
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766291c6bd1a81469ce5dc2f1fbd8aee94f0db89
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019832"
 ---
-# <a name="compiler-error-c2154"></a>C2154 chyby kompilátoru
-'type': jako argument pro kompilátoru vnitřního typu znak '__underlying_type' je povolen pouze typ – výčet  
-  
- Můžete získat pouze podkladový typ výčtového typu.  
-  
- Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+# <a name="compiler-error-c2154"></a>Chyba kompilátoru C2154
+
+'type': jako argument vlastnosti kompilátoru vnitřního typu "výraz __underlying_type" je povolený jedině typ výčtu
+
+Můžete získat pouze základní typ typu výčtu.
+
+Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).

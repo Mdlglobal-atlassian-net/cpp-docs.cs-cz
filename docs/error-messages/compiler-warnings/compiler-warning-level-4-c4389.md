@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4389 | Microsoft Docs
+title: Upozornění (úroveň 4) C4389 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a51ad6c6cf01744a99402c4db9c7cbd8f82339
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d67ae253926e79b6bc13d339ac303cca767090
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022562"
 ---
-# <a name="compiler-warning-level-4-c4389"></a>C4389 kompilátoru upozornění (úroveň 4)
-'operátor': Neshoda podepsané nepodepsaných  
-  
- Operace podílejí signed a unsigned proměnné. To může mít za následek ztrátu dat.  
-  
- Následující ukázka generuje C4389:  
-  
-```  
-// C4389.cpp  
-// compile with: /W4  
-#pragma warning(default: 4389)  
-  
-int main()  
-{  
-   int a = 9;  
-   unsigned int b = 10;  
-   if (a == b)   // C4389  
-      return 0;  
-   else  
-      return 0;  
-};  
+# <a name="compiler-warning-level-4-c4389"></a>Kompilátor upozornění (úroveň 4) C4389
+
+'operator': podepsané/unsigned – neshoda
+
+Operace týká proměnné se znaménkem a bez znaménka. To může mít za následek ztrátu dat.
+
+Následující ukázka generuje C4389:
+
+```
+// C4389.cpp
+// compile with: /W4
+#pragma warning(default: 4389)
+
+int main()
+{
+   int a = 9;
+   unsigned int b = 10;
+   if (a == b)   // C4389
+      return 0;
+   else
+      return 0;
+};
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023524"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -30,8 +30,8 @@ ms.locfileid: "39408063"
 
 A **__declspec** rozšířeného atributu, který lze použít v deklaracích funkcí.
 
-## <a name="syntax"></a>Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe
+
 > *Návratový typ* __declspec(nothrow) [*konvence volání*] *název funkce* ([*seznam argumentů*])
 
 ## <a name="remarks"></a>Poznámky
@@ -57,6 +57,7 @@ V **/std: c ++ 17** režimu `throw()` není ekvivalentní osobám, které použ�
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [__declspec](../cpp/declspec.md)  
- [noexcept](noexcept-cpp.md)  
- [Klíčová slova](../cpp/keywords-cpp.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)

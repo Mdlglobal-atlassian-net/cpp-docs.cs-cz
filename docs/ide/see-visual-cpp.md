@@ -1,5 +1,5 @@
 ---
-title: '&lt;v tématu&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Zobrazit&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d050625121314526dff687822b97d7b19475a5e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025854"
 ---
-# <a name="ltseegt-visual-c"></a>&lt;v tématu&gt; (Visual C++)
-\<Najdete v části > značka umožňuje zadat odkaz z v textu. Použití [ \<seealso >](../ide/seealso-visual-cpp.md) označíte, text, který chcete zobrazit v části Viz také.  
+# <a name="ltseegt-visual-c"></a>&lt;Zobrazit&gt; (Visual C++)
+\<Naleznete v tématu > značky umožňuje zadat odkaz v rámci textu. Použití [ \<seealso >](../ide/seealso-visual-cpp.md) označuje text, který chcete zobrazit v části Viz také.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ ms.locfileid: "33335496"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `member`  
- Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Uzavřete název v jednoduchých nebo dvojitých uvozovek.  
+*Člen*<br/>
+Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  
   
- Kompilátor zkontroluje, zda existuje element daného kódu a přeloží `member` k názvu elementu ve výstupu XML.  Kompilátor vydá upozornění, pokud jej nenalezne `member`.  
+ Kompilátor kontroluje, zda daný prvek kódu existuje a odstraňuje `member` do názvu prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   
- V tématu [ \<souhrnné >](../ide/summary-visual-cpp.md) příklad použití \<najdete v části >.  
+ Zobrazit [ \<summary >](../ide/summary-visual-cpp.md) pro příklad použití \<naleznete v tématu >.  
   
- Kompilátor Visual C++ se pokusí přeložit cref odkazy v jednom průchodu přes dokumentační komentáře.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz budou označeny jako nevyřešené. V tématu [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.  
+ Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené. Zobrazit [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak provést cref odkaz na obecného typu tak, aby kompilátor vyřeší odkaz.  
+ Následující příklad ukazuje, jak můžete provést cref odkaz na obecný typ, tak, že kompilátor bude přeložit odkaz.  
   
 ```  
 // xml_see_cref_example.cpp  

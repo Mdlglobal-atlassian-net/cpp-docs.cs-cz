@@ -1,5 +1,5 @@
 ---
-title: Chyby kompilátoru prostředků RC1000 až RC4413 | Microsoft Docs
+title: Chyby kompilátoru prostředků RC1000 až RC4413 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d40925f42f6082439bedadec8416f780e57016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045416"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Chyby kompilátoru prostředků RC1000 až RC4413
-Tato část poskytuje přehled chyb generovaných sestavovacími nástroji. Nápovědu v konkrétní chybová zpráva, klikněte na tlačítko myši na číslo chyby v okně výstupu a stiskněte klávesu F1 nebo zadejte číslo chyby v **vyhledejte** pole v indexu.
+
+Tato část poskytuje přehled chyb generovaných sestavovacími nástroji. Chcete-li zobrazit nápovědu k určité chybové zprávě, klikněte myší na číslo chyby v okně Výstup a stiskněte klávesu F1 nebo zadejte číslo chyby v **vyhledejte** pole v indexu.

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1078 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1078 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019365"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Závažná chyba nástroje NMAKE U1078
-konstantní přetečení v 'výraz.  
-  
- Daný výraz obsahuje konstanta, která překročila rozsah - 2 147 483 648 na 2 147 483 647. Konstanta zobrazovaly v jednom z následujících situací:  
-  
--   Výraz zadaný direktivu předběžného zpracování  
-  
--   Úroveň chyby zadaným čárka (**-**) příkaz modifikátor
+
+přetečení konstanty na pozici "výraz"
+
+Tento výraz obsažená je konstanta, která překročila rozsah - 2 147 483 648 do 2 147 483 647. Konstanta se objevil v jednom z následujících situací:
+
+- Výraz zadaný direktiva předzpracování
+
+- Úrovně chyby zadaným pomlčku (**-**) příkaz modifikátor

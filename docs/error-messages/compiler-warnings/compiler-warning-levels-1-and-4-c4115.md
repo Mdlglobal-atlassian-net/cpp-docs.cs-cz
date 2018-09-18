@@ -1,5 +1,5 @@
 ---
-title: C4115 kompilátoru upozornění (úrovně 1 a 4) | Microsoft Docs
+title: Upozornění (úrovně 1 a 4) C4115 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2edfdc84ee38e20f7193d720eab0ccb58d30790b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c22e3c33f9ef2409c02f0e651473d566b4d2a74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022523"
 ---
-# <a name="compiler-warning-levels-1-and-4-c4115"></a>C4115 kompilátoru upozornění (úrovně 1 a 4)
-'type': s názvem definice typu v závorkách  
-  
- Daný symbol se používá k definování struktury, sjednocení nebo výčtového typu uvnitř výraz v závorkách. Obor definice může mít neočekávané.  
-  
- Definice ve volání funkce C, má globální obor. Ve volání C++ má definice stejný obor jako funkce volána.  
-  
- Toto upozornění může být způsobeno deklarátory v uvozovkách (například prototypy), které nejsou výrazy se závorkami.  
-  
- Toto je upozornění úrovně 1 s C++ – programy a programy C zkompilovat pod kompatibility ANSI (/Za). Jinak je úroveň 3.
+# <a name="compiler-warning-levels-1-and-4-c4115"></a>Kompilátor upozornění (úrovně 1 a 4) C4115
+
+'type': Pojmenovaná definice typu v závorkách
+
+Daný symbol se používá k definování struktury, sjednocení nebo výčtového typu uvnitř výraz v závorkách. Rozsahu této definice mohou neočekávané.
+
+Definici ve volání funkce jazyka C, má globální obor. Ve volání jazyka C++ má tato definice ve stejném rozsahu jako volané funkce.
+
+Toto upozornění může být také způsobeno deklarátory mezi kulaté závorky (například prototypů), které nejsou výrazy se závorkami.
+
+Toto je upozornění úrovně 1 s programy v jazyce C++ a C programech zkompilovaných pod kompatibility ANSI (/Za). V opačném případě je úroveň 3.

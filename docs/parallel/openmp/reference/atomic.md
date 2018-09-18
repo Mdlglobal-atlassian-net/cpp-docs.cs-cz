@@ -1,5 +1,5 @@
 ---
-title: Atomic | Microsoft Docs
+title: Atomic | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037486"
 ---
 # <a name="atomic"></a>atomic
-Určuje, že umístění paměti, který bude aktualizován atomicky.  
+Určuje, že umístění v paměti, která bude aktualizována atomicky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ Určuje, že umístění paměti, který bude aktualizován atomicky.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `expression`  
- Příkaz obsahující lvalue jejichž umístění paměti, které chcete chránit proti více zápisy. Další informace o forms právní výrazu najdete v OpenMP specifikaci.  
+*Výraz*<br/>
+Příkazu, který obsahuje hodnoty lvalue, umístění v paměti, které chcete chránit proti více zápisy. Další informace o platný výraz formuláře naleznete v tématu Specifikace OpenMP.  
   
 ## <a name="remarks"></a>Poznámky  
- `atomic` – Direktiva podporuje žádné OpenMP – klauzule.  
+ `atomic` Podporuje bez klauzule OpenMP – direktiva.  
   
- Další informace najdete v tématu [2.6.4 atomic vytvořit](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Další informace najdete v tématu [vytvořit 2.6.4 atomic](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
 ## <a name="example"></a>Příklad  
   

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1009 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1009 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034106"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Závažná chyba kompilátoru prostředků RC1009
-omezení kompilátoru: makra moc vnořené 'makro.  
-  
- Velikost souboru přesahuje limit kompilátor prostředků pro makro vnoření. Zkontrolovat, jestli se zadaný zdrojový soubor, aby se snížila hloubky vnoření jeho makra.
+
+limit kompilátoru: makra jsou vnořená moc hluboko "makra"
+
+Soubor překračuje limit kompilátor prostředků pro – makro vnoření. Revidovat zadaný zdrojový soubor a snížit hloubka vnoření jeho maker.

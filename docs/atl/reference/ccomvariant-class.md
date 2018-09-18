@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042543"
 ---
 # <a name="ccomvariant-class"></a>CComVariant – třída
 
@@ -43,9 +43,8 @@ Tato třída zabalí typ VARIANT, poskytování člen označující typ dat ulo�
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>Členové
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*  
+*pSrc*<br/>
 [in] Odkazuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) bude připojený k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*varSrc*  
+*varSrc*<br/>
 [in] `CComVariant` Nebo VARIANTU použít k inicializaci `CComVariant` objektu. Obsah objektu variant zdroje se zkopíruje do cíle bez převodu.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] Znakový řetězec používaný k inicializaci `CComVariant` objektu. Ukončit nulou široké (Unicode) řetězec znaků můžete předat LPCOLESTR verzi konstruktoru nebo řetězce ANSI na LPCSTR verzi. V obou případech je daný řetězec převést na Unicode BSTR přidělena pomocí `SysAllocString`. Typ `CComVariant` objekt se bude VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] **Bool** použitý k inicializaci `CComVariant` objektu. **Bool** argument je převeden na VARIANT_BOOL před uložené. Typ `CComVariant` objekt se bude VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] **Int**, **BAJTŮ**, **krátký**, **dlouhé**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**, nebo **unsigned int** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4, v uvedeném pořadí.
 
-*vtSrc*  
+*vtSrc*<br/>
 [in] Typ objektu variant. Pokud je první parametr **int**, platné typy jsou VT_I4 a VT_INT. Pokud je první parametr **dlouhé**, platné typy jsou VT_I4 a VT_ERROR. Pokud je první parametr **double**, platné typy jsou VT_R8 a VT_DATE. Pokud je první parametr **unsigned int**, platné typy jsou VT_UI4 a VT_UINT.
 
-*fltSrc*  
+*fltSrc*<br/>
 [in] **Float** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_R4.
 
-*dblSrc*  
+*dblSrc*<br/>
 [in] **Double** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_R8.
 
-*cySrc*  
+*cySrc*<br/>
 [in] `CY` Použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] `IDispatch` Nebo `IUnknown` použitý k inicializaci ukazatele `CComVariant` objektu. `AddRef` bude volána na ukazatel rozhraní. Typ `CComVariant` objekt se bude VT_DISPATCH nebo VT_UNKNOWN, v uvedeném pořadí.
 
 Nebo použít k inicializaci ukazatele SAFERRAY `CComVariant` objektu. Kopie třídy SAFEARRAY je uložena v `CComVariant` objektu. Typ `CComVariant` objekt se bude kombinací původní typ SAFEARRAY a VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] **Char** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_I1.
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_BSTR.
 
 ### <a name="remarks"></a>Poznámky
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*vtNew*  
+*vtNew*<br/>
 [in] Nový typ pro `CComVariant` objektu.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Ukazatel na typ VARIANT, jejichž hodnoty se převedou na nový typ. Výchozí hodnota je NULL, tj. `CComVariant` objektu se převedou na místě.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*  
+*pSrc*<br/>
 [in] Ukazatel [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) ke zkopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>Parametry
 
-*pstrDest*  
+*pstrDest*<br/>
 Odkazuje na BSTR, který obdrží kopii obsah `CComVariant` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 [out] Vrátí zdrojovou hodnotu typu VARIANT objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*varSrc*  
+*varSrc*<br/>
 [in] `CComVariant` Nebo [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) přiřazení `CComVariant` objektu. Obsah objektu variant zdroje se zkopíruje do cíle bez převodu.
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR má být přiřazena k `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_BSTR.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] Řetězec znaků, který má být přiřazena k `CComVariant` objektu. Ukončit nulou široké (Unicode) řetězec znaků můžete předat LPCOLESTR verzi operátor nebo řetězce ANSI na LPCSTR verzi. V obou případech se daný řetězec převést na Unicode BSTR přidělena pomocí `SysAllocString`. Typ `CComVariant` objekt se bude VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] **Bool** přiřazení `CComVariant` objektu. **Bool** argument je převeden na VARIANT_BOOL před uložené. Typ `CComVariant` objekt se bude VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] **Int**, BYTE, **krátký**, **dlouhé**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**, nebo **unsigned int** přiřazení `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4, v uvedeném pořadí.
 
-*fltSrc*  
+*fltSrc*<br/>
 [in] **Float** přiřazení `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_R4.
 
-*dblSrc*  
+*dblSrc*<br/>
 [in] **Double** přiřazení `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_R8.
 
-*cySrc*  
+*cySrc*<br/>
 [in] `CY` Přiřazení `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] `IDispatch` Nebo `IUnknown` ukazatele pro přiřazení `CComVariant` objektu. `AddRef` bude volána na ukazatel rozhraní. Typ `CComVariant` objekt se bude VT_DISPATCH nebo VT_UNKNOWN, v uvedeném pořadí.
 
 Nebo ukazatel SAFEARRAY pro přiřazení `CComVariant` objektu. Kopie třídy SAFEARRAY je uložena v `CComVariant` objektu. Typ `CComVariant` objekt se bude kombinací původní typ SAFEARRAY a VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] Znak, který má být přiřazena k `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_I1.
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní v datovém proudu, který obsahuje data.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ VARIANT, například BSTR **int**, nebo **char**.
 
-*PT*  
+*PT*<br/>
 Použitý k inicializaci ukazatele `CComVariant` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní na datovém proudu.
 
 ### <a name="return-value"></a>Návratová hodnota

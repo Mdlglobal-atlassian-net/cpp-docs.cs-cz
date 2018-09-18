@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4224 | Microsoft Docs
+title: Upozornění (úroveň 1) C4224 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f74aee988264706d5c74e94c8198a448f66465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49ad5937d310166dd3ca7f41e6881d98f396535f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025656"
 ---
-# <a name="compiler-warning-level-1-c4224"></a>C4224 kompilátoru upozornění (úroveň 1)
-nestandardní rozšíření používané: formální parametr "identifikátor" byl dříve definován jako typ  
-  
- Identifikátor byl dříve používán jako `typedef`. To způsobí, že upozornění v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4224.cpp  
-// compile with: /Za /W1 /LD  
-typedef int I;  
-void func ( int I );  // C4224  
+# <a name="compiler-warning-level-1-c4224"></a>Kompilátor upozornění (úroveň 1) C4224
+
+používá se nestandardní rozšíření: formální parametr 'identifier' byl předtím definovaný jako typ.
+
+Tento identifikátor se využívala `typedef`. To způsobí, že upozornění v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Příklad
+
+```
+// C4224.cpp
+// compile with: /Za /W1 /LD
+typedef int I;
+void func ( int I );  // C4224
 ```

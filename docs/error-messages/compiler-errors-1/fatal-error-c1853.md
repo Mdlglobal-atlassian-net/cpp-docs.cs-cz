@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1853 | Microsoft Docs
+title: Závažná chyba C1853 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aa6a67c13f76b0bf43159b9e9de95068102a2b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 016e5bbf064643ddff0f63c5e16a967ed914f3e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044948"
 ---
 # <a name="fatal-error-c1853"></a>Závažná chyba C1853
-  
-> '*filename*' předkompilovaný hlavičkový soubor je z předchozí verze kompilátoru, nebo předkompilovaných hlaviček C++ a používáte je z jazyka C (nebo naopak)  
-  
-Možné příčiny:  
-  
--   Předkompilované hlavičky bylo kompilováno s předchozí verze kompilátoru. Vyzkoušejte si nutnosti rekompilace záhlaví s aktuální kompilátoru.  
-  
--   Předkompilované hlavičky je C++ a používáte z C. Zkuste nutnosti rekompilace hlavičku pro použití s C zadáním jedné z [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) – možnosti kompilátoru nebo změna příponě zdrojového souboru na "c". Další informace najdete v tématu [dvě možnosti pro předkompilaci kódu](../../build/reference/creating-precompiled-header-files.md#two-choices-for-precompiling-code).
+
+> "*filename*" soubor předkompilované hlavičky je z předchozí verze kompilátoru, nebo předkompilované hlavičky je C++ a vy ji používáte z C (nebo naopak)
+
+Možné příčiny:
+
+- Předkompilované hlavičky byl zkompilován pomocí předchozí verze kompilátoru. Zkuste rekompilace záhlaví s aktuální kompilátorem.
+
+- Předkompilovaná hlavička v C++ a vy ji používáte z c zkuste rekompilace zadáním jedné z hlaviček pro použití s C [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) – možnosti kompilátoru, nebo změnit příponu souboru zdroje na "c". Další informace najdete v tématu [dvě možnosti pro předkompilaci kódu](../../build/reference/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

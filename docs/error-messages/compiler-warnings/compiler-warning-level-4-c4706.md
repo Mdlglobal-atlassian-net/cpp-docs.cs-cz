@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4706 | Microsoft Docs
+title: Upozornění (úroveň 4) C4706 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1131147a9600525746cb3e89119189ed9e5026a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843edeaf490f27475003e9303f7929b818e2b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036953"
 ---
-# <a name="compiler-warning-level-4-c4706"></a>C4706 kompilátoru upozornění (úroveň 4)
-přiřazení v rámci podmíněného výrazu  
-  
- Hodnota testování podmíněného výrazu se výsledek přiřazení.  
-  
- Přiřazení má hodnotu (hodnotu na levé straně přiřazení), které je možné právními předpisy v jiné výrazu, včetně výraz testu.  
-  
- Následující ukázka generuje C4706:  
-  
-```  
-// C4706a.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a  = b ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- Upozornění dojde i v případě, že dvakrát závorkách testovací podmínky:  
-  
-```  
-// C4706b.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a  =  b ) ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- Pokud chcete otestovat relace a přiřazení, Nedělejte pomocí `==` operátor. Například následující řádek testy jestli a b jsou stejné:  
-  
-```  
-// C4706c.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a == b )  
-   {  
-   }  
-}  
-```  
-  
- Pokud máte v úmyslu provést test hodnota výsledek přiřazení, otestujte zajistit, že přiřazení je nulová nebo not null. Následující kód například nevygeneruje toto upozornění:  
-  
-```  
-// C4706d.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a = b ) != 0 )  
-   {  
-   }  
-}  
+# <a name="compiler-warning-level-4-c4706"></a>Kompilátor upozornění (úroveň 4) C4706
+
+přiřazení podmíněného výrazu
+
+Testovací hodnotu v podmíněném výrazu byl výsledek přiřazení.
+
+Přiřazení má hodnotu (hodnoty na levé straně přiřazení), která je možné právně v jiný výraz, včetně výrazu testu.
+
+Následující ukázka generuje C4706:
+
+```
+// C4706a.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a  = b ) // C4706
+   {
+   }
+}
+```
+
+Upozornění dojde i v případě, že Dvojité závorky kolem testovací podmínku:
+
+```
+// C4706b.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a  =  b ) ) // C4706
+   {
+   }
+}
+```
+
+Pokud je vaším záměrem je testovací relaci a Nedělejte přiřazení, použijte `==` operátor. Například následující řádek testů Určuje, zda a b jsou stejné:
+
+```
+// C4706c.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a == b )
+   {
+   }
+}
+```
+
+Pokud máte v úmyslu provést test hodnota výsledek přiřazení, testování pro zajištění, že přiřazení je nenulová nebo not null. Následující kód například nevygeneruje toto upozornění:
+
+```
+// C4706d.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a = b ) != 0 )
+   {
+   }
+}
 ```

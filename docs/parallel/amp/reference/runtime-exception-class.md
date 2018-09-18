@@ -1,5 +1,5 @@
 ---
-title: runtime_exception – třída | Microsoft Docs
+title: runtime_exception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019891"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception – třída
-Základní typ pro výjimky v knihovně C++ Accelerated masivní paralelismus (AMP).  
+Základní typ výjimky v knihovně C++ Accelerated Massive Parallelism (AMP).  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ class runtime_exception : public std::exception;
 |Název|Popis|  
 |----------|-----------------|  
 |[runtime_exception – konstruktor](#ctor)|Inicializuje novou instanci třídy `runtime_exception` třídy.|  
-|[~runtime_exception Destructor](#dtor)|Zničí `runtime_exception` objektu.|  
+|[~runtime_exception Destructor](#dtor)|Odstraní `runtime_exception` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -55,7 +55,7 @@ class runtime_exception : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `runtime_exception` objekt s touto.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `runtime_exception` do tohoto objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -85,20 +85,20 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popis chyby, který způsobil výjimku.  
+*_TEXT*<br/>
+Popis chyby, která způsobila výjimku.  
   
- `_Hresult`  
- HRESULT chyby, který způsobil výjimku.  
+*_Hresult*<br/>
+Hodnota HRESULT chyby, která způsobila výjimku.  
   
- `_Other`  
- `runtime_exception` Objekt, který chcete kopírovat.  
+*Ji_né*<br/>
+`runtime_exception` Objektu, který chcete zkopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `runtime_exception` Objektu.  
 
 ## <a name="dtor"></a>  ~ runtime_exception – destruktor  
-Zničí objektu.  
+Odstraní objekt.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -116,10 +116,10 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- HRESULT chyby, který způsobil výjimku.  
+ Hodnota HRESULT chyby, která způsobila výjimku.  
   
 ## <a name="runtime_exception__operator_eq"></a>  operátor =   
-  Zkopíruje obsah zadaného `runtime_exception` objekt s touto.  
+  Zkopíruje obsah zadaného `runtime_exception` do tohoto objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -128,11 +128,11 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `runtime_exception` Objekt, který chcete kopírovat.  
+*Ji_né*<br/>
+`runtime_exception` Objektu, který chcete zkopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `runtime_exception` objektu.  
+ Odkaz na tento `runtime_exception` objektu.  
   
 
   

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1087 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1087 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07309c64066b0a17aab110035c700c229c439df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0e094c720222990ee90af7de900d8cf6ba4051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036797"
 ---
 # <a name="nmake-fatal-error-u1087"></a>Závažná chyba nástroje NMAKE U1087
-nemůže mít: a:: závislé objekty pro stejný cíl  
-  
- Cíl nelze zadat v obou single dvojtečkou (**:**) a dvojité dvojtečky (`::`) závislostí.  
-  
- Určete cíl v blocích několika popisů, `::` v každém řádku závislostí.
+
+nemůže mít: a:: závislé položky pro stejný cíl
+
+Cíl nejde zadat v obou single dvojtečkou (**:**) a dvěma dvojtečkami (`::`) závislostí.
+
+Chcete-li určit cíle ve více blocích popisů, použijte `::` na každém řádku závislostí.

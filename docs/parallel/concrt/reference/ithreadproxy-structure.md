@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027853"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy – struktura
 Abstrakce vlákna exekuce. V závislosti na tom `SchedulerType` klíče zásad plánovače vytvoříte, Resource Manageru, udělí se vám proxy vlákna, která je založená na regulárních vlákno Win32 nebo uživatelským režimem plánovatelná vlákna (UMS). UMS vlákna jsou podporované v 64bitových systémech s verzí Windows 7 a vyšší.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `switchState`  
- Označuje stav proxy vlákna, které provádí přepínač. Parametr je typu `SwitchingProxyState`.  
+*switchState*<br/>
+Označuje stav proxy vlákna, které provádí přepínač. Parametr je typu `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `SwitchOut` potřebujete zrušit přiřazení kontextu z kořene virtuálního procesoru, který je spuštěn, z jakéhokoli důvodu. V závislosti na hodnotě předané v parametru `switchState`, a zda je prováděna na kořenovém adresáři virtuálního procesoru, volání se okamžitě vrátí nebo zablokuje vlákno proxy spojené s kontextem. Jedná se o chybu volání `SwitchOut` s parametrem nastaveným na `Idle`. To povede [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimky.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContext`  
- Spolupráce při přepnutí do kontextu spuštění.  
+*pContext*<br/>
+Spolupráce při přepnutí do kontextu spuštění.  
   
- `switchState`  
- Označuje stav proxy vlákna, které provádí přepínač. Parametr je typu `SwitchingProxyState`.  
+*switchState*<br/>
+Označuje stav proxy vlákna, které provádí přepínač. Parametr je typu `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k přepínání z jednoho spuštění kontextu do jiného, z [iexecutioncontext::Dispatch –](iexecutioncontext-structure.md#dispatch) metoda první kontext spuštění. Metoda přidruží kontextu spuštění `pContext` s proxy vlákna, pokud ještě není spojen s jednou. Hodnota zadaná pro je určena vlastnictví aktuální podproces proxy `switchState` argument.  

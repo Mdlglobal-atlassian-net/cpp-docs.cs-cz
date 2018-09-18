@@ -1,5 +1,5 @@
 ---
-title: C2444 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2444 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80af78ffbf0d51a9ae8e7f4090aa5c6aa0d9045f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 061abaef158e309246528374b375b20fa75978f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041102"
 ---
-# <a name="compiler-error-c2444"></a>C2444 chyby kompilátoru
-"identifikátor": používá ANSI prototyp, najít "typ" očekává ' {' nebo ';'  
-  
- Prototyp funkce následuje typu.  
-  
- Tato chyba může být způsobeno chybí středník nebo složených závorek.
+# <a name="compiler-error-c2444"></a>Chyba kompilátoru C2444
+
+'identifier': používal se prototyp ANSI, našlo se: type', byl očekáván ' {"nebo";"
+
+Prototyp funkce postupuje podle typu.
+
+Tuto chybu může způsobovat chybí středník nebo složenou závorku.

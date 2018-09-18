@@ -1,5 +1,5 @@
 ---
-title: Upozornění sestavení projektu PRJ0018 | Microsoft Docs
+title: Upozornění sestavení projektu PRJ0018 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914f05b6e2bb3dfb8932b306fb7c84b9a31466c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e232ed90af6002a58356827421b2d49e68ba14a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033209"
 ---
 # <a name="project-build-warning-prj0018"></a>Upozornění sestavení projektu PRJ0018
-Nebyly nalezeny následující proměnné prostředí:  
-  
- Proměnné prostředí není definován. Tato chyba zobrazí proměnné prostředí, které nebyly definovány.  
-  
- V tématu [makra pro příkazy sestavení vlastní](../../ide/common-macros-for-build-commands-and-properties.md) informace o makra v procesu sestavení.
+
+Následující proměnné prostředí nebyly nalezeny:
+
+Proměnná prostředí není definován. Tato chyba zobrazuje seznam proměnných prostředí, které nebyly definovány.
+
+Zobrazit [Macros for Build Commands vlastní](../../ide/common-macros-for-build-commands-and-properties.md) o makra v procesu sestavení.

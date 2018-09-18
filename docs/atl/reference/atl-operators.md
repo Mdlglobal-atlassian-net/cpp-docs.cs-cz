@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039774"
 ---
 # <a name="atl-operators"></a>ATL – operátory
 
@@ -42,16 +42,16 @@ Tato část obsahuje referenční témata pro globální operátory ATL.
 
 Porovná `CSid` objekty nebo `SID` struktury (security identifier) pro rovnost.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -62,16 +62,16 @@ Vrátí hodnotu TRUE, pokud objekty rovnají, FALSE. Pokud nejsou stejné.
 
 Porovná `CSid` objekty nebo `SID` struktury (security identifier) pro nerovnost.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -82,16 +82,16 @@ Vrátí hodnotu TRUE, pokud jsou tyto objekty stejné, FALSE, pokud jsou shodné
 
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru menší než `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -106,16 +106,16 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru větší než `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -130,16 +130,16 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 
 Testuje, zda `CSid` objektu nebo `SID` struktuře na levé straně operátoru menší než nebo rovno je `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,16 +154,16 @@ Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je imple
 
 Testuje, zda `CSid` objektu nebo `SID` je struktura na levé straně operátoru větší než nebo rovna hodnotě `CSid` objektu nebo `SID` struktury na pravé straně (z důvodu kompatibility standardní knihovna C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První `CSid` objektu nebo `SID` struktury k porovnání.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhá `CSid` objektu nebo `SID` struktury k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4334 | Microsoft Docs
+title: Upozornění (úroveň 3) C4334 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f26749c968c3cac18b509046633ba3d91d15a4be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7bb16ea38b2c2112c12c561398341a7d1adbfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044012"
 ---
-# <a name="compiler-warning-level-3-c4334"></a>C4334 kompilátoru upozornění (úroveň 3)
-'operátor': výsledek 32-bit shift implicitně převést na 64 bitů (byla určena shift 64-bit?)  
-  
- Výsledek 32-bit shift byl implicitně převést na 64bitovou a kompilátoru má podezření, že byla určena shift 64-bit.  Toto upozornění vyřešíte buď použijte shift 64-bit nebo explicitně přetypovat výsledek shift na 64bitovou verzi.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4334.  
-  
-```  
-// C4334.cpp  
-// compile with: /W3 /c  
-void SetBit(unsigned __int64 *p, int i) {  
-   *p |= (1 << i);   // C4334  
-   *p |= (1i64 << i);   // OK  
-}  
+# <a name="compiler-warning-level-3-c4334"></a>Kompilátor upozornění (úroveň 3) C4334
+
+'operator': výsledek 32bitového posunu se implicitně převedl na 64 bitů (byl 64bitový posun určený?)
+
+Výsledek 32bitového posunu se implicitně převést na 64 bitů a kompilátoru podezření, že byl 64bitový posun určený.  Pokud chcete vyřešit toto upozornění, použijte 64bitový posun nebo explicitně přetypovat shift výsledek na 64bitovou verzi.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4334.
+
+```
+// C4334.cpp
+// compile with: /W3 /c
+void SetBit(unsigned __int64 *p, int i) {
+   *p |= (1 << i);   // C4334
+   *p |= (1i64 << i);   // OK
+}
 ```

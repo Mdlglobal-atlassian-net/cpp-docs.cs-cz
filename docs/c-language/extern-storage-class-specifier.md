@@ -18,39 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24f25116a955c83f8f3685b9646c3086238d306e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020846"
 ---
 # <a name="extern-storage-class-specifier"></a>extern – specifikátor třídy úložiště
 
-Proměnná deklarovaná pomocí **extern** – specifikátor třídy úložiště je odkaz na proměnnou se stejným názvem, které jsou definovány v jiném zdrojovém souboru. Používá se k definice proměnné na vnější úrovni zviditelnit. Proměnná deklarovaná jako **extern** nemá žádné úložiště přidělené sama za sebe, je pouze název. 
-  
-## <a name="example"></a>Příklad  
- Tento příklad ilustruje deklarace na vnitřní a vnější úrovni:  
-  
-```c  
+Proměnná deklarovaná pomocí **extern** – specifikátor třídy úložiště je odkaz na proměnnou se stejným názvem, které jsou definovány v jiném zdrojovém souboru. Používá se k definice proměnné na vnější úrovni zviditelnit. Proměnná deklarovaná jako **extern** nemá žádné úložiště přidělené sama za sebe, je pouze název.
 
-// Source1.c  
+## <a name="example"></a>Příklad
+
+Tento příklad ilustruje deklarace na vnitřní a vnější úrovni:
+
+```c
+
+// Source1.c
 
 int i = 1;
 
-
 // Source2. c
 
-#include <stdio.h>  
+#include <stdio.h>
 
-// Refers to the i that is defined in Source1.c:   
+// Refers to the i that is defined in Source1.c:
 extern int i;
 
 void func(void);
 
 int main()
 {
-    // Prints 1:   
+    // Prints 1:
     printf_s("%d\n", i);
     func();
     return;
@@ -58,20 +58,21 @@ int main()
 
 void func(void)
 {
-    // Address of global i assigned to pointer variable:  
+    // Address of global i assigned to pointer variable:
     static int *external_i = &i;
 
-    // This definition of i hides the global i in Source.c:   
+    // This definition of i hides the global i in Source.c:
     int i = 16;
 
-    // Prints 16, 1:  
+    // Prints 16, 1:
     printf_s("%d\n%d\n", i, *external_i);
 }
-```  
-  
- V tomto příkladu je proměnná `i` je definována v Source1.c s počáteční hodnotou 1. **Extern** deklarace v Source2.c je je "i" viditelný v tomto souboru. 
+```
 
- V `func` funkce, adresa globální proměnné `i` slouží k inicializaci **statické** proměnné ukazatele `external_i`. Tento postup funguje, protože globální proměnná má **statické** životnost, což znamená její adresa během provádění programu nezmění. Další, proměnná `i` je definována v rámci oboru `func` jako místní proměnná s počáteční hodnotou 16. Tato definice nemá vliv na hodnotu na vnější úrovni `i`, což je skrytý pomocí jejího názvu jako lokální proměnné. Hodnota globální proměnné `i` je teď přístupný pouze prostřednictvím ukazatele `external_i`.   
-  
-## <a name="see-also"></a>Viz také  
- [Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+V tomto příkladu je proměnná `i` je definována v Source1.c s počáteční hodnotou 1. **Extern** deklarace v Source2.c je je "i" viditelný v tomto souboru.
+
+V `func` funkce, adresa globální proměnné `i` slouží k inicializaci **statické** proměnné ukazatele `external_i`. Tento postup funguje, protože globální proměnná má **statické** životnost, což znamená její adresa během provádění programu nezmění. Další, proměnná `i` je definována v rámci oboru `func` jako místní proměnná s počáteční hodnotou 16. Tato definice nemá vliv na hodnotu na vnější úrovni `i`, což je skrytý pomocí jejího názvu jako lokální proměnné. Hodnota globální proměnné `i` je teď přístupný pouze prostřednictvím ukazatele `external_i`.
+
+## <a name="see-also"></a>Viz také
+
+[Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

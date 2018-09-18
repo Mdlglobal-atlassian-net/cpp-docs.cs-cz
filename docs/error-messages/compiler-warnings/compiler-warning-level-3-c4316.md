@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4316 | Microsoft Docs
+title: Upozornění (úroveň 3) C4316 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609f3bbe9f338c5d53491190512ce2b9c290cdb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4170481b95cca0d43aa03c776009a5030194a4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032923"
 ---
-# <a name="compiler-warning-level-3-c4316"></a>C4316 kompilátoru upozornění (úroveň 3)
-Pro tento typ nemusí být zarovnána objekt přidělené v haldě.  
-  
- Objekt přepsání zarovnaný přidělené pomocí `operator new` nemusí mít zadané zarovnání. Přepsání [new – operátor](../../c-runtime-library/operator-new-crt.md) a [delete – operátor](../../c-runtime-library/operator-delete-crt.md) pro přepsání zarovnán typy tak, aby používají rutiny zarovnaný přidělení – například [_aligned_malloc –](../../c-runtime-library/reference/aligned-malloc.md) a [_aligned_free –](../../c-runtime-library/reference/aligned-free.md). Následující ukázka generuje C4316:  
-  
-```cpp  
-// C4316.cpp  
-// Test: cl /W3 /c C4316.cpp  
-  
-__declspec(align(32)) struct S {}; // C4324  
-  
-int main() {  
-    new S; // C4316  
-}  
+# <a name="compiler-warning-level-3-c4316"></a>Kompilátor upozornění (úroveň 3) C4316
+
+Objekt přidělený do haldy nemusí být zarovnáním pro tento typ.
+
+Neoprávněně zarovnaný objektu přidělený pomocí `operator new` nemusí mít zadané zarovnání. Přepsat [operátor new](../../c-runtime-library/operator-new-crt.md) a [operátor delete](../../c-runtime-library/operator-delete-crt.md) pro nadbytečně zarovnané typy tak, že používají rutiny pro zarovnané přidělení – například [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) a [_aligned_free –](../../c-runtime-library/reference/aligned-free.md). Následující ukázka generuje C4316:
+
+```cpp
+// C4316.cpp
+// Test: cl /W3 /c C4316.cpp
+
+__declspec(align(32)) struct S {}; // C4324
+
+int main() {
+    new S; // C4316
+}
 ```

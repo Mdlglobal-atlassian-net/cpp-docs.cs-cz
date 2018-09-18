@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4407 | Microsoft Docs
+title: Upozornění (úroveň 1) C4407 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbc02c32463703f658cef1d5756926311d89b193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9a665dbb71157b37f72d3d0721357d00dc37230
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032599"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>C4407 kompilátoru upozornění (úroveň 1)
-CAST. mezi různé ukazatel na člena reprezentace kompilátoru generovat nesprávný kód  
-  
- Byl zjištěn nesprávný přetypování.  
-  
- C4407 lze vygenerovat z důvodu pracovních kompilátoru shoda, které bylo provedeno v aplikaci Visual C++ 2005. Ukazatele na člena nyní vyžaduje úplný název a address-of – operátor (&).  
-  
- C4407 může dojít, pokud přetypování mezi více dědičnosti ukazatel na členem, abyste mohli jedna dědičnost ukazatele na člena. V některých případech to může fungovat, ale někdy nelze protože reprezentace ukazatele na člena jedna dědičnost nebude obsahovat dost informací. Kompilování pomocí **/VMM** vám může pomoci (Další informace najdete v tématu [/VMM, / VMS, / vmv (obecná reprezentace)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Můžete také zkusit Změna uspořádání vaše základní třídy; kompilátor je zjišťování ke ztrátě informací v převodu, protože základní třída má na posunu nenulové z odvozený.  
-  
- Následující ukázka generuje C4407:  
-  
-```  
-// C4407.cpp  
-// compile with: /W1 /c  
-struct C1 {};  
-struct C2 {};  
-struct C3 : C1, C2 {};  
-  
-typedef void(C3::*PMF_C3)();  
-typedef void(C2::*PMF_C2)();  
-  
-PMF_C2 f1(PMF_C3 pmf) {  
-   return (PMF_C2)pmf;   // C4407, change type of cast,  
-   // or reverse base class inheritance of C3 (i.e. : C2, C1)  
-}  
+# <a name="compiler-warning-level-1-c4407"></a>Kompilátor upozornění (úroveň 1) C4407
+
+přetypování mezi různé reprezentacemi ukazatele na člen, kompilátor může vygenerovat nesprávný kód
+
+Byl zjištěn nesprávný přetypování.
+
+C4407 mohou být generovány z důvodu kompilátoru prací, které bylo provedeno v aplikaci Visual C++ 2005. Pointer-to-member nyní vyžaduje úplný název a address-of – operátor (&).
+
+C4407 může dojít, pokud přetypování mezi více dědičnosti pointer-to-member na jednoduchá dědičnost pointer-to-member. Někdy to můžou fungovat, ale někdy není toho schopen, protože reprezentace pointer-to-member jednoduchá dědičnost nebude obsahovat dostatek informací. Kompilace s **/VMM** může pomoci (Další informace najdete v tématu [/VMM, / VMS, / vmv (obecná reprezentace)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Můžete také zkusit uspořádání základní třídy; kompilátor je zjišťování ztráty informací v převod, protože základní třída je posunem nenulové od odvozený.
+
+Následující ukázka generuje C4407:
+
+```
+// C4407.cpp
+// compile with: /W1 /c
+struct C1 {};
+struct C2 {};
+struct C3 : C1, C2 {};
+
+typedef void(C3::*PMF_C3)();
+typedef void(C2::*PMF_C2)();
+
+PMF_C2 f1(PMF_C3 pmf) {
+   return (PMF_C2)pmf;   // C4407, change type of cast,
+   // or reverse base class inheritance of C3 (i.e. : C2, C1)
+}
 ```

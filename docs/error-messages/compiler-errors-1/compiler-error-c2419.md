@@ -1,5 +1,5 @@
 ---
-title: C2419 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2419 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a456a4844c596a7cacad6ca85af8923d23d480f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fa3e6c562fe526df506a0f3aaf6944850f303b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041334"
 ---
-# <a name="compiler-error-c2419"></a>C2419 chyby kompilátoru
-Mod podle nula v "context"  
-  
- Parametr napravo `MOD` operátor je nulová. v tomto kontextu.
+# <a name="compiler-error-c2419"></a>Chyba kompilátoru C2419
+
+Mod podle nulové v "context"
+
+Parametr napravo od `MOD` operátor je nula, v tomto kontextu.

@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4049 | Microsoft Docs
+title: Upozornění Linkerů LNK4049 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,69 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50dadc9c160ac8902cedcd60c954b565dce6e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ad4e4adb492789639c71a25a2db774a80cd77c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021756"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Upozornění linkerů LNK4049
-místně definované symbol importovat symbol  
-  
- Symbol byl exportovaný z i importovat do programu.  
-  
- Toto upozornění je generován linkeru po deklarování symbol pomocí `__declspec(dllexport)` třídy úložiště atributů v souboru jeden objekt a pomocí něj odkazovat `__declspec(dllimport)` atribut v jiném.  
-  
- Upozornění LNK4049 je obecnější verze [LNK4217 upozornění Linkerů nástroje](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md). Linkeru generuje LNK4049 upozornění, když nelze určit, z které funkce bylo odkazováno importované symbolu.  
-  
- Běžné případy, kdy se vygeneruje LNK4049 místo LNK4217 jsou:  
-  
--   Provádění přírůstkové propojování pomocí [/PŘÍRŮSTKOVÉ](../../build/reference/incremental-link-incrementally.md) možnost.  
-  
--   Provedení optimalizace celého programu pomocí [/ltgc](../../build/reference/ltcg-link-time-code-generation.md) možnost.  
-  
- Chcete-li vyřešit LNK4049, zkuste jednu z následujících:  
-  
--   Odeberte `__declspec(dllimport)` název deklarace z dopředného deklarace symbolu, která spustí LNK4049. Symboly v rámci bitové kopie binární můžete vyhledat pomocí **DUMPBIN** nástroj. **DUMPBIN nebo symboly** přepínače zobrazí tabulky symbolů COFF bitové kopie. Další informace o **DUMPBIN** nástroj, najdete v části [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md).  
-  
--   Dočasně zakážete přírůstkové propojování a optimalizace celého programu. Nutnosti rekompilace aplikace vygeneruje LNK4217 upozornění, která bude obsahovat název funkce, ze kterého bylo odkazováno importované symbolu. Odeberte `__declspec(dllimport)` deklarace z importovaných symbol a Povolit přírůstkové propojování nebo optimalizace celého programu podle potřeby.  
-  
- Poslední generovaný kód se bude chovat správně, kód generovaný pro volání importované funkce sice méně efektivní než přímé volání funkce. Toto upozornění se nezobrazí, když zkompilujete pomocí možnosti [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Další informace o import a export dat deklarace, najdete v části [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
-  
-## <a name="example"></a>Příklad  
- Propojování následující dva moduly vygeneruje LNK4049. První modul generuje soubor objektu obsahující jedné exportované funkce.  
-  
-```  
-// LNK4049a.cpp  
-// compile with: /c  
-  
-__declspec(dllexport) int func()   
-{  
-   return 3;  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Druhý modul generuje soubor objektu obsahující deklaraci dopředného exportovali v první modulu, společně s volání této funkce uvnitř funkce `main` funkce. Tento modul s modulem první propojení vygeneruje LNK4049. Odebrání `__declspec(dllimport)` deklarace vyřešit upozornění.  
-  
-```  
-// LNK4049b.cpp  
-// compile with: /link /WX /LTCG LNK4049a.obj  
-// LNK4049 expected  
-  
-__declspec(dllimport) int func();  
-// try the following line instead  
-// int func();  
-  
-int main()  
-{  
-   return func();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Upozornění LNK4217 nástroje linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)   
- [dllexport, dllimport](../../cpp/dllexport-dllimport.md)
+
+lokálně definovaný symbol importovat symbol
+
+Symbol byla exportovaná z i importovat do programu.
+
+Toto upozornění je vygenerován linkerem při deklaraci symbolu pomocí `__declspec(dllexport)` atributu v souboru jednoho objektu třídy úložiště a na něj odkazovat pomocí `__declspec(dllimport)` atribut v jiném.
+
+Upozornění LNK4049 je obecnější verze [LNK4217 upozornění nástrojů Linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md). Linker generuje LNK4049 upozornění, když nemůže určit z funkce, které bylo odkazováno importované symbol.
+
+Běžné případy, ve kterém se vygeneruje LNK4049 místo LNK4217 jsou:
+
+- Přírůstkové propojování pomocí provádí [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) možnost.
+
+- Pomocí provádí optimalizace celého programu [parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md) možnost.
+
+Řešení LNK4049, zkuste použijte jeden z následujících akcí:
+
+- Odeberte `__declspec(dllimport)` název deklarace z Dopředná deklarace symbolu, která aktivovala LNK4049. Můžete hledat symboly v rámci binárního obrazu pomocí **DUMPBIN** nástroj. **DUMPBIN/symboly** přepínač zobrazí tabulka symbolů COFF bitové kopie. Další informace o **DUMPBIN** nástroj, najdete v článku [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md).
+
+- Dočasně zakážete přírůstkové propojení a optimalizace celého programu. Opětovnou kompilací aplikace vygeneruje LNK4217 upozornění, která bude obsahovat název funkce, ze které bylo odkazováno importované symbol. Odeberte `__declspec(dllimport)` deklarace z importované symbolů a Povolit přírůstkové propojení nebo optimalizace celého programu podle potřeby.
+
+I když konečné generovaný kód se bude chovat správně, je méně efektivní než přímého volání funkce kód generovaný pro volání importované funkce. Toto upozornění se nezobrazí při kompilaci pomocí volby [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+Další informace o import a export dat deklarace, naleznete v tématu [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
+
+## <a name="example"></a>Příklad
+
+Propojení dvou modulů vygeneruje LNK4049. První modul vygeneruje soubor objektu, který obsahuje jeden exportované funkce.
+
+```
+// LNK4049a.cpp
+// compile with: /c
+
+__declspec(dllexport) int func()
+{
+   return 3;
+}
+```
+
+## <a name="example"></a>Příklad
+
+Druhý modul vygeneruje soubor objektu obsahující Dopředná deklarace funkce exportovat v modulu první spolu s volání této funkce uvnitř `main` funkce. Tento modul s modulem první propojení vygeneruje LNK4049. Odebírá `__declspec(dllimport)` deklarace vyřeší upozornění.
+
+```
+// LNK4049b.cpp
+// compile with: /link /WX /LTCG LNK4049a.obj
+// LNK4049 expected
+
+__declspec(dllimport) int func();
+// try the following line instead
+// int func();
+
+int main()
+{
+   return func();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Upozornění linkerů LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)<br/>
+[dllexport, dllimport](../../cpp/dllexport-dllimport.md)

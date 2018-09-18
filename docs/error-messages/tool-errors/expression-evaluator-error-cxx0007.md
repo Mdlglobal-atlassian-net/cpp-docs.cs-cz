@@ -1,5 +1,5 @@
 ---
-title: CXX0007 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0007 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab244578d7a44b1fd952ee441cd8cc51f1ca1fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a331f5e696ffa368e17599df76577b9e3354435
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024863"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>Chyba při vyhodnocování výrazu CXX0007
-Chybí pravé závorky  
-  
- Nevyváženou závorkách nebyly nalezeny ve výrazu. Znovu zadejte výraz s vyrovnáváním závorek.  
-  
- Tato chyba je stejný jako CAN0007.
+
+chybí pravá závorka
+
+Nenašly se nevyváženou závorky ve výrazu. Znovu zadejte výraz s vyvážené závorky.
+
+Tato chyba se shoduje s CAN0007.

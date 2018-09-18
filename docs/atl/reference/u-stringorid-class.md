@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046274"
 ---
 # <a name="ustringorid-class"></a>_U_stringorid – třída
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 Konstruktor UINT Převede argument na typ prostředku, který je kompatibilní s funkcí správy prostředků Windows makro MAKEINTRESOURCE a výsledek je uložen v single – datový člen třídy, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 ID prostředku.
 
-*lpString*  
+*lpString*<br/>
 Název prostředku.
 
 ### <a name="remarks"></a>Poznámky

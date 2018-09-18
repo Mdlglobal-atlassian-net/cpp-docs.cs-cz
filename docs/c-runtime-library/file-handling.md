@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199354"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036355"
 ---
 # <a name="file-handling"></a>Zpracování souborů
 
@@ -86,7 +86,7 @@ Tyto rutiny představují způsob, jak změnit reprezentaci souboru mezi `FILE` 
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Popisovač návratový souboru operačního systému přidružený k existující popisovač souboru za běhu C|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Přidruží popisovač souboru za běhu C existující popisovač souboru operačního systému.|
 
- Následující funkce Win32 také otevřít soubory a kanály:
+Následující funkce Win32 také otevřít soubory a kanály:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

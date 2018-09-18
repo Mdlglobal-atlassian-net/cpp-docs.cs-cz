@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1136 | Microsoft Docs
+title: Chyba Linkerů LNK1136 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53cab76b186ce6fdc3aa9a5a5d581044c65616e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b70d5e7cb302430561e6092e47e07091e0d8c4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043063"
 ---
 # <a name="linker-tools-error-lnk1136"></a>Chyba linkerů LNK1136
-Neplatný nebo poškozený soubor  
-  
- Vstupní soubor má hlavičku poškozená nebo je nulová velké nebo malé neobvyklým způsobem.  
-  
- Pokud soubor byl nesprávně zadán jako další závislosti, může být také způsoben LNK1136.
+
+Neplatný nebo poškozený soubor
+
+Vstupní soubor obsahuje poškozené záhlaví nebo je nula, velké nebo malé neobvyklým způsobem.
+
+LNK1136 dojít také tehdy, pokud soubor byl nesprávně zadán jako další závislost.

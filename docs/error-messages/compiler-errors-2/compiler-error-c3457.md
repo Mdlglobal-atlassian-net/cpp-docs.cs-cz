@@ -1,5 +1,5 @@
 ---
-title: C3457 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3457 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99621cfd4f1827763be8ec84d82871290a04652b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 794c3deb042c383f3802ce32f3f7c4580f6061a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021496"
 ---
-# <a name="compiler-error-c3457"></a>C3457 chyby kompilátoru
-'atribut': atribut nepodporuje nepojmenované argumenty  
-  
- Atributy zdrojové poznámky, na rozdíl od CLR vlastních atributů nebo atributy kompilátoru podporují jenom pojmenované argumenty.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3457.  
-  
-```  
-#include "SourceAnnotations.h"  
-[vc_attributes::Post( 1 )] int f();   // C3457  
-[vc_attributes::Post( Valid=vc_attributes::Yes )] int f2();   // OK  
+# <a name="compiler-error-c3457"></a>Chyba kompilátoru C3457
+
+'attribute': atribut nepodporuje nepojmenované argumenty
+
+Atributy zdroje poznámky, na rozdíl od CLR vlastní atribut nebo atributy kompilátoru podporují pouze pojmenované argumenty.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3457.
+
+```
+#include "SourceAnnotations.h"
+[vc_attributes::Post( 1 )] int f();   // C3457
+[vc_attributes::Post( Valid=vc_attributes::Yes )] int f2();   // OK
 ```

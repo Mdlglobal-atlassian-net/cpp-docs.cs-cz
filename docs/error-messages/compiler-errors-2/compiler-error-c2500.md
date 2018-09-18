@@ -1,5 +1,5 @@
 ---
-title: C2500 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2500 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c05ffd59e415375dd3c7f94ae9bc377c0fc2b9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b7e24ca520796b63171fe63c2bf841fe8776845
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026670"
 ---
-# <a name="compiler-error-c2500"></a>C2500 chyby kompilátoru
-'identifier1': 'identifier2' je již přímé základní třída  
-  
- Třídu nebo strukturu, zobrazí se více než jednou, v seznamu základní třídy.  
-  
- Přímé základní je uvedených v seznamu základní. Nepřímý základní je základní třídou jednoho v seznamu základní třídy.  
-  
- Třídu nelze zadat jako přímý základní třída více než jednou. Třída slouží jako nepřímé základní třída více než jednou.  
-  
- Následující ukázka generuje C2500:  
-  
-```  
-// C2500.cpp  
-// compile with: /c  
-class A {};  
-class B : public A, public A {};    // C2500  
-  
-// OK  
-class C : public A {};  
-class D : public A {};  
-class E : public C, public D {};  
+# <a name="compiler-error-c2500"></a>Chyba kompilátoru C2500
+
+"identifier1": 'identifier2' je již přímé základní třídy.
+
+Třída nebo struktura, zobrazí se více než jednou v seznamu základních tříd.
+
+Přímou základní je uvedených v seznamu základních. Nepřímý základ je základní třídou jednoho v seznamu základních tříd.
+
+Třídu nelze zadat více než jednou jako přímou základní třídu. Třída může sloužit jako nepřímou základní třídou více než jednou.
+
+Následující ukázka generuje C2500:
+
+```
+// C2500.cpp
+// compile with: /c
+class A {};
+class B : public A, public A {};    // C2500
+
+// OK
+class C : public A {};
+class D : public A {};
+class E : public C, public D {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4205 | Microsoft Docs
+title: Upozornění (úroveň 4) C4205 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc8c811fd8d67964bdef8149aea09d83e4649b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9847e3c009e132993bcbb6aa94d2064d61e40421
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042361"
 ---
-# <a name="compiler-warning-level-4-c4205"></a>C4205 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: deklarace statické funkce v oboru – funkce  
-  
- Pomocí rozšíření Microsoft (/Ze) **statické** funkce lze deklarovat uvnitř jiné funkce. Funkce přidělen globální obor.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4205.c  
-// compile with: /W4  
-void func1()  
-{  
-   static int func2();  // C4205  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- Takové inicializacích jsou neplatné v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4205"></a>Kompilátor upozornění (úroveň 4) C4205
+
+používá se nestandardní rozšíření: deklarace statické funkce v oboru funkce
+
+S rozšířeními společnosti Microsoft (/Ze) **statické** funkce mohou být deklarovány uvnitř jiné funkci. Globální rozsah je uvedena funkce.
+
+## <a name="example"></a>Příklad
+
+```
+// C4205.c
+// compile with: /W4
+void func1()
+{
+   static int func2();  // C4205
+};
+
+int main()
+{
+}
+```
+
+Tyto inicializace jsou neplatné pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

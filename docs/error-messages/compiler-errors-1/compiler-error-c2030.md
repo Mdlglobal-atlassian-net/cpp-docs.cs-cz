@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2030 | Microsoft Docs
+title: Chyba kompilátoru C2030 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceccc1088e32382167e7e6400360b30de07fde1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0c5849c372cc4c7ebf27dbe010e65d406ad1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032890"
 ---
 # <a name="compiler-error-c2030"></a>Chyba kompilátoru C2030
-destruktor s chráněné privátním usnadnění nesmí být členem třídy deklarován 'zapečetěné.  
-  
- Prostředí Windows Runtime třídy deklarován jako `sealed` nemůže mít chráněný privátní destruktor. Veřejné virtuální a privátní nevirtuálních destruktory jsou povoleny pouze v zapečetěných typech. Další informace najdete v tématu [Ref třídy a struktury](../../cppcx/ref-classes-and-structs-c-cx.md).  
-  
- Chcete-li tuto chybu opravit, změňte usnadnění destruktoru.
+
+destruktor s přístupností protected private nemůže být členem třídy deklarované jako sealed.
+
+Prostředí Windows Runtime třídy deklarované jako `sealed` nemůže mít destruktor chráněné privátní. Veřejné virtuální a privátní nevirtuální destruktory jsou povoleny pouze v zapečetěných typech. Další informace najdete v tématu [referenční třídy a struktury](../../cppcx/ref-classes-and-structs-c-cx.md).
+
+Chcete-li tuto chybu vyřešit, změňte přístupnost destruktor.

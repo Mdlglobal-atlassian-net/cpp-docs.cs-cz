@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e00190e7c7b4eacbd8f53b87f2e5ad3efd44d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 249182277473eebf5f11d4f6f3de1e8e7d275b61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032609"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro kopírování (C++)
 
@@ -95,4 +95,4 @@ Operátory přiřazení vygenerované kompilátorem následují stejný vzor s o
 
 Důsledky jsou podobné jako u těch, které jsou vygenerovány kopírovacím konstruktorem. Pokud typ argumentu není **const**, přiřazení **const** vygeneruje chybu. Opak není pravdou: Pokud **const** hodnotu, která není přiřazena hodnota **const**, přiřazení uspěje.
 
-Další informace o přetížených operátorech přiřazení naleznete v tématu [přiřazení](../cpp/assignment.md).  
+Další informace o přetížených operátorech přiřazení naleznete v tématu [přiřazení](../cpp/assignment.md).

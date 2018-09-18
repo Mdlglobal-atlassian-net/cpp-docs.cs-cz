@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751316"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025149"
 ---
 # <a name="icollectiononstlimpl-class"></a>Icollectiononstlimpl – třída
 
@@ -35,25 +35,25 @@ Tato třída poskytuje metody používané třídy kolekce.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Kolekce rozhraní modelu COM.
 
-*CollType*  
+*CollType*<br/>
 Třída kontejneru standardní knihovny C++.
 
-*Typ položky*  
+*Typ položky*<br/>
 Typ položky, které jsou vystavené rozhraní kontejneru.
 
-*CopyItem*  
+*CopyItem*<br/>
 A [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*  
+*EnumType*<br/>
 A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)– třída kompatibilní enumerátor.
 
 ## <a name="members"></a>Členové
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>Parametry
 
-*pcount –*  
+*pcount –*<br/>
 [out] Počet elementů v kolekci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 [in] Index založený na 1 položka v kolekci.
 
-*pvar*  
+*pvar*<br/>
 [out] Odpovídající položky pro *Index*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] **IUnknown** ukazatel nově vytvořený enumerator – objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka ATLCollections](../../visual-cpp-samples.md)   
+[Ukázka ATLCollections](../../visual-cpp-samples.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

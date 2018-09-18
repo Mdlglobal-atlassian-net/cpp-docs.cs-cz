@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4255 | Microsoft Docs
+title: Upozornění (úroveň 4) C4255 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff68feb5f926a3c2cf8bbb85acfa18e8e1ecfa29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e07cc1077993e1bb22c5d8af4ce4445d38321b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032377"
 ---
-# <a name="compiler-warning-level-4-c4255"></a>C4255 kompilátoru upozornění (úroveň 4)
-'function': žádné funkce prototypu zadané: převádění (')' do '(void).  
-  
- Kompilátor nenalezl explicitní seznam argumentů pro funkci. Toto upozornění je pro kompilátor C.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4255:  
-  
-```  
-// C4255.c  
-// compile with: /W4 /WX  
-#pragma warning (default : 4255)  
-  
-void f()  { // C4255  
-// try the following line instead  
-//void f(void) {  
-}  
-  
-int main(int argc, char *argv[]) {  
-   f();  
-}  
+# <a name="compiler-warning-level-4-c4255"></a>Kompilátor upozornění (úroveň 4) C4255
+
+'function': zadaný žádný prototyp funkce: převod '(') '(void).
+
+Kompilátor nenalezl explicitní seznam argumentů funkce. Toto upozornění je pro kompilátor jazyka C.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4255:
+
+```
+// C4255.c
+// compile with: /W4 /WX
+#pragma warning (default : 4255)
+
+void f()  { // C4255
+// try the following line instead
+//void f(void) {
+}
+
+int main(int argc, char *argv[]) {
+   f();
+}
 ```
