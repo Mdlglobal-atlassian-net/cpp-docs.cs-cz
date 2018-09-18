@@ -1,5 +1,5 @@
 ---
-title: -DEF (zadat soubor definice modulu) | Microsoft Docs
+title: -DEF (zadání souboru definice modulu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0c712b81fbb755edd132c6f97efc906ba4f5ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ec7458f5b81dd2b9d5aac49959b935f49377081
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371148"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720390"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Zadat soubor definice modulu)
-```  
-/DEF:filename  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Název souboru*  
- Název souboru definice modulu (.def) mají být předány linkeru.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost/DEF předá soubor definice modulu (.def) linkeru. ODKAZ na lze zadat pouze jeden soubor .def. Podrobnosti o soubory .def najdete v tématu [soubory definice modulu](../../build/reference/module-definition-dot-def-files.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Klikněte **Linkeru** složky.  
-  
-3.  Klikněte **vstup** stránku vlastností.  
-  
-4.  Změnit **soubor definice modulu** vlastnost.  
-  
- K určení souboru .def v rámci vývojového prostředí, doporučujeme ho přidat do projektu spolu s další soubory a zadejte soubor možnosti/def.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+```
+/DEF:filename
+```
+
+## <a name="arguments"></a>Arguments
+
+*Název souboru*<br/>
+Název souboru definice modulu (.def) má být předán linkeru.
+
+## <a name="remarks"></a>Poznámky
+
+/ DEF předá linkeru soubor definice modulu (.def). K propojení lze zadat pouze jeden soubor def. Podrobnosti o .def souborech najdete v tématu [soubory definice modulu](../../build/reference/module-definition-dot-def-files.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Klikněte na tlačítko **Linkeru** složky.
+
+1. Klikněte na tlačítko **vstup** stránku vlastností.
+
+1. Upravit **soubor definice modulu** vlastnost.
+
+Zadat soubor .def z vývojového prostředí, musí ho přidat do projektu společně s další soubory a pak zadejte soubor, který má parametr/def.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.
+
+## <a name="see-also"></a>Viz také
+
+[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
+[Možnosti linkeru](../../build/reference/linker-options.md)

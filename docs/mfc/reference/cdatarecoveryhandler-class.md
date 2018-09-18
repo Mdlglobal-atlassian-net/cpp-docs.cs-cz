@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339277"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701763"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler – třída
 `CDataRecoveryHandler` Automaticky ukládá dokumenty a obnoví je, pokud se aplikace neočekávaně ukončí.  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel `CDocument` uložte.|  
-|[in] *bResetModifiedFlag*|Hodnota TRUE znamená, že `CDataRecoveryHandler` bere v úvahu *pDocument* má být upraven; Hodnota FALSE označuje, že bude považovat za rozhraní *pDocument* bude bez úprav. Další informace o účinek tohoto příznaku v části poznámky.|  
+|*pDocument*|[in] Ukazatel `CDocument` uložte.|  
+|*bResetModifiedFlag*|[in] Hodnota TRUE znamená, že `CDataRecoveryHandler` bere v úvahu *pDocument* má být upraven; Hodnota FALSE označuje, že bude považovat za rozhraní *pDocument* bude bez úprav. Další informace o účinek tohoto příznaku v části poznámky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud jsou nastavené příslušnými příznaky a *pDocument* v platném `CDocument` objektu.  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *dwRestartManagerSupportFlags*|Určuje, jaké možnosti Správce restartování jsou podporovány.|  
-|[in] *nAutosaveInterval*|Doba mezi automaticky ukládá. Tento parametr je v milisekundách.|  
+|*dwRestartManagerSupportFlags*|[in] Určuje, jaké možnosti Správce restartování jsou podporovány.|  
+|*nAutosaveInterval*|[in] Doba mezi automaticky ukládá. Tento parametr je v milisekundách.|  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní MFC framework automaticky vytvoří `CDataRecoveryHandler` objekt pro vaši aplikaci při použití **nový projekt** průvodce. Pokud se přizpůsobení chování obnovení dat nebo správce restartování, nevytvářejte `CDataRecoveryHandler` objektu.  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel `CDocument`. Tato metoda vytvoří dokument informace pro tento `CDocument`.|  
+|*pDocument*|[in] Ukazatel `CDocument`. Tato metoda vytvoří dokument informace pro tento `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace vrací hodnotu TRUE.  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *strAutosavedFile*|Řetězec, který obsahuje název souboru automaticky uložené.|  
+|*strAutosavedFile*|[in] Řetězec, který obsahuje název souboru automaticky uložené.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace vždy vrátí hodnotu TRUE.  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDocumentName*  
- Řetězec, který obsahuje název dokumentu. `GenerateAutosaveFileName` název tohoto dokumentu se používá ke generování odpovídající název souboru automatického ukládání.  
+*strDocumentName*<br/>
+[in] Řetězec, který obsahuje název dokumentu. `GenerateAutosaveFileName` název tohoto dokumentu se používá ke generování odpovídající název souboru automatického ukládání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Název souboru automatického ukládání generovaných *strDocumentName*.  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel `CDocument`. `GetDocumentListName` načte název dokumentu z tohoto `CDocument`.|  
+|*pDocument*|[in] Ukazatel `CDocument`. `GetDocumentListName` načte název dokumentu z tohoto `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Název dokumentu z *pDocument*.  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel `CDocument`.|  
+|*pDocument*|[in] Ukazatel `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Normální záhlaví pro zadaný dokument.  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDocumentTitle*  
- Normální záhlaví pro dokument.  
+*strDocumentTitle*<br/>
+[in] Normální záhlaví pro dokument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Název obnovené dokumentu.  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel na dokument, který chcete odebrat.|  
+|*pDocument*|[in] Ukazatel na dokument, který chcete odebrat.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE v případě *pDocument* byl odebrán ze seznamu. FALSE, pokud došlo k chybě.  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nAutosaveInterval*  
- Nové automatické ukládání interval v milisekundách.  
+*nAutosaveInterval*<br/>
+[in] Nové automatické ukládání interval v milisekundách.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  Nastaví adresář, kde jsou uloženy soubory automaticky uložené.  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *strAutosavePath*|Cesta kde jsou uloženy soubory automatického ukládání.|  
+|*strAutosavePath*|[in] Cesta kde jsou uloženy soubory automatického ukládání.|  
   
 ### <a name="remarks"></a>Poznámky  
  Změna adresáře automatického ukládání nepřesouvá aktuálně automaticky uložené soubory.  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *strRestartIdentifier*|Jedinečný identifikátor pro správce restartování.|  
+|*strRestartIdentifier*|[in] Jedinečný identifikátor pro správce restartování.|  
   
 ### <a name="remarks"></a>Poznámky  
  Správce restartování zaznamenává informace o otevřených dokumentů v registru. Tyto informace se ukládají s restartování jedinečný identifikátor jako klíč. Protože identifikátor restartování je jedinečný pro každou instanci aplikace, více instancí aplikace může neočekávaně ukončena a správce restartování můžete obnovit každý z nich.  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *bSaveOnIdle*|TRUE, pokud chcete uložit informace o dokumentu během aktuální nečinnosti cyklu; FALSE, nebude se provádět uložení.|  
+|*bSaveOnIdle*|[in] TRUE, pokud chcete uložit informace o dokumentu během aktuální nečinnosti cyklu; FALSE, nebude se provádět uložení.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Nastaví, zda správce restartování způsobila předchozí ukončení aplikace.  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *bShutdownByRestartManager*|Hodnota TRUE označuje, že správce restartování způsobila ukončení; aplikace FALSE označuje, že aplikace byla ukončena z nějakého jiného důvodu.|  
+|*bShutdownByRestartManager*|[in] Hodnota TRUE označuje, že správce restartování způsobila ukončení; aplikace FALSE označuje, že aplikace byla ukončena z nějakého jiného důvodu.|  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní se chová různě v závislosti na Určuje, zda nebyl očekáván předchozí ukončení nebo zda byl inicializován nástrojem Správce restartování.  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[in] *pDocument*|Ukazatel na uložený dokument.|  
+|*pDocument*|[in] Ukazatel na uložený dokument.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud tato metoda odstraní automaticky uložené dokumentu a aktualizované informace o dokumentu; FALSE, pokud došlo k chybě.  

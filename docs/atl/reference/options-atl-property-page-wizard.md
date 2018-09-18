@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77849366ecfbdaee819eff6b8938b2dadb7b8db3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3f3cf6a9e2c9924ae72624c931a4551736f8956
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761001"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711825"
 ---
 # <a name="options-atl-property-page-wizard"></a>Možnosti Průvodce stránkou vlastností ATL
 
 Pomocí této stránky v průvodci můžete definovat vláken modelu a agregace úroveň stránky vlastností, kterou vytváříte.
 
-**Model vláken**  
-Určuje model vláken používané stránky vlastností.
+- **Model vláken**
 
-Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.
+   Určuje model vláken používané stránky vlastností.
 
-|Možnost|Popis|
-|------------|-----------------|
-|**Jeden**|Na stránce vlastností spustí jenom v primárním vláknu COM.|
-|**Objektu Apartment**|Na stránce vlastností lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení|
+   Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.
 
-**Agregace**  
-Přidá podporu agregace pro stránku vlastnost, kterou vytváříte. Zobrazit [agregace](../../atl/aggregation.md) Další informace.
+   |Možnost|Popis|
+   |------------|-----------------|
+   |**Jeden**|Na stránce vlastností spustí jenom v primárním vláknu COM.|
+   |**Objektu Apartment**|Na stránce vlastností lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení|
 
-|Možnost|Popis|
-|------------|-----------------|
-|**Ano**|Vytvoření stránky vlastností, které se dají agregovat.|
-|**Ne**|Vytvoření stránky vlastností, který nemůže být agregován.|
-|**Pouze**|Vytvoření stránky vlastností, který může být vytvořena pouze prostřednictvím agregace.|
+- **Agregace**
+
+   Přidá podporu agregace pro stránku vlastnost, kterou vytváříte. Zobrazit [agregace](../../atl/aggregation.md) Další informace.
+
+   |Možnost|Popis|
+   |------------|-----------------|
+   |**Ano**|Vytvoření stránky vlastností, které se dají agregovat.|
+   |**Ne**|Vytvoření stránky vlastností, který nemůže být agregován.|
+   |**Pouze**|Vytvoření stránky vlastností, který může být vytvořena pouze prostřednictvím agregace.|
 
 ## <a name="see-also"></a>Viz také
 

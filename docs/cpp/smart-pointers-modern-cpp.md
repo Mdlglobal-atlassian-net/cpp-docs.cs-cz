@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703583"
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 V moderním programování C++ standardní knihovna obsahuje *inteligentní ukazatele*, které se používají k zajištění, že programy jsou volné paměti a dalších prostředků a jsou bezpečné na výjimku.  
@@ -69,8 +69,9 @@ V moderním programování C++ standardní knihovna obsahuje *inteligentní ukaz
 ## <a name="kinds-of-smart-pointers"></a>Typy inteligentních ukazatelů  
  V následující části jsou shrnuty různé druhy inteligentních ukazatelů, které jsou k dispozici v programovacím prostředí Windows, včetně popisu, kdy je vhodné je použít.  
   
- **Inteligentní ukazatele knihovny C++ Standard**  
- Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazatelů do objektů POCO.  
+### <a name="c-standard-library-smart-pointers"></a>Inteligentní ukazatele knihovny C++ Standard
+
+Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazatelů do objektů POCO.  
   
 -   `unique_ptr`   
      Povolují právě jednoho vlastníka podkladového ukazatele. Použijte jako výchozí volbu pro POCO, pokud nejste jisti, že budete potřebovat `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnat s `boost::scoped_ptr`. `unique_ptr` je malý a efektivní. velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vkládání a načítání z kolekcí standardní knihovny C++. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ V moderním programování C++ standardní knihovna obsahuje *inteligentní ukaz
 -   `weak_ptr`   
     Zvláštní případ inteligentní ukazatel pro použití ve spojení s `shared_ptr`. A `weak_ptr` poskytuje přístup k objektu, který je vlastněn jednou nebo více `shared_ptr` instancí, ale se neúčastní počítání odkazů. Použijte ho, chcete-li objekt sledovat, ale nepotřebujete ho ponechat ve stavu alive. Potřebné v některých případech pro přerušení cyklických odkazů mezi `shared_ptr` instancí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) a [weak_ptr – třída](../standard-library/weak-ptr-class.md).  
   
- **Inteligentní ukazatele pro objekty COM (klasické Windows programování)**  
- Při práci s objekty COM zabalte ukazatele rozhraní do příslušného typu inteligentního ukazatele. Knihovna ATL definuje řadu inteligentních ukazatelů pro různé účely. Můžete také použít `_com_ptr_t` typ inteligentního ukazatele, který kompilátor používá při vytváření obálkových tříd ze souborů .tlb. Jedná se o nejlepší volbu, pokud nechcete zahrnovat hlavičkové soubory ATL.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Inteligentní ukazatele pro objekty COM (klasické programování v systému Windows)
+
+Při práci s objekty COM zabalte ukazatele rozhraní do příslušného typu inteligentního ukazatele. Knihovna ATL definuje řadu inteligentních ukazatelů pro různé účely. Můžete také použít `_com_ptr_t` typ inteligentního ukazatele, který kompilátor používá při vytváření obálkových tříd ze souborů .tlb. Jedná se o nejlepší volbu, pokud nechcete zahrnovat hlavičkové soubory ATL.  
   
  [CComPtr – třída](../atl/reference/ccomptr-class.md)  
  Tuto volbu použijte, dokud nenastane situace, že nemůžete použít knihovnu ATL. Provede součet odkazů pomocí `AddRef` a `Release` metody. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ V moderním programování C++ standardní knihovna obsahuje *inteligentní ukaz
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)  
  Se podobá `CComQIPtr` funkcí, ale nezávisí na hlavičkách ATL.  
   
- **Inteligentní ukazatele ATL pro objekty POCO**  
- Kromě inteligentních ukazatelů pro objekty COM definuje ATL také inteligentní ukazatele a kolekce inteligentních ukazatelů pro objekty POCO. V klasickém programování Windows, jsou tyto typy užitečné alternativy ke kolekcím standardní knihovny C++, zejména v případě, že není požadována přenositelnost kódu nebo pokud nechcete kombinovat modely programování C++ standardní knihovna a ATL.  
+### <a name="atl-smart-pointers-for-poco-objects"></a>Inteligentní ukazatele ATL pro objekty POCO
+
+Kromě inteligentních ukazatelů pro objekty COM definuje ATL také inteligentní ukazatele a kolekce inteligentních ukazatelů pro objekty POCO. V klasickém programování Windows, jsou tyto typy užitečné alternativy ke kolekcím standardní knihovny C++, zejména v případě, že není požadována přenositelnost kódu nebo pokud nechcete kombinovat modely programování C++ standardní knihovna a ATL.  
   
  [CAutoPtr – třída](../atl/reference/cautoptr-class.md)  
  Inteligentní ukazatel, který vynucuje jedinečné vlastnictví převodem vlastnictví na kopii. Srovnatelné se zastaralou `std::auto_ptr` třídy.  
