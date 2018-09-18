@@ -1,5 +1,5 @@
 ---
-title: C3650 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3650 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcb5b1622523668c4ed7136424ded5e3f900e25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ee7477acc26621a13a1a1d3b4f2d0d0f563c665
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016543"
 ---
-# <a name="compiler-error-c3650"></a>C3650 chyby kompilátoru
-'interface_method': nelze použít jako explicitní přepsání, musí být virtuální členské funkce základní třídy  
-  
- Došlo pokusu o plnění explicitní přepsání člena, který nebyl virtuální.  
-  
- Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3650:  
-  
-```  
-// C3650.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void a();  
-};  
-  
-public ref class S {  
-public:  
-   static int f() { return 0; }  
-   static int g() { return 0; }  
-};  
-  
-public ref struct T1 : public S, I {  
-   virtual int f() new sealed = S::f;   // C3650  
-   virtual int g() { return 0; }   // OK does not override S::g  
-   virtual void a() new sealed = I::a {}   // OK  
-};  
+# <a name="compiler-error-c3650"></a>Chyba kompilátoru C3650
+
+'interface_method': nejde používat jako explicitní přepsání; musí být virtuální členská funkce základní třídy.
+
+Došlo pokusu o provést explicitní přepsání člena, která není virtuální.
+
+Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Následující ukázka generuje C3650:
+
+```
+// C3650.cpp
+// compile with: /clr
+public interface struct I {
+   void a();
+};
+
+public ref class S {
+public:
+   static int f() { return 0; }
+   static int g() { return 0; }
+};
+
+public ref struct T1 : public S, I {
+   virtual int f() new sealed = S::f;   // C3650
+   virtual int g() { return 0; }   // OK does not override S::g
+   virtual void a() new sealed = I::a {}   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1107 | Microsoft Docs
+title: Závažná chyba C1107 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc896f08ac161cae4e4fab5e991da810f3faf195
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016634"
 ---
 # <a name="fatal-error-c1107"></a>Závažná chyba C1107
-Nelze najít sestavení 'file': Zadejte cestu k sestavení vyhledávání pomocí /AI nebo nastavením LIBPATH – proměnná prostředí  
-  
- Byl předán soubor metadat [#using](../../preprocessor/hash-using-directive-cpp.md) direktiva, která nelze najít.  
-  
- LIBPATH, který je popsaný v tomto tématu pro `#using`a [/AI](../../build/reference/ai-specify-metadata-directories.md) – možnost kompilátoru umožňují zadat adresáře, ve kterých bude kompilátor hledat soubory odkazované metadat.
+
+nepovedlo se najít sestavení 'file': Zadejte cesty pro hledání sestavení pomocí parametru /AI nebo nastavením proměnné prostředí LIBPATH
+
+Soubor metadat byl předán [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice, které kompilátor se nepovedlo najít.
+
+LIBPATH, která je popsána v tématu o `#using`a [/AI](../../build/reference/ai-specify-metadata-directories.md) – možnost kompilátoru vám umožňují určit adresáře, ve kterých bude kompilátor hledat soubory odkazované metadat.

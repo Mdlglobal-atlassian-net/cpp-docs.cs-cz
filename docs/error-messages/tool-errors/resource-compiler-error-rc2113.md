@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2113 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2113 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152621a248c2a47a453034f1b171fe1746000fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015867"
 ---
 # <a name="resource-compiler-error-rc2113"></a>Chyba kompilátoru prostředků RC2113
-V dialogovém okně byl očekáván END  
-  
- **END** – klíčové slovo musí dojít na konci **dialogové okno** příkaz. Zajistěte, aby neexistují žádné otevřete uvozovky, ponecháno z předchozí příkaz.
+
+END očekává v dialogovém okně
+
+**END** – klíčové slovo se musí vyskytovat na konci **dialogové okno** příkazu. Ujistěte se, že neexistují žádné otevřené nabídky vlevo od předchozího příkazu.

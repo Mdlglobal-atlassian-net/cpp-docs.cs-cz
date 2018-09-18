@@ -1,5 +1,5 @@
 ---
-title: Chyba matematické operace M6110 | Microsoft Docs
+title: Chyba matematické operace M6110 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97918c38f896dd5fccd3abeae86a3104cf80694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 333a6d9741d4ccaa5764e84fabd71f58788c1b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015791"
 ---
 # <a name="math-error-m6110"></a>Chyba matematické operace M6110
-přetečení zásobníku  
-  
- Výraz s plovoucí desetinnou čárkou způsobila přetečení zásobníku s plovoucí desetinnou čárkou.  
-  
- Přetečení zásobníku výjimky s plovoucí desetinnou čárkou jsou až limitu sedm úrovně kromě osm úrovní obvykle nepodporuje koprocesor 287 8087. 387 zachycena.  
-  
- Program se ukončí s ukončovacím kódem 138.
+
+přetečení zásobníku
+
+Výraz s plovoucí desetinnou čárkou způsobit přetečení zásobníku s plovoucí desetinnou čárkou.
+
+Až limitu sedm úrovní kromě osm úrovní obvykle podporuje koprocesoru 287 8087. 387 zachycovány výjimky přetečení zásobníku s plovoucí desetinnou čárkou.
+
+Program se ukončí s ukončovacím kódem 138.

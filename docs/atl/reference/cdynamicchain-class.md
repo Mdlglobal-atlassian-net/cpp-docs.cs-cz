@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017960"
 ---
 # <a name="cdynamicchain-class"></a>Cdynamicchain – třída
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna příjem zprávy.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lResult*  
+*lResult*<br/>
 [out] Výsledek zpracování zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy. Původně definovat tuto hodnotu přímo pomocí volání [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy.
 
-*odstraněný objekt*  
+*odstraněný objekt*<br/>
 [in] Ukazatel na objekt zřetězené deklarace mapování zprávy. Tento objekt musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifikátor mapu zpráv ve zřetězených objektů. Výchozí hodnota je 0, což označuje výchozí mapování zpráv deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Chcete-li určit mapování alternativních zpráva deklarována s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předejte `msgMapID`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,5 +201,5 @@ Pokud *dwChainID* hodnota již existuje v kolekci, jeho přidruženého objektu 
 
 ## <a name="see-also"></a>Viz také
 
-[Cwindowimpl – třída](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

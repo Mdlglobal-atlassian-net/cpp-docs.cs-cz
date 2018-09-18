@@ -1,5 +1,5 @@
 ---
-title: Převody z typů s plovoucí desetinnou čárkou | Microsoft Docs
+title: Převody z typů s plovoucí desetinnou čárkou | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -15,54 +15,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce86a9ceffaa5d9dacfe56e6b89b677b3abb1517
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefbbde88704ffd53f8bcf1445186bb7e6cdd6af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017628"
 ---
 # <a name="conversions-from-floating-point-types"></a>Převody z typů s plovoucí desetinnou čárkou
 
-A **float** převést na hodnotu **dvojité** nebo **long double**, nebo **dvojité** převést na **dlouho dvakrát**, zde nevyskytlo žádná změna v poli hodnota. A **dvojité** převést na hodnotu **float** hodnota je reprezentována přesně, pokud je to možné. Přesnost může dojít ke ztrátě, pokud hodnota není možné vyjádřit přesně. Pokud je výsledek mimo rozsah, chování nedefinovaný. V tématu [omezení Floating-Point konstanty](../c-language/limits-on-floating-point-constants.md) pro rozsah typů s plovoucí desetinnou čárkou.
+A **float** převedeny na hodnotu **double** nebo **long double**, nebo **double** převést na **dlouho dvakrát**, prochází nezměnila hodnota. A **double** převedeny na hodnotu **float** hodnota je reprezentován přesně, pokud je to možné. Pokud hodnota se nedá přesně prezentovat, může dojít ke ztrátě přesnosti. Pokud výsledek je mimo rozsah, není chování definováno. Zobrazit [omezení konstant s plovoucí desetinné čárky s](../c-language/limits-on-floating-point-constants.md) pro řadu typů s plovoucí desetinnou čárkou.
 
-Je převést hodnotu plovoucí celočíselné hodnoty podle první převod na **dlouho**, pak z **dlouho** hodnotu s konkrétní hodnotou integrální. Za desetinnou hodnotu s plovoucí se zahodí v převod na **dlouho**. Pokud je stále výsledek příliš velký pro uložení do **dlouho**, výsledek převodu není definován.
+Hodnotu s plovoucí desetinnou čárkou je převeden na celočíselnou hodnotu prvního přejdete k **dlouhé**, pak z **dlouhé** hodnotu na konkrétní celočíselnou hodnotu. Desetinnou část hodnoty s plovoucí desetinnou čárkou je zahozena v převod na **dlouhé**. Pokud výsledek je stále se nevešla do **dlouhé**, výsledek převod není definován.
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Při převodu **dvojité** nebo **long double** číslo s plovoucí desetinnou čárkou menší na dvě desetinná čísla, hodnota proměnné s plovoucí desetinnou čárkou se zkrátí směrem k nule, když dojde podtečení. Přetečení způsobí, že chyba spuštění. Všimněte si, že mapuje kompilátoru Microsoft C **long double** na typ **dvojité**.
+Při převodu **double** nebo **long double** číslo s plovoucí desetinnou čárkou na menší s plovoucí desetinnou čárkou číslo, hodnotu proměnné s plovoucí desetinnou čárkou je zkrácena směrem k nule, když dojde k podtečení. Přetečení způsobí chybu za běhu. Všimněte si, že kompilátor Microsoft C mapuje **long double** na typ **double**.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-Následující tabulka shrnuje převody z typů s plovoucí čárkou.
+Následující tabulka shrnuje převody z typů s plovoucí desetinnou čárkou.
 
 ## <a name="conversions-from-floating-point-types"></a>Převody z typů s plovoucí desetinnou čárkou
 
 |From|Chcete-li|Metoda|
 |----------|--------|------------|
-|**float**|**char**|Převést na **dlouho**; převést **dlouho** k **char**|
-|**float**|**short**|Převést na **dlouho**; převést **dlouho** k **krátké**|
-|**float**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký a nelze je jako **dlouho**, výsledkem nedefinovaný.|
-|**float**|**short bez znaménka**|Převést na **dlouho**; převést **dlouho** k **prostě bez znaménka**|
-|**float**|**dlouho bez znaménka**|Převést na **dlouho**; převést **dlouho** k **dlouho bez znaménka**|
-|**float**|**double**|Změnit interního vyjádření|
-|**float**|**dlouhé double**|Změnit interního vyjádření|
-|**double**|**char**|Převést na **float**; převést **float** k **char**|
-|**double**|**short**|Převést na **float**; převést **float** k **krátké**|
-|**double**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký a nelze je jako **dlouho**, výsledkem nedefinovaný.|
-|**double**|**short bez znaménka**|Převést na **dlouho**; převést **dlouho** k **prostě bez znaménka**|
-|**double**|**dlouho bez znaménka**|Převést na **dlouho**; převést **dlouho** k **dlouho bez znaménka**|
-|**double**|**float**|Představují jako **float**. Pokud **dvojité** hodnotu nelze reprezentovat přesně tak, jak **float**, dojde ke ztrátě přesnosti. Pokud hodnota je příliš velký a nelze je jako **float**, výsledkem nedefinovaný.|
-|**dlouhé double**|**char**|Převést na **float**; převést **float** k **char**|
-|**dlouhé double**|**short**|Převést na **float**; převést **float** k **krátké**|
-|**dlouhé double**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký a nelze je jako **dlouho**, výsledkem nedefinovaný.|
-|**dlouhé double**|**short bez znaménka**|Převést na **dlouho**; převést **dlouho** k **prostě bez znaménka**|
-|**dlouhé double**|**dlouho bez znaménka**|Převést na **dlouho**; převést **dlouho** k **dlouho bez znaménka**|
-|**dlouhé double**|**float**|Představují jako **float**. Pokud **dvojité** hodnotu nelze reprezentovat přesně tak, jak **float**, dojde ke ztrátě přesnosti. Pokud hodnota je příliš velký a nelze je jako **float**, výsledkem nedefinovaný.|
-|**dlouhé double**|**double**|**Long double** hodnota je považována za **dvojité**.|
+|**float**|**char**|Převést na **dlouhé**; převod **dlouhé** k **char**|
+|**float**|**short**|Převést na **dlouhé**; převod **dlouhé** k **krátké**|
+|**float**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký, aby se dala vyjádřit jako **dlouhé**, výsledek není definován.|
+|**float**|**short bez znaménka**|Převést na **dlouhé**; převod **dlouhé** k **unsigned short**|
+|**float**|**unsigned long**|Převést na **dlouhé**; převod **dlouhé** k **unsigned long**|
+|**float**|**double**|Změnit vnitřní reprezentaci|
+|**float**|**typ long double**|Změnit vnitřní reprezentaci|
+|**double**|**char**|Převést na **float**; převod **float** k **char**|
+|**double**|**short**|Převést na **float**; převod **float** k **krátké**|
+|**double**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký, aby se dala vyjádřit jako **dlouhé**, výsledek není definován.|
+|**double**|**short bez znaménka**|Převést na **dlouhé**; převod **dlouhé** k **unsigned short**|
+|**double**|**unsigned long**|Převést na **dlouhé**; převod **dlouhé** k **unsigned long**|
+|**double**|**float**|Znázornění jako **float**. Pokud **double** hodnota nemůže být reprezentován přesně jako **float**, dojde ke ztrátě přesnosti. Pokud hodnota je moc velká, aby se dala vyjádřit jako **float**, výsledek nedefinován.|
+|**typ long double**|**char**|Převést na **float**; převod **float** k **char**|
+|**typ long double**|**short**|Převést na **float**; převod **float** k **krátké**|
+|**typ long double**|**long**|Zkraťte na desetinné čárky. Pokud je výsledek příliš velký, aby se dala vyjádřit jako **dlouhé**, výsledek není definován.|
+|**typ long double**|**short bez znaménka**|Převést na **dlouhé**; převod **dlouhé** k **unsigned short**|
+|**typ long double**|**unsigned long**|Převést na **dlouhé**; převod **dlouhé** k **unsigned long**|
+|**typ long double**|**float**|Znázornění jako **float**. Pokud **double** hodnota nemůže být reprezentován přesně jako **float**, dojde ke ztrátě přesnosti. Pokud hodnota je moc velká, aby se dala vyjádřit jako **float**, výsledek nedefinován.|
+|**typ long double**|**double**|**Long double** je považován za hodnotu **double**.|
 
-Převody z **float**, **dvojité**, nebo **long double** hodnoty k **nepodepsané dlouho** nejsou přesné, pokud je hodnota převáděné větší než maximální kladnou **dlouho** hodnotu.
+Převody z **float**, **double**, nebo **long double** hodnoty **unsigned long** nejsou přesné, pokud je převáděná hodnota větší než maximální pozitivní **dlouhé** hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Převody přiřazení](../c-language/assignment-conversions.md)  
+[Převody přiřazení](../c-language/assignment-conversions.md)

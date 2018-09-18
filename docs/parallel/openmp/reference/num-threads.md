@@ -1,5 +1,5 @@
 ---
-title: num_threads | Microsoft Docs
+title: num_threads | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016283"
 ---
 # <a name="numthreads"></a>num_threads
-Nastaví počet vláken v týmu přístup z více vláken.  
+Nastaví počet vláken v týmu vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Nastaví počet vláken v týmu přístup z více vláken.
 num_threads(num)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `num`  
- Počet vláken  
+*počet*<br/>
+Počet vláken  
   
 ## <a name="remarks"></a>Poznámky  
  `num_threads` Klauzule má stejné funkce jako [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) funkce.  
@@ -52,7 +51,7 @@ num_threads(num)
  Další informace najdete v tématu [2.3 parallel – konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [paralelní](../../../parallel/openmp/reference/parallel.md) příklad použití `num_threads` klauzule.  
+ Zobrazit [paralelní](../../../parallel/openmp/reference/parallel.md) pro příklad použití `num_threads` klauzuli.  
   
 ## <a name="see-also"></a>Viz také  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

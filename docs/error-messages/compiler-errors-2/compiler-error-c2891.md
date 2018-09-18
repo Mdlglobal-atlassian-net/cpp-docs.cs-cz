@@ -1,5 +1,5 @@
 ---
-title: C2891 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2891 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01741d1cc67f0045c46ab392212625b9e1a2d8ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d81662cb02fa3c8f6af75009daf4dab9b70196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016556"
 ---
-# <a name="compiler-error-c2891"></a>C2891 chyby kompilátoru
-"parametr": nelze převést na adresu parametr šablony  
-  
- Adresa parametru šablony nelze provést, pokud se nejedná lvalue. Parametry typu nejsou hodnoty lvalue, protože mají žádnou adresu. Bez – typ hodnoty v seznamech parametr šablony, které nejsou hodnoty lvalue také nemají adresu. Toto je ukázkový kód, který způsobuje, že C2891 chyby kompilátoru, protože hodnota zadaná jako parametr šablony je kopii generované kompilátorem argumentu šablony.  
-  
-```  
-template <int i> int* f() { return &i; }  
-```  
-  
- Parametry šablony, které jsou hodnoty lvalue, jako je například odkazové typy, můžete jeho adresu provedli.  
-  
-```  
-template <int& r> int* f() { return &r; }  
-```  
-  
- Chcete-li tuto chybu, nepřebírají adresu parametr šablony Pokud se nejedná lvalue.
+# <a name="compiler-error-c2891"></a>Chyba kompilátoru C2891
+
+"parametr": nejde adresovat parametr šablony
+
+Nelze převzít adresu proměnné parametr šablony, pokud má hodnotu lvalue. Parametry typu nejsou hodnoty lvalue, protože nemají žádnou adresu. Bez typu hodnoty v seznamech parametrů šablony, které nejsou hodnotami lvalues také nemusí adresu. Toto je příklad kódu, který způsobí, že chyba kompilátoru C2891, protože hodnota předána jako parametr šablony je generovaný kompilátorem kopie argumentu šablony.
+
+```
+template <int i> int* f() { return &i; }
+```
+
+Parametry šablony, které jsou l-hodnoty, jako jsou typy odkazů, můžete jeho adresu trvaly.
+
+```
+template <int& r> int* f() { return &r; }
+```
+
+Chcete-li opravit tuto chybu, není adresovat parametr šablony není l-hodnota.

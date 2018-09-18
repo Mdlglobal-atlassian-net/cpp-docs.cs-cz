@@ -1,5 +1,5 @@
 ---
-title: CXX0029 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0029 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017011"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Chyba při vyhodnocování výrazu CXX0029
-není struktura ukazatele  
-  
- Operátor výběru členů (**->**) bylo použito pro výraz, který není ukazatel na strukturu.  
-  
- Zkontrolujte, zda celý výraz je v závorkách správně, nebo typ přetypování adresu výraz, který má odpovídající struktura ukazatel typu.  
-  
- Tato chyba je stejný jako CAN0029.
+
+Nejedná se o ukazatel – struktura
+
+Operátor výběru členů (**->**) byla použita ve výrazu, který není ukazatel na strukturu.
+
+Zkontrolujte, že celý výraz v závorce je správně, nebo typ přetypování na typ ukazatele vhodnou strukturou výrazu adresy.
+
+Tato chyba se shoduje s CAN0029.

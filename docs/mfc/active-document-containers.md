@@ -1,5 +1,5 @@
 ---
-title: Kontejnery pro aktivní dokument | Microsoft Docs
+title: Kontejnery pro aktivní dokument | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: de03bc7b08a0fe5ae3b1c34fd1a7ec79c8fb0661
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017570"
 ---
 # <a name="active-document-containers"></a>Kontejnery pro aktivní dokument
-Kontejner pro aktivní dokument, jako je například Microsoft Office Binder nebo Internet Exploreru umožňuje pracovat s jinou aplikaci typů v rámci jedné (namísto nutnosti vytvořit a použít více snímků aplikace pro každou několik dokumentů Typ dokumentu).  
+Kontejner pro aktivní dokument, jako je například Microsoft modul vazby sady Office nebo aplikace Internet Explorer umožňuje pracovat s několika dokumenty těchto různých typů v rámci jednoho snímku (místo vynucení můžete vytvářet a používat více aplikací snímků pro každý Typ dokumentu).  
   
- MFC plně podporuje kontejnery pro aktivní dokument v `COleDocObjectItem` třídy. Průvodce aplikací MFC můžete vytvořit kontejner výběrem **kontejner pro aktivní dokument** v zaškrtávací políčko **složené podporu dokumentu** stránky Průvodce aplikací MFC. Další informace najdete v tématu [vytvoření aplikace kontejnerů pro aktivní dokument](../mfc/creating-an-active-document-container-application.md).  
+ Knihovna MFC poskytuje plná podpora pro kontejnery pro aktivní dokument v `COleDocObjectItem` třídy. Můžete použít Průvodce aplikací knihovny MFC a vytvoří kontejner aktivního dokumentu výběrem **kontejner pro aktivní dokument** zaškrtávací políčko na **Podpora složených dokumentů** stránky Průvodce aplikací knihovny MFC. Další informace najdete v tématu [vytvoření aplikace kontejnerů pro aktivní dokument](../mfc/creating-an-active-document-container-application.md).  
   
- Další informace o kontejnery pro aktivní dokument najdete v tématu:  
+ Další informace o kontejnery pro aktivní dokument naleznete v tématu:  
   
--   [Požadavky na kontejneru](#container_requirements)  
+-   [Požadavků na kontejner](#container_requirements)  
   
--   [Objekty dokumentu lokality](#document_site_objects)  
+-   [Objekty lokality dokumentu](#document_site_objects)  
   
--   [Objekty zobrazení lokality](#view_site_objects)  
+-   [Zobrazit objekty lokality](#view_site_objects)  
   
--   [Objekt rámce](#frame_object)  
+-   [Orámovat objekt](#frame_object)  
   
 -   [Slučování nabídek nápovědy](../mfc/help-menu-merging.md)  
   
@@ -45,49 +45,48 @@ Kontejner pro aktivní dokument, jako je například Microsoft Office Binder neb
   
 -   [Cíle příkazů](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a> Požadavky na kontejneru  
- Podpora aktivního dokumentu v kontejner znamená více než jen implementace rozhraní: se také vyžaduje znalost pomocí rozhraní obsažený objekt. Totéž platí i pro aktivní dokument rozšíření, kde kontejneru musí také vědět, jak používat tyto rozšíření rozhraní na aktivní dokumenty sami.  
+##  <a name="container_requirements"></a> Požadavků na kontejner  
+ Podpora aktivního dokumentu v aktivním dokumentu kontejneru znamená víc než jenom implementace rozhraní: také vyžaduje znalost pomocí rozhraní obsažený objekt. Totéž platí i pro aktivní dokument rozšíření, kde kontejneru musíte taky vědět jak pomocí těchto rozhraní rozšíření na samotných dokumentech aktivní.  
   
- Kontejner pro aktivní dokument, který se integruje aktivní dokumenty musí:  
+ Kontejner pro aktivní dokument, který integruje aktivní dokumenty musí:  
   
--   Být umožňuje zpracovávat úložiště objektů prostřednictvím `IPersistStorage` rozhraní, to znamená, je nutné zadat `IStorage` instance pro každý aktivní dokument.  
+-   Být schopné úložišti objektů pomocí `IPersistStorage` rozhraní, to znamená, je nutné zadat `IStorage` instance pro každý aktivní dokument.  
   
--   Podporují základní funkce vnoření OLE – dokumenty, očekávání "server" objekty (jeden do každého dokumentu nebo vložení) implementující `IOleClientSite` a `IAdviseSink`.  
+-   Podpora základní vkládání funkce dokumenty OLE, proto je nutné objekty "lokalit" (jeden na dokument nebo vkládání), které implementují `IOleClientSite` a `IAdviseSink`.  
   
--   Podpora aktivace na místě vložené objekty nebo aktivní dokumenty. Musíte implementovat objekty lokality kontejneru `IOleInPlaceSite` a objekt rámečku kontejneru musíte zadat `IOleInPlaceFrame`.  
+-   Podpora aktivace na místě vložené objekty nebo aktivní dokumenty. Musíte implementovat objekty lokality kontejneru `IOleInPlaceSite` a je nutné zadat objekt rámce kontejneru `IOleInPlaceFrame`.  
   
--   Podpora aktivní dokumenty rozšíření implementací `IOleDocumentSite` zajistit mechanismus pro kontejner, aby komunikoval s dokumentu. Volitelně můžete kontejneru implementovat rozhraní aktivní dokument `IOleCommandTarget` a `IContinueCallback` na vyzvednutí jednoduché příkazy jako tisku nebo uložení.  
+-   Podpora rozšíření aktivní dokumenty implementací `IOleDocumentSite` mechanismus pro kontejner ke komunikaci s dokumentu. Volitelně můžete kontejner implementovat rozhraní aktivní dokument `IOleCommandTarget` a `IContinueCallback` ke sbírání jednoduchých příkazů, jako je například tisku nebo uložení.  
   
- Volitelně můžete implementovat objekt rámečku, objekty zobrazení a objekt kontejneru `IOleCommandTarget` pro podporu od odeslání určité příkazy, jak je popsáno v [cíle příkazů](../mfc/message-handling-and-command-targets.md). Zobrazení a kontejneru objektů můžete volitelně také můžete implementovat `IPrint` a `IContinueCallback`, pro podporu tisk prostřednictvím kódu programu, jak je popsáno v [programový tisk](../mfc/programmatic-printing.md).  
+ Orámovat objekt zobrazit objekty a objekt kontejneru může volitelně implementovat `IOleCommandTarget` pro podporu odeslání některé příkazy, jak je popsáno v [cíle příkazů](../mfc/message-handling-and-command-targets.md). Zobrazení a kontejneru objektů lze také v případě potřeby implementovat `IPrint` a `IContinueCallback`pro zajištění podpory tisk prostřednictvím kódu programu, jak je popsáno v [programový tisk](../mfc/programmatic-printing.md).  
   
- Následující obrázek znázorňuje koncepční vztahy mezi kontejner a jeho komponenty (na levé straně) a aktivní dokument a jeho zobrazení (vpravo). Aktivní dokument spravuje úložiště a data a zobrazení zobrazí nebo volitelně vytiskne tato data. Rozhraní tučným písmem jsou požadované pro aktivní dokument účast; tučné písmo a kurzíva jsou volitelné. Všechny ostatní rozhraní jsou povinné.  
+ Následující obrázek znázorňuje koncepční vztah mezi kontejneru a jeho součástí (vlevo) a aktivní dokument a jeho zobrazení (vpravo). Aktivní dokument spravuje úložiště a data a zobrazí nebo volitelně vypíše data zobrazení. Rozhraní tučným písmem jsou povinné pro aktivní dokument účast; tučné písmo a kurzíva jsou volitelné. Všechny ostatní rozhraní jsou povinné.  
   
- ![Aktivní dokument kontejneru rozhraní](../mfc/media/vc37gj1.gif "vc37gj1")  
+ ![Rozhraní kontejner aktivního dokumentu](../mfc/media/vc37gj1.gif "vc37gj1")  
   
- Dokument, který podporuje pouze jedno zobrazení můžete implementovat zobrazení a dokumentu součásti (tedy příslušných rozhraní) u jedné konkrétní třídy. Kontejner lokalitu, která podporuje pouze jedno zobrazení současně kromě toho můžete kombinovat webu dokumentů a zobrazení lokality do jedné lokality konkrétní třídy. Objekt rámečku kontejneru, však musí zůstat odlišné a kontejneru dokumentu součást jenom zde zahrnuta poskytnout úplný přehled o architektuře; nemá vliv architektura zahrnutí aktivního dokumentu.  
+ Dokument, který podporuje pouze jedno zobrazení můžete implementovat součásti zobrazení i dokumentu (to znamená, že jejich odpovídající rozhraní) na jednu konkrétní třídu. Kontejner lokality, která podporuje pouze jedno zobrazení najednou kromě toho můžete kombinovat webu dokumentů a zobrazení webu do jedné lokality konkrétní třídy. Orámovat objekt kontejneru, ale musí zůstat distinct a součást dokumentu kontejneru pouze zde zahrnuta poskytnout ucelený přehled o architektuře; není ovlivněna architektura zahrnutí aktivního dokumentu.  
   
-##  <a name="document_site_objects"></a> Objekty dokumentu lokality  
- V architektuře zahrnutí aktivního dokumentu lokalitu dokumentu je stejný jako objekt lokality klienta v dokumentech OLE a uveďte `IOleDocument` rozhraní:  
+##  <a name="document_site_objects"></a> Objekty lokality dokumentu  
+ V architektuře zahrnutí aktivního dokumentu webu dokumentů je stejný jako objekt lokality klienta v dokumentech OLE a uveďte `IOleDocument` rozhraní:  
+
+```cpp
+interface IOleDocumentSite : IUnknown
+{
+    HRESULT ActivateMe(IOleDocumentView *pViewToActivate);
+}
+```  
   
- `interface IOleDocumentSite : IUnknown`  
+ Web dokumentů se koncepčně kontejner pro jeden nebo více objektů "zobrazení webu". Každý objekt lokality zobrazení souvisí s objekty jednotlivých zobrazení dokumentu spravovány lokalitou dokumentu. Pokud kontejner podporuje pouze jedno zobrazení na webu dokumentů, pak ho můžete implementovat webu dokumentů a zobrazení webu pomocí jedné konkrétní třídy.  
   
- `{`  
+##  <a name="view_site_objects"></a> Zobrazit objekty lokality  
+ Objekt kontejneru zobrazení webu spravuje prostor pro zobrazení pro určité zobrazení dokumentu. Kromě podpory standard `IOleInPlaceSite` rozhraní, zobrazení webu také obecně implementuje `IContinueCallback` programový tisk ovládacího prvku. (Všimněte si, že objekt zobrazení nikdy dotazuje `IContinueCallback` tak ji ve skutečnosti může být implementováno na některý objekt kontejneru verzi.)  
   
- `HRESULT ActivateMe(IOleDocumentView *pViewToActivate);`  
+ Kontejner, který podporuje několik zobrazení musí být schopen vytvořit více zobrazení objektů webu v rámci webu dokumentů. Každé zobrazení to poskytuje samostatné aktivace a deaktivace služby poskytované prostřednictvím `IOleInPlaceSite`.  
   
- `}`  
+##  <a name="frame_object"></a> Orámovat objekt  
+ Orámovat objekt kontejneru je ve většině případů stejné rámce, který se používá pro aktivace na místě v dokumenty OLE, to znamená, ten, který zpracuje vyjednávání nabídek a panelů nástrojů. Objekt zobrazení má přístup k tomuto objektu rámce prostřednictvím `IOleInPlaceSite::GetWindowContext`, která navíc poskytuje přístup ke kontejneru objekt reprezentující dokument kontejneru (která může zpracovávat vyjednávání úrovni podokna nástrojů a výčet obsaženého objektu).  
   
- Web dokumentů je koncepčně kontejner pro jeden nebo více objektů "zobrazení server". Každý objekt lokality zobrazení je spojen s objekty jednotlivých zobrazení dokumentu spravovány lokalitou dokumentu. Pokud kontejner podporuje pouze jedno zobrazení na webu dokumentů, pak je můžete implementovat webu dokumentů a zobrazení lokalitu s jedné konkrétní třídy.  
-  
-##  <a name="view_site_objects"></a> Objekty zobrazení lokality  
- Objekt lokality zobrazení kontejneru spravuje místo zobrazení v konkrétním zobrazení dokumentu. Také podporuje standardní `IOleInPlaceSite` rozhraní zobrazit web také obecně implementuje `IContinueCallback` pro programové řízení tisku. (Všimněte si, že objekt zobrazení nikdy dotazuje na `IContinueCallback` , ve skutečnosti se dá implementovat na některý objekt kontejneru přání.)  
-  
- Kontejner, který podporuje více zobrazení musí být schopen vytvořit více zobrazení objekty lokality v rámci lokality dokumentu. To poskytuje jednotlivých zobrazení samostatné aktivace a deaktivace služby podle prostřednictvím `IOleInPlaceSite`.  
-  
-##  <a name="frame_object"></a> Objekt rámce  
- Objekt rámečku kontejneru je ve většině případů stejné rámce, který slouží k aktivaci na místě v dokumentech OLE, který je, ten, který zpracuje vyjednávání nabídek a panelů nástrojů. Objekt zobrazení má přístup k tomuto objektu rámce prostřednictvím `IOleInPlaceSite::GetWindowContext`, která také poskytuje přístup k objektu kontejneru reprezentující dokument kontejneru (který může zpracovat vyjednávání úrovni podokna nástrojů a výčty obsažených objektů).  
-  
- Kontejner můžete posílení rámečku přidáním `IOleCommandTarget`. To umožní přijímat příkazy, které pocházejí v uživatelském rozhraní aktivní dokument stejným způsobem, že toto rozhraní můžete povolit kontejner odeslat stejné příkazy (například **nový soubor**, **otevřete**,  **Uložit jako**, **tiskových**; **Upravit kopie**, **vložení**, **vrátit zpět**a jiné) pro aktivní dokument. Další informace najdete v tématu [cíle příkazů](../mfc/message-handling-and-command-targets.md).  
+ Kontejner pro aktivní dokument můžete rozšířit rámce přidáním `IOleCommandTarget`. Umožní vám to přijímá příkazy, které pocházejí z aktivního dokumentu uživatelské rozhraní stejným způsobem, že toto rozhraní umožňuje kontejner k odesílání stejných příkazů (například **nový soubor**, **otevřít**,  **Uložit jako**, **tisk**; **Upravit kopii**, **vložit**, **zpět**a další) pro aktivní dokument. Další informace najdete v tématu [cíle příkazů](../mfc/message-handling-and-command-targets.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)

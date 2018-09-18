@@ -1,5 +1,5 @@
 ---
-title: unsupported_os – třída | Microsoft Docs
+title: unsupported_os – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4881bc0182c0d7bfbc5b5806fd6a59eea7fb25
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5298f7d8e6a998fb7841a6c3429a4240876c7cf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016530"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os – třída
-Tato třída popisuje výjimku vyvolá, když se používá nepodporovaný operační systém.  
+Tato třída popisuje výjimku vyvolána, když se používá nepodporovaný operační systém.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ class unsupported_os : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[unsupported_os](#ctor)|Přetíženo. Vytvoří `unsupported_os` objektu.|  
+|[unsupported_os –](#ctor)|Přetíženo. Vytvoří `unsupported_os` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -52,7 +52,7 @@ class unsupported_os : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> unsupported_os 
+##  <a name="ctor"></a> unsupported_os – 
 
  Vytvoří `unsupported_os` objektu.  
   
@@ -63,8 +63,8 @@ unsupported_os() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

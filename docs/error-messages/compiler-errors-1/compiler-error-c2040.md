@@ -1,5 +1,5 @@
 ---
-title: C2040 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2040 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6b19a5dd647e51efb46ef9798b7f7cdff5339b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccfbacff97550e20c0dd0202e0737585ffd39d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016465"
 ---
-# <a name="compiler-error-c2040"></a>C2040 chyby kompilátoru
-'operátor': "identifier1" se liší v úrovních dereference z 'identifier2.  
-  
- Výraz zadaný operandy zahrnující má nekompatibilní operandem nebo implicitně převést typy operandů. Pokud jsou oba operandy aritmetické nebo jsou obě nonarithmetic (například pole nebo ukazatel), použijí se beze změny. Pokud je jeden operand aritmetické a dalších není, aritmetické operand je převést na typ nonarithmetic operandu.  
-  
- Tato ukázka generuje C2040 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2040.cpp  
-// Compile by using: cl /c /W3 C2040.cpp  
-bool test() {  
-   char c = '3';  
-   return c == "3"; // C2446, C2040  
-   // return c == '3'; // OK  
-}  
+# <a name="compiler-error-c2040"></a>Chyba kompilátoru C2040
+
+'operator': "identifier1" se liší úrovněmi indirekce z "identifier2.
+
+Zahrnující zadané operandy výrazu má nekompatibilní operandem nebo implicitně převeden typy operandů. Pokud jsou oba operandy aritmetického nebo obojí jsou nonarithmetic (například pole nebo ukazatel), použijí se beze změny. Je-li jeden operand je aritmetické a druhá ne, aritmetický operand je převeden na typ nonarithmetic operandu.
+
+Tato ukázka generuje C2040 a ukazuje, jak ho opravit.
+
+```
+// C2040.cpp
+// Compile by using: cl /c /W3 C2040.cpp
+bool test() {
+   char c = '3';
+   return c == "3"; // C2446, C2040
+   // return c == '3'; // OK
+}
 ```

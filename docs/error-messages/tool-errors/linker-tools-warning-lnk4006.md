@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4006 | Microsoft Docs
+title: Upozornění Linkerů LNK4006 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 261d5dcc27c44291ddc6de4a6440cde040a84ed7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c992369d7bb3d9a3571e23c42a64bf936d5ae383
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017609"
 ---
 # <a name="linker-tools-warning-lnk4006"></a>Upozornění linkerů LNK4006
-symbol již definována v objektu. druhý definice ignorovat  
-  
- V dané `symbol`, zobrazují v jeho dekorované formuláře, násobkem byl definován. Když je zjištěna toto upozornění, `symbol` bude přidán dvakrát, ale použije se jenom jeho první formulář.  
-  
- Toto upozornění můžete získat, pokud se pokusíte sloučit dva knihovny importu do jednoho.  
-  
- Pokud se znovu sestavit běhové knihovny jazyka C, můžete tuto zprávu ignorovat.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  V dané `symbol` může být zabalené funkce, vytvořený kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md). Tento symbol byl součástí více než jeden soubor, ale byl změněn mezi kompilace. Znovu zkompiluje všechny soubory, které zahrnují `symbol`.  
-  
-2.  V dané `symbol` může byla definována jinak v dva objekty člen v různé knihovny.  
-  
-3.  Absolutní může mít dvakrát, definována s jinou hodnotou v každé definici.  
-  
-4.  Pokud při kombinování knihovny, neobdrží chybovou zprávu `symbol` již existuje v knihovně, který se přidává do.
+
+symbol už je definovaný v objektu. Druhá definice se ignoruje.
+
+Dané `symbol`, zobrazí v upravené podobě, byl definován vícekrát. Když je zjištěna toto upozornění, `symbol` dvakrát se přidají, ale použije se jenom jeho první formulář.
+
+Toto upozornění můžete získat, při pokusu sloučit do větve dvě knihovny importu.
+
+Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Dané `symbol` může být zabalené funkce, vytvořené kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md). Tento symbol je zahrnutý ve více než jeden soubor, ale byl změněn mezi kompilacemi. Znovu zkompilovat všechny soubory, které zahrnují `symbol`.
+
+1. Dané `symbol` může byly definovány rozdílně v dva členské objekty v jiných knihovnách.
+
+1. Absolutní je pravděpodobně definována dvakrát, s jinou hodnotou v každé definici.
+
+1. Pokud chybová zpráva při kombinování knihovny, `symbol` již existuje v knihovně se přidávají do.

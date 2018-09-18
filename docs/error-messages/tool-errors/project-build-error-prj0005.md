@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0005 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0005 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016509"
 ---
 # <a name="project-build-error-prj0005"></a>Chyba sestavení projektu PRJ0005
-Nelze vytvořit dočasný soubor v adresáři 'directory'.  
-  
- Volání vytvoření dočasného souboru se nezdařilo. Příčin:  
-  
--   Nemá dostatek dočasného souboru názvy.  
-  
--   Dočasný adresář je jen pro čtení.  
-  
--   Neexistuje žádné dočasný adresář nebo TMP proměnné prostředí.  
-  
--   V počítači je málo volného místa na disku.
+
+Nelze vytvořit dočasný soubor do adresáře 'directory'.
+
+Volání vytvoření dočasného souboru se nezdařilo. Příčinám neúspěchu patří:
+
+- Nemá dostatek názvů dočasný soubor.
+
+- Dočasný adresář je jen pro čtení.
+
+- Neexistuje žádný dočasný adresář nebo TMP proměnné prostředí.
+
+- Počítač je nedostatek volného místa na disku.

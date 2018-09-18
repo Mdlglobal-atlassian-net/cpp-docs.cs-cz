@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018246"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
 Kompilátor Visual C++ zpřístupňuje následující vnitřní objekty na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **Parametry**  
   
- `Location`  
- Adresa umístění v paměti a číst nebo zapisovat.  
+*Poloha*<br/>
+Adresa umístění v paměti a číst nebo zapisovat.  
   
- `Value`  
- Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).  
+*Hodnota*<br/>
+Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).  
   
  **Vrátí hodnotu (pouze pro zatížení vnitřní)**  
   
@@ -2209,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor číslo v rozsahu 0 až 15.  
+*coproc*<br/>
+Koprocesor číslo v rozsahu 0 až 15.  
   
- `opcode1`  
- Koprocesor konkrétní operační kód v rozsahu 0 až 7  
+*opcode1*<br/>
+Koprocesor konkrétní operační kód v rozsahu 0 až 7  
   
- `crn`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
+*crn*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
   
- `crm`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
+*CRM*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
   
- `opcode2`  
- Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
+*opcode2*<br/>
+Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
   
  **Návratová hodnota**  
   
@@ -2248,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor číslo v rozsahu 0 až 15.  
+*coproc*<br/>
+Koprocesor číslo v rozsahu 0 až 15.  
   
- `opcode1`  
- Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
+*opcode1*<br/>
+Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
   
- `crm`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
+*CRM*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
   
  **Vrací hodnotu**  
   
@@ -2293,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **Parametry**  
   
- `value`  
- Hodnota má být proveden zápis 80bitové.  
+*value*<br/>
+Hodnota má být proveden zápis 80bitové.  
   
- `coproc`  
- Koprocesor číslo v rozsahu 0 až 15.  
+*coproc*<br/>
+Koprocesor číslo v rozsahu 0 až 15.  
   
- `opcode1`  
- Koprocesor konkrétní operační kód v rozsahu 0 až 7.  
+*opcode1*<br/>
+Koprocesor konkrétní operační kód v rozsahu 0 až 7.  
   
- `crn`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
+*crn*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
   
- `crm`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
+*CRM*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
   
- `opcode2`  
- Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
+*opcode2*<br/>
+Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
   
  **Návratová hodnota**  
   
@@ -2336,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor číslo v rozsahu 0 až 15.  
+*coproc*<br/>
+Koprocesor číslo v rozsahu 0 až 15.  
   
- `opcode1`  
- Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
+*opcode1*<br/>
+Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
   
- `crm`  
- Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
+*CRM*<br/>
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
   
  **Návratová hodnota**  
   

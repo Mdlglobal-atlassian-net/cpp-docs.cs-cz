@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4210 | Microsoft Docs
+title: Upozornění (úroveň 4) C4210 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a376eb8bb9c5dffe5cfd4bc34c720c7e0acf41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cd9bf209d7d9f48ac2ff0aae4663dc9088199df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017713"
 ---
-# <a name="compiler-warning-level-4-c4210"></a>C4210 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: funkce zadaný rozsah souboru  
-  
- Pomocí rozšíření Microsoft výchozí ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), funkce deklarace mít rozsah souboru.  
-  
-```  
-// C4210.c  
-// compile with: /W4 /c  
-void func1()  
-{  
-   extern int func2( double );   // C4210 expected  
-}  
-  
-int main()  
-{  
-   func2( 4 );   //  /Ze passes 4 as type double  
-}                //  /Za passes 4 as type int  
-```  
-  
- Toto rozšíření zabránit se přenosný na jiné kompilátory kódu.
+# <a name="compiler-warning-level-4-c4210"></a>Kompilátor upozornění (úroveň 4) C4210
+
+používá se nestandardní rozšíření: Zadaný obor file – funkce
+
+S výchozí rozšíření Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), deklarace funkce mají rozsah souboru.
+
+```
+// C4210.c
+// compile with: /W4 /c
+void func1()
+{
+   extern int func2( double );   // C4210 expected
+}
+
+int main()
+{
+   func2( 4 );   //  /Ze passes 4 as type double
+}                //  /Za passes 4 as type int
+```
+
+Toto rozšíření může zakázat kódu přenositelnost na jiné kompilátory.
