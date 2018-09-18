@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022679"
 ---
 # <a name="ccomautothreadmodule-class"></a>Ccomautothreadmodule – třída
 
@@ -44,13 +44,13 @@ Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] Třídy správy výběr vlákna. Výchozí hodnota je [ccomsimplethreadallocator –](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Členové
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Ukazatel na funkci Tvůrce.
 
-*riid*  
+*riid*<br/>
 [in] Identifikátor IID požadované rozhraní.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Ukazatel na pole položek mapování objektu.
 
-*h*  
+*h*<br/>
 [in] Předány HINSTANCE `DLLMain` nebo `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Ukazatel na LIBID knihovnu typů, který je přidružený k projektu.
 
-*nThreads*  
+*nThreads*<br/>
 [in] Počet vláken, který se má vytvořit. Ve výchozím nastavení *nThreads* je hodnoty vrácené [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Poznámky
@@ -269,5 +269,5 @@ Když počet zámků modulů dosáhne nuly, může být uvolněna modulu.
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

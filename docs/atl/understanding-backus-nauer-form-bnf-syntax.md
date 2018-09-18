@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020872"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Principy syntaxe (BNF) formuláře Backus Nauer
 
@@ -54,56 +54,56 @@ Tady je pár příkladů syntaxe, které vám pomohou pochopit, jak fungují zá
 
 ### <a name="syntax-example-1"></a>Příklad syntaxe 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 Určuje, že `registry expression` je ekvivalentní `Add Key`.
 
 ### <a name="syntax-example-2"></a>Příklad syntaxe 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 Určuje, že `registry expression` je ekvivalentem `Add Key` nebo `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Příklad syntaxe 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 Určuje, že `Key Name` je ekvivalentní k jednomu nebo více `AlphaNumerics`.
 
 ### <a name="syntax-example-4"></a>Příklad syntaxe 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 Určuje, že `Add Key` je ekvivalentní `Key Name`a že řetězcové literály `ForceRemove`, `NoRemove`, a `val`, jsou volitelné.
 
 ### <a name="syntax-example-5"></a>Příklad syntaxe 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 Určuje, že `AlphaNumeric` je ekvivalentní k žádné jiné – znak NULL.
 
 ### <a name="syntax-example-6"></a>Příklad syntaxe 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 Určuje, že název klíče `testmulti` je nahrazován hodnotu složenou ze `String 1` a `String 2`.
 
 ### <a name="syntax-example-7"></a>Příklad syntaxe 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 Určuje, že název klíče `testhex` je nastavena hodnotu DWORD hexadecimální 55 (desítková 85). Poznámka: Tento formát odpovídá **& H** notation jako součástí specifikace jazyka Visual Basic.

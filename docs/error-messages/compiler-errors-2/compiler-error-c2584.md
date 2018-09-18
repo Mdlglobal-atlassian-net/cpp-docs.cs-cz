@@ -1,5 +1,5 @@
 ---
-title: C2584 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2584 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ea7a4b0ce44231925f4231c5876f352765ad6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f8c523936473673f3af09400922e2594ed1891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029426"
 ---
-# <a name="compiler-error-c2584"></a>C2584 chyby kompilátoru
-'Class': přímé základní 'Base2' je nepřístupný; už na základní 'base1 –.  
-  
- `Class` již je odvozena přímo z `Base1`. `Base2` také je odvozena z `Base1`. `Class` nelze odvodit z `Base2` protože to znamená (nepřímo), která dědí z `Base1` znovu, což není právní protože `Base1` je již přímé základní třídy.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2584.  
-  
-```  
-// C2584.cpp  
-// compile with: /c  
-struct A1 {  
-   virtual int MyFunction();  
-};  
-  
-struct A2 {  
-    virtual int MyFunction();  
-};  
-  
-struct B1: public virtual A1, virtual A2 {  
-    virtual int MyFunction();  
-};  
-  
-struct B2: public virtual A2, virtual A1 {  
-    virtual int MyFunction();  
-};  
-  
-struct C: virtual B1, B2 {  
-    virtual int MyFunction();  
-};  
-  
-struct Z : virtual B2, virtual C {   // C2584  
-// try the following line insted  
-// struct Z : virtual C {  
-    virtual int MyFunction();  
-};  
+# <a name="compiler-error-c2584"></a>Chyba kompilátoru C2584
+
+'Class': Přímá základní "base2 –" je nedostupná; již třídou base 'base1 –.
+
+`Class` již je odvozena přímo z `Base1`. `Base2` také se odvozuje od `Base1`. `Class` nelze odvodit z `Base2` vzhledem k tomu, že by to znamenalo dědění (nepřímo) z `Base1` akci, která není platná vzhledem k tomu `Base1` už je přímá základní třída.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2584.
+
+```
+// C2584.cpp
+// compile with: /c
+struct A1 {
+   virtual int MyFunction();
+};
+
+struct A2 {
+    virtual int MyFunction();
+};
+
+struct B1: public virtual A1, virtual A2 {
+    virtual int MyFunction();
+};
+
+struct B2: public virtual A2, virtual A1 {
+    virtual int MyFunction();
+};
+
+struct C: virtual B1, B2 {
+    virtual int MyFunction();
+};
+
+struct Z : virtual B2, virtual C {   // C2584
+// try the following line insted
+// struct Z : virtual C {
+    virtual int MyFunction();
+};
 ```

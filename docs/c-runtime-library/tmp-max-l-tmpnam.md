@@ -1,5 +1,5 @@
 ---
-title: Tmp_max –, l_tmpnam – | Microsoft Docs
+title: TMP_MAX, L_tmpnam | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef1a50b1446b9bff0eafc982e77a1bd6db568cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee175eb7f12952dfe7e30ef79842ee03a96fbb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019676"
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX, L_tmpnam
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `TMP_MAX` maximální počet jedinečných názvů souborů, `tmpnam` může generovat funkce. `L_tmpnam` je délka dočasné názvy souborů generované `tmpnam`.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+`TMP_MAX` je maximální počet jedinečných názvů souborů, které `tmpnam` funkce můžete vygenerovat. `L_tmpnam` je délka dočasné názvy souborů generovaných `tmpnam`.
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

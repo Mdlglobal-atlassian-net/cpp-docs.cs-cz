@@ -1,5 +1,5 @@
 ---
-title: C2384 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2384 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce139166e2378a26a91bc66db134ec6098aedbdc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3aa9ec8a6a94f53123c443a1149df7cdbc95c83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020456"
 ---
-# <a name="compiler-error-c2384"></a>C2384 chyby kompilátoru
-"člen": nelze použít __declspec(thread) členem spravované nebo WinRT – třída  
-  
- [Vlákno](../../cpp/thread.md) `__declspec` modifikátor nelze použít na členem spravované nebo prostředí Windows Runtime třídy.  
-  
- Statické vláken místní úložiště ve spravovaném kódu lze použít pouze pro staticky načíst knihovny DLL – knihovny DLL musí být staticky načteny při spuštění procesu. Prostředí Windows Runtime nepodporuje místní úložiště vláken.  
-  
- Následující řádek vygeneruje C2384 a ukazuje, jak opravit v jazyce C + +/ CLI kódu:  
-  
-```  
-// C2384.cpp  
-// compile with: /clr /c  
-public ref class B {  
-public:  
-   __declspec( thread ) static int tls_i = 1;   // C2384  
-  
-   // OK - declare with attribute instead  
-   [System::ThreadStaticAttribute]  
-   static int tls_j;  
-};  
+# <a name="compiler-error-c2384"></a>Chyba kompilátoru C2384
+
+'member': nelze použít __declspec(thread) na člen spravované nebo třídy WinRT
+
+[Vlákno](../../cpp/thread.md) `__declspec` modifikátor nejde použít u člena spravované nebo třídy Windows Runtime.
+
+Statické vlákno místní úložiště ve spravovaném kódu lze použít pouze pro staticky načtené knihovny DLL, knihovnu DLL musí být staticky načteny při spuštění procesu. Modul Windows Runtime nepodporuje úložiště thread local.
+
+Následující příkaz generuje C2384 a ukazuje, jak ho opravit v jazyce C + +/ CLI kódu:
+
+```
+// C2384.cpp
+// compile with: /clr /c
+public ref class B {
+public:
+   __declspec( thread ) static int tls_i = 1;   // C2384
+
+   // OK - declare with attribute instead
+   [System::ThreadStaticAttribute]
+   static int tls_j;
+};
 ```

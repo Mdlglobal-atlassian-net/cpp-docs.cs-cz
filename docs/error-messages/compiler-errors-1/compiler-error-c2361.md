@@ -1,5 +1,5 @@
 ---
-title: C2361 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2361 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9223916543119c16fc5d8c19bf5cb9ae38e77909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d91ee8b004e2f485326378eb2e1611f217f745c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029790"
 ---
-# <a name="compiler-error-c2361"></a>C2361 chyby kompilátoru
-Inicializace "identifikátor" bylo přeskočeno popiskem "default"  
-  
- Inicializace `identifier` mohou být přeskočeny v `switch` příkaz. Po deklaraci s inicializátoru nelze přeskočit, pokud je deklaraci uzavřené v bloku. (Pokud bylo deklarováno v rámci bloku, proměnné se v rámci oboru až do konce `switch` příkaz.)  
-  
- Následující ukázka generuje C2361:  
-  
-```  
-// C2361.cpp  
-void func( void ) {  
-   int x;  
-   switch (x) {  
-   case 0 :  
-      int i = 1;  
-      { int j = 1; }  
-   default :   // C2361 error  
-      int k = 1;  
-   }  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2361b.cpp  
-// compile with: /c  
-void func( void ) {  
-   int x = 0;  
-   switch (x) {  
-   case 0 :  
-      { int j = 1; int i = 1;}  
-   default :  
-      int k = 1;  
-   }  
-}  
+# <a name="compiler-error-c2361"></a>Chyba kompilátoru C2361
+
+Inicializace 'identifier' je podle popisku "default" přeskočila.
+
+Inicializace `identifier` mohly být přeskočeny, v `switch` příkazu. Nelze přejít po deklaraci s inicializátorem, není-li prohlášení je uzavřen v bloku. (Pokud je deklarovaná v rámci bloku, proměnná je v rámci oboru až do konce `switch` příkazu.)
+
+Následující ukázka generuje C2361:
+
+```
+// C2361.cpp
+void func( void ) {
+   int x;
+   switch (x) {
+   case 0 :
+      int i = 1;
+      { int j = 1; }
+   default :   // C2361 error
+      int k = 1;
+   }
+}
+```
+
+Možná řešení:
+
+```
+// C2361b.cpp
+// compile with: /c
+void func( void ) {
+   int x = 0;
+   switch (x) {
+   case 0 :
+      { int j = 1; int i = 1;}
+   default :
+      int k = 1;
+   }
+}
 ```

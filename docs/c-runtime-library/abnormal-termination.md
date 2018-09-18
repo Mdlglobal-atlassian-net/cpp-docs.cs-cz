@@ -1,5 +1,5 @@
 ---
-title: _abnormal_termination | Microsoft Docs
+title: _abnormal_termination | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028204"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Určuje, zda `__finally` blokovat z [try-finally – příkaz](../cpp/try-finally-statement.md) se zadá, když systému provádí vnitřní seznam obslužné rutiny ukončení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je systém *unwinding* zásobníku, jinak hodnota `false`.  
-  
-## <a name="remarks"></a>Poznámky  
- Toto je interní funkce používat ke správě unwinding výjimky a není určená k volání přímo z uživatelského kódu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>Viz také  
- [try-finally – příkaz](../cpp/try-finally-statement.md)
+
+Označuje, zda `__finally` bloku [try-finally – příkaz](../cpp/try-finally-statement.md) se zadá při provádění vnitřního seznam obslužné rutiny ukončení systému.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud je systém *odvíjení* zásobníku; v opačném případě `false`.
+
+## <a name="remarks"></a>Poznámky
+
+Toto je vnitřní funkce používané ke správě odvíjení výjimky a není určena k volání z uživatelského kódu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>Viz také
+
+[try-finally – příkaz](../cpp/try-finally-statement.md)

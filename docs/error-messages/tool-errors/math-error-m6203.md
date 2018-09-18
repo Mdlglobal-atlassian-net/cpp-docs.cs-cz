@@ -1,5 +1,5 @@
 ---
-title: Chyba matematické operace M6203 | Microsoft Docs
+title: Chyba matematické operace M6203 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7660284f9e5e69b53f3289eaa1aa424944bbecb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8474c91802b4756207676c466fdd28d66d911b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022666"
 ---
 # <a name="math-error-m6203"></a>Chyba matematické operace M6203
-'function': _overflow – chyba  
-  
- Výsledek danou funkci byl příliš velký a nelze je.  
-  
- Tato chyba volání `_matherr` funkce s názvem funkce, jeho argumenty a typ chyby. Je možné přepsat `_matherr` funkce přizpůsobit zpracování určitých spuštění s plovoucí desetinnou čárkou matematické chyby.
+
+'function': Chyba _OVERFLOW
+
+Výsledkem dané funkce bylo příliš velké a nelze je reprezentovat.
+
+Tato chyba volání `_matherr` funkce s názvem funkce, argumentů a typ chyby. Je možné přepsat `_matherr` přizpůsobit zpracování některých chyb za běhu s plovoucí desetinnou čárkou matematické funkce.

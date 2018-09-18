@@ -1,5 +1,5 @@
 ---
-title: C2731 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2731 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925a781501b2dfd3ed2297319d49cc27854a78a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85062af79a7de750ca0e347da00f6209e8293074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028763"
 ---
-# <a name="compiler-error-c2731"></a>C2731 chyby kompilátoru
-"identifikátor": funkce nemohou být přetíženy.  
-  
- Funkce `main`, `WinMain`, `DllMain`, a `LibMain` nemohou být přetíženy.  
-  
- Následující ukázka generuje C2731:  
-  
-```  
-// C2731.cpp  
-extern "C" void WinMain(int, char *, char *);  
-void WinMain(int, short, char *, char*);   // C2731  
+# <a name="compiler-error-c2731"></a>Chyba kompilátoru C2731
+
+'identifier': funkce nemůže být přetížená.
+
+Funkce `main`, `WinMain`, `DllMain`, a `LibMain` nemohou být přetíženy.
+
+Následující ukázka generuje C2731:
+
+```
+// C2731.cpp
+extern "C" void WinMain(int, char *, char *);
+void WinMain(int, short, char *, char*);   // C2731
 ```

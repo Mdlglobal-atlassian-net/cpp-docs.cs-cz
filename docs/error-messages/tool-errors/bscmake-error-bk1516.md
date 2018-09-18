@@ -1,5 +1,5 @@
 ---
-title: Chyba nástroje BSCMAKE BK1516 | Microsoft Docs
+title: Chyba nástroje BSCMAKE BK1516 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b76d41719da17e6e69d88d17a45269fff75cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9be9eeb1043c28806d28cf216bc87931015695d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030011"
 ---
 # <a name="bscmake-error-bk1516"></a>Chyba nástroje BSCMAKE BK1516
-bscfile poškozený; Nelze aktualizovat přírůstkově  
-  
- .Bsc soubor byl pravděpodobně poškozený z důvodu selhání systému během sestavení. Odstranění souboru BSC programem, znovu vytvořit všechny soubory .sbr a pak opětovné sestavení souboru BSC programem.
+
+bscfile poškozen. nedá se přírůstkově aktualizovat
+
+Soubor .bsc byl poškozen, pravděpodobně z důvodu selhání systému během sestavení. Odstranit soubor .bsc, znovu sestavit všechny soubory .sbr a poté opětovné sestavení souboru .bsc.

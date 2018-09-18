@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4105 | Microsoft Docs
+title: Upozornění Linkerů LNK4105 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ffdd8953e08f38d36bdfc2e68ad6cb8e06fb85b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4411421741cf8bf7c714a6322d58bd177e7e7270
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024980"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>Upozornění linkerů LNK4105
-žádný argument zadaný s možnost "možnost"; ignoruje možnost  
-  
- Toto upozornění se zobrazí pouze když [/Libpath](../../build/reference/libpath-additional-libpath.md) je možnost nastavena. Je-li zadán žádný adresář pomocí této možnosti linkeru ignoruje možnost a vygeneruje tuto zprávu upozornění.  
-  
- Pokud není nutné přepsat existující nastavení prostředí knihovny, odeberte možnost/Libpath z příkazového řádku linkeru. Pokud chcete použít alternativní vyhledávání cestu pro knihovny, zadejte alternativní cestu, následující možnosti/Libpath.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-link /libpath:c:\filepath\lib bar.obj  
-```  
-  
- by přímé linkeru pro vyhledání potřebných knihoven v `c:\filepath\lib` před vyhledáváním v výchozí umístění.
+
+žádný argument zadaný pomocí možnosti "možnost"; ignoruje se parametr
+
+Toto varování se objeví jenom když [/Libpath](../../build/reference/libpath-additional-libpath.md) je možnost nastavená. Pokud tato možnost není zadán žádný adresář, linker ignoruje možnost a generuje toto upozornění.
+
+Pokud chcete přepsat stávající nastavení knihovně prostředí nepotřebujete, odeberte z příkazového řádku linkeru možnost/Libpath. Pokud chcete použít jiný hledaný cestu pro knihovny, zadejte alternativní cestu, následující možnosti/Libpath.
+
+## <a name="example"></a>Příklad
+
+```
+link /libpath:c:\filepath\lib bar.obj
+```
+
+bude směrovat linkeru, aby hledání požadované knihovny v `c:\filepath\lib` před vyhledáváním ve výchozích umístěních.

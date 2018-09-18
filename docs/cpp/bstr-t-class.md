@@ -18,53 +18,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 04244357f7e372856aea28063ab0df9db6431e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465867"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028685"
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
-**Specifické pro Microsoft**  
-  
- A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](/previous-versions/windows/desktop/automat/bstr). Třída spravuje a pomocí volání funkce zrušení přidělení prostředků `SysAllocString` a `SysFreeString` a dalších `BSTR` rozhraní API. **_Bstr_t** třída používá počítání odkazů, aby se zabránilo nadměrnému zatížení.  
-  
-### <a name="construction"></a>Konstrukce  
-  
-|||  
-|-|-|  
-|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Vytvoří `_bstr_t` objektu.|  
-  
-### <a name="operations"></a>Operace  
-  
-|||  
-|-|-|  
-|[přiřazení](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` uzavřenou `_bstr_t`.|  
-|[Attach](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálky `BSTR`.|  
-|[kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřeného `BSTR`.|  
-|[Detach](../cpp/bstr-t-detach.md)|Vrátí `BSTR` uzavřenou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|  
-|[GetAddress](../cpp/bstr-t-getaddress.md)|Odkazuje `BSTR` uzavřenou `_bstr_t`.|  
-|[Getbstr –](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` uzavřenou `_bstr_t`.|  
-|[Délka](../cpp/bstr-t-length.md)|Vrátí počet znaků `_bstr_t`.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[operátor =](../cpp/bstr-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího `_bstr_t` objektu.|  
-|[+= – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Připojí znaky na konec objektu `_bstr_t` objektu.|  
-|[+ – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Spojuje dva řetězce.|  
-|[! – operátor](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda zapouzdřený `BSTR` je prázdný řetězec.|  
-|[operátor ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porovná dva `_bstr_t` objekty.|  
-|[operátor wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahovat ukazatele na zapouzdřený objekt Unicode nebo vícebajtový `BSTR` objektu.|  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<comutil.h >  
-  
- **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
-  
-## <a name="see-also"></a>Viz také:  
- [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)
+
+**Specifické pro Microsoft**
+
+A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](/previous-versions/windows/desktop/automat/bstr). Třída spravuje a pomocí volání funkce zrušení přidělení prostředků `SysAllocString` a `SysFreeString` a dalších `BSTR` rozhraní API. **_Bstr_t** třída používá počítání odkazů, aby se zabránilo nadměrnému zatížení.
+
+### <a name="construction"></a>Konstrukce
+
+|||
+|-|-|
+|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Vytvoří `_bstr_t` objektu.|
+
+### <a name="operations"></a>Operace
+
+|||
+|-|-|
+|[Assign](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` uzavřenou `_bstr_t`.|
+|[Attach](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálky `BSTR`.|
+|[kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřeného `BSTR`.|
+|[Detach](../cpp/bstr-t-detach.md)|Vrátí `BSTR` uzavřenou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|
+|[GetAddress](../cpp/bstr-t-getaddress.md)|Odkazuje `BSTR` uzavřenou `_bstr_t`.|
+|[Getbstr –](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` uzavřenou `_bstr_t`.|
+|[Délka](../cpp/bstr-t-length.md)|Vrátí počet znaků `_bstr_t`.|
+
+### <a name="operators"></a>Operátory
+
+|||
+|-|-|
+|[operátor =](../cpp/bstr-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího `_bstr_t` objektu.|
+|[+= – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Připojí znaky na konec objektu `_bstr_t` objektu.|
+|[+ – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Spojuje dva řetězce.|
+|[! – operátor](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda zapouzdřený `BSTR` je prázdný řetězec.|
+|[operátor ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porovná dva `_bstr_t` objekty.|
+|[operátor wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahovat ukazatele na zapouzdřený objekt Unicode nebo vícebajtový `BSTR` objektu.|
+
+**Specifické pro END Microsoft**
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<comutil.h >
+
+**Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
+
+## <a name="see-also"></a>Viz také:
+
+[Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

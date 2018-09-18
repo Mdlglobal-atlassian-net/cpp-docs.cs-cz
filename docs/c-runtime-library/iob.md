@@ -1,5 +1,5 @@
 ---
-title: _iob – | Microsoft Docs
+title: _iob – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,24 +23,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca49fa1d832149dc6c5c920b067edebd42dadb87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc775363d980486fd32ba38b0e66d3141a5e5cd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028984"
 ---
 # <a name="iob"></a>_iob
-Pole stdio řídicí struktury.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-FILE _iob[_IOB_ENTRIES];  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `IOB_ENTRIES` je definován jako 20 v stdio.h.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální proměnné](../c-runtime-library/global-variables.md)
+
+Pole stdio řídicích struktur.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+FILE _iob[_IOB_ENTRIES];
+```
+
+## <a name="remarks"></a>Poznámky
+
+`IOB_ENTRIES` je definován jako 20 v souboru stdio.h.
+
+## <a name="see-also"></a>Viz také
+
+[Globální proměnné](../c-runtime-library/global-variables.md)

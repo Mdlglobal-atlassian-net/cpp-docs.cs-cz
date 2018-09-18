@@ -1,5 +1,5 @@
 ---
-title: C2368 Chyba kompilátoru | Microsoft Docs
+title: C2368 Chyba kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5660bcc07758ccd8e693207d87988b3b4f1d03ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 923f3742688b9d5c282cb8ceb3799a978e9a030a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030524"
 ---
 # <a name="compiler-error-c2368"></a>C2368 chyby kompilátoru
-"identifikátor": předefinování; specifikátory různých přidělení  
-  
- Zadejte jiný deklarace a definice symbolu `__declspec` atributy.
+
+'identifier': předefinování; specifikátory různých přidělení
+
+Deklarace a definice symbolu Určuje jinou `__declspec` atributy.

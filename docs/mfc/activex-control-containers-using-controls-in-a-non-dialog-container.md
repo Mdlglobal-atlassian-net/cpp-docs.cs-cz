@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru než dialogovém okně | Microsoft Docs'
+title: 'Kontejnery ovládacích prvků ActiveX: Použití ovládacích prvků v kontejneru než dialogovém okně | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,57 +18,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e190eb76702b1c6d246ac2aee9c22021955af7f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028100"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX – kontejnery ovládacích prvků: Použití ovládacích prvků v jiném kontejneru než dialogovém okně
-V některých aplikace, jako je například SDI a MDI aplikace můžete pro vložení ovládacího prvku v okně aplikace. **Vytvořit** funkce člena třídy obálky vložit pomocí Visual C++, můžete dynamicky, vytvořte instanci ovládacího prvku bez nutnosti dialogové okno.  
+V některých aplikací, jako jsou SDI nebo MDI aplikaci můžete k vložení ovládacího prvku v okně aplikace. **Vytvořit** členské funkce třídy obálky vložen Visual c++, můžete dynamicky vytvořit instanci ovládacího prvku bez nutnosti dialogového okna.  
   
- **Vytvořit** – členská funkce má následující parametry:  
+ **Vytvořit** členské funkce má následující parametry:  
   
- `lpszWindowName`  
- Ukazatel na text, který se zobrazí v textu nebo popisek ovládacího prvku (pokud existuje).  
+*lpszWindowName*<br/>
+Ukazatel na text, který se zobrazí ve vlastnosti ovládacího prvku Text nebo Caption. (pokud existuje).  
   
- `dwStyle`  
- Styly systému Windows. Úplný seznam najdete v tématu [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
+*dwStyle*<br/>
+Styly Windows. Úplný seznam najdete v tématu [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
   
- `rect`  
- Určuje velikost a umístění ovládacího prvku.  
+*Rect*<br/>
+Určuje velikost a umístění ovládacího prvku.  
   
- `pParentWnd`  
- Určuje ovládacího prvku nadřazeného okna, obvykle `CDialog`. Nesmí být **NULL**.  
+*pParentWnd*<br/>
+Určuje nadřazené okno ovládacího prvku, obvykle `CDialog`. Nesmí se jednat o **NULL**.  
   
- `nID`  
- Určuje ID ovládacího prvku a umožňuje kontejnerem odkazovat na ovládací prvek.  
+*nID*<br/>
+Určuje ID ovládacího prvku a je možné odkazovat na ovládací prvek kontejnerem.  
   
- Příkladem použití této funkce vytvořit dynamicky ovládacího prvku ActiveX by v zobrazení formuláře aplikace SDI. Potom můžete vytvořit instanci ovládacího prvku `WM_CREATE` obslužná rutina aplikace.  
+ V zobrazení formuláře aplikace SDI by Příkladem použití této funkce dynamicky se vytvářejí ovládacího prvku ActiveX. Potom můžete vytvořit instanci ovládacího prvku `WM_CREATE` obslužné rutiny aplikace.  
   
- V tomto příkladu `CMyView` je třída hlavního zobrazení `CCirc` je obálková třída a msc H je záhlaví (. H) soubor obálkovou třídu.  
+ V tomto příkladu `CMyView` je třída hlavního zobrazení `CCirc` obálkovou třídu a msc H je záhlaví (. H) file obálkovou třídu.  
   
  Implementace této funkce je čtyři kroky.  
   
-### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>V okně – dialogové okno vytvořit dynamicky ovládacího prvku ActiveX  
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>Dynamicky se vytvářejí ovládacího prvku ActiveX v okně – dialogové okno  
   
 1.  Vložit msc H v CMYVIEW. H, těsně před `CMyView` definici třídy:  
   
      [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
   
-2.  Přidání členské proměnné (typu `CCirc`) do části chráněné `CMyView` umístěný v CMYVIEW definici třídy. V:  
+2.  Přidání členské proměnné (typu `CCirc`) do části chráněné `CMyView` umístěné v CMYVIEW definici třídy. V:  
   
      [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
     [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
   
-3.  Přidat `WM_CREATE` popisovač zpráv pro třídu `CMyView`.  
+3.  Přidat `WM_CREATE` obslužné rutiny zpráv pro třídu `CMyView`.  
   
-4.  Ve funkci obslužná rutina `CMyView::OnCreate`, volání ovládacího prvku `Create` funkce pomocí **to** ukazatel jako nadřazené okno:  
+4.  Ve funkci obslužné rutiny `CMyView::OnCreate`, volání ovládacího prvku `Create` použití pracovat **to** ukazatele jako nadřazené okno:  
   
      [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   
-5.  Znovu sestavte projekt. Str ovládacího prvku se dynamicky vytvoří vždy, když je vytvořeno zobrazení aplikace.  
+5.  Sestavte projekt znovu. Ovládací prvek KR vytvoří dynamicky při každém zobrazení vaší aplikace.  
   
 ## <a name="see-also"></a>Viz také  
  [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)

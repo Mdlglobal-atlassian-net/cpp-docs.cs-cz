@@ -1,5 +1,5 @@
 ---
-title: C3242 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3242 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9c30ef9a2662a705b7fa9d3620f1d6d89edea8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a426ffa92337b227a9f79c8d30f2890b639a056
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026423"
 ---
-# <a name="compiler-error-c3242"></a>C3242 chyby kompilátoru
-'function': pouze explicitně můžete přepsat virtuální funkce  
-  
- Pokusili jste se explicitně přepsat nevirtuální metoda.
+# <a name="compiler-error-c3242"></a>Chyba kompilátoru C3242
+
+'function': pouze explicitně můžete přepsat virtuální funkce
+
+Pokusili jste se explicitně přepsat nevirtuální metody.

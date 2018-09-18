@@ -1,5 +1,5 @@
 ---
-title: C2473 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2473 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0342d3e8e6011e37b0588515299f2a0ab7b761
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0eeecedd3ad2cee551b6003912d9b7af32883588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026072"
 ---
-# <a name="compiler-error-c2473"></a>C2473 chyby kompilátoru
-"identifikátor": vypadá jako definice funkce, ale neexistuje žádný seznam parametrů.  
-  
- Kompilátor zjištěna, co hledá jako funkci, bez seznam parametrů.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2473.  
-  
-```  
-// C2473.cpp  
-// compile with: /clr /c  
-class A {  
-   int i {}   // C2473  
-};  
-  
-class B {  
-   int i() {}   // OK  
-};  
+# <a name="compiler-error-c2473"></a>Chyba kompilátoru C2473
+
+'identifier': vypadá definici funkce, ale neexistuje seznam parametrů.
+
+Kompilátor zjistil, jak vypadal funkce, bez seznamu parametrů.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2473.
+
+```
+// C2473.cpp
+// compile with: /clr /c
+class A {
+   int i {}   // C2473
+};
+
+class B {
+   int i() {}   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4076 | Microsoft Docs
+title: Upozornění Linkerů LNK4076 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e9a85237a47515925a5867b0f26b7321e778c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de96bdbbc9752cd68ca78728395ad4bfdb4b01a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018524"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Upozornění linkerů LNK4076
-Neplatný přírůstkové stavový soubor 'název souboru'; nonincrementally propojení  
-  
- Odkaz nemůže zapisovat do souboru stavu přírůstkové (.ilk). Buď `filename` je poškozený nebo se nejedná o databázi serveru linking přírůstkové. Odeberte soubor a znovu připojit.
+
+Neplatný stav přírůstkové soubor 'filename'; nepřírůstkově
+
+Odkaz nemůže zapisovat do souboru stavu přírůstků (propojení.ilk). Buď `filename` je poškozený nebo se nejedná o databázi přírůstkové propojení. Odeberte soubor a znovu připojit.

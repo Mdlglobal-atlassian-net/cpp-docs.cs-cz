@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031623"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace jazyka C (strukturované) a výjimky jazyka C++
 
@@ -47,10 +47,10 @@ Jsou-li zkombinovány strukturované a výjimky jazyka C++, mějte na paměti t�
 
   Zobrazit další informace týkající se použití `setjmp` a `longjmp` v programech jazyka C++.
 
-- [Zpracování strukturovaných výjimek v jazyce C++](../cpp/exception-handling-differences.md)
+- [Ošetření strukturovaných výjimek v C++](../cpp/exception-handling-differences.md)
 
   Příklady způsobů, jak vám umožní zpracování strukturovaných výjimek jazyka C++.
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)  
+[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

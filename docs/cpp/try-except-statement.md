@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031434"
 ---
 # <a name="try-except-statement"></a>try-except – příkaz
 
 **Specifické pro Microsoft**
 
-**Zkuste – s výjimkou** příkaz je rozšířením společnosti Microsoft pro C a C++ – jazyky, které podporuje strukturované zpracování výjimek.  
+**Zkuste – s výjimkou** příkaz je rozšířením společnosti Microsoft pro C a C++ – jazyky, které podporuje strukturované zpracování výjimek.
 
-## <a name="syntax"></a>Syntaxe  
-  
-> **__try**   
-> {  
->    strážené kódu  
-> }  
-> **__except** ( *výraz* )  
-> {  
->    Kód obslužné rutiny výjimek  
-> }  
+## <a name="syntax"></a>Syntaxe
+
+> **__try** {/ / strážených kód} **__except** ( *výraz* ) {/ / kód obslužné rutiny výjimek}
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,7 +67,7 @@ Složený příkaz za **__try** klauzule je tělem nebo chráněnou částí. Sl
 
 1. Chráněná část je spuštěna.
 
-2. Pokud při provádění chráněné části dojde k žádné výjimce, provádění pokračuje na příkazu následujícímu po **__except** klauzuli.  
+2. Pokud při provádění chráněné části dojde k žádné výjimce, provádění pokračuje na příkazu následujícímu po **__except** klauzuli.
 
 3. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, **__except** *výraz* (volá se *filtr* výraz) je vyhodnocen a jeho hodnota určuje, jak je výjimka ošetřena. Existují tři hodnoty:
 
@@ -88,10 +81,10 @@ Vzhledem k tomu, **__except** výraz je vyhodnocen jako výraz jazyka C, je omez
 
 Každá aplikace může obsahovat svou vlastní obslužnou rutinu výjimky.
 
-Není povoleno přejít do **__try** příkaz však povoleno přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen v průběhu provádění příkazu **zkuste – s výjimkou** příkazu.  
-  
-Další informace naleznete v článku Q315937 znalostní báze: POSTUP: Zachycení přetečení zásobníku v aplikaci Visual C++.  
-  
+Není povoleno přejít do **__try** příkaz však povoleno přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen v průběhu provádění příkazu **zkuste – s výjimkou** příkazu.
+
+Další informace naleznete v článku Q315937 znalostní báze: POSTUP: Zachycení přetečení zásobníku v aplikaci Visual C++.
+
 ## <a name="the-leave-keyword"></a>Klíčové slovo __leave
 
 **__Leave** – klíčové slovo je platné pouze uvnitř chráněné části **zkuste – s výjimkou** příkazu a jeho účinkem je přechod na konec chráněné části. Běh programu pokračuje prvním příkazem za obslužnou rutinou výjimky.
@@ -106,12 +99,12 @@ Strukturované zpracování výjimek poskytuje dvě vnitřní funkce, které jso
 
 Vnitřní funkce `GetExceptionInformation` vrací ukazatel na strukturu obsahující další informace o výjimce. Pomocí tohoto ukazatele lze přistoupit ke stavu počítače, v jakém byl v době výskytu hardwarové výjimky. Struktura je následující:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Typy ukazatelů `PEXCEPTION_RECORD` a `PCONTEXT` jsou definovány ve vloženém souboru \<souboru winnt.h >, a `_EXCEPTION_RECORD` a `_CONTEXT` jsou definovány ve vloženém souboru \<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h definuje několik alternativních názvů pro tyto vnitřní objekty:
 
 `GetExceptionCode` je ekvivalentní `_exception_code`
 
- `GetExceptionInformation` je ekvivalentní `_exception_info`
+`GetExceptionInformation` je ekvivalentní `_exception_info`
 
- `AbnormalTermination` je ekvivalentní `_abnormal_termination`
-  
+`AbnormalTermination` je ekvivalentní `_abnormal_termination`
+
 ## <a name="example"></a>Příklad
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Výstup  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**Specifické pro END Microsoft**  
+## <a name="output"></a>Výstup
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)   
- [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)
+
+[Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)<br/>
+[Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)

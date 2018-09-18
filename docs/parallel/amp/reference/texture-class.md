@@ -1,5 +1,5 @@
 ---
-title: Texture – třída | Microsoft Docs
+title: Texture – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 369ca34eb75b33208365d34756312e23e85afd92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029634"
 ---
 # <a name="texture-class"></a>texture – třída
-Texturou je typu dat na agregační `accelerator_view` v doméně rozsah. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně rozsah. Každá proměnná obsahuje hodnotu odpovídající primitivní typ C++ ( `unsigned int`, `int`, `float`, `double`), skalárního typu ( `norm`, nebo `unorm`), nebo zadejte krátký vektoru.  
+Textura je souhrn dat na `accelerator_view` v rozšířené doméně. Jde o kolekci proměnných, jedna pro každý prvek v rozšířené doméně. Každá proměnná obsahuje hodnotu odpovídající primitivnímu typu jazyka C++ ( `unsigned int`, `int`, `float`, `double`), skalární typu ( `norm`, nebo `unorm`), nebo typu short vector.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ class texture;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `value_type`  
- Typ elementů v textury.  
+*value_type*<br/>
+Typ prvků v textuře.  
   
- `_Rank`  
- Pořadí textury.  
+*_Rank*<br/>
+Řád textury.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -65,41 +65,41 @@ class texture;
 |Název|Popis|  
 |----------|-----------------|  
 |[Texture – konstruktor](#ctor)|Inicializuje novou instanci třídy `texture` třídy.|  
-|[~ texture – destruktor](#ctor)|Zničí `texture` objektu.|  
+|[~ texture – destruktor](#ctor)|Odstraní `texture` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[copy_to](#copy_to)|Kopie `texture` objektu do cílového umístění, pomocí tohoto postupu hloubkové kopie.|  
-|[data](#data)|Nezpracovaná data tohoto texture vrátí ukazatel procesoru.|  
-|[get](#get)|Vrátí hodnotu elementu v zadaném indexu.|  
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) tedy upřednostňovaný cíl pro tuto texture zkopírovány do.|  
-|[get_depth_pitch](#get_depth_pitch)|Vrátí počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.|  
-|[get_row_pitch](#get_row_pitch)|Vrátí počet bajtů mezi každý řádek v 2D nebo 3D pracovní texture na procesoru.|  
-|[set](#set)|Nastaví hodnotu elementu v zadaném indexu.|  
+|[copy_to](#copy_to)|Kopie `texture` na cíl provedením hluboké kopie.|  
+|[data](#data)|Vrátí ukazatel CPU na nezpracovaná data této textury.|  
+|[get](#get)|Vrátí hodnotu prvku na zadaném indexu.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) , který je upřednostňovaným cílem, zkopírovány do této textury.|  
+|[get_depth_pitch](#get_depth_pitch)|Vrátí počet bajtů mezi každou hloubkou řezu v pracovní 3D textuře na CPU.|  
+|[get_row_pitch](#get_row_pitch)|Vrátí počet bajtů mezi každým řádkem ve 2D nebo 3D pracovní textuře na CPU.|  
+|[set](#set)|Nastaví hodnotu prvku na zadaném indexu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator() –](#operator_call)|Vrátí element hodnotu, která je zadanou parametry.|  
-|[[] – operátor](#operator_at)|Vrátí element, který je v zadaném indexu.|  
-|[operátor =](#operator_eq)|Zkopíruje zadaný [texture](texture-class.md) k tomuto objektu.|  
+|[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|  
+|[Operator [].](#operator_at)|Vrátí prvek, který je v zadaném indexu.|  
+|[operátor =](#operator_eq)|Zkopíruje zadaný [textury](texture-class.md) do tohoto objektu.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[pořadí konstanta](#rank)|Získá pořadí `texture` objektu.|  
+|[RANK – konstanta](#rank)|Zjistí řád objektu `texture` objektu.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[associated_accelerator_view](#associated_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) tedy upřednostňovaný cíl pro tuto texture zkopírovány do.|  
-|[depth_pitch](#depth_pitch)|Získá počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.|  
-|[row_pitch](#row_pitch)|Získá počet bajtů mezi každý řádek v 2D nebo 3D pracovní texture na procesoru.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) , který je upřednostňovaným cílem, zkopírovány do této textury.|  
+|[depth_pitch](#depth_pitch)|Získá počet bajtů mezi každou hloubkou řezu v pracovní 3D textuře na CPU.|  
+|[row_pitch](#row_pitch)|Získá počet bajtů mezi každým řádkem ve 2D nebo 3D pracovní textuře na CPU.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `_Texture_base`  
@@ -111,9 +111,9 @@ class texture;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="dtor"></a> ~ texture 
+##  <a name="dtor"></a> ~ textury 
 
- Zničí `texture` objektu.  
+ Odstraní `texture` objektu.  
   
 ```  
 ~texture() restrict(cpu);
@@ -121,7 +121,7 @@ class texture;
   
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view – 
 
- Získá [accelerator_view](accelerator-view-class.md) tedy upřednostňovaný cíl pro tuto texture zkopírovány do.  
+ Získá [accelerator_view](accelerator-view-class.md) , který je upřednostňovaným cílem, zkopírovány do této textury.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
@@ -129,7 +129,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a> copy_to – 
 
- Kopie `texture` objektu do cílového umístění, pomocí tohoto postupu hloubkové kopie.  
+ Kopie `texture` na cíl provedením hluboké kopie.  
   
 ```  
 void copy_to(texture& _Dest) const; 
@@ -137,18 +137,18 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Dest`  
- Objekt, který se má zkopírovat do.  
+*_Dest*<br/>
+Objekt, který chcete zkopírovat do.  
   
- `_Rank`  
- Pořadí textury.  
+*_Rank*<br/>
+Řád textury.  
   
- `value_type`  
- Typ elementů v textury.  
+*value_type*<br/>
+Typ prvků v textuře.  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Data 
 
- Nezpracovaná data tohoto texture vrátí ukazatel procesoru.  
+ Vrátí ukazatel CPU na nezpracovaná data této textury.  
   
 ```  
 void* data() restrict(cpu);
@@ -162,63 +162,63 @@ const void* data() const restrict(cpu);
   
 ##  <a name="depth_pitch"></a> depth_pitch 
 
- Získá počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.  
+ Získá počet bajtů mezi každou hloubkou řezu v pracovní 3D textuře na CPU.  
   
 ```  
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a> GET 
+##  <a name="get"></a> získat 
 
- Vrátí hodnotu elementu v zadaném indexu.  
+ Vrátí hodnotu prvku na zadaném indexu.  
   
 ```  
 const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index elementu.  
+*_Index*<br/>
+Index prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota elementu v zadaném indexu.  
+ Hodnotu prvku na zadaném indexu.  
   
 ##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view – 
 
- Vrátí accelerator_view, který je upřednostňovaný cíl pro tuto texture zkopírovány do.  
+ Vrátí accelerator_view, který je upřednostňovaným cílem, do kterého má být zkopírován do tato textura.  
   
 ```  
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [Accelerator_view](accelerator-view-class.md) tedy upřednostňovaný cíl pro tuto texture zkopírovány do.  
+ [Accelerator_view](accelerator-view-class.md) , který je upřednostňovaným cílem, zkopírovány do této textury.  
   
 ##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
- Vrátí počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.  
+ Vrátí počet bajtů mezi každou hloubkou řezu v pracovní 3D textuře na CPU.  
   
 ```  
 unsigned int get_depth_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.  
+ Počet bajtů mezi každou hloubkou řezu v pracovní 3D textuře na CPU.  
   
 ##  <a name="get_row_pitch"></a> get_row_pitch 
 
- Vrátí počet bajtů mezi každý řádek v prostorovém 2 pracovní texture nebo mezi každý řádek hloubka řez ve 3 dimenzí pracovní texture.  
+ Vrátí počet bajtů mezi každým řádkem ve 2 trojrozměrné pracovní textuře, nebo mezi každým řádkem hloubkou řezu v trojrozměrné 3 pracovní textuře.  
   
 ```  
 unsigned int get_row_pitch() const restrict(cpu);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů mezi každý řádek v prostorovém 2 pracovní texture nebo mezi každý řádek hloubka řez ve 3 dimenzí pracovní texture.  
+ Počet bajtů mezi každým řádkem ve 2 trojrozměrné pracovní textuře, nebo mezi každým řádkem hloubkou řezu v trojrozměrné 3 pracovní textuře.  
   
-##  <a name="operator_call"></a> Operator() – 
+##  <a name="operator_call"></a> Operator() 
 
- Vrátí element hodnotu, která je zadanou parametry.  
+ Vrátí hodnotu prvku určeného parametry.  
   
 ```  
 const value_type operator() (
@@ -241,27 +241,27 @@ const value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index.  
+*_Index*<br/>
+Index.  
   
- `_I0`  
- Většina významné součást index.  
+*_I0*<br/>
+Nejvýznamnější komponenta indexu.  
   
- `_I1`  
- Další na většinu významné součást index.  
+*_I1*<br/>
+Další na nejvýznamnější komponenta indexu.  
   
- `_I2`  
- Nejméně významným součást index.  
+*_I2*<br/>
+Nejméně významná komponenta indexu.  
   
- `_Rank`  
- Pořadí index.  
+*_Rank*<br/>
+Řád indexu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota elementu, která je zadána parametry.  
+ Hodnota prvku určeného parametry.  
   
-##  <a name="operator_at"></a> [] – operátor 
+##  <a name="operator_at"></a> Operator []. 
 
- Vrátí element, který je v zadaném indexu.  
+ Vrátí prvek, který je v zadaném indexu.  
   
 ```  
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
@@ -271,18 +271,18 @@ const value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index.  
+*_Index*<br/>
+Index.  
   
- `_I0`  
- Index.  
+*_I0*<br/>
+Index.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Element, který je v zadaném indexu.  
+ Prvek, který je v zadaném indexu.  
   
 ##  <a name="operator_eq"></a> operátor = 
 
- Zkopíruje zadaný [texture](texture-class.md) k tomuto objektu.  
+ Zkopíruje zadaný [textury](texture-class.md) do tohoto objektu.  
   
 ```  
 texture& operator= (
@@ -294,15 +294,15 @@ texture& operator= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `texture` Objekt, který chcete zkopírovat z.  
+*Ji_né*<br/>
+`texture` Objektu, který chcete kopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `texture` objektu.  
+ Odkaz na tento `texture` objektu.  
   
-##  <a name="rank"></a> Pořadí 
+##  <a name="rank"></a> pořadí 
 
- Získá pořadí `texture` objektu.  
+ Zjistí řád objektu `texture` objektu.  
   
 ```  
 static const int rank = _Rank;  
@@ -310,15 +310,15 @@ static const int rank = _Rank;
   
 ##  <a name="row_pitch"></a> row_pitch 
 
- Získá počet bajtů mezi každý řádek v 2D nebo 3D pracovní texture na procesoru.  
+ Získá počet bajtů mezi každým řádkem ve 2D nebo 3D pracovní textuře na CPU.  
   
 ```  
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a> nastavení 
+##  <a name="set"></a> Nastavit 
 
- Nastaví hodnotu elementu v zadaném indexu.  
+ Nastaví hodnotu prvku na zadaném indexu.  
   
 ```  
 void set(
@@ -327,16 +327,16 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index elementu.  
+*_Index*<br/>
+Index prvku.  
   
- `_Rank`  
- Pořadí index.  
+*_Rank*<br/>
+Řád indexu.  
   
- `value`  
- Nová hodnota elementu.  
+*value*<br/>
+Nová hodnota prvku.  
   
-##  <a name="ctor"></a> Texture 
+##  <a name="ctor"></a> Textury 
 
  Inicializuje novou instanci třídy `texture` třídy.  
   
@@ -561,59 +561,59 @@ texture(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Acc_view`  
- [Accelerator_view](accelerator-view-class.md) , určuje umístění textury.  
+*_Acc_view*<br/>
+[Accelerator_view](accelerator-view-class.md) , která určuje umístění textury.  
   
- `_Av`  
- [Accelerator_view](accelerator-view-class.md) , určuje umístění textury.  
+*_Av*<br/>
+[Accelerator_view](accelerator-view-class.md) , která určuje umístění textury.  
   
- `_Associated_av`  
- Accelerator_view, která určuje upřednostňovaný cíl pro kopie do nebo z této texture.  
+*_Associated_av*<br/>
+Accelerator_view, který určuje upřednostňovaný cíl pro kopie do nebo z této textury.  
   
- `_Bits_per_scalar_element`  
- Počet bitů na každý skalární prvek v základní typ skalární textury. Podporované hodnoty jsou obecně, 8, 16, 32 až 64. Pokud zadáte hodnotu 0, je stejná jako základní scalar_type počet bitů. 64 je platná pouze pro textury založené na dvojitou hodnotu.  
+*_Bits_per_scalar_element*<br/>
+Počet bitů na každý skalární prvek v základním skalárním typu textury. Obecně jsou podporovány hodnoty 8, 16, 32 a 64. Pokud zadáte hodnotu 0, počet bitů je stejný jako základní scalar_type. 64 je platná pouze pro double textury.  
   
- `_Ext`  
- Rozsah v Každá dimenze textury.  
+*_Ext*<br/>
+Rozsah v každé dimenzi textury.  
   
- `_E0`  
- Nejdůležitější komponenta textury.  
+*_E0*<br/>
+Nejdůležitější součást textury.  
   
- `_E1`  
- Další na většinu významné součást textury.  
+*_E1*<br/>
+Další na nejvýznamnější komponenta textury.  
   
- `_E2`  
- Nejméně významný součást rozsah textury.  
+*_E2*<br/>
+Nejméně významná komponenta rozsahu textury.  
   
- `_Input_iterator`  
- Typ vstupu interator.  
+*_Input_iterator*<br/>
+Typ vstupního iterátoru.  
   
- `_Mipmap_levels`  
- Počet úrovní mipmap v základní texture. Pokud zadáte hodnotu 0, textury bude mít plný rozsah mipmap úrovně dolů na nejmenší možná velikost pro zadaný rozsah.  
+*_Mipmap_levels*<br/>
+Počet úrovní mipmap u podkladové textury. Pokud zadáte hodnotu 0, bude mít textura plný rozsah úrovní mipmap na nejmenší možnou hodnotu pro zadaný rozsah.  
   
- `_Rank`  
- Pořadí v rozsahu.  
+*_Rank*<br/>
+Řád rozsahu.  
   
- `_Source`  
- Ukazatel na vyrovnávací paměť hostitele.  
+*_Zdroj*<br/>
+Ukazatel do vyrovnávací paměti hostitele.  
   
- `_Src`  
- Chcete-li texture ke kopírování.  
+*_Src*<br/>
+Chcete-li kopírovat texturu.  
   
- `_Src_byte_size`  
- Počet bajtů ve vyrovnávací paměti zdroje.  
+*_Src_byte_size*<br/>
+Počet bajtů ve zdrojové vyrovnávací paměti.  
   
- `_Src_first`  
- Začátek iterator do kontejneru zdroje.  
+*_Src_first*<br/>
+Počáteční iterátor do zdrojového kontejneru.  
   
- `_Src_last`  
- Koncová iterator do kontejneru zdroje.  
+*_Src_last*<br/>
+Koncový iterátor do zdrojového kontejneru.  
   
- `_Other`  
- Další zdroje dat.  
+*Ji_né*<br/>
+Jiný zdroj dat.  
   
- `_Rank`  
- Pořadí v části.  
+*_Rank*<br/>
+Řád oddílu.  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: C3653 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3653 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78dd5a9c52c9dfc845de43c62ae38180d0d079f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0409317cb0cdf6a248554cba2e18d7f9d2e0e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019000"
 ---
-# <a name="compiler-error-c3653"></a>C3653 chyby kompilátoru
-'function': nelze použít jako s názvem přepsání: funkce přepsání nebyl nalezen; Zapomněli jste název funkce explicitně, použití:: operátor?  
-  
- Explicitní přepsání zadat funkci, která nebyla nalezena v žádné rozhraní. Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3653:  
-  
-```  
-// C3653.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void h();  
-};  
-  
-public ref struct X : public I {  
-   virtual void f() new sealed = J {};   // C3653 no J in scope  
-   virtual void g() {}   // OK  
-   virtual void h() new sealed = I::h {};   // OK  
-};  
+# <a name="compiler-error-c3653"></a>Chyba kompilátoru C3653
+
+'function': nelze použít jako pojmenované přepsání: přepisovaná funkce se nebyl nalezen; Nezapomněli jste funkci pojmenovat explicitně, použití:: operator?
+
+Explicitní přepsání zadaná funkce, která nebyla nalezena v libovolném rozhraní. Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Následující ukázka generuje C3653:
+
+```
+// C3653.cpp
+// compile with: /clr
+public interface struct I {
+   void h();
+};
+
+public ref struct X : public I {
+   virtual void f() new sealed = J {};   // C3653 no J in scope
+   virtual void g() {}   // OK
+   virtual void h() new sealed = I::h {};   // OK
+};
 ```

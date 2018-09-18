@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024390"
 ---
 # <a name="cmessagemap-class"></a>Cmessagemap – třída
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna příjem zprávy.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lResult*  
+*lResult*<br/>
 [out] Výsledek zpracování zprávy.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifikátor, který bude zpracovávat zprávy mapování zprávy. Výchozí zprávu mapování deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), je identifikován 0. Mapování zpráv alternativní deklarované s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), je identifikován `msgMapID`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -108,7 +108,7 @@ Volané procedury okna nástroje [CContainedWindow](../../atl/reference/ccontain
 
 ## <a name="see-also"></a>Viz také
 
-[Cdynamicchain – třída](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain – třída](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

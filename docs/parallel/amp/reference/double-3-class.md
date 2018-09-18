@@ -1,5 +1,5 @@
 ---
-title: double_3 – třída | Microsoft Docs
+title: double_3 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027749"
 ---
 # <a name="double3-class"></a>double_3 – třída
-Představuje krátký vektor tři hodnoty Double.  
+Představuje krátký vektor tří hodnot datového typu Double.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ class double_3;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class double_3;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[double_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[double_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -158,19 +158,19 @@ class double_3;
 |Název|Popis|  
 |----------|-----------------|  
 |double_3::Operator-||  
-|double_3::Operator--||  
+|double_3::Operator-||  
 |double_3::Operator * =||  
-|/ double_3::Operator = – operátor||  
+|double_3::Operator / =||  
 |double_3::Operator ++||  
 |double_3::Operator +=||  
 |double_3::Operator =||  
-|double_3::Operator-=||  
+|operátor double_3::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#double_3__size)||  
+|[velikost – konstanta](#double_3__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -215,9 +215,9 @@ class double_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> double_3 
+##  <a name="ctor"></a> double_3 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 double_3() restrict(amp,
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="double_3__size"></a> Velikost 
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030141"
 ---
 # <a name="ccomsafearray-class"></a>Ccomsafearray – třída
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v poli.
 
 ## <a name="members"></a>Členové
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*psaSrc*  
+*psaSrc*<br/>
 Ukazatel `SAFEARRAY` objektu.
 
-*ulCount*  
+*ulCount*<br/>
 Počet objektů, které chcete přidat do pole.
 
-*PT*  
+*PT*<br/>
 Ukazatel na jeden nebo více objektů, které mají být přidány do pole.
 
-*t*  
+*t*<br/>
 Odkaz na objekt, který chcete přidat do pole.
 
-*bCopy*  
+*bCopy*<br/>
 Určuje, zda má být vytvořena kopie data. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*psaSrc*  
+*psaSrc*<br/>
 Ukazatel `SAFEARRAY` struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*vázaný*  
+*vázaný*<br/>
 A `SAFEARRAYBOUND` struktury.
 
-*ulCount*  
+*ulCount*<br/>
 Počet prvků v poli.
 
-*lLBound*  
+*lLBound*<br/>
 Hodnota dolní mez; To znamená, že index prvního prvku v poli.
 
-*pBound*  
+*pBound*<br/>
 Ukazatel `SAFEARRAYBOUND` struktury.
 
-*uDims*  
+*uDims*<br/>
 Počet dimenzí v poli.
 
-*saSrc*  
+*saSrc*<br/>
 Odkaz na `SAFEARRAY` struktury nebo `CComSafeArray` objektu. V obou případech konstruktor používá tento odkaz k vytvoření kopie pole, takže po vytvoření se neodkazuje pole.
 
-*psaSrc*  
+*psaSrc*<br/>
 Ukazatel `SAFEARRAY` struktury. Konstruktor používá tuto adresu k vytvoření kopie pole, takže po vytvoření se neodkazuje pole.
 
 ### <a name="remarks"></a>Poznámky
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 Ukazatel `SAFEARRAY` ke kopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 Ukazatel na umístění, ve kterém chcete vytvořit nový `SAFEARRAY`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*pBound*  
+*pBound*<br/>
 Ukazatel `SAFEARRAYBOUND` objektu.
 
-*uDims*  
+*uDims*<br/>
 Počet dimenzí v poli.
 
-*ulCount*  
+*ulCount*<br/>
 Počet prvků v poli.
 
-*lLBound*  
+*lLBound*<br/>
 Hodnota dolní mez; To znamená, že index prvního prvku v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 Indexové číslo hodnotu jako pole k vrácení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Rozměry pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Rozměry pole, pro který má být získána dolní mez. Pokud tento parametr vynechán, výchozí hodnota je 0.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Rozměry pole, pro který má být získána horní mez. Pokud tento parametr vynechán, výchozí hodnota je 0.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*alIndex*  
+*alIndex*<br/>
 Ukazatel na vektor indexů pro jednotlivé rozměry pole. Úplně vlevo (nejvýznamnější) dimenze je `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Vrátí odkaz na data.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*alIndex*  
+*alIndex*<br/>
 Ukazatel na vektor indexů pro jednotlivé rozměry pole. Rozměr nejvíce vpravo (nejméně významnou) je `alIndex`[0].
 
-*T*  
+*T*<br/>
 Určuje hodnotu nového elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Index, nIndex*  
+*Index, nIndex*<br/>
 Indexové číslo požadovaný element v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*saSrc*  
+*saSrc*<br/>
 Odkaz na `CComSafeArray` objektu.
 
-*psaSrc*  
+*psaSrc*<br/>
 Ukazatel `SAFEARRAY` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*pBound*  
+*pBound*<br/>
 Ukazatel `SAFEARRAYBOUND` strukturu, která obsahuje informace o počtu prvků a dolní mez pole.
 
-*ulCount*  
+*ulCount*<br/>
 Požadovaný počet objektů v poli se změněnou velikostí.
 
-*lLBound*  
+*lLBound*<br/>
 Dolní mez.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 Číslo indexu elementu pole pro nastavení.
 
-*t*  
+*t*<br/>
 Nová hodnota zadaného prvku.
 
-*bCopy*  
+*bCopy*<br/>
 Určuje, zda má být vytvořena kopie data. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -672,7 +672,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 
-[Datový typ SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray::Create](#create)   
-[CComSafeArray::Destroy](#destroy)   
+[Datový typ SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

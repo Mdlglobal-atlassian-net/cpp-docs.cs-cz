@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4434 | Microsoft Docs
+title: Upozornění (úroveň 4) C4434 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c639fa1cc89266fd9cc2935d88132ceae225a85e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec0d9e4cfbed2d2871e35631df918f17a342f653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025760"
 ---
-# <a name="compiler-warning-level-4-c4434"></a>C4434 kompilátoru upozornění (úroveň 4)
-konstruktoru třídy musí mít privátní usnadnění; Změna privátní přístup  
-  
- C4434 označuje, že kompilátor změnila usnadnění statického konstruktoru. Statické konstruktory musí mít privátní usnadnění, jako jsou určeny pouze má být volána modul common language runtime. Další informace najdete v tématu [statické konstruktory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4434.  
-  
-```  
-// C4434.cpp  
-// compile with: /W4 /c /clr  
-public ref struct R {  
-   static R(){}   // C4434  
-};  
+# <a name="compiler-warning-level-4-c4434"></a>Kompilátor upozornění (úroveň 4) C4434
+
+konstruktor třídy musí mít přístupnost private; Změna na soukromý přístup
+
+C4434 udává, že kompilátor změnil usnadnění statický konstruktor. Statické konstruktory musí mít přístupnost private, jako jsou určená jenom pro být volán modul common language runtime. Další informace najdete v tématu [statické konstruktory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4434.
+
+```
+// C4434.cpp
+// compile with: /W4 /c /clr
+public ref struct R {
+   static R(){}   // C4434
+};
 ```

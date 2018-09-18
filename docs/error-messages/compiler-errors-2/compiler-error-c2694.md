@@ -1,5 +1,5 @@
 ---
-title: C2694 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2694 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1578b6d7c55272c4b798d0222a1da37f5a749ecc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aae194d0ec2aa6c5eedafa1d4c66137861385ed6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029585"
 ---
-# <a name="compiler-error-c2694"></a>C2694 chyby kompilátoru
-'přepsání': přepisování virtuální funkce má méně omezující specifikace výjimek než základní třída člena virtuální funkce "base"  
-  
- Byl-li přepsat virtuální funkce, ale v části [/Za](../../build/reference/za-ze-disable-language-extensions.md), přepisování funkce měl méně omezující [specifikace výjimek](../../cpp/exception-specifications-throw-cpp.md).  
-  
- Následující ukázka generuje C2694:  
-  
-```  
-// C2694.cpp  
-// compile with: /Za /c  
-class MyBase {  
-public:  
-   virtual void f(void) throw(int) {  
-   }  
-};  
-  
-class Derived : public MyBase {  
-public:  
-   void f(void) throw(...) {}   // C2694  
-   void f2(void) throw(int) {}   // OK  
-};  
+# <a name="compiler-error-c2694"></a>Chyba kompilátoru C2694
+
+"override": přepisující virtuální funkce má míň omezující specifikaci výjimky než základní třídy virtuální členská funkce "base"
+
+Byl-li přepsat virtuální funkci, ale v nabídce [/Za](../../build/reference/za-ze-disable-language-extensions.md), přepisující funkce má míň omezující [specifikace výjimky](../../cpp/exception-specifications-throw-cpp.md).
+
+Následující ukázka generuje C2694:
+
+```
+// C2694.cpp
+// compile with: /Za /c
+class MyBase {
+public:
+   virtual void f(void) throw(int) {
+   }
+};
+
+class Derived : public MyBase {
+public:
+   void f(void) throw(...) {}   // C2694
+   void f2(void) throw(int) {}   // OK
+};
 ```

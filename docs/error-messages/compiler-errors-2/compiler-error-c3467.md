@@ -1,5 +1,5 @@
 ---
-title: C3467 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3467 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ea834ff01f228b9b30f8acdafb665dbba743517
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4482aea590b255300a08b5072444b6fabfc5a2eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026436"
 ---
-# <a name="compiler-error-c3467"></a>C3467 chyby kompilátoru
-'type': Tento typ již byly předány  
-  
- Kompilátor nalezen více než jednu deklaraci typu dopředného pro stejného typu. Je povolen pouze jeden deklarace podle typu.  
-  
- Další informace najdete v tématu [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří komponentu.  
-  
-```  
-// C3467.cpp  
-// compile with: /LD /clr  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3467.  
-  
-```  
-// C3467_b.cpp  
-// compile with: /clr /c  
-#using "C3467.dll"  
-[ assembly:TypeForwardedTo(R::typeid) ];  
-[ assembly:TypeForwardedTo(R::typeid) ];   // C3467  
+# <a name="compiler-error-c3467"></a>Chyba kompilátoru C3467
+
+'type': Tento typ už je předaný
+
+Kompilátor nalezena více než jedna deklarace typu dopředného pro stejného typu. Je povolena pouze jedna deklarace podle typu.
+
+Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad vytvoří komponentu.
+
+```
+// C3467.cpp
+// compile with: /LD /clr
+public ref class R {};
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3467.
+
+```
+// C3467_b.cpp
+// compile with: /clr /c
+#using "C3467.dll"
+[ assembly:TypeForwardedTo(R::typeid) ];
+[ assembly:TypeForwardedTo(R::typeid) ];   // C3467
 ```

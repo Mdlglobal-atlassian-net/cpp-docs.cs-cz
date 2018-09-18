@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4073 | Microsoft Docs
+title: Upozornění Linkerů LNK4073 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4197d850dbc7a064ebc7c6e33183d83fb9916ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eab8643706b3c7468b589bd63c508ec0c2bf5306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021905"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Upozornění linkerů LNK4073
-Nelze vytvořit mapy pro soubor .ilk; nonincrementally propojení  
-  
- Nebyl k dispozici velké dostatek místa na souvislý ve sdílené paměti pro odkaz pro vytvoření souboru přírůstkové stav (.ilk). ODKAZ provést nonincremental sestavení.
+
+nedá se vytvořit mapa souboru .ilk; nepřírůstkově
+
+Nebyl k dispozici rozsáhlou dostatek souvislé místo ve sdílené paměti pro odkaz můžete vytvořit soubor stavu přírůstků (propojení.ilk). ODKAZ provést nepřírůstková sestavení.

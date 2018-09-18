@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2017 | Microsoft Docs
+title: Chyba Linkerů LNK2017 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095423b5f2d86cef309ed4316ff72d195b11eb26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80af2bb6475fc37b7feba5b29bfe9c1292740286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022447"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Chyba linkerů LNK2017
-přemístění 'symbol' do 'segment"Neplatná bez /LARGEADDRESSAWARE:NO  
-  
- Pokoušíte se vytvořit bitovou kopii 64-bit adresy 32-bit. Chcete-li to provést, postupujte takto:  
-  
--   Použijte adresu pevné zatížení.  
-  
--   Omezte bitovou kopii na 3 GB.  
-  
--   Zadejte [/largeaddressaware:no](../../build/reference/largeaddressaware-handle-large-addresses.md).
+
+'symbol' přemístění "segmentu" bez: No neplatná.
+
+Pokoušíte se vytvořit bitovou kopii 64-bit s adresami 32-bit. Chcete-li to provést, musíte mít:
+
+- Použijte adresu zatížení.
+
+- Omezte na obrázku 3 GB.
+
+- Zadejte [: No](../../build/reference/largeaddressaware-handle-large-addresses.md).

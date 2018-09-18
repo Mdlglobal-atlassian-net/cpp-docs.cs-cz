@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024538"
 ---
 # <a name="ca2caex-class"></a>Ca2caex – třída
 
@@ -36,13 +36,13 @@ Tato třída se používá řetězec převodních maker CA2CTEX CT2CAEX a defini
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CA2CAEX
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.
 
 ## <a name="members"></a>Členové
@@ -103,10 +103,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Textový řetězec, který má být převeden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Nepoužívané v této třídě.
 
 ### <a name="remarks"></a>Poznámky
@@ -137,7 +137,7 @@ LPCSTR m_psz;
 
 Operátor převodu.
 
-```  
+```
 operator LPCSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Vrátí textový řetězec psaní LPCSTR.
 
 ## <a name="see-also"></a>Viz také
 
-[Ca2aex – třída](../../atl/reference/ca2aex-class.md)   
-[Ca2wex – třída](../../atl/reference/ca2wex-class.md)   
-[Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
-[Cw2cwex – třída](../../atl/reference/cw2cwex-class.md)   
-[Cw2wex – třída](../../atl/reference/cw2wex-class.md)   
+[CA2AEX – třída](../../atl/reference/ca2aex-class.md)<br/>
+[CA2WEX – třída](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX – třída](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX – třída](../../atl/reference/cw2wex-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

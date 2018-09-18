@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1047 | Microsoft Docs
+title: Závažná chyba C1047 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce88321173ee2c8cc286f18d8ab8f1bf5ec98e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1983fa0a18667d98f84dfe5049afd4e872d87d93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198622"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021587"
 ---
 # <a name="fatal-error-c1047"></a>Závažná chyba C1047
-Vytvoření objektu nebo knihovna souboru 'file' s kompilátoru starší než jiné objekty; opětovné sestavení staré objekty a knihovny  
-  
- C1047 dojde, pokud objekt soubory nebo knihovny vytvořené s **/ltgc** jsou spojeny dohromady, ale kde vytvořené tyto soubory objektů nebo knihovny s různými verzemi sady nástrojů Visual C++.  
-  
- To může nastat, když začít používat nové verze kompilátoru ale udělat čistou opětovné sestavení existující objekt soubory nebo knihovny.  
-  
- Chcete-li vyřešit C1047, znovu vytvořit všechny soubory objektů nebo knihovny.
+
+Soubor objektu nebo knihovny 'file' byl vytvořen pomocí staršího kompilátoru než jiné objekty; Sestavte starší objekty a knihovny
+
+C1047 dojde při vytváření souborů objektů nebo knihoven s **parametru/LTCG** jsou spojeny dohromady, ale pokud tyto soubory objektů nebo knihoven sestavují s různými verzemi sady nástrojů Visual C++.
+
+To může nastat, pokud začít používat novou verzi kompilátoru, ale proveďte čisté sestavení z existujících souborů objektů nebo knihoven.
+
+Chcete-li vyřešit C1047, opětovné sestavení všech souborů objektů nebo knihoven.

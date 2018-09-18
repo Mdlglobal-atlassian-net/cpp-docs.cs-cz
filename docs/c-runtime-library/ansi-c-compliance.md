@@ -1,5 +1,5 @@
 ---
-title: Kompatibilita se specifikací ANSI C | Microsoft Docs
+title: Kompatibilita se specifikací ANSI C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,19 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 452c6803ea05f051727a1417aee49c3a56759141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5fceb2681befa5ed9c8c82facb85442aed2d646
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023342"
 ---
 # <a name="ansi-c-compliance"></a>Kompatibilita se specifikací ANSI C
-Zásady vytváření názvů pro všechny identifikátory specifické pro společnost Microsoft v běhu systému (například funkce, makra, konstanty, proměnné a definic typů) je kompatibilní se specifikací ANSI. V této dokumentaci je žádné běhové funkce, který dodržuje standardy ANSI/ISO C poznamenat, že je ANSI kompatibilní. Aplikace standardu ANSI měli používat jenom tyto funkce kompatibilní ANSI.  
-  
- Názvy funkce specifické pro společnost Microsoft a globální proměnné začít s jedním podtržítkem. Názvy těchto lze přepsat pouze místně v rámci oboru vašeho kódu. Například když zahrnete Microsoft běhu hlavičkových souborů, můžete stále místně přepsat funkce specifické pro společnost Microsoft s názvem `_open` deklarováním místní proměnné se stejným názvem. Tento název pro globální funkce nebo – globální proměnná však nelze použít.  
-  
- Názvy makra specifické pro společnost Microsoft a manifestu konstanty začít dvě podtržítka nebo s jedním úvodní podtržítkem bezprostředně následované velké písmeno. Rozsah tyto identifikátory je absolutní. Například nemůžete použít identifikátor specifické pro společnost Microsoft **_UPPER** z tohoto důvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Kompatibilita](../c-runtime-library/compatibility.md)
+
+Zásady vytváření názvů pro všechny identifikátory specifické pro společnost Microsoft v systému za běhu (například funkce, makra, konstant, proměnných a definice typů) kompatibilní se standardem ANSI. V této dokumentaci je uvedeno běhové funkce, která dodržuje standardy ANSI/ISO C jako ANSI kompatibilní. Vyhovující standardu ANSI aplikace by měly používat jenom tyto funkce kompatibilní ANSI.
+
+Názvy funkcí specifických pro společnost Microsoft a globální proměnné začínají s jedním podtržítkem. Tyto názvy lze přepsat pouze místně v rámci oboru svého kódu. Například pokud zahrnete Microsoft za běhu hlavičkové soubory, můžete stále místně přepsat funkce specifické pro společnost Microsoft s názvem `_open` deklarováním místní proměnná se stejným názvem. Tento název globální funkce nebo globální proměnná však nelze použít.
+
+Názvy maker specifické pro společnost Microsoft a konstanty manifestu začínají dvěma podtržítky, nebo jedno vedoucí podtržítko bezprostředně následovat velké písmeno. Rozsah těchto identifikátorů je absolutní. Například nemůžete použít identifikátor specifické pro společnost Microsoft **_UPPER** z tohoto důvodu.
+
+## <a name="see-also"></a>Viz také
+
+[Kompatibilita](../c-runtime-library/compatibility.md)

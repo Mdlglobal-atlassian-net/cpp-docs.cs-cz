@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1852 | Microsoft Docs
+title: Závažná chyba C1852 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11160eea5e978a0c1ef67255d4e96b48fe2d101
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0adfa7eed25f1902300fa2378b8ffc19eb8dfafd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023797"
 ---
 # <a name="fatal-error-c1852"></a>Závažná chyba C1852
-"název souboru, není platný předkompilovaný hlavičkový soubor  
-  
- Soubor není předkompilovaných hlaviček.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Neplatný soubor zadaným **/Yu** nebo **hdrstop – #pragma**.  
-  
-2.  Kompilátor předpokládá příponu souboru .pch, pokud neurčíte jinak.
+
+'filename' není platný předkompilovaného hlavičkového souboru
+
+Soubor není předkompilovanou hlavičku.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Neplatný soubor určený parametrem **/Yu** nebo **#pragma hdrstop**.
+
+1. Kompilátor předpokládá příponu souboru .pch, pokud neurčíte jinak.

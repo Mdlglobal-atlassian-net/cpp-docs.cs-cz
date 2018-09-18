@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1004 | Microsoft Docs
+title: Závažná chyba C1004 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d88f76c00c8f5b36acf238f0da88e908eac6dbe8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a284de510fde49602a06fb9282c0ddd59eeb0ac1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020277"
 ---
 # <a name="fatal-error-c1004"></a>Závažná chyba C1004
-Neočekávaný konec souboru nalezen  
-  
- Kompilátor bylo dosaženo konce zdrojového souboru bez vyřešení konstrukt. Kód mohou chybět jeden z následujících elementů:  
-  
--   Pravé složené závorce  
-  
--   Pravá závorka  
-  
--   Uzavírající komentář značky (* nebo)  
-  
--   Středníkem  
-  
- Chcete-li tuto chybu vyřešit, zkontrolujte následující:  
-  
--   Výchozí diskové jednotce není dostatek místa pro dočasné soubory, které vyžadují o dvakrát tolik místa jako zdrojový soubor.  
-  
--   `#if` Direktiva, která vyhodnocena jako false nemá uzavírací `#endif` – direktiva.  
-  
--   Zdrojový soubor nemá na konci znaky CR a odřádkování.  
-  
- Následující ukázka generuje C1004:  
-  
-```  
-// C1004.cpp  
-#if TEST  
-int main() {}  
-// C1004  
-```  
-  
- Možná řešení:  
-  
-```  
-// C1004b.cpp  
-#if TEST  
-#endif  
-  
-int main() {}  
+
+Neočekávaný konec souboru nalezen
+
+Kompilátor bylo dosaženo konce zdrojového souboru bez překladu konstrukci. Kód pravděpodobně chybí jeden z následujících elementů:
+
+- Pravé složené závorky
+
+- Pravá závorka
+
+- Na závěr komentáře značky (* /)
+
+- Středníkem
+
+Chcete-li tuto chybu vyřešit, zkontrolujte následující:
+
+- Na disk výchozí nemá dostatek místa pro dočasné soubory, které vyžadují dvakrát tolik místa jako zdrojový soubor.
+
+- `#if` Direktiva, která se vyhodnotí jako false chybí uzavírací `#endif` směrnice.
+
+- Zdrojový soubor nesmí končit zalomení řádku a odřádkování.
+
+Následující ukázka generuje C1004:
+
+```
+// C1004.cpp
+#if TEST
+int main() {}
+// C1004
+```
+
+Možná řešení:
+
+```
+// C1004b.cpp
+#if TEST
+#endif
+
+int main() {}
 ```

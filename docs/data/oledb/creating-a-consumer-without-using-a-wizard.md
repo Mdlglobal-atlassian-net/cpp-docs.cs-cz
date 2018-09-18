@@ -15,19 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 843c2d79af8acaff835e8500f1f1d67870c4b63e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023589"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
+
 V následujícím příkladu se předpokládá, že přidáte podporu příjemce technologie OLE DB do existujícího projektu ATL. Pokud chcete přidat podporu příjemce technologie OLE DB pro aplikace knihovny MFC, by měl spustit Průvodce aplikací MFC, která vytvoří nezbytné veškerou podporu a vyvolá rutiny knihovny MFC, které jsou nezbytné ke spuštění aplikace.  
   
- Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce příjemcem ATL OLE DB:  
+Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce příjemcem ATL OLE DB:  
   
--   V souboru Stdafx.h připojte `#include` příkazy:  
+- V souboru Stdafx.h připojte `#include` příkazy:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -35,14 +36,14 @@ V následujícím příkladu se předpokládá, že přidáte podporu příjemce
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Příjemce prostřednictvím kódu programu, obvykle provádí následující pořadí operací:  
+Příjemce prostřednictvím kódu programu, obvykle provádí následující pořadí operací:  
   
--   Vytvořte třídu záznam uživatele, který váže sloupce pro lokální proměnné. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapování sloupců a parametr mapy. Deklarovat v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; datový člen pro každou z těchto datových členů také deklarujte datový člen stav a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+- Vytvořte třídu záznam uživatele, který váže sloupce pro lokální proměnné. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapování sloupců a parametr mapy. Deklarovat v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; datový člen pro každou z těchto datových členů také deklarujte datový člen stav a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
     >  Pokud píšete vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
   
--   Vytvořit instanci zdroje dat a relace. Rozhodnout, jaký typ přístupového objektu a sady řádků a potom vytvořte instanci sady řádků pomocí [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md):  
+- Vytvořit instanci zdroje dat a relace. Rozhodnout, jaký typ přístupového objektu a sady řádků a potom vytvořte instanci sady řádků pomocí [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md):  
   
     ```cpp  
     CDataSource ds;  
@@ -50,15 +51,15 @@ V následujícím příkladu se předpokládá, že přidáte podporu příjemce
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   Volání `CoInitialize` inicializovat COM. To je obvykle volána v hlavní kód. Příklad:  
+- Volání `CoInitialize` inicializovat COM. To je obvykle volána v hlavní kód. Příklad:  
   
     ```cpp  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   Volání [CDataSource::Open](../../data/oledb/cdatasource-open.md) nebo jednu z jeho variant.  
+- Volání [CDataSource::Open](../../data/oledb/cdatasource-open.md) nebo jednu z jeho variant.  
   
--   Otevřete připojení ke zdroji dat, otevřete relaci a otevřete a inicializaci sady řádků (a pokud příkaz, také ho spustit):  
+- Otevřete připojení ke zdroji dat, otevřete relaci a otevřete a inicializaci sady řádků (a pokud příkaz, také ho spustit):  
   
     ```cpp  
     hr = ds.Open();  
@@ -66,11 +67,11 @@ V následujícím příkladu se předpokládá, že přidáte podporu příjemce
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr `rs.Open`. Příklad, jak to lze provést, naleznete v tématu GetRowsetProperties v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr `rs.Open`. Příklad, jak to lze provést, naleznete v tématu GetRowsetProperties v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
   
--   Nyní můžete v sadě řádků načtení/práce s daty.  
+- Nyní můžete v sadě řádků načtení/práce s daty.  
   
--   Po dokončení se vaše aplikace, ukončete připojení, relace a sady řádků:  
+- Po dokončení se vaše aplikace, ukončete připojení, relace a sady řádků:  
   
     ```cpp  
     rs.Close();  
@@ -80,11 +81,12 @@ V následujícím příkladu se předpokládá, že přidáte podporu příjemce
   
      Pokud použijete příkaz, můžete chtít volat `ReleaseCommand` po `Close`. Příklad kódu v [CCommand::Close](../../data/oledb/ccommand-close.md) ukazuje, jak volat `Close` a `ReleaseCommand`.  
   
--   Volání `CoUnInitialize` k inicializaci modelu COM. To je obvykle volána v hlavní kód.  
+- Volání `CoUnInitialize` k inicializaci modelu COM. To je obvykle volána v hlavní kód.  
   
     ```  
     CoUninitialize();  
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

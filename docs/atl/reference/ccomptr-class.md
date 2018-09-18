@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030921"
 ---
 # <a name="ccomptr-class"></a>CComPtr – třída
 
@@ -32,13 +32,13 @@ Třída inteligentní ukazatel pro správu ukazatele rozhraní modelu COM.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Rozhraní modelu COM zadání typu ukazatel na Uložit.
 
 ## <a name="members"></a>Členové
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*LP*  
+*LP*<br/>
 Použít k inicializaci ukazatele rozhraní.
 
-*T*  
+*T*<br/>
 Rozhraní modelu COM.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Tato operace AddRefs nový objekt a verzích existující objekt, pokud existuje
 
 ## <a name="see-also"></a>Viz také
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

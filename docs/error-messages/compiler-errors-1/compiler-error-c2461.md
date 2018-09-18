@@ -1,5 +1,5 @@
 ---
-title: C2461 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2461 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47aee3122dad3e875cf58d5a41bcadda297e1463
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39d58b315fdd7e3c4e1899041cebf8400813ed40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029296"
 ---
-# <a name="compiler-error-c2461"></a>C2461 chyby kompilátoru
-  
-> '*třída*': konstruktor Syntaxe chybí formální parametry  
-  
- Konstruktor pro třídu neurčuje žádné formální parametry. Prohlášení o konstruktor musíte zadat seznam formální parametr. V seznamu nesmí být prázdné.  
-  
-Chcete-li tento problém vyřešit, přidejte po deklaraci pár závorek *třída*:: **třída*.  
-  
-## <a name="example"></a>Příklad  
-  
-Následující příklad ukazuje, jak opravit C2461:  
-  
-```cpp  
-// C2461.cpp  
-// compile with: /c  
-class C {  
-   C::C;     // C2461  
-   C::C();   // OK  
-};  
+# <a name="compiler-error-c2461"></a>Chyba kompilátoru C2461
+
+> "*třídy*': syntaxi konstruktoru chybí formální parametry.
+
+Konstruktor pro třídu neurčuje žádné formální parametry. Deklarace konstruktoru musíte zadat seznam formálních parametrů. Seznam může být prázdný.
+
+Chcete tento problém vyřešit, přidejte dvojici závorek za deklaraci *třídy*:: **třídy*.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak opravit C2461:
+
+```cpp
+// C2461.cpp
+// compile with: /c
+class C {
+   C::C;     // C2461
+   C::C();   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4250 | Microsoft Docs
+title: Upozornění (úroveň 2) C4250 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,112 +16,115 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0a49f42dec57677149ab5c36cfc1ab99822cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5797782691385111f0be22854643315f4e596fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031430"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>C4250 kompilátoru upozornění (úroveň 2)
-"třída1": dědí 'class2::member' prostřednictvím dominance  
-  
- Dvě nebo více členů mají stejný název. V `class2` je zděděn, protože je základní třída pro třídy, které obsahovaly tohoto člena.  
-  
- Chcete-li potlačit C4250, použijte [upozornění](../../preprocessor/warning.md) – Direktiva pragma.  
-  
- Vzhledem k tomu, že virtuální základní třídy je sdílen více odvozené třídy, název v odvozené třídě dominuje název v základní třídě. Například následující hierarchie tříd zadána existují dvě definice func převzít v rámci kosočtverec: instance vbc::func() prostřednictvím slabé třídy a dominantní:: func() prostřednictvím dominantní třídy. Nekvalifikované volání func() prostřednictvím objekt třídy kosočtverec vždy volá dominate:: func() instance.  Kdyby zavádět instanci func() slabé třídy ani definice převažovalo a volání by označeno jako dvojznačné.  
-  
-```  
-// C4250.cpp  
-// compile with: /c /W2  
-#include <stdio.h>  
-struct vbc {  
-   virtual void func() { printf("vbc::func\n"); }  
-};  
-  
-struct weak : public virtual vbc {};  
-  
-struct dominant : public virtual vbc {  
-   void func() { printf("dominant::func\n"); }  
-};  
-  
-struct diamond : public weak, public dominant {};  
-  
-int main() {  
-   diamond d;  
-   d.func();   // C4250  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4250.  
-  
-```  
-// C4250_b.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-class A {  
-public:  
-   virtual operator int () {  
-      return 2;  
-   }  
-};  
-  
-class B : virtual public A {  
-public:  
-   virtual operator int () {  
-      return 3;  
-   }  
-};  
-  
-class C : virtual public A {};  
-  
-class E : public B, public C {};   // C4250  
-  
-int main() {  
-   E eObject;  
-   cout << eObject.operator int() << endl;  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Tento příklad ukazuje složitější situaci. Následující ukázka generuje C4250.  
-  
-```  
-// C4250_c.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-class V {  
-public:  
-   virtual int f() {  
-      return 1024;  
-   }  
-};  
-  
-class B : virtual public V {  
-public:  
-   int b() {  
-      return f(); // B::b() calls V::f()  
-   }  
-};  
-  
-class M : virtual public V {  
-public:  
-   int f() {  
-      return 7;  
-   }  
-};  
-  
-// because of dominance, f() is M::f() inside D,  
-// changing the meaning of B::b's f() call inside a D  
-class D : public B, public M {};   // C4250  
-  
-int main() {  
-   D d;  
-   cout << "value is: " << d.b();   // invokes M::f()  
-}  
+# <a name="compiler-warning-level-2-c4250"></a>Kompilátor upozornění (úroveň 2) C4250
+
+'class1': 'class2::member"prostřednictvím dominance dědí
+
+Dva nebo více členů mají stejný název. V `class2` se dědí, protože je základní třídou pro jiné třídy, které tento člen.
+
+Chcete-li potlačit C4250, použijte [upozornění](../../preprocessor/warning.md) direktivy pragma.
+
+Vzhledem k tomu, že virtuální základní třídy je sdílen mezi více odvozených tříd, název v odvozené třídě dominuje název v základní třídě. Například s ohledem následující hierarchie tříd, existují dvě definice func zděděné v rámci kosočtverce: instance vbc::func() prostřednictvím slabé třídy a dominantní:: func() prostřednictvím dominantní třídy. Neúplného volání func() prostřednictvím objekt třídy kosočtverce vždy volá instance dominate:: func().  Kdyby zavést instance func() slabé třídy ani definice by převládají na poli a volání by být označeno jako dvojznačné.
+
+```
+// C4250.cpp
+// compile with: /c /W2
+#include <stdio.h>
+struct vbc {
+   virtual void func() { printf("vbc::func\n"); }
+};
+
+struct weak : public virtual vbc {};
+
+struct dominant : public virtual vbc {
+   void func() { printf("dominant::func\n"); }
+};
+
+struct diamond : public weak, public dominant {};
+
+int main() {
+   diamond d;
+   d.func();   // C4250
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4250.
+
+```
+// C4250_b.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+class A {
+public:
+   virtual operator int () {
+      return 2;
+   }
+};
+
+class B : virtual public A {
+public:
+   virtual operator int () {
+      return 3;
+   }
+};
+
+class C : virtual public A {};
+
+class E : public B, public C {};   // C4250
+
+int main() {
+   E eObject;
+   cout << eObject.operator int() << endl;
+}
+```
+
+## <a name="example"></a>Příklad
+
+Tento příklad ukazuje mnohem složitější situace. Následující ukázka generuje C4250.
+
+```
+// C4250_c.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+using namespace std;
+
+class V {
+public:
+   virtual int f() {
+      return 1024;
+   }
+};
+
+class B : virtual public V {
+public:
+   int b() {
+      return f(); // B::b() calls V::f()
+   }
+};
+
+class M : virtual public V {
+public:
+   int f() {
+      return 7;
+   }
+};
+
+// because of dominance, f() is M::f() inside D,
+// changing the meaning of B::b's f() call inside a D
+class D : public B, public M {};   // C4250
+
+int main() {
+   D d;
+   cout << "value is: " << d.b();   // invokes M::f()
+}
 ```

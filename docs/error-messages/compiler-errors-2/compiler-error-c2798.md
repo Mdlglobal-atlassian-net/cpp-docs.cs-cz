@@ -1,5 +1,5 @@
 ---
-title: C2798 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2798 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de30a19a2a27cde991cfce0ca061ce6f5447f033
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88241989d54e1a068b226b59091a381f531dee9e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028854"
 ---
-# <a name="compiler-error-c2798"></a>C2798 chyby kompilátoru
-je nejednoznačný 'super::member.  
-  
- Více zděděné struktury obsahovat člen odkazovaná adresou [super](../../cpp/super.md). Buď může opravte chybu:  
-  
--   Odebrání B1 nebo B2 ze seznamu dědičnosti D.  
-  
--   Změna názvu datového člena v B1 nebo B2.  
-  
- Následující ukázka generuje C2798:  
-  
-```  
-// C2798.cpp  
-struct B1 {  
-   int i;  
-};  
-  
-struct B2 {  
-   int i;  
-};  
-  
-struct D : B1, B2 {  
-   void g() {  
-      __super::i = 4; // C2798  
-   }  
-};  
+# <a name="compiler-error-c2798"></a>Chyba kompilátoru C2798
+
+'super::member' je nejednoznačný
+
+Více zděděných struktury obsahují člen odkazovaný adresou [mimořádně](../../cpp/super.md). Buď může oprava chyby:
+
+- B1 a B2 se odebírá ze seznamu dědičnosti d.
+
+- Změna názvu datového člena v B1 a B2.
+
+Následující ukázka generuje C2798:
+
+```
+// C2798.cpp
+struct B1 {
+   int i;
+};
+
+struct B2 {
+   int i;
+};
+
+struct D : B1, B2 {
+   void g() {
+      __super::i = 4; // C2798
+   }
+};
 ```

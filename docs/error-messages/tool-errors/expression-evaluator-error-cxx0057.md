@@ -1,5 +1,5 @@
 ---
-title: CXX0057 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0057 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509c7e00236ed824c3213f7ba730909873646c2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f993b435df4d0b6804ab9b31698074d65a03112
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025019"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>Chyba při vyhodnocování výrazu CXX0057
-žádný kód na číslo řádku  
-  
- Žádný kód byl vygenerován pro zadané číslo řádku. Nelze použít jako zarážky.  
-  
- Tato chyba je stejný jako CAN0057.
+
+žádný kód na řádku číslo
+
+Nevygeneroval se žádný kód pro zadaný počet řádků. Nelze použít jako zarážku.
+
+Tato chyba se shoduje s CAN0057.

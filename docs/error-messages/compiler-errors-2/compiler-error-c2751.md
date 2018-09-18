@@ -1,5 +1,5 @@
 ---
-title: C2751 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2751 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fe5354061c0839cd7569c018e84b0e4f2905e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97a4021eb4cc5092f4bb9424e141666aea4a00f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021782"
 ---
-# <a name="compiler-error-c2751"></a>C2751 chyby kompilátoru
-"parametr": nemůže být kvalifikovaný název parametru – funkce  
-  
- Jako parametr funkce nelze použít kvalifikovaný název.  
-  
- Následující ukázka generuje C2751:  
-  
-```  
-// C2751.cpp  
-namespace std {  
-   template<typename T>  
-   class list {};  
-}  
-  
-#define list std::list  
-void f(int &list){}   // C2751  
+# <a name="compiler-error-c2751"></a>Chyba kompilátoru C2751
+
+'parametru': název parametru funkce nemůže být kvalifikovaný.
+
+Úplný název nelze použít jako parametr funkce.
+
+Následující ukázka generuje C2751:
+
+```
+// C2751.cpp
+namespace std {
+   template<typename T>
+   class list {};
+}
+
+#define list std::list
+void f(int &list){}   // C2751
 ```

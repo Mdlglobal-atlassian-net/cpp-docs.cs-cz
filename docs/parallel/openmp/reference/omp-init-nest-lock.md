@@ -1,5 +1,5 @@
 ---
-title: omp_init_nest_lock – | Microsoft Docs
+title: omp_init_nest_lock – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca97885a64df3897bda59dd7f04b2306f31536aa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 11c3e0fc08f8c2e0f4df9ac20df6260f64618ee3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029543"
 ---
 # <a name="ompinitnestlock"></a>omp_init_nest_lock
 Inicializuje zámek.  
@@ -34,11 +34,10 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry 
   
- `lock`  
- Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
+*lock*<br/>
+Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
   
 ## <a name="remarks"></a>Poznámky  
  Počáteční počet vnoření je nula.  

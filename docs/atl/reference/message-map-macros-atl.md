@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024907"
 ---
 # <a name="message-map-macros-atl"></a>Makra Map zpráv (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identifikátor mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Název třídy obsahující mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Název základní třídy, který obsahuje mapování zprávy.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identifikátor mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Název datového člena, který obsahuje mapování zprávy.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identifikátor mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Název základní třídy, který obsahuje mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>Parametry
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in] Jedinečný identifikátor objektu mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Název datového člena, který obsahuje mapování zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru odeslání zprávy.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parametry
 
-*zpráva*  
+*zpráva*<br/>
 [in] Zprávy Windows.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*msgFirst*  
+*msgFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah zprávy.
 
-*msgLast*  
+*msgLast*<br/>
 [in] Označuje konec souvislý rozsah zprávy.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parametry
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor ovládacího prvku odeslání zprávy.
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor ovládacího prvku odeslání zprávy.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="remarks"></a>Poznámky
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*kód*  
+*kód*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.  
 
 ### <a name="requirements"></a>Požadavky
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*CD*  
+*CD*<br/>
 [in] Kód upozornění.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Označuje začátek toho souvislý rozsah identifikátory ovládacího prvku.
 
-*idLast*  
+*idLast*<br/>
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
-*Func*  
+*Func*<br/>
 [in] Název funkce obslužná rutina zprávy.
 
 ## <a name="see-also"></a>Viz také

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61cbd301d01d62c0d24f232703b53cebf411a082
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021067"
 ---
 # <a name="celementtraits-class"></a>Celementtraits – třída
 
@@ -31,13 +31,13 @@ Tato třída používá kolekce tříd poskytují metody a funkce pro přesunut�
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="remarks"></a>Poznámky
@@ -54,5 +54,5 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 ## <a name="see-also"></a>Viz také
 
-[Cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

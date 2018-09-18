@@ -1,5 +1,5 @@
 ---
-title: Pragmas jazyka C | Microsoft Docs
+title: Pragmas jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027346"
 ---
 # <a name="c-pragmas"></a>Pragmas jazyka C
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-A *– Direktiva pragma* dává pokyn kompilátoru k provedení určité akce v době kompilace. Direktivy pragma se v různých kompilátorech liší. Například můžete použít **optimalizovat** – Direktiva pragma nastavit optimalizace provést u vašeho programu. Direktivy pragma jazyka Microsoft C jsou tyto:
+A *– Direktiva pragma* dává pokyn kompilátoru k provedení určité akce v době kompilace. Direktivy pragma se v různých kompilátorech liší. Například můžete použít **optimalizovat** – Direktiva pragma se nastavit optimalizace, které budou pro program provedeny. Direktivy pragma jazyka Microsoft C jsou tyto:
 
 |||||
 |-|-|-|-|
 |**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|
-|**auto_inline**|**Funkce**|**intrinsic**|**warning**|
+|**auto_inline**|**– funkce**|**intrinsic**|**warning**|
 |**check_stack**|**hdrstop**|**message**||
 |**code_seg**|**include_alias**|**optimize**||
 |**Komentář**|**inline_depth**|**pack**||
 
-V tématu [direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) popis direktivy kompilátoru Microsoft C.
+Zobrazit [direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) popis direktiv pragma kompilátoru C společnosti Microsoft.
 
- **Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)  
+[Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

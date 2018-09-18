@@ -1,5 +1,5 @@
 ---
-title: C2106 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2106 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0d8b55bed4b86e44ada9f81dc2bf0269af604ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68dd34810041b9d71056d4bb4afc9beadcaffa81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030739"
 ---
-# <a name="compiler-error-c2106"></a>C2106 chyby kompilátoru
-'operátor': levý operand musí být hodnota l  
-  
- Operátor musí mít hodnotu l jako levý operand.  
-  
- Následující ukázka generuje C2106:  
-  
-```  
-// C2106.cpp  
-int main() {  
-   int a;  
-   1 = a;   // C2106  
-   a = 1;   // OK  
-}  
+# <a name="compiler-error-c2106"></a>Chyba kompilátoru C2106
+
+'operator': levý operand musí být l-value.
+
+Operátor musí mít jako levý operand l hodnotou.
+
+Následující ukázka generuje C2106:
+
+```
+// C2106.cpp
+int main() {
+   int a;
+   1 = a;   // C2106
+   a = 1;   // OK
+}
 ```

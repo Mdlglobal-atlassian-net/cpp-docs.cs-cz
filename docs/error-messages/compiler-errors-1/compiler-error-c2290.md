@@ -1,5 +1,5 @@
 ---
-title: C2290 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2290 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb3ce81832f4366add1c8da96623690cd40b3dd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c96216782994e6491437df82c8bb56d74354622b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030523"
 ---
-# <a name="compiler-error-c2290"></a>C2290 chyby kompilátoru
-Syntaxe asm C++ ignorovány. Použijte __asm.  
-  
- `asm` Syntaxe je vyhrazena pro budoucí použití.
+# <a name="compiler-error-c2290"></a>Chyba kompilátoru C2290
+
+Syntaxe C++ asm ignoruje. Použijte: __asm.
+
+`asm` Syntaxe je vyhrazená pro budoucí použití.

@@ -1,5 +1,5 @@
 ---
-title: C3712 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3712 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df27d74f276f70cb93a7e862e452b3a6d0eb4e55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa1790c2f5634f01d52e0eec65f5bfcf933ab058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029920"
 ---
-# <a name="compiler-error-c3712"></a>C3712 chyby kompilátoru
-"metody": metodu obslužné rutiny události musí vracet stejného typu jako zdroj "metoda"  
-  
- Jste definovali metodu obslužné rutiny události, který nevrátil stejného typu jako metodu zdroje událostí. Pokud chcete vyřešit tuto chybu, poskytněte obslužná rutina události stejné návratový typ jako metodu zdroj události.  
-  
- Následující ukázka generuje C3712:  
-  
-```  
-// C3712.cpp  
-// compile with: /c  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   int handler1() { return 0; }  
-   // try the following line instead  
-   // void handler1() {}  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712  
-   }  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712  
-   }  
-};  
+# <a name="compiler-error-c3712"></a>Chyba kompilátoru C3712
+
+"metoda": metoda obslužné rutiny události musí vracet stejný typ jako zdroj "metoda"
+
+Definujete metodu obslužné rutiny události, která nevrátila stejného typu jako metodu zdroj události. Chcete-li vyřešit tuto chybu, poskytněte metodu obslužné rutiny události vracet hodnotu stejného typu jako metodu zdroje události.
+
+Následující ukázka generuje C3712:
+
+```
+// C3712.cpp
+// compile with: /c
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   int handler1() { return 0; }
+   // try the following line instead
+   // void handler1() {}
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712
+   }
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712
+   }
+};
 ```

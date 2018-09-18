@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025526"
 ---
 # <a name="floating-limits"></a>Plovoucí omezení
 
 **Specifické pro Microsoft**
 
-Následující tabulka uvádí omezení hodnot konstant s plovoucí desetinnou čárkou. Tato omezení jsou také definovány v souboru standardní hlavičku \<float.h >.  
+Následující tabulka uvádí omezení hodnot konstant s plovoucí desetinnou čárkou. Tato omezení jsou také definovány v souboru standardní hlavičku \<float.h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Omezení konstant s plovoucí desetinnou čárkou
 
@@ -57,4 +57,4 @@ Následující tabulka uvádí omezení hodnot konstant s plovoucí desetinnou �
 
 ## <a name="see-also"></a>Viz také:
 
-[Omezení typu Integer](../cpp/integer-limits.md)  
+[Omezení typu Integer](../cpp/integer-limits.md)

@@ -1,5 +1,5 @@
 ---
-title: C2313 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2313 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e9e5e9163137537c9da2cd8c14bd1271ebeb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57e291788f261f0e62bd476b3027dfa809594ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024931"
 ---
-# <a name="compiler-error-c2313"></a>C2313 chyby kompilátoru
-'type1': je zachytila odkazu ('type2') na číslo řádku  
-  
- Typ výjimky má dvě obslužné rutiny. Typ pro druhý catch je odkaz na typ první.  
-  
- Následující ukázka generuje C2313:  
-  
-```  
-// C2313.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-    try {  
-        throw "ooops!";  
-    }  
-    catch( C& ) {}  
-    catch( C ) {}   // C2313  
-}  
+# <a name="compiler-error-c2313"></a>Chyba kompilátoru C2313
+
+'type1': se zachycuje prostřednictvím odkazu ('type2') na číslo řádku
+
+Typ výjimky má dvě obslužné rutiny. Typ pro druhý catch je odkaz na typ prvního.
+
+Následující ukázka generuje C2313:
+
+```
+// C2313.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+    try {
+        throw "ooops!";
+    }
+    catch( C& ) {}
+    catch( C ) {}   // C2313
+}
 ```

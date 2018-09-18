@@ -1,5 +1,5 @@
 ---
-title: Pokud (OpenMP) | Microsoft Docs
+title: Pokud (OpenMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020950"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Určuje, zda se má provést smyčku paralelně nebo postupně.  
+Určuje, zda smyčku budou spuštěny paralelně nebo postupně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Určuje, zda se má provést smyčku paralelně nebo postupně.
 if(expression)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `expression`  
- Integrální výraz, který, pokud se vyhodnotí jako true (nenulové hodnoty), způsobí, že kód v oblasti paralelní prováděny paralelně. Pokud je výsledkem na hodnotu false (nula), paralelní oblast je provedený postupně (jedno vlákno).  
+*Výraz*<br/>
+Celočíselný výraz, který, pokud se vyhodnotí jako true (nenulový), způsobí, že kód v paralelní oblasti spustit paralelně. Pokud je výraz vyhodnocen jako na hodnotu false (nula), paralelní oblasti provádí postupně (jedno vlákno).  
   
 ## <a name="remarks"></a>Poznámky  
  `if` platí pro následující direktivy:  

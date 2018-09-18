@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4471 | Microsoft Docs
+title: Upozornění (úroveň 4) C4471 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/24/2017
 ms.technology:
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a530cee3c3fcfec8566d46b116fcc4e71760ed11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bcbeafb6952bc40f7fb67c6a0baa2e90051d3ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023355"
 ---
-# <a name="compiler-warning-level-4-c4471"></a>C4471 kompilátoru upozornění (úroveň 4)
-'*výčtu*': deklaraci předat dál bez ohledu na obor výčtu musí mít základní typ (int předpokládá, že)  
-  
-Bez specifikátorem pro základní typ nebyl nalezen deklaraci předat dál bez ohledu na obor výčtu. Ve výchozím nastavení, předpokládá Visual C++ `int` je základní typ pro výčet. Pokud jiný typ použitými v definici – výčet, například pokud je zadán jiný explicitní typ, nebo pokud jiný atribut type je implicitně nastavit pomocí inicializátoru to může způsobit problémy. Můžete mít problémy s přenositelností; Další kompilátory Nepředpokládejte `int` je základní typ výčtu.  
-  
-Toto upozornění je vypnuto ve výchozím nastavení; můžete použít /Wall nebo /w*N*4471 ji povolit na příkazovém řádku nebo použijte #pragma [upozornění](../../preprocessor/warning.md) ve zdrojovém souboru.  
-  
-V některých případech toto upozornění je nesprávné. Pokud se po definice se objeví dopředného deklarace pro výčet, může aktivovat toto upozornění. Například tento kód je platný, i když může to způsobit C4471:  
-  
-```cpp  
+# <a name="compiler-warning-level-4-c4471"></a>Kompilátor upozornění (úroveň 4) C4471
+
+"*výčet*': Dopředná deklarace výčtu bez oboru musí mít základní typ (předpokládá se int)
+
+Dopředná deklarace výčtu bez oboru bylo nalezeno bez specifikátoru základního typu. Ve výchozím nastavení, předpokládá Visual C++ `int` je základní typ pro výčet. Pokud jiný typ použít v definici výčtu, například případného různých explicitního typu nebo jiný typ je implicitně nastaven pomocí inicializátoru, může to způsobovat problémy. Také můžete mít problémy s přenositelností; jiné kompilátory Nepředpokládejte `int` je základní typ výčtu.
+
+Toto upozornění je vypnuto ve výchozím nastavení; můžete použít Wall nebo /w*N*4471 ji povolit na příkazovém řádku nebo použijte #pragma [upozornění](../../preprocessor/warning.md) ve zdrojovém souboru.
+
+V některých případech se toto upozornění je nesprávné. Pokud Dopředná deklarace výčtu se zobrazí za definice, toto upozornění může aktivovat. Například tento kód je platný, i když to může způsobit C4471:
+
+```cpp
 // C4471a.cpp
 // Compile with: cl /c /w14471 C4471a.cpp
 enum Example { item = 0x80000000UL };
 enum Example;    // Spurious C4471
 // ...
-```  
-  
-## <a name="example"></a>Příklad  
-Obecně je bezpečné použít úplnou definici pro bez ohledu na obor výčet místo deklaraci předat dál. Můžete uvést definici v záhlaví souboru a její zahrnutí do zdrojových souborů, které na ni odkazuje. Toto funguje ve kódu napsaného pro C ++ 98 a novější. Doporučujeme, abyste toto řešení pro přenositelnost a snadné údržby.  
-  
-```cpp  
+```
+
+## <a name="example"></a>Příklad
+
+Obecně je bezpečné používat úplné definici pro místo Dopředná deklarace výčtu bez oboru. Můžete umístit definici v hlavičkovém souboru a zahrnout do zdrojových souborů, které na ni odkazují. Tento postup funguje v kódu napsaného pro C ++ 98 a novější. Doporučujeme, abyste toto řešení pro přenositelnost a snadnost údržby.
+
+```cpp
 // C4471b.cpp
 // Compile with: cl /c /w14471 C4471b.cpp
 enum Example;    // C4471
 // To fix, replace the line above with the enumeration definition:
 // enum Example { item = 0x80000000UL };
 // ...
-```  
-  
-## <a name="example"></a>Příklad  
-Ve C ++ 11 můžete přidat explicitní typ výčtu bez ohledu na obor a jeho dopředného deklaraci. Doporučujeme, abyste toto řešení pouze v případě, že complex – hlavička zahrnutí logiku brání použití definici místo deklaraci předat dál. Toto řešení může vést k problém údržby: Pokud změníte základní typ použitý pro definice výčtu, musíte změnit taky všechny dopředného deklarací tak, aby odpovídaly nebo tichou chyby může mít v kódu. Předat dál deklaraci můžete umístit do souboru záhlaví pro tento problém minimalizoval.  
-  
-```cpp  
+```
+
+## <a name="example"></a>Příklad
+
+V C ++ 11 můžete přidat explicitního typu, typu nevymezeného výčtu a k jeho Dopředná deklarace. Toto řešení doporučujeme jenom v případě, že začlenění logiky complex – hlavička brání použití definice místo Dopředná deklarace. Toto řešení může vést k problém s údržbou: změňte základní typ použitý pro definice výčtu, musíte změnit taky všechny deklarace dopředu tak, aby odpovídaly, nebo nemáte tiché chyby v kódu. Dopředná deklarace můžete umístit do souboru hlaviček, chcete-li minimalizovat potíže.
+
+```cpp
 // C4471c.cpp
 // Client code for enumeration defined in C4471d.cpp
 // Compile with: cl /c /w14471 C4471c.cpp C4471d.cpp
@@ -63,22 +66,23 @@ enum Example;    // C4471, int assumed
 // To fix, replace the lines above with the forward declarations:
 // enum Example : unsigned;
 // ...
-```  
-  
-```cpp  
+```
+
+```cpp
 // C4471d.cpp
 // Definition for enumeration used in C4471c.cpp
 // Compile with: cl /c /w14471 C4471c.cpp C4471d.cpp
 enum Example : unsigned { item = 0x80000000 }; // explicit type
 // ...
-```  
-  
-Pokud zadáte explicitního typu pro výčet, doporučujeme také povolit upozornění [C4369](compiler-warning-level-1-C4369.md), který se ve výchozím nastavení zapnutý. Ten identifikuje případech, kde položka výčtu vyžaduje jiného typu než explicitně zadaného typu.
-  
-## <a name="example"></a>Příklad  
-Můžete změnit svůj kód použít vymezenou výčtu, funkce, která je nové v C ++ 11. Definice a kód klienta, který používá typ výčtu musí být změněn na použít vymezenou výčtu. Doporučujeme že používat vymezenou výčtu Pokud máte problémy s znečištění oboru názvů, protože názvy definované výčtu položky jsou omezeny na rozsahu výčtového typu. Jiné funkce vymezená výčtu je, že její členy nelze implicitně převést na jiný typ celočíselný nebo výčet, který může být zdrojem jemně chyby.
+```
 
-```cpp  
+Pokud chcete zadat explicitní typ pro výčet, doporučujeme také povolit upozornění [C4369](compiler-warning-level-1-C4369.md), na které je ve výchozím nastavení. Určuje, případy, kde položka výčtu vyžaduje jiný typ než explicitně zadaného typu.
+
+## <a name="example"></a>Příklad
+
+Můžete změnit kód Refaktorovat pro použití rozsahu výčtového typu, funkce, která je nového v C ++ 11. Určený rozsah výčtu musíte změnit definici a klientský kód, který používá typ výčtu. Doporučujeme že používat výčtovém Pokud máte problémy s znečištění oboru názvů, protože názvy definované výčet položek jsou omezené na rozsah výčtu. Další funkcí výčtovém je, že její členy nejde implicitně převést na jiný celočíselný nebo Výčtový typ, který může být zdrojem drobné chyby.
+
+```cpp
 // C4471e.cpp
 // Client code for scoped enumeration defined in C4471f.cpp
 // Compile with: cl /c /w14471 C4471e.cpp C4471f.cpp
@@ -86,13 +90,13 @@ enum Example;    // C4471
 // To fix, replace the line above with the forward declaration:
 // enum class Example;
 // ...
-```  
-  
-```cpp  
+```
+
+```cpp
 // C4471f.cpp
 // Definition for scoped enumeration used in C4471e.cpp
 // Compile with: cl /c /w14471 C4471e.cpp C4471f.cpp
 enum class Example { item = 0 };
 // ...
-```  
-  
+```
+

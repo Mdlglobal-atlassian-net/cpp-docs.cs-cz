@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025877"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Kompilátor C4840 upozornění (úroveň 4)
 
 > nepřenositelné použití třídy*typ*"jako argumentu variadické funkce
-  
+
 ## <a name="remarks"></a>Poznámky
 
 Třídy nebo struktury, které jsou předány variadické funkce musí být snadno kopírovatelná. Při předávání těchto objektů, kompilátor jednoduše vytvoří bitové kopie a nevolá konstruktor nebo destruktor.

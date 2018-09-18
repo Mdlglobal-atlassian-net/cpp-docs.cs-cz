@@ -1,5 +1,5 @@
 ---
-title: C2133 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2133 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878f6fa4a36e7de28bfc084f7f716d50b52c363a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 169b24787f1b180c7ba70c5d779e341e60ea2150
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025188"
 ---
-# <a name="compiler-error-c2133"></a>C2133 chyby kompilátoru
-"identifikátor": Neznámý velikost  
-  
- Nenastavenou velikostí pole je deklarován jako člena třídy, struktury, sjednocení nebo – výčet. Možnosti /Za (ANSI C) neumožňuje pole nenastavenou velikostí členů.  
-  
- Následující ukázka generuje C2133:  
-  
-```  
-// C2133.cpp  
-// compile with: /Za  
-struct X {  
-   int a[0];   // C2133 unsized array  
-};  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2133b.cpp  
-// compile with: /c  
-struct X {  
-   int a[0];   // no /Za  
-};  
+# <a name="compiler-error-c2133"></a>Chyba kompilátoru C2133
+
+'identifier': Neznámá velikost
+
+Pole bez velikosti je deklarován jako člen třídy, struktury, unie nebo výčtu. Možnosti kompilátoru /Za (ANSI C) neumožňuje pole nesetříděné podle velikosti členů.
+
+Následující ukázka generuje C2133:
+
+```
+// C2133.cpp
+// compile with: /Za
+struct X {
+   int a[0];   // C2133 unsized array
+};
+```
+
+Možná řešení:
+
+```
+// C2133b.cpp
+// compile with: /c
+struct X {
+   int a[0];   // no /Za
+};
 ```

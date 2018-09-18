@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1065 | Microsoft Docs
+title: Závažná chyba C1065 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e211af9390f9102fcd7b2514aed900140cd531e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865e353af85b392c1da696166f77a1e28acd8475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022952"
 ---
 # <a name="fatal-error-c1065"></a>Závažná chyba C1065
-omezení kompilátoru: mimo značky  
-  
- Zdrojový soubor obsahuje více než 65,523 třídy, struktury, sjednocení, obory názvů nebo výčty.  
-  
- Rozdělte do menších souborů.
+
+limit kompilátoru: došly značky
+
+Zdrojový soubor obsahuje více než 65,523 třídy, struktury, sjednocení, obory názvů nebo výčty.
+
+Soubor rozdělte na menší soubory.

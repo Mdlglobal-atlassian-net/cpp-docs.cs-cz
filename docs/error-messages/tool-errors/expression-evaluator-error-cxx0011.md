@@ -1,5 +1,5 @@
 ---
-title: CXX0011 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0011 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9840b805960f3ebb571dd9cb6a35895364099d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a9409728f5dbcbb003ecb8d2d9e4f98bc57ede
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026839"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Chyba při vyhodnocování výrazu CXX0011
-Chybí pravé závorky  
-  
- Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz s vyrovnáváním hranaté závorky.  
-  
- Tato chyba je stejný jako CAN0011.
+
+chybí pravá hranatá závorka
+
+Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz do vyváženého složených závorek.
+
+Tato chyba se shoduje s CAN0011.

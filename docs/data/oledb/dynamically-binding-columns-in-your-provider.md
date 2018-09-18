@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028542"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamické vazby sloupců ve zprostředkovateli
+
 Ujistěte se, že si opravdu potřebujete dynamická vazba sloupců. To může být nutné, protože:  
   
--   Sady řádků sloupců nejsou definovány v době kompilace.  
+- Sady řádků sloupců nejsou definovány v době kompilace.  
   
--   Podporujete element jako je například záložky, který přidá sloupce.  
+- Podporujete element jako je například záložky, který přidá sloupce.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>K implementaci dynamická vazba sloupců  
   
-1.  Odeberte parametr `PROVIDER_COLUMN_MAP`s z vašeho kódu.  
+1. Odeberte parametr `PROVIDER_COLUMN_MAP`s z vašeho kódu.  
   
-2.  V záznamu uživatele (struktury) přidejte následující deklarace:  
+1. V záznamu uživatele (struktury) přidejte následující deklarace:  
   
     ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementace `GetColumnInfo` funkce. Tato funkce se stanoví jak osobní údaje uloženy. Můžete potřebovat k získání vlastností nebo jiné informace pro tuto funkci. Můžete chtít vytvořit makro, podobně jako [COLUMN_ENTRY](../../data/oledb/column-entry.md) – makro, chcete-li přidat vlastní údaje.  
+1. Implementace `GetColumnInfo` funkce. Tato funkce se stanoví jak osobní údaje uloženy. Můžete potřebovat k získání vlastností nebo jiné informace pro tuto funkci. Můžete chtít vytvořit makro, podobně jako [COLUMN_ENTRY](../../data/oledb/column-entry.md) – makro, chcete-li přidat vlastní údaje.  
   
      Následující příklad ukazuje `GetColumnInfo` funkce.  
   
@@ -97,4 +98,5 @@ Ujistěte se, že si opravdu potřebujete dynamická vazba sloupců. To může b
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d83f98de4f1d07fbebdd07186729453d2ef1d3b2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 23cc8e519fc47173efe413cc687ef48c0dc39945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025162"
 ---
 # <a name="cautoptrarray-class"></a>Cautoptrarray – třída
 
@@ -84,7 +84,7 @@ Inicializuje pole inteligentního ukazatele.
 
 ## <a name="see-also"></a>Viz také
 
-[Catlarray – třída](../../atl/reference/catlarray-class.md)   
-[Cautoptrelementtraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
-[Cautoptrlist – třída](../../atl/reference/cautoptrlist-class.md)   
+[CAtlArray – třída](../../atl/reference/catlarray-class.md)<br/>
+[CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[CAutoPtrList – třída](../../atl/reference/cautoptrlist-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

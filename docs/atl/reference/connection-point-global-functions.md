@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025539"
 ---
 # <a name="connection-point-global-functions"></a>Globální funkce bodů připojení
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Ukazatel `IUnknown` objektu chce připojit pomocí klienta.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel na straně klienta `IUnknown`.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
 
-*pdw*  
+*pdw*<br/>
 [out] Ukazatel na soubor cookie, který jednoznačně identifikuje připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Ukazatel `IUnknown` objektu, který je klient připojen s.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
 
-*datový sklad*  
+*datový sklad*<br/>
 [in] Soubor cookie, který jednoznačně identifikuje připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 [in] Ukazatel na objekt obsahující mapování jímky.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] Hodnota TRUE, pokud mají všechny položky jímky doporučujeme; FALSE, pokud mají být unadvised všechny položky jímky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -145,5 +145,5 @@ Standardní hodnoty HRESULT.
 
 ## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)   
+[Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra bodů připojení](../../atl/reference/connection-point-macros.md)

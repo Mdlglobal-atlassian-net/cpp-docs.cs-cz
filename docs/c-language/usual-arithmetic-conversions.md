@@ -1,5 +1,5 @@
 ---
-title: Obvyklé aritmetické převody | Microsoft Docs
+title: Obvyklé aritmetické převody | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,53 +19,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ceaa3e5b50fbc72d14564630399b5e5ba74b49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030418"
 ---
 # <a name="usual-arithmetic-conversions"></a>Obvyklé aritmetické převody
-Většina operátory jazyka C provést převody typů a dovést operandy výrazu do stejného typu nebo rozšířit krátké hodnoty použít v operacích počítač velikosti celé číslo. Převody provádí operátory jazyka C závisí na konkrétní operátor a typ operandu nebo operandy. Řada operátorů se ale provést převody podobně jako u operandů plovoucí a integrální typy. Tyto převody se označují jako "aritmetické převody." Převod hodnoty operand na kompatibilní typ. způsobí, že žádná změna na jeho hodnotu.  
-  
- Aritmetické převody shrnuté níž se nazývají "obvyklé aritmetické převody." Tyto kroky platí pouze pro binární operátory, které očekávají aritmetické typu. Účelem je yield společný typ, který je i typ výsledku. Pokud chcete zjistit, které převody ve skutečnosti provádět, kompilátor platí následující algoritmus pro binárních operací ve výrazu. Následující postup nejsou pořadí priorit.  
-  
-1.  Pokud je buď operand typu `long double`, jiné operand je převést na typ `long double`.  
-  
-2.  Pokud není splněna podmínka výše a je buď operand typu **dvojité**, jiné operand je převést na typ **dvojité**.  
-  
-3.  Pokud nejsou splněny výše uvedené dvě podmínky a je buď operand typu **float**, jiné operand je převést na typ **float**.  
-  
-4.  Pokud nejsou splněné výše uvedených tří podmínek (žádná z operandy jsou typy s plovoucí čárkou), pak integrální převody jsou prováděny v operandy následovně:  
-  
-    -   Pokud je buď operand typu `unsigned long`, jiné operand je převést na typ `unsigned long`.  
-  
-    -   Pokud není splněna podmínka výše a je buď operand typu **dlouho** a dalších typu `unsigned int`, oba operandy se převedou na typ `unsigned long`.  
-  
-    -   Pokud výše uvedené dvě podmínky nejsou splněné, a je buď operand typu **dlouho**, jiné operand je převést na typ **dlouho**.  
-  
-    -   Pokud nejsou splněné výše uvedených tří podmínek, a je buď operand typu `unsigned int`, jiné operand je převést na typ `unsigned int`.  
-  
-    -   Pokud žádná z výše uvedených podmínek jsou splněny, jsou oba operandy převést na typ `int`.  
-  
- Následující kód ukazuje tato pravidla převodu:  
-  
-```  
-float   fVal;  
-double  dVal;  
-int   iVal;  
-unsigned long ulVal;  
-  
-dVal = iVal * ulVal; /* iVal converted to unsigned long  
-                      * Uses step 4.  
-                      * Result of multiplication converted to double   
-                      */  
-dVal = ulVal + fVal; /* ulVal converted to float  
-                      * Uses step 3.  
-                      * Result of addition converted to double   
-                      */   
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Operátory jazyka C](../c-language/c-operators.md)
+
+Většina operátory jazyka C provádět převody typů převést na společný typ. operandy výrazu nebo rozšiřovat krátký hodnot použitých v operacích počítač velikosti celého čísla. Převody prováděné operátory jazyka C jsou závislé na konkrétní operátor a typu operandu či operandů. Ale mnoho operátorů převodů podobně jako u operandů typu s plovoucí desetinnou čárkou a celočíselné typy. Tyto převody jsou označovány jako "aritmetické převody". Převod hodnoty operandu kompatibilní typ způsobí ignorování jakýchkoli změn na jeho hodnotu.
+
+Aritmetické převody shrnuté níž jsou označovány jako "obvyklé aritmetické převody." Tyto kroky se použijí pouze pro binární operátory, které očekávají aritmetického typu. Účelem je poskytovat společný typ, který je také typ výsledku. Pokud chcete zjistit, které převody skutečně proběhnout, kompilátor platí následující požadovaný algoritmus pro binární operace ve výrazu. Následující postup nejsou pořadí priority.
+
+1. Pokud některý operand je typu `long double`, je druhý operand je převeden na typ `long double`.
+
+1. Pokud výše uvedené podmínka není splněna a některý operand je typu **double**, je druhý operand je převeden na typ **double**.
+
+1. Pokud nejsou splněny obě uvedené podmínky a některý operand je typu **float**, je druhý operand je převeden na typ **float**.
+
+1. Nejsou-li výše uvedené tři podmínky splněny (žádný z operandů jsou typy s plovoucí desetinnou čárkou), pak jsou prováděny celočíselné převody na operandy následujícím způsobem:
+
+   - Pokud některý operand je typu `unsigned long`, je druhý operand je převeden na typ `unsigned long`.
+
+   - Pokud výše uvedené podmínka není splněna a některý operand je typu **dlouhé** a druhý operand typu `unsigned int`, jsou oba operandy převedeny na typ `unsigned long`.
+
+   - Pokud nejsou splněny obě uvedené podmínky a některý operand je typu **dlouhé**, je druhý operand je převeden na typ **dlouhé**.
+
+   - Pokud nejsou splněny výše uvedených tří podmínek a některý operand je typu `unsigned int`, je druhý operand je převeden na typ `unsigned int`.
+
+   - Pokud jsou splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ `int`.
+
+Následující kód znázorňuje tato pravidla převodu:
+
+```
+float   fVal;
+double  dVal;
+int   iVal;
+unsigned long ulVal;
+
+dVal = iVal * ulVal; /* iVal converted to unsigned long
+                      * Uses step 4.
+                      * Result of multiplication converted to double
+                      */
+dVal = ulVal + fVal; /* ulVal converted to float
+                      * Uses step 3.
+                      * Result of addition converted to double
+                      */
+```
+
+## <a name="see-also"></a>Viz také
+
+[Operátory jazyka C](../c-language/c-operators.md)

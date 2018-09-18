@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021561"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl – třída
+
 Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Relace objekt odvozený od `IDBCreateCommandImpl`.  
+
+*T*<br/>
+Relace objekt odvozený od `IDBCreateCommandImpl`.  
   
- *CommandClass*  
- Vaší třídy příkazu.  
+*CommandClass*<br/>
+Vaší třídy příkazu.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|Vytvoří nový příkaz.|  
   
 ## <a name="remarks"></a>Poznámky  
- Volitelné rozhraní objektu relace získat nový příkaz.  
+
+Volitelné rozhraní objektu relace získat nový příkaz.  
 
 ## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+
 Vytvoří nový příkaz a vrátí požadované rozhraní.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
- Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:  
+Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:  
   
 |Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

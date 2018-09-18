@@ -1,5 +1,5 @@
 ---
-title: CXX0052 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0052 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f4b6fb0db87a77f433775fedea9880f3f24bd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ba8fb898930ef830857773a89cd80e4c43c59c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028152"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Chyba při vyhodnocování výrazu CXX0052
-nejsou k dispozici – členská funkce  
-  
- Členské funkce byl zadán jako zarážku však nebyl nalezen. Nastavení boru přerušení na funkci, která byla vložená může způsobit, že k této chybě.  
-  
- Znovu zkompiluje soubor s vložené odpojen (/ Ob0) k nastavení boru přerušení v této funkci.  
-  
- Výraz volá funkci, která nebyla definována.  
-  
- Tato chyba je stejný jako CAN0052.
+
+Členská funkce není k dispozici.
+
+Členská funkce byla zadána hodnota zarážku nebylo však možné najít. Nastavení zarážky na funkci, která byla vložena může způsobit, že k této chybě.
+
+Soubor s vkládání odpojen (/ Ob0) Chcete-li nastavit zarážku v této funkci.
+
+Výraz volá funkci, která nebyla definována.
+
+Tato chyba se shoduje s CAN0052.

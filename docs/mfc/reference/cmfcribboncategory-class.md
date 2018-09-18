@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee097dd95a1a88b8cf2cb3dc48c4406499001443
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 73cf6b78475ca438c39e52263c4e91b10de60f8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020417"
 ---
 # <a name="cmfcribboncategory-class"></a>Cmfcribboncategory – třída
 `CMFCRibbonCategory` Třída implementuje kartu pásu karet, která obsahuje skupinu [panely pásu karet](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -237,23 +237,18 @@ class CMFCRibbonCategory : public CObject
   
  Následující příklad ukazuje, jak vytvořit kategorii pásu karet a přidání panelu do něj.  
   
- `// Create a new ribbon category and get a pointer to it`  
-  
- `CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory`  
-  
- `(_T("&Write"),           // Category name`  
-  
- `IDB_WRITE,              // Category small images (16 x 16)`  
-  
- `IDB_WRITE_LARGE);   // Category large images (32 x 32)`  
-  
- `// Add a panel to the new category`  
-  
- `CMFCRibbonPanel* pPanel = pCategory->AddPanel (`  
-  
- `_T("Clipboard"),                       // Panel name`  
-  
- `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
+```cpp
+// Create a new ribbon category and get a pointer to it`  
+CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory
+    (_T("&Write"),           // Category name
+    IDB_WRITE,               // Category small images (16 x 16)
+    IDB_WRITE_LARGE);        // Category large images (32 x 32)
+
+// Add a panel to the new category
+CMFCRibbonPanel* pPanel = pCategory->AddPanel (
+    _T("Clipboard"),                // Panel name
+    m_PanelIcons.ExtractIcon (0));  // Panel icon
+```
   
  Následující diagram znázorňuje obrázek domovské kategorie z RibbonApp ukázkovou aplikaci.  
   

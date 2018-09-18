@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024642"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
+
 Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jedné třídě.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -60,14 +61,16 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Třídu přistupujícího objektu.  
+
+*TAccessor*<br/>
+Třídu přistupujícího objektu.  
   
- *TRowset*  
- Třídy sady řádků.  
+*TRowset*<br/>
+Třídy sady řádků.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -75,16 +78,18 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Vytvoření vazby](#bind)|Vytvoří vazbu (nepoužívá, pokud `bBind` je zadán jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
+|[Bind](#bind)|Vytvoří vazbu (nepoužívá, pokud `bBind` je zadán jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](#caccessorrowset)|Konstruktor|  
 |[Zavřít](#close)|Zavře sadu řádků a všechny přistupující objekty.|  
 |[Freerecordmemory –](#freerecordmemory)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.|  
 |[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.  
+
+Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.  
 
 ## <a name="bind"></a> CAccessorRowset::Bind
+
 Vytvoří vazbu, pokud jste zadali `bBind` jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md).  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -94,9 +99,11 @@ HRESULT Bind();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+
 Inicializuje `CAccessorRowset` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,6 +113,7 @@ CAccessorRowset();
 ```  
 
 ## <a name="close"></a> CAccessorRowset::Close
+
 Uvolní všechny aktivní přístupové objekty a sady řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -115,9 +123,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní všechny přidružené paměti.  
+
+Uvolní všechny přidružené paměti.  
 
 ## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+
 Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -127,6 +137,7 @@ void FreeRecordMemory();
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+
 Získá informace o sloupci z otevřené sady řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -141,16 +152,20 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.  
+
+Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.  
   
- Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: C3075 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3075 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c582c9907987fe9f015f3e639e2f3f2e362e0c82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb2cbcb8908803cef2347fe5eb60342647094f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023329"
 ---
-# <a name="compiler-error-c3075"></a>C3075 chyby kompilátoru
-'instance': instance typu odkaz, "typ", nelze vložit do typu hodnoty  
-  
- Typ hodnoty nemůže obsahovat instance typu odkaz.  
-  
- Další informace najdete v tématu [C++ – sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3075.  
-  
-```  
-// C3075.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-value struct X {  
-   U y;   // C3075  
-};  
-  
-ref struct Y {  
-   U y;   // OK  
-};  
+# <a name="compiler-error-c3075"></a>Chyba kompilátoru C3075
+
+'instance': nemůžete vložit instanci typu odkazu, 'type' v typu hodnoty
+
+Hodnotový typ nemůže obsahovat instanci typu odkazu.
+
+Další informace najdete v tématu [C++ – sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3075.
+
+```
+// C3075.cpp
+// compile with: /clr /c
+ref struct U {};
+value struct X {
+   U y;   // C3075
+};
+
+ref struct Y {
+   U y;   // OK
+};
 ```

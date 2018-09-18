@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028633"
 ---
 # <a name="traversing-a-simple-rowset"></a>Procházení jednoduché sady řádků
+
 Následující příklad ukazuje databázový rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu ATL, načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access database s využitím zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě záznamů uživatele `CArtists`. Otevře připojení, otevře relaci připojení a otevře se v tabulce v relaci.  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Uživatelský záznam `CArtists`, vypadá přibližně takto:  
+Uživatelský záznam `CArtists`, vypadá přibližně takto:  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 848f940c9aa974c838a4600235ab97d099bcbd06
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d7add0ccd001579c15a3621afc87354a0626c454
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024512"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+
 Třídy zprostředkovatele použití vícenásobné dědičnosti. Následující kód ukazuje řetězec dědičnosti pro objekt zdroje dat:  
   
 ```cpp
@@ -42,12 +43,13 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Všechny komponenty modelu COM jsou odvozeny z `CComObjectRootEx` a `CComCoClass`. `CComObjectRootEx` poskytuje implementaci pro `IUnknown` rozhraní. Dokáže zpracovat všechny modelu vláken. `CComCoClass` je vyžadována podpora všechny chyby zpracovává. Pokud chcete odeslat klientovi bohatší informace o chybě, můžete použít některé chyby rozhraní API v `CComCoClass`.  
+Všechny komponenty modelu COM jsou odvozeny z `CComObjectRootEx` a `CComCoClass`. `CComObjectRootEx` poskytuje implementaci pro `IUnknown` rozhraní. Dokáže zpracovat všechny modelu vláken. `CComCoClass` je vyžadována podpora všechny chyby zpracovává. Pokud chcete odeslat klientovi bohatší informace o chybě, můžete použít některé chyby rozhraní API v `CComCoClass`.  
   
- Objekt zdroje dat také dědí z třídy několik 'Impl'. Každá třída poskytuje implementaci pro rozhraní. Zdroje dat objektu implementuje `IPersist`, `IDBProperties`, `IDBInitialize`, a `IDBCreateSession` rozhraní. Implementace objektu zdroje dat OLE DB každé rozhraní vyžaduje. Můžete se na podporu nebo děděním nebo není dědění z jedné z těchto tříd 'Impl' nepodporuje konkrétní funkce. Pokud chcete zajistit podporu `IDBDataSourceAdmin` rozhraní, abyste dědili z `IDBDataSourceAdminImpl` třídy pro získání funkce vyžaduje.  
+Objekt zdroje dat také dědí z třídy několik 'Impl'. Každá třída poskytuje implementaci pro rozhraní. Zdroje dat objektu implementuje `IPersist`, `IDBProperties`, `IDBInitialize`, a `IDBCreateSession` rozhraní. Implementace objektu zdroje dat OLE DB každé rozhraní vyžaduje. Můžete se na podporu nebo děděním nebo není dědění z jedné z těchto tříd 'Impl' nepodporuje konkrétní funkce. Pokud chcete zajistit podporu `IDBDataSourceAdmin` rozhraní, abyste dědili z `IDBDataSourceAdminImpl` třídy pro získání funkce vyžaduje.  
   
 ## <a name="com-map"></a>Mapy modelu COM.  
- Vždy, když klient volá `QueryInterface` pro rozhraní na zdroj dat, prochází následující mapy modelu COM:  
+
+Vždy, když klient volá `QueryInterface` pro rozhraní na zdroj dat, prochází následující mapy modelu COM:  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,10 +61,11 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- COM_INTERFACE_ENTRY – makra jsou z knihovny ATL a že se provádění `QueryInterface` v `CComObjectRootEx` navrácení odpovídající rozhraní.  
+COM_INTERFACE_ENTRY – makra jsou z knihovny ATL a že se provádění `QueryInterface` v `CComObjectRootEx` navrácení odpovídající rozhraní.  
   
 ## <a name="property-map"></a>Mapy vlastností  
- Mapy vlastností určuje všechny vlastnosti určené zprostředkovatele:  
+
+Mapy vlastností určuje všechny vlastnosti určené zprostředkovatele:  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -132,9 +135,9 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- Vlastnosti v OLE DB jsou seskupeny. Objekt zdroje dat má dvě vlastnosti skupiny: jednu pro DBPROPSET_DATASOURCEINFO nastavit a jeden pro DBPROPSET_DBINIT nastavit. Sada DBPROPSET_DATASOURCEINFO odpovídá vlastnosti o poskytovateli a zdrojem dat. Sada DBPROPSET_DBINIT odpovídá vlastnosti používané při inicializaci. Šablony zprostředkovatele technologie OLE DB zpracování těchto sad s makry PROPERTY_SET. Makra vytvořit blok, který obsahuje pole vlastností. Vždy, když klient volá `IDBProperties` rozhraní, poskytovatel použije mapy vlastností.  
+Vlastnosti v OLE DB jsou seskupeny. Objekt zdroje dat má dvě vlastnosti skupiny: jednu pro DBPROPSET_DATASOURCEINFO nastavit a jeden pro DBPROPSET_DBINIT nastavit. Sada DBPROPSET_DATASOURCEINFO odpovídá vlastnosti o poskytovateli a zdrojem dat. Sada DBPROPSET_DBINIT odpovídá vlastnosti používané při inicializaci. Šablony zprostředkovatele technologie OLE DB zpracování těchto sad s makry PROPERTY_SET. Makra vytvořit blok, který obsahuje pole vlastností. Vždy, když klient volá `IDBProperties` rozhraní, poskytovatel použije mapy vlastností.  
   
- Nemusíte implementovat každé vlastnosti ve specifikaci. Však musí podporovat požadované vlastnosti; v tématu specifikace shody úroveň 0 pro další informace. Pokud nechcete podporu vlastnost, můžete ho odebrat z mapy. Pokud chcete zajistit podporu vlastnost, přidejte ho do objektu map s použitím PROPERTY_INFO_ENTRY – makro. Makro odpovídá `UPROPINFO` struktury, jak je znázorněno v následujícím kódu:  
+Nemusíte implementovat každé vlastnosti ve specifikaci. Však musí podporovat požadované vlastnosti; v tématu specifikace shody úroveň 0 pro další informace. Pokud nechcete podporu vlastnost, můžete ho odebrat z mapy. Pokud chcete zajistit podporu vlastnost, přidejte ho do objektu map s použitím PROPERTY_INFO_ENTRY – makro. Makro odpovídá `UPROPINFO` struktury, jak je znázorněno v následujícím kódu:  
   
 ```cpp  
 struct UPROPINFO  
@@ -152,16 +155,17 @@ struct UPROPINFO
 };  
 ```  
   
- Každý prvek ve struktuře představuje informace, které zpracovávají vlastnost. Obsahuje `DBPROPID` určit identifikátor GUID a ID pro vlastnost. Také obsahuje položky, které určují typ a hodnotu vlastnosti.  
+Každý prvek ve struktuře představuje informace, které zpracovávají vlastnost. Obsahuje `DBPROPID` určit identifikátor GUID a ID pro vlastnost. Také obsahuje položky, které určují typ a hodnotu vlastnosti.  
   
- Pokud chcete změnit výchozí hodnotu vlastnosti (Všimněte si, že příjemce může kdykoli změnit hodnotu zapisovatelnou vlastnost), můžete použít buď PROPERTY_INFO_ENTRY_VALUE nebo PROPERTY_INFO_ENTRY_EX – makro. Tato makra umožňují zadat hodnotu pro odpovídající vlastnost. PROPERTY_INFO_ENTRY_VALUE – makro je zjednodušenou notaci, který vám umožní změnit hodnotu. PROPERTY_INFO_ENTRY_VALUE – makro volá PROPERTY_INFO_ENTRY_EX – makro. Toto makro umožňuje přidat nebo změnit všechny atributy v `UPROPINFO` struktury.  
+Pokud chcete změnit výchozí hodnotu vlastnosti (Všimněte si, že příjemce může kdykoli změnit hodnotu zapisovatelnou vlastnost), můžete použít buď PROPERTY_INFO_ENTRY_VALUE nebo PROPERTY_INFO_ENTRY_EX – makro. Tato makra umožňují zadat hodnotu pro odpovídající vlastnost. PROPERTY_INFO_ENTRY_VALUE – makro je zjednodušenou notaci, který vám umožní změnit hodnotu. PROPERTY_INFO_ENTRY_VALUE – makro volá PROPERTY_INFO_ENTRY_EX – makro. Toto makro umožňuje přidat nebo změnit všechny atributy v `UPROPINFO` struktury.  
   
- Pokud chcete definovat vlastní sadu vlastností, můžete přidat jednu tím, že další kombinace BEGIN_PROPSET_MAP/END_PROPSET_MAP. Budete muset definovat identifikátor GUID pro sadu vlastností a pak definovat vlastní vlastnosti. Pokud máte vlastnosti specifické pro zprostředkovatele, můžete je přidáte do nové místo použití existující sady vlastností. Tím předejdete potížím v novějších verzích technologie OLE DB.  
+Pokud chcete definovat vlastní sadu vlastností, můžete přidat jednu tím, že další kombinace BEGIN_PROPSET_MAP/END_PROPSET_MAP. Budete muset definovat identifikátor GUID pro sadu vlastností a pak definovat vlastní vlastnosti. Pokud máte vlastnosti specifické pro zprostředkovatele, můžete je přidáte do nové místo použití existující sady vlastností. Tím předejdete potížím v novějších verzích technologie OLE DB.  
   
 ## <a name="user-defined-property-sets"></a>Uživatelem definované vlastnosti sady  
- Jazyk Visual C++ podporuje uživatelem definované vlastnosti sady. Není nutné přepsat `GetProperties` nebo `GetPropertyInfo`. Místo toho šablony zjistit žádné uživatelem definované vlastnosti sadu a přidat ho do příslušného objektu.  
+
+Jazyk Visual C++ podporuje uživatelem definované vlastnosti sady. Není nutné přepsat `GetProperties` nebo `GetPropertyInfo`. Místo toho šablony zjistit žádné uživatelem definované vlastnosti sadu a přidat ho do příslušného objektu.  
   
- Pokud budete mít nastavenou vlastnost definovaný uživatelem, který má být k dispozici v době inicializace (to znamená, než příjemce volá `IDBInitialize::Initialize`), můžete toto určíte pomocí příznaku UPROPSET_USERINIT ve spojení s BEGIN_PROPERTY_SET_EX – makro. Sada vlastností musí být v objektu zdroje dat, aby to fungovalo (jak vyžaduje specifikaci OLE DB). Příklad:  
+Pokud budete mít nastavenou vlastnost definovaný uživatelem, který má být k dispozici v době inicializace (to znamená, než příjemce volá `IDBInitialize::Initialize`), můžete toto určíte pomocí příznaku UPROPSET_USERINIT ve spojení s BEGIN_PROPERTY_SET_EX – makro. Sada vlastností musí být v objektu zdroje dat, aby to fungovalo (jak vyžaduje specifikaci OLE DB). Příklad:  
   
 ```cpp  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -170,4 +174,5 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)
+
+[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

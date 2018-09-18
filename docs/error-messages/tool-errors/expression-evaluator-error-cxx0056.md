@@ -1,5 +1,5 @@
 ---
-title: CXX0056 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0056 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da79a78753a9847686eca6952767fdefbe27005a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd3c2401516ee986d283dab62703c3a0dc8df42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019845"
 ---
 # <a name="expression-evaluator-error-cxx0056"></a>Chyba při vyhodnocování výrazu CXX0056
-došlo k chybě v číslo řádku  
-  
- Byl zadán představuje počet neplatný řádek.  
-  
- Tato chyba je stejný jako CAN0056.
+
+Chyba v řádku číslo
+
+Byl zadán číslo řádku je neplatný.
+
+Tato chyba se shoduje s CAN0056.

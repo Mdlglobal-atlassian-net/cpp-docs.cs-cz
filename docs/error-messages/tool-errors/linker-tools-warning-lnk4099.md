@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4099 | Microsoft Docs
+title: Upozornění Linkerů LNK4099 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22764705b35b2e882c5a03e819c9812d084dc118
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50bdceaba2e72312febec4819b96df334b5398c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025998"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Upozornění linkerů LNK4099
-PDB 'název souboru' nebyla nalezena 'objektu/knihovny' nebo 'path'; propojování objektů, jako kdyby žádné informace o ladění  
-  
- Linkeru se nepodařilo najít souboru pdb. Zkopírujte jej do adresáře, který obsahuje `object/library`.  
-  
- K vyhledání názvu souboru PDB přidružené k objektu souboru:  
-  
-1.  Extrahujte soubor objektu z knihovny s [lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**.obj** `xyz` **.lib**.  
-  
-2.  Zkontrolujte cestu k souboru pdb s **dumpbin /section:.debug$ T /rawdata** `objectname` **.obj**.  
-  
- Může také kompilovat s [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), takže pdb nemusí použít nebo odebrat [/DEBUG](../../build/reference/debug-generate-debug-info.md) – možnost linkeru Pokud nemají soubory PDB pro objekty, které se připojujete.
+
+Soubor PDB 'filename' nebyl nalezen 'objektu/knihovny' nebo 'path'; objekt se propojí, jako by nebyly dostupné žádné ladicí informace
+
+Propojovací program nemohl najít soubor .pdb. Zkopírujte do adresáře, který obsahuje `object/library`.
+
+Chcete-li najít název souboru PDB přidružené k souboru objektu:
+
+1. Extrahujte soubor objektu v knihovně s [lib](../../build/reference/lib-reference.md) **/extrahovat:**`objectname`**.obj** `xyz` **lib**.
+
+1. Zkontrolujte cestu k souboru .pdb s **dumpbin /section:.debug$ T /rawdata** `objectname` **.obj**.
+
+Může také kompilovat s [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), takže se soubor pdb není nutné použít nebo odebrat [/DEBUG](../../build/reference/debug-generate-debug-info.md) – možnost linkeru Pokud nemají soubory .pdb pro objekty, které se připojujete.

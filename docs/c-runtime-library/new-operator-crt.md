@@ -1,5 +1,5 @@
 ---
-title: operátor new(CRT) | Microsoft Docs
+title: operátor new(CRT) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd143c97a95ebe5f1e156a469c1536ae762c0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ad3531403542ab0b8a553865f2da1d80dd0cd96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389868"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026566"
 ---
 # <a name="operator-newcrt"></a>new(CRT) – operátor
-Od verze Visual Studio 2013, Universal C Runtime (UCRT) už podporuje nové C++ konkrétní operátor a operátor odstranit funkce. Tyto jsou teď součástí standardní knihovny C++. Další informace najdete v tématu [nové a odstraňte operátory](../cpp/new-and-delete-operators.md) a [operátor new](../cpp/new-operator-cpp.md) v referenční příručka jazyka C++. 
+
+Od v sadě Visual Studio 2013, Universal C Runtime (UCRT) již podporuje C++ specifické operátor new a operátor delete funkce. Ty jsou teď součástí standardní knihovny C++. Další informace najdete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md) a [operátor new](../cpp/new-operator-cpp.md) v referenci jazyka C++.

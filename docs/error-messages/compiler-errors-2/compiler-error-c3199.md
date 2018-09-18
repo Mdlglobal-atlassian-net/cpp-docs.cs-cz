@@ -1,5 +1,5 @@
 ---
-title: C3199 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3199 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddad2218e81603f59cad51e3a684303e144171e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ed917b3711f7f757b0a4ad89f0e6594ea1642a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027271"
 ---
-# <a name="compiler-error-c3199"></a>C3199 chyby kompilátoru
-Neplatné použití s plovoucí desetinnou čárkou direktivy: výjimky nejsou podporované v režimu bez přesné  
-  
- [Float_control –](../../preprocessor/float-control.md) – Direktiva pragma byl použit k určení výjimek plovoucí desetinné čárky modelu v části [/fp](../../build/reference/fp-specify-floating-point-behavior.md) nastavení jiné než **/fp: přesné**.  
-  
- Následující ukázka generuje C3199:  
-  
-```  
-// C3199.cpp  
-// compile with: /fp:fast  
-#pragma float_control(except, on)   // C3199  
+# <a name="compiler-error-c3199"></a>Chyba kompilátoru C3199
+
+Neplatné použití direktiv pragma s plovoucí desetinnou čárkou: výjimky jsou podporované jedině v režimu bez přesné
+
+[Float_control](../../preprocessor/float-control.md) – Direktiva pragma se používá k určení model výjimek s plovoucí desetinnou čárkou v rámci [/FP](../../build/reference/fp-specify-floating-point-behavior.md) nastavení jiné než **/FP: precise**.
+
+Následující ukázka generuje C3199:
+
+```
+// C3199.cpp
+// compile with: /fp:fast
+#pragma float_control(except, on)   // C3199
 ```

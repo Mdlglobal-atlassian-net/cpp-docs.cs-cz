@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023303"
 ---
 # <a name="server-registration-global-functions"></a>Globální funkce serverové registrace
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*pComModule*  
+*pComModule*<br/>
 Ukazatel na modulu COM.
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE, pokud knihovna typů je k registraci.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud má hodnotu NULL, se zaregistruje všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*pComModule*  
+*pComModule*<br/>
 Ukazatel na modulu COM.
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE, pokud knihovna typů je k registraci.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud má hodnotu NULL bude zrušena všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*pComModule*  
+*pComModule*<br/>
 Ukazatel na modulu COM.
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Zobrazit [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) další podrobnosti.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Zobrazit [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) další podrobnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>Parametry
 
-*pComModule*  
+*pComModule*<br/>
 Ukazatel na modulu COM.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*pComModule*  
+*pComModule*<br/>
 Ukazatel na modulu COM.
 
-*rclsid*  
+*rclsid*<br/>
 Identifikátor CLSID objektu, který má být vytvořen.
 
-*riid*  
+*riid*<br/>
 Identifikátor IID požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota

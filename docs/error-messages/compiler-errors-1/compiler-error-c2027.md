@@ -1,5 +1,5 @@
 ---
-title: C2027 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2027 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3c85d2ffbd3fffe4e1e6ce6dafc615f199c00a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69aae289fbab56cd77e544118909b2d7ef72ae0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032039"
 ---
-# <a name="compiler-error-c2027"></a>C2027 chyby kompilátoru
-použití nedefinované typu "typ"  
-  
- Typ nelze použít, dokud nebude definováno. Chcete-li vyřešit chyby, ujistěte se, že typ je plně definována před odkazující na ho.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2027.  
-  
-```  
-// C2027.cpp  
-class C;  
-class D {  
-public:  
-   void func() {  
-   }  
-};  
-  
-int main() {  
-   C *pC;  
-   pC->func();   // C2027  
-  
-   D *pD;  
-   pD->func();  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Je možné deklarovat ukazatel typu deklarovaný ale definován.  Ale Visual C++ nepovoluje odkaz na nedefinovaný typu.  
-  
- Následující ukázka generuje C2027.  
-  
-```  
-// C2027_b.cpp  
-class A;  
-A& CreateA();  
-  
-class B;  
-B* CreateB();  
-  
-int main() {  
-   CreateA();   // C2027  
-   CreateB();   // OK  
-}  
+# <a name="compiler-error-c2027"></a>Chyba kompilátoru C2027
+
+použití nedefinovaného typu 'type'
+
+Typ nelze použít, dokud je definována. Chcete-li vyřešit chybu, ujistěte se, že typ je plně definována před odkazování.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2027.
+
+```
+// C2027.cpp
+class C;
+class D {
+public:
+   void func() {
+   }
+};
+
+int main() {
+   C *pC;
+   pC->func();   // C2027
+
+   D *pD;
+   pD->func();
+}
+```
+
+## <a name="example"></a>Příklad
+
+Je možné deklarovat ukazatel na typ deklarovaný, ale nedefinovaná.  Ale jazyk Visual C++ neumožňuje odkaz na Nedefinovaný typ.
+
+Následující ukázka generuje C2027.
+
+```
+// C2027_b.cpp
+class A;
+A& CreateA();
+
+class B;
+B* CreateB();
+
+int main() {
+   CreateA();   // C2027
+   CreateB();   // OK
+}
 ```

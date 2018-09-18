@@ -1,5 +1,5 @@
 ---
-title: ToLower, _tolower –, towlower –, _tolower_l –, _towlower_l – | Microsoft Docs
+title: ToLower _tolower –, towlower –, _tolower_l –, _towlower_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -53,15 +53,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023663"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
-Převádí znak na malá písmena.
+
+Převede znak na malá písmena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,30 +89,30 @@ int _towlower_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má převést.
+Znak pro převod.
 
 *Národní prostředí*<br/>
-Národní prostředí pro překlad specifická pro národní prostředí.
+Národní prostředí pro překlad specifických pro národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každý z těchto rutin převádí kopii *c* na malá písmena, pokud převod je možné a vrátí výsledek. Je rezervovaný pro označení chybu žádnou návratovou hodnotu.
+Každá z těchto rutin převádí kopii *c* na malá písmena, pokud převod je možné a vrátí výsledek. Vyhrazená k indikaci chyby není žádnou návratovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je to možné a relevantní každý z těchto rutin dané velké písmeno převede na malé písmeno. Case převodu **towlower –** je specifický pro národní prostředí. V případě došlo ke změně pouze znaky, které se týkají aktuální národní prostředí. Funkce bez **_l** používat příponu aktuálně nastavené národní prostředí. Verze tyto funkce, které mají **_l** příponu trvat národní prostředí jako parametr a použijte místo aktuálně nastavené národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Pokud je to možné a relevantní každá z těchto rutin dané velké písmeno převede na malá písmena. Převod velikosti písmen **towlower –** je specifických pro národní prostředí. V případě se změní pouze znaky relevantní pro aktuální národní prostředí. Funkce bez **_l** příponu použít aktuálně nastavené národního prostředí. Verze těchto funkcí, které mají **_l** přípona trvat národního prostředí jako parametr, který budete používat místo aktuálně nastavené národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Aby **_tolower –** umožnit očekávané výsledky, [__isascii –](isascii-isascii-iswascii.md) a [isupper –](isupper-isupper-l-iswupper-iswupper-l.md) musí i vrátit nenulové hodnoty.
+Aby **_tolower –** očekávané výsledky, [__isascii –](isascii-isascii-iswascii.md) a [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musí obě vrací nenulovou hodnotu.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_totlower –**|**ToLower**|**_mbctolower –**|**towlower –**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l –** a **_towlower_l –** mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním **_totlower_l**.
+> **_tolower_l –** a **_towlower_l –** mít žádnou závislost národního prostředí a neměly by být volány přímo. Jsou určeny pro interní použití rozhraním **_totlower_l**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -121,13 +122,13 @@ Aby **_tolower –** umožnit očekávané výsledky, [__isascii –](isascii-is
 |**_tolower –**|\<ctype.h >|
 |**towlower –**|\<ctype.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [na funkce](../../c-runtime-library/to-functions.md).
+Podívejte se na příklad v [funkcí](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)<br/>

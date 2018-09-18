@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019468"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752812"
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Parametry
 
-*funkci wNotifyCode*  
+*funkci wNotifyCode*<br/>
 Kód upozornění.
 
-*wID*  
+*wID*<br/>
 Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Popisovač okna ovládacího prvku.
 
-*bHandled*  
+*bHandled*<br/>
 Mapování sady zpráv *bHandled* na hodnotu TRUE před `CommandHandler` je volána. Pokud `CommandHandler` plně nezpracovává zprávy, měli nastavit *bHandled* na hodnotu FALSE pro označení je zprávu zapotřebí další zpracování.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -61,7 +61,7 @@ Příklad použití této obslužné rutiny zpráv v mapování zprávy, nalezne
 
 ## <a name="see-also"></a>Viz také
 
-[Implementace okna](../atl/implementing-a-window.md)   
-[Mapy zpráv](../atl/message-maps-atl.md)   
+[Implementace okna](../atl/implementing-a-window.md)<br/>
+[Mapy zpráv](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY –](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

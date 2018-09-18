@@ -1,5 +1,5 @@
 ---
-title: C3715 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3715 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9412592ac177fb49f065975db469c9f77b98e8c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63ae3486b4db21a3aa241d5ebdbbfa0cdc6806f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026553"
 ---
-# <a name="compiler-error-c3715"></a>C3715 chyby kompilátoru
-'ukazatel': musí být ukazatel na 'class'.  
-  
- Zadaný ukazatel v [__hook](../../cpp/hook.md) nebo [__unhook](../../cpp/unhook.md) , nesouvisí s platnou třídu. Chcete-li tuto chybu vyřešit, ověřte, zda vaše `__hook` a `__unhook` volání určovala ukazatelé na třídy platný.
+# <a name="compiler-error-c3715"></a>Chyba kompilátoru C3715
+
+"ukazatelů": musí být ukazatel na 'class'
+
+Zadán ukazatel v [__hook](../../cpp/hook.md) nebo [__unhook](../../cpp/unhook.md) , která neukazuje na platnou třídu. Chcete-li tuto chybu opravit, ujistěte se, že vaše `__hook` a `__unhook` volání určují odkazy na platné třídy.

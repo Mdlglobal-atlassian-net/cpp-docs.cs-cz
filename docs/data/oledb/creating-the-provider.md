@@ -1,5 +1,5 @@
 ---
-title: Vytvoření zprostředkovatele | Microsoft Docs
+title: Vytvoření zprostředkovatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032091"
 ---
 # <a name="creating-the-provider"></a>Vytvoření zprostředkovatele
-#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Vytvoření zprostředkovatele OLE DB pomocí Průvodce zprostředkovatele OLE DB knihovny ATL  
+
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Vytvoření zprostředkovatele OLE DB pomocí Průvodce zprostředkovatelem ATL OLE DB  
   
-1.  Klikněte pravým tlačítkem na projekt.  
+1. Klikněte pravým tlačítkem na projekt.  
   
-2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na **přidat třídu**.  
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
   
-3.  V **přidat třídu** dialogové okno, vyberte **ATL zprostředkovatele technologie OLE DB** ikonu a pak klikněte na tlačítko **otevřete**.  
+1. V **přidat třídu** dialogové okno, vyberte **ATL OLE DB Provider** ikonu a pak klikněte na tlačítko **otevřít**.  
   
-4.  V průvodci zprostředkovatele knihovny ATL technologie OLE DB zadejte krátký název svého poskytovatele v **krátký název** pole. V následujících tématech použijte krátký název "MyProvider", ale můžete použít jiný název. Další pole názvů naplnit podle názvu, který zadáte.  
+1. V Průvodci zprostředkovatel knihovny ATL technologie OLE DB zadejte krátký název pro váš poskytovatel v **krátký název** pole. V následujících tématech použijte krátký název "MyProvider", ale můžete použít jiný název. Ostatní naplnit podle názvu, kterou zadáte.  
   
-5.  V případě potřeby upravte další pole názvů. Kromě název objektu a soubor můžete upravit následující:  
+1. V případě potřeby upravte další pole názvů. Kromě názvů objektu a souboru můžete upravit následující:  
   
-    -   **Třída typu coclass**: název, který COM používá k vytvoření zprostředkovatele.  
+    -   **Coclass**: název, který COM používá k vytvoření poskytovatele.  
   
-    -   **ProgID**: programové identifikátor, který je textový řetězec, který lze použít místo identifikátor GUID.  
+    -   **ProgID**: programový identifikátor, který je textový řetězec, který je možné použít místo identifikátoru GUID.  
   
-    -   **Verze**: použity s ProgID a třída typu coclass pro generování ID programový závislý na verzi.  
+    -   **Verze**: sloužícího ke generování programový identifikátor závislé na verzi s identifikátorem ProgID a coclass  
   
-6.  Klikněte na tlačítko **Dokončit**.  
+1. Klikněte na tlačítko **Dokončit**.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

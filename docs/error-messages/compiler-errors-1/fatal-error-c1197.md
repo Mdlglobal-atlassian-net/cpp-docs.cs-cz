@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1197 | Microsoft Docs
+title: Závažná chyba C1197 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dacd459729161cf635287697a4a6d35c15eab3e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58561e7bd906fc750779ef53a4f68ec27088a3b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024759"
 ---
 # <a name="fatal-error-c1197"></a>Závažná chyba C1197
-nemůže odkazovat 'mscorlib.dll_1', jak program již odkázal 'mscorlib.dll_2.  
-  
- Kompilátor odpovídá verzi modulu CLR.  Chcete-li verzi běžné souborů modulu runtime jazyka z předchozí verze byl však proveden pokus o.  
-  
- Pokud chcete tuto chybu vyřešit, odkazovat jenom soubory z verze modul common language runtime, který se dodává s verzí aplikace Visual C++ jsou kompilujete s.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C1197:  
-  
-```  
-// C1197.cpp  
-// compile with: /clr /c  
-// processor: x86  
-#using "C:\Windows\Microsoft.NET\Framework\v1.1.4322\mscorlib.dll"   // C1197  
-// try the following line instead  
-// #using "mscorlib.dll"  
+
+nemůže odkazovat 'mscorlib.dll_1', protože program už odkazuje na "mscorlib.dll_2"
+
+Kompilátor odpovídá verzi modulu common language runtime.  Však byl proveden pokus o tak, aby odkazovaly na verzi common soubor modulu runtime jazyka z předchozí verze.
+
+Chcete-li vyřešit tuto chybu, odkazovat pouze na soubory z verze common language runtime, dodávané s verzí jazyka Visual C++, který je aktuálně kompilován s.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C1197:
+
+```
+// C1197.cpp
+// compile with: /clr /c
+// processor: x86
+#using "C:\Windows\Microsoft.NET\Framework\v1.1.4322\mscorlib.dll"   // C1197
+// try the following line instead
+// #using "mscorlib.dll"
 ```

@@ -1,5 +1,5 @@
 ---
-title: texture_view – třída | Microsoft Docs
+title: texture_view – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027073"
 ---
 # <a name="textureview-class"></a>texture_view – třída
-Poskytuje přístup pro čtení a zápis do texturou. `texture_view` můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  
+Poskytuje přístup pro čtení a zápisu do textury. `texture_view` jde použít jenom ke čtení textur s typem hodnoty `int`, `unsigned int`, nebo `float` , které mají výchozí 32bitovou hodnotu bpse. Chcete-li čtení ostatních formátů textur použijte `texture_view<const value_type, _Rank>`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,47 +50,47 @@ class texture_view<const value_type, _Rank>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `value_type`  
- Typ elementů v texture agregace.  
+*value_type*<br/>
+Typ prvků v agregátu textury.  
   
- `_Rank`  
- Pořadí `texture_view`.  
+*_Rank*<br/>
+Řád objektu `texture_view`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`value_type`|Typ elementů v texture agregace.|  
-|`coordinates_type`|Typ souřadnice slouží k zadání texel v `texture_view`– to znamená, `short_vector` má stejné pořadí jako související texture, který má hodnotu typ `float`.|  
-|`gather_return_type`|Návratový typ použitý pro shromažďování operations – to znamená, pořadí 4 `short_vector` , blokování čtyřmi součástmi homogenního barva shromáždit ze čtyř hodnot texel vzorků.|  
+|`value_type`|Typ prvků v agregátech textury.|  
+|`coordinates_type`|Typ souřadnice použitý k určení texelu v `texture_view`– to znamená, `short_vector` , který se stejným názvem, jako má přidružená textura s typem hodnoty z `float`.|  
+|`gather_return_type`|Návratový typ použitý pro operace shromažďování – tedy pořadí 4 `short_vector` , že obsahuje čtyři homogenní barevné složky komponenty shromážděných z čtyř hodnot texel.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[texture_view – konstruktor](#ctor)|Přetíženo. Vytvoří `texture_view` instance.|  
-|[~texture_view Destructor](#ctor)|Zničí `texture_view` instance.|  
+|[~texture_view Destructor](#ctor)|Odstraní `texture_view` instance.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[gather_alpha](#gather_alpha)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí alpha (w) součástí čtyři jen Vzorkovaná texels.|  
-|[gather_blue](#gather_blue)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí blue (z) součástí čtyři jen Vzorkovaná texels.|  
-|[gather_green](#gather_green)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.|  
-|[gather_red](#gather_red)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).|  
-|[get](#get)|Přetíženo. Získá hodnotu elementu index.|  
-|[Ukázka](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
-|[set](#set)|Nastaví hodnotu elementu index.|  
+|[gather_alpha](#gather_alpha)|Přetíženo. Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty alpha (w) čtyř navzorkovaných texelů.|  
+|[gather_blue](#gather_blue)|Přetíženo. Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty blue (z) čtyř navzorkovaných texelů.|  
+|[gather_green](#gather_green)|Přetíženo. Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty green (y) čtyř navzorkovaných texelů.|  
+|[gather_red](#gather_red)|Přetíženo. Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty red (x) čtyř navzorkovaných texelů.|  
+|[get](#get)|Přetíženo. Získá hodnotu prvku podle indexu.|  
+|[Ukázka](#sample)|Přetíženo. Navzorkuje texturu na zadaných souřadnicích a úrovni podrobností pomocí zadané konfigurace vzorkování.|  
+|[set](#set)|Nastaví hodnotu prvku podle indexu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator() –](#operator_call)|Přetíženo. Získá hodnotu elementu index.|  
-|[[] – operátor](#operator_at)|Přetíženo. Získá hodnotu elementu index.|  
+|[Operator()](#operator_call)|Přetíženo. Získá hodnotu prvku podle indexu.|  
+|[Operator [].](#operator_at)|Přetíženo. Získá hodnotu prvku podle indexu.|  
 |[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
@@ -109,15 +109,15 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** concurrency::graphics  
   
-##  <a name="dtor"></a> ~ texture_view 
+##  <a name="dtor"></a> ~ texture_view – 
 
- Zničí `texture_view` instance.  
+ Odstraní `texture_view` instance.  
   
 ```  
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="ctor"></a> texture_view 
+##  <a name="ctor"></a> texture_view – 
 
  Vytvoří `texture_view` instance.  
   
@@ -156,32 +156,32 @@ texture_view(// [7] copy constructor
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
- [1, 2] Konstruktor  
- `texture` Na kterém zapisovatelné `texture_view` je vytvořena.  
+*_Src*<br/>
+[1, 2] Konstruktor  
+ `texture` Využívající zapisovatelná `texture_view` se vytvoří.  
   
  [3, 4] Konstruktor  
- `texture` Na kterém umožňovat zápis `texture_view` je vytvořena.  
+ `texture` Využívající nezapisovatelná `texture_view` se vytvoří.  
   
- `_Other`  
- [5] kopírovací konstruktor  
- Zdroj zapisovatelné `texture_view`.  
+*Ji_né*<br/>
+[5] Kopírovat konstruktor  
+ Zapisovatelný zdroj `texture_view`.  
   
- [6, 7] Kopírovací konstruktor  
- Zdroj umožňovat zápis `texture_view`.  
+ [6, 7]. Kopírovací konstruktor  
+ Nezapisovatelný zdroj `texture_view`.  
   
- `_Mipmap_level`  
- Úroveň konkrétní mipmap ve zdroji `texture` to tomto zapisovatelné `texture_view` váže k. Výchozí hodnota je 0, která představuje úroveň mip nejvyšší úrovně (nejpodrobnější).  
+*_Mipmap_level*<br/>
+Konkrétní úroveň mipmap ve zdroji `texture` to tomto zapisovatelné `texture_view` vytvoří vazbu. Výchozí hodnota je 0, což představuje úroveň mip (nejpodrobnější) nejvyšší úrovně.  
   
- `_Most_detailed_mip`  
- TOP úroveň mip úroveň (nejpodrobnější) pro zobrazení, relativně k zadané `texture_view` objektu.  
+*_Most_detailed_mip*<br/>
+Nejvyšší úrovně (nejpodrobnější) dovozní ceny pro zobrazení relativní k zadanému `texture_view` objektu.  
   
- `_Mip_levels`  
- Počet úrovní mipmap přístupné prostřednictvím `texture_view`.  
+*_Mip_levels*<br/>
+Počet úrovní mipmapy přístupných prostřednictvím `texture_view`.  
   
 ##  <a name="gather_red"></a> gather_red 
 
- Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).  
+ Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty red (x) čtyř navzorkovaných texelů.  
   
 ```  
 const gather_return_type gather_red(
@@ -197,21 +197,21 @@ const gather_return_type gather_red(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Address_mode`  
- Režim adresu používat ukázce `texture_view`. Adresa režim je stejný pro všechny dimenze.  
+*_Address_mode*<br/>
+Režim adresy, které chcete použít k ukázce `texture_view`. Režim adresy, který je stejný pro všechny dimenze.  
   
- `_Sampler`  
- Konfigurace sampler používat ukázce `texture_view`.  
+*_Sampler*<br/>
+Konfigurace vzorkovníku pro použití k ukázce `texture_view`.  
   
- `_Coord`  
- Souřadnice provést ukázka z. Desetinné číslo souřadnic se používají promítnout mezi texels ukázka.  
+*_Coord*<br/>
+Souřadnice, kde je vzorek odebírán. Desetinné hodnoty souřadnic lze interpolovat mezi vzorovými texely.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pořadí 4 krátké vektor, který obsahuje komponentu červený (x) na 4 vzorkovat texel hodnoty.  
+ Krátký vektor pořadí 4 obsahující červenou (y) součást 4 vzorkovaných hodnot texel.  
   
 ##  <a name="gather_green"></a> gather_green 
 
- Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.  
+ Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty green (y) čtyř navzorkovaných texelů.  
   
 ```  
 const gather_return_type gather_green(
@@ -227,21 +227,21 @@ const gather_return_type gather_green(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Address_mode`  
- Režim adresu používat ukázce `texture_view`. Adresa režim je stejný pro všechny dimenze.  
+*_Address_mode*<br/>
+Režim adresy, které chcete použít k ukázce `texture_view`. Režim adresy, který je stejný pro všechny dimenze.  
   
- `_Sampler`  
- Konfigurace sampler používat ukázce `texture_view`.  
+*_Sampler*<br/>
+Konfigurace vzorkovníku pro použití k ukázce `texture_view`.  
   
- `_Coord`  
- Souřadnice provést ukázka z. Desetinné číslo souřadnic se používají promítnout mezi texels ukázka.  
+*_Coord*<br/>
+Souřadnice, kde je vzorek odebírán. Desetinné hodnoty souřadnic lze interpolovat mezi vzorovými texely.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pořadí 4 krátké vektor, který obsahuje komponentu zelený (y) na 4 vzorkovat texel hodnoty.  
+ Krátký vektor pořadí 4 obsahující zelenou (y) součást 4 vzorkovaných hodnot texel.  
   
 ##  <a name="gather_blue"></a> gather_blue 
 
- Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí blue (z) součástí čtyři jen Vzorkovaná texels.  
+ Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty blue (z) čtyř navzorkovaných texelů.  
   
 ```  
 const gather_return_type gather_blue(
@@ -257,21 +257,21 @@ const gather_return_type gather_blue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Address_mode`  
- Režim adresu používat ukázce `texture_view`. Adresa režim je stejný pro všechny dimenze.  
+*_Address_mode*<br/>
+Režim adresy, které chcete použít k ukázce `texture_view`. Režim adresy, který je stejný pro všechny dimenze.  
   
- `_Sampler`  
- Konfigurace sampler používat ukázce `texture_view`.  
+*_Sampler*<br/>
+Konfigurace vzorkovníku pro použití k ukázce `texture_view`.  
   
- `_Coord`  
- Souřadnice provést ukázka z. Desetinné číslo souřadnic se používají promítnout mezi texels ukázka.  
+*_Coord*<br/>
+Souřadnice, kde je vzorek odebírán. Desetinné hodnoty souřadnic lze interpolovat mezi vzorovými texely.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pořadí 4 krátké vektor, který obsahuje komponentu červený (x) na 4 vzorkovat texel hodnoty.  
+ Krátký vektor pořadí 4 obsahující červenou (y) součást 4 vzorkovaných hodnot texel.  
   
 ##  <a name="gather_alpha"></a> gather_alpha 
 
- Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí alpha (w) součástí čtyři jen Vzorkovaná texels.  
+ Navzorkuje texturu na zadaných souřadnicích pomocí zadané konfigurace vzorkování a vrátí komponenty alpha (w) čtyř navzorkovaných texelů.  
   
 ```  
 const gather_return_type gather_alpha(
@@ -287,21 +287,21 @@ const gather_return_type gather_alpha(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Address_mode`  
- Režim adresu používat ukázce `texture_view`. Adresa režim je stejný pro všechny dimenze.  
+*_Address_mode*<br/>
+Režim adresy, které chcete použít k ukázce `texture_view`. Režim adresy, který je stejný pro všechny dimenze.  
   
- `_Sampler`  
- Konfigurace sampler používat ukázce `texture_view`.  
+*_Sampler*<br/>
+Konfigurace vzorkovníku pro použití k ukázce `texture_view`.  
   
- `_Coord`  
- Souřadnice provést ukázka z. Desetinné číslo souřadnic se používají promítnout mezi texels ukázka.  
+*_Coord*<br/>
+Souřadnice, kde je vzorek odebírán. Desetinné hodnoty souřadnic lze interpolovat mezi vzorovými texely.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pořadí 4 krátké vector obsahující (w) součást na 4 vzorkovat texel hodnoty alfa.  
+ Krátký vektor pořadí 4 obsahující alfa (w) součást 4 vzorkovaných hodnot texel.  
   
-##  <a name="get"></a> GET 
+##  <a name="get"></a> získat 
 
- Získá hodnotu elementu v zadaném indexu.  
+ Získá hodnotu prvku na zadaném indexu.  
   
 ```  
 const value_type get(
@@ -314,18 +314,18 @@ value_type get(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index elementu, který chcete získat, může být více dimenzí.  
+*_Index*<br/>
+Index prvku, který chcete získat, případně může být vícedimenzionální.  
   
- `_Mip_level`  
- Úroveň mipmap, ze kterého jsme měli získat hodnotu. Výchozí hodnota 0 představuje nejpodrobnější mipmap úrovni.  
+*_Mip_level*<br/>
+Úroveň mipmapy, ze které jsme měli získat hodnotu. Výchozí hodnota 0 představuje nejpodrobnější úroveň mipmapy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota elementu.  
   
 ##  <a name="operator_eq"></a> operátor = 
 
- Přiřadí zobrazení stejné struktury jako zadaná `texture_view` k tomuto `texture_view` instance.  
+ Přiřadí zobrazení stejné textury, jak uvádí `texture_view` tomuto `texture_view` instance.  
   
 ```  
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor  
@@ -341,19 +341,19 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- [1, 2] Kopírovací konstruktor  
- Možností zápisu `texture_view` objektu.  
+*Ji_né*<br/>
+[1, 2] Kopírovací konstruktor  
+ Zapisovatelný `texture_view` objektu.  
   
- [3] kopírovací konstruktor  
- Umožňovat zápis `texture_view` objektu.  
+ [3] Kopírovat konstruktor  
+ Nezapisovatelný `texture_view` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `texture_view` instance.  
+ Odkaz na tento `texture_view` instance.  
   
-##  <a name="operator_at"></a> [] – operátor 
+##  <a name="operator_at"></a> Operator []. 
 
- Vrátí hodnotu elementu index.  
+ Vrátí hodnotu prvku podle indexu.  
   
 ```  
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
@@ -369,18 +369,18 @@ value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index může být více dimenzí.  
+*_Index*<br/>
+Index, případně může být vícedimenzionální.  
   
- `_I0`  
- Jednorozměrná index.  
+*_I0*<br/>
+Jednorozměrný index.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota elementu indexovat pomocí `_Index`.  
+ Indexovaná hodnota prvku podle `_Index`.  
   
-##  <a name="operator_call"></a> Operator() – 
+##  <a name="operator_call"></a> Operator() 
 
- Vrátí hodnotu elementu index.  
+ Vrátí hodnotu prvku podle indexu.  
   
 ```  
 const value_type operator() (
@@ -421,24 +421,24 @@ value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index může být více dimenzí.  
+*_Index*<br/>
+Index, případně může být vícedimenzionální.  
   
- `_I0`  
- Většina významné součást index.  
+*_I0*<br/>
+Nejvýznamnější komponenta indexu.  
   
- `_I1`  
- Další na většinu významné součást index.  
+*_I1*<br/>
+Další na nejvýznamnější komponenta indexu.  
   
- `_I2`  
- Nejméně významným součást index.  
+*_I2*<br/>
+Nejméně významná komponenta indexu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota elementu indexovat pomocí `_Index`.  
+ Indexovaná hodnota prvku podle `_Index`.  
   
 ##  <a name="sample"></a> Ukázka 
 
- Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.  
+ Navzorkuje texturu na zadaných souřadnicích a úrovni podrobností pomocí zadané konfigurace vzorkování.  
   
 ```  
 value_type sample(
@@ -457,27 +457,27 @@ value_type sample(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Filter_mode`  
- Režim filtru sloužící k ukázkové texture_view. Režim filtru je stejný pro minimalizaci, maximization a mipmap filtry.  
+*_Filter_mode*<br/>
+Režim filtru, který chcete použít pro vzorkování texture_view. Režim filtru, který je stejný pro minimalizaci, maximalizaci a filtry mipmapy.  
   
- `_Address_mode`  
- Režim adres sloužící k ukázkové texture_view. Adresa režim je stejný pro všechny dimenze.  
+*_Address_mode*<br/>
+Režim adresy, který chcete použít pro vzorkování texture_view. Režim adresy, který je stejný pro všechny dimenze.  
   
- `_Sampler`  
- Sampler konfigurace sloužící k ukázkové texture_view.  
+*_Sampler*<br/>
+Konfigurace vzorkovníku pro použití pro vzorkování texture_view.  
   
- `_Coord`  
- Souřadnice provést ukázka z. Desetinné číslo souřadnic se používají promítnout mezi hodnotami texel.  
+*_Coord*<br/>
+Souřadnice, kde je vzorek odebírán. Desetinné hodnoty souřadnic lze interpolovat mezi hodnotami texel.  
   
- `_Level_of_detail`  
- Hodnota určuje úroveň mipmap zkusit z. Promítnout mezi dvě úrovně mipmap se používají desetinné číslo. Výchozí úroveň podrobností je 0, což představuje nejpodrobnější mip úrovni.  
+*_Level_of_detail*<br/>
+Hodnota určuje úroveň mipmap k ukázkový z. Desetinné hodnoty se používají k lze interpolovat mezi dvěma úrovněmi mipmap. Výchozí úroveň podrobností je 0, což představuje nejpodrobnější úroveň mip.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Interpolované ukázkové hodnoty.  
+ Interpolovaná Ukázková hodnota.  
   
-##  <a name="set"></a> nastavení 
+##  <a name="set"></a> Nastavit 
 
- Nastaví hodnotu elementu v zadaném indexu se zadanou hodnotou.  
+ Nastaví hodnotu prvku na zadaném indexu se zadanou hodnotou.  
   
 ```  
 void set(
@@ -486,11 +486,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index elementu, který chcete nastavit, může být více dimenzí.  
+*_Index*<br/>
+Index prvku, který chcete nastavit, případně může být vícedimenzionální.  
   
- `value`  
- Hodnota k nastavení elementu.  
+*value*<br/>
+Hodnotu nastavit na element.  
   
 ##  <a name="value_type"></a> value_type 
 

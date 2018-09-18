@@ -1,5 +1,5 @@
 ---
-title: C3749 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3749 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78de0c696123375c11e5c11e64223858b57451ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4151d712c12cb34785c3f4ab77c76cdd78d4830
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024083"
 ---
-# <a name="compiler-error-c3749"></a>C3749 chyby kompilátoru
-'atribut': vlastní atribut nesmí být použity uvnitř funkce  
-  
- Vlastní atribut nelze použít uvnitř funkce. Další informace o vlastních atributů, naleznete v tématu [atribut](../../windows/attribute.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3749:  
-  
-```  
-// C3749a.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[AttributeUsage(AttributeTargets::All)]  
-public ref struct ABC : public Attribute {  
-   ABC() {}  
-};  
-  
-void f1() { [ABC]; };  // C3749  
-```  
+# <a name="compiler-error-c3749"></a>Chyba kompilátoru C3749
+
+'attribute': vlastního atributu nelze použít uvnitř funkce.
+
+Vlastní atribut nelze použít uvnitř funkce. Další informace o vlastních atributů, naleznete v tématu [atribut](../../windows/attribute.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3749:
+
+```
+// C3749a.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::All)]
+public ref struct ABC : public Attribute {
+   ABC() {}
+};
+
+void f1() { [ABC]; };  // C3749
+```

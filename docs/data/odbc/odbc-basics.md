@@ -1,5 +1,5 @@
 ---
-title: ODBC – základy | Microsoft Docs
+title: ODBC – základy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,61 +19,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69b3694292171f00e03cdb941def27fd9e8ffc84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ed44350e4ebfd808533859b6256a2eb0b4b6de0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023784"
 ---
 # <a name="odbc-basics"></a>ODBC – základy
+
 Toto téma obsahuje základní informace o připojení ODBC (Open Database):  
   
--   [Způsob práce s třídami databází rozhraní ODBC](../../data/odbc/odbc-and-the-database-classes.md)  
+- [Způsob práce s databázovými třídami rozhraní ODBC](../../data/odbc/odbc-and-the-database-classes.md)  
   
--   [Možnosti ovladače ODBC pro práci s dynamické sady](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
+- [Možnosti ovladače rozhraní ODBC pro práci s dynamické sady](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
   
--   [Jaké součásti ODBC, budete muset znovu distribuovat s vašimi aplikacemi](../../data/odbc/redistributing-odbc-components-to-your-customers.md)  
+- [Jaké součástí rozhraní ODBC budete muset znovu distribuovat s vašimi aplikacemi](../../data/odbc/redistributing-odbc-components-to-your-customers.md)  
   
- Budete také chtít přečíst téma související [ODBC: knihovny kurzorů ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
-  
-> [!NOTE]
->  Zdroje dat ODBC jsou přístupné prostřednictvím třídy knihovny MFC rozhraní ODBC, jak je popsáno v tomto tématu nebo třídy MFC objekt DAO (Data Access).  
+Budete také chtít přečíst související téma [ODBC: Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!NOTE]
->  Třídy MFC rozhraní ODBC podporují kódování Unicode a více vláken. Další informace o podpoře multithreadingu najdete v tématu [ODBC – třídy a vlákna](../../data/odbc/odbc-classes-and-threads.md)  
+>  Zdroje dat rozhraní ODBC jsou přístupné prostřednictvím třídy knihovny MFC rozhraní ODBC, jak je popsáno v tomto tématu, nebo třídy knihovny MFC objekt DAO (Data Access).  
   
- Rozhraní ODBC je rozhraní úrovně volání, které umožňuje aplikacím přístup k datům v všechny databáze, pro kterou je ovladač ODBC. Pomocí rozhraní ODBC, můžete vytvořit databázové aplikace s přístupem k jakékoli databázi, pro které má váš koncový uživatel ovladače ODBC. ODBC poskytuje rozhraní API, která umožňuje aplikacím za nezávislé zdrojového systému správy databáze (databázového systému).  
+> [!NOTE]
+>  Třídy knihovny MFC rozhraní ODBC podporu kódování Unicode a multithreadingu. Další informace o podpoře multithreadingu naleznete v tématu [ODBC – třídy a vlákna](../../data/odbc/odbc-classes-and-threads.md)  
   
- Rozhraní ODBC je část databáze systému Microsoft Windows otevřete služby architektura (WOSA), což je rozhraní, které umožňuje založené na Windows aplikací klasické pracovní plochy pro připojení k několika výpočetních prostředí bez přepsání aplikace pro každou platformu.  
+ODBC je úroveň volání rozhraní, které umožňuje aplikacím přistupovat k datům v jakékoli databázi, pro kterou je ovladač rozhraní ODBC. Pomocí rozhraní ODBC, můžete vytvořit databázových aplikací s přístupem k jakékoli databázi, pro kterou má koncový uživatel ovladač rozhraní ODBC. ODBC poskytuje rozhraní API, která umožňuje vaší aplikaci, která bude nezávisle na zdrojový systém správy databáze (DBMS).  
   
- Tady jsou součástí rozhraní ODBC:  
+ODBC je část databáze systému Microsoft Windows otevřete služby architektury (WOSA), což je rozhraní, které umožňuje založené na Windows desktopových aplikací pro připojení k více výpočetní prostředí bez přepsání aplikace pro každou platformu.  
   
--   ROZHRANÍ API ODBC  
+Tady jsou součástí rozhraní ODBC:  
   
-     Knihovna funkce volá sadu kódy chyb a standard [SQL](../../data/odbc/sql.md) syntaxe pro přístup k datům v systémech DBMS.  
+- ROZHRANÍ API ODBC  
   
--   Správce ovladačů ODBC  
+     Knihovna volání funkcí, sada kódů chyb a standardní [SQL](../../data/odbc/sql.md) syntaxi pro přístup k datům v systémech DBMS.  
   
-     Dynamická knihovna (Odbc32.dll), který načítá ovladače ODBC databáze jménem aplikace. Je transparentní pro vaše aplikace tuto knihovnu DLL.  
+- Správce ovladačů ODBC  
   
--   ODBC – ovladače databáze  
+     Dynamická knihovna (Odbc32.dll), který načte ovladače rozhraní ODBC databáze jménem aplikace. Tato knihovna DLL je transparentní pro vaši aplikaci.  
+  
+- Databáze ovladače rozhraní ODBC  
   
      Jeden nebo více knihovny DLL, které zpracovávají volání funkcí rozhraní ODBC pro konkrétní systémy DBMS. Seznam dodaných ovladačů najdete v tématu [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
   
--   [Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
+- [Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
-     Dynamická knihovna (Odbccr32.dll), který se nachází mezi správce ovladačů ODBC a ovladače a zpracování posouvání data.  
+     Dynamickou knihovnu (Odbccr32.dll), který se nachází mezi správcem ovladačů rozhraní ODBC a ovladači a zpracování dat posouvání.  
   
--   [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)  
+- [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)  
   
-     Nástroj používaný pro konfiguraci databázového systému a zpřístupněte ji jako zdroj dat pro aplikaci.  
+     Nástroj, který se používá ke konfiguraci DBMS, aby byla k dispozici jako zdroj dat pro aplikaci.  
   
- Aplikace dosáhne nezávislost na systémech DBMS pracovní prostřednictvím ovladače ODBC napsané konkrétně pro databázového systému spíše než práce přímo se databázového systému. Ovladač přeloží volání do příkazů, že jeho databázového systému můžete použít ke zjednodušení práce vývojáře a zpřístupnění široké škály datových zdrojů.  
+Aplikace dosáhne nezávislost na systémy DBMS pracovní prostřednictvím ovladače rozhraní ODBC psány konkrétně pro DBMS spíše než práci přímo s DBMS. Ovladač překládá volání na příkazy jeho DBMS můžete zjednodušit práci pro vývojáře a zpřístupnění pro širokou škálu zdrojů dat.  
   
- Databázové třídy podporují libovolný zdroj dat, pro které máte ovladače ODBC. Například to může zahrnovat relační databázi, databázi indexované sekvenční přístup – metoda (ISAM), tabulky aplikace Microsoft Excel nebo textového souboru. Ovladače ODBC spravovat připojení ke zdroji dat a SQL slouží k výběru záznamy z databáze.  
+Databázové třídy podporu libovolný zdroj dat, pro který máte ovladač rozhraní ODBC. Například to může zahrnovat relační databázi, databázi indexované sekvenční přístup – metoda (ISAM), tabulky Microsoft Excel nebo textový soubor. ODBC – ovladače spravovat připojení ke zdroji dat a SQL slouží k výběru záznamů z databáze.  
   
- Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v části [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
+Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v tématu [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

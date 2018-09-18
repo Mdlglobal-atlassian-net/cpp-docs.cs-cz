@@ -1,5 +1,5 @@
 ---
-title: invalid_link_target – třída | Microsoft Docs
+title: invalid_link_target – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021743"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target – třída
-Tato třída popisuje výjimka vyvolaná při `link_target` je volána metoda blok zasílání zpráv a zasílání zpráv blok nejde připojit k cíli. To může být výsledkem vyšší než počet odkazů, které je povoleno zasílání zpráv bloku nebo při pokusu o odkaz na konkrétní cíl dvakrát pro stejný zdroj.  
+Tato třída popisuje výjimku vyvolána, když `link_target` je volána metoda blok zpráv a blok zpráv se nejde připojit k cíli. To může být vyšší než počet odkazů, které je povoleno blok zpráv nebo pokus o odkaz konkrétní cílovou dvakrát ke stejnému zdroji.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class invalid_link_target : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> invalid_link_target 
+##  <a name="ctor"></a> invalid_link_target – 
 
  Vytvoří `invalid_link_target` objektu.  
   
@@ -63,11 +63,11 @@ invalid_link_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)
 
 

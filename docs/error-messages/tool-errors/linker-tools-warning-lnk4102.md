@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4102 | Microsoft Docs
+title: Upozornění Linkerů LNK4102 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d13dcbc6d15efd7cf3a7ea0a310de4ab7b0c93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9daaffc4ddfa9a869c2e60e2c05dc2b7e296d94b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031851"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>Upozornění linkerů LNK4102
-Export odstranění destruktor 'name'; bitová kopie nemusí správně fungovat.  
-  
- Program se pokusil exportovat odstraňování destruktor. Výsledný odstranění může dojít přes hranice knihovny DLL tak, aby tento proces se může uvolnit paměť, která není vlastníkem. Ujistěte se, zda daný symbol není uveden v souboru .def a zda je symbol není uvedena jako argument **nebo IMPORTU** nebo **/EXPORT** možnost v příkazovém řádku linkeru.  
-  
- Pokud se znovu sestavit běhové knihovny jazyka C, můžete tuto zprávu ignorovat.
+
+Export odstraňující destruktor "name"; bitové kopie se možná správně nespustí
+
+Program se pokusil exportovat odstraňování destruktor. Výsledný odstranění může dojít k přes hranice knihovny DLL tak, aby proces může uvolnit paměť, která není vlastníkem. Ujistěte se, že daný symbol není uvedená v souboru .def a že symbol není uvedena jako argument **/IMPORT** nebo **/EXPORT** možnost příkazového řádku linkeru.
+
+Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.

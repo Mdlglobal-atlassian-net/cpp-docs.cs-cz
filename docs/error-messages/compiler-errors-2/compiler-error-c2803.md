@@ -1,5 +1,5 @@
 ---
-title: C2803 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2803 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51cf2a8b38a86fcd97ab693b3853fe25527a0bb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7885735ebad1ff90afaf4ba8eaf6dfca9f3e0ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027034"
 ---
-# <a name="compiler-error-c2803"></a>C2803 chyby kompilátoru
-'operátor operátor' musí mít alespoň jeden formální parametr typu třídy  
-  
- Přetížené operátor chybí parametr typu třídy.  
-  
- Je třeba předat minimálně jeden parametr odkazem (není pomocí ukazatele, ale odkazů) nebo hodnota, která má být schopni zapisovat "< b" (třídy typu A a b).  
-  
- Pokud jsou oba parametry ukazatele bude čistý porovnání ukazatel adresy a nebude používat převod definovaný uživatelem.  
-  
- Následující ukázka generuje C2803:  
-  
-```  
-// C2803.cpp  
-// compile with: /c  
-class A{};  
-bool operator< (const A *left, const A *right);   // C2803  
-// try the following line instead  
-// bool operator< (const A& left, const A& right);  
+# <a name="compiler-error-c2803"></a>Chyba kompilátoru C2803
+
+'operator operátor' musí mít aspoň jeden formální parametr typu třídy.
+
+Přetížený operátor chybí parametr typu třídy.
+
+Je nutné předat nejmíň jeden parametr odkazem (bez použití ukazatele, ale odkazy) nebo hodnota, která má být schopni napsat "< b" (typ třídy A a b).
+
+Pokud jsou oba parametry ukazatele bude čistě porovnání adresách ukazatelů a nebudeme je používat uživatelem definovaný převod.
+
+Následující ukázka generuje C2803:
+
+```
+// C2803.cpp
+// compile with: /c
+class A{};
+bool operator< (const A *left, const A *right);   // C2803
+// try the following line instead
+// bool operator< (const A& left, const A& right);
 ```

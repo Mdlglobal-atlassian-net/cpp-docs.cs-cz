@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9043 | Microsoft Docs
+title: Upozornění příkazového řádku D9043 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65bf672418b49dbf6017374ab7cd18caa61d7403
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29371e147c693b2aa49f8dcf838841af3c75c8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031861"
 ---
 # <a name="command-line-warning-d9043"></a>Upozornění příkazového řádku D9043
-Neplatná hodnota 'warning_level' pro 'compiler_option'; za předpokladu, že 4999; Upozornění analýzy kódu nejsou přidružené úrovně varování  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C9043.  
-  
-```  
-// D9043.cpp  
-// compile with: /analyze /w16001  
-// D9043 warning expected  
-int main() {}  
+
+Neplatná hodnota "warning_level' pro 'compiler_option'; za předpokladu, že 4999; Upozornění analýzy kódu nejsou přidružená k úrovním upozornění
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C9043.
+
+```
+// D9043.cpp
+// compile with: /analyze /w16001
+// D9043 warning expected
+int main() {}
 ```

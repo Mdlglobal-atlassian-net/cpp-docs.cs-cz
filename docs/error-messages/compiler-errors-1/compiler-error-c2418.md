@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2418 | Microsoft Docs
+title: Chyba kompilátoru C2418 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943b939fbc7095f8cbdd058ea10a7dc25f84476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abbc4e0f0cc74ff704f74bef66a913b37cec5f7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024658"
 ---
 # <a name="compiler-error-c2418"></a>Chyba kompilátoru C2418
-nelze odstranit soubor prohlížeče: název souboru  
-  
- Kompilátor nemůže odstranit soubor prohlížeče.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Soubor je jen pro čtení.  
-  
-2.  Soubor je používán jiným procesem.
+
+nejde odstranit soubor prohlížeče: název souboru
+
+Kompilátor nemůže odstranit soubor prohlížeče.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Soubor je jen pro čtení.
+
+1. Soubor je používán jiným procesem.

@@ -1,5 +1,5 @@
 ---
-title: Konstanty oprávnění souboru | Microsoft Docs
+title: Konstanty oprávnění souboru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,44 +22,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c016664bf107b9531553ef372dfc5dc28650ef7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ae2e7d669edda1ab3069cf3cdb30b79482047e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026635"
 ---
 # <a name="file-permission-constants"></a>Konstanty oprávnění souboru
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <sys/stat.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Jeden z těchto konstanty je požadován při `_O_CREAT` (`_open`, `_sopen`) je zadán.  
-  
- `pmode` Argument určuje nastavení oprávnění souboru následujícím způsobem.  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_S_IREAD`|Čtení povolené|  
-|`_S_IWRITE`|Zápis povolen|  
-|`_S_IREAD` &#124; `_S_IWRITE`|Čtení a zápis povolen.|  
-  
- Když se použije jako `pmode` argument pro `_umask`, manifestu konstanta nastaví nastavení oprávnění následujícím způsobem.  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_S_IREAD`|Zápis není povolený (soubor je jen pro čtení)|  
-|`_S_IWRITE`|Čtení není povolené (soubor je jen pro zápis)|  
-|`_S_IREAD` &#124; `_S_IWRITE`|Čtení ani zápis povolen.|  
-  
-## <a name="see-also"></a>Viz také  
- [_Otevřít _wopen –](../c-runtime-library/reference/open-wopen.md)   
- [_sopen –, _wsopen –](../c-runtime-library/reference/sopen-wsopen.md)   
- [_umask –](../c-runtime-library/reference/umask.md)   
- [Standardní typy](../c-runtime-library/standard-types.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <sys/stat.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Jeden z následujících konstant je vyžadován v případě `_O_CREAT` (`_open`, `_sopen`) je zadán.
+
+`pmode` Argument určuje nastavení oprávnění k souboru následujícím způsobem.
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_S_IREAD`|Čtení povolené|
+|`_S_IWRITE`|Zapisování povoleno|
+|`_S_IREAD` &#124; `_S_IWRITE`|Čtení a zápis povolen|
+
+Když se použije jako `pmode` argument pro `_umask`, konstanta manifestu nastaví oprávnění nastavení následujícím způsobem.
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_S_IREAD`|Zápis není povolena (soubor je jen pro čtení)|
+|`_S_IWRITE`|Čtení není povolena (soubor je jen pro zápis)|
+|`_S_IREAD` &#124; `_S_IWRITE`|Čtení ani zápis povolen|
+
+## <a name="see-also"></a>Viz také
+
+[_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_umask](../c-runtime-library/reference/umask.md)<br/>
+[Standardní typy](../c-runtime-library/standard-types.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

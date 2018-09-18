@@ -1,5 +1,5 @@
 ---
-title: C3661 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3661 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f290e5149000aa823da8c1e3ce1fabe533406de1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7c7987e9ca84009cc8705c22a8f2ec7c3c89b00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026634"
 ---
-# <a name="compiler-error-c3661"></a>C3661 chyby kompilátoru
-explicitní přepsání seznamu nenalezla žádné metody k přepsání  
-  
- Explicitní přepsání zadán jeden nebo více názvy typů.  Však se žádná funkce s nezbytné podpis v typu (typů), který odpovídá podpis přepsání funkce.  Pokud se pokusíte přepsat na základě názvu typu, musí být jeden nebo více virtuálních funkcí v zadané typy, které odpovídají podpis přepsání funkce.  
-  
- Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).
+# <a name="compiler-error-c3661"></a>Chyba kompilátoru C3661
+
+v seznamu explicitních přepsání nenalezl žádné metody přepsání
+
+Explicitní přepsání zadat jeden nebo více názvů typů.  Ale nebyla žádná funkce s nezbytné podpis v typu, který odpovídá signatuře přepisující funkce.  Pokud se pokusíte přepsat na základě názvu typu, musí být jeden nebo více virtuálních funkcí v uvedené typy, které odpovídají podpisu přepisující funkce.
+
+Další informace najdete v tématu [explicitní přepsání](../../windows/explicit-overrides-cpp-component-extensions.md).

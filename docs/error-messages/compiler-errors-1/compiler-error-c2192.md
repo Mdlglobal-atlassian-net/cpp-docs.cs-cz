@@ -1,5 +1,5 @@
 ---
-title: C2192 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2192 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97b0885dd626c992ab55703038838aa743e30d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6cea2b4ce805c8f7d966ee9d2b3c27f8a901c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023511"
 ---
-# <a name="compiler-error-c2192"></a>C2192 chyby kompilátoru
-parametr "číslo" deklarace jiný  
-  
- Funkce C byla deklarována znovu s jiným parametrem seznamu. C nepodporuje přetížených funkcí.  
-  
- Následující ukázka generuje C2192:  
-  
-```  
-// C2192.c  
-// compile with: /Za /c  
-void func( float, int );  
-void func( int, float );   // C2192, different parameter list  
-void func2( int, float );   // OK  
+# <a name="compiler-error-c2192"></a>Chyba kompilátoru C2192
+
+Parametr 'number' Deklarace jinou
+
+Funkce jazyka C se deklaroval podruhé s jiným seznamem parametrů. C nepodporuje přetížené funkce.
+
+Následující ukázka generuje C2192:
+
+```
+// C2192.c
+// compile with: /Za /c
+void func( float, int );
+void func( int, float );   // C2192, different parameter list
+void func2( int, float );   // OK
 ```

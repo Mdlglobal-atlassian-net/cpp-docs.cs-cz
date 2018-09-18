@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024499"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl – třída
 
@@ -44,16 +44,16 @@ Tato třída implementuje dialog (modálním nebo nemodálním), který je hosti
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CAxDialogImpl`.
 
-*Tčíslice*  
+*Tčíslice*<br/>
 Okno základní třída pro `CDialogImplBaseT`.
 
 ## <a name="members"></a>Členové
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*bAdvise*  
+*bAdvise*<br/>
 Nastavte na hodnotu true, pokud mají všechny položky jímky doporučujeme; jímka hodnotu false, pokud všechny položky jsou unadvised.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač nadřazenému oknu.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
-*RECT – &AMP;*  
+*RECT – &AMP;*<br/>
 Tento parametr není používán. Tento parametr je předán `CComControl`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -180,16 +180,16 @@ Volejte tuto metodu za účelem vytvoření modálního dialogového okna.
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Parametry
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Hodnota, která má být vrácen [DoModal](#domodal).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Ukazatel [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturu, která obsahuje zprávy, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>Viz také
 
-[CDialogImpl – třída](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl – třída](../../atl/reference/cdialogimpl-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

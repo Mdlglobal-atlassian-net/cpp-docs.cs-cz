@@ -1,5 +1,5 @@
 ---
-title: omp_set_dynamic – | Microsoft Docs
+title: omp_set_dynamic – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18521113125eb49fa413568b6a62472bb50a7924
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c3e8ac574ce304238affbab41acc415e1d8de697
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026904"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-Označuje, že počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.  
+Označuje, že je možné upravit počet vláken v následných paralelní oblasti podle času spuštění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,14 +34,13 @@ void omp_set_dynamic(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `val`  
- Hodnota, která označuje, pokud lze upravit počet vláken, která je k dispozici v dalších paralelní oblasti modulem runtime.  Pokud nenulové, že modul runtime, můžete upravit počet vláken, pokud nula, nebude modul runtime dynamicky upravit počet vláken.  
+*Val*<br/>
+Hodnota označující, pokud je možné upravit počet vláken v následných paralelní oblasti modulem runtime.  Pokud nenulovou hodnotu, že modul runtime můžete upravit počet vláken, pokud je nula, modul runtime nebude dynamicky upravit počet vláken.  
   
 ## <a name="remarks"></a>Poznámky  
- Počet vláken, se nikdy překročit hodnotu, která nastavuje [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
+ Počet vláken se nikdy nepřekročí hodnotu nastavenou [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
  Použití [omp_get_dynamic –](../../../parallel/openmp/reference/omp-get-dynamic.md) zobrazíte aktuální nastavení `omp_set_dynamic`.  
   

@@ -1,5 +1,5 @@
 ---
-title: float_2 – třída | Microsoft Docs
+title: float_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82197c785c8b27e2d4f2607cd677141b219c90ca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019950"
 ---
 # <a name="float2-class"></a>float_2 – třída
-Představuje krátký Vektor dvě obtékaných objektů.  
+Představuje krátký vektor dvou hodnot float.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class float_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class float_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -90,19 +90,19 @@ class float_2;
 |Název|Popis|  
 |----------|-----------------|  
 |float_2::Operator-||  
-|float_2::Operator--||  
+|float_2::Operator-||  
 |float_2::Operator * =||  
-|/ float_2::Operator = – operátor||  
+|float_2::Operator / =||  
 |float_2::Operator ++||  
 |float_2::Operator +=||  
 |float_2::Operator =||  
-|float_2::Operator-=||  
+|operátor float_2::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#float_2__size)||  
+|[velikost – konstanta](#float_2__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -125,9 +125,9 @@ class float_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> float_2 
+##  <a name="ctor"></a> float_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 float_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline float_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="float_2__size"></a> Velikost 
 

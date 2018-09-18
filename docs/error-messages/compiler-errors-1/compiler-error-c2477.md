@@ -1,5 +1,5 @@
 ---
-title: C2477 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2477 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1212a664582f19e91fbf21bde36431ec715946
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a3e8a9f76526ecc170b30436ff395d54f8d5395
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020163"
 ---
-# <a name="compiler-error-c2477"></a>C2477 chyby kompilátoru
-"člen": člen statických dat nelze inicializovat prostřednictvím odvozené třídy  
-  
- Členem třídu šablony statických dat byl nesprávně inicializován. Toto je k narušující změně ve verzích Visual C++ compiler před Visual Studio .NET 2003, aby bylo možné v souladu s ISO C++ standard.  
-  
- Následující ukázka generuje C2477:  
-  
-```  
-// C2477.cpp  
-// compile with: /Za /c  
-template <class T>  
-struct S {  
-   static int n;  
-};  
-  
-struct X {};  
-struct A: S<X> {};  
-  
-int A::n = 0;   // C2477  
-  
-template<>  
-int S<X>::n = 0;  
+# <a name="compiler-error-c2477"></a>Chyba kompilátoru C2477
+
+'member': Statický datový člen nejde inicializovat prostřednictvím odvozené třídy
+
+Statický datový člen třídy šablony byl inicializován nesprávně. Toto je k zásadní změně verze kompilátoru Visual C++ před Visual Studio .NET 2003, aby bylo možné v souladu s ISO C++ standard.
+
+Následující ukázka generuje C2477:
+
+```
+// C2477.cpp
+// compile with: /Za /c
+template <class T>
+struct S {
+   static int n;
+};
+
+struct X {};
+struct A: S<X> {};
+
+int A::n = 0;   // C2477
+
+template<>
+int S<X>::n = 0;
 ```

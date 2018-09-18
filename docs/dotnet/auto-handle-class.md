@@ -1,5 +1,5 @@
 ---
-title: auto_handle – třída | Microsoft Docs
+title: auto_handle – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029712"
 ---
 # <a name="autohandle-class"></a>auto_handle – třída
-Správa automatického prostředků, který můžete použít pro vložení do spravovaného typu virtuální popisovač.  
+Správa automatického prostředků, který slouží k vložení virtuální popisovač do spravovaného typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_element_type`  
- Spravovaný typ, který má být vložen.  
+*_element_type*<br/>
+Spravovaný typ má být vložen.  
   
 ## <a name="requirements"></a>Požadavky  
  **Soubor hlaviček** \<msclr\auto_handle.h >  
@@ -46,5 +46,5 @@ ref class auto_handle;
   
 ## <a name="see-also"></a>Viz také  
  [auto_handle –](../dotnet/auto-handle.md)   
- [auto_handle – členové](../dotnet/auto-handle-members.md)   
+ [auto_handle – členy](../dotnet/auto-handle-members.md)   
  [auto_gcroot Class](../dotnet/auto-gcroot-class.md)

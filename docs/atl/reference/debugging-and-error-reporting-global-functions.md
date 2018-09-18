@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019409"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Ladění a globální funkce hlášení chyb
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parametry
 
-*Chyba*  
+*Chyba*<br/>
 Hodnota chyby pro převod.
 
 ### <a name="remarks"></a>Poznámky
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID objektu oznámena tato chyba.
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in] Řetězec popisující chybu. Verze Unicode určit, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor IID rozhraní definování chyb nebo GUID_NULL Pokud chyba není definován v operačním systému.
 
-*hRes*  
+*hRes*<br/>
 [in] Hodnota HRESULT, který chcete vrátit zpět volajícímu.
 
-*nID*  
+*nID*<br/>
 [in] Identifikátor prostředku řetězce popisu chyby se mají ukládat. Tato hodnota by měla být mezi hodnotu 0x0200 a 0xFFFF (včetně). V sestavení ladění **ASSERT** dojde-li *nID* index není platný řetězec. V sestaveních pro vydání řetězce popisu chyby bude nastavena na "Neznámá chyba".
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Identifikátor kontextu pomoc pro chybu.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Cesta a název souboru nápovědy popisující chybu.
 
-*hInst*  
+*hInst*<br/>
 [in] Popisovač pro prostředek. Ve výchozím nastavení, je tento parametr `__AtlBaseModuleModule::GetResourceInstance`, kde `__AtlBaseModuleModule` je globální instanci [catlbasemodule –](../../atl/reference/catlbasemodule-class.md) nebo z něj odvozenou třídu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Parametry
 
-*hr*  
+*hr*<br/>
 Standardní hodnotu HRESULT.
 
 ### <a name="remarks"></a>Poznámky
@@ -233,6 +233,6 @@ Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního 
 
 ## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)   
+[Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra ladění a hlášení chyb](../../atl/reference/debugging-and-error-reporting-macros.md)
 

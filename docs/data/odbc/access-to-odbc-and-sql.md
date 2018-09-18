@@ -1,5 +1,5 @@
 ---
-title: Přístup k rozhraní ODBC a jazyku SQL | Microsoft Docs
+title: Přístup k rozhraní ODBC a jazyku SQL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fb5daa988614e7e9cb058fce183c6af5b50dd30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40b88cd7db95a05edd6174701c04724a6f245223
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018714"
 ---
 # <a name="access-to-odbc-and-sql"></a>Přístup k rozhraní ODBC a jazyku SQL
-Knihovny Microsoft Foundation Class zapouzdří mnoha volání rozhraní API systému Windows a umožňuje stále přímo volat jakékoli funkce rozhraní API systému Windows. Databázové třídy poskytují flexibilitu stejné s ohledem na rozhraní API ODBC. Když vás od velkou část složitosti ODBC třídy databáze chrání, bude možné volat rozhraní API ODBC funkce přímo z libovolného místa v programu.  
+
+Knihovny Microsoft Foundation Class zapouzdřuje mnoho volání Windows API a stále umožňuje přímo volat jakékoli funkce rozhraní Windows API. Databázové třídy poskytují stejné flexibilitu z hlediska rozhraní API ODBC. Zatímco databázové třídy vás chrání před mnoho složitostí rozhraní ODBC, bude možné volat funkce rozhraní API ODBC přímo z libovolného místa v programu.  
   
- Podobně databázové třídy vás chrání před nutností pracovat příliš s [SQL](../../data/odbc/sql.md), ale pokud chcete, můžete jej přímo používat. Objekty sady záznamů můžete přizpůsobit předáním vlastní příkazu jazyka SQL (nebo nastavíte části výchozího příkazu) při otevření sady záznamů. Můžete také provést volání SQL přímo pomocí [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funkce člena třídy [CDatabase](../../mfc/reference/cdatabase-class.md).  
+Obdobně databázové třídy vás chrání před nutností pracovat s příliš [SQL](../../data/odbc/sql.md), ale pokud chcete, můžete můžete přímo použít. Můžete přizpůsobit objekty sady záznamů předáním vlastní příkaz jazyka SQL (ani jeho části Nastavení výchozího příkazu) při otevření sady záznamů. Můžete provést také přímo pomocí volání SQL [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) členské funkce třídy [CDatabase](../../mfc/reference/cdatabase-class.md).  
   
- Další informace najdete v tématu [ODBC: volání rozhraní ODBC API funkce přímo](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: provedení přímé SQL volání (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
+Další informace najdete v tématu [ODBC: volání rozhraní ODBC API funkce přímo](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: provádění přístupem SQL volání (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)
+
+[Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)
