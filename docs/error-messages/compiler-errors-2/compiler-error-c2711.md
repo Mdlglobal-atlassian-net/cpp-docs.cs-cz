@@ -1,5 +1,5 @@
 ---
-title: C2711 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2711 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2e5c904d7f6d865b94ea4fb4ba65be4c974f8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5a2e757c525d272055077cb95516abf42c06dbc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088433"
 ---
-# <a name="compiler-error-c2711"></a>C2711 chyby kompilátoru
-'function': tuto funkci nelze zkompilovat jako spravovaný, zvažte použití #pragma nespravované  
-  
- Některé pokyny zabrání kompilátor generování MSIL nadřazených funkce.  
-  
- Následující ukázka generuje C2711:  
-  
-```  
-// C2711.cpp  
-// compile with: /clr  
-// processor: x86  
-using namespace System;  
-value struct V {  
-   static const t = 10;  
-};  
-  
-void bar() {  
-   V::t;  
-   __asm int 3   // C2711 inline asm can't be compiled managed  
-}  
+# <a name="compiler-error-c2711"></a>Chyba kompilátoru C2711
+
+'function': tuto funkci nejde zkompilovat jako spravovanou, zvažte použití #pragma unmanaged
+
+Některé pokyny zabrání kompilátor generuje jazyk MSIL pro nadřazené funkce.
+
+Následující ukázka generuje C2711:
+
+```
+// C2711.cpp
+// compile with: /clr
+// processor: x86
+using namespace System;
+value struct V {
+   static const t = 10;
+};
+
+void bar() {
+   V::t;
+   __asm int 3   // C2711 inline asm can't be compiled managed
+}
 ```

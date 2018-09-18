@@ -1,5 +1,5 @@
 ---
-title: '&lt;výjimka&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;výjimka&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 03724e6f1ad0c85ad70e464786a7393b3f2f61e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094985"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;výjimka&gt; (Visual C++)
-\<Výjimka > značka umožňuje určit výjimek, které může být vyvolána. Tato značka se použije k definici metody.  
+\<Výjimky > značky umožňuje určit, jaké výjimky mohou být vyvolány. Tato značka se použije k definici metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ ms.locfileid: "33323937"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `member`  
- Odkaz na výjimku, která je k dispozici z aktuální prostředí kompilace. Pomocí pravidel vyhledávání název kompilátor ověří, že existuje výjimka a překládá `member` na element kanonický název ve výstupu XML.  Kompilátor vydá upozornění, pokud jej nenalezne `member`.  
+*Člen*<br/>
+Odkaz na výjimku, která je k dispozici z prostředí aktuální kompilace. Pomocí pravidel vyhledávání pro název, kompilátor kontroluje, zda existuje výjimka a přeloží `member` k názvu canonical prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.  
   
- Uzavřete název v jednoduchých nebo dvojitých uvozovek.  
+ Název uzavřete do jednoduchých nebo dvojitých uvozovek.  
   
- Informace o tom, jak vytvořit cref odkaz na obecného typu najdete v tématu [ \<najdete v části >](../ide/see-visual-cpp.md).  
+ Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).  
   
- `description`  
- Popis.  
+*Popis*<br/>
+Popis.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   
- Kompilátor Visual C++ se pokusí přeložit cref odkazy v jednom průchodu přes dokumentační komentáře.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz budou označeny jako nevyřešené. V tématu [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.  
+ Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené. Zobrazit [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.  
   
 ## <a name="example"></a>Příklad  
   

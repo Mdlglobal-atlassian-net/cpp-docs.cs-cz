@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097793"
 ---
 # <a name="catlarray-class"></a>Catlarray – třída
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ dat uložených v poli.
 
-*ETraits*  
+*ETraits*<br/>
 Kód použitý má zkopírovat nebo přesunout prvky.
 
 ## <a name="members"></a>Členové
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*  
+*– Element*<br/>
 Elementu, který chcete přidat do pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*aSrc*  
+*aSrc*<br/>
 Pole, které chcete připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*aSrc*  
+*aSrc*<br/>
 Zdroj prvků ke zkopírování do pole.
 
 ### <a name="remarks"></a>Poznámky
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Hodnota indexu elementu pole k vrácení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parametry
 
-*iStart*  
+*iStart*<br/>
 Index, ve kterém má být vložen pole.
 
-*paNew*  
+*paNew*<br/>
 Pole, která se má vložit.
 
 ### <a name="remarks"></a>Poznámky
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Index, kde prvek nebo prvky mají být vloženy.
 
-*– Element*  
+*– Element*<br/>
 Hodnota elementu nebo prvků, které mají být vloženy.
 
-*nCount*  
+*nCount*<br/>
 Počet prvků, které mají přidat.
 
 ### <a name="remarks"></a>Poznámky
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Hodnota indexu elementu pole k vrácení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Index prvního prvku odebrat.
 
-*nCount*  
+*nCount*<br/>
 Počet prvků, které mají odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Index odkazuje na element pole nastavení.
 
-*– Element*  
+*– Element*<br/>
 Nová hodnota zadaného prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parametry
 
-*nNewSize*  
+*nNewSize*<br/>
 Požadovaná velikost pole.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Hodnota umožňuje určit, jak velký, aby vyrovnávací paměti. Hodnota -1 způsobí, že interně vypočtená hodnota má být použit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Index odkazuje na element pole nastavení.
 
-*– Element*  
+*– Element*<br/>
 Nová hodnota zadaného prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -559,9 +559,9 @@ Nahradí hodnota elementu, na které odkazuje index. Pokud *iElement* je větš�
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka MMXSwarm](../../visual-cpp-samples.md)   
-[Příklad DynamicConsumer](../../visual-cpp-samples.md)   
-[Příklad UpdatePV](../../visual-cpp-samples.md)   
-[Výběr ukázky](../../visual-cpp-samples.md)   
-[Carray – třída](../../mfc/reference/carray-class.md)   
+[Ukázka MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Příklad DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Příklad UpdatePV](../../visual-cpp-samples.md)<br/>
+[Výběr ukázky](../../visual-cpp-samples.md)<br/>
+[CArray – třída](../../mfc/reference/carray-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

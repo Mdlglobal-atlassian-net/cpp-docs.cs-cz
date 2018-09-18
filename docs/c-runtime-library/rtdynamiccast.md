@@ -1,5 +1,5 @@
 ---
-title: __RTDynamicCast | Microsoft Docs
+title: __RTDynamicCast | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,55 +27,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092060"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
-Implementace modulu runtime [dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-PVOID __RTDynamicCast (  
-   PVOID inptr,   
-   LONG VfDelta,  
-   PVOID SrcType,  
-   PVOID TargetType,   
-   BOOL isReference  
-   ) throw(...)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `inptr`  
- Ukazatel na polymorfní objekt.  
-  
- `VfDelta`  
- Posun virtuální funkce ukazatele v objektu.  
-  
- `SrcType`  
- Statický typ objektu, na kterou odkazuje `inptr` parametr.  
-  
- `TargetType`  
- Zamýšlený výsledek přetypování.  
-  
- `isReference`  
- `true` Pokud vstup je odkaz; `false` Pokud vstup je ukazatel.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na příslušnou dílčí objekt, v případě úspěšného; v opačném **NULL**.  
-  
-## <a name="exceptions"></a>Výjimky  
- `bad_cast()` Pokud vstup `dynamic_cast<>` je odkaz, přetypování selže.  
-  
-## <a name="remarks"></a>Poznámky  
- Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` ukazatel nebo hodnotu l `TargetType` je odkaz. `TargetType` musí být ukazatel nebo odkaz na typ dříve definované třídy, nebo ukazatel na void.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
+
+Implementace modulu runtime [dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+PVOID __RTDynamicCast (
+   PVOID inptr,
+   LONG VfDelta,
+   PVOID SrcType,
+   PVOID TargetType,
+   BOOL isReference
+   ) throw(...)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*inptr*<br/>
+Ukazatel na objekt polymorfní.
+
+*VfDelta*<br/>
+Posun ukazatele virtuální funkce objektu.
+
+*SrcType*<br/>
+Statický typ objektu, na které odkazují `inptr` parametru.
+
+*TargetType*<br/>
+Požadovaný výsledek přetypování.
+
+*isReference*<br/>
+`true` Pokud vstup je odkaz; `false` při vstupu ukazatele.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na odpovídající dílčí objekt, v případě úspěchu; v opačném případě **NULL**.
+
+## <a name="exceptions"></a>Výjimky
+
+`bad_cast()` Pokud vstup do `dynamic_cast<>` je odkaz a přetypování se nezdaří.
+
+## <a name="remarks"></a>Poznámky
+
+Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` je ukazatel nebo l hodnotou, pokud `TargetType` je odkaz. `TargetType` musí být ukazatel nebo odkaz na typ dříve definicí třídy nebo ukazatel na typ void.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
 |__RTDynamicCast|rtti.h|

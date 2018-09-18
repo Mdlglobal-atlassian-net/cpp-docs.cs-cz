@@ -1,5 +1,5 @@
 ---
-title: C2113 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2113 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad712fa27d6350b672a7bfc1636d0fb3b80b7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94dd75ad7df782a92dfe359ebabf0abe1175ad75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096168"
 ---
-# <a name="compiler-error-c2113"></a>C2113 chyby kompilátoru
-'-': ukazatel lze odčítat pouze z jiné ukazatele  
-  
- Pravý operand v rámci operace odečtení ukazatele, ale byl levý operand není.
+# <a name="compiler-error-c2113"></a>Chyba kompilátoru C2113
+
+'-': ukazatel se dá odečíst jedině od jiného ukazatele
+
+Pravý operand v operaci odčítání je ukazatel, ale nebyla levý operand.

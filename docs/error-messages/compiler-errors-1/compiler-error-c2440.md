@@ -1,5 +1,5 @@
 ---
-title: C2440 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2440 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,210 +16,221 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6b03dfc413e3a63e5084dc265d5b7010fbcebd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80107f3adf4b460fd2563026a1b7ff6ab6394167
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091215"
 ---
-# <a name="compiler-error-c2440"></a>C2440 chyby kompilátoru
-'Převod': nelze převést na 'type2' 'type1'  
-  
-Kompilátor nelze přetypovat z `type1` k `type2`.  
-  
-## <a name="example"></a>Příklad  
-C2440 může dojít, pokud se pokusíte k chybě při inicializaci jiný const `char*` (nebo `wchar_t*`) pomocí řetězcový literál v kódu C++, když shoda možnost kompilátoru [/Zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) nastavena. V jazyce C, typ řetězcový literál je pole `char`, ale v jazyce C++, je pole `const char`. Tato ukázka generuje C2440:  
-  
-```cpp  
-// C2440s.cpp  
-// Build: cl /Zc:strictStrings /W3 C2440s.cpp  
-// When built, the compiler emits:  
-// error C2440: 'initializing' : cannot convert from 'const char [5]'   
-// to 'char *'  
-//        Conversion from string literal loses const qualifier (see  
-// /Zc:strictStrings)  
-  
-int main() {  
-   char* s1 = "test"; // C2440  
-   const char* s2 = "tests"; // OK  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může také dojít, pokud se pokusíte převést ukazatele na člena void *. Další vzorek generuje C2440:  
-  
-```cpp  
-// C2440.cpp  
-class B {  
-public:  
-   void  f(){;}  
-  
-   typedef void (B::*pf)();  
-  
-   void f2(pf pf) {  
-       (this->*pf)();  
-       void* pp = (void*)pf;   // C2440  
-   }  
-  
-   void f3() {  
-      f2(f);  
-   }  
-};  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může být též situace, pokud se pokusíte převést z typu, který je deklarován pouze dopředu, ale není definován. Tato ukázka generuje C2440:  
-  
-```cpp  
-// c2440a.cpp   
-struct Base { }; // Defined  
-  
-struct Derived; // Forward declaration, not defined  
-  
-Base * func(Derived * d) {  
-    return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'  
-}  
-  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 chyby na řádcích 15 a 16 bude další vzorek jsou kvalifikovaný pomocí `Incompatible calling conventions for UDT return value` zprávy. A *UDT* je uživatelsky definovaný typ., například třída, struktura nebo union. Tyto druhy chyb nekompatibilita způsobuje Pokud konvence volání UDT zadaný v návratový typ předat dál deklarace je v konfliktu s skutečné konvence volání UDT a pokud je zahrnuta ukazatel na funkci.  
-  
- V příkladu nejprve nejsou dopředně deklarace pro struktury a funkci, která vrátí struktura; kompilátor předpokládá, že struct používá C++ konvence volání. Dále je definici struktura, která ve výchozím nastavení používá C konvence volání. Protože kompilátor nebude vědět konvence volání dané struktury, dokud neskončí čtení celá struktura konvence volání pro struktura v návratový typ `get_c2` také předpokládá se, že C++.  
-  
- Struct následuje jiný deklarace funkce, která vrací struct, ale v tomto okamžiku kompilátor ví, že je struktura konvence volání C++. Podobně po definování struktura je definována ukazatel na funkci, která vrátí struct, tak, aby kompilátor ví, že struct používá C++ konvence volání.  
-  
- Chcete-li vyřešit C2440, ke kterému dochází z důvodu nekompatibilní konvence volání, deklarujte funkce, které vrací typ definovaný uživatelem po definování UDT.  
-  
-```cpp  
-// C2440b.cpp  
-struct MyStruct;  
-  
-MyStruct get_c1();  
-  
-struct MyStruct {  
-   int i;  
-   static MyStruct get_C2();  
-};  
-  
-MyStruct get_C3();  
-  
-typedef MyStruct (*FC)();  
-  
-FC fc1 = &get_c1;   // C2440, line 15  
-FC fc2 = &MyStruct::get_C2;   // C2440, line 16  
-FC fc3 = &get_C3;  
-  
-class CMyClass {  
-public:  
-   explicit CMyClass( int iBar)  
-      throw()   {  
-   }  
-  
-   static CMyClass get_c2();  
-};  
-  
-int main() {  
-   CMyClass myclass = 2;   // C2440  
-   // try one of the following  
-   // CMyClass myclass{2};  
-   // CMyClass myclass(2);  
-  
-   int *i;  
-   float j;  
-   j = (float)i;   // C2440, cannot cast from pointer to int to float  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může také nastat, pokud přiřadíte nula na vnitřní ukazatel:  
-  
-```cpp  
-// C2440c.cpp  
-// compile with: /clr  
-int main() {  
-   array<int>^ arr = gcnew array<int>(100);  
-   interior_ptr<int> ipi = &arr[0];  
-   ipi = 0;   // C2440  
-   ipi = nullptr;   // OK  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může dojít také pro nesprávné použití převod definovaný uživatelem. Například když operátora převodu byla definována jako `explicit`, kompilátor nelze použít v implicitní převod. Další informace o uživatelem definovaných převodů najdete v tématu [uživatelem definovaných převodů (C + +/ CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Tato ukázka generuje C2440:  
-  
-```cpp  
-// C2440d.cpp  
-// compile with: /clr  
-value struct MyDouble {  
-   double d;  
-   // convert MyDouble to Int32  
-   static explicit operator System::Int32 ( MyDouble val ) {  
-      return (int)val.d;  
-   }  
-};  
-  
-int main() {  
-   MyDouble d;  
-   int i;  
-   i = d;   // C2440  
-   // Uncomment the following line to resolve.  
-   // i = static_cast<int>(d);  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může také nastat, pokud se pokusíte vytvořit instanci třídy Visual C++ pole, jejichž typ je <xref:System.Array>.  Další informace najdete v tématu [pole](../../windows/arrays-cpp-component-extensions.md).  Další vzorek generuje C2440:  
-  
-```cpp  
-// C2440e.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   array<int>^ intArray = Array::CreateInstance(__typeof(int), 1);   // C2440  
-   // try the following line instead  
-   // array<int>^ intArray = safe_cast<array<int> ^>(Array::CreateInstance(__typeof(int), 1));  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C2440 může dojít také z důvodu změn ve funkci atributy.  Následující ukázka generuje C2440.  
-  
-```cpp  
-// c2440f.cpp  
-// compile with: /LD  
-[ module(name="PropDemoLib", version=1.0) ];   // C2440  
-// try the following line instead  
-// [ module(name="PropDemoLib", version="1.0") ];  
-```  
-  
-## <a name="example"></a>Příklad  
- Visual C++ compiler již neumožňuje [const_cast – operátor](../../cpp/const-cast-operator.md) přetypovat dolů, kdy zdrojový kód, který používá **/CLR** kompiluje programování.  
-  
- Chcete-li vyřešit tento C2440, použijte operátor správné přetypování. Další informace najdete v tématu [operátory přetypování](../../cpp/casting-operators.md).  
-  
- Tato ukázka generuje C2440:  
-  
-```cpp  
-// c2440g.cpp  
-// compile with: /clr  
-ref class Base {};  
-ref class Derived : public Base {};  
-int main() {  
-   Derived ^d = gcnew Derived;  
-   Base ^b = d;  
-   d = const_cast<Derived^>(b);   // C2440  
-   d = dynamic_cast<Derived^>(b);   // OK  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
-C2440 může dojít v důsledku změny shoda kompilátoru v sadě Visual Studio 2015 Update 3. Dříve, kompilátor nesprávně určité odlišné výrazy při považována za stejný typ identifikace odpovídající šablonu `static_cast` operaci. Nyní správně odlišuje typy a kód, který spoléhali na předchozí `static_cast` chování je poškozená. Chcete-li tento problém vyřešit, změňte argument šablony shodovat s typem parametru šablony, nebo použijte `reinterpret_cast` nebo přetypování ve stylu C.
-  
-Tato ukázka generuje C2440:  
-  
-```cpp  
+# <a name="compiler-error-c2440"></a>Chyba kompilátoru C2440
+
+'conversion': nelze převést z 'type1' na 'type2'
+
+Kompilátor nelze převést z `type1` k `type2`.
+
+## <a name="example"></a>Příklad
+
+C2440 může nastat, pokud se pokusíte inicializovat nekonstantní `char*` (nebo `wchar_t*`) pomocí řetězcového literálu v kódu jazyka C++, když možnost přizpůsobení kompilátoru [/Zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) nastavena. V jazyce C je typ řetězcového literálu pole `char`, ale v jazyce C++ je pole `const char`. Tato ukázka generuje upozornění C2440:
+
+```cpp
+// C2440s.cpp
+// Build: cl /Zc:strictStrings /W3 C2440s.cpp
+// When built, the compiler emits:
+// error C2440: 'initializing' : cannot convert from 'const char [5]'
+// to 'char *'
+//        Conversion from string literal loses const qualifier (see
+// /Zc:strictStrings)
+
+int main() {
+   char* s1 = "test"; // C2440
+   const char* s2 = "tests"; // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může také zapříčinit, pokud při pokusu o převod ukazatele na člen na void *. Následující ukázka generuje upozornění C2440:
+
+```cpp
+// C2440.cpp
+class B {
+public:
+   void  f(){;}
+
+   typedef void (B::*pf)();
+
+   void f2(pf pf) {
+       (this->*pf)();
+       void* pp = (void*)pf;   // C2440
+   }
+
+   void f3() {
+      f2(f);
+   }
+};
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může také zapříčinit, pokud při pokusu o přetypování z typu, který je deklarován pouze vpřed, ale není definovaný. Tato ukázka generuje upozornění C2440:
+
+```cpp
+// c2440a.cpp
+struct Base { }; // Defined
+
+struct Derived; // Forward declaration, not defined
+
+Base * func(Derived * d) {
+    return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'
+}
+
+```
+
+## <a name="example"></a>Příklad
+
+Chyby C2440 v řádcích 15 a 16 Další ukázky jsou kvalifikované `Incompatible calling conventions for UDT return value` zprávy. A *UDT* je typ definovaný uživatelem, jako je například třída, struktura nebo sjednocení. Tyto druhy chyb nekompatibility jsou způsobeny, když je konvence volání UDT zadaný v návratovém typu dopředné deklarace je v konfliktu se skutečnou konvencí volání UDT a když je zahrnuta ukazatele na funkci.
+
+V tomto příkladu nejdřív existují dopředné deklarace pro strukturu a funkci, která vrátí strukturu; kompilátor předpokládá, že struktura používá konvenci volání jazyka C++. Dále je definice struktury, která standardně používá konvence volání. Vzhledem k tomu, že kompilátor nezná konvence volání struktury, dokud nedokončí čtení celé struktury, konvence volání pro strukturu v návratovém typu `get_c2` se také považuje za C++.
+
+Struktura je následována jinou deklarací funkce, která vrátí strukturu, ale v tomto okamžiku kompilátor ví, že je struktura, obsahovat konvence volání C++. Podobně ukazatel funkce, která vrátí strukturu, je definován po definici struktury tak, aby kompilátor ví, že struktura používá konvenci volání jazyka C++.
+
+Chcete-li vyřešit chybu C2440, která nastává z důvodu nekompatibilních konvencí volání, deklarujte funkce vracející typ definovaný uživatelem po definici UDT.
+
+```cpp
+// C2440b.cpp
+struct MyStruct;
+
+MyStruct get_c1();
+
+struct MyStruct {
+   int i;
+   static MyStruct get_C2();
+};
+
+MyStruct get_C3();
+
+typedef MyStruct (*FC)();
+
+FC fc1 = &get_c1;   // C2440, line 15
+FC fc2 = &MyStruct::get_C2;   // C2440, line 16
+FC fc3 = &get_C3;
+
+class CMyClass {
+public:
+   explicit CMyClass( int iBar)
+      throw()   {
+   }
+
+   static CMyClass get_c2();
+};
+
+int main() {
+   CMyClass myclass = 2;   // C2440
+   // try one of the following
+   // CMyClass myclass{2};
+   // CMyClass myclass(2);
+
+   int *i;
+   float j;
+   j = (float)i;   // C2440, cannot cast from pointer to int to float
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může vzniknout také v případě, že přiřadíte nulový vnitřní ukazatel:
+
+```cpp
+// C2440c.cpp
+// compile with: /clr
+int main() {
+   array<int>^ arr = gcnew array<int>(100);
+   interior_ptr<int> ipi = &arr[0];
+   ipi = 0;   // C2440
+   ipi = nullptr;   // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může vzniknout také kvůli nesprávnému použití uživatelem definovaného převodu. Například pokud operátor převodu byl definovaný jako `explicit`, kompilátor nelze použít v implicitní převod. Další informace o uživatelem definovaných převodů, naleznete v tématu [uživatelem definovaných převodů (C + +/ CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Tato ukázka generuje upozornění C2440:
+
+```cpp
+// C2440d.cpp
+// compile with: /clr
+value struct MyDouble {
+   double d;
+   // convert MyDouble to Int32
+   static explicit operator System::Int32 ( MyDouble val ) {
+      return (int)val.d;
+   }
+};
+
+int main() {
+   MyDouble d;
+   int i;
+   i = d;   // C2440
+   // Uncomment the following line to resolve.
+   // i = static_cast<int>(d);
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může vzniknout také při pokusu o vytvoření instance pole Visual C++, jehož typ je <xref:System.Array>.  Další informace najdete v tématu [pole](../../windows/arrays-cpp-component-extensions.md).  Následující ukázka generuje upozornění C2440:
+
+```cpp
+// C2440e.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   array<int>^ intArray = Array::CreateInstance(__typeof(int), 1);   // C2440
+   // try the following line instead
+   // array<int>^ intArray = safe_cast<array<int> ^>(Array::CreateInstance(__typeof(int), 1));
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může vzniknout také z důvodu změn ve funkci atributů.  Následující ukázka generuje upozornění C2440.
+
+```cpp
+// c2440f.cpp
+// compile with: /LD
+[ module(name="PropDemoLib", version=1.0) ];   // C2440
+// try the following line instead
+// [ module(name="PropDemoLib", version="1.0") ];
+```
+
+## <a name="example"></a>Příklad
+
+Kompilátor Visual C++ již neumožňuje [operátor const_cast](../../cpp/const-cast-operator.md) pro přetypování směrem dolů, když zdrojový kód, který používá **/CLR** programování je zkompilován.
+
+Chcete-li vyřešit tuto chybu C2440, použijte správný operátor osazení. Další informace najdete v tématu [operátory přetypování](../../cpp/casting-operators.md).
+
+Tato ukázka generuje upozornění C2440:
+
+```cpp
+// c2440g.cpp
+// compile with: /clr
+ref class Base {};
+ref class Derived : public Base {};
+int main() {
+   Derived ^d = gcnew Derived;
+   Base ^b = d;
+   d = const_cast<Derived^>(b);   // C2440
+   d = dynamic_cast<Derived^>(b);   // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+C2440 může vzniknout z důvodu změn v shoda kompilátoru v sadě Visual Studio 2015 Update 3. Dříve, kompilátor nesprávně považován za určité odlišné výrazy stejného typu při identifikaci odpovídající šablonu `static_cast` operace. Nyní kompilátor rozlišuje typy správně a kód, který spoléhal na předchozí `static_cast` chování je poškozená. Chcete-li tento problém vyřešit, změňte argument šablony pro odpovídat typu parametru šablony, nebo použít `reinterpret_cast` nebo přetypování C-style.
+
+Tato ukázka generuje upozornění C2440:
+
+```cpp
 // c2440h.cpp
 
 template<int *a>
@@ -232,7 +243,7 @@ struct S2 : S1<&g> {
 int main()
 {
     S2 s;
-    static_cast<S1<&*&g>>(s); // C2440 in VS 2015 Update 3 
+    static_cast<S1<&*&g>>(s); // C2440 in VS 2015 Update 3
     // This compiles correctly:
     // static_cast<S1<&g>>(s);
 }
@@ -241,51 +252,53 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 
 ```
 
-## <a name="example"></a>Příklad  
-### <a name="copy-list-initialization"></a>Kopie – seznam – inicializace
+## <a name="example"></a>Příklad
 
-Visual Studio 2017 a novější správně vyvolat chyby kompilátoru vztahující se k vytvoření objektu pomocí inicializátoru seznamů, které nebyly provedeny v sadě Visual Studio 2015 a může způsobit selhání nebo modul runtime chování není definován. V C ++ 17 kopírování – seznam inicializace kompilátor je potřeba vzít v úvahu explicitní konstruktor pro rozlišení přetížení, ale musíte zvýšit chybu, pokud je ve skutečnosti vybrali této přetížení.
+### <a name="copy-list-initialization"></a>Inicializace kopírování seznamu
 
-Následující příklad zkompiluje v sadě Visual Studio 2015, ale není v Visual Studio 2017.
+Visual Studio 2017 a novější správně vyvolat chyby při kompilaci vztahující se k vytvoření objektu pomocí inicializační seznamy, které nebyly byla zachycena v sadě Visual Studio 2015 a může způsobit selhání nebo nedefinované chování za běhu. V C ++ 17 kopírování Inicializace seznamu kompilátor je potřeba vzít v úvahu explicitní konstruktor pro řešení přetížení, ale musí vyvolat chybu, pokud je ve skutečnosti zvolená tohoto přetížení.
 
-```cpp  
-// C2440j.cpp  
+Následující příklad se zkompiluje ve Visual Studiu 2015 ale není v sadě Visual Studio 2017.
+
+```cpp
+// C2440j.cpp
 struct A
 {
-    explicit A(int) {} 
+    explicit A(int) {}
     A(double) {}
 };
 
 int main()
 {
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot
                          // convert from 'int' to 'const A &'
 }
-```  
-  
-Chcete-li chybu opravit, použijte přímé inicializace:  
-  
-```cpp  
-// C2440k.cpp  
+```
+
+Chcete-li opravit chybu, použijte přímé inicializace:
+
+```cpp
+// C2440k.cpp
 struct A
 {
-    explicit A(int) {} 
+    explicit A(int) {}
     A(double) {}
 };
 
 int main()
 {
     const A& a2{ 1 };
-}  
-```  
+}
+```
 
 ## <a name="example"></a>Příklad
-### <a name="cv-qualifiers-in-class-construction"></a>Kvalifikátory odchylka nákladů ve vytváření – třída
 
-V sadě Visual Studio 2015 kompilátor někdy nesprávně ignoruje kvalifikátor odchylka nákladů při generování objektu třídy prostřednictvím volání konstruktoru. To může potenciálně způsobit havárie nebo neočekávané modul runtime chování. Následující příklad zkompiluje v sadě Visual Studio 2015, ale vyvolá chybu kompilátoru Visual Studio 2017 a novější:
+### <a name="cv-qualifiers-in-class-construction"></a>Kvalifikátory CV v konstrukci třídy
+
+V sadě Visual Studio 2015 kompilátor někdy nesprávně ignoruje kvalifikátor cv-qualifier při generování objektu třídy prostřednictvím volání konstruktoru. To může potenciálně způsobit selhání nebo neočekávané chování za běhu. Následující příklad zkompiluje ve Visual Studiu 2015 ale vyvolá kompilátor chybu v sadě Visual Studio 2017 a novější:
 
 ```cpp
-struct S 
+struct S
 {
     S(int);
     operator int();
@@ -294,4 +307,4 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-Chcete-li k chybě, deklarujte operátor int() jako const.
+Chcete-li opravit chybu, deklarujte operátor int() jako const.

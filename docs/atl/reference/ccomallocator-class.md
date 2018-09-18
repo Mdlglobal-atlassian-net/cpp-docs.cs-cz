@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088940"
 ---
 # <a name="ccomallocator-class"></a>Ccomallocator – třída
 
@@ -65,7 +65,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Počet bajtů k přidělení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel do přidělené paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -103,10 +103,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel do přidělené paměti.
 
-*nBytes*  
+*nBytes*<br/>
 Počet bajtů, které mají přidělit jinému uživateli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -119,6 +119,6 @@ Změní velikost přidělené paměti. Zobrazit [CoTaskMemRealloc](/windows/desk
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomheapptr – třída](../../atl/reference/ccomheapptr-class.md)   
-[Ccrtallocator – třída](../../atl/reference/ccrtallocator-class.md)   
+[CComHeapPtr – třída](../../atl/reference/ccomheapptr-class.md)<br/>
+[CCRTAllocator – třída](../../atl/reference/ccrtallocator-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

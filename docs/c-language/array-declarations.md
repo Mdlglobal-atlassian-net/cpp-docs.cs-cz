@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091906"
 ---
 # <a name="array-declarations"></a>Deklarace pole
 
@@ -48,9 +48,9 @@ ms.locfileid: "43762473"
 
 Protože *konstantního výrazu* je volitelný, má dvě různými formami syntaxe:
 
--   První formulář definuje proměnnou pole. *Konstantní výraz* argument v hranatých závorkách určuje počet prvků v poli. *Konstantní výraz*, pokud jsou k dispozici, musí mít celočíselný typ a hodnotu větší než nula. Každý prvek má typ daný *specifikátor typu*, což může být libovolný typ s výjimkou `void`. K elementu pole nemůže být typ funkce.
+- První formulář definuje proměnnou pole. *Konstantní výraz* argument v hranatých závorkách určuje počet prvků v poli. *Konstantní výraz*, pokud jsou k dispozici, musí mít celočíselný typ a hodnotu větší než nula. Každý prvek má typ daný *specifikátor typu*, což může být libovolný typ s výjimkou `void`. K elementu pole nemůže být typ funkce.
 
--   Druhý typ deklaruje proměnnou, která je definována jinde. Vynechá *konstantní výraz* argument v závorkách, ale ne závorky. Tento formulář můžete použít jenom v případě, že jste dříve inicializovat pole deklarovaný jako parametr, nebo ji deklarovali jako odkaz na pole explicitně definovány jinde v programu.
+- Druhý typ deklaruje proměnnou, která je definována jinde. Vynechá *konstantní výraz* argument v závorkách, ale ne závorky. Tento formulář můžete použít jenom v případě, že jste dříve inicializovat pole deklarovaný jako parametr, nebo ji deklarovali jako odkaz na pole explicitně definovány jinde v programu.
 
 V obou formách *direct-declarator* názvy proměnných a může změnit typ proměnné. Hranaté závorky (**[] č.**) následující *direct-declarator* upravit deklarátor na typ array.
 
@@ -75,6 +75,7 @@ Tři sloupce na prvním řádku se ukládají nejprve, za nímž následuje tři
 K odkazování na jednotlivý prvek pole, použijte výraz dolního indexu, jak je popsáno v [Příponové operátory](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Příklady
+
 Tyto příklady ilustrují deklarace pole:
 
 ```C

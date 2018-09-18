@@ -1,5 +1,5 @@
 ---
-title: C2324 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2324 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121ca44ed988bf297599b9b3ca021f4d2c83ee2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a92b3e97c7484a7aa0126659783ef821730fe4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089278"
 ---
-# <a name="compiler-error-c2324"></a>C2324 chyby kompilátoru
-"identifikátor": neočekávané napravo od "název"  
-  
- Destruktor je volána pomocí správný identifikátor.  
-  
- Následující ukázka generuje C2324:  
-  
-```  
-// C2324.cpp  
-class A {};  
-typedef A* pA_t;  
-int i;  
-  
-int main() {  
-   pA_t * ppa = new pA_t;  
-   ppa->~i;   // C2324  
-   ppa->~pA_t();   // OK  
-}  
+# <a name="compiler-error-c2324"></a>Chyba kompilátoru C2324
+
+'identifier': neočekávalo se napravo "name"
+
+Destruktoru je volána pomocí nesprávný identifikátor.
+
+Následující ukázka generuje C2324:
+
+```
+// C2324.cpp
+class A {};
+typedef A* pA_t;
+int i;
+
+int main() {
+   pA_t * ppa = new pA_t;
+   ppa->~i;   // C2324
+   ppa->~pA_t();   // OK
+}
 ```

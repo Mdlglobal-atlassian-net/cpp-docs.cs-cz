@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7dd5a76e08d85e75f7e48e63927ef7b07e85fb40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089252"
 ---
 # <a name="cmapwordtoptr-class"></a>Cmapwordtoptr – třída
 Podporuje mapy ukazatelů typu void označenými pomocí 16bitových slov.  
@@ -63,9 +63,7 @@ class CMapWordToPtr : public CObject
 ## <a name="members"></a>Členové  
  Členské funkce `CMapWordToPtr` jsou podobné jako u členských funkcí třídy [cmapstringtoob –](../../mfc/reference/cmapstringtoob-class.md). Z důvodu podobnosti, můžete použít `CMapStringToOb` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CObject` ukazatele jako parametr funkce nebo návratová hodnota, nahraďte ukazatel na **void**. Po zobrazení `CString` nebo **const** ukazatel na **char** jako parametr funkce nebo návratová hodnota, nahraďte slovo.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  například se přeloží na  
   

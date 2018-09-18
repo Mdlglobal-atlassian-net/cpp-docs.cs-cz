@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093834"
 ---
 # <a name="idispeventimpl-class"></a>Idispeventimpl – třída
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Jedinečný identifikátor pro zdrojový objekt. Když `IDispEventImpl` je základní třídou pro složeného ovládacího prvku, použijte ID prostředku požadované obsažený ovládací prvek pro tento parametr. V ostatních případech použijte libovolné kladné celé číslo.
 
-*T*  
+*T*<br/>
 Třída uživatele, která je odvozena od `IDispEventImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Ukazatel na IID dispinterface události touto třídou implementována. Toto rozhraní musí být definován v knihovně typů, které jsou označeny *plibid*, *wMajor*, a *wMinor*.
 
-*plibid*  
+*plibid*<br/>
 Ukazatel na knihovnu typů, který definuje rozhraní odbavení odkazované *pdiid*. Pokud **& GUID_NULL**, knihovnu typů se načtou z objektu sourcing události.
 
-*wMajor*  
+*wMajor*<br/>
 Hlavní verze knihovny typů. Výchozí hodnota je 0.
 
-*wMinor*  
+*wMinor*<br/>
 Dílčí verze knihovny typů. Výchozí hodnota je 0.
 
-*tihclass*  
+*tihclass*<br/>
 Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je typu třídy `CComTypeInfoHolder`; nicméně, tento parametr šablony můžete přepsat zadáním třídy typu jiného než `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Členové
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Odkaz na ID funkce.
 
-*dispidMember*  
+*dispidMember*<br/>
 [in] ID odbavení funkce.
 
-*lcid*  
+*lcid*<br/>
 [in] Kontext národního prostředí ID funkce.
 
-*Informace o*  
+*Informace o*<br/>
 [in] Struktura označující, jak je funkce volána.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Parametry
 
-*pTI*  
+*pTI*<br/>
 [in] Ukazatel [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) rozhraní obsahující uživatelem definovaného typu.
 
-*hrt*  
+*hrt*<br/>
 [in] Popisovač pro popis typu, který se má načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -249,10 +249,10 @@ Ve výchozím nastavení, je třída `CComTypeInfoHolder`. `CComTypeInfoHolder` 
 
 ## <a name="see-also"></a>Viz také
 
-[_Atl_func_info – struktura](../../atl/reference/atl-func-info-structure.md)   
-[Idispatchimpl – třída](../../atl/reference/idispatchimpl-class.md)   
-[Idispeventsimpleimpl – třída](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO – struktura](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl – třída](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventSimpleImpl – třída](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

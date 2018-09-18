@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2135 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2135 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14600b00b1347f7fe63c0bc8b6d1ab5c70b68fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bd510aa4a6045b3e691ba89d05b327d35818b8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092983"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Chyba kompilátoru prostředků RC2135
-Soubor nebyl nalezen: název souboru  
-  
- Nebyl nalezen v souboru určeném v příkazovém řádku kompilátoru prostředků. Zkontrolujte, zda soubor byl přesunut do jiného adresáře a zda název a cesta jsou zadány správně.  
-  
- Prohledají se soubory pro použití **zahrnout** proměnné prostředí nebo Visual C++ **zahrnout** nastavení.
+
+Soubor nebyl nalezen: název souboru
+
+Nebyl nalezen zadaný soubor na příkazovém řádku pro kompilátor prostředků. Zkontrolujte, zda soubor byl přesunut do jiného adresáře a určuje, zda název souboru a cesta jsou zadány správně.
+
+Soubory se vyhledávají pomocí **zahrnout** proměnné prostředí nebo Visual C++ **zahrnout** nastavení.

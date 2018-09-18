@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4350 | Microsoft Docs
+title: Upozornění (úroveň 1) C4350 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7e13b73eeee9c24841e97419b702b3e41be3982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ad49a7471be257fa0c22f66fa1bb2bbea049194
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096688"
 ---
-# <a name="compiler-warning-level-1-c4350"></a>C4350 kompilátoru upozornění (úroveň 1)
-změna chování: byl zavolán člen 'member1' místo členu 'member2'  
-  
- Rvalue nelze navázat na jiný const odkaz. Ve verzích Visual C++ před Visual Studio 2003 bylo možné vytvořit vazbu rvalue s odkazem na jiný const v přímé inicializace. Tento kód se nyní zobrazí upozornění.  
-  
- Pro zpětnou kompatibilitu je stále možné svázat rvalue bez const odkazy, ale standardní převody jsou upřednostňované, pokud je to možné.  
-  
- Toto upozornění představuje změnu chování z kompilátoru Visual C++ .NET 2002. Pokud je povoleno, toto upozornění může mít pravděpodobně pro správný kód. Například je může mít při používání **std::auto_ptr** šablona třídy.  
-  
- Pokud se zobrazí toto upozornění, zkontrolujte v kódu, které chcete zobrazit, pokud je závislý na rvalue vazbu na jiný const odkazy. Přidání const k odkazu nebo zadáním další přetížení const odkaz může problém vyřešit.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. Další informace najdete v tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
- Následující ukázka generuje C4350:  
-  
-```cpp  
-// C4350.cpp  
-// compile with: /W1  
-#pragma warning (default : 4350)  
-class A {};  
-  
-class B  
-{  
-public:  
-   B(B&){}  
-   // try the following instead:  
-   // B(const B&){}  
-  
-   B(A){}  
-   operator A(){ return A();}  
-};  
-  
-B source() { return A(); }  
-  
-int main()  
-{  
-   B ap(source());   // C4350  
-}  
+# <a name="compiler-warning-level-1-c4350"></a>Kompilátor upozornění (úroveň 1) C4350
+
+změna chování: byl zavolán člen 'member1' místo členu 'member2'
+
+R-hodnoty nemůže být vázán na nekonstantní odkaz. Ve verzích aplikace Visual C++ před Visual Studio 2003 bylo možné vytvořit vazbu rvalue na nekonstantní odkaz v přímé inicializaci. Tento kód nyní poskytuje upozornění.
+
+Z důvodu zpětné kompatibility je stále možné svázat nekonstantní odkazy rvalue, ale standardní převody jsou upřednostňované, kdykoli je to možné.
+
+Toto upozornění představuje ke změně chování od Visual C++ .NET 2002 kompilátor. Pokud je povoleno, toto upozornění může mít pravděpodobně pro správný kód. To může být Mějme například při použití **std::auto_ptr** šablony třídy.
+
+Pokud se zobrazí toto upozornění, prozkoumejte kód a zjistěte, jestli je závislý na rvalue vazby na nekonstantní odkazy. Přidání odkazu na konstantní nebo které uvádějí další přetížení odkaz na objekt může problém vyřešit.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+Následující ukázka generuje C4350:
+
+```cpp
+// C4350.cpp
+// compile with: /W1
+#pragma warning (default : 4350)
+class A {};
+
+class B
+{
+public:
+   B(B&){}
+   // try the following instead:
+   // B(const B&){}
+
+   B(A){}
+   operator A(){ return A();}
+};
+
+B source() { return A(); }
+
+int main()
+{
+   B ap(source());   // C4350
+}
 ```

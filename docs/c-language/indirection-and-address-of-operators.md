@@ -1,5 +1,5 @@
 ---
-title: Deferenční operátory a operátory adresy | Microsoft Docs
+title: Deferenční operátory a operátory Address-of | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/16/2018
 ms.technology:
@@ -25,37 +25,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087475"
 ---
 # <a name="indirection-and-address-of-operators"></a>Deferenční operátory a operátory adresy
 
-Deferenční operátor unární (__&#42;__) přistupuje hodnotu nepřímo prostřednictvím ukazatele. Operand musí být typu ukazatele. Výsledkem operace je hodnota adresovaná operandem, tedy hodnota na adrese, na kterou operand ukazuje. Typ výsledku je typ adresovaný operandem.
+Operátor unární dereference (__&#42;__) nepřímo přistupuje k hodnotě prostřednictvím ukazatele. Operand musí být typu ukazatel. Výsledkem operace je hodnota adresovaná operandem, tedy hodnota na adrese, na kterou operand ukazuje. Typ výsledku je typ adresovaný operandem.
 
-Výsledkem deferenční operátor je *typ* Pokud operand typu *ukazatel na typ*. Ukazuje-li operand na funkci, je výsledkem označení funkce. Odkazuje na objekt, výsledkem je lvalue, který určuje objekt.
+Výsledek operátoru dereference *typ* je-li operand typu *ukazatel na typ*. Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li objekt, je výsledkem l-hodnotou označující objekt.
 
-Pokud je hodnota ukazatele je neplatná, není definován výsledek deferenční operátor. Toto jsou některé z nejběžnějších podmínky, které zneplatnit hodnota ukazatele:
+Pokud hodnota ukazatele je neplatná, výsledek operátor dereference není definován. Tady jsou některé z nejběžnějších situací, které zneplatňují hodnotu ukazatele:
 
 - Ukazatel je nulový.
 
-- Ukazatele určuje adresu objektu po konci životnosti (například objekt, který je mimo rozsah nebo který je navrácena) v době odkaz.
+- Ukazatel Určuje adresu objektu po konci životnosti (například objekt, který je nepřejdou mimo rozsah nebo, která není přidělená) v době reference.
 
 - Ukazatel určuje adresu, která je pro typ objektu, na který ukazatel ukazuje, nesprávně zarovnána.
 
 - Ukazatel určuje adresu, která není používána spuštěným programem.
 
-Operátor unární adresy (**&**) poskytuje adresu jeho operand. Operand musí být buď lvalue, který určuje objekt, který není deklarovaný __zaregistrovat__ a není bitové pole nebo výsledek unární operátor __&#42;__ dereference – operátor nebo pole (__&#91; &#93;__) operátor nebo označení funkce. Výsledkem je typu *ukazatel na typ* pro operand typu *typu*.
+Operátor unární address-of (**&**) poskytuje adresu svého operandu. Operand musí být buď l-hodnotou označující objekt, který není deklarován __zaregistrovat__ a není bitové pole, nebo výsledek unární __&#42;__ operátor nebo pole přistoupit přes ukazatel (__&#91; &#93;__) – operátor ani označení funkce. Výsledek je typu *ukazatel na typ* pro operand typu *typ*.
 
-Pokud je výsledkem unární operátor operand __&#42;__ operátor, ani operátor je vyhodnocena a výsledkem je, jako kdyby byly vynechání obě. Výsledek není lvalue a omezení u operátory platit stále. Pokud je výsledkem operand __&#91; &#93;__ operátor, ani __&__ operátor ani unární __&#42;__ implikované __&#91; &#93;__ vyhodnotí operátor. Výsledek obsahuje stejného efektu jako odebrání __&__ operátor a změna __&#91; &#93;__ operátor a __+__ operátor. Výsledkem je, jinak hodnota ukazatele na objekt nebo funkce, které jsou určené operandem.
-
+Je-li operand výsledek unární __&#42;__ operátor ani operátor je vyhodnocen a výsledkem je, jako by oba byly vynechány. Výsledek není l-hodnota a stále platí omezení na operátory. Je-li operand výsledek __&#91; &#93;__ operátor, ani __&__ operátor ani unární __&#42;__ implikována __&#91; &#93;__ operátor je vyhodnocen. Výsledek má stejný účinek jako odebrání __&__ operátor a změna __&#91; &#93;__ operátor __+__ operátor. Jinak výsledkem je ukazatel na objekt nebo funkci určeném operandem.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklady použijte tyto společné deklarace:
+Následující příklady používají tyto běžné deklarace:
 
 ```C
 int *pa, x;
@@ -63,25 +62,25 @@ int a[20];
 double d;
 ```
 
-Tento příkaz používá address-of – operátor (**&**) provést adresu šesté elementu pole `a`. Výsledek je uložen v proměnné ukazatele `pa`:
+Tento příkaz používá operátor address-of (**&**) převzít adresu šestého prvku v poli `a`. Výsledek je uložen v proměnné ukazatele `pa`:
 
-```C  
+```C
 pa = &a[5];
 ```
 
-Deferenční operátor (__&#42;__) se v tomto příkladu používá pro přístup `int` hodnotu na adrese uložené v `pa`. Hodnota je přiřazena k proměnné celé číslo `x`:
+Operátor dereference (__&#42;__) se v tomto příkladu používá pro přístup `int` hodnota na adrese uložené v `pa`. Hodnota je přiřazená k celočíselné proměnné `x`:
 
 ```C
 x = *pa;
 ```
 
-Tento příklad ukazuje, který výsledek použití deferenční operátor na adresu `x` je stejný jako `x`:
+Tento příklad ukazuje, že výsledek použití operátoru dereference na adresu `x` je stejný jako `x`:
 
 ```C
 assert( x == *&x );
 ```
 
-Tento příklad ukazuje ekvivalentní způsoby deklarování ukazatel na funkci:
+Tento příklad ukazuje deklaraci ukazatele na funkci ekvivalentní způsoby:
 
 ```C
 int roundup( void );     /* Function declaration */
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 Po deklaraci funkce `roundup` jsou na tuto funkci `roundup` deklarovány a inicializovány dva ukazatele. První ukazatel `proundup` je inicializován pouze pomocí názvu funkce, zatímco druhý ukazatel `pround` v inicializaci používá operátor adresa. Tyto inicializace jsou ekvivalentní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Deferenční operátor:&#42;](../cpp/indirection-operator-star.md)  
-[Operátor address-of: &](../cpp/address-of-operator-amp.md)  
+[Deferenční operátor:&#42;](../cpp/indirection-operator-star.md)<br/>
+[Operátor address-of: &](../cpp/address-of-operator-amp.md)

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095432"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 Implementuje jednotné rozhraní dokumentu (SDI) překrytého nebo místního okna rámce funkcí Windows a poskytuje členy pro správu okna. Rozšiřuje [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vyšší řád slova musí být jedna z následujících hodnot.  
-  
- `0`  
- Rozhraní by měl ignorovat stisknutí kláves.  
-  
- `1`  
- Rozhraní by měl zavřete nabídku.  
-  
- `2`  
- Rozhraní by měl vybrat jednu z položek zobrazených v nabídce. Nižší řád slova obsahuje ID příkazu k výběru.  
-  
-### <a name="remarks"></a>Poznámky  
+
+|||
+|-|-|
+ `0` | Rozhraní by měl ignorovat stisknutí kláves.  
+ `1`  | Rozhraní by měl zavřete nabídku.  
+ `2`  | Rozhraní by měl vybrat jednu z položek zobrazených v nabídce. Nižší řád slova obsahuje ID příkazu k výběru.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Rozhraní volá tuto metodu při přesunutí ukazatele myši.  

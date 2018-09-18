@@ -1,5 +1,5 @@
 ---
-title: concurrent_priority_queue – třída | Microsoft Docs
+title: concurrent_priority_queue – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096138"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue – třída
-`concurrent_priority_queue` Třída je kontejner, který umožňuje více vláken současně nabízení a pop položek. Položky jsou odebrány v pořadí podle priority, kde je priorita určena functor, zadaný jako argument šablony.  
+`concurrent_priority_queue` Třída je kontejner, který umožňuje více vláken současně nabízená oznámení a pop položek. Položky jsou otevřené v pořadí podle priority, kde je určen priority funktor zadaný jako argument šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,53 +46,53 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Datový typ prvky, které mají být uloženy ve frontě s prioritou.  
+*T*<br/>
+Datový typ prvků, který bude uložen do prioritní fronty.  
   
- `_Compare`  
- Typ objektu funkce, která můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí ve frontě s prioritou. Tento argument je volitelný a binární predikát `less<T>` je výchozí hodnota.  
+*_Porovnat*<br/>
+Typ objektu funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v prioritní fronty. Tento argument je nepovinný a binární predikát `less<T>` je výchozí hodnota.  
   
- `_Ax`  
- Typ, který představuje uložené allocator objekt, který zapouzdřuje podrobnosti o přidělení a zrušení přidělení paměti pro souběžné priority fronty. Tento argument je volitelný a výchozí hodnota je `allocator<T>`.  
+*_Ax*<br/>
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti pro souběžný prioritní fronty. Tento argument je nepovinný a výchozí hodnota je `allocator<T>`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`allocator_type`|Typ, který reprezentuje allocator – třída souběžných priority fronty.|  
-|`const_reference`|Typ, který představuje const odkaz na element typu uložené v souběžných priority fronty.|  
-|`reference`|Typ, který reprezentuje odkaz na element typu uložené v souběžných priority fronty.|  
-|`size_type`|Typ, který udává počet elementů v souběžných priority fronty.|  
-|`value_type`|Typ, který představuje datový typ, který je uložený ve frontě souběžných priority.|  
+|`allocator_type`|Typ, který představuje třídu alokátoru pro souběžné prioritní fronty.|  
+|`const_reference`|Typ, který představuje konstantní odkaz na element typu uložené v souběžné prioritní fronty.|  
+|`reference`|Typ, který představuje odkaz na element typu uložené v souběžné prioritní fronty.|  
+|`size_type`|Typ, který vrátí počet prvků v souběžné prioritní fronty.|  
+|`value_type`|Typ, který představuje typ dat uložených v souběžné prioritní fronty.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[concurrent_priority_queue](#ctor)|Přetíženo. Vytvoří souběžných priority fronty.|  
+|[concurrent_priority_queue](#ctor)|Přetíženo. Sestaví souběžných prioritní fronty.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zrušte zaškrtnutí](#clear)|Vymaže všechny elementy ve souběžných prioritu. Tato metoda není bezpečná souběžnosti.|  
-|[prázdný](#empty)|Testy, pokud je v době prázdný souběžných priority fronty tato metoda je volána. Tato metoda je bezpečné souběžnosti.|  
-|[get_allocator](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných priority fronty. Tato metoda je bezpečné souběžnosti.|  
-|[push](#push)|Přetíženo. Přidá element do souběžných priority fronty. Tato metoda je bezpečné souběžnosti.|  
-|[Velikost](#size)|Vrátí počet elementů ve frontě souběžných priority. Tato metoda je bezpečné souběžnosti.|  
-|[Swap](#swap)|Zamění obsah dvou souběžných priority fronty. Tato metoda není bezpečná souběžnosti.|  
-|[try_pop](#try_pop)|Odebere a vrátí nejvyšší prioritou element z fronty, pokud fronty je prázdný. Tato metoda je bezpečné souběžnosti.|  
+|[Vymazat](#clear)|Vymaže všechny prvky v souběžné prioritu. Tato metoda není bezpečná pro souběžnost.|  
+|[prázdný](#empty)|Testuje, zda je souběžných prioritní fronty je prázdný v době tato metoda je volána. Tato metoda je bezpečná pro souběžnost.|  
+|[get_allocator](#get_allocator)|Vrátí kopii objektu Alokátor použitý k vytvoření souběžných prioritní fronty. Tato metoda je bezpečná pro souběžnost.|  
+|[push](#push)|Přetíženo. Přidá prvek na souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.|  
+|[Velikost](#size)|Vrátí počet prvků v souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.|  
+|[Prohození](#swap)|Zamění obsah dvou souběžných prioritní fronty. Tato metoda není bezpečná pro souběžnost.|  
+|[try_pop](#try_pop)|Odebere a vrátí nejvyšší prvek prioritu z fronty, pokud fronta je prázdný. Tato metoda je bezpečná pro souběžnost.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_priority_queue` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_priority_queue` do tohoto objektu. Tato metoda není bezpečná pro souběžnost.|  
   
 ## <a name="remarks"></a>Poznámky  
- Podrobné informace o `concurrent_priority_queue` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Podrobné informace o `concurrent_priority_queue` najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `concurrent_priority_queue`  
@@ -102,20 +102,20 @@ template <typename T,
   
  **Namespace:** souběžnosti  
   
-##  <a name="clear"></a> Zrušte zaškrtnutí 
+##  <a name="clear"></a> Vymazat 
 
- Vymaže všechny elementy ve souběžných prioritu. Tato metoda není bezpečná souběžnosti.  
+ Vymaže všechny prvky v souběžné prioritu. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 void clear();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `clear` není bezpečné souběžnosti. Je nutné zajistit, že jsou nejsou žádná jiná vlákna při volání této metody vyvolání metody ve frontě souběžných s prioritou. `clear` není volné paměti.  
+ `clear` není bezpečná pro souběžnost. Ujistěte se, že nejsou žádná jiná vlákna jsou volání metod na souběžné prioritní fronty, při volání této metody. `clear` Nelze uvolnit paměť.  
   
-##  <a name="ctor"></a> concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue – 
 
- Vytvoří souběžných priority fronty.  
+ Sestaví souběžných prioritní fronty.  
   
 ```
 explicit concurrent_priority_queue(
@@ -146,62 +146,62 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_InputIterator`  
- Typ vstupu iterator.  
+*_InputIterator*<br/>
+Typ vstupního iterátoru.  
   
- `_Al`  
- Třída alokátoru, která se má použít s tímto objektem.  
+*_Al*<br/>
+Třída alokátoru, která se má použít s tímto objektem.  
   
- `_Init_capacity`  
- Počáteční kapacitu `concurrent_priority_queue` objektu.  
+*_Init_capacity*<br/>
+Počáteční kapacita objektu `concurrent_priority_queue` objektu.  
   
- `_Begin`  
- Pozice první prvek v rozsahu elementy, které se mají zkopírovat.  
+*_Zahájit*<br/>
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.  
   
- `_End`  
- Pozice první prvek mimo rozsah elementy, které se mají zkopírovat.  
+*_Ukončit*<br/>
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.  
   
- `_Src`  
- Zdroj `concurrent_priority_queue` objekt, který chcete zkopírovat nebo přesunout elementy z.  
+*_Src*<br/>
+Zdroj `concurrent_priority_queue` objektu, který chcete zkopírovat nebo přesunout elementy ze.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny konstruktory uložit objekt allocator `_Al` a inicializace priority fronty.  
+ Všechny konstruktory ukládají objekt alokátoru `_Al` a inicializovat prioritní fronty.  
   
- První konstruktor Určuje frontu prázdný počáteční priority a volitelně specifikuje přidělení.  
+ První konstruktor určuje prázdný počáteční prioritní fronty a volitelně určuje alokátoru.  
   
- Druhý konstruktor určuje prioritu fronty s počáteční kapacita `_Init_capacity` a volitelně specifikuje přidělení.  
+ Druhý konstruktor určuje prioritní fronty s počáteční kapacitu `_Init_capacity` a volitelně určuje alokátoru.  
   
- Třetí konstruktor určuje poskytl iterator rozsah hodnot [ `_Begin`, `_End`) a volitelně specifikuje přidělení.  
+ Třetí konstruktor určuje hodnoty poskytnuté rozsahem iterátoru [ `_Begin`, `_End`) a volitelně určuje alokátoru.  
   
- Konstruktory čtvrté a páté zadejte kopii priority fronty `_Src`.  
+ Čtvrtý a pátý konstruktor určuje kopii prioritní fronty `_Src`.  
   
- Konstruktory šesté a sedmého zadejte přesunu priority fronty `_Src`.  
+ Zadejte šestého a sedmý konstruktor přesunutí prioritní fronty `_Src`.  
   
 ##  <a name="empty"></a> prázdný 
 
- Testy, pokud je v době prázdný souběžných priority fronty tato metoda je volána. Tato metoda je bezpečné souběžnosti.  
+ Testuje, zda je souběžných prioritní fronty je prázdný v době tato metoda je volána. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se v tuto chvíli byla zavolána funkce, prázdný priority fronty `false` jinak.  
+ `true` Pokud v tuto chvíli byla volána funkce, byla prázdná prioritní fronty `false` jinak.  
   
-##  <a name="get_allocator"></a> get_allocator – 
+##  <a name="get_allocator"></a> get_allocator 
 
- Vrátí kopii allocator použitý k vytvoření souběžných priority fronty. Tato metoda je bezpečné souběžnosti.  
+ Vrátí kopii objektu Alokátor použitý k vytvoření souběžných prioritní fronty. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Kopie allocator použitý k vytvoření `concurrent_priority_queue` objektu.  
+ Alokátor použitý k vytvoření kopie `concurrent_priority_queue` objektu.  
   
 ##  <a name="operator_eq"></a> operátor = 
 
- Přiřadí obsah jiného `concurrent_priority_queue` k tomuto objektu. Tato metoda není bezpečná souběžnosti.  
+ Přiřadí obsah jiného `concurrent_priority_queue` do tohoto objektu. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -210,15 +210,15 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
- Zdroj `concurrent_priority_queue` objektu.  
+*_Src*<br/>
+Zdroj `concurrent_priority_queue` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `concurrent_priority_queue` objektu.  
+ Odkaz na tento `concurrent_priority_queue` objektu.  
   
-##  <a name="push"></a> Push 
+##  <a name="push"></a> nabízených oznámení 
 
- Přidá element do souběžných priority fronty. Tato metoda je bezpečné souběžnosti.  
+ Přidá prvek na souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 void push(const value_type& _Elem);
@@ -227,52 +227,52 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Elem`  
- Elementu, který chcete přidat do souběžných priority fronty.  
+*_Elem*<br/>
+Elementu, který chcete přidat do souběžných prioritní fronty.  
   
 ##  <a name="size"></a> Velikost 
 
- Vrátí počet elementů ve frontě souběžných priority. Tato metoda je bezpečné souběžnosti.  
+ Vrátí počet prvků v souběžné prioritní fronty. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 size_type size() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet elementů v této `concurrent_priority_queue` objektu.  
+ Počet prvků v tomto `concurrent_priority_queue` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácený velikost záruku, že se mají zahrnout všechny elementy přidané ve volání funkce `push`. Je však nemusí odrážet výsledky čekajících souběžných operací.  
+ Je zaručeno, že vrácená velikost zahrnout všechny elementy přidané ve volání funkce `push`. Ale to nemusí odrážet výsledky čekající souběžných operací.  
   
-##  <a name="swap"></a> Swap 
+##  <a name="swap"></a> Prohození 
 
- Zamění obsah dvou souběžných priority fronty. Tato metoda není bezpečná souběžnosti.  
+ Zamění obsah dvou souběžných prioritní fronty. Tato metoda není bezpečná pro souběžnost.  
   
 ```
 void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Queue`  
- `concurrent_priority_queue` Objekt, který chcete Prohodit obsah s.  
+*_Fronty*<br/>
+`concurrent_priority_queue` Objektu k výměně obsahu s.  
   
 ##  <a name="try_pop"></a> try_pop – 
 
- Odebere a vrátí nejvyšší prioritou element z fronty, pokud fronty je prázdný. Tato metoda je bezpečné souběžnosti.  
+ Odebere a vrátí nejvyšší prvek prioritu z fronty, pokud fronta je prázdný. Tato metoda je bezpečná pro souběžnost.  
   
 ```
 bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Elem`  
- Odkaz na proměnnou, který vyplní s nejvyšší prioritou elementu, pokud je fronta není prázdný.  
+*_Elem*<br/>
+Odkaz na proměnnou, která naplní prvku nejvyšší prioritou, pokud fronta je prázdný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se hodnota odebrány, `false` jinak.  
+ `true` Pokud hodnotu byl odebrán, `false` jinak.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)
 
 

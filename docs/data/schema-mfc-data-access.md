@@ -1,5 +1,5 @@
 ---
-title: Schéma (MFC Data Access) | Microsoft Docs
+title: Schéma (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f7ba3e7b64a8c65678830593098ef658b3495c75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff1759203593cd556a91cbe17b93388488a2b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091241"
 ---
-# <a name="schema--mfc-data-access"></a>Schéma (Data MFC Access)
-Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí vygenerované průvodcem kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přístup na sadu záznamů, ale databázové třídy můžete řešit některé změny schématu, jako je přidání, změna nebo odstranění nevázaných sloupců. Pokud se změní tabulky, je nutné ručně aktualizovat sadu záznamů pro tabulku a potom znovu zkompiluje vaší aplikace.  
+# <a name="schema--mfc-data-access"></a>Schéma (přístup k datům MFC)
+
+Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí generované v Průvodci kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přistupuje na sadu záznamů, ale databázové třídy můžete vyřešit některé změny schématu, jako je například přidání, změna uspořádání nebo odstranění nevázaných sloupců. Pokud tabulka změní, musíte ručně aktualizovat sadu záznamů tabulky a zkompilovat aplikaci znovu.  
   
- Můžete také doplnit kód generované v Průvodci jak nakládat s databází, jejichž schématu není znám zcela v době kompilace. Další informace najdete v tématu [sada záznamů: dynamické vazby datových sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+Můžete doplnit generované v Průvodci kód vypořádat s databází, jejichž schématu není úplně známý v době kompilace. Další informace najdete v tématu [sada záznamů: dynamické vazby dat sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům programování (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
- [SQL](../data/odbc/sql.md)   
- [Sada záznamů (ODBC)](../data/odbc/recordset-odbc.md)
+
+[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[SQL](../data/odbc/sql.md)<br/>
+[Sada záznamů (ODBC)](../data/odbc/recordset-odbc.md)

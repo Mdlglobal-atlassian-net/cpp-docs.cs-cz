@@ -1,5 +1,5 @@
 ---
-title: task_completion_event – třída | Microsoft Docs
+title: task_completion_event – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088992"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event – třída
-`task_completion_event` Třída umožňuje zpozdit provádění úlohy, dokud je podmínka nebo spustit úlohu v reakci na externí událost.  
+`task_completion_event` Třída umožňuje zpoždění spuštění úlohy, dokud není splněna podmínka, nebo spuštění úlohy jako odpověď na vnější události.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_ResultType`  
- Typ výsledku této `task_completion_event` třídy.  
-  
- `T`  
+*_ResultType*<br/>
+Typ výsledku této `task_completion_event` třídy.  
+
   
 ## <a name="members"></a>Členové  
   
@@ -58,15 +57,15 @@ class task_completion_event<void>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[set](#set)|Přetíženo. Nastaví událost dokončení úlohy.|  
-|[set_exception](#set_exception)|Přetíženo. Rozšíří výjimku na všechny úlohy přidružené k této události.|  
+|[set](#set)|Přetíženo. Nastaví událost dokončení úkolu.|  
+|[set_exception](#set_exception)|Přetíženo. Rozšíří výjimku pro všechny úkoly spojené s touto událostí.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pomocí úlohy vytvořené z události dokončení úlohy při váš scénář vyžaduje, abyste vytvoření úlohy, která se dokončí, a tím jeho pokračování pro ně naplánováno spuštění v určitém okamžiku v budoucnu. `task_completion_event` Musí mít stejný typ jako úlohu, můžete vytvořit a volání metody set u události dokončení úlohy s hodnotou typu bude přidružené úlohu dokončit a zadat tuto hodnotu v důsledku k jeho pokračování.  
+ Použijte úlohu vytvořenou z události dokončení úkolu když vaše situace vyžaduje vytvoření úlohy, která bude dokončena, a tím bude její pokračování naplánováno ke spuštění v určitém okamžiku v budoucnu. `task_completion_event` Musí být stejného typu jako úkol vytvoříte a volání metody set na událost dokončení úkolu s hodnotou tohoto typu způsobí dokončení přidruženého úkolu a poskytne tuto hodnotu v důsledku jeho pokračování.  
   
- Pokud nikdy signalizace událostí dokončení úkolů, když je destructed budou zrušeny všechny úkoly vytvořené z něj.  
+ Pokud událost dokončení úlohy není signalizována, všechny úlohy z ní vytvořené budou zrušeny při její destrukci.  
   
- `task_completion_event` chová se jako inteligentní ukazatel a mají být předány podle hodnoty.  
+ `task_completion_event` se chová jako inteligentní ukazatel a musí být předán podle hodnoty.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `task_completion_event`  
@@ -76,9 +75,9 @@ class task_completion_event<void>;
   
  **Namespace:** souběžnosti  
   
-##  <a name="set"></a> nastavení 
+##  <a name="set"></a> Nastavit 
 
- Nastaví událost dokončení úlohy.  
+ Nastaví událost dokončení úkolu.  
   
 ```
 bool set(_ResultType _Result) const ;
@@ -87,18 +86,18 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Result`  
- Výsledek, který má nastavená Tato událost se.  
+*_Result*<br/>
+Výsledek, který má tato událost nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí metoda `true` Pokud bylo úspěšné. v nastavení události. Vrátí `false` Pokud události je již nastaven.  
+ Metoda vrátí `true` Pokud bylo nastavení události úspěšné. Vrátí `false` -li událost již nastavena.  
   
 ### <a name="remarks"></a>Poznámky  
- Za přítomnosti více souběžných volání nebo `set`, pouze první volání bude úspěšné a její výsledek (pokud existuje) bude uložen v události dokončení úlohy. Zbývající sady jsou ignorovány a metoda vrátí hodnotu false. Když nastavíte o událost dokončení úkolů, všechny úlohy vytvořené z událostí okamžitě dokončí, a jeho pokračování, pokud existuje, bude naplánována. Úloha dokončení objekty, které mají `_ResultType` jiné než `void` předá hodnotu jejich pokračování.  
+ Za přítomnosti více nebo souběžných volání `set`, bude úspěšné pouze první volání a jeho výsledek (pokud existují) budou uložena v události dokončení úkolu. Zbývající sady jsou ignorovány a metoda vrátí hodnotu false. Při nastavení události dokončení úkolu budou všechny úkoly vytvořené z, že události okamžitě dokončeny a její pokračování, pokud existuje, bude naplánováno. Úloha dokončení objekty, které mají `_ResultType` jiné než `void` předají hodnotu svým následovníkům.  
   
-##  <a name="set_exception"></a> set_exception – 
+##  <a name="set_exception"></a> set_exception 
 
- Rozšíří výjimku na všechny úlohy přidružené k této události.  
+ Rozšíří výjimku pro všechny úkoly spojené s touto událostí.  
   
 ```
 template<typename _E>
@@ -108,13 +107,18 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Typ výjimky.
+
+*_Except*<br/>
+Výjimka k nastavení.
+
+*_ExceptionPtr*<br/>
+Výjimka ukazatel k nastavení.
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="ctor"></a> task_completion_event 
+##  <a name="ctor"></a> task_completion_event – 
 
  Vytvoří `task_completion_event` objektu.  
   

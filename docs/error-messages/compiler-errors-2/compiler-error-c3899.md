@@ -1,5 +1,5 @@
 ---
-title: C3899 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3899 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40f1065514437463be06a89f01e067c4324cd2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b154941051e1c6887e8e05756befd6a18c62ed72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091777"
 ---
-# <a name="compiler-error-c3899"></a>C3899 chyby kompilátoru
-'příkaz var': l-value použití initonly – datový člen není povoleno přímo v rámci paralelní oblasti v třídě 'class'.  
-  
- [Initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) – datový člen nelze inicializovat uvnitř konstruktor, který je v této části [paralelní](../../parallel/openmp/reference/parallel.md) oblast.  Je to proto kompilátor nemá k interní přemístění tento kód tak, aby efektivně už je součástí konstruktoru.  
-  
- Vyřešit, inicializujte data člena initonly v konstruktoru, ale mimo paralelní oblast.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3899.  
-  
-```  
-// C3899.cpp  
-// compile with: /clr /openmp  
-#include <omp.h>   
-  
-public ref struct R {  
-   initonly int x;  
-   R() {  
-      x = omp_get_thread_num() + 1000;   // OK  
-      #pragma omp parallel num_threads(5)  
-      {  
-         // cannot assign to 'x' here  
-         x = omp_get_thread_num() + 1000;   // C3899  
-         System::Console::WriteLine("thread {0}", omp_get_thread_num());  
-      }  
-      x = omp_get_thread_num() + 1000;   // OK  
-   }  
-};  
-  
-int main() {  
-   R^ r = gcnew R;  
-   System::Console::WriteLine(r->x);  
-}  
+# <a name="compiler-error-c3899"></a>Chyba kompilátoru C3899
+
+'příkaz var': použití l-value datového členu initonly není povolené přímo v rámci paralelní oblastí v třídě 'class'
+
+[Initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) uvnitř konstruktor, který je v této části se nedá inicializovat datový člen [paralelní](../../parallel/openmp/reference/parallel.md) oblasti.  Je to proto kompilátor udělá interní přemístění tento kód tak, že už efektivně nejsou součástí konstruktoru.
+
+Pokud chcete vyřešit, inicializujte datového členu initonly v konstruktoru, ale mimo paralelní oblasti.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3899.
+
+```
+// C3899.cpp
+// compile with: /clr /openmp
+#include <omp.h>
+
+public ref struct R {
+   initonly int x;
+   R() {
+      x = omp_get_thread_num() + 1000;   // OK
+      #pragma omp parallel num_threads(5)
+      {
+         // cannot assign to 'x' here
+         x = omp_get_thread_num() + 1000;   // C3899
+         System::Console::WriteLine("thread {0}", omp_get_thread_num());
+      }
+      x = omp_get_thread_num() + 1000;   // OK
+   }
+};
+
+int main() {
+   R^ r = gcnew R;
+   System::Console::WriteLine(r->x);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4124 | Microsoft Docs
+title: Upozornění (úroveň 1) C4124 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: accd58c123bcd74e54176eed5eb974c3df33dbab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a69190487c22987ead2d00ec102785ed42ea93c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090922"
 ---
-# <a name="compiler-warning-level-1-c4124"></a>C4124 kompilátoru upozornění (úroveň 1)
-__fastcall s povolenou kontrolou zásobníku je neefektivní  
-  
- `__fastcall` – Klíčové slovo se použila se kontrola zásobníku povolené.  
-  
- `__fastcall` Konvence generuje kód rychlejší, ale zásobník kontrola způsobí, že pomalejší kód. Při použití `__fastcall`, zásobník kontrolu s vypnout **check_stack –** – Direktiva pragma nebo /Gs.  
-  
- Jenom pro první funkce deklarovaný za těchto podmínek se objeví toto upozornění.
+# <a name="compiler-warning-level-1-c4124"></a>Kompilátor upozornění (úroveň 1) C4124
+
+__fastcall s kontrolou zásobníku je neefektivní
+
+`__fastcall` – Klíčové slovo byl použit s kontrolou zásobníku povolena.
+
+`__fastcall` Konvence generuje rychlejší, ale kontrolou zásobníku způsobí pomalejší kódu. Při použití `__fastcall`, vypněte s kontrolou zásobníku **check_stack –** – Direktiva pragma nebo /Gs.
+
+Jenom pro první funkce deklarovaná za těchto podmínek se objeví toto upozornění.

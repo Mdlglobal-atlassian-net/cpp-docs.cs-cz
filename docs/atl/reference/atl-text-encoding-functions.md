@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b77c814b3ce2f372ae34e3c0293951ec23cdf6a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090747"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -44,7 +44,7 @@ Tyto funkce podporují text kódování a dekódování.
 
 |||
 |-|-|
-|[AtlGetHexValue](#atlgethexvalue)|Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.|   
+|[AtlGetHexValue](#atlgethexvalue)|Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.|
 |[AtlGetVersion](#atlgetversion)|Voláním této funkce se získat verzi knihovny ATL, kterou používáte.  |
 |[AtlHexDecode](#atlhexdecode)|Dekóduje řetězec dat, který byl zakódován jako šestnáctkový text předchozí volání [AtlHexEncode](#atlhexencode).|
 |[AtlHexDecodeGetRequiredLength](#atlhexdecodegetrequiredlength)|Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z šestnáctkově zakódovaného řetězce zadané délky.|
@@ -70,19 +70,19 @@ Tyto funkce podporují text kódování a dekódování.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlenc.h  
+**Záhlaví:** atlenc.h
 
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
 
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.
 
 ```
-inline char AtlGetHexValue(char chIn) throw();  
+inline char AtlGetHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*chIn*  
+*chIn*<br/>
 Šestnáctkové kódy znaků "0" – "9", "A"-"F" nebo "a"-"f".
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -93,13 +93,13 @@ inline char AtlGetHexValue(char chIn) throw();
 
 Voláním této funkce se získat verzi knihovny ATL, kterou používáte.
 
-```  
-ATLAPI_(DWORD) AtlGetVersion(void* pReserved);  
+```
+ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zachovány*  
+*Zachovány*<br/>
 Vyhrazené ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -114,32 +114,32 @@ Funkce by měla být volána následujícím způsobem.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h  
+**Záhlaví:** atlbase.h
 
 ## <a name="atlhexdecode"></a> AtlHexDecode
 
 Dekóduje řetězec dat, který byl zakódován jako šestnáctkový text předchozí volání [AtlHexEncode](#atlhexencode).
 
-```    
-inline BOOL AtlHexDecode(  
-   LPCSTR pSrcData,  
-   int nSrcLen,  
-   LPBYTE pbDest,  
-   int* pnDestLen) throw();  
+```
+inline BOOL AtlHexDecode(
+   LPCSTR pSrcData,
+   int nSrcLen,
+   LPBYTE pbDest,
+   int* pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pSrcData*  
+*pSrcData*<br/>
 Řetězec obsahující data, která mají dekódovat.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka ve znacích *pSrcData*.
 
-*pbDest*  
+*pbDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem dekódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délku v bajtech *pbDest*. Pokud funkce uspěje, proměnná přijímá počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, proměnné obdrží má požadovanou délku v bajtech vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -150,13 +150,13 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z šestnáctkově zakódovaného řetězce zadané délky.
 
-```  
-inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet znaků v kódovaný řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -167,26 +167,26 @@ Počet bajtů potřebných pro vyrovnávací paměť, která by mohla obsahovat 
 
 Voláním této funkce zakódujete data jako řetězec šestnáctkového textu.
 
-```  
-inline BOOL AtlHexEncode(  
-   const BYTE * pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-int * pnDestLen) throw();  
+```
+inline BOOL AtlHexEncode(
+   const BYTE * pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+int * pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Vyrovnávací paměť obsahující data, která mají být zakódován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka dat kódovaný v bajtech.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem kódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délky ve znacích *szDest*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná požadovaná délka ve znacích, vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,13 +201,13 @@ Každý bajt zdrojová data kódovaná jako 2 hexadecimálních znaků.
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```  
-inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet bajtů dat kódovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -218,13 +218,13 @@ Počet znaků vyžadovaný pro vyrovnávací paměť, která by mohla obsahovat 
 
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.
 
-```  
-inline short AtlHexValue(char chIn) throw();  
+```
+inline short AtlHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*chIn*  
+*chIn*<br/>
 Šestnáctkové kódy znaků "0" – "9", "A"-"F" nebo "a"-"f".
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -235,26 +235,26 @@ inline short AtlHexValue(char chIn) throw();
 
 Voláním této funkce převedete řetězec s kódováním Unicode na UTF-8.
 
-```  
-ATL_NOINLINE inline int AtlUnicodeToUTF8(  
-   LPCWSTR wszSrc,  
-   int nSrc,  
-   LPSTR szDest,  
-   int nDest) throw();  
+```
+ATL_NOINLINE inline int AtlUnicodeToUTF8(
+   LPCWSTR wszSrc,
+   int nSrc,
+   LPSTR szDest,
+   int nDest) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*wszSrc*  
+*wszSrc*<br/>
 Řetězec znaků Unicode má být převeden
 
-*nSrc*  
+*nSrc*<br/>
 Délka ve znacích řetězec znaků Unicode.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem převedený řetězec.
 
-*nDest*  
+*nDest*<br/>
 Délka vyrovnávací paměti v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,30 +269,30 @@ Pokud chcete určit velikost vyrovnávací paměti vyžadované pro převedený 
 
 Voláním této funkce převedete data pomocí kódování B.
 
-```  
-inline BOOL BEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet) throw();  
+```
+inline BOOL BEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Vyrovnávací paměť obsahující data, která mají být zakódován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka dat kódovaný v bajtech.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem kódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délky ve znacích *szDest*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná požadovaná délka ve znacích, vyrovnávací paměti.
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Znakovou sadu pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -307,16 +307,16 @@ Schéma kódování "B" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/r
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```  
-inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet bajtů dat kódovaný.
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 Délka ve znacích znakovou sadu pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -331,31 +331,31 @@ Schéma kódování "B" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/r
 
 Voláním této funkce převedete znaky, které jsou problematické pro použití v kódu XML, na jejich bezpečné ekvivalenty.
 
-```  
-inline int EscapeXML(  
-   const wchar_t * szIn,  
-   int nSrcLen,  
-   wchar_t * szEsc,  
-   int nDestLen,  
-   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();  
+```
+inline int EscapeXML(
+   const wchar_t * szIn,
+   int nSrcLen,
+   wchar_t * szEsc,
+   int nDestLen,
+   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*szIn*  
+*szIn*<br/>
 Řetězec, který má být převeden.
 
-*nSrclen*  
+*nSrclen*<br/>
 Délka ve znacích řetězec, který má být převeden.
 
-*szEsc*  
+*szEsc*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem převedený řetězec.
 
-*nDestLen*  
+*nDestLen*<br/>
 Délka ve znacích volající – přidělené vyrovnávací paměti.
 
-*dwFlags*  
-ATL_ESC příznaky popisující, jak se má provést převod. 
+*dwFlags*<br/>
+ATL_ESC příznaky popisující, jak se má provést převod.
 
 - ATL_ESC_FLAG_NONE výchozí chování. Nabídka značek a apostrofy nepřevádějí.
 - Nabídka ATL_ESC_FLAG_ATTR značek a apostrofy se převedou na `&quot;` a `&apos;` v uvedeném pořadí.
@@ -380,16 +380,16 @@ V tabulce jsou uvedeny možné převody prováděné tuto funkci:
 
 Voláním této funkce získáte počet znaků s diakritikou v řetězci.
 
-```  
-inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();  
+```
+inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*szSrc*  
+*szSrc*<br/>
 Řetězec, který má být analyzován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka řetězce ve znacích.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -400,13 +400,13 @@ Vrátí počet rozšířených znaků nalezených v rámci řetězce podle [IsEx
 
 Voláním této funkce zjistíte, zda daný znak používá diakritiku (je menší než 32, větší než 126 a nejde o tabulátor, odřádkování ani návrat na začátek řádku).
 
-```  
-inline int IsExtendedChar(char ch) throw();  
+```
+inline int IsExtendedChar(char ch) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak, který má být testována
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -417,34 +417,34 @@ Hodnota TRUE, pokud znak je rozšířeno, FALSE v opačném případě.
 
 Voláním této funkce převedete data pomocí kódování Q.
 
-```  
-inline BOOL QEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet,  
-   int* pnNumEncoded = NULL) throw();  
+```
+inline BOOL QEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet,
+   int* pnNumEncoded = NULL) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Vyrovnávací paměť obsahující data, která mají být zakódován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka dat kódovaný v bajtech.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem kódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délky ve znacích *szDest*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná požadovaná délka ve znacích, vyrovnávací paměti.
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Znakovou sadu pro převod.
 
-*pnNumEncoded*  
+*pnNumEncoded*<br/>
 Ukazatel na proměnnou, která při návratu obsahuje počet problematické znaky, do kterých má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -459,16 +459,16 @@ Schéma kódování "Q" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/r
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```  
-inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet bajtů dat kódovaný.
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 Délka ve znacích znakovou sadu pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -483,13 +483,13 @@ Schéma kódování "Q" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/r
 
 Dekóduje řetězec dat, který byl zakódován do formátu quoted-printable, jako předchozí volání [QPEncode](#qpencode).
 
-```  
-inline BOOL QPDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw();  
+```
+inline BOOL QPDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -521,13 +521,13 @@ Quoted-printable schéma kódování je popsán v dokumentu RFC 2045 ([http://ww
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného ve formátu quoted-printable.
 
-```  
-inline int QPDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet znaků v kódovaný řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -542,32 +542,34 @@ Quoted-printable schéma kódování je popsán v dokumentu RFC 2045 ([http://ww
 
 Voláním této funkce zakódujete data do formátu quoted-printable.
 
-```  
-inline BOOL QPEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL QPEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Vyrovnávací paměť obsahující data, která mají být zakódován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka dat kódovaný v bajtech.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem kódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délky ve znacích *szDest*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná požadovaná délka ve znacích, vyrovnávací paměti.
 
-*dwFlags*  
-ATLSMTP_QPENCODE příznaky popisující, jak se má provést převod. 
+*dwFlags*<br/>
+ATLSMTP_QPENCODE příznaky popisující, jak se má provést převod.
+
 - ATLSMTP_QPENCODE_DOT Pokud se zobrazí tečku na začátku řádku, to je přidán do výstupu stejně jako kódování.
+
 - Připojí ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` kódovaný řetězec.
 
 Quoted-printable schéma kódování je popsán v [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
@@ -584,13 +586,13 @@ Quoted-printable schéma kódování je popsán v dokumentu RFC 2045 ([http://ww
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```  
-inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet bajtů dat kódovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -605,26 +607,26 @@ Quoted-printable schéma kódování je popsán v dokumentu RFC 2045 ([http://ww
 
 Dekóduje řetězec dat, která byla funkce, jako předchozí volání [UUEncode](#uuencode).
 
-```  
-inline BOOL UUDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   BYTE* pbDest,  
-   int* pnDestLen) throw ();  
+```
+inline BOOL UUDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   BYTE* pbDest,
+   int* pnDestLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Řetězec obsahující data, která mají dekódovat.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka v bajtech *pbSrcData*.
 
-*pbDest*  
+*pbDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem dekódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délku v bajtech *pbDest*. Pokud funkce uspěje, proměnná přijímá počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, proměnné obdrží má požadovanou délku v bajtech vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -639,13 +641,13 @@ Tato implementace uuencoding následuje specifikace POSIX P1003.2b/D11.
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného do kódování UUENCODE.
 
-```  
-inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet znaků v kódovaný řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -660,37 +662,40 @@ Tato implementace uuencoding následuje specifikace POSIX P1003.2b/D11.
 
 Voláním této funkce zakódujete data do kódování UUENCODE.
 
-```  
-inline BOOL UUEncode(  
-   const BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCTSTR lpszFile = _T("file"),  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL UUEncode(
+   const BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCTSTR lpszFile = _T("file"),
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Vyrovnávací paměť obsahující data, která mají být zakódován.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Délka dat kódovaný v bajtech.
 
-*szDest*  
+*szDest*<br/>
 Volající – přidělené vyrovnávací paměti pro příjem kódovaná data.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Ukazatel na proměnnou, která obsahuje délky ve znacích *szDest*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná požadovaná délka ve znacích, vyrovnávací paměti.
 
-*lpszFile*  
+*lpszFile*<br/>
 Soubor, který má přidat do záhlaví, pokud je podle ATLSMTP_UUENCODE_HEADER *dwFlags*.
 
-*dwFlags*  
-Příznaky řízení chování této funkce. 
+*dwFlags*<br/>
+Příznaky řízení chování této funkce.
+
 - Bude kódována ATLSMTP_UUENCODE_HEADE záhlaví.
+
 - ATLSMTP_UUENCODE_END konci bude kódování.
+
 - ATLSMTP_UUENCODE_DOT Data nádivky bude provádět.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -705,13 +710,13 @@ Tato implementace uuencoding následuje specifikace POSIX P1003.2b/D11.
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```  
-inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Počet bajtů dat kódovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -724,5 +729,5 @@ Tato implementace uuencoding následuje specifikace POSIX P1003.2b/D11.
 
 ### <a name="see-also"></a>Viz také
 
-[Koncepty](../../atl/active-template-library-atl-concepts.md)   
-[Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)   
+[Koncepty](../../atl/active-template-library-atl-concepts.md)<br/>
+[Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

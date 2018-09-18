@@ -1,5 +1,5 @@
 ---
-title: Funkce záznamu zobrazit třídy (MFC Data Access) | Microsoft Docs
+title: Funkce záznamu zobrazení tříd (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093217"
 ---
-# <a name="features-of-record-view-classes--mfc-data-access"></a>Funkce tříd zobrazení záznamu (Data MFC Access)
-Můžete provést pomocí formuláře přístup k datům programování pomocí třídy [CFormView](../mfc/reference/cformview-class.md), ale [CRecordView](../mfc/reference/crecordview-class.md) je obecně lepší třída k odvozování z. Kromě jeho `CFormView` funkce `CRecordView`:  
+# <a name="features-of-record-view-classes--mfc-data-access"></a>Funkce tříd zobrazení záznamu (přístup k datům MFC)
+
+Můžete provést programování založené na formulářích – přístup k datům s třídou [CFormView](../mfc/reference/cformview-class.md), ale [CRecordView](../mfc/reference/crecordview-class.md) je obecně lepší třídy odvozovat z. Kromě jeho `CFormView` funkce, `CRecordView`:  
   
--   Poskytuje výměna dialogových dat (DDX) mezi ovládacích prvků formuláře a objekt přidružené sady záznamů.  
+- Poskytuje výměna dat dialogových oken (DDX) mezi ovládací prvky formuláře a objekt přidružené sady záznamů.  
   
--   Zpracovává přesunout na první, přesunout na další, přesunout na předchozí a přesunout na poslední příkazy pro procházení záznamy v objektu přidružené sady záznamů.  
+- Zpracovává příkazy přesunout na první, přesunout na další, přesunout na předchozí a přesunout na poslední pro procházení záznamů v objektu přidružené sady záznamů.  
   
--   Když se uživatel přesune na jiný záznam se změní aktualizace na aktuální záznam.  
+- Když uživatel přesune na jiný záznam se aktualizace změní na aktuální záznam.  
   
- Další informace o navigační najdete v tématu [zobrazení záznamů: Podpora navigace v zobrazení záznamu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
+Další informace o navigaci v tématu [zobrazení záznamů: Podpora navigace v zobrazení záznamu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Zobrazení záznamů (Data MFC Access)](../data/record-views-mfc-data-access.md)   
- [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)
+
+[Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

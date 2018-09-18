@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091696"
 ---
 # <a name="cthreadpool-class"></a>Cthreadpool – třída
 
@@ -44,16 +44,16 @@ Tato třída poskytuje fondu pracovních vláken, které zpracovávají fronty p
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Pracovního procesu*  
+*Pracovního procesu*<br/>
 Třída odpovídají [archetyp pracovního procesu](../../atl/reference/worker-archetype.md) poskytuje kód používá ke zpracování pracovní položky ve frontě fondu vláken.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Třída poskytující funkce použitá k vytvoření vláken ve fondu.
 
 ## <a name="members"></a>Členové
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parametry
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Parametr pracovního procesu se mají předat objekt vlákna pracovního procesu `Initialize`, `Execute`, a `Terminate` metody.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
 Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
 
 Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  Výchozí hodnota je 2 vláken na procesor. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Velikost zásobníku pro každé vlákno ve fondu.
 
-*hCompletion*  
+*hCompletion*<br/>
 Popisovač objektu pro přidružení k port dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Požadavek*  
+*Požadavek*<br/>
 Požadavek na zařadí do fronty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
 Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí. Pokud je zadána žádná hodnota nebo 0, tato metoda použije časový limit nastavený [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Poznámky
@@ -358,6 +358,6 @@ Tato metoda odešle žádost o vypnutí na všechna vlákna ve fondu. Pokud vypr
 
 ## <a name="see-also"></a>Viz také
 
-[Ithreadpoolconfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[IThreadPoolConfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Třídy](../../atl/reference/atl-classes.md)

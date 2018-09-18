@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ebd514b0135de4ac438b406201dc069257d1bce
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e34b6d3764c0096e30c0e1f27c36194fd5d44110
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088823"
 ---
 # <a name="atl-encoding-reference"></a>ATL – referenční dokumentace ke kódování
 
@@ -54,6 +54,6 @@ Kódování v celou řadu běžných standardů aplikace Internet například uu
 
 ## <a name="see-also"></a>Viz také
 
-[Koncepty](../atl/active-template-library-atl-concepts.md)   
+[Koncepty](../atl/active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097611"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass – třída
 
@@ -36,16 +36,16 @@ Tato třída poskytuje metody pro vytvoření instance třídy a získání jeho
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CComCoClass`.
 
-*pclsid*  
+*pclsid*<br/>
 Ukazatel na identifikátor CLSID objektu.
 
 ## <a name="members"></a>Členové
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*Q*  
+*Q*<br/>
 Rozhraní modelu COM, která má být vrácena prostřednictvím *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] Vnější neznámá nebo řídící neznámou agregace.
 
-*str*  
+*str*<br/>
 [out] Adresa proměnné ukazatele, která přijímá ukazatel požadovaná rozhraní, pokud bude úspěšné vytvoření.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszDesc*  
-[in] Řetězec popisující chybu. Verze Unicode `Error` Určuje, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.  
-*identifikátor IID*  
+*lpszDesc*<br/>
+[in] Řetězec popisující chybu. Verze Unicode `Error` Určuje, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.
+
+*identifikátor IID*<br/>
 [in] Identifikátor IID rozhraní definování chyb nebo GUID_NULL (výchozí hodnota), pokud chyba není definován v operačním systému.
 
-*hRes*  
+*hRes*<br/>
 [in] Hodnota HRESULT, který chcete vrátit zpět volajícímu. Výchozí hodnota je 0. Další podrobnosti o *hRes*, naleznete v oddílu Poznámky.
 
-*nID*  
+*nID*<br/>
 [in] Identifikátor prostředku řetězce popisu chyby se mají ukládat. Tato hodnota by měla být mezi hodnotu 0x0200 a 0xFFFF (včetně). V sestavení ladění **ASSERT** dojde-li *nID* index není platný řetězec. V sestaveních pro vydání řetězce popisu chyby bude nastavena na "Neznámá chyba".
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Identifikátor kontextu pomoc pro chybu.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Cesta a název souboru nápovědy popisující chybu.
 
-*hInst*  
+*hInst*<br/>
 [in] Popisovač pro prostředek. Ve výchozím nastavení, je tento parametr `_AtlModule::GetResourceInstance`, kde `_AtlModule` je globální instanci [catlmodule –](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota

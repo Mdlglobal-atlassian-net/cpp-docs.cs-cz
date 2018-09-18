@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4985 | Microsoft Docs
+title: Upozornění (úroveň 4) C4985 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8f0b62a72d61ee061fd996f93638acba9e7ebb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d67b7394ef9bd38409ca45abe6ed7d347f5a37d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092660"
 ---
-# <a name="compiler-warning-level-4-c4985"></a>C4985 kompilátoru upozornění (úroveň 4)
-"název symbol": atributy není k dispozici na předchozí deklarace.  
-  
- Jazyk (SAL) poznámky Microsoft zdrojového kódu poznámky na aktuální metoda deklarace a definice se liší od poznámky u starších deklarace. Stejné poznámky SAL musí být používány definice a deklarace metody.  
-  
- SAL poskytuje sadu poznámky, které lze použít k popisu, jak funkce používá jeho parametrů, předpoklady, které provádí o nich a záruky, které provádí na dokončení. Poznámky jsou definovány v záhlaví souboru sal.h.  
-  
- Všimněte si, že makra SAL nelze rozbalit, pokud tento projekt [/ analyze](../../build/reference/analyze-code-analysis.md) příznak. Pokud zadáte **/ analyze**, kompilátor můžete vyvolat C4985, i v případě, že žádná varování nebo chyby zobrazovaly bez **/ analyze**.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
-1.  Použijte stejné poznámky SAL v definici metody a všechny jeho deklarace.  
-  
-## <a name="see-also"></a>Viz také  
- [Poznámky SAL](../../c-runtime-library/sal-annotations.md)
+# <a name="compiler-warning-level-4-c4985"></a>Kompilátor upozornění (úroveň 4) C4985
+
+'název symbolu': neexistují atributy pro předchozí deklaraci.
+
+Microsoft zdrojového kódu poznámky jazyka (SAL) poznámky na aktuální metodu deklarace nebo definice liší od poznámky u starších deklarace. Definice a deklarace metody musí využívat stejnou poznámky SAL.
+
+SAL poskytuje sadu poznámky, které můžete použít k popisu, jak funkce používá parametry, předpoklady, které provádí o nich a záruky, které provádí na dokončení. Poznámky jsou definovány v souboru hlaviček sal.h.
+
+Všimněte si, že SAL makra nelze rozbalit, pokud projekt nemá [/ analyze](../../build/reference/analyze-code-analysis.md) příznak zadán. Pokud zadáte **/ analyze**, kompilátor může vyvolat C4985, i v případě, že žádná upozornění ani chyby zobrazovaly bez **/ analyze**.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+1. Použijte stejné poznámky SAL v definici metody a všechny jeho deklarace.
+
+## <a name="see-also"></a>Viz také
+
+[Poznámky SAL](../../c-runtime-library/sal-annotations.md)

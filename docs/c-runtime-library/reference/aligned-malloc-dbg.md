@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093040"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
+*Velikost*<br/>
 Velikost požadované alokace paměti.
 
-*Zarovnání*  
+*Zarovnání*<br/>
 Hodnota zarovnání, které musí být celočíselnou mocninou 2.
 
-*Název souboru*  
+*Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který se požadovaná operace rozdělení nebo hodnota NULL.
 
-*Číslo řádku*  
+*Číslo řádku*<br/>
 Číslo řádku ve zdrojovém souboru, ve kterém se požadovaná operace rozdělení nebo hodnota NULL.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -96,4 +96,4 @@ Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-featur
 
 ## <a name="see-also"></a>Viz také:
 
-[Rutiny ladění](../../c-runtime-library/debug-routines.md)  
+[Rutiny ladění](../../c-runtime-library/debug-routines.md)

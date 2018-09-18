@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087952"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog – třída
 
@@ -35,7 +35,7 @@ Tato třída implementuje základní modální dialogové okno.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 ID prostředku šablony prostředku dialogového okna.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 Hodnota TRUE, pokud objektu dialogového okna je zarovnaný na střed na okno vlastníka. v opačném případě FALSE.
 
 ## <a name="members"></a>Členové
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Popisovač na nadřazený prvek dialogového okna. Pokud se nezadá žádná hodnota, nadřazené nastavená na aktuálně aktivní okno.
 
 ### <a name="return-value"></a>Návratová hodnota

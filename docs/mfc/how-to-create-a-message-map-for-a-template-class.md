@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření mapy zpráv pro třídu šablony | Microsoft Docs'
+title: 'Postupy: vytvoření mapy zpráv pro třídu šablony | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,58 +15,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7867cc40ae837da5fad957b6a1d584fb7c2c4ce
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 701e6f2912c3f9a8b5f138d8f188003f9db43021
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096133"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Postupy: Vytvoření mapy zpráv pro třídu šablony
-Mapování zpráv v prostředí MFC poskytuje účinný způsob, jak přímé zpráv systému Windows na instanci objektu příslušné C++. Příklady cílů mapy zpráv knihovny MFC: třídy aplikace, třídy dokumentů a zobrazení, – třídy ovládacích prvků a tak dále.  
+Mapování zpráv v prostředí MFC poskytuje efektivní způsob, jak směrování zpráv Windows k příslušné instanci objektu C++. Příklady cílů mapy zpráv knihovny MFC: třídy aplikace, dokument a zobrazení tříd, třídy ovládacích prvků a tak dále.  
   
- Tradiční mapy zpráv knihovny MFC jsou deklarováno s použitím [begin_message_map –](reference/message-map-macros-mfc.md#begin_message_map) makro deklarovat spuštění mapy zpráv, makro záznam pro každou metodu třídu obslužné rutiny zpráv a nakonec [end_message_map –](reference/message-map-macros-mfc.md#end_message_map)makro deklarovat konec mapy zpráv.  
+ Tradiční mapy zpráv knihovny MFC jsou deklarovány pomocí [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) – makro, chcete-li deklarovat počáteční mapu zpráv – makro položky pro každou metodu třídy obslužná rutina zprávy a nakonec [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)– makro pro deklaraci na konec mapování zprávy.  
   
- Jedním z omezení s [begin_message_map –](reference/message-map-macros-mfc.md#begin_message_map) makro nastane, když se používá ve spojení s třídou obsahující argumenty šablony. Při použití s třídu šablony, tato makro způsobí chybu kompilace z důvodu chybějící parametry šablony během rozšiřování makro. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) makro byla navržena k umožnění mapuje třídy obsahující jednu šablonu argument deklarovat vlastní zprávu.  
+ Jediným omezením s [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) – makro nastane, pokud se používá ve spojení s třídou obsahující argumenty šablony. Při použití s třída šablony, toto makro způsobí chybu kompilace z důvodu chybějící parametry šablony při rozšíření makra. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) – makro byla navržena k umožnění mapuje třídy obsahující o jeden argument deklarovat své vlastní zprávu.  
   
 ## <a name="example"></a>Příklad  
- Zvažte například kde knihovny MFC [clistbox –](../mfc/reference/clistbox-class.md) třída rozšířena zajistit synchronizaci s externího zdroje dat. Fiktivní `CSyncListBox` třída je deklarovaná následujícím způsobem:  
+ Vezměte v úvahu příklad kde MFC [clistbox –](../mfc/reference/clistbox-class.md) třídy je rozšířené kvůli synchronizaci s externí zdroj dat. Fiktivní `CSyncListBox` třída je deklarována následovně:  
   
  [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  
   
- `CSyncListBox` Třída je na jednoho typu, který popisuje zdroji dat, které se budou synchronizovat s použitím šablon. Také deklaruje tři metody, které budou součástí mapy zpráv třídy: `OnPaint`, `OnDestroy`, a `OnSynchronize`. `OnSynchronize` Metoda je implementována následujícím způsobem:  
+ `CSyncListBox` Třída je jeden typ, který popisuje zdroje dat se synchronizují se bez vizuálního vzhledu. Také deklaruje tři metody, které se bude účastnit v mapování zprávy třídy: `OnPaint`, `OnDestroy`, a `OnSynchronize`. `OnSynchronize` Metoda je implementován takto:  
   
  [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
   
- Výše uvedené implementace umožňuje `CSyncListBox` třídy se specializuje na všechny typu třídy, který implementuje `GetCount` metoda, například `CArray`, `CList`, a `CMap`. `StringizeElement` Funkce je deklaraci pomocí následující šablony funkce:  
+ Umožňuje provádění výše `CSyncListBox` třídy specificky určené na libovolný typ třídy, která implementuje `GetCount` metody, například `CArray`, `CList`, a `CMap`. `StringizeElement` Je funkce prototypem pomocí následující šablony funkce:  
   
  [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
   
- Mapy zpráv pro tuto třídu za normálních okolností by být definován jako:  
+ Mapy zpráv pro tuto třídu za normálních okolností je definován jako:  
   
- `BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)`  
+```cpp
+BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
+  ON_WM_PAINT()
+  ON_WM_DESTROY()
+  ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)
+END_MESSAGE_MAP()
+```
   
- `ON_WM_PAINT()`  
-  
- `ON_WM_DESTROY()`  
-  
- `ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)`  
-  
- `END_MESSAGE_MAP()`  
-  
- kde **LBN_SYNCHRONIZE** je zpráva vlastní uživatelské definované aplikací, jako například:  
+ kde **LBN_SYNCHRONIZE** vlastní uživatelská zpráva definované aplikací, jako například:  
   
  [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
   
- Výše uvedené mapy makro nebude kompilovat, vzhledem k tomu, že specifikace šablony pro `CSyncListBox` třída bude chybět během rozšiřování makro. **BEGIN_TEMPLATE_MESSAGE_MAP** makro tento problém řeší začleněním parametr zadané šablony do rozšířené makro mapy. Mapy zpráv pro tuto třídu se změní na:  
+ Výše uvedené mapování – makro nebude kompilovat, vzhledem k tomu, že specifikace šablony pro `CSyncListBox` třídy budou chybět během rozšíření makra. **BEGIN_TEMPLATE_MESSAGE_MAP** – makro tento problém řeší začleňte do mapy rozšířené – makro parametr určené šablony. Mapy zpráv pro tuto třídu bude:  
   
  [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
   
- Následující ukazuje použití ukázkové `CSyncListBox` pomocí `CStringList` objektu:  
+ Následující znázorňuje ukázkové využití `CSyncListBox` pomocí `CStringList` objektu:  
   
  [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
   
- K dokončení testu `StringizeElement` funkce musí být specializuje pro práci s `CStringList` třídy:  
+ K dokončení testu `StringizeElement` funkce musí být specializovaná pro práci s `CStringList` třídy:  
   
  [!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]  
   

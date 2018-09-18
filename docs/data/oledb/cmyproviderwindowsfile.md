@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087263"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+
 Průvodce vytvoří třídu pro obsahovat jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je vygenerovaný průvodcem a uvádí všechny soubory v adresáři s použitím `WIN32_FIND_DATA` struktury. `CMyProviderWindowsFile` dědí z `WIN32_FIND_DATA` struktury:  
   
 ```cpp
@@ -46,9 +47,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` je volána [třídy uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapování popisující sloupce v sadě řádků %{Rowset/ poskytovatele. Mapování sloupce poskytovatele obsahuje jeden záznam pro každé pole v sadě řádků %{Rowset/ použití maker PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadí a posun k položce struktury. Sloupec položky zprostředkovatele ve výše uvedeném kódu obsahují posun do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenáší do jedné souvislé vyrovnávací paměti. Místo toho můžete provést aritmetiku ukazatele, mapy můžete zadat datový člen.  
+`CMyProviderWindowsFile` je volána [třídy uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapování popisující sloupce v sadě řádků %{Rowset/ poskytovatele. Mapování sloupce poskytovatele obsahuje jeden záznam pro každé pole v sadě řádků %{Rowset/ použití maker PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadí a posun k položce struktury. Sloupec položky zprostředkovatele ve výše uvedeném kódu obsahují posun do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenáší do jedné souvislé vyrovnávací paměti. Místo toho můžete provést aritmetiku ukazatele, mapy můžete zadat datový člen.  
   
- `CMyProviderRowset` Třída také obsahuje `Execute` metody. `Execute` je, co skutečně čte data z nativní zdroje. Následující kód ukazuje generované průvodcem `Execute` metody. Využívá rozhraní Win32 funkce `FindFirstFile` a `FindNextFile` rozhraní API k načtení informací o souborech v adresáři a umístit je do instance `CMyProviderWindowsFile` třídy.  
+`CMyProviderRowset` Třída také obsahuje `Execute` metody. `Execute` je, co skutečně čte data z nativní zdroje. Následující kód ukazuje generované průvodcem `Execute` metody. Využívá rozhraní Win32 funkce `FindFirstFile` a `FindNextFile` rozhraní API k načtení informací o souborech v adresáři a umístit je do instance `CMyProviderWindowsFile` třídy.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +82,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Adresář hledání je reprezentován `m_strCommandText`; obsahuje text reprezentován `ICommandText` rozhraní příkazového objektu. Pokud není zadán žádný adresář, použije aktuální adresář.  
+Adresář hledání je reprezentován `m_strCommandText`; obsahuje text reprezentován `ICommandText` rozhraní příkazového objektu. Pokud není zadán žádný adresář, použije aktuální adresář.  
   
- Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a umístí jej do `m_rgRowData` datový člen. `CRowsetImpl` Třída definuje `m_rgRowData` datový člen. Data v tomto poli představuje celou tabulku a používá se v rámci šablony.  
+Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a umístí jej do `m_rgRowData` datový člen. `CRowsetImpl` Třída definuje `m_rgRowData` datový člen. Data v tomto poli představuje celou tabulku a používá se v rámci šablony.  
   
 ## <a name="see-also"></a>Viz také  
- [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)
+
+[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

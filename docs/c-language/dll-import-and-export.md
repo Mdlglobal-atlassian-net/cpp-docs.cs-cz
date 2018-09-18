@@ -1,5 +1,5 @@
 ---
-title: Knihovny DLL Import a Export | Microsoft Docs
+title: Knihovna DLL Import a Export | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048500cbf41eebdbb5a58d6622f7a351172e6f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cd950504297909f9c3839df5781a6db4753f085
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095401"
 ---
 # <a name="dll-import-and-export"></a>Import a export knihovny DLL
-**Konkrétní Microsoft**  
-  
- Modifikátory třídy úložiště dllimport a dllexport jsou zvláštní rozšíření společnosti Microsoft pro jazyk C. Tyto modifikátory definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Konkrétní informace o použití těchto modifikátory najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Rozšířené atributy třídy úložiště jazyka C](../c-language/c-extended-storage-class-attributes.md)
+
+**Specifické pro Microsoft**
+
+Modifikátory třídy úložiště dllimport a dllexport jsou zvláštní rozšíření společnosti Microsoft pro jazyk C. Tyto modifikátory definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Konkrétní informace o použití těchto parametrů najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Rozšířené atributy třídy úložiště jazyka C](../c-language/c-extended-storage-class-attributes.md)

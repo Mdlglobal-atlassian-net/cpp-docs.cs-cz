@@ -1,5 +1,5 @@
 ---
-title: _Cifmod – | Microsoft Docs
+title: _CIfmod | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090461"
 ---
 # <a name="cifmod"></a>_CIfmod
-Vypočítá zbytek nejvyšší dvě hodnoty v zásobníku s plovoucí desetinnou čárkou.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato verze `fmod` funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.  
-  
- Výsledná hodnota se posune do horní části zásobníku.  
-  
-## <a name="requirements"></a>Požadavky  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Vypočítá zbytek s plovoucí desetinnou čárkou nejvyšší dvě hodnoty v zásobníku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato verze `fmod` funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+
+Výsledná hodnota je vloženy do horní části zásobníku.
+
+## <a name="requirements"></a>Požadavky
+ **Platforma:** x86
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

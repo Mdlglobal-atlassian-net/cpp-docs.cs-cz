@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1070 | Microsoft Docs
+title: NMAKE U1070 závažná chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe39a5d6f6074596561cd8e32f7b9428bc60f6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6eb462e5c3c7e497cde55151bf92c62ffb2afcd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087016"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Závažná chyba nástroje NMAKE U1070
-cyklus definice makra 'makra.  
-  
- Definice daného makra obsahovala makro jehož definice obsažené dané makro. Definice maker cyklické jsou neplatné.  
-  
-## <a name="example"></a>Příklad  
- Následující definice maker  
-  
-```  
-ONE=$(TWO)  
-TWO=$(ONE)  
-```  
-  
- dojít k následující chybě:  
-  
-```  
-cycle in macro definition 'TWO'  
+
+zacyklení v definici makra "makro"
+
+Definice makra dané obsažené makra, jejichž definice obsahovala danou – makro. Definice maker cyklické jsou neplatné.
+
+## <a name="example"></a>Příklad
+
+Následující definice – makro
+
+```
+ONE=$(TWO)
+TWO=$(ONE)
+```
+
+způsobit následující chybu:
+
+```
+cycle in macro definition 'TWO'
 ```

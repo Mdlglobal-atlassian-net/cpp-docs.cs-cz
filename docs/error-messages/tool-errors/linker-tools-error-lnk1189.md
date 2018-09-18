@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1189 | Microsoft Docs
+title: Chyba Linkerů LNK1189 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c54181c042d51dc0a3317c81978b25b33d936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9527c7a741c34f9f75967d9d5465b65cbd1dcfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087926"
 ---
 # <a name="linker-tools-error-lnk1189"></a>Chyba linkerů LNK1189
-LIBTOOMANYMEMBERS:: knihovny omezit překročila počet objektů  
-  
- Byl překročen limit 65535 objektů nebo členy v knihovně.  
-  
- Chcete-li tento problém vyřešit, rozdělte na dvě nebo více knihovny s méně objektů nebo členy své knihovny.
+
+LIBTOOMANYMEMBERS:: knihovny omezit překročila počet objektů
+
+Byl překročen limit 65535 objektů nebo členy v knihovně.
+
+Chcete-li vyřešit tento problém, rozdělte na dvě nebo více knihovny se zmírněními hrozeb méně objektů nebo členy knihovny.

@@ -1,5 +1,5 @@
 ---
-title: C3839 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3839 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb5541e07d168df36bae83f81b7b8a8a7273665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597d02ff347d399833e2376743b50f65e7674a18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092905"
 ---
-# <a name="compiler-error-c3839"></a>C3839 chyby kompilátoru
-nelze změnit zarovnání ve spravovaných WinRT typu nebo  
-  
- Zarovnání proměnných v spravované nebo prostředí Windows Runtime typy řídí CLR nebo prostředí Windows Runtime a nemůže být upraven s [zarovnat](../../cpp/align-cpp.md).  
-  
- Následující ukázka generuje C3839:  
-  
-```  
-// C3839a.cpp  
-// compile with: /clr  
-ref class C  
-{  
-public:  
-   __declspec(align(32)) int m_j; // C3839  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3839"></a>Chyba kompilátoru C3839
+
+nejde změnit zarovnání v spravované nebo typ WinRT
+
+Zarovnání proměnné ve spravované nebo typy Windows Runtime se řídí CLR nebo prostředí Windows Runtime a nelze ji změnit pomocí [zarovnat](../../cpp/align-cpp.md).
+
+Následující ukázka generuje C3839:
+
+```
+// C3839a.cpp
+// compile with: /clr
+ref class C
+{
+public:
+   __declspec(align(32)) int m_j; // C3839
+};
+
+int main()
+{
+}
 ```

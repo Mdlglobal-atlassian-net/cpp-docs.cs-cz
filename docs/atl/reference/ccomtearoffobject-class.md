@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752759"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089577"
 ---
 # <a name="ccomtearoffobject-class"></a>Ccomtearoffobject – třída
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.
 
 ATL – implementuje jeho odtržených rozhraní ve dvou fázích – `CComTearOffObjectBase` metody zpracovávají počet odkazů a `QueryInterface`, zatímco `CComTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*  
+*PV*<br/>
 [in] Ukazatel, který bude převeden na ukazatel `CComObject<Owner>` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parametry
 
-*Vlastník*  
+*Vlastník*<br/>
 [in] Třída, pro kterou odnímatelnými nabídkami se implementuje.
 
 ### <a name="remarks"></a>Poznámky
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor IID rozhraní žádá.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -209,5 +209,5 @@ V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrát
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcachedtearoffobject – třída](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject – třída](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

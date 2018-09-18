@@ -1,5 +1,5 @@
 ---
-title: CXX0010 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0010 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed62ecba1d25882a95f6555c48d43b3ae405110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcc7231f3dca4c46c2ace410b9444c472880ff7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086795"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Chyba při vyhodnocování výrazu CXX0010
-chybějící levá hranatá závorka  
-  
- Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz s vyrovnáváním hranaté závorky.  
-  
- Tato chyba je stejný jako CAN0010.
+
+chybějící levá závorka
+
+Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz do vyváženého složených závorek.
+
+Tato chyba se shoduje s CAN0010.

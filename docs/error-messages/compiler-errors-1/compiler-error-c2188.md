@@ -1,5 +1,5 @@
 ---
-title: C2188 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2188 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f9f796da1256710ed08cade743e88317b6b8d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfbec3a86c385a5ae6af5a53561736b5a44ad2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089694"
 ---
-# <a name="compiler-error-c2188"></a>C2188 chyby kompilátoru
-"číslo": pro široká znaková příliš velká.  
-  
- Počet překračuje limit velikosti pro celou – znak typu. Vyberte typ větší.
+# <a name="compiler-error-c2188"></a>Chyba kompilátoru C2188
+
+'number': moc velké pro široký znak
+
+Počet překračuje limit velikosti pro typ širokého znaku. Výběr typu větší.

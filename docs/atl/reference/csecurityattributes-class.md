@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093048"
 ---
 # <a name="csecurityattributes-class"></a>Csecurityattributes – třída
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Parametry
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Odkaz na popisovač zabezpečení.
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Parametry
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Odkaz na popisovač zabezpečení.
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.
 
 ### <a name="remarks"></a>Poznámky
@@ -108,8 +108,8 @@ Tato metoda používá konstruktor k inicializaci `CSecurityAttributes` objektu.
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[Popisovač zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[Popisovač zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

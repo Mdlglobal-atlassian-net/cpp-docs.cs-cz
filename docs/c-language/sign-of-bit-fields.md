@@ -1,5 +1,5 @@
 ---
-title: Znak bitových polí | Microsoft Docs
+title: Znak bitových polí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8e09aea98c63015e86eeacf8f3458723aa4e61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 351fb7704faf8a168d13cde2558015c340e44d72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090051"
 ---
 # <a name="sign-of-bit-fields"></a>Znak bitových polí
-**ANSI 3.5.2.1** zda "plain" `int` pole je považován za **podepsané int** bit pole nebo jako na nepodepsané int bitová pole  
-  
- Bitová pole mohou být se znaménkem nebo bez znaménka. Prostá bitová pole jsou považována za pole se znaménkem.  
-  
-## <a name="see-also"></a>Viz také  
- [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.1** zda "prostý" `int` pole je považován za **znaménkem** nebo za bitové pole unsigned int
+
+Bitová pole mohou být se znaménkem nebo bez znaménka. Prostá bitová pole jsou považována za pole se znaménkem.
+
+## <a name="see-also"></a>Viz také
+
+[Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

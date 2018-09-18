@@ -12,25 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17f5f427efdcbdca6213989f6976fb734a74ba5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092710"
 ---
 # <a name="summary-of-string-literals"></a>Souhrn textových literálů
 
 *řetězcový literál*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **.**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s – znak sekvence*sub > optimalizované</sub> **.**  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s – znak sekvence*sub > optimalizované</sub> **.**
+
 *s – znak sekvence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
+
 *s char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě značkou dvojité uvozovky ("), zpětného lomítka (\\), nebo sekvence escape znaků nového řádku  
+&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě značkou dvojité uvozovky ("), zpětného lomítka (\\), nebo sekvence escape znaků nového řádku
 
 ## <a name="see-also"></a>Viz také
 

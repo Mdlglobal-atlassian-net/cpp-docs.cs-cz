@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf38e433f7042707b502a4cba2088db9412adb29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a7f2f44df96ca339e5d8e4b251b5f2d259cb606b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092138"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
-**Specifické pro Microsoft**  
-  
- Extrahuje a vrátí zapouzdřený ukazatel rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Interface* Detach( ) throw( );  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Extrahuje a vrátí zapouzdřený ukazatel rozhraní a poté vyčistí úložiště zapouzdřeného ukazatele na hodnotu NULL. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je na vás volat `Release` na Vrácený ukazatel rozhraní.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)
+
+**Specifické pro Microsoft**
+
+Extrahuje a vrátí zapouzdřený ukazatel rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Interface* Detach( ) throw( );
+```
+
+## <a name="remarks"></a>Poznámky
+
+Extrahuje a vrátí zapouzdřený ukazatel rozhraní a poté vyčistí úložiště zapouzdřeného ukazatele na hodnotu NULL. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je na vás volat `Release` na Vrácený ukazatel rozhraní.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

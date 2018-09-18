@@ -1,5 +1,5 @@
 ---
-title: C2022 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2022 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165607"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089655"
 ---
-# <a name="compiler-error-c2022"></a>C2022 chyby kompilátoru
-"číslo": příliš velký pro znak  
-  
- Osmičkové číslo následující zpětné lomítko (\\) ve znaku nebo řetězcová konstanta je příliš dlouhý pro představují znak.
+# <a name="compiler-error-c2022"></a>Chyba kompilátoru C2022
+
+'number': moc velké pro znak
+
+Osmičkové číslo po zpětné lomítko (\\) ve znaku nebo řetězcová konstanta je příliš dlouhý pro reprezentaci znaků.

@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1332 | Microsoft Docs
+title: Chyba Linkerů LNK1332 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094517"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Chyba linkerů LNK1332
-zjištěna\<počet > typy prostředí Windows Runtime v jeden modul naimportována a definovaný v jiném modulu  
-  
- Když ho vytvořil aktuální cíl, linkeru zjistil <`count`> typy prostředí Windows Runtime, z nichž každý je naimportována jeden modul a rovněž definovaný v jiném modulu.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Opravte všechny chyby LNK2039 v sestavení podle návrhu v chybové zprávě.  
-  
-## <a name="see-also"></a>Viz také  
- [Chyba linkerů LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)   
- [Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+
+zjištěna\<count > typy Windows Runtime naimportované do jednoho modulu a definovaný v jiném.
+
+Při jeho aktuální cíl, linker zjistil <`count`> typy Windows Runtime, z nichž každý je naimportované do jednoho modulu a také definované v jiném modulu.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Opravte všechny chyby LNK2039 v sestavení podle návrhu v chybové zprávě.
+
+## <a name="see-also"></a>Viz také
+
+[Chyba linkerů LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
+[Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

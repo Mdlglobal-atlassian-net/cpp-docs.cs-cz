@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4057 | Microsoft Docs
+title: Upozornění (úroveň 4) C4057 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3217ccb0a96fbe02e152ff82dedeb7e8e54b89ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10ce6b67fd24b4b8db01177af0225deab9dba4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088004"
 ---
-# <a name="compiler-warning-level-4-c4057"></a>C4057 kompilátoru upozornění (úroveň 4)
-'operátor': 'identifier1' indirection mírně odlišné základních typů z 'identifier2.  
-  
- Dva výrazy ukazatel odkazovat na jiné základní typy. Výrazy jsou bez převodu použít.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Typy signed a unsigned kombinací.  
-  
-2.  Kombinování **krátké** a **dlouho** typy.
+# <a name="compiler-warning-level-4-c4057"></a>Kompilátor upozornění (úroveň 4) C4057
+
+'operator': "identifier1" dereference na mírně odlišnými základními typy z "identifier2"
+
+Dvou výrazů ukazatele odkazují na různé základní typy. Výrazy se používají bez převodu.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Kombinování typy se znaménkem a bez znaménka.
+
+1. Kombinování **krátký** a **dlouhé** typy.

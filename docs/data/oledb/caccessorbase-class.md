@@ -36,14 +36,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086834"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase – třída
+
 Všechny přistupující objekty v šablonách technologie OLE DB odvozovat z této třídy. `CAccessorBase` Umožňuje spravovat několik přístupových objektů jedné sady řádků. Také poskytuje vazby pro parametry a výstupní sloupce.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -65,9 +66,11 @@ Všechny přistupující objekty v šablonách technologie OLE DB odvozovat z t�
 |[Releaseaccessors –](#release)|Uvolní přístupové objekty.|  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
 
 ## <a name="close"></a> CAccessorBase::Close
+
 Zavře přístupové objekty.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -77,9 +80,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je nutné volat [releaseaccessors –](../../data/oledb/caccessorbase-releaseaccessors.md) první.  
+
+Je nutné volat [releaseaccessors –](../../data/oledb/caccessorbase-releaseaccessors.md) první.  
 
 ## <a name="geth"></a> CAccessorBase::GetHAccessor
+
 Načte popisovač přistupujícího objektu zadaného přístupového objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -89,13 +94,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nAccessor*  
- [in] Číslo nula posun pro přistupující objekt.  
+
+*nAccessor*<br/>
+[in] Číslo nula posun pro přistupující objekt.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač přistupujícího objektu.  
+
+Popisovač přistupujícího objektu.  
 
 ## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+
 Získá počet přistupující objekty vytvořené třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -105,9 +113,11 @@ ULONG GetNumAccessors() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet přistupující objekty vytvořené třídy.  
+
+Počet přistupující objekty vytvořené třídy.  
 
 ## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+
 Vrátí true, pokud je během operace přesunu automaticky načíst data pro přistupující objekt.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -117,13 +127,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nAccessor*  
- [in] Číslo nula posun pro přistupující objekt.  
+
+*nAccessor*<br/>
+[in] Číslo nula posun pro přistupující objekt.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je přistupující objekt automaticky přistupující objekt. V opačném případě vrátí **false**.  
+
+Vrátí **true** Pokud je přistupující objekt automaticky přistupující objekt. V opačném případě vrátí **false**.  
 
 ## <a name="release"></a> CAccessorBase::ReleaseAccessors
+
 Uvolní přistupující objekty vytvořené třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -133,16 +146,20 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pUnk*  
- [in] Ukazatel `IUnknown` rozhraní pro objekt modelu COM, pro kterou byly vytvořeny přístupové objekty.  
+
+*pUnk*<br/>
+[in] Ukazatel `IUnknown` rozhraní pro objekt modelu COM, pro kterou byly vytvořeny přístupové objekty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Volá se z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
+
+Volá se z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessorBase – třída](../../data/oledb/caccessorbase-class.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessorBase – třída](../../data/oledb/caccessorbase-class.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093438"
 ---
 # <a name="catlmodule-class"></a>Catlmodule – třída
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Parametry
 
-*pRegistrar*  
+*pRegistrar*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pFunc*  
+*pFunc*<br/>
 Ukazatel na funkci přidat.
 
-*datový sklad*  
+*datový sklad*<br/>
 Uživatelem definované datové předána funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppGIT*  
+*ppGIT*<br/>
 Ukazatel na proměnnou, která se zobrazí ukazatel na Global Interface Table.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRes*  
+*lpszRes*<br/>
 Název prostředku.
 
-*nResID*  
+*nResID*<br/>
 ID prostředku.
 
-*bRegister*  
+*bRegister*<br/>
 Hodnota TRUE, pokud by měl být zaregistrován objekt; FALSE v opačném případě.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRes*  
+*lpszRes*<br/>
 Název prostředku.
 
-*bRegister*  
+*bRegister*<br/>
 Určuje, zda by měly být zaregistrovány objektu.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parametry
 
-*nResID*  
+*nResID*<br/>
 ID prostředku.
 
-*lpszRes*  
+*lpszRes*<br/>
 Název prostředku.
 
-*bRegister*  
+*bRegister*<br/>
 Určuje, zda by měly být zaregistrovány skript prostředků.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -364,7 +364,7 @@ Podobně jako [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresou
 
 ## <a name="see-also"></a>Viz také
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
-[Třídy modulů](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Třídy modulů](../../atl/atl-module-classes.md)<br/>
 [Komponenta registru (Registrar)](../../atl/atl-registry-component-registrar.md)  

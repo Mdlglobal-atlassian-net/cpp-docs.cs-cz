@@ -1,5 +1,5 @@
 ---
-title: C3536 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3536 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f88e656b0d63b6a7a4d60ace2f4cd5e2347d188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7585a75ebe9733c228756e92d8e5ae57699aca27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088576"
 ---
-# <a name="compiler-error-c3536"></a>C3536 chyby kompilátoru
-'symbol': nelze použít před inicializací  
-  
- Uvedené symbol nelze použít, před inicializací. V praxi to znamená, že proměnné nelze použít k chybě při inicializaci sám sebe.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
-1.  Inicializace nezdařila proměnné sama se sebou.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vypočítá C3536, protože každá proměnná je inicializován sama se sebou.  
-  
-```  
-// C3536.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto a = a;     //C3536  
-   auto b = &b;    //C3536  
-   auto c = c + 1; //C3536  
-   auto* d = &d;   //C3536  
-   auto& e = e;    //C3536  
-   return 0;  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Auto – klíčové slovo](../../cpp/auto-keyword.md)
+# <a name="compiler-error-c3536"></a>Chyba kompilátoru C3536
+
+'symbol': nejde použít, dokud není inicializován
+
+Zadaný symbol nejde používat před inicializací. V praxi to znamená, že proměnné nelze inicializovat.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+1. Proměnná se sebou samým, nebyl inicializován.
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu vrací C3536, protože každá proměnná je inicializována sám se sebou.
+
+```
+// C3536.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto a = a;     //C3536
+   auto b = &b;    //C3536
+   auto c = c + 1; //C3536
+   auto* d = &d;   //C3536
+   auto& e = e;    //C3536
+   return 0;
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Auto – klíčové slovo](../../cpp/auto-keyword.md)

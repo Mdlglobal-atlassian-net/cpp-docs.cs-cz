@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2008 | Microsoft Docs
+title: Chyba Linkerů LNK2008 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086808"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Chyba linkerů LNK2008
-Oprava cíl není zarovnaný 'symbol_name.  
-  
- ODKAZ najít oprava cíl v souboru objektu, který nebyl správně zarovnána.  
-  
- Tato chyba může být způsobeno vlastní podle bodu zarovnání (například #pragma [pack](../../preprocessor/pack.md)), [zarovnat](../../cpp/align-cpp.md) modifikátor, nebo pomocí kódu jazyka sestavení, která mění podle bodu zarovnání.  
-  
- Pokud váš kód nepoužívá výše uvedených možností, může být způsobeno kompilátorem.
+
+Cíl opravy není zarovnaný "symbol_name.
+
+ODKAZ nalezen cíl opravy v souboru objektu, který nebyl správně zarovnány.
+
+Tuto chybu může způsobovat zarovnání vlastní bodu (například #pragma [pack](../../preprocessor/pack.md)), [zarovnat](../../cpp/align-cpp.md) modifikátor, nebo pomocí kódu sestavení jazyka, který upravuje bodu zarovnání.
+
+Pokud váš kód nepoužívá žádné z výše uvedeného, to může být způsobeno kompilátorem.

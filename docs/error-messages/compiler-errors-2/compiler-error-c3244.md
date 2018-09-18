@@ -1,5 +1,5 @@
 ---
-title: C3244 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3244 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a652e94345b7c615b3181d088186eb80113848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4e0ebfccfcf37c9c93af55e85f3dd5dd2a1c2d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091579"
 ---
-# <a name="compiler-error-c3244"></a>C3244 chyby kompilátoru
-"metody": Tato metoda byla zavedena rozhraním' ' není rozhraním'.  
-  
- Pokusili jste se [explicitně přepsat](../../cpp/explicit-overrides-cpp.md) člena, který neexistuje v zadaném rozhraní, ale neexistuje v jiné základní třídy.  
-  
- Následující ukázka generuje C3244:  
-  
-```  
-// C3244.cpp  
-#pragma warning(disable:4199)  
-  
-__interface IX15A {  
-   void f();  
-};  
-  
-__interface IX15B {  
-   void g();  
-};  
-  
-class CX15 : public IX15A, public IX15B {  
-public:        
-   void IX15A::f();  
-   void IX15B::g();  
-};  
-  
-void CX15::IX15A::g()   // C3244 occurs here  
-{  
-}  
+# <a name="compiler-error-c3244"></a>Chyba kompilátoru C3244
+
+"metoda": tuto metodu zavádí až "rozhraní" není rozhraním".
+
+Pokusili jste se [explicitně přepsat](../../cpp/explicit-overrides-cpp.md) člena, který neexistuje v zadané rozhraní, ale existuje v jiné základní třídy.
+
+Následující ukázka generuje C3244:
+
+```
+// C3244.cpp
+#pragma warning(disable:4199)
+
+__interface IX15A {
+   void f();
+};
+
+__interface IX15B {
+   void g();
+};
+
+class CX15 : public IX15A, public IX15B {
+public:
+   void IX15A::f();
+   void IX15B::g();
+};
+
+void CX15::IX15A::g()   // C3244 occurs here
+{
+}
 ```

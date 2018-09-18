@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru prostředků RW4004 | Microsoft Docs
+title: Upozornění kompilátoru prostředků RW4004 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bd1c043ac5660c5cb8fc8b2bfa1dd2f6968b55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33305f1f86c0cc1722e4a235ec27927f6e70675f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095986"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Upozornění kompilátoru prostředků RW4004
-Není ekvivalentní virtuální klíče kódu znaků ASCII  
-  
- Řetězcový literál byl použit pro virtuální kód v akcelerátor VIRTKEY typu.  
-  
- Toto upozornění můžete pokračovat, ale mějte na paměti, že klávesy akcelerátoru generované nemusí odpovídat řetězec, který jste uvedli. (VIRTKEYs použít různé klíče kódy než ASCII akcelerátorů.)  
-  
- Textové literály jsou syntakticky, můžete jenom zajistit, že dostanete akcelerátoru chcete pomocí **jich\* #define** hodnoty v odkazující na Windows.
+
+Virtuální klíče kódu není ekvivalentní znaku standardu ASCII
+
+Řetězcový literál se použil pro virtuální kód v akcelerátoru typ VIRTKEY.
+
+Toto upozornění můžete pokračovat, ale mějte na paměti, že akcelerátor klíčů vygenerovaných nemusí odpovídat řetězec, který jste určili. (VIRTKEYs použít různé kódy kláves než ASCII akcelerátory.)
+
+Řetězcové literály jsou syntakticky správný, je jenom zajistit, že dostanete akcelerátoru pomocí **jich\* #define** hodnoty v WINDOWS.h.

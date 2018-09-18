@@ -1,5 +1,5 @@
 ---
-title: Odstranění otevřených souborů | Microsoft Docs
+title: Odstranění otevřených souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 268496c676aa0c324fa434879e9147eef180dd30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e66c811571f22c263193ffad676052b34b7f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087094"
 ---
 # <a name="deleting-open-files"></a>Odstranění otevřených souborů
-**ANSI 4.9.4.1** vliv odebrat funkce na otevření souboru  
-  
- Funkce remove odstraní soubor. Pokud je soubor otevřen, tato funkce se nezdaří a vrátí hodnotu -1.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce knihovny](../c-language/library-functions.md)
+
+**ANSI 4.9.4.1** účinek funkce remove na otevřený soubor
+
+Funkce remove odstraní soubor. Pokud je soubor otevřen, tato funkce se nezdaří a vrátí hodnotu -1.
+
+## <a name="see-also"></a>Viz také
+
+[Funkce knihovny](../c-language/library-functions.md)

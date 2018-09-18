@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089044"
 ---
 # <a name="atlbasemodule70-structure"></a>_Atl_base_module70 – struktura
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>Členové
 
-`cbSize`  
+`cbSize`<br/>
 Velikost struktury, použít pro správu verzí.
 
-`m_hInst`  
+`m_hInst`<br/>
 `hInstance` Pro tento modul (exe nebo dll).
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 Výchozí instance prostředků popisovač.
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 Informace o verzi operačního systému. Vnitřně jej používá knihovnu ATL.
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 Obsahuje verzi knihovny ATL. Aktuálně 0x0700.
 
-`pguidVer`  
+`pguidVer`<br/>
 ATL interní identifikátor GUID.
 
-`m_csResource`  
+`m_csResource`<br/>
 Používá k synchronizaci přístupu k `m_rgResourceInstance` pole. Vnitřně jej používá knihovnu ATL.
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 Pole použitá k vyhledání prostředků ve všech instancích prostředků, které ATL je vědět. Vnitřně jej používá knihovnu ATL.
 
 ## <a name="remarks"></a>Poznámky

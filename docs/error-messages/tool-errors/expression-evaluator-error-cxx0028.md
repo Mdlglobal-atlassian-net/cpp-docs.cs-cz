@@ -1,5 +1,5 @@
 ---
-title: CXX0028 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0028 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb894a9960e74fe2b6c2569aab01b66a0de077e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087426"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>Chyba při vyhodnocování výrazu CXX0028
-element není struktura/sjednocení  
-  
- Byl zadán výraz formuláře 'Struct.Member' nebo 'pStruct -> člen', ale \<člen > není element struktury.  
-  
- Výraz nemusí být správně v závorkách.  
-  
- Tato chyba je stejný jako CAN0028.
+
+Struktura/sjednocení – element
+
+Byl zadán výraz formuláře "Struct.Member" nebo "pStruct -> člen", ale \<člena > nepředstavuje element struktury.
+
+Výraz nemusí být správně v závorkách.
+
+Tato chyba se shoduje s CAN0028.

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604b58f7f8f6074c16effa3220d17bc00c44f5b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 872644533a0fab73768392efa2c5cd016b6bb980
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095650"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmy (moderní verze jazyka C++)
 
@@ -31,13 +31,13 @@ Pro moderní programování C++ doporučujeme použít algoritmy [standardní kn
 
 Pro zápis Komparátor, použijte přísné **<** a používat *pojmenované lambda výrazy* kde je to možné.
 
-```cpp  
+```cpp
 auto comp = [](const widget& w1, const widget& w2)
      { return w1.weight() < w2.weight(); }
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );  
+auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
 ## <a name="loops"></a>Smyčky
@@ -46,26 +46,26 @@ Pokud je to možné, použijte založený na rozsahu **pro** smyčky nebo volán
 
 Namísto starého C++ následujícím způsobem:
 
-```cpp  
+```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
-    /* ... */  
+    /* ... */
 }
 
 auto i = v.begin();
 
 for ( ; i != v.end(); ++i ) {
-    if (*i > x && *i < y) break;  
-}  
+    if (*i > x && *i < y) break;
+}
 ```
 
 Použijte moderní C++ následujícím způsobem:
 
-```cpp  
+```cpp
 for_each( begin(strings), end(strings), [](string& s) {
-  // ...  
+  // ...
 } );
 
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
 ### <a name="range-based-for-loops"></a>Na základě rozsahu smyček for

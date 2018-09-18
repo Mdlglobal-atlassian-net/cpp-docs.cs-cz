@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4305 | Microsoft Docs
+title: Upozornění (úroveň 1) C4305 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,24 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086821"
 ---
-# <a name="compiler-warning-level-1-c4305"></a>C4305 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4305"></a>Kompilátor upozornění (úroveň 1) C4305
 
-> '*kontextu*': zkrácení z '*type1*'do'*type2*.  
+> "*kontextu*': zkrácení z '*type1*"do"*type2*"
 
 ## <a name="remarks"></a>Poznámky
 
-Se objeví toto upozornění, když je hodnota převedena na menší typ v inicializaci nebo jako argument konstruktoru, což vede ke ztrátě informací.
+Pokud hodnota je převedena na menší typ inicializace nebo jako argument konstruktoru, čímž dojde ke ztrátě informací se objeví toto upozornění.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka obsahuje dva způsoby, jak vám může tento stav zapříčinit:
+Tato ukázka zobrazí dva způsoby, jak vám může tento stav zapříčinit:
 
 ```cpp
 // C4305.cpp
@@ -51,4 +51,4 @@ int main()
 }
 ```
 
-Chcete-li tento problém vyřešit, inicializovat pomocí hodnoty správného typu nebo použijte explicitní přetypování do správného typu. Například použít **float** literálu například 2.71828f místo **dvojité** (výchozí typ pro literály s plovoucí desetinnou čárkou) k chybě při inicializaci **float** proměnnou, nebo mají být předány konstruktor, který přebírá **float** argument.
+Chcete-li vyřešit tento problém, inicializovat pomocí hodnoty správného typu, nebo použijte explicitní přetypování na správný typ. Například použít **float** literálu jako je například 2.71828f místo **double** (výchozí typ pro literály s plovoucí desetinnou čárkou) k inicializaci **float** proměnné, nebo předat konstruktor, který přijímá **float** argument.

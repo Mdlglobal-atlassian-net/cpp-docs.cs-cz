@@ -1,5 +1,5 @@
 ---
-title: fseek, _lseek – konstanty | Microsoft Docs
+title: fseek, _lseek – konstanty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,32 +20,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcf0a1106610740a585b7e4f8b68e3fc9b6a8f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d48ead4532638461962a3bf88d2321cee775ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087653"
 ---
 # <a name="fseek-lseek-constants"></a>fseek, _lseek – konstanty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- *Původu* argument určuje počáteční pozici a může být jedna z následujících konstant manifestu:  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`SEEK_END`|Konec souboru|  
-|`SEEK_CUR`|Aktuální pozici ukazatele souboru|  
-|`SEEK_SET`|Začátek souboru|  
-  
-## <a name="see-also"></a>Viz také  
- [fseek, _fseeki64 –](../c-runtime-library/reference/fseek-fseeki64.md)   
- [_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+*Původu* argument určuje počáteční pozici a může být jedna z následujících konstant manifestu:
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`SEEK_END`|Konec souboru|
+|`SEEK_CUR`|Aktuální pozici ukazatele na soubor|
+|`SEEK_SET`|Začátek souboru|
+
+## <a name="see-also"></a>Viz také
+
+[fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)<br/>
+[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

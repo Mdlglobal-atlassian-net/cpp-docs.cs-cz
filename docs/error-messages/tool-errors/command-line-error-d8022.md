@@ -1,5 +1,5 @@
 ---
-title: Chyba příkazového řádku D8022 | Microsoft Docs
+title: Chyba příkazového řádku D8022 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338612527555dff6331ceaeef5e3b3dba0949d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1438473ff4fa45bf4000cb273ad3817d5673f219
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094416"
 ---
 # <a name="command-line-error-d8022"></a>Chyba příkazového řádku D8022
-Nelze otevřít 'messagefile.  
-  
- Daný soubor není v aktuálním adresáři nebo v adresáři zadaném v proměnné prostředí PATH. Soubor zprávy obsahuje stručný přehled syntaxe příkazového řádku kompilátoru a možnosti.  
-  
- Přesunete tento soubor k aktuálnímu adresáři nebo jiného adresáře v aktuální cestě. Pokud tento soubor nebyl nalezen, spusťte instalační program a zkopírujte ho z distribučních disků.
+
+Nelze otevřít "messagefile.
+
+Daný soubor není v aktuálním adresáři nebo v adresáři uvedeném na proměnné prostředí PATH. Zpráva obsahuje stručný popis syntaxe příkazového řádku kompilátoru a možnosti.
+
+Přesuňte tento soubor do aktuálního adresáře nebo adresáře v aktuální cestě. Pokud tento soubor nebyl nalezen, spusťte instalační program ho zkopírovat z disků distribuce.

@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1164 | Microsoft Docs
+title: Chyba Linkerů LNK1164 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ad1c223c9d4b22e3763f1d24a6c2631f6342d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b07dcf360a58b07b84abe655641b758d6137d0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087425"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Chyba linkerů LNK1164
-část zarovnání oddílů (number) větší než hodnota /ALIGN  
-  
- Velikost zarovnání pro daný oddíl v souboru objektu překračuje hodnotu zadanou pomocí [/ALIGN](../../build/reference/align-section-alignment.md) možnost. **/ALIGN** hodnota musí být násobkem 2 a musí být roven nebo překročí zarovnání oddílů zadaná v souboru objektu.  
-  
- Buď pak ji znovu zkompilovat s menší zarovnání oddílů nebo zvyšte **/ALIGN** hodnotu.
+
+část zarovnání oddílu (číslo) větší než hodnota/align.
+
+Velikost zarovnání pro danou část do souboru objektu nepřekročí hodnotu zadanou pomocí [/ALIGN](../../build/reference/align-section-alignment.md) možnost. **/ALIGN** hodnota musí být mocninou čísla 2 a musí být roven nebo překračují zarovnání oddílů v souboru objektu.
+
+Buď zkompilujte znovu s menším zarovnání oddílů nebo zvýšení **/ALIGN** hodnotu.

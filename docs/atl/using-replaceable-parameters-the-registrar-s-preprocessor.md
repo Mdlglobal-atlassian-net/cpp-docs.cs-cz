@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097468"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Použití nahraditelných parametrů (doménový Registrátor&#39;s preprocesoru)
 
@@ -36,8 +36,8 @@ Nahraditelné parametry umožňují klienta vašeho registrátora zadání dat z
 
 Další možností použití preprocesoru je zřetězit data za běhu s daty skriptu. Předpokládejme například, že položka je potřeba, který obsahuje úplnou cestu k modulu s řetězcem "`, 1`" přidán na konec. Nejprve definujte následující rozšíření:
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 Potom jeden skript zpracování metody uvedené v před voláním [vyvolání skriptů](../atl/invoking-scripts.md), přidejte můžou nahradit aktuální soubor do mapy:
@@ -53,8 +53,8 @@ Při analýze souboru, který rozbalí doménový Registrátor `'%MODULE%, 1'` k
 >  Nahradit nahrazujícími hodnotami v době běhu, odeberte volání ve skriptu na [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) – makro. Místo toho, nahraďte ho vlastním `UpdateRegistry` metodu, která volá [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)a předat vaše pole _ATL_REGMAP_ Položka struktury. Vaše pole _ATL_REGMAP_ENTRY musí mít alespoň jednu položku, která je nastavena na {NULL, NULL} a tato položka by měla být vždy poslední položky. V opačném případě chybu narušení přístupu bude generována v případě `UpdateRegistryFromResource` je volána.
 
 > [!NOTE]
->  Při sestavování projektu, jejichž výstupem jsou spustitelný soubor, ATL automaticky přidá uvozovky kolem názvu cesty vytvořen v době běhu s **modulu %** parametr skriptu doménový Registrátor. Pokud nechcete, aby se název cesty do uvozovek, pomocí nové **MODULE_RAW %** parametr místo.  
->   
+>  Při sestavování projektu, jejichž výstupem jsou spustitelný soubor, ATL automaticky přidá uvozovky kolem názvu cesty vytvořen v době běhu s **modulu %** parametr skriptu doménový Registrátor. Pokud nechcete, aby se název cesty do uvozovek, pomocí nové **MODULE_RAW %** parametr místo.
+>
 >  Při sestavování projektu, jejichž výstupem jsou knihovny DLL, ATL nebude přidávat uvozovky název cesty, pokud **modulu %** nebo **MODULE_RAW %** se používá.
 
 ## <a name="see-also"></a>Viz také

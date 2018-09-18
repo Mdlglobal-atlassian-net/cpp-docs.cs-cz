@@ -1,5 +1,5 @@
 ---
-title: C3058 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3058 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867dbdead4c4268035b5c34a5ef053b959c822a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56862c411a31781f85afb280453c43b3611ff31e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093971"
 ---
-# <a name="compiler-error-c3058"></a>C3058 chyby kompilátoru
-'symbol': symbol není deklarován jako 'threadprivate, než bude použit v klauzuli 'copyin.  
-  
- Deklarování symbol [threadprivate](../../parallel/openmp/reference/threadprivate.md) před použitím v [copyin](../../parallel/openmp/reference/copyin.md) klauzule.  
-  
- Následující ukázka generuje C3058:  
-  
-```  
-// C3058.cpp  
-// compile with: /openmp  
-int x, y, z;  
-#pragma omp threadprivate(x, z)  
-  
-void test() {  
-   #pragma omp parallel copyin(x, y)   // C3058  
-   {  
-   }  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3058b.cpp  
-// compile with: /openmp /LD  
-int x, y, z;  
-#pragma omp threadprivate(x, y)  
-  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-   }  
-}  
+# <a name="compiler-error-c3058"></a>Chyba kompilátoru C3058
+
+'symbol': symbol není deklarovaný jako 'threadprivate' než se použijí v klauzuli copyin.
+
+Nejprve musí být deklarován symbol [threadprivate](../../parallel/openmp/reference/threadprivate.md) předtím, než je možné v [copyin](../../parallel/openmp/reference/copyin.md) klauzuli.
+
+Následující ukázka generuje C3058:
+
+```
+// C3058.cpp
+// compile with: /openmp
+int x, y, z;
+#pragma omp threadprivate(x, z)
+
+void test() {
+   #pragma omp parallel copyin(x, y)   // C3058
+   {
+   }
+}
+```
+
+Možná řešení:
+
+```
+// C3058b.cpp
+// compile with: /openmp /LD
+int x, y, z;
+#pragma omp threadprivate(x, y)
+
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+   }
+}
 ```

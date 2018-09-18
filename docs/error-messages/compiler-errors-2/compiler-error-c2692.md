@@ -1,5 +1,5 @@
 ---
-title: C2692 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2692 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02110750a748b5c520df7d202a87957f227a802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03a9006889c5853e77b5603484ea9d18f2474241
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088368"
 ---
-# <a name="compiler-error-c2692"></a>C2692 chyby kompilátoru
-'Název_funkce': plně deklaraci funkce vyžadované v kompilátoru jazyka C s ' / clr se možnost  
-  
- Při kompilování pro .NET spravovaného kódu, vyžaduje kompilátor jazyka C deklarace funkcí ANSI. Kromě toho, pokud funkci nepřijímá žádné parametry, se musí explicitně deklarovat `void` jako typ parametru.
+# <a name="compiler-error-c2692"></a>Chyba kompilátoru C2692
+
+'Název_funkce': v kompilátoru C používat plně prototypované funkce "/ clr' možnost
+
+Při kompilaci pro .NET spravovaného kódu, kompilátor jazyka C vyžaduje deklarace funkcí ANSI. Kromě toho, pokud funkce nepřijímá žádné parametry, se musí explicitně deklarovat `void` jako typ parametru.

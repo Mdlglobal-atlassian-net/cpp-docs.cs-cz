@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b75398db6e078f28fab4525da55aaae8193663
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089902"
 ---
 # <a name="cstringelementtraitsi-class"></a>Cstringelementtraitsi – třída
 
@@ -36,13 +36,13 @@ Tato třída poskytuje statické funkce související se ukládají v objektech 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>  
+template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>
 class CStringElementTraitsI : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="members"></a>Členové
@@ -88,10 +88,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -112,10 +112,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -136,7 +136,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Element řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -161,6 +161,6 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Viz také
 
-[Celementtraitsbase – třída](../../atl/reference/celementtraitsbase-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [CStringElementTraits – třída](../../atl/reference/cstringelementtraits-class.md)

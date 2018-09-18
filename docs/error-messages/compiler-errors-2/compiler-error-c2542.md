@@ -1,5 +1,5 @@
 ---
-title: C2542 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2542 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039d5853da3876dbe079ff1e4a38be4afdb34bd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81f6f9aa48a4a0ee1a0b414879ae3673c13529fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097237"
 ---
-# <a name="compiler-error-c2542"></a>C2542 chyby kompilátoru
-"identifikátor": objektu třídy nemá žádný konstruktor pro inicializaci  
-  
- Neexistuje žádný konstruktor s seznam parametrů, která odpovídá inicializace.  
-  
- Tato chyba může být způsobeno nesprávné parametry v inicializace.
+# <a name="compiler-error-c2542"></a>Chyba kompilátoru C2542
+
+'identifier': objekt třídy nemá žádný konstruktor pro inicializaci
+
+Neexistuje žádný konstruktor se seznamem parametrů, který odpovídá inicializace.
+
+Tuto chybu může způsobovat nesprávné parametry při inicializaci.

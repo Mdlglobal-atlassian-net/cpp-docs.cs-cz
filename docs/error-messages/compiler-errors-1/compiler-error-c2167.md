@@ -1,5 +1,5 @@
 ---
-title: C2167 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2167 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22abe4d25f6f8fe9b8d07195a2fd23b44dd7b19e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dee381be72124d69a17fd6e3026066bbadfac13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088381"
 ---
-# <a name="compiler-error-c2167"></a>C2167 chyby kompilátoru
-'function': příliš mnoho parametrů Skutečná vnitřní funkce  
-  
- Odkaz na `intrinsic` funkce má příliš mnoho parametrů.
+# <a name="compiler-error-c2167"></a>Chyba kompilátoru C2167
+
+'function': moc velký počet skutečných parametrů pro vnitřní funkci
+
+Odkaz na `intrinsic` funkce má příliš mnoho parametrů.

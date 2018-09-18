@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4274 | Microsoft Docs
+title: Upozornění (úroveň 1) C4274 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b941fc0cb32e268e33d3b0e1ae66079e8decaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f6db0ee96674beda51ab02c8651e6f4960a0bf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094683"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>C4274 kompilátoru upozornění (úroveň 1)
-\#Ident ignorován; naleznete v dokumentaci k #pragma komentář (exestr, 'řetězec')  
-  
- `#ident` – Direktiva, která vloží řetězec definované uživatelem v objektu nebo spustitelný soubor, je zastaralý. V důsledku toho kompilátor ignoruje direktivu.  
-  
+# <a name="compiler-warning-level-1-c4274"></a>Kompilátor upozornění (úroveň 1) C4274
+
+\#Ident ignorovány; najdete v dokumentaci #pragma Comment (exestr, 'řetězec')
+
+`#ident` – Direktiva, která vloží řetězec uživatelem zadaný objekt nebo spustitelný soubor, se již nepoužívá. V důsledku toho kompilátor ignoruje direktivy.
+
 > [!CAUTION]
->  C4274 upozornění informuje o tom, abyste použili [#pragma komentář (exestr, 'řetězec')](../../preprocessor/comment-c-cpp.md) – direktiva. Tuto žádost, ale je zastaralá a bude v budoucí verzi kompilátoru revidován. Pokud použijete `#pragma` direktivy, nástroj linkeru (LINK.exe) ignoruje záznam komentář vyprodukované direktiva a vydá upozornění [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Místo `#ident` direktivy, doporučujeme použít řetězec prostředku verzi souboru v aplikaci.  
-  
-## <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Odeberte `#ident "` *řetězec* `"` – direktiva.  
-  
-## <a name="see-also"></a>Viz také  
- [komentáře (C/C++)](../../preprocessor/comment-c-cpp.md)   
- [Upozornění LNK4229 nástroje linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)   
- [Práce se zdrojovými soubory](../../windows/working-with-resource-files.md)
+>  Upozornění C4274 výzvou k použití [#pragma comment (exestr, 'řetězec')](../../preprocessor/comment-c-cpp.md) směrnice. Ale toto doporučení je zastaralá a bude v budoucí verzi kompilátoru revidován. Pokud používáte `#pragma` direktiv, nástroj linker (LINK.exe) ignoruje poznámku vytvářených směrnice a vydá upozornění [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Místo `#ident` direktiv, doporučujeme použít zdrojový řetězec verze souboru v aplikaci.
+
+## <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Odeberte `#ident "` *řetězec* `"` směrnice.
+
+## <a name="see-also"></a>Viz také
+
+[comment (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
+[Upozornění linkerů LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
+[Práce se zdrojovými soubory](../../windows/working-with-resource-files.md)

@@ -1,5 +1,5 @@
 ---
-title: CXX0049 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0049 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097067"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>Chyba při vyhodnocování výrazu CXX0049
-zastaralé OMF – prosím znovu připojit programu  
-  
- Program používaný původní OMF (formát modulu objektů).  
-  
- Znovu připojit program pomocí aktuální verze linkeru.  
-  
- Tato chyba je stejný jako CAN0049.
+
+zastaralé OMF – prosím znovu propojit aplikaci
+
+Program používá starý OMF (formát modulu objekt).
+
+Znovu propojit program v aktuální verzi linkeru.
+
+Tato chyba se shoduje s CAN0049.

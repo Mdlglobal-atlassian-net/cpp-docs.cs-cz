@@ -1,5 +1,5 @@
 ---
-title: C3455 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3455 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f48f16164327645eb0c1982e9e11e8ea394276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089356"
 ---
-# <a name="compiler-error-c3455"></a>C3455 chyby kompilátoru
-'atribut': žádná z konstruktoru atributu neodpovídala argumenty  
-  
- Neplatná hodnota se používá k deklaraci atribut.  V tématu [atribut](../../windows/attribute.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3455.  
-  
-```  
-// C3455.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute("MyAt")]   // C3455  
-// try the following line instead  
-// [attribute(All)]  
-ref struct MyAttr {  
-   MyAttr() {}  
-};  
+# <a name="compiler-error-c3455"></a>Chyba kompilátoru C3455
+
+'attribute': žádný z konstruktů atributů argumentům neodpovídá
+
+Chcete-li deklarovat atribut byla použita neplatná hodnota.  Zobrazit [atribut](../../windows/attribute.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3455.
+
+```
+// C3455.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute("MyAt")]   // C3455
+// try the following line instead
+// [attribute(All)]
+ref struct MyAttr {
+   MyAttr() {}
+};
 ```

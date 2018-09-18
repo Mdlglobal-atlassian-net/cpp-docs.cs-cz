@@ -1,5 +1,5 @@
 ---
-title: C2834 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2834 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb4fb992f9213c4a4b456f786fd8f81308cec12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b94e1a3fba9bc3589af020340651b4546347cf1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089342"
 ---
-# <a name="compiler-error-c2834"></a>C2834 chyby kompilátoru
-musí být globálně kvalifikovaný "operátor operátor.  
-  
- `new` a `delete` operátory jsou svázané s třídy, kterých se nacházejí. Řešení rozsahu nelze použít k výběru verzi `new` nebo `delete` z jiné třídy. K implementaci více formy `new` nebo `delete` operátor, vytvořit verzi operátor s velmi formální parametry.
+# <a name="compiler-error-c2834"></a>Chyba kompilátoru C2834
+
+musí být globálně kvalifikovaný "operátor operator.
+
+`new` a `delete` operátory jsou vázané na třídu, kde se nacházejí. Rozlišení oboru nelze použít k výběru verze `new` nebo `delete` z jiné třídy. K implementaci více forem `new` nebo `delete` operátor vytvořit verzi operátoru s velmi formálních parametrů.

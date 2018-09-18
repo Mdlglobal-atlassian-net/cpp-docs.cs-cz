@@ -17,33 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097156"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT – struktura
 Písemně vaše [popisovač oznámení obslužné rutiny](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), budete muset použít **TOOLTIPTEXT** struktury. Členové **TOOLTIPTEXT** struktury jsou:  
   
- `typedef struct {`  
-  
- `NMHDR     hdr;        // required for all WM_NOTIFY messages`  
-  
- `LPTSTR    lpszText;   // see below`  
-  
- `TCHAR     szText[80]; // buffer for tool tip text`  
-  
- `HINSTANCE hinst;      // see below`  
-  
- `UINT      uflags;     // flag indicating how to interpret the`  
-  
- `// idFrom member of the NMHDR structure`  
-  
- `// that is included in the structure`  
-  
- `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
+```cpp
+typedef struct {
+    NMHDR     hdr;        // required for all WM_NOTIFY messages
+    LPTSTR    lpszText;   // see below
+    TCHAR     szText[80]; // buffer for tool tip text
+    HINSTANCE hinst;      // see below
+    UINT      uflags;     // flag indicating how to interpret the
+                          // idFrom member of the NMHDR structure
+                          // that is included in the structure
+} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
+```
   
  *HDR*  
  Určuje nástroj, který potřebuje text. Jediným členem této struktury, které je třeba je ID ovládacího prvku příkazu. ID příkazu ovládacího prvku bude v *idFrom* člena **NMHDR** strukturu, k němu přistupovat pomocí syntaxe `hdr.idFrom`. Zobrazit [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) diskuzi o členy **NMHDR** struktury.  
@@ -57,7 +51,7 @@ Písemně vaše [popisovač oznámení obslužné rutiny](../mfc/handling-ttn-ne
  *hinst*  
  Popisovač instance, která obsahuje řetězec, který má být použit jako text tipu nástroj. Pokud *lpszText* je adresa nástroj text tipu, tento člen je NULL.  
   
- Při zpracování `TTN_NEEDTEXT` oznámení zprávu, zadejte řetězec, který se má zobrazit v jednom z následujících způsobů:  
+Při zpracování `TTN_NEEDTEXT` oznámení zprávu, zadejte řetězec, který se má zobrazit v jednom z následujících způsobů:  
   
 -   Zkopírujte text do vyrovnávací paměti určené parametrem *szText* člena.  
   

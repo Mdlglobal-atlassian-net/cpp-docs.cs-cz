@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095934"
 ---
 # <a name="pointer-declarations"></a>Deklarace ukazatelů
 
@@ -59,6 +59,7 @@ Tím, že *specifikátor typu* **void**, můžete odložit určení typu, na kte
 Před definováním struktury, sjednocení nebo Výčtový typ. je možné deklarovat ukazatel na strukturu, sjednocení nebo výčtového typu. Deklarovat ukazatel pomocí značky struktury nebo sjednocení, jak je znázorněno v následujících příkladech. Takové deklarace jsou povolená, protože není potřeba znát velikost struktury nebo sjednocení k přidělení místa pro proměnnou ukazatel kompilátor.
 
 ## <a name="examples"></a>Příklady
+
 Následující příklady znázorňují deklarace ukazatelů.
 
 ```

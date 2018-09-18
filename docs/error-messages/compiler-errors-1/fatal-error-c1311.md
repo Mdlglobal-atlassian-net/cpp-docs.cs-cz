@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1311 | Microsoft Docs
+title: Závažná chyba C1311 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091059"
 ---
 # <a name="fatal-error-c1311"></a>Závažná chyba C1311
-Formát COFF nelze inicializovat staticky 'var' s číslo (adresu bajtů)  
-  
- Adresu, jehož hodnota není znám. v době kompilace nelze staticky přiřadit do proměnné, jehož typ má úložiště menší než čtyři bajtů.  
-  
- Této chybě může dojít na kód, který je jinak platný C++.  
-  
- Následující příklad ukazuje jednu podmínku, která může způsobit C1311.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+Formát COFF nemůže staticky inicializovat 'var' se číslo b adresy.
+
+Adresa, jehož hodnota není známá v době kompilace nelze přiřadit staticky proměnnou, jejíž typ má úložiště méně než čtyři bajty.
+
+Této chybě může dojít v kódu, který je jinak platný C++.
+
+Následující příklad ukazuje jednu podmínku, která může způsobit, že C1311.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

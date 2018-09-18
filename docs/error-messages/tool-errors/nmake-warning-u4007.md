@@ -1,5 +1,5 @@
 ---
-title: Upozornění nástroje NMAKE U4007 | Microsoft Docs
+title: Upozornění nástroje NMAKE U4007 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c28bf0918e61f3819865f65458ce78e5cdc4eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40c186e222edbb3b141fd13d8a5964e4a696edd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087510"
 ---
 # <a name="nmake-warning-u4007"></a>Upozornění nástroje NMAKE U4007
-Název souboru 'název souboru, příliš dlouhá. zkracování 8.3  
-  
- Základní název je daný soubor obsahuje více než osm znaků nebo rozšíření má více než tři znaky. NMAKE zkrácen název, který má základní osm znaků a příponu tři znaky.  
-  
- Pokud systém souborů podporuje dlouhé názvy souborů, uzavřete název do dvojitých uvozovek nahoře (**"**).
+
+Název souboru 'filename' příliš dlouhá. zkracování na 8.3.
+
+Základní název daný soubor má více než osm znaků nebo rozšíření má více než tři znaky. NMAKE zkrácený název, který má základní osm znaků a rozšíření tři znaky.
+
+Pokud systém souborů podporuje dlouhé názvy souborů, uzavřete název do uvozovek (**"**).

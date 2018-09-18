@@ -1,5 +1,5 @@
 ---
-title: OMP_NUM_THREADS | Microsoft Docs
+title: OMP_NUM_THREADS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091163"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-Nastaví maximální počet vláken v oblasti paralelní, není-li přepsat [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [num_threads](../../../parallel/openmp/reference/num-threads.md).  
+Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,27 +32,26 @@ Nastaví maximální počet vláken v oblasti paralelní, není-li přepsat [omp
 set OMP_NUM_THREADS[=num]  
 ```  
   
+### <a name="parameters"></a>Parametry
+  
+*počet*<br/>
+Maximální počet vláken, které chcete v paralelní oblasti až 64 v implementaci Visual C++.  
+  
 ## <a name="remarks"></a>Poznámky  
- kde  
+ **OMP_NUM_THREADS** proměnné prostředí můžete přepsat [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) funkce nebo [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- `num`  
- Maximální počet vláken, která chcete v oblasti paralelní až 64 implementace Visual C++.  
-  
-## <a name="remarks"></a>Poznámky  
- **OMP_NUM_THREADS** – proměnná prostředí je možné přepsat [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) funkce nebo [num_threads](../../../parallel/openmp/reference/num-threads.md).  
-  
- Výchozí hodnota `num` v jazyce Visual C++ implementace standardní OpenMP je počet virtuálních procesorů, včetně procesorů Hyper-threadingem.  
+ Výchozí hodnota `num` v jazyce Visual C++ implementace standardu OpenMP je počet virtuálních procesorů, včetně hyperthreadingem procesory.  
   
  Další informace najdete v tématu [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příkaz nastaví **OMP_NUM_THREADS** proměnnou prostředí na 16:  
+ Nastaví zadáním následujícího příkazu **OMP_NUM_THREADS** proměnné prostředí na 16:  
   
 ```  
 set OMP_NUM_THREADS=16  
 ```  
   
- Následující příkaz zobrazí aktuální nastavení **OMP_NUM_THREADS** proměnnou prostředí:  
+ Následující příkaz zobrazí aktuální nastavení **OMP_NUM_THREADS** proměnné prostředí:  
   
 ```  
 set OMP_NUM_THREADS  

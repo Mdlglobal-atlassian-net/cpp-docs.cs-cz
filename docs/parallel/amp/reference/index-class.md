@@ -1,5 +1,5 @@
 ---
-title: index – třída | Microsoft Docs
+title: index – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097130"
 ---
 # <a name="index-class"></a>index – třída
-Definuje *N*-dimenzí index pographics-cpp-amp.md.  
+Definuje *N*-multidimenzionálním index pographics-cpp-amp.md.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Rank`  
- Pořadí, nebo počet dimenzí.  
+*_Rank*<br/>
+Řád, neboli počet rozměrů.  
   
 ## <a name="members"></a>Členové  
   
@@ -45,34 +45,34 @@ class index;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[index – konstruktor](#ctor)|Inicializuje novou instanci třídy `index` třídy.|  
+|[index konstruktor](#ctor)|Inicializuje novou instanci třídy `index` třídy.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[--– operátor](#operator--)|Snižuje každý element `index` objektu.|  
-|[Operator(MOD) =](#operator_mod_eq)|Vypočítá numerického zbytku (zbývající) každý prvek v `index` objektu při dělení čísla daný element.|  
-|[Operator * =](#operator_star_eq)|Vynásobí jednotlivé prvky `index` objekt číslem.|  
-|[/ = – operátor](#operator_div_eq)|Vydělí jednotlivé prvky `index` objekt číslem.|  
-|[index::Operator\[\]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
-|[Operator ++](#operator_add_add)|Zvýší jednotlivé prvky `index` objektu.|  
-|[operator+=](#operator_add_eq)|Přidá zadané číslo na jednotlivé prvky `index` objektu.|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` objekt s touto.|  
-|[-= – operátor](#operator_-_eq)|Odečítá od zadané číslo z každý element `index` objektu.|  
+|[Operator--](#operator--)|Sníží každý prvek `index` objektu.|  
+|[Operator(MOD) =](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|  
+|[Operator * =](#operator_star_eq)|Vynásobí každý prvek `index` číslem.|  
+|[/ = – operátor](#operator_div_eq)|Vydělí každý prvek `index` číslem.|  
+|[index::Operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|  
+|[Operator ++](#operator_add_add)|Zvýší všechny prvky objektu `index` objektu.|  
+|[operator+=](#operator_add_eq)|Přičte zadané číslo ke každému prvku objektu `index` objektu.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` do tohoto objektu.|  
+|[operátor-=](#operator_-_eq)|Odečte zadané číslo od každého prvku objektu `index` objektu.|  
 
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[pořadí konstanta](#rank)|Ukládá pořadí `index` objektu.|  
+|[RANK – konstanta](#rank)|Udržuje řád objektu `index` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `index`  
   
 ## <a name="remarks"></a>Poznámky  
- `index` Struktura představuje souřadnic vektor *N* celých čísel, která určuje jedinečný pozici v *N*-dimenzí místa. Hodnoty v vektor seřazeni z nejvýznamnějších k nejméně významný. Můžete načíst hodnoty složek pomocí [operátor =](#operator_eq).  
+ `index` Struktura představuje vektor souřadnic *N* celých čísel, které určují jedinečné umístění v *N*-rozměrného prostoru. Hodnoty ve vektoru jsou seřazeny od nejvýznamnější po nejméně významnou. Můžete načíst hodnoty komponent pomocí [operátoru =](#operator_eq).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** amp.h  
@@ -80,8 +80,8 @@ class index;
  **Namespace:** souběžnosti  
 
 
-## <a name="index_ctor"></a> index – konstruktor
-Inicializuje novou instanci třídy index.
+## <a name="index_ctor"></a> index konstruktor
+Inicializuje novou instanci třídy indexu.
 
 ```  
 index() restrict(amp,cpu);
@@ -112,21 +112,21 @@ explicit index(
 
 ### <a name="parameters"></a>Parametry
 
-_Array  
-Jednorozměrné pole s rank hodnotami.  
+_Pole  
+Jednorozměrné pole s hodnotami řádů.  
 _I  
-Umístění indexu v jednorozměrné indexu.  
+Umístění indexu v jednorozměrném indexu.  
 _I0  
-Délka nejvýznamnějších dimenze.  
+Délka nejvýznamnějšího rozměru.  
 _I1  
-Délka další na většinu významné dimenze.  
+Délka další na nejvýznamnější dimenze.  
 _I2  
-Délka nejméně významný dimenze.  
-_Other  
-Objekt index, na kterých je založena na nový objekt index.  
+Velikost nejméně významného rozměru.  
+Ji_né  
+Index objektu, na kterých je založena na nový objekt indexu.  
 
-## <a name="operator--"></a>  --– operátor
-Snižuje každý prvek objektu indexu.  
+## <a name="operator--"></a>  Operator--
+Sníží každý prvek objektu indexu.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
 
@@ -135,10 +135,10 @@ index operator--(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-values"></a>Vrácené hodnoty
-Pro operátor předpona objektu indexu (* to). Pro operátor příponu nový objekt v indexu.
+Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
 
 ## <a name="operator_mod_eq"></a>  Operator(MOD) =   
-Vypočítá numerického zbytku (zbývající) každý element v indexu objektu při dělení tohoto prvku zadané číslo.
+Vypočítá modulo (zbytek) jednotlivých prvků v objektu indexu při dělení zadaným číslem.
 
 ```  
 index<_Rank>& operator%=(
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Parametry
-_Rhs číslo rozdělit pomocí zjistit zbytek.
+_Rhs číslo rozdělit podle najít zbytek.
 Vrátí hodnotu objektu indexu.
 
 ## <a name="operator_star_eq"></a>  Operator * =   
-Vynásobí každý element v indexu objektu podle zadaného čísla.
+Vynásobí každý prvek v objektu indexu zadaným číslem.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -158,10 +158,10 @@ index<_Rank>& operator*=(
 ```
 
 ### <a name="parameters"></a>Parametry
-_Rhs číslo, které má násobení.
+_Rhs násobené číslo.
 
 ## <a name="operator_div_eq"></a>  / = – operátor 
-Vydělí každý element v indexu objektu podle zadaného čísla.
+Vydělí každý prvek v objektu indexu zadaným číslem.
 
 ```
 index<_Rank>& operator/=(
@@ -171,7 +171,7 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Parametry
 _Rhs číslo, které má dělit.
 
-## <a name="operator_at"></a>  Operátor\[\]  
+## <a name="operator_at"></a>  – Operátor\[\]  
 Vrátí komponentu indexu v zadaném umístění.
 
 ```
@@ -185,13 +185,13 @@ int& operator[] (
 ```
 
 ### <a name="parameters"></a>Parametry
-_Index celé číslo od 0 do pořadí minus 1.
+_Index celé číslo od 0 do řádu mínus 1.
 
 ### <a name="return-value"></a>Návratová hodnota
-Element, který je v zadaném indexu.
+Prvek, který je v zadaném indexu.
 
 ### <a name="remarks"></a>Poznámky
-Tato následující příklad zobrazuje hodnoty součást indexu.
+Následující příklad zobrazí hodnoty komponent indexu.
 ```  
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
@@ -201,7 +201,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>  Operator ++   
-Zvýší každý prvek objektu indexu.
+Zvýší hodnotu všech prvků objektu indexu.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -210,10 +210,10 @@ index<_Rank> operator++(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-value"></a>Návratová hodnota
-Pro operátor předpona objektu indexu (* to). Pro operátor příponu nový objekt v indexu.
+Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
 
 ## <a name="operator_add_eq"></a>  += – operátor   
-Přidá zadané číslo na každý element objektu indexu.
+Přičte zadané číslo ke každému prvku objektu indexu.
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -224,26 +224,26 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parametry
-_Rhs číslo, které chcete přidat.
+_Rhs přičítané číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
 Index objektu.
 
 ## <a name="operator_eq"></a>  operátor =   
-S touto zkopíruje obsah objektu zadaného indexu.
+Zkopíruje obsah zadaného indexu objektu do tohoto objektu.
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parametry
-_Other index objekt, který chcete zkopírovat z.
+Ji_né objekt indexu bude kopírováno.
 
 ### <a name="return-value"></a>Návratová hodnota
-Odkaz na tento objekt v indexu.
+Odkaz na tento objekt indexu.
 
-## <a name="operator_-_eq"></a>  -= – operátor
-Odečítá od zadané číslo z každého prvku objektu indexu.
+## <a name="operator_-_eq"></a>  operátor-=
+Odečte zadané číslo od každého prvku objektu indexu.
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -254,13 +254,13 @@ index<_Rank>& operator-=(
 ) restrict(amp,cpu);
 ```  
 ### <a name="parameters"></a>Parametry
-_Rhs číslo, které má být odečtena.
+_Rhs odečítané číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
 Index objektu.   
 
-## <a name="rank"></a>  Pořadí  
-  Získá pořadí objektu indexu.
+## <a name="rank"></a>  pořadí  
+  Zjistí řád objektu indexu.
 ```
 static const int rank = _Rank;
 ``` 

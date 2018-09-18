@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092524"
 ---
 # <a name="using-abort"></a>Používání příkazu abort
-Volání [přerušit](../c-runtime-library/reference/abort.md) funkce dojde k okamžitému ukončení. Funkce obchází běžný proces ničení inicializovaných globálních statických objektů. Také obchází všechna speciální zpracování zadaná pomocí funkce `atexit`.  
-  
-## <a name="see-also"></a>Viz také:  
- [Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)
+
+Volání [přerušit](../c-runtime-library/reference/abort.md) funkce dojde k okamžitému ukončení. Funkce obchází běžný proces ničení inicializovaných globálních statických objektů. Také obchází všechna speciální zpracování zadaná pomocí funkce `atexit`.
+
+## <a name="see-also"></a>Viz také:
+
+[Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)

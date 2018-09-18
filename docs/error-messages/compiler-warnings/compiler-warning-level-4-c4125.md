@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4125 | Microsoft Docs
+title: Upozornění (úroveň 4) C4125 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af7fdd16925f080137be386cb3d2dd0dd3d8b446
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7042dd8689bf5a9bafc35d6bdaa6028f0c52df2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087237"
 ---
-# <a name="compiler-warning-level-4-c4125"></a>C4125 kompilátoru upozornění (úroveň 4)
-Desítková číslice ukončí osmičková řídicí sekvence  
-  
- Kompilátor vyhodnotí číslo osmičková bez číslici desítkové soustavy a předpokládá, že znaku je desítková číslice.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4125a.cpp  
-// compile with: /W4  
-char array1[] = "\709"; // C4125  
-int main()  
-{  
-}  
-```  
-  
- Pokud číslici 9 slouží jako znak, opravte příklad následujícím způsobem:  
-  
-```  
-// C4125b.cpp  
-// compile with: /W4  
-char array[] = "\0709";  // C4125 String containing "89"  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4125"></a>Kompilátor upozornění (úroveň 4) C4125
+
+desítkové číslo končí osmičkovou řídicí sekvence
+
+Kompilátor vyhodnotí jako osmičkové číslo bez desítková číslice a předpokládá, že je znak desítkové číslice.
+
+## <a name="example"></a>Příklad
+
+```
+// C4125a.cpp
+// compile with: /W4
+char array1[] = "\709"; // C4125
+int main()
+{
+}
+```
+
+Pokud je jako znak 9 číslic, opravte v příkladu následujícím způsobem:
+
+```
+// C4125b.cpp
+// compile with: /W4
+char array[] = "\0709";  // C4125 String containing "89"
+int main()
+{
+}
 ```

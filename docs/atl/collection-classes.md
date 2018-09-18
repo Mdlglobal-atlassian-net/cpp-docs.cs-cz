@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cc94c2b935198cd3c445e8460e23ebbf2af55b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e6c86db9be77e098d1160b847fce5ff940d20cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093425"
 ---
 # <a name="collection-classes"></a>Třídy kolekce
 
@@ -99,6 +99,6 @@ Následující třídy poskytují podporu pro pole, seznamy, mapy a také metody
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../atl/atl-class-overview.md)   
+[Přehled tříd](../atl/atl-class-overview.md)<br/>
 [Třídy kolekce](../atl/atl-collection-classes.md)
 

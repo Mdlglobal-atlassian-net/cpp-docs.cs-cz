@@ -1,5 +1,5 @@
 ---
-title: C2912 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2912 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b165e868f4a2055d692d768c7e5c0164dd34002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb3a1aef43033c57f50cadda79bae3035aea978
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091910"
 ---
-# <a name="compiler-error-c2912"></a>C2912 chyby kompilátoru
-explicitní specializace "prohlášení" není specializace šablony funkcí  
-  
- Nelze specialize bez šablony funkce.  
-  
- Následující ukázka generuje C2912:  
-  
-```  
-// C2912.cpp  
-// compile with: /c  
-void f(char);  
-template<> void f(char);   // C2912  
-template<class T> void f(T);   // OK  
-```  
-  
- Tato chyba bude vygenerována také v důsledku kompilátoru shoda práci, kterou bylo provedeno v sadě Visual Studio .NET 2003: pro každý explicitní specializace, je nutné vybrat parametry explicitní specializace tak, že budou odpovídat parametrům primární Šablona.  
-  
-```  
-// C2912b.cpp  
-class CF {  
-public:  
-   template <class A> CF(const A& a) {}   // primary template  
-  
-   // attempted explicit specialization  
-   template <> CF(const char* p) {}   // C2912  
-  
-   // try the following line instead  
-   // template <> CF(const char& p) {}  
-};  
+# <a name="compiler-error-c2912"></a>Chyba kompilátoru C2912
+
+explicitní specializace "deklarace" není specializací šablony funkcí
+
+Nejde specializovat nešablonové funkce.
+
+Následující ukázka generuje C2912:
+
+```
+// C2912.cpp
+// compile with: /c
+void f(char);
+template<> void f(char);   // C2912
+template<class T> void f(T);   // OK
+```
+
+K této chybě také se vygeneruje jako výsledek kompilátoru prací, které bylo provedeno v aplikaci Visual Studio .NET 2003: pro každý explicitní specializace, je nutné vybrat parametry explicitní specializace tak, aby odpovídaly parametrům primární Šablona.
+
+```
+// C2912b.cpp
+class CF {
+public:
+   template <class A> CF(const A& a) {}   // primary template
+
+   // attempted explicit specialization
+   template <> CF(const char* p) {}   // C2912
+
+   // try the following line instead
+   // template <> CF(const char& p) {}
+};
 ```

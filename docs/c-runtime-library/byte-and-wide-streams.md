@@ -1,5 +1,5 @@
 ---
-title: Bajtové a široké proudy | Microsoft Docs
+title: Bajtové a široké proudy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de026c8887e19e76bbce533db8997193679d1371
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e031aa0ebbad279c630f2687457af11dc478b72d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095830"
 ---
 # <a name="byte-and-wide-streams"></a>Bajtové a široké proudy
-Tok bajtů zpracovává soubor jako pořadí bajtů. Datový proud v rámci programu, je stejné pořadí bajtů.  
-  
- Naopak široké datového proudu souboru jsou považovány za posloupnost zobecněný vícebajtové znaky, což může mít širokou škálu kódování pravidla. (Textové a binární soubory jsou stále číst a zapisovat jak bylo popsáno dříve.) V rámci programu do datového proudu vypadá jako odpovídající pořadí široké znaky. Převody mezi dvěma reprezentace nastat do během standardní knihovny jazyka C. Pravidla převodu může, v zásadě změněna voláním [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) který mění kategorii `LC_CTYPE`. Každý datový proud široké určuje jeho pravidel převodu v době, stane se celý orientované a zachová, i když tyto pravidla kategorii `LC_CTYPE` následně změny.  
-  
- Umístění v rámci široké datového proudu vyskytne stejná omezení jako text steams. Kromě toho indikátoru pozice souboru může mít i řešení stavu závislé kódování. Obvykle zahrnuje obě bajt posun v rámci datového proudu a objekt typu `mbstate_t`. Proto pouze spolehlivý způsob, jak získat pozice souboru v rámci široké datového proudu je voláním [fgetpos –](../c-runtime-library/reference/fgetpos.md), a pouze spolehlivý způsob, jak obnovit pozice získat tímto způsobem je voláním [fsetpos –](../c-runtime-library/reference/fsetpos.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory a proudy](../c-runtime-library/files-and-streams.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Datový proud bajtů zpracovává soubor jako sekvence bajtů. V rámci programu je datový proud stejné pořadí bajtů.
+
+Naopak široké stream považuje za soubor posloupnost zobecněný vícebajtových znaků, což může mít celou řadu kódování pravidla. (Textové a binární soubory jsou nadále číst a zapisovat jak bylo popsáno dříve.) V rámci programu datového proudu vypadá jako odpovídající pořadí širokých znaků. Převody mezi dvěma reprezentace dojít v rámci standardní knihovny jazyka C. Pravidla převodu lze v zásadě, změnit voláním [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) , který mění kategorii `LC_CTYPE`. Každý datový proud široké určuje jeho pravidla převodu v době, bude celý orientované a uchovává tyto pravidla i v případě kategorii `LC_CTYPE` následně změní.
+
+Umístění v rámci široké datového proudu utrpí stejná omezení jako text steams. Kromě toho Indikátor pozice v souboru může mít také řešit závislá na stavu kódování. Obvykle obsahuje oba posun v bajtech v rámci datový proud a objekt typu `mbstate_t`. Proto pouze spolehlivý způsob, jak získat pozice souboru v rámci široké datového proudu je voláním [fgetpos](../c-runtime-library/reference/fgetpos.md), a pouze spolehlivý způsob, jak obnovit pozici získat tímto způsobem je voláním [fsetpos](../c-runtime-library/reference/fsetpos.md).
+
+## <a name="see-also"></a>Viz také
+
+[Soubory a proudy](../c-runtime-library/files-and-streams.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

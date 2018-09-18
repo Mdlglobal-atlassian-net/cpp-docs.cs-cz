@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095752"
 ---
 # <a name="cdefaultchartraits-class"></a>Cdefaultchartraits – třída
 
@@ -33,13 +33,13 @@ Tato třída poskytuje dvě statické funkce pro převod znaků mezi velkými a 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="members"></a>Členové
@@ -64,13 +64,13 @@ Tato třída poskytuje funkce, které se používají ve třídě [cstringelemen
 Voláním této funkce k převedení znaku na malá písmena.
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Znak pro převod na malá písmena.
 
 ### <a name="example"></a>Příklad
@@ -82,13 +82,13 @@ Znak pro převod na malá písmena.
 Voláním této funkce k převedení znaku na velká písmena.
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Znak pro převod na velká písmena.
 
 ## <a name="see-also"></a>Viz také

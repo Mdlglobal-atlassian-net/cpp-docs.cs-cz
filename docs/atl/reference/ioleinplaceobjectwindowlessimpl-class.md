@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd6c2ddfaef8c298696ea33537ea7bfd754330f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 112700fffc3b4104599f68f80f00e8d3239788f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089564"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Ioleinplaceobjectwindowlessimpl – třída
 
@@ -53,7 +53,7 @@ class IOleInPlaceObjectWindowlessImpl
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `IOleInPlaceObjectWindowlessImpl`.
 
 ## <a name="members"></a>Členové
@@ -197,5 +197,5 @@ Zobrazit [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

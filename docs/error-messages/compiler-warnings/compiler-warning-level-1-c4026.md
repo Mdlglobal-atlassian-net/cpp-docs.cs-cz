@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4026 | Microsoft Docs
+title: Upozornění (úroveň 1) C4026 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb28cd4c4a2029a617c07696da2b7e24166c00c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e5e32422e0f9e6af4ab724b358bfce1019077b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094101"
 ---
-# <a name="compiler-warning-level-1-c4026"></a>C4026 kompilátoru upozornění (úroveň 1)
-funkce deklarovat s formální parametr seznamu  
-  
- Deklarace funkce má formální parametry, ale neexistuje v definici funkce. Následující volání této funkce předpokládá, že funkce nepřijímá žádné parametry.
+# <a name="compiler-warning-level-1-c4026"></a>Kompilátor upozornění (úroveň 1) C4026
+
+funkce deklarovaná pomocí seznamu formálních parametrů.
+
+Deklarace funkce má formální parametry, ale nikoli definice funkce. Následných volání této funkce se předpokládá, že funkce nepřebírá žádné parametry.

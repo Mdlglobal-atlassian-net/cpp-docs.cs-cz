@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4237 | Microsoft Docs
+title: Upozornění (úroveň 1) C4237 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfefb2dc7dd04f2334b2b7d222153d5ee351ae2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca72e4973c71655bc4a891570c6f686304d07eb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277576"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092892"
 ---
-# <a name="compiler-warning-level-1-c4237"></a>C4237 kompilátoru upozornění (úroveň 1)
-– klíčové slovo '– klíčové slovo' je ještě nebyla podporována, ale vyhrazený pro budoucí použití  
-  
- Klíčové slovo ve specifikaci C++ není implementována ve Visual C++ compiler, ale není k dispozici jako symbol uživatelem definované klíčové slovo.  
-  
- Následující ukázka generuje C4237:  
-  
-```  
-// C4237.cpp  
-// compile with: /W1 /c  
-int export;   // C4237  
+# <a name="compiler-warning-level-1-c4237"></a>Kompilátor upozornění (úroveň 1) C4237
+
+– klíčové slovo '– klíčové slovo' je ještě není podporované, ale vyhrazené pro budoucí použití
+
+Klíčové slovo ve specifikaci C++ není implementovaná v kompilátoru jazyka Visual C++, ale klíčové slovo není k dispozici jako uživatelsky definovaný symbol.
+
+Následující ukázka generuje C4237:
+
+```
+// C4237.cpp
+// compile with: /W1 /c
+int export;   // C4237
 ```

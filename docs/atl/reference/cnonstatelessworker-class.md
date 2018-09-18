@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095596"
 ---
 # <a name="cnonstatelessworker-class"></a>Cnonstatelessworker – třída
 
@@ -38,13 +38,13 @@ Přijímá požadavky od fondu vláken a předává je do objektu pracovního pr
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Pracovního procesu*  
+*Pracovního procesu*<br/>
 Třída pracovní vlákno odpovídají [archetyp pracovního procesu](../../atl/reference/worker-archetype.md) vhodný pro zpracování požadavků ve frontě na [cthreadpool –](../../atl/reference/cthreadpool-class.md).
 
 ## <a name="members"></a>Členové
@@ -130,6 +130,6 @@ Tato třída není nutné vyčištění `Terminate`.
 
 ## <a name="see-also"></a>Viz také
 
-[Cthreadpool – třída](../../atl/reference/cthreadpool-class.md)   
-[Archetyp pracovního procesu](../../atl/reference/worker-archetype.md)   
+[CThreadPool – třída](../../atl/reference/cthreadpool-class.md)<br/>
+[Archetyp pracovního procesu](../../atl/reference/worker-archetype.md)<br/>
 [Třídy](../../atl/reference/atl-classes.md)

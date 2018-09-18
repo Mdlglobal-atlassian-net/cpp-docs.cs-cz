@@ -1,5 +1,5 @@
 ---
-title: C2308 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2308 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091969"
 ---
-# <a name="compiler-error-c2308"></a>C2308 chyby kompilátoru
-zřetězení řetězců neodpovídající  
-  
- Pro zřetězení nebyly zadány oba řetězce široké a bez celou znak. Nelze řetězení široká znaková řetězce a znak není celé řetězec.
+# <a name="compiler-error-c2308"></a>Chyba kompilátoru C2308
+
+řetězení neodpovídajících řetězců
+
+Pro zřetězení byly zadány oba široké a jiných širokého znaku řetězce. Nejde zřetězit řetězec širokých znaků a řetězce bez širokého znaku.

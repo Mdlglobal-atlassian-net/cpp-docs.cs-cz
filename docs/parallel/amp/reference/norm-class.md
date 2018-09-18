@@ -1,5 +1,5 @@
 ---
-title: Norm – třída | Microsoft Docs
+title: Norm – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087474"
 ---
 # <a name="norm-class"></a>norm – třída
-Představují norm číslo. Každý prvek je plovoucí bodu číslo v rozsahu [-1.0f, 1.0f].  
+Představují normu číslo. Každý prvek je plovoucí bodu číslo v rozsahu [-1.0f, 1.0f].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ class norm;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Norm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor. Inicializace na 0, 0f.|  
+|[Norm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor. Inicializujte na 0,0 f.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -46,9 +46,9 @@ class norm;
 |----------|-----------------|  
 |Norm::Operator-||  
 |Norm::Operator--||  
-|Norm::Operator float|Operátor převodu. Převést norm číslo na plovoucí bodu hodnotu.|  
+|Norm::Operator float|Operátor převodu. Převést norm číslo plovoucí desetinnou čárkou.|  
 |Norm::Operator * =||  
-|/ Norm::Operator = – operátor||  
+|Norm::Operator / =||  
 |Norm::Operator ++||  
 |Norm::Operator +=||  
 |Norm::Operator =||  
@@ -62,9 +62,9 @@ class norm;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> Norm 
+##  <a name="ctor"></a> Norm – 
 
- Výchozí konstruktor. Inicializace na 0, 0f.  
+ Výchozí konstruktor. Inicializujte na 0,0 f.  
   
 ```  
 norm(
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V`  
- Hodnota určená k chybě při inicializaci.  
+*_V*<br/>
+Hodnoty použité k inicializaci.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

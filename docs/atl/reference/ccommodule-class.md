@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090695"
 ---
 # <a name="ccommodule-class"></a>Ccommodule – třída
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*rclsid*  
+*rclsid*<br/>
 [in] Identifikátor CLSID objektu, který má být vytvořen.
 
-*riid*  
+*riid*<br/>
 [in] Identifikátor IID požadované rozhraní.
 
-*ppv*  
+*ppv*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Ukazatel na pole položek mapování objektu.
 
-*h*  
+*h*<br/>
 [in] Předány HINSTANCE `DLLMain` nebo `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Ukazatel na LIBID knihovnu typů, který je přidružený k projektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID objektu, který má být zaregistrován.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Identifikátor ProgID přidružená k objektu.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Identifikátor ProgID nezávislé na verzi přidružené k objektu.
 
-*nDescID*  
+*nDescID*<br/>
 [in] Identifikátor prostředku řetězce pro popis objektu.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Určuje model vláken k zadání v registru. Možné hodnoty jsou THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in] Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Popis těchto hodnot najdete v tématu [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) v sadě Windows SDK.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Popis těchto hodnot najdete v tématu [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in] Určuje, zda se zaregistruje knihovnu typů. Výchozí hodnota je FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 [in] Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud se zaregistruje NULL (výchozí hodnota), všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in] Řetězec ve formátu `"\\N"`, kde `N` je celočíselný index prostředku knihovny typů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor CLSID objektu se zrušit registraci
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Identifikátor ProgID přidružená k objektu.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Identifikátor ProgID nezávislé na verzi přidružené k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>Parametry
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Při hodnotě TRUE je také zrušit registraci knihovny typů.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapě objektů bude zrušena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 Identifikátor CLSID objektu, který má být zaregistrován nebo zrušení registrace
 
-*lpszProgID*  
+*lpszProgID*<br/>
 Identifikátor ProgID přidružená k objektu.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 Identifikátor ProgID nezávislé na verzi přidružené k objektu.
 
-*nDescID*  
+*nDescID*<br/>
 Identifikátor prostředku řetězců pro popis objektu.
 
-*szDesc*  
+*szDesc*<br/>
 Řetězec obsahující popis objektu.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje model vláken k zadání v registru. Možné hodnoty jsou THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
 
-*bRegister*  
+*bRegister*<br/>
 Určuje, zda by měly být zaregistrovány objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Název prostředku.
 
-*nResID*  
+*nResID*<br/>
 [in] ID prostředku.
 
-*bRegister*  
+*bRegister*<br/>
 [in] Určuje, zda by měly být zaregistrovány objektu.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky použije `%MODULE%`. Pokud chcete používat další nahraditelné parametry, naleznete v poznámkách podrobnosti. Jinak použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Název prostředku.
 
-*nResID*  
+*nResID*<br/>
 [in] ID prostředku.
 
-*bRegister*  
+*bRegister*<br/>
 [in] Určuje, zda by měly být zaregistrovány skript prostředků.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky použije `%MODULE%`. Pokud chcete používat další nahraditelné parametry, naleznete v poznámkách podrobnosti. Jinak použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota

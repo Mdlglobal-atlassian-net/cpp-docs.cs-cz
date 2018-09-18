@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1158 | Microsoft Docs
+title: Chyba Linkerů LNK1158 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094166"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Chyba linkerů LNK1158
-nelze spustit 'název souboru.  
-  
- Daný spustitelný soubor volá [odkaz](../../build/reference/linker-command-line-syntax.md) není v adresáři, který obsahuje odkaz ani v adresáři zadaném v proměnné prostředí PATH.  
-  
- Například se zobrazí tato chyba, pokud se pokusíte použít parametru PGOPTIMIZE [/ltgc](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru na počítači s 32bitové verzi operačního systému.
+
+nelze spustit 'název souboru.
+
+Daný spustitelný soubor volá [odkaz](../../build/reference/linker-command-line-syntax.md) není v adresáři, který obsahuje odkaz, ani v adresáři uvedeném na proměnné prostředí PATH.
+
+Například obdržíte tuto chybu, pokud se pokusíte použít parametr PGOPTIMIZE [parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru na počítači s operačním systémem 32-bit.

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097676"
 ---
 # <a name="ccombstr-class"></a>CComBSTR – třída
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] A `CComBSTR` objektu, který chcete připojit.
 
-*ch*  
+*ch*<br/>
 [in] Znak pro připojení.
 
-*lpsz*  
+*lpsz*<br/>
 [in] Ukončit nulou znak řetězec pro připojení. Řetězec s kódováním Unicode lze předat prostřednictvím přetížení LPCOLESTR nebo řetězec ANSI prostřednictvím LPCSTR verze.
 
-*nLen*  
+*nLen*<br/>
 [in] Počet znaků od *lpsz* připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] BSTR má připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpsz*  
+*lpsz*<br/>
 [in] Ukazatel na pole bajtů pro připojení.
 
-*p*  
+*p*<br/>
 [in] Počet bajtů, které mají připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*  
+*pSrc*<br/>
 [in] Safearray obsahující prvků, které slouží k vytvoření řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR přiřadit aktuální `CComBSTR` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*src*  
+*src*<br/>
 [in] BSTR pro připojení k objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 [out] Ukazatel na pole safearray používají k uložení výsledků této funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -315,31 +315,31 @@ Konstruktor Výchozí konstruktor sady [m_str](#m_str) člena na hodnotu NULL.
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSize*  
+*nSize*<br/>
 [in] Počet znaků pro kopírování z *sz* nebo počáteční velikost ve znacích `CComBSTR`.
 
-*Sz*  
+*Sz*<br/>
 [in] Řetězec zkopírujte. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Řetězec zkopírujte. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
 
-*src*  
+*src*<br/>
 [in] A `CComBSTR` objektu.
 
-*identifikátor GUID*  
+*identifikátor GUID*<br/>
 [in] Odkaz na `GUID` struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pbstr*  
+*pbstr*<br/>
 [out] Adresa BSTR, ve kterých se mají vrátit řetězec přidělených touto metodou.
 
-*pvarDest*  
+*pvarDest*<br/>
 [out] Adresa hodnotu typu VARIANT, ve kterých se mají vrátit řetězec přidělených touto metodou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -499,7 +499,7 @@ BSTR m_str;
 
 Přetypování `CComBSTR` objekt BSTR.
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] A `CComBSTR` objektu.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Řetězec zakončený nula.
 
-*nNull*  
+*nNull*<br/>
 [in] Musí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -586,16 +586,16 @@ Tento kontrolní výraz není standardně povolená. Definujte ATL_CCOMBSTR_ADDR
 Přidá řetězec do `CComBSTR` objektu.
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] A `CComBSTR` objektu, který chcete připojit.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Ukončit nulou řetězec pro připojení.
 
 ### <a name="remarks"></a>Poznámky
@@ -629,8 +629,8 @@ Porovnání se provádí pomocí výchozí národní prostředí uživatele.
 Nastaví [m_str](#m_str) člena na kopii *pSrc* nebo kopii BSTR členem *src*. Operátor přiřazení přesunu přesune `src` bez kopírování.
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] A `CComBSTR` objektu.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Řetězec zakončený nula.
 
-*nNull*  
+*nNull*<br/>
 [in] Musí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní v datovém proudu, který obsahuje data.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní na datovém proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -773,5 +773,5 @@ Můžete znovu vytvořit BSTR z obsahu pomocí datového proudu [ReadFromStream]
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [ATL a MFC – makra převodu řetězců](string-conversion-macros.md)

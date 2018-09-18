@@ -1,5 +1,5 @@
 ---
-title: C2377 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2377 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d76b94ef099c2ac84ee7f048539ed56549d2e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f3813642503013ecd2ad3be4c01d55f12c837ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087031"
 ---
-# <a name="compiler-error-c2377"></a>C2377 chyby kompilátoru
-"identifikátor": předefinování; Další symbolem nemohou být přetíženy – TypeDef  
-  
- A `typedef` je předefinovat identifikátor.  
-  
- Následující ukázka generuje C2377:  
-  
-```  
-// C2377.cpp  
-// compile with: /c  
-typedef int i;  
-int i;   // C2377  
-int j;   // OK  
+# <a name="compiler-error-c2377"></a>Chyba kompilátoru C2377
+
+'identifier': předefinování; Definice TypeDef nemůže být přetížená s žádným jiným symbolem
+
+A `typedef` předefinovat identifikátor.
+
+Následující ukázka generuje C2377:
+
+```
+// C2377.cpp
+// compile with: /c
+typedef int i;
+int i;   // C2377
+int j;   // OK
 ```

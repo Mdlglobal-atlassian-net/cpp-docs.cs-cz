@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe2cf03debbfd88f19ccc77d3922a9a5c50a50d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091267"
 ---
 # <a name="atl-connection-points"></a>ATL – body připojení
 
@@ -33,18 +33,18 @@ Každý bod připojení podporuje [IConnectionPoint](/windows/desktop/api/ocidl/
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[ATL – třídy bodu připojení](../atl/atl-connection-point-classes.md)  
+[ATL – třídy bodu připojení](../atl/atl-connection-point-classes.md)<br/>
 Stručně popisuje ATL – třídy, které podporují spojovací body.
 
-[Přidání bodů připojení objektu](../atl/adding-connection-points-to-an-object.md)  
+[Přidání bodů připojení objektu](../atl/adding-connection-points-to-an-object.md)<br/>
 Popisuje postup pro přidání bodů připojení objektu.
 
-[ATL – příklad bodu připojení](../atl/atl-connection-point-example.md)  
+[ATL – příklad bodu připojení](../atl/atl-connection-point-example.md)<br/>
 Poskytuje příklad deklarování bod připojení.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
 ## <a name="see-also"></a>Viz také

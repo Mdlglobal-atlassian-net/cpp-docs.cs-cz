@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087874"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset – třída
+
 Přístupy prvky sady řádků pomocí syntaxe pole.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Typ přístupového objektu třídy, která chcete v sadě řádků používat.  
+
+*TAccessor*<br/>
+Typ přístupového objektu třídy, která chcete v sadě řádků používat.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Počet řádků, které jsou již načten.|  
   
 ## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+
 Vytvoří novou `CArrayRowset` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Nmaximum*  
- [in] Maximální počet řádků v sadě řádků. 
+
+*Nmaximum*<br/>
+[in] Maximální počet řádků v sadě řádků. 
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
+
 Celá sada řádků se načte do paměti, vytváření bitové kopie nebo jeho snímek.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> CArrayRowset::operator
+
 Poskytuje syntaxi jako pole pro přistupování k řádku v sadě řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Parametr bez vizuálního vzhledu, který určuje typ přístupového objektu uložená v dané sadě řádků.  
+
+*TAccessor*<br/>
+Parametr bez vizuálního vzhledu, který určuje typ přístupového objektu uložená v dané sadě řádků.  
   
- *nRow*  
- [in] Číslo řádku (prvek pole), které chcete získat přístup.  
+*nRow*<br/>
+[in] Číslo řádku (prvek pole), které chcete získat přístup.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Obsah požadovaný řádek.  
+
+Obsah požadovaný řádek.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *nRow* překračuje počet řádků v sadě řádků, je vyvolána výjimka.  
+
+Pokud *nRow* překračuje počet řádků v sadě řádků, je vyvolána výjimka.  
 
 ## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+
 Obsahuje počet řádků v sadě řádků, které již byly načteny.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset – třída](../../data/oledb/crowset-class.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset – třída](../../data/oledb/crowset-class.md)

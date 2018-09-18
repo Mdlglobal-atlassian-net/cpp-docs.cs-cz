@@ -1,5 +1,5 @@
 ---
-title: C2749 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2749 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1738bdcc66e05512932fcd9029484dc55e3fc4a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cccc06d9202297e1c86d87735621e12dd346cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095210"
 ---
-# <a name="compiler-error-c2749"></a>C2749 chyby kompilátoru
-'type': můžete pouze throw a catch popisovač pro spravované třídy s/clr: safe  
-  
- Při použití **/CLR: safe**, můžete pouze throw nebo catch odkazového typu.  
-  
- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2749:  
-  
-```  
-// C2749.cpp  
-// compile with: /clr:safe  
-ref struct MyStruct {  
-public:  
-   int i;  
-};  
-  
-int main() {  
-   MyStruct ^x = gcnew MyStruct;  
-  
-   // Delete the following 4 lines to resolve.  
-   try {   
-      throw (1);   // C2749  
-   }  
-   catch(int){}  
-  
-   // OK  
-   try {  
-      throw (x);  
-   }  
-   catch(MyStruct ^){}   
-}  
+# <a name="compiler-error-c2749"></a>Chyba kompilátoru C2749
+
+'type': můžete pouze operaci throw nebo catch popisovač pro spravovanou třídu s/clr: safe
+
+Při použití **/CLR: safe**, můžete pouze operaci throw nebo catch typ odkazu.
+
+Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2749:
+
+```
+// C2749.cpp
+// compile with: /clr:safe
+ref struct MyStruct {
+public:
+   int i;
+};
+
+int main() {
+   MyStruct ^x = gcnew MyStruct;
+
+   // Delete the following 4 lines to resolve.
+   try {
+      throw (1);   // C2749
+   }
+   catch(int){}
+
+   // OK
+   try {
+      throw (x);
+   }
+   catch(MyStruct ^){}
+}
 ```

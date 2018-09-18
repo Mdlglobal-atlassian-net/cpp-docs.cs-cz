@@ -1,5 +1,5 @@
 ---
-title: C3189 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3189 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf0e49ecf9c8003d8dcfe035b14c8f5c5067dbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4666a16aed6d26f1cf38e4b32523c7c36948274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093867"
 ---
-# <a name="compiler-error-c3189"></a>C3189 chyby kompilátoru
-' typeid\<typ abstraktní deklarátor >': Tato syntaxe je již nejsou podporovány, použijte:: typeid místo  
-  
- Zastaralé formu [typeid](../../windows/typeid-cpp-component-extensions.md) se používá, použijte nový formulář.  
-  
- Následující ukázka generuje C3189:  
-  
-```  
-// C3189.cpp  
-// compile with: /clr  
-int main() {  
-   System::Type^ t  = typeid<System::Object>;   // C3189  
-   System::Type^ t2  = System::Object::typeid;   // OK  
-}  
+# <a name="compiler-error-c3189"></a>Chyba kompilátoru C3189
+
+"typeid\<zadejte abstraktním deklarátorem >': Tato syntaxe už není podporovaná, použijte:: typeid místo
+
+Zastaralé formy [typeid](../../windows/typeid-cpp-component-extensions.md) byl použit, použít nový formulář.
+
+Následující ukázka generuje C3189:
+
+```
+// C3189.cpp
+// compile with: /clr
+int main() {
+   System::Type^ t  = typeid<System::Object>;   // C3189
+   System::Type^ t2  = System::Object::typeid;   // OK
+}
 ```

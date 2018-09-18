@@ -1,5 +1,5 @@
 ---
-title: __set_app_type | Microsoft Docs
+title: __set_app_type | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,38 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854873987cd83b89efc5c9006c1e091023c91226
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22d4c6da3b897d0158f790a0146e3f10f7aa385c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093117"
 ---
 # <a name="setapptype"></a>__set_app_type
-Nastaví aktuální typ aplikace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void __set_app_type (  
-   int at  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `at`  
- Hodnota, která určuje typ aplikace. Možné hodnoty jsou:  
-  
-|Hodnota|Popis|  
-|-----------|-----------------|  
-|_UNKNOWN_APP|Typ neznámé aplikace.|  
-|_CONSOLE_APP|Aplikace konzoly (příkazového řádku).|  
-|_GUI_APP|Aplikace s grafickým uživatelským rozhraním (Windows).|  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
+
+Nastaví aktuální typ aplikace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void __set_app_type (
+   int at
+   )
+```
+
+#### <a name="parameters"></a>Parametry
+
+*at*<br/>
+Hodnota, která určuje typ aplikace. Možné hodnoty jsou:
+
+|Hodnota|Popis|
+|-----------|-----------------|
+|_UNKNOWN_APP|Neznámý typ aplikace.|
+|_CONSOLE_APP|Aplikace konzoly (příkazového řádku).|
+|_GUI_APP|Aplikace grafického uživatelského rozhraní (Windows).|
+
+## <a name="remarks"></a>Poznámky
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
 |__set_app_type|internal.h|

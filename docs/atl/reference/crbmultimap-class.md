@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093815"
 ---
 # <a name="crbmultimap-class"></a>Crbmultimap – třída
 
@@ -40,22 +40,22 @@ Tato třída reprezentuje strukturu mapování, která umožňuje že každému 
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče prvku.
 
-*V*  
+*V*<br/>
 Typ elementu hodnota.
 
-*KTraits*  
+*KTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
 
-*VTraits*  
+*VTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ## <a name="members"></a>Členové
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey), nebo předchozí volání k `GetNextValueWithKey`.
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), nebo předchozí volání k `GetNextWithKey`.
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementu, který chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Hodnotu klíče pro přidání do `CRBMultiMap` objektu.
 
-*value*  
+*value*<br/>
 Hodnota k přidání do `CRBMultiMap` objekt přidružený k *klíč*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Určuje klíč, který identifikuje elementy, která se má odstranit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -288,7 +288,7 @@ Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
 ## <a name="see-also"></a>Viz také
 
-[Crbtree – třída](../../atl/reference/crbtree-class.md)   
-[Catlmap – třída](../../atl/reference/catlmap-class.md)   
-[Crbmap – třída](../../atl/reference/crbmap-class.md)   
+[CRBTree – třída](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap – třída](../../atl/reference/catlmap-class.md)<br/>
+[CRBMap – třída](../../atl/reference/crbmap-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

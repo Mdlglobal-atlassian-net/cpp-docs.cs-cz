@@ -1,5 +1,5 @@
 ---
-title: C3190 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3190 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797d7299c73574db28dd5c09284602e167485204
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed7f3b29ffeab2ae26516c51cf6ce09acab3e54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088524"
 ---
-# <a name="compiler-error-c3190"></a>C3190 chyby kompilátoru
-zatížení při vytváření instance s argumenty zadané šablony není explicitní vytvoření instance všechny členské funkce "typ"  
-  
- Kompilátor zjištěna, aby se zajistila vytváření instancí explicitní funkce; ale argumenty zadaného typu neodpovídají žádné možné funkcí.  
-  
- Následující ukázka generuje C3190:  
-  
-```  
-// C3190.cpp  
-// compile with: /LD  
-template<class T>  
-struct A {  
-   A(int x = 0) {  
-   }  
-   A(int x, int y) {  
-   }  
-};  
-  
-template A<float>::A();   // C3190  
-// try the following line instead  
-// template A<int>::A(int);  
-  
-struct Y {  
-   template<class T> void f(T);  
-};  
-  
-template<class T> void Y::f(T) { }  
-  
-template void Y::f(int,int);   // C3190  
-  
-template<class OT> class X {  
-   template<class T> void f2(T,OT);  
-};  
-  
-template<class OT> template<class T> void X<OT>::f2(T,OT) {}  
-  
-template void X<float>::f2<int>(int,char);   // C3190  
-// try one of the following lines instead  
-// template void X<char>::f2(int, char);  
-// template void X<char>::f2<int>(int,char);  
-// template void X<char>::f2<>(int,char);  
+# <a name="compiler-error-c3190"></a>Chyba kompilátoru C3190
+
+'instance' se zadanými argumenty šablony není explicitní vytváření instancí žádné členské funkce 'type'
+
+Kompilátor zjistil pokus funkce explicitní vytváření instancí; ale poskytnutý typ argumentů se neshodují s všechny možné funkce.
+
+Následující ukázka generuje C3190:
+
+```
+// C3190.cpp
+// compile with: /LD
+template<class T>
+struct A {
+   A(int x = 0) {
+   }
+   A(int x, int y) {
+   }
+};
+
+template A<float>::A();   // C3190
+// try the following line instead
+// template A<int>::A(int);
+
+struct Y {
+   template<class T> void f(T);
+};
+
+template<class T> void Y::f(T) { }
+
+template void Y::f(int,int);   // C3190
+
+template<class OT> class X {
+   template<class T> void f2(T,OT);
+};
+
+template<class OT> template<class T> void X<OT>::f2(T,OT) {}
+
+template void X<float>::f2<int>(int,char);   // C3190
+// try one of the following lines instead
+// template void X<char>::f2(int, char);
+// template void X<char>::f2<int>(int,char);
+// template void X<char>::f2<>(int,char);
 ```

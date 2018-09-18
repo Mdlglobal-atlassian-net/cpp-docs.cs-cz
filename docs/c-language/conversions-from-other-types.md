@@ -1,5 +1,5 @@
 ---
-title: Převody z ostatních typů | Microsoft Docs
+title: Převody z ostatních typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -15,27 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e919782022ee64f657611a14d6eae6173a67b8c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b443526248eb09accce8b35133235c71c06c2627
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094582"
 ---
 # <a name="conversions-from-other-types"></a>Převody z ostatních typů
 
-Vzhledem k tomu, **výčtu** hodnota je **int** hodnotu podle definice převody do a z **výčtu** hodnota jsou stejné jako u **int** typu. Pro kompilátor Microsoft C celé číslo, je stejná jako **dlouho**.
+Protože **výčtu** hodnota je **int** hodnotu podle definice převody do a z **výčtu** hodnota jsou stejné jako u **int** typu. Kompilátor Microsoft C je celé číslo stejně jako **dlouhé**.
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
 Nejsou povoleny žádné převody mezi typy struktury a sjednocení.
 
-Libovolná hodnota můžete převést na typ **void**, ale výsledek takový převod lze použít pouze v kontextu, kde je hodnotu výrazu zrušených, například příkaz výrazu.
+Jakoukoli hodnotu lze převést na typ **void**, ale výsledek takového převodu lze použít pouze v kontextu, ve kterém je hodnota výrazu zahozena, například v příkazu výrazu.
 
-**Void** typ nemá žádnou hodnotu, podle definice. Proto jej nelze převést na jiný typ, a dalších typů nelze převést na **void** podle přiřazení. Ale explicitně převést hodnotu na typ **void**, jak je popsáno v [převody přetypování](../c-language/type-cast-conversions.md).
+**Void** typ nemá žádnou hodnotu, podle definice. Proto jej nelze převést na libovolný typ, a dalších typů nelze převést na **void** přiřazením. Ale můžete explicitně přetypovat hodnotu na typ **void**, jak je popsáno v [převody přetypování](../c-language/type-cast-conversions.md).
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Převody přiřazení](../c-language/assignment-conversions.md)  
+[Převody přiřazení](../c-language/assignment-conversions.md)

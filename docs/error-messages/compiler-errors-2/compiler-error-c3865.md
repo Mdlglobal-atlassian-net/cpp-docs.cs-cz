@@ -1,5 +1,5 @@
 ---
-title: C3865 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3865 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a872d4cf7ed285a0798461c77adf904cfa3e71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd5c83d922601ca4cdffe0f3772723b31e630b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090838"
 ---
-# <a name="compiler-error-c3865"></a>C3865 chyby kompilátoru
-'calling_convention': lze použít pouze na nativní členské funkce  
-  
- Konvence volání byl použit na funkci, která se globální funkce nebo na spravované – členská funkce. Konvence volání lze použít pouze v nativní (není spravované) členské funkce.  
-  
- Další informace najdete v tématu [konvence volání](../../cpp/calling-conventions.md).  
-  
- Následující ukázka generuje C3865:  
-  
-```  
-// C3865.cpp  
-// compile with: /clr  
-// processor: x86  
-void __thiscall Func(){}   // C3865  
-  
-// OK  
-struct MyType {  
-   void __thiscall Func(){}  
-};  
+# <a name="compiler-error-c3865"></a>Chyba kompilátoru C3865
+
+'calling_convention': jde použít jenom pro nativní členské funkce
+
+Konvence volání byl použit na funkci, která se globální funkce nebo na spravované členskou funkci. Konvence volání jde použít jenom u nativních (není spravované) členské funkce.
+
+Další informace najdete v tématu [konvence volání](../../cpp/calling-conventions.md).
+
+Následující ukázka generuje C3865:
+
+```
+// C3865.cpp
+// compile with: /clr
+// processor: x86
+void __thiscall Func(){}   // C3865
+
+// OK
+struct MyType {
+   void __thiscall Func(){}
+};
 ```

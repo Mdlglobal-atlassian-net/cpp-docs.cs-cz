@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095856"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM – stránky vlastností
 
@@ -38,18 +38,18 @@ Další informace najdete v tématu [seznamy vlastností a stránky vlastností]
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Zadání stránek vlastností](../atl/specifying-property-pages.md)  
+[Zadání stránek vlastností](../atl/specifying-property-pages.md)<br/>
 Jsou uvedené kroky pro zadání stránek vlastností pro ovládací prvek je a ukazuje příklad třídy.
 
-[Implementace stránek vlastností](../atl/implementing-property-pages.md)  
+[Implementace stránek vlastností](../atl/implementing-property-pages.md)<br/>
 Jsou uvedené kroky pro implementaci stránky vlastností, včetně metod k přepsání. Vás provede kompletní příklad podle ATLPages ukázkový program.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Ukázka ATLPages](../visual-cpp-samples.md)  
+[Ukázka ATLPages](../visual-cpp-samples.md)<br/>
 Abstraktní ukázky pro ukázku ATLPages, který implementuje stránku vlastností pomocí `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
 ## <a name="see-also"></a>Viz také

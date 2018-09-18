@@ -1,5 +1,5 @@
 ---
-title: C2191 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2191 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088355"
 ---
-# <a name="compiler-error-c2191"></a>C2191 chyby kompilátoru
-druhý parametr seznamu delší než první  
-  
- Funkce C byla deklarována znovu s delší seznam parametrů. C nepodporuje přetížených funkcí.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2191:  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+# <a name="compiler-error-c2191"></a>Chyba kompilátoru C2191
+
+druhý seznam parametrů je delší než první.
+
+Funkce jazyka C se deklaroval podruhé s delší seznam parametrů. C nepodporuje přetížené funkce.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2191:
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

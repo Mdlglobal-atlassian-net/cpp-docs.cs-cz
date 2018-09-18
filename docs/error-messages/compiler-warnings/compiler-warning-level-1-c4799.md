@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4799 | Microsoft Docs
+title: Upozornění (úroveň 1) C4799 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f888d6a941ad487ce122e46c43582e1c96525c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d83917289e5ad76a874587894a66e163fed90a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088225"
 ---
-# <a name="compiler-warning-level-1-c4799"></a>C4799 kompilátoru upozornění (úroveň 1)  
-  
-> Žádné EMMS na konci funkce '*funkce*.  
-  
-Funkce má alespoň jeden instrukcí MMX, ale nemá `EMMS` instrukcí. Pokud je použita multimédií instrukce, `EMMS` pokyn nebo `_mm_empty` vnitřní by měla být používána zrušte word multimédií značky na konci MMX kód.  
-  
-C4799 může dojít, když pomocí ivec.h, která určuje, že kód nepoužívá správně provést instrukci EMMS před vrácením. Toto je false upozornění pro tyto hlavičky. To může vypnout tak, že definujete _SILENCE_IVEC_C4799 v ivec.h. Upozorňujeme však, to také zbaví kompilátor poskytnutí správné upozornění tohoto typu.  
-  
-Související informace najdete v tématu [nastavit instrukcí MMX společnosti Intel](../../assembler/inline/intel-s-mmx-instruction-set.md).
+# <a name="compiler-warning-level-1-c4799"></a>Kompilátor upozornění (úroveň 1) C4799
+
+> Žádné EMMS. na konci funkce "*funkce*.
+
+Funkci má alespoň jedna instrukce MMX, ale nemá `EMMS` instrukce. Při použití multimediálních instrukce `EMMS` instrukce nebo `_mm_empty` vnitřní by měl také použít k zrušte slovo multimediální značky na konci MMX kódu.
+
+C4799 se může zobrazit při použití ivec.h, která udává, že kód nepoužívá správně spustit instrukci EMMS. před vrácením. Toto je false upozornění pro tyto hlavičky. Toto může vypnout definováním _SILENCE_IVEC_C4799 ivec.h. Nezapomínejte, že to bude také zabránění kompilátoru poskytuje správné upozornění tohoto typu.
+
+Související informace naleznete v tématu [sadu instrukcí MMX společnosti Intel](../../assembler/inline/intel-s-mmx-instruction-set.md).

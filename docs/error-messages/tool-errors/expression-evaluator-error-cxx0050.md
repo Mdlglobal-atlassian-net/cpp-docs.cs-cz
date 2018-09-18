@@ -1,5 +1,5 @@
 ---
-title: CXX0050 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0050 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095422"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Chyba při vyhodnocování výrazu CXX0050
-levé straně:: musí být třída, struktura/sjednocení  
-  
- Symbol na levé straně operátor řešení rozsahu (`::`) nebyla třídy, struktury nebo union.  
-  
- Tato chyba je stejný jako CAN0050.
+
+levé straně:: musí být třída/struktura/sjednocení
+
+Symbolu na levé straně operátoru rozlišení oboru (`::`) nebyla třídy, struktury nebo sjednocení.
+
+Tato chyba se shoduje s CAN0050.

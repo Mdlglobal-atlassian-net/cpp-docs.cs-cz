@@ -1,5 +1,5 @@
 ---
-title: Chyby příkazového řádku D8000 až D9999 | Microsoft Docs
+title: Chyby příkazového řádku D8000 až D9999 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e608745f4c10d915ee0fc8a2cdad2f372f81046c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bed2202c8dc7f6372a102eb3926ac49d568793a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096701"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>Chyby příkazového řádku D8000 až D9999
 
-Články v této části poskytují odkaz na chyby příkazového řádku, které jsou generované nástroje pro sestavení.
+Články v této části poskytují odkaz na příkazový řádek chyb generovaných sestavovacími nástroji.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -61,6 +61,6 @@ ms.locfileid: "33302539"
 
 [Upozornění příkazového řádku D9043](../../error-messages/tool-errors/command-line-warning-d9043.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Chyby sestavení C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[Chyby sestavení C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

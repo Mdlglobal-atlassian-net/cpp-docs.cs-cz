@@ -1,5 +1,5 @@
 ---
-title: Vytvoření příjemce technologie OLE DB pomocí Průvodce | Microsoft Docs
+title: Vytvoření příjemce technologie OLE DB pomocí Průvodce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7b9323630307aaf959cd55267a918bbd628bc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097881"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Vytvoření příjemce technologie OLE DB pomocí průvodce
-Tento postup ukazuje, jak můžete použít Průvodce projektu knihovny ATL a průvodce příjemcem knihovny ATL technologie OLE DB pro vygenerování příjemce technologie OLE DB šablony a potom upravte kód hlavní aplikace konzoly načíst a zobrazit data z tabulky databáze.  
+
+Tento postup ukazuje, jak můžete použít Průvodce projektem ATL a průvodce příjemcem ATL OLE DB generování šablony příjemce OLE DB a následně upravit hlavní kód konzolovou aplikaci pro načtení a zobrazení dat z databázové tabulky.  
   
- V posledních dvou částech kód vygenerované průvodcem příjemce technologie OLE DB.  
+V posledních dvou částech kód vygenerované průvodcem příjemce technologie OLE DB.  
   
- Tato část obsahuje následující témata:  
+Tato část obsahuje následující témata:  
   
--   [Vytvoření jednoduchého příjemce](../../data/oledb/creating-a-simple-consumer.md)  
+- [Vytvoření jednoduchého příjemce](../../data/oledb/creating-a-simple-consumer.md)  
   
--   [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md)  
+- [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md)  
   
--   [Třídy generované v průvodci příjemcem](../../data/oledb/consumer-wizard-generated-classes.md)  
+- [Třídy generované v průvodci příjemcem](../../data/oledb/consumer-wizard-generated-classes.md)  
   
--   [Metody generované v průvodci příjemcem](../../data/oledb/consumer-wizard-generated-methods.md)  
+- [Metody generované v průvodci příjemcem](../../data/oledb/consumer-wizard-generated-methods.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

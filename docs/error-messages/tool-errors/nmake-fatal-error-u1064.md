@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1064 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1064 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5573943fc2c274d48768933a634b2c052361a8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4240bf2c553957e73d5ead0bdd03ea129450645b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092996"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Závažná chyba nástroje NMAKE U1064
-Nebyl nalezen v souboru pravidel a není zadán žádný cíl.  
-  
- Příkaz NMAKE nezadali souboru pravidel nebo cíl a aktuální adresář neobsahuje soubor s názvem souboru pravidel.  
-  
- NMAKE požaduje souboru pravidel nebo příkazového řádku cíl (nebo obě). Chcete-li zpřístupnit souboru pravidel NMAKE, zadejte možnost /F nebo umístit soubor s názvem souboru pravidel v aktuálním adresáři. NMAKE můžete vytvořit cíl příkazového řádku pomocí odvozená pravidla, pokud není k dispozici souboru pravidel.
+
+Nenašel se soubor MAKEFILE a není zadaný žádný cíl
+
+NMAKE příkazového řádku nezadali souboru pravidel nebo cíl a aktuální adresář neobsahuje soubor s názvem souboru pravidel.
+
+NMAKE vyžaduje souboru pravidel nebo příkazového řádku cíl (nebo obojí). Chcete-li zpřístupnit souboru pravidel NMAKE, možnost /F nebo umístit soubor s názvem souboru pravidel v aktuálním adresáři. NMAKE můžete vytvořit cíl příkazového řádku pomocí pravidla odvození, pokud není k dispozici soubor pravidel.

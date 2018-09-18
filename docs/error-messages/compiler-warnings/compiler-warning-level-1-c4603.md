@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4603 | Microsoft Docs
+title: Upozornění (úroveň 1) C4603 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54247238e522afb057c19fc407e0c3951e6b30cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c5100bdac5589747d948597baa35658df9da4ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087854"
 ---
-# <a name="compiler-warning-level-1-c4603"></a>C4603 kompilátoru upozornění (úroveň 1)
-'\<identifikátor >': Makro není definováno nebo ho definici se liší po použití předkompilovaných hlaviček  
-  
- Makro určeného *identifikátor* zástupný symbol je různé nebo už definované po použití předkompilovaných hlaviček.  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)
+# <a name="compiler-warning-level-1-c4603"></a>Kompilátor upozornění (úroveň 1) C4603
+
+"\<identifikátor >': Makro není definované nebo se definice liší od použití předkompilované hlavičky
+
+Makra určené *identifikátor* zástupný symbol je jiný nebo už definované po použití předkompilovaných hlaviček.
+
+## <a name="see-also"></a>Viz také
+
+[Vytváření předkompilovaných hlavičkových souborů](../../build/reference/creating-precompiled-header-files.md)

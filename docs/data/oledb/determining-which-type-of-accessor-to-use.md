@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086964"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Určení použitého typu přístupového objektu
+
 V době kompilace nebo za běhu, můžete určit typy dat pro sadu řádků.  
   
- Pokud je potřeba určit datové typy v době kompilace, použijte statického následovníka (například `CAccessor`). Datové typy, které můžete určit ručně nebo pomocí průvodce příjemcem ATL OLE DB.  
+Pokud je potřeba určit datové typy v době kompilace, použijte statického následovníka (například `CAccessor`). Datové typy, které můžete určit ručně nebo pomocí průvodce příjemcem ATL OLE DB.  
   
- Pokud je potřeba určit datové typy v době běhu, použít dynamickou (`CDynamicAccessor` nebo její podřízené jednotce) nebo ruční přístupového objektu (`CManualAccessor`). V těchto případech můžete volat `GetColumnInfo` pro řádků vrátit informace o vazbě sloupec, ze kterého můžete určit typy.  
+Pokud je potřeba určit datové typy v době běhu, použít dynamickou (`CDynamicAccessor` nebo její podřízené jednotce) nebo ruční přístupového objektu (`CManualAccessor`). V těchto případech můžete volat `GetColumnInfo` pro řádků vrátit informace o vazbě sloupec, ze kterého můžete určit typy.  
   
- Následující tabulka uvádí typy přístupových objektů, které jsou součástí šablony příjemce. Každý přistupující objekt má své výhody a nevýhody. V závislosti na vaší situaci jeden typ přístupového objektu by měl vyhovovat vašim potřebám.  
+Následující tabulka uvádí typy přístupových objektů, které jsou součástí šablony příjemce. Každý přistupující objekt má své výhody a nevýhody. V závislosti na vaší situaci jeden typ přístupového objektu by měl vyhovovat vašim potřebám.  
   
 |Přístupový objekt třídy|Vazba|Parametr|Komentář|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ V době kompilace nebo za běhu, můžete určit typy dat pro sadu řádků.
 |`CXMLAccessor`|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data a ji naformátuje jako XML příznakem data.|  
   
 ## <a name="see-also"></a>Viz také  
- [Použití přístupových objektů](../../data/oledb/using-accessors.md)
+
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)

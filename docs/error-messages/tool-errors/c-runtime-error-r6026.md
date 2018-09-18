@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6026 C | Microsoft Docs
+title: Chyba modulu Runtime R6026 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7c8bea41b946db67ce24a52393d87873926f3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 824649a28edc1b630eb2fbacd7beec05d74975a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087427"
 ---
-# <a name="c-runtime-error-r6026"></a>R6026 Chyba za běhu C
-není dostatek místa pro inicializaci stdio  
-  
+# <a name="c-runtime-error-r6026"></a>Chyba modulu Runtime R6026 C
+
+není dostatek místa pro inicializaci stdio
+
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má problém s interní paměť. Existuje několik možných příčin této chyby, avšak obvykle je způsobena podmínku velmi málo paměti. Může být také způsobeno, chyb v aplikaci, poškození knihoven Visual C++, které používá nebo ovladač.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Ukončete ostatní spuštěné aplikace nebo restartujte počítač k uvolnění paměti.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
-> -   Pokud byla aplikace funguje před poslední instalace jinou aplikaci aplikační nebo ovladačů, použijte **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat nové aplikace nebo ovladače a zkuste aplikaci znovu.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravit nebo znovu nainstalovat všechny kopie systému Microsoft Visual C++ Redistributable.  
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory v jazyce**  
-  
- K této chybě dojde, když není dost paměti k dispozici inicializovat standardní podporu vstupně-výstupních operací v modulu runtime C. Obvykle k této chybě dojde při spuštění aplikace. Ověřte, že vaše aplikace a ovladače a knihovny DLL, která načte nedošlo k poškození haldy při spuštění.
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale obvykle je způsobena podmínku velmi málo paměti. Může být také způsobeno, chybu v aplikaci, poškozením knihoven Visual C++, které používá nebo ovladač.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Pokud aplikace byla dříve poslední instalace jiné aplikace nebo ovladače funkční, použijte **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat Nová aplikace nebo ovladače a zkuste aplikaci znovu.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte všechny kopie systému Microsoft Visual C++ Redistributable.
+> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+K této chybě dochází, když není dost paměti k dispozici inicializovat standardní podporu vstupně-výstupní operace v modulu C runtime. K této chybě obvykle dochází při spuštění aplikace. Ověřte, že vaše aplikace a ovladače a knihovny DLL, která načte nedošlo k poškození haldy při spuštění.

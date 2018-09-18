@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4716 | Microsoft Docs
+title: Upozornění (úroveň 1) C4716 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be620264c315fc9c2ff3cd4cb91bd9d77c8a4d07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f7a6fd31ecae4643e947cb4a56897e80010e350
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093399"
 ---
-# <a name="compiler-warning-level-1-c4716"></a>C4716 kompilátoru upozornění (úroveň 1)
-'function' musí vrátit hodnotu  
-  
- Danou funkci nevrátil hodnotu.  
-  
- Pouze funkce s návratovým typem void může použít příkaz return bez doprovodné návratovou hodnotu.  
-  
- Když tato funkce je volána, bude vrácen nedefinovanou hodnotu.  
-  
- Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md).  
-  
- Následující ukázka generuje C4716:  
-  
-```  
-// C4716.cpp  
-// compile with: /c /W1  
-// C4716 expected  
-#pragma warning(default:4716)  
-int test() {  
-   // uncomment the following line to resolve  
-   // return 0;  
-}  
+# <a name="compiler-warning-level-1-c4716"></a>Kompilátor upozornění (úroveň 1) C4716
+
+'function' musí vracet hodnotu
+
+Dané funkce nevrací hodnotu.
+
+Pouze funkce s návratovým typem void lze použít příkaz return bez doprovodné návratové hodnoty.
+
+Nedefinovaná hodnota se vrátí při volání této funkce.
+
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
+
+Následující ukázka generuje C4716:
+
+```
+// C4716.cpp
+// compile with: /c /W1
+// C4716 expected
+#pragma warning(default:4716)
+int test() {
+   // uncomment the following line to resolve
+   // return 0;
+}
 ```

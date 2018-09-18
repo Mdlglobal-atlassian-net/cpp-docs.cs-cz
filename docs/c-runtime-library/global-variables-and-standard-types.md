@@ -1,5 +1,5 @@
 ---
-title: Globální proměnné a standardní typy | Microsoft Docs
+title: Globální proměnné a standardní typy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c0781f286d054d9a4baeedf9460fa460bf39c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59dfba20e2bf55bb314cd97d860a741a6d830957
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089733"
 ---
 # <a name="global-variables-and-standard-types"></a>Globální proměnné a standardní typy
-Běhové knihovny Microsoft obsahuje definice pro [globální proměnné](../c-runtime-library/global-variables.md), [řízení příznaky](../c-runtime-library/control-flags.md), a [standardní typy](../c-runtime-library/standard-types.md) používané rutiny knihovny. Přístup k těchto proměnných, příznaky a typy deklarací je v programu nebo zahrnutím odpovídající hlavičkových souborů.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace běhové knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Obsahuje definice pro knihovny run-time Microsoft [globální proměnné](../c-runtime-library/global-variables.md), [řídicí příznaky](../c-runtime-library/control-flags.md), a [standardní typy](../c-runtime-library/standard-types.md) používá rutiny knihoven. Přístup k těchto proměnných, příznaky a typy deklarací ve svém programu nebo zahrnutím souborů příslušné záhlaví.
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

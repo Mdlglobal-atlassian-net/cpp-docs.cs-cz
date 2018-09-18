@@ -1,5 +1,5 @@
 ---
-title: Sdílení konstant | Microsoft Docs
+title: Sdílení konstant | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,38 +30,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41060a9dbd3d2bc8176a2b13233db54933a6428b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05226ffcc5a10785391969f8162a76034efc4d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097300"
 ---
 # <a name="sharing-constants"></a>Sdílení konstant
-Konstanty pro sdílení souborů režimy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <share.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- *Shflag* argument určuje sdílení režimu, který se skládá z jedné nebo více manifestu konstanty. Ty mohou být kombinovány s *oflag* argumenty (viz [konstanty souboru](../c-runtime-library/file-constants.md)).  
-  
- Následující tabulka uvádí konstanty a jejich význam:  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_SH_DENYRW`|Odmítne oprávnění ke čtení a zápisu do souboru|  
-|`_SH_DENYWR`|Odmítne přístup k zápisu do souboru|  
-|`_SH_DENYRD`|Odmítne přístup pro čtení k souboru|  
-|`_SH_DENYNO`|Povolí přístup čtení a zápis|  
-|`_SH_SECURE`|Nastaví zabezpečeném režimu (sdílené pro čtení, výhradní přístup pro zápis).|  
-  
-## <a name="see-also"></a>Viz také  
- [_sopen –, _wsopen –](../c-runtime-library/reference/sopen-wsopen.md)   
- [_fsopen –, _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Konstanty pro sdílení souborů režimy.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <share.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+*Shflag* argument určuje režim sdílení, který se skládá z jednoho nebo více konstant manifestu. Ty je možné kombinovat s *oflag* argumentů (viz [konstanty souboru](../c-runtime-library/file-constants.md)).
+
+V následující tabulce jsou uvedeny konstanty a jejich význam:
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_SH_DENYRW`|Zakazuje čtení a zápis do souboru|
+|`_SH_DENYWR`|Odepřít přístup pro zápis do souboru|
+|`_SH_DENYRD`|Odepřít přístup pro čtení k souboru|
+|`_SH_DENYNO`|Povolí čtení a zápis|
+|`_SH_SECURE`|Nastaví zabezpečený režim (sdílené pro čtení, exkluzivní přístup pro zápis).|
+
+## <a name="see-also"></a>Viz také
+
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

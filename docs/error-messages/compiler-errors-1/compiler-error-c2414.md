@@ -1,5 +1,5 @@
 ---
-title: C2414 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2414 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22710e0056a7dea65130a65a3ccb9c5310f1c39f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 642cb00605ed13146288edf5d39cb5d0c14c6e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089915"
 ---
-# <a name="compiler-error-c2414"></a>C2414 chyby kompilátoru
-Neplatný počet operandy  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Opcode nepodporuje počet operandy použít. V příručce jazyka sestavení odkaz můžete určit správný počet operandy.  
-  
-2.  Novější procesor podporuje pokyn s různým počtem operandy. Upravit [/arch (minimální architektura procesoru)](../../build/reference/arch-minimum-cpu-architecture.md) možnost použít novější procesoru.
+# <a name="compiler-error-c2414"></a>Chyba kompilátoru C2414
+
+Neplatný počet operandů
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Operační kód nepodporuje počet operandů použít. Zkontrolujte referenčním manuálu sestavení jazyka určit správný počet operandů.
+
+1. Novější procesor podporuje instrukce s různým počtem operandy. Upravit [/arch (minimální architektura procesoru)](../../build/reference/arch-minimum-cpu-architecture.md) možnost použít novější procesoru.

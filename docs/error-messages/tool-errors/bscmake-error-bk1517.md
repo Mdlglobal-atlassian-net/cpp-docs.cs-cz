@@ -1,5 +1,5 @@
 ---
-title: Chyba nástroje BSCMAKE BK1517 | Microsoft Docs
+title: Chyba nástroje BSCMAKE BK1517 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097052"
 ---
 # <a name="bscmake-error-bk1517"></a>Chyba nástroje BSCMAKE BK1517
-zdrojový soubor pro sbrfile kompilovat s /Yc a /Yu  
-  
- Soubor .sbr odkazuje sama na sebe. Pravděpodobně bylo překompilovat s /Yu po kompilujete s /Yc. Obnovit – možnost kompilátoru pro zdrojový soubor /Yc a pak vyberte **znovu sestavit** generovat nové soubory .sbr. Není znovu zkompiluje zdrojový soubor s /Yu.
+
+zdrojový soubor pro sbrfile zkompilovaná /Yc a /Yu
+
+Soubor .sbr odkazuje sama na sebe. Po kompilaci s možností/Yc to bylo pravděpodobně rekompilovány/YU. Resetovat možnosti kompilátoru pro zdrojový soubor pro /Yc a pak vyberte **znovu sestavit** generovat nové soubory .sbr. Nezkompilujete zdrojového souboru s/Yu.

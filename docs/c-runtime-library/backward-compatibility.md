@@ -1,5 +1,5 @@
 ---
-title: Zpětná kompatibilita | Microsoft Docs
+title: Zpětná kompatibilita | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,21 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a04dec046435478ca621ad8f5e2e3c4323f3e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3056b90f3c6f0f62158a9b6dcfe145cda9740c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092190"
 ---
 # <a name="backward-compatibility"></a>Zpětná kompatibilita
-Pro kompatibilitu mezi verzemi produktu, knihovna OLDNAMES. LIB mapuje názvy starého na nové názvy. Například `open` mapuje `_open`. Je nutné explicitně propojit s OLDNAMES. LIB jenom v případě, že je kompilovat s následující kombinace možností příkazového řádku:  
-  
--   `/Zl` (vypuštění názvu výchozí knihovny ze souboru objektu) a `/Ze` (výchozí nastavení – pomocí rozšíření Microsoft)  
-  
--   `/link` (řízení linkeru), `/NOD` (hledání žádné výchozí knihovny), a `/Ze`  
-  
- Další informace o parametrech příkazového řádku kompilátoru najdete v tématu [referenční dokumentace kompilátoru](../build/reference/compiler-options.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Kompatibilita](../c-runtime-library/compatibility.md)
+
+Kvůli kompatibilitě mezi verzemi tohoto produktu, knihovna OLDNAMES. LIB mapuje starých názvů na nové názvy. Například `open` mapuje `_open`. Je třeba explicitně propojit s OLDNAMES. LIB jenom při kompilaci s následující kombinace možností příkazového řádku:
+
+- `/Zl` (vypuštění názvu výchozí knihovny ze souboru objektu) a `/Ze` (výchozí nastavení – pomocí rozšíření společnosti Microsoft)
+
+- `/link` (linkeru – ovládací prvek), `/NOD` (hledání žádné výchozí knihovny), a `/Ze`
+
+Další informace o možnostech příkazového řádku kompilátoru najdete v tématu [kompilátory](../build/reference/compiler-options.md).
+
+## <a name="see-also"></a>Viz také
+
+[Kompatibilita](../c-runtime-library/compatibility.md)

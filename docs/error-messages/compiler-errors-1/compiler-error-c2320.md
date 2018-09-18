@@ -1,5 +1,5 @@
 ---
-title: C2320 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2320 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df97278845bbbce64cb33da9df7f1c74907665ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 875fa8bc6dea83b6f1cbbb87303576e98bc30e74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094244"
 ---
-# <a name="compiler-error-c2320"></a>C2320 chyby kompilátoru
-Očekává se:' podle specifikátor přístupu 'specifikátor.  
-  
- Klíčové slovo `public`, `protected`, nebo `private` musí být následovaným dvojtečkou.
+# <a name="compiler-error-c2320"></a>Chyba kompilátoru C2320
+
+byl očekáván ':' použít specifikátor přístupu "specifikátor"
+
+Klíčové slovo `public`, `protected`, nebo `private` musí být následován dvojtečkou.

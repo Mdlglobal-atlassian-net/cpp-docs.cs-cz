@@ -1,5 +1,5 @@
 ---
-title: C2102 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2102 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1f5b5bf0c1acca3b85a3cf2059919abf45b33cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da6ca4739acecf3d8c27af7e4b6baff5aa1d6602
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164785"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089596"
 ---
-# <a name="compiler-error-c2102"></a>C2102 chyby kompilátoru
-' &' vyžaduje hodnotu l  
-  
- Address-of – operátor ( `&` ) musí mít hodnotu l jako operand.
+# <a name="compiler-error-c2102"></a>Chyba kompilátoru C2102
+
+"&" vyžaduje l-value.
+
+Operátor address-of ( `&` ) musí být l hodnotou jako operand.

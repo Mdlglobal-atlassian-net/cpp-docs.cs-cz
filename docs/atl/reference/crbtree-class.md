@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090357"
 ---
 # <a name="crbtree-class"></a>Crbtree – třída
 
@@ -54,22 +54,22 @@ Tato třída poskytuje metody pro vytváření a využívání Red černé strom
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klíče prvku.
 
-*V*  
+*V*<br/>
 Typ elementu hodnota.
 
-*KTraits*  
+*KTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
 
-*VTraits*  
+*VTraits*<br/>
 Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
 
 ## <a name="members"></a>Členové
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Hodnotu klíče.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice.
 
-*Klíč*  
+*Klíč*<br/>
 Proměnná, která přijímá klávesu.
 
-*value*  
+*value*<br/>
 Proměnné, která přijímá hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Klíč*  
+*Klíč*<br/>
 Parametr šablony určující typ klíče stromové struktuře.
 
-*value*  
+*value*<br/>
 Parametr šablony určující typ hodnoty stromové struktuře.
 
 ### <a name="remarks"></a>Poznámky
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Poznámky
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*value*  
+*value*<br/>
 Hodnota k přidání do `CRBTree` objektu.
 
 ### <a name="remarks"></a>Poznámky

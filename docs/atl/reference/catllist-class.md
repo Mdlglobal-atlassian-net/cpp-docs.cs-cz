@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090791"
 ---
 # <a name="catllist-class"></a>Catllist – třída
 
@@ -61,16 +61,16 @@ Tato třída poskytuje metody pro vytváření a správa seznamu objektů.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ elementu.
 
-*ETraits*  
+*ETraits*<br/>
 Kód použitý má zkopírovat nebo přesunout prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
 
 ## <a name="members"></a>Členové
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*  
+*– Element*<br/>
 Nový prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNew*  
+*plNew*<br/>
 Seznam, který chcete přidat.
 
 ### <a name="remarks"></a>Poznámky
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*  
+*– Element*<br/>
 Elementu, který chcete přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNew*  
+*plNew*<br/>
 Seznam, který chcete přidat.
 
 ### <a name="remarks"></a>Poznámky
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*  
+*– Element*<br/>
 Elementu, který chcete nalézt v seznamu.
 
-*posStartAfter*  
+*posStartAfter*<br/>
 Počáteční pozice pro vyhledávání. Pokud není zadána žádná hodnota, začíná hledání head element.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Index založený na nule element seznamu požadavků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, zadání konkrétní elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, vrácený z předchozího volání `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), nebo jiné `CAtlList` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, vrácený z předchozího volání `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), nebo jiné `CAtlList` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice, po jejímž uplynutí se vloží nový prvek.
 
-*– Element*  
+*– Element*<br/>
 Element, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Nový prvek se vloží do seznamu před tuto hodnotu pozice.
 
-*– Element*  
+*– Element*<br/>
 Element, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice prvku, který chcete přesunout.
 
 ### <a name="remarks"></a>Poznámky
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice prvku, který chcete přesunout.
 
 ### <a name="remarks"></a>Poznámky
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice prvku, který chcete odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Hodnota pozice odpovídá elementu, který chcete změnit.
 
-*– Element*  
+*– Element*<br/>
 Nová hodnota prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos1*  
+*pos1*<br/>
 První hodnota pozice.
 
-*pos2*  
+*pos2*<br/>
 Druhá hodnota pozice.
 
 ### <a name="remarks"></a>Poznámky
@@ -808,5 +808,5 @@ Zamění prvky ve dvou pozic určený. V sestavení ladění bude selhání kont
 
 ## <a name="see-also"></a>Viz také
 
-[CList – třída](../../mfc/reference/clist-class.md)   
+[CList – třída](../../mfc/reference/clist-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

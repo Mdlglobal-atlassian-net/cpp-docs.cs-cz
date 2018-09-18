@@ -1,5 +1,5 @@
 ---
-title: Časové pásmo | Microsoft Docs
+title: Časové pásmo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3979916452fbea9154e28070c96dce9e278059a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f5b39c90d9f9d873905c21a2f61b8114a8979cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096766"
 ---
 # <a name="time-zone"></a>Časové pásmo
-**ANSI 4.12.1 jednostranná ochrana** místním časovém pásmu a letní čas  
-  
- Místní časové pásmo je Tichomoří (běžný čas). Microsoft C podporuje letní čas.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce knihovny](../c-language/library-functions.md)
+
+**ANSI 4.12.1** místní časové pásmo a letní čas
+
+Místní časové pásmo je Tichomoří (běžný čas). Microsoft C podporuje letní čas.
+
+## <a name="see-also"></a>Viz také
+
+[Funkce knihovny](../c-language/library-functions.md)

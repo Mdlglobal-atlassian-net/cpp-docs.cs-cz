@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091826"
 ---
 # <a name="csnapinitemimpl-class"></a>Csnapinitemimpl – třída
 
@@ -54,16 +54,16 @@ Tato třída poskytuje metody pro implementaci modulu snap-in uzel objektu.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 Hodnota TRUE, pokud objekt je rozšíření modulu snap-in; v opačném případě FALSE.
 
 ## <a name="members"></a>Členové
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*piCallback*  
+*piCallback*<br/>
 [in] Ukazatel `IContextMenuCallback` , který můžete přidat položky do kontextové nabídky.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [out v] Identifikuje definované Microsoft Management Console MMC, položka nabídky vložení body, které lze použít. To může být kombinací následujících příznaků:
 
 - V horní části místní nabídka může být vložen CCM_INSERTIONALLOWED_TOP položky.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - V nabídce Zobrazit panel nástrojů nebo v podnabídce zobrazení místní nabídky podokna výsledků lze vložit CCM_INSERTIONALLOWED_VIEW položky.
 
-*Typ*  
+*Typ*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parametry
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Určuje identifikátor příkazu položky nabídky.
 
-*Typ*  
+*Typ*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parametry
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Ukazatel `IPropertySheetCallback` rozhraní.
 
-*Popisovač*  
+*Popisovač*<br/>
 [in] Určuje popisovač používaný ke směrování zprávy oznámení MMCN_PROPERTY_CHANGE na třídu příslušná data.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel `IExtendPropertySheet` rozhraní na objekt, který obsahuje informace o kontextu uzlu.
 
-*Typ*  
+*Typ*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*  
+*CF*<br/>
 [in] Formát (text, formátovaný text nebo formátovaný text položky OLE) do schránky.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel na datový proud obsahující data objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parametry
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Ukazatel na adresu typu vrácené zobrazení.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Ukazatel na MMC_VIEW_OPTIONS výčet, který poskytuje možnosti určené vlastnící modul snap-in konzole. Tato hodnota může být jedna z následujících akcí:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 informuje konzolu, nepoužívejte nabízí ten samý standardní seznam možností zobrazení v **zobrazení** nabídky. Umožňuje modulu snap-in k zobrazení vlastní vlastních zobrazení pouze v podokně výsledků. Toto je pouze možnost příznak definované v tuto chvíli.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Ukazatel `SCOPEDATAITEM` struktury `CSnapInItemImpl` objektu.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Ukazatel `RESULTDATAITEM` struktury `CSnapInItemImpl` objektu.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parametry
 
-*event*  
+*event*<br/>
 [in] Určuje akci provedenou uživatelem. Je možné následující oznámení:
 
 - MMCN_ACTIVATE odesílá se, když se okna aktivovat a deaktivovat.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE posílají, když modul snap-in můžete aktualizovat všechna zobrazení když dojde ke změně.
 
-*arg*  
+*arg*<br/>
 [in] Závisí na typu oznámení.
 
-*Param*  
+*Param*<br/>
 [in] Závisí na typu oznámení.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Ukazatel na objekt implementace `IComponentData`. Tento parametr hodnotu NULL, pokud není se předalo oznámení `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Ukazatel na objekt, který implementuje `IComponent`. Tento parametr hodnotu NULL, pokud není se předalo oznámení `IComponent::Notify`.
 
-*Typ*  
+*Typ*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parametry
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Nenulové, pokud funkce by měla být volána před položky budou přidány do kontextové nabídky; jinak 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [out v] Identifikuje definované Microsoft Management Console MMC, položka nabídky vložení body, které lze použít. To může být kombinací následujících příznaků:
 
 - V horní části místní nabídka může být vložen CCM_INSERTIONALLOWED_TOP položky.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] ID tlačítko panelu nástrojů, která se má nastavit.
 
-*fsState*  
+*fsState*<br/>
 [in] Příznaky stav tlačítka. Může být jeden nebo více z následujících akcí:
 
 - TBSTATE_CHECKED tlačítko stylu TBSTYLE_CHECKED a stisknutí se.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Konec řádku A TBSTATE_WRAP následuje tlačítka. Tlačítka musí mít také TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] Příznaky stav tlačítka. Může být jeden nebo více z následujících akcí:
 
 - TBSTYLE_BUTTON vytvoří standardní tlačítko.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] ID položky nabídky, která se má nastavit.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Ukazatel na řetězec pro položky nabídky aktualizace.
 
-*příznaky*  
+*příznaky*<br/>
 [in] Určuje příznaky nový stav. To může být kombinací následujících příznaků:
 
 - MF_POPUP Určuje, že se jedná o podnabídku v místní nabídce. Položky nabídky, body vložení a další podnabídek může přidat do podnabídky pomocí jeho `lCommandID` jako jejich `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 Určuje ID tlačítko na panelu nástrojů tlačítko Aktualizovat.
 
-*fsState*  
+*fsState*<br/>
 Určuje stav tlačítka panelu nástrojů. Pokud tento stav je možné nastavit, vrátí hodnotu TRUE. To může být kombinací následujících příznaků:
 
 - POVOLIT tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a nejde aktivovat.

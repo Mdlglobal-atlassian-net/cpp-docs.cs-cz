@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4de30a1abdf111f171ad49a028a25cc2683cbef4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086951"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl – třída
+
 Poskytuje implementaci pro `IOpenRowset` rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -43,11 +44,13 @@ class IOpenRowsetImpl : public IOpenRowset
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *SessionClass*  
- Vaše třída odvozena od `IOpenRowsetImpl`.  
+
+*SessionClass*<br/>
+Vaše třída odvozena od `IOpenRowsetImpl`.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -59,9 +62,11 @@ class IOpenRowsetImpl : public IOpenRowset
 |[OpenRowset](#openrowset)|Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu. (Není v ATLDB. H)|  
   
 ## <a name="remarks"></a>Poznámky  
- [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
+
+[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+
 Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory.*  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -79,15 +84,17 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *RowsetClass*  
- Šablona člena třídy představující třídu sady řádků uživatele. Obvykle generované průvodcem knihovnou.  
+
+*RowsetClass*<br/>
+Šablona člena třídy představující třídu sady řádků uživatele. Obvykle generované průvodcem knihovnou.  
   
- *pRowsetObj*  
- [out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.  
+*pRowsetObj*<br/>
+[out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.  
   
- Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory.*  
+Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+
 Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -103,11 +110,14 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nebyla nalezena v ATLDB. H. Je vytvořen objekt Průvodcem knihovnou ATL při vytváření zprostředkovatele.  
+
+Tato metoda nebyla nalezena v ATLDB. H. Je vytvořen objekt Průvodcem knihovnou ATL při vytváření zprostředkovatele.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

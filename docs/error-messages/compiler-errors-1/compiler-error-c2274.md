@@ -1,5 +1,5 @@
 ---
-title: C2274 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2274 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd9bda3f3b0ab267ec008443dd865334e1b765e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0fcc6b0afe78e089c268f69274be1cbfb6f3d32c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093195"
 ---
-# <a name="compiler-error-c2274"></a>C2274 chyby kompilátoru
-'type': Neplatný jako pravé straně '.' – operátor  
-  
- Typ se zobrazí jako pravý operand operátoru přístup ke členu (.).  
-  
- Tato chyba může být způsobeno pokusu o přístup k uživatelsky definovaný typ. převod. Použití klíčového slova `operator` mezi období a `type`.  
-  
- Následující ukázka generuje C2286:  
-  
-```  
-// C2274.cpp  
-struct MyClass {  
-   operator int() {  
-      return 0;  
-   }  
-};  
-  
-int main() {  
-   MyClass ClassName;  
-   int i = ClassName.int();   // C2274  
-   int j = ClassName.operator int();   // OK  
-}  
+# <a name="compiler-error-c2274"></a>Chyba kompilátoru C2274
+
+'type': neplatné jako pravá strana "." – operátor
+
+Typ se zobrazí jako pravý operand operátoru přístupu ke členům (.).
+
+Tuto chybu může způsobovat pokusu o přístup k převodu uživatelem definovaného typu. Pomocí klíčového slova `operator` mezi období a `type`.
+
+Následující ukázka generuje C2286:
+
+```
+// C2274.cpp
+struct MyClass {
+   operator int() {
+      return 0;
+   }
+};
+
+int main() {
+   MyClass ClassName;
+   int i = ClassName.int();   // C2274
+   int j = ClassName.operator int();   // OK
+}
 ```

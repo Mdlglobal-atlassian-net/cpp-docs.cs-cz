@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4458 | Microsoft Docs
+title: Upozornění (úroveň 4) C4458 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815433004756e4726ee4e562cbd0e424a35d377a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 873aa94db899ae6620e2bbb1f24277c6e7c841c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094543"
 ---
-# <a name="compiler-warning-level-4-c4458"></a>C4458 kompilátoru upozornění (úroveň 4)
-  
-> prohlášení o '*identifikátor*' skryje třídy člena
-  
-Prohlášení o *identifikátor* v oboru místní skryje deklaraci stejně jako názvem *identifikátor* na rozsah třídy. Toto upozornění informacemi o tom, který odkazuje na *identifikátor* v tomto rozsahu odkazující na lokálně deklarovaný verze není verze člena třídy, která mohou nebo nemusí být vašich představ. Chcete-li tento problém vyřešit, doporučujeme, abyste že poskytnout názvy lokální proměnné, které nejsou v konfliktu s názvy členů třídy.  
-    
+# <a name="compiler-warning-level-4-c4458"></a>Kompilátor upozornění (úroveň 4) C4458
+
+> deklarace "*identifikátor*' skryje člen třídy
+
+Deklarace *identifikátor* v místním oboru skrývá deklaraci nazvanými *identifikátor* v oboru třídy. Toto upozornění umožňuje zjistit, která odkazuje na *identifikátor* v tomto oboru vyřešit lokálně deklarované verzi není verze člena třídy, který může nebo nemusí být vaším záměrem. Chcete-li vyřešit tento problém, doporučujeme že poskytnout lokální proměnné s názvy, které nejsou v rozporu s názvy členů třídy.
+
 ## <a name="example"></a>Příklad
-  
-Následující ukázka generuje C4458, protože parametr `x` a místní proměnné `y` v `member_fn` mají stejné názvy jako datových členů v třídě. Chcete-li tento problém vyřešit, použijte odlišné názvy parametrů a místní proměnné.  
-  
-```cpp  
+
+Následující ukázka generuje C4458, protože parametr `x` a místní proměnnou `y` v `member_fn` mají stejné názvy jako datové členy třídy. Chcete-li vyřešit tento problém, použijte jiné názvy parametrů a lokálních proměnných.
+
+```cpp
 // C4458_hide.cpp
 // compile with: cl /W4 /c C4458_hide.cpp
 
@@ -42,10 +42,10 @@ struct S {
     float y;
     void member_fn(long x) {   // C4458
         double y;  // C4458
-        y = x;  
+        y = x;
         // To fix this issue, change the parameter name x
-        // and local name y to something that does not 
+        // and local name y to something that does not
         // conflict with the data member names.
     }
 } s;
-```  
+```

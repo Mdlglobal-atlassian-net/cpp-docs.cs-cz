@@ -1,5 +1,5 @@
 ---
-title: __CxxFrameHandler | Microsoft Docs
+title: __CxxFrameHandler | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,47 +27,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53659b462f811bca79209dd141d90527401cbc95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a4141d932cfad78ca9c563334ebbe51f711153e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088719"
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
-Vnitřní funkce CRT. Používá CRT pro zpracování strukturovaných výjimka rámce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-EXCEPTION_DISPOSITION __CxxFrameHandler(  
-      EHExceptionRecord  *pExcept,  
-      EHRegistrationNode *pRN,  
-      void               *pContext,   
-      DispatcherContext  *pDC  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `pExcept`  
- Výjimka záznam, který je předán možné `catch` příkazy.  
-  
- `pRN`  
- Dynamické informace o rámce zásobníku, který slouží ke zpracování výjimky. Další informace najdete v tématu ehdata.h.  
-  
- `pContext`  
- Kontext. (Nepoužívá se na procesory Intel.)  
-  
- `pDC`  
- Další informace o funkce zásobníku a položka rámečku.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Jeden z *výrazu filtru* hodnoty používané [zkuste-except – příkaz](../cpp/try-except-statement.md).  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
+
+Vnitřní funkce CRT. Používá CRT pro zpracování strukturovaných výjimek snímků.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+EXCEPTION_DISPOSITION __CxxFrameHandler(
+      EHExceptionRecord  *pExcept,
+      EHRegistrationNode *pRN,
+      void               *pContext,
+      DispatcherContext  *pDC
+   )
+```
+
+#### <a name="parameters"></a>Parametry
+
+*pExcept*<br/>
+Záznam o výjimce, která je předána možné `catch` příkazy.
+
+*PRN*<br/>
+Dynamické informace o zásobníku, který se používá ke zpracování výjimky. Další informace najdete v tématu ehdata.h.
+
+*pContext*<br/>
+Kontext. (Nelze použít na procesorech Intel.)
+
+*primární řadič domény*<br/>
+Další informace o funkci položku a v zásobníku rámce.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Jeden z *výrazu filtru* hodnot použitých [zkuste-except – příkaz](../cpp/try-except-statement.md).
+
+## <a name="remarks"></a>Poznámky
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
 |__CxxFrameHandler|excpt.h, ehdata.h|

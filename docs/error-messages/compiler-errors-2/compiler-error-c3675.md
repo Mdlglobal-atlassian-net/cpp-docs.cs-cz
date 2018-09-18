@@ -1,5 +1,5 @@
 ---
-title: C3675 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3675 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4aaa53ae1d92364fad143f127ee3e7b504acdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4b6656753ab4a611dcb80d1473e0b44bf47a270
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094777"
 ---
-# <a name="compiler-error-c3675"></a>C3675 chyby kompilátoru
-'function': je rezervována, protože je definována 'vlastnost'  
-  
- Po deklarování jednoduché vlastnosti kompilátor generuje get a sadu přístupových metod a těch, které se nacházejí v oboru vašeho programu názvy.  Generované kompilátorem názvy jsou tvořeny předřazení get_ a set_ název vlastnosti.  Proto nelze deklarovat funkce se stejným názvem jako přístupové objekty generované kompilátorem.  
-  
- V tématu [vlastnost](../../windows/property-cpp-component-extensions.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3675.  
-  
-```  
-// C3675.cpp  
-// compile with: /clr /c  
-ref struct C {  
-public:  
-   property int Size;  
-   int get_Size() { return 0; }   // C3675  
-};  
+# <a name="compiler-error-c3675"></a>Chyba kompilátoru C3675
+
+'function': je vyhrazené, protože 'property' je definován.
+
+Když deklarujete jednoduchou vlastnost, kompilátor vygeneruje get a set přístupové metody a ty názvy jsou k dispozici v rámci programu.  Názvy generované kompilátorem jsou vytvářena předřazení get_ a set_ název vlastnosti.  Proto nelze deklarovat funkce se stejným názvem jako přístupové objekty generovaný kompilátorem.
+
+Zobrazit [vlastnost](../../windows/property-cpp-component-extensions.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3675.
+
+```
+// C3675.cpp
+// compile with: /clr /c
+ref struct C {
+public:
+   property int Size;
+   int get_Size() { return 0; }   // C3675
+};
 ```

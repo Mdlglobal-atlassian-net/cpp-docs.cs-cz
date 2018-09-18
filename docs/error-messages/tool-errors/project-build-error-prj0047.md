@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0047 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0047 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df87dd3da4ce77f5ce0e88d992e34c3dbc68c66a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e7e8f80d4db4c005dc57085ccfadcffee640aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088648"
 ---
 # <a name="project-build-error-prj0047"></a>Chyba sestavení projektu PRJ0047
-Proces pozastavená, nejde obnovit.  Sestavení se nezdařilo.  
-  
- Došlo k chybě ve vývojovém prostředí.  
-  
- Pokud chcete tuto chybu vyřešit, zavřít a znovu načíst projekt. V případě potřeby, ukončete a restartujte Visual Studio.
+
+Nelze obnovit Pozastavený proces.  Sestavení se nezdařilo.
+
+Ve vývojovém prostředí došlo k chybě.
+
+Chcete-li vyřešit tuto chybu, zavřete a znovu načíst projekt. V případě potřeby, ukončete a restartujte aplikaci Visual Studio.

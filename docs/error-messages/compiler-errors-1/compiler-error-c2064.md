@@ -1,5 +1,5 @@
 ---
-title: C2064 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2064 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,67 +16,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e5e21d7c33c84bb531b53c08aefbfce9dc7fd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7099c8a8371d7a08c95693fffe0d8814303e783e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098105"
 ---
-# <a name="compiler-error-c2064"></a>C2064 chyby kompilátoru
-Výraz nelze vyhodnotit funkci trvá N argumenty  
-  
- Při volání funkce prostřednictvím výrazu. Výraz nebyl vyhodnocen jako ukazatel na funkci, která provede zadaný počet argumentů.  
-  
- V tomto příkladu kód pokusí volat jiné funkce jako funkce. Následující ukázka generuje C2064:  
-  
-```  
-// C2064.cpp  
-int i, j;  
-char* p;  
-void func() {  
-   j = i();    // C2064, i is not a function  
-   p();        // C2064, p doesn't point to a function  
-}  
-```  
-  
- Ukazatele na nestatické členské funkce musí volat v kontextu instance objektu. Následující ukázka generuje C2064 a ukazuje, jak to opravit:  
-  
-```  
-// C2064b.cpp  
-struct C {  
-   void func1(){}  
-   void func2(){}  
-};  
-  
-typedef void (C::*pFunc)();  
-  
-int main() {  
-   C c;  
-   pFunc funcArray[2] = {&C::func1, &C::func2};  
-   (funcArray[0])();    // C2064   
-   (c.*funcArray[0])(); // OK - function called in instance context  
-}  
-  
-```  
-  
- V rámci třídy ukazatelů na funkce člena musí také označovat volání kontextu objektu. Následující ukázka generuje C2064 a ukazuje, jak to opravit:  
-  
-```  
-// C2064d.cpp  
-// Compile by using: cl /c /W4 C2064d.cpp  
-struct C {  
-   typedef void (C::*pFunc)();  
-   pFunc funcArray[2];  
-   void func1(){}  
-   void func2(){}  
-   C() {  
-      funcArray[0] = &C::func1;  
-      funcArray[1] = &C::func2;  
-   }  
-   void func3() {  
-      (funcArray[0])();   // C2064  
-      (this->*funcArray[0])(); // OK - called in this instance context  
-   }  
-};  
+# <a name="compiler-error-c2064"></a>Chyba kompilátoru C2064
+
+Termín se nevyhodnocuje na funkci s argumenty N
+
+Je provedeno volání funkce prostřednictvím výrazu. Výraz se nevyhodnocuje na ukazatel na funkci, která přijímá zadaný počet argumentů.
+
+V tomto příkladu kód pokusí volat jiné funkce jako funkce. Následující ukázka generuje C2064:
+
+```
+// C2064.cpp
+int i, j;
+char* p;
+void func() {
+   j = i();    // C2064, i is not a function
+   p();        // C2064, p doesn't point to a function
+}
+```
+
+Ukazatele na nestatické členské funkce je nutné volat z kontextu instance objektu. Následující ukázka generuje C2064 a ukazuje, jak ho opravit:
+
+```
+// C2064b.cpp
+struct C {
+   void func1(){}
+   void func2(){}
+};
+
+typedef void (C::*pFunc)();
+
+int main() {
+   C c;
+   pFunc funcArray[2] = {&C::func1, &C::func2};
+   (funcArray[0])();    // C2064
+   (c.*funcArray[0])(); // OK - function called in instance context
+}
+
+```
+
+V rámci třídy musíte uvést ukazatelů na členské funkce také volání kontextu objektu. Následující ukázka generuje C2064 a ukazuje, jak ho opravit:
+
+```
+// C2064d.cpp
+// Compile by using: cl /c /W4 C2064d.cpp
+struct C {
+   typedef void (C::*pFunc)();
+   pFunc funcArray[2];
+   void func1(){}
+   void func2(){}
+   C() {
+      funcArray[0] = &C::func1;
+      funcArray[1] = &C::func2;
+   }
+   void func3() {
+      (funcArray[0])();   // C2064
+      (this->*funcArray[0])(); // OK - called in this instance context
+   }
+};
 ```

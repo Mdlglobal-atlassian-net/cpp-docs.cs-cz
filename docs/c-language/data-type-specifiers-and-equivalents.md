@@ -1,5 +1,5 @@
 ---
-title: Datový typ specifikátory a ekvivalenty | Microsoft Docs
+title: Datový typ specifikátory a ekvivalenty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,40 +22,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7380fa654ba7e886800d784966b77cb8c9d1dab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68444d5ac8944e3c6679fce6397226d48206037f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092723"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty datového typu
-Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů typů uvedené v následující tabulce a předpokládá, že typ `char` je ve výchozím nastavení se znaménkem. Proto v této příručce `char` je ekvivalentní **podepsané char**.  
-  
-### <a name="type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty typu  
-  
-|Specifikátor typu|Ekvivalenty|  
-|--------------------|---------------------|  
-|**podepsané char**1|**char**|  
-|**podepsaný int**|**podepsané**, **int**|  
-|**krátká celočíselná podepsané**|**krátký**, **prostě podepsané**|  
-|**podepsané dlouho int**|**dlouhé**, **podepsané dlouho**|  
-|**unsigned char**|—|  
-|**int bez znaménka**|**Bez znaménka**|  
-|**krátká celočíselná bez znaménka**|**short bez znaménka**|  
-|**nepodepsané dlouho int**|**dlouho bez znaménka**|  
-|**float**|—|  
-|**long double**2|—|  
-  
- 1 Pokud provedete **char** typu bez znaménka ve výchozím nastavení (tak, že zadáte /J – možnost kompilátoru), nelze zkrátit **podepsané char** jako **char**.  
-  
- 2 mapuje v 32bitové a 64bitové verze operačních systémů Microsoft C kompilátoru **long double** na typ **dvojité**.  
-  
- **Konkrétní Microsoft**  
-  
- Zadávat lze změnit výchozí možnost kompilátoru /J **char** typu z podepsané na nepodepsané. Pokud tato možnost je ve skutečnosti **char** stejný význam jako **nepodepsané char**, a je nutné použít **podepsané** – klíčové slovo deklarovat hodnota podepsaný znaku. Pokud **char** hodnota je deklarován explicitně podepsaný držitelem, parametrem / neovlivňuje a hodnota je s rozšířeným při rozšířit do **int** typu. **Char** typ je rozšířené při rozšířit na nule **int** typu.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Specifikátory typu jazyka C](../c-language/c-type-specifiers.md)
+
+Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů typů uvedené v následující tabulce a předpokládá, že typ `char` je ve výchozím nastavení se znaménkem. Proto je v této knize `char` je ekvivalentní **podepsané char**.
+
+### <a name="type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty typu
+
+|Specifikátor typu|Ekvivalenty|
+|--------------------|---------------------|
+|**podepsané char**1|**char**|
+|**podepsané int**|**podepsané**, **int**|
+|**krátká celočíselná podepsané**|**krátký**, **podepsané krátké**|
+|**podepsané long int**|**dlouhé**, **podepsané dlouho**|
+|**unsigned char**|—|
+|**unsigned int**|**bez znaménka**|
+|**unsigned short int**|**short bez znaménka**|
+|**unsigned long int**|**unsigned long**|
+|**float**|—|
+|**long double**2|—|
+
+1 je-li **char** typ bez znaménka ve výchozím nastavení (zadáním možnosti kompilátoru /), nelze zkrátit **podepsané char** jako **char**.
+
+2 v 32bitových a 64bitových operačních systémech kompilátor Microsoft C mapuje **long double** na typ **double**.
+
+**Specifické pro Microsoft**
+
+Můžete zadat možnost kompilátoru /J lze změnit výchozí **char** z typu se znaménkem na typ bez znaménka. Pokud tato možnost je ve skutečnosti **char** stejný význam jako **unsigned char**, a je nutné použít **podepsané** – klíčové slovo pro deklaraci hodnoty znaku se znaménkem. Pokud **char** hodnotu explicitně deklarována se znaménkem, možnost /J ji neovlivní a hodnota je rozšířen o znaménko při rozšíření na **int** typu. **Char** rozšířené při rozšíření na nula je typ **int** typu.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Specifikátory typu jazyka C](../c-language/c-type-specifiers.md)

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1057 | Microsoft Docs
+title: Závažná chyba C1057 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092667"
 ---
 # <a name="fatal-error-c1057"></a>Závažná chyba C1057
-Neočekávaný konec souboru v rozšíření – makro  
-  
- Kompilátor bylo dosaženo konce souboru zdroje při shromažďování makro volání argumenty, pravděpodobně z důvodu chybí pravé závorky v makro volání.
+
+Neočekávaný konec souboru začal v rozšíření makra
+
+Kompilátor bylo dosaženo konce zdrojového souboru při shromažďování volání makra argumenty, pravděpodobně kvůli ve volání makra chybí pravá závorka.

@@ -1,5 +1,5 @@
 ---
-title: C2360 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2360 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c24a44222a01d66c57aab340c5a06469f212e285
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f443c27c496d5d05c17bde854181b0fdde58f545
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089200"
 ---
-# <a name="compiler-error-c2360"></a>C2360 chyby kompilátoru
-Inicializace "identifikátor" bylo přeskočeno 'case' popiskem  
-  
- Inicializace `identifier` mohou být přeskočeny v `switch` příkaz. Po deklaraci s inicializátoru nelze přeskočit, pokud je deklaraci uzavřené v bloku. (Pokud bylo deklarováno v rámci bloku, proměnné se v rámci oboru až do konce `switch` příkaz.)  
-  
- Následující ukázka generuje C2360:  
-  
-```  
-// C2360.cpp  
-int main() {  
-   int x = 0;  
-   switch ( x ) {  
-   case 0 :  
-      int i = 1;  
-      { int j = 1; }  
-   case 1 :   // C2360  
-      int k = 1;  
-   }  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2360b.cpp  
-int main() {  
-   int x = 0;  
-   switch ( x ) {  
-   case 0 :  
-      { int j = 1; int i = 1;}  
-   case 1 :  
-      int k = 1;  
-   }  
-}  
+# <a name="compiler-error-c2360"></a>Chyba kompilátoru C2360
+
+Inicializace 'identifier' je podle popisku 'case' přeskočila.
+
+Inicializace `identifier` mohly být přeskočeny, v `switch` příkazu. Nelze přejít po deklaraci s inicializátorem, není-li prohlášení je uzavřen v bloku. (Pokud je deklarovaná v rámci bloku, proměnná je v rámci oboru až do konce `switch` příkazu.)
+
+Následující ukázka generuje C2360:
+
+```
+// C2360.cpp
+int main() {
+   int x = 0;
+   switch ( x ) {
+   case 0 :
+      int i = 1;
+      { int j = 1; }
+   case 1 :   // C2360
+      int k = 1;
+   }
+}
+```
+
+Možná řešení:
+
+```
+// C2360b.cpp
+int main() {
+   int x = 0;
+   switch ( x ) {
+   case 0 :
+      { int j = 1; int i = 1;}
+   case 1 :
+      int k = 1;
+   }
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6028 C | Microsoft Docs
+title: Chyba modulu Runtime R6028 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b978d1d9165fd48be9d0ce31aa72092fc660dbd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a23fcd6ff7c5fb49e31efab831f1102bc079d91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093380"
 ---
-# <a name="c-runtime-error-r6028"></a>R6028 Chyba za běhu C
-Nelze inicializovat haldu  
-  
+# <a name="c-runtime-error-r6028"></a>Chyba modulu Runtime R6028 C
+
+Nelze inicializovat haldu
+
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má problém s interní paměť. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chyby v programu, nebo vadný ovladačů.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Ukončete ostatní spuštěné aplikace nebo restartujte počítač k uvolnění paměti.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
-> -   Pokud byla aplikace funguje před poslední instalace jinou aplikaci aplikační nebo ovladačů, použijte **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat nové aplikace nebo ovladače a zkuste aplikaci znovu.  
-> -   Zkontrolujte webu dodavatele hardwaru nebo **Windows Update** v **ovládací panely** pro aktualizace softwaru a ovladačů.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory v jazyce**  
-  
- K této chybě dojde, když se operačnímu systému nepodaří vytvořit fond paměti pro aplikace. Konkrétně C Runtime (CRT) volal funkci Win32 `HeapCreate`, který vrátil hodnotu NULL udávající neúspěch.  
-  
- Pokud k této chybě dojde během spouštění aplikace, nemusí být systém schopen splnit požadavky haldy, protože jsou načteny vadné ovladače. Pomocí služby Windows Update nebo na webu dodavatele hardwaru vyhledejte aktualizované ovladače.
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chyb v programu, nebo hardwarové vadné ovladače.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Pokud aplikace byla dříve poslední instalace jiné aplikace nebo ovladače funkční, použijte **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat Nová aplikace nebo ovladače a zkuste aplikaci znovu.
+> -   Zkontrolujte web dodavatele hardwaru nebo **Windows Update** v **ovládací panely** pro aktualizace softwaru a ovladače.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+K této chybě dojde, když se operačnímu systému nepodaří vytvořit fond paměti pro aplikace. Konkrétně prostředí Runtime jazyka C (CRT) volalo funkci Win32 `HeapCreate`, která vrátila hodnotu NULL označující selhání.
+
+Pokud k této chybě dojde během spouštění aplikace, nemusí být systém schopen splnit požadavky haldy, protože jsou načteny vadné ovladače. Pomocí služby Windows Update nebo na webu dodavatele hardwaru vyhledejte aktualizované ovladače.

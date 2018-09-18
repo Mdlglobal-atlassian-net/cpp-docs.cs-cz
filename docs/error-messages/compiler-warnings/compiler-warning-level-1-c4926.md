@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4926 | Microsoft Docs
+title: Upozornění (úroveň 1) C4926 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527c03d4f71048064c2120f7cfa9730de198fd46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1942c334f06dce7a8f208f01cae6e2da1b6bb6cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087939"
 ---
-# <a name="compiler-warning-level-1-c4926"></a>C4926 kompilátoru upozornění (úroveň 1)
-"identifikátor": symbol je již definován: atributy ignorovat  
-  
- Byl nalezen deklaraci předat dál, ale s atributy konstrukce se stejným názvem již existuje. Atributy dopředného deklaraci se ignorují.  
-  
- Následující ukázka generuje C4926:  
-  
-```  
-// C4926.cpp  
-// compile with: /W1  
-[module(name="MyLib")];  
-  
-[coclass]  
-struct a {  
-};  
-  
-[coclass]  
-struct a;   // C4926  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4926"></a>Kompilátor upozornění (úroveň 1) C4926
+
+'identifier': symbol je už definovaný: atributy se ignorují
+
+Dopředná deklarace byl nalezen, ale s atributy konstrukce se stejným názvem už existuje. Atributy pro dopředné deklarace se ignorují.
+
+Následující ukázka generuje C4926:
+
+```
+// C4926.cpp
+// compile with: /W1
+[module(name="MyLib")];
+
+[coclass]
+struct a {
+};
+
+[coclass]
+struct a;   // C4926
+
+int main() {
+}
 ```

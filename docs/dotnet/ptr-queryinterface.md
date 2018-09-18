@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Microsoft Docs
+title: PTR::QueryInterface | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090136"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Dotazuje vlastní objekt COM pro rozhraní a připojí výsledek do jiného `com::ptr`.  
+Dotazuje se vlastnictví objektu modelu COM pro rozhraní a připojí výsledek do jiného `com::ptr`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `other`  
- `com::ptr` , Získají rozhraní.  
+*Ostatní*<br/>
+`com::ptr` , Která získá rozhraní.  
   
 ## <a name="exceptions"></a>Výjimky  
- Interně `QueryInterface` se volá na vlastní objekt COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ Interně `QueryInterface` je volán na vlastní objekt modelu COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k vytvoření obálky COM pro jiné rozhraní objektu COM vlastníkem aktuální obálku. Tato metoda volá `QueryInterface` prostřednictvím vlastní objekt COM požádat o ukazatel na určité rozhraní COM objektu a připojí ukazatel vrácený rozhraní k předané `com::ptr`.  
+ Pomocí této metody můžete vytvořit obálky COM pro jiné rozhraní objektu COM, který vlastní aktuální obálky. Tato metoda volá `QueryInterface` prostřednictvím vlastní objekt modelu COM požádat o ukazatel na určité rozhraní modelu COM objektu a připojí Vrácený ukazatel rozhraní k předaným `com::ptr`.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu. `WriteTopLevelNode` – Členská funkce používá `QueryInterface` k vyplnění místní `com::ptr` s `IXMLDOMNode` a pak předá `com::ptr` (podle sledovací odkaz) privátního člena funkce, která zapisuje vlastnosti uzlu název a text do konzoly.  
+ V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `WriteTopLevelNode` Členská funkce používá `QueryInterface` tak, aby vyplnil místní `com::ptr` s `IXMLDOMNode` a pak předá `com::ptr` (sledováním odkaz) privátní členské funkci, která zapisuje do konzole vlastnosti name a text uzlu.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -161,5 +161,5 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>Viz také  
- [PTR – členové](../dotnet/ptr-members.md)   
+ [PTR – členy](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

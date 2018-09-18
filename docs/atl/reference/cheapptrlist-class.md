@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e44475d7d9eee547e0e9d47c8d49c439d91bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089227"
 ---
 # <a name="cheapptrlist-class"></a>Cheapptrlist – třída
 
@@ -35,7 +35,7 @@ Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename E, class Allocator = ATL::CCRTAllocator>  
+template<typename E, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrList 
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
@@ -43,10 +43,10 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ objektu ukládaly ve třídě kolekce.
 
-*Allocator –*  
+*Allocator –*<br/>
 Třída přidělení paměti pro použití. Výchozí hodnota je [ccrtallocator –](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Členové
@@ -81,7 +81,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
@@ -90,7 +90,7 @@ Velikost bloku je míra množství paměti přidělené, pokud je nutné použí
 
 ## <a name="see-also"></a>Viz také
 
-[Catllist – třída](../../atl/reference/catllist-class.md)   
-[Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
-[Cheapptrelementtraits – třída](../../atl/reference/cheapptrelementtraits-class.md)   
+[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
+[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits – třída](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

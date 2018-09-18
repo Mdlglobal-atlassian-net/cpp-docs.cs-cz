@@ -1,5 +1,5 @@
 ---
-title: C3070 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3070 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bacae42b6136364ed69d9ecad54a98e492f30bd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f9f770097126afd31725c511335eb44713a556e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088459"
 ---
-# <a name="compiler-error-c3070"></a>C3070 chyby kompilátoru
-'vlastnost': vlastnost nemá metodu "nastavení"  
-  
- Metoda přistupujícího objektu sady vlastnost nebyla definována. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3070:  
-  
-```  
-// C3070.cpp  
-// compile with: /clr  
-ref class R {  
-public:  
-   R(int size) {  
-      m_data = gcnew array<int>(size);  
-   }  
-  
-   property int % MyProp[int] {  
-      int% get(int index) {   
-         return m_data[index];   
-      }  
-   }  
-  
-   property int % MyProp2[int] {  
-      int% get(int index) {   
-         return m_data[index];  
-      }  
-      void set(int index, int % value) {}  
-   }  
-  
-   property const int % MyProp3[int] {  
-      const int% get(int index) {   
-         return m_data[index];  
-      }  
-      void set(int index, const int % value) {}  
-   }  
-  
-private:  
-   array<int>^ m_data;  
-};  
-  
-int main() {  
-   R^ r = gcnew R(10);  
-   r->MyProp[4] = 4;   // C3070  
-  
-   int value = 4;  
-   r->MyProp2[4] = value;   // OK  
-   r->MyProp3[4] = 4;   // OK  
-}  
+# <a name="compiler-error-c3070"></a>Chyba kompilátoru C3070
+
+'property': vlastnost nemá metodu set.
+
+Metody přístupový objekt set vlastnosti nebyla definována. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).
+
+Následující ukázka generuje C3070:
+
+```
+// C3070.cpp
+// compile with: /clr
+ref class R {
+public:
+   R(int size) {
+      m_data = gcnew array<int>(size);
+   }
+
+   property int % MyProp[int] {
+      int% get(int index) {
+         return m_data[index];
+      }
+   }
+
+   property int % MyProp2[int] {
+      int% get(int index) {
+         return m_data[index];
+      }
+      void set(int index, int % value) {}
+   }
+
+   property const int % MyProp3[int] {
+      const int% get(int index) {
+         return m_data[index];
+      }
+      void set(int index, const int % value) {}
+   }
+
+private:
+   array<int>^ m_data;
+};
+
+int main() {
+   R^ r = gcnew R(10);
+   r->MyProp[4] = 4;   // C3070
+
+   int value = 4;
+   r->MyProp2[4] = value;   // OK
+   r->MyProp3[4] = 4;   // OK
+}
 ```

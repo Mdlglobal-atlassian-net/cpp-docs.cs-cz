@@ -1,5 +1,5 @@
 ---
-title: C3747 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3747 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca36074f33299b1a55da0fe7b42786a05dd6c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1f657e6d3f64a4d8a2244ab2927a9a712c14b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091670"
 ---
-# <a name="compiler-error-c3747"></a>C3747 chyby kompilátoru
-Chybí výchozí typ parametru: parametru param  
-  
- Parametry obecného nebo šabloně s výchozími hodnotami nelze v seznamu parametrů následovat parametry, které nemají výchozí hodnoty.  
-  
- Následující ukázka generuje C3747:  
-  
-```  
-// C3747.cpp  
-template <class T1 = int, class T2>   // C3747  
-struct MyStruct {};  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3747b.cpp  
-// compile with: /c  
-template <class T1, class T2 = int>  
-struct MyStruct {};  
+# <a name="compiler-error-c3747"></a>Chyba kompilátoru C3747
+
+Chybí výchozí parametr typu: Parametr param
+
+Parametry obecného nebo šablonu s výchozími hodnotami nemůže v seznamu parametrů následovat parametry, které nemají výchozí hodnoty.
+
+Následující ukázka generuje C3747:
+
+```
+// C3747.cpp
+template <class T1 = int, class T2>   // C3747
+struct MyStruct {};
+```
+
+Možná řešení:
+
+```
+// C3747b.cpp
+// compile with: /c
+template <class T1, class T2 = int>
+struct MyStruct {};
 ```

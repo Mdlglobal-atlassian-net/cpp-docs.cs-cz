@@ -1,5 +1,5 @@
 ---
-title: C2668 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2668 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,136 +16,143 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6cb5f53d3d4d0971398dbba10e24b579ce6c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093750"
 ---
-# <a name="compiler-error-c2668"></a>C2668 chyby kompilátoru
-'function': nejednoznačné volání přetížené funkce  
-  
- Zadaná přetížené funkce volání nebylo možné přeložit. Můžete explicitně převést jednu nebo více parametrů skutečný.  
-  
- Tuto chybu můžete získat také pomocí šablony. Pokud ve stejné třídě, máte regulární členské funkce a funkce šablonované člen se stejným podpisem, musí být první šablonované jeden. Jedná se o omezení aktuální implementace Visual C++.  
-  
- Částečné řazení šablon funkcí v najdete v článku znalostní báze Knowledge Base Q240869 Další informace.  
-  
- Pokud vytváříte projektu knihovny ATL obsahující objekt COM podporující `ISupportErrorInfo`, najdete v článku znalostní báze Knowledge Base Q243298.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2668:  
-  
-```  
-// C2668.cpp  
-struct A {};  
-struct B : A {};  
-struct X {};  
-struct D : B, X {};  
-  
-void func( X, X ){}  
-void func( A, B ){}  
-D d;  
-int main() {  
-   func( d, d );   // C2668 D has an A, B, and X   
-   func( (X)d, (X)d );   // OK, uses func( X, X )  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Je také možné tuto chybu vyřešit s [pomocí deklarace](../../cpp/using-declaration.md):  
-  
-```  
-// C2668b.cpp  
-// compile with: /EHsc /c  
-// C2668 expected  
-#include <iostream>  
-class TypeA {  
-public:  
-   TypeA(int value) {}  
-};  
-  
-class TypeB {  
-   TypeB(int intValue);  
-   TypeB(double dbValue);  
-};  
-  
-class TestCase {  
-public:  
-   void AssertEqual(long expected, long actual, std::string  
-                    conditionExpression = "");  
-};  
-  
-class AppTestCase : public TestCase {  
-public:  
-   // Uncomment the following line to resolve.  
-   // using TestCase::AssertEqual;  
-   void AssertEqual(const TypeA expected, const TypeA actual,  
-                    std::string conditionExpression = "");  
-   void AssertEqual(const TypeB expected, const TypeB actual,  
-                    std::string conditionExpression = "");  
-};  
-  
-class MyTestCase : public AppTestCase {  
-   void TestSomething() {  
-      int actual = 0;  
-      AssertEqual(0, actual, "Value");  
-   }  
-};  
-```  
-  
-## <a name="example"></a>Příklad  
- Tato chyba může být také vygenerovaného jako výsledek kompilátoru shoda práci, kterou bylo provedeno pro Visual Studio .NET 2003: nejednoznačné konverzi na přetypování konstantní 0.  
-  
- Převod na přetypování pomocí konstantní 0 je nejednoznačné, protože int vyžaduje převod i na dlouho a pro void *. Pokud chcete tuto chybu vyřešit, přetypování 0 přesný typ parametru funkce, které používá se pro tak, aby žádné převody muset provést (Tento kód bude v verze Visual C++ pro Visual Studio .NET 2003 a sady Visual Studio .NET).  
-  
-```  
-// C2668c.cpp  
-#include "stdio.h"  
-void f(long) {  
-   printf_s("in f(long)\n");  
-}  
-void f(void*) {  
-   printf_s("in f(void*)\n");  
-}  
-int main() {  
-   f((int)0);   // C2668  
-  
-   // OK  
-   f((long)0);  
-   f((void*)0);  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Této chybě může dojít, protože teď má CRT float a double formy všechny matematické funkce.  
-  
-```  
-// C2668d.cpp  
-#include <math.h>  
-int main() {  
-   int i = 0;  
-   float f;  
-   f = cos(i);   // C2668  
-   f = cos((float)i);   // OK  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Této chybě může dojít, protože z math.h v CRT odebral pow (int, int).  
-  
-```  
-// C2668e.cpp  
-#include <math.h>  
-int main() {  
-   pow(9,9);   // C2668  
-   pow((double)9,9);   // OK  
-}  
+# <a name="compiler-error-c2668"></a>Chyba kompilátoru C2668
+
+'function': nejednoznačné volání přetížené funkce
+
+Volání zadané funkce přetížení se nepodařilo přeložit. Můžete explicitně přetypovat jeden nebo více skutečných parametrů.
+
+Tuto chybu můžete získat také pomocí šablony. Pokud ve stejné třídě, máte regulární členské funkce a bez vizuálního vzhledu členská funkce se stejným podpisem, musí být první je bez vizuálního vzhledu. Jedná se omezení aktuální implementace jazyka Visual C++.
+
+Na částečné řazení šablon funkcí najdete v článku znalostní báze Knowledge Base Q240869 Další informace.
+
+Pokud vytváříte projekt knihovny ATL, který obsahuje objekt modelu COM podporuje `ISupportErrorInfo`, najdete v článku znalostní báze Q243298.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2668:
+
+```
+// C2668.cpp
+struct A {};
+struct B : A {};
+struct X {};
+struct D : B, X {};
+
+void func( X, X ){}
+void func( A, B ){}
+D d;
+int main() {
+   func( d, d );   // C2668 D has an A, B, and X
+   func( (X)d, (X)d );   // OK, uses func( X, X )
+}
 ```
 
-## <a name="example"></a>Příklad  
-Tento kód v sadě Visual Studio 2015 se podaří, ale selže ve Visual Studio 2017 a později se C2668. V sadě Visual Studio 2015 kompilátor chybnou informací považovat kopírování. seznam inicializace stejným způsobem jako regulární kopie inicializace; považuje za pouze převod konstruktory pro rozlišení přetížení. 
+## <a name="example"></a>Příklad
+
+Dalším způsobem, jak vyřešit tuto chybu je [using – deklarace](../../cpp/using-declaration.md):
+
+```
+// C2668b.cpp
+// compile with: /EHsc /c
+// C2668 expected
+#include <iostream>
+class TypeA {
+public:
+   TypeA(int value) {}
+};
+
+class TypeB {
+   TypeB(int intValue);
+   TypeB(double dbValue);
+};
+
+class TestCase {
+public:
+   void AssertEqual(long expected, long actual, std::string
+                    conditionExpression = "");
+};
+
+class AppTestCase : public TestCase {
+public:
+   // Uncomment the following line to resolve.
+   // using TestCase::AssertEqual;
+   void AssertEqual(const TypeA expected, const TypeA actual,
+                    std::string conditionExpression = "");
+   void AssertEqual(const TypeB expected, const TypeB actual,
+                    std::string conditionExpression = "");
+};
+
+class MyTestCase : public AppTestCase {
+   void TestSomething() {
+      int actual = 0;
+      AssertEqual(0, actual, "Value");
+   }
+};
+```
+
+## <a name="example"></a>Příklad
+
+Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: nejednoznačný převod na přetypování konstant 0.
+
+Převod na přetypování pomocí konstantní 0 je nejednoznačný, protože int vyžaduje převod jak dlouho a na typ void *. Chcete-li vyřešit tuto chybu, přetypování 0 pro přesného typu parametru funkce, který používá se pro tak, aby žádný převod muset provést (Tento kód bude platit ve Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++).
+
+```
+// C2668c.cpp
+#include "stdio.h"
+void f(long) {
+   printf_s("in f(long)\n");
+}
+void f(void*) {
+   printf_s("in f(void*)\n");
+}
+int main() {
+   f((int)0);   // C2668
+
+   // OK
+   f((long)0);
+   f((void*)0);
+}
+```
+
+## <a name="example"></a>Příklad
+
+Této chybě může dojít, protože CRT má teď plovoucí desetinnou čárkou a double formy všechny matematické funkce.
+
+```
+// C2668d.cpp
+#include <math.h>
+int main() {
+   int i = 0;
+   float f;
+   f = cos(i);   // C2668
+   f = cos((float)i);   // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+Této chybě může dojít, protože pow (int, int) byla odstraněna z math.h v CRT.
+
+```
+// C2668e.cpp
+#include <math.h>
+int main() {
+   pow(9,9);   // C2668
+   pow((double)9,9);   // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+Tento kód v sadě Visual Studio 2015 úspěšné, ale v sadě Visual Studio 2017 a novější s C2668 se nezdaří. V sadě Visual Studio 2015 kompilátor nesprávně zpracovávají Inicializace kopírování seznamu v stejným způsobem jako regulární Inicializace kopírování; za to, převod pouze konstruktory pro řešení přetížení.
 
 ```
 C++

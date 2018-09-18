@@ -1,5 +1,5 @@
 ---
-title: C2690 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2690 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ee25501b621ca48648cdc00edaf927b6792428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48a4bfdf93a8b897b6f5e861a9031859fe39f5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096181"
 ---
-# <a name="compiler-error-c2690"></a>C2690 chyby kompilátoru
-'operátor': nelze provést na spravované aritmetika ukazatele nebo WinRT pole  
-  
- Aritmetika ukazatele není povolená na spravované nebo WinRT pole. Pole indexu zápis slouží k procházení pole.  
+# <a name="compiler-error-c2690"></a>Chyba kompilátoru C2690
+
+'operator': nelze provést na spravované aritmetika ukazatele nebo pole WinRT
+
+Aritmetika ukazatele není povolený u spravované nebo WinRT pole. Pole indexu zápis slouží k procházení pole.
