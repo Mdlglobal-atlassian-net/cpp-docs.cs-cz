@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4710 | Microsoft Docs
+title: Upozornění (úroveň 4) C4710 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1cc77d8ee5393fe600ceadd9c1335d76e32efe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f6de17f7005db3834bfcfc93aff03f12f0293ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046092"
 ---
-# <a name="compiler-warning-level-4-c4710"></a>C4710 kompilátoru upozornění (úroveň 4)
-'function': není vložená funkce  
-  
- Danou funkci byla vybrána pro vložené rozšíření, ale kompilátor nebyla provedena vložené.  
-  
- Vložené provádí uvážení kompilátoru. **Vložené** – klíčové slovo, například **zaregistrovat** – klíčové slovo, slouží jako nápovědu pro kompilátor. Kompilátor používá heuristiku k určení, pokud by měl vložené určitou funkci pro urychlení kód při kompilaci pro rychlost, nebo pokud by měl vložené určitou funkci zmenšit kód při kompilaci pro prostor. Kompilátor bude pouze vložené při kompilaci pro prostor velmi malé funkce.  
-  
- V některých případech kompilátor není vložené určitou funkci mechanických důvodů. V tématu [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) seznam příčiny kompilátor může vložené funkce.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+# <a name="compiler-warning-level-4-c4710"></a>Kompilátor upozornění (úroveň 4) C4710
+
+'function': funkce není vložena
+
+Dané funkce byla vybrána pro vložené rozšíření, ale kompilátor neprovedli vkládání.
+
+Vkládání se provádí na základě vlastního uvážení kompilátoru. **Vložené** – klíčové slovo, třeba **zaregistrovat** – klíčové slovo, se používají jako Nápověda pro kompilátor. Kompilátor používá heuristiku k určení, pokud by měl vložení funkce pro urychlení kódu při kompilaci pro rychlost, nebo pokud by měl vložení funkce zmenšit kód při kompilaci pro prostor. Kompilátor bude pouze vložené při kompilaci pro prostor velmi malé funkce.
+
+V některých případech kompilátor nevloží určitou funkci mechanických důvodů. Zobrazit [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) seznam důvodů kompilátor může funkce.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.

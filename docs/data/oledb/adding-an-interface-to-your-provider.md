@@ -1,5 +1,5 @@
 ---
-title: Přidání rozhraní ke zprostředkovateli | Microsoft Docs
+title: Přidání rozhraní ke zprostředkovateli | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f50459550c91f07c12f6f18b3fbbaa5622ab7408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093543"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032390"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Přidání rozhraní ke zprostředkovateli
-Určuje, které objekty, které chcete přidat rozhraní (obvykle datové zdroje, řádků, příkaz nebo relace objekty vytvořené průvodcem zprostředkovatele OLE DB). Je možné, že objekt je nutné přidat rozhraní je ten, který váš poskytovatel v současné době nepodporuje. V takovém případě spusťte ATL OLE DB Provider průvodce k vytvoření objektu. Klikněte pravým tlačítkem na projekt v zobrazení tříd, klikněte na tlačítko **přidat třídu** z **přidat** nabídce a pak klikněte na tlačítko **ATL zprostředkovatele technologie OLE DB**. Můžete chtít vložit kód rozhraní v samostatném adresáři a poté zkopírujte soubory do projektu zprostředkovatele.  
+
+Určuje, které objekty chcete přidat rozhraní do (obvykle datové zdroje, sady řádků, příkaz nebo relace objekty vytvořené průvodcem zprostředkovatele OLE DB). Je možné, že objekt je potřeba přidat rozhraní do je ten, který váš poskytovatel v současné době nepodporuje. V takovém případě spusťte ATL OLE DB poskytovatele průvodce k vytvoření objektu. Klikněte pravým tlačítkem na projekt v zobrazení tříd, klikněte na tlačítko **přidat třídu** z **přidat** nabídky a pak klikněte na tlačítko **ATL OLE DB Provider**. Můžete chtít ukládejte kód rozhraní samostatný adresář a potom zkopírujte soubory do projektu poskytovatele.  
   
- Pokud jste vytvořili novou třídu pro podporu rozhraní, je objekt, který dědí z třídy. Může například přidat třídu **IRowsetIndexImpl** do objektu sady řádků:  
+Pokud jste vytvořili novou třídu pro podporu rozhraní, je objekt, který dědí z třídy. Můžete například přidat třídu **IRowsetIndexImpl** do objektu sady řádků:  
   
 ```cpp  
 template <class Creator>  
@@ -34,7 +35,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Přidání rozhraní **COM_MAP** v objektu použitím makra COM_INTERFACE_ENTRY. Pokud není mapa, vytvořte. Příklad:  
+Přidat rozhraní do **COM_MAP** v objektu COM_INTERFACE_ENTRY – makro. Pokud neexistuje žádná mapa, vytvořte ji. Příklad:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Pro objekt sady řádků řetězu mapy svého nadřazeného objektu tak, aby objekt můžete delegovat na nadřazené třídy. V tomto příkladu přidejte do mapy makro COM_INTERFACE_ENTRY_CHAIN:  
+U objektu sady řádků řetězu mapu svého nadřazeného objektu objekt tak, aby objekt může delegovat na nadřazenou třídu. V tomto příkladu přidá dané makro COM_INTERFACE_ENTRY_CHAIN do mapy:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -52,4 +53,5 @@ END_COM_MAP()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

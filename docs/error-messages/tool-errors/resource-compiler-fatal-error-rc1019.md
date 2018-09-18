@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1019 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1019 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd9658a97f1f62a2a5a262e7262127744dd144a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a455daffba3957b9a4628ecab9e604994e4a4ce2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027086"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Závažná chyba kompilátoru prostředků RC1019
-neočekávané ' #else.  
-  
- `#else` – Direktiva neobjevil v rámci `#if`, **#ifdef**, nebo **#ifndef** vytvořit.  
-  
- Ujistěte se, že je `#if`, **#ifdef**, nebo **#ifndef** v platnosti než tohoto prohlášení.
+
+neočekávané ' #else '
+
+`#else` Směrnice nenacházely se v rámci `#if`, **#ifdef**, nebo **#ifndef** vytvořit.
+
+Ujistěte se, že dochází `#if`, **#ifdef**, nebo **#ifndef** v platnosti než tento příkaz.

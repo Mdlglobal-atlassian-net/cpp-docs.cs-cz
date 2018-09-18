@@ -1,5 +1,5 @@
 ---
-title: CXX0026 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0026 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f95a69827d3753307e210b348a6f490a756240
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b90950807cb394412eabcd1af878c63f48e610cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017923"
 ---
 # <a name="expression-evaluator-error-cxx0026"></a>Chyba při vyhodnocování výrazu CXX0026
-Chybný formát řetězce  
-  
- Řetězec formátu byl nesprávně zadán. Zkontrolujte syntaxi výrazu.  
-  
- Tato chyba je stejný jako CAN0026.  
-  
- Další informace najdete v tématu [specifikátory formátu v jazyce C++](/visualstudio/debugger/format-specifiers-in-cpp).
+
+Chybný formát řetězce
+
+Formátovací řetězec byl nesprávně zadán. Zkontrolujte syntaxi výrazu.
+
+Tato chyba se shoduje s CAN0026.
+
+Další informace najdete v tématu [specifikátory formátu v jazyce C++](/visualstudio/debugger/format-specifiers-in-cpp).

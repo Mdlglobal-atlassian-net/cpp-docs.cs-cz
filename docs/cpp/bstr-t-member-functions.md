@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6fd3b9959e6c029a6a0b670771e6671404739b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 49f112f39d5e16cbaa2abc0b290396cc28013a95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040502"
 ---
 # <a name="bstrt-member-functions"></a>_bstr_t – členské funkce
-Informace o `_bstr_t` členské funkce, najdete v článku [třída _bstr_t](../cpp/bstr-t-class.md).  
-  
-## <a name="see-also"></a>Viz také:  
- [_bstr_t – třída](../cpp/bstr-t-class.md)
+
+Informace o `_bstr_t` členské funkce, najdete v článku [třída _bstr_t](../cpp/bstr-t-class.md).
+
+## <a name="see-also"></a>Viz také:
+
+[_bstr_t – třída](../cpp/bstr-t-class.md)

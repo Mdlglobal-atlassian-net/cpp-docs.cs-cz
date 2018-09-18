@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1152 | Microsoft Docs
+title: Chyba Linkerů LNK1152 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b15185977dfdaa6c6cad154889e95f59ab27c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22276d0b3189f93f57f8337b22b5d6070cd3db0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034470"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Chyba linkerů LNK1152
-nelze vyřešit jeden nebo více upraveného symboly  
-  
- Tato chyba je před jeden upozornění [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) pro každý bez upraveného symbol, který nebylo možné přeložit a aspoň dva upozornění [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) duplicitní symbolů pro upraveného symbol nalezen.
+
+nelze vyřešit jeden nebo víc nedekorovaných symbolů
+
+Tato chyba předchází jedno upozornění [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) pro každý nedekorovaných symbol, který nebylo možné přeložit a aspoň dva upozornění [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) duplicitní symbolů pro nedekorovaných symbolů se nenašly.

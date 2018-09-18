@@ -18,38 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e8df26063a8d854f643b78fa127d1c17ef43589
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339461"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038728"
 ---
 # <a name="testing-the-read-only-provider"></a>Testování zprostředkovatele pouze pro čtení
+
 Testování zprostředkovatele, budete potřebovat příjemce. Je užitečné, pokud příjemce můžete porovnat s tímto poskytovatelem. Šablony příjemce technologie OLE DB se dynamicky obálku kolem OLE DB a shodovat s objekty COM zprostředkovatele. Protože zdrojem je dodáván s šablonami příjemců, je snadné ladění zprostředkovatele s nimi. Šablony příjemce se také velmi malé a rychlý způsob, jak vyvíjet aplikace pro koncové uživatele.  
   
- V příkladu v tomto tématu vytvoří aplikaci výchozí Průvodce aplikací knihovny MFC pro testování příjemce. Testování aplikace je jednoduchá dialogové okno Přidat kód šablony příjemce technologie OLE DB.  
+V příkladu v tomto tématu vytvoří aplikaci výchozí Průvodce aplikací knihovny MFC pro testování příjemce. Testování aplikace je jednoduchá dialogové okno Přidat kód šablony příjemce technologie OLE DB.  
   
 ### <a name="to-create-the-test-application"></a>Chcete-li vytvořit testovací aplikace  
   
-1.  Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
+1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
-2.  V podokně typy projektů, vyberte **projekty Visual C++** složky. V podokně šablony vyberte **aplikace knihovny MFC**.  
+1. V podokně typy projektů, vyberte **projekty Visual C++** složky. V podokně šablony vyberte **aplikace knihovny MFC**.  
   
-3.  Název projektu zadejte **TestProv**a potom klikněte na tlačítko **OK**.  
+1. Název projektu zadejte **TestProv**a potom klikněte na tlačítko **OK**.  
   
      Zobrazí se Průvodce aplikací knihovny MFC.  
   
-4.  Na **typ aplikace** stránce **na bázi dialogu**.  
+1. Na **typ aplikace** stránce **na bázi dialogu**.  
   
-5.  Na **rozšířené funkce** stránce **automatizace**a potom klikněte na tlačítko **Dokončit**.  
+1. Na **rozšířené funkce** stránce **automatizace**a potom klikněte na tlačítko **Dokončit**.  
   
 > [!NOTE]
 >  Aplikace nevyžaduje podporu automatizace, pokud chcete přidat **CoInitialize** v **CTestProvApp::InitInstance**.  
   
- Můžete zobrazit a upravit TestProv dialogových oken (IDD_TESTPROV_DIALOG) tak, že ji vyberete v okně zobrazení prostředků. V dialogovém okně umístěte dvě pole se seznamem, jeden pro každý řetězec v dané sadě řádků. Vypnout vlastnost řazení pro oba seznamy stisknutím kombinace kláves ALT + Enter Pokud vybraný seznam, kliknutím **styly** kartu a vymazání **řazení** zaškrtávací políčko. Také, umístěte **spustit** tlačítko v dialogovém okně Načíst soubor. Dialogové okno dokončení TestProv by měl mít dvě pole se seznamem označené jako "Řetězce 1" a "Řetězec 2". zahrnuje také **OK**, **zrušit**, a **spustit** tlačítka.  
+Můžete zobrazit a upravit TestProv dialogových oken (IDD_TESTPROV_DIALOG) tak, že ji vyberete v okně zobrazení prostředků. V dialogovém okně umístěte dvě pole se seznamem, jeden pro každý řetězec v dané sadě řádků. Vypnout vlastnost řazení pro oba seznamy stisknutím kombinace kláves ALT + Enter Pokud vybraný seznam, kliknutím **styly** kartu a vymazání **řazení** zaškrtávací políčko. Také, umístěte **spustit** tlačítko v dialogovém okně Načíst soubor. Dialogové okno dokončení TestProv by měl mít dvě pole se seznamem označené jako "Řetězce 1" a "Řetězec 2". zahrnuje také **OK**, **zrušit**, a **spustit** tlačítka.  
   
- Otevřete soubor hlaviček pro třídu dialogového okna (v tomto případě TestProvDlg.h). Přidejte následující kód do souboru hlaviček (mimo všechny deklarace tříd):  
+Otevřete soubor hlaviček pro třídu dialogového okna (v tomto případě TestProvDlg.h). Přidejte následující kód do souboru hlaviček (mimo všechny deklarace tříd):  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -70,9 +71,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- Kód představuje záznam uživatele, který definuje, které sloupce budou v dané sadě řádků. Když klient volá `IAccessor::CreateAccessor`, chcete-li určit sloupce, které k vytvoření vazby použije tyto položky. Šablony příjemce technologie OLE DB taky povolit dynamické vazby sloupců. COLUMN_ENTRY makra jsou klientské verze PROVIDER_COLUMN_ENTRY makra. Dvě makra COLUMN_ENTRY určit pořadí, typ, délku a dat členství pro dva řetězce.  
+Kód představuje záznam uživatele, který definuje, které sloupce budou v dané sadě řádků. Když klient volá `IAccessor::CreateAccessor`, chcete-li určit sloupce, které k vytvoření vazby použije tyto položky. Šablony příjemce technologie OLE DB taky povolit dynamické vazby sloupců. COLUMN_ENTRY makra jsou klientské verze PROVIDER_COLUMN_ENTRY makra. Dvě makra COLUMN_ENTRY určit pořadí, typ, délku a dat členství pro dva řetězce.  
   
- Přidat obslužnou rutinu pro **spustit** tlačítko stisknutím klávesy CTRL a dvojitým kliknutím **spustit** tlačítko. Vložte následující kód ve funkci:  
+Přidat obslužnou rutinu pro **spustit** tlačítko stisknutím klávesy CTRL a dvojitým kliknutím **spustit** tlačítko. Vložte následující kód ve funkci:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -101,7 +102,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- `CCommand`, `CDataSource`, A `CSession` třídy, které patří k šablonám příjemců OLE DB. Každá třída napodobuje objekt modelu COM ve zprostředkovateli. `CCommand` Přebírá objekt `CProvider` třídy deklarované v souboru hlaviček, jako parametr šablony. `CProvider` Představuje parametr vazby, které používáte pro přístup k datům od poskytovatele. Tady je `Open` kód pro zdroj dat, relace a příkaz:  
+`CCommand`, `CDataSource`, A `CSession` třídy, které patří k šablonám příjemců OLE DB. Každá třída napodobuje objekt modelu COM ve zprostředkovateli. `CCommand` Přebírá objekt `CProvider` třídy deklarované v souboru hlaviček, jako parametr šablony. `CProvider` Představuje parametr vazby, které používáte pro přístup k datům od poskytovatele. Tady je `Open` kód pro zdroj dat, relace a příkaz:  
   
 ```cpp  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -114,13 +115,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- Řádky, které se otevřete každý tříd vytváření každý objekt modelu COM ve zprostředkovateli. Vyhledejte poskytovatele, použijte ProgID poskytovatele. Identifikátor ProgID můžete získat z registru systému nebo nahlédněte do souboru MyProvider.rgs (otevřete adresář a vyhledejte klíč ProgID poskytovatele).  
+Řádky, které se otevřete každý tříd vytváření každý objekt modelu COM ve zprostředkovateli. Vyhledejte poskytovatele, použijte ProgID poskytovatele. Identifikátor ProgID můžete získat z registru systému nebo nahlédněte do souboru MyProvider.rgs (otevřete adresář a vyhledejte klíč ProgID poskytovatele).  
   
- Soubor MyData.txt je součástí MyProv vzorku. Vytvoříte vlastní soubor, použijte editor a napište sudý počet řetězců, stisknutím klávesy ENTER mezi každého řetězce. Pokud přesunete soubor, změňte název cesty.  
+Soubor MyData.txt je součástí MyProv vzorku. Vytvoříte vlastní soubor, použijte editor a napište sudý počet řetězců, stisknutím klávesy ENTER mezi každého řetězce. Pokud přesunete soubor, změňte název cesty.  
   
- Předat řetězec "c:\\\samples\\\myprov\\\MyData.txt" v `table.Open` řádku. Pokud můžete krokovat s vnořením `Open` volání, uvidíte, že je tento řetězec předat `SetCommandText` metoda ve zprostředkovateli. Všimněte si, `ICommandText::Execute` metodu použít tento řetězec.  
+Předat řetězec "c:\\\samples\\\myprov\\\MyData.txt" v `table.Open` řádku. Pokud můžete krokovat s vnořením `Open` volání, uvidíte, že je tento řetězec předat `SetCommandText` metoda ve zprostředkovateli. Všimněte si, `ICommandText::Execute` metodu použít tento řetězec.  
   
- Chcete-li načíst data, zavolejte `MoveNext` v tabulce. `MoveNext` volání `IRowset::GetNextRows`, `GetRowCount`, a `GetData` funkce. Pokud neexistují žádné další řádky (to znamená, je větší než aktuální pozici v dané sadě řádků `GetRowCount`), ukončí smyčku:  
+Chcete-li načíst data, zavolejte `MoveNext` v tabulce. `MoveNext` volání `IRowset::GetNextRows`, `GetRowCount`, a `GetData` funkce. Pokud neexistují žádné další řádky (to znamená, je větší než aktuální pozici v dané sadě řádků `GetRowCount`), ukončí smyčku:  
   
 ```cpp  
 while (table.MoveNext() == S_OK)  
@@ -130,9 +131,10 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- Všimněte si, že pokud nejsou žádné další řádky, vrátí DB_S_ENDOFROWSET. Hodnota DB_S_ENDOFROWSET není chyba. Vždy byste měli zkontrolovat S_OK smyčce načtení dat a není použití makra SUCCEEDED.  
+Všimněte si, že pokud nejsou žádné další řádky, vrátí DB_S_ENDOFROWSET. Hodnota DB_S_ENDOFROWSET není chyba. Vždy byste měli zkontrolovat S_OK smyčce načtení dat a není použití makra SUCCEEDED.  
   
- Teď by měl být možné vytvářet a testovat program.  
+Teď by měl být možné vytvářet a testovat program.  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+
+[Rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: C3462 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3462 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb5cfe5bc95c3530746bf263e340c5e3923abb42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eba9e063b60ff60403b8b4cc7136ccd1313ecc47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028035"
 ---
-# <a name="compiler-error-c3462"></a>C3462 chyby kompilátoru
-'type': pouze typ importované může být přeposílán  
-  
- Atribut TypeForwardedTo musí použít u typu v odkazované metadat.  
-  
- Další informace najdete v tématu [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří komponentu.  
-  
-```  
-// C3462.cpp  
-// compile with: /clr /LD  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3462.  
-  
-```  
-// C3462b.cpp  
-// compile with: /clr /c  
-#using "C3462.dll"  
-ref class N {};  
-[assembly:TypeForwardedTo(N::typeid)];   // C3462  
-[assembly:TypeForwardedTo(R::typeid)];  
+# <a name="compiler-error-c3462"></a>Chyba kompilátoru C3462
+
+'type': předávat dál se dají jenom importované typy
+
+Atribut TypeForwardedTo musí být použité u typu v metadatech odkazovaný.
+
+Další informace najdete v tématu [předávání typů (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad vytvoří komponentu.
+
+```
+// C3462.cpp
+// compile with: /clr /LD
+public ref class R {};
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3462.
+
+```
+// C3462b.cpp
+// compile with: /clr /c
+#using "C3462.dll"
+ref class N {};
+[assembly:TypeForwardedTo(N::typeid)];   // C3462
+[assembly:TypeForwardedTo(R::typeid)];
 ```

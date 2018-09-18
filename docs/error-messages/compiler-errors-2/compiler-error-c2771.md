@@ -1,5 +1,5 @@
 ---
-title: C2771 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2771 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b545e4f1a5654177f4fc787931b229f493d7826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfd6bc68b7081e4bf38fe02f54b632a141313c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036524"
 ---
-# <a name="compiler-error-c2771"></a>C2771 chyby kompilátoru
-\#Import je povolená jenom na globální nebo oboru názvů  
-  
- `#import` – Direktiva není povolen v, například funkce nebo struktuře.
+# <a name="compiler-error-c2771"></a>Chyba kompilátoru C2771
+
+\#Import je povolená jedině globální nebo obor názvů
+
+`#import` Direktiva není dovolená v, například funkce nebo struktuře.

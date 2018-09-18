@@ -1,5 +1,5 @@
 ---
-title: Iresourcemanager – struktura | Microsoft Docs
+title: Iresourcemanager – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d1032b2db7d1552beb40eb724b9953142b9b2ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027411"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
-Rozhraní pro správce prostředků Concurrency Runtime. Toto je rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků.  
+Rozhraní pro správce prostředků modulu Runtime souběžnosti. Toto je rozhraní, díky které plánovači komunikovat s Resource Managerem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,21 +46,21 @@ struct IResourceManager;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IResourceManager::OSVersion](#osversion)|Výčtový typ, který představuje verzi operačního systému.|  
+|[Iresourcemanager::osversion –](#osversion)|Výčtový typ, který představuje verzi operačního systému.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Iresourcemanager::createnodetopology –](#createnodetopology)|Nachází pouze v ladění sestavení modulu runtime, tato metoda je test háku, navrženy k usnadnění testování služby Správce prostředků v různých topologiích hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní sestavení modulu runtime tato metoda vrátí bez provedení všech akcí.|  
-|[Iresourcemanager::getavailablenodecount –](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.|  
-|[Iresourcemanager::getfirstnode –](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovaným pomocí Správce prostředků.|  
-|[Iresourcemanager::Reference –](#reference)|Zvýší počet odkazů na instanci Resource Manager.|  
-|[Iresourcemanager::registerscheduler –](#registerscheduler)|Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.|  
-|[Iresourcemanager::Release –](#release)|Snižuje počet odkaz na instanci Resource Manager. Resource Manager zničen při jeho počet odkazů přejde na `0`.|  
+|[Iresourcemanager::createnodetopology –](#createnodetopology)|K dispozici jenom v ladění sestavení modulu runtime, tato metoda je zkušebnímu zavěšení navrženým k usnadnění testování výhod Resource Manageru na různé topologie hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní buildy modulu runtime tato metoda vrátí bez provedení jakékoli akce.|  
+|[Iresourcemanager::getavailablenodecount –](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici na Resource Manager.|  
+|[Iresourcemanager::getfirstnode –](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovanými správcem prostředků.|  
+|[Iresourcemanager::Reference –](#reference)|Zvýší počet odkazů na instanci Resource Manageru.|  
+|[Iresourcemanager::registerscheduler –](#registerscheduler)|Zaregistruje plánovače pomocí Resource Manageru. Po registraci Plánovač byste komunikovat s využitím Resource Manageru `ISchedulerProxy` rozhraní, která je vrácena.|  
+|[IResourceManager::Release](#release)|Sníží počet odkaz na instanci Resource Manageru. Resource Manager je zničen při jeho počet odkazů dosáhne `0`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití [createresourcemanager –](concurrency-namespace-functions.md) funkce získat rozhraní pro správce prostředků instanci typu singleton. Metoda zvýší počet odkazů v Resource Manageru a by měla vyvolat [iresourcemanager::Release –](#release) metodu pro uvolnění odkaz, když jste hotovi s Resource Managerem. Každý plánovače, kterou vytvoříte obvykle bude volat tuto metodu během vytváření a uvolněte odkaz na správci prostředků vypnut.  
+ Použití [createresourcemanager –](concurrency-namespace-functions.md) funkce získat rozhraní na instanci typu singleton Resource Manageru. Metoda zvýší počet odkazů v Resource Manageru a byste měli vyvolat [IResourceManager::Release](#release) metodu pro uvolnění odkazu, jakmile budete hotovi s Resource Managerem. Obvykle každý plánovače, kterou jste vytvořili se vyvolat tuto metodu při vytváření a uvolnit odkaz na Resource Manager vypnut.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IResourceManager`  
@@ -71,7 +71,7 @@ struct IResourceManager;
  **Namespace:** souběžnosti  
   
 ##  <a name="createnodetopology"></a>  Iresourcemanager::createnodetopology – metoda  
- Nachází pouze v ladění sestavení modulu runtime, tato metoda je test háku, navrženy k usnadnění testování služby Správce prostředků v různých topologiích hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní sestavení modulu runtime tato metoda vrátí bez provedení všech akcí.  
+ K dispozici jenom v ladění sestavení modulu runtime, tato metoda je zkušebnímu zavěšení navrženým k usnadnění testování výhod Resource Manageru na různé topologie hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní buildy modulu runtime tato metoda vrátí bez provedení jakékoli akce.  
   
 ```
 virtual void CreateNodeTopology(
@@ -82,44 +82,44 @@ virtual void CreateNodeTopology(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nodeCount`  
- Počet právě simulated uzlů procesoru.  
+*NodeCount*<br/>
+Počet uzlů procesoru se simulované.  
   
- `pCoreCount`  
- Pole, která určuje počet jader na každém uzlu.  
+*pCoreCount*<br/>
+Pole, která určuje počet jader na každém uzlu.  
   
- `pNodeDistance`  
- Matice zadání uzlu vzdálenost mezi dvěma uzly. Tento parametr může mít hodnotu `NULL`.  
+*pNodeDistance*<br/>
+Matice zadáním uzel vzdálenost mezi dvěma uzly. Tento parametr může mít hodnotu `NULL`.  
   
- `pProcessorGroups`  
- Pole, které určuje skupinu procesorů každý uzel patří do.  
+*pProcessorGroups*<br/>
+Pole, která určuje skupinu procesorů každý uzel patří do.  
   
 ### <a name="remarks"></a>Poznámky  
- [invalid_argument](../../../standard-library/invalid-argument-class.md) je vyvolána, pokud parametr `nodeCount` má hodnotu `0` byl předán v, nebo pokud parametr `pCoreCount` má hodnotu `NULL`.  
+ [invalid_argument –](../../../standard-library/invalid-argument-class.md) je vyvolána, pokud parametr `nodeCount` má hodnotu `0` byla předána, nebo pokud parametr `pCoreCount` má hodnotu `NULL`.  
   
- [invalid_operation](invalid-operation-class.md) je vyvolána, pokud tato metoda je volána, když existují další plánovače v procesu.  
+ [invalid_operation –](invalid-operation-class.md) je vyvolána, pokud tato metoda je volána, když existují další plánovače v procesu.  
   
 ##  <a name="getavailablenodecount"></a>  Iresourcemanager::getavailablenodecount – metoda  
- Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.  
+ Vrátí počet uzlů, které jsou k dispozici na Resource Manager.  
   
 ```
 virtual unsigned int GetAvailableNodeCount() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet uzlů, které jsou k dispozici pro správce prostředků.  
+ Počet uzlů, které jsou k dispozici na Resource Manager.  
   
 ##  <a name="getfirstnode"></a>  Iresourcemanager::getfirstnode – metoda  
- Vrátí první uzel v pořadí výčtu definovaným pomocí Správce prostředků.  
+ Vrátí první uzel v pořadí výčtu definovanými správcem prostředků.  
   
 ```
 virtual ITopologyNode* GetFirstNode() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- První uzel v pořadí výčtu definovaným pomocí Správce prostředků.  
+ První uzel v pořadí výčtu definovanými správcem prostředků.  
   
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion – výčet  
+##  <a name="iresourcemanager__osversion"></a>  Iresourcemanager::osversion – výčet  
  Výčtový typ, který představuje verzi operačního systému.  
   
 ```
@@ -127,7 +127,7 @@ enum OSVersion;
 ```  
   
 ##  <a name="reference"></a>  Iresourcemanager::Reference – metoda  
- Zvýší počet odkazů na instanci Resource Manager.  
+ Zvýší počet odkazů na instanci Resource Manageru.  
   
 ```
 virtual unsigned int Reference() = 0;
@@ -137,7 +137,7 @@ virtual unsigned int Reference() = 0;
  Výsledný počet odkazů.  
   
 ##  <a name="registerscheduler"></a>  Iresourcemanager::registerscheduler – metoda  
- Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.  
+ Zaregistruje plánovače pomocí Resource Manageru. Po registraci Plánovač byste komunikovat s využitím Resource Manageru `ISchedulerProxy` rozhraní, která je vrácena.  
   
 ```
 virtual ISchedulerProxy *RegisterScheduler(
@@ -146,22 +146,22 @@ virtual ISchedulerProxy *RegisterScheduler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pScheduler`  
- `IScheduler` Rozhraní plánovačem k registraci.  
+*pScheduler*<br/>
+`IScheduler` Rozhraní pro scheduler k registraci.  
   
- `version`  
- Verze rozhraní komunikace Plánovač používá ke komunikaci s Resource Managerem. Používáte verzi umožňuje Resource Manager vyvíjí rozhraní komunikace současně získat přístup do starší funkce plánovače. Plánovače, které chcete používat funkce služby Správce prostředků v sadě Visual Studio 2010 měli použít verzi `CONCRT_RM_VERSION_1`.  
+*Verze*<br/>
+Verze rozhraní komunikace Plánovač používá ke komunikaci s Resource Managerem. S použitím verze umožňuje Resource Manageru vyvíjí komunikačního rozhraní zároveň vám umožní získat přístup do starší funkce plánovače. Plánovačům, které chcete používat funkce služby Správce prostředků k dispozici v sadě Visual Studio 2010 měli používat verzi `CONCRT_RM_VERSION_1`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `ISchedulerProxy` Rozhraní Resource Manager je spojen s vašeho scheduleru. Vašeho scheduleru použít ke komunikaci s Resource Managerem z tohoto bodu na toto rozhraní.  
+ `ISchedulerProxy` Rozhraní Resource Manager je spojen s váš plánovač. Pomocí tohoto rozhraní by měl váš Plánovač komunikovat s využitím Resource Manageru od této chvíle v.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k zahájení komunikace s Resource Managerem. Metoda přidruží `IScheduler` rozhraní pro vašeho scheduleru se `ISchedulerProxy` rozhraní a rukou zpátky na vás. Požadavky na spuštění prostředky pro použití vašeho scheduleru nebo přihlášení k odběru vláken s Resource Managerem, můžete použít rozhraní vrácená. Resource Manager použije elementů zásad ze zásad plánovače vrácený [ischeduler::getpolicy –](ischeduler-structure.md#getpolicy) metoda určit, jaké typy vláken Plánovač bude nutné spustit pracovní. Pokud vaše `SchedulerKind` zásad klíč má hodnotu `UmsThreadDefault` a hodnota je pro čtení zpět z zásady jako hodnota `UmsThreadDefault`, `IScheduler` rozhraní předaný metodě musí být `IUMSScheduler` rozhraní.  
+ Pomocí této metody můžete zahájit komunikaci se správcem prostředků. Metoda přidruží `IScheduler` rozhraní pro váš Plánovač s `ISchedulerProxy` rozhraní a praktické je zpět. Vrácené rozhraní můžete požádat o spuštění prostředky používají váš Plánovač, nebo k odběru vláken s Resource Managerem. Resource Manager použije zásady prvky z zásadu plánovače vrácené [ischeduler::getpolicy –](ischeduler-structure.md#getpolicy) metodou ke zjištění, jaký typ vlákna Plánovač potřebovat k provedení práce. Pokud vaše `SchedulerKind` má hodnotu klíče zásad `UmsThreadDefault` a přečíst hodnotu zpět z zásady jako hodnota `UmsThreadDefault`, `IScheduler` rozhraní předaný metodě musí být `IUMSScheduler` rozhraní.  
   
- Vyvolá metoda `invalid_argument` výjimka Pokud parametr `pScheduler` má hodnotu `NULL` nebo pokud parametr `version` není platnou verzi pro rozhraní komunikace.  
+ Metoda vyvolá `invalid_argument` výjimka Pokud parametr `pScheduler` má hodnotu `NULL` nebo, pokud parametr `version` není platná verze rozhraní komunikace.  
   
-##  <a name="release"></a>  Iresourcemanager::Release – metoda  
- Snižuje počet odkaz na instanci Resource Manager. Resource Manager zničen při jeho počet odkazů přejde na `0`.  
+##  <a name="release"></a>  IResourceManager::Release – metoda  
+ Sníží počet odkaz na instanci Resource Manageru. Resource Manager je zničen při jeho počet odkazů dosáhne `0`.  
   
 ```
 virtual unsigned int Release() = 0;
@@ -171,6 +171,6 @@ virtual unsigned int Release() = 0;
  Výsledný počet odkazů.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Ischedulerproxy – struktura](ischedulerproxy-structure.md)   
  [IScheduler – struktura](ischeduler-structure.md)

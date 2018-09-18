@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045052"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject – třída
 
@@ -41,14 +41,14 @@ Tato třída implementuje `IUnknown` agregované nebo neagregovaná objektu.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*obsažené*  
+*obsažené*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ## <a name="members"></a>Členové
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*  
+*PV*<br/>
 [in] Ukazatel na vnější neznámá, pokud objekt má být agregován, nebo hodnota NULL, pokud objekt, pokud není agregovaný objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 [out] Ukazatel **CComPolyObject <** `contained` **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*obsažené*  
+*obsažené*<br/>
 [in] Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -216,22 +216,22 @@ Načte ukazatel na požadované rozhraní.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Q*  
+*Q*<br/>
 Rozhraní COM.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
-*str*  
+*str*<br/>
 [out] Ukazatel na rozhraní identifikovaný `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -256,6 +256,6 @@ V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro 
 
 ## <a name="see-also"></a>Viz také
 
-[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

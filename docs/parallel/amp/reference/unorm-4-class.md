@@ -1,5 +1,5 @@
 ---
-title: unorm_4 – třída | Microsoft Docs
+title: unorm_4 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5c57bbb2e54eb86333ee7e80ad144a486c4c1fba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027658"
 ---
 # <a name="unorm4-class"></a>unorm_4 – třída
-Představuje krátký vektoru čtyři nepodepsané normální čísel.  
+Představuje krátký vektor čtyř normálních čísel bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -296,7 +296,7 @@ class unorm_4;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class unorm_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[unorm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[unorm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -456,7 +456,7 @@ class unorm_4;
 |unorm_4::Operator-||  
 |unorm_4::operator--||  
 |unorm_4::operator*=||  
-|/ unorm_4::Operator = – operátor||  
+|unorm_4::Operator / =||  
 |unorm_4::Operator ++||  
 |unorm_4::operator+=||  
 |unorm_4::Operator =||  
@@ -466,7 +466,7 @@ class unorm_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#unorm_4__size)||  
+|[velikost – konstanta](#unorm_4__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -566,7 +566,7 @@ class unorm_4;
 |unorm_4::xz||  
 |unorm_4::xzw||  
 |unorm_4::xzwy||  
-|unorm_4::xzy||  
+|unorm_4::xyz||  
 |unorm_4::xzyw||  
 |unorm_4::y||  
 |unorm_4::yw||  
@@ -609,9 +609,9 @@ class unorm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> unorm_4 
+##  <a name="ctor"></a> unorm_4 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 unorm_4() restrict(amp,
@@ -675,23 +675,23 @@ explicit inline unorm_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V3`  
- Hodnota k chybě při inicializaci element 3.  
+*_V3*<br/>
+Hodnota inicializace element 3.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="unorm_4__size"></a> Velikost 
 

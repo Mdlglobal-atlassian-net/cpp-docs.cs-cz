@@ -1,5 +1,5 @@
 ---
-title: C2079 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2079 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,67 +16,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b29200be08c10dcfaeb178941309c6f3aec6ff9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddea9a8651a62f7cbb857e1d53962142471c2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032175"
 ---
-# <a name="compiler-error-c2079"></a>C2079 chyby kompilátoru
-"identifikátor" používá nedefinované třída nebo struktura/sjednocení "název"  
-  
- Zadaný identifikátor je Nedefinovaná třída, struktura nebo union.  
-  
- Tato chyba může být způsobeno inicializace anonymní sjednocení.  
-  
- Následující ukázka generuje C2079:  
-  
-```  
-// C2079.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int main() {  
-   std::ifstream g;   // C2079  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2079b.cpp  
-// compile with: /EHsc  
-#include <fstream>  
-int main( ) {  
-   std::ifstream g;  
-}  
-```  
-  
- C2079 může také nastat, pokud se pokusíte deklarace objektu v zásobníku typu jejichž dopředného deklarace nachází pouze v oboru.  
-  
-```  
-// C2079c.cpp  
-class A;  
-  
-class B {  
-   A a;   // C2079  
-};  
-  
-class A {};  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2079d.cpp  
-// compile with: /c  
-class A;  
-class C {};  
-  
-class B {  
-   A * a;  
-   C c;  
-};  
-  
-class A {};  
+# <a name="compiler-error-c2079"></a>Chyba kompilátoru C2079
+
+'identifier' používá nedefinovanou třídu/strukturu/sjednocení "name"
+
+Zadaný identifikátor je Nedefinovaná třída, struktura nebo sjednocení.
+
+Tuto chybu může způsobovat anonymní sjednocení inicializace.
+
+Následující ukázka generuje C2079:
+
+```
+// C2079.cpp
+// compile with: /EHsc
+#include <iostream>
+int main() {
+   std::ifstream g;   // C2079
+}
+```
+
+Možná řešení:
+
+```
+// C2079b.cpp
+// compile with: /EHsc
+#include <fstream>
+int main( ) {
+   std::ifstream g;
+}
+```
+
+C2079 může také dojít, pokud při pokusu o deklarovat objekt v zásobníku typu, jehož dopředné deklarace je jenom v oboru.
+
+```
+// C2079c.cpp
+class A;
+
+class B {
+   A a;   // C2079
+};
+
+class A {};
+```
+
+Možná řešení:
+
+```
+// C2079d.cpp
+// compile with: /c
+class A;
+class C {};
+
+class B {
+   A * a;
+   C c;
+};
+
+class A {};
 ```

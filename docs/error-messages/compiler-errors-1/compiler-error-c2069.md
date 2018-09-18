@@ -1,5 +1,5 @@
 ---
-title: C2069 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2069 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e182409ec0d9bc609daf96060386c374072cdef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 548342ed0d08de93af1288c57bed5067ad97ccf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032886"
 ---
-# <a name="compiler-error-c2069"></a>C2069 chyby kompilátoru
-přetypování 'void' podmínek na jinou hodnotu než 'void.  
-  
- Typ `void` nelze převést na jiný typ.
+# <a name="compiler-error-c2069"></a>Chyba kompilátoru C2069
+
+přetypování "void" období na jinou hodnotu než 'zrušit'
+
+Typ `void` nelze přetypovat na libovolného typu.

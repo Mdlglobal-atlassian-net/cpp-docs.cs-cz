@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524f360f2dcc2e1eaec11723395da0be7058c21a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756500"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028048"
 ---
 # <a name="com-map-macros"></a>Makra COM Map
 
@@ -47,7 +47,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název objektu třídy, které jsou vystaveny rozhraní na.
 
 ### <a name="remarks"></a>Poznámky
@@ -70,5 +70,5 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce mapy modelu COM](../../atl/reference/com-map-global-functions.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044935"
 ---
 # <a name="win32threadtraits-class"></a>Win32threadtraits – třída
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Parametry
 
-*lpsa*  
+*lpsa*<br/>
 Atributy zabezpečení pro nové vlákno.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Velikost zásobníku pro nové vlákno.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 Procedura vlákna nové vlákno.
 
-*pvParam*  
+*pvParam*<br/>
 Parametr, který má být předán procedura vlákna.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Vytváření příznaky (0 nebo CREATE_SUSPENDED).
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Adresa proměnné DWORD, který v případě úspěchu, přijímá ID vlákna nově vytvořeného vlákna.
 
 ### <a name="return-value"></a>Návratová hodnota

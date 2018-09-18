@@ -1,5 +1,5 @@
 ---
-title: C2142 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2142 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11fd3cd62b236daa93424f53a0896888a89fe33d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32301087ac1f06f1958ca8de7d2f66645dafb3d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032488"
 ---
-# <a name="compiler-error-c2142"></a>C2142 chyby kompilátoru
-deklarace funkcí liší, proměnné parametry zadat pouze jednu z nich.  
-  
- Jednu deklaraci funkce obsahuje seznam proměnných parametrů. Další deklarace neexistuje. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) jenom.  
-  
- Následující ukázka generuje C2142:  
-  
-```  
-// C2142.c  
-// compile with: /Za /c  
-void func();  
-void func( int, ... );   // C2142  
-void func2( int, ... );   // OK  
+# <a name="compiler-error-c2142"></a>Chyba kompilátoru C2142
+
+deklarace funkce se liší, parametry proměnné jsou zadané jenom v jednom z nich
+
+Jedna deklarace funkce obsahuje seznam parametrů proměnných. Další deklarace je nepodporuje. ANSI jazyka C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) pouze.
+
+Následující ukázka generuje C2142:
+
+```
+// C2142.c
+// compile with: /Za /c
+void func();
+void func( int, ... );   // C2142
+void func2( int, ... );   // OK
 ```

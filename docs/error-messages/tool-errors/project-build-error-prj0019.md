@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0019 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0019 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edab70ebb0e6abcf3761034e7ee8ed19b16dad57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06ea422a272b43f7e6226b330a210c0c6ea3f977
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038084"
 ---
 # <a name="project-build-error-prj0019"></a>Chyba sestavení projektu PRJ0019
-Nástroj vrátil kód chyby z  
-  
- Úroveň chyby, která byla nenulové hodnoty pro vlastní krok sestavení nebo události sestavení.  
-  
- Zobrazí se také PRJ0019 při nástroj vrátil kód chyby, ale žádná chybová zpráva. To může nastat, například když přesměrovat výstup MIDL NUL.  
-  
- V tématu [řešení potíží s kroky vlastního sestavení a události sestavení](../../ide/troubleshooting-build-customizations.md) Další informace.  
-  
- Této chybě může dojít také při používáte jako člen skupiny Users a přístup pro správu je zapotřebí. Další informace najdete v tématu [spuštění jako člen skupiny Users](../../security/running-as-a-member-of-the-users-group.md).
+
+Nástroj vrátil kód chyby z
+
+Úrovně chyby byla nenulovou hodnotu pro vlastní krok sestavení nebo události sestavení.
+
+Zobrazí se také PRJ0019 při nástroj vrátil chybový kód, ale žádná chybová zpráva. To může nastat, například když přesměrovat výstup nástroje MIDL NUL.
+
+Zobrazit [řešení potíží s kroky vlastního sestavení a události sestavení](../../ide/troubleshooting-build-customizations.md) Další informace.
+
+K této chybě může dojít, když jste přihlášeni jako člen skupiny Users a přístup pro správu je potřeba. Další informace najdete v tématu [spuštění jako člen skupiny Users](../../security/running-as-a-member-of-the-users-group.md).

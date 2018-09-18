@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4235 | Microsoft Docs
+title: Upozornění (úroveň 4) C4235 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031818"
 ---
-# <a name="compiler-warning-level-4-c4235"></a>C4235 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: nejsou podporovány na této architektuře – klíčové slovo '– klíčové slovo'  
-  
- Kompilátor nepodporuje klíčové slovo, které jste použili.  
-  
- Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md). Například aby C4235 do upozornění úroveň 2, použijte následující řádek kódu  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- ve zdrojovém kódu souboru.
+# <a name="compiler-warning-level-4-c4235"></a>Kompilátor upozornění (úroveň 4) C4235
+
+používá se nestandardní rozšíření: klíčové slovo '– klíčové slovo' není na této architektuře podporováno
+
+Kompilátor nepodporuje klíčové slovo, které jste použili.
+
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md). Například chcete-li C4235 do upozornění úrovně 2, použijte následující řádek kódu
+
+```
+#pragma warning(2:4235)
+```
+
+v souboru zdrojového kódu.

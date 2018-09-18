@@ -1,5 +1,5 @@
 ---
-title: C3493 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3493 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aec62bfff59396ec73141746193e4e3f16d84fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad3c46117e77d432af27321165f1e1ab93d2ef3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045104"
 ---
-# <a name="compiler-error-c3493"></a>C3493 chyby kompilátoru
-'příkaz var' nelze implicitně zaznamenat, protože nebyl zadán žádný výchozí režim zachytávání  
-  
- Zachytávání výrazu lambda prázdný, `[]`, určuje výraz lambda nebude explicitně nebo implicitně zaznamenat žádné proměnné.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Zadejte výchozí režim zachycení, nebo  
-  
--   Explicitně zachytit jednu nebo více proměnných.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad generuje C3493, protože upravuje externí proměnné, ale určuje klauzuli prázdný zachycení:  
-  
-```  
-// C3493a.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [](int n) { m = n; }(99); // C3493  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad přeloží C3493 zadáním odkazem jako výchozí režim zachytávání.  
-  
-```  
-// C3493b.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [&](int n) { m = n; }(99);  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3493"></a>Chyba kompilátoru C3493
+
+'příkaz var' nejde implicitně zachytit, protože nebyl zadán žádný výchozí režim sběru dat
+
+Zachycení výrazu lambda prázdný, `[]`, určuje, že výraz lambda nemá explicitně nebo implicitně zachytit všechny proměnné.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Zadejte výchozí režim sběru dat, nebo
+
+- Explicitně zachytit jednu nebo více proměnných.
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C3493, protože upravuje externí proměnné, ale určuje klauzule prázdného záznamu:
+
+```
+// C3493a.cpp
+
+int main()
+{
+   int m = 55;
+   [](int n) { m = n; }(99); // C3493
+}
+```
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu řeší C3493 tak, že zadáte jako výchozí režim sběru dat podle odkazu.
+
+```
+// C3493b.cpp
+
+int main()
+{
+   int m = 55;
+   [&](int n) { m = n; }(99);
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

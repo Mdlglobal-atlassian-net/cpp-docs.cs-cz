@@ -19,38 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3790f4cb357ed830ba2c61b3c2906356dc64da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5a2883cba0d04bbed38ec44e8d00fdab0d4d5695
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021041"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
-**Specifické pro Microsoft**  
-  
- Typ se změní `_variant_t` objekt označený `VARTYPE`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void ChangeType(  
-   VARTYPE vartype,  
-   const _variant_t* pSrc = NULL   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *VarType*  
- `VARTYPE` To `_variant_t` objektu.  
-  
- *pSrc*  
- Ukazatel na objekt `_variant_t`, který má být převeden. Pokud je tato hodnota NULL, převod se provádí na místě.  
-  
-## <a name="remarks"></a>Poznámky  
- Tato členská funkce převede `_variant_t` na zadaný objekt `VARTYPE`. Pokud *pSrc* má hodnotu NULL, převod se provede na místě, jinak to `_variant_t` objekt zkopírován z *pSrc* a poté převeden.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_variant_t – třída](../cpp/variant-t-class.md)
+
+**Specifické pro Microsoft**
+
+Typ se změní `_variant_t` objekt označený `VARTYPE`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void ChangeType(
+   VARTYPE vartype,
+   const _variant_t* pSrc = NULL
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*VarType*<br/>
+`VARTYPE` To `_variant_t` objektu.
+
+*pSrc*<br/>
+Ukazatel na objekt `_variant_t`, který má být převeden. Pokud je tato hodnota NULL, převod se provádí na místě.
+
+## <a name="remarks"></a>Poznámky
+
+Tato členská funkce převede `_variant_t` na zadaný objekt `VARTYPE`. Pokud *pSrc* má hodnotu NULL, převod se provede na místě, jinak to `_variant_t` objekt zkopírován z *pSrc* a poté převeden.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_variant_t – třída](../cpp/variant-t-class.md)

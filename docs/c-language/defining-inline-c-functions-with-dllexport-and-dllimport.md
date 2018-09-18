@@ -1,5 +1,5 @@
 ---
-title: Definování vložených funkcí jazyka C pomocí příkazů dllexport a dllimport | Microsoft Docs
+title: Definování vložených funkcí jazyka C pomocí příkazů dllexport a dllimport | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58ca4ab6fdfe06dec6d790db3135e42a6eeb39d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82612d7502557c88c4abf5a974d42b3bf62c3403
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038708"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Definování vložených funkcí jazyka C pomocí příkazů dllexport a dllimport
-**Konkrétní Microsoft**  
-  
- Jako vloženou lze definovat funkci s atributem `dllexport`. V takovém případě je pro funkci vždy vytvořena instance a funkce je exportována bez ohledu na to, zda jakýkoli modul v programu na funkci odkazuje. Funkce je považována za importovanou jiným programem.  
-  
- Můžete také definovat jako vložené funkce deklarovat s **dllimport** atribut. Funkce v tomto případě můžete rozšířit (přičemž podléhá specifikace – možnost kompilátoru /Ob (vložené)) ale nikdy vytvoření instance. Zejména je-li načtena adresa vložené importované funkce, je vrácena adresa funkce umístěné v knihovně DLL. Toto chování je shodné s načtením adresy nevložené importované funkce.  
-  
- Statické místních dat a řetězce v vložené funkce zachovat stejné identity mezi DLL a klientem stejně jako v jednom programu (to znamená, spustitelný soubor bez knihovnu DLL rozhraní).  
-  
- Při poskytování importovaných vložených funkcí buďte opatrní. Například při aktualizaci knihovny DLL nepředpokládejte, že klient bude změněnou verzi knihovny používat. Chcete-li se ujistit, že je načítána správná verze knihovny DLL, sestavte znovu také klienta knihovny.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)
+
+**Specifické pro Microsoft**
+
+Jako vloženou lze definovat funkci s atributem `dllexport`. V takovém případě je pro funkci vždy vytvořena instance a funkce je exportována bez ohledu na to, zda jakýkoli modul v programu na funkci odkazuje. Funkce je považována za importovanou jiným programem.
+
+Můžete také jako vloženou lze definovat funkce deklarovaná pomocí **dllimport** atribut. V takovém případě funkce můžete rozbalit (specifikace – možnost kompilátoru /Ob (inline)) ale nikdy nevytváří instanci. Zejména je-li načtena adresa vložené importované funkce, je vrácena adresa funkce umístěné v knihovně DLL. Toto chování je shodné s načtením adresy nevložené importované funkce.
+
+Statická místní data a řetězce ve vložených funkcích zachovávají stejné identity mezi knihovnou DLL a klientem, jak by je zachovávaly v jediném programu (tedy spustitelném souboru bez rozhraní knihovny DLL).
+
+Při poskytování importovaných vložených funkcí buďte opatrní. Například při aktualizaci knihovny DLL nepředpokládejte, že klient bude změněnou verzi knihovny používat. Chcete-li se ujistit, že je načítána správná verze knihovny DLL, sestavte znovu také klienta knihovny.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)

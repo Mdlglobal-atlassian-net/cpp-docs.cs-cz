@@ -1,5 +1,5 @@
 ---
-title: C3769 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3769 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5258c3dadd7ede384520b76e95c1b8e691882f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da57a883bcf66535a531e98e23b5927d37cadccd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042224"
 ---
-# <a name="compiler-error-c3769"></a>C3769 chyby kompilátoru
-'type': vnořené třídy nemůže mít stejný název jako okamžitě nadřazených – třída  
-  
- Vnořené třídy nemůže mít stejný název jako okamžitě nadřazených tříd.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3769.  
-  
-```  
-// C3769.cpp  
-// compile with: /c  
-class x {  
-   class x {};   // C3769  
-   class y {  
-      class x{};   // OK  
-   };  
-};  
+# <a name="compiler-error-c3769"></a>Chyba kompilátoru C3769
+
+'type': vnořená třída nemůže mít stejný název jako okamžitě nadřazené třídy
+
+Vnořená třída nemůže mít stejný název jako okamžitě nadřazené třídy.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3769.
+
+```
+// C3769.cpp
+// compile with: /c
+class x {
+   class x {};   // C3769
+   class y {
+      class x{};   // OK
+   };
+};
 ```

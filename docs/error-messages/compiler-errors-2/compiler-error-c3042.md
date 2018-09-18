@@ -1,5 +1,5 @@
 ---
-title: C3042 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3042 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d2f88702bb3c1c2439dd2931ee269c9c1413ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36fde6251244582a0626c80aa673ed6dd0e559d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045214"
 ---
-# <a name="compiler-error-c3042"></a>C3042 chyby kompilátoru
-klauzule 'copyprivate' a 'nowait' se nemůže vyskytovat společně na "směrnice" OpenMP – direktiva  
-  
- [Copyprivate](../../parallel/openmp/reference/copyprivate.md) a [nowait](../../parallel/openmp/reference/nowait.md) klauzule se vzájemně vylučují na zadaný direktivu. Chcete-li tuto chybu opravit, odeberte jednu nebo obě `copyprivate` nebo `nowait` klauzule.  
-  
- Následující ukázka generuje C3042:  
-  
-```  
-// C3042.cpp  
-// compile with: /openmp /c  
-#include <stdio.h>  
-#include "omp.h"  
-  
-double d;  
-  
-int main() {  
-    #pragma omp parallel private(d)  
-   {  
-      #pragma omp single copyprivate(d) nowait   // C3042  
-      {  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3042"></a>Chyba kompilátoru C3042
+
+"copyprivate" a 'nowait' nemůžou být společně v direktivě OpenMP "direktiva"
+
+[Copyprivate](../../parallel/openmp/reference/copyprivate.md) a [nowait](../../parallel/openmp/reference/nowait.md) klauzule se vzájemně vylučují pro zadaný direktivu. Chcete-li tuto chybu opravit, odebrat jedno nebo obě `copyprivate` nebo `nowait` klauzule.
+
+Následující ukázka generuje C3042:
+
+```
+// C3042.cpp
+// compile with: /openmp /c
+#include <stdio.h>
+#include "omp.h"
+
+double d;
+
+int main() {
+    #pragma omp parallel private(d)
+   {
+      #pragma omp single copyprivate(d) nowait   // C3042
+      {
+      }
+   }
+}
 ```

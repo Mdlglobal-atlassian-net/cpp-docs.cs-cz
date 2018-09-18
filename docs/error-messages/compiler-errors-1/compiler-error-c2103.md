@@ -1,5 +1,5 @@
 ---
-title: C2103 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2103 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a8d5eed933461a3898026f4bac051245c94dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1db81152e36b8d1d0fe95d15862036437e3a4fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042595"
 ---
-# <a name="compiler-error-c2103"></a>C2103 chyby kompilátoru
-' &' na registrovat proměnné  
-  
- Nelze zpracovat adresu do registru.
+# <a name="compiler-error-c2103"></a>Chyba kompilátoru C2103
+
+' &' pro proměnnou registru
+
+Nejde převzít adresu registru.

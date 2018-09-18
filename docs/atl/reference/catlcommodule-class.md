@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040801"
 ---
 # <a name="catlcommodule-class"></a>Catlcommodule – třída
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE, pokud knihovna typů je k registraci. Výchozí hodnota je FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud se zaregistruje NULL (výchozí hodnota), všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Řetězec ve formátu "\\\N", kde N je celočíselný index prostředku knihovny typů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Hodnota TRUE, pokud má být zrušena registrace knihovny typů. Výchozí hodnota je FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapě objektů bude zrušena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Řetězec ve formátu "\\\N", kde N je celočíselný index prostředku knihovny typů.
 
 ### <a name="remarks"></a>Poznámky
@@ -193,5 +193,5 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

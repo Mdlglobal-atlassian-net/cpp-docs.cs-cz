@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9036 | Microsoft Docs
+title: Upozornění příkazového řádku D9036 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c382f971c12b9ffb54c6e98c8b1f4609d7aadad4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c8f3030e1ee59b92b32d340e89e909f9da4fd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039761"
 ---
 # <a name="command-line-warning-d9036"></a>Upozornění příkazového řádku D9036
-'option_2"místo"option_1.  
-  
- Upozornění D9036 je pokračování [příkazového řádku D9035 upozornění](../../error-messages/tool-errors/command-line-warning-d9035.md).
+
+"option_2" místo "option_1.
+
+Upozornění D9036 je pokračováním [příkazového řádku D9035 upozornění](../../error-messages/tool-errors/command-line-warning-d9035.md).

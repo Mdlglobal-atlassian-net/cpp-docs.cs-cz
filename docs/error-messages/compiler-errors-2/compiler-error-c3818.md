@@ -1,5 +1,5 @@
 ---
-title: C3818 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3818 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 270b48f014025f56b3055f21417cd49c7225420f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88821655ae559717eeb5e65403724ec1b1423a40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026410"
 ---
-# <a name="compiler-error-c3818"></a>C3818 chyby kompilátoru
-Deklarace pole vlastnosti 'vlastnost1, nebude přetížení vlastnost index 'vlastnost2.  
-  
- Přetížení není možné pro vlastnosti, když jedna je indexer a druhý je vlastnost pole. 
-  
- C3818 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3818"></a>Chyba kompilátoru C3818
+
+Deklarace vlastností pole 'vlastnost1' nebude přetížení nepřetíží indexovanou vlastnost 'vlastnost2.
+
+Přetížení není možné, vlastnosti, když je indexeru a druhá vlastnost typu pole.
+
+C3818 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

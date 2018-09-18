@@ -1,5 +1,5 @@
 ---
-title: C2272 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2272 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e969e7cadadf1102dadfb8089a847046731b568f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e17765ee0acbf20d76e631bf7fccfb3413c5dc1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040307"
 ---
-# <a name="compiler-error-c2272"></a>C2272 chyby kompilátoru
-'function': Modifikátory není povoleno pro statické členské funkce  
-  
- A `static` – členská funkce deklarovat s specifikátorem modelu paměti, jako například [const](../../cpp/const-cpp.md) nebo [volatile](../../cpp/volatile-cpp.md), a takové modifikátory nejsou povoleny na `static` členské funkce.  
-  
- Následující ukázka generuje C2272:  
-  
-```  
-// C2272.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   static void func1() const volatile;   // C2272  func1 is static  
-   void func2() const volatile;   // OK  
-};  
+# <a name="compiler-error-c2272"></a>Chyba kompilátoru C2272
+
+'function': Modifikátory není povolený u statických členských funkcí
+
+A `static` členská funkce je deklarována s specifikátorem paměťový model, jako například [const](../../cpp/const-cpp.md) nebo [volatile](../../cpp/volatile-cpp.md), a tyto modifikátory nejsou povolené u `static` členské funkce.
+
+Následující ukázka generuje C2272:
+
+```
+// C2272.cpp
+// compile with: /c
+class CMyClass {
+public:
+   static void func1() const volatile;   // C2272  func1 is static
+   void func2() const volatile;   // OK
+};
 ```

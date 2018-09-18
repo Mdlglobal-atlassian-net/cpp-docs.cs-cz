@@ -1,5 +1,5 @@
 ---
-title: progress_reporter – třída | Microsoft Docs
+title: progress_reporter – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016764"
 ---
 # <a name="progressreporter-class"></a>progress_reporter – třída
-Třída průběh zpravodaje, která umožňuje reporting oznámení průběhu určitého typu. Každý objekt progress_reporter je vázána na operaci nebo konkrétní asynchronní akce.  
+Třída zpravodaj pokroku umožňuje vykazování průběhu oznámení určitého typu. Každý objekt progress_reporter je vázán na konkrétní asynchronní akci nebo operaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_ProgressType`  
- Typ datové části jednotlivých oznámení o průběhu nahlášené prostřednictvím ohlašování průběh.  
+*_ProgressType*<br/>
+Typ datové části každého oznámení o pokroku vykázaného prostřednictvím.  
   
 ## <a name="members"></a>Členové  
   
@@ -52,10 +52,10 @@ class progress_reporter;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Sestava](#report)|Odešle zprávu o průběhu asynchronní akce nebo operace, ke kterému je tento průběh ohlašování vázán.|  
+|[Sestavy](#report)|Odešle zprávu o pokroku asynchronní akce nebo operace, ke kterému je vázán tento zpravodaj pokroku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tento typ se pouze k dispozici pro aplikace Windows Runtime.  
+ Tento typ je pouze k dispozici pro aplikace Windows Runtime.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `progress_reporter`  
@@ -65,23 +65,23 @@ class progress_reporter;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> progress_reporter 
+##  <a name="ctor"></a> progress_reporter – 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="report"></a> Sestava 
+##  <a name="report"></a> Sestavy 
 
- Odešle zprávu o průběhu asynchronní akce nebo operace, ke kterému je tento průběh ohlašování vázán.  
+ Odešle zprávu o pokroku asynchronní akce nebo operace, ke kterému je vázán tento zpravodaj pokroku.  
   
 ```
 void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `val`  
- Datová část sestavy prostřednictvím oznámení o průběhu.  
+*Val*<br/>
+Datové zprávy prostřednictvím oznámení postupu.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

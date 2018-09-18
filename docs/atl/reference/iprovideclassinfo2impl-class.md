@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033872"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Iprovideclassinfo2impl – třída
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Ukazatel na identifikátor coclass'.
 
-*psrcid*  
+*psrcid*<br/>
 Ukazatel na identifikátor coclass' výchozí odchozí dispinterface.
 
-*plibid*  
+*plibid*<br/>
 Ukazatel na LIBID knihovnu typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předán typ na úrovni serveru knihovny.
 
-*wMajor*  
+*wMajor*<br/>
 Hlavní verze knihovny typů. Výchozí hodnota je 1.
 
-*wMinor*  
+*wMinor*<br/>
 Dílčí verze knihovny typů. Výchozí hodnota je 0.
 
-*tihclass*  
+*tihclass*<br/>
 Třída používá ke správě informací o typu coclass'. Výchozí hodnota je `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Členové

@@ -1,5 +1,5 @@
 ---
-title: Posuny doprava | Microsoft Docs
+title: Klikněte pravým tlačítkem myši Staffhubu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2eac057bbf8164915ff645cca098bbbf7c1995a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f31ebddb38d1eb1cafe9495f8c121811ec502524
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032408"
 ---
 # <a name="right-shifts"></a>Posuny doprava
-Výsledek posunutí doprava záporné hodnoty podepsané integrálních typů  
-  
- Posunutí záporné hodnoty doprava dává polovinu absolutní hodnoty zaokrouhlené dolů. Například přihlášeni `short` hodnotu-253 (šestnáctkových 0xFF03, binární 00000011 11111111) zapuštěno správné jeden bit vytváří-127 (šestnáctkových 0xFF81, binární 11111111 10000001). Kladné 253 zapuštěno správné vytváří +126.  
-  
- Posuny doprava zachovávají přihlašovací bit podepsaných integrálních typů. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Například, pokud je přihlášeni 0xF0000000 `int`, vytváří 0xF8000000 posunutí doprava. S posunem jako záporné `int` právo 32 časy vytváří 0xFFFFFFFF.  
-  
- Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán. Například pokud 0xF000 bez znaménka, výsledkem je 0x7800. Přejdou `unsigned` nebo kladných `int` právo 32 časy vytváří 0x00000000.  
-  
-## <a name="see-also"></a>Viz také  
- [Celá čísla](../c-language/integers.md)
+
+Výsledek pravého posunutí záporné hodnoty celočíselného typu se znaménkem
+
+Posunutí záporné hodnoty doprava dává polovinu absolutní hodnoty zaokrouhlené dolů. Například podepsané `short` hodnotu-253 (hexadecimální 0xFF03, binární 11111111 00000011) posunuta jeden bit doprava vytvoří-127 (hexadecimální 0xFF81, Binárně 11111111 10000001). Pozitivní 253 se posune doprava vytvoří hodnotu + 126.
+
+Posuny doprava zachovává bit znaménka celočíselných typů se znaménkem. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Například, pokud je 0xF0000000 se znaménkem `int`, pravé posunutí 0xf8000000. Posunutí záporné `int` doprava 32krát vytvoří 0xFFFFFFFF.
+
+Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán. Například je-li 0xF000 bez znaménka, výsledek je 0x7800. Posun `unsigned` nebo kladné `int` doprava 32krát vytvoří 0x00000000.
+
+## <a name="see-also"></a>Viz také
+
+[Celá čísla](../c-language/integers.md)

@@ -1,5 +1,5 @@
 ---
-title: Upozornění nástroje BSCMAKE BK4504 | Microsoft Docs
+title: Upozornění nástroje BSCMAKE BK4504 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a17aa8b4e2a98d3bda5d21ea84962791b8051dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8a2da8903dade37faf3b14175b65f3169efd908
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049762"
 ---
 # <a name="bscmake-warning-bk4504"></a>Upozornění nástroje BSCMAKE BK4504
-soubor obsahuje příliš mnoho odkazů; ignoruje další odkazy z tohoto zdroje  
-  
- Souboru obsahuje více než 64 000 odkazy na symboly. Když BSCMAKE došlo 64 000 odkazy v souboru, ignoruje všechny odkazy na další.  
-  
- K odstranění problému, buď rozdělit na dvě nebo více souborů, z nichž každá má méně než 64 000 symbolů odkazy, nebo pomocí `#pragma component(browser)` preprocesoru směrnice pro symboly omezení, které jsou generovány pro konkrétní odkazy. Další informace najdete v tématu [součást](../../preprocessor/component.md).
+
+soubor obsahuje příliš mnoho odkazů; Další odkazy z tohoto zdroje se ignoruje
+
+Soubor .cpp obsahuje víc než 64 000 odkazy na symboly. Když BSCMAKE došlo k 64 000 odkazy v souboru, ignoruje všechny odkazy na další.
+
+Chcete-li tento problém, buď rozdělení souboru na dva nebo více souborů, z nichž každá má méně než 64 000 odkazy na symbol, použijte `#pragma component(browser)` direktivy preprocesoru na limit symboly, které jsou generovány pro konkrétní odkazy. Další informace najdete v tématu [komponenty](../../preprocessor/component.md).

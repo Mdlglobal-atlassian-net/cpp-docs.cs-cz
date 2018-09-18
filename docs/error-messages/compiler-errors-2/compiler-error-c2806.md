@@ -1,5 +1,5 @@
 ---
-title: C2806 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2806 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c75a6aee78aef97f57acd29bf640917600dc05e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cf48170c8fc8b73f9c4cbe36c051a8daff4314
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043635"
 ---
-# <a name="compiler-error-c2806"></a>C2806 chyby kompilátoru
-'operátor operátor' má příliš mnoho formální parametry  
-  
- Přetížené operátor má příliš mnoho parametrů.  
-  
- Následující ukázka generuje C2806:  
-  
-```  
-// C2806.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator++ ( int, int );   // C2806 more than 1 parameter  
-   X operator++ ( int );   // OK  
-} ;  
+# <a name="compiler-error-c2806"></a>Chyba kompilátoru C2806
+
+'operator operátor' má moc velký počet formálních parametrů
+
+Přetíženého operátoru má moc parametrů.
+
+Následující ukázka generuje C2806:
+
+```
+// C2806.cpp
+// compile with: /c
+class X {
+public:
+   X operator++ ( int, int );   // C2806 more than 1 parameter
+   X operator++ ( int );   // OK
+} ;
 ```

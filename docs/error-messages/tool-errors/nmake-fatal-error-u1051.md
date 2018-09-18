@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1051 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1051 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 570c7e5d8e6e8250a67e4f032ac26b04388cfd00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d3a14b75a30aa22bcc9faafb97a218051bb080
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045013"
 ---
 # <a name="nmake-fatal-error-u1051"></a>Závažná chyba nástroje NMAKE U1051
-Nedostatek paměti  
-  
- NMAKE nemá dostatek paměti, včetně virtuální paměti, protože souboru pravidel byla příliš velká nebo složitá.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Uvolněte místo na disku.  
-  
-2.  Zvětšete velikost stránkovacího souboru systému Windows NT nebo odkládací soubor systému Windows.  
-  
-3.  Pokud jenom součást souboru pravidel se používá, buď souboru pravidel rozdělit na samostatné soubory, nebo použijte **! Pokud** omezit množství, které musí zpracovat NMAKE direktivy předběžného zpracování. **! Pokud** direktivy zahrnují **! Pokud**, `!IFDEF`, **! Ifndef –**, **! Pokud jiný**, **! ELSE** `IFDEF`, a **! ELSE** `IFNDEF`.
+
+Nedostatek paměti
+
+NMAKE není dostatek paměti, včetně virtuální paměti, protože soubor pravidel je příliš velký nebo složitý.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Uvolněte místo na disku.
+
+1. Zvětšete velikost stránkovacího souboru systému Windows NT nebo odkládací soubor Windows.
+
+1. Pokud pouze část souboru pravidel se používá, rozdělit na samostatné soubory souboru pravidel nebo použít **! Pokud** a omezit tak množství, která musí zpracovávat NMAKE direktivy předběžného zpracování. **! Pokud** direktivy zahrnují **! Pokud**, `!IFDEF`, **! IFNDEF**, **! ELSE IF**, **! OSTATNÍ** `IFDEF`, a **! OSTATNÍ** `IFNDEF`.

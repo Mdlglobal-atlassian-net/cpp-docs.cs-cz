@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046755"
 ---
 # <a name="cautoptrlist-class"></a>Cautoptrlist – třída
 
@@ -35,14 +35,14 @@ Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ ukazatele.
 
 ## <a name="members"></a>Členové
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Velikost bloku, výchozí hodnota je 10.
 
 ### <a name="remarks"></a>Poznámky
@@ -88,6 +88,6 @@ Velikost bloku je míra množství paměti přidělené, pokud je nutné použí
 
 ## <a name="see-also"></a>Viz také
 
-[Catllist – třída](../../atl/reference/catllist-class.md)   
-[Cautoptrelementtraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
+[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
+[CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

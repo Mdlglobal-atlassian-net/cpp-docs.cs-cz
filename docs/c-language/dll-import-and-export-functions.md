@@ -1,5 +1,5 @@
 ---
-title: Knihovny DLL Import a Export funkcí | Microsoft Docs
+title: Knihovna DLL Import a Export funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da456b7caca59fb874f4da87a342162b53c09319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3da47c4d6c5af518660b5799b3bf9ae3f512a6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029218"
 ---
 # <a name="dll-import-and-export-functions"></a>Import a export funkcí knihovny DLL
-**Konkrétní Microsoft**  
-  
- Nejvíce dokončení a aktuální informace o tomto tématu najdete v [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
-  
- **Dllimport** a `dllexport` modifikátory třídy úložiště jsou specifické pro společnost Microsoft rozšíření pro jazyk C. Tyto modifikátory explicitně definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Deklarace funkcí s modifikátorem `dllexport` odstraňuje potřebu souboru definice modulu (.DEF). Můžete také **dllimport** a `dllexport` modifikátory s daty a objekty.  
-  
- **Dllimport** a `dllexport` modifikátory třídy úložiště musí být použit s – klíčové slovo rozšířených atributů syntaxe `__declspec`, jak je uvedeno v následujícím příkladu:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllExport void func();  
-DllExport int i = 10;  
-DllExport int j;  
-DllExport int n;  
-```  
-  
- Konkrétní informace o syntaxi pro modifikátory rozšířené třídy úložiště najdete v tématu [rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Definice funkcí jazyka C](../c-language/c-function-definitions.md)
+
+**Specifické pro Microsoft**
+
+Nejvíce nejúplnější a nejaktuálnější informace k tomuto tématu najdete v [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+
+**Dllimport** a `dllexport` modifikátory třídy úložiště jsou rozšíření specifické pro společnost Microsoft pro jazyk C. Tyto modifikátory explicitně definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Deklarace funkcí s modifikátorem `dllexport` odstraňuje potřebu souboru definice modulu (.DEF). Můžete také použít **dllimport** a `dllexport` modifikátory data a objekty.
+
+**Dllimport** a `dllexport` modifikátory třídy úložiště je nutné použít s klíčovým slovem syntaxi rozšířeného atributu, `__declspec`, jak je znázorněno v tomto příkladu:
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllExport void func();
+DllExport int i = 10;
+DllExport int j;
+DllExport int n;
+```
+
+Konkrétní informace o syntaxi pro rozšířené paměťové třídy modifikátory najdete v tématu [rozšířené atributy tříd úložiště](../c-language/c-extended-storage-class-attributes.md).
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Definice funkcí jazyka C](../c-language/c-function-definitions.md)

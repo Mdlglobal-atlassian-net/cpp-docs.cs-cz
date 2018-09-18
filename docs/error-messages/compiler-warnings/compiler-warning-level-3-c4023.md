@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4023 | Microsoft Docs
+title: Upozornění (úroveň 3) C4023 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d72e39575b447787c3e0ead7910baedc8e815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe457f9a6181fa11b34dd615ad4d5b9637c8bddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045169"
 ---
-# <a name="compiler-warning-level-3-c4023"></a>C4023 kompilátoru upozornění (úroveň 3)
-'symbol': předán na základě ukazatel Neprototypové funkce: Parametr číslo  
-  
- Předávání na základě ukazatel Neprototypové funkce způsobí, že má ukazatel na budou normalizovány s vést k neočekávaným výsledkům.  
-  
- Pokud používáte prototypu funkce, které se předávají základní ukazatelé může být stanovena toto upozornění.
+# <a name="compiler-warning-level-3-c4023"></a>Kompilátor upozornění (úroveň 3) C4023
+
+'symbol': ukazatel based se předává neprototypované funkci: Parametr číslo
+
+Předání ukazatele neprototypované funkci způsobí, že ukazatel normalizovány s nepředvídatelnými výsledky.
+
+Pokud používáte prototypu funkce, které jsou předány na základě ukazatele lze vyřešit toto upozornění.

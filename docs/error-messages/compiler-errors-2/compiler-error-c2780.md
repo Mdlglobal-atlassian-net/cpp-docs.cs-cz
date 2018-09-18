@@ -1,5 +1,5 @@
 ---
-title: C2780 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2780 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fba3d16284e8f56dd3583cb73d4b8fec56222a38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7e0bac3957ece3d2b0363f57a99443e9a3cf992
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024070"
 ---
-# <a name="compiler-error-c2780"></a>C2780 chyby kompilátoru
-"prohlášení": očekává argumenty N - M poskytuje  
-  
- Šablonu funkce obsahuje příliš málo nebo příliš mnoho argumentů.  
-  
- Následující ukázka generuje C2780 a ukazuje, jak to opravit:  
-  
-```  
-// C2780.cpp  
-template<typename T>  
-void f(T, T){}  
-  
-int main() {  
-   f(1);  // C2780  
-   // try the following line instead  
-   // f(1,2);  
-}  
+# <a name="compiler-error-c2780"></a>Chyba kompilátoru C2780
+
+"deklarace": očekává argumenty N - M k dispozici
+
+Šablona funkce obsahuje příliš málo nebo příliš mnoho argumentů.
+
+Následující ukázka generuje C2780 a ukazuje, jak ho opravit:
+
+```
+// C2780.cpp
+template<typename T>
+void f(T, T){}
+
+int main() {
+   f(1);  // C2780
+   // try the following line instead
+   // f(1,2);
+}
 ```

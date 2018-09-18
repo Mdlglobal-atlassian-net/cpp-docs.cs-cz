@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cfa128ecb598d4960c0d5527e66a9cb81266c2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70b99ac7790477df88a0e685afd5652a35c06233
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047522"
 ---
 # <a name="winmodule-global-functions"></a>Globální funkce WinModule
 
@@ -51,13 +51,13 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>Parametry
 
-*pWinModule*  
+*pWinModule*<br/>
 Ukazatel na modulu [_atl_win_module70 –](../../atl/reference/atl-win-module70-structure.md) struktury.
 
-*pData*  
+*pData*<br/>
 Ukazatel [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktura bude inicializována a přidán do aktuální modul.
 
-*odstraněný objekt*  
+*odstraněný objekt*<br/>
 Ukazatel na objekt **to** ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -74,7 +74,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>Parametry
 
-*pWinModule*  
+*pWinModule*<br/>
 Ukazatel na modulu [_atl_win_module70 –](../../atl/reference/atl-win-module70-structure.md) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota

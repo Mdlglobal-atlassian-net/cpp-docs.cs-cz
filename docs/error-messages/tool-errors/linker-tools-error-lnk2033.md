@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2033 | Microsoft Docs
+title: Chyba Linkerů LNK2033 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03e8d2e0502d6e3664bff05c75fffb4f4ebd5da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c547b4d35e2e7fe057cdd67f0dad47f58d000c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039987"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Chyba linkerů LNK2033
-Nerozpoznaný odkaz typeref token (token) pro "typ"  
-  
- Typ nemá v metadatech MSIL definici.  
-  
- LNK2033 může dojít, když kompilujete s **/CLR: safe** a kde je předat dál deklarace typu v modul MSIL, kde se v modulu MSIL odkazuje typ.  
-  
- Typ musí být definován v rámci **/CLR: safe**.  
-  
- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje LNK2033.  
-  
-```  
-// LNK2033.cpp  
-// compile with: /clr:safe  
-// LNK2033 expected  
-ref class A;  
-ref class B {};  
-  
-int main() {  
-   A ^ aa = nullptr;  
-   B ^ bb = nullptr;   // OK  
-};  
+
+Nerozpoznaný token typeref (token) pro 'type'
+
+Typ nemá definici v metadatech jazyka MSIL.
+
+LNK2033 může dojít při kompilaci s **/CLR: safe** a ve kterých je Dopředná deklarace pro typ v modulu jazyka MSIL, kde se odkazuje typ v modulu MSIL.
+
+Tento typ musí být definován v rámci **/CLR: safe**.
+
+Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje LNK2033.
+
+```
+// LNK2033.cpp
+// compile with: /clr:safe
+// LNK2033 expected
+ref class A;
+ref class B {};
+
+int main() {
+   A ^ aa = nullptr;
+   B ^ bb = nullptr;   // OK
+};
 ```

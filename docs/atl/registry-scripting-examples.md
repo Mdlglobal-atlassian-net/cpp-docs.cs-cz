@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022108"
 ---
 # <a name="registry-scripting-examples"></a>Příklady skriptování registru
 
@@ -32,17 +32,17 @@ Příklady skriptování v tomto tématu ukazují, jak přidá klíč do systém
 
 Následující strom analýzy ukazuje jednoduchý skript, který přidá jeden klíč do systémového registru. Konkrétně se skript přidá klíč, `MyVeryOwnKey`do `HKEY_CURRENT_USER`. Také přiřadí výchozí řetězcovou hodnotu `HowGoesIt` do nového klíče:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Tento skript lze snadno rozšířit k definování více podklíče následujícím způsobem:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Nyní, skript přidá podklíč, `HasASubkey`do `MyVeryOwnKey`. Tento podklíč obě přidá `PrettyCool` podklíč (s výchozí `DWORD` hodnotu 55) a `ANameValue` se pojmenovaná hodnota (s řetězcovou hodnotu `WithANamedValue`).
@@ -61,8 +61,8 @@ Nyní, skript přidá podklíč, `HasASubkey`do `MyVeryOwnKey`. Tento podklíč 
 
 Následující skript zaregistruje samotný server COM doménový Registrátor.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 V době běhu, přidá tento strom analýzy `ATL.Registrar` klíč `HKEY_CLASSES_ROOT`. Na tento nový klíč pak it:
@@ -106,15 +106,15 @@ Strom analýzy teď přidá dva nové podklíče `{44EC053A-400F-11D0-9DCD-00A0C
 
 Pokud chcete zadat více než jeden strom analýzy ve skriptu, umístíte na konci druhého jednom stromu. Například následující skript přidá klíč, `MyVeryOwnKey`, k stromů analýzy pro obě `HKEY_CLASSES_ROOT` a `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

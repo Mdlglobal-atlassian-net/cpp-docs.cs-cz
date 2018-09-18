@@ -1,5 +1,5 @@
 ---
-title: C2773 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2773 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad1a4a3b34bd8c4d4ed81c1327073e650f5079
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023433"
 ---
-# <a name="compiler-error-c2773"></a>C2773 chyby kompilátoru
-\#Import a #using k dispozici pouze v kompilátoru C++  
-  
- Kompilátor jazyka C nerozpoznává `#import` direktivy preprocesoru. Zkompilujte zdroj jako C++. Použití [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) v případě potřeby.
+# <a name="compiler-error-c2773"></a>Chyba kompilátoru C2773
+
+\#Import a #using k dispozici pouze v kompilátoru jazyka C++
+
+Kompilátor jazyka C nerozpozná `#import` direktiva preprocesoru. Zkompiluje kód jako C++ zdroji. Použití [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) v případě potřeby.

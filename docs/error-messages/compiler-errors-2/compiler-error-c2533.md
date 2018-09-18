@@ -1,5 +1,5 @@
 ---
-title: C2533 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2533 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06733dc8ee52462ab7fcac4255ee8fa697a9bac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 528b78e71713725907a9f0e2bd06cec1a8c62e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045403"
 ---
-# <a name="compiler-error-c2533"></a>C2533 chyby kompilátoru
-"identifikátor": konstruktory nejsou povoleny návratový typ.  
-  
- Konstruktor nemůže mít typ vrácené hodnoty (není i `void` návratový typ).  
-  
- Chybí středník mezi koncem definice třídy a první implementace konstruktor je běžné zdroj této chyby. Kompilátor vidí třída jako definice návratový typ pro funkci konstruktoru a generuje C2533.  
-  
- Následující ukázka generuje C2533 a ukazuje, jak to opravit:  
-  
-```  
-// C2533.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X();     
-};  
-  
-int X::X() {}   // C2533 - constructor return type not allowed  
-X::X() {}   // OK - fix by using no return type  
+# <a name="compiler-error-c2533"></a>Chyba kompilátoru C2533
+
+'identifier': konstruktory není povolený návratový typ.
+
+Konstruktor nemůže mít návratový typ (včetně `void` návratový typ).
+
+Běžné příčiny této chyby je chybí středník mezi koncem definice třídy a první implementaci konstruktoru. Kompilátor považuje definici návratový typ funkce konstruktoru třídy a generuje C2533.
+
+Následující ukázka generuje C2533 a ukazuje, jak ho opravit:
+
+```
+// C2533.cpp
+// compile with: /c
+class X {
+public:
+   X();
+};
+
+int X::X() {}   // C2533 - constructor return type not allowed
+X::X() {}   // OK - fix by using no return type
 ```

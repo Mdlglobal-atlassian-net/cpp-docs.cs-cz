@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4098 | Microsoft Docs
+title: Upozornění Linkerů LNK4098 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aadf25d968d6d457f891cab49a43591455b9d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2068534d51ae1350510a349f875c1977299edb1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019147"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Upozornění linkerů LNK4098
-DEFAULTLIB 'knihovny, je v konfliktu s použití jiných knihovny; použít /NODEFAULTLIB:library  
-  
- Pokoušíte se propojit s kompatibilní knihovny.  
-  
+
+DEFAULTLIB 'library' je v konfliktu s použitím jiných knihoven; Použijte/NODEFAULTLIB: library
+
+Pokoušíte se propojit s kompatibilní knihovny.
+
 > [!NOTE]
->  Běhové knihovny teď obsahují direktivy, aby se zabránilo mísí různé typy. Zobrazí se toto upozornění, pokud se pokusíte použít různé typy nebo ladění a bez ladění verzích běhové knihovny ve stejné aplikaci. Například pokud zkompilujete jeden soubor použít jednu druh běhové knihovny a druhý souboru použít jiný typ (například jednovláknové porovnání s více vlákny) a propojit je se pokusil, zobrazí se toto upozornění. Všechny zdrojové soubory pro použití stejné běhové knihovny musí zkompilují. Najdete v článku [použití běhové knihovny](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) – možnosti kompilátoru Další informace.  
-  
- Můžete použít linkeru [/VERBOSE:LIB](../../build/reference/verbose-print-progress-messages.md) přepínač tak, aby určit, které knihovny je hledání linkeru. Pokud se zobrazí LNK4098 a chcete vytvořit spustitelný soubor, který používá například jedním podprocesem, bez ladění běhové knihovny, použijte **/VERBOSE:LIB** možnost a zjistěte, které knihovny je hledání linkeru. Linkeru by měl tisk LIBC.lib a není LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib nebo MSVCRTD.lib jako knihovny vyhledávat. Se dá zjistit linkeru ignorovat nesprávné běhové knihovny pomocí [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pro každou knihovnu, kterou chcete ignorovat.  
-  
- Následující tabulka uvádí, které knihovny třeba ji ignorovat, v závislosti na tom, které běhové knihovny, kterou chcete použít.  
-  
-|Použití této běhové knihovny|Ignorovat tyto knihovny|  
-|-----------------------------------|----------------------------|  
-|Jednovláknové (libc.lib)|Libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Více vláken (libcmt.lib)|Libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Vícevláknové použití knihovny DLL (msvcrt.lib)|Libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Ladění jednovláknové (libcd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|  
-|Ladění vícevláknových (libcmtd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|  
-|Ladění Multithreaded pomocí knihovny DLL (msvcrtd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|  
-  
- Například pokud se vám zobrazila tato upozornění a chcete vytvořit spustitelný soubor, který používá jiný debug, jednovláknové verzi běhové knihovny, můžete použít následující možnosti s linkeru:  
-  
-```  
-/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib  
+>  Knihovny za běhu nyní obsahovat direktivy, aby se zabránilo kombinace různých typů. Zobrazí se toto upozornění, pokud se pokusíte použít různé typy nebo ladění a verze knihovny run-time ve stejném programu. Například pokud jste kompilaci jednoho souboru chcete použít jeden druh běhové knihovny a další soubor použít jiný typ (například s jedním vláknem a s více vlákny) a propojit je se pokusil, se zobrazí toto upozornění. Byste měli kompilovat všechny zdrojové soubory používat stejné knihovny run-time. Zobrazit [použití knihovny Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) možnosti kompilátoru pro další informace.
+
+Můžete použít propojovacího programu [: lib](../../build/reference/verbose-print-progress-messages.md) přepínač tak, aby určit, které knihovny hledání linkeru. Pokud se zobrazí LNK4098 a chcete-li vytvořit spustitelný soubor, který používá, například jednovláknový, bez ladění runtime knihoven, použijte **: lib** možnost zjistit, které knihovny hledání linkeru. Propojovací program by měl vytisknout LIBC.lib a není LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib nebo MSVCRTD.lib jako Prohledané knihovny. Poznáte linkeru, aby ignorovat nesprávné knihovny za běhu pomocí [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pro každou knihovnu, kterou chcete ignorovat.
+
+Následující tabulka uvádí, které knihovny mají být ignorovány, v závislosti na tom, které knihovny run-time, kterou chcete použít.
+
+|Použití této knihovny run-time|Ignorovat tyto knihovny|
+|-----------------------------------|----------------------------|
+|S jedním vláknem (libc.lib)|Libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
+|Vícevláknové (libcmt.lib)|Libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
+|Vícevláknové použití knihovny DLL (msvcrt.lib)|Libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
+|Ladění s jedním vláknem (libcd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|
+|Ladění vícevláknových (libcmtd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|
+|Ladění vícevláknové použití knihovny DLL (msvcrtd.lib)|Libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|
+
+Například pokud obdržíte toto upozornění a chcete ji vytvořit spustitelný soubor, který používá verzi knihovny za běhu bez ladění, s jedním vláknem, můžete použít následující možnosti pomocí linkeru:
+
+```
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

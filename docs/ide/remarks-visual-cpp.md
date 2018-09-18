@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027560"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;Poznámky&gt; (Visual C++)
 \<Remarks > Značka se používá k přidání informací o typu, doplňující informace zadaným [ \<summary >](../ide/summary-visual-cpp.md). Tyto informace se zobrazují v [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code) a v sestavě webového kódu komentář.  
@@ -35,8 +35,8 @@ ms.locfileid: "43684209"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Popis člena.  
+*Popis*<br/>
+Popis člena.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  

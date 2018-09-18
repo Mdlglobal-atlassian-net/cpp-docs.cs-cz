@@ -1,5 +1,5 @@
 ---
-title: lastprivate | Microsoft Docs
+title: lastprivate | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028191"
 ---
 # <a name="lastprivate"></a>lastprivate
-Určuje, že je nastavena nadřazených kontext verzi proměnnou rovna privátní verzi kteroukoli vlákna spustí poslední iterace (konstrukce cyklu for) nebo poslední část (#pragma oddíly).  
+Určuje, že verze nadřazeného objektu context proměnné je nastavena na soukromou verzi podle toho, která vlákno spustí poslední iterace (konstrukci smyčky for-loop) nebo poslední část (#pragma oddílů).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Určuje, že je nastavena nadřazených kontext verzi proměnnou rovna privátn�
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Proměnné, která je nastavena na privátní verzi kteroukoli vlákna spustí poslední iterace (konstrukce cyklu for) nebo poslední část (#pragma oddíly).  
+*var*<br/>
+Proměnné, která je nastavena na soukromou verzi podle toho, která vlákna spustí poslední iterace (konstrukci smyčky for-loop) nebo poslední část (#pragma oddílů).  
   
 ## <a name="remarks"></a>Poznámky  
  `lastprivate` platí pro následující direktivy:  
@@ -48,7 +47,7 @@ lastprivate(var)
  Další informace najdete v tématu [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [plán](../../../parallel/openmp/reference/schedule.md) příklad použití `lastprivate` klauzule.  
+ Zobrazit [plán](../../../parallel/openmp/reference/schedule.md) pro příklad použití `lastprivate` klauzuli.  
   
 ## <a name="see-also"></a>Viz také  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

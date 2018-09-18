@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022172"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Isupporterrorinfoimpl – třída
 
@@ -37,14 +37,14 @@ Tato třída poskytuje výchozí implementaci třídy [ISupportErrorInfo rozhran
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*piid*  
+*piid*<br/>
 Ukazatel na IID rozhraní, které podporuje [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Členové
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
 Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -1,5 +1,5 @@
 ---
-title: C2483 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2483 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/15/2017
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a10fd33ebeef43904db964fc327fb749029f963
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be2a2caef9e1252bf1ab36253a7f5f715b94d5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031610"
 ---
-# <a name="compiler-error-c2483"></a>C2483 chyby kompilátoru
+# <a name="compiler-error-c2483"></a>Chyba kompilátoru C2483
 
->'*identifikátor*': objekt s konstruktoru nebo destruktor nelze deklarovat 'vláken.
+>"*identifikátor*': nelze použít deklaraci objektu se konstruktor nebo destruktor"vlákno"
 
-Tato chybová zpráva je v sadě Visual Studio 2015 a novější verze zastaralé. V předchozích verzích proměnné deklarovány s `thread` atribut nemůže být inicializovaný s konstruktor nebo jiných výraz, který vyžaduje testování spuštění. Statický výraz se vyžaduje k chybě při inicializaci `thread` data.
+Tato chybová zpráva je zastaralé v sadě Visual Studio 2015 a novější verze. V předchozích verzích, jsou proměnné deklarovány s `thread` atribut se nedá inicializovat pomocí konstruktoru nebo jiný výraz, který se vyžaduje vyhodnocení za běhu. Statický výraz je potřeba inicializovat `thread` data.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2483 v sadě Visual Studio 2013 a starší verze.
+Následující ukázka generuje C2483 v sadě Visual Studio 2013 a dřívějších verzích.
 
 ```cpp
 // C2483.cpp
@@ -39,7 +39,7 @@ Následující ukázka generuje C2483 v sadě Visual Studio 2013 a starší verz
 __declspec(thread) struct A {
    A(){}
    ~A(){}
-} aa;   // C2483 error  
+} aa;   // C2483 error
 
 __declspec(thread) struct B {} b;   // OK
 ```

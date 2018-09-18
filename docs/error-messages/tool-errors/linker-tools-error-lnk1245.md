@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1245 | Microsoft Docs
+title: Chyba Linkerů LNK1245 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a1c2e5f7bf66946dcc5816d7a20fd485b59b45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299237"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041789"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Chyba linkerů LNK1245
-Neplatný subsystému subsystému zadaný; / SUBSYSTEM musí být WINDOWS, WINDOWSCE nebo KONZOLY  
-  
- [/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) byl použit ke kompilaci objektu a byl true jeden z následujících podmínek:  
-  
--   Byl definován vlastní vstupního bodu ([/Entry](../../build/reference/entry-entry-point-symbol.md)), tak, aby linkeru nepodařilo odvodit podsystému.  
-  
--   Byla předána hodnota [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) propojovacího, který není platný pro objekty/CLR.  
-  
- V obou situacích je řešení zadejte platnou hodnotu pro možnost /SUBSYSTEM linkeru.
+
+Neplatný subsystém zadaný; subsystému / SUBSYSTEM musí být WINDOWS, WINDOWSCE nebo CONSOLE
+
+[/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) byla použita pro kompilaci objektu a byl jeden z následujících podmínek hodnotu true:
+
+- Byl definován vlastní vstupní bod ([/Entry](../../build/reference/entry-entry-point-symbol.md)), tak, aby linker nebylo možné odvodit podsystému.
+
+- Byl předán hodnotu [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru, který není platný pro objekty/CLR.
+
+V obou situacích je řešení zadejte platnou hodnotu pro možnost linker/Subsystem.

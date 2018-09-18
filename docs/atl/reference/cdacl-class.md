@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036135"
 ---
 # <a name="cdacl-class"></a>Cdacl – třída
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 A [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.
 
-*AccessMask*  
+*AccessMask*<br/>
 Určuje masku přístupová práva, povolit pro danou `CSid` objektu.
 
-*AceFlags*  
+*AceFlags*<br/>
 Sadu bitových příznaků, které řídí ACE dědičnosti.
 
-*pObjectType*  
+*pObjectType*<br/>
 Typ objektu.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Typ zděděných objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 A `CSid` objektu.
 
-*AccessMask*  
+*AccessMask*<br/>
 Určuje masku přístupová práva k odepřen pro zadaný rozbočovač `CSid` objektu.
 
-*AceFlags*  
+*AceFlags*<br/>
 Sadu bitových příznaků, které řídí ACE dědičnosti. Výchozí hodnota je 0 v prvním metody.
 
-*pObjectType*  
+*pObjectType*<br/>
 Typ objektu.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Typ zděděných objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,13 +183,13 @@ Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) popis rů
 Konstruktor
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Existující `ACL` struktury (seznamu řízení přístupu).
 
 ### <a name="remarks"></a>Poznámky
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Seznam ACL (seznam řízení přístupu) přiřadit existující objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index položky ACE odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -272,9 +272,9 @@ Odebere všechny `ACE` strukturu (položky řízení přístupu) (pokud existuje
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[Cacl – třída](../../atl/reference/cacl-class.md)   
-[Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)   
-[Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[CAcl – třída](../../atl/reference/cacl-class.md)<br/>
+[Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

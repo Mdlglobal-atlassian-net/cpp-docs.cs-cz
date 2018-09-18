@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1055 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1055 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017927"
 ---
 # <a name="nmake-fatal-error-u1055"></a>Závažná chyba nástroje NMAKE U1055
-Nedostatek místa na prostředí  
-  
- Operační systém nemá dostatek místa pro proměnné prostředí.  
-  
- Buď zvětšete velikost místa prostředí nebo nastavení méně proměnných prostředí.
+
+mimo prostor prostředí
+
+Operační systém nemá dostatek místa pro proměnné prostředí.
+
+Buď zvětšete místo prostředí nebo nastavení menším počtem proměnných prostředí.

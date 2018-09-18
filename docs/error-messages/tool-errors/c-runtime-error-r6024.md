@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6024 C | Microsoft Docs
+title: Chyba modulu Runtime R6024 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdfee9da378415afe0b88fe6eed18ec8f570d4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10b258b12bb1ad7e47a7b126b8fd503814186645
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041594"
 ---
-# <a name="c-runtime-error-r6024"></a>R6024 Chyba za běhu C
-není dostatek místa pro tabulku _onexit – / atexit  
-  
+# <a name="c-runtime-error-r6024"></a>Chyba modulu Runtime R6024 C
+
+není dostatek místa pro tabulku _onexit/atexit
+
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má problém s interní paměť. Tato chyba je obvykle způsobeno podmínku velmi málo paměti nebo výjimečně podle chyby v programu nebo poškození knihoven Visual C++, které používá.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Ukončete ostatní spuštěné aplikace nebo restartujte počítač k uvolnění paměti.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravit nebo znovu nainstalovat všechny kopie systému Microsoft Visual C++ Redistributable.  
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory v jazyce**  
-  
- K této chybě dojde, protože nebylo k dispozici pro žádné paměti `_onexit` nebo `atexit` funkce. Tato chyba je způsobená podmínku nedostatku paměti. Zvažte předběžné přidělení vyrovnávací paměti při spuštění aplikace, který pomáhá při ukládání uživatelských dat a provedení čisté aplikace ukončete v nedostatku paměti.
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Tato chyba je obvykle způsobeno podmínku velmi málo paměti nebo jen zřídka, chyb v programu nebo poškozením knihoven Visual C++, které používá.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte všechny kopie systému Microsoft Visual C++ Redistributable.
+> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+K této chybě dochází, protože nebylo k dispozici pro žádné paměti `_onexit` nebo `atexit` funkce. Tato chyba je způsobena podmínku nedostatku paměti. Můžete zvážit, předběžně přiděluje vyrovnávací paměti při spuštění aplikace, které pomáhají při ukládání uživatelských dat a provedení čisté aplikace ukončit v nedostatku paměti.

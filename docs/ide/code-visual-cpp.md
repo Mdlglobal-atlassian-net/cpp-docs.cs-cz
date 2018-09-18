@@ -1,5 +1,5 @@
 ---
-title: '&lt;kód&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;kód&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 508f6b41c791cdb3a62e7c6e3de8a8a633dff3e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038877"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;kód&gt; (Visual C++)
-\<Kód > Značka poskytuje způsob, jak vyjádřit jako kód jeden nebo více řádků.  
+\<Kód > značky poskytuje způsob, jak určit jeden nebo více řádků jako kód.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ ms.locfileid: "33330116"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `content`  
- Text, který je označený jako kód.  
+*Obsah*<br/>
+Text, který je označený jako kód.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití [ \<c >](../ide/c-visual-cpp.md) označíte, část textu by měl být označen jako kód.  
+ Použití [ \<c >](../ide/c-visual-cpp.md) k označení část textu, by měla být označena jako kód.  
   
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
   
 ## <a name="example"></a>Příklad  
- Najdete v části [ \<příklad >](../ide/example-visual-cpp.md) tématu příklad použití \<kód > značky.  
+ Najdete v článku [ \<příklad >](../ide/example-visual-cpp.md) najdete příklad, jak používat \<kód > značky.  
   
 ## <a name="see-also"></a>Viz také  
  [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

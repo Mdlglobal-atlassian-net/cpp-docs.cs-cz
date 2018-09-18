@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1506 | Microsoft Docs
+title: Závažná chyba C1506 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b36d7210a3ed81b7049c1ab011a38c64f7d196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 391414365549b462952045a7d9efe080097f3af6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036746"
 ---
 # <a name="fatal-error-c1506"></a>Závažná chyba C1506
-Chyba oboru neopravitelné bloku  
-  
- Bloku byl příliš velký pro kompilaci.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Neodpovídající složené závorky  
-  
-2.  Neobvykle velký funkce nebo – třída
+
+Chyba při vytváření oboru neopravitelné bloku
+
+Blok byl příliš velký pro kompilaci.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Neshoda závorek
+
+1. Neobvykle velký funkci nebo třídu

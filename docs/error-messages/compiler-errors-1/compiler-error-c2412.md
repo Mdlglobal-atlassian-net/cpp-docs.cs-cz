@@ -1,5 +1,5 @@
 ---
-title: C2412 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2412 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6abe2e7ae989acab3b8545f447d567a0e876953
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee9c3b7b414bcbfa07fb289a76e9e481da6697c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044558"
 ---
-# <a name="compiler-error-c2412"></a>C2412 chyby kompilátoru
-"štítek": velká a malá písmena Návěstí bylo předefinováno  
-  
- Popisek je definován více než jednou ve funkci aktuální. Změňte pravopis štítek i jeho odkazy.
+# <a name="compiler-error-c2412"></a>Chyba kompilátoru C2412
+
+"štítek": malá a velká písmena Návěstí bylo předefinováno
+
+Popisek je definován více než jednou v aktuální funkci. Změňte pravopis popisek a jeho odkazy.

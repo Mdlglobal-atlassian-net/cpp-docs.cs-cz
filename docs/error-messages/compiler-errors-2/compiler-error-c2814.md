@@ -1,5 +1,5 @@
 ---
-title: C2814 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2814 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75215a0df53606c8807cc275e86616c1ae8c6b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef85e143b13ea5184235676179e33b387f751aa8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046573"
 ---
-# <a name="compiler-error-c2814"></a>C2814 chyby kompilátoru
-"člen": nativního typu nemůže být vnořena ve spravované nebo WinRT zadejte "typ"  
-  
-## <a name="example"></a>Příklad  
- Nativní typ nemůže být vnořena v typu CLR nebo WinRT. Následující ukázka generuje C2814 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2814.cpp  
-// compile with: /clr /c  
-ref class A {  
-   class B {};   // C2814  
-   ref class C {};   // OK  
-};  
-```  
+# <a name="compiler-error-c2814"></a>Chyba kompilátoru C2814
+
+'member': nativní typ nemůže být vnořen v rámci spravované nebo WinRT typu 'type'
+
+## <a name="example"></a>Příklad
+
+Nativní typ nemůže být vnořený v typu CLR nebo WinRT. Následující ukázka generuje C2814 a ukazuje, jak ho opravit.
+
+```
+// C2814.cpp
+// compile with: /clr /c
+ref class A {
+   class B {};   // C2814
+   ref class C {};   // OK
+};
+```

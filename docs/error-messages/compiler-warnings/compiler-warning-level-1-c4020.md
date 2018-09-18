@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4020 | Microsoft Docs
+title: Upozornění (úroveň 1) C4020 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb7926e22802178ff3cbcb710fbc9b74e7138f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0303c1a811304cd2edaa8622208dc4bada86ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046729"
 ---
-# <a name="compiler-warning-level-1-c4020"></a>C4020 kompilátoru upozornění (úroveň 1)
-'function': příliš mnoho parametrů skutečné  
-  
- Počet ve volání funkce skutečného parametrů překračuje počet formální parametry v definici nebo funkce prototypu. Kompilátor předá velmi skutečné parametry podle konvence volání funkce.  
-  
- Následující ukázka generuje C4020:  
-  
-```  
-// C4020.c  
-// compile with: /W1 /c  
-void f(int);  
-int main() {  
-   f(1,2);   // C4020  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C4020b.c  
-// compile with: /c  
-void f(int);  
-int main() {  
-   f(1);  
-}  
+# <a name="compiler-warning-level-1-c4020"></a>Kompilátor upozornění (úroveň 1) C4020
+
+'function': moc velký počet skutečných parametrů
+
+Počet skutečných parametrů ve volání funkce překračuje počet formálních parametrů v prototypu funkce nebo definice. Kompilátor předá velmi skutečných parametrů podle konvence volání funkce.
+
+Následující ukázka generuje C4020:
+
+```
+// C4020.c
+// compile with: /W1 /c
+void f(int);
+int main() {
+   f(1,2);   // C4020
+}
+```
+
+Možná řešení:
+
+```
+// C4020b.c
+// compile with: /c
+void f(int);
+int main() {
+   f(1);
+}
 ```
