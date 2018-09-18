@@ -1,5 +1,5 @@
 ---
-title: Konstanty haldy | Microsoft Docs
+title: Konstanty haldy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25118792500d679d243f55e5d87e62a4994eaa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 791509a7c67f5fa47128fda97688c43e592724ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115174"
 ---
 # <a name="heap-constants"></a>Konstanty haldy
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto konstanty poskytnout návratovou hodnotu, která určuje stav haldě.  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_HEAPBADBEGIN`|Informace počáteční hlavičky nebyl nalezen nebo je neplatný.|  
-|`_HEAPBADNODE`|Byl nalezen chybný uzel, nebo je poškozena halda.|  
-|`_HEAPBADPTR`|**_pentry** pole z **_heapinfo –** struktura neobsahuje platný ukazatel do haldy (`_heapwalk` pouze rutiny).|  
-|`_HEAPEMPTY`|Halda nebyla inicializována.|  
-|`_HEAPEND`|Úspěšně byl dosažen konec haldy (`_heapwalk` pouze rutiny).|  
-|`_HEAPOK`|Halda představuje konzistentní (`_heapset` a `_heapchk` pouze rutiny). Žádné chyby, pokud; **_Heapinfo –** struktura obsahuje informace o další položka (`_heapwalk` pouze rutiny).|  
-  
-## <a name="see-also"></a>Viz také  
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapset –](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty poskytnout návratovou hodnotu označující stav haldy.
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_HEAPBADBEGIN`|Informace v hlavičce počáteční nebyl nalezen nebo nebyl platný.|
+|`_HEAPBADNODE`|Byl nalezen špatný uzel nebo poškození haldy.|
+|`_HEAPBADPTR`|**_pentry** pole **_heapinfo –** struktury neobsahuje platný ukazatel do haldy (`_heapwalk` pouze rutina).|
+|`_HEAPEMPTY`|Haldy nebyla inicializována.|
+|`_HEAPEND`|Bylo úspěšně dosaženo konce haldy (`_heapwalk` pouze rutina).|
+|`_HEAPOK`|Halda představuje konzistentní vzhledem k aplikacím (`_heapset` a `_heapchk` pouze rutiny). Zatím; žádné chyby **_Heapinfo –** struktura obsahuje informace o další položce (`_heapwalk` pouze rutina).|
+
+## <a name="see-also"></a>Viz také
+
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

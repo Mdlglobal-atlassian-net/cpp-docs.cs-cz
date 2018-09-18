@@ -1,5 +1,5 @@
 ---
-title: Ukládání řetězců ve zprostředkovateli OLE DB | Microsoft Docs
+title: Ukládání řetězců ve zprostředkovateli OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112691"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Ukládání řetězců ve zprostředkovateli OLE DB
-V souboru MyProviderRS.h, Průvodce zprostředkovatele OLE DB ATL vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, buď změňte `CWindowsFile` nebo přidat vlastní záznam uživatele, jak je znázorněno v následujícím kódu:  
+
+V souboru MyProviderRS.h, Průvodce zprostředkovatelem ATL OLE DB vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, buď upravte `CWindowsFile` nebo přidejte záznam uživatele, jak je znázorněno v následujícím kódu:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Datové členy `szCommand` a `szText` představují dva řetězce s `szCommand2` a `szText2` poskytují další sloupce v případě potřeby. Datový člen `dwBookmark` není vyžadován pro tohoto jednoduchého zprostředkovatele pouze pro čtení, ale se později používá k přidání `IRowsetLocate` rozhraní; viz [rozšíření jednoduchého číst pouze zprostředkovatele](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operátor porovná instancí (implementace tento operátor. je volitelný).  
+Datové členy `szCommand` a `szText` představují dva řetězce s `szCommand2` a `szText2` poskytují další sloupce v případě potřeby. Datový člen `dwBookmark` pro tohoto jednoduchého zprostředkovatele pouze pro čtení není potřeba, ale se později používá k přidání `IRowsetLocate` rozhraní; viz [rozšíření jednoduchého číst pouze zprostředkovatele](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operátor porovná instancí (implementace tohoto operátoru je volitelný).  
   
- Když to uděláte, měli být připravení zkompilování a spuštění svého poskytovatele. Chcete-li otestovat zprostředkovatele, musíte příjemce s odpovídající funkce. [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md) ukazuje, jak vytvořit testovací příjemce. Spusťte test příjemce s poskytovatelem. Ověřte, že zkušební příjemce obdrží správné řetězce od poskytovatele, po kliknutí **spustit** tlačítka na **zkušební příjemce** dialogové okno.  
+Když to uděláte, váš poskytovatel by měl být připraveni zkompilovat a spustit. Testování zprostředkovatele, budete potřebovat příjemce s odpovídající funkce. [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md) ukazuje, jak vytvořit testovací příjemce. Spusťte test příjemce s tímto poskytovatelem. Ověřte, že příjemce testů obdrží správné řetězce od poskytovatele po kliknutí **spustit** tlačítko **zkušební příjemce** dialogové okno.  
   
- Pokud váš poskytovatel úspěšně testování, můžete zvýšit jeho funkce implementací další rozhraní. Příklad je uveden v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Když poskytovatele úspěšně otestovat, můžete chtít zvýšit jeho funkce tím, že přidáte další rozhraní. Příklad je uveden v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)

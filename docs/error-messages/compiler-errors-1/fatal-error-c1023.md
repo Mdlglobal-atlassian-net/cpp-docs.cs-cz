@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1023 | Microsoft Docs
+title: Závažná chyba C1023 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115239"
 ---
 # <a name="fatal-error-c1023"></a>Závažná chyba C1023
-'file': Neočekávaná chyba s pch, zkuste znovu sestavit pch  
-  
- C1023 může být způsobeno jedním z několika problémy, řešení, ke kterému je znovu vytvořit předkompilovaný hlavičkový soubor.  
-  
- Pokud se pokusíte použít předkompilovaný hlavičkový soubor na počítači, na kterém byl vytvořený, může být způsobeno C1023.
+
+'file': došlo k neočekávané chybě se zkuste znovu sestavit soubor pch
+
+C1023 mohlo být způsobeno jedním z několika problémy, řešení, do kterého se opětovné sestavení předkompilovaného souboru hlaviček.
+
+Pokud se pokusíte použít soubor předkompilované hlavičky v počítači než na kterém byla vytvořena, může být způsobeno C1023.

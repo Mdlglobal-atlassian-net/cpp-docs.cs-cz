@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118697"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl – třída
+
 Poskytuje implementaci [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) objektu.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -43,11 +44,13 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Vaše třída odvozena od `IGetDataSourceImpl`.  
+
+*T*<br/>
+Vaše třída odvozena od `IGetDataSourceImpl`.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -58,9 +61,11 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 |[GetDataSource](#getdatasource)|Vrátí ukazatel rozhraní objektu zdroje dat, která byla relace vytvořena.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je povinné rozhraní relace k získání ukazatele rozhraní objektu zdroje dat.  
+
+Toto je povinné rozhraní relace k získání ukazatele rozhraní objektu zdroje dat.  
 
 ## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
+
 Vrátí ukazatel rozhraní objektu zdroje dat, která byla relace vytvořena.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -71,11 +76,14 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Je užitečné, pokud potřebujete přístup k vlastnostem v objektu zdroje dat.  
+
+Je užitečné, pokud potřebujete přístup k vlastnostem v objektu zdroje dat.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

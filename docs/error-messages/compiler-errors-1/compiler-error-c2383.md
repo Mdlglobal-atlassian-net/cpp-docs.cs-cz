@@ -1,5 +1,5 @@
 ---
-title: C2383 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2383 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81624ccd7f4857cb2f7d8474d393a9743ab1a2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c529c22636f112291fa53b852899cad78dac589
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113224"
 ---
-# <a name="compiler-error-c2383"></a>C2383 chyby kompilátoru
-'*symbol*': výchozí argumenty nejsou povoleny na tento symbol  
-  
- Kompilátor C++ neumožňuje výchozí argumenty ukazatelů na funkce.  
-  
- Tento kód byl přijat ve Visual C++ compiler ve verzi před Visual Studio 2005, ale teď obsahuje chybu. Pro kód, který funguje ve všech verzích Visual C++ nepřiřazujte výchozí hodnota pro argument ukazatel funkce.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad generuje C2383 a zobrazuje možná řešení:  
-  
-```cpp  
-// C2383.cpp  
-// compile with: /c   
-void (*pf)(int = 0);   // C2383  
-void (*pf)(int);   // OK  
+# <a name="compiler-error-c2383"></a>Chyba kompilátoru C2383
+
+"*symbol*': výchozí argumenty nejsou povolené pro tento symbol
+
+Kompilátor C++ nepovoluje výchozí argumenty na ukazatele na funkce.
+
+Tento kód byl přijat kompilátorem jazyka Visual C++ ve verzích před Visual Studio 2005, ale nyní vrátí chybu. Pro kód, který funguje ve všech verzích aplikace Visual C++ nepřiřazujte výchozí hodnota pro argument typu ukazatel na funkci.
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C2383 a zobrazuje možná řešení:
+
+```cpp
+// C2383.cpp
+// compile with: /c
+void (*pf)(int = 0);   // C2383
+void (*pf)(int);   // OK
 ```

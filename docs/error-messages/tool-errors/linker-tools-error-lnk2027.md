@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2027 | Microsoft Docs
+title: Chyba Linkerů LNK2027 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156310a0d21651b9fd2ee6002ace419db4996681
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022e363af575e29e3085dcaec21257fa7e4ab5f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116840"
 ---
 # <a name="linker-tools-error-lnk2027"></a>Chyba linkerů LNK2027
-modul nerozpoznaný odkaz 'module'  
-  
- Soubor předaný linkeru má závislost na modul, který byl zadán ani s **/ASSEMBLYMODULE** ani předaný linkeru.  
-  
- Pro vyřešení LNK2027, proveďte jednu z těchto možností:  
-  
--   Nepředávejte k linkeru soubor, který má závislost modulu.  
-  
--   Zadejte modul s **/ASSEMBLYMODULE**.  
-  
--   Pokud modul bezpečné .netmodule, předejte modul přímo do linkeru.  
-  
- Další informace najdete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) a [.netmodule soubory jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).
+
+odkaz na nerozpoznaný modulu 'module'
+
+Soubor linkeru předány obsahuje závislost na modulu, který byl zadán ani jeden s **/ASSEMBLYMODULE** ani linkeru předány.
+
+Vyřešit LNK2027, proveďte jednu z následujících akcí:
+
+- Nepředávejte linkeru soubor, který má závislost modulu.
+
+- Zadejte modul s parametrem **/ASSEMBLYMODULE**.
+
+- Pokud modul je bezpečné .netmodule, předejte modulu přímo do propojovacího programu.
+
+Další informace najdete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) a [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).

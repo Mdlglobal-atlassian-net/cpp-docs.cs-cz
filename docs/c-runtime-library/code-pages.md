@@ -1,5 +1,5 @@
 ---
-title: Znakové stránky | Microsoft Docs
+title: Znakové stránky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,36 +22,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113718"
 ---
 # <a name="code-pages"></a>Znakové stránky
 
-A *znaková stránka* je znaková sada, která může obsahovat čísla, interpunkčních znamének a další zvláštní znaky. Různé jazyky a národní prostředí může používat různé znakové stránky. Například ANSI znaková stránka 1252 slouží pro angličtinu a většina evropských jazyků; Výrobce OEM znaková stránka 932 se používá pro japonské Kanji.
+A *znakovou stránku* je znaková sada, která může obsahovat čísla, interpunkční znaménka a dalších glyfy. Různé jazyky a národní prostředí může použít různé znakové stránky. Například ANSI znakovou stránkou 1252 slouží pro angličtinu a většina evropských jazyků; Výrobce OEM znakovou stránku 932 se používá pro japonské Kanji.
 
- Znaková stránka může být reprezentován v tabulce jako mapování znaků hodnoty jednobajtové nebo vícebajtové hodnoty. Mnoho znakové stránky sdílet sadu znaků v rozsahu 0x00 – 0x7F znaků ASCII.
+Znaková stránka může být reprezentován v tabulce jako mapování pro hodnoty jednobajtové nebo vícebajtové znaky. Mnoho stránek kód sdílet sadu pro znaky v rozsahu 0x00 – 0x7F znaků ASCII.
 
- Běhové knihovny Microsoft používá následující typy znakové stránky:
+Běhové knihovny Microsoft používá tyto druhy znakových stránek:
 
-- Výchozí systémová znaková stránka ANSI. Ve výchozím nastavení při spuštění spuštění systému automaticky nastaví vícebajtové znakové stránky na stránku výchozího systému ANSI kód, který se získávají z operačního systému. Volání:
+- Systému výchozí ANSI znakovou stránku. Ve výchozím nastavení při spuštění systému za běhu automaticky nastaví vícebajtovou znakovou stránku na znakovou stránku ANSI výchozí systémové hodnoty, která se získá z operačního systému. Volání:
 
     ```C
     setlocale ( LC_ALL, "" );
     ```
 
-     také nastaví ANSI výchozí systémová znaková stránka národního prostředí.
+     také nastaví národní prostředí systému výchozí ANSI znakovou stránku.
 
-- Znaková stránka národního prostředí. Chování počet běhové rutiny je závislá na aktuální nastavení národního prostředí, které zahrnuje znaková stránka národního prostředí. (Další informace najdete v tématu [rutiny závislých na národním prostředí](../c-runtime-library/locale.md).) Ve výchozím nastavení používají všechny rutiny závislých na národním prostředí v běhové knihovny Microsoft znakové stránky, která odpovídá na "C", národní prostředí. Při spuštění můžete změnit nebo dotaz znaková stránka národního prostředí používá v volání [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+- Znaková stránka národního prostředí. Chování počet běhové rutiny je závislá na aktuální nastavení národního prostředí, která zahrnuje znaková stránka národního prostředí. (Další informace najdete v tématu [rutiny závislé na národním prostředí](../c-runtime-library/locale.md).) Ve výchozím nastavení používají všechny rutiny závislé na národním prostředí v knihovně Microsoft za běhu znakovou stránku, která odpovídá na národní prostředí "C". Při spuštění můžete změnit nebo dotazovat znaková stránka národního prostředí používané pro volání [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
-- Vícebajtové znakové stránky. Chování pro většinu rutin vícebajtových znaků v běhové knihovny závisí na aktuální vícebajtové znakové stránky. Ve výchozím nastavení použijte tyto rutiny ANSI výchozí systémová znaková stránka. Při spuštění se můžete dotazovat a změnit vícebajtové znakové stránky s [_getmbcp –](../c-runtime-library/reference/getmbcp.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md), v uvedeném pořadí.
+- Vícebajtové znakové stránky. Chování většina rutin vícebajtového znaku v knihovně runtime závisí na aktuální nastavení vícebajtové znakové stránky. Ve výchozím nastavení použijte tyto rutiny systému výchozí ANSI znakovou stránku. V době běhu můžete zadávat dotazy a změnit vícebajtovou znakovou stránku s [_getmbcp](../c-runtime-library/reference/getmbcp.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md)v uvedeném pořadí.
 
-- ANSI tak, aby odpovídaly národního prostředí, ve kterém programy C provedli tradičně je definována národního prostředí "C". Znaková stránka národního prostředí "C" ("C" kódové stránky) odpovídá znaková sada ASCII. Například v národním prostředí "C" **islower –** vrací hodnotu true pro hodnoty 0x61 - pouze 0x7A. V jiné národním prostředí **islower –** může vrátit hodnotu true pro tyto a také jiné hodnoty, podle definice toto národní prostředí.
+- ANSI tak, aby odpovídaly národní prostředí, ve kterém jste spustili tradičně programů jazyka C je definována národní prostředí "C". Znaková stránka národního prostředí "C" ("C" znaková stránka) odpovídá znakové sady ASCII. Například v národním prostředí "C" **islower** vrací hodnotu true pro hodnoty 0x61 - 0x7A pouze. V jiném národním prostředí **islower** může vrátit hodnotu true pro tyto stejně jako ostatní hodnoty dle toto národní prostředí.
 
 ## <a name="see-also"></a>Viz také
 
 [Internacionalizace](../c-runtime-library/internationalization.md)<br/>
- [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114576"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
 Jako součást [povolení popisů tlačítek](../mfc/enabling-tool-tips.md), zpracování **TTN_NEEDTEXT** zprávu tak, že přidáte následující položku do mapy zprávu nadřazenému oknu:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- Členská funkce se volá, když pro toto tlačítko je nutné zadat text.  
+*memberFxn*<br/>
+Členská funkce se volá, když pro toto tlačítko je nutné zadat text.  
   
  Všimněte si, že ID popisku tlačítka je vždy 0.  
   
@@ -41,14 +41,14 @@ Jako součást [povolení popisů tlačítek](../mfc/enabling-tool-tips.md), zpr
   
  kde jsou kurzívou parametry:  
   
- `id`  
- Identifikátor ovládacího prvku, který poslat oznámení. Nepoužívá se. Id ovládacího prvku je převzata z **NMHDR** struktury.  
+*id*<br/>
+Identifikátor ovládacího prvku, který poslat oznámení. Nepoužívá se. Id ovládacího prvku je převzata z **NMHDR** struktury.  
   
- `pNMHDR`  
- Ukazatel [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Tato struktura je také popsáno dále v [ToolTipText – struktura](../mfc/tooltiptext-structure.md).  
+*pNMHDR*<br/>
+Ukazatel [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Tato struktura je také popsáno dále v [ToolTipText – struktura](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Ukazatel na kód výsledku můžete nastavit před vrácením. **TTN_NEEDTEXT** můžete ignorovat obslužné rutiny *pResult* parametru.  
+*pResult*<br/>
+Ukazatel na kód výsledku můžete nastavit před vrácením. **TTN_NEEDTEXT** můžete ignorovat obslužné rutiny *pResult* parametru.  
   
  Jako příklad obslužnou rutinu oznámení formulářové zobrazení:  
   

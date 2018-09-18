@@ -1,5 +1,5 @@
 ---
-title: spawn – konstanty | Microsoft Docs
+title: spawn – konstanty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,30 +30,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a069f9f29f6fd15c3ce21111a37757519af229
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8daaf38e60ca48b4a34deb2086bbd14eb45651e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116929"
 ---
 # <a name="spawn-constants"></a>spawn – konstanty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <process.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `mode` Argument určuje akci provedenou volající proces před a během operace spawn. Následující hodnoty pro `mode` je možné:  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_P_OVERLAY`|Překryvy volání proces s nový proces, zničení volání procesu (stejné jako ovlivňuje `_exec` volání).|  
-|`_P_WAIT`|Pozastaví volající vlákno až do dokončení provádění nový proces (synchronní `_spawn`).|  
-|`_P_NOWAIT`, `_P_NOWAITO`|Bude pokračovat v provádění volající proces souběžně nový proces (asynchronní `_spawn`).|  
-|`_P_DETACH`|Bude pokračovat v provádění volání procesu; Nový proces běží na pozadí bez přístupu na konzole nebo klávesnice. Volání `_cwait` proti nový proces se nezdaří. Jedná se asynchronní `_spawn`.|  
-  
-## <a name="see-also"></a>Viz také  
- [_spawn, _wspawn – funkce](../c-runtime-library/spawn-wspawn-functions.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <process.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+`mode` Argument určuje akci provedenou na základě volajícího procesu před nasazením a během operace vytvořit podřízený proces. Následující hodnoty pro `mode` jsou možné:
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_P_OVERLAY`|Překryvy volající proces se nový proces, zničení volajícího procesu (stejný vliv jako `_exec` volání).|
+|`_P_WAIT`|Pozastaví volající vlákno, dokud se nedokončí spuštění nového procesu (synchronní `_spawn`).|
+|`_P_NOWAIT`, `_P_NOWAITO`|Pokračuje v provádění volající proces současně nový proces (asynchronní `_spawn`).|
+|`_P_DETACH`|Pokračuje v provádění volajícího procesu. Nový proces běží na pozadí bez přístupu konzoly nebo klávesnice. Volání `_cwait` proti nový proces se nezdaří. Toto je asynchronní `_spawn`.|
+
+## <a name="see-also"></a>Viz také
+
+[_spawn, _wspawn – funkce](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

@@ -1,5 +1,5 @@
 ---
-title: omp_set_nested – | Microsoft Docs
+title: omp_set_nested – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116879"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
-Vnořené paralelismus umožňuje.  
+Povolí vnořená paralelismu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,18 +34,17 @@ void omp_set_nested(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `val`  
- Pokud nenulové hodnoty, umožňuje vnořené stupně paralelního zpracování. Pokud nula, zakáže vnořené stupně paralelního zpracování.  
+*Val*<br/>
+Nenulovou hodnotu, pokud se povolí vnořená paralelismu. Pokud je nula, zakáže vnořené paralelismu.  
   
 ## <a name="remarks"></a>Poznámky  
- Omp – vnořené paralelismus lze zapnout s `omp_set_nested`, nebo nastavením [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) proměnné prostředí.  
+ OMP vnořené paralelismu, lze zapnout pomocí `omp_set_nested`, nebo nastavením [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) proměnné prostředí.  
   
  Nastavení pro `omp_set_nested` přepíše nastavení jazyka `OMP_NESTED` proměnné prostředí.  
   
- Když je povolené, proměnné prostředí může dojít k narušení jinak provozní program vzhledem k tomu, že počet vláken, zvyšuje exponenciálnímu při vnoření paralelní oblasti.  Například funkce, recurses 6krát s počet vláken omp – nastavte na 4 vyžaduje 4 096 (4 exponentem 6) vláken obecně, způsobí snížení výkonu aplikace, pokud počet vláken překročí maximální počet procesorů. Jedinou výjimkou můžou být že vázána vstupně-výstupních operací aplikace.  
+ Pokud povolená, proměnné prostředí můžete přerušit jinak provozní program vzhledem k tomu, že počet vláken zvyšuje exponenciálně při vnoření paralelních oblastí.  Například funkce, vyžaduje recurses 6krát s počtem vláken OMP nastavena na 4 4 096 (4 k elektrické energie 6) vlákna obecně platí, způsobí snížení výkonu aplikace, pokud číslo vlákna překročí počet procesorů. Jedinou výjimkou by být že vázaný vstupně-výstupních operací aplikace.  
   
  Použití [omp_get_nested –](../../../parallel/openmp/reference/omp-get-nested.md) zobrazíte aktuální nastavení `omp_set_nested`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4488 | Microsoft Docs
+title: Upozornění (úroveň 1) C4488 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a3c5fc64637d989066acfa90715c50504664231
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d2cccedada47519ada55353cb44faab0e34cf03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118268"
 ---
-# <a name="compiler-warning-level-1-c4488"></a>C4488 kompilátoru upozornění (úroveň 1)
-'function': vyžaduje – klíčové slovo '– klíčové slovo' implementovat metodu rozhraní 'interface_method.  
-  
- Třída musí implementovat rozhraní, ze kterého se přímo dědí všechny členy. Implementovaná člen musí mít veřejnou dostupnost a musí být označen virtuální.  
-  
-## <a name="example"></a>Příklad  
- C4488 může dojít, pokud implementovaná člen není veřejný. Následující ukázka generuje C4488.  
-  
-```  
-// C4488.cpp  
-// compile with: /clr /c /W1 /WX  
-interface struct MyI {  
-   void f1();  
-};  
-  
-// implemented member not public  
-ref class B : MyI { virtual void f1() {} };  // C4488  
-  
-// OK  
-ref class C : MyI {  
-public:  
-   virtual void f1() {}  
-};  
-```  
-  
-## <a name="example"></a>Příklad  
- C4488 situace může nastat, pokud implementovaná člen není označena jako virtuální. Následující ukázka generuje C4488.  
-  
-```  
-// C4488_b.cpp  
-// compile with: /clr /c /W1 /WX  
-interface struct MyI {  
-   void f1();  
-};  
-  
-ref struct B : MyI { void f1() {} };   // C4488  
-ref struct C : MyI { virtual void f1() {} };   // OK  
+# <a name="compiler-warning-level-1-c4488"></a>Kompilátor upozornění (úroveň 1) C4488
+
+'function': vyžaduje klíčové slovo '– klíčové slovo' o implementaci metody rozhraní "interface_method"
+
+Třída musí implementovat všechny členy rozhraní, ze které přímo dědí. Implementovaný člen musí mít přístupnost public a musí být označena jako virtuální.
+
+## <a name="example"></a>Příklad
+
+C4488 může dojít, pokud implementovaný člen není veřejný. Následující ukázka generuje C4488.
+
+```
+// C4488.cpp
+// compile with: /clr /c /W1 /WX
+interface struct MyI {
+   void f1();
+};
+
+// implemented member not public
+ref class B : MyI { virtual void f1() {} };  // C4488
+
+// OK
+ref class C : MyI {
+public:
+   virtual void f1() {}
+};
+```
+
+## <a name="example"></a>Příklad
+
+C4488 může dojít, pokud implementovaný člen není označený jako virtuální. Následující ukázka generuje C4488.
+
+```
+// C4488_b.cpp
+// compile with: /clr /c /W1 /WX
+interface struct MyI {
+   void f1();
+};
+
+ref struct B : MyI { void f1() {} };   // C4488
+ref struct C : MyI { virtual void f1() {} };   // OK
 ```

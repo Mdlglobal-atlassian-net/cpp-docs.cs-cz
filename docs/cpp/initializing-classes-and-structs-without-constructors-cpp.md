@@ -12,62 +12,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bca7ef417a633f186f2b7ca6f7d92af37e780420
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c9cf80b9b1a6a7002e4176720cf12b305592c6fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117514"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Inicializace tříd a struktur bez konstruktorů (C++)
-Není vždy nutné definovat konstruktor pro třídu, zejména těch, které je poměrně jednoduchá. Uživatelé můžou inicializace objektů třídy nebo struktury pomocí jednotnou inicializaci, jak je znázorněno v následujícím příkladu:  
-  
-```cpp 
-#include "stdafx.h"  
-#include <Windows.h>  
-  
-// No constructor  
-struct TempData  
-{  
-    int StationId;  
-    time_t time;  
-    double current;  
-    double maxTemp;  
-    double minTemp;  
-};  
-  
-// Has a constructor  
-struct TempData2  
-{  
-    TempData2(double minimum, double maximum, double cur, int id, time_t t) :  
-       minTemp(minimum), maxTemp(maximum), current(cur), stationId(id), time(t) {}  
-    int stationId;  
-    time_t time;  
-    double current;  
-    double maxTemp;  
-    double minTemp;  
-};  
-  
-int main()  
-{  
-    // Member initialization (in order of declaration):  
-    TempData td{ 45978, GetCurrentTime(), 28.9, 37.0, 16.7 };  
-  
-    // Default initialization = {0,0,0,0,0}  
-    TempData td_default{};  
-  
-    //Error C4700 uninitialized local variable  
-    TempData td_noInit;  
-  
-    // Member declaration (in order of ctor parameters)  
-    TempData2 td2{ 16.7, 37.0, 28.9, 45978, GetCurrentTime() };  
-  
-    return 0;  
-}  
-```  
-  
- Všimněte si, že při třídě nebo struktuře nemá žádný konstruktor, zadáte seznam prvky v pořadí, členů jsou deklarovány ve třídě. Pokud třída nemá konstruktor, poskytují prvky v pořadí parametrů.  
-  
-## <a name="see-also"></a>Viz také:  
- [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
- [Konstruktory](../cpp/constructors-cpp.md)
+
+Není vždy nutné definovat konstruktor pro třídu, zejména těch, které je poměrně jednoduchá. Uživatelé můžou inicializace objektů třídy nebo struktury pomocí jednotnou inicializaci, jak je znázorněno v následujícím příkladu:
+
+```cpp
+#include "stdafx.h"
+#include <Windows.h>
+
+// No constructor
+struct TempData
+{
+    int StationId;
+    time_t time;
+    double current;
+    double maxTemp;
+    double minTemp;
+};
+
+// Has a constructor
+struct TempData2
+{
+    TempData2(double minimum, double maximum, double cur, int id, time_t t) :
+       minTemp(minimum), maxTemp(maximum), current(cur), stationId(id), time(t) {}
+    int stationId;
+    time_t time;
+    double current;
+    double maxTemp;
+    double minTemp;
+};
+
+int main()
+{
+    // Member initialization (in order of declaration):
+    TempData td{ 45978, GetCurrentTime(), 28.9, 37.0, 16.7 };
+
+    // Default initialization = {0,0,0,0,0}
+    TempData td_default{};
+
+    //Error C4700 uninitialized local variable
+    TempData td_noInit;
+
+    // Member declaration (in order of ctor parameters)
+    TempData2 td2{ 16.7, 37.0, 28.9, 45978, GetCurrentTime() };
+
+    return 0;
+}
+```
+
+Všimněte si, že při třídě nebo struktuře nemá žádný konstruktor, zadáte seznam prvky v pořadí, členů jsou deklarovány ve třídě. Pokud třída nemá konstruktor, poskytují prvky v pořadí parametrů.
+
+## <a name="see-also"></a>Viz také:
+
+[Třídy a struktury](../cpp/classes-and-structs-cpp.md)<br/>
+[Konstruktory](../cpp/constructors-cpp.md)

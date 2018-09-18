@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116864"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
 
@@ -129,13 +129,13 @@ Konstruktor
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CSecurityDesc` Objektu nebo `SECURITY_DESCRIPTOR` struktura přiřazena novému `CSecurityDesc` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*  
+*pstr*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který obsahuje [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format) má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psdc*  
+*psdc*<br/>
 Ukazatel `SECURITY_DESCRIPTOR_CONTROL` struktura, která obdrží informace o řízení popisovač zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pDacl*  
+*pDacl*<br/>
 Ukazatel `CDacl` strukturu, do kterého chcete uložit kopii DACL popisovače zabezpečení. Pokud volitelný seznam řízení přístupu existuje, metoda nastaví *pDacl* adresu popisovače zabezpečení volitelný seznam řízení přístupu. Pokud volitelný seznam ACL neexistuje, je uložená žádná hodnota.
 
-*pbPresent*  
+*pbPresent*<br/>
 Ukazatel na hodnotu, která indikuje přítomnost volitelného seznamu řízení přístupu ve Zadaný popisovač zabezpečení. Popisovač zabezpečení obsahuje volitelný seznam řízení přístupu,-li tento parametr je nastaven na hodnotu true. Pokud popisovač zabezpečení neobsahuje volitelného seznamu řízení přístupu, tento parametr je nastaven na hodnotu false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Ukazatel na příznak nastavena na hodnotu příznaku SE_DACL_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury, pokud existuje volitelný seznam řízení přístupu pro popisovač zabezpečení. Pokud tento příznak není true, byla načtena výchozího mechanismu; volitelný seznam řízení přístupu Pokud má hodnotu false, volitelný seznam řízení přístupu explicitně zadaná uživatelem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*  
+*psid má*<br/>
 Ukazatel [identifikační číslo volané stanice](../../atl/reference/csid-class.md) (security identifier), která obdrží kopii skupiny uložená v cdacl –.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Ukazatel na příznak nastavena na hodnotu příznaku SE_GROUP_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury po návratu metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*  
+*psid má*<br/>
 Ukazatel [identifikační číslo volané stanice](../../atl/reference/csid-class.md) (security identifier), která obdrží kopii skupiny uložená v cdacl –.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Ukazatel na příznak nastavena na hodnotu příznaku SE_OWNER_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury po návratu metody.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pSacl*  
+*pSacl*<br/>
 Ukazatel `CSacl` strukturu, do kterého chcete uložit kopii SACL popisovače zabezpečení. Pokud systém ACL existuje, metoda nastaví *pSacl* adresu popisovače zabezpečení systému seznamu ACL. Pokud systém ACL neexistuje, je uložená žádná hodnota.
 
-*pbPresent*  
+*pbPresent*<br/>
 Ukazatel na metodu příznak nastaví udávajících přítomnost systému seznamu ACL v Zadaný popisovač zabezpečení. Obsahuje-li popisovače zabezpečení systému seznamu ACL, tento parametr je nastaven na hodnotu true. Popisovač zabezpečení neobsahuje systém seznamu ACL,-li tento parametr je nastaven na hodnotu false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Ukazatel na příznak nastavena na hodnotu příznaku SE_SACL_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury, pokud existuje systém seznamu ACL pro popisovač zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -529,13 +529,13 @@ Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, kt
 Operátor přiřazení.
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `SECURITY_DESCRIPTOR` Struktury nebo `CSecurityDesc` objekt přiřadit `CSecurityDesc` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -546,7 +546,7 @@ Vrátí aktualizovaný `CSecurityDesc` objektu.
 
 Přetypování na ukazatel na hodnotu `SECURITY_DESCRIPTOR` struktury.
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>Parametry
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 SECURITY_DESCRIPTOR_CONTROL maska, která označuje nastavované řídicí bity. Seznam příznaků, které je možné nastavit, najdete v části [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 Masku SECURITY_DESCRIPTOR_CONTROL, která určuje nové hodnoty řídicích bitů určených maskou *ControlBitsOfInterest* masky. Tento parametr může být kombinací příznaků uvedených pro *ControlBitsOfInterest* parametru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*Seznam DACL*  
+*Seznam DACL*<br/>
 Odkaz `CDacl` určující seznam DACL pro popisovač zabezpečení. Tento parametr nesmí mít hodnotu NULL. Nastavení DACL hodnoty NULL v popisovači zabezpečení, by měl použít první formulář metody s *bPresent* nastavena na hodnotu false.
 
-*bPresent*  
+*bPresent*<br/>
 Určuje příznak, který udává přítomnost DACL v popisovači zabezpečení. Pokud tento parametr hodnotu true, metoda nastaví příznak SE_DACL_PRESENT `SECURITY_DESCRIPTOR_CONTROL` struktury a používá hodnoty v *Dacl* a *bDefaulted* parametry. Pokud je false, metoda vymaže příznak SE_DACL_PRESENT a *bDefaulted* se ignoruje.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Určuje příznak, který udává zdrojový DACL. Pokud tento příznak není true, načtou seznam DACL některé výchozího mechanismu. Pokud má hodnotu false, seznam DACL byl explicitně zadán uživatel. Metoda SE_DACL_DEFAULTED příznak uloží tuto hodnotu `SECURITY_DESCRIPTOR_CONTROL` struktury. Pokud není tento parametr zadán, je příznak SE_DACL_DEFAULTED zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor SID*  
+*identifikátor SID*<br/>
 Odkaz [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekt popisovače zabezpečení nové primární skupiny. Tento parametr nesmí mít hodnotu NULL. Popisovač zabezpečení může být označený jako bez nutnosti DACL nebo SACL, ale musí mít skupinu a vlastníka, i ty jsou NULL SID (která je integrovaná SID zvláštní význam).
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Určuje, zda informace o primární skupině odvozený z výchozího mechanismu. Pokud je tato hodnota true, je výchozí informace a metodu uloží tuto hodnotu jako příznak SE_GROUP_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury. Pokud tento parametr je nula, je příznak SE_GROUP_DEFAULTED zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor SID*  
+*identifikátor SID*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekt popisovače zabezpečení nového primárního vlastníka. Tento parametr nesmí mít hodnotu NULL.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Označuje, zda informace o vlastníkovi je odvozena z výchozího mechanismu. Pokud je tato hodnota true, je výchozí informace. Metoda uloží tuto hodnotu jako příznak SE_OWNER_DEFAULTED v `SECURITY_DESCRIPTOR_CONTROL` struktury. Pokud tento parametr je nula, je příznak SE_OWNER_DEFAULTED zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*SACL*  
+*SACL*<br/>
 Ukazatel `CSacl` určující SACL popisovače zabezpečení. Tento parametr nesmí mít hodnotu NULL a musí být objekt csacl –. Na rozdíl od DACL není žádný rozdíl mezi hodnotou NULL nebo prázdný seznam SACL, jak objekty SACL nezadávejte přístupová práva, jenom auditování informace.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Určuje příznak, který udává zdrojový SACL. Pokud tento příznak není true, načtou SACL některé výchozího mechanismu. Pokud má hodnotu false, SACL byl explicitně zadán uživatel. Metoda SE_SACL_DEFAULTED příznak uloží tuto hodnotu `SECURITY_DESCRIPTOR_CONTROL` struktury. Pokud není tento parametr zadán, je příznak SE_SACL_DEFAULTED zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*  
+*pstr*<br/>
 Ukazatel na řetězec zakončený hodnotou null, která se zobrazí [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*si*  
+*si*<br/>
 Určuje kombinaci SECURITY_INFORMATION bitové příznaky označující součásti popisovače zabezpečení, které chcete zahrnout do výstupního řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -713,7 +713,7 @@ Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

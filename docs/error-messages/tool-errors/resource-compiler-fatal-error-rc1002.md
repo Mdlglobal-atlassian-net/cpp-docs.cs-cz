@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1002 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1002 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114524"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Závažná chyba kompilátoru prostředků RC1002
-Nedostatek místa na haldy  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Zvětšete místo odkládacího souboru systému Windows. Další informace o zvětšení místa odkládacího souboru najdete v části virtuální paměti v nápovědě k systému Windows.  
-  
-2.  Aktuální soubor rozdělit do menších souborů a jejich kompilace samostatně.  
-  
-3.  Odeberte ostatní programy a ovladače v systému.
+
+nedostatek prostoru v haldě
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Zvětšete místo odkládacího souboru Windows. Další informace o zvětšení místa odkládacího souboru naleznete v tématu virtuální paměti v nápovědě k Windows.
+
+1. Aktuální soubor rozdělit do menších souborů a zkompilovat je samostatně.
+
+1. Odeberte ostatní programy nebo ovladače, které jsou spuštěny v systému.

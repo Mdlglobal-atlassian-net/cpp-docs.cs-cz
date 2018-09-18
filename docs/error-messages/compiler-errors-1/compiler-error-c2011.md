@@ -1,5 +1,5 @@
 ---
-title: C2011 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2011 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 898a724f022a81f590ec1f8165de9752de6c1d0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09946a6a3e974293e65a582c735e3de42503f0c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115033"
 ---
-# <a name="compiler-error-c2011"></a>C2011 chyby kompilátoru
-"identifikátor": "typ" Zadejte předefinování  
-  
- Identifikátor již byl definován jako `type`. Zkontrolujte, zda předefinování identifikátoru.  
-  
- Může také k C2011, pokud se importovat soubor záhlaví, nebo knihovna více než jednou do stejného souboru. Aby se zabránilo více zahrnutí z typů front definovaných v záhlaví souboru, použijte zahrnují chrání nebo `#pragma` [po](../../preprocessor/once.md) direktivy v záhlaví souboru.  
-  
- Pokud potřebujete najít počáteční deklaraci Předefinovaná typu, můžete použít [/P](../../build/reference/p-preprocess-to-a-file.md) kompilátoru příznak ke generování předběžně zpracované výstup předaný kompilátoru. Text vyhledávací nástroje vám pomůže najít instancí identifikátor Předefinovaná ve výstupním souboru.  
-  
- Následující ukázka generuje C2011 a ukazuje jeden ze způsobů a opravte ji:  
-  
-```  
-// C2011.cpp  
-// compile with: /c  
-struct S;  
-union S;   // C2011  
-union S2;   // OK  
+# <a name="compiler-error-c2011"></a>Chyba kompilátoru C2011
+
+'identifier': "typ" předefinování typu
+
+Identifikátor již byl definován jako `type`. Zkontrolujte redefinice identifikátor.
+
+Může také získáte C2011 Pokud importujete soubor hlaviček nebo do stejného souboru knihovny typů více než jednou. Zabránit vícenásobnému zahrnutí typy definované v souboru hlaviček, zahrnují použití chrání nebo `#pragma` [po](../../preprocessor/once.md) direktivy v souboru hlaviček.
+
+Pokud je potřeba najít počáteční deklaraci typu Předefinovaná, můžete použít [/P](../../build/reference/p-preprocess-to-a-file.md) předán kompilátoru příznak pro generování předzpracovaného výstupu kompilátoru. Textové vyhledávací nástroje můžete použít k vyhledání instance identifikátoru Předefinovaná do výstupního souboru.
+
+Následující ukázka generuje C2011 a ukazuje jeden způsob, jak ho opravit:
+
+```
+// C2011.cpp
+// compile with: /c
+struct S;
+union S;   // C2011
+union S2;   // OK
 ```

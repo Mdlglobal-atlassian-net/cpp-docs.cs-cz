@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3952ff05e7b147418d4282b31e8a35572c9b0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ee73a91c14d567754f336b1d71ad4d157781140
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114056"
 ---
 # <a name="atl-copy-policy-classes"></a>Třídy zásady kopírování ATL
 
@@ -90,6 +90,6 @@ VCUE_Copy.h také obsahuje následující specializace této třídy: `GenericCo
 
 ## <a name="see-also"></a>Viz také
 
-[Implementace kolekce založené na knihovně Standard jazyka C++](../atl/implementing-an-stl-based-collection.md)   
+[Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
 [Ukázka ATLCollections](../visual-cpp-samples.md)
 

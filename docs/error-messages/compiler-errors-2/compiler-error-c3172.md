@@ -1,5 +1,5 @@
 ---
-title: C3172 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3172 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3feadd9c8fc39edb707e8dbd3a80ed90d078d72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25c3b1fd9132c6b170fdf74b1619a35d83959f90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117633"
 ---
-# <a name="compiler-error-c3172"></a>C3172 chyby kompilátoru
-'module_name': v projektu nelze zadat jiný idl_module – atributy  
-  
- [idl_module –](../../windows/idl-module.md) atributy se stejným názvem ale odlišným `dllname` nebo `version` parametry nebyly nalezeny v dva soubory v kompilaci. Pouze jeden jedinečný `idl_module` jeden kompilace lze zadat atribut.  
-  
- Identické `idl_module` atributy lze zadat v více než jednoho souboru se zdrojovým kódem.  
-  
- Například pokud následující `idl_module` nebyly nalezeny atributy:  
-  
-```  
-// C3172.cpp  
-[module(name="MyMod")];  
-[ idl_module(name="x", dllname="file.dll", version="1.1") ];  
-int main() {}  
-```  
-  
- A pak  
-  
-```  
-// C3172b.cpp  
-// compile with: C3172.cpp  
-// C3172 expected  
-[ idl_module(name="x", dllname="file.dll", version="1.0") ];  
-```  
-  
- Kompilátor by vygeneroval C3172 (Všimněte si hodnot jinou verzi).
+# <a name="compiler-error-c3172"></a>Chyba kompilátoru C3172
+
+'module_name': nelze zadat jiné atributy idl_module v projektu
+
+[možnost idl_module](../../windows/idl-module.md) atributy se stejným názvem ale jiným `dllname` nebo `version` parametry byly nalezeny ve dvou souborů v kompilaci. Pouze jeden jedinečný `idl_module` může být určen atribut za kompilace.
+
+Identické `idl_module` atributy lze zadat ve více než jeden soubor zdrojového kódu.
+
+Například pokud následující `idl_module` byly nalezeny atributy:
+
+```
+// C3172.cpp
+[module(name="MyMod")];
+[ idl_module(name="x", dllname="file.dll", version="1.1") ];
+int main() {}
+```
+
+a pak,
+
+```
+// C3172b.cpp
+// compile with: C3172.cpp
+// C3172 expected
+[ idl_module(name="x", dllname="file.dll", version="1.0") ];
+```
+
+kompilátor vygeneruje C3172 (Všimněte si hodnot jinou verzi).

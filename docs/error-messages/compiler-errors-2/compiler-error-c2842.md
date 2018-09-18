@@ -1,5 +1,5 @@
 ---
-title: C2842 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2842 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118814"
 ---
-# <a name="compiler-error-c2842"></a>C2842 chyby kompilátoru
-'class': spravované WinRT typu nesmí definovat vlastní 'new – operátor' nebo 'operátor odstranit.  
-  
- Můžete definovat vlastní ** new – operátor nebo **delete – operátor** ke správě přidělení paměti na nativní haldě. Referenční třídy však nelze definovat tyto operátory, protože jsou pouze přiděleny na spravovaná halda.  
+# <a name="compiler-error-c2842"></a>Chyba kompilátoru C2842
 
-  
- Další informace najdete v tématu [uživatelem definované operátory (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2842.  
-  
-```  
-// C2842.cpp  
-// compile with: /clr /c  
-ref class G {  
-   void* operator new( size_t nSize );   // C2842  
-};  
-```  
+'class': spravovaný typ WinRT nesmí definovat vlastní 'operator new' nebo 'operátor delete.
+
+Můžete definovat vlastní ** operátor new nebo **operátor delete** Správa přidělování paměti na nativní haldě. Ale referenční třídy nelze definovat tyto operátory, protože jsou přiděleny pouze na spravované haldě.
+
+
+Další informace najdete v tématu [uživatelem definované operátory (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2842.
+
+```
+// C2842.cpp
+// compile with: /clr /c
+ref class G {
+   void* operator new( size_t nSize );   // C2842
+};
+```

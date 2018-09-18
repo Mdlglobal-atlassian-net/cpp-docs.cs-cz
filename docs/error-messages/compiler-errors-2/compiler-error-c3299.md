@@ -1,5 +1,5 @@
 ---
-title: C3299 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3299 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa0b8d3ee1a3d33a5d750cc559da63e036ff16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ca5a57ca1cdfe442386872d738a01cf4235685c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117826"
 ---
-# <a name="compiler-error-c3299"></a>C3299 chyby kompilátoru
-'member_function': nelze zadat omezení, se dědí z základní metody  
-  
- Při přepisování obecné členské funkce, nelze zadat omezení klauzule (s opakováním, omezení znamená, že nejsou zděděné omezení).  
-  
- Zdědí klauzulích omezení u obecné funkce, které jsou přepsání.  
-  
- Další informace najdete v tématu [omezení obecných parametrů typů (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3299.  
-  
-```  
-// C3299.cpp  
-// compile with: /clr /c  
-public ref struct R {  
-   generic<class T>   
-   where T : R  
-   virtual void f();  
-};  
-  
-public ref struct S : R {  
-   generic<class T>   
-   where T : R   // C3299  
-   virtual void f() override;  
-};  
+# <a name="compiler-error-c3299"></a>Chyba kompilátoru C3299
+
+'member_function': nelze zadat omezení, dědí se ze základní metody
+
+Při přepisování obecné členskou funkci, nelze zadat klauzule omezení (s opakováním, omezení znamená, že nejsou děděna omezení).
+
+Klauzule omezení u obecných funkce, které jsou přepsání se budou dědit.
+
+Další informace najdete v tématu [omezení parametrů obecných typů (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3299.
+
+```
+// C3299.cpp
+// compile with: /clr /c
+public ref struct R {
+   generic<class T>
+   where T : R
+   virtual void f();
+};
+
+public ref struct S : R {
+   generic<class T>
+   where T : R   // C3299
+   virtual void f() override;
+};
 ```

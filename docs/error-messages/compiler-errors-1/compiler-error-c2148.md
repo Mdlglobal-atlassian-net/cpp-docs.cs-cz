@@ -1,5 +1,5 @@
 ---
-title: C2148 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2148 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64f11f94c5a0c5d223d97b6b597f89b89aa160b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8e76228ff585f47a2cbe210ac3eb96d5d281a93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114017"
 ---
-# <a name="compiler-error-c2148"></a>C2148 chyby kompilátoru
-Celková velikost pole nesmí být delší než 0x7fffffff bajtů  
-  
- Pole překračuje limit. Zmenšete velikost pole.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2148:  
-  
-```  
-// C2148.cpp  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( ) {  
-   char MyArray[0x7ffffffff];   // C2148  
-   char * MyArray2 = (char *)malloc(0x7fffffff);  
-  
-   if (MyArray2)  
-      printf_s("It worked!");  
-   else  
-      printf_s("It didn't work.");  
-}  
+# <a name="compiler-error-c2148"></a>Chyba kompilátoru C2148
+
+Celková velikost pole nesmí být delší než 0x7fffffff bajtů
+
+Pole překračuje limit. Snižte velikost pole.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2148:
+
+```
+// C2148.cpp
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( ) {
+   char MyArray[0x7ffffffff];   // C2148
+   char * MyArray2 = (char *)malloc(0x7fffffff);
+
+   if (MyArray2)
+      printf_s("It worked!");
+   else
+      printf_s("It didn't work.");
+}
 ```

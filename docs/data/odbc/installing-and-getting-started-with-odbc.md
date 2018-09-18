@@ -1,5 +1,5 @@
 ---
-title: Instalace a úvod do rozhraní ODBC | Microsoft Docs
+title: Instalace a úvod do rozhraní ODBC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3cf6731b8fb047bd7f9b3b0d44facd7602006d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d832365a7b17dc5e35a4f01ed3fa031c10e9a6ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113784"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalace a úvod do rozhraní ODBC
-V následujících tématech můžete nainstalovat součásti, které je potřeba začít pracovat s připojením ODBC (Open Database).  
+
+Následující témata vám pomůžou nainstalovat součásti, které potřebujete, abyste mohli začít pracovat s připojením ODBC (Open Database).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [Instalaci ovladače ODBC, které se dodávají spolu s Visual C++](../../data/odbc/odbc-administrator.md)  
+- [Instalace ovladačů rozhraní ODBC, které se dodávají s jazykem Visual C++](../../data/odbc/odbc-administrator.md)  
   
--   [Redistribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/odbc-basics.md)  
+- [Redistribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/odbc-basics.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: C2825 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2825 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5352901d50e011229ed9aa4715923881c26a8fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bd0e9f8f2f5444b8835abc9f6802919f0e6c941
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117579"
 ---
-# <a name="compiler-error-c2825"></a>C2825 chyby kompilátoru
-var: musí být třída nebo obor názvů při následuje '::'  
-  
- Neúspěšný pokus došlo k vytvoření kvalifikovaný název.  
-  
- Ujistěte se, že váš kód neobsahuje deklaraci funkce, kde název funkce začíná::.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2825:  
-  
-```  
-// C2825.cpp  
-typedef int i;  
-int main() {  
-   int* p = new int;  
-   p->i::i();   // C2825  
-   // try the following line instead  
-   // p->i::~i();  
-}  
+# <a name="compiler-error-c2825"></a>Chyba kompilátoru C2825
+
+var: musí být třída nebo obor názvů v případě, že následuje '::'
+
+K vytvoření kvalifikovaného názvu byl proveden neúspěšný pokus o.
+
+Například, ujistěte se, že váš kód neobsahuje deklaraci funkce, kde začíná název funkce::.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2825:
+
+```
+// C2825.cpp
+typedef int i;
+int main() {
+   int* p = new int;
+   p->i::i();   // C2825
+   // try the following line instead
+   // p->i::~i();
+}
 ```

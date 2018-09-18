@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1055 | Microsoft Docs
+title: Závažná chyba C1055 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f0dc0e8dca08e8b0de47b73516d3fdfa21435b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6960d8168bd818e4d1baa30e5e54940e6e4dc2e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115447"
 ---
 # <a name="fatal-error-c1055"></a>Závažná chyba C1055
-omezení kompilátoru: mimo klíče  
-  
- Zdrojový soubor obsahuje příliš mnoho symboly. Kompilátor nemá dostatek klíče hash pro tabulky symbolů.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Zdrojový soubor rozdělte do menších souborů.  
-  
-2.  Vyloučení nepotřebných hlavičkových souborů.  
-  
-3.  Znovu použít dočasné a globální proměnné místo vytvoření nové.
+
+limit kompilátoru: došly klíče
+
+Zdrojový soubor obsahuje příliš mnoho symbolů. Kompilátor nemá dostatek klíčů hash pro symbol tabulku.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Zdrojový soubor rozdělte na menší soubory.
+
+1. Odstranění nepotřebných hlavičkové soubory.
+
+1. Znovu použít dočasný a globální proměnné místo vytvoření nové značky.

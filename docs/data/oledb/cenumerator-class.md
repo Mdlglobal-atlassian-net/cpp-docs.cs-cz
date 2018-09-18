@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117475"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
+
 Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h
+
+**Záhlaví:** také atldbcli.h
   
 ## <a name="members"></a>Členové  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[Otevřít](#open)|Otevře se enumerátor.|  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete načíst `ISourcesRowset` data nepřímo z této třídy.  
+
+Můžete načíst `ISourcesRowset` data nepřímo z této třídy.  
 
 ## <a name="find"></a> CEnumerator::Find
+
 Vyhledá zadaný název mezi dostupných zprostředkovatelů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *szSearchName*  
- [in] Název, který se má hledat.  
+
+*szSearchName*<br/>
+[in] Název, který se má hledat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE** Pokud název nebyl nalezen. V opačném případě **false**.  
+
+**Hodnota TRUE** Pokud název nebyl nalezen. V opačném případě **false**.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní.  
+
+Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
+
 Analyzuje zobrazovaný název na extrahuje komponentu řetězec, který lze převést na moniker.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *ppMoniker*  
- [out] Moniker služby byl analyzován ze zobrazovaného jména ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) aktuálního řádku.  
+
+*ppMoniker*<br/>
+[out] Moniker služby byl analyzován ze zobrazovaného jména ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) aktuálního řádku.  
   
- *lpszDisplayName*  
- [in] Zobrazovaný název analyzovat.  
+*lpszDisplayName*<br/>
+[in] Zobrazovaný název analyzovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
+
 Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pMoniker*  
- [in] Ukazatel na moniker enumerátor.  
+
+*pMoniker*<br/>
+[in] Ukazatel na moniker enumerátor.  
   
- *pClsid*  
- [in] Ukazatel `CLSID` čítače.  
+*pClsid*<br/>
+[in] Ukazatel `CLSID` čítače.  
   
- *Enumerátor*  
- [in] Odkaz na enumerátor.  
+*Enumerátor*<br/>
+[in] Odkaz na enumerátor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ## <a name="see-also"></a>Viz také  
- [DBViewer](../../visual-cpp-samples.md)   
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

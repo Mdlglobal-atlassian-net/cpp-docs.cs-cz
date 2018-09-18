@@ -30,14 +30,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118132"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl – třída
+
 Provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -49,11 +50,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída odvozená z `IRowsetCreator`.  
+
+*T*<br/>
+Třída odvozená z `IRowsetCreator`.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |[SetSite](#setsite)|Nastaví lokalitu, která obsahuje objektu sady řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.  
+
+Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.  
 
 ## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
+
 Nastaví lokalitu, která obsahuje objektu sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -76,15 +81,19 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pCreator*  
- [in] Ukazatel `IUnknown` ukazatel rozhraní objektu sady řádků Správa lokality.  
+
+*pCreator*<br/>
+[in] Ukazatel `IUnknown` ukazatel rozhraní objektu sady řádků Správa lokality.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Kromě toho `IRowsetCreatorImpl::SetSite` umožňuje OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` vlastnosti. 
+
+Kromě toho `IRowsetCreatorImpl::SetSite` umožňuje OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` vlastnosti. 
 
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

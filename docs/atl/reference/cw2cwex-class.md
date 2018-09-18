@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4314e4f2d31e499c01049d1fbec579f16c2849
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b45945a0f91570d78d8c1e365fd70240c2385b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116799"
 ---
 # <a name="cw2cwex-class"></a>Cw2cwex – třída
 
@@ -36,13 +36,13 @@ Tato třída se používá makra převodu řetězců CW2CTEX CT2CWEX a definice 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2CWEX
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.
 
 ## <a name="members"></a>Členové
@@ -97,16 +97,16 @@ Zobrazit [knihovny ATL a MFC – makra převodu řetězců](string-conversion-ma
 Konstruktor
 
 ```
-CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2CWEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Textový řetězec, který má být převeden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Znakovou stránku. Nepoužívá se v této třídě.
 
 ### <a name="remarks"></a>Poznámky
@@ -137,7 +137,7 @@ LPCWSTR m_psz;
 
 Operátor převodu.
 
-```  
+```
 operator LPCWSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Vrátí textový řetězec psaní LPCWSTR.
 
 ## <a name="see-also"></a>Viz také
 
-[Ca2aex – třída](../../atl/reference/ca2aex-class.md)   
-[Ca2caex – třída](../../atl/reference/ca2caex-class.md)   
-[Ca2wex – třída](../../atl/reference/ca2wex-class.md)   
-[Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
-[Cw2wex – třída](../../atl/reference/cw2wex-class.md)   
+[CA2AEX – třída](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX – třída](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX – třída](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX – třída](../../atl/reference/cw2aex-class.md)<br/>
+[CW2WEX – třída](../../atl/reference/cw2wex-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

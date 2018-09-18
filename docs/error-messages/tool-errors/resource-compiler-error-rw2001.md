@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RW2001 | Microsoft Docs
+title: Chyba kompilátoru prostředků RW2001 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077260b615d0a5adf32278d8857df5b8f74b7e5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f401ce7c9a96cfeecf195b8872a704b8b1291939
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114979"
 ---
 # <a name="resource-compiler-error-rw2001"></a>Chyba kompilátoru prostředků RW2001
-Neplatný direktivě v souboru předběžně zpracované RC  
-  
- RC soubor obsahuje **#pragma** – direktiva.  
-  
- Použití **#ifndef** direktivy preprocesoru s **RC_INVOKED** konstantní, že kompilátor prostředků definuje, pokud ho zpracuje vloženého souboru. Místo **#pragma** direktivy uvnitř bloku kódu, který není při zpracování **RC_INVOKED** je definována konstanta. Kód v bloku je zpracovat pouze kompilátor C/C++ a ne kompilátor prostředků. Následující vzorový kód ukazuje tento postup:  
-  
-```  
-#ifndef RC_INVOKED  
-#pragma pack(2)  // C/C++ only, ignored by Resource Compiler  
-#endif  
-```  
-  
- **#Pragma** direktivy preprocesoru nemá žádný význam. RC soubor. **#Include** direktivy preprocesoru se často v používá. RC soubor zahrnout soubor hlaviček (soubor projektu na základě vlastní hlavičky nebo standardní hlavičku souborů dodaných společností Microsoft s jedním z jeho produktů). Některé z těchto zahrnout soubory obsahují **#pragma** – direktiva. Protože soubor záhlaví může obsahovat jeden nebo více další hlavičkové soubory, soubor, který obsahuje je problematický **#pragma** – direktiva nemusí být hned zjevné.  
-  
- **#Ifndef RC_INVOKED** technika můžete řídit včetně soubory hlaviček v projektu na základě hlavičkových souborů.
+
+Neplatná direktiva v Předzpracovaný soubor RC
+
+Soubor RC obsahuje **#pragma** směrnice.
+
+Použití **#ifndef** direktivy preprocesoru s **RC_INVOKED** konstantní, že kompilátor prostředků definuje při zpracování vloženého souboru. Místo **#pragma** direktivy uvnitř bloku kódu, který není zpracována, když **RC_INVOKED** – konstanta je definována. Kód v bloku, jsou zpracovávána pouze kompilátor C/C++ a ne kompilátor prostředků. Následující ukázkový kód demonstruje tento postup:
+
+```
+#ifndef RC_INVOKED
+#pragma pack(2)  // C/C++ only, ignored by Resource Compiler
+#endif
+```
+
+**#Pragma** direktivy preprocesoru nemá žádný význam. Soubor RC. **#Include** direktivy preprocesoru se používá v. Soubor RC zahrnout soubor hlaviček (soubor projektu na základě vlastní hlavičky nebo standardní hlavičku souboru poskytovaných microsoftem s některou z jejích produktů). Některé z nich zahrnují soubory obsahují **#pragma** směrnice. Protože soubor hlaviček může zahrnovat jeden nebo více další hlavičkové soubory, soubor, který obsahuje je problematický **#pragma** – direktiva nemusí být hned zjevné.
+
+**#Ifndef RC_INVOKED** včetně hlavičkové soubory v souborech hlaviček na základě projektu můžete řídit technika.

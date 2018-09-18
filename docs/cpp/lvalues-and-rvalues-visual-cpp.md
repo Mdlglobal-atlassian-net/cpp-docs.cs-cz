@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114498"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
 
 Každý výraz jazyka C++ má typ, patří *kategorií hodnot*. Hodnota kategorie jsou základem pro pravidla, která řídí kompilátory při vytváření, kopírování a přesouvání dočasné objekty při vyhodnocení výrazu.
 
- Standardu C ++ 17 definuje kategorie hodnotu výrazu takto:
+Standardu C ++ 17 definuje kategorie hodnotu výrazu takto:
 
 - A *glvalue* je výraz, jehož vyhodnocení určuje identitu objektu, bitového pole nebo funkce.
 - A *hodnota, která není* je výraz, jehož vyhodnocení inicializuje objekt nebo bitové pole nebo vypočítá hodnotu operand operátoru, podle určeného kontextu, ve kterém se zobrazí.
@@ -36,40 +36,40 @@ Každý výraz jazyka C++ má typ, patří *kategorií hodnot*. Hodnota kategori
 
 Následující diagram znázorňuje vztahy mezi kategorií:
 
- ![Kategorie hodnotu výrazů C++](media/value_categories.png "kategorie hodnotu výrazu jazyka C++")
+![Kategorie hodnotu výrazů C++](media/value_categories.png "kategorie hodnotu výrazu jazyka C++")
 
- L-hodnota má adresu s přístupem k aplikaci. Výrazy l-hodnoty. Příklady názvy proměnných, včetně **const** proměnné, prvky pole, funkce volání, která vrátí odkaz na lvalue, bitová pole, sjednocení a členy třídy.
+L-hodnota má adresu s přístupem k aplikaci. Výrazy l-hodnoty. Příklady názvy proměnných, včetně **const** proměnné, prvky pole, funkce volání, která vrátí odkaz na lvalue, bitová pole, sjednocení a členy třídy.
 
- Hodnota, která není výraz nemá adresu, který je přístupný pro váš program. Příklady výrazů hodnota, která není jsou literály, volání funkce, které vracejí nereferenčního typu a dočasné objekty, které jsou vytvořeny během evalution výraz ale přístupný pouze pomocí kompilátoru.
+Hodnota, která není výraz nemá adresu, který je přístupný pro váš program. Příklady výrazů hodnota, která není jsou literály, volání funkce, které vracejí nereferenčního typu a dočasné objekty, které jsou vytvořeny během evalution výraz ale přístupný pouze pomocí kompilátoru.
 
- Výraz hodnoty xvalue má adresu, která už nebude přístupný pro váš program však lze použít k inicializaci odkaz rvalue, který poskytuje přístup k výraz. Příklady zahrnují volání funkcí, které vrátí odkaz rvalue a dolní index pole, člen a ukazatel na člen výrazy kde pole nebo objekt je odkaz rvalue.
+Výraz hodnoty xvalue má adresu, která už nebude přístupný pro váš program však lze použít k inicializaci odkaz rvalue, který poskytuje přístup k výraz. Příklady zahrnují volání funkcí, které vrátí odkaz rvalue a dolní index pole, člen a ukazatel na člen výrazy kde pole nebo objekt je odkaz rvalue.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje několik správných a nesprávných použití l-hodnot a r-hodnot:
+Následující příklad ukazuje několik správných a nesprávných použití l-hodnot a r-hodnot:
 
 ```cpp
 // lvalues_and_rvalues2.cpp
 int main()
 {
- int i, j, *p;
+int i, j, *p;
 
- // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
- i = 7;
+// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+i = 7;
 
- // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
- 7 = i; // C2106
- j * 4 = 7; // C2106
+// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+7 = i; // C2106
+j * 4 = 7; // C2106
 
- // Correct usage: the dereferenced pointer is an lvalue.
- *p = i;
+// Correct usage: the dereferenced pointer is an lvalue.
+*p = i;
 
- const int ci = 7;
- // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
- ci = 9; // C3892
+const int ci = 7;
+// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+ci = 9; // C3892
 
- // Correct usage: the conditional operator returns an lvalue.
- ((i < 3) ? i : j) = 7;
+// Correct usage: the conditional operator returns an lvalue.
+((i < 3) ? i : j) = 7;
 }
 ```
 
@@ -79,6 +79,7 @@ int main()
 Podmínky *l-hodnoty* a *rvalue* jsou často používány při odkazu na odkazy objektu. Další informace o referencích naleznete v tématu [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) a [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Viz také:
- [Základní koncepty](../cpp/basic-concepts-cpp.md)  
- [Deklarátor odkazu l-hodnoty: &](../cpp/lvalue-reference-declarator-amp.md)  
- [Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)
+
+[Základní koncepty](../cpp/basic-concepts-cpp.md)<br/>
+[Deklarátor odkazu l-hodnoty: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
+[Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

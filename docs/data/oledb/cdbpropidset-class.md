@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466403"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114472"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
+
 Dědí z `DBPROPIDSET` struktury a přidá konstruktor, který inicializuje pole klíče i na [addpropertyid –](../../data/oledb/cdbpropidset-addpropertyid.md) přístup k metodě.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -61,7 +62,8 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ```  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h
+
+**Záhlaví:** také atldbcli.h
   
 ## <a name="members"></a>Členové  
   
@@ -80,9 +82,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operátor =](#op_equal)|Přiřadí obsah jedno ID vlastnosti nastavit na jiný.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktura patří do sady jednu vlastnost.  
+
+Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktura patří do sady jednu vlastnost.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+
 Přidá ID vlastnosti ID sady vlastností.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,10 +96,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *číslo PropId*  
- [in] Nastavte vlastnost ID se má přidat do ID vlastnosti.  
+
+*číslo PropId*<br/>
+[in] Nastavte vlastnost ID se má přidat do ID vlastnosti.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+
 Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -109,13 +115,15 @@ CDBPropIDSet();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identifikátor GUID*  
- [in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.  
+
+*identifikátor GUID*<br/>
+[in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.  
   
- *propidset*  
- [in] Jiné `CDBPropIDSet` objekt pro konstrukci kopie.  
+*propidset*<br/>
+[in] Jiné `CDBPropIDSet` objekt pro konstrukci kopie.  
 
 ## <a name="setguid"></a> CDBPropIDSet::SetGUID
+
 Nastaví pole identifikátoru GUID v `DBPROPIDSET` struktury.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -125,13 +133,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identifikátor GUID*  
- [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
+
+*identifikátor GUID*<br/>
+[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) také. Voláním této funkce, pokud použijete výchozí konstruktor pro tuto třídu.  
+
+Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) také. Voláním této funkce, pokud použijete výchozí konstruktor pro tuto třídu.  
 
 ## <a name="op_equal"></a> CDBPropIDSet::operator =
+
 Přiřadí obsah jedno ID vlastnosti nastavena na jinou sadu vlastnost ID.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -141,5 +152,6 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

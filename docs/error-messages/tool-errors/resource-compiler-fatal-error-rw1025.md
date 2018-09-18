@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RW1025 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RW1025 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba216e63cb0cae92b4541800493a2fb6195553a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bf7bdeed320c004ffb75fa1d25d9b89147b0c13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117397"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Závažná chyba kompilátoru prostředků RW1025
-Nedostatek paměti úplně haldy  
-  
- Zkontrolujte, zda rezidentní software, který může být zabírají příliš mnoho prostoru. Pomocí programu CHKDSK zjistit, kolik paměti máte.  
-  
- Při vytváření souboru velké prostředků, rozdělení na dva soubory skriptu prostředků. Po vytvoření dva soubory .res, použijte příkazový řádek MS-DOS ke spojení je:  
-  
-```  
-copy first.res /b + second.res /b full.res  
+
+Nedostatek paměti úplně haldy
+
+Zkontrolujte rezidentní software, který může být zabíraly příliš velkého prostoru. Použijte CHKDSK program a zjistěte, kolik paměti máte.
+
+Pokud vytváříte velkého souboru prostředků, rozdělte do dvou souborů skriptu prostředků. Po vytvoření dva soubory res, použijte příkazový řádek systému MS-DOS k nim dohromady:
+
+```
+copy first.res /b + second.res /b full.res
 ```

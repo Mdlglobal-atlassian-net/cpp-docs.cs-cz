@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115037"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Upravuje chování [plán](../../../parallel/openmp/reference/schedule.md) klauzule při `schedule(runtime)` je zadán v `for` nebo `parallel for` – direktiva.  
@@ -37,8 +37,8 @@ set OMP_SCHEDULE[=type[,size]]
 *Velikost*<br/>
 (Volitelné) Určuje velikost iterací. `size` Musí být kladné celé číslo. Výchozí hodnota je 1, kromě případů, kdy `type` je statická. Není platná v případě `type` je `runtime`.  
   
- `type`  
- Typ plánování:  
+*Typ*<br/>
+Typ plánování:  
   
 -   `dynamic`  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115473"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.  
@@ -32,11 +32,10 @@ Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vl�
 shared(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- Pokud  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
+*var*<br/>
+Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
   
 ## <a name="remarks"></a>Poznámky  
  Dalším způsobem, jak sdílet proměnné mezi vlákny je [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.  

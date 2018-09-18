@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116721"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>Parametry
 
- *params*  
+*params*<br/>
 Jeden nebo více parametrů, které musí být typu literálu a samotné musí být konstantní výraz.
 
 ## <a name="return-value"></a>Návratová hodnota
 
- Proměnná constexpr nebo funkce musí vracet [typ literálu](trivial-standard-layout-and-pod-types.md#literal_types).
+Proměnná constexpr nebo funkce musí vracet [typ literálu](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>proměnné constexpr
 
- Hlavní rozdíl mezi const a proměnné constexpr je inicializace konstantní proměnné může být odložena až do doby běhu, zatímco proměnné constexpr musí inicializovat v době kompilace.  Všechny proměnné constexpr jsou const.
+Hlavní rozdíl mezi const a proměnné constexpr je inicializace konstantní proměnné může být odložena až do doby běhu, zatímco proměnné constexpr musí inicializovat v době kompilace.  Všechny proměnné constexpr jsou const.
 
 - Proměnné mohou být deklarovány s **constexpr**, pokud má typ literálu a je inicializován. Pokud se inicializace provádí pomocí konstruktoru, konstruktor musí být deklarována jako **constexpr**.
 
@@ -91,7 +91,7 @@ Funkce constexpr platí následující pravidla:
 Následující pravidla platí pro **constexpr** funkce v sadě Visual Studio 2017 a novější:
 
 - Může obsahovat **Pokud** a **přepnout** příkazů a všechny opakování příkazů, včetně **pro**, na základě rozsahu, **při**a **proveďte – zatímco**.
- 
+
 - Může obsahovat místní deklarace proměnných, ale proměnná musí být inicializován, musí být typu literálu a nemůže být statická nebo místního vlákna. Místně deklarované proměnné nemusí být konstantní a může změnit.
 
 - Nestatická členská funkce constexpr není musí být implicitně const.
@@ -115,7 +115,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje **constexpr** proměnné, funkce a uživatelem definovaného typu. Všimněte si, že se v poslední příkaz v main(), **constexpr** členská funkce GetValue() je volání za běhu, protože hodnota nemusí být v době kompilace znám.
+Následující příklad ukazuje **constexpr** proměnné, funkce a uživatelem definovaného typu. Všimněte si, že se v poslední příkaz v main(), **constexpr** členská funkce GetValue() je volání za běhu, protože hodnota nemusí být v době kompilace znám.
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>Viz také:
- [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: C3206 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3206 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,134 +16,135 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b8d8bae310bca939ae7b88fac44728b35a0066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aa7775f0da26846851677aa267b91438ce84dbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117956"
 ---
-# <a name="compiler-error-c3206"></a>C3206 chyby kompilátoru
-'function': Neplatný typ argumentu pro 'param' chybí argument seznam typů na – třída typu 'typename'  
-  
- Funkce šablony je definován jako trvá šablonu typ argumentu. Ale byla předána šablonu argumentu šablony.  
-  
- Následující ukázka generuje C3206:  
-  
-```  
-// C3206.cpp  
-template <class T>  
-void f() {}  
-  
-template <class T>  
-struct S {};  
-  
-void f1() {  
-   f<S>();   // C3206  
-   // try the following line instead  
-   // f<S<int> >();  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3206b.cpp  
-// compile with: /c  
-template <class T>  
-void f() {}  
-  
-template <class T>  
-struct S {};  
-  
-void f1() {  
-   f<S<int> >();  
-}  
-```  
-  
- C3206 může dojít také při použití obecných typů:  
-  
-```  
-// C3206c.cpp  
-// compile with: /clr  
-generic <class GT1>  
-void gf() {}  
-  
-generic <class T>  
-value struct GS {};  
-  
-int main() {  
-   gf<GS>();   // C3206  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3206d.cpp  
-// compile with: /clr  
-generic <class GT1>  
-void gf() {}  
-  
-generic <class T>  
-value struct GS {};  
-  
-int main() {  
-   gf<GS<int> >();  
-}  
-```  
-  
- 
- Šablona třídy není povoleno jako argument typ šablony. Následující ukázka vyvolá C3206:  
-  
-```  
-// C3206e.cpp  
-template <class T>  
-struct S {};  
-  
-template <class T>  
-void func() {   // takes a type  
-   T<int> t;  
-}  
-  
-int main() {  
-   func<S>();   // C3206 S is not a type.  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3206f.cpp  
-template <class T>  
-struct S {};  
-  
-template <class T>  
-void func() {   // takes a type  
-   T t;  
-}  
-  
-int main() {  
-   func<S<int> >();  
-}  
-```  
-  
- Pokud parametr šablony šablonu je nutné, budete muset zalomení funkce v třídu šablony, která přebírá parametr šablony šablony:  
-  
-```  
-// C3206g.cpp  
-template <class T>  
-struct S {};  
-  
-template<template<class> class TT>  
-struct X {  
-   static void func() {  
-      TT<int> t1;  
-      TT<char> t2;  
-   }  
-};  
-  
-int main() {  
-   X<S>::func();  
-}  
+# <a name="compiler-error-c3206"></a>Chyba kompilátoru C3206
+
+'function': Neplatný argument typu pro 'param' chybí seznam argumentů typu na typ třídy 'typename'
+
+Funkce šablon je definován přijímá argument typu šablony. Však byl předán jako argument šablony šablony.
+
+Následující ukázka generuje C3206:
+
+```
+// C3206.cpp
+template <class T>
+void f() {}
+
+template <class T>
+struct S {};
+
+void f1() {
+   f<S>();   // C3206
+   // try the following line instead
+   // f<S<int> >();
+}
+```
+
+Možná řešení:
+
+```
+// C3206b.cpp
+// compile with: /c
+template <class T>
+void f() {}
+
+template <class T>
+struct S {};
+
+void f1() {
+   f<S<int> >();
+}
+```
+
+C3206 může dojít také při použití obecných typů:
+
+```
+// C3206c.cpp
+// compile with: /clr
+generic <class GT1>
+void gf() {}
+
+generic <class T>
+value struct GS {};
+
+int main() {
+   gf<GS>();   // C3206
+}
+```
+
+Možná řešení:
+
+```
+// C3206d.cpp
+// compile with: /clr
+generic <class GT1>
+void gf() {}
+
+generic <class T>
+value struct GS {};
+
+int main() {
+   gf<GS<int> >();
+}
+```
+
+
+Šablona třídy není povolená jako argument typu šablony. Následující příklad vyvolá C3206:
+
+```
+// C3206e.cpp
+template <class T>
+struct S {};
+
+template <class T>
+void func() {   // takes a type
+   T<int> t;
+}
+
+int main() {
+   func<S>();   // C3206 S is not a type.
+}
+```
+
+Možná řešení:
+
+```
+// C3206f.cpp
+template <class T>
+struct S {};
+
+template <class T>
+void func() {   // takes a type
+   T t;
+}
+
+int main() {
+   func<S<int> >();
+}
+```
+
+Pokud parametr template šablony je nezbytné, budete muset obalí funkci do šablony třídy, která přebírá parametr template šablony:
+
+```
+// C3206g.cpp
+template <class T>
+struct S {};
+
+template<template<class> class TT>
+struct X {
+   static void func() {
+      TT<int> t1;
+      TT<char> t2;
+   }
+};
+
+int main() {
+   X<S>::func();
+}
 ```

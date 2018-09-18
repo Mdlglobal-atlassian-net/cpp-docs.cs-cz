@@ -1,5 +1,5 @@
 ---
-title: omp_unset_nest_lock – | Microsoft Docs
+title: omp_unset_nest_lock – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434fb3e4cb07b11f2142f78ee4b243e6945dfd9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115967"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-Uvolní nestable zámek.  
+Uvolní, vnořitelných zámek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,16 @@ void omp_unset_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `lock`  
- Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) který byl inicializován s [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md), vlákno ve vlastnictví a provádění ve funkci.  
+*lock*<br/>
+Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , který byl inicializován s [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md)vlastněné uživatelem vlákna a provádění ve funkci.  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [3.2.4 omp_unset_lock a omp_unset_nest_lock – funkce](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md) příklad použití `omp_unset_nest_lock`.  
+ Zobrazit [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md) pro příklad použití `omp_unset_nest_lock`.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce](../../../parallel/openmp/reference/openmp-functions.md)

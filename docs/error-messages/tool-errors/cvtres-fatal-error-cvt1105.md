@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje CVTRES CVT1105 | Microsoft Docs
+title: Závažná chyba nástroje CVTRES CVT1105 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aad4e504a4a25dd0ed2579ddf8efae4f0f8c624d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80d3b41669e7ce2c66055d791039f4f326e040bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118606"
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>Závažná chyba nástroje CVTRES CVT1105
-Nelze hledat v souboru  
-  
- CVTRES nebylo možné přejít do umístění v souboru.  
-  
- Tato chyba může být způsobeno poškození souboru.
+
+Nelze vyhledat v souboru
+
+CVTRES nelze přejít na umístění v souboru.
+
+Tuto chybu může způsobovat poškození souborů.

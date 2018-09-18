@@ -1,5 +1,5 @@
 ---
-title: Upozornění nástroje NMAKE U4011 | Microsoft Docs
+title: Upozornění nástroje NMAKE U4011 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af9c0f90c507eebe212a9c3cbfb2f2d21cded43d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1038ee86f76789451565ab6799795c851c95a95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118333"
 ---
 # <a name="nmake-warning-u4011"></a>Upozornění nástroje NMAKE U4011
-"target": Ne všechny závislosti, které jsou k dispozici. cíl Nevytvořen  
-  
- Závislé daného cíle složka neexistuje nebo byla zastaralé a příkaz pro aktualizaci závislé vrátil nenulový ukončovací kód. Možnost /K sdělili NMAKE pokračovat ve zpracování, které nejsou součástí sestavení a vydat ukončovací kód 1 až po dokončení NMAKE relace.  
-  
- Toto upozornění je před upozornění [nástroje U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pro každý závislé, který se nepodařilo vytvořit ani aktualizovat.
+
+'target': Ne všechny položky závislé na k dispozici. Cíl se nesestavil
+
+Závislé daného cíle neexistuje nebo byl zastaralý a příkaz pro aktualizaci rolích dependent vrátil nenulový ukončovací kód. Možnost /K informaci NMAKE pokračovat ve zpracovávání nesouvisejících částí sestavení a vydání ukončovací kód 1 až po dokončení NMAKE relace.
+
+Toto upozornění předchází upozornění [nástroje U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pro každé závislé, který se má vytvořit nebo aktualizovat.

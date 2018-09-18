@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116240"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednotná inicializace a delegování konstruktorů
+
 V moderním jazyce C++, můžete použít *složených závorek inicializace* pro každý typ, bez znaménko rovná se. Také vám pomůže Delegující konstruktory zjednodušit kód, když máte víc konstruktorů, které provádějí podobné úkoly.
 
 ## <a name="brace-initialization"></a>Inicializace složenou závorku
+
 Inicializaci složenými můžete použít pro všechny třídy, struktury nebo sjednocení. Pokud má typ výchozí konstruktor, implicitně nebo explicitně deklarován, můžete použít výchozí inicializace složenou závorku (pomocí prázdné závorky). Například následující třídy mohou být inicializovány pomocí výchozí a inicializaci složenými nevýchozí:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>objekt initializer_list konstruktory
+
 [Initializer_list – třída](../standard-library/initializer-list-class.md) reprezentuje seznam objektů zadaného typu, který lze použít v konstruktoru a v jiném kontextu. Objekt initializer_list můžete sestavit s využitím inicializaci složenými:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Delegování konstruktorů
+
 Mnoho třídy mají více konstruktorů, které podobné práce – například ověřit parametry:
 
 ```cpp

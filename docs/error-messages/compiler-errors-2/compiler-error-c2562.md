@@ -1,5 +1,5 @@
 ---
-title: C2562 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2562 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114225"
 ---
-# <a name="compiler-error-c2562"></a>C2562 chyby kompilátoru
-"identifikátor": 'void' funkce návrat hodnoty  
-  
- Funkce je deklarován jako `void` , ale vrací hodnotu.  
-  
- Tato chyba může být způsobeno prototypu nesprávná funkce.  
-  
- Tato chyba může být stanovena, je-li zadat návratový typ v deklaraci funkce.  
-  
- Následující ukázka generuje C2562:  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+# <a name="compiler-error-c2562"></a>Chyba kompilátoru C2562
+
+'identifier': "void" funkce vrací hodnotu
+
+Funkce je deklarována jako `void` , ale vrací hodnotu.
+
+Tuto chybu může způsobovat prototypu nesprávná funkce.
+
+Tato chyba může být stanovena, pokud zadáte návratový typ v deklaraci funkce.
+
+Následující ukázka generuje C2562:
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

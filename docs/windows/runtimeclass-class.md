@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118905"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
 
@@ -69,7 +69,8 @@ Seznam rozhraní objekt implementuje nad rámec `IUnknown`, `IInspectable` nebo 
 
 ## <a name="members"></a>Členové
 
-`RuntimeClassInitialize` Funkce, která inicializuje objekt, pokud `MakeAndInitialize` šablony funkce se používá ke konstrukci objektu. Vrátí hodnotu S_OK, pokud objekt byl úspěšně inicializován nebo kód chyby modelu COM. Pokud inicializace se nezdařila. Kód chyby modelu COM je postoupena jako návratovou hodnotu `MakeAndInitialize`. Všimněte si, že `RuntimeClassInitialize` metoda není volána, pokud `Make` šablony funkce se používá ke konstrukci objektu.
+`RuntimeClassInitialize`<br/>
+Funkce, která inicializuje objekt, pokud `MakeAndInitialize` šablony funkce se používá ke konstrukci objektu. Vrátí hodnotu S_OK, pokud objekt byl úspěšně inicializován nebo kód chyby modelu COM. Pokud inicializace se nezdařila. Kód chyby modelu COM je postoupena jako návratovou hodnotu `MakeAndInitialize`. Všimněte si, že `RuntimeClassInitialize` metoda není volána, pokud `Make` šablony funkce se používá ke konstrukci objektu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 

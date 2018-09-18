@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118450"
 ---
 # <a name="worker-archetype"></a>Archetyp pracovního procesu
 
@@ -68,7 +68,7 @@ Tyto parametry šablony by měl třídy tak, aby odpovídal na tomto archetype:
 
 Volá se, aby zpracování pracovní položky.
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>Parametry
 
-*Požadavek*  
+*Požadavek*<br/>
 Pracovní položky ke zpracování. Pracovní položka je stejného typu jako `RequestType`.
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Vlastní parametr srozumitelné pro třídu pracovního procesu. Také předat `WorkerArchetype::Initialize` a `Terminate`.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Ukazatel [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struktura používaná k vytvoření fronty, na které pracovní položky byly ve frontě.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-Volána k inicializaci objektu pracovního procesu, než jsou předány žádné požadavky `WorkerArchetype::Execute`.  
+Volána k inicializaci objektu pracovního procesu, než jsou předány žádné požadavky `WorkerArchetype::Execute`.
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*pvParam*  
+*pvParam*<br/>
 Vlastní parametr srozumitelné pro třídu pracovního procesu. Také předat `WorkerArchetype::Terminate` a `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -106,8 +106,8 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 Definice typu pro typ pracovní položky, které mohou být zpracovány třídy pracovního procesu.
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -118,17 +118,17 @@ Tento typ musí být použita jako první parametr `WorkerArchetype::Execute` a 
 
 K inicializaci objektu pracovního procesu po všechny požadavky byly předány volané `WorkerArchetype::Execute`).
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*pvParam*  
+*pvParam*<br/>
 Vlastní parametr srozumitelné pro třídu pracovního procesu. Také předat `WorkerArchetype::Initialize` a `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>Viz také
 
-[Koncepty](../../atl/active-template-library-atl-concepts.md)   
+[Koncepty](../../atl/active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)
 

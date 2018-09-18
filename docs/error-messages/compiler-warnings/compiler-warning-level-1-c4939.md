@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4939 | Microsoft Docs
+title: Upozornění (úroveň 1) C4939 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459674bb4e6899563a18943f7ba510a6168d0e28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e13cab2d5277cca0a1962b8ec254aaef10cfc98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118762"
 ---
-# <a name="compiler-warning-level-1-c4939"></a>C4939 kompilátoru upozornění (úroveň 1)
-\#vtordisp – Direktiva pragma – je zastaralá a budou odebrány v budoucí verzi Visual C++  
-  
- [Vtordisp](../../preprocessor/vtordisp.md) – Direktiva pragma budou odebrány v budoucí verzi Visual C++.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4939.  
-  
-```  
-// C4939.cpp  
-// compile with: /c /W1  
-#pragma vtordisp(off)   // C4939  
+# <a name="compiler-warning-level-1-c4939"></a>Kompilátor upozornění (úroveň 1) C4939
+
+\#vtordisp – Direktiva pragma je zastaralá a v příští verzi Visual C++ se odebere
+
+[Vtordisp](../../preprocessor/vtordisp.md) – Direktiva pragma se odebere v budoucí verzi jazyka Visual C++.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4939.
+
+```
+// C4939.cpp
+// compile with: /c /W1
+#pragma vtordisp(off)   // C4939
 ```

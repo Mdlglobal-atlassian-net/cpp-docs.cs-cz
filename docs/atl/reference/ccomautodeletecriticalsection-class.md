@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118437"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Ccomautodeletecriticalsection – třída
 
@@ -54,6 +54,6 @@ Tato třída představuje žádné další metody v její základní třídě. Z
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomsafedeletecriticalsection – třída](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
-[Ccomautocriticalsection – třída](../../atl/reference/ccomcriticalsection-class.md)   
+[CComSafeDeleteCriticalSection – třída](../../atl/reference/ccomsafedeletecriticalsection-class.md)<br/>
+[CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

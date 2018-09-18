@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1141 | Microsoft Docs
+title: Chyba Linkerů LNK1141 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee194889f6b25842be49edf4dbc7ff4edf9ff1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c1046f240a701883058a4eede9670645dd12bcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113627"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Chyba linkerů LNK1141
-Chyba při vytváření sestavení export souboru  
-  
- [ODKAZ](../../build/reference/linker-command-line-syntax.md) Nepodařilo se vytvořit soubor exportuje (.exp).  
-  
- Příčiny této chyby patří problémů systému, jako je třeba nedostatek paměti a syntaxe chyby v možnostech nebo příkazy definice modulu.  
-  
- Tato chyba je před jiné chybě, která poskytuje další informace.  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory .Exp jako vstup linkeru](../../build/reference/dot-exp-files-as-linker-input.md)
+
+během sestavování souboru exportů došlo k chybě
+
+[ODKAZ](../../build/reference/linker-command-line-syntax.md) Nepodařilo se vytvořit soubor exporty (.exp).
+
+Příčiny této chyby patří systému problémy, jako je nedostatek paměti a syntaktických chyb v možnosti nebo příkazy definice modulu.
+
+Tato chyba předchází Další chyba, která poskytuje další informace.
+
+## <a name="see-also"></a>Viz také
+
+[Soubory .Exp jako vstup linkeru](../../build/reference/dot-exp-files-as-linker-input.md)

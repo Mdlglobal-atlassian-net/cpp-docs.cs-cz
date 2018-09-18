@@ -1,5 +1,5 @@
 ---
-title: Tokeny jazyka C | Microsoft Docs
+title: Tokeny jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff5e7dea444cdfe9e8925aeeb56561d42d8600e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a088e089896e76b8195813022ee179b4772533
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118541"
 ---
 # <a name="c-tokens"></a>Tokeny jazyka C
-Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelným kompilátorem. Token je text zdrojového programu, který kompilátor nerozdělí na prvky komponent.  
-  
-## <a name="syntax"></a>Syntaxe  
- *token*:  
- *– Klíčové slovo*  
-  
- *Identifikátor*  
-  
- *Konstantní*  
-  
- *řetězcový literál*  
-  
- *operator*  
-  
- *interpunkci*  
-  
+
+Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelným kompilátorem. Token je text zdrojového programu, který kompilátor nerozdělí na prvky komponent.
+
+## <a name="syntax"></a>Syntaxe
+
+*token*: *– klíčové slovo*
+
+*identifikátor*
+
+*Konstanty*
+
+*řetězcový literál*
+
+*operator*
+
+*interpunkci*
+
 > [!NOTE]
->  V tématu Úvod do[souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) vysvětlení konvence syntaxe ANSI.  
-  
- Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Interpunkční znaky, jako jsou závorky (**[]**), složené závorky (**{}**), kulaté závorky ( **()** ) a čárky (**,**) jsou také tokeny.  
-  
-## <a name="see-also"></a>Viz také  
- [Elementy jazyka C](../c-language/elements-of-c.md)
+>  Naleznete v úvodu do[souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) vysvětlení konvencí syntaxe standardu ANSI.
+
+Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Interpunkční znaménka, např. hranaté závorky (**[] č.**), složené závorky (**{}**), závorek ( **()** ) a čárky (**,**) jsou také tokeny.
+
+## <a name="see-also"></a>Viz také
+
+[Elementy jazyka C](../c-language/elements-of-c.md)

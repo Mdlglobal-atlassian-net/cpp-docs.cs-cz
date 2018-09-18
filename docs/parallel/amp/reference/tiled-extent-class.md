@@ -1,5 +1,5 @@
 ---
-title: tiled_extent – třída | Microsoft Docs
+title: tiled_extent – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114550"
 ---
 # <a name="tiledextent-class"></a>tiled_extent – třída
-A `tiled_extent` objekt `extent` objekt jednu až tři dimenzí, který rozděluje prostor rozsah do jeden, dva nebo trojrozměrné dlaždice.  
+A `tiled_extent` je objekt `extent` objekt dimenze jedné do tří, který rozděluje rozsah prostoru do jedno, dvou nebo třírozměrných dlaždic.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Dim0`  
- Délka nejvýznamnějších dimenze.  
+*_Dim0*<br/>
+Délka nejvýznamnějšího rozměru.  
   
- `_Dim1`  
- Délka další většinu významné dimenze.  
+*_Dim1*<br/>
+Délka druhého nejvýznamnějšího rozměru další úplně.  
   
- `_Dim2`  
- Délka nejméně významný dimenze.  
+*_Dim2*<br/>
+Velikost nejméně významného rozměru.  
   
 ## <a name="members"></a>Členové  
   
@@ -78,31 +78,31 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[get_tile_extent](#get_tile_extent)|Vrátí `extent` objekt, který zachycuje hodnoty `tiled_extent` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
-|[odsazení](#pad)|Vrátí novou `tiled_extent` objekt s rozsahy upraví, až se dělitelná dimenze dlaždice.|  
-|[zkrácení](#truncate)|Vrátí novou `tiled_extent` objekt s rozsahy upraveno dolů, aby dělitelná dimenze dlaždice.|  
+|[get_tile_extent](#get_tile_extent)|Vrátí `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|  
+|[panel](#pad)|Vrátí nový `tiled_extent` objektu s rozsahy upraví, až se rovnoměrně dělitelné podle dimenzí dlaždice.|  
+|[zkrátit](#truncate)|Vrátí nový `tiled_extent` objektu s rozsahy sníženými tak byly rovnoměrně dělitelné podle dimenzí dlaždice.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `tiled_index` objekt s touto.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `tiled_index` do tohoto objektu.|  
 
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[tile_dim0 konstanta](#tile_dim0)|Ukládá délka nejvýznamnějších dimenze.|  
-|[tile_dim1 konstanta](#tile_dim1)|Ukládá délka další většinu významné dimenze.|  
-|[tile_dim2 konstanta](#tile_dim2)|Ukládá délku nejméně významný dimenze.|  
+|[tile_dim0 – konstanta](#tile_dim0)|Ukládá velikost nejvýznamnějšího rozměru.|  
+|[tile_dim1 – konstanta](#tile_dim1)|Ukládá délku druhé nejvýznamnější dimenze další úplně.|  
+|[tile_dim2 – konstanta](#tile_dim2)|Ukládá velikost nejméně významného rozměru.|  
 
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|Získá `extent` objekt, který zachycuje hodnoty `tiled_extent` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
+|[tile_extent](#tile_extent)|Získá `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `extent`  
@@ -130,14 +130,14 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `extent` Nebo `tiled_extent` objekt, který chcete kopírovat.  
+*Ji_né*<br/>
+`extent` Nebo `tiled_extent` objektu, který chcete zkopírovat.  
   
 
   
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent –   
-Vrátí `extent` objekt, který zachycuje hodnoty `tiled_extent` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.  
+Vrátí `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -146,11 +146,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `extent` Objekt, který zachycuje dimenze tohoto `tiled_extent` instance.  
+ `extent` , Který zachycuje rozměry této `tiled_extent` instance.  
   
 
-## <a name="pad"> </a>  odsazení   
-Vrátí novou `tiled_extent` objekt s rozsahy upraví, až se dělitelná dimenze dlaždice.  
+## <a name="pad"> </a>  panel   
+Vrátí nový `tiled_extent` objektu s rozsahy upraví, až se rovnoměrně dělitelné podle dimenzí dlaždice.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -160,8 +160,8 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nové `tiled_extent` objektu podle hodnoty. 
-## <a name="truncate"> </a>  zkrácení   
-Vrátí novou `tiled_extent` objekt s rozsahy upraveno dolů, aby dělitelná dimenze dlaždice.  
+## <a name="truncate"> </a>  zkrátit   
+Vrátí nový `tiled_extent` objektu s rozsahy sníženými tak byly rovnoměrně dělitelné podle dimenzí dlaždice.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -170,10 +170,10 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí novou `tiled_extent` objekt s rozsahy upraveno dolů, aby dělitelná dimenze dlaždice.  
+ Vrátí nový `tiled_extent` objektu s rozsahy sníženými tak byly rovnoměrně dělitelné podle dimenzí dlaždice.  
 
 ## <a name="operator_eq"> </a>  operátor =   
-Zkopíruje obsah zadaného `tiled_index` objekt s touto.  
+Zkopíruje obsah zadaného `tiled_index` do tohoto objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -183,14 +183,14 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `tiled_index` Objekt, který chcete zkopírovat z.  
+*Ji_né*<br/>
+`tiled_index` Objektu, který chcete kopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `tiled_index` instance.  
+ Odkaz na tento `tiled_index` instance.  
 
 ## <a name="tile_dim0"> </a>  tile_dim0   
-Ukládá délka nejvýznamnějších dimenze.  
+Ukládá velikost nejvýznamnějšího rozměru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-Ukládá délka další většinu významné dimenze.  
+Ukládá délku druhé nejvýznamnější dimenze další úplně.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -207,7 +207,7 @@ Ukládá délka další většinu významné dimenze.
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tile_dim2"> </a>  tile_dim2   
-Ukládá délku nejméně významný dimenze.  
+Ukládá velikost nejméně významného rozměru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -215,7 +215,7 @@ Ukládá délku nejméně významný dimenze.
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tile_extent"> </a>  tile_extent –   
-  Získá `extent` objekt, který zachycuje hodnoty `tiled_extent` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.  
+  Získá `extent` , který zachycuje hodnoty `tiled_extent` argumenty šablony `_Dim0`, `_Dim1`, a `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  
   

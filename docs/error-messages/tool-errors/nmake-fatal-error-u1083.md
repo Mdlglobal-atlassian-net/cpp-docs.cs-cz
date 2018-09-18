@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1083 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1083 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7ba60c712181abf0c519fdd072de566157a186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2d162551f0f1eea68fb008ba8b7d1c6d304b6a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116637"
 ---
 # <a name="nmake-fatal-error-u1083"></a>Závažná chyba nástroje NMAKE U1083
-Makro cíl "target" zasahuje do nic  
-  
- Daný cíl je k vyvolání makra, která nebyla definována nebo má hodnotu null. NMAKE nemůže zpracovat cílovou hodnotu null.
+
+cílové makro 'target' se rozbaluje prázdné.
+
+Daný cíl je vyvolání makra, která nebyla definována nebo má hodnotu null. NMAKE nemůže zpracovat cíle hodnotu null.

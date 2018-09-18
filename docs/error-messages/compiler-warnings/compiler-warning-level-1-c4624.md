@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4624 | Microsoft Docs
+title: Upozornění (úroveň 1) C4624 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d11bc5c8b5034fa305a22ba893c62faff18cc38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbc482fe693da366a3ba3ce7e53d5e8bbf23618c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118386"
 ---
-# <a name="compiler-warning-level-1-c4624"></a>C4624 kompilátoru upozornění (úroveň 1)
-odvozené třídy': destruktor byl implicitně definován jako odstranit, protože základní třída destruktor je nedostupný, nebo odstraněné  
-  
- Destruktor nebyla přístupná nebo odstraněné v základní třídě a nebyl proto vygenerované odvozené třídy. Chyba kompilátoru způsobí, že pokusy o vytvoření tohoto typu objektu v zásobníku.  
-  
- Následující ukázka generuje C4624 a ukazuje, jak to opravit:  
-  
-```  
-// C4624.cpp  
-// compile with: /W1 /c  
-class B {  
-// Uncomment the following line to fix.  
-// public:  
-   ~B();  
-};  
-  
-class D : public B {};   // C4624 B's destructor not public  
+# <a name="compiler-warning-level-1-c4624"></a>Kompilátor upozornění (úroveň 1) C4624
+
+'derived class': destruktor byl implicitně definovaný jako odstranit, protože destruktor základní třídy je nedostupné nebo odstraněné
+
+Destruktor nebyla přístupná nebo odstraněné v základní třídě a proto se nevygeneroval pro odvozenou třídu. Jakýkoliv pokus o vytvoření objektu tohoto typu v zásobníku způsobí chybu kompilátoru.
+
+Následující ukázka generuje C4624 a ukazuje, jak ho opravit:
+
+```
+// C4624.cpp
+// compile with: /W1 /c
+class B {
+// Uncomment the following line to fix.
+// public:
+   ~B();
+};
+
+class D : public B {};   // C4624 B's destructor not public
 ```

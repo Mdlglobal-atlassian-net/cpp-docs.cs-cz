@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115993"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- V 32bitové verzi systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen na 32bitový ukazatel. Na 64bitovém systému je ukazatel deklarovaný pomocí **__ptr32** převeden na 64bitový ukazatel.
+V 32bitové verzi systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen na 32bitový ukazatel. Na 64bitovém systému je ukazatel deklarovaný pomocí **__ptr32** převeden na 64bitový ukazatel.
 
 > [!NOTE]
 > Nemůžete použít **__ptr32** nebo **__ptr64** při kompilaci s **/CLR: pure**. V opačném případě bude vygenerována chyba kompilátoru C2472. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
@@ -80,4 +80,5 @@ int main()
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [Základní typy](../cpp/fundamental-types-cpp.md)
+
+[Základní typy](../cpp/fundamental-types-cpp.md)

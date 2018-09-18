@@ -1,5 +1,5 @@
 ---
-title: uninitialized_object – třída | Microsoft Docs
+title: uninitialized_object – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113835"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object – třída
-Výjimka, která se vyvolá, když se používá k neinicializovanému objektu.  
+Výjimka, která je vyvolána při použití neinicializovaného objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,9 +54,9 @@ class uninitialized_object : public runtime_exception;
  **Záhlaví:** amprt.h  
   
  **Namespace:** souběžnosti  
-## <a name="uninitialized_object__ctor"></a> unsupported_feature 
+## <a name="uninitialized_object__ctor"></a> unsupported_feature – 
 
-Vytvoří novou instanci třídy unsupported_feature výjimka.  
+Sestaví novou instanci výjimky unsupported_feature.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -68,8 +68,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popis chyby.  
+*_TEXT*<br/>
+Popis chyby.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `unsupported_feature` Objektu. 

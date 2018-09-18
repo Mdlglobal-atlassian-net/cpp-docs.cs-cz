@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6aa360229857e3c12322cb6579aa0dbbba53d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753237"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116701"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementace kolekce založené na knihovně Standard jazyka C++
 
@@ -111,7 +111,7 @@ Teď můžete otestovat kód s klientem nástroje podle vašeho výběru.
 
 ## <a name="see-also"></a>Viz také
 
-[Kolekce a výčty](../atl/atl-collections-and-enumerators.md)   
-[Ukázka ATLCollections](../visual-cpp-samples.md)   
+[Kolekce a výčty](../atl/atl-collections-and-enumerators.md)<br/>
+[Ukázka ATLCollections](../visual-cpp-samples.md)<br/>
 [Třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md)
 

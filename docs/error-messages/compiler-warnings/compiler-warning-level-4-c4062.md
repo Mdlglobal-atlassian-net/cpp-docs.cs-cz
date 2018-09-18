@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4062 | Microsoft Docs
+title: Upozornění (úroveň 4) C4062 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889fb83fa3ea3de844e4ce8c74f0a7c5d150d54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9632c6b6259d67a8c3ad02f39dc5e61425550e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114849"
 ---
-# <a name="compiler-warning-level-4-c4062"></a>C4062 kompilátoru upozornění (úroveň 4)
-nejsou zpracovávány enumerátor "identifikátor" v přepínači výčtu 'výčtu.  
-  
- Výčet nemá žádné přidruženou obslužnou rutinu v `switch` příkaz a neexistuje žádná **výchozí** popisek.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4062:  
-  
-```  
-// C4062.cpp  
-// compile with: /W4  
-#pragma warning(default : 4062)  
-enum E { a, b, c };  
-void func ( E e ) {  
-   switch(e) {  
-      case a:  
-      case b:  
-      break;   // no default label  
-   }   // C4062, enumerate 'c' not handled  
-}  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-4-c4062"></a>Kompilátor upozornění (úroveň 4) C4062
+
+'identifier' výčtu v přepnutí výčtu 'enumeration' není zpracován.
+
+Výčet nemá žádná přidružená obslužná rutina `switch` příkaz a neexistuje žádná **výchozí** popisek.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4062:
+
+```
+// C4062.cpp
+// compile with: /W4
+#pragma warning(default : 4062)
+enum E { a, b, c };
+void func ( E e ) {
+   switch(e) {
+      case a:
+      case b:
+      break;   // no default label
+   }   // C4062, enumerate 'c' not handled
+}
+
+int main() {
+}
 ```

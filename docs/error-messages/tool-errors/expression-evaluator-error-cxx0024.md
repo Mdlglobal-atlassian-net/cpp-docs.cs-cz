@@ -1,5 +1,5 @@
 ---
-title: CXX0024 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0024 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a07297ddabf269b003a1f14d967d1187fea96d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2816be7bb1d33757d9722d605d461ac6fb34fadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118190"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>Chyba při vyhodnocování výrazu CXX0024
-operace musí l-value  
-  
- Výraz, který nelze vyhodnotit na hodnotu l byl zadán pro operaci, která vyžaduje l hodnota.  
-  
- L – hodnota (nazývané, protože se zobrazí na levé straně příkazu přiřazení) je výraz, který odkazuje na umístění paměti.  
-  
- Například `buffer[count]` je platný l hodnota, protože odkazuje na konkrétní paměti umístění. Logické porovnání `zed != 0` není platná hodnota l, protože se vyhodnotí na hodnotu TRUE nebo FALSE, ne na adresu paměti.  
-  
- Tato chyba je stejný jako CAN0024.
+
+operace potřebuje l-value
+
+Výraz, který není vyhodnocen na l hodnota zadaná pro operaci, která vyžaduje l hodnotou.
+
+L hodnota (tedy volat, protože se zobrazí na levé straně příkazu přiřazení) je výraz, který odkazuje na umístění v paměti.
+
+Například `buffer[count]` je platný l hodnotou, protože odkazuje na umístění konkrétní paměťové. Logické porovnání `zed != 0` není platnou l hodnotou, protože je vyhodnocen jako TRUE nebo FALSE, ne na adresu paměti.
+
+Tato chyba se shoduje s CAN0024.

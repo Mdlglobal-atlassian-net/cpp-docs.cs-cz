@@ -1,5 +1,5 @@
 ---
-title: C4485 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4485 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84d2976e31d5cc3a9b6547d0c4b02a61327ce0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb83700bf8ca79960599d85ed3d335f80c9fc7f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117748"
 ---
-# <a name="compiler-warning-c4485"></a>C4485 upozornění kompilátoru
-'override_function': odpovídá metody třídy base ref 'base_class_function', ale není označen jako 'nové' nebo 'přepsání'; 'nové (a "virtuální") se předpokládá, že  
-  
- Přistupující objekt přepsání, bez ohledu `virtual` – klíčové slovo, přistupujícího objektu funkce základní třídy, ale `override` nebo `new` specifikátor nebyla součástí přepsání podpis funkce. Přidat `new` nebo `override` specifikátor vyřešit toto upozornění.  
-  
- V tématu [přepsat](../../windows/override-cpp-component-extensions.md) a [new (nový slot v tabulce vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Další informace.  
-  
- C4485 je vždy vydané jako chyba. Použití [upozornění](../../preprocessor/warning.md) – Direktiva pragma pro potlačení C4485.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4485  
-  
-```  
-// C4485.cpp  
-// compile with: /clr  
-delegate void Del();  
-  
-ref struct A {  
-   virtual event Del ^E;  
-};  
-  
-ref struct B : A {  
-   virtual event Del ^E;   // C4485  
-};  
-  
-ref struct C : B {  
-   virtual event Del ^E {  
-      void raise() override {}  
-      void add(Del ^) override {}  
-      void remove(Del^) override {}  
-   }  
-};  
+# <a name="compiler-warning-c4485"></a>Upozornění kompilátoru C4485
+
+'override_function': odpovídá metodě base ref class "base_class_function", ale není označené jako "nové" nebo "override"; předpokládá se 'new. (a 'virtual')
+
+Přístupový objekt přepíše, s nebo bez něj `virtual` – klíčové slovo, funkce přístupového objektu základní třídy, ale `override` nebo `new` specifikátor nebyla součástí přepsání signatura funkce. Přidat `new` nebo `override` specifikátor, chcete-li vyřešit tato upozornění.
+
+Zobrazit [přepsat](../../windows/override-cpp-component-extensions.md) a [new (nový slot v tabulce vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Další informace.
+
+C4485 je vždy vyvoláno jako chyba. Použití [upozornění](../../preprocessor/warning.md) potlačit C4485 direktivy pragma.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4485
+
+```
+// C4485.cpp
+// compile with: /clr
+delegate void Del();
+
+ref struct A {
+   virtual event Del ^E;
+};
+
+ref struct B : A {
+   virtual event Del ^E;   // C4485
+};
+
+ref struct C : B {
+   virtual event Del ^E {
+      void raise() override {}
+      void add(Del ^) override {}
+      void remove(Del^) override {}
+   }
+};
 ```

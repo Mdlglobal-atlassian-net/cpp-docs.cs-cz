@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1099 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1099 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be09691de4212d07b1452ffe33725a3978fc053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3ef75a1435d8c922087fcdd21d1941961bc82cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113380"
 ---
 # <a name="nmake-fatal-error-u1099"></a>Závažná chyba nástroje NMAKE U1099
-přetečení zásobníku  
-  
- Makefile zpracovává byla příliš složitý pro aktuální přidělení zásobníku v nástroji NMAKE. NMAKE má přidělení 0x3000 (12K).  
-  
- A zvyšte tak přidělení zásobníku na NMAKE, spusťte [nástroje editbin /stack](../../build/reference/stack.md) nástroj s větší možnost zásobníku:  
-  
- **Editbin – /STACK:reserve NMAKE. SOUBOR EXE**  
-  
- kde *rezervovat* je číslo větší než aktuální přidělení zásobníku v nástroji NMAKE.
+
+přetečení zásobníku
+
+Zpracování souboru pravidel byla příliš složitý pro aktuální přidělení zásobníku v nástroji NMAKE. NMAKE má přidělený objem 0x3000 (12 kb / s).
+
+Pro zvýšení přidělení zásobníku v NMAKE, spusťte [/Stack editbin](../../build/reference/stack.md) nástroj s větší možností zásobníku:
+
+**Editbin – /STACK:reserve NMAKE. SOUBOR EXE**
+
+kde *rezervovat* je větší než aktuální přidělení zásobníku v nástroji NMAKE číslo.

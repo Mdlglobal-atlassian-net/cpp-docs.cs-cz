@@ -18,39 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85de0f147d0cfed873a091d17c46e56bf5758a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89e243dd1905e61a6c9a1b16c1936d7d6617ba17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116812"
 ---
 # <a name="compound-statements-blocks"></a>Složené příkazy (bloky)
-Složený příkaz se skládá z nuly nebo více příkazů uzavřených do složených závorek (**{}**). Složený příkaz lze použít všude, kde je očekáván příkaz. Složené příkazy jsou často označovány za „bloky“.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-{ [ statement-list ] }  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Následující příklad používá složený příkaz jako *příkaz* součástí **Pokud** – příkaz (naleznete v tématu [if – příkaz](../cpp/if-else-statement-cpp.md) podrobnosti o syntaxi):  
-  
-```cpp 
-if( Amount > 100 )  
-{  
-    cout << "Amount was too large to handle\n";  
-    Alert();  
-}  
-else  
+
+Složený příkaz se skládá z nuly nebo více příkazů uzavřených do složených závorek (**{}**). Složený příkaz lze použít všude, kde je očekáván příkaz. Složené příkazy jsou často označovány za „bloky“.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+{ [ statement-list ] }
+```
+
+## <a name="remarks"></a>Poznámky
+
+Následující příklad používá složený příkaz jako *příkaz* součástí **Pokud** – příkaz (naleznete v tématu [if – příkaz](../cpp/if-else-statement-cpp.md) podrobnosti o syntaxi):
+
+```cpp
+if( Amount > 100 )
 {
-    Balance -= Amount;  
+    cout << "Amount was too large to handle\n";
+    Alert();
 }
-```  
-  
+else
+{
+    Balance -= Amount;
+}
+```
+
 > [!NOTE]
->  Jelikož deklarace je příkaz, deklarace může být jeden z příkazů v *seznamu příkazů*. Důsledkem toho mají názvy deklarované uvnitř složeného příkazu (ale nikoli explicitně deklarované jako statické) místní obor a v případě objektů i životnost. Zobrazit [oboru](../cpp/scope-visual-cpp.md) podrobné informace o zpracování názvů s místním rozsahem.  
-  
-## <a name="see-also"></a>Viz také:  
- [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)
+>  Jelikož deklarace je příkaz, deklarace může být jeden z příkazů v *seznamu příkazů*. Důsledkem toho mají názvy deklarované uvnitř složeného příkazu (ale nikoli explicitně deklarované jako statické) místní obor a v případě objektů i životnost. Zobrazit [oboru](../cpp/scope-visual-cpp.md) podrobné informace o zpracování názvů s místním rozsahem.
+
+## <a name="see-also"></a>Viz také:
+
+[Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)

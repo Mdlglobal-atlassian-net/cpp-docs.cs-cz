@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118827"
 ---
 # <a name="attributes-in-c"></a>Atributy v jazyce C++
 
@@ -45,7 +45,7 @@ Atributy představují standardizované alternativou k rozšíření specifické
 
 - `[[carries_dependency]]` Určuje, že funkce šíří data závislostí řazení s ohledem na synchronizaci vláken. Atribut lze použít na jeden nebo více parametrů, chcete-li určit, že argument předaný přenáší závislostí do těla funkce. Atribut lze použít pro funkce samotná, chcete-li určit, že návratová hodnota představuje závislost mimo funkci. Kompilátor může použít tyto informace pro generování kódu efektivnější.
 
-- `[[deprecated]]` **Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor může být využit k vygenerování informační zpráva, když kód klienta se pokusí o volání funkce. Můžete použít k deklaraci třídy, název typedef, proměnné, nestatický datový člen, funkce, obor názvů, výčtu, enumerátor nebo specializace šablony.  
+- `[[deprecated]]` **Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor může být využit k vygenerování informační zpráva, když kód klienta se pokusí o volání funkce. Můžete použít k deklaraci třídy, název typedef, proměnné, nestatický datový člen, funkce, obor názvů, výčtu, enumerátor nebo specializace šablony.
 
 - `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepnout](switch-statement-cpp.md) příkazy jako Nápověda pro kompilátor (nebo každému, kdo čte kód), která je určena fallthrough chování. Kompilátor Visual C++ aktuálně neupozorňuje fallthrough chování, takže tento atribut nemá žádný účinek chování kompilátoru.
 

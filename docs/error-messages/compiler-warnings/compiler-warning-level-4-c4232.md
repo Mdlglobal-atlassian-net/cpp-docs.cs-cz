@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4232 | Microsoft Docs
+title: Upozornění (úroveň 4) C4232 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093f9eeeb27b402b58f3d53ae34952c34dca3779
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 450c764cfc130acf28e3edfb40fcd17c8ac3b664
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118281"
 ---
-# <a name="compiler-warning-level-4-c4232"></a>C4232 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: "identifikátor": adresa dllimport 'dllimport' nejsou statické, identity není zaručena.  
-  
- V části rozšíření Microsoft (/Ze), můžete udělit nestatické hodnotu jako adresu funkce deklarovat s **dllimport** modifikátor. V části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), to způsobí, že k chybě.  
-  
- Následující ukázka generuje C4232:  
-  
-```  
-// C4232.c  
-// compile with: /W4 /Ze /c  
-int __declspec(dllimport) f();  
-int (*pfunc)() = &f;   // C4232  
+# <a name="compiler-warning-level-4-c4232"></a>Kompilátor upozornění (úroveň 4) C4232
+
+používá se nestandardní rozšíření: 'identifier': adresa DllImport "dllimport" není statická, identita není zaručená.
+
+Pod rozšíření společnosti Microsoft (/Ze), můžete poskytnout nestatické hodnotu jako adresu funkce deklarovat **dllimport** modifikátor. V části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), to způsobí chybu.
+
+Následující ukázka generuje C4232:
+
+```
+// C4232.c
+// compile with: /W4 /Ze /c
+int __declspec(dllimport) f();
+int (*pfunc)() = &f;   // C4232
 ```

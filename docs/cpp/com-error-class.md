@@ -16,68 +16,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ba95eb0e1ffb619b6cdecfc8b410ff5a4b5534
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: dfbaf1f0c88eaeb71bc4dfbbf2dca72c8d07251e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117436"
 ---
 # <a name="comerror-class"></a>_com_error – třída
-**Specifické pro Microsoft**  
-  
- A **_com_error** objekt představuje podmínku výjimky vyhledat pomocí funkce obálky zpracování chyb v souborech hlaviček generovaných z knihovny typů nebo jeden z třídy COM support. **_Com_error** třída zapouzdří kód chyby: HRESULT a všechny přidružené `IErrorInfo Interface` objektu.  
-  
-### <a name="construction"></a>Konstrukce  
-  
-|||  
-|-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Vytvoří **_com_error** objektu.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[operátor =](../cpp/com-error-operator-equal.md)|Přiřadí existující **_com_error** objektu na jiný.|  
-  
-### <a name="extractor-functions"></a>Extraktor funkcí  
-  
-|||  
-|-|-|  
-|[Chyba](../cpp/com-error-error.md)|Načte hodnotu HRESULT předaný konstruktoru.|  
-|[ErrorInfo](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|  
-|[WCode](../cpp/com-error-wcode.md)|Načte 16bitové chybový kód namapovat na zapouzdřený HRESULT.|  
-  
-### <a name="ierrorinfo-functions"></a>Funkce IErrorInfo  
-  
-|||  
-|-|-|  
-|[Popis](../cpp/com-error-description.md)|Volání `IErrorInfo::GetDescription` funkce.|  
-|[HelpContext](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|  
-|[Soubor nápovědy](../cpp/com-error-helpfile.md)|Volání `IErrorInfo::GetHelpFile` – funkce|  
-|[Zdroj](../cpp/com-error-source.md)|Volání `IErrorInfo::GetSource` funkce.|  
-|[GUID](../cpp/com-error-guid.md)|Volání `IErrorInfo::GetGUID` funkce.|  
-  
-### <a name="format-message-extractor"></a>Formát zprávy Extraktor  
-  
-|||  
-|-|-|  
-|[Chybová zpráva](../cpp/com-error-errormessage.md)|Získá řetězcovou zprávu pro HRESULT uložený ve **_com_error** objektu.|  
-  
-### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode k Mapovačů HRESULT  
-  
-|||  
-|-|-|  
-|[Hresulttowcode –](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit HRESULT na 16 bitů `wCode`.|  
-|[Wcodetohresult –](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` 32-bit HRESULT.|  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<comdef.h >  
-  
- `Lib:` comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
-  
-## <a name="see-also"></a>Viz také:  
- [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)   
- [Rozhraní IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+
+**Specifické pro Microsoft**
+
+A **_com_error** objekt představuje podmínku výjimky vyhledat pomocí funkce obálky zpracování chyb v souborech hlaviček generovaných z knihovny typů nebo jeden z třídy COM support. **_Com_error** třída zapouzdří kód chyby: HRESULT a všechny přidružené `IErrorInfo Interface` objektu.
+
+### <a name="construction"></a>Konstrukce
+
+|||
+|-|-|
+|[_com_error](../cpp/com-error-com-error.md)|Vytvoří **_com_error** objektu.|
+
+### <a name="operators"></a>Operátory
+
+|||
+|-|-|
+|[operátor =](../cpp/com-error-operator-equal.md)|Přiřadí existující **_com_error** objektu na jiný.|
+
+### <a name="extractor-functions"></a>Extraktor funkcí
+
+|||
+|-|-|
+|[Chyba](../cpp/com-error-error.md)|Načte hodnotu HRESULT předaný konstruktoru.|
+|[ErrorInfo](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|
+|[WCode](../cpp/com-error-wcode.md)|Načte 16bitové chybový kód namapovat na zapouzdřený HRESULT.|
+
+### <a name="ierrorinfo-functions"></a>Funkce IErrorInfo
+
+|||
+|-|-|
+|[Popis](../cpp/com-error-description.md)|Volání `IErrorInfo::GetDescription` funkce.|
+|[HelpContext](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|
+|[Soubor nápovědy](../cpp/com-error-helpfile.md)|Volání `IErrorInfo::GetHelpFile` – funkce|
+|[Zdroj](../cpp/com-error-source.md)|Volání `IErrorInfo::GetSource` funkce.|
+|[GUID](../cpp/com-error-guid.md)|Volání `IErrorInfo::GetGUID` funkce.|
+
+### <a name="format-message-extractor"></a>Formát zprávy Extraktor
+
+|||
+|-|-|
+|[Chybová zpráva](../cpp/com-error-errormessage.md)|Získá řetězcovou zprávu pro HRESULT uložený ve **_com_error** objektu.|
+
+### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode k Mapovačů HRESULT
+
+|||
+|-|-|
+|[Hresulttowcode –](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit HRESULT na 16 bitů `wCode`.|
+|[Wcodetohresult –](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` 32-bit HRESULT.|
+
+**Specifické pro END Microsoft**
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<comdef.h >
+
+`Lib:` comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
+
+## <a name="see-also"></a>Viz také:
+
+[Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)<br/>
+[Rozhraní IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)

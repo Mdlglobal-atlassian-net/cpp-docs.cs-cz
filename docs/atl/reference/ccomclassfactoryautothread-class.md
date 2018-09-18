@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476edd2a199ca21a9067a72cac82a6ac7b608112
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114160"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread – třída
 
@@ -85,13 +85,13 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
 
-*riid*  
+*riid*<br/>
 [in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -112,7 +112,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*hejna*  
+*hejna*<br/>
 [in] Při hodnotě TRUE se zvýší počet zámků; v opačném případě je snížen počet zámků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -127,9 +127,9 @@ Volání `LockServer` umožňuje klientovi opřete se o objekt pro vytváření 
 
 ## <a name="see-also"></a>Viz také
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[Ccomclassfactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)   
-[Ccomclassfactorysingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactorySingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

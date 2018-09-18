@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2022 | Microsoft Docs
+title: Chyba Linkerů LNK2022 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7769bc28dc777ef8d7b82b91b9695356db05a682
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b28e9f31c9ce4a7659891698feff48b16450944
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118346"
 ---
-# <a name="linker-tools-error-lnk2022"></a>Chyba linkerů LNK2022  
-  
-> metadata operace se nezdařila (*HRESULT*): *error_message*  
-  
-Linkeru zjistil chybu při slučování metadat. Metadata chyby musí vyřešit propojení úspěšně.  
-  
-Jeden způsob, jak diagnostikovat potíže je spuštění **ildasm-tokeny** na soubory objektů nalézt typy, které mají tokeny uvedené v `error_message`a vyhledejte rozdíly.  V metadatech dva různé typy se stejným názvem není platný, i v případě, že právě LayoutType atributu se liší.  
-  
-Jeden důvodu LNK2022 je ve více souborech určených ke kompilaci, se stejným názvem, ale s konfliktními definice typu (například struktury) existuje, a při kompilaci s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  V takovém případě se ujistěte, že typ má stejné definice v souborech všech určených ke kompilaci.  Název typu, je uvedena ve `error_message`.  
-  
-Další možnou příčinou LNK2022 je při linkeru vyhledá soubor metadat v jiném umístění, než bylo zadáno pro kompilátor (s [#using](../../preprocessor/hash-using-directive-cpp.md) ). Ujistěte se, že soubor metadat (.dll nebo .netmodule) je ve stejném umístění, když uplyne linkeru, stejně, jako když byl předán kompilátoru.  
-  
-Při vytváření aplikace ATL použití makra `_ATL_MIXED` je vyžadována ve všech souborech určených ke kompilaci, pokud se používá alespoň v jedné.  
-  
-## <a name="example"></a>Příklad  
-  
-Následující příklad definuje typ prázdný.  
-  
-```cpp  
-// LNK2022_a.cpp  
-// compile with: /clr /c  
-public ref class Test {};  
-```  
-  
-## <a name="example"></a>Příklad  
-  
-Tento příklad ukazuje, že nemůže propojit dva soubory zdrojového kódu, které obsahují typy stejný název, ale jiné definice.  
-  
-Následující ukázka generuje LNK2022.  
-  
-```cpp  
-// LNK2022_b.cpp  
-// compile with: LNK2022_a.cpp /clr /LD   
-// LNK2022 expected  
-public ref class Test {  
-   void func() {}  
-   int var;  
-};  
+# <a name="linker-tools-error-lnk2022"></a>Chyba linkerů LNK2022
+
+> operace s metadaty selhala (*HRESULT*): *error_message*
+
+Linker došlo k chybě při slučování metadat. Chyby metadat musí být přeloženy na odkaz úspěšně.
+
+Jedním ze způsobů pro diagnostiku tohoto problému je ke spuštění **ildasm-tokeny** na objekt soubory, které chcete najít typy, které mají tokeny uveden v `error_message`a vyhledejte rozdíly.  V metadatech dva různé typy se stejným názvem není platný, i v případě, že se liší jenom atribut LayoutType.
+
+Jeden z důvodu LNK2022 je ve více souborech určených ke kompilaci, se stejným názvem, ale s konfliktní definice typu (jako je například struktura) existuje, a při kompilaci s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  V takovém případě Ujistěte se, že typ má stejné definici ve všech souborech určených ke kompilaci.  Název typu je uveden v `error_message`.
+
+Další možnou příčinou LNK2022 je, pokud linker zjistí soubor metadat v jiném umístění než bylo zadáno pro kompilátor (s [#using](../../preprocessor/hash-using-directive-cpp.md) ). Ujistěte se, že soubor metadat (.dll nebo .netmodule) je ve stejném umístění, pokud je předán linkeru, stejně, jako když byla předána do kompilátor.
+
+Při sestavování aplikace ATL, použijte makro `_ATL_MIXED` vyžaduje ve všech souborech určených ke kompilaci, pokud se používá v alespoň jednom.
+
+## <a name="example"></a>Příklad
+
+Následující příklad definuje typ prázdný.
+
+```cpp
+// LNK2022_a.cpp
+// compile with: /clr /c
+public ref class Test {};
+```
+
+## <a name="example"></a>Příklad
+
+Tento příklad ukazuje, že nelze propojit dva soubory zdrojového kódu, které obsahují typy stejným názvem, ale různé definice.
+
+Následující ukázka generuje LNK2022.
+
+```cpp
+// LNK2022_b.cpp
+// compile with: LNK2022_a.cpp /clr /LD
+// LNK2022 expected
+public ref class Test {
+   void func() {}
+   int var;
+};
 ```

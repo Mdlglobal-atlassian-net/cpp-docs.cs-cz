@@ -29,46 +29,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664de5ad25fcce2bf744fb9365542d63f3d91e51
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b1b93cf52ee7690aa86f4a80acae2731197ec9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115369"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-Vnitřní funkce CRT. Používá rozhraní k vyhledání příslušné výjimky obslužná rutina zpracovávala na aktuální výjimku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _except_handler3(  
-   PEXCEPTION_RECORD exception_record,  
-   PEXCEPTION_REGISTRATION registration,  
-   PCONTEXT context,  
-   PEXCEPTION_REGISTRATION dispatcher  
-);  
-```  
-  
+
+Vnitřní funkce CRT. Používá rozhraní k vyhledání příslušné výjimky obslužná rutina zpracovávala na aktuální výjimku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+int _except_handler3(
+   PEXCEPTION_RECORD exception_record,
+   PEXCEPTION_REGISTRATION registration,
+   PCONTEXT context,
+   PEXCEPTION_REGISTRATION dispatcher
+);
+```
+
 #### <a name="parameters"></a>Parametry
 
 *exception_record*<br/>
-[in] Informace o určité výjimky.  
-  
+[in] Informace o určité výjimky.
+
 *Registrace*<br/>
-[in] Záznam, který určuje, které rozsah tabulky by měl být použit k vyhledání obslužná rutina výjimky.  
-  
+[in] Záznam, který určuje, které rozsah tabulky by měl být použit k vyhledání obslužná rutina výjimky.
+
 *Kontext*<br/>
-[in] Vyhrazená.  
-  
+[in] Vyhrazená.
+
 *Dispečer*<br/>
-[in] Vyhrazená.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud by měl zrušit výjimku, vrátí `DISPOSITION_DISMISS`. Pokud výjimky by měly být předány o úroveň výš zapouzdřující obslužné rutiny výjimek, vrátí `DISPOSITION_CONTINUE_SEARCH`.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud tato metoda vyhledá obslužnou rutinu příslušné výjimky, předá výjimku do obslužné rutiny. V takovém případě tato metoda nevrátí do kódu, která ji zavolala a vrácená hodnota je relevantní.  
-  
-## <a name="see-also"></a>Viz také  
- [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+[in] Vyhrazená.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud by měl zrušit výjimku, vrátí `DISPOSITION_DISMISS`. Pokud výjimky by měly být předány o úroveň výš zapouzdřující obslužné rutiny výjimek, vrátí `DISPOSITION_CONTINUE_SEARCH`.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud tato metoda vyhledá obslužnou rutinu příslušné výjimky, předá výjimku do obslužné rutiny. V takovém případě tato metoda nevrátí do kódu, která ji zavolala a vrácená hodnota je relevantní.
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

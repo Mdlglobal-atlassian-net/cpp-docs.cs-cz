@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11a2d96f2602c596e6470b310ef274f8c23290d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 87ae430dabf3a4aac54b77afb0b2ed5c143a8875
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754914"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116032"
 ---
 # <a name="atldrawinfo-structure"></a>Atl_drawinfo – struktura
 
@@ -51,43 +51,43 @@ struct ATL_DRAWINFO {
 
 ## <a name="members"></a>Členové
 
-`cbSize`  
+`cbSize`<br/>
 Velikost struktury, v bajtech.
 
-`dwDrawAspect`  
+`dwDrawAspect`<br/>
 Určuje, jak má být reprezentován cíl. Reprezentace může zahrnovat obsah, ikony, miniaturu nebo tisk dokumentu. Seznam možných hodnot najdete v tématu [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) a [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).
 
-`lindex`  
+`lindex`<br/>
 Část, která je zapotřebí pro operaci příkazu pro vykreslení cíle. Jeho interpretace se liší v závislosti na hodnotě v `dwDrawAspect` člena.
 
-`ptd`  
+`ptd`<br/>
 Ukazatel [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktura, která povolí optimalizace vykreslování v závislosti na aspekt zadán. Všimněte si, že novější objektů a kontejnerů, které podporují optimalizované vykreslení rozhraní podporují také tohoto člena. Starší objektů a kontejnerů, které nepodporuje optimalizované vykreslení rozhraní vždycky zadejte hodnotu NULL pro tento člen.
 
-`hicTargetDev`  
+`hicTargetDev`<br/>
 Kontextové informace pro cílové zařízení odkazované `ptd` ze kterého můžete objekt extrahovat metriky zařízení a testovat funkce zařízení. Pokud `ptd` má hodnotu NULL, objekt by měl ignorovat hodnotu v `hicTargetDev` člena.
 
-`hdcDraw`  
+`hdcDraw`<br/>
 Kontext zařízení, na kterém chcete-li nakreslit. Pro objekt bez oken `hdcDraw` člen `MM_TEXT` režim mapování s jeho logické souřadnice odpovídající souřadnice klienta obsahujícího okna. Kromě toho by měl být kontext zařízení v takovém stavu, jako je obvykle předávána `WM_PAINT` zprávy.
 
-`prcBounds`  
+`prcBounds`<br/>
 Ukazatel na [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struktura určující obdélník na `hdcDraw` a ve kterém má být vykreslena objektu. Tento člen Určuje umístění a roztažení objektu. Tento člen by měl mít hodnotu NULL k vykreslení objektu active bez oken na místě. V každé situaci, hodnota NULL není platná hodnota a by měl vést `E_INVALIDARG` kód chyby. Pokud kontejner předá objekt bez oken hodnota jiná než NULL, objekt vykreslovat požadovaný aspekt do kontextu zadané zařízení a obdélník. Kontejner můžete takový požadavek z objektu bez oken pro vykreslení zobrazení druhé, neaktivní objektu nebo vytisknutí objektu.
 
-`prcWBounds`  
+`prcWBounds`<br/>
 Pokud `hdcDraw` je kontextu zařízení metasouboru (naleznete v tématu [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) v sadě Windows SDK), tím je ukazatel na `RECTL` struktura určení ohraničující obdélník v podkladové metasouboru. Obdélník struktura obsahuje rozsah okna a okna původu. Tyto hodnoty jsou užitečné pro kreslení metasoubory. Obdélník indikován `prcBounds` je vnořená do to `prcWBounds` obdélník; jsou ve stejném souřadnicového prostoru.
 
-`bOptimize`  
+`bOptimize`<br/>
 Nenulové, pokud je kreslení ovládacího prvku být optimalizován, jinak 0. Pokud je optimalizované pro kreslení stav kontextu zařízení se automaticky obnoví, až budete hotovi vykreslování.
 
-`bZoomed`  
+`bZoomed`<br/>
 Nenulové, pokud cíl obsahuje faktor zvětšování, jinak 0. Na faktor zvětšování je uložen v `ZoomNum`.
 
-`bRectInHimetric`  
+`bRectInHimetric`<br/>
 Nenulovou hodnotu, pokud rozměry `prcBounds` jsou v HIMETRIC, jinak 0.
 
-`ZoomNum`  
+`ZoomNum`<br/>
 Šířka a výška rámečku, do kterého je objekt vykreslen. Na faktor zvětšování podél osy x (podíl fyzická velikost objektu na jeho aktuální rozsah) cíle je hodnota `ZoomNum.cx` dělená hodnota `ZoomDen.cx`. Podobným způsobem je dosaženo na faktor zvětšování podél osy y.
 
-`ZoomDen`  
+`ZoomDen`<br/>
 Skutečné šířku a výšku cíle.
 
 ## <a name="remarks"></a>Poznámky
@@ -102,6 +102,6 @@ Tato struktura ukládá relevantní informace, které se použije k vykreslení 
 
 ## <a name="see-also"></a>Viz také
 
-[Třídy a struktury](../../atl/reference/atl-classes.md)  
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)  
+[Třídy a struktury](../../atl/reference/atl-classes.md)<br/>
+[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

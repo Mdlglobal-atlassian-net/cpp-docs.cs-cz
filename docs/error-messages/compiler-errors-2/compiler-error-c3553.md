@@ -1,5 +1,5 @@
 ---
-title: C3553 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3553 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4ed8c2776015f9d9c6aedbe7a9da93f404f680
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c91697b8fa4f04c040d92f8af3aa004bbde7a773
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118619"
 ---
-# <a name="compiler-error-c3553"></a>C3553 chyby kompilátoru
-decltype očekává výrazu není typu  
-  
- `decltype()` – Klíčové slovo vyžaduje výraz jako argument, nikoli název typu. Poslední příkaz v následujícím fragmentu kódu například vypočítá chyba C3553.  
-  
- `int x = 0;`  
-  
- `decltype(x+1);`  
-  
- `decltype(int); // C3553`
+# <a name="compiler-error-c3553"></a>Chyba kompilátoru C3553
+
+> decltype očekává výraz, ne typ.
+
+`decltype()` – Klíčové slovo vyžaduje výraz jako argument, není název typu. Poslední příkaz v následujícím fragmentu kódu například výsledkem chyba C3553.
+
+```cpp
+int x = 0;
+decltype(x+1);
+decltype(int); // C3553
+```

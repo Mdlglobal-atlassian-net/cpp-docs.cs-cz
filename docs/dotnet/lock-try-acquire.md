@@ -1,5 +1,5 @@
 ---
-title: Lock::try_acquire | Microsoft Docs
+title: Lock::try_acquire | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115954"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-Získá zámek na objektu, čeká určenou dobu a vrácení `bool` nahlásit úspěch pořízení místo došlo k výjimce.  
+Získá zámek na objekt, čekající na určenou dobu a vrácení `bool` oznamuje úspěch pořízení namísto vyvolání výjimky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_timeout`  
- Hodnota časového limitu v milisekundách, nebo jako <xref:System.TimeSpan>.  
+*_vypršení časového limitu*<br/>
+Hodnota časového limitu v milisekundách, nebo jako <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se získal zámek, `false` jinak.  
+ `true` Pokud byl získán zámek, `false` jinak.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud již byla získal zámek, tato funkce neprovede žádnou akci.  
+ Pokud již byl získán zámek, tato funkce nemá žádný účinek.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad používá jednu instanci třídy napříč více vláken.  Třída využívají k zajištění konzistentní pro každé vlákno přístupů k jeho interních datových zámek sám na sobě.  Hlavní vlákno aplikace používá zámek ve stejné instanci třídy k pravidelně kontrolovat, zda stále existují jakékoli pracovních vláken a čeká ukončíte až do všech pracovních vláken dokončili úkoly.  
+ Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -147,5 +147,5 @@ All threads completed.
  **Namespace** msclr –  
   
 ## <a name="see-also"></a>Viz také  
- [Lock – členy třídy](../dotnet/lock-members.md)   
+ [Lock – členy](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

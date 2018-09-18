@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116773"
 ---
 # <a name="ccomcurrency-class"></a>Ccomcurrency – třída
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc*  
+*curSrc*<br/>
 Existující objekt `CComCurrency`.
 
-*cySrc*  
+*cySrc*<br/>
 Proměnné typu MĚNA.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*  
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*<br/>
 Počáteční hodnota předaná do proměnné člena `m_currency`.
 
-*cSrc*  
+*cSrc*<br/>
 Znak obsahující počáteční hodnota předaná do proměnné člena `m_currency`.
 
-*nInteger*, *nFraction*  
+*nInteger*, *nFraction*<br/>
 Celé číslo a komponenty zlomku počáteční peněžní hodnoty. Zobrazit [ccomcurrency –](../../atl/reference/ccomcurrency-class.md) přehled pro další informace.
 
-*pDispSrc*  
+*pDispSrc*<br/>
 `IDispatch` Ukazatele.
 
-*varSrc*  
+*varSrc*<br/>
 Proměnné typu VARIANT. Národní prostředí aktuálního vlákna se používá k provedení převodu.
 
-*szSrc*  
+*szSrc*<br/>
 Řetězec Unicode nebo ANSI obsahující počáteční hodnota. Národní prostředí aktuálního vlákna se používá k provedení převodu.
 
 ### <a name="remarks"></a>Poznámky
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Násobitel.
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objektu se používá jako násobitel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Násobitel.
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objektu se používá jako násobitel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Dělitel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Dělitel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objekt přidán na původní objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc*  
+*curSrc*<br/>
 A `CComCurrency` objektu.
 
-*cySrc*  
+*cySrc*<br/>
 Proměnné typu MĚNA.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
 Číselná hodnota pro přiřazení `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 `CComCurrency` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Měna*  
+*Měna*<br/>
 A `CComCurrency` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -571,7 +571,7 @@ Pokud je první objekt větší než nebo roven druhému FALSE v opačném pří
 
 Tyto operátory lze přetypovat `CComCurrency` objektu na datový typ MĚNA.
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Parametry
 
-*nDecimals*  
+*nDecimals*<br/>
 Počet číslic, na který `m_currency` zaokrouhlen v rozsahu 0 až 4.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Parametry
 
-*nFraction*  
+*nFraction*<br/>
 Hodnota má být přiřazena k desetinné součást `m_currency` datový člen. Znak desetinné součásti musí stejný jako součást celé číslo a hodnota musí být v rozsahu -9999 (CY_MIN_FRACTION) +9999 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>Parametry
 
-*nInteger*  
+*nInteger*<br/>
 Hodnota, která má být přiřazená součást celé číslo `m_currency` datový člen. Znaménko celé číslo součásti musí odpovídat znaménko existující komponentu desetinné části.
 
 *nInteger* musí být v rozsahu CY_MIN_INTEGER k CY_MAX_INTEGER (včetně). Tyto hodnoty jsou definovány v atlcur.h.
@@ -651,6 +651,6 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 
-[COleCurrency – třída](../../mfc/reference/colecurrency-class.md)   
-[MĚNY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[COleCurrency – třída](../../mfc/reference/colecurrency-class.md)<br/>
+[MĚNY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4754 | Microsoft Docs
+title: Upozornění (úroveň 4) C4754 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,103 +16,106 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7f4e42d2e44a55c98abdcd5c3e723e2a9269a1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7681f78812ef33dce5bd6d7792f8158a8f35ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118658"
 ---
-# <a name="compiler-warning-level-4-c4754"></a>C4754 kompilátoru upozornění (úroveň 4)
-Převod pravidel pro aritmetické operace v porovnání to znamenat, že tento jeden větve nelze provést.  
-  
- C4754 upozornění, protože výsledkem porovnání je vždy stejný. To znamená, že jeden z větve podmínky nikdy proveden, s největší pravděpodobností protože přidružené celočíselný výraz je nesprávný. Tento kód vadou nejčastěji dochází v kontroly přetečení nesprávný celých čísel na 64bitové architektury.  
-  
- Pravidla převodu celé číslo jsou komplexní a existuje mnoho jemně nástrahy. Jako alternativu k opravě každý C4754 upozornění, můžete aktualizovat kód, který použije [SafeInt – knihovna](../../windows/safeint-library.md).  
-  
-## <a name="example"></a>Příklad  
- Tato ukázka generuje C4754:  
-  
-```cpp  
-// C4754a.cpp  
-// Compile with: /W4 /c  
-#include "errno.h"  
-  
-int sum_overflow(unsigned long a, unsigned long b)   
-{  
-   unsigned long long x = a + b; // C4754  
-  
-   if (x > 0xFFFFFFFF)   
-   {  
-      // never executes!  
-      return EOVERFLOW;  
-   }  
-   return 0;  
-}  
-```  
-  
- Přidání `a + b` by mohlo způsobit aritmetického přetečení před výsledkem je přetypování nahoru na hodnotu 64-bit a přiřazenou proměnné 64-bit `x`. To znamená, že kontrola na `x` je redundantní a nikdy catch přetečení. V takovém případě kompilátor vydává toto upozornění:  
-  
-```Output  
-Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).  
-```  
-  
- Pokud chcete odstranit toto upozornění, můžete změnit přiřazení příkaz přetypovat operandy na 8 bajtů hodnoty:  
-  
-```cpp  
-// Casting one operand is sufficient to force all the operands in   
-// the addition be upcast according to C/C++ conversion rules, but  
-// casting both is clearer.  
-unsigned long long x =   
-   (unsigned long long)a + (unsigned long long)b;  
-```  
-  
-## <a name="example"></a>Příklad  
- Další vzorek vytvoří také C4754.  
-  
-```cpp  
-// C4754b.cpp  
-// Compile with: /W4 /c  
-#include "errno.h"  
-  
-int wrap_overflow(unsigned long a)   
-{  
-   if (a + sizeof(unsigned long) < a) // C4754  
-   {   
-      // never executes!  
-      return EOVERFLOW;  
-   }  
-   return 0;  
-}  
-```  
-  
- `sizeof()` Vrátí operátor `size_t`, jejíž aktuální velikost je závislá na architekturu. Ukázkový kód funguje na 32bitové architektury kde `size_t` je typu 32-bit. Ale na 64bitové architektury `size_t` je typu 64-bit. Převod pravidel pro celá čísla znamenají, že `a` je přetypování nahoru na 64-bit hodnotu ve výrazu `a + b < a` jako kdyby byly napsány `(size_t)a + (size_t)b < (size_t)a`. Když `a` a `b` jsou 32bitová celá čísla, nikdy přetečení operace 64-bit sčítání a nikdy obsahuje omezení. V důsledku toho kód nikdy zjistí přetečení celé číslo na 64bitové architektury. Tento příklad způsobí, že kompilátor emitování toto upozornění:  
-  
-```Output  
-Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).  
-```  
-  
- Všimněte si, že upozornění explicitně uvádí konstantní hodnota 4 místo původní zdrojový řetězec – na době analysis upozornění zaznamená kód problematické `sizeof(unsigned long)` již byl převeden na konstantu. Proto možná budete muset sledovat dolů výrazu, který ve zdrojovém kódu souvisí s konstantní hodnotou v upozornění. Nejběžnější zdroje kód byl přeložen na konstanty v C4754 zprávy upozornění, jako jsou výrazy `sizeof(TYPE)` a `strlen(szConstantString)`.  
-  
- V tomto případě kód pevné by vypadat takto:  
-  
-```cpp  
-// Casting the result of sizeof() to unsigned long ensures  
-// that all the addition operands are 32-bit, so any overflow   
-// is detected by the check.  
-if (a + (unsigned long)sizeof(unsigned long) < a)  
-  
-```  
-  
- **Poznámka:** číslo řádku, které jsou uvedené v kompilátoru upozornění je poslední řádek příkazu. V upozornění o komplexní podmíněného příkaz, který je rozdělena na více řádků řádek, který má vadou kód může být Víceřádkový před řádek, který je hlášen. Příklad:  
-  
-```cpp  
-unsigned long a;  
-  
-if (a + sizeof(unsigned long) < a || // incorrect check  
-    condition1() ||   
-    a == 0) {    // C4754 warning reported on this line  
-         // never executes!  
-         return INVALID_PARAMETER;  
-}  
+# <a name="compiler-warning-level-4-c4754"></a>Kompilátor upozornění (úroveň 4) C4754
+
+Pravidla převodu pro aritmetické operace v porovnání se rozumí, že jednu větev nejde provést.
+
+Objeví se upozornění C4754, protože výsledkem porovnání je vždy stejný. To znamená, že jeden z větve podmínka není nikdy proveden, pravděpodobně protože přidružené celočíselný výraz není správná. Tato vada kódu často dochází v kontroly přetečení celých nesprávné na 64bitové architektury.
+
+Pravidla převodu celého čísla jsou komplexní a existuje mnoho drobným nástrahy. Jako alternativu k opravě každý C4754 upozornění, můžete aktualizovat kód, který použije [SafeInt – knihovna](../../windows/safeint-library.md).
+
+## <a name="example"></a>Příklad
+
+Tato ukázka vygeneruje C4754:
+
+```cpp
+// C4754a.cpp
+// Compile with: /W4 /c
+#include "errno.h"
+
+int sum_overflow(unsigned long a, unsigned long b)
+{
+   unsigned long long x = a + b; // C4754
+
+   if (x > 0xFFFFFFFF)
+   {
+      // never executes!
+      return EOVERFLOW;
+   }
+   return 0;
+}
+```
+
+Přidání `a + b` předtím, než je přetypování nahoru na 64 bitů hodnotu výsledku by mohlo způsobit aritmetické přetečení a přiřazená k proměnné 64-bit `x`. To znamená, že kontrola `x` je redundantní a nikdy catch přetečení. V tomto případě kompilátor vydá toto varování:
+
+```Output
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).
+```
+
+Chcete-li upozornění odstranit, můžete změnit příkazu přiřazení k přetypování operandy na 8 bajtů hodnoty:
+
+```cpp
+// Casting one operand is sufficient to force all the operands in
+// the addition be upcast according to C/C++ conversion rules, but
+// casting both is clearer.
+unsigned long long x =
+   (unsigned long long)a + (unsigned long long)b;
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje také C4754.
+
+```cpp
+// C4754b.cpp
+// Compile with: /W4 /c
+#include "errno.h"
+
+int wrap_overflow(unsigned long a)
+{
+   if (a + sizeof(unsigned long) < a) // C4754
+   {
+      // never executes!
+      return EOVERFLOW;
+   }
+   return 0;
+}
+```
+
+`sizeof()` Operátor vrátí `size_t`, jejíž velikost je závislé na architekturu. Ukázkový kód funguje na 32bitové architektury kde `size_t` je typem 32-bit. Ale na 64bitové architektury `size_t` je 64bitového typu. Pravidla převodu pro celá čísla znamenají, že `a` je přetypování nahoru na 64 bitů hodnotu ve výrazu `a + b < a` jakoby byly napsány `(size_t)a + (size_t)b < (size_t)a`. Když `a` a `b` jsou 32bitová celá čísla, nikdy přetečení operace sčítání 64bitovým kompilátorem a omezení nikdy neudržuje. V důsledku toho kód nikdy zjistí přetečení celého čísla na 64bitové architektury. Tento příklad způsobí, že kompilátor generuje toto upozornění:
+
+```Output
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).
+```
+
+Všimněte si, že upozornění explicitně obsahuje konstantní hodnotu 4 namísto původní zdrojový řetězec – době upozornění analýzy zaznamená problematický kód `sizeof(unsigned long)` již byl převeden na konstantu. Proto bude pravděpodobně nutné sledovat dolů výrazu, který ve zdrojovém kódu souvisí s konstantní hodnotou v upozornění. Nejběžnějšími zdroji kód přeložit konstanty v C4754 varovné zprávy, jako jsou výrazy `sizeof(TYPE)` a `strlen(szConstantString)`.
+
+Oprava kódu v tomto případě by vypadat takto:
+
+```cpp
+// Casting the result of sizeof() to unsigned long ensures
+// that all the addition operands are 32-bit, so any overflow
+// is detected by the check.
+if (a + (unsigned long)sizeof(unsigned long) < a)
+
+```
+
+**Poznámka:** uvedená v upozornění kompilátoru číslo řádku je poslední řádek příkazu. Ve zprávě s upozorněním o komplexní podmíněném příkazu, která je rozdělena do více řádků řádek, který je závadný kód může být Víceřádkový před řádek, který se použije v hlášení. Příklad:
+
+```cpp
+unsigned long a;
+
+if (a + sizeof(unsigned long) < a || // incorrect check
+    condition1() ||
+    a == 0) {    // C4754 warning reported on this line
+         // never executes!
+         return INVALID_PARAMETER;
+}
 ```

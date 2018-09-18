@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116744"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 Modul common language runtime poskytuje platformu vyvolání služby nebo PInvoke, což umožňuje spravovat kód volat funkce jazyka C v nativní propojenými dynamickými knihovnami (DLL). Stejné zařazování dat se používá také u interoperabilita modelů COM s modulem runtime a pro mechanismus "Prostě to funguje" nebo IJW.  
@@ -105,7 +105,7 @@ int main() {
   
  V tomto příkladu spolupracuje program Visual C++ s funkcí MessageBox, která je součástí rozhraní API systému Win32.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Pokud používáme PInvoke v aplikaci Visual C++, pak doporučujeme psát podobný následujícímu:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  Zde je, že nemůžeme odstranit paměť pro nespravovaný řetězec vrácený funkcí MakeSpecial. Jiné funkce volané prostřednictvím PInvoke vrací ukazatel na vnitřní vyrovnávací paměť, která nemá být odebrána uživatelem. V tomto případě použití funkce IJW je jasnou volbou.  
   
 ## <a name="limitations-of-pinvoke"></a>Omezení PInvoke  
  Nelze vrátit stejný ukazatel z nativní funkce, který je předáván jako parametr. Pokud nativní funkce vrátí ukazatel, který byl zařazen do ní metodou PInvoke, může následovat poškození paměti a výjimek.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

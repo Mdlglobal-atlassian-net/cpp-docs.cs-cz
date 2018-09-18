@@ -1,5 +1,5 @@
 ---
-title: C4355 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4355 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f57b8a7c279b820f4f9fc4a68715804a12e625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44833c8e640002f2f94d44938641fa3c1fa33db7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115304"
 ---
-# <a name="compiler-warning-c4355"></a>C4355 upozornění kompilátoru
-'this' : použito v inicializačním seznamu základních členů  
-  
- **To** ukazatel je platná pouze v rámci nestatické členské funkce. Nelze použít v seznamu inicializátoru pro základní třídu.  
-  
- Konstruktory základní třídy a konstruktory člena třídy se nazývají před **to** konstruktor. Jste ve skutečnosti předaný objekt unconstructed tak, aby jiný konstruktor ukazatel. Pokud tyto další konstruktory přístup k žádné členy nebo volat funkce člena v tomto, výsledkem bude definován. Neměli byste používat **to** ukazatel až po dokončení všech konstrukce.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4355:  
-  
-```  
-// C4355.cpp  
-// compile with: /w14355 /c  
-#include <tchar.h>  
-  
-class CDerived;  
-class CBase {  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function() = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase {  
-public:  
-   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor  
-   virtual void function() {};  
-};  
-  
-CBase::~CBase() {  
-   m_pDerived -> function();  
-}  
-  
-int main() {  
-   CDerived myDerived;  
-}  
+# <a name="compiler-warning-c4355"></a>Upozornění kompilátoru C4355
+
+'this' : použito v inicializačním seznamu základních členů
+
+**To** ukazatel je platný pouze v rámci nestatické členské funkce. Nelze použít v seznamu inicializátorů pro základní třídu.
+
+Konstruktory základní třídy a konstruktory členů třídy se nazývají před **to** konstruktoru. V důsledku toho jsme předán ukazatel unconstructed objektu do jiného konstruktoru. Pokud tyto konstruktory přístup k žádné členy nebo volat členské funkce na to, bude výsledek nedefinovaný. Neměli byste používat **to** ukazatele, dokud se nedokončí všechny konstrukce.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4355:
+
+```
+// C4355.cpp
+// compile with: /w14355 /c
+#include <tchar.h>
+
+class CDerived;
+class CBase {
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function() = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase {
+public:
+   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor
+   virtual void function() {};
+};
+
+CBase::~CBase() {
+   m_pDerived -> function();
+}
+
+int main() {
+   CDerived myDerived;
+}
 ```

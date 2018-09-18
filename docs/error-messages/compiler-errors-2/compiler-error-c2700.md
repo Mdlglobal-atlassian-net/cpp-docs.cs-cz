@@ -1,5 +1,5 @@
 ---
-title: C2700 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2700 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dd938756caee0906524cc002fa393ff01fd5fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b4b52c09467bea6e41be7b9fc016884859bd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115772"
 ---
-# <a name="compiler-error-c2700"></a>C2700 chyby kompilátoru
-"identifikátor": nemůže být vyvolána (/W4 použijte další informace)  
-  
- Objekt nelze vyvolat. Kompilovat s [/W4](../../build/reference/compiler-option-warning-level.md) diagnostické informace.
+# <a name="compiler-error-c2700"></a>Chyba kompilátoru C2700
+
+'identifier': nejde vyvolat (použijte/W4 pro další informace)
+
+Nejde vyvolat objekt. Kompilovat s [/W4](../../build/reference/compiler-option-warning-level.md) další diagnostické informace.

@@ -1,5 +1,5 @@
 ---
-title: C2389 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2389 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eaf2907238294ea34c8dbcd51609434b3328d88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73809d0fdd94871ad282042cef22a233ced19a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113237"
 ---
-# <a name="compiler-error-c2389"></a>C2389 chyby kompilátoru
-'operátor': Neplatný operand 'nullptr.  
-  
- `nullptr` nemůže být operand.  
-  
- Následující ukázka generuje C2389:  
-  
-```  
-// C2389.cpp  
-// compile with: /clr  
-int main() {  
-   throw nullptr;   // C2389  
-}  
+# <a name="compiler-error-c2389"></a>Chyba kompilátoru C2389
+
+'operator': Neplatný operand "nullptr"
+
+`nullptr` operand nemůže být.
+
+Následující ukázka generuje C2389:
+
+```
+// C2389.cpp
+// compile with: /clr
+int main() {
+   throw nullptr;   // C2389
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4639 | Microsoft Docs
+title: Upozornění (úroveň 4) C4639 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad4b3159eb83c6dd050bba41032a461716f556a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0ab2e08878e2172337ef373ebcbc8a37359b85f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294229"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117670"
 ---
-# <a name="compiler-warning-level-4-c4639"></a>C4639 kompilátoru upozornění (úroveň 4)
-Chyba MSXML, dokument XML, který komentáře nebude zpracováno. Důvod  
-  
- Toto upozornění může mít libovolný počet důvodů.  
-  
- Chcete-li vyřešit toto upozornění:  
-  
--   Pak ji znovu zkompilovat.  
-  
--   Znovu nainstalujte jazyk MSXML přeinstalováním modul common language runtime.  
-  
--   Upravte nebo odeberte dokumentace komentář, který je příčinou upozornění a pak ji znovu zkompilovat.  
-  
- Když je vydaný C4639, všechny další zpracování komentáře XML je zakázané a nevygenerovala projektový soubor.
+# <a name="compiler-warning-level-4-c4639"></a>Kompilátor upozornění (úroveň 4) C4639
+
+Chyba MSXML; dokumentu XML, který nezpracují se komentáře. Důvod
+
+Toto upozornění může dojít z nejrůznějších důvodů.
+
+Chcete-li vyřešit tato upozornění:
+
+- Znovu zkompilujte.
+
+- Znovu nainstalujte MSXML přeinstalací modul common language runtime.
+
+- Upravit nebo odebrat Dokumentační komentář, který je příčinou upozornění a překompilujte.
+
+Při vydání C4639 všechny další zpracování Komentář XML je zakázaná a soubor .xdc.

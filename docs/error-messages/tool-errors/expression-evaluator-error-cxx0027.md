@@ -1,5 +1,5 @@
 ---
-title: CXX0027 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0027 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1559aa2f3fc43080841810e11ce792db8e13b95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f728b8eb67c36c8469d1d88e9080e22cba6555d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118788"
 ---
 # <a name="expression-evaluator-error-cxx0027"></a>Chyba při vyhodnocování výrazu CXX0027
-transakční program addr není l – hodnota  
-  
- Zkontrolujte syntaxi výrazu.  
-  
- Tato chyba je stejný jako CAN0027.
+
+transakční program addr není l hodnotou.
+
+Zkontrolujte syntaxi výrazu.
+
+Tato chyba se shoduje s CAN0027.

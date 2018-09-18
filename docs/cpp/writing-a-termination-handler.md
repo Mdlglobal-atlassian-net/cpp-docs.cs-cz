@@ -21,27 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 85241d9dde87e929b02328a6e7d0c75b5ce068ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116227"
 ---
 # <a name="writing-a-termination-handler"></a>Zápis obslužné rutiny ukončení
-Na rozdíl od obslužné rutiny výjimky je obslužná rutina ukončení spuštěna vždy, bez ohledu na to, zda je chráněný blok kódu ukončen normálně. Jediným účelem obslužné rutiny ukončení by mělo být zajištění, že prostředky, jako například paměť, popisovače a soubory, jsou správně uzavřeny bez ohledu na to, jak část kódu dokončí provádění.  
-  
- Obslužné rutiny ukončení používají příkaz try-finally.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
-  
--   [Příkaz try-finally](../cpp/try-finally-statement.md)  
-  
--   [Vymazání prostředků](../cpp/cleaning-up-resources.md)  
-  
--   [Načasování akcí ve zpracování výjimek](../cpp/timing-of-exception-handling-a-summary.md)  
-  
--   [Omezení obslužných rutin ukončení](../cpp/restrictions-on-termination-handlers.md)  
-  
-## <a name="see-also"></a>Viz také:  
- [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Na rozdíl od obslužné rutiny výjimky je obslužná rutina ukončení spuštěna vždy, bez ohledu na to, zda je chráněný blok kódu ukončen normálně. Jediným účelem obslužné rutiny ukončení by mělo být zajištění, že prostředky, jako například paměť, popisovače a soubory, jsou správně uzavřeny bez ohledu na to, jak část kódu dokončí provádění.
+
+Obslužné rutiny ukončení používají příkaz try-finally.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+
+- [Příkaz try-finally](../cpp/try-finally-statement.md)
+
+- [Vymazání prostředků](../cpp/cleaning-up-resources.md)
+
+- [Načasování akcí ve zpracování výjimek](../cpp/timing-of-exception-handling-a-summary.md)
+
+- [Omezení obslužných rutin ukončení](../cpp/restrictions-on-termination-handlers.md)
+
+## <a name="see-also"></a>Viz také:
+
+[Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

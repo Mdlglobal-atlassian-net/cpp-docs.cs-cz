@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113133"
 ---
 # <a name="com-map-global-functions"></a>Globální funkce mapy modelu COM.
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pThis*  
+*pThis*<br/>
 [in] Ukazatel na objekt, který obsahuje mapování modelu COM rozhraní vystavena `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Pole `_ATL_INTMAP_ENTRY` struktury, které přistupují k mapě dostupné rozhraní.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní zadané v *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>Parametry
 
-*rguid1*  
+*rguid1*<br/>
 [in] Identifikátor GUID, který má být porovnán s `IID_IUnknown`.
 
 ## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)   
+[Funkce](../../atl/reference/atl-functions.md)<br/>
 [Makra map COM](../../atl/reference/com-map-macros.md)

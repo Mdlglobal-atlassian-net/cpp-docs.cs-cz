@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf97db30cae44d02a690782f1246e06d6c2b9a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112990"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty ATL Active Server stránky
 
@@ -46,10 +46,10 @@ Active Server Pages komponenty jsou součástí architekturu Internetová inform
 
 ## <a name="see-also"></a>Viz také
 
-[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
-[Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)   
-[Přidání metody](../../ide/adding-a-method-visual-cpp.md)   
-[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Přidání metody](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)
 

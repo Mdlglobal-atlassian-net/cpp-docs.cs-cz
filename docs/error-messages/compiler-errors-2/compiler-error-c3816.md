@@ -1,5 +1,5 @@
 ---
-title: C3816 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3816 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be09db4d91b511583b3119f03df8abc61a0153e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfc0cf864caeefd5b19e3d40383724909575d4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115889"
 ---
-# <a name="compiler-error-c3816"></a>C3816 chyby kompilátoru
-"prohlášení" byla deklarována nebo definovaný s jinou spravované nebo WinRTmodifier  
-  
- Předat dál deklarace a skutečnou deklaraci vyžadovat, aby existovat žádné konflikty nebo nekonzistence v deklaraci atributy.  
-  
- Následující ukázka generuje C3816 a ukazuje, jak to opravit:  
-  
-```  
-// C3816a.cpp  
-// compile with: /clr /c  
-class C1;  
-// try the following line instead  
-// ref class C1;  
-  
-ref class C1{  // C3816, forward declaration does not use ref  
-};  
+# <a name="compiler-error-c3816"></a>Chyba kompilátoru C3816
+
+"deklarace" byla dříve deklarované nebo definované pomocí jiné spravované nebo WinRTmodifier
+
+Dopředná deklarace a skutečná deklarace vyžadují, aby existovat žádné konflikty nebo nekonzistence v deklaraci atributy.
+
+Následující ukázka generuje C3816 a ukazuje, jak ho opravit:
+
+```
+// C3816a.cpp
+// compile with: /clr /c
+class C1;
+// try the following line instead
+// ref class C1;
+
+ref class C1{  // C3816, forward declaration does not use ref
+};
 ```
