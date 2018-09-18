@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078514"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)
+
 Aktualizuje [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány během transakce prostřednictvím vyrovnávací paměti (stejnou metodu používá mimo transakce). Pole datových členů sady záznamů společně slouží jako vyrovnávací paměť úprav, který obsahuje aktuální záznam, který sada záznamů zálohuje dočasně během `AddNew` nebo `Edit`. Během `Delete` operaci, aktuální záznam nejsou zálohovány v rámci transakce. Další informace o vyrovnávací paměť pro úpravu a jak aktualizace uložit aktuální záznam najdete v tématu [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
 >  Pokud jste implementovali hromadné načítání řádků, nelze volat `AddNew`, `Edit`, nebo `Delete`. Místo toho musíte napsat vlastní funkce pro provádění aktualizací ke zdroji dat. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Během transakce `AddNew`, `Edit`, a `Delete` operace může být potvrzena nebo vrácena zpět. Účinky `CommitTrans` a `Rollback` může způsobit, že aktuální záznam obnoven do vyrovnávací paměti pro úpravy. Pokud chcete mít jistotu, že aktuální záznam správné obnovení, je důležité pochopit, jak `CommitTrans` a `Rollback` členské funkce `CDatabase` pracovat s funkcí aktualizace `CRecordset`.  
+Během transakce `AddNew`, `Edit`, a `Delete` operace může být potvrzena nebo vrácena zpět. Účinky `CommitTrans` a `Rollback` může způsobit, že aktuální záznam obnoven do vyrovnávací paměti pro úpravy. Pokud chcete mít jistotu, že aktuální záznam správné obnovení, je důležité pochopit, jak `CommitTrans` a `Rollback` členské funkce `CDatabase` pracovat s funkcí aktualizace `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Jak ovlivňuje CommitTrans – aktualizace  
- Následující tabulka popisuje účinky `CommitTrans` transakcí.  
+
+Následující tabulka popisuje účinky `CommitTrans` transakcí.  
   
 ### <a name="how-committrans-affects-updates"></a>Jak ovlivňuje CommitTrans – aktualizace  
   
@@ -48,7 +50,8 @@ Aktualizuje [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány b�
 |`Delete` Potom `CommitTrans`|Záznamy ze zdroje dat odstranit.|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> Jak ovlivňuje vrácení zpět transakcí  
- Následující tabulka popisuje účinky `Rollback` transakcí.  
+
+Následující tabulka popisuje účinky `Rollback` transakcí.  
   
 ### <a name="how-rollback-affects-transactions"></a>Jak ovlivňuje vrácení zpět transakcí  
   
@@ -61,8 +64,9 @@ Aktualizuje [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány b�
 |`Delete` Potom `Rollback`|Obsah aktuální záznam je odstraněn.|Volání `Requery` obnovit obsah aktuální záznam ze zdroje dat.|Odstranění dat ze zdroje dat je obrácený.|  
   
 ## <a name="see-also"></a>Viz také  
- [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase – třída](../../mfc/reference/cdatabase-class.md)   
- [CRecordset – třída](../../mfc/reference/crecordset-class.md)
+
+[Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[CDatabase – třída](../../mfc/reference/cdatabase-class.md)<br/>
+[CRecordset – třída](../../mfc/reference/crecordset-class.md)

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086145"
 ---
 # <a name="containers-modern-c"></a>Kontejnery (moderní verze jazyka C++)
 
@@ -48,6 +48,7 @@ Nepoužívejte pole stylu C. Pro starší rozhraní API, třeba přímý příst
 Další informace o kontejnerech naleznete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Viz také:
- [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)  
- [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)  
+
+[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1203 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1203 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081452"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Závažná chyba kompilátoru prostředků RC1203
-Zadané ID neplatné hexadecimální výchozí jazyk.  
-  
- Zadejte výchozí jazyk (/ l) možnost následovalo Neplatný hexadecimální jazyk ID. V tématu [řetězce země nebo oblast a jazyk](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *referenční dokumentace běhové knihovny* seznam platné ID jazyka.
+
+Zadané ID Neplatná šestnáctková výchozí jazyk.
+
+Zadejte výchozí jazyk (/ l) možnost následovalo identifikátor neplatný hexadecimální jazyk. Zobrazit [jazyka a země/Region Strings](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *Run-Time Library Reference* seznam platné ID jazyka.

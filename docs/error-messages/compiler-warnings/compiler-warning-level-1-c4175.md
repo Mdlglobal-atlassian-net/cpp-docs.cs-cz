@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4175 | Microsoft Docs
+title: Upozornění (úroveň 1) C4175 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e94b85a65f95353498c144eb4d55abdf83daa2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61cf0471bd4308feb7be3a789f03e4355d6f7366
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080282"
 ---
-# <a name="compiler-warning-level-1-c4175"></a>C4175 kompilátoru upozornění (úroveň 1)
-\#Direktiva pragma component(browser, on): informace o prohlížeči se musí nejprve zadat na příkazovém řádku  
-  
- Chcete-li použít [součást](../../preprocessor/component.md) – Direktiva pragma, musíte vygenerovat procházet informace během kompilace ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).
+# <a name="compiler-warning-level-1-c4175"></a>Kompilátor upozornění (úroveň 1) C4175
+
+\#direktivy pragma component(browser, on): informace o prohlížeči nejprve třeba zadat na příkazovém řádku
+
+Použití [komponenty](../../preprocessor/component.md) – Direktiva pragma, je nutné generovat informace o procházení při kompilaci ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).

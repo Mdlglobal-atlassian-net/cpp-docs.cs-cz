@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4041 | Microsoft Docs
+title: Upozornění (úroveň 1) C4041 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd8c933522e523329c41ebe666a5a7e3c198cb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ff2c8066557e420ecd7de561d7731b7be733315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085781"
 ---
-# <a name="compiler-warning-level-1-c4041"></a>C4041 kompilátoru upozornění (úroveň 1)
-omezení kompilátoru: ukončení prohlížeče výstup  
-  
- Informace o prohlížeči překročil limit kompilátoru.  
-  
- Toto upozornění může být způsobeno kompilujete s [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) (informace o prohlížeči včetně lokální proměnné).  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Kompilace s /Fr (informace o prohlížeči bez místní proměnné).  
-  
-2.  Zakážete prohlížeče výstup (Kompilovat bez /FR nebo /Fr).
+# <a name="compiler-warning-level-1-c4041"></a>Kompilátor upozornění (úroveň 1) C4041
+
+limit kompilátoru: ukončuje se výstup prohlížeče
+
+Informace o prohlížeči překročil limit kompilátoru.
+
+Toto upozornění může být způsobeno kompilaci [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) (informace o prohlížeči včetně lokálních proměnných).
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Kompilovat s /Fr (informace o prohlížeči bez lokální proměnné).
+
+1. Zakážete výstup prohlížeče (kompilace bez /FR nebo /Fr).

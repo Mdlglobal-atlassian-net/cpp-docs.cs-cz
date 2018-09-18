@@ -1,5 +1,5 @@
 ---
-title: C3501 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3501 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a74c3f06165765f971a8999dfe80412dd99dc719
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf614c8b04dc9695d870aa8254cff8a2b75ca26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086275"
 ---
-# <a name="compiler-error-c3501"></a>C3501 chyby kompilátoru
-neexistuje žádné typelib zaregistrovat pro ProgID 'progid.  
-  
- ID třídy zadaný identifikátor progid nemá přidružený typ knihovny. Proto nelze předat to progid k `#import` příkaz.
+# <a name="compiler-error-c3501"></a>Chyba kompilátoru C3501
+
+neexistuje žádné knihovny typů zaregistrovaný pro ProgID "progid.
+
+ID třídy pro zadaný identifikátor progid nemá knihovny přidruženého typu. Proto nemůžete předat to progid k `#import` příkazu.

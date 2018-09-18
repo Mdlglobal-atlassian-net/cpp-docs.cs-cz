@@ -1,5 +1,5 @@
 ---
-title: Ukázka programu obecného textu | Microsoft Docs
+title: Ukázka programu obecného textu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,175 +18,177 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1c332bc9b6ca491951ff1c9a7665471078d703e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081530"
 ---
 # <a name="a-sample-generic-text-program"></a>Ukázka programu obecného textu
-**Konkrétní Microsoft**  
-  
- Následující program GENTEXT. C, poskytuje podrobnější obrázek použití mapování obecného textu, které jsou definované v Tchar –. V:  
-  
-```  
-// GENTEXT.C  
-// use of generic-text mappings defined in TCHAR.H  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <direct.h>  
-#include <errno.h>  
-#include <tchar.h>  
-  
-int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)  
-{  
-   _TCHAR buff[_MAX_PATH];  
-   _TCHAR *str = _T("Astring");  
-   char *amsg = "Reversed";  
-   wchar_t *wmsg = L"Is";  
-  
-#ifdef _UNICODE  
-   printf("Unicode version\n");  
-#else /* _UNICODE */  
-#ifdef _MBCS  
-   printf("MBCS version\n");  
-#else  
-   printf("SBCS version\n");  
-#endif  
-#endif /* _UNICODE */  
-  
-   if (_tgetcwd(buff, _MAX_PATH) == NULL)  
-       printf("Can't Get Current Directory - errno=%d\n", errno);  
-   else  
-       _tprintf(_T("Current Directory is '%s'\n"), buff);  
-   _tprintf(_T("'%s' %hs %ls:\n"), str, amsg, wmsg);  
-   _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));  
-   return 0;  
-}  
-  
-```  
-  
- Pokud `_MBCS` byl definován GENTEXT. C mapuje následující MBCS program:  
-  
-```  
-// crt_mbcsgtxt.c  
-  
-/*   
- * Use of generic-text mappings defined in TCHAR.H  
- * Generic-Text-Mapping example program  
- * MBCS version of GENTEXT.C  
- */  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <mbstring.h>  
-#include <direct.h>  
-  
-int __cdecl main(int argc, char **argv, char **envp)  
-{  
-   char buff[_MAX_PATH];  
-   char *str = "Astring";  
-   char *amsg = "Reversed";  
-   wchar_t *wmsg = L"Is";  
-  
-   printf("MBCS version\n");  
-  
-   if (_getcwd(buff, _MAX_PATH) == NULL) {  
-       printf("Can't Get Current Directory - errno=%d\n", errno);  
-   }  
-   else {  
-       printf("Current Directory is '%s'\n", buff);  
-   }  
-  
-   printf("'%s' %hs %ls:\n", str, amsg, wmsg);  
-   printf("'%s'\n", _mbsrev(_mbsdup((unsigned char*) str)));  
-   return 0;  
-}  
-```  
-  
- Pokud `_UNICODE` byl definován GENTEXT. C mapuje následující verzi Unicode programu. Další informace o používání `wmain` v programech Unicode k nahrazení `main`, najdete v části [použití funkce wmain](../c-language/using-wmain.md) v *referenční dokumentace jazyka C*.  
-  
-```  
-// crt_unicgtxt.c  
-  
-/*   
- * Use of generic-text mappings defined in TCHAR.H  
- * Generic-Text-Mapping example program  
- * Unicode version of GENTEXT.C  
- */  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <direct.h>  
-  
-int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)  
-{  
-   wchar_t buff[_MAX_PATH];  
-   wchar_t *str = L"Astring";  
-   char *amsg = "Reversed";  
-   wchar_t *wmsg = L"Is";  
-  
-   printf("Unicode version\n");  
-  
-   if (_wgetcwd(buff, _MAX_PATH) == NULL) {  
-      printf("Can't Get Current Directory - errno=%d\n", errno);  
-   }  
-   else {  
-       wprintf(L"Current Directory is '%s'\n", buff);  
-   }  
-  
-   wprintf(L"'%s' %hs %ls:\n", str, amsg, wmsg);  
-   wprintf(L"'%s'\n", wcsrev(wcsdup(str)));  
-   return 0;  
-}  
-```  
-  
- Pokud ani `_MBCS` ani `_UNICODE` byl definován GENTEXT. C mapuje jednobajtové kód ASCII, následujícím způsobem:  
-  
-```  
-// crt_sbcsgtxt.c  
-/*   
- * Use of generic-text mappings defined in TCHAR.H  
- * Generic-Text-Mapping example program  
- * Single-byte (SBCS) Ascii version of GENTEXT.C  
- */  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <direct.h>  
-  
-int __cdecl main(int argc, char **argv, char **envp)  
-{  
-   char buff[_MAX_PATH];  
-   char *str = "Astring";  
-   char *amsg = "Reversed";  
-   wchar_t *wmsg = L"Is";  
-  
-   printf("SBCS version\n");  
-  
-   if (_getcwd(buff, _MAX_PATH) == NULL) {  
-       printf("Can't Get Current Directory - errno=%d\n", errno);  
-   }  
-   else {  
-       printf("Current Directory is '%s'\n", buff);  
-   }  
-  
-   printf("'%s' %hs %ls:\n", str, amsg, wmsg);  
-   printf("'%s'\n", strrev(strdup(str)));  
-   return 0;  
-}  
-```  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)   
- [Mapování datového typu](../c-runtime-library/data-type-mappings.md)   
- [Mapování konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Mapování rutiny](../c-runtime-library/routine-mappings.md)   
- [Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)
+
+**Specifické pro Microsoft**
+
+Následující program GENTEXT. Jazyk C poskytuje podrobnější příklad použití mapování obecného textu, které jsou definovány v TCHAR. V:
+
+```
+// GENTEXT.C
+// use of generic-text mappings defined in TCHAR.H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <direct.h>
+#include <errno.h>
+#include <tchar.h>
+
+int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
+{
+   _TCHAR buff[_MAX_PATH];
+   _TCHAR *str = _T("Astring");
+   char *amsg = "Reversed";
+   wchar_t *wmsg = L"Is";
+
+#ifdef _UNICODE
+   printf("Unicode version\n");
+#else /* _UNICODE */
+#ifdef _MBCS
+   printf("MBCS version\n");
+#else
+   printf("SBCS version\n");
+#endif
+#endif /* _UNICODE */
+
+   if (_tgetcwd(buff, _MAX_PATH) == NULL)
+       printf("Can't Get Current Directory - errno=%d\n", errno);
+   else
+       _tprintf(_T("Current Directory is '%s'\n"), buff);
+   _tprintf(_T("'%s' %hs %ls:\n"), str, amsg, wmsg);
+   _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
+   return 0;
+}
+
+```
+
+Pokud `_MBCS` byl definován GENTEXT. C mapuje se na následující program znakové sady MBCS:
+
+```
+// crt_mbcsgtxt.c
+
+/*
+ * Use of generic-text mappings defined in TCHAR.H
+ * Generic-Text-Mapping example program
+ * MBCS version of GENTEXT.C
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <mbstring.h>
+#include <direct.h>
+
+int __cdecl main(int argc, char **argv, char **envp)
+{
+   char buff[_MAX_PATH];
+   char *str = "Astring";
+   char *amsg = "Reversed";
+   wchar_t *wmsg = L"Is";
+
+   printf("MBCS version\n");
+
+   if (_getcwd(buff, _MAX_PATH) == NULL) {
+       printf("Can't Get Current Directory - errno=%d\n", errno);
+   }
+   else {
+       printf("Current Directory is '%s'\n", buff);
+   }
+
+   printf("'%s' %hs %ls:\n", str, amsg, wmsg);
+   printf("'%s'\n", _mbsrev(_mbsdup((unsigned char*) str)));
+   return 0;
+}
+```
+
+Pokud `_UNICODE` byl definován GENTEXT. C mapuje následující Unicode verzi programu. Další informace o používání `wmain` sady Unicode jako náhrada `main`, naleznete v tématu [použití funkce wmain](../c-language/using-wmain.md) v *referenční dokumentace jazyka C*.
+
+```
+// crt_unicgtxt.c
+
+/*
+ * Use of generic-text mappings defined in TCHAR.H
+ * Generic-Text-Mapping example program
+ * Unicode version of GENTEXT.C
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <direct.h>
+
+int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
+{
+   wchar_t buff[_MAX_PATH];
+   wchar_t *str = L"Astring";
+   char *amsg = "Reversed";
+   wchar_t *wmsg = L"Is";
+
+   printf("Unicode version\n");
+
+   if (_wgetcwd(buff, _MAX_PATH) == NULL) {
+      printf("Can't Get Current Directory - errno=%d\n", errno);
+   }
+   else {
+       wprintf(L"Current Directory is '%s'\n", buff);
+   }
+
+   wprintf(L"'%s' %hs %ls:\n", str, amsg, wmsg);
+   wprintf(L"'%s'\n", wcsrev(wcsdup(str)));
+   return 0;
+}
+```
+
+Pokud ani `_MBCS` ani `_UNICODE` byl definován GENTEXT. C mapuje jednobajtové kódu ASCII, následujícím způsobem:
+
+```
+// crt_sbcsgtxt.c
+/*
+ * Use of generic-text mappings defined in TCHAR.H
+ * Generic-Text-Mapping example program
+ * Single-byte (SBCS) Ascii version of GENTEXT.C
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <direct.h>
+
+int __cdecl main(int argc, char **argv, char **envp)
+{
+   char buff[_MAX_PATH];
+   char *str = "Astring";
+   char *amsg = "Reversed";
+   wchar_t *wmsg = L"Is";
+
+   printf("SBCS version\n");
+
+   if (_getcwd(buff, _MAX_PATH) == NULL) {
+       printf("Can't Get Current Directory - errno=%d\n", errno);
+   }
+   else {
+       printf("Current Directory is '%s'\n", buff);
+   }
+
+   printf("'%s' %hs %ls:\n", str, amsg, wmsg);
+   printf("'%s'\n", strrev(strdup(str)));
+   return 0;
+}
+```
+
+ **Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapování datového typu](../c-runtime-library/data-type-mappings.md)<br/>
+[Mapování konstant a globálních proměnných](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Mapování rutin](../c-runtime-library/routine-mappings.md)<br/>
+[Použití mapování obecného textu](../c-runtime-library/using-generic-text-mappings.md)

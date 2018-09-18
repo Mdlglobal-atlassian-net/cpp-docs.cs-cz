@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083974"
 ---
 # <a name="time-management"></a>Správa času
 
 Tyto funkce můžete použijte k získání aktuální čas a převést, upravte a uložte ho podle potřeby. Aktuální čas je systémový čas.
 
- **_Ftime** a **localtime** použít rutiny **TZ** proměnné prostředí. Pokud **TZ** není nastaven, pokusí se použít informace o časovém pásmu, který je určený operační systém knihovny run-time. Pokud tyto informace jsou k dispozici, tyto funkce použijte výchozí hodnotu PST8PDT. Další informace o **TZ**, naleznete v tématu [_tzset –](../c-runtime-library/reference/tzset.md); zobrazit také [_daylight, časové pásmo a _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+**_Ftime** a **localtime** použít rutiny **TZ** proměnné prostředí. Pokud **TZ** není nastaven, pokusí se použít informace o časovém pásmu, který je určený operační systém knihovny run-time. Pokud tyto informace jsou k dispozici, tyto funkce použijte výchozí hodnotu PST8PDT. Další informace o **TZ**, naleznete v tématu [_tzset –](../c-runtime-library/reference/tzset.md); zobrazit také [_daylight, časové pásmo a _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ### <a name="time-routines"></a>Time Routines
 

@@ -1,5 +1,5 @@
 ---
-title: C2082 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2082 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbaa7f59b8853dd1b1ad0f2e839b00086db8eac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6939bf628072fc1c5c4e72c0012e4a190d43864
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082401"
 ---
-# <a name="compiler-error-c2082"></a>C2082 chyby kompilátoru
-Předefinování formální parametr "identifikátor"  
-  
- Formální parametr pro funkci je předeklarována v rámci tělo funkce. Chcete-li vyřešit chyby, odeberte předefinování.  
-  
- Následující ukázka generuje C2082:  
-  
-```  
-// C2082.cpp  
-void func(int i) {  
-   int i;   // C2082  
-   int ii;   // OK  
-}  
+# <a name="compiler-error-c2082"></a>Chyba kompilátoru C2082
+
+Předefinování formálního parametru 'identifier'
+
+Formální parametr funkce je deklarováno v rámci těla funkce. Chcete-li chybu vyřešit, odeberte Změna definice.
+
+Následující ukázka generuje C2082:
+
+```
+// C2082.cpp
+void func(int i) {
+   int i;   // C2082
+   int ii;   // OK
+}
 ```

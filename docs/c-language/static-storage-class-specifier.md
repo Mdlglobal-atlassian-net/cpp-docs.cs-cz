@@ -1,5 +1,5 @@
 ---
-title: statický specifikátor třídy úložiště | Microsoft Docs
+title: statický specifikátor třídy úložiště | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7d61e39eb706721ddf936f88f5df02a6eddf96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1a58a8c7ab6eeb7d304d84cef15beb9046184fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079489"
 ---
 # <a name="static-storage-class-specifier"></a>Statický specifikátor třídy úložiště
-Proměnná definovaná na interní úrovni s **statické** – specifikátor třídy úložiště je globální doba platnosti, ale je viditelná pouze v rámci bloku v kterého je deklarovaná. Pro konstantní řetězce, pomocí **statické** je užitečné, protože ho nebude režii časté inicializace často říká funkcí.  
-  
-## <a name="remarks"></a>Poznámky  
-Pokud není inicializaci explicitně **statické** proměnné, je inicializováno 0 ve výchozím nastavení. Uvnitř funkce **statické** způsobí, že úložiště přidělování a slouží jako definice. Vnitřní statické proměnné poskytují trvalé soukromé úložiště, které je viditelné pouze jedinou funkcí.  
-  
-## <a name="see-also"></a>Viz také  
-[Třídy úložiště jazyka C](c-storage-classes.md)  
-[Třídy úložiště (C++)](../cpp/storage-classes-cpp.md)  
+
+Proměnná deklarovaná na vnitřní úrovni **statické** – specifikátor třídy úložiště má globální dobu platnosti, ale je viditelný pouze v rámci bloku ve kterém je deklarována. Pro konstantní řetězce je použití **statické** je užitečné, protože zmírňuje režii časté inicializace v často volaných funkcích.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud neinicializujete explicitně **statické** proměnné, je inicializován na 0 ve výchozím nastavení. Uvnitř funkce **statické** způsobí, že je přiděleno úložiště a slouží jako definice. Vnitřní statické proměnné poskytují trvalé soukromé úložiště, které je viditelné pouze jedinou funkcí.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy úložiště jazyka C](c-storage-classes.md)<br/>
+[Třídy úložiště (C++)](../cpp/storage-classes-cpp.md)

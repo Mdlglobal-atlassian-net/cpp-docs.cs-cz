@@ -1,5 +1,5 @@
 ---
-title: CXX0041 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0041 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93a2e5d8b589ddfbddac979aa27e0241ee02c68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1dc525ea75f58028f7359c7a063bdb45a8387a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080802"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Chyba při vyhodnocování výrazu CXX0041
-třídy element musí být statický člen nebo – členská funkce  
-  
- Nestatické členské – třída (nebo struktura nebo union) byl použit bez zadání které vytváření instancí třídy k použití.  
-  
- Pokud není zadán vytváření instancí lze používat pouze členy statických dat nebo členské funkce.  
-  
- Tato chyba je stejný jako CAN0041.
+
+Třída elementu musí být statický člen nebo členskou funkci
+
+Nestatický člen třídy (nebo struktura nebo sjednocení) byl použit bez zadání která vytváření instancí třídy k použití.
+
+Pouze statické datové členy nebo členské funkce lze použít bez zadání instance.
+
+Tato chyba se shoduje s CAN0041.

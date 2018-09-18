@@ -1,5 +1,5 @@
 ---
-title: _cabs – | Microsoft Docs
+title: _cabs | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085279"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,11 +64,11 @@ Komplexní čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_cabs –** v případě úspěchu vrátí absolutní hodnotu jejího argumentu. Na přetečení **_cabs –** vrátí **huge_val –** a nastaví **errno** k **erange –**. Můžete změnit zpracování chyb pomocí [_matherr –](matherr.md).
+**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** k **ERANGE**. Můžete změnit zpracování chyb pomocí [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cabs –** funkce vypočítá absolutní hodnotu komplexního čísla, která musí být struktura typu [_complex –](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z reálného součást *x* a pomyslná součást *y*. Volání **_cabs –** vytváří hodnotě odpovídající výraz `sqrt( z.x * z.x + z.y * z.y )`.
+**_Cabs** funkce vypočítá absolutní hodnotu komplexního čísla, která musí být strukturu typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z proceduru reálnou součástí *x* a imaginární části *y*. Volání **_cabs** produkuje hodnotu ekvivalentní výraz `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,7 +76,7 @@ Komplexní čísla.
 |-------------|---------------------|
 |**_cabs**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -103,8 +103,8 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

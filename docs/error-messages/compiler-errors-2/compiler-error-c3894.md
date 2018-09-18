@@ -1,5 +1,5 @@
 ---
-title: C3894 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3894 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc94b207f3e9df607a7599bc960f2423f7acd029
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 373da78257ee0f5ce7307ab521cccb0297933240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080087"
 ---
-# <a name="compiler-error-c3894"></a>C3894 chyby kompilátoru
-'příkaz var': použijte l-value initonly statických dat člena je povoleno pouze v konstruktoru třídy třídy 'class'.  
-  
- Statické [initonly](../../dotnet/initonly-cpp-cli.md) datové členy lze použít pouze jako hodnoty l na jejich bod deklarace, nebo v statického konstruktoru.  
-  
- Datové členy (nestatické) initonly instance můžete použít jenom jako hodnoty l na jejich bod deklarace, nebo v konstruktory instancí (nestatické).  
-  
- Následující ukázka generuje C3894:  
-  
-```  
-// C3894.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   initonly static int data_var = 0;  
-  
-public:  
-   // class constructor  
-   static Y1() {  
-      data_var = 99;   // OK  
-      System::Console::WriteLine("in static constructor");  
-   }  
-  
-   // not the class constructor  
-   Y1(int i) {  
-      data_var = i;   // C3894  
-   }  
-  
-   static void Test() {}  
-  
-};  
-  
-int main() {  
-   Y1::data_var = 88;   // C3894  
-   int i = Y1::data_var;  
-   Y1 ^ MyY1 = gcnew Y1(99);  
-   Y1::Test();  
-}  
+# <a name="compiler-error-c3894"></a>Chyba kompilátoru C3894
+
+'příkaz var': použití l-value statického datového členu initonly je povolený jenom v konstruktoru class třídy 'class'
+
+Statické [initonly](../../dotnet/initonly-cpp-cli.md) datové členy jde použít jenom jako l hodnoty na jejich bod prohlášení nebo ve statickém konstruktoru.
+
+Datové členy initonly (nestatické) instance jde použít jenom jako l hodnoty na jejich bod deklarace nebo v instančních konstruktorech (nestatické).
+
+Následující ukázka generuje C3894:
+
+```
+// C3894.cpp
+// compile with: /clr
+ref struct Y1 {
+   initonly static int data_var = 0;
+
+public:
+   // class constructor
+   static Y1() {
+      data_var = 99;   // OK
+      System::Console::WriteLine("in static constructor");
+   }
+
+   // not the class constructor
+   Y1(int i) {
+      data_var = i;   // C3894
+   }
+
+   static void Test() {}
+
+};
+
+int main() {
+   Y1::data_var = 88;   // C3894
+   int i = Y1::data_var;
+   Y1 ^ MyY1 = gcnew Y1(99);
+   Y1::Test();
+}
 ```

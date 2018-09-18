@@ -1,5 +1,5 @@
 ---
-title: Odečtení ukazatele | Microsoft Docs
+title: Odečtení ukazatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576a8d9252db3d5733775a7a0c348b428462aa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9756861fd1204a05179ac77dfa648822ed83e5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079531"
 ---
 # <a name="pointer-subtraction"></a>Odečtení ukazatele
-**ANSI 3.3.6, 4.1.1** typ celé číslo, které jsou požadované pro uchovávání rozdíl mezi dvěma ukazatele k prvkům ve stejném poli **ptrdiff_t –**  
-  
- `ptrdiff_t` Typedef je `int` na x86 32bitovou platformu. Na 64bitových platformách `ptrdiff_t` typedef je `__int64`.
-  
-## <a name="see-also"></a>Viz také  
- [Pole a ukazatelé](../c-language/arrays-and-pointers.md)
+
+**ANSI 3.3.6, 4.1.1** typu celé číslo vyžadováno k uložení rozdílu mezi dvěma ukazateli na prvky stejného pole **ptrdiff_t**
+
+`ptrdiff_t` Definice typedef je `int` na 32-bit x86 platformy. Na 64bitových platformách `ptrdiff_t` definice typedef je `__int64`.
+
+## <a name="see-also"></a>Viz také
+
+[Pole a ukazatelé](../c-language/arrays-and-pointers.md)

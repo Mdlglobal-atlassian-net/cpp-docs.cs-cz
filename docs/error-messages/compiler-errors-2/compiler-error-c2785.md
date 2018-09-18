@@ -1,5 +1,5 @@
 ---
-title: C2785 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2785 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0ca6235e0fd4bdd22330e807464e96280ae461
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfae8a58d9c42c9ddc3ef7779fc86f7157ba41b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080854"
 ---
-# <a name="compiler-error-c2785"></a>C2785 chyby kompilátoru
-'declaration1' a 'declaration2' mají různé návratové typy  
-  
- Návratový typ funkce specializace šablony se liší od návratový typ šablony primární funkce.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
-1.  Zkontrolujte všechny specializací šablony funkce konzistence.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2785:  
-  
-```  
-// C2785.cpp  
-// compile with: /c  
-template<class T> void f(T);  
-  
-template<> int f(int); // C2785  
-template<> void f(int); // OK  
+# <a name="compiler-error-c2785"></a>Chyba kompilátoru C2785
+
+"declaration1" a 'declaration2' mají rozdílné návratové typy
+
+Návratový typ specializace šablony funkce se liší od návratový typ šablony primární funkce.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+1. Zkontrolujte všechny specializace šablony funkce pro zajištění konzistence.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2785:
+
+```
+// C2785.cpp
+// compile with: /c
+template<class T> void f(T);
+
+template<> int f(int); // C2785
+template<> void f(int); // OK
 ```

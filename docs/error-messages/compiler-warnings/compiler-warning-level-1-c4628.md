@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4628 | Microsoft Docs
+title: Upozornění (úroveň 1) C4628 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ffc84b8b7ec9934bb0dae951f5868d271ab62be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b3f7e65a6235b7eb890cf1265b949760f370ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082557"
 ---
-# <a name="compiler-warning-level-1-c4628"></a>C4628 kompilátoru upozornění (úroveň 1)
-spřežky nejsou podporovány se -Ze. Sekvence znaků 'digraph' není interpretována jako alternativní token pro 'char'.  
-  
- Digraphs nejsou podporované v rámci [/Ze](../../build/reference/za-ze-disable-language-extensions.md). Toto upozornění bude následovat za chybu.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4628:  
-  
-```  
-// C4628.cpp  
-// compile with: /WX  
-#pragma warning(default : 4628)  
-int main()  
-<%   // C4628 <% digraph for {  
-}  
+# <a name="compiler-warning-level-1-c4628"></a>Kompilátor upozornění (úroveň 1) C4628
+
+spřežky nejsou podporovány se -Ze. Sekvence znaků 'digraph' není interpretována jako alternativní token pro 'char'.
+
+Digraphy nejsou podporované v rámci [/Ze](../../build/reference/za-ze-disable-language-extensions.md). Toto upozornění bude následovat chyba.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4628:
+
+```
+// C4628.cpp
+// compile with: /WX
+#pragma warning(default : 4628)
+int main()
+<%   // C4628 <% digraph for {
+}
 ```

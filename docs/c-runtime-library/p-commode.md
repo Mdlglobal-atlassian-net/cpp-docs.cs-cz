@@ -1,5 +1,5 @@
 ---
-title: __p__commode | Microsoft Docs
+title: __p__commode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082440"
 ---
 # <a name="pcommode"></a>__p__commode
-Odkazuje na `_commode` globální proměnná, která určuje výchozí *režim souboru potvrzení* pro vstupně-výstupní operace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel `_commode` – globální proměnná.  
-  
-## <a name="remarks"></a>Poznámky  
- `__p__commode` Funkce je jen pro interní použití a neměla být volána z uživatelského kódu.  
-  
- Určuje režim souboru potvrzení při zápisu důležitých dat na disk. Další informace najdete v tématu [fflush –](../c-runtime-library/reference/fflush.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
+
+Odkazuje `_commode` globální proměnné, která určuje výchozí *potvrzení režim souboru* pro vstupně-výstupní operace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel `_commode` globální proměnné.
+
+## <a name="remarks"></a>Poznámky
+
+`__p__commode` Funkce je jen pro interní použití a by neměla být volána z uživatelského kódu.
+
+Určuje režim potvrzení souborů při zápisu důležitá data na disk. Další informace najdete v tématu [fflush –](../c-runtime-library/reference/fflush.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
 |__p\__commode|internal.h|

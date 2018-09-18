@@ -1,5 +1,5 @@
 ---
-title: C2199 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2199 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31164597c9427dc5e915f5a0315d8e2bb7825e8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 616b155ad0ca22c3eb45fd881a22ff36b5430f81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083650"
 ---
-# <a name="compiler-error-c2199"></a>C2199 chyby kompilátoru
-Chyba syntaxe: nalezen ' identifikátor (' v globálním oboru (byl deklaraci určený?)  
-  
- Zadaný kontext způsobila chybu syntaxe. Může být nesprávná deklarace syntaxe.  
-  
- Následující ukázka generuje C2199:  
-  
-```  
-// C2199.cpp  
-// compile with: /c  
-int j = int(1) int(1);   // C2199  
-int j = 1;   // OK  
+# <a name="compiler-error-c2199"></a>Chyba kompilátoru C2199
+
+Chyba syntaxe: nenašel se identifikátor ("v globálním oboru (byla deklarace úmyslná?)
+
+Zadaný kontext způsobila chybu syntaxe. Může být nesprávná deklarace syntaxe.
+
+Následující ukázka generuje C2199:
+
+```
+// C2199.cpp
+// compile with: /c
+int j = int(1) int(1);   // C2199
+int j = 1;   // OK
 ```

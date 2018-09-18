@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4673 | Microsoft Docs
+title: Upozornění (úroveň 4) C4673 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aecb4b3590a3cb1a1b055cd1e3377d00c5d0e5bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab61a71a747b1fd917db579a57700107d12da87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085813"
 ---
-# <a name="compiler-warning-level-4-c4673"></a>C4673 kompilátoru upozornění (úroveň 4)
-vyvolání "identifikátor" následující typy nebude se zvažovat v lokalitě catch  
-  
- Objekt throw nelze zpracovat v **catch** bloku. Každý typ, který nelze zpracovat, je uveden ve výstupu chyba okamžitě následující řádek obsahující toto upozornění. Každý typ neošetřené má svou vlastní upozornění. Přečtěte si upozornění pro každý typ konkrétní informace.  
-  
- Následující ukázka generuje C4673:  
-  
-```  
-// C4673.cpp  
-// compile with: /EHsc /W4  
-class Base {  
-private:  
-   char * m_chr;  
-public:  
-   Base() {  
-      m_chr = 0;  
-   }  
-  
-   ~Base() {  
-      if(m_chr)  
-         delete m_chr;  
-   }  
-};  
-  
-class Derv : private Base {  
-public:  
-   Derv() {}  
-   ~Derv() {}  
-};  
-  
-int main() {  
-   try {  
-      Derv D1;  
-      // delete previous line, uncomment the next line to resolve  
-      // Base D1;  
-      throw D1;   // C4673  
-   }  
-  
-   catch(...) {}  
-}  
+# <a name="compiler-warning-level-4-c4673"></a>Kompilátor upozornění (úroveň 4) C4673
+
+'identifier' vyvolání těchto typů nebude brát v lokalitě catch
+
+Objekt throw nemůže být zpracovány v **catch** bloku. Každý typ, který nelze zpracovat je uvedená ve výstupu chyba hned za řádek obsahující toto upozornění. Každý Nezpracovaný typ má své vlastní upozornění. Přečtěte si upozornění pro každý typ konkrétní informace.
+
+Následující ukázka generuje C4673:
+
+```
+// C4673.cpp
+// compile with: /EHsc /W4
+class Base {
+private:
+   char * m_chr;
+public:
+   Base() {
+      m_chr = 0;
+   }
+
+   ~Base() {
+      if(m_chr)
+         delete m_chr;
+   }
+};
+
+class Derv : private Base {
+public:
+   Derv() {}
+   ~Derv() {}
+};
+
+int main() {
+   try {
+      Derv D1;
+      // delete previous line, uncomment the next line to resolve
+      // Base D1;
+      throw D1;   // C4673
+   }
+
+   catch(...) {}
+}
 ```

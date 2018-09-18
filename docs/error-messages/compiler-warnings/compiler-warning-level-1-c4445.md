@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4445 | Microsoft Docs
+title: Upozornění (úroveň 1) C4445 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd0d15113373f752bb861d73e48091687b2f0d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80b3e13f0f7271a38d71c65efa65f104e44aa475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079944"
 ---
-# <a name="compiler-warning-level-1-c4445"></a>C4445 kompilátoru upozornění (úroveň 1)
-'function': v WinRT nebo spravovaný typ nemůže být privátní virtuální metoda  
-  
- Pokud je privátní virtuální funkce, nelze přistupovat odvozeným typem. Tuto chybu opravit, změňte usnadnění člena virtuální funkce na chráněný nebo veřejné.
+# <a name="compiler-warning-level-1-c4445"></a>Kompilátor upozornění (úroveň 1) C4445
+
+'function': v WinRT nebo spravovaný typ virtuální metoda nemůže být privátní
+
+Pokud virtuální funkce je soukromý, nelze získat přístup odvozeným typem. Pokud chcete tuto chybu opravit, změňte přístupnost člena virtuální členská funkce na chráněný nebo veřejné.

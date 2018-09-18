@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74bc3326c50f1b460fc212074b7ca34dec518c76
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6cc489850ea8e8d2704c92d1c2a671557a4db67a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084325"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Csimplearrayequalhelperfalse – třída
 
@@ -32,13 +32,13 @@ Tato třída je pomocné rutiny pro [csimplearray –](../../atl/reference/csimp
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelperFalse
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Odvozené třídy.
 
 ## <a name="members"></a>Členové
@@ -75,5 +75,5 @@ Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem fa
 
 ## <a name="see-also"></a>Viz také
 
-[Csimplearrayequalhelper – třída](../../atl/reference/csimplearrayequalhelper-class.md)   
+[CSimpleArrayEqualHelper – třída](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

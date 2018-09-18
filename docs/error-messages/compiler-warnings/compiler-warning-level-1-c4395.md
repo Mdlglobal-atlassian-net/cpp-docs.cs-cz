@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4395 | Microsoft Docs
+title: Upozornění (úroveň 1) C4395 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b52322b7114a16fcd0f447ba6fd628751c250e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d80f4bd5e01fdcc055452a66226f6f27ae920e90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080139"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>C4395 kompilátoru upozornění (úroveň 1)
-'function': na kopii datového členu initonly "člen" bude volána – členská funkce  
-  
- Členské funkce byla zavolána na [initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) – datový člen.  C4395 zobrazí upozornění, která **initonly** – datový člen nemůže být upraven funkcí.  
-  
- Následující ukázka generuje C4395:  
-  
-```  
-// C4395.cpp  
-// compile with: /W1 /clr  
-public value class V {  
-public:  
-   V(int data) : m_data(data) {}  
-  
-   void Mutate() {  
-      System::Console::WriteLine("Enter Mutate: m_data = {0}", m_data);  
-      m_data *= 2;  
-      System::Console::WriteLine("Leave Mutate: m_data = {0}", m_data);  
-   }  
-  
-   int m_data;  
-};  
-  
-public ref class R {  
-public:  
-   static void f() {  
-      System::Console::WriteLine("v.m_data = {0}", v.m_data);  
-      v.Mutate();   // C4395  
-      System::Console::WriteLine("v.m_data = {0}", v.m_data);  
-   }  
-  
-private:  
-   initonly static V v = V(4);  
-};  
-  
-int main() {  
-   R::f();  
-}  
+# <a name="compiler-warning-level-1-c4395"></a>Kompilátor upozornění (úroveň 1) C4395
+
+'function': členská funkce se bude volat pro kopii datového členu initonly 'member'
+
+Členská funkce byla volána pro [initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) datový člen.  C4395, která upozorní **initonly** datový člen nemůže upravit funkce.
+
+Následující ukázka generuje C4395:
+
+```
+// C4395.cpp
+// compile with: /W1 /clr
+public value class V {
+public:
+   V(int data) : m_data(data) {}
+
+   void Mutate() {
+      System::Console::WriteLine("Enter Mutate: m_data = {0}", m_data);
+      m_data *= 2;
+      System::Console::WriteLine("Leave Mutate: m_data = {0}", m_data);
+   }
+
+   int m_data;
+};
+
+public ref class R {
+public:
+   static void f() {
+      System::Console::WriteLine("v.m_data = {0}", v.m_data);
+      v.Mutate();   // C4395
+      System::Console::WriteLine("v.m_data = {0}", v.m_data);
+   }
+
+private:
+   initonly static V v = V(4);
+};
+
+int main() {
+   R::f();
+}
 ```

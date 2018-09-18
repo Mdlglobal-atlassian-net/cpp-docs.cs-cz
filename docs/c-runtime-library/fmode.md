@@ -1,5 +1,5 @@
 ---
-title: _fmode – | Microsoft Docs
+title: _fmode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dfb5343e7a9ab64b2a1bd5cdb6edea0821e1559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfc89eeda690632979521fa8a4e91c48c8b3c866
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080828"
 ---
 # <a name="fmode"></a>_fmode
-`_fmode` Proměnná nastaví výchozí režim překladu souboru pro překlad textu nebo binárních. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [_get_fmode –](../c-runtime-library/reference/get-fmode.md) a [_set_fmode –](../c-runtime-library/reference/set-fmode.md), který má být použit místo globální proměnné. Je deklarován v Stdlib.h následujícím způsobem.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-extern int _fmode;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Výchozí nastavení `_fmode` je `_O_TEXT` pro překlad textovém režimu. `_O_BINARY` je nastavení pro binárního režimu.  
-  
- Můžete změnit hodnotu `_fmode` třemi způsoby:  
-  
--   Odkaz s Binmode.obj. Tato operace změní počáteční nastavení `_fmode` k `_O_BINARY`, způsobuje všechny soubory kromě `stdin`, `stdout`, a `stderr` otevřít v binárním režimu.  
-  
--   Volání na `_get_fmode` nebo `_set_fmode` pro získání nebo nastavení `_fmode` globální proměnná, v uvedeném pořadí.  
-  
--   Změňte hodnotu `_fmode` přímo podle nastavení v programu.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální proměnné](../c-runtime-library/global-variables.md)   
- [_get_fmode –](../c-runtime-library/reference/get-fmode.md)   
- [_set_fmode](../c-runtime-library/reference/set-fmode.md)
+
+`_fmode` Proměnné se nastaví výchozí režim překladu souboru textový nebo binární překlad. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [_get_fmode –](../c-runtime-library/reference/get-fmode.md) a [_set_fmode –](../c-runtime-library/reference/set-fmode.md), který by měl být zastoupen globální proměnnou. Je deklarována v souboru Stdlib.h následujícím způsobem.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+extern int _fmode;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení `_fmode` je `_O_TEXT` pro překlad textu režimu. `_O_BINARY` je toto nastavení pro binárním režimu.
+
+Můžete změnit hodnotu `_fmode` třemi způsoby:
+
+- Propojení s knihovnou Binmode.obj. Tím se změní nastavení počáteční `_fmode` k `_O_BINARY`, způsobí všechny soubory kromě `stdin`, `stdout`, a `stderr` otevřít v binárním režimu.
+
+- Volání `_get_fmode` nebo `_set_fmode` pro získání nebo nastavení `_fmode` globální proměnné, v uvedeném pořadí.
+
+- Změňte hodnotu vlastnosti `_fmode` přímo nastavením ve svém programu.
+
+## <a name="see-also"></a>Viz také
+
+[Globální proměnné](../c-runtime-library/global-variables.md)<br/>
+[_get_fmode](../c-runtime-library/reference/get-fmode.md)<br/>
+[_set_fmode](../c-runtime-library/reference/set-fmode.md)

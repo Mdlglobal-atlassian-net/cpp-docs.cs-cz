@@ -1,5 +1,5 @@
 ---
-title: _Ciexp – | Microsoft Docs
+title: _CIexp | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f74e34a75698f95906de23d7093f6680a0d127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 227aca74ef64884c64ba83c9f36eb16417041fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081556"
 ---
 # <a name="ciexp"></a>_CIexp
-Vypočítá exponenciální nejvyšší hodnoty v zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIexp();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato verze `exp` funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.  
-  
- Výsledná hodnota se posune do horní části zásobníku.  
-  
-## <a name="requirements"></a>Požadavky  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
+
+Vypočítá exponenciální funkci o nejvyšší hodnotu v zásobníku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIexp();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato verze `exp` funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+
+Výsledná hodnota je vloženy do horní části zásobníku.
+
+## <a name="requirements"></a>Požadavky
+ **Platforma:** x86
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

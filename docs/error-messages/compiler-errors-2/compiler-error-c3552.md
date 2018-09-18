@@ -1,5 +1,5 @@
 ---
-title: C3552 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3552 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f1453a6175019ad7c90471330d11c77da26134
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd9f7ae37500e115fa33fa61298cab800c88f9c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081257"
 ---
-# <a name="compiler-error-c3552"></a>C3552 chyby kompilátoru
-'typename': pozdní zadaný návratový typ nemůže obsahovat 'auto'  
-  
- Pokud použijete `auto` – klíčové slovo jako zástupný symbol pro návratový typ funkce, je nutné zadat návratový typ pozdní zadaný. Však nelze použít jiný `auto` – klíčové slovo k určení pozdní určených pro návratovým typem. Například následující fragment kódu vypočítá chyba C3552.  
-  
- `auto myFunction->auto; // C3552`
+# <a name="compiler-error-c3552"></a>Chyba kompilátoru C3552
+
+'typename': pozdně zadaný návratový typ nemůže obsahovat 'auto'
+
+Pokud používáte `auto` – klíčové slovo jako zástupný symbol pro návratový typ funkce, je nutné zadat pozdně zadaný návratový typ. Však nelze použít jiné `auto` – klíčové slovo k určení pozdně zadaný návratový typ. Například následující fragment kódu vrátí chyba C3552.
+
+`auto myFunction->auto; // C3552`

@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2039 | Microsoft Docs
+title: Chyba Linkerů LNK2039 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954ea12eb9b49c2bdf59b31a1ec2ec2e66c124ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac4fdde90911427a1a193bfb6f3a950a7bdcf180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081790"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Chyba linkerů LNK2039
-Import ref třída\<typu >, která je definovaná v another.obj, je nutné buď importované nebo definované, ale ne pomocí obou  
-  
- Třída ref ' <`type`>' je v souboru .obj zadaný naimportovány, ale je rovněž definovaný v jiném souboru .obj. Tento stav může způsobit selhání běhového prostředí nebo jiné neočekávanému chování.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
-1.  Zkontrolujte, zda se`type`' musí být definován v souboru .obj jiných a zkontrolujte, zda musí být importovány ze souboru .winmd.  
-  
-2.  Odeberte definici nebo import.  
-  
-## <a name="see-also"></a>Viz také  
- [Chyby a upozornění Linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)   
- [Chyba linkerů LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
+
+Importuje se referenční třída\<typu > ", která je definována v another.obj; by měla být buď importovaná nebo definovaná, ale ne obojí.
+
+Třída ref class ' <`type`>' se importují v souboru .obj zadaný, ale je také definováno v jiném souboru .obj. K tomuto stavu může způsobit selhání běhového prostředí nebo jiné neočekávané chování.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+1. Zkontrolujte, zda "`type`' musí být definován v jiném souboru .obj a zkontrolujte, jestli musí být importovány ze souboru .winmd.
+
+1. Odeberte definici nebo importu.
+
+## <a name="see-also"></a>Viz také
+
+[Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
+[Chyba linkerů LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

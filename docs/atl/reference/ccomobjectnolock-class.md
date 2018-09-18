@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4f2ce063c817ee4bf0c9f8ee4fea3beffb075
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078956"
 ---
 # <a name="ccomobjectnolock-class"></a>Ccomobjectnolock – třída
 
@@ -35,13 +35,13 @@ Tato třída implementuje `IUnknown` pro neagregovaná objektu, ale nemá není 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<class Base>  
+template<class Base>
 class CComObjectNoLock : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ## <a name="members"></a>Členové
@@ -99,7 +99,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Typ void\*</em>  
+<em>Typ void\*</em><br/>
 [in] Tento nepojmenovaný parametr se nepoužívá. Existuje symetrie s jinými `CComXXXObjectXXX` konstruktory.
 
 ##  <a name="dtor"></a>  Ccomobjectnolock –:: ~ ccomobjectnolock –
@@ -124,10 +124,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor se požadované rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota

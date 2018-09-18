@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4086 | Microsoft Docs
+title: Upozornění Linkerů LNK4086 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b3ad3a8ceebf97ccdcf7a1d8079886f54a3984
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a2ee7660f0ad78d04f7edb191929296c8d47a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079229"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>Upozornění linkerů LNK4086
-vstupní bod funkce není __stdcall s bajtů "číslo" argumentů; bitová kopie nemusí fungovat.  
-  
- Vstupní bod pro knihovny DLL musí být `__stdcall`. Buď znovu zkompiluje funkce se [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) možnost nebo zadejte `__stdcall` nebo rozhraní WINAPI při definici funkce.
+
+vstupní bod 'function' není __stdcall s 'number' b argumentů; bitové kopie se možná nespustí.
+
+Vstupní bod pro knihovnu DLL musí být `__stdcall`. Buď znovu zkompilovat funkci s [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) možnost nebo zadejte `__stdcall` nebo WINAPI při definici funkce.

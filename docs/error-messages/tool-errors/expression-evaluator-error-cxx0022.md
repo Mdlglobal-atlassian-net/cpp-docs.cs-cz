@@ -1,5 +1,5 @@
 ---
-title: CXX0022 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0022 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082349"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Chyba při vyhodnocování výrazu CXX0022
-volání funkce před _main  
-  
- Vyhodnocovací filtr výrazů C funkci nelze vyhodnotit před ladicího programu vstoupilo do funkce **_main**. Dokud není správně inicializována program **_main** byla volána.  
-  
- Tato chyba je stejný jako CAN0022.
+
+volání funkce před _main
+
+Chyba při vyhodnocování výrazů C funkci nelze vyhodnotit před ladicí program má funkce **_main**. Program není správně inicializována až do **_main** byla volána.
+
+Tato chyba se shoduje s CAN0022.

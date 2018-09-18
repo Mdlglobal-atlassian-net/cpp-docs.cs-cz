@@ -22,53 +22,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bc9c9771622b1778abc5bf86a8ebb6e67d3fbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ac33b9c7cbcc20f3cea55e73a0c079a21a068a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086054"
 ---
 # <a name="main-program-startup"></a>main: nastavení programu
-Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který splňuje programovací model Unicode, můžete použít `wmain`, což je verze širokého znaku **hlavní**.  
-  
- **Hlavní** není kompilátorem předdefinované funkce. Musí být zadána textu programu.  
-  
- Syntaxe deklarace pro **hlavní** je  
-  
-```cpp 
-int main();  
-```  
-  
- nebo v případě potřeby  
-  
-```cpp 
-int main(int argc, char *argv[], char *envp[]);  
-```  
-  
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Syntaxe deklarace pro `wmain` vypadá takto:  
-  
-```cpp 
-int wmain( );  
-```  
-  
- nebo v případě potřeby  
-  
-```cpp 
-int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
-```  
-  
- Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na **hlavní** Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
-  
- Další možností **hlavní** a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete **hlavní** nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy **hlavní** nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.  
-  
+
+Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který splňuje programovací model Unicode, můžete použít `wmain`, což je verze širokého znaku **hlavní**.
+
+**Hlavní** není kompilátorem předdefinované funkce. Musí být zadána textu programu.
+
+Syntaxe deklarace pro **hlavní** je
+
+```cpp
+int main();
+```
+
+nebo v případě potřeby
+
+```cpp
+int main(int argc, char *argv[], char *envp[]);
+```
+
+## <a name="microsoft-specific"></a>Specifické pro Microsoft
+
+Syntaxe deklarace pro `wmain` vypadá takto:
+
+```cpp
+int wmain( );
+```
+
+nebo v případě potřeby
+
+```cpp
+int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
+```
+
+Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na **hlavní** Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.
+
+Další možností **hlavní** a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete **hlavní** nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy **hlavní** nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.
+
 **Specifické pro END Microsoft**
 
- Typy pro `argc` a `argv` jsou definovány jazykem. Názvy `argc`, `argv`, a `envp` tradičních, avšak nemusejí kompilátorem. Další informace a příklad najdete v tématu [definice argumentů](../cpp/argument-definitions.md).  
-  
-## <a name="see-also"></a>Viz také:  
- [klíčová slova](../cpp/keywords-cpp.md)   
- [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)   
- [Main – omezení funkce](../cpp/main-function-restrictions.md)   
- [Analýza argumentů příkazového řádku jazyka C++](../cpp/parsing-cpp-command-line-arguments.md)
+Typy pro `argc` a `argv` jsou definovány jazykem. Názvy `argc`, `argv`, a `envp` tradičních, avšak nemusejí kompilátorem. Další informace a příklad najdete v tématu [definice argumentů](../cpp/argument-definitions.md).
+
+## <a name="see-also"></a>Viz také:
+
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)<br/>
+[main – omezení funkce](../cpp/main-function-restrictions.md)<br/>
+[Analýza argumentů příkazového řádku jazyka C++](../cpp/parsing-cpp-command-line-arguments.md)

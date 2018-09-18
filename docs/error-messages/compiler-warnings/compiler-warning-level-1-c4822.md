@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4822 | Microsoft Docs
+title: Upozornění (úroveň 1) C4822 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9491d522c65eba3599c3618d510c57b55682876
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33748a39eae4b6f2a84cadb818570f9a311b1fe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078319"
 ---
-# <a name="compiler-warning-level-1-c4822"></a>C4822 kompilátoru upozornění (úroveň 1)
-"člen": místní třídy – členská funkce nemá text  
-  
- Členské funkce místní třídy byl deklarován ale není definovaný ve třídě. Pokud chcete použít místní třídy členské funkce, musí být definovat ve třídě. Nelze deklarovat ve třídě a definování mimo třídy.  
-  
- Všechny definice na více systémů třídy pro místní třídy členské funkce bude k chybě.  
-  
- Následující ukázka generuje C4822:  
-  
-```  
-// C4822.cpp  
-// compile with: /W1  
-int main() {  
-   struct C {  
-      void func1(int);   // C4822  
-      // try the following line instead  
-      // void func1(int){}  
-  };  
-}  
+# <a name="compiler-warning-level-1-c4822"></a>Kompilátor upozornění (úroveň 1) C4822
+
+'member': členská funkce lokální třídy nemá tělo.
+
+Členská funkce lokální třídy byla deklarována, ale není definovaný ve třídě. Pokud chcete použít členská funkce lokální třídy, musí být definovat ve třídě. Nelze deklarovat v třídě a definování mimo třídy.
+
+Všechny definice mimo třídu pro členská funkce lokální třídy bude k chybě.
+
+Následující ukázka generuje C4822:
+
+```
+// C4822.cpp
+// compile with: /W1
+int main() {
+   struct C {
+      void func1(int);   // C4822
+      // try the following line instead
+      // void func1(int){}
+  };
+}
 ```

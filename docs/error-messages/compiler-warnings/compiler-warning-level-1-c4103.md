@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4103 | Microsoft Docs
+title: Upozornění (úroveň 1) C4103 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f072db4a260d2c83d1dd4b373630cd6e585efc2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1942acc2d9c5c274806e06127f9f98d4bfcb5077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085534"
 ---
-# <a name="compiler-warning-level-1-c4103"></a>C4103 kompilátoru upozornění (úroveň 1)
-'název souboru': zarovnání změněno poté, co včetně záhlaví, může být způsobeno chybějícím #pragma pack(pop)  
-  
- Okolních ovlivňuje rozložení třídy a běžně, pokud balení změny mezi soubory hlaviček, může dojít k problémům.  
-  
- Použít #pragma [pack](../../preprocessor/pack.md)(pop) před ukončením soubor hlaviček, chcete-li vyřešit toto upozornění.  
-  
- Následující ukázka generuje C4103:  
-  
-```  
-// C4103.h  
-#pragma pack(push, 4)  
-  
-// defintions and declarations  
-  
-// uncomment the following line to resolve  
-// #pragma pack(pop)  
-```  
-  
- A pak  
-  
-```  
-// C4103.cpp  
-// compile with: /LD /W1  
-#include "c4103.h"   // C4103  
+# <a name="compiler-warning-level-1-c4103"></a>Kompilátor upozornění (úroveň 1) C4103
+
+'filename': zarovnání změnit po přidání hlavičky, může být kvůli chybějící direktivě #pragma pack(pop).
+
+Balení ovlivňuje rozložení tříd a běžně, pokud balení změny v souborech hlaviček, může dojít k problémům.
+
+Použijte #pragma [pack](../../preprocessor/pack.md)(pop) před ukončením soubor hlaviček, chcete-li vyřešit tato upozornění.
+
+Následující ukázka generuje C4103:
+
+```
+// C4103.h
+#pragma pack(push, 4)
+
+// defintions and declarations
+
+// uncomment the following line to resolve
+// #pragma pack(pop)
+```
+
+a pak,
+
+```
+// C4103.cpp
+// compile with: /LD /W1
+#include "c4103.h"   // C4103
 ```

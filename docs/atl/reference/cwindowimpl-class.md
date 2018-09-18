@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084551"
 ---
 # <a name="cwindowimpl-class"></a>Cwindowimpl – třída
 
@@ -45,19 +45,19 @@ Poskytuje metody pro vytváření nebo vytvoření podtřídy časového období
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše nová třída odvozena od `CWindowImpl`.
 
-*Tčíslice*  
+*Tčíslice*<br/>
 Základní třída vaší třídy. Ve výchozím nastavení, základní třída je [cwindow –](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 A [třída vlastností](../../atl/understanding-window-traits.md) , který definuje styly pro okno. Výchozí hodnota je `CControlWinTraits`.
 
 ## <a name="members"></a>Členové
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač okna nadřazené nebo vlastníka.
 
-*Rect*  
+*Rect*<br/>
 [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující pozici okna. `RECT` Je možné předat ukazatelem nebo odkazem.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Určuje název okna. Výchozí hodnota je NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Styl okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Styl rozšířené okna. Tato hodnota je kombinovat s styl poskytovaný třídou osobnostní rysy pro okno. Výchozí hodnota poskytuje jsou vlastnosti třídy plnou kontrolu nad styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Pro podřízené okno identifikátor okna. Pro okno nejvyšší úrovně, nabídky popisovač okna. Výchozí hodnota je **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Ukazatel na data vytvoření okna. Úplný popis naleznete v popisu pro poslední parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Parametry
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna zničen.
 
 ### <a name="remarks"></a>Poznámky
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna se rozčlenit do podtříd.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -387,6 +387,6 @@ Můžete přepsat `WindowProc` jiný mechanismus pro zpracování zpráv.
 
 ## <a name="see-also"></a>Viz také
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

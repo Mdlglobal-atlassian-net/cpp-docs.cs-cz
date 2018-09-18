@@ -1,5 +1,5 @@
 ---
-title: Internacionalizace | Microsoft Docs
+title: Internacionalizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0107e163a7435a2434852868687b5e386d324d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2aa28d8974fe34f9824617a1f2c86181443397e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084585"
 ---
 # <a name="internationalization"></a>Internacionalizace
 
-Knihovna prostředí Microsoft Runtime obsahuje mnoho rutin, které jsou užitečné při vytváření různých verzí programu pro mezinárodní trhy. To zahrnuje [národního prostředí související rutiny](../c-runtime-library/locale.md), široká charakterová rutiny, rutiny vícebajtových znaků a rutiny obecného textu. Pro přehlednost je většina rutin týkajících se národního prostředí v tomto seznamu zařazena také podle činnosti, kterou vykonávají. V této části a v abecedním seznamu jsou rutiny pro vícebajtové a široké znaky popsány pomocí svých protějšků s jednobajtovými znaky, pokud existují.
+Knihovna prostředí Microsoft Runtime obsahuje mnoho rutin, které jsou užitečné při vytváření různých verzí programu pro mezinárodní trhy. Jedná se o [rutin týkajících se národního prostředí](../c-runtime-library/locale.md), širokého znaku rutiny, vícebajtové a obecné textové rutiny. Pro přehlednost je většina rutin týkajících se národního prostředí v tomto seznamu zařazena také podle činnosti, kterou vykonávají. V této části a v abecedním seznamu jsou rutiny pro vícebajtové a široké znaky popsány pomocí svých protějšků s jednobajtovými znaky, pokud existují.
 
- K dispozici jsou také alternativy operátorů ISO646.
+K dispozici jsou také alternativy operátorů ISO646.
 
 ## <a name="see-also"></a>Viz také
 

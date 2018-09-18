@@ -1,5 +1,5 @@
 ---
-title: C2180 chyby kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2180 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43c179b837e840f800a6c468efdd9cdd6a6604b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c74912b92162cbfcada3630ed6a6845b67045d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084143"
 ---
-# <a name="compiler-error-c2180"></a>C2180 chyby kompilátoru
-řízení výraz má typu "typ"  
-  
- Řízení výrazu v `if`, `while`, `for`, nebo `do` příkaz je výraz přetypovat `void`. Chcete-li tento problém vyřešit, změňte řízení výraz na ten, který vytváří `bool` , nebo lze převést na typ `bool`.  
-  
- Následující ukázka generuje C2180:  
-  
-```  
-// C2180.c  
-  
-int main() {  
-   while ((void)1)   // C2180  
-      return 1;  
-   while (1)         // OK  
-      return 0;  
-}  
+# <a name="compiler-error-c2180"></a>Chyba kompilátoru C2180
+
+řídicí výraz má typ 'type'
+
+Řídicí výraz v `if`, `while`, `for`, nebo `do` příkaz je výraz přetypovaný na `void`. Chcete tento problém vyřešit, změňte řídicí výraz, který vytváří `bool` nebo typ, který lze převést na `bool`.
+
+Následující ukázka generuje C2180:
+
+```
+// C2180.c
+
+int main() {
+   while ((void)1)   // C2180
+      return 1;
+   while (1)         // OK
+      return 0;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'Výměna polí záznamu: Použití funkce RFX | Microsoft Docs'
+title: 'Výměna polí záznamu: Použití funkce RFX | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 296ae2e4f535e08924a77b8726b93778a6da5026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c3fdededa6e107e15a8c0999d65ba4e0c5cf47f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083038"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Výměna polí záznamu: Použití funkce RFX
-Toto téma vysvětluje, co provedete k použití RFX ve vztahu k jaké rozhraní.  
+
+Toto téma vysvětluje, co udělat, abyste použití funkce RFX ve vztahu k čemu rozhraní framework.  
   
 > [!NOTE]
->  Toto téma se vztahuje na třídy odvozené od třídy [CRecordset](../../mfc/reference/crecordset-class.md) v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné RFX je podobná RFX. Chcete-li pochopit rozdíly, přečtěte si téma [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Toto téma platí pro třídy odvozené od [CRecordset](../../mfc/reference/crecordset-class.md) v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Následující témata obsahují související informace:  
+Následující témata obsahují informace související:  
   
--   [Výměna polí záznamu: Práce s kódem průvodce](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) zavádí hlavní součásti RFX a vysvětluje kód, který Průvodce aplikací knihovny MFC a **přidat třídu** (jak je popsáno v [přidání příjemce rozhraní ODBC knihovny MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zápis k podpoře RFX a jak můžete změnit kód průvodce.  
+- [Výměna polí záznamu: Práce s kódem průvodce](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) představuje hlavní komponenty RFX a vysvětluje, kód, který Průvodce aplikací knihovny MFC a **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zápisu pro podporu RFX a jak můžete chtít změnit kód průvodce.  
   
--   [Výměna polí záznamu: Použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) vysvětluje psaní volání funkce RFX ve vaší `DoFieldExchange` přepsat.  
+- [Výměna polí záznamu: Použití funkcí RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) vysvětluje psaní volání funkcí RFX v vaše `DoFieldExchange` přepsat.  
   
- Následující tabulka uvádí vaši roli ve vztahu k rozhraní provede za vás.  
+V následující tabulce jsou uvedeny vaši roli ve vztahu k rámci udělá za vás.  
   
-### <a name="using-rfx-you-and-the-framework"></a>Použití funkce RFX: Vy a architektura  
+### <a name="using-rfx-you-and-the-framework"></a>Použití funkce RFX: Jste a rozhraní  
   
 |Vy|Rozhraní framework|  
 |---------|-------------------|  
 
-| Deklarace tříd sady záznamů pomocí průvodce. Zadejte názvy a typy dat pole datových členů. | Průvodce odvozuje `CRecordset` třídy a zápisy [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) přepsání pro vás, včetně RFX volání pro každé pole datového člena funkce. |  
-| (Volitelné) Ručně přidejte všechny potřebné parametry datových členů do třídy. Ručně přidejte volání funkce RFX k `DoFieldExchange` pro každý parametr datového člena, že přidáte volání [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pro skupinu parametrů a zadejte celkový počet parametrů v [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). V tématu [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). ||  
-| (Volitelné) Ruční vytvoření vazby dalších sloupců s pole datových členů. Zvyšte ručně [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). V tématu [sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||  
+| Deklarace třídy sady záznamů s průvodce. Zadejte názvy a datové typy pole datových členů. | Průvodce odvozuje `CRecordset` třídy a zapíše [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) přepsat za vás, včetně RFX volání pro každé pole datového člena funkce. |  
+| (Volitelné) Ručně přidáte všechny potřebné parametry datových členů třídy. Ručně přidejte volání funkce RFX `DoFieldExchange` pro každý parametr datový člen, přidejte volání do [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pro skupinu parametrů a zadejte celkový počet parametrů v [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Zobrazit [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). ||  
+| (Volitelné) Ruční svázání další sloupce na pole datové členy. Zvyšte ručně [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Zobrazit [sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||  
 
-| Vytvořte objekt vaší třídy sady záznamů. Před použitím objektu, nastavte hodnoty jeho parametru datové členy, pokud existuje. | Rozhraní pro efektivitu, znovu naváže parametry, pomocí rozhraní ODBC. Pokud předáte hodnoty parametrů, předává je rozhraní ke zdroji dat. Pouze hodnoty parametrů jsou odesílány pro zopakování dotazu, pokud řazení nebo filtrování řetězce změnily. |  
-| Otevřete objekt sady záznamů pomocí [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Provede dotaz sady záznamů, sváže sloupce do pole datových členů sady záznamů a volání `DoFieldExchange` pro výměnu dat mezi první vybraný záznam a sady záznamů pole datových členů. |  
-| Přejděte do sady záznamů pomocí [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) nebo příkaz nabídky nebo panelu nástrojů. | Volání `DoFieldExchange` k přenosu dat do pole datových členů z nové aktuální záznam. |  
-| Přidat, aktualizovat a odstranit záznamy. | Volání `DoFieldExchange` k přenosu dat do zdroje dat. |  
+| Sestavte objekt třídy sady záznamů. Před použitím objektu, nastavte hodnoty parametru datové členy, pokud existuje. | Z důvodu efektivity rozhraní znovu naváže parametry, pomocí ovladače ODBC. Při předávání hodnot parametrů, předává je rozhraní ke zdroji dat. Pouze hodnoty parametrů jsou odesílány pro zopakování dotazu, pokud jste změnili řazení a/nebo filtr řetězce. |  
+| Vytvořit objekt sady záznamů prostřednictvím [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Provede dotaz sadu záznamů, váže sloupce pole data členů sady záznamů a volání `DoFieldExchange` pro výměnu dat mezi první vybraný záznam a sady záznamů pole datových členů. |  
+| Posouvání záznamů pomocí [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) nebo příkaz nabídky nebo panelu nástrojů. | Volání `DoFieldExchange` k přenosu dat do datové členy polí z nové aktuální záznam. |  
+| Přidávání, aktualizace a odstraňování záznamů. | Volání `DoFieldExchange` posílat data do zdroje dat. |  
   
 ## <a name="see-also"></a>Viz také  
- [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
- [Výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md)   
- [Sada záznamů: Získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
- [CRecordset – třída](../../mfc/reference/crecordset-class.md)   
- [CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)   
- [Makra, globální funkce a globální proměnné](../../mfc/reference/mfc-macros-and-globals.md)
+
+[Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Sada záznamů: Získávání součtů a jiných souhrnných výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[CRecordset – třída](../../mfc/reference/crecordset-class.md)<br/>
+[CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)<br/>
+[Makra, globální funkce a globální proměnné](../../mfc/reference/mfc-macros-and-globals.md)
 

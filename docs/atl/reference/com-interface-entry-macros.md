@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085222"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Parametry
 
-x [in] název rozhraní vaše třída je odvozena z objektu přímo.
+*x*<br/>
+[in] Název rozhraní, které objekt třídy přímo odvozena.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Název rozhraní, které chcete zpřístupnit z objektu.
 
-*x2*  
+*x2*<br/>
 [in] Název větve dědičnosti, ze kterého *x* je přístupný.
 
 ### <a name="remarks"></a>Poznámky
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní vystavené.
 
-*x*  
+*x*<br/>
 [in] Název třídy, jejíž vtable se zveřejní jako rozhraní identifikovaný *iid*.
 
 ### <a name="example"></a>Příklad
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID, které zadáváte pro rozhraní.
 
-*x*  
+*x*<br/>
 [in] Název rozhraní, které objekt třídy přímo odvozena.
 
-*x2*  
+*x2*<br/>
 [in] Název druhého rozhraní, které objekt třídy přímo odvozena.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní pro dotazování.
 
-*punk*  
+*punk*<br/>
 [in] Název `IUnknown` ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parametry
 
-*punk*  
+*punk*<br/>
 [in] Název `IUnknown` ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní pro dotazování.
 
-*punk*  
+*punk*<br/>
 [in] Název `IUnknown` ukazatele. Musíte být členem třídy obsahující mapy modelu COM.
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor agregace, který se vytvoří, pokud *punk* má hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*punk*  
+*punk*<br/>
 [in] Název `IUnknown` ukazatele. Musíte být členem třídy obsahující mapy modelu COM.
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 [in] Identifikátor agregace, který se vytvoří, pokud *punk* má hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Text použitý k vytvoření identifikátoru rozhraní.
 
 ### <a name="remarks"></a>Poznámky
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID odtržených rozhraní.
 
-*x*  
+*x*<br/>
 [in] Název třídy implementující rozhraní.
 
-*punk*  
+*punk*<br/>
 [in] Název `IUnknown` ukazatele. Musíte být členem třídy obsahující mapy modelu COM. By měl být inicializována na hodnotu NULL v konstruktoru objektu třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID odtržených rozhraní.
 
-*x*  
+*x*<br/>
 [in] Název třídy implementující rozhraní.
 
 ### <a name="remarks"></a>Poznámky
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*  
+*Název třídy*<br/>
 [in] Základní třída aktuálního objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor GUID rozhraní vystavené.
 
-*datový sklad*  
+*datový sklad*<br/>
 [in] Parametr předaný prostřednictvím *func*.
 
-*Func*  
+*Func*<br/>
 [in] Ukazatel funkce, která vrátí *iid*.
 
 ### <a name="remarks"></a>Poznámky
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*datový sklad*  
+*datový sklad*<br/>
 [in] Parametr předaný prostřednictvím *func*.
 
-*Func*  
+*Func*<br/>
 [in] Funkce, která je volána při zpracování této položky v objektu map COM.
 
 ### <a name="remarks"></a>Poznámky
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Text použitý k vytvoření identifikátoru rozhraní.
 
 ### <a name="remarks"></a>Poznámky

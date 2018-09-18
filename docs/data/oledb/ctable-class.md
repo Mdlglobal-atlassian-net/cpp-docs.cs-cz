@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081296"
 ---
 # <a name="ctable-class"></a>CTable – třída
+
 Poskytuje prostředky pro přímý přístup k jednoduché sady řádků (jeden bez parametrů).  
   
 ## <a name="syntax"></a>Syntaxe
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Třídu přistupujícího objektu.  
+
+*TAccessor*<br/>
+Třídu přistupujícího objektu.  
   
- *TRowset*  
- Třídy sady řádků.  
+*TRowset*<br/>
+Třídy sady řádků.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+
+**Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -62,9 +65,11 @@ class CTable :
 |[Otevřít](#open)|Otevře se v tabulce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazit [CCommand](../../data/oledb/ccommand-class.md) informace o tom, jak provést příkaz pro přístup k sadě řádků.  
+
+Zobrazit [CCommand](../../data/oledb/ccommand-class.md) informace o tom, jak provést příkaz pro přístup k sadě řádků.  
 
 ## <a name="open"></a> CTable::Open
+
 Otevře se v tabulce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Relace*  
- [in] Relace, pro který je otevřen v tabulce.  
+
+*Relace*<br/>
+[in] Relace, pro který je otevřen v tabulce.  
   
- *wszTableName*  
- [in] Název tabulky, pokud chcete otevřít, je předán jako řetězec znaků Unicode.  
+*wszTableName*<br/>
+[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec znaků Unicode.  
   
- *szTableName*  
- [in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.  
+*szTableName*<br/>
+[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.  
   
- *DBID*  
- [in] `DBID` Tabulky otevřete.  
+*DBID*<br/>
+[in] `DBID` Tabulky otevřete.  
   
- *pPropSet*  
- [in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
+*pPropSet*<br/>
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
   
- *ulPropSets*  
- [in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
+*ulPropSets*<br/>
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní HRESULT.  
+
+Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+
+Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

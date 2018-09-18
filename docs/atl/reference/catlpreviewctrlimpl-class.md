@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079333"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl – třída
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Popisovač okna hostitele zadaný shellem pro náhled ve formátu RTF.
 
-*Čínská lidová republika*  
+*Čínská lidová republika*<br/>
 Určuje počáteční velikost a pozice okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*  
+*hDC*<br/>
 Popisovač pro kontext zařízení pro kreslení.
 
 ### <a name="remarks"></a>Poznámky
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Nastavte na WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Tento parametr není používán.
 
-*lParam*  
+*lParam*<br/>
 Tento parametr není používán.
 
-*bHandled*  
+*bHandled*<br/>
 Když se tato funkce vrátí, obsahuje hodnotu TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Popisovač do nového nadřazeného okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBack*  
+*clrBack*<br/>
 Barva pozadí okno náhledu.
 
-*clrText*  
+*clrText*<br/>
 Barva textu v okně verze preview.
 
-*PLF*  
+*PLF*<br/>
 Písmo použité k zobrazení textu v okně verze preview.
 
 ### <a name="remarks"></a>Poznámky
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parametry
 
-*Čínská lidová republika*  
+*Čínská lidová republika*<br/>
 Určuje novou velikost a pozice ovládacího prvku ve verzi preview.
 
-*bRedraw*  
+*bRedraw*<br/>
 Určuje, zda by měl překreslit ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky

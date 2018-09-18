@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085755"
 ---
 # <a name="process-and-environment-control"></a>Řízení procesů a prostředí
 
@@ -77,11 +77,11 @@ Pomocí rutiny řízení procesů ke spuštění, zastavení a spravovat procesy
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Vytvoření a spuštění nového procesu pomocí **cesta** proměnná, zadaný prostředí a pole argumentů|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Spusťte příkaz operačního systému|
 
- V operačním systému Windows je ekvivalentní trdliště proces spuštěný proces. Můžete použít jakýkoli proces **_cwait** čekání na jiný proces, pro který se označuje ID procesu.
+V operačním systému Windows je ekvivalentní trdliště proces spuštěný proces. Můžete použít jakýkoli proces **_cwait** čekání na jiný proces, pro který se označuje ID procesu.
 
- Rozdíl mezi **_exec** a **_spawn** rodiny je, že **_spawn** funkce může vrátit ovládací prvek z nového procesu do volajícího procesu. V **_spawn** funkce volajícího procesu a nový proces se nacházejí v paměti není-li **_P_OVERLAY** určena. V **_exec** funkce, nový proces překrytí zpracovat volání ovládacího prvku nelze vrátit do volajícího procesu, pokud dojde k chybě při pokusu o spuštění nového procesu.
+Rozdíl mezi **_exec** a **_spawn** rodiny je, že **_spawn** funkce může vrátit ovládací prvek z nového procesu do volajícího procesu. V **_spawn** funkce volajícího procesu a nový proces se nacházejí v paměti není-li **_P_OVERLAY** určena. V **_exec** funkce, nový proces překrytí zpracovat volání ovládacího prvku nelze vrátit do volajícího procesu, pokud dojde k chybě při pokusu o spuštění nového procesu.
 
- Rozdíly mezi funkcemi v **_exec** řady, jakož i z těch, které v **_spawn** řady, zahrnují metodu vyhledání soubor, který má být proveden, protože nový proces, formulář v nástrojích pro které argumenty jsou předány do nového procesu a způsob nastavení prostředí, jak je znázorněno v následující tabulce. Použijte funkci, která předá seznam argumentů, když počet argumentů je konstantní nebo známý v době kompilace. Použijte funkci, která předává ukazatel na pole obsahující argumenty, pokud je počet argumentů, které má být stanovena v době běhu. Informace v následující tabulce platí taky pro protějšky širokého znaku **_spawn** a **_exec** funkce.
+Rozdíly mezi funkcemi v **_exec** řady, jakož i z těch, které v **_spawn** řady, zahrnují metodu vyhledání soubor, který má být proveden, protože nový proces, formulář v nástrojích pro které argumenty jsou předány do nového procesu a způsob nastavení prostředí, jak je znázorněno v následující tabulce. Použijte funkci, která předá seznam argumentů, když počet argumentů je konstantní nebo známý v době kompilace. Použijte funkci, která předává ukazatel na pole obsahující argumenty, pokud je počet argumentů, které má být stanovena v době běhu. Informace v následující tabulce platí taky pro protějšky širokého znaku **_spawn** a **_exec** funkce.
 
 ### <a name="spawn-and-exec-function-families"></a>_spawn a _exec rodiny – funkce
 

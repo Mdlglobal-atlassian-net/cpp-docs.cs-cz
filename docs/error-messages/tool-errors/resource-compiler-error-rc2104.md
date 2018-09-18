@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2104 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2104 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28beaad95cc33d8b014b22035f9ed641f1b6ab6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd602dcde34aa7cc08486188ab5fb5925eca0eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081088"
 ---
 # <a name="resource-compiler-error-rc2104"></a>Chyba kompilátoru prostředků RC2104
-Nedefinovaný název – klíčové slovo nebo klíč: klíč  
-  
- Zadané klíčové slovo nebo název klíče není definován.  
-  
- Tato chyba je často způsobené překlepem v definici prostředků nebo v souboru zahrnuté záhlaví. Můžete se také jednat chybí záhlaví souboru.  
-  
- Chcete-li vyřešit problém, vyhledejte soubor hlaviček, který by měl obsahovat definované – klíčové slovo nebo název klíče a ověřte, že je součástí souboru prostředků a že – klíčové slovo nebo klíč název je napsán správně. Pokud váš projekt byl vytvořen s předkompilovaných hlaviček a následně odebrat, ujistěte se, že se soubor prostředků stále zahrnuje všechny požadované hlavičky.  
-  
- Ověření definovaná klíčová slova a názvy klíčů v souboru prostředků v sadě Visual Studio, otevřete **zobrazení prostředků** okno – na řádku nabídek zvolte **zobrazení**, **zobrazení prostředků**– a potom otevřete místní nabídku pro soubor .rc a zvolte **symboly prostředků** zobrazíte seznam definovaných symbolů. Pokud chcete upravit zahrnuté hlavičky, otevřete místní nabídku pro soubor .rc a zvolte **prostředek zahrnuje**.  
-  
- Pokud narazíte na tuto zprávu:  
-  
-```  
-undefined keyword or key name: MFT_STRING   
-```  
-  
- Otevřete \MCL\MFC\Include\AfxRes.h a přidejte tuto include – direktiva:  
-  
-```  
-#include <winresrc.h>  
+
+Nedefinovaný název – klíčové slovo nebo klíč: klíč
+
+Zadané klíčové slovo nebo název klíče není definován.
+
+Tato chyba je často způsobeno překlep v definici prostředků nebo v souboru hlaviček zahrnuté. Můžete se také jednat chybí soubor hlaviček.
+
+Pokud chcete problém vyřešit, vyhledejte soubor hlaviček, který by měl obsahovat definované – klíčové slovo nebo název klíče a ověřte, že je součástí souboru prostředků, a že – klíčové slovo nebo klíč název je napsán správně. Pokud váš projekt byl vytvořen s předkompilovanou hlavičkou, a následně ho odebrat, ujistěte se, že soubor prostředků stále zahrnuje všechny požadované záhlaví.
+
+Ověření definovaná klíčová slova a názvy klíčů v souboru prostředků v sadě Visual Studio, otevřete **zobrazení prostředků** okno – v panelu nabídky zvolte **zobrazení**, **zobrazení prostředků**– a pak otevřete místní nabídku pro soubor .rc a zvolte možnost **symbolů prostředků** zobrazíte seznam definovaných symbolů. K úpravě zahrnutých hlaviček, otevřete místní nabídku pro soubor .rc a zvolte **prostředek zahrnuje**.
+
+Pokud narazíte na tuto zprávu:
+
+```
+undefined keyword or key name: MFT_STRING
+```
+
+Otevřete \MCL\MFC\Include\AfxRes.h a přidejte tuto direktivu:
+
+```
+#include <winresrc.h>
 ```

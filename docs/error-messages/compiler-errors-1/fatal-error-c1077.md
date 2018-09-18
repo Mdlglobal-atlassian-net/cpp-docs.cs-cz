@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1077 | Microsoft Docs
+title: Závažná chyba C1077 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc2881180fd2b3948c0e9ed7b3125dc03d0f093
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a16d27ab2e2c42ed2f58bbb416df067f01c7ec0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081348"
 ---
 # <a name="fatal-error-c1077"></a>Závažná chyba C1077
-omezení kompilátoru: nelze mít více než číslo možnosti příkazového řádku  
-  
- Počet možností příkazového řádku překračuje vnitřní limit.  
-  
- Může být příliš mnoho symboly definovaný s [/D](../../build/reference/d-preprocessor-definitions.md). (Umístit definice v záhlaví souboru místo.)
+
+limit kompilátoru: nelze mít více než číslo možnosti příkazového řádku
+
+Počet parametrů příkazového řádku překračuje vnitřní limit.
+
+Může být příliš mnoho symbolů definovaných s [/D](../../build/reference/d-preprocessor-definitions.md). (Umístit definice v hlavičkovém souboru místo toho.)

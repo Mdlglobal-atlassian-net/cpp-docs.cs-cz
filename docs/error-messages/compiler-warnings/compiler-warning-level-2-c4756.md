@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4756 | Microsoft Docs
+title: Upozornění (úroveň 2) C4756 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6f6cca331fdcd36c0917a9043b1f08ec4c2374
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b80596ede2cc93e64b79b1d5c08e091a880c7771
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086613"
 ---
-# <a name="compiler-warning-level-2-c4756"></a>C4756 kompilátoru upozornění (úroveň 2)
-v konstantní aritmetické přetečení  
-  
- Kompilátor vygenerovalo výjimku přitom konstantní aritmetické během kompilace.  
-  
- Následující ukázka generuje C4756:  
-  
-```  
-// C4756.cpp  
-// compile with: /W2 /Od  
-int main()  
-{  
-   float f = 1e100+1e100;   // C4756  
-}  
+# <a name="compiler-warning-level-2-c4756"></a>Kompilátor upozornění (úroveň 2) C4756
+
+přetečení v aritmetice konstanty
+
+Kompilátor vygeneruje výjimku při provádění aritmetice konstanty v podobě během kompilace.
+
+Následující ukázka generuje C4756:
+
+```
+// C4756.cpp
+// compile with: /W2 /Od
+int main()
+{
+   float f = 1e100+1e100;   // C4756
+}
 ```

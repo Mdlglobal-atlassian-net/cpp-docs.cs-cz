@@ -1,5 +1,5 @@
 ---
-title: Matematické konstanty | Microsoft Docs
+title: Matematické konstanty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,46 +32,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca022fe2800a7c576af8d66e2e820be5f2375b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12a53aff22d55b8f99b05bf870276da1370fad13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081426"
 ---
 # <a name="math-constants"></a>Matematické konstanty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#define _USE_MATH_DEFINES // for C++  
-#include <cmath>  
-  
-#define _USE_MATH_DEFINES // for C  
-#include <math.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Následující symboly jsou definovány pro hodnoty jejich označených výrazů:  
-  
-|Symbol|Výraz|Hodnota|  
-|------------|----------------|-----------|  
-|M_E –|e|2.71828182845904523536|  
-|M_LOG2E –|log2(e)|1.44269504088896340736|  
-|M_LOG10E –|LOG10(e)|0.434294481903251827651|  
-|M_LN2 –|ln(2)|0.693147180559945309417|  
-|M_LN10 –|: ln(10)|2.30258509299404568402|  
-|M_PI –|platformy|3.14159265358979323846|  
-|M_PI_2 –|pí/2|1.57079632679489661923|  
-|M_PI_4 –|pí/4|0.785398163397448309616|  
-|M_1_PI –|1/pi|0.318309886183790671538|  
-|M_2_PI –|2/pi|0.636619772367581343076|  
-|M_2_SQRTPI –|2/Sqrt(pi)|1.12837916709551257390|  
-|M_SQRT2 –|Sqrt(2)|1.41421356237309504880|  
-|M_SQRT1_2 –|1/Sqrt(2)|0.707106781186547524401|  
-  
- Matematické konstanty nejsou definovány v standardní C/C++. Používat, je nutné nejprve definovat `_USE_MATH_DEFINES` a potom vložte cmath – nebo math.h.  
-  
- Soubor ATLComTime.h zahrnuje math.h při sestavení projektu v režimu vydání. Pokud použijete jeden nebo více matematické konstanty v projektu, který také obsahuje ATLComTime.h, je nutné definovat `_USE_MATH_DEFINES` předtím, než zahrnete ATLComTime.h.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#define _USE_MATH_DEFINES // for C++
+#include <cmath>
+
+#define _USE_MATH_DEFINES // for C
+#include <math.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+Pro hodnoty jejich uvedené výrazy jsou definovány následující symboly:
+
+|Symbol|Výraz|Hodnota|
+|------------|----------------|-----------|
+|M_E|e|2.71828182845904523536|
+|M_LOG2E|log2(e)|1.44269504088896340736|
+|M_LOG10E|LOG10(e)|0.434294481903251827651|
+|M_LN2|ln(2)|0.693147180559945309417|
+|M_LN10|: ln(10)|2.30258509299404568402|
+|M_PI|Pi|3.14159265358979323846|
+|M_PI_2|pí/2|1.57079632679489661923|
+|M_PI_4|pí/4|0.785398163397448309616|
+|M_1_PI|1/pi|0.318309886183790671538|
+|M_2_PI|2/pi|0.636619772367581343076|
+|M_2_SQRTPI|2/Sqrt(pi)|1.12837916709551257390|
+|M_SQRT2|Sqrt(2)|1.41421356237309504880|
+|M_SQRT1_2|1/Sqrt(2)|0.707106781186547524401|
+
+Matematické konstanty nejsou definovány ve standardním C/C++. K jejich použití, je nutné nejprve definovat `_USE_MATH_DEFINES` a poté zahrnout cmath nebo math.h.
+
+Soubor ATLComTime.h obsahuje math.h, když váš projekt se vytvořil v režimu vydání. Pokud použijete jeden nebo více matematické konstanty v projektu, která zahrnuje i ATLComTime.h, je nutné definovat `_USE_MATH_DEFINES` předtím, než zahrnete ATLComTime.h.
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

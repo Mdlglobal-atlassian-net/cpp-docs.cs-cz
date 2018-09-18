@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8af52c0e90f346e99564c839333f85ca396f9fd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6dbc0e10f2747b9a9a2ad3ff345a580d4797ea72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079307"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Ccomqiptrelementtraits – třída
 
@@ -32,17 +32,17 @@ Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename I, const IID* piid=& __uuidof(I)>  
+template<typename I, const IID* piid=& __uuidof(I)>
 class CComQIPtrElementTraits : 
    public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*I*  
+*I*<br/>
 Rozhraní modelu COM zadání typu ukazatel na Uložit.
 
-*piid*  
+*piid*<br/>
 Ukazatel na IID *můžu*.
 
 ## <a name="members"></a>Členové
@@ -85,5 +85,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>Viz také
 
-[Cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

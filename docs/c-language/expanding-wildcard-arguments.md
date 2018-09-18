@@ -1,5 +1,5 @@
 ---
-title: Rozbalení argumentů zástupných znaků | Microsoft Docs
+title: Rozbalení argumentů zástupných znaků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d7a9fc75e23a03e4db232bc798c89f89083e62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d78b23f81b72d04e9299616b0273bc97bb7a4e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078150"
 ---
 # <a name="expanding-wildcard-arguments"></a>Rozbalení argumentů zástupných znaků
-**Konkrétní Microsoft**  
-  
- Při spuštění programu C, můžete použít buď dva zástupné znaky – otazník (?) a hvězdička (*) – chcete zadat název souboru a cesta argument v příkazovém řádku.  
-  
- Ve výchozím nastavení nejsou zástupné znaky rozšířit argumentů příkazového řádku. Můžete nahradit vektoru normální argument `argv` načítání rutiny s verzí, která pomocí propojení se souborem setargv.obj nebo wsetargv.obj rozbalte zástupné znaky. Pokud váš program používá `main` funkce, odkaz s setargv.obj. Pokud váš program používá `wmain` funkce, odkaz s wsetargv.obj. Mají obě tyto ekvivalentní chování.  
-  
- Odkaz s setargv.obj nebo wsetargv.obj, použijte **/link** možnost. Příklad:  
-  
- **setargv.obj/Link example.c cl**  
-  
- Zástupné znaky jsou rozšířit stejným způsobem jako příkazy operačního systému. (Viz příručka uživatele operačního systému, pokud jste obeznámeni s zástupné znaky.)  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti odkazů](../c-runtime-library/link-options.md)   
- [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)
+
+**Specifické pro Microsoft**
+
+Při spuštění programu v jazyce C, můžete použít buď dva zástupné znaky – otazník (?) a hvězdičku (*) – chcete zadat cestu a název souboru argument v příkazovém řádku.
+
+Zástupné znaky nejsou ve výchozím nastavení, rozbalení argumentů příkazového řádku. Můžete nahradit vektoru normální argument `argv` načítání rutinu s verzí, díky propojení s setargv.obj nebo wsetargv.obj soubor rozšiřovat zástupné znaky. Pokud program používá `main` funkce, propojení s knihovnou setargv.obj. Pokud program používá `wmain` funkce, propojení s knihovnou wsetargv.obj. Obě tyto mají ekvivalentní chování.
+
+Chcete-li propojit s setargv.obj nebo wsetargv.obj, použijte **/link** možnost. Příklad:
+
+**cl example.c/Link setargv.obj**
+
+Zástupné znaky jsou rozbaleny stejným způsobem jako příkazy operačního systému. (Viz příručka uživatele operačního systému, pokud nejste obeznámeni se zástupnými znaky.)
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Možnosti odkazů](../c-runtime-library/link-options.md)<br/>
+[main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

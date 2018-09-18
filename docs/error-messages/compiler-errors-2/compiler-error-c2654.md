@@ -1,5 +1,5 @@
 ---
-title: C2654 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2654 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b28fb3de46d9071c9ee19711344c5b41e337934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cbab40739617343f8d2a2e5e26540f01e82f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232877"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080841"
 ---
-# <a name="compiler-error-c2654"></a>C2654 chyby kompilátoru
-"identifikátor": Pokus o přístup člena mimo členské funkce  
-  
- Člen je přístupné v deklaraci. Data členů jsou přístupné pouze v členské funkce.  
-  
- K této chybě může dojít, když probíhá pokus o inicializaci proměnné v deklaraci. Pro tento účel použijte konstruktor.
+# <a name="compiler-error-c2654"></a>Chyba kompilátoru C2654
+
+'identifier': Pokus o přístup k členu mimo členskou funkci
+
+Člen pracuje v deklaraci. Datový člen je přístupný pouze v členské funkce.
+
+K této chybě může dojít při pokusu o inicializaci proměnné v deklaraci. Pro tento účel použijte konstruktor.

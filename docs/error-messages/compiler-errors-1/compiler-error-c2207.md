@@ -1,5 +1,5 @@
 ---
-title: C2207 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2207 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d62494aca47f0ad52c9abbe8e3b897c58c327d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab9d89d66efed3cfa687d17b8a9efd406bf1bec7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082635"
 ---
-# <a name="compiler-error-c2207"></a>C2207 chyby kompilátoru
-"člen": členem třídy šablony nelze získat typ funkce  
-  
- `member` Třídy šablony dříve analýze jako člena nestatické data. Nelze jej předefinovat jako členské funkce.
+# <a name="compiler-error-c2207"></a>Chyba kompilátoru C2207
+
+'member': člen šablony třídy nemůže získat typ funkce.
+
+`member` Třídy šablony bylo dříve analyzovat jako nestatický datový člen. Nelze jej předefinovat jako členskou funkci.

@@ -1,5 +1,5 @@
 ---
-title: C3633 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3633 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341123f51a065cc8dcd43425f65b21edaf00abbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaa4712fb571d56166204655aff95153ac328ce6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078267"
 ---
-# <a name="compiler-error-c3633"></a>C3633 chyby kompilátoru
-"člen" nelze definovat jako člen spravované "typ"  
-  
-CLR referenční třídy datových členů nesmí být typu POD C++.  Pouze můžete vytvořit instanci POD nativního typu v typu CLR.  Například POD typ nemůže obsahovat kopírovacího konstruktoru nebo operátor přiřazení.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C3633.  
-  
-```  
-// C3633.cpp  
-// compile with: /clr /c  
-#pragma warning( disable : 4368 )  
-  
-class A1 {  
-public:  
-   A1() { II = 0; }  
-   int II;  
-};  
-  
-ref class B {  
-public:  
-   A1 a1;   // C3633  
-   A1 * a2;   // OK  
-   B() : a2( new A1 ) {}  
-    ~B() { delete a2; }  
-};  
-```  
+# <a name="compiler-error-c3633"></a>Chyba kompilátoru C3633
+
+nelze definovat 'člen' jako člen spravovaného 'typu'
+
+Datové členy referenční třídy CLR nemůže být typu POD C++.  Můžete vytvořit pouze instanci nativní typ POD typu CLR.  Například typ POD nemůže obsahovat kopírovací konstuktor ani operátor přiřazení.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3633.
+
+```
+// C3633.cpp
+// compile with: /clr /c
+#pragma warning( disable : 4368 )
+
+class A1 {
+public:
+   A1() { II = 0; }
+   int II;
+};
+
+ref class B {
+public:
+   A1 a1;   // C3633
+   A1 * a2;   // OK
+   B() : a2( new A1 ) {}
+    ~B() { delete a2; }
+};
+```

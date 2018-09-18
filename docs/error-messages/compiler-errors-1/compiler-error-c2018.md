@@ -1,5 +1,5 @@
 ---
-title: C2018 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2018 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c65afa60b5e86850f0bc22f85c3c4348c91ef05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03903c2a3aa17da0149f596053c133f04184a501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162795"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081595"
 ---
-# <a name="compiler-error-c2018"></a>C2018 chyby kompilátoru
-Neznámý znak 'bitů hodnoty hexnumber.  
-  
- Zdrojový soubor obsahuje neočekávaný znak ASCII, který je určený podle jeho hexadecimální číslo. Chcete-li chybu vyřešit, odeberte znak.
+# <a name="compiler-error-c2018"></a>Chyba kompilátoru C2018
+
+Neznámý znak 'v členu hexnumber.
+
+Zdrojový soubor obsahuje neočekávaný znak ASCII, který je určený podle její šestnáctkové číslo. Chcete-li chybu vyřešit, odeberte znak.

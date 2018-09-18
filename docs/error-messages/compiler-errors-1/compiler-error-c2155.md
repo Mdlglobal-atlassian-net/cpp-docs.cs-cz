@@ -1,5 +1,5 @@
 ---
-title: C2155 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2155 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d3194dcaad982e5e9d4ce758352f7221a389dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8622de0beb968a4db9d133e698137bca3e04f14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083194"
 ---
-# <a name="compiler-error-c2155"></a>C2155 chyby kompilátoru
-'?': Neplatný levý operand, očekává aritmetické nebo ukazatel typu  
-  
- Výraz na levé straně z `?` nejde porovnat na nulu. Je nutné použít aritmetické nebo ukazatel výraz, který je možné porovnávat na nulu.
+# <a name="compiler-error-c2155"></a>Chyba kompilátoru C2155
+
+'?': Neplatný levý operand. očekával aritmetický typ nebo typ ukazatele
+
+Výraz na levé straně výrazu `?` nelze porovnat na nulu. Je nutné použít výraz aritmetické operace nebo ukazatel, který lze porovnávat na nulu.

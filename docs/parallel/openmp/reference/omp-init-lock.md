@@ -1,5 +1,5 @@
 ---
-title: omp_init_lock | Microsoft Docs
+title: omp_init_lock | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07e542f9c850b300ab55cbbbbb0155173eda98f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: daa6ed95cf0deb2bbaf296da38a6cbee312685bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082154"
 ---
 # <a name="ompinitlock"></a>omp_init_lock
-Inicializuje jednoduché zámku.  
+Inicializuje jednoduchým zámkem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,8 @@ void omp_init_lock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `lock`  
- Proměnné typu [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
+*lock*<br/>
+Proměnné typu [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [3.2.1 omp_init_lock a omp_init_nest_lock – funkce](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  

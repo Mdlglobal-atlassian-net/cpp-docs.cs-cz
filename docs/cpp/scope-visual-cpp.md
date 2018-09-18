@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080438"
 ---
 # <a name="scope-c"></a>Rozsah (C++)
 
 Při deklaraci elementu programu například třídy, funkce nebo proměnná, můžete jeho název pouze "Zobrazit" a používají v některých částech programu. Je volána kontext, ve kterém je viditelný název jeho *oboru*. Například, pokud deklarujete proměnnou `x` ve funkci, `x` je jenom viditelné v rámci této tělo funkce. Má *místní rozsah*. Ve svém programu; může mít jiné proměnné se stejným názvem tak dlouho, dokud jsou v různých oborech, že nebudou porušovat jednoho definičního pravidla a je vyvolána žádná chyba.
 
-Pro automatické nestatické proměnné obor také určuje, kdy je vytvořeno a zničeno při v paměti pro programy. 
+Pro automatické nestatické proměnné obor také určuje, kdy je vytvořeno a zničeno při v paměti pro programy.
 
 Existuje šest druhy rozsahů:
 
@@ -51,9 +51,9 @@ Existuje šest druhy rozsahů:
 
 Název lze skrýt jeho deklarací v uzavřeném bloku. Na následujícím obrázku je `i` deklarováno v rámci vnitřního bloku, a tím dojde ke skrytí proměnné přidružené k `i` v rozsahu vnějšího bloku.
 
- ![Blok&#45;oboru skrývání názvů](../cpp/media/vc38sf1.png "vc38SF1") rozsah bloku a skrytí názvu
+![Blok&#45;oboru skrývání názvů](../cpp/media/vc38sf1.png "vc38SF1") rozsah bloku a skrytí názvu
 
- Výstup z programu zobrazeného na obrázku je:
+Výstup z programu zobrazeného na obrázku je:
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Skrytí názvů tříd
 
- Názvy tříd lze skrýt deklarováním funkce, objektu, proměnné nebo enumerátoru ve stejném oboru. Ale název třídy i nadále přístupný při předponu klíčového slova **třídy**.
+Názvy tříd lze skrýt deklarováním funkce, objektu, proměnné nebo enumerátoru ve stejném oboru. Ale název třídy i nadále přístupný při předponu klíčového slova **třídy**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > Jakékoli místo názvu třídy (`Account`) je volána pro klíčové slovo class musí použije k odlišení od proměnné účtu pro globální obor. Toto pravidlo neplatí, vyskytne-li se název třídy na levé straně operátoru rozlišení oboru (::). Názvy na levé straně operátoru rozlišení oboru jsou vždy považovány za názvy tříd.
 
- Následující příklad ukazuje, jak deklarovat ukazatel na objekt typu `Account` pomocí **třídy** – klíčové slovo:
+Následující příklad ukazuje, jak deklarovat ukazatel na objekt typu `Account` pomocí **třídy** – klíčové slovo:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- `Account` v inicializátoru (v závorkách) v předchozím příkazu má globální obor; je typu **double**.
+`Account` v inicializátoru (v závorkách) v předchozím příkazu má globální obor; je typu **double**.
 
 > [!NOTE]
 > Opětovné použití názvů identifikátorů, jak je znázorněno v tomto příkladu, je považováno za špatný styl programování.
@@ -118,7 +118,7 @@ Informace o deklaraci a inicializaci objektů tříd naleznete v tématu [tříd
 
 ## <a name="hiding-names-with-global-scope"></a>Skrytí názvů s globálním oboru
 
- Názvy s globálním rozsahem lze skrýt pomocí explicitní deklarace stejného názvu v oboru bloku. Ale globálního oboru názvů lze přistupovat pomocí operátoru rozlišení oboru (`::`).
+Názvy s globálním rozsahem lze skrýt pomocí explicitní deklarace stejného názvu v oboru bloku. Ale globálního oboru názvů lze přistupovat pomocí operátoru rozlišení oboru (`::`).
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>Viz také:
- [Základní koncepty](../cpp/basic-concepts-cpp.md)
+
+[Základní koncepty](../cpp/basic-concepts-cpp.md)

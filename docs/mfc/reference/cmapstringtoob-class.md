@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6eea9b6005498c6c42017731db7ea706af96726
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a0d233bd9ad35eabe5782e58e186f0033b8cf816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085768"
 ---
 # <a name="cmapstringtoob-class"></a>Cmapstringtoob – třída
 Třída kolekce slovníku, která mapuje jedinečné `CString` objektů `CObject` ukazatele.  
@@ -241,13 +241,12 @@ void GetNextAssoc(
   
  Výsledky z této aplikace jsou následující:  
   
- `Lisa : a CAge at $4724 11`  
-  
- `Marge : a CAge at $47A8 35`  
-  
- `Homer : a CAge at $4766 36`  
-  
- `Bart : a CAge at $45D4 13`  
+```Output
+Lisa : a CAge at $4724 11
+Marge : a CAge at $47A8 35
+Homer : a CAge at $4766 36
+Bart : a CAge at $45D4 13
+```
   
 ##  <a name="getsize"></a>  CMapStringToOb::GetSize  
  Vrátí počet prvků na mapě.  
@@ -484,11 +483,11 @@ CObject*& operator[ ](lpctstr key);
   
  Výsledky z této aplikace jsou následující:  
   
- `Operator [] example: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $4A02 11`  
-  
- `[Bart] = a CAge at $497E 13`  
+```Output
+Operator [] example: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $4A02 11
+[Bart] = a CAge at $497E 13
+```
   
 ##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
  Odebere všechny prvky z této mapy a odstraní `CString` klíče objekty.  
@@ -553,13 +552,12 @@ BOOL RemoveKey(LPCTSTR key);
   
  Výsledky z této aplikace jsou následující:  
   
- `RemoveKey example: A CMapStringToOb with 3 elements`  
-  
- `[Marge] = a CAge at $49A0 35`  
-  
- `[Homer] = a CAge at $495E 36`  
-  
- `[Bart] = a CAge at $4634 13`  
+```Output
+RemoveKey example: A CMapStringToOb with 3 elements
+[Marge] = a CAge at $49A0 35
+[Homer] = a CAge at $495E 36
+[Bart] = a CAge at $4634 13
+```
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
  Primární znamená, že vkládání elementů v objektu map.  
@@ -598,17 +596,14 @@ void SetAt(
   
  Výsledky z této aplikace jsou následující:  
   
- `before Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $493C 11`  
-  
- `[Bart] = a CAge at $4654 13`  
-  
- `after Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $49C0 12`  
-  
- `[Bart] = a CAge at $4654 13`  
+```Output
+before Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $493C 11
+[Bart] = a CAge at $4654 13
+after Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $49C0 12
+[Bart] = a CAge at $4654 13
+```
   
 ## <a name="see-also"></a>Viz také  
  [CObject – třída](../../mfc/reference/cobject-class.md)   

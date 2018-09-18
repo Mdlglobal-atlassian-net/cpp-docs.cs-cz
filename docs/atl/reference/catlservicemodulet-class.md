@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086457"
 ---
 # <a name="catlservicemodulet-class"></a>Catlservicemodulet – třída
 
@@ -62,16 +62,16 @@ Tato třída implementuje služby.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CAtlServiceModuleT`.
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 Identifikátor prostředku služby.
 
 ## <a name="members"></a>Členové
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Přepínač, který definuje operaci obslužné rutiny. Podrobnosti najdete v tématu poznámky.
 
 ### <a name="remarks"></a>Poznámky
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Řetězce pro zápis do protokolu událostí.
 
-...  
+*...*<br/>
 Volitelné další řetězců, které mají být zapsané do protokolu událostí.
 
 ### <a name="remarks"></a>Poznámky
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Vyhrazená.
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 Příkazový řádek.
 
-*pnRetCode*  
+*pnRetCode*<br/>
 Hodnota HRESULT odpovídající registraci (Pokud se uskutečnilo).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Tento parametr je předán [CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bService*  
+*bService*<br/>
 Musí být pravda, pokud chcete zaregistrovat jako služba.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc – argument.
 
-*lpszArgv*  
+*lpszArgv*<br/>
 Argv – argument.
 
 ### <a name="remarks"></a>Poznámky
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwState*  
+*dwState*<br/>
 Nový stav. Zobrazit [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) možných hodnot.
 
 ### <a name="remarks"></a>Poznámky
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -575,5 +575,5 @@ Tato metoda zpracovává příkazového řádku (s [CAtlServiceModuleT::ParseCom
 
 ## <a name="see-also"></a>Viz také
 
-[Catlexemodulet – třída](../../atl/reference/catlexemodulet-class.md)   
+[CAtlExeModuleT – třída](../../atl/reference/catlexemodulet-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

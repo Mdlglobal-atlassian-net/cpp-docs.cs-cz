@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ccd57fb3fa183fd93afbf8846769a8a11a7d6663
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078553"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Upozornění kompilátoru prostředků RC4214
-Znakovou stránku, která není platná: ignorováno  
-  
- Soubor .rc obsažené v něm argument znakovou stránku, která a znakovou stránku, která je zadána je neplatný. Zobrazit [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Další informace.
+
+Znakovou stránku, která není platná: ignorováno
+
+Soubor .rc obsažené v něm argument znakovou stránku, která a znakovou stránku, která je zadána je neplatný. Zobrazit [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Další informace.

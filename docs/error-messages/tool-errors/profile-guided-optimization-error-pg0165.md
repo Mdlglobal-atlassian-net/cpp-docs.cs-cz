@@ -1,5 +1,5 @@
 ---
-title: Na základě profilu PG0165 chyba optimalizace | Microsoft Docs
+title: Profilově řízené optimalizace na základě PG0165 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acad97411480112d06dadd454d1368dcfdf2c87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332751a123bf7d6414c40b79870b5edf27a3d8a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084208"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>Chyba optimalizace na základě profilu PG0165
-Čtení 'Filename.pgd': ' PGD verze není podporována (Neshoda verzí)'.  
-  
- PGD soubory jsou specifické pro konkrétní kompilátoru nástrojů. Tato chyba se vygeneruje, když používáte jiný než ten, který používá pro kompilátor *Filename*.pgd. Tato chyba označuje, že tento sady nástrojů kompilátoru nelze použít data z *Filename*.pgd za účelem optimalizace aktuálním programem.  
-  
- Chcete-li vyřešit tento problém, znovu vygenerovat *Filename*.pgd pomocí aktuální sady nástrojů kompilátoru.
+
+Čtení "Filename.pgd": "verze souboru PGD se nepodporuje (Neshoda verzí)".
+
+Soubor PGD soubory jsou specifické pro sadu nástrojů konkrétního kompilátoru. Tato chyba se vygeneruje, když používáte jiný kompilátoru, než jaký se používá pro *Filename*.pgd. Tato chyba označuje, že tato sada nástrojů kompilátoru nelze použít data z *Filename*.pgd k optimalizaci aktuálním programem.
+
+Chcete-li tento problém vyřešit, znovu vygenerovat *Filename*.pgd pomocí aktuální sady nástrojů kompilátoru.

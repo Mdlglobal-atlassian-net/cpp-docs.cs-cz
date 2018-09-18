@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084507"
 ---
 # <a name="atlwinmodule70-structure"></a>_Atl_win_module70 – struktura
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>Členové
 
-`cbSize`  
+`cbSize`<br/>
 Velikost struktury, použít pro správu verzí.
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 Slouží k serializaci přístup k okna registrační kód. Vnitřně jej používá knihovnu ATL.
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 Lze svázat objekty, které windows. Vnitřně jej používá knihovnu ATL.
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 Používá ke sledování registrace tříd oken tak, aby mohly být správně zrušit registraci při ukončení. Vnitřně jej používá knihovnu ATL.
 
 ## <a name="remarks"></a>Poznámky

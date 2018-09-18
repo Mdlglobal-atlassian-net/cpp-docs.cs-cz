@@ -1,5 +1,5 @@
 ---
-title: Long double – typ | Microsoft Docs
+title: Long double – typ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3803116cdd9681462644299ee28be15b76950f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 575ac3462af83aaf4e612cc8b591dce78160695a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081700"
 ---
 # <a name="type-long-double"></a>long double – typ
-`long double` Typ je stejný jako [dvojité](../c-language/type-double.md) typu.  
-  
-## <a name="see-also"></a>Viz také  
- [Úložiště základních typů](../c-language/storage-of-basic-types.md)
+
+`long double` Je stejný jako typů [double](../c-language/type-double.md) typu.
+
+## <a name="see-also"></a>Viz také
+
+[Úložiště základních typů](../c-language/storage-of-basic-types.md)

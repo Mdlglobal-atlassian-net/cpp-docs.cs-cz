@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081985"
 ---
 # <a name="threadprivate"></a>threadprivate
 Určuje, že proměnná je privátní pro vlákno.  
@@ -32,11 +32,10 @@ Určuje, že proměnná je privátní pro vlákno.
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- Pokud  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Čárkou oddělený seznam proměnných, které chcete označit jako soukromé ve vlákně. `var` musí být globální nebo obor názvů rozsahem proměnné nebo statické místní proměnné.  
+*var*<br/>
+Čárkou oddělený seznam proměnných, které chcete označit jako soukromé ve vlákně. `var` musí být globální nebo obor názvů rozsahem proměnné nebo statické místní proměnné.  
   
 ## <a name="remarks"></a>Poznámky  
  `threadprivate` Podporuje bez klauzule OpenMP – direktiva.  

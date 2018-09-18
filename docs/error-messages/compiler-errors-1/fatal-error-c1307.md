@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1307 | Microsoft Docs
+title: Závažná chyba C1307 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d06ce51ada7cd9159b8e02ff627bf12ebb7293d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65f398dd9885c571ea0d66171889f20d3321a3b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085859"
 ---
 # <a name="fatal-error-c1307"></a>Závažná chyba C1307
-Program byl upraven, protože nebyla shromážděna data profilu  
-  
- Při použití [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), linkeru zjistil vstupní modul, který byl překompilovat po /LTCG:PGINSTRUMENT a že modul byl změněn na bodu, pokud je existující data profilu už relevantní. Například pokud grafu volání změnili v modulu Rekompilované, vygeneruje kompilátor C1307.  
-  
- Chcete-li tuto chybu vyřešit, spusťte /LTCG:PGINSTRUMENT, vrátit všechny testovací spouští a spusťte /LTCG:PGOPTIMIZE. Pokud /LTCG:PGINSTRUMENT a opakování akce, které všechny testovací nelze spustit spustí, použijte /LTCG:PGUPDATE místo /LTCG:PGOPTIMIZE vytvoření optimalizované bitové kopie.
+
+Program byl upraven od shromáždění dat profilu
+
+Při použití [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), linker zjištěn vstupní modul, který byl znovu zkompilovat po /LTCG:PGINSTRUMENT a že modul byl změněn na místo, kde stávající data profilu už nejsou relevantní. Například pokud grafu volání v modulu překompilovanou nezměnilo, bude kompilátor generovat C1307.
+
+Pokud chcete tuto chybu vyřešit, spusťte /LTCG:PGINSTRUMENT, znovu všechny testovací běhy a spusťte /LTCG:PGOPTIMIZE. Pokud nelze spustit /LTCG:PGINSTRUMENT a znovu, které všechny testovací běhy, použijte k vytvoření optimalizované bitové kopie /LTCG:PGUPDATE místo /LTCG:PGOPTIMIZE.

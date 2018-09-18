@@ -1,5 +1,5 @@
 ---
-title: C3717 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3717 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe6cdb53b3ee78016c25b273eb4682ec380d12f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c770ecfc914c033c1db71578cda137d632e363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086693"
 ---
-# <a name="compiler-error-c3717"></a>C3717 chyby kompilátoru
-"metody": nelze zadat metodu, která aktivuje události  
-  
- Můžete deklarovat metodu událost, která obsahuje implementaci. [__Event](../../cpp/event.md) deklarace metody nemůže mít definici. Pokud chcete vyřešit tuto chybu, zajistěte, aby měly deklarace metoda žádné události definice. Například v následujícím kódu odebrat tělo funkce z `event1` deklarace podle komentáře.  
-  
- Následující ukázka generuje C3717:  
-  
-```  
-// C3717.cpp  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void event1() {   // C3717  
-   }  
-  
-   // remove definition for event1 and substitute following declaration  
-   // __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void handler1() {  
-   }  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3717"></a>Chyba kompilátoru C3717
+
+'metody': nelze definovat metodu, která aktivuje události
+
+Můžete deklarovat metodu události, která zahrnuje implementace. [__Event](../../cpp/event.md) deklarace metody nemůže mít definici. Chcete-li vyřešit tuto chybu, zajistěte, aby definice deklarace metody žádné události. Například v následujícím kódu odebrat tělo funkce z `event1` deklaraci je uvedené poznámky.
+
+Následující ukázka generuje C3717:
+
+```
+// C3717.cpp
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void event1() {   // C3717
+   }
+
+   // remove definition for event1 and substitute following declaration
+   // __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void handler1() {
+   }
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
+
+int main() {
+}
 ```

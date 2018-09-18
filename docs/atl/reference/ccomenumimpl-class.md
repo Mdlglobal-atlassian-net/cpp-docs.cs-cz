@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082512"
 ---
 # <a name="ccomenumimpl-class"></a>Ccomenumimpl – třída
 
@@ -43,22 +43,22 @@ Tato třída poskytuje implementaci pro uložení položky výčtu v poli rozhra
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Enumerátor rozhraní modelu COM. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
 
-*piid*  
+*piid*<br/>
 Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
 
-*T*  
+*T*<br/>
 Typ položky, které jsou vystavené rozhraní enumerátor.
 
-*kopírování*  
+*kopírování*<br/>
 Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Členové
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*začít*  
+*začít*<br/>
 Ukazatel na první prvek pole obsahující položky, které chcete vytvořit výčet.
 
-*ukončení*  
+*ukončení*<br/>
 Ukazatel na umístění hned za poslední prvek pole obsahující položky, které chcete vytvořit výčet.
 
-*pUnk*  
+*pUnk*<br/>
 [in] `IUnknown` Ukazatel objektu, který musí být zachováno po celou dobu životnosti enumerátor. Předejte hodnotu NULL, pokud žádný takový objekt neexistuje.
 
-*příznaky*  
+*příznaky*<br/>
 Příznaky určující, zda by měl čítač převzít vlastnictví pole nebo vytvořte jeho kopii. Možné hodnoty jsou popsané níže.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -167,13 +167,13 @@ Pokud předáte ukazatele na položky v poli nachází v jiném objektu (a nepta
 
 *Příznaky* parametr umožňuje určit, jak enumerátor by měly zpracovávat do něho předaný prvků pole. *příznaky* můžete provést jednu z hodnot `CComEnumFlags` výčtu je uvedeno níže:
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` znamená, že doba platnosti tohoto pole není řízen enumerátor. V takovém případě buď pole bude statické nebo objekt identifikovaný *pUnk* bude zodpovědná za uvolnění pole, pokud už je nepotřebujete.
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parametry
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Enumerátor rozhraní na nově vytvořený objekt naklonovali z aktuální enumerátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Počet prvků požadavku.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Pole pro vyplnění s prvky.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Počet prvků ve skutečnosti vrátí v *rgelt*. To může být kratší než *celt* Pokud méně než *celt* prvků zůstávaly v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Počet prvků, které mají přeskočit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -304,6 +304,6 @@ Pokud vrátí E_INVALIDARG *celt* je nula, vrátí S_FALSE, je-li menší než *
 
 ## <a name="see-also"></a>Viz také
 
-[Ienumonstlimpl – třída](../../atl/reference/ienumonstlimpl-class.md)   
-[Ccomenum – třída](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl – třída](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum – třída](../../atl/reference/ccomenum-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

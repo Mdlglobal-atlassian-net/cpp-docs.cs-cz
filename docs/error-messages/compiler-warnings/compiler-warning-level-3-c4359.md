@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4359 | Microsoft Docs
+title: Upozornění (úroveň 3) C4359 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ddc48294734e5a180014ea20cf98b9d7374f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e97d321b0df8856aadd58f7d27f6339a5776d0f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084156"
 ---
-# <a name="compiler-warning-level-3-c4359"></a>C4359 kompilátoru upozornění (úroveň 3)
-'type': skutečný zarovnání (8) je větší než hodnota zadaná v __declspec(align())  
-  
- Zarovnání zadaná pro typ je menší než zarovnání typu jednoho z jeho datových členů.  Další informace najdete v tématu [zarovnat](../../cpp/align-cpp.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4359.  
-  
-```  
-// C4359.cpp  
-// compile with: /W3 /c  
-struct __declspec(align(8)) C8 { __int64 i; };  
-struct __declspec(align(4)) C4  { C8 m8; };   // C4359  
-struct __declspec(align(8)) C8_b  { C8 m8; };   // OK  
-struct __declspec(align(16)) C16  { C8 m8; };   // OK  
+# <a name="compiler-warning-level-3-c4359"></a>Kompilátor upozornění (úroveň 3) C4359
+
+'type': je větší než hodnota zadaná v __declspec(align()) skutečné zarovnání (8)
+
+Zarovnání zadané pro typ je menší než zarovnání typ jednoho z jejích datových členů.  Další informace najdete v tématu [zarovnat](../../cpp/align-cpp.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4359.
+
+```
+// C4359.cpp
+// compile with: /W3 /c
+struct __declspec(align(8)) C8 { __int64 i; };
+struct __declspec(align(4)) C4  { C8 m8; };   // C4359
+struct __declspec(align(8)) C8_b  { C8 m8; };   // OK
+struct __declspec(align(16)) C16  { C8 m8; };   // OK
 ```

@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080308"
 ---
 # <a name="cpatht-class"></a>Cpatht – třída
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>Parametry
 
-*StringType*  
+*StringType*<br/>
 Třídy ATL/MFC řetězec určený pro danou cestu (viz [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Členové
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszExtension*  
+*pszExtension*<br/>
 Přípona souboru, který chcete přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszMore*  
+*pszMore*<br/>
 Řetězec, který chcete připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Parametry
 
-*iDrive*  
+*iDrive*<br/>
 Číslo jednotku (A: je 0, 1 je b a tak dále).
 
 ### <a name="remarks"></a>Poznámky
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>Parametry
 
-*pszDir*  
+*pszDir*<br/>
 Cesta k adresáři.
 
-*pszFile*  
+*pszFile*<br/>
 Cesta k souboru.
 
 ### <a name="remarks"></a>Poznámky
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parametry
 
-*pszOther*  
+*pszOther*<br/>
 Cesta, která má být porovnán s aktuální.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*  
+*hDC*<br/>
 Kontext zařízení pro metriky písma
 
-*nWidth*  
+*nWidth*<br/>
 Šířka v pixelech, které řetězec bude muset přizpůsobit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxChars*  
+*nMaxChars*<br/>
 Maximální počet znaků, které mají být součástí nového řetězce, včetně ukončujícího znaku NULL.
 
-*dwFlags*  
+*dwFlags*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszPath*  
+*pszPath*<br/>
 Ukazatel na řetězec cesty.
 
-*Cesta*  
+*Cesta*<br/>
 Řetězec cesty.
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrefix*  
+*pszPrefix*<br/>
 Předpona, který chcete vyhledat. Předpona je jedním z těchto typů: "C:\\\\",".","..",".. \\\\".
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszOther*  
+*pszOther*<br/>
 Jiné cesty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszSpec*  
+*pszSpec*<br/>
 Ukazatel na řetězec zakončený hodnotou null typu souboru, který chcete vyhledat. Například chcete otestovat, jestli soubor v aktuální cestě je soubor dokumentu *pszSpec* musí být nastavená na "* .doc".
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszMore*  
+*pszMore*<br/>
 Řetězec, který chcete připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>Parametry
 
-*pszFrom*  
+*pszFrom*<br/>
 Začátek relativní cesty.
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 Atributy souboru *pszFrom*. Pokud tato hodnota obsahuje FILE_ATTRIBUTE_DIRECTORY, *pszFrom* se předpokládá, že bude adresář; v opačném případě *pszFrom* předpokládá, že je možné do souboru.
 
-*pszTo*  
+*pszTo*<br/>
 Koncový bod relativní cesty.
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 Atributy souboru *pszTo*. Pokud tato hodnota obsahuje FILE_ATTRIBUTE_DIRECTORY, *pszTo* se předpokládá, že bude adresář; v opačném případě *pszTo* předpokládá, že je možné do souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszExtension*  
+*pszExtension*<br/>
 Předchází novou příponu názvu souboru "." znaku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>Viz také
 
-[Třídy](../../atl/reference/atl-classes.md)   
+[Třídy](../../atl/reference/atl-classes.md)<br/>
 [CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)

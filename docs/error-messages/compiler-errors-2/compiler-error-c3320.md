@@ -1,5 +1,5 @@
 ---
-title: C3320 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3320 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08810d38b74081cfb8573d1e33ea3a8ec4dabd4c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b67d419630d59902270638213ce7a79dd8b9e0c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078436"
 ---
-# <a name="compiler-error-c3320"></a>C3320 chyby kompilátoru
-'type': typ nemůže mít stejný název jako vlastnost 'name' module  
-  
-Exportovaný uživatelem definovaný typ (UDT), které by mohly být struktura, třídu, výčet nebo union, nemůže mít stejný název jako parametr předaný [modulu](../../windows/module-cpp.md) vlastnost název atributu.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C3320:  
-  
-```cpp  
-// C3320.cpp  
-#include "unknwn.h"  
-[module(name="xx")];  
-  
-[export] struct xx {   // C3320  
-// Try the following line instead  
-// [export] struct yy {  
-   int i;  
-};  
+# <a name="compiler-error-c3320"></a>Chyba kompilátoru C3320
+
+'type': typ nemůže mít stejný název jako vlastnost 'name' module
+
+Exportované uživatelem definovaný typ (UDT), které by mohly být struktury, třídy, výčtu nebo sjednocení, nemůže mít stejný název jako parametr předaný [modulu](../../windows/module-cpp.md) vlastnost name atributu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3320:
+
+```cpp
+// C3320.cpp
+#include "unknwn.h"
+[module(name="xx")];
+
+[export] struct xx {   // C3320
+// Try the following line instead
+// [export] struct yy {
+   int i;
+};
 ```

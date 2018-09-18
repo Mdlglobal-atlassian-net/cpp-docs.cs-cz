@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084572"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Idispeventsimpleimpl – třída
 
@@ -42,19 +42,19 @@ Tato třída obsahuje implementaci `IDispatch` metody bez získání informací 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Jedinečný identifikátor pro zdrojový objekt. Když `IDispEventSimpleImpl` je základní třídou pro složeného ovládacího prvku, použijte ID prostředku požadované obsažený ovládací prvek pro tento parametr. V ostatních případech použijte libovolné kladné celé číslo.
 
-*T*  
+*T*<br/>
 Třída uživatele, která je odvozena od `IDispEventSimpleImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Ukazatel na IID dispinterface události touto třídou implementována.
 
 ## <a name="members"></a>Členové
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
 
-*piid*  
+*piid*<br/>
 Ukazatel na IID objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
 
-*piid*  
+*piid*<br/>
 Ukazatel na IID objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -287,8 +287,8 @@ Po připojení bylo přerušeno, události již nebudou směrovány k funkcím o
 
 ## <a name="see-also"></a>Viz také
 
-[_Atl_func_info – struktura](../../atl/reference/atl-func-info-structure.md)   
-[Idispatchimpl – třída](../../atl/reference/idispatchimpl-class.md)   
-[Idispeventimpl – třída](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO – struktura](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl – třída](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl – třída](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

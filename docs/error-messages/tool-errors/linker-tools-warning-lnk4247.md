@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4247 | Microsoft Docs
+title: Upozornění Linkerů LNK4247 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6096bbfba9c60d8ed28aa660d078cd155f0316a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d84a5964cb8df5d2973b6031da55d48dade584e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078007"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Upozornění linkerů LNK4247
-vstupní bod 'decorated_function_name' již má atribut vlákna; atribut ignorovat  
-  
- Vstupní bod, zadaným [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), měl atribut vláken, ale [/CLRTHREADATTRIBUTE (nastavit CLR vláken atribut)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) také zadaná, se jiný model vláken.  
-  
- Linkeru ignorovat hodnotu zadanou pomocí /CLRTHREADATTRIBUTE.  
-  
- Chcete-li vyřešit toto upozornění:  
-  
--   Odeberte /CLRTHREADATTRIBUTE z buildu.  
-  
--   Odeberte atribut z vašeho souboru se zdrojovým kódem.  
-  
--   Odeberte i atribut ze zdroje a /CLRTHREADATTRIBUTE z buildu a přijměte výchozí model vláken CLR.  
-  
--   Změňte hodnotu předaný /CLRTHREADATTRIBUTE, tak, aby ho souhlasí s atributem ve zdroji.  
-  
--   Změňte atribut ve zdroji, tak, aby ho souhlasí s hodnotou předaný /CLRTHREADATTRIBUTE.  
-  
- Následující ukázka generuje LNK4247  
-  
-```  
-// LNK4247.cpp  
-// compile with: /clr /c  
-// post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console  
- [System::MTAThreadAttribute]  
-void functionTitle (){}  
+
+atribut vlákna; již obsahuje vstupní bod "decorated_function_name. ignoruje atribut
+
+Vstupní bod, zadaný [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), měl atribut dělení na vlákna, ale [/CLRTHREADATTRIBUTE (nastavit atribut modulu CLR vlákno)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) byl taky zadaný s jinou model vláken.
+
+Propojovací program ignoruje hodnotu zadanou pomocí /CLRTHREADATTRIBUTE.
+
+Chcete-li vyřešit tato upozornění:
+
+- Odeberte /CLRTHREADATTRIBUTE z vašeho sestavení.
+
+- Odeberte atribut ze souboru zdrojového kódu.
+
+- Odeberte obě atribut ze zdroje a /CLRTHREADATTRIBUTE z vašeho sestavení a přijměte výchozí model dělení na vlákna modulu CLR.
+
+- Hodnota předaná /CLRTHREADATTRIBUTE, změňte tak, že souhlasí s atributem ve zdroji.
+
+- Změňte atribut ve zdroji, tak, že souhlasí s hodnotu předanou /CLRTHREADATTRIBUTE.
+
+Následující ukázka generuje LNK4247
+
+```
+// LNK4247.cpp
+// compile with: /clr /c
+// post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console
+[System::MTAThreadAttribute]
+void functionTitle (){}
 ```

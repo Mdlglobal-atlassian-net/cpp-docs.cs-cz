@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4053 | Microsoft Docs
+title: C4053 kompilátoru (úroveň 4) upozornění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d884355d3f1e8b0c4507ff345718628804092b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f608d3248f3294178fbabc5c81a6145e4cf3fb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086496"
 ---
-# <a name="compiler-warning-level-4-c4053"></a>C4053 kompilátoru upozornění (úroveň 4)
-pro jeden void operand '?:.  
-  
- `?:` Operátor je zadána výrazu typu `void`. Hodnota `void` operand není definován.
+# <a name="compiler-warning-level-4-c4053"></a>Kompilátor C4053 upozornění (úroveň 4)
+
+jeden operand void pro '?: "
+
+`?:` Operátor je uveden ve výrazu typu `void`. Hodnota `void` operand není definován.

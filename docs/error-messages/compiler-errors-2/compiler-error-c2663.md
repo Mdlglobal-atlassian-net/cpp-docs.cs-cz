@@ -1,5 +1,5 @@
 ---
-title: C2663 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2663 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f39f516b32aaf1159d47726d01623e253ee8b383
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fed35dcce056eb3d2a660c154e94b8058563dba7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083688"
 ---
-# <a name="compiler-error-c2663"></a>C2663 chyby kompilátoru
-'function': číslo přetížení mít žádné právní převody pro "this" ukazatele  
-  
- Nebylo možné převést kompilátor `this` k jakékoli přetížené verze členské funkce.  
-  
- Tato chyba může být způsobeno vyvolání jinou hodnotu než`const` – členská funkce na `const` objektu.  Možná řešení:  
-  
-1.  Odeberte `const` z deklarace objektu.  
-  
-2.  Přidat `const` do jednoho z přetížení funkce člen.  
-  
- Následující ukázka generuje C2663:  
-  
-```  
-// C2663.cpp  
-struct C {  
-   void f() volatile {}  
-   void f() {}  
-};  
-  
-struct D {  
-   void f() volatile;  
-   void f() const {}  
-};  
-  
-const C *pcc;  
-const D *pcd;  
-  
-int main() {  
-   pcc->f();    // C2663  
-   pcd->f();    // OK  
-}  
+# <a name="compiler-error-c2663"></a>Chyba kompilátoru C2663
+
+'function': číslo přetížení mít žádné platné převody pro ukazatel "this"
+
+Kompilátor nelze převést `this` k některé z přetížených verzí členskou funkci.
+
+Tato chyba může být způsobena vyvoláním non -`const` členskou funkci na `const` objektu.  Možná řešení:
+
+1. Odeberte `const` z deklarace objektu.
+
+1. Přidat `const` do jednoho z přetížení funkce členů.
+
+Následující ukázka generuje C2663:
+
+```
+// C2663.cpp
+struct C {
+   void f() volatile {}
+   void f() {}
+};
+
+struct D {
+   void f() volatile;
+   void f() const {}
+};
+
+const C *pcc;
+const D *pcd;
+
+int main() {
+   pcc->f();    // C2663
+   pcd->f();    // OK
+}
 ```

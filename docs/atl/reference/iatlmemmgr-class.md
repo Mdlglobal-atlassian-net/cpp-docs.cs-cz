@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1e04bd31ca1942e5e5fa054cb4991233e2f61c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b772a548054cd9d829356436afe53748c215c193
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078917"
 ---
 # <a name="iatlmemmgr-class"></a>Iatlmemmgr – třída
 
@@ -76,7 +76,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Požadovaný počet bajtů v nového bloku paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -101,7 +101,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -122,7 +122,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -143,10 +143,10 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
-*nBytes*  
+*nBytes*<br/>
 Požadovaný počet bajtů v nového bloku paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -173,7 +173,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,7 +194,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,7 +215,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,7 +236,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -257,7 +257,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -278,7 +278,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -299,7 +299,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -320,7 +320,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 [out] Adresa `IFontDisp` ukazatel rozhraní, které slouží k přijímání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -341,7 +341,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -362,7 +362,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Parametry
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -385,7 +385,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -406,7 +406,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -423,7 +423,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Parametry
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -444,7 +444,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Parametry
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -465,7 +465,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] Adresa proměnné k získání aktuální hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -486,7 +486,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -507,7 +507,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -528,7 +528,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -549,7 +549,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -570,7 +570,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -591,7 +591,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -612,7 +612,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -633,7 +633,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -654,7 +654,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -675,7 +675,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Parametry
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -696,7 +696,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -717,7 +717,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -734,7 +734,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] Nová hodnota této vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -755,7 +755,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pDispatch*  
+*pDispatch*<br/>
 Ukazatel na nové rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -776,10 +776,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Ukazatel `IUnknown` rozhraní připojené k hostitelský objekt ovládacího prvku.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -799,13 +799,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (předchází **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -836,22 +836,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (s předponou **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna pro hostování.
 
-*pStream*  
+*pStream*<br/>
 [in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Adresa ukazatel, který se zobrazí `IUnknown` rozhraní vytvořený ovládací prvek. Může mít hodnotu NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Identifikátor rozhraní odchozí rozhraní v obsažený objekt. Může mít hodnotu IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Ukazatel `IUnknown` rozhraní jímky objektu k připojení k bodu připojení na obsaženého objektu určeného `iidSink`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -874,10 +874,10 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 [in] ID rozhraní na ovládací prvek požaduje.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Adresa ukazatel, který se zobrazí zadané rozhraní vytvořený ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -894,7 +894,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ukazatel `IDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -911,7 +911,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ukazatel `IDocHostUIHandlerDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -936,7 +936,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Parametry
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR, který obsahuje licenční klíč pro ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
@@ -966,7 +966,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Parametry
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] BSTR, který obsahuje licenční klíč pro ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204877"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080685"
 ---
 # <a name="crgn-class"></a>Crgn – třída
 Zapouzdřuje oblast rozhraní GDI systému Windows grafiky zařízení.  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  Odkazuje na pole `POINT` struktury nebo pole `CPoint` objekty. Každá struktura určuje souřadnice x a y jednoho vrcholu mnohoúhelníku. `POINT` Struktura má následující formát:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  Určuje počet `POINT` struktury nebo `CPoint` objektů v poli odkazované *lpPoints*.  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  Odkazuje na pole `POINT` struktury nebo pole `CPoint` objekty, které definuje vrcholy polygonů. Každého mnohoúhelníku musí explicitně ukončeno, protože je systém automaticky nezavře. Polygonů zadávají postupně. `POINT` Struktura má následující formát:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  Odkazuje na pole celých čísel. První celé číslo určuje počet vrcholů v první mnohoúhelníku ve *lpPoints* pole, druhý celé číslo určuje počet vrcholů v druhé mnohoúhelníků a tak dále.  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lprect –*  
  Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rohu oblasti. `RECT` Struktura má následující formát:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je operace úspěšná; jinak 0.  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lprect –*  
  Odkazuje `RECT` struktury nebo `CRect` objektu. `RECT` Struktura má následující formát:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud libovolné části obdélníku zadaného leží v hranicích oblasti; jinak 0.  

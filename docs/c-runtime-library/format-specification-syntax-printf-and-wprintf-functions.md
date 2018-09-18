@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082492"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -58,8 +58,7 @@ Argumenty, které následují formátovacím řetězci interpretovány podle odp
 Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned` variant, jsou určené pomocí **d**, **i**, **o**, **u**, **x**, a **X**. Typy s plovoucí desetinnou čárkou, jako `float`, `double`, a `long double`, jsou určené pomocí **a**, **A**, **e**, **E**, **f**, **F**, **g**, a **G**. Ve výchozím nastavení Pokud se změnil *velikost* předponu, jsou přiřazeny celočíselné argumenty do `int` typu a argumentů s plovoucí desetinnou čárkou jsou přiřazeny do `double`. V 64bitových systémech `int` je 32bitová hodnota; proto bude 64bitová celá čísla zkrácena, když jsou formátována pro výstup, není-li *velikost* předponu **ll** nebo **I64**se používá. Typy ukazatelů, která jsou určena podle **p** použít výchozí velikost ukazatele pro platformu.
 
 > [!NOTE]
-> **Specifické pro Microsoft**  
-> **Z** zadejte znak a chování **c**, **C**, **s**, a **S** typ znaky při jejich produkty slouží spolu s `printf` a `wprintf` funkce, jsou rozšíření společnosti Microsoft. Standard ISO C používá **c** a **s** konzistentně pro úzkých znaků a řetězce, a **C** a **S** pro široké znaky a řetězce v všechny funkce, formátování.
+> **Specifické pro Microsoft** **Z** zadejte znak a chování **c**, **C**, **s**, a **S** znaky při jejich použití se službou `printf` a `wprintf` funkce, jsou rozšíření společnosti Microsoft. Standard ISO C používá **c** a **s** konzistentně pro úzkých znaků a řetězce, a **C** a **S** pro široké znaky a řetězce v všechny funkce, formátování.
 
 ### <a name="type-field-characters"></a>Znaky pole typu
 
@@ -212,11 +211,10 @@ V jazyce Visual C++ i když `long double` je odlišný typ se má stejnou vnitř
 **Hc** nebo **hybridní připojení** specifikátor typu je synonymní s **c** v `printf` funkce a s **C** v `wprintf` funkce. **Lc**, **lC**, **RC** nebo **RC** specifikátor typu je synonymní s **C** v `printf` Funkce a s **c** v `wprintf` funkce. **Hs** nebo **hS** specifikátor typu je synonymní s **s** v `printf` funkce a s **S** v `wprintf` funkce. **Ls**, **lS**, **ws** nebo **wS** specifikátor typu je synonymní s **S** v `printf` Funkce a s **s** v `wprintf` funkce.
 
 > [!NOTE]
-> **Specifické pro Microsoft**  
-> **můžu** (velká písmena i) **I32**, **I64**, a **w** argument předpony modifikující velikosti jsou rozšíření společnosti Microsoft a nejsou kompatibilní s ISO C. **h** předpony při použití s daty typu `char` a **l** (malé písmeno L) předpony při použití s daty typu `double` jsou rozšíření společnosti Microsoft.
+> **Specifické pro Microsoft** **můžu** (velká písmena i) **I32**, **I64**, a **w** předpony modifikující velikost argumentu jsou společnosti Microsoft rozšíření a jsou není kompatibilní s ISO C. **h** předpony při použití s daty typu `char` a **l** (malé písmeno L) předpony při použití s daty typu `double` jsou rozšíření společnosti Microsoft.
 
 ## <a name="see-also"></a>Viz také
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p – poziční parametry](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p – poziční parametry](../c-runtime-library/printf-p-positional-parameters.md)

@@ -1,5 +1,5 @@
 ---
-title: Řízení příznaky | Microsoft Docs
+title: Řídicí příznaky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd37a3d76a39748efc0352df829a7b5c57146a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 716e597be5d337d11d58df944bbba468e496f078
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078059"
 ---
 # <a name="control-flags"></a>Příznaky ovládacích prvků
-Ladicí verze běhové knihovny Microsoft C používá následující příznaky tak, aby řízení přidělení haldy a procesu generování sestav. Další informace najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).  
-  
-|Příznak|Popis|  
-|----------|-----------------|  
-|[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Mapuje funkce základní hald svým ladicí verze|  
-|[_DEBUG](../c-runtime-library/debug.md)|Umožňuje použití ladění verzích běhové funkce|  
-|[_crtDbgFlag](../c-runtime-library/crtdbgflag.md)|Určuje, jak správce haldy ladění sleduje přidělování|  
-  
- Tyto příznaky se může definovat s možností příkazového řádku /D nebo s `#define` – direktiva. Když je příznak definovaná pomocí `#define`, direktivu musí být před příkaz pro běžné deklarace zahrnout soubor hlaviček.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md)
+
+Ladicí verze knihovny run-time Microsoft C používá následující příznaky do ovládacího prvku přidělení haldy a vytváření sestav procesu. Další informace najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
+
+|Příznak|Popis|
+|----------|-----------------|
+|[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Mapuje na své ekvivalenty ladění verzí funkcí základní haldy|
+|[_DEBUG](../c-runtime-library/debug.md)|Umožňuje použití ladění verzí funkcí za běhu|
+|[_crtDbgFlag](../c-runtime-library/crtdbgflag.md)|Určuje, jak správce hald ladění sleduje přidělení|
+
+Tyto příznaky mohou být definovány pomocí možnosti /D příkazového řádku nebo pomocí `#define` směrnice. Pokud je příznak definován s `#define`, direktiva musí být uvedena před příkaz pro běžné deklarace zahrnout soubor hlaviček.
+
+## <a name="see-also"></a>Viz také
+
+[Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md)

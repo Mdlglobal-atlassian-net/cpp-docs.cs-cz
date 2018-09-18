@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1089 | Microsoft Docs
+title: Závažná chyba C1089 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f60097b1075756a0a44247d40fe2f0ba8a4d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8deac0579cedcd369211b3624dc004ca995dc8f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085560"
 ---
 # <a name="fatal-error-c1089"></a>Závažná chyba C1089
-Nelze zkrátit, soubor typ souboru: 'file': zpráva  
-  
- Kompilátor nelze zmenšit, soubor, který chcete nula délka.
+
+Nejde zkrátit soubor filetype: 'file': zpráva
+
+Kompilátor nelze zmenšit, soubor, který chcete nulové délky.

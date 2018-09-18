@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48cea73ede2a7c5ec529f4fc44f917494560ced
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9288eda15b0bac3d3694ee56a2f427aefb60e032
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086431"
 ---
 # <a name="reference-counting"></a>Počítání odkazů
 
@@ -44,6 +44,6 @@ Počítání odkazů můžete implementovat také tak, aby se počítá každý 
 
 ## <a name="see-also"></a>Viz také
 
-[Úvod do modelu COM](../atl/introduction-to-com.md)   
+[Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
 [Správa životnosti objektu prostřednictvím počítání odkazů](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 
