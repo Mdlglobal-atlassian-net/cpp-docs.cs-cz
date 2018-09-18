@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 71c0fb14574aedb74d756e72a93cd0dc626ba086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057376"
 ---
 # <a name="atlcreatewnddata-structure"></a>_Atlcreatewnddata – struktura
 
@@ -42,13 +42,13 @@ Tato struktura obsahuje data instance třídy v kódu časová okna v knihovně 
 
 ## <a name="members"></a>Členové
 
-`m_pThis`  
+`m_pThis`<br/>
 **To** ukazatel, použít k získání přístupu k instanci třídy v procedury okna.
 
-`m_dwThreadID`  
+`m_dwThreadID`<br/>
 ID vlákna z aktuální instance třídy.
 
-`m_pNext`  
+`m_pNext`<br/>
 Ukazatel na další `_AtlCreateWndData` objektu.
 
 ## <a name="requirements"></a>Požadavky

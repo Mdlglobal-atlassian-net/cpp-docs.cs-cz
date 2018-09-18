@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052839"
 ---
 # <a name="cadapt-class"></a>Cadapt – třída
 
@@ -36,13 +36,13 @@ Tato šablona se používá k zabalení tříd, které mění definici operáto
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Adaptovaný typ
 
 ## <a name="members"></a>Členové
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*rSrc*  
+*rSrc*<br/>
 Proměnné typu adaptovaná zkopírovat do objektu nově vytvořeného adaptéru.
 
-*rSrCA*  
+*rSrCA*<br/>
 Objekt adaptér jehož dat obsažených by měl zkopírovat (nebo přesunut) do nově vytvořeného adaptér objektu.
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ To **veřejné** datový člen lze přistupovat přímo nebo nepřímo pomocí [
 
 Vrátí **const** odkaz [m_T](#m_t) člena, což objekt adaptér, který má zacházet, jako by šlo objekt typu *T*.
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ A **const** odkaz na `m_T`.
 
 Vrátí odkaz na [m_T](#m_t) člena, což objekt adaptér, který má zacházet, jako by šlo objekt typu *T*.
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rSrc*  
+*rSrc*<br/>
 Odkaz na objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*rSrc*  
+*rSrc*<br/>
 Odkaz na objekt adaptovaného typu, které se mají zkopírovat.
 
-*rSrCA*  
+*rSrCA*<br/>
 Odkaz na objekt přesunout.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rSrc*  
+*rSrc*<br/>
 Odkaz na objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota

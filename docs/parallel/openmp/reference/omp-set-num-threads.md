@@ -1,5 +1,5 @@
 ---
-title: omp_set_num_threads – | Microsoft Docs
+title: omp_set_num_threads – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335cb283026a019d6c6a03565c5dbec541140db3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 849bdade5c6abfad07ebed262fb367487d3e1415
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047886"
 ---
 # <a name="ompsetnumthreads"></a>omp_set_num_threads
-Nastaví počet vláken v následujících oblastech paralelní, není-li přepsat [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzule.  
+Nastaví počet vláken v následných paralelních oblastí, pokud nejsou přepsány [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzuli.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,16 @@ void omp_set_num_threads(
 );  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+### <a name="parameters"></a>Parametry
   
- `num_threads`  
- Počet vláken v paralelní oblasti.  
+*num_threads*<br/>
+Počet vláken v paralelní oblasti.  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [3.1.1 omp_set_num_threads – funkce](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [omp_get_num_threads –](../../../parallel/openmp/reference/omp-get-num-threads.md) příklad použití `omp_set_num_threads`.  
+ Zobrazit [omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) pro příklad použití `omp_set_num_threads`.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce](../../../parallel/openmp/reference/openmp-functions.md)

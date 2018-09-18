@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047925"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Poznámky  
  *LpButtons* ukazatel odkazuje na pole `TBBUTTON` struktury. Každý `TBBUTTON` přidruží tlačítko se přidá s styl tlačítka, image a/nebo řetězec, ID příkazu, stavu a uživatelem definované datové struktury:  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  Členové jsou následující:  
   
- `iBitmap`  
- Z nuly vycházející index obrázku tlačítka, -1, pokud žádný obrázek pro toto tlačítko.  
+- `iBitmap`  
+
+   Z nuly vycházející index obrázku tlačítka, -1, pokud žádný obrázek pro toto tlačítko.  
   
- `idCommand`  
- Příkaz identifikátor přidružený k tlačítku. Tento identifikátor se posílá ve wm_command – zprávy při kliknutí na toto tlačítko. Pokud `fsStyle` člen má hodnotu TBSTYLE_SEP, tento člen musí být nula.  
+-  `idCommand`  
+
+   Příkaz identifikátor přidružený k tlačítku. Tento identifikátor se posílá ve wm_command – zprávy při kliknutí na toto tlačítko. Pokud `fsStyle` člen má hodnotu TBSTYLE_SEP, tento člen musí být nula.  
   
- `fsState`  
- Příznaky stav tlačítka. Může být kombinací hodnot uvedených níže:  
+-  `fsState`  
+
+   Příznaky stav tlačítka. Může být kombinací hodnot uvedených níže:  
   
-- TBSTATE_CHECKED tlačítko stylu TBSTYLE_CHECKED a stisknutí se.  
+   - TBSTATE_CHECKED tlačítko stylu TBSTYLE_CHECKED a stisknutí se.  
   
-- TBSTATE_ENABLED tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a nejde aktivovat.  
+   - TBSTATE_ENABLED tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a nejde aktivovat.  
   
-- TBSTATE_HIDDEN tlačítko není viditelný a nemůže přijímat uživatelský vstup.  
+   - TBSTATE_HIDDEN tlačítko není viditelný a nemůže přijímat uživatelský vstup.  
   
-- TBSTATE_INDETERMINATE tlačítko nejde aktivovat.  
+   - TBSTATE_INDETERMINATE tlačítko nejde aktivovat.  
   
-- TBSTATE_PRESSED, které stisknutí tlačítka.  
+   - TBSTATE_PRESSED, které stisknutí tlačítka.  
   
-- Konec řádku A TBSTATE_WRAP následuje tlačítka. Tlačítka musí mít také stav TBSTATE_ENABLED.  
+   - Konec řádku A TBSTATE_WRAP následuje tlačítka. Tlačítka musí mít také stav TBSTATE_ENABLED.  
   
- `fsStyle`  
- Styl tlačítka. Může být kombinací hodnot uvedených níže:  
+- `fsStyle`  
+
+   Styl tlačítka. Může být kombinací hodnot uvedených níže:  
   
-- TBSTYLE_BUTTON vytvoří standardní tlačítko.  
+   - TBSTYLE_BUTTON vytvoří standardní tlačítko.  
   
-- Vytvoří TBSTYLE_CHECK tlačítko, které přepíná mezi stavů pressed a unpressed pokaždé, když uživatel na něj klikne. Je ve stavu při stisknutí tlačítka má jinou barvu pozadí.  
+   - Vytvoří TBSTYLE_CHECK tlačítko, které přepíná mezi stavů pressed a unpressed pokaždé, když uživatel na něj klikne. Je ve stavu při stisknutí tlačítka má jinou barvu pozadí.  
   
-- Stisknutí TBSTYLE_CHECKGROUP vytvoří, které se stiskne tlačítko kontroly, který zůstává až do dalšího tlačítka ve skupině.  
+   - Stisknutí TBSTYLE_CHECKGROUP vytvoří, které se stiskne tlačítko kontroly, který zůstává až do dalšího tlačítka ve skupině.  
   
-- Stisknutí TBSTYLE_GROUP vytvoří, které stisknutí tlačítka, který zůstane až do dalšího tlačítka ve skupině.  
+   - Stisknutí TBSTYLE_GROUP vytvoří, které stisknutí tlačítka, který zůstane až do dalšího tlačítka ve skupině.  
   
-- TBSTYLE_SEP vytvoří oddělovač, poskytuje malé mezeru mezi skupinami tlačítko. Tlačítko, které má tento styl nepřijímá vstup uživatele.  
+   - TBSTYLE_SEP vytvoří oddělovač, poskytuje malé mezeru mezi skupinami tlačítko. Tlačítko, které má tento styl nepřijímá vstup uživatele.  
   
- `dwData`  
- Data definovaná uživatelem.  
+- `dwData`  
+
+   Data definovaná uživatelem.  
   
- `iString`  
- Index založený na nule řetězec, který má použít na tlačítku pro uživatele. popiskem nebo -1, pokud neexistuje žádný řetězec pro toto tlačítko.  
+- `iString`  
+
+   Index založený na nule řetězec, který má použít na tlačítku pro uživatele. popiskem nebo -1, pokud neexistuje žádný řetězec pro toto tlačítko.  
   
- Image a/nebo řetězec, jehož index je poskytnout musí být dříve přidány do ovládacího prvku panel nástrojů seznam pomocí [AddBitmap](#addbitmap), [addstring –](#addstring), a/nebo [AddStrings](#addstrings).  
+Image a/nebo řetězec, jehož index je poskytnout musí být dříve přidány do ovládacího prvku panel nástrojů seznam pomocí [AddBitmap](#addbitmap), [addstring –](#addstring), a/nebo [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Přidá nový řetězec předaný jako ID prostředku, na panelu nástrojů vnitřní seznam řetězců.  

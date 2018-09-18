@@ -1,5 +1,5 @@
 ---
-title: '&lt;Vrátí&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Vrátí&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056076"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;Vrátí&gt; (Visual C++)
-\<Vrátí > Značka je třeba používat v komentář pro deklaraci metody k popisu návratovou hodnotu.  
+\<Vrátí > značky byste měli použít ve komentář pro deklaraci metody k popisu návratovou hodnotu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,8 @@ ms.locfileid: "33336733"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Popis návratovou hodnotu.  
+*Popis*<br/>
+Popis návratovou hodnotu.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  

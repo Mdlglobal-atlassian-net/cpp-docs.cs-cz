@@ -1,5 +1,5 @@
 ---
-title: C3707 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3707 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7268f584d9f269b4f2f15b837379ec12ab0185d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d18d4a82d06018cdba6147ba6756b1718648847a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052778"
 ---
-# <a name="compiler-error-c3707"></a>C3707 chyby kompilátoru
-'function': metoda dispinterface musí mít dispid  
-  
- Pokud používáte `dispinterface` metoda, je nutné ji přiřadit `dispid`. Odstranění této chyby, přiřadit `dispid` k `dispinterface` metoda, například pomocí uncommenting `id` atribut na metodě v následující ukázce. Další informace najdete v tématu atributy [dispinterface](../../windows/dispinterface.md) a [id](../../windows/id.md).  
-  
- Následující ukázka generuje C3707:  
-  
-```  
-// C3707.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[module(name="xx")];  
-[dispinterface]  
-__interface IEvents : IDispatch  
-{  
-   HRESULT event1([in] int i);   // C3707  
-   // try the following line instead  
-   // [id(1)] HRESULT event1([in] int i);  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3707"></a>Chyba kompilátoru C3707
+
+'function': metoda dispinterface musí mít dispid
+
+Pokud používáte `dispinterface` metoda, je nutné ji přiřadit `dispid`. Chcete-li tuto chybu opravit, přiřaďte `dispid` k `dispinterface` metody, například podle odstraňuje se komentování `id` atributu v metodě v následující ukázce. Další informace najdete v tématu atributy [dispinterface](../../windows/dispinterface.md) a [id](../../windows/id.md).
+
+Následující ukázka generuje C3707:
+
+```
+// C3707.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[module(name="xx")];
+[dispinterface]
+__interface IEvents : IDispatch
+{
+   HRESULT event1([in] int i);   // C3707
+   // try the following line instead
+   // [id(1)] HRESULT event1([in] int i);
+};
+
+int main() {
+}
 ```

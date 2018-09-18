@@ -1,5 +1,5 @@
 ---
-title: C3247 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3247 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ba734203cdac6a56a82f3fd44853d62af53fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f706b4f1a1935a5c6246ea285c7e8b2b746f08cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047236"
 ---
-# <a name="compiler-error-c3247"></a>C3247 chyby kompilátoru
-"třída1": coclass nemůže Zdědit z jiné třída typu coclass "třída2"  
-  
- Třída označené jako [třída typu coclass](../../windows/coclass.md) atribut nemůže Zdědit z jiné třídy, které jsou označené jako `coclass` atribut.  
-  
- Následující ukázka generuje C3247:  
-  
-```  
-// C3247.cpp  
-[module(name="MyLib")];  
-[coclass]  
-class a {  
-};  
-  
-[coclass]  
-class b : public a {   // C3247  
-};  
-int main() {  
-}  
+# <a name="compiler-error-c3247"></a>Chyba kompilátoru C3247
+
+'class1': Konstrukt coclass nemůže dědit z jiného konstruktu coclass 'class2'
+
+Třída označena [coclass](../../windows/coclass.md) atribut nemůže dědit z jiné třídy označené `coclass` atribut.
+
+Následující ukázka generuje C3247:
+
+```
+// C3247.cpp
+[module(name="MyLib")];
+[coclass]
+class a {
+};
+
+[coclass]
+class b : public a {   // C3247
+};
+int main() {
+}
 ```

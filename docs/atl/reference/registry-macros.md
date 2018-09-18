@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058494"
 ---
 # <a name="registry-macros"></a>Makra registru
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametry
 
-*ID knihovny*  
+*ID knihovny*<br/>
 Identifikátor GUID knihovny typů.
 
 ### <a name="remarks"></a>Poznámky
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parametry
 
-*class*  
+*class*<br/>
 [in] Zahrnuto z důvodu zpětné kompatibility.
 
-*Identifikátor PID*  
+*Identifikátor PID*<br/>
 [in] LPCTSTR, který je identifikátor specifické pro verzi programu.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR, který je identifikátor nezávislé na verzi programu.
 
-*nID*  
+*nID*<br/>
 [in] UINT, který je index řetězec prostředku v registru, který se použije jako popis programu.
 
-*příznaky*  
+*příznaky*<br/>
 [in] Hodnota DWORD obsahující model vláken programu v registru. Musí být jedna z následujících hodnot: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
 
 ### <a name="remarks"></a>Poznámky
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parametry
 
-*resid*  
+*resid*<br/>
 Id prostředku, který obsahuje informace o souboru .rgs *appid*.
 
-*ID aplikace*  
+*ID aplikace*<br/>
 IDENTIFIKÁTOR GUID.
 
 ### <a name="remarks"></a>Poznámky
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Identifikátor prostředku řetězce.
 
 ### <a name="remarks"></a>Poznámky
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Generované průvodcem identifikátor prostředku.
 
 ### <a name="remarks"></a>Poznámky

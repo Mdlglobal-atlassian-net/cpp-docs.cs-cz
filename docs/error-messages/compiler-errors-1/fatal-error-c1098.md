@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1098 | Microsoft Docs
+title: Závažná chyba C1098 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ce35d7cdc16d7804cba280315db4d11b436e94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff7ed883798abe457b1092fd5729c1d75fc6f9ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048991"
 ---
 # <a name="fatal-error-c1098"></a>Závažná chyba C1098
-Zjistila se Neshoda verzí s modulem upravit a pokračovat  
-  
- Ladicí verze, kterou používáte, neodpovídá kompilátoru použít k vytvoření spustitelného souboru. Pokud nutnosti rekompilace problém nevyřeší, můžete přeinstalovat, abyste měli jistotu, že máte správné verze kompilátoru a ladicí program Visual C++.
+
+Neshoda verzí s modulem upravit a pokračovat
+
+Ladicí verze, které používáte neodpovídá kompilátor používá k vytvoření spustitelného souboru. Pokud rekompilace se problém nevyřeší, budete muset znovu nainstalovat abyste měli jistotu, že máte správné verze ladicího programu a kompilátor Visual C++.

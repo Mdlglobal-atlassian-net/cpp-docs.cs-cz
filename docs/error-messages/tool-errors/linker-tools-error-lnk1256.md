@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1256 | Microsoft Docs
+title: Chyba Linkerů LNK1256 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4039dccb4dc8abd421b4622bbe928931f7f396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a711343eaf64a9ef1c46a5044cb3d6a2f84c5f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050642"
 ---
 # <a name="linker-tools-error-lnk1256"></a>Chyba linkerů LNK1256
-ALINK operace se nezdařila: důvod  
-  
- Obvyklým důvodem LNK1256 je nesprávné číslo verze sestavení. Hodnota 65535 není povolena pro libovolnou část číslo verze sestavení. Verze sestavení platný rozsah hodnot je 0 - 65534.  
-  
- LNK1256 může také dojít, pokud ALINK nelze nalézt kontejner s názvem klíče. Odstranit kontejner klíčů a přidejte ji znovu do silný název CSP pomocí [Sn.exe (nástroj silným názvem)](/dotnet/framework/tools/sn-exe-strong-name-tool).  
-  
- Dalším důvodem pro LNK1256 je Neshoda verzí mezi linkeru a Alink.dll. Příčinou může být poškozená instalace Visual Studia. Použití **programy a funkce** v Ovládacích panelech opravy a nové instalace sady Visual Studio.  
-  
- Následující ukázka generuje LNK1256:  
-  
-```  
-// LNK1256.cpp  
-// compile with: /clr /LD  
-// LNK1256 expected  
-[assembly:System::Reflection::AssemblyVersionAttribute("1.0.65535")];  
-public class CMyClass {  
-public:  
-   int value;  
-};  
+
+Operace ALINK selhala: důvod
+
+Častým důvodem, proč LNK1256 je nesprávné číslo verze pro sestavení. Hodnota 65535 není povolena pro libovolnou část čísla verze sestavení. Platný rozsah pro sestavení verze je 0 – 65534.
+
+LNK1256 můžete také tehdy, když ALINK nelze najít pojmenované kontejneru klíčů. Odstranění kontejneru klíčů a znovu přidat do CSP silného názvu pomocí [Sn.exe (nástroj Strong Name)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+
+Dalším důvodem pro LNK1256 je Neshoda verzí mezi linkeru a Alink.dll. Příčinou může být poškozená instalace sady Visual Studio. Použití **programy a funkce** v Ovládacích panelech Windows opravte nebo přeinstalujte Visual Studio.
+
+Následující ukázka generuje LNK1256:
+
+```
+// LNK1256.cpp
+// compile with: /clr /LD
+// LNK1256 expected
+[assembly:System::Reflection::AssemblyVersionAttribute("1.0.65535")];
+public class CMyClass {
+public:
+   int value;
+};
 ```

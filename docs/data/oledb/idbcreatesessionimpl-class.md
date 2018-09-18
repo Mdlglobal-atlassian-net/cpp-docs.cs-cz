@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047392"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl – třída
+
 Poskytuje implementaci pro [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- VAŠI TŘÍDU ODVOZENOU Z  
+
+*T*<br/>
+VAŠI TŘÍDU ODVOZENOU Z  
   
- *SessionClass*  
- Objekt relace.  
+*SessionClass*<br/>
+Objekt relace.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h 
+
+**Záhlaví:** atldb.h 
   
 ## <a name="members"></a>Členové  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 |[Vytvoření relace](#createsession)|Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní na nově vytvořené relace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Povinné rozhraní na objekty zdroje dat  
+
+Povinné rozhraní na objekty zdroje dat  
 
 ## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+
 Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní na nově vytvořené relace.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -74,8 +79,10 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
+
+Zobrazit [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

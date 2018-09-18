@@ -1,5 +1,5 @@
 ---
-title: C2570 chyby kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2570 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b870ddd8bb162f4f65bd3200c397f912249304b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f5914af21ec780167c45334829a5d6517cf3662
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052975"
 ---
-# <a name="compiler-error-c2570"></a>C2570 chyby kompilátoru
-"identifikátor": union nemohou mít základní třídy  
-  
- Spojení je odvozena od třídy, struktury nebo union. Toto není povoleno. Místo toho deklarujte odvozený typ jako třídu nebo strukturu.  
-  
- Následující ukázka generuje C2570:  
-  
-```  
-// C2570.cpp  
-// compile with: /c  
-class base {};  
-union hasPubBase : public base {};   // C2570  
-union hasNoBase {};   // OK  
+# <a name="compiler-error-c2570"></a>Chyba kompilátoru C2570
+
+'identifier': sjednocení nemůže mít základní třídy
+
+Sjednocení je odvozena z třídy, struktury nebo sjednocení. Toto není povoleno. Místo toho deklarujte odvozený typ jako třídy nebo struktury.
+
+Následující ukázka generuje C2570:
+
+```
+// C2570.cpp
+// compile with: /c
+class base {};
+union hasPubBase : public base {};   // C2570
+union hasNoBase {};   // OK
 ```

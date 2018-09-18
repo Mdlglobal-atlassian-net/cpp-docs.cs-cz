@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f468117cc4d3fad8f3eb1d94abc948c9a4a032b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057480"
 ---
 # <a name="catlmodulet-class"></a>Catlmodulet – třída
 
@@ -38,13 +38,13 @@ Tato třída implementuje modul knihovny ATL.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CAtlModuleT`.
 
 ## <a name="members"></a>Členové
@@ -74,7 +74,7 @@ Vaše třída odvozena od `CAtlModuleT`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [Catlmodule –](../../atl/reference/catlmodule-class.md)
 
@@ -132,10 +132,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE, pokud knihovna typů je k registraci. Výchozí hodnota je FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud se zaregistruje NULL (výchozí hodnota), všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -166,10 +166,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parametry
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE, pokud knihovna typů je také možné odregistrovat.
 
-*pCLSID*  
+*pCLSID*<br/>
 Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapě objektů bude zrušena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -186,7 +186,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bRegister*  
+*bRegister*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -195,6 +195,6 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 
-[Catlmodule – třída](../../atl/reference/catlmodule-class.md)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[CAtlModule – třída](../../atl/reference/catlmodule-class.md)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

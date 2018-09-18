@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4221 | Microsoft Docs
+title: Upozornění (úroveň 4) C4221 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e602eb662533207a1f2957d3b11a0823e4b83af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b0804c8b7cb2d059e45fa504334687a796fbe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293192"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056414"
 ---
-# <a name="compiler-warning-level-4-c4221"></a>C4221 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: "identifikátor": Nelze inicializovat pomocí adresy automatické proměnné  
-  
- Rozšíření Microsoft výchozí (/Ze), bude možné inicializovat typ agregace (**pole**, `struct`, nebo **sjednocení**) s adresou místní proměnné (automaticky).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4221.c  
-// compile with: /W4  
-struct S  
-{  
-   int *i;  
-};  
-  
-void func()  
-{  
-   int j;  
-   struct S s1 = { &j };   // C4221  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Takové inicializacích jsou neplatné v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4221"></a>Kompilátor upozornění (úroveň 4) C4221
+
+používá se nestandardní rozšíření: 'identifier': Nelze inicializovat pomocí adresy automatické proměnné
+
+Pomocí rozšíření výchozí společnosti Microsoft (/Ze), můžete inicializovat požadovaný typ agregace (**pole**, `struct`, nebo **sjednocení**) adresu lokální proměnné (automatické).
+
+## <a name="example"></a>Příklad
+
+```
+// C4221.c
+// compile with: /W4
+struct S
+{
+   int *i;
+};
+
+void func()
+{
+   int j;
+   struct S s1 = { &j };   // C4221
+}
+
+int main()
+{
+}
+```
+
+Tyto inicializace jsou neplatné pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

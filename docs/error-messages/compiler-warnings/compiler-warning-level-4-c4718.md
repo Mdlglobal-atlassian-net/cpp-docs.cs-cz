@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4718 | Microsoft Docs
+title: Upozornění (úroveň 4) C4718 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92ab7a32babd181f282c799568e3a9dea436c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8736902f4c3a1cfac7313806fde65d1b253716b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054230"
 ---
-# <a name="compiler-warning-level-4-c4718"></a>C4718 kompilátoru upozornění (úroveň 4)
-volání funkce: rekurzivní volání nemá žádné vedlejší účinky odstranění  
-  
- Funkce obsahuje zpětného volání, ale jinak nemá žádné vedlejší účinky. Volání této funkce se teď odstraňuje. Správnost programu nemá vliv, ale bude se chování. Zatímco ponechat volání v může mít za následek výjimku přetečení zásobníku modulu runtime, odstraňování volání Odebere tuto možnost.
+# <a name="compiler-warning-level-4-c4718"></a>Kompilátor upozornění (úroveň 4) C4718
+
+volání funkce: rekurzivní volání nemá žádné vedlejší efekty, odstraňuje se
+
+Funkce obsahuje rekurzivní volání, ale jinak nemá žádné vedlejší účinky. Voláním této funkce se odstraňuje. Správnost program nemá vliv, ale je chování. Vzhledem k tomu byste museli opustit volání může vést k výjimce přetečení zásobníku modulu runtime, odstraněním volání dojde k odebrání této možnosti.

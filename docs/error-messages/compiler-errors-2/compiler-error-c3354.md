@@ -1,5 +1,5 @@
 ---
-title: C3354 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3354 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4bcc36580a453932068350f01b53c5f09f2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40f86702be19259bed7899cdbc5106346d6c6594
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058533"
 ---
-# <a name="compiler-error-c3354"></a>C3354 chyby kompilátoru
-'function': Funkce použitá k vytvoření delegáta nemůže mít typ vrácené "typ"  
-  
- Je neplatný, protože návratové typy pro následující typy `delegate`:  
-  
--   Ukazatel na funkci  
-  
--   Ukazatel na člena  
-  
--   Ukazatel na – členská funkce  
-  
--   Odkaz na funkci  
-  
--   Odkaz na – členská funkce  
-  
- Následující ukázka generuje C3354:  
-  
-```  
-// C3354_2.cpp  
-// compile with: /clr /c  
-using namespace System;  
-typedef void ( *VoidPfn )();  
-  
-delegate VoidPfn func(); // C3354  
-// try the following line instead  
-// delegate  void func();  
-```  
+# <a name="compiler-error-c3354"></a>Chyba kompilátoru C3354
+
+'function': Funkce použitá k vytvoření delegáta nemůže mít návratový typ 'type'
+
+Nejsou platné jako typy vracených hodnot pro tyto typy `delegate`:
+
+- Ukazatel na funkci
+
+- Ukazatel na člena
+
+- Ukazatel na členskou funkci.
+
+- Odkaz na funkci
+
+- Odkaz na členskou funkci.
+
+Následující ukázka generuje C3354:
+
+```
+// C3354_2.cpp
+// compile with: /clr /c
+using namespace System;
+typedef void ( *VoidPfn )();
+
+delegate VoidPfn func(); // C3354
+// try the following line instead
+// delegate  void func();
+```

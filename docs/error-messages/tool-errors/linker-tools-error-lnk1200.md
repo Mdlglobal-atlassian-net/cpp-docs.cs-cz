@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1200 | Microsoft Docs
+title: Chyba Linkerů LNK1200 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab32939c55dce5e27f907f3d23e639b24741cdc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03ecd51142bf30230b6b177a36e007345e93bf2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059313"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Chyba linkerů LNK1200
-Chyba při čtení databáze programu 'název souboru.  
-  
- Nepodařilo se přečíst databázi programu (PDB).  
-  
- Tato chyba může být způsobeno poškození souboru.  
-  
- Pokud `filename` je PDB soubor objektu znovu zkompiluje objekt souboru pomocí [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
- Pokud `filename` je PDB pro hlavní výstupní soubor a k této chybě došlo během přírůstkové odkaz, odstraňte PDB a znovu připojit.
+
+Chyba při čtení databáze programu: filename.
+
+Nelze načíst databázi programu (PDB).
+
+Tuto chybu může způsobovat poškození souborů.
+
+Pokud `filename` je do souboru PDB soubor objektu znovu zkompilujte soubor objektu pomocí [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+Pokud `filename` je soubor PDB pro hlavního výstupního souboru a k této chybě došlo během přírůstkového propojení, odstraňte soubor PDB a znovu připojit.

@@ -1,5 +1,5 @@
 ---
-title: writeonly_texture_view – třída | Microsoft Docs
+title: writeonly_texture_view – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047749"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view – třída
-Poskytuje přístup writeonly k texturou.  
+Poskytuje přístup typu writeonly k textuře.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,45 +45,45 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `value_type`  
- Typ elementů v textury.  
+*value_type*<br/>
+Typ prvků v textuře.  
   
- `_Rank`  
- Pořadí textury.  
+*_Rank*<br/>
+Řád textury.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
 |`scalar_type`||  
-|`value_type`|Typ elementů v textury.|  
+|`value_type`|Typ prvků v textuře.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[writeonly_texture_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `writeonly_texture_view` třídy.|  
-|[~writeonly_texture_view Destructor](#ctor)|Zničí `writeonly_texture_view` objektu.|  
+|[~writeonly_texture_view Destructor](#ctor)|Odstraní `writeonly_texture_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[set](#set)|Nastaví hodnotu elementu v zadaném indexu.|  
+|[set](#set)|Nastaví hodnotu prvku na zadaném indexu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Zkopíruje zadaný `writeonly_texture_view` k tomuto objektu.|  
+|[operátor =](#operator_eq)|Zkopíruje zadaný `writeonly_texture_view` do tohoto objektu.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[pořadí konstanta](#rank)|Získá pořadí `writeonly_texture_view` objektu.|  
+|[RANK – konstanta](#rank)|Zjistí řád objektu `writeonly_texture_view` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `_Texture_base`  
@@ -97,7 +97,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="dtor"></a> ~ writeonly_texture_view 
 
- Zničí `writeonly_texture_view` objektu.  
+ Odstraní `writeonly_texture_view` objektu.  
   
 ```  
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> operátor = 
 
- Zkopíruje zadaný `writeonly_texture_view` k tomuto objektu.  
+ Zkopíruje zadaný `writeonly_texture_view` do tohoto objektu.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,23 +113,23 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `writeonly_texture_view` objekt, který chcete zkopírovat z.  
+*Ji_né*<br/>
+`writeonly_texture_view` objekt bude kopírováno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na toto `writeonly_texture_view` objektu.  
+ Odkaz na tento `writeonly_texture_view` objektu.  
   
-##  <a name="rank"></a> Pořadí 
+##  <a name="rank"></a> pořadí 
 
- Získá pořadí `writeonly_texture_view` objektu.  
+ Zjistí řád objektu `writeonly_texture_view` objektu.  
   
 ```  
 static const int rank = _Rank;  
 ```  
   
-##  <a name="set"></a> nastavení 
+##  <a name="set"></a> Nastavit 
 
- Nastaví hodnotu elementu v zadaném indexu.  
+ Nastaví hodnotu prvku na zadaném indexu.  
   
 ```  
 void set(
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Index`  
- Index elementu.  
+*_Index*<br/>
+Index prvku.  
   
- `value`  
- Nová hodnota elementu.  
+*value*<br/>
+Nová hodnota prvku.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Pořadí textury.  
+*_Rank*<br/>
+Řád textury.  
   
- `value_type`  
- Typ elementů v textury.  
+*value_type*<br/>
+Typ prvků v textuře.  
   
- `_Src`  
- Texture, který se používá k vytvoření `writeonly_texture_view`.  
+*_Src*<br/>
+Textury, který se používá k vytvoření `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

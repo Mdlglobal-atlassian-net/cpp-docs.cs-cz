@@ -1,5 +1,5 @@
 ---
-title: C2815 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2815 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eadfe636250c0acab9bcb2cd09323292f26a43
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 192c991cfee9fb1925601719ea61c47c5227c753
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057652"
 ---
-# <a name="compiler-error-c2815"></a>C2815 chyby kompilátoru
-operátor odstranit: musí být první formální parametr ' void *', 'param' byl však použit  
-  
- Všechny uživatelské [delete – operátor](../../standard-library/new-operators.md#op_delete) funkce vyžaduje první formální parametr typu `void *`.  
-  
- Následující ukázka generuje C2815:  
-  
-```  
-// C2815.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   void mf1(int *a);  
-   void operator delete(CMyClass *);   // C2815  
-   void operator delete(void *);   
-};  
+# <a name="compiler-error-c2815"></a>Chyba kompilátoru C2815
+
+operátor delete: první formální parametr musí být "void *', 'param' byl však použit
+
+Všechny uživatelem definované [operátor delete](../../standard-library/new-operators.md#op_delete) funkce musí přebírat první formální parametr typu `void *`.
+
+Následující ukázka generuje C2815:
+
+```
+// C2815.cpp
+// compile with: /c
+class CMyClass {
+public:
+   void mf1(int *a);
+   void operator delete(CMyClass *);   // C2815
+   void operator delete(void *);
+};
 ```

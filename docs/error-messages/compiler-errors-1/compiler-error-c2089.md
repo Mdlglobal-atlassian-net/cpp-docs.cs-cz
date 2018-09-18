@@ -1,5 +1,5 @@
 ---
-title: C2089 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2089 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f76c5b5ae8212e463a7022680ffca5dd4ca498
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb64f1f0c2a8c5af2a8b8625cd1a05c530066185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046146"
 ---
-# <a name="compiler-error-c2089"></a>C2089 chyby kompilátoru
-"identifikátor": "-klíč třídy' příliš velký  
-  
- Zadaná struktura nebo sjednocení překračuje limit 4GB.
+# <a name="compiler-error-c2089"></a>Chyba kompilátoru C2089
+
+'identifier': 'klíč třídy"moc velká
+
+Určené struktury nebo sjednocení překračuje limit 4GB.

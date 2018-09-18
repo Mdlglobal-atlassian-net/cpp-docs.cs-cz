@@ -1,5 +1,5 @@
 ---
-title: C2493 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2493 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 336378894f5bc6d4e0dc061b630f8517b97e89c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf65e17aa44746fea51d50cdb7c2a6e8be60cca2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047990"
 ---
-# <a name="compiler-error-c2493"></a>C2493 chyby kompilátoru
-Neplatný formu __based  
-  
- A `__based` výraz musí být založená na ukazatel.  
-  
- Následující ukázka generuje C2493:  
-  
-```  
-// C2493.cpp  
-// compile with: /c  
-char mybase;  
-int __based(mybase) ptr;   // C2493  
-  
-// OK  
-char * mybase;  
-int __based(mybase) * ptr;  
+# <a name="compiler-error-c2493"></a>Chyba kompilátoru C2493
+
+Neplatná podoba __based
+
+A `__based` výraz musí být založené na ukazatel.
+
+Následující ukázka generuje C2493:
+
+```
+// C2493.cpp
+// compile with: /c
+char mybase;
+int __based(mybase) ptr;   // C2493
+
+// OK
+char * mybase;
+int __based(mybase) * ptr;
 ```

@@ -1,5 +1,5 @@
 ---
-title: CXX0039 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0039 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8681d73d2889433516b205a47c500193bbeabdb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5397426618c5dfcbaa6307105781ff2e6f2eb97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048328"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Chyba při vyhodnocování výrazu CXX0039
-symbol je nejednoznačný  
-  
- Vyhodnocovací filtr výrazů C nemůže určit, která instance symbol použít ve výrazu. Symbol dojde k více než jednou ve stromu dědičnosti.  
-  
- Musíte použít operátor řešení rozsahu (`::`) k explicitnímu zadání instance použít ve výrazu.  
-  
- Tato chyba je stejný jako CAN0039.
+
+nejednoznačný symbol
+
+Vyhodnocovací filtr výrazů C nemůže určit, která instance symbol, který chcete použít ve výrazu. Symbol vyskytuje více než jednou ve stromu dědičnosti.
+
+Je nutné použít operátor rozlišení oboru (`::`) s ohledem na instance, kterou chcete použít ve výrazu.
+
+Tato chyba se shoduje s CAN0039.

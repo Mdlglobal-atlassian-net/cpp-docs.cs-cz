@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054295"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Podpora COM + 1.0 v projektech ATL
 
@@ -39,7 +39,7 @@ Pokud vyberete **podporu modelu COM + 1.0** zaškrtávací políčko, můžete t
 
 ## <a name="see-also"></a>Viz také
 
-[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

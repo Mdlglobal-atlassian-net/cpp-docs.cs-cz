@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1306 | Microsoft Docs
+title: Chyba Linkerů LNK1306 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,58 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb340a4c28f94f18e0c4b65bea8749394e002bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7cc007a4a594c8593d7820365377f1c811b1e23c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300495"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050564"
 ---
-# <a name="linker-tools-error-lnk1306"></a>Chyba linkerů LNK1306  
-  
-> Funkce knihoven DLL vstupního bodu nelze spravovat; nativní kompilace  
-  
-`DllMain` Nelze kompilovat, k MSIL; musí být zkompilovány v nativním režimu.  
-  
-Chcete-li vyřešit tento problém  
-  
--   Zkompilovat soubor, který obsahuje vstupní bod bez **/CLR**.  
-  
--   Vstupní bod chápat `#pragma unmanaged` části.  
-  
-Další informace naleznete v tématu:  
-  
--   [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [managed, unmanaged](../../preprocessor/managed-unmanaged.md)  
-  
--   [Inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md)  
-  
--   [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../../build/run-time-library-behavior.md)  
-  
-## <a name="example"></a>Příklad  
-  
-Následující ukázka generuje LNK1306.  
-  
-```cpp  
-// LNK1306.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-// LNK1306 error expected  
-#include <windows.h>  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-```  
-  
-Chcete-li tento problém vyřešit, nepoužívejte / CLR – možnost kompilaci tohoto souboru, nebo používat `#pragma` – direktiva uvést definici vstupní bod do nespravovaných části, jak je znázorněno v tomto příkladu:  
-  
-```cpp  
-// LNK1306fix.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-#include <windows.h>  
-#pragma managed(push, off)  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-#pragma managed(pop)  
-```  
+# <a name="linker-tools-error-lnk1306"></a>Chyba linkerů LNK1306
+
+> Není možné spravovat funkci vstupního bodu DLL; nativní kompilace
+
+`DllMain` nemohou být zkompilovány do jazyka MSIL; musí být zkompilována pro nativní.
+
+Chcete-li vyřešit tento problém
+
+- Zkompilujte soubor, který obsahuje vstupní bod bez **/CLR**.
+
+- Do vstupního bodu `#pragma unmanaged` oddílu.
+
+Další informace naleznete v tématu:
+
+- [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
+
+- [Inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md)
+
+- [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../../build/run-time-library-behavior.md)
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje LNK1306.
+
+```cpp
+// LNK1306.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+// LNK1306 error expected
+#include <windows.h>
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+```
+
+Chcete-li vyřešit tento problém, nepoužívejte možnost/CLR a zkompilujte tento soubor, nebo použít `#pragma` směrnice vložit definici vstupní bod do nespravované části, jak je znázorněno v tomto příkladu:
+
+```cpp
+// LNK1306fix.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+#include <windows.h>
+#pragma managed(push, off)
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+#pragma managed(pop)
+```

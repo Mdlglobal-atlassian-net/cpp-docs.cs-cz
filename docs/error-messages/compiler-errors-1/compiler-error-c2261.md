@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru C2261 | Microsoft Docs
+title: Chyba kompilátoru C2261 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45050daf3149cd813fb23b5814be5fe49c375f03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed43dc43fb6ceaf514a8e7452b06eb7bdaf7362
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051643"
 ---
 # <a name="compiler-error-c2261"></a>Chyba kompilátoru C2261
-'řetězec': odkaz na sestavení je neplatný a nelze jej přeložit  
-  
- Hodnotu nebyla platná.  
-  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> slouží k určení přátelského sestavení. Například pokud a.dll chce určit b.dll jako přátelského sestavení, zadali byste (v a.dll): InternalsVisibleTo("b"). Modul runtime pak umožňuje b.dll všechno ve a.dll (s výjimkou privátní typy) přístup.  
-  
- Další informace o správné syntaxi při zadávání přátelských sestavení najdete v tématu [přátelských sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2261.  
-  
-```  
-// C2261.cpp  
-// compile with: /clr /c  
-using namespace System::Runtime::CompilerServices;  
-[assembly: InternalsVisibleTo("a,a,a")];   // C2261  
-[assembly: InternalsVisibleTo("a.a")];   // OK  
-[assembly: InternalsVisibleTo("a")];   // OK  
+
+"řetězec": odkaz na sestavení je neplatný a nelze rozpoznat
+
+Hodnota není platný.
+
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> slouží k určení přátelského sestavení. Například pokud a.dll chce b.dll zadat jako sestavení typu friend, zadali byste (v a.dll): InternalsVisibleTo("b"). Modul runtime pak umožní b.dll přístup ke všem, co a.dll (s výjimkou soukromé typy).
+
+Další informace o správnou syntaxi při určování sestavení typu friend, naleznete v tématu [přátelská sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2261.
+
+```
+// C2261.cpp
+// compile with: /clr /c
+using namespace System::Runtime::CompilerServices;
+[assembly: InternalsVisibleTo("a,a,a")];   // C2261
+[assembly: InternalsVisibleTo("a.a")];   // OK
+[assembly: InternalsVisibleTo("a")];   // OK
 ```

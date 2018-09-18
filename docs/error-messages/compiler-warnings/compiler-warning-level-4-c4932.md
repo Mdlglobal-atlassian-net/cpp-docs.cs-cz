@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4932 | Microsoft Docs
+title: Upozornění (úroveň 4) C4932 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99fc58f9e6208db9aaeb8689e8be8b49f9aaea4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c9143406fc4b52d50b5dc68215fa796f5100fb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053918"
 ---
-# <a name="compiler-warning-level-4-c4932"></a>C4932 kompilátoru upozornění (úroveň 4)
-__identifier(Identifier) a \_jsou _identifier(identifier)  
-  
- Kompilátor není schopen rozlišit mezi **_finally** a `__finally` nebo `__try` a **_try** jako parametr předaný [__identifier](../../windows/identifier-cpp-cli.md). Byste neměli používat obě jako identifikátory v stejný program jako povede to [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) chyba.  
-  
- Následující ukázka generuje C4932:  
-  
-```  
-// C4932.cpp  
-// compile with: /clr /W4 /WX  
-int main() {  
-   int __identifier(_finally) = 245;   // C4932  
-   int __identifier(__finally) = 25;   // C4932  
-}  
+# <a name="compiler-warning-level-4-c4932"></a>Kompilátor upozornění (úroveň 4) C4932
+
+__identifier(Identifier) a \__identifier(identifier) jsou
+
+Kompilátor nedokáže rozlišit **_finally** a `__finally` nebo `__try` a **_try** jako parametr předaný do [__identifier](../../windows/identifier-cpp-cli.md). By se neměly pokoušet použít je jako identifikátory ve stejném programu, jinak dojde v [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) chyby.
+
+Následující ukázka generuje C4932:
+
+```
+// C4932.cpp
+// compile with: /clr /W4 /WX
+int main() {
+   int __identifier(_finally) = 245;   // C4932
+   int __identifier(__finally) = 25;   // C4932
+}
 ```

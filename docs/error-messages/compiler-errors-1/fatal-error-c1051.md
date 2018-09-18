@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1051 | Microsoft Docs
+title: Závažná chyba C1051 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d83d399d8ceba495856045f0502cc0f08c21eb7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bbd385d685f671d171ee5aaa967e92acab7fb38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057935"
 ---
 # <a name="fatal-error-c1051"></a>Závažná chyba C1051
-Program databázového souboru 'pdbfile' má zastaralé formát, odstraňte jej a znovu zkompiluje  
-  
- Kompilátor nelze aktualizovat souboru databáze programu, který má starší číslo verze. Odstraňte soubor a znovu zkompiluje s vaším programem **/Zi** nebo **/ZI**. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informace ladění)](../../build/reference/z7-zi-zi-debug-information-format.md)
+
+soubor databáze programu, 'pdbfile', má zastaralý formát, odstraňte ho a překompilujte
+
+Kompilátor nelze aktualizovat soubor databáze programu, který má starší číslo verze. Stejný soubor odstranit také a znovu zkompilovat váš program s **/zi** nebo **/zi**. Další informace najdete v tématu  [ /Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md)

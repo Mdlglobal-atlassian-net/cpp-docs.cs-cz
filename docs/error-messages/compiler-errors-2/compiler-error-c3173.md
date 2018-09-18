@@ -1,5 +1,5 @@
 ---
-title: C3173 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3173 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef35c534ac834779da15fce99e8c82b94bd445e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a02ae1fcf4aff9636445979a81ef0a02ab5cb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053021"
 ---
-# <a name="compiler-error-c3173"></a>C3173 chyby kompilátoru
-zjistila se Neshoda verzí v idl sloučení  
-  
- K této chybě dojde, když soubor objektu obsahuje vložené idl, který byl vytvořen s předchozí verzí kompilátoru. Kompilátor kóduje zajistěte, aby byl stejný kompilátoru sloužící ke generování idl obsah, který je součástí soubory .obj také stejné kompilátoru použit ke sloučení vloženého idl číslo verze.  
-  
- Aktualizujte instalaci Visual C++, tak, aby byly všechny nástroje z na nejnovější prodejní verzi.
+# <a name="compiler-error-c3173"></a>Chyba kompilátoru C3173
+
+Neshoda verzí ve sloučení idl
+
+Tato chyba nastane, pokud soubor objektu obsahuje vložené idl, který byl vygenerován pomocí předchozí verze kompilátoru. Kompilátor kóduje čísla verze pro, ujistěte se, že kompilátor stejné sloužící ke generování obsah idl, který je vložený v souborech .obj také stejné kompilátoru použitý ke sloučení vložené idl.
+
+Aktualizujte instalaci Visual C++ tak, že všechny nástroje jsou z nejnovější vydanou verzi.

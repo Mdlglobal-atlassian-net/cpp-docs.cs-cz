@@ -1,5 +1,5 @@
 ---
-title: C2174 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2174 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052368"
 ---
-# <a name="compiler-error-c2174"></a>C2174 chyby kompilátoru
-'function': skutečný parametr obsahuje typ void: Parametr Číslo1, číslo2 seznamu parametr  
-  
- Parametr `number1` předaný seznam parametrů `number2` je `void` parametr. Parametry nemůžou mít typ `void`. Místo nich se používá `void*`.
+# <a name="compiler-error-c2174"></a>Chyba kompilátoru C2174
+
+'function': skutečný parametr má typ void: Parametr Číslo1, číslo2 seznam parametrů
+
+Parametr `number1` předaný do seznamu parametrů `number2` je `void` parametru. Parametry nemůžou mít typ `void`. Místo nich se používá `void*`.

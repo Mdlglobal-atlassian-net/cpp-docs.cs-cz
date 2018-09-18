@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba kompilátoru prostředků RC1120 | Microsoft Docs
+title: Závažná chyba kompilátoru prostředků RC1120 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d117f7b106e14cde2def5477fab5ad0fc92a6411
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f28e381d4eac0bfd1f010ef3919452635a1b96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056999"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>Závažná chyba kompilátoru prostředků RC1120
-Nedostatek paměti potřeby počet bajtů  
-  
- Kompilátor prostředků nemá dostatek paměti pro položky, které je uložený v jeho haldy. Obvykle je to výsledek má příliš mnoho symboly.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Zvětšete místo odkládacího souboru Windows. Další informace o zvětšení místa odkládacího souboru najdete v části virtuální paměti v nápovědě k systému Windows.  
-  
-2.  Vyloučení nepotřebných vložené soubory, zejména nepotřebné `#define`prototypy s a funkce.  
-  
-3.  Rozdělit do dvou nebo více souborů aktuální soubor a jejich kompilace samostatně.  
-  
-4.  Odeberte jiné programy a ovladače, které jsou spuštěné v systému, což může být využívají poměrně velké množství paměti.
+
+Nedostatek paměti třeba počet bajtů
+
+Nástroj Resource Compiler nemá dostatek úložiště pro položky, které je uložený v jeho haldy. Obvykle to je výsledkem by bylo příliš mnoho symbolů.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Zvětšete místo odkládacího souboru Windows. Další informace o zvětšení místa odkládacího souboru naleznete v tématu virtuální paměti v nápovědě k Windows.
+
+1. Odstraňte nepotřebné vkládané soubory, zejména nepotřebné `#define`prototypy s a funkce.
+
+1. Rozdělit do dvou nebo více souborů aktuální soubor a zkompilovat je samostatně.
+
+1. Odeberte ostatní programy a ovladače spuštěné v systému, který může spotřebovávat značné množství paměti.

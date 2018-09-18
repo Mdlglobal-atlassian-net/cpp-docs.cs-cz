@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4182 | Microsoft Docs
+title: Upozornění (úroveň 1) C4182 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e86076a9d8218d08bd7437e2a06878b6ee91ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c0cdac45238a4734b02d34f4c540c62a2f0c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056570"
 ---
-# <a name="compiler-warning-level-1-c4182"></a>C4182 kompilátoru upozornění (úroveň 1)
-\#zahrnout úroveň vnoření je hloubky; 'číslo. možné nekonečná rekurze  
-  
- Kompilátor nemá dostatek místa v haldě kvůli počet vnořených zahrnout soubory. Vložené soubory je vnořený, pokud je součástí z jiného souboru zahrnout.  
-  
- Tato zpráva je informační a předchází chyba [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).
+# <a name="compiler-warning-level-1-c4182"></a>Kompilátor upozornění (úroveň 1) C4182
+
+\#zahrnout úrovně vnoření je "číslo"; možná nekonečná rekurze
+
+Kompilátor nemá dostatek místa v haldě kvůli řadě vnořené soubory k zahrnutí. Když je zahrnutý z jiného souboru include je vnořená vloženého souboru.
+
+Tato zpráva je informační a předchází chyba [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).

@@ -1,5 +1,5 @@
 ---
-title: C2884 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2884 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bacfc53f8b1f14a9b7409a43db39fd943739e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d9266162d4608e39982cce1e94751e427bc5e47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054711"
 ---
-# <a name="compiler-error-c2884"></a>C2884 chyby kompilátoru
-"název": zaváděné pomocí deklarace je v konfliktu s místní funkce 'function'.  
-  
- Pokusili jste se definovat funkce více než jednou. První definice je místní definice. Druhá je z oboru názvů s `using` deklarace.  
-  
- Následující ukázka generuje C2884:  
-  
-```  
-// C2884.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-void f() {  
-   void z(int);  
-   using A::z;   // C2884 z is already defined  
-}  
+# <a name="compiler-error-c2884"></a>Chyba kompilátoru C2884
+
+"name": zavedené pomocí deklarace je v konfliktu s lokální funkce 'function'
+
+Pokusili jste se definovat funkci více než jednou. První definice je lokální definici. Druhým je z oboru názvů s `using` deklarace.
+
+Následující ukázka generuje C2884:
+
+```
+// C2884.cpp
+namespace A {
+   void z(int);
+}
+
+void f() {
+   void z(int);
+   using A::z;   // C2884 z is already defined
+}
 ```

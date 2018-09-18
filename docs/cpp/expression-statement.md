@@ -15,26 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d94acdfff2fdea2cc35d0856940270ba82e131af
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f026a91846196e34f97b4d2cbcfa2c9fa749e8b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058600"
 ---
 # <a name="expression-statement"></a>Příkaz výrazu
-Příkazy výrazů způsobí vyhodnocení výrazů. Není proveden žádný přenos řízení nebo iterace jako výsledek příkazu výrazu.  
-  
- Syntaxe pro příkaz výrazu je jednoduše  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-[expression ] ;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Před provedením dalšího příkazu jsou všechny výrazy v příkazu výrazu vyhodnoceny a dokončeny všechny vedlejší účinky. Nejčastěji používané příkazy výrazů jsou přiřazení a volání funkce.  Jelikož je výraz nepovinný, je samotný středník považován za prázdný příkaz výrazu, označuje jako [null](../cpp/null-statement.md) příkazu.  
-  
-## <a name="see-also"></a>Viz také:  
- [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)
+
+Příkazy výrazů způsobí vyhodnocení výrazů. Není proveden žádný přenos řízení nebo iterace jako výsledek příkazu výrazu.
+
+Syntaxe pro příkaz výrazu je jednoduše
+
+## <a name="syntax"></a>Syntaxe
+
+```
+[expression ] ;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Před provedením dalšího příkazu jsou všechny výrazy v příkazu výrazu vyhodnoceny a dokončeny všechny vedlejší účinky. Nejčastěji používané příkazy výrazů jsou přiřazení a volání funkce.  Jelikož je výraz nepovinný, je samotný středník považován za prázdný příkaz výrazu, označuje jako [null](../cpp/null-statement.md) příkazu.
+
+## <a name="see-also"></a>Viz také:
+
+[Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)

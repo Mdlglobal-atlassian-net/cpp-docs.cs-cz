@@ -29,44 +29,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054074"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Zjednodušení přístupu k datům s použitím atributů databáze
+
 Toto téma popisuje použití atributů databáze pro zjednodušení databázových operací.  
   
- Základní způsob pro přístup k informacím z databáze je vytvoření příkazu (nebo tabulky) třídy a třídy uživatelského záznamu pro určitou tabulku v databázi. Atributy databáze Zjednodušte některé deklarace šablon, které jste dřív měli provést.  
+Základní způsob pro přístup k informacím z databáze je vytvoření příkazu (nebo tabulky) třídy a třídy uživatelského záznamu pro určitou tabulku v databázi. Atributy databáze Zjednodušte některé deklarace šablon, které jste dřív měli provést.  
   
- Pro demonstraci použití atributů databáze, následující části vysvětlují dvě odpovídající tabulky a deklarace třídy uživatelského záznamu: atributy použije první a druhý používá šablony technologie OLE DB. Takové deklarace je obvykle umístěn kód v hlavičkovém souboru s názvem pro objekt příkazu nebo tabulky, například Authors.h.  
+Pro demonstraci použití atributů databáze, následující části vysvětlují dvě odpovídající tabulky a deklarace třídy uživatelského záznamu: atributy použije první a druhý používá šablony technologie OLE DB. Takové deklarace je obvykle umístěn kód v hlavičkovém souboru s názvem pro objekt příkazu nebo tabulky, například Authors.h.  
   
- Porovnáním dvou souborů uvidíte, jak mnohem jednodušší je používat atributy. Mezi rozdíly jsou:  
+Porovnáním dvou souborů uvidíte, jak mnohem jednodušší je používat atributy. Mezi rozdíly jsou:  
   
--   Pomocí atributů, stačí jenom jednu třídu deklarovat: `CAuthors`, zatímco se šablonami, je třeba deklarovat dvě: `CAuthorsNoAttrAccessor` a `CAuthorsNoAttr`.  
+- Pomocí atributů, stačí jenom jednu třídu deklarovat: `CAuthors`, zatímco se šablonami, je třeba deklarovat dvě: `CAuthorsNoAttrAccessor` a `CAuthorsNoAttr`.  
   
--   `db_source` Je ekvivalentní volání ve verzi s atributy `OpenDataSource()` volání v deklaraci šablony.  
+- `db_source` Je ekvivalentní volání ve verzi s atributy `OpenDataSource()` volání v deklaraci šablony.  
   
--   `db_table` Volání ve verzi s atributy je ekvivalentní deklaraci šablony následující:  
+- `db_table` Volání ve verzi s atributy je ekvivalentní deklaraci šablony následující:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   `db_column` Volání ve verzi s atributy jsou ekvivalentní a mapováním sloupců (viz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) v deklaraci šablony.  
+- `db_column` Volání ve verzi s atributy jsou ekvivalentní a mapováním sloupců (viz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) v deklaraci šablony.  
   
- Atributy vložení deklarace třídy záznamů uživatele. Třída záznamů uživatele je ekvivalentní `CAuthorsNoAttrAccessor` v deklaraci šablony. Pokud vaše třída tabulky `CAuthors`, názvem třídy vloženého uživatelského záznamu `CAuthorsAccessor`, a jeho deklaraci lze zobrazit pouze ve vloženém kódu. Další informace najdete v tématu "Vložené uživatel záznam třídy" v [uživatelských záznamů](../../data/oledb/user-records.md).  
+Atributy vložení deklarace třídy záznamů uživatele. Třída záznamů uživatele je ekvivalentní `CAuthorsNoAttrAccessor` v deklaraci šablony. Pokud vaše třída tabulky `CAuthors`, názvem třídy vloženého uživatelského záznamu `CAuthorsAccessor`, a jeho deklaraci lze zobrazit pouze ve vloženém kódu. Další informace najdete v tématu "Vložené uživatel záznam třídy" v [uživatelských záznamů](../../data/oledb/user-records.md).  
   
- Všimněte si, že v současně s atributy a kód bez vizuálního vzhledu, je třeba nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty`.  
+Všimněte si, že v současně s atributy a kód bez vizuálního vzhledu, je třeba nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty`.  
   
- Informace o atributech popsané v tomto tématu najdete v tématu [atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md).  
+Informace o atributech popsané v tomto tématu najdete v tématu [atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Tabulky a deklarace přistupujícího objektu pomocí atributů  
- Následující kód volá `db_source` a `db_table` na tabulkovou třídu. `db_source` Určuje zdroj dat a připojení, který se má použít. `db_table` vloží příslušný kód šablony pro deklaraci třídy tabulky. `db_column` zadat mapování sloupce a vložit deklarace přistupujícího objektu. Atributy příjemce technologie OLE DB můžete používat v jakémkoli projektu, který podporuje knihovnu ATL.  
+
+Následující kód volá `db_source` a `db_table` na tabulkovou třídu. `db_source` Určuje zdroj dat a připojení, který se má použít. `db_table` vloží příslušný kód šablony pro deklaraci třídy tabulky. `db_column` zadat mapování sloupce a vložit deklarace přistupujícího objektu. Atributy příjemce technologie OLE DB můžete používat v jakémkoli projektu, který podporuje knihovnu ATL.  
   
- Tady je tabulka a přístupového objektu deklarace pomocí atributů:  
+Tady je tabulka a přístupového objektu deklarace pomocí atributů:  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -102,7 +104,8 @@ public:
 ```  
   
 ## <a name="table-and-accessor-declaration-using-templates"></a>Tabulky a deklarace přistupujícího objektu pomocí šablon  
- Tady je tabulka a přístupového objektu deklarace pomocí šablon.  
+
+Tady je tabulka a přístupového objektu deklarace pomocí šablon.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -207,4 +210,5 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)   
+
+[Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)   

@@ -1,5 +1,5 @@
 ---
-title: C2184 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2184 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068850ea37811cc68c070a968cc2ddc5aa0ce8a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c901dbbe97c47afd8096c89f33db6e3e355cba4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050486"
 ---
-# <a name="compiler-error-c2184"></a>C2184 chyby kompilátoru
-'type': Neplatný typ pro __except výraz, musí být celé číslo  
-  
- Typ použila [__except](../../c-language/try-except-statement-c.md) prohlášení, ale typ není povolen.  
-  
- Následující ukázka generuje C2184:  
-  
-```  
-// C2184.cpp  
-void f() {  
-   int * p;  
-   __try{}  
-   __except(p){};   // C2184  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2184b.cpp  
-// compile with: /c  
-void f() {  
-   int i = 0;  
-   __try{}  
-   __except(i){};  
-}  
+# <a name="compiler-error-c2184"></a>Chyba kompilátoru C2184
+
+'type': Neplatný typ pro možnost __except výrazu, musí být integrální
+
+Typ použila [__except](../../c-language/try-except-statement-c.md) příkazu, ale typ není povolený.
+
+Následující ukázka generuje C2184:
+
+```
+// C2184.cpp
+void f() {
+   int * p;
+   __try{}
+   __except(p){};   // C2184
+}
+```
+
+Možná řešení:
+
+```
+// C2184b.cpp
+// compile with: /c
+void f() {
+   int i = 0;
+   __try{}
+   __except(i){};
+}
 ```

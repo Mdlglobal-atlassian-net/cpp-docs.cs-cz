@@ -1,5 +1,5 @@
 ---
-title: C3052 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3052 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96db942b0ed50114378843b9f88fd77b2d24d771
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d292087aefcc7bb99e505aefd0534dd018b2725
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049214"
 ---
-# <a name="compiler-error-c3052"></a>C3052 chyby kompilátoru
-'příkaz var': proměnné se nezobrazí v klauzuli sdílení dat v klauzuli default(none)  
-  
- Pokud [default(none)](../../parallel/openmp/reference/default-openmp.md) se používá, všechny proměnné používané v strukturovaných bloku musí být explicitně zadány jako buď [sdílené](../../parallel/openmp/reference/shared-openmp.md) nebo [privátní](../../parallel/openmp/reference/private-openmp.md).  
-  
- Následující ukázka generuje C3052:  
-  
-```  
-// C3052.cpp  
-// compile with: /openmp /c  
-int main() {  
-   int n1 = 1;  
-  
-   #pragma omp parallel default(none) // shared(n1) private(n1)  
-   {  
-      n1 = 0;   // C3052 use either a shared or private clause  
-   }  
-}  
+# <a name="compiler-error-c3052"></a>Chyba kompilátoru C3052
+
+'příkaz var': proměnná se neobjevuje v klauzuli data-sharing pod klauzulí default(none)
+
+Pokud [default(none)](../../parallel/openmp/reference/default-openmp.md) se používá, všechny proměnné použité v strukturovaný blok musí být explicitně určena jako [sdílené](../../parallel/openmp/reference/shared-openmp.md) nebo [privátní](../../parallel/openmp/reference/private-openmp.md).
+
+Následující ukázka generuje C3052:
+
+```
+// C3052.cpp
+// compile with: /openmp /c
+int main() {
+   int n1 = 1;
+
+   #pragma omp parallel default(none) // shared(n1) private(n1)
+   {
+      n1 = 0;   // C3052 use either a shared or private clause
+   }
+}
 ```

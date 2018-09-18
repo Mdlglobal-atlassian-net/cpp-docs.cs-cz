@@ -1,5 +1,5 @@
 ---
-title: C3016 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3016 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 905cc529029fb8495f85b1ec695c49e4ba3999f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77686f669dcd767a1d79c0ac60360f1bb2aa81b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047548"
 ---
-# <a name="compiler-error-c3016"></a>C3016 chyby kompilátoru
-'příkaz var': index proměnné v OpenMP pro příkaz musí mít podepsaný integrální typu  
-  
- Index proměnné v OpenMP `for` příkaz musí být celočíselné typ se znaménkem.  
-  
- Následující ukázka generuje C3016:  
-  
-```  
-// C3016.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      unsigned int i = 0;  
-      // Try the following line instead:  
-      // int i = 0;  
-  
-      #pragma omp for  
-      for (i = 0; i <= 10; ++i)   // C3016  
-      {  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3016"></a>Chyba kompilátoru C3016
+
+'příkaz var': indexovaná proměnná příkazu for v OpenMP musí mít celočíselný typ se znaménkem
+
+Indexovaná proměnná v OpenMP `for` příkaz musí být celočíselný typ se znaménkem.
+
+Následující ukázka generuje C3016:
+
+```
+// C3016.cpp
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel
+   {
+      unsigned int i = 0;
+      // Try the following line instead:
+      // int i = 0;
+
+      #pragma omp for
+      for (i = 0; i <= 10; ++i)   // C3016
+      {
+      }
+   }
+}
 ```

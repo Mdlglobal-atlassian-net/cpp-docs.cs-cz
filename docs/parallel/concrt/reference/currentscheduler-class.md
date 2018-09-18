@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059482"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler – třída
 Představuje abstrakci pro aktuální Plánovač přidružený kontext volání.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Policy`  
- Zásady plánovače, která popisuje chování nově vytvořený plánovač.  
+*Zásady _protokolu*<br/>
+Zásady plánovače, která popisuje chování nově vytvořený plánovač.  
   
 ### <a name="remarks"></a>Poznámky  
  Plánovač přílohu kontext volání implicitně uvádí počet odkazů na Plánovač.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Placement`  
- Odkaz na umístění, kde bude možné úlohy ve skupině plánování tendenční směrem k provedení.  
+*_Umístění.*<br/>
+Odkaz na umístění, kde bude možné úlohy ve skupině plánování tendenční směrem k provedení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořený plán skupiny. To `ScheduleGroup` objekt má počet počáteční odkazů na ní umístěny.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Placement`  
- Odkaz na umístění o dotazování aktuálního plánovače.  
+*_Umístění.*<br/>
+Odkaz na umístění o dotazování aktuálního plánovače.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Označení, zda je nebo není umístění určeném `_Placement` argument je k dispozici pro aktuální plánovač.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_ShutdownEvent`  
- Popisovač objektu události Windows, který bude signál modulem runtime, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama.  
+*_ShutdownEvent*<br/>
+Popisovač objektu události Windows, který bude signál modulem runtime, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud neexistuje žádný Plánovač připojit ke kontextu volání, bude výsledkem volání této metody [scheduler_not_attached –](scheduler-not-attached-class.md) vyvolání výjimky.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Proc`  
- Ukazatel na funkci, která se má spustit provádění těla lehký úkol.  
+*_Proc*<br/>
+Ukazatel na funkci, která se má spustit provádění těla lehký úkol.  
   
- `_Data`  
- Ukazatel void data, která se předá jako parametr do těla úkolu.  
+*_Data*<br/>
+Ukazatel void data, která se předá jako parametr do těla úkolu.  
   
- `_Placement`  
- Odkaz na umístění, ve kterém bude možné lehký úkol tendenční směrem k provedení.  
+*_Umístění.*<br/>
+Odkaz na umístění, ve kterém bude možné lehký úkol tendenční směrem k provedení.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.  

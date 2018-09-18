@@ -15,51 +15,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 091a529bdd8eb80158fc093fd450e496bc4f18c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052345"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
+
 Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvodce příjemcem ATL OLE DB.  
   
 ### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB  
   
-1.  Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
+1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
      **Nový projekt** zobrazí se dialogové okno.  
   
-2.  V podokně typy projektů, klikněte **projekty Visual C++** složku a pak klikněte na tlačítko **projekt Win32** ikony v podokně šablon. V **název** zadejte název projektu, například **MyCons**.  
+1. V podokně typy projektů, klikněte **projekty Visual C++** složku a pak klikněte na tlačítko **projekt Win32** ikony v podokně šablon. V **název** zadejte název projektu, například **MyCons**.  
   
-3.  Klikněte na tlačítko **OK**.  
+1. Klikněte na tlačítko **OK**.  
   
      Zobrazí se Průvodce projektu Win32.  
   
-4.  Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat podporu ATL**.  
+1. Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat podporu ATL**.  
   
-5.  Klikněte na tlačítko **Dokončit** zavřete průvodce a generování projektu.  
+1. Klikněte na tlačítko **Dokončit** zavřete průvodce a generování projektu.  
   
- Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.  
+Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.  
   
 #### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem ATL OLE DB  
   
-1.  V zobrazení tříd klikněte pravým tlačítkem myši `MyCons` projektu.  
+1. V zobrazení tříd klikněte pravým tlačítkem myši `MyCons` projektu.  
   
-2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
   
      **Přidat třídu** zobrazí se dialogové okno.  
   
-3.  V podokně kategorie, klikněte na tlačítko **Visual C++**, klikněte na tlačítko **příjemce ATL OLE DB** v podokně šablon a pak klikněte na ikonu **otevřít**.  
+1. V podokně kategorie, klikněte na tlačítko **Visual C++**, klikněte na tlačítko **příjemce ATL OLE DB** v podokně šablon a pak klikněte na ikonu **otevřít**.  
   
      Zobrazí se průvodce příjemcem ATL OLE DB.  
   
-4.  Klikněte na tlačítko **zdroj dat** tlačítko.  
+1. Klikněte na tlačítko **zdroj dat** tlačítko.  
   
      **Vlastnosti propojení dat** zobrazí se dialogové okno.  
   
-5.  V **vlastnosti propojení dat** dialogové okno pole, postupujte takto:  
+1. V **vlastnosti propojení dat** dialogové okno pole, postupujte takto:  
   
     -   Na **poskytovatele** kartu, zadejte zprostředkovatele OLE DB.  
   
@@ -78,11 +79,11 @@ Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvo
   
      **Vyberte databázový objekt** zobrazí se dialogové okno.  
   
-6.  Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu vyberte tabulku produktů z databáze Northwind.  
+1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu vyberte tabulku produktů z databáze Northwind.  
   
-7.  Klikněte na tlačítko **OK**. Vrátí průvodce příjemcem ATL OLE DB.  
+1. Klikněte na tlačítko **OK**. Vrátí průvodce příjemcem ATL OLE DB.  
   
-8.  Názvy pro dokončení průvodce `Class` a **souboru .h** na základě názvu tabulky, zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.  
+1. Názvy pro dokončení průvodce `Class` a **souboru .h** na základě názvu tabulky, zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.  
   
 9. Zrušte **Atributovaný** zaškrtněte políčko, aby průvodce vytvoří příjemce kódu pomocí [tříd šablon technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) místo výchozího [atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
@@ -96,7 +97,7 @@ Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvo
   
 12. Klikněte na tlačítko **Dokončit** vytvořte příjemce.  
   
- Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak je znázorněno v [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md). Třídy příkazů bude mít název, který jste zadali v `Class` pole v průvodci (v tomto případě `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (v tomto případě `CProductsAccessor`).  
+Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak je znázorněno v [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md). Třídy příkazů bude mít název, který jste zadali v `Class` pole v průvodci (v tomto případě `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (v tomto případě `CProductsAccessor`).  
   
 > [!NOTE]
 >  Průvodce umístí do souboru Products.h následující řádek:  
@@ -109,4 +110,5 @@ Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvo
 >  Tento řádek znemožňuje spotřebitele aplikaci v kompilaci a vám připomene zkontrolovat pevně kódovaná hesla v připojovacím řetězci. Po kontrole připojovací řetězec, můžete odebrat tento řádek kódu.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

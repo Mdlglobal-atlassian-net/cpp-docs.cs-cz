@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28136c9fa131d525878fe0551f5ba2421576951
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057493"
 ---
 # <a name="cheapptrelementtraits-class"></a>Cheapptrelementtraits – třída
 
@@ -36,17 +36,17 @@ Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T, class Allocator = ATL::CCRTAllocator>  
+template<typename T, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrElementTraits : 
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ objektu ukládaly ve třídě kolekce.
 
-*Allocator –*  
+*Allocator –*<br/>
 Třída přidělení paměti pro použití. Výchozí hodnota je [ccrtallocator –](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Členové
@@ -98,6 +98,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>Viz také
 
-[Cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md)   
-[Ccomheapptr – třída](../../atl/reference/ccomheapptr-class.md)   
+[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CComHeapPtr – třída](../../atl/reference/ccomheapptr-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

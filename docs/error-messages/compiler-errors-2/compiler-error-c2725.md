@@ -1,5 +1,5 @@
 ---
-title: C2725 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2725 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a32f2a3255aa0d23f3164d01c0168365ad55c660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 969ddd9343073dff3732204eb4b17375bb5ab9cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056037"
 ---
-# <a name="compiler-error-c2725"></a>C2725 chyby kompilátoru
-'výjimka': nelze vyvolat nebo catch spravované nebo objekt WinRT hodnotou nebo odkazem  
-  
- Typ spravované nebo WinRT výjimky nebyla správná.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2725 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2725.cpp  
-// compile with: /clr  
-ref class R {  
-public:  
-   int i;  
-};  
-  
-int main() {  
-   R % r1 = *gcnew R;  
-   throw r1;   // C2725  
-  
-   R ^ r2 = gcnew R;  
-   throw r2;   // OK     
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2725 a ukazuje, jak ji odstranit.  
-  
-```  
-// C2725b.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   try {}  
-   catch( System::Exception%) {}   // C2725  
-   // try the following line instead  
-   // catch( System::Exception ^e) {}  
-}  
-```  
+# <a name="compiler-error-c2725"></a>Chyba kompilátoru C2725
+
+'exception': nelze provést operaci throw nebo catch spravované nebo objekt WinRT hodnotou nebo odkazem
+
+Spravovaný typ nebo WinRT výjimky není správný.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2725 a ukazuje, jak ho opravit.
+
+```
+// C2725.cpp
+// compile with: /clr
+ref class R {
+public:
+   int i;
+};
+
+int main() {
+   R % r1 = *gcnew R;
+   throw r1;   // C2725
+
+   R ^ r2 = gcnew R;
+   throw r2;   // OK
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2725 a ukazuje, jak ho opravit.
+
+```
+// C2725b.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   try {}
+   catch( System::Exception%) {}   // C2725
+   // try the following line instead
+   // catch( System::Exception ^e) {}
+}
+```

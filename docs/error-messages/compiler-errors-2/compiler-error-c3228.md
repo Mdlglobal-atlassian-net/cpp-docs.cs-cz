@@ -1,5 +1,5 @@
 ---
-title: C3228 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3228 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c949aef15e9049f47b68094ae89b297bee1fc700
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1818cbae07af904a468447e16fcb95384e5dcd17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054685"
 ---
-# <a name="compiler-error-c3228"></a>C3228 chyby kompilátoru
-'function': argument obecného typu 'param' nemůže být "typ", musí být typu valuetype nebo popisovač  
-  
- Nesprávný typ byl předán jako argument obecného typu.  
-  
- Následující ukázka generuje C3228:  
-  
-```  
-// C3228.cpp  
-// compile with: /clr  
-class A {};  
-  
-value class B {};  
-  
-generic <class T>  
-void Test() {}  
-  
-ref class C {  
-public:  
-   generic <class T>  
-   static void f() {}  
-};  
-  
-int main() {  
-   C::f<A>();   // C3228  
-   C::f<B>();   // OK  
-  
-   Test<C>();   // C3228  
-   Test<C ^>();   // OK  
-}  
+# <a name="compiler-error-c3228"></a>Chyba kompilátoru C3228
+
+'function': argument obecného typu pro 'param' nemůže mít "typ", musí být typ hodnoty nebo popisovač typu
+
+Nesprávný typ byl předán jako argument obecného typu.
+
+Následující ukázka generuje C3228:
+
+```
+// C3228.cpp
+// compile with: /clr
+class A {};
+
+value class B {};
+
+generic <class T>
+void Test() {}
+
+ref class C {
+public:
+   generic <class T>
+   static void f() {}
+};
+
+int main() {
+   C::f<A>();   // C3228
+   C::f<B>();   // OK
+
+   Test<C>();   // C3228
+   Test<C ^>();   // OK
+}
 ```

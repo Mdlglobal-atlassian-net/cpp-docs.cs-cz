@@ -1,5 +1,5 @@
 ---
-title: Převody z nepodepsaných integrálních typů | Microsoft Docs
+title: Převody z nepodepsaných integrálních typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8a77e898feb6676487c557b8e96d54dc793ace
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ef2c16c92322ae54dcc6dd7d577268daf74831
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058273"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
 
-Celé číslo bez znaménka jsou převedeny na kratší číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů, nebo již nepodepsaný nebo podepsaný celočíselná a tím, že rozšíří nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).
+Celé číslo bez znaménka se převede na kratší bez znaménka nebo podepsané celé číslo zkrácením nejvyšších bitů nebo na již bez znaménka nebo podepsané celé číslo rozšířením nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).
 
-Pokud hodnotu s integrální typ převeden na znaménkem s menší velikostí, nebo celé číslo bez znaménka jsou převedeny na jeho odpovídající číslo se znaménkem, hodnota je beze změny, pokud může být reprezentován v nového typu. Ale hodnota představuje změny, pokud je bit přihlašovací nastavený, jako v následujícím příkladu.
+Pokud hodnoty celočíselného typu převeden na celé číslo se znaménkem s menší velikostí, nebo celé číslo bez znaménka, je převedena na jeho odpovídající celé číslo se znaménkem, hodnota je beze změny, pokud můžou být vyjádřeny v novém typu. Nicméně hodnota představuje změny, pokud je bit znaménka nastavená jako v následujícím příkladu.
 
 ```C
 int j;
@@ -39,9 +39,9 @@ j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Pokud není možné vyjádřit, výsledkem je, definované implementací. V tématu [převody přetypování](../c-language/type-cast-conversions.md) informace o zpracování kompilátoru Microsoft C degradace celých čísel. Stejné výsledky chování z převod celé číslo nebo přetypování na celé číslo.
+Pokud nemůže být reprezentovaná, výsledkem je definován implementací. Zobrazit [převody přetypování](../c-language/type-cast-conversions.md) informace o zpracování kompilátor Microsoft C degradace celých čísel. Stejné výsledky chování z převodu celého čísla nebo z typu přetypování na celé číslo.
 
-Nepodepsané hodnoty se převedou způsobem, který zachovává jejich hodnota a není reprezentovat přímo C. Jedinou výjimkou je převod z **nepodepsané dlouho** k **float**, který ztratí maximálně nejnižší bits. Jinak je zachovaná hodnotu, podepsaný držitelem nebo bez znaménka. Pokud se hodnota typu integrální jsou převedeny na plovoucí a hodnota je mimo rozsah reprezentovat, výsledkem je definovaný. (Viz [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o rozsahu pro typy s plovoucí desetinnou čárkou a integrální.)
+Nepodepsané hodnoty se převedou tak, aby zachovává jejich hodnota a není reprezentovatelné přímo v jazyce C. Jedinou výjimkou je převod z **unsigned long** k **float**, který ztratí maximálně bity nižšího řádu. V opačném případě hodnota se zachová pro účely, nebo bez znaménka. Pokud hodnota typu celé číslo je převedena na číslo s plovoucí čárkou a hodnota je mimo rozsah reprezentovatelný, výsledek nedefinován. (Viz [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o rozsahu u typů s plovoucí desetinnou čárkou a integrální.)
 
 Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
 
@@ -49,37 +49,37 @@ Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
 
 |From|Chcete-li|Metoda|
 |----------|--------|------------|
-|**unsigned char**|**char**|Zachovat bitový; bit horní stane přihlašovací bit|
-|**unsigned char**|**short**|Rozšíření nula.|
-|**unsigned char**|**long**|Rozšíření nula.|
-|**unsigned char**|**short bez znaménka**|Rozšíření nula.|
-|**unsigned char**|**dlouho bez znaménka**|Rozšíření nula.|
-|**unsigned char**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
-|**unsigned char**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|
-|**unsigned char**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
-|**short bez znaménka**|**char**|Zachovat nejnižší bajtů|
-|**short bez znaménka**|**short**|Zachovat bitový; bit horní stane přihlašovací bit|
-|**short bez znaménka**|**long**|Rozšíření nula.|
-|**short bez znaménka**|**unsigned char**|Zachovat nejnižší bajtů|
-|**short bez znaménka**|**dlouho bez znaménka**|Rozšíření nula.|
-|**short bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
-|**short bez znaménka**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|
-|**short bez znaménka**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
-|**dlouho bez znaménka**|**char**|Zachovat nejnižší bajtů|
-|**dlouho bez znaménka**|**short**|Zachovat nejnižší aplikace word|
-|**dlouho bez znaménka**|**long**|Zachovat bitový; bit horní stane přihlašovací bit|
-|**dlouho bez znaménka**|**unsigned char**|Zachovat nejnižší bajtů|
-|**dlouho bez znaménka**|**short bez znaménka**|Zachovat nejnižší aplikace word|
-|**dlouho bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
-|**dlouho bez znaménka**|**double**|Převést přímo na **double**|
-|**dlouho bez znaménka**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
+|**unsigned char**|**char**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
+|**unsigned char**|**short**|Rozšíření nula|
+|**unsigned char**|**long**|Rozšíření nula|
+|**unsigned char**|**short bez znaménka**|Rozšíření nula|
+|**unsigned char**|**unsigned long**|Rozšíření nula|
+|**unsigned char**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
+|**unsigned char**|**double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
+|**unsigned char**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
+|**short bez znaménka**|**char**|Zachovat dolní bajty.|
+|**short bez znaménka**|**short**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
+|**short bez znaménka**|**long**|Rozšíření nula|
+|**short bez znaménka**|**unsigned char**|Zachovat dolní bajty.|
+|**short bez znaménka**|**unsigned long**|Rozšíření nula|
+|**short bez znaménka**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
+|**short bez znaménka**|**double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
+|**short bez znaménka**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
+|**unsigned long**|**char**|Zachovat dolní bajty.|
+|**unsigned long**|**short**|Zachovat nižší řád slova|
+|**unsigned long**|**long**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
+|**unsigned long**|**unsigned char**|Zachovat dolní bajty.|
+|**unsigned long**|**short bez znaménka**|Zachovat nižší řád slova|
+|**unsigned long**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
+|**unsigned long**|**double**|Převést přímo na **double**|
+|**unsigned long**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Pro kompilátor Microsoft C **nepodepsané int** typ je ekvivalentní **nepodepsané dlouho** typu. Převod **nepodepsané int** hodnotu pokračuje stejným způsobem jako převod **nepodepsané dlouho**. Převody z **nepodepsané dlouho** hodnoty k **float** nejsou přesné, pokud je hodnota převáděné větší než maximální kladnou podepsané **dlouho** hodnotu.
+Kompilátor Microsoft C **unsigned int** je ekvivalentem typu **unsigned long** typu. Převod **unsigned int** hodnotu pokračuje stejným způsobem jako převod **unsigned long**. Převody z **unsigned long** hodnoty **float** nejsou přesné, pokud je převáděná hodnota větší než maximální pozitivní podepsané **dlouhé** hodnotu.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Převody přiřazení](../c-language/assignment-conversions.md)  
+[Převody přiřazení](../c-language/assignment-conversions.md)

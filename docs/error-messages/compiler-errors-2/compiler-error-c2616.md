@@ -1,5 +1,5 @@
 ---
-title: C2616 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2616 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad7163522fb1155f540293622689fbc0388733f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a983f8cd1083fa05499c334ad776a220441db61a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047418"
 ---
-# <a name="compiler-error-c2616"></a>C2616 chyby kompilátoru
-'Převod': nelze implicitně převést jiný lvalue 'type1' na 'type2' není const  
-  
- Odkaz nelze inicializovat z jiných lvalue.  
-  
- Jedná se o chybu v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a upozornění v části rozšíření Microsoft (**/Ze**).
+# <a name="compiler-error-c2616"></a>Chyba kompilátoru C2616
+
+'conversion': nelze implicitně převést jiné l-hodnota 'type1' na 'type2', který není const
+
+Odkaz nemůže být inicializován z jiné hodnoty lvalue.
+
+Jedná se o chybu v rámci kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a upozornění v rámci rozšíření společnosti Microsoft (**/Ze**).

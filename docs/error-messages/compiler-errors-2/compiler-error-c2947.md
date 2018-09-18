@@ -1,5 +1,5 @@
 ---
-title: C2947 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2947 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1af4e6a5a27c13d69351eaf0cddfafe11ba5f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 508c2ae29b0290332cc7c2b49aac0a1ecb10528f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054516"
 ---
-# <a name="compiler-error-c2947"></a>C2947 chyby kompilátoru
-byla očekávána ' >' ukončit konstrukce, najít, syntaxe.  
-  
- Seznam argumentů obecného nebo šablony nemusí byla ukončena správně.  
-  
- C2947 také může být generována chyby syntaxe.  
-  
- Následující ukázka generuje C2947:  
-  
-```  
-// C2947.cpp  
-// compile with: /c  
-template <typename T>=   // C2947  
-// try the following line instead  
-// template <typename T>  
-struct A {};  
+# <a name="compiler-error-c2947"></a>Chyba kompilátoru C2947
+
+byl očekáván ' >' k ukončení konstrukce, nalezen 'syntaxe:
+
+Rozvrhy generic nebo šablony seznamu argumentů nemusí po ukončení správně.
+
+C2947 mohou být generovány chyby syntaxe.
+
+Následující ukázka generuje C2947:
+
+```
+// C2947.cpp
+// compile with: /c
+template <typename T>=   // C2947
+// try the following line instead
+// template <typename T>
+struct A {};
 ```

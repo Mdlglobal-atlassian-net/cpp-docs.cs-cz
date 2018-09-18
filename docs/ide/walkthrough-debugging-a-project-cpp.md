@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Ladění projektu (C++) | Microsoft Docs'
+title: 'Návod: Ladění projektu (C++) | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -16,53 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 914eb26384a32c9a81a153db04c10708eb42e652
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056532"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Návod: Ladění projektu (C++)
 V tomto návodu změníte program pro vyřešení problému, který jste zjistili při testování projektu.  
   
 ## <a name="prerequisites"></a>Požadavky  
   
--   Tento návod předpokládá, že rozumíte základy jazyka C++.  
+- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.  
   
--   Také předpokládá, že jste dokončili dříve související návodů, které jsou uvedeny v [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### <a name="to-fix-a-program-that-has-a-bug"></a>Oprava programu, který obsahuje chybu  
+### <a name="to-fix-a-program-that-has-a-bug"></a>Chcete-li vyřešit program, který obsahuje chybu  
   
-1.  Chcete-li zjistit, co se stane, když je objekt `Cardgame` zničen, zobrazte destruktor třídy `Cardgame`.  
+1. Chcete-li zjistit, co se stane, když je objekt `Cardgame` zničen, zobrazte destruktor třídy `Cardgame`.  
   
-     Na řádku nabídek zvolte **zobrazení**, **zobrazení tříd**.  
+     V panelu nabídky zvolte **zobrazení** > **zobrazení tříd**.  
   
-     V **zobrazení tříd** okno, rozbalte **herní** strom projektu a vyberte **Cardgame** třídy, které chcete zobrazit členy třídy a metody.  
+     V **zobrazení tříd** okna, rozbalte **hru** stromu projektu a vyberte **Cardgame** třídu členy třídy a metody.  
   
-     Otevřete místní nabídku pro **~Cardgame(void)** destruktor a potom zvolte **přejít k definici**.  
+     Otevřete místní nabídku **~Cardgame(void)** destruktor a klikněte na tlačítko **přejít k definici**.  
   
-2.  Pro snížení proměnné `totalParticipants` při ukončení aplikace Cardgame přidejte následující kód mezi otevírací a uzavírací závorky destruktoru `Cardgame::~Cardgame`:  
+1. Pro snížení proměnné `totalParticipants` při ukončení aplikace Cardgame přidejte následující kód mezi otevírací a uzavírací závorky destruktoru `Cardgame::~Cardgame`:  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]  
   
-3.  Soubor Cardgame.cpp by měl by vypadat takto:  
+1. Soubor Cardgame.cpp by měl po změnách by vypadat takto:  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
   
-4.  Na řádku nabídek zvolte **sestavení**, **sestavit řešení**.  
+1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.  
   
-5.  Po dokončení sestavení spustit v režimu ladění výběrem **ladění**, **spustit ladění** v řádku nabídek nebo výběrem klávesy F5. Program se pozastaví u první zarážky.  
+1. Po dokončení sestavení spusťte je v režimu ladění pomocí možnosti **ladění** > **spustit ladění** na řádku nabídek nebo kliknutím **F5** klíč. Program se pozastaví na k první zarážce.  
   
-6.  Krok prostřednictvím programu na řádku nabídek zvolte **ladění**, **Krokovat s přeskočením**, nebo zvolte F10 klíč.  
+1. Chcete-li krokovat programem, v řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.  
   
-     Po každém provedení konstruktoru třídy Cardgame se hodnota proměnné `totalParticipants` zvýší. Když se funkce `PlayGames` dokončí, a jelikož se každá instance třídy Cardgame dostane mimo rozsah a je odstraněna (a je zavolán destruktor), proměnná `totalParticipants` se sníží. Těsně před `return` je spustit příkaz, `totalParticipants` rovná 0.  
+     Všimněte si, že po každém z nich `Cardgame` provede konstruktor, hodnota `totalParticipants` zvyšuje. Když `PlayGames` funkce vrátí, protože každému `Cardgame` instance dostane mimo rozsah a je odstraněna (a je zavolán destruktor), `totalParticipants` snižuje. Těsně před `return` je proveden příkaz `totalParticipants` rovná 0.  
   
-7.  Krokování programu, dokud bude pokračovat, nebo ji spustit výběrem nechat **ladění**, **spustit** v řádku nabídek nebo výběrem klávesy F5.  
+1. Pokračujte v krokování programem, dokud se neukončí, nebo jej spusťte pomocí možnosti **ladění** > **spustit** na řádku nabídek nebo kliknutím **F5** klíč.  
   
 ## <a name="next-steps"></a>Další kroky  
- **Předchozí:** [návod: testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Další:**[návod: nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+
+**Předchozí:** [návod: testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/> 
+**Další krok:** [návod: nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

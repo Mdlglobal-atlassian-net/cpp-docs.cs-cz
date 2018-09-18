@@ -1,5 +1,5 @@
 ---
-title: uint_2 – třída | Microsoft Docs
+title: uint_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 375e9c8ce4c2060e41fbebc51f6512d293a15517
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059300"
 ---
 # <a name="uint2-class"></a>uint_2 – třída
-Představuje krátký Vektor dvě celá čísla bez znaménka.  
+Představuje krátký vektor dvou celých čísel bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class uint_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class uint_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[uint_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[uint_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -93,7 +93,7 @@ class uint_2;
 |uint_2::operator%=||  
 |uint_2::operator&=||  
 |uint_2::operator*=||  
-|/ uint_2::Operator = – operátor||  
+|uint_2::Operator / =||  
 |uint_2::operator^=||  
 |uint_2::operator&#124;=||  
 |uint_2::operator~||  
@@ -108,7 +108,7 @@ class uint_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#uint_2__size)||  
+|[velikost – konstanta](#uint_2__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -131,9 +131,9 @@ class uint_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> uint_2 
+##  <a name="ctor"></a> uint_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 uint_2() restrict(amp,
@@ -182,17 +182,17 @@ explicit inline uint_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="uint_2__size"></a> Velikost 
 

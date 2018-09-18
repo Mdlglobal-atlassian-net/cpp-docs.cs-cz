@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1201 | Microsoft Docs
+title: Závažná chyba C1201 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a52ca6be4cfe2cf4d87e5e76bd1ff943097c8d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd48dec90f607d1744b2f994c96f8e7f6f425168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046963"
 ---
 # <a name="fatal-error-c1201"></a>Závažná chyba C1201
-Nelze pokračovat po Chyba syntaxe v definici šablony třídy  
-  
- Došlo k neočekávané chybě při analýze definice třídy šablony.  
-  
- Odstraňte ostatní chyby a znovu zkompilovat. Pokud tento selže, Poznámka v případech chyb, pokuste se izolovat daný problém a vytvořit reprodukovatelnou testovacího případu, obraťte se na [služby Microsoft Product Support Services](/visualstudio/ide/talk-to-us).
+
+nejde pokračovat po chybě syntaxe v definici šablony třídy.
+
+Došlo k neočekávané chybě při analýze definice šablony třídy.
+
+Opravte všechny chyby a znovu zkompilovat. Pokud tento selže, Všimněte si okolností chybu, zkuste izolovat daný problém a vytvořit reprodukovatelnou testovací případ, obraťte se na [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).

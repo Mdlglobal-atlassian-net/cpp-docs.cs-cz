@@ -1,5 +1,5 @@
 ---
-title: C3277 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3277 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd38ccc8a4f812a458073c429d83cebe5dff151b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a346f6b2abce22a1238a1f9bc6f8ea9f961cb43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059057"
 ---
-# <a name="compiler-error-c3277"></a>C3277 chyby kompilátoru
-uvnitř spravovaného typu type, nelze definovat nespravované výčet 'výčtu.  
-  
- Výčet byl definován nesprávně spravovaného typu.  
-  
- Následující ukázka generuje C3277:  
-  
-```  
-// C3277a.cpp  
-// compile with: /clr  
-ref class A  
-{  
-   enum E {e1,e2};   // C3277  
-   // try the following line instead  
-   // enum class E {e1,e2};  
-};  
-  
-int main()  
-{  
-}  
-```  
+# <a name="compiler-error-c3277"></a>Chyba kompilátoru C3277
+
+nejde definovat Nespravovaný výčet "výčet" uvnitř spravovaného 'typu'
+
+Výčet byl nesprávně definované uvnitř spravovaným typem.
+
+Následující ukázka generuje C3277:
+
+```
+// C3277a.cpp
+// compile with: /clr
+ref class A
+{
+   enum E {e1,e2};   // C3277
+   // try the following line instead
+   // enum class E {e1,e2};
+};
+
+int main()
+{
+}
+```

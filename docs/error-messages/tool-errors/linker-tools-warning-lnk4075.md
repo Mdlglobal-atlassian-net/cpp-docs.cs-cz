@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4075 | Microsoft Docs
+title: Upozornění Linkerů LNK4075 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd9a4ecdad30a0be2d45300367f6f79a65a6b31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a021a9345975dcb197ab578901baf22f76db846
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059651"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Upozornění linkerů LNK4075
-ignoruje možnost "1" z důvodu specifikace "option2"  
-  
- Druhá možnost přepsání první.  
-  
- Možnosti linkeru vzájemně se vylučuje zadávají.  Zkontrolujte možnosti linkeru.  Tam, kde jsou možnosti linkeru zadán závisí na tom, jak jsou sestavení projektu.  
-  
--   Pokud vytváříte ve vývojovém prostředí, zkontrolujte oblast stránky vlastností linkeru pro svůj projekt a v tématu, kde jsou specifikované obě možnosti linkeru.  V tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md) Další informace.  
-  
--   Pokud vytvoříte na příkazovém řádku, podívejte se na možnosti linkeru zadaný existuje.  
-  
--   Pokud vytvoříte pomocí skriptů sestavení, projděte skripty zobrazíte, kde jsou tyto možnosti linkeru specifikované.  
-  
- Pokud zjistíte, kde jsou zadány možnosti linkeru vzájemně se vylučuje, odeberte jednu z možností linkeru.  
-  
- Některé konkrétní příklady:  
-  
--   Pokud jste modul, který byl kompilován s **/ZI**, což naznačuje možnost interní linker volat /EDITANDCONTINUE a modul, který byl kompilován s /OPT:REF, /OPT:ICF nebo /INCREMENTAL:NO, která vyžadují žádné /EDITANDCONTINUE, bude získáte LNK4075.  V tématu [/Z7, / zi, /ZI (formát informace ladění)](../../build/reference/z7-zi-zi-debug-information-format.md) Další informace.
+
+ignoruje kvůli specifikaci "možnost2" číslo "možnost1"
+
+Druhá možnost přepíše první.
+
+Jsou zadané linkeru vzájemně se vylučující možnosti.  Prozkoumejte možnosti linkeru.  Tam, kde jsou možnosti linkeru zadán závisí na tom, jak se sestavení projektu.
+
+- Pokud vytváříte ve vývojovém prostředí, podívejte se do stránky vlastností linkeru pro váš projekt a v tématu, kde jsou zadané obě možnosti linkeru.  Zobrazit [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md) Další informace.
+
+- Při sestavování v příkazovém řádku, podívejte se na možnosti linkeru, existuje zadaná.
+
+- Pokud vytváříte skripty sestavení, projděte vaše skripty, abyste zjistili, kde jsou zadané tyto možnosti linkeru.
+
+Pokud zjistíte, kde jsou zadány možnosti vzájemně se vylučující linkeru, odeberte jednu z možností propojovacího programu.
+
+Některé konkrétní příklady:
+
+- Pokud jste modul, který byl kompilován s **/zi**, což zahrnuje interní linkeru možnost volat neignoruje a modul, který byl kompilován s OPT, /OPT:ICF nebo/incremental: no, které neznamená žádné neignoruje, bude Získejte LNK4075.  Zobrazit [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md) Další informace.

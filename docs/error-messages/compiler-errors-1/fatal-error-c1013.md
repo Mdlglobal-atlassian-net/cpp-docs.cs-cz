@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1013 | Microsoft Docs
+title: Závažná chyba C1013 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198635"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050508"
 ---
 # <a name="fatal-error-c1013"></a>Závažná chyba C1013
-omezení kompilátoru: příliš mnoho otevřít závorky  
-  
- Výraz obsahuje příliš mnoho úrovní závorkách v jeden výraz. Zjednodušení výraz nebo rozdělte do více příkazů.  
-  
- Před Visual C++ 6.0 Service Pack 3 byl překročen limit na vnořené závorky v jeden výraz 59. V současné době limitu vnořené závorky je 256.
+
+limit kompilátoru: moc velký počet levých závorek
+
+Výraz obsahuje příliš mnoho úrovní závorky v jednom výrazu. Zjednodušit výraz nebo ho rozdělte do více příkazů.
+
+Před Visual C++ 6.0 aktualizací Service Pack 3 byl překročen limit na vnořené závorky v jednom výrazu 59. V současné době limitu vnořené závorky je 256.

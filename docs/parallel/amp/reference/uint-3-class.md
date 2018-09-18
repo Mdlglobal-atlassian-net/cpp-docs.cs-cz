@@ -1,5 +1,5 @@
 ---
-title: uint_3 – třída | Microsoft Docs
+title: uint_3 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe59fc6f956c0e88cae1e5c737d3fe33d10d10b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052670"
 ---
 # <a name="uint3-class"></a>uint_3 – třída
-Představuje krátký vektoru tři celých čísel bez znaménka.  
+Představuje krátký vektor tří celých čísel bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ class uint_3;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class uint_3;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[uint_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[uint_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -161,7 +161,7 @@ class uint_3;
 |uint_3::operator%=||  
 |uint_3::operator&=||  
 |uint_3::operator*=||  
-|/ uint_3::Operator = – operátor||  
+|uint_3::Operator / =||  
 |uint_3::operator^=||  
 |uint_3::operator&#124;=||  
 |uint_3::operator~||  
@@ -176,7 +176,7 @@ class uint_3;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#uint_3__size)||  
+|[velikost – konstanta](#uint_3__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -221,9 +221,9 @@ class uint_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> uint_3 
+##  <a name="ctor"></a> uint_3 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 uint_3() restrict(amp,
@@ -273,20 +273,20 @@ explicit inline uint_3(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="uint_3__size"></a> Velikost 
 

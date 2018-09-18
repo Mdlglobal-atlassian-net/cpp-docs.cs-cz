@@ -1,5 +1,5 @@
 ---
-title: Práce s dokumenty a zobrazeními | Microsoft Docs
+title: Práce s dokumenty a zobrazeními | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053963"
 ---
 # <a name="working-with-documents-and-views"></a>Práce s dokumenty a zobrazeními
-Knihovna Microsoft Foundation třídy (MFC) závisí na architektuře document/view – pro mnoho funkcí. Obvykle se dokument uloží vaše data a zobrazení zobrazí v okně s rámečkem v oblasti klienta a spravuje interakci s uživatelem s daty. Zobrazení komunikuje s dokumentu, který má získat a aktualizovat data. Databázové třídy můžete použít s framework, nebo bez něj.  
+
+Knihovny Microsoft Foundation Classes (MFC) závisí na architektuře document/view – pro celou řadu jejích funkcí. Obvykle dokument uloží vaše data a zobrazení se zobrazí v rámci klientské oblasti okna rámce a spravuje interakci uživatele s daty. Zobrazení komunikuje s dokumentem získat a aktualizovat data. Můžete použít databázové třídy, rozhraní nebo bez něj.  
   
- Další informace o použití databázových tříd v rámci najdete v tématu [MFC: použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md).  
+Další informace o použití databázových tříd v rámci najdete v tématu [knihovny MFC: použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md).  
   
- Ve výchozím nastavení vytvoří Průvodce aplikací MFC kostru aplikace bez podpory databáze. Nicméně můžete vybrat možnosti zahrnout minimální podporu databáze nebo podrobnější podporu založené na formulářích. Další informace o možnosti Průvodce aplikací najdete v tématu [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+Ve výchozím nastavení Průvodce aplikací MFC vytvoří kostru aplikace bez podpory databáze. Můžete ale vybrat možnosti, které zahrnují minimální podporu databáze nebo více úplnou podporu založené na formulářích. Další informace o možnosti Průvodce aplikací najdete v tématu [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
- Databázové třídy můžete použít i bez použití architektuře document/view – úplná. Další informace najdete v tématu [MFC: použití třídy databáze bez dokumentů a zobrazení](../../data/mfc-using-database-classes-without-documents-and-views.md).  
+Můžete také použít databázové třídy bez použití úplné document/view – architektura. Další informace najdete v tématu [knihovny MFC: použití třídy databáze bez dokumentů a zobrazení](../../data/mfc-using-database-classes-without-documents-and-views.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)
+
+[Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: __p__fmode | Microsoft Docs
+title: __p__fmode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,33 +27,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520f81062f1bbbb295f17c6bc041afb8b5f2877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c4dcea9e3f35bf5fd8dbfbed9273562ac3db551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056336"
 ---
 # <a name="pfmode"></a>__p__fmode
-Odkazuje na `_fmode` globální proměnná, která určuje výchozí *režim překladu souboru* pro vstupně-výstupní operace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int* __p__fmode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel `_fmode` – globální proměnná.  
-  
-## <a name="remarks"></a>Poznámky  
- `__p__fmode` Funkce je jen pro interní použití a neměla být volána z uživatelského kódu.  
-  
- Určuje režim překladu souboru buď `binary` nebo `text` překlad [_Otevřít](../c-runtime-library/reference/open-wopen.md) a [_pipe –](../c-runtime-library/reference/pipe.md) vstupně-výstupních operací. Další informace najdete v tématu [_fmode –](../c-runtime-library/fmode.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|__p\__fmode –|stdlib.h|
+
+Odkazuje `_fmode` globální proměnné, která určuje výchozí *režim překladu souboru* pro vstupně-výstupní operace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int* __p__fmode(
+   );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel `_fmode` globální proměnné.
+
+## <a name="remarks"></a>Poznámky
+
+`__p__fmode` Funkce je jen pro interní použití a by neměla být volána z uživatelského kódu.
+
+Určuje režim překladu souboru buď `binary` nebo `text` překlad pro [_Otevřít](../c-runtime-library/reference/open-wopen.md) a [_pipe –](../c-runtime-library/reference/pipe.md) vstupně-výstupních operací. Další informace najdete v tématu [_fmode](../c-runtime-library/fmode.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|__p\__fmode|stdlib.h|

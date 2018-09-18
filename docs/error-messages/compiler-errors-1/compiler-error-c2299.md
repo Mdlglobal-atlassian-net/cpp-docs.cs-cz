@@ -1,5 +1,5 @@
 ---
-title: C2299 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2299 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21213f08e25050932274a64d0ed56db96f2a453
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4977f4a5ac81cf4c04d3b143f6f7e670a9d9279
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049615"
 ---
-# <a name="compiler-error-c2299"></a>C2299 chyby kompilátoru
-'function': změna v chování: explicitní specializace nemůže být kopírovacího konstruktoru nebo operátor přiřazení kopie  
-  
- Tato chyba může být také vygenerovaného jako výsledek kompilátoru shoda práci, kterou bylo provedeno pro Visual C++ 2005: předchozích verzí aplikace Visual C++ povolené explicitní specializací pro kopírovacího konstruktoru nebo operátor přiřazení kopírování.  
-  
- Chcete-li vyřešit C2299, neprovádějte konstruktor copy nebo operátor přiřazení funkce šablony, ale spíš funkci bez šablony, která přebírá typu třídy. Kód, který volá konstruktor kopírování nebo operátor přiřazení explicitním zadáním argumenty šablony je potřeba odebrat argumenty šablony.  
-  
- Následující ukázka generuje C2299:  
-  
-```  
-// C2299.cpp  
-// compile with: /c  
-class C {  
-   template <class T>  
-   C (T t);  
-  
-   template <> C (const C&);   // C2299  
-   C (const C&);   // OK  
-};  
+# <a name="compiler-error-c2299"></a>Chyba kompilátoru C2299
+
+'function': Změna chování: explicitní specializace nemůže být kopírovací konstuktor ani operátor copy assignment
+
+Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual C++ 2005: předchozí verze aplikace Visual C++ explicitní specializace povolená pro kopírovací konstuktor ani operátor přiřazení kopie.
+
+Chcete-li vyřešit C2299, Nedovolte, aby byly kopírovací konstruktor nebo operátor přiřazení šablony funkce, ale spíše nešablonové funkce, která přebírá typ třídy. Veškerý kód, který volá kopírovací konstuktor ani operátor přiřazení explicitním zadáním argumentů šablony musí odebrat argumenty šablony.
+
+Následující ukázka generuje C2299:
+
+```
+// C2299.cpp
+// compile with: /c
+class C {
+   template <class T>
+   C (T t);
+
+   template <> C (const C&);   // C2299
+   C (const C&);   // OK
+};
 ```

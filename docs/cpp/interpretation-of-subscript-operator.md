@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eeb8d4232fae16cfaa588341a54bf4318483b92
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e1457744747ee3638d7f0b9485ac12af60e5cdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058338"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretace operátoru dolního indexu
 
@@ -34,8 +34,8 @@ Stejně jako všechna sčítání, která zahrnují typy ukazatelů, se změna v
 
 Pro vícerozměrná pole je adresa odvozena podobně následujícím způsobem:
 
-((*název pole*) + (*dolní index*1 \* *maximální*2 \* *maximální*3 \* ... \* *maximální*n) + (*dolní index*2 \* *maximální*3 \* ... \* *maximální*n) + … + *dolní index*n))  
-  
+((*název pole*) + (*dolní index*1 \* *maximální*2 \* *maximální*3 \* ... \* *maximální*n) + (*dolní index*2 \* *maximální*3 \* ... \* *maximální*n) + … + *dolní index*n))
+
 ## <a name="see-also"></a>Viz také:
 
 [Pole](../cpp/arrays-cpp.md)<br/>

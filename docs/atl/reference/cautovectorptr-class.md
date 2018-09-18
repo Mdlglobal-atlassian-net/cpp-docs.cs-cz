@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054477"
 ---
 # <a name="cautovectorptr-class"></a>Cautovectorptr – třída
 
@@ -40,13 +40,13 @@ Tato třída představuje objekt inteligentního ukazatele pomocí vektoru nové
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ ukazatele.
 
 ## <a name="members"></a>Členové
@@ -82,7 +82,7 @@ Typ ukazatele.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody pro vytváření a správu inteligentního ukazatele, která pomůže zajistit ochranu před nevracení paměti, že automaticky uvolnění prostředků při spadá mimo rozsah. `CAutoVectorPtr` je podobný `CAutoPtr`, přičemž jediným rozdílem je, který `CAutoVectorPtr` používá [vektor – nový&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) a [odstranění vektoru&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) k přidělují a uvolňují paměť místo C++ **nové** a **odstranit** operátory. V tématu [cautovectorptrelementtraits –](../../atl/reference/cautovectorptrelementtraits-class.md) Pokud kolekce tříd `CAutoVectorPtr` jsou povinné.  
+Tato třída poskytuje metody pro vytváření a správu inteligentního ukazatele, která pomůže zajistit ochranu před nevracení paměti, že automaticky uvolnění prostředků při spadá mimo rozsah. `CAutoVectorPtr` je podobný `CAutoPtr`, přičemž jediným rozdílem je, který `CAutoVectorPtr` používá [vektor – nový&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) a [odstranění vektoru&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) k přidělují a uvolňují paměť místo C++ **nové** a **odstranit** operátory. V tématu [cautovectorptrelementtraits –](../../atl/reference/cautovectorptrelementtraits-class.md) Pokud kolekce tříd `CAutoVectorPtr` jsou povinné.
 
 Zobrazit [CAutoPtr](../../atl/reference/cautoptr-class.md) příklad používání třídy inteligentního ukazatele.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Počet prvků v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr` Objektu bude převzít vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Stávajícího ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -226,7 +226,7 @@ Operátor přiřazení odpojí `CAutoVectorPtr` objekt z jakékoli aktuální uk
 
 Operátor přetypování.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ Vrací ukazatel na objekt typu dat definovanému v šabloně třídy.
 
 ## <a name="see-also"></a>Viz také
 
-[Cautoptr – třída](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr – třída](../../atl/reference/cautoptr-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054750"
 ---
 # <a name="creating-an-atl-project"></a>Vytvoření projektu ATL
 
@@ -47,6 +47,6 @@ Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řeš
 
 ## <a name="see-also"></a>Viz také
 
-[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
 

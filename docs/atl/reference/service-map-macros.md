@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053710"
 ---
 # <a name="service-map-macros"></a>Makra Map služeb
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Určuje třídu obsahující mapy služeb.
 
 ### <a name="remarks"></a>Poznámky
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>Parametry
 
-*IDENTIFIKÁTOR SID*  
+*IDENTIFIKÁTOR SID*<br/>
 ID služby.
 
 ### <a name="example"></a>Příklad
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Parametry
 
-*punk*  
+*punk*<br/>
 Ukazatel **IUnknown** rozhraní, ke kterému do řetězce.
 
 ### <a name="example"></a>Příklad

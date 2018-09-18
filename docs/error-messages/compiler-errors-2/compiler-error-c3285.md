@@ -1,5 +1,5 @@
 ---
-title: C3285 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3285 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8991383147618d1168a9819ee02e2567cc4a6852
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 685d83f224cc0b6c259a2fdf6946f28d909a1e6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049563"
 ---
-# <a name="compiler-error-c3285"></a>C3285 chyby kompilátoru
-pro každý příkaz nemůže pracovat s proměnnými typu "typ"  
-  
- `for each` Příkaz opakuje skupinu embedded příkazy pro každý prvek v pole nebo objekt kolekce.  
-  
- V tématu [, v](../../dotnet/for-each-in.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3285.  
-  
-```  
-// C3285.cpp  
-// compile with: /clr  
-int main() {  
-   for each (int i in 0) {}   // C3285   
-  
-   array<int> ^p = { 1, 2, 3 };  
-   for each (int j in p) {}   // OK  
-}  
+# <a name="compiler-error-c3285"></a>Chyba kompilátoru C3285
+
+pro každý příkaz nejde použít pro proměnné typu 'type'
+
+`for each` Příkaz opakuje skupinu integrovaných prohlášení pro každý prvek v poli nebo kolekci objektů.
+
+Zobrazit [u každé v](../../dotnet/for-each-in.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3285.
+
+```
+// C3285.cpp
+// compile with: /clr
+int main() {
+   for each (int i in 0) {}   // C3285
+
+   array<int> ^p = { 1, 2, 3 };
+   for each (int j in p) {}   // OK
+}
 ```

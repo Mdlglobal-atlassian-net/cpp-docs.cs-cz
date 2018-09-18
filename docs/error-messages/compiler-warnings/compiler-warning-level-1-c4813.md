@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4813 | Microsoft Docs
+title: Upozornění (úroveň 1) C4813 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310c4c3a0d4be35e45c9593dc4f3cc1de00077d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1bfdc3e7aa4a2f0cf32770c1511832900f2339b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050122"
 ---
-# <a name="compiler-warning-level-1-c4813"></a>C4813 kompilátoru upozornění (úroveň 1)
-'function': funkce friend místní třídy musí mít bylo dříve deklarované  
-  
- Funkce friend v informacích o vnitřní třídě nebyl deklarován ve vnější třídě.  
-  
- Následující ukázka generuje C4813:  
-  
-```  
-// C4813.cpp  
-// compile with: /W1 /LD  
-void MyClass()  
-{  
-   // void func();  
-   class InnerClass  
-   {  
-      friend void func();   // C4813 uncomment declaration above  
-   };  
-}  
+# <a name="compiler-warning-level-1-c4813"></a>Kompilátor upozornění (úroveň 1) C4813
+
+'function': funkce friend lokální třídy musí mít byla deklarována
+
+Spřátelené funkce v vnitřní třídu nebyl deklarován ve vnější třídy.
+
+Následující ukázka generuje C4813:
+
+```
+// C4813.cpp
+// compile with: /W1 /LD
+void MyClass()
+{
+   // void func();
+   class InnerClass
+   {
+      friend void func();   // C4813 uncomment declaration above
+   };
+}
 ```

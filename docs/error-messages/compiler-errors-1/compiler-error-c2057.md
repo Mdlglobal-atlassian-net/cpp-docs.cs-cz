@@ -1,5 +1,5 @@
 ---
-title: C2057 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2057 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48598fba0e27aa875ec5ec2a97aaa4ef9d5326
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb9018224d10fa0104ee461e8bbeb659173fc9f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051716"
 ---
-# <a name="compiler-error-c2057"></a>C2057 chyby kompilátoru
-Očekávaný konstantní výraz  
-  
- Kontext vyžaduje konstantní výraz, jehož hodnota je známý v době kompilace výrazu.  
-  
- Kompilátor musí znát velikost a typ v době kompilace, aby bylo možné přidělit místo pro instance tohoto typu.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2057 a ukazuje, jak to opravit:  
-  
-```  
-// C2057.cpp  
-int i;  
-int b[i];   // C2057 - value of i is unknown at compile time  
-int main() {  
-   const int i = 8;  
-   int b[i]; // OK - value of i is fixed and known to compiler  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C má více omezující pravidla pro konstantní výrazy.  Následující ukázka generuje C2057 a ukazuje, jak to opravit:  
-  
-```  
-// C2057b.c  
-#define ArraySize1 10  
-int main() {   
-   const int ArraySize2 = 10;   
-   int h[ArraySize2];   // C2057 - C does not allow variables here  
-   int h[ArraySize1];   // OK - uses preprocessor constant  
-}  
+# <a name="compiler-error-c2057"></a>Chyba kompilátoru C2057
+
+Očekával se konstantní výraz.
+
+Kontext vyžaduje konstantní výraz, výraz, jehož hodnota je znám v době kompilace.
+
+Aby bylo možné přidělit místo pro instance tohoto typu musí kompilátor vědět velikosti typu v době kompilace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2057 a ukazuje, jak ho opravit:
+
+```
+// C2057.cpp
+int i;
+int b[i];   // C2057 - value of i is unknown at compile time
+int main() {
+   const int i = 8;
+   int b[i]; // OK - value of i is fixed and known to compiler
+}
+```
+
+## <a name="example"></a>Příklad
+
+C má přísnější pravidla pro konstantní výrazy.  Následující ukázka generuje C2057 a ukazuje, jak ho opravit:
+
+```
+// C2057b.c
+#define ArraySize1 10
+int main() {
+   const int ArraySize2 = 10;
+   int h[ArraySize2];   // C2057 - C does not allow variables here
+   int h[ArraySize1];   // OK - uses preprocessor constant
+}
 ```

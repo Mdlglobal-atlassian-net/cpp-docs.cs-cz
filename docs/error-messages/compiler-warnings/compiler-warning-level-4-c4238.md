@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4238 | Microsoft Docs
+title: Upozornění (úroveň 4) C4238 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057025"
 ---
-# <a name="compiler-warning-level-4-c4238"></a>C4238 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: použít jako lvalue rvalue – třída  
-  
- Pro kompatibilitu s předchozí verzí aplikace Visual C++, rozšíření Microsoft (**/Ze**) vám umožní používat typu třídy jako rvalue v kontextu, který implicitně nebo explicitně bere jeho adresy. V některých případech, například v příkladu níže může být nebezpečný.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- Toto použití způsobí chybu v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4238"></a>Kompilátor upozornění (úroveň 4) C4238
+
+používá se nestandardní rozšíření: rvalue třídy se používá jako l-hodnoty.
+
+Z důvodu kompatibility s předchozími verzemi sady Visual C++, rozšíření společnosti Microsoft (**/Ze**) vám umožní použít typ třídy jako r-hodnoty. v kontextu, který implicitně nebo explicitně přijímá jeho adresu. V některých případech, například v příkladu níže to může být nebezpečné.
+
+## <a name="example"></a>Příklad
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+Toto použití způsobí chybu podle kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -1,5 +1,5 @@
 ---
-title: C3412 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3412 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5b2c86b91160eb7ae342b39ea6a63ffad364bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a04de132c85cb09a960d3a0edfcb3b07127119
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054568"
 ---
-# <a name="compiler-error-c3412"></a>C3412 chyby kompilátoru
-'šablony': nelze specialize šablony v aktuálním oboru  
-  
- Šablonu nelze specializované na rozsah třídy v globální nebo oboru názvů.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3412.  
-  
-```  
-// C3412.cpp  
-template <class T>  
-struct S {  
-   template <>  
-   struct S<int> {};   // C3412 in a class  
-};  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje možným řešením.  
-  
-```  
-// C3412b.cpp  
-// compile with: /c  
-template <class T>  
-struct S {};  
-  
-template <>  
-struct S<int> {};  
+# <a name="compiler-error-c3412"></a>Chyba kompilátoru C3412
+
+"Šablona": nejde specializovat šablonu v aktuálním rozsahu.
+
+V oboru třídy pouze v globální nebo obor názvů rozsahu nedá specializovat šablonu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3412.
+
+```
+// C3412.cpp
+template <class T>
+struct S {
+   template <>
+   struct S<int> {};   // C3412 in a class
+};
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje možným řešením.
+
+```
+// C3412b.cpp
+// compile with: /c
+template <class T>
+struct S {};
+
+template <>
+struct S<int> {};
 ```

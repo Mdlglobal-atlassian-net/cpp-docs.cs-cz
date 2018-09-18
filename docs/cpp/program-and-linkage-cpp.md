@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056778"
 ---
 # <a name="program-and-linkage-c"></a>Program a propojení (C++)
 
@@ -45,11 +45,11 @@ Nicméně v některých případech může být potřeba deklarovat globální p
 
 ## <a name="linkage-vs-scope"></a>Propojení a oboru
 
-Koncept *propojení* označuje, zda globální symboly (například, názvy typů názvy proměnných a funkcí) v rámci programu jako celek mezi jednotkami překladu. Koncept *oboru* odkazuje na symboly, které jsou deklarovány v rámci bloku, jako je například obor názvů, třídy nebo tělo funkce. Tyto značky jsou viditelné pouze v rámci oboru, ve kterém jsou definovány; Koncept propojení se nevztahuje na ně. 
+Koncept *propojení* označuje, zda globální symboly (například, názvy typů názvy proměnných a funkcí) v rámci programu jako celek mezi jednotkami překladu. Koncept *oboru* odkazuje na symboly, které jsou deklarovány v rámci bloku, jako je například obor názvů, třídy nebo tělo funkce. Tyto značky jsou viditelné pouze v rámci oboru, ve kterém jsou definovány; Koncept propojení se nevztahuje na ně.
 
 ## <a name="external-vs-internal-linkage"></a>Vnější vs. vnitřní propojení
 
-A *bezplatná funkce* je funkce, která je definována na globální nebo obor názvů. Non-const globální proměnné a funkce bezplatné ve výchozím nastavení mají *vnější propojení*; jsou viditelné v libovolné jednotce překladu programu. Proto může mít žádné jiné globální objekt (proměnnou, definice třídy atd.) tento název. Symbol s *vnitřní propojení* nebo *bez propojení* je viditelná pouze v rámci jednotce překladu, ve kterém je deklarována. Při název má vnitřní propojení, může se stejným názvem existuje v jiné jednotce překladu. Proměnné deklarované s definicí třídy nebo funkce úřadů, které nemají žádné propojení. 
+A *bezplatná funkce* je funkce, která je definována na globální nebo obor názvů. Non-const globální proměnné a funkce bezplatné ve výchozím nastavení mají *vnější propojení*; jsou viditelné v libovolné jednotce překladu programu. Proto může mít žádné jiné globální objekt (proměnnou, definice třídy atd.) tento název. Symbol s *vnitřní propojení* nebo *bez propojení* je viditelná pouze v rámci jednotce překladu, ve kterém je deklarována. Při název má vnitřní propojení, může se stejným názvem existuje v jiné jednotce překladu. Proměnné deklarované s definicí třídy nebo funkce úřadů, které nemají žádné propojení.
 
 Můžete vynutit na globální název pomocí explicitní deklarace to jako mít interní vazbu **statické**. Tím se omezí jeho viditelnost na stejné jednotce překladu, ve kterém je deklarována. Všimněte si, že v tomto kontextu **statické** znamená něco jiného než při použít pro lokální proměnné.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Zobrazit [extern](extern-cpp.md) Další informace.
 
 ## <a name="see-also"></a>Viz také:
- [Základní koncepty](../cpp/basic-concepts-cpp.md)
+
+[Základní koncepty](../cpp/basic-concepts-cpp.md)

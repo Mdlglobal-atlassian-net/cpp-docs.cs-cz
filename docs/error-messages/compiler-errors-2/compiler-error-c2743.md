@@ -1,5 +1,5 @@
 ---
-title: C2743 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2743 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a762a7c816f713f9371ff50524ccb582753535b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4217a1e7a8475362c654ac34b6a345846341ec35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235607"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056483"
 ---
-# <a name="compiler-error-c2743"></a>C2743 chyby kompilátoru
-'type': nelze catch nativního typu s __clrcall – destruktor nebo kopírovací konstruktor  
-  
- Modul kompilován s **/CLR** pokus o zachycení výjimek nativní typu a kde je typ destruktor nebo kopírovacího konstruktoru používá `__clrcall` konvence volání.  
-  
- Když kompilujete s **/CLR**, zpracování výjimek v nativním typu být očekává členské funkce [__cdecl](../../cpp/cdecl.md) a není [__clrcall](../../cpp/clrcall.md). Nativní typy s členské funkce pomocí `__clrcall` konvence volání nemůže být zachycena v modulu kompilovat s **/CLR**.  
-  
- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2743.  
-  
-```  
-// C2743.cpp  
-// compile with: /clr  
-public struct S {  
-   __clrcall ~S() {}  
-};  
-  
-public struct T {  
-   ~T() {}  
-};  
-  
-int main() {  
-   try {}  
-   catch(S) {}   // C2743  
-   // try the following line instead  
-   // catch(T) {}  
-  
-   try {}  
-   catch(S*) {}   // OK  
-}  
+# <a name="compiler-error-c2743"></a>Chyba kompilátoru C2743
+
+'type': nelze zachytit nativní typ s destruktorem __clrcall nebo kopírovacím konstuktorem
+
+Modul zkompilovaný s **/CLR** došlo k pokusu o zachytit výjimku nativní typ a kde typu destruktor nebo kopírovací konstuktor používá `__clrcall` konvence volání.
+
+Při kompilaci s **/CLR**, zpracování výjimek očekává, že členské funkce v nativním typu bude [__cdecl](../../cpp/cdecl.md) a ne [__clrcall](../../cpp/clrcall.md). Nativní typy pomocí členské funkce pomocí `__clrcall` konvence volání nemůže být zachycena v modul zkompilovaný pomocí **/CLR**.
+
+Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2743.
+
+```
+// C2743.cpp
+// compile with: /clr
+public struct S {
+   __clrcall ~S() {}
+};
+
+public struct T {
+   ~T() {}
+};
+
+int main() {
+   try {}
+   catch(S) {}   // C2743
+   // try the following line instead
+   // catch(T) {}
+
+   try {}
+   catch(S*) {}   // OK
+}
 ```

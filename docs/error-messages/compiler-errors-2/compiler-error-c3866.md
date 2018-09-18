@@ -1,5 +1,5 @@
 ---
-title: C3866 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3866 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9109e35f3c79d33a4c3439aa58befdbe91068c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb56440dd67bc59e7719acdf70cee2784c889db2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048900"
 ---
-# <a name="compiler-error-c3866"></a>C3866 chyby kompilátoru
-Seznam argumentů chybí volání funkce  
-  
- Volání destruktoru nebo finalizační metodu uvnitř nestatické členské funkce, neměl seznam argumentů.  
-  
- Následující ukázka generuje C3866:  
-  
-```  
-// C3866.cpp  
-// compile with: /c  
-class C {  
-   ~C();  
-   void f() {  
-      this->~C;   // C3866  
-      this->~C();   // OK  
-   }  
-};  
+# <a name="compiler-error-c3866"></a>Chyba kompilátoru C3866
+
+Chybí seznam argumentů funkce volání
+
+Destruktor nebo finalizační metodu. voláním uvnitř nestatické členské funkce, neměl seznam argumentů.
+
+Následující ukázka generuje C3866:
+
+```
+// C3866.cpp
+// compile with: /c
+class C {
+   ~C();
+   void f() {
+      this->~C;   // C3866
+      this->~C();   // OK
+   }
+};
 ```

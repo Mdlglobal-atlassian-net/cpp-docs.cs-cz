@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052657"
 ---
 # <a name="fatal-error-c1093"></a>Závažná chyba C1093
 
-> Volání rozhraní API "*název funkce*'se nezdařil'*umístění volání*": "*text z běhu*.  
-  
-Volání funkce .NET se nezdařilo. *Text z běhu* řetězec může nebo nemusí být poskytnuty tímto modulem COM.  
-  
+> Volání rozhraní API "*název funkce*'se nezdařil'*umístění volání*": "*text z běhu*.
+
+Volání funkce .NET se nezdařilo. *Text z běhu* řetězec může nebo nemusí být poskytnuty tímto modulem COM.
+
 Další informace o systému chybové zprávy naleznete v souboru systému winerror.h a [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

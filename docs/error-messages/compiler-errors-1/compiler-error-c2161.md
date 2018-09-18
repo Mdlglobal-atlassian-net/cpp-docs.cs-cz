@@ -1,5 +1,5 @@
 ---
-title: C2161 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2161 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62ea3ec8d0d4ac4cb47f61d23473b1faabc3a894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac32776c954974f0f2f81789c6e78de894786b73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051816"
 ---
-# <a name="compiler-error-c2161"></a>C2161 chyby kompilátoru
-' ##' nelze provést na konci definici – makro  
-  
- Definice makra bylo dokončeno s operátor vložení tokenu (##).  
-  
- Následující ukázka generuje C2161:  
-  
-```  
-// C2161.cpp  
-// compile with: /c  
-#define mac(a,b) a   // OK  
-#define mac(a,b) a##   // C2161  
+# <a name="compiler-error-c2161"></a>Chyba kompilátoru C2161
+
+"##" nemůže být na konci definice makra
+
+Definice makra skončila s operátorem vložení tokenu (##).
+
+Následující ukázka generuje C2161:
+
+```
+// C2161.cpp
+// compile with: /c
+#define mac(a,b) a   // OK
+#define mac(a,b) a##   // C2161
 ```

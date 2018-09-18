@@ -1,5 +1,5 @@
 ---
-title: CXX0015 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0015 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050813"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Chyba při vyhodnocování výrazu CXX0015
-výraz je příliš složitý (přetečení zásobníku)  
-  
- Zadaný výraz je příliš složitý nebo vnořené příliš hluboko pro velikost úložiště, které jsou k dispozici pro vyhodnocovací filtr výrazů C.  
-  
- Přetečení obvykle dochází z důvodu příliš mnoho čekající výpočty.  
-  
- Změna uspořádání výraz tak, aby jednotlivé komponenty výraz může být vyhodnocen jako jeho zjištění, namísto nutnosti počkejte dalších částí výraz, který má být vypočítána.  
-  
- Výraz rozdělte do více příkazů.  
-  
- Tato chyba je stejný jako CAN0015.
+
+výraz je příliš složitý (přetečení zásobníku)
+
+Výraz zadaný byla příliš složité nebo jsou vnořené moc hluboko množství úložiště k dispozici pro vyhodnocování výrazů C.
+
+Přetečení obvykle dochází z důvodu příliš mnoha čekající výpočtů.
+
+Změna uspořádání výraz tak, aby jednotlivé komponenty výraz lze vyhodnotit, jako je došlo k, namísto nutnosti čekání na ostatní části výraz, který má být vypočtena.
+
+Výraz rozdělte do více příkazů.
+
+Tato chyba se shoduje s CAN0015.

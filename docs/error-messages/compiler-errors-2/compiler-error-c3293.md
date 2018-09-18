@@ -1,5 +1,5 @@
 ---
-title: C3293 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3293 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 07/21/2017
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b195a91825b0f20445b29e330f67810329584db7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d45f342528b1ee6297ee6c11a01a0eceb710595
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050330"
 ---
-# <a name="compiler-error-c3293"></a>C3293 chyby kompilátoru
-"objekt": "default" používat pro přístup k výchozí vlastnost (indexer) pro třídu "typ"  
-  
- Indexované vlastnosti se nesprávně získat přístup.  V tématu [postupy: použití vlastnosti v jazyce C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) Další informace.  
+# <a name="compiler-error-c3293"></a>Chyba kompilátoru C3293
 
- **Visual Studio 2017 a novější**: V sadě Visual Studio 2015 a starší, kompilátor v některých případech misidentified výchozí vlastnost jako výchozí indexer. Bylo možné tento problém obejít, na základě identifikátoru "Výchozí" pro přístup k vlastnosti. Alternativní řešení, samotné se stala problematické po výchozí zavedl jako klíčové slovo v C ++ 11. Proto je ve Visual Studio 2017 byly opraveny chyby, které vyžaduje alternativní řešení a kompilátor nyní vyvolá chybu, pokud "Výchozí" se používá pro přístup k výchozí vlastnost pro třídu.
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3293 v sadě Visual Studio 2015 a starší.  
-  
-```  
-// C3293.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref class IndexerClass {  
-public:  
-   // default indexer  
-   property int default[int] {  
-      int get(int index) { return 0; }  
-      void set(int index, int value) {}  
-   }  
-};  
-  
-int main() {  
-   IndexerClass ^ ic = gcnew IndexerClass;  
+"objekt": "default" používat pro přístup k výchozí vlastnost (indexer) pro třídu 'type'
+
+Indexovaná vlastnost se použila správně.  Naleznete v tématu [postupy: používání vlastností v jazyce C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) Další informace.
+
+**Visual Studio 2017 a novější**: V sadě Visual Studio 2015 a starší, kompilátor v některých případech misidentified výchozí vlastnost jako výchozí indexeru. Bylo možné tento problém obejít, pomocí identifikátor "Výchozí" pro přístup k vlastnosti. Alternativní řešení, samotný začal být problematické po výchozí byla zavedená jako klíčové slovo v C ++ 11. Proto v sadě Visual Studio 2017 které jsme opravili chyby, které vyžaduje řešení, a kompilátor vyvolá chybu nyní, když "Výchozí" se používá pro přístup k výchozí vlastnost pro třídu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3293 v sadě Visual Studio 2015 a starší.
+
+```
+// C3293.cpp
+// compile with: /clr /c
+using namespace System;
+ref class IndexerClass {
+public:
+   // default indexer
+   property int default[int] {
+      int get(int index) { return 0; }
+      void set(int index, int value) {}
+   }
+};
+
+int main() {
+   IndexerClass ^ ic = gcnew IndexerClass;
    ic->Item[0] = 21;   // C3293 in VS2015 OK in VS2017
    ic->default[0] = 21;   // OK in VS2015 and earlier
-  
-   String ^s = "Hello";  
+
+   String ^s = "Hello";
    wchar_t wc = s->Chars[0];   // C3293 in VS2015 OK in VS2017
-   wchar_t wc2 = s->default[0];   // OK in VS2015 and earlier  
-   Console::WriteLine(wc2);  
-}  
+   wchar_t wc2 = s->default[0];   // OK in VS2015 and earlier
+   Console::WriteLine(wc2);
+}
 ```

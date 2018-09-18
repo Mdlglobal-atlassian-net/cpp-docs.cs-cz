@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056730"
 ---
 # <a name="using-dynamic-accessors"></a>Použití dynamických přístupových objektů
 
@@ -173,8 +173,8 @@ Příklad ukazuje, jak použít tuto třídu pro spuštění systému SQL Server
 
 ## <a name="see-also"></a>Viz také:
 
-[Použití přístupových objektů](../../data/oledb/using-accessors.md)  
-[CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)  
-[CDynamicStringAccessor – třída](../../data/oledb/cdynamicstringaccessor-class.md)  
-[CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)  
+[Použití přístupových objektů](../../data/oledb/using-accessors.md)<br/>
+[CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor – třída](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Příklad DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  

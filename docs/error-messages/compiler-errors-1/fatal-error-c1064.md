@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1064 | Microsoft Docs
+title: Závažná chyba C1064 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19d70d603b87168fe8d81843fae48989ab0c15e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83d6356a2da54e21fd03d10aa394d5a5bf60f6f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050928"
 ---
 # <a name="fatal-error-c1064"></a>Závažná chyba C1064
-omezení kompilátoru: tokenu došlo k přetečení vnitřní vyrovnávací paměť  
-  
- Identifikátor překračuje délku vnitřní vyrovnávací paměti používané pro identifikátory. Zkraťte název.
+
+limit kompilátoru: token způsobil přetečení vnitřní vyrovnávací paměť
+
+Identifikátor překračuje délku vnitřní vyrovnávací paměti používané pro identifikátory. Zkraťte název.

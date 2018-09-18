@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1070 | Microsoft Docs
+title: Závažná chyba C1070 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99650b93819c4bc0192d612b0f1344e1b99671d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e871b69bb189140a4001d574736a255eefaf61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055621"
 ---
 # <a name="fatal-error-c1070"></a>Závažná chyba C1070
-Neshoda #if / pár #endif v souboru, název souboru.  
-  
- `#if`, `#ifdef`, Nebo `#ifndef` – direktiva nemá odpovídající `#endif`.  
-  
- Následující ukázka generuje C1070:  
-  
-```  
-// C1070.cpp  
-#define TEST  
-  
-#ifdef TEST  
-  
-#ifdef TEST  
-#endif  
-// C1070  
-```  
-  
- Možná řešení:  
-  
-```  
-// C1070b.cpp  
-// compile with: /c  
-#define TEST  
-  
-#ifdef TEST  
-#endif  
-  
-#ifdef TEST  
-#endif  
+
+Neshoda #if / #endif pár v soubor 'filename.
+
+`#if`, `#ifdef`, Nebo `#ifndef` – direktiva nemá odpovídající `#endif`.
+
+Následující ukázka generuje C1070:
+
+```
+// C1070.cpp
+#define TEST
+
+#ifdef TEST
+
+#ifdef TEST
+#endif
+// C1070
+```
+
+Možná řešení:
+
+```
+// C1070b.cpp
+// compile with: /c
+#define TEST
+
+#ifdef TEST
+#endif
+
+#ifdef TEST
+#endif
 ```

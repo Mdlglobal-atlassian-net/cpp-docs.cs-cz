@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059267"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL – objekty COM
 
@@ -57,30 +57,30 @@ Další aspekty objekt knihovny ATL modelu COM jsou zpracovávány jiné třídy
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Implementace CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[Implementace CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 Zobrazit příklad položky mapy modelu COM pro implementaci `CComObjectRootEx`.
 
-[Implementace CComObject, CComAggObject a CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[Implementace CComObject, CComAggObject a CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 Popisuje, jak **DECLARE_\*_AGGREGATABLE** makra mají vliv na použití `CComObject`, `CComAggObject`, a `CComPolyObject`.
 
-[Podpora IDispatch a IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[Podpora IDispatch a IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 Obsahuje seznam ATL – implementace třídy pro podporu `IDispatch` a `IErrorInfo` rozhraní.
 
-[Podpora IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[Podpora IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 Tento článek popisuje kroky pro implementaci bod připojení pro vaši třídu.
 
-[Změna výchozího objektu pro vytváření tříd a agregačního modelu](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[Změna výchozího objektu pro vytváření tříd a agregačního modelu](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 Zobrazit jaké makra použít ke změně třídy výchozí model objektu pro vytváření a agregace.
 
-[Vytvoření agregovaného objektu](../atl/creating-an-aggregated-object.md)  
+[Vytvoření agregovaného objektu](../atl/creating-an-aggregated-object.md)<br/>
 Seznam kroků pro vytvoření agregovaného objektu.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md)  
+[Vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Poskytuje informace o vytvoření objektu ATL COM.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 
 ## <a name="see-also"></a>Viz také

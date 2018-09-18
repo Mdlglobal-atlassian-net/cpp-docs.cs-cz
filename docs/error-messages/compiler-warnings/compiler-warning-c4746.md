@@ -1,5 +1,5 @@
 ---
-title: C4746 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4746 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d00c75b2b7cdf2fdafb4e109496a701fb561cb9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6abce7ebbcdc41effed05ccf54337e3976c34e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054860"
 ---
-# <a name="compiler-warning-c4746"></a>C4746 upozornění kompilátoru
-volatile přístup '\<výraz >' podléhá/volatile: [iso&#124;ms] nastavení; zvažte použití vnitřní funkce __iso_volatile_load nebo úložiště.  
-  
- C4746 jsou vydávány vždy, když volatile proměnné se k nim přistupuje přímo. Je určena k pomoci vývojářům určit umístění kódu, které jsou postižené konkrétním volatile modelu aktuálně zadaný (což se dá řídit pomocí [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) – možnost kompilátoru). Konkrétně může být užitečné při hledání překážek paměti generované kompilátorem hardware při použití /volatile:ms.  
-  
- Vnitřní funkce __iso_volatile_load/úložiště lze explicitně přístup k nestálým paměti bez ovlivnění volatile modelu. Pomocí těchto vnitřní funkce C4746 nespustí.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+# <a name="compiler-warning-c4746"></a>Upozornění kompilátoru C4746
+
+přístup typu "\<výrazu >' / volatile: [iso&#124;ms] nastavení; zvažte použití vnitřních funkcí Using __iso_volatile_load/store.
+
+C4746 je vygenerován pokaždé, když volatile proměnná je k nim přistupuje přímo. Jeho účelem je pomoci vývojářům při identifikaci umístění kódu, které jsou ovlivněny konkrétním model volatile aktuálně zadané (což se dá řídit pomocí [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) – možnost kompilátoru). Zejména může být užitečné při hledání vygenerovaný kompilátorem hardwarové překážky paměti, když se používá /volatile:ms.
+
+Vnitřní objekty Using __iso_volatile_load/store umožňuje explicitně přístup volatile paměti bez ovlivnění volatile model. Pomocí těchto vnitřních objektů, nebude spustí C4746.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.

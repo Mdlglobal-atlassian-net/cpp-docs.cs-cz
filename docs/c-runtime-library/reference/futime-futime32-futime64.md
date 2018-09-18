@@ -1,5 +1,5 @@
 ---
-title: _futime – _futime32 –, _futime64 – | Microsoft Docs
+title: _futime _futime32, _futime64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056817"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
-Nastaví čas změny pro soubor otevřený.
+Nastaví čas změny na otevřený soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,30 +73,30 @@ int _futime64(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Popisovače souborů k otevření souboru.
+Popisovač souboru pro otevření souboru.
 
-*FileTime*<br/>
+*FileTime –*<br/>
 Ukazatel na strukturu obsahující nové datum změny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí 0, pokud bylo úspěšné. Pokud dojde k chybě, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a **errno** je nastaven na **ebadf –**, označující popisovač souboru je neplatný nebo **einval –**, označující neplatný parametr.
+Pokud je úspěšná, vrátí 0. Pokud dojde k chybě, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EBADF**, určující popisovač souboru je neplatná nebo **EINVAL**, určující neplatný parametr.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Futime –** rutiny nastaví datum změny a doba přístupu k otevření souboru spojené s *fd*. **_futime –** je stejný jako [_utime –](utime-utime32-utime64-wutime-wutime32-wutime64.md)kromě toho, že je její argument popisovače souborů otevřeného souboru, nikoli název souboru nebo cestu k souboru. **_Utimbuf –** struktura obsahuje pole pro nové změny datum a čas přístup. Obě pole musí obsahovat platné hodnoty. **_utimbuf32** a **_utimbuf64** jsou stejné jako **_utimbuf –** s výjimkou použití typů 32bitové a 64bitové verze čas, v uvedeném pořadí. **_futime –** a **_utimbuf –** použít typu time 64-bit a **_futime –** je stejný jako v chování **_futime64 –**. Pokud potřebujete vynutit staré chování, definovat **_USE_32BIT_TIME_T**. Provedete to způsobí, že **_futime –** být identické v chování **_futime32 –** a způsobí, že **_utimbuf –** strukturu chcete použít typ čas 32-bit, což odpovídá **__utimbuf32**.
+**_Futime** rutina nastaví datum změny a čas přístupu na otevřený soubor přidružený k *fd*. **_futime** je stejný jako [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), s tím rozdílem, že její argument je popisovač souboru otevřený soubor, nikoli název souboru nebo cesta k souboru. **_Utimbuf –** struktura obsahuje pole pro nové změny datum a čas přístupu. Obě pole musí obsahovat platné hodnoty. **_utimbuf32** a **_utimbuf64** jsou stejné jako **_utimbuf –** s výjimkou použití typů 32bitové a 64bitové čas v uvedeném pořadí. **_futime** a **_utimbuf –** použít 64-bit čas a **_futime** je stejný jako v chování **_futime64**. Pokud potřebujete vynutit staré chování, definovat **_USE_32BIT_TIME_T**. To způsobí, že to **_futime** mít identickou chování **_futime32** a způsobí, že **_utimbuf –** strukturu chcete použít typ času 32-bit, díky tomu je ekvivalentní k **__utimbuf32**.
 
-**_futime64 –**, které používá **__utimbuf64 –** struktury, může číst a upravovat soubor datům až 23:59:59, 31. prosince 3000, UTC; zatímco volání **_futime32 –** selže, pokud je hodnota data v souboru později než 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro tyto funkce.
+**_futime64**, který používá **__utimbuf64 –** struktury, může číst a upravovat data souboru do 23:59:59, 31 prosince 3000 UTC, zatímco volání **_futime32** selže, pokud je datum v souboru nejpozději do 23:59:59 18. ledna 2038 UTC. Půlnoc 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro tyto funkce.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_futime –**|\<SYS/utime.h >|\<errno.h>|
+|**_futime**|\<SYS/utime.h >|\<errno.h>|
 |**_futime32**|\<SYS/utime.h >|\<errno.h>|
 |**_futime64**|\<SYS/utime.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -143,25 +143,25 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>Vzorový výstup
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>

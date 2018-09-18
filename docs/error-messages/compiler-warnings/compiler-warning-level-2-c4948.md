@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 2) upozornění C4948 | Microsoft Docs
+title: Upozornění (úroveň 2) C4948 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422f06e6e9ac749b16524f45e61cb6bbbd672cb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51b42677fbabde58afb3cb989e9b0d73e34f92a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050824"
 ---
-# <a name="compiler-warning-level-2-c4948"></a>C4948 kompilátoru upozornění (úroveň 2)
-Návratový typ "objekt" neodpovídá poslední parametr typ odpovídající nastavovací metoda  
-  
-Kompilátor najít neshody mezi jaký typ dat je právě získání a nastavení pro indexované vlastnosti.  
-  
-C4948 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-warning-level-2-c4948"></a>Kompilátor upozornění (úroveň 2) C4948
+
+Návratový typ 'přístupového objektu' neodpovídá typem parametru odpovídajícího nastavovacího kódu.
+
+Kompilátor zjistil neshodu mezi jaký datový typ je právě získat a nastavit pro indexované vlastnosti.
+
+C4948 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

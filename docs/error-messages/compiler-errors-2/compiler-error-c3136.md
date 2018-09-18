@@ -1,5 +1,5 @@
 ---
-title: C3136 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3136 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f892c7f3d1ca7bf2aebf3ecfe7574182b544fd01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0439aa157a683065ccf7fff5b5f9d6d4d85e2f12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054217"
 ---
-# <a name="compiler-error-c3136"></a>C3136 chyby kompilátoru
-"rozhraní": rozhraní modelu COM může dědit vlastnosti pouze z jiné rozhraní modelu COM, není 'rozhraní' rozhraní modelu COM  
-  
- Rozhraní, u kterého jste se použít [rozhraní atribut](../../windows/interface-attributes.md) dědí z rozhraní, které není rozhraní modelu COM. Rozhraní modelu COM nakonec dědí z `IUnknown`. Žádné rozhraní sebou atribut rozhraní je rozhraní modelu COM.  
-  
- Následující příklad generuje C3136:  
-  
-```  
-// C3136.cpp  
-#include "unknwn.h"  
-  
-__interface A   // C3136  
-// try the following line instead  
-// _interface A : IUnknown  
-{  
-   int a();  
-};  
-  
-[object]  
-__interface B : A  
-{  
-   int aa();  
-};  
+# <a name="compiler-error-c3136"></a>Chyba kompilátoru C3136
+
+'rozhraní': rozhraní modelu COM může dědit jedině z jiného rozhraní COM, 'rozhraní' není kompatibilní se rozhraní modelu COM
+
+Rozhraní, ke které jste použili [atribut interface](../../windows/interface-attributes.md) dědí z rozhraní, které není rozhraní COM. Rozhraní modelu COM, takže v konečném důsledku dědí z `IUnknown`. Každé rozhraní, které předchází atribut rozhraní je rozhraní modelu COM.
+
+Následující příklad generuje C3136:
+
+```
+// C3136.cpp
+#include "unknwn.h"
+
+__interface A   // C3136
+// try the following line instead
+// _interface A : IUnknown
+{
+   int a();
+};
+
+[object]
+__interface B : A
+{
+   int aa();
+};
 ```

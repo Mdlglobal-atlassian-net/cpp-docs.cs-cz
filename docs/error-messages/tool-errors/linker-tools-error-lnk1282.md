@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1282 | Microsoft Docs
+title: Chyba Linkerů LNK1282 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6640f288bef2601bedeb33fa9fad4b2f3e4389f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c23eab3e21064076b9bd8663b0c3a593d997b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057092"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Chyba linkerů LNK1282
-Nepodařilo se soubor /REBASE; byl podepsán  
-  
- Pokoušíte se o změňte základní adresu podepsané sestavení s možností /REBASE pro [nástroje editbin](../../build/reference/editbin-reference.md). Chcete-li to provést, nejprve změňte základní adresu a pak se přihlaste sestavení.
+
+Nepodařilo se soubor /REBASE; bylo provedeno
+
+Jste se pokusili získat změnit základní adresa podepsané sestavení s možností /REBASE pro [editbin](../../build/reference/editbin-reference.md). Chcete-li to provést, nejprve změňte základní adresu a pak se přihlaste sestavení.

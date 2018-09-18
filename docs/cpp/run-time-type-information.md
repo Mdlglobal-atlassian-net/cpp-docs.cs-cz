@@ -18,31 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77584e5fdd731c499629149a9163dbacb5eafb5e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050876"
 ---
 # <a name="run-time-type-information"></a>Informace běhového typu
-Informace o typu modulu runtime (RTTI) je mechanismus, který umožňuje stanovit typ objektu při provádění programu. RTTI byl přidán do jazyka C++, protože mnoho dodavatelů knihoven tříd implementovalo tuto funkci samostatně. Tím došlo k nekompatibilitě mezi knihovnami. Podpora informací o typu modulu runtime na úrovni jazyka se stala samozřejmostí.  
-  
- V zájmu přehlednosti je popis mechanismu RTTI téměř zcela omezen na ukazatele. Uvedenou koncepci lze však také použít pro odkazy.  
-  
- Existují tři hlavní prvky jazyka C++ informující o typu modulu runtime:  
-  
--   [Dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.  
-  
-     Používá se pro převod polymorfních typů.  
-  
--   [Typeid](../cpp/typeid-operator.md) operátor.  
-  
-     Používá se k identifikaci přesného typu objektu.  
-  
--   [Type_info](../cpp/type-info-class.md) třídy.  
-  
-     Sloužící k uchování informací o typu vrácené **typeid** operátor.  
-  
-## <a name="see-also"></a>Viz také:  
- [Přetypování](../cpp/casting.md)
+
+Informace o typu modulu runtime (RTTI) je mechanismus, který umožňuje stanovit typ objektu při provádění programu. RTTI byl přidán do jazyka C++, protože mnoho dodavatelů knihoven tříd implementovalo tuto funkci samostatně. Tím došlo k nekompatibilitě mezi knihovnami. Podpora informací o typu modulu runtime na úrovni jazyka se stala samozřejmostí.
+
+V zájmu přehlednosti je popis mechanismu RTTI téměř zcela omezen na ukazatele. Uvedenou koncepci lze však také použít pro odkazy.
+
+Existují tři hlavní prvky jazyka C++ informující o typu modulu runtime:
+
+- [Dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.
+
+     Používá se pro převod polymorfních typů.
+
+- [Typeid](../cpp/typeid-operator.md) operátor.
+
+     Používá se k identifikaci přesného typu objektu.
+
+- [Type_info](../cpp/type-info-class.md) třídy.
+
+     Sloužící k uchování informací o typu vrácené **typeid** operátor.
+
+## <a name="see-also"></a>Viz také:
+
+[Přetypování](../cpp/casting.md)

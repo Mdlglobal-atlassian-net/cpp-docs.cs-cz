@@ -1,5 +1,5 @@
 ---
-title: C2504 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2504 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac0f8f28955af172590535568289182c3489d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb11774f65454799761913babb428dc6a471743
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054126"
 ---
-# <a name="compiler-error-c2504"></a>C2504 chyby kompilátoru
-'class': základní třída není definována  
-  
- Základní třída je deklarovaná však nikdy definována.  Možné příčiny:  
-  
-1.  Chybí zahrnout soubor.  
-  
-2.  Externí základní třída není deklarován s [extern](../../cpp/using-extern-to-specify-linkage.md).  
-  
- Následující ukázka generuje C2504:  
-  
-```  
-// C2504.cpp  
-// compile with: /c  
-class A;  
-class B : public A {};   // C2504  
-```  
-  
- OK  
-  
-```  
-class C{};  
-class D : public C {};  
+# <a name="compiler-error-c2504"></a>Chyba kompilátoru C2504
+
+'class': základní třída undefined
+
+Základní třída je deklarovaná, ale dosud definováno.  Možné příčiny:
+
+1. Chybí soubor k zahrnutí.
+
+1. Externí základní třída není deklarována s [extern](../../cpp/using-extern-to-specify-linkage.md).
+
+Následující ukázka generuje C2504:
+
+```
+// C2504.cpp
+// compile with: /c
+class A;
+class B : public A {};   // C2504
+```
+
+OK
+
+```
+class C{};
+class D : public C {};
 ```

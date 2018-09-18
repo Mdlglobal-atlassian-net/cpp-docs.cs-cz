@@ -1,5 +1,5 @@
 ---
-title: C2779 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2779 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046781"
 ---
-# <a name="compiler-error-c2779"></a>C2779 chyby kompilátoru
-"prohlášení": metody vlastností může být přidružen pouze nestatické datové členy  
-  
- `property` Členem statických dat je nesprávně použit rozšířené atribut.  
-  
- Následující ukázka generuje C2779:  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+# <a name="compiler-error-c2779"></a>Chyba kompilátoru C2779
+
+"deklarace": metody vlastností lze přidružit pouze s nestatických datových členů
+
+`property` Rozšířeného atributu nesprávně platí pro statický datový člen.
+
+Následující ukázka generuje C2779:
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```

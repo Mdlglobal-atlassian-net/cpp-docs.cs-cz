@@ -1,5 +1,5 @@
 ---
-title: Lock::LOCK | Microsoft Docs
+title: Lock::LOCK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051815"
 ---
 # <a name="locklock"></a>lock::lock
-Vytvoří `lock` objekt, volitelně čeká na získání zámku navždy, po zadanou dobu, nebo vůbec.  
+Vytvoří `lock` objektu, volitelně čekají na získání zámku forever, po zadanou dobu času, nebo dokonce vůbec.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_object`  
- Objekt, který má být uzamčena.  
+*d_ostupné*<br/>
+Objekt, který chcete zamknout.  
   
- `_timeout`  
- Hodnota časového limitu v milisekundách, nebo jako <xref:System.TimeSpan>.  
+*_vypršení časového limitu*<br/>
+Hodnota časového limitu v milisekundách, nebo jako <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Výjimky  
- Vyvolá <xref:System.ApplicationException> Pokud získávání zámku nedochází před vypršením časového limitu.  
+ Vyvolá <xref:System.ApplicationException> Pokud získání zámku se nevyskytuje před vypršením časového limitu.  
   
 ## <a name="remarks"></a>Poznámky  
- První tři formy konstruktoru pokusí získat zámek na `_object` během zadaného časového limitu (nebo <xref:System.Threading.Timeout.Infinite> Pokud není zadaný žádný).  
+ První tři formy konstruktoru se pokouší získat zámek na `_object` během zadaného časového limitu (nebo <xref:System.Threading.Timeout.Infinite> Pokud se nezadá žádný).  
   
- Čtvrtý formu konstruktoru není získat zámek na `_object`. `lock_later` je členem skupiny [lock_when – výčet](../dotnet/lock-when-enum.md). Použití [lock::acquire](../dotnet/lock-acquire.md) nebo [lock::try_acquire](../dotnet/lock-try-acquire.md) v tomto případě získat zámek.  
+ Čtvrtý formu konstruktoru nelze získat zámek na `_object`. `lock_later` je členem skupiny [lock_when – výčet](../dotnet/lock-when-enum.md). Použití [lock::acquire](../dotnet/lock-acquire.md) nebo [lock::try_acquire](../dotnet/lock-try-acquire.md) v tomto případě získání zámku.  
   
- Zámek, budou vydané automaticky při volání destruktoru.  
+ Zámek se automaticky uvolněn, pokud je volán destruktor.  
   
- `_object` nemůže být <xref:System.Threading.ReaderWriterLock>.  Pokud se jedná, dojde k chybě kompilátoru.  
+ `_object` nemůže být <xref:System.Threading.ReaderWriterLock>.  Pokud se jedná, způsobí chybu kompilátoru.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad používá jednu instanci třídy napříč více vláken.  Třída využívají k zajištění konzistentní pro každé vlákno přístupů k jeho interních datových zámek sám na sobě.  Hlavní vlákno aplikace používá zámek ve stejné instanci třídy k pravidelně kontrolovat, zda stále existují jakékoli pracovních vláken a čeká ukončíte až do všech pracovních vláken dokončili úkoly.  
+ Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -164,7 +164,7 @@ All threads completed.
  **Namespace** msclr –  
   
 ## <a name="see-also"></a>Viz také  
- [Lock – členy třídy](../dotnet/lock-members.md)   
- [zámek:: ~ zámku](../dotnet/lock-tilde-lock.md)   
+ [Lock – členy](../dotnet/lock-members.md)   
+ [zámek:: ~ lock](../dotnet/lock-tilde-lock.md)   
  [Lock::Acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

@@ -1,5 +1,5 @@
 ---
-title: Transakce (MFC Data Access) | Microsoft Docs
+title: Transakce (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9dd531aee6ac8014f2ce47ddee7fc5f82e35a63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332568d0a4a275247c95fc6b5ecfbbfcb8712acc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052204"
 ---
-# <a name="transactions--mfc-data-access"></a>Transakce (Data MFC Access)
-Koncept transakce byla vyvinuta pro zpracování případů, kdy výsledný stav databáze závisí na celkový úspěch řady operací. Tato situace může přijít vzhledem k tomu, že po sobě jdoucí operace může upravit výsledky předchozí operace. V takových případech jedna operace selže, výsledný stav by neurčitou.  
+# <a name="transactions--mfc-data-access"></a>Transakce (přístup k datům MFC)
+
+Koncept transakce byla vyvinuta zpracovat případy, ve kterých výsledný stav databáze závisí na celkový počet úspěšných řady operací. To může dojít, protože následných operací může upravit výsledky předchozí operace. V takových případech Pokud jedna operace selže, výsledný stav může být neurčitý.  
   
- Chcete-li tento problém vyřešit, transakce skupiny řady operací takovým tak, aby bylo možno integritu konečný výsledek. Buď musí být všechny operace úspěšné a potom potvrzené (zapsána do databáze), nebo selže celá transakce. Zrušení transakce se nazývá vrácení zpět. Vrácení zpět umožňuje obnovení změny a vrátí databázi do stavu před transakcí.  
+K vyřešení tohoto problému je transakce skupině posloupnost operací takovým způsobem, který si být jistí integrity konečný výsledek. Buď musí být všechny operace úspěšná a potom potvrdit (zapsána do databáze), nebo celá transakce nezdaří. Zrušení transakce se nazývá vrácení zpět. Vrácení zpět umožňuje obnovení změny a vrátí databázi do stavu před transakcí.  
   
- Například v automatizované bankovní transakci, převod peněz z účtu A k účtu B, jak odstoupení od uložení A a b musí být zpracován fondů správně, nebo celá transakce selhat.  
+Například v transakci automatizované bankovnictví, peníze při přenosu z účtu A k účtu B, jak stažení zálohy A a B musí být úspěšně zpracovat fondů správně, nebo musí selhat, celá transakce.  
   
- Transakce musí mít ACID vlastnosti, které stát pro následující:  
+Transakce musí mít odpovídající zásadám ACID vlastnosti, které nechá následující:  
   
--   **Nedělitelnost** transakce je atomické jednotky práce a provede právě jednou, všechny práci nebo žádná.  
+- **Atomicitu** transakce je atomickou jednotku práce a provede přesně jednou; všechny práci nebo žádná.  
   
--   **Konzistence** transakce se zachovají konzistenci dat, převádí jeden konzistentní stav dat do jiné konzistentní stav dat. Data vázání transakce musí být sémanticky zachována.  
+- **Konzistence** konzistenci dat, transformace konzistentní stav dat na jiný konzistentní stav dat zachová transakce. Data vázaná transakcí musí být sémanticky zachovány.  
   
--   **Izolace** transakce je jednotka izolace a ke všem dochází samostatně a nezávisle na souběžných transakcí. Transakce by se nikdy zobrazit dílčí etapy jiné transakci.  
+- **Izolace** transakce je jednotka izolace a každá se vyskytuje samostatně a nezávisle na souběžných transakcí. Transakce by nikdy neuvidí dílčích etap jinou transakcí.  
   
--   **Odolnost** transakce je jednotka obnovení. Pokud transakce úspěšné, uchová, jeho aktualizací, i když dojde k chybě systému, nebo se vypne. V případě selhání transakce systému zůstane ve stavu před spuštěním transakce.  
+- **Odolnost** transakce je jednotka pro obnovení. Pokud je transakce úspěšná, její aktualizací vyskytovat i dál, i v případě systému dojde k chybě nebo se vypne. Pokud transakce selže, systém zůstane ve stavu před spuštěním transakce.  
   
- Může podporovat transakce v OLE DB (najdete v části [podpora transakcí v OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) nebo rozhraní ODBC (viz [transakce (ODBC)](../data/odbc/transaction-odbc.md)).  
+Může podporovat transakce v OLE DB (viz [podpora transakcí v OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) nebo rozhraní ODBC (naleznete v tématu [transakce (ODBC)](../data/odbc/transaction-odbc.md)).  
   
- Distribuovaná transakce je transakcí, která aktualizuje distribuované dat, který je dat na více systémů počítači v síti. Pokud chcete podporovat transakce přes distribuovaného systému, používejte ADO.NET, nikoli podporu transakce OLE DB.  
+Distribuované transakce je transakce, která aktualizuje distribuovaných dat, to znamená, že data ve více než jeden síťový počítač systému. Pokud chcete zajistit podporu transakcí v distribuovaném systému, používejte ADO.NET spíše než transakce podporu technologie OLE DB.  
   
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům programování (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4677 | Microsoft Docs
+title: Upozornění (úroveň 1) C4677 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3511ad3100bf695cec5df97703b39e5926c71c11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6a3f57ba0e3d4c15c83711a86bb8482fa8b0596
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049382"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>C4677 kompilátoru upozornění (úroveň 1)
-'function': podpis privátního člena obsahuje privátní typ sestavení 'private_type.  
-  
- Typ, který má veřejnou dostupnost mimo sestavení používá typ, který má privátní přístup mimo sestavení. Komponenty, která odkazuje na typ veřejných sestavení nebudou moci používat člena typu nebo členy, které odkazují na typ privátní sestavení.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4677.  
-  
-```  
-// C4677.cpp  
-// compile with: /clr /c /W1  
-delegate void TestDel();  
-public delegate void TestDel2();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;   // C4677  
-   static event TestDel2^ MyClass_Event2;   // OK  
-};  
+# <a name="compiler-warning-level-1-c4677"></a>Kompilátor upozornění (úroveň 1) C4677
+
+'function': podpis nesoukromého členu obsahuje typ sestavení private 'private_type.
+
+Typ, který nemá přístupnost public mimo sestavení používá typ, který má privátní přístup mimo sestavení. Komponenta, která odkazuje na typ veřejné sestavení nebude možné používat typ člena nebo členy, které odkazují na typ sestavení private.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4677.
+
+```
+// C4677.cpp
+// compile with: /clr /c /W1
+delegate void TestDel();
+public delegate void TestDel2();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;   // C4677
+   static event TestDel2^ MyClass_Event2;   // OK
+};
 ```

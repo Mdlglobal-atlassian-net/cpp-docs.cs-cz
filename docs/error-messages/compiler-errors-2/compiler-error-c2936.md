@@ -1,5 +1,5 @@
 ---
-title: C2936 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2936 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d3cfd6e9142e5c10906eaa94d5a1466b0d0bd19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 839d2f3dd005e4bd8bd697c74e5940a0331c1acc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054243"
 ---
-# <a name="compiler-error-c2936"></a>C2936 chyby kompilátoru
-'class': id – třída typu předefinovat jako proměnnou a globální data  
-  
- Třídu generic nebo šablonu nelze použít jako globální data proměnné.  
-  
- Tato chyba může být způsobena Pokud nesprávně se splní složené závorky.  
-  
- Následující ukázka generuje C2936:  
-  
-```  
-// C2936.cpp  
-// compile with: /c  
-template<class T> struct TC { };   
-int TC<int>;   // C2936  
-  
-// OK  
-struct TC2 { };   
-int TC2;  
-```  
-  
- C2936 může dojít také při použití obecných typů:  
-  
-```  
-// C2936b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref struct GC {};  
-int GC<int>;   // C2936  
-  
-// OK  
-ref struct GC2 {};  
-int GC2;  
+# <a name="compiler-error-c2936"></a>Chyba kompilátoru C2936
+
+'class': typ třídy id se předefinovalo jako proměnnou globálních dat
+
+Rozvrhy generic nebo šablony třídy nelze použít jako globální data proměnnou.
+
+Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+
+Následující ukázka generuje C2936:
+
+```
+// C2936.cpp
+// compile with: /c
+template<class T> struct TC { };
+int TC<int>;   // C2936
+
+// OK
+struct TC2 { };
+int TC2;
+```
+
+C2936 může dojít také při použití obecných typů:
+
+```
+// C2936b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC {};
+int GC<int>;   // C2936
+
+// OK
+ref struct GC2 {};
+int GC2;
 ```

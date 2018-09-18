@@ -1,5 +1,5 @@
 ---
-title: Typ char | Microsoft Docs
+title: Typ char | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4db02292398da5c35f2894d4ce278cea88a584
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eec964d9b81ee93f888bbd4152f06f6bdf51b6d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053827"
 ---
 # <a name="type-char"></a>Znakový typ
-`char` Typ se používá k ukládání celočíselnou hodnotu členem reprezentovat znaková sada. Zda je celočíselná hodnota kód ASCII odpovídající zadanému znaku.  
-  
- **Konkrétní Microsoft**  
-  
- Znak hodnoty typu `unsigned char` mít rozsahu od 0 do 0xFF hexadecimální. A **podepsané char** má rozsah 0x80 do 0x7F. Tyto rozsahy převede 0 do 255 desítkové soustavy a -128 do + 127 decimal, v uvedeném pořadí. Možnost kompilátoru /J změní výchozí hodnoty **podepsané** k `unsigned`.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Úložiště základních typů](../c-language/storage-of-basic-types.md)
+
+`char` Typ se používá k ukládání celočíselnou hodnotu členu reprezentovatelné znakové sady. Tuto hodnotu celého čísla je kód ASCII odpovídající zadanému znaku.
+
+**Specifické pro Microsoft**
+
+Znak hodnoty typu `unsigned char` mají rozsah od 0 do 0xFF šestnáctkové. A **podepsané char** má rozsah 0x80 do 0x7F. Tyto rozsahy přeložit a 0 až 255 desetinné -128 do + 127 decimal, v uvedeném pořadí. Možnost kompilátoru /J změní výchozí z **podepsané** k `unsigned`.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Úložiště základních typů](../c-language/storage-of-basic-types.md)

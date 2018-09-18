@@ -1,5 +1,5 @@
 ---
-title: C3482 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3482 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7ea983d13f03add2772da173062b1ad5652d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9921c25575888ab2db1c092f9325002d1becb921
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053372"
 ---
-# <a name="compiler-error-c3482"></a>C3482 chyby kompilátoru
-'this' dá použít jenom jako zachycení lambda v rámci nestatické členské funkce  
-  
- Nelze předat `this` do seznamu zachycení výrazu lambda, který je deklarován v statickou metodu nebo globální funkce.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Převést nadřazených funkce nestatickou metodu, nebo  
-  
--   Odeberte `this` ukazatel ze seznamu zachycení výrazu lambda.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad generuje C3482:  
-  
-```  
-// C3482.cpp  
-// compile with: /c  
-  
-class C  
-{  
-public:  
-   static void staticMethod()  
-   {  
-      [this] {}(); // C3482  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3482"></a>Chyba kompilátoru C3482
+
+"this" jde použít jenom jako zachycení lambdy v rámci funkce nestatického člena
+
+Nelze předat `this` na seznamu zachycení výrazu lambda, který je deklarován v statickou metodu nebo globálními funkcemi.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Převést na nestatické metody nadřazené funkce nebo
+
+- Odeberte `this` ukazatele v seznamu zachycení výrazu lambda.
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C3482:
+
+```
+// C3482.cpp
+// compile with: /c
+
+class C
+{
+public:
+   static void staticMethod()
+   {
+      [this] {}(); // C3482
+   }
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Řídicí proudy | Microsoft Docs
+title: Řídicí proudy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cb0d049cceba82a7812c3b676c6955c433b439
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47c3dac2b6e0297594ddf441696a956d98bd82a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055465"
 ---
 # <a name="controlling-streams"></a>Řídicí proudy
-[fopen –](../c-runtime-library/reference/fopen-wfopen.md) vrátí adresu objekt typu `FILE`. Použijte tuto adresu jako `stream` argument několik – funkce knihovny provádět různé operace v otevření souboru. Pro datový proud s bajtů všechny vstupní probíhá jako v případě, že každý znak je pro čtení voláním [fgetc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstup probíhá jako v případě, že každý znak je zapsán voláním [fputc –](../c-runtime-library/reference/fputc-fputwc.md). Pro datový proud s široké, všechny vstupní probíhá jako v případě, že každý znak je pro čtení voláním [fgetwc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstup probíhá jako v případě, že každý znak je zapsán voláním [fputwc –](../c-runtime-library/reference/fputc-fputwc.md).  
-  
- Soubor můžete zavřít voláním [fclose –](../c-runtime-library/reference/fclose-fcloseall.md), po jejímž uplynutí adresu `FILE` objekt je neplatný.  
-  
- A `FILE` objekt ukládá stav datového proudu, včetně:  
-  
--   Indikátor chyby nastavit nenulové hodnoty funkcí, která zaznamená pro čtení nebo zápisu došlo k chybě.  
-  
--   Indikátor end souboru ve funkci, která zaznamená konec souboru při čtení nastavení nenulové hodnoty.  
-  
--   Indikátor pozice souboru Určuje další bajtů v datovém proudu pro čtení nebo zápis, pokud soubor může podporovat umísťovací požadavky.  
-  
--   A [stream stavu](../c-runtime-library/stream-states.md) Určuje, zda datový proud bude přijímat čtení a zápisy a jestli nevázaný datového proudu, zaměřené na konkrétní bajtů, nebo celý zaměřené na konkrétní.  
-  
--   Převod stavu pamatuje, že stav všech částečně sestaví nebo vygenerovat zobecněn vícebajtových znaků, jakož i žádný stav posunutí pro pořadí bajtů v souboru).  
-  
--   Vyrovnávací paměť souboru Určuje adresu a velikost pole objekt, který funkce knihovny můžete použít ke zlepšení výkonu pro čtení a operace zápisu do datového proudu.  
-  
- Nijak nemění žádné hodnotou uloženou v `FILE` objektu nebo do vyrovnávací paměti souboru, který zadáte pro použití s objektem. Nelze zkopírovat `FILE` objektu a přenositelnosti použijte adresu kopie jako `stream` argument funkce knihovny.  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory a proudy](../c-runtime-library/files-and-streams.md)
+
+[fopen –](../c-runtime-library/reference/fopen-wfopen.md) vrátí adresu objektu typu `FILE`. Použijte tuto adresu, jako `stream` argument pro několik funkcí knihovna můžete provádět různé operace na otevřený soubor. Pro datový proud bajtů, všechny vstupní probíhá jakoby každý znak je pro čtení voláním [fgetc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstupní probíhá jakoby každý znak je vytvořená systémem volání [fputc](../c-runtime-library/reference/fputc-fputwc.md). Pro celou datový proud, všechny vstupní probíhá jakoby každý znak je pro čtení voláním [fgetwc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstupní probíhá jakoby každý znak je vytvořená systémem volání [fputwc –](../c-runtime-library/reference/fputc-fputwc.md).
+
+Soubor můžete zavřít voláním [fclose –](../c-runtime-library/reference/fclose-fcloseall.md), po jejímž uplynutí adresu `FILE` objekt je neplatný.
+
+A `FILE` ukládá stav datového proudu, včetně:
+
+- Indikátor chyby nastavit nenulové funkci, která se zaznamená čtení nebo zápisu došlo k chybě.
+
+- Ve funkci, která narazí na konec souboru při čtení nastavení nenulovou indikátor konce souboru.
+
+- Indikátor pozice v souboru Určuje další bajt v datovém proudu pro čtení nebo zápis, pokud ho může podporovat požadavky na umístění.
+
+- A [Streamovat stav](../c-runtime-library/stream-states.md) Určuje, zda datový proud bude přijímat operací čtení a/nebo zápisy a určuje, zda je datový proud odvázat, orientovaný bajtů, nebo celý orientovaný.
+
+- Stav převodu zapamatuje si, že stav kteréhokoli částečně týkajícím se této nebo vygenerovat zobecněn vícebajtového znaku, stejně jako jakýkoli stav shift pro pořadí bajtů v souboru).
+
+- Vyrovnávací paměť souboru Určuje adresu a velikost pole objektu, který funkce knihovny můžete použít ke zlepšení výkonu pro čtení a operace zápisu do datového proudu.
+
+Neměňte libovolná hodnota uložená v `FILE` objektu nebo ve vyrovnávací paměti souboru, který zadáte pro použití s tímto objektem. Nelze zkopírovat `FILE` objektu a přenositelnosti použijte adresu kopii jako `stream` argument pro funkci knihovny.
+
+## <a name="see-also"></a>Viz také
+
+[Soubory a proudy](../c-runtime-library/files-and-streams.md)

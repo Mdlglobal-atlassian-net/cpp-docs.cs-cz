@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4740 | Microsoft Docs
+title: Upozornění (úroveň 4) C4740 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6260a923da9f48b869707480d64f9be13ef7e9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6353ac464d95e8805a9c9e55488a355f71372508
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056147"
 ---
-# <a name="compiler-warning-level-4-c4740"></a>C4740 kompilátoru upozornění (úroveň 4)
-tok nebo zrušení vloženého kódu asm potlačí globální optimalizace  
-  
- Pokud je přechod v na nebo z `asm` bloku globální optimalizace jsou pro tuto funkci zakázán.  
-  
- Následující ukázka generuje C4740:  
-  
-```  
-// C4740.cpp  
-// compile with: /O2 /W4  
-// processor: x86  
-int main() {  
-   __asm jmp tester  
-   tester:;  
-}  
+# <a name="compiler-warning-level-4-c4740"></a>Kompilátor upozornění (úroveň 4) C4740
+
+Flow nebo z vloženého kódu asm potlačuje globální optimalizaci.
+
+Když je nárůst v na nebo z `asm` bloku, globální optimalizace zakázány pro tuto funkci.
+
+Následující ukázka generuje C4740:
+
+```
+// C4740.cpp
+// compile with: /O2 /W4
+// processor: x86
+int main() {
+   __asm jmp tester
+   tester:;
+}
 ```

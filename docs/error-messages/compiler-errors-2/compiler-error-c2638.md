@@ -1,5 +1,5 @@
 ---
-title: C2638 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2638 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2917b1a947925b8bbd01f366f9540184b839a41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7155de95ec4475a2b7b114292e507685717f8d78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060417"
 ---
-# <a name="compiler-error-c2638"></a>C2638 chyby kompilátoru
-"identifikátor": __based – modifikátor neplatná na ukazatel na člena  
-  
- `__based` Modifikátor nelze použít pro ukazatelé na členy.  
-  
- Následující ukázka generuje C2638:  
-  
-```  
-// C2638.cpp  
-void *a;  
-  
-class C {  
-public:  
-   int i;  
-   int j;  
-   int func();  
-};  
-int __based (a) C::* cpi = &C::i;  // C2638  
-int (__based (a) C::* cpf)() = &C::func; // c2638  
+# <a name="compiler-error-c2638"></a>Chyba kompilátoru C2638
+
+'identifier': ukazatel na ukazatel na člena je neplatný modifikátor __based
+
+`__based` Modifikátor nejde použít pro ukazatele a členy.
+
+Následující ukázka generuje C2638:
+
+```
+// C2638.cpp
+void *a;
+
+class C {
+public:
+   int i;
+   int j;
+   int func();
+};
+int __based (a) C::* cpi = &C::i;  // C2638
+int (__based (a) C::* cpf)() = &C::func; // c2638
 ```

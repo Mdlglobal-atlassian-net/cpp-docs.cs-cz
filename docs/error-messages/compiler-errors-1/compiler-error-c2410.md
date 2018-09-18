@@ -1,5 +1,5 @@
 ---
-title: C2410 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2410 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2a2df0941130c4f2416806a05ce0378373eb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba4c2b57bcae062ccf811e33cf1deaea45f83737
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052449"
 ---
-# <a name="compiler-error-c2410"></a>C2410 chyby kompilátoru
-"identifikátor": název nejednoznačný člena v 'kontextu.  
-  
- Identifikátor je členem více než jeden struktury nebo sjednocení v tomto kontextu.  
-  
- Použijte struktury nebo sjednocení specifikátor u operandu, který chybu způsobil. Struktura nebo sjednocení specifikátor je identifikátor typu `struct` nebo `union` ( `typedef` název nebo proměnnou stejného typu jako struktury nebo sjednocení odkazováno). Levý operand operátoru první výběru členů (.) používat operand musí být specifikátor.
+# <a name="compiler-error-c2410"></a>Chyba kompilátoru C2410
+
+'identifier': nejednoznačný název členu "context"
+
+Identifikátor je členem více než jeden struktury nebo sjednocení v tomto kontextu.
+
+Použijte specifikátor struktury nebo sjednocení na operand, který způsobil chybu. Je identifikátor typu struktury nebo sjednocení specifikátor `struct` nebo `union` ( `typedef` název nebo proměnnou stejného typu jako struktury nebo sjednocení, na kterou se odkazuje). Levý operand první operátor výběru členů (.) použít operand musí být specifikátor.

@@ -1,5 +1,5 @@
 ---
-title: improper_scheduler_detach – třída | Microsoft Docs
+title: improper_scheduler_detach – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd22c745a3b913c2973fa7d09609cab7f337ee1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd492f28f2aba76e9d6e6d3b381d4d0de4c30202
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059189"
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach – třída
-Tato třída popisuje výjimka vyvolaná při `CurrentScheduler::Detach` metoda je volána v kontextu, který nebyl přidán do jakékoli služby Plánovač pomocí `Attach` metodu `Scheduler` objektu.  
+Tato třída popisuje výjimku vyvolána, když `CurrentScheduler::Detach` metoda je volána u objektu context, která nebyla připojena k žádné scheduleru pomocí `Attach` metodu `Scheduler` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class improper_scheduler_detach : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> improper_scheduler_detach 
+##  <a name="ctor"></a> improper_scheduler_detach – 
 
  Vytvoří `improper_scheduler_detach` objektu.  
   
@@ -63,9 +63,9 @@ improper_scheduler_detach() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Scheduler – třída](scheduler-class.md)

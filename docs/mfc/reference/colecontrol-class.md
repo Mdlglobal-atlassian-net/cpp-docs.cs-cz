@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050096"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 Výkonná základní třída pro vývoj ovládacích prvků OLE.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 Ve výchozím nastavení `GetControlFlags` vrátí `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Pokud nastavíte, funkce používá begin malířského přizpůsobené pro ovládací prvky OLE místo [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) rozhraní API (ve výchozím nastavení).
-
-`clipPaintDC` Není-li nastavit, zakáže volání `IntersectClipRect` provedené `COleControl` a získává výhody malé rychlost. Pokud používáte aktivace bez oken, nemá příznak žádný vliv.
-
-`pointerInactive` Pokud nastavení, zatímco váš ovládací prvek je neaktivní tím, že poskytuje interakce s myší v `COleControl`provádění `IPointerInactive` rozhraní, které je ve výchozím nastavení zakázané.
-
-`noFlickerActivate` Pokud nastavení, eliminuje velmi výkresu operace a související vizuální blikání. Použijte, když váš ovládací prvek vykresluje stejně jako v aktivní a neaktivní stavy. Pokud používáte aktivace bez oken, nemá příznak žádný vliv.
-
-`windowlessActivate` Pokud nastavení, označuje ovládací prvek používá aktivace bez oken.
-
-`canOptimizeDraw` Pokud nastaveno, označuje, že ovládací prvek provede optimalizované vykreslení, pokud kontejner podporuje.
+|||
+|-|-|
+|`fastBeginPaint`|Pokud nastavíte, funkce používá begin malířského přizpůsobené pro ovládací prvky OLE místo [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) rozhraní API (ve výchozím nastavení).|
+|`clipPaintDC`|Není-li nastavit, zakáže volání `IntersectClipRect` provedené `COleControl` a získává výhody malé rychlost. Pokud používáte aktivace bez oken, nemá příznak žádný vliv.|
+|`pointerInactive`|Pokud nastavení, zatímco váš ovládací prvek je neaktivní tím, že poskytuje interakce s myší v `COleControl`provádění `IPointerInactive` rozhraní, které je ve výchozím nastavení zakázané.|
+|`noFlickerActivate`|Pokud nastavení, eliminuje velmi výkresu operace a související vizuální blikání. Použijte, když váš ovládací prvek vykresluje stejně jako v aktivní a neaktivní stavy. Pokud používáte aktivace bez oken, nemá příznak žádný vliv.|
+|`windowlessActivate`|Pokud nastavení, označuje ovládací prvek používá aktivace bez oken.|
+|`canOptimizeDraw`|Pokud nastaveno, označuje, že ovládací prvek provede optimalizované vykreslení, pokud kontejner podporuje.|
 
 Další informace o `GetControlFlags` a další optimalizace ovládací prvky OLE, najdete v článku [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 

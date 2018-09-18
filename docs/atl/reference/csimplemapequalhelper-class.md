@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1670ff7ed53d05b1dfc09e6953650892b0335f61
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 654b801c61d00f179d6d7ef88763b323d6503873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050577"
 ---
 # <a name="csimplemapequalhelper-class"></a>Csimplemapequalhelper – třída
 
@@ -33,16 +33,16 @@ Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimple
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelper
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*TKey*  
+*TKey*<br/>
 Klíčovým prvkem.
 
-*TVal*  
+*TVal*<br/>
 Hodnota elementu.
 
 ## <a name="members"></a>Členové
@@ -72,10 +72,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametry
 
-*k1*  
+*k1*<br/>
 První klíč.
 
-*k2*  
+*k2*<br/>
 Druhý klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -92,10 +92,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Parametry
 
-*V1*  
+*V1*<br/>
 První hodnota.
 
-*v2*  
+*v2*<br/>
 Druhá hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -104,5 +104,5 @@ Vrátí true, pokud hodnoty jsou stejné, jinak hodnota false.
 
 ## <a name="see-also"></a>Viz také
 
-[Csimplemapequalhelperfalse – třída](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+[CSimpleMapEqualHelperFalse – třída](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

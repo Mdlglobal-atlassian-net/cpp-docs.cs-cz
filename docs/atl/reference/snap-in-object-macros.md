@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65995f24e58b0bdce4a15adc72de0b60ded644dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050551"
 ---
 # <a name="snap-in-object-macros"></a>Makra objektů modulu snap-In
 
@@ -57,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*  
+*Název třídy*<br/>
 [in] Název třídy datového rozšíření modulu snap-in.
 
 ### <a name="remarks"></a>Poznámky
@@ -78,7 +78,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Parametry
 
-*_třídy*  
+*_třídy*<br/>
 [in] Určuje třídu objektu modulu Snap-In.
 
 ### <a name="example"></a>Příklad
@@ -111,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Parametry
 
-*_třídy*  
+*_třídy*<br/>
 [in] Určuje třídu objektu modulu Snap-In.
 
 ### <a name="example"></a>Příklad
@@ -128,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Parametry
 
-*dataClass*  
+*dataClass*<br/>
 [in] Třída dat rozšíření modulu snap-in.
 
 ### <a name="remarks"></a>Poznámky
@@ -149,7 +149,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Parametry
 
-*dataClass*  
+*dataClass*<br/>
 [in] Třída dat rozšíření modulu snap-in.
 
 ### <a name="remarks"></a>Poznámky
@@ -170,7 +170,7 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Určuje místní nabídky objektu modulu Snap-In.
 
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
@@ -183,7 +183,7 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Určuje ovládací prvek panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky

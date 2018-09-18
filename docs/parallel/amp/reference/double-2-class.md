@@ -1,5 +1,5 @@
 ---
-title: double_2 – třída | Microsoft Docs
+title: double_2 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d607fd0d63eb1e4fc968b4f83ce71d19eda4cfd0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059287"
 ---
 # <a name="double2-class"></a>double_2 – třída
-Představují krátké vektor 2 double.  
+Představuje krátký vektor 2 double.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ class double_2;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class double_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[double_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[double_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -90,13 +90,13 @@ class double_2;
 |Název|Popis|  
 |----------|-----------------|  
 |double_2::Operator-||  
-|double_2::Operator--||  
+|double_2::Operator-||  
 |double_2::Operator * =||  
-|/ double_2::Operator = – operátor||  
+|double_2::Operator / =||  
 |double_2::Operator ++||  
 |double_2::Operator +=||  
 |double_2::Operator =||  
-|double_2::Operator-=||  
+|operátor double_2::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -125,9 +125,9 @@ class double_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> double_2 
+##  <a name="ctor"></a> double_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 double_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline double_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="double_2__size"></a> Velikost 
 

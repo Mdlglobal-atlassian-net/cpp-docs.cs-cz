@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_registration – třída | Microsoft Docs
+title: cancellation_token_registration – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059590"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration – třída
-`cancellation_token_registration` Třída reprezentuje zpětné volání oznámení z `cancellation_token`. Když `register` metodu `cancellation_token` se používá k přijetí oznámení o zrušení v případech, `cancellation_token_registration` jako popisovač pro zpětné volání tak, aby volající požadovat zpětného volání konkrétní už být provedeny prostřednictvím použití sevrátíobjekt`deregister` metoda.  
+`cancellation_token_registration` Třída představuje zpětné volání upozornění z `cancellation_token`. Když `register` metodu na `cancellation_token` slouží k přijímání oznámení tom, kdy kde zrušení dojde, `cancellation_token_registration` objekt je vrácen jako popisovač pro zpětné volání tak, aby volající mohl požadovat konkrétní zpětné volání již nebude provedeno pomocí `deregister` metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,13 +59,13 @@ class cancellation_token_registration;
   
  **Namespace:** souběžnosti  
   
-##  <a name="dtor"></a> ~ cancellation_token_registration 
+##  <a name="dtor"></a> ~ cancellation_token_registration – 
 
 ```
 ~cancellation_token_registration();
 ```  
   
-##  <a name="ctor"></a> cancellation_token_registration 
+##  <a name="ctor"></a> cancellation_token_registration – 
 
 ```
 cancellation_token_registration();
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Má zkopírovat nebo přesunout.
+ 
 ##  <a name="operator_neq"></a> Operator! = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
-  
+*_Rhs*<br/>
+`cancellation_token_registration` k porovnání.
+ 
 ### <a name="return-value"></a>Návratová hodnota  
   
 ##  <a name="operator_eq"></a> operátor = 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Přiřadit.
+ 
 ### <a name="return-value"></a>Návratová hodnota  
   
 ##  <a name="operator_eq_eq"></a> Operator == 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
-  
+*_Rhs*<br/>
+`cancellation_token_registration` k porovnání.
+ 
 ### <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="see-also"></a>Viz také  

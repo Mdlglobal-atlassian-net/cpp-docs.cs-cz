@@ -1,5 +1,5 @@
 ---
-title: C3859 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3859 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2f8c51f25c09881e10e980276fc2035a6a70aed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ac06a09a6ad66384fd2b5423e3df046771f7653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053386"
 ---
-# <a name="compiler-error-c3859"></a>C3859 chyby kompilátoru
-rozsah virtuální paměti pro PCH překročena; prosím znovu zkompiluje s možností příkazového řádku z '-Zmvalue' nebo vyšší  
-  
- Předkompilované hlavičky je příliš malá pro množství dat, které kompilátor pokouší put v ní. Použití **/Zm** kompilátoru příznak k určení větší hodnotu předkompilovaný hlavičkový soubor. Další informace najdete v tématu [/Zm (zadat paměti omezení přidělení předkompilované hlavičky)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+# <a name="compiler-error-c3859"></a>Chyba kompilátoru C3859
+
+rozsah virtuální paměti pro PCH překročil; Zkompilujte znovu s možností příkazového řádku z "-Zmvalue" nebo vyšší
+
+Předkompilované hlavičky je moc malé množství dat, který kompilátor pokouší vložit v ní. Použití **/Zm** kompilátoru příznak pro označení větší hodnotu pro soubor předkompilované hlavičky. Další informace najdete v tématu [/Zm (zadat předkompilované hlavičky Memory Allocation Limit)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067edba7bc0a8819925af533dd48a34c6f6e4536
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4b3c7d53e3500b5dd97fdbd49e4006916cd1a80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055452"
 ---
 # <a name="catlbasemodule-class"></a>Catlbasemodule – třída
 
@@ -93,7 +93,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Instance prostředku pro přidání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -122,7 +122,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*i*  
+*i*<br/>
 Počet instancí prostředku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -175,7 +175,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Instance prostředku pro odebrání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -192,7 +192,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Nová instance prostředku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,5 +201,5 @@ Vrátí instanci aktualizovaný prostředek.
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

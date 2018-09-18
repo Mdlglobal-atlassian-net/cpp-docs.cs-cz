@@ -1,5 +1,5 @@
 ---
-title: C3396 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3396 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bc75aec0cd4f92ebced316c76f95598802e4e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e96231cf72b144c58e925fb2f74a6be29e9030f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047444"
 ---
-# <a name="compiler-error-c3396"></a>C3396 chyby kompilátoru
-'atribut': vlastní atribut nebyl nalezen v atribut namespace.  
-  
- C3396 označuje, že nepoužíváte aktuální modulu CLR.  Přeinstalujte vaší CLR vyřešit.
+# <a name="compiler-error-c3396"></a>Chyba kompilátoru C3396
+
+'attribute': vlastní atribut nebyl nalezen v atribut namespace.
+
+C3396 označuje, že nepoužíváte aktuální modul common language runtime.  Přeinstalujte vaše CLR k vyřešení.

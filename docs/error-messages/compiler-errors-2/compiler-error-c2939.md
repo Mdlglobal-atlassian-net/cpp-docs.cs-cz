@@ -1,5 +1,5 @@
 ---
-title: C2939 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2939 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b4cc897c5d24b841e7ad5c8428cd10d9a36961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d397eff2cfe561ace6f29b00601941779ef2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053145"
 ---
-# <a name="compiler-error-c2939"></a>C2939 chyby kompilátoru
-'class': id – třída typu předefinovat jako proměnnou a místní data  
-  
- Třídu generic nebo šablonu nelze použít jako proměnnou místní data.  
-  
- Tato chyba může být způsobena Pokud nesprávně se splní složené závorky.  
-  
- Následující ukázka generuje C2939:  
-  
-```  
-// C2939.cpp  
-template<class T>  
-struct TC { };   
-int main() {  
-   int TC<int>;   // C2939  
-   int TC;   // OK  
-}  
-```  
-  
- C2939 může dojít také při použití obecných typů:  
-  
-```  
-// C2939b.cpp  
-// compile with: /clr  
-generic<class T>  
-ref struct GC { };  
-  
-int main() {  
-   int GC<int>;   // C2939  
-   int GC;   // OK  
-}  
+# <a name="compiler-error-c2939"></a>Chyba kompilátoru C2939
+
+'class': typ třídy id se předefinovalo jako místní datová proměnná
+
+Rozvrhy generic nebo šablony třídy nelze použít jako proměnná místní data.
+
+Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+
+Následující ukázka generuje C2939:
+
+```
+// C2939.cpp
+template<class T>
+struct TC { };
+int main() {
+   int TC<int>;   // C2939
+   int TC;   // OK
+}
+```
+
+C2939 může dojít také při použití obecných typů:
+
+```
+// C2939b.cpp
+// compile with: /clr
+generic<class T>
+ref struct GC { };
+
+int main() {
+   int GC<int>;   // C2939
+   int GC;   // OK
+}
 ```

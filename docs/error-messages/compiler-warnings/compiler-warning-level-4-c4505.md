@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4505 | Microsoft Docs
+title: Upozornění (úroveň 4) C4505 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054776"
 ---
-# <a name="compiler-warning-level-4-c4505"></a>C4505 kompilátoru upozornění (úroveň 4)
-'function': neregistrované místní funkce byla odebrána.  
-  
- Danou funkci je místní a není odkazovaná v těle modul; Proto funkce je neaktivní kód.  
-  
- Kompilátor nevygeneroval kód pro tuto funkci neaktivní.
+# <a name="compiler-warning-level-4-c4505"></a>Kompilátor upozornění (úroveň 4) C4505
+
+'function': neodkazovaná lokální funkce se odebrala.
+
+Danou funkci je místní a není odkazovaný v těle modul; Proto je funkce mrtvý kód.
+
+Kompilátor negeneruje kód pro tuto funkci neaktivní.

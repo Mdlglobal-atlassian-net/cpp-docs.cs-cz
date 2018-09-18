@@ -1,5 +1,5 @@
 ---
-title: _stat – struktura, st_mode – konstanty pole | Microsoft Docs
+title: _stat – struktura, st_mode – konstanty pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,39 +45,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f603757706bfdeeaaefe5b6d33cd94bb2624c389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051135"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat – struktura, st_mode – konstanty pole
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <sys/stat.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- K označení typ souboru v se používají tyto konstanty **st_mode –** pole z [_stat – struktura](../c-runtime-library/standard-types.md).  
-  
- Konstanty bitová maska jsou následující:  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_S_IFMT`|Maska typu souboru|  
-|`_S_IFDIR`|Adresář|  
-|`_S_IFCHR`|Speciální znak (označuje zařízení, pokud nastavení)|  
-|`_S_IFREG`|Regulární|  
-|`_S_IREAD`|Oprávnění ke čtení, vlastník|  
-|`_S_IWRITE`|Oprávnění zapisovat, vlastník|  
-|`_S_IEXEC`|Spuštění nebo vyhledávání oprávnění vlastníka|  
-  
-## <a name="see-also"></a>Viz také  
- [_stat, _wstat – funkce](../c-runtime-library/reference/stat-functions.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [Standardní typy](../c-runtime-library/standard-types.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <sys/stat.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty se používají k označení typu souboru v **st_mode –** pole [_stat – struktura](../c-runtime-library/standard-types.md).
+
+Konstanty bitové masky jsou popsané níže:
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_S_IFMT`|Zadejte masku souboru.|
+|`_S_IFDIR`|Adresář|
+|`_S_IFCHR`|Speciální znaky (označuje zařízení, pokud je nastavení)|
+|`_S_IFREG`|Pravidelné|
+|`_S_IREAD`|Oprávnění ke čtení, vlastníka|
+|`_S_IWRITE`|Oprávnění zapisovat, vlastníka|
+|`_S_IEXEC`|Spuštění/hledání oprávnění vlastníka|
+
+## <a name="see-also"></a>Viz také
+
+[_stat, _wstat – funkce](../c-runtime-library/reference/stat-functions.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[Standardní typy](../c-runtime-library/standard-types.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

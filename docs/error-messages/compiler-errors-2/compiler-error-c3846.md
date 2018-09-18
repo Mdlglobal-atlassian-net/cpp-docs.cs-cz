@@ -1,5 +1,5 @@
 ---
-title: C3846 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3846 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d5650d1743ba379ce065d4051bfed807a1df71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f8b44661534dca1beb39c0407f882d41f1f503c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055127"
 ---
-# <a name="compiler-error-c3846"></a>C3846 chyby kompilátoru
-'symbol': nelze importovat symbol 'assembly2': jako 'symbol' již byla naimportována ze sestavení 'assembly1'  
-  
- Symbol nelze importovat z odkazovaného sestavení, protože byly dříve importovány z odkazované sestavení.  
-  
+# <a name="compiler-error-c3846"></a>Chyba kompilátoru C3846
+
+'symbol': nejde naimportovat symbol z: 'assembly2': jako 'symbol' již byl importován z jiného sestavení "assembly1.
+
+Symbol nejde importovat z odkazovaných sestavení, protože byly dříve importovány z odkazovaných sestavení.
+
 ## <a name="example"></a>Příklad
-Následující ukázka generuje C3846:  
-  
-```  
-// C3846a.cpp  
-// compile with: /LD /clr  
-public ref struct G  
-{  
-};  
-```  
-  
- A pak zkompilovat toto:  
-  
-```  
-// C3846b.cpp  
-// compile with: /clr  
-#using "c3846a.dll"  
-#using "c3846a.obj"   // C3846  
-  
-int main()  
-{  
-}  
-```  
+
+Následující ukázka generuje C3846:
+
+```
+// C3846a.cpp
+// compile with: /LD /clr
+public ref struct G
+{
+};
+```
+
+A potom zkompilujete toto:
+
+```
+// C3846b.cpp
+// compile with: /clr
+#using "c3846a.dll"
+#using "c3846a.obj"   // C3846
+
+int main()
+{
+}
+```

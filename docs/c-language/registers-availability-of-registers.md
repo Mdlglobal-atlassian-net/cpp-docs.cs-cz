@@ -1,5 +1,5 @@
 ---
-title: 'Registry: Dostupnost registrů | Microsoft Docs'
+title: 'Registry: Dostupnost registrů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a63bf8980ea9022a1cd06bc890512db8ba85a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c7c09bccda07358384ca6b0be8d3ea824bc99e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055140"
 ---
 # <a name="registers-availability-of-registers"></a>Registry: dostupnost registrů
-**ANSI 3.5.1** v rozsahu, ke kterému objekty ve skutečnosti se může v registrech pomocí register – specifikátor třídy úložiště  
-  
- Kompilátor nerespektuje požadavky uživatele na proměnné registru. Místo toho provádí při optimalizaci své vlastní volby.  
-  
-## <a name="see-also"></a>Viz také  
- [Chování definované implementací](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.1** rozsahu, do které objekty může skutečně umístit do registrů pomocí specifikátoru třídy úložiště register
+
+Kompilátor nerespektuje požadavky uživatele na proměnné registru. Místo toho provádí při optimalizaci své vlastní volby.
+
+## <a name="see-also"></a>Viz také
+
+[Chování definované implementací](../c-language/implementation-defined-behavior.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4557 | Microsoft Docs
+title: Upozornění (úroveň 3) C4557 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055298"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>C4557 kompilátoru upozornění (úroveň 3)
-'__assume' obsahuje efekt 'effect'  
-  
- Hodnota předaná [__assume](../../intrinsics/assume.md) statement2 byla změněna.  
-  
- Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.  
-  
- Následující ukázka generuje C4557:  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+# <a name="compiler-warning-level-3-c4557"></a>Kompilátor upozornění (úroveň 3) C4557
+
+'__assume' obsahuje efekt 'effect'
+
+Hodnota předaná [__assume](../../intrinsics/assume.md) příkaz2 byla změněna.
+
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+
+Následující ukázka generuje C4557:
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046248"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
@@ -153,25 +153,25 @@ Implementujte metodu, jak je znázorněno níže:
 Jakmile jednou sestavíte projekt, můžete otestovat stránky vlastností a pomocný objekt pomocí jednoduchého makro, které můžete vytvořit a spustit ve vývojovém prostředí sady Visual Studio. Toto makro vytvoří pomocné rutiny a pak volat jeho `ShowPage` metodu pomocí identifikátor ProgID **DocProperties** stránku vlastností a `IUnknown` ukazatel aktuálně aktivním dokumentem v editoru sady Visual Studio. Kód, který potřebujete pro toto makro je zobrazena níže:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Když spustíte toto makro, na stránce vlastností zobrazí zobrazuje název souboru a stav jen pro čtení aktuálního textového dokumentu. Umožňuje zápis do dokumentu ve vývojovém prostředí; jsou pouze údaje stavu jen pro čtení dokumentu To nemá vliv na atribut jen pro čtení souboru na disku.
 
 ## <a name="see-also"></a>Viz také
 
-[Stránky vlastností](../atl/atl-com-property-pages.md)   
+[Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
 [Ukázka ATLPages](../visual-cpp-samples.md)

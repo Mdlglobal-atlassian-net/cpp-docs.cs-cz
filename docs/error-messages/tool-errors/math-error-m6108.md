@@ -1,5 +1,5 @@
 ---
-title: Chyba matematické operace M6108 | Microsoft Docs
+title: Chyba matematické operace M6108 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfeca48aa04ebfbc097649e5c25253166c50dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1624a89b472733b4adb5563c8ba52e0b03dcaa2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048614"
 ---
 # <a name="math-error-m6108"></a>Chyba matematické operace M6108
-vypočítat druhou odmocninu  
-  
- Operand v rámci operace druhou odmocninu bylo záporné.  
-  
- Program se ukončí s ukončovacím kódem 136.  
-  
+
+Druhá odmocnina
+
+Operand v rámci operace druhou odmocninu byla záporná.
+
+Program se ukončí s ukončovacím kódem 136.
+
 > [!NOTE]
->  `sqrt` Funkce běhové knihovny jazyka C a vnitřní funkce FORTRAN **SQRT** nevydávají této chybě. C `sqrt` funkce kontroluje argument před provedením operace a vrací hodnotu chyby, pokud operand je záporná. FORTRAN **SQRT** funkce generuje chyba domény [operace M6201](../../error-messages/tool-errors/math-error-m6201.md) místo této chyby.
+>  `sqrt` Funkce knihovny run-time jazyka C a vnitřní funkce až po FORTRAN **SQRT** negenerují k této chybě. C `sqrt` funkce zkontroluje argument před provedením operace a vrací chybovou hodnotu, pokud operand je záporný. FORTRAN **SQRT** funkce generuje chybu domény [operace M6201](../../error-messages/tool-errors/math-error-m6201.md) místo této chyby.

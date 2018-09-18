@@ -1,5 +1,5 @@
 ---
-title: C2439 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2439 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058409"
 ---
-# <a name="compiler-error-c2439"></a>C2439 chyby kompilátoru
-"identifikátor": člen nebylo možné inicializovat.  
-  
- Třída, struktura nebo členů sjednocení nelze inicializovat.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Probíhá pokus o inicializaci nepřímých základní třídu nebo strukturu.  
-  
-2.  Probíhá pokus o inicializaci zděděné členem třídu nebo strukturu. Pomocí konstruktoru třídu nebo strukturu, musí být inicializován zděděného členu.
+# <a name="compiler-error-c2439"></a>Chyba kompilátoru C2439
+
+'identifier': člen nešel inicializovat
+
+Třídy, struktury nebo člen sjednocení nelze inicializovat.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Došlo k pokusu o inicializaci nepřímá základní třída nebo struktura.
+
+1. Došlo k pokusu o inicializaci zděděného člena třídy nebo struktury. Zděděný člen musí být inicializován pomocí konstruktoru třídy nebo struktury.

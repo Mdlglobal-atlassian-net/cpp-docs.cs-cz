@@ -1,5 +1,5 @@
 ---
-title: C2153 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2153 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d288434cce1e1584a61040145b07d26defd9dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb3283ff4d27b6c939434ac3df8f8c1febf0eb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051422"
 ---
-# <a name="compiler-error-c2153"></a>C2153 chyby kompilátoru
-šestnáctkových konstanty musí mít alespoň jeden číslice v hexadecimálním formátu  
-  
- Hexadecimální konstanty 0 x 0 X a \x nejsou platné. Alespoň jedna číslice v hexadecimálním formátu postupujte x nebo X.  
-  
- Následující ukázka generuje C2153:  
-  
-```  
-// C2153.cpp  
-int main() {  
-   int a= 0x;    // C2153  
-   int b= 0xA;   // OK  
-}  
+# <a name="compiler-error-c2153"></a>Chyba kompilátoru C2153
+
+hexadecimální konstanty musí mít alespoň jednu číslici hex
+
+Šestnáctkové konstanty 0 x, 0 X a \x nejsou platné. Musí splňovat aspoň jednu číslici hex x nebo X.
+
+Následující ukázka generuje C2153:
+
+```
+// C2153.cpp
+int main() {
+   int a= 0x;    // C2153
+   int b= 0xA;   // OK
+}
 ```

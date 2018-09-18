@@ -1,5 +1,5 @@
 ---
-title: C3309 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3309 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390740c3a7083ede314f58a7bc68432c243583ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d9d5f80d6c3a32f77637725e8ca53f1fdbfd51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055478"
 ---
-# <a name="compiler-error-c3309"></a>C3309 chyby kompilátoru
-'macro_name': název modulu nemůže mít makra nebo klíčové slovo  
-  
- Hodnota, kterou předáte pro vlastnost název atributu, modul nemůže být symbol pro preprocesor rozbalte; musí být řetězcový literál.  
-  
- Následující ukázka generuje C3309:  
-  
-```  
-// C3309.cpp  
-#define NAME MyModule  
-[module(name="NAME")];   // C3309  
-// Try the following line instead  
-// [module(name="MyModule")];  
-[coclass]  
-class MyClass {  
-public:  
-   void MyFunc();  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3309"></a>Chyba kompilátoru C3309
+
+'macro_name': název modulu nemůže být makro ani klíčové slovo
+
+Hodnota, kterou předat vlastnost name atributu modul nemůže být symbol preprocesoru, aby rozbalte; musí být řetězcový literál.
+
+Následující ukázka generuje C3309:
+
+```
+// C3309.cpp
+#define NAME MyModule
+[module(name="NAME")];   // C3309
+// Try the following line instead
+// [module(name="MyModule")];
+[coclass]
+class MyClass {
+public:
+   void MyFunc();
+};
+
+int main() {
+}
 ```

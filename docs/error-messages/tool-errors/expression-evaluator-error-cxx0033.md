@@ -1,5 +1,5 @@
 ---
-title: CXX0033 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0033 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 720b1aec6c9be16879119bc0e8148a301507577a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04f37b53c30d36a43d339132bfd9baca3e5ec70c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057194"
 ---
 # <a name="expression-evaluator-error-cxx0033"></a>Chyba při vyhodnocování výrazu CXX0033
-došlo k chybě v informace o typu OMF  
-  
- Spustitelný soubor nemá platný objekt modulu formátu (OMF) pro ladění.  
-  
- Tato chyba je stejný jako CAN0033.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Spustitelný soubor nebyl vytvořen s linkeru vydané s touto verzí aplikace Visual C++. Znovu připojit pomocí aktuální verze LINK.exe kód objektu.  
-  
-2.  Soubor .exe mohlo dojít k poškození. Znovu zkompiluje a znovu připojit programu.
+
+Chyba v omf – informace o typu
+
+Spustitelný soubor nemá formát modulu platný objekt (omf –) pro ladění.
+
+Tato chyba se shoduje s CAN0033.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Spustitelný soubor nebyl vytvořen pomocí linkeru vydané s touto verzí sady Visual C++. Znovu propojit objektový kód v aktuální verzi LINK.exe.
+
+1. Tento soubor .exe je poškozený. Znovu zkompilovat a znovu propojit do programu.

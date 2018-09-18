@@ -29,44 +29,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db24214cde4358e55f86ce5ca60f3547220511f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22416f4036d79f9e9b7c95f1cf9098e450533f39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054269"
 ---
 # <a name="setjmp3"></a>_setjmp3
-Vnitřní funkce CRT. Novou implementaci `setjmp` funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _setjmp3(  
-   OUT jmp_buf env,  
-   int count,  
-   (optional parameters)  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+Vnitřní funkce CRT. Novou implementaci `setjmp` funkce.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+int _setjmp3(
+   OUT jmp_buf env,
+   int count,
+   (optional parameters)
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *env*<br/>
-[out] Adresa vyrovnávací paměti pro ukládání informací o stavu.  
-  
+[out] Adresa vyrovnávací paměti pro ukládání informací o stavu.
+
 *Počet*<br/>
-[in] Počet dalších `DWORD`s informací, které jsou uloženy v `optional parameters`.  
-  
+[in] Počet dalších `DWORD`s informací, které jsou uloženy v `optional parameters`.
+
 *Volitelné parametry*<br/>
-[in] Další data nasdílí `setjmp` vnitřní. První `DWORD` je ukazatel na funkci, která slouží k uvolnění doplňující data a vrátit se stálé registraci stavu. Druhá `DWORD` je úroveň, zkuste obnovit. Další data se uloží do pole Obecná data v `jmp_buf`.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu 0.  
-  
-## <a name="remarks"></a>Poznámky  
- Nepoužívejte tuto funkci v programu v jazyce C++. Je vnitřní funkce, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, naleznete v tématu [používání setjmp/longjmp](../cpp/using-setjmp-longjmp.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [setjmp](../c-runtime-library/reference/setjmp.md)
+[in] Další data nasdílí `setjmp` vnitřní. První `DWORD` je ukazatel na funkci, která slouží k uvolnění doplňující data a vrátit se stálé registraci stavu. Druhá `DWORD` je úroveň, zkuste obnovit. Další data se uloží do pole Obecná data v `jmp_buf`.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vždy vrátí hodnotu 0.
+
+## <a name="remarks"></a>Poznámky
+
+Nepoužívejte tuto funkci v programu v jazyce C++. Je vnitřní funkce, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, naleznete v tématu [používání setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
+
+## <a name="requirements"></a>Požadavky
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[setjmp](../c-runtime-library/reference/setjmp.md)

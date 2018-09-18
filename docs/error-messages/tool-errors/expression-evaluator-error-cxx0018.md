@@ -1,5 +1,5 @@
 ---
-title: CXX0018 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0018 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fbc4f2a4df7233b13579cb1dd4f9fa9679eb4e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d5bd4808d1e03252e5b3df4cee2955bb6a456d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051097"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Chyba při vyhodnocování výrazu CXX0018
-Chybný název registru  
-  
- Zadaný registrace neexistuje nebo nelze zobrazit.  
-  
- Okno kukátka můžete zobrazit následující registry:  
-  
- AX SP DS IP  
-  
- BX DOPORUČENÝCH POSTUPŮ ES FL  
-  
- CX MA SS GS  
-  
- DIRECTX DI CS SS  
-  
- EAX ESP DS EIP  
-  
- EBX EBP ES EFL  
-  
- ECX ESI FS  
-  
- EDX EDI CS  
-  
- Tato chyba je stejný jako CAN0018.
+
+Chybný název registru
+
+Zadaný registr neexistuje nebo nelze zobrazit.
+
+Okno kukátka můžete zobrazit následujících registrů:
+
+AX SP DS IP
+
+MX BP ES FL
+
+CX SI SS GS
+
+DX DI CS SS
+
+EAX ESP DS EIP
+
+EBX EBP ES EFL
+
+SLUŽBA FS ESI ECX
+
+EDX EDI CS
+
+Tato chyba se shoduje s CAN0018.

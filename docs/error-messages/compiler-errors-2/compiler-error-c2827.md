@@ -1,5 +1,5 @@
 ---
-title: C2827 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2827 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c96f9c3d43a289deb73fdb4414c344b7748da97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 139a012f9ed4dd3b6d81d92be3c441df4f899aac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052208"
 ---
-# <a name="compiler-error-c2827"></a>C2827 chyby kompilátoru
-"operátor provozovatelem" nelze přepsat globální s unární formuláře  
-  
- Operátor nemůže mít formuláři unární mimo objekt.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Proveďte místní přetížené operátor objekt.  
-  
-2.  Zvolte odpovídající unární operátor pro přetížení.
+# <a name="compiler-error-c2827"></a>Chyba kompilátoru C2827
+
+'operator operátor' nedá globálně přepsat jeho unární podobou.
+
+Operátor nemůže mít unární formulářů mimo objektu.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Proveďte přetíženého operátoru místní objekt.
+
+1. Zvolte odpovídající unární operátor přetížení.

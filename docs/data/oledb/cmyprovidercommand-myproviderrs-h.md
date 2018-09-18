@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b437f02a0df4f4ff0e34c44939c2a40f3ccebf74
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 919455c1f0e1bae0491226e2f2d0f53bb35f7ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046599"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+
 `CMyProviderCommand` Třída je implementace objektu command zprostředkovatel. Poskytuje implementaci pro `IAccessor`, `ICommandText`, a `ICommandProperties` rozhraní. `IAccessor` Rozhraní je stejný jako v dané sadě řádků. Objekt příkazu používá přistupující k určení vazby parametrů. Objektu sady řádků je používá k určení vazby pro výstupní sloupce. `ICommandText` Rozhraní je užitečný způsob, jak určit textový příkaz. V tomto příkladu `ICommandText` rozhraní později, když přidá vlastní kód; Potlačí také `ICommand::Execute` metody. `ICommandProperties` Rozhraní zpracovává všechny vlastnosti pro objekty příkazu a sady řádků.  
   
 ```cpp  
@@ -42,11 +43,12 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- `IAccessor` Rozhraní spravuje všechny vazby použité v příkazech a sady řádků. Příjemce volání `IAccessor::CreateAccessor` s polem `DBBINDING` struktury. Každý `DBBINDING` struktura obsahuje informace o tom, jak by měly být zpracovány vazeb sloupců (jako je například typ a délku). Zprostředkovatel přijímá struktury a určuje, jak by se měly převést data a zda jsou všechny převody potřebné. `IAccessor` Rozhraní se používá v objektu příkazu pro zpracování libovolných parametrů v příkazu.  
+`IAccessor` Rozhraní spravuje všechny vazby použité v příkazech a sady řádků. Příjemce volání `IAccessor::CreateAccessor` s polem `DBBINDING` struktury. Každý `DBBINDING` struktura obsahuje informace o tom, jak by měly být zpracovány vazeb sloupců (jako je například typ a délku). Zprostředkovatel přijímá struktury a určuje, jak by se měly převést data a zda jsou všechny převody potřebné. `IAccessor` Rozhraní se používá v objektu příkazu pro zpracování libovolných parametrů v příkazu.  
   
- Objekt příkazu také poskytuje implementaci `IColumnsInfo`. OLE DB vyžaduje `IColumnsInfo` rozhraní. Rozhraní umožňuje příjemci k načtení informací o parametry příkazu. Pomocí objektu sady řádků `IColumnsInfo` rozhraní, který vrací informace o výstupní sloupce k poskytovateli.  
+Objekt příkazu také poskytuje implementaci `IColumnsInfo`. OLE DB vyžaduje `IColumnsInfo` rozhraní. Rozhraní umožňuje příjemci k načtení informací o parametry příkazu. Pomocí objektu sady řádků `IColumnsInfo` rozhraní, který vrací informace o výstupní sloupce k poskytovateli.  
   
- Zprostředkovatel také obsahuje rozhraní volá `IObjectWithSite`. `IObjectWithSite` Rozhraní bylo implementováno v knihovně ATL 2.0 a umožňuje implementátora k předávání informací o samotné do jeho podřízených. Objekt příkazu používá `IObjectWithSite` informace zjistit všechny generují rozhraní objektu sady řádků je vytvořil.  
+Zprostředkovatel také obsahuje rozhraní volá `IObjectWithSite`. `IObjectWithSite` Rozhraní bylo implementováno v knihovně ATL 2.0 a umožňuje implementátora k předávání informací o samotné do jeho podřízených. Objekt příkazu používá `IObjectWithSite` informace zjistit všechny generují rozhraní objektu sady řádků je vytvořil.  
   
 ## <a name="see-also"></a>Viz také  
- [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)
+
+[Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

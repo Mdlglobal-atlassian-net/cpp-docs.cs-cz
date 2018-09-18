@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052734"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation – třída
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Token pAT*  
+*Token pAT*<br/>
 Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se mají zrušit změny automaticky
 
 ### <a name="remarks"></a>Poznámky
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Token pAT*  
+*Token pAT*<br/>
 Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se automaticky vrátí zpátky.
 
 ### <a name="remarks"></a>Poznámky
@@ -147,6 +147,6 @@ Pokud tato metoda je volána pro účely, které patří k obnovení zosobnění
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka ATLSecurity](../../visual-cpp-samples.md)   
-[Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)   
+[Ukázka ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

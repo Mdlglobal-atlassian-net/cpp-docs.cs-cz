@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df584fd95921594562cf4c1fb912986343b30c4c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 47d56641209ea1fe192bf0c32ace7701a1e579dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054529"
 ---
 # <a name="fatal-error-c1084"></a>Závažná chyba C1084
-Nejde přečíst soubor filetype: 'file': zpráva  
-  
- Tato chyba je obecně výsledek volání se nezdařilo interní systémové rozhraní API provedené kompilátorem. Zpráva zobrazená, když k této chybě dochází často generuje buď [_wcserror_s –](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).  
-  
- Provedením následujících kroků může vyřešit C1084:  
-  
--   Ujistěte se, že zadaný soubor existuje.  
-  
--   Ujistěte se, že jsou nastavené příslušná oprávnění pro přístup k souboru.  
-  
--   Zkontrolujte syntaxi příkazového řádku dodržuje pravidel popsaných v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).  
-  
--   Zkontrolujte, že proměnné prostředí **TMP** a **TEMP** jsou správně set, stejně jako příslušná oprávnění pro přístup k adresáři, tyto proměnné prostředí odkazovat. Také zajistěte, aby disky odkazuje **TMP** a **TEMP** proměnné prostředí obsahují odpovídající množství volného místa.  
-  
--   Pokud zpráva "Chybné číslo souboru" zadaný soubor může mít byla zavření v popředí při kompilaci na pozadí.  
-  
- Po provedení výše uvedených diagnostiky, proveďte čisté sestavení.
+
+Nejde přečíst soubor filetype: 'file': zpráva
+
+Tato chyba je obecně výsledek volání se nezdařilo interní systémové rozhraní API provedené kompilátorem. Zpráva zobrazená, když k této chybě dochází často generuje buď [_wcserror_s –](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+
+Provedením následujících kroků může vyřešit C1084:
+
+- Ujistěte se, že zadaný soubor existuje.
+
+- Ujistěte se, že jsou nastavené příslušná oprávnění pro přístup k souboru.
+
+- Zkontrolujte syntaxi příkazového řádku dodržuje pravidel popsaných v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).
+
+- Zkontrolujte, že proměnné prostředí **TMP** a **TEMP** jsou správně set, stejně jako příslušná oprávnění pro přístup k adresáři, tyto proměnné prostředí odkazovat. Také zajistěte, aby disky odkazuje **TMP** a **TEMP** proměnné prostředí obsahují odpovídající množství volného místa.
+
+- Pokud zpráva "Chybné číslo souboru" zadaný soubor může mít byla zavření v popředí při kompilaci na pozadí.
+
+Po provedení výše uvedených diagnostiky, proveďte čisté sestavení.

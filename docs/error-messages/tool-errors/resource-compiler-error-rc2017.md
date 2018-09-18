@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2017 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2017 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73acafab54c5448eaa9fbf0887a9e124311a654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e00759ae0d987a04d60fd5f32ca0a7d18f3832c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053840"
 ---
 # <a name="resource-compiler-error-rc2017"></a>Chyba kompilátoru prostředků RC2017
-Neplatná řídicí sekvence  
-  
- Řídicí sekvence zobrazovaly nebyla očekávána jen jedna.  
-  
- Řídicí sekvence – zpětné lomítko ( **\\** ) a číslo nebo písmeno – může dojít pouze v znak nebo řetězec konstantní.
+
+Neplatná řídicí sekvence
+
+Sekvence escape objevily, kde jeden neočekával.
+
+Řídicí sekvence – zpětné lomítko ( **\\** ) následované číslicí nebo písmenem, může dojít pouze v znak nebo řetězec konstanty.

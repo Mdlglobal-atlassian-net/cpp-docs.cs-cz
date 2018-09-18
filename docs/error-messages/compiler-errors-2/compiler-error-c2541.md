@@ -1,5 +1,5 @@
 ---
-title: C2541 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2541 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44d03ad19746719360f0528dceae8d88be6be8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 492f6f938af5e09221bff3c1c848c9688b28931d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049147"
 ---
-# <a name="compiler-error-c2541"></a>C2541 chyby kompilátoru
-'delete': odstranění: nelze odstranit objekty, které nejsou ukazatele  
-  
- [Odstranit](../../cpp/delete-operator-cpp.md) operátor byl použit v objektu, který není ukazatel.  
-  
- Následující ukázka generuje C2541:  
-  
-```  
-// C2541.cpp  
-int main() {  
-   int i;  
-   delete i;   // C2541 i not a pointer  
-  
-   // OK  
-   int *ip = new int;  
-   delete ip;  
-}  
+# <a name="compiler-error-c2541"></a>Chyba kompilátoru C2541
+
+"odstranit": odstranění: nelze odstranit objekty, které nejsou ukazatele
+
+[Odstranit](../../cpp/delete-operator-cpp.md) operátor byla použita na objekt, který není ukazatel.
+
+Následující ukázka generuje C2541:
+
+```
+// C2541.cpp
+int main() {
+   int i;
+   delete i;   // C2541 i not a pointer
+
+   // OK
+   int *ip = new int;
+   delete ip;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4558 | Microsoft Docs
+title: Upozornění (úroveň 1) C4558 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852e3d3e8bb1c8186232cbed2636ac890b0cd057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 404f4a343b35081a64267424c436063c085958e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056648"
 ---
-# <a name="compiler-warning-level-1-c4558"></a>C4558 kompilátoru upozornění (úroveň 1)
-Hodnota operand 'Hodnota' je mimo rozsah 'dolní hranice - horní hranice.  
-  
- Hodnota předaná instrukce jazyk sestavení je mimo rozsah zadaný pro parametr. Hodnota bude zkrácen.  
-  
- Následující ukázka generuje C4558:  
-  
-```  
-// C4558.cpp  
-// compile with: /W1  
-// processor: x86  
-void asm_test() {  
-   __asm pinsrw   mm1, eax, 8;   // C4558  
-}  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4558"></a>Kompilátor upozornění (úroveň 1) C4558
+
+hodnota operandu 'value' je mimo rozsah 'dolní hranice - horní hranice.
+
+Hodnota předaná instrukce jazyka sestavení je mimo rozsah zadaný pro parametr. Hodnota se zkrátí.
+
+Následující ukázka generuje C4558:
+
+```
+// C4558.cpp
+// compile with: /W1
+// processor: x86
+void asm_test() {
+   __asm pinsrw   mm1, eax, 8;   // C4558
+}
+
+int main() {
+}
 ```

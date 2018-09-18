@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1037 | Microsoft Docs
+title: Závažná chyba C1037 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047678"
 ---
 # <a name="fatal-error-c1037"></a>Závažná chyba C1037
-Nelze otevřít objekt souboru filename  
-  
- Objekt soubor určený touto [/Fo](../../build/reference/fo-object-file-name.md) nelze otevřít.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Neplatný název souboru.  
-  
-2.  Není dostatek paměti k otevření souboru.  
-  
-3.  Soubor používá jiný proces.  
-  
-4.  Soubor určený jen pro čtení má stejný název.  
-  
+
+Nelze otevřít soubor objektu názvu souboru
+
+Soubor objektu určeného [/Fo](../../build/reference/fo-object-file-name.md) nelze otevřít.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Neplatný název souboru.
+
+1. Není dostatek paměti k otevření souboru.
+
+1. Soubor používá jiný proces.
+
+1. Soubor určený jen pro čtení má stejný název.
+

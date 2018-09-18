@@ -1,5 +1,5 @@
 ---
-title: CXX0036 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0036 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e1bf3cda85d7b3d64d51279688a52cec5c0336
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050109"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Chyba při vyhodnocování výrazu CXX0036
-Chybný kontextu {...} specifikace  
-  
- Tato zpráva se může objevit žádné několik chyb v použití operátoru kontextu (**{}**).  
-  
--   Syntaxe context – operátor (**{}**) byl nesprávně zadán.  
-  
-     Syntaxe operátor kontextu je:  
-  
-     {*funkce*,*modulu*,*dll*}*výraz*  
-  
-     Toto nastavení určuje kontextu *výraz*. Operátor kontextu má stejnou prioritu a využití jako přetypování.  
-  
-     Koncové čárky lze vynechat. Pokud platí jedna z *funkce*, *modulu*, nebo *dll* obsahuje čárku literál musí uzavřete celý název v závorkách.  
-  
--   Název funkce napsán správně nebo neexistuje v zadaném modulu nebo dynamickou knihovnu.  
-  
-     Protože C je malá a velká písmena jazyk, *funkce* musí mít v případě přesné definovaným ve zdroji.  
-  
--   Modul nebo knihovna DLL nebyla nalezena.  
-  
-     Zkontrolujte název úplná cesta zadaném modulu nebo DLL.  
-  
- Tato chyba je stejný jako CAN0036.
+
+špatný kontext {...} specifikace
+
+Tato zpráva se může objevit některou z několika chyb používá operátor kontextu (**{}**).
+
+- Syntaxe operátor kontextu (**{}**) byl nesprávně zadán.
+
+     Syntaxe operátor kontextu je následující:
+
+     {*funkce*,*modulu*,*dll*}*výraz*
+
+     Určuje kontext *výraz*. Operátor kontextu má stejnou prioritu a použití jako přetypování.
+
+     Na konci čárky lze vynechat. Pokud je libovolná z *funkce*, *modulu*, nebo *dll* obsahuje čárku literálu celý název je nutné uzavřít do závorek.
+
+- Název funkce napsaný správně nebo neexistuje v zadaném modulu nebo knihovny DLL.
+
+     Protože je velká a malá písmena jazyka C *funkce* musí být uvedené v rozlišovat velikost písmen, jak jsou definovány ve zdroji.
+
+- Modul nebo knihovny DLL se nenašel.
+
+     Zkontrolujte úplný název cesty zadaném modulu nebo knihovny DLL.
+
+Tato chyba se shoduje s CAN0036.

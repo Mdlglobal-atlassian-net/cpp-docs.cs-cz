@@ -1,5 +1,5 @@
 ---
-title: C2485 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2485 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf668f70d0d55c81744119e77fbb3bd24630493a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe33462f5f2e5e958a70823a6b4652882860ba0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046625"
 ---
-# <a name="compiler-error-c2485"></a>C2485 chyby kompilátoru
-"identifikátor": nerozpoznaný atribut Rozšířené  
-  
- Atribut deklarace není platný.
+# <a name="compiler-error-c2485"></a>Chyba kompilátoru C2485
+
+'identifier': Nerozpoznaný rozšířený atribut
+
+Atribut deklarace není platná.

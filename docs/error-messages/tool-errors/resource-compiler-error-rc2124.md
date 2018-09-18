@@ -1,5 +1,5 @@
 ---
-title: Chyba kompilátoru prostředků RC2124 | Microsoft Docs
+title: Chyba kompilátoru prostředků RC2124 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cda6713c03c8bf672c57dc21e44cd4768027daf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5e46f7384039dcd2eef7eb05b2ba8c4f86b7e46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048224"
 ---
 # <a name="resource-compiler-error-rc2124"></a>Chyba kompilátoru prostředků RC2124
-není povolen prázdný nabídky  
-  
- **END** – klíčové slovo se nachází před všechny položky nabídky, jsou definovány v **nabídky** příkaz. Kompilátor prostředků nepovoluje prázdný nabídky. Zajistěte, aby všechny otevřené uvozovky, v rámci nemáte **nabídky** příkaz.
+
+prázdné nabídky není povolená.
+
+**END** – klíčové slovo se nachází před všechny položky nabídky jsou definovány v **nabídky** příkazu. Nástroj Resource Compiler neumožňuje prázdné nabídky. Ujistěte se, že nemáte žádné otevřené uvozovek v rámci **nabídky** příkazu.

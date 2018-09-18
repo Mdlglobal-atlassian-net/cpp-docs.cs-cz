@@ -1,5 +1,5 @@
 ---
-title: C2594 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2594 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1de853b8992d3c02eb94c0b050d72539fc3282
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9be22544930bb94c36ec5906cbf60d5caac143fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058006"
 ---
-# <a name="compiler-error-c2594"></a>C2594 chyby kompilátoru
-'operátor': nejednoznačné převody z 'type1' na 'type2'  
-  
- Žádný převod z *type1* k *type2* byl přímé více než jiný. Dvě možná řešení doporučujeme pro převod z *type1* k *type2*. První možností je definovat přímé převod z *type1* k *type2*, a druhou možností je zadat posloupnost převody z *type1* k  *Type2*.  
-  
- Následující ukázka generuje C2594. Navržené řešení do chyba je posloupnost převody:  
-  
-```  
-// C2594.cpp  
-// compile with: /c  
-struct A{};  
-struct I1 : A {};  
-struct I2 : A {};  
-struct D : I1, I2 {};  
-  
-A *f (D *p) {  
-   return (A*) (p);    // C2594  
-  
-// try the following line instead  
-// return static_cast<A *>(static_cast<I1 *>(p));  
-}  
+# <a name="compiler-error-c2594"></a>Chyba kompilátoru C2594
+
+'operator': nejednoznačné převody z 'type1' na 'type2'
+
+Žádný převod z *type1* k *type2* byl přímější než kterýkoli jiný. Doporučujeme dvě možná řešení pro převod z *type1* k *type2*. První možností je definování přímý převod z *type1* k *type2*, a druhou možností je k určení posloupnost převody z *type1* k  *Type2*.
+
+Následující ukázka generuje C2594. Navržené řešení na chybu je posloupnost převody:
+
+```
+// C2594.cpp
+// compile with: /c
+struct A{};
+struct I1 : A {};
+struct I2 : A {};
+struct D : I1, I2 {};
+
+A *f (D *p) {
+   return (A*) (p);    // C2594
+
+// try the following line instead
+// return static_cast<A *>(static_cast<I1 *>(p));
+}
 ```

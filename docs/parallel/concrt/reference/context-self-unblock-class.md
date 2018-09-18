@@ -1,5 +1,5 @@
 ---
-title: context_self_unblock – třída | Microsoft Docs
+title: context_self_unblock – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1113abc814167912380b57ae7fc85d04284e77
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90774b304a4649c72b6232b5908bf9ff14a4412d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057350"
 ---
 # <a name="contextselfunblock-class"></a>context_self_unblock – třída
-Tato třída popisuje výjimka vyvolaná při `Unblock` metodu `Context` objektu se říká ze stejného kontextu. To by indikovat pokus o daném kontextu odblokovat sám sebe.  
+Tato třída popisuje výjimku vyvolána, když `Unblock` metodu `Context` objektu je volána z stejný kontext. Pokus o by jít odblokujete samotné podle daného kontextu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class context_self_unblock : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> context_self_unblock 
+##  <a name="ctor"></a> context_self_unblock – 
 
  Vytvoří `context_self_unblock` objektu.  
   
@@ -64,8 +64,8 @@ context_self_unblock() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

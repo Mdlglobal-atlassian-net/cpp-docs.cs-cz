@@ -1,5 +1,5 @@
 ---
-title: C2061 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2061 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d4b018dbab16e8e376a3331a85d0f1b1004f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896fdb21c57e0f558b87ec23e2be309cf49f8095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057961"
 ---
-# <a name="compiler-error-c2061"></a>C2061 chyby kompilátoru
-Chyba syntaxe: identifikátor "identifikátor"  
-  
- Kompilátor najít identifikátor, kde nebyl očekáván. Ujistěte se, že `identifier` je deklarovaná dříve, než ho použijete.  
-  
- Inicializátoru může být uzavřena v závorkách. K tomuto problému nedošlo, uzavřete deklarátor v závorkách ani ji nastavit `typedef`.  
-  
- Tato chyba může také dojít, když kompilátor zjistí výraz jako šablonu argumentu třídy; použít [typename](../../cpp/typename.md) pro oznámení kompilátoru je typu.  
-  
- Následující ukázka generuje C2061:  
-  
-```  
-// C2061.cpp  
-// compile with: /c  
-template < A a >   // C2061  
-// try the following line instead  
-// template < typename b >  
-class c{};  
-```  
-  
- C2061 může dojít, pokud je předat název instance pro [typeid](../../windows/typeid-cpp-component-extensions.md):  
-  
-```  
-// C2061b.cpp  
-// compile with: /clr  
-ref struct G {  
-   int i;  
-};  
-  
-int main() {  
-   G ^ pG = gcnew G;  
-   System::Type ^ pType = typeid<pG>;   // C2061  
-   System::Type ^ pType2 = typeid<G>;   // OK  
-}  
+# <a name="compiler-error-c2061"></a>Chyba kompilátoru C2061
+
+Chyba syntaxe: identifikátor 'identifier'
+
+Kompilátor najít identifikátor, ve kterém se neočekávala. Ujistěte se, že `identifier` je deklarována před jejich použitím.
+
+Inicializátor mohou být uzavřeny v závorkách. K tomuto problému vyhnout, uzavřete deklarátoru v závorkách nebo ji `typedef`.
+
+Tato chyba může být způsobeno i když kompilátor zjistí výraz jako argument šablony třídy; použít [typename](../../cpp/typename.md) pro oznámení kompilátoru je typem.
+
+Následující ukázka generuje C2061:
+
+```
+// C2061.cpp
+// compile with: /c
+template < A a >   // C2061
+// try the following line instead
+// template < typename b >
+class c{};
+```
+
+C2061 může dojít, pokud předáte název instance do [typeid](../../windows/typeid-cpp-component-extensions.md):
+
+```
+// C2061b.cpp
+// compile with: /clr
+ref struct G {
+   int i;
+};
+
+int main() {
+   G ^ pG = gcnew G;
+   System::Type ^ pType = typeid<pG>;   // C2061
+   System::Type ^ pType2 = typeid<G>;   // OK
+}
 ```

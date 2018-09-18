@@ -1,5 +1,5 @@
 ---
-title: C2862 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2862 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9aac4a7c4bd43dcd4f0e688c955619133d375f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cfd5ee07ecd7ca1613c4e7b5584294e58aace3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049784"
 ---
-# <a name="compiler-error-c2862"></a>C2862 chyby kompilátoru
-"rozhraní": rozhraní může mít pouze veřejné členy  
-  
- Chráněné a soukromé členy může přistupovat pouze z jiné členské funkce. Tito členové jsou žádné použití v rozhraní, vzhledem k tomu, že se nemusí poskytovat implementace pro všechny její členy.  
-  
- Následující příklad vytvoří C2862:  
-  
-```  
-// C2862.cpp  
-// compile with: /c  
-#include <unknwn.h>  
-  
-[object, uuid="60719E20-EF37-11D1-978D-0000F805D73B"]  
-__interface IMyInterface {  
-   HRESULT mf1(void);   // OK  
-protected:  
-   HRESULT mf2(int *b);   // C2862  
-private:  
-   HRESULT mf3(int *c);   // C2862  
-};  
+# <a name="compiler-error-c2862"></a>Chyba kompilátoru C2862
+
+'rozhraní': rozhraní může mít pouze veřejné členy
+
+Chráněné a soukromým členům se dá přistupovat jenom ze jiné členské funkce. Tyto členy jsou žádné použití v rozhraní, protože neposkytují implementace pro kterýkoli z jejích členů.
+
+Následující ukázka vygeneruje C2862:
+
+```
+// C2862.cpp
+// compile with: /c
+#include <unknwn.h>
+
+[object, uuid="60719E20-EF37-11D1-978D-0000F805D73B"]
+__interface IMyInterface {
+   HRESULT mf1(void);   // OK
+protected:
+   HRESULT mf2(int *b);   // C2862
+private:
+   HRESULT mf3(int *c);   // C2862
+};
 ```

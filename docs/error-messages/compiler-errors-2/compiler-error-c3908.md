@@ -1,5 +1,5 @@
 ---
-title: C3908 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3908 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f971ec355c3f1c3772b2a0cd4059cf0a8abd630
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7591b8ab5f8495b6af866e23e7a169b0f9cd29a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047314"
 ---
-# <a name="compiler-error-c3908"></a>C3908 chyby kompilátoru
-úroveň přístupu je méně omezující než 'konstrukce.  
-  
- Metodu přistupujícího objektu vlastnosti (get nebo sadu) nemůže mít méně omezující přístup, než je zadaná v samotné vlastnosti přístup.  Stejně tak v případě metody přístupových objektů události.  
-  
- Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md) a [událostí](../../windows/event-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3908:  
-  
-```  
-// C3908.cpp  
-// compile with: /clr  
-ref class X {  
-protected:  
-   property int i {  
-   public:   // C3908 property i is protected   
-      int get();  
-   private:  
-      void set(int);   // OK more restrictive  
-   };  
-};  
+# <a name="compiler-error-c3908"></a>Chyba kompilátoru C3908
+
+úroveň přístupu méně omezující než 'konstrukce.
+
+Přístupové metody vlastností (get nebo set) nemůže mít méně omezující přístupová oprávnění, než přístup k zadané v samotné vlastnosti.  Stejně tak v případě metody přistupujícího objektu události.
+
+Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md) a [události](../../windows/event-cpp-component-extensions.md).
+
+Následující ukázka generuje C3908:
+
+```
+// C3908.cpp
+// compile with: /clr
+ref class X {
+protected:
+   property int i {
+   public:   // C3908 property i is protected
+      int get();
+   private:
+      void set(int);   // OK more restrictive
+   };
+};
 ```

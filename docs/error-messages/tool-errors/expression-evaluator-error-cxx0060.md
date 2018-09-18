@@ -1,5 +1,5 @@
 ---
-title: CXX0060 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0060 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abaa34a8616cc2574d759d2c48f2f3401b7a944d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a517fc480efdcbea8942cb0a46ee343f3c399a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056947"
 ---
 # <a name="expression-evaluator-error-cxx0060"></a>Chyba při vyhodnocování výrazu CXX0060
-registrace není k dispozici  
-  
- Výraz zadaný registrace, která se nedá použít. Tato chyba může být způsobeno pokusu o přístup k registru, který neexistuje v počítači spuštěn.  
-  
- Tato chyba je stejný jako CAN0060.
+
+registrace není k dispozici
+
+Výraz zadaný registr, který nelze použít. Tuto chybu může způsobovat pokusu o přístup k registru, který neexistuje v daném počítači používají.
+
+Tato chyba se shoduje s CAN0060.

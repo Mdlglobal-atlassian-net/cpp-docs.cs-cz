@@ -1,5 +1,5 @@
 ---
-title: C2084 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2084 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce1510dd6e78b8774d3cc433f583c16cdbb8d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09ce703b6908257e37c2b7ff1b2714f1426f941f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052104"
 ---
-# <a name="compiler-error-c2084"></a>C2084 chyby kompilátoru
-Funkce '*funkce*se již text  
-  
- Funkce již byl definován.  
-  
- Ve verzích než Visual Studio 2002, Visual C++  
-  
--   Kompilátor by více specializací šablony, které se přeložit na stejnou skutečný typ přijmout, i když další definice nikdy nebude k dispozici. Kompilátor nyní zjistí tyto několik definic.  
-  
--   `__int32` a `int` byly zpracovány jako samostatné typy. Kompilátor teď zpracovává `__int32` jako synonymum pro `int`. To znamená, že kompilátor zjistí několik definic, funkce při přetížení na obou `__int32` a `int` a vrátí chybu.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2084:  
-  
-```cpp  
-// C2084.cpp  
-void Func(int);  
-void Func(int) {}   // define function  
-void Func(int) {}   // C2084 second definition  
-```  
-  
-Chcete-li opravit tuto chybu, odeberte duplicitní definice:  
-  
-```  
-// C2084b.cpp  
-// compile with: /c  
-void Func(int);  
-void Func(int) {}  
+# <a name="compiler-error-c2084"></a>Chyba kompilátoru C2084
+
+funkce "*funkce*' už má tělo.
+
+Funkce již byl definován.
+
+Ve verzích Visual C++ před Visual Studio 2002
+
+- Kompilátor bude přijímat více specializace šablony, které přeložit na skutečný typ stejný, i když by nikdy nebude k dispozici další definice. Kompilátor zjistí nyní tyto několik definic.
+
+- `__int32` a `int` zachází jako samostatné typy. Kompilátor nyní zpracovává `__int32` jako synonymum pro `int`. To znamená, že kompilátor zjistí víc definic, pokud je funkce přetížena u obou `__int32` a `int` a vrátí chybu.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2084:
+
+```cpp
+// C2084.cpp
+void Func(int);
+void Func(int) {}   // define function
+void Func(int) {}   // C2084 second definition
+```
+
+Chcete-li tuto chybu opravit, odeberte duplicitní definice:
+
+```
+// C2084b.cpp
+// compile with: /c
+void Func(int);
+void Func(int) {}
 ```

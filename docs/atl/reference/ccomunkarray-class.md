@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057447"
 ---
 # <a name="ccomunkarray-class"></a>Ccomunkarray – třída
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Parametry
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Maximální počet `IUnknown` ukazatele, které se můžou uchovávat ve statickém poli.
 
 ## <a name="members"></a>Členové
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 Voláním této metody lze přidat `IUnknown` ukazatel na pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown` Ukazatel, pro který je vyžadován přidružený soubor cookie.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametry
 
-*dwCookie*  
+*dwCookie*<br/>
 Soubor cookie, pro kterou přidruženého `IUnknown` ukazatel je povinný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametry
 
-*dwCookie*  
+*dwCookie*<br/>
 Odkazování na soubor cookie `IUnknown` ukazatel na odebrat z pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -206,5 +206,5 @@ Vrátí hodnotu TRUE, pokud ukazatel myši je odebrána, FALSE, jinak.
 
 ## <a name="see-also"></a>Viz také
 
-[Ccomdynamicunkarray – třída](../../atl/reference/ccomdynamicunkarray-class.md)   
+[CComDynamicUnkArray – třída](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

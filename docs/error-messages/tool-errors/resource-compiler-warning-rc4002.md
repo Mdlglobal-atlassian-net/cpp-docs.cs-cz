@@ -1,5 +1,5 @@
 ---
-title: Upozornění kompilátoru prostředků RC4002 | Microsoft Docs
+title: Upozornění kompilátoru prostředků RC4002 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c932b5f120f540f34cd0d6bdfef51be99bfbb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 400d748f0ce9cafa4d11690f1d6c9fbfa4af90e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058988"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>Upozornění kompilátoru prostředků RC4002
-příliš mnoho parametrů skutečné makro identifikátoru  
-  
- Počet aktuálních parametrů zadaný s daným identifikátorem byl větší než číslo zadané v definici makra identifikátoru formální parametry.  
-  
- Další skutečné parametry byly shromažďovány ale během rozšíření makro ignorována.
+
+moc velký počet skutečných parametrů pro – makro 'identifier'
+
+Počet skutečných parametrů zadán s daným identifikátorem byla větší než číslo zadané v definici makra identifikátoru formálních parametrů.
+
+Další skutečných parametrů byly shromažďovány ale ignorovat během rozšiřování makra.

@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4acd81a5420f9fe2685e7570f26fea61691b845
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9d5164394853d2ac4f18efc94863b8fc3fa5ba78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053125"
 ---
 # <a name="using-atexit"></a>Používání výrazu atexit
-S [atexit](../c-runtime-library/reference/atexit.md) funkce, můžete zadat funkci zpracování výstupu, který se spustí před ukončením programu. Žádné globální statické objekty inicializované před voláním **atexit** před spuštěním funkce zpracování výstupu nejsou zničeny.  
-  
-## <a name="see-also"></a>Viz také:  
- [Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)
+
+S [atexit](../c-runtime-library/reference/atexit.md) funkce, můžete zadat funkci zpracování výstupu, který se spustí před ukončením programu. Žádné globální statické objekty inicializované před voláním **atexit** před spuštěním funkce zpracování výstupu nejsou zničeny.
+
+## <a name="see-also"></a>Viz také:
+
+[Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)

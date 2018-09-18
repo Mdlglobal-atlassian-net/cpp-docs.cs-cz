@@ -1,5 +1,5 @@
 ---
-title: copyin | Microsoft Docs
+title: copyin | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059326"
 ---
 # <a name="copyin"></a>copyin
-Umožňuje vláken pro přístup k hlavní vlákno hodnota [threadprivate](../../../parallel/openmp/reference/threadprivate.md) proměnné.  
+Umožňuje vláken pro přístup k hodnotě hlavní vlákno, [threadprivate](../../../parallel/openmp/reference/threadprivate.md) proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,10 @@ Umožňuje vláken pro přístup k hlavní vlákno hodnota [threadprivate](../..
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- kde  
+## <a name="parameters"></a>Parametry
   
- `var`  
- `threadprivate` Proměnné, která bude inicializován s hodnotou proměnné v hlavní vlákno, protože existuje před paralelní konstrukce.  
+*var*<br/>
+`threadprivate` Proměnné, která bude inicializován hodnotou proměnné v hlavním vlákně, protože existuje před paralelní konstrukce.  
   
 ## <a name="remarks"></a>Poznámky  
  `copyin` platí pro následující direktivy:  
@@ -50,7 +49,7 @@ copyin(var)
  Další informace najdete v tématu [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [threadprivate](../../../parallel/openmp/reference/threadprivate.md) příklad použití `copyin`.  
+ Zobrazit [threadprivate](../../../parallel/openmp/reference/threadprivate.md) pro příklad použití `copyin`.  
   
 ## <a name="see-also"></a>Viz také  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

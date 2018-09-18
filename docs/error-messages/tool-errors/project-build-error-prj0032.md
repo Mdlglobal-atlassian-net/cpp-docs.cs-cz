@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0032 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0032 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053569"
 ---
 # <a name="project-build-error-prj0032"></a>Chyba sestavení projektu PRJ0032
-Vlastnost 'Výstupy' pro úrovni projektu vlastní krok sestavení obsahovala 'Makro', který je vyhodnocen 'macro_expansion'.  
-  
- Vlastní krok sestavení na projektu měl chybný výstup pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamená, že je cesta chybně vytvořen, a to obsahující znaky, nebo kombinace znaků, které jsou neplatné v cestě k souboru.  
-  
- Pokud chcete tuto chybu vyřešit, opravte makro nebo odstraňte specifikace cesty. Vyhodnotí cesta je absolutní cestu z adresáře projektu.
+
+Vlastnost "Výstupy" kroku vlastního sestavení na úrovni projektu obsahovala "makra", která je vyhodnocena na "macro_expansion".
+
+Vlastní krok sestavení na projektu má chybný výstup pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamenat, že cesta je chybně vytvořený kód, obsahující znaky nebo kombinace znaků, které jsou neplatné v cestě k souboru.
+
+Chcete-li tuto chybu vyřešit, opravte makro nebo odstraňte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.

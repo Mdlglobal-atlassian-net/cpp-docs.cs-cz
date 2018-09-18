@@ -1,5 +1,5 @@
 ---
-title: Přístup k datům v jazyce Visual C++ | Microsoft Docs
+title: Přístup k datům v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -19,41 +19,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060301"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
-Téměř všechny produkty databáze SQL a NoSQL, poskytují rozhraní pro nativních aplikací C++. Standardní rozhraní odvětví je ODBC, který nepodporuje všechny produkty hlavní databáze SQL a mnoho NoSQL produkty. Pro produkty Microsoft získáte od výrobce pro další informace. Knihovny třetích stran s různými licenční podmínky jsou k dispozici.
+Téměř všechny databáze, SQL a NoSQL, a nabízejí rozhraní pro nativní aplikace C++. Standardní rozhraní odvětví je rozhraní ODBC, které podporuje všechny hlavní produkty SQL database a řada produktů NoSQL. Pro produkty jiných výrobců najdete dodavatele pro další informace. Knihovny třetích stran s různými podmínkami licence jsou také k dispozici.
 
-Vzhledem k tomu, že 2011 Microsoft má zarovnán na ODBC jako standardní pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, jak místně a v cloudu. Další informace najdete v tématu [programovací přístup dat \(MFC ATL\)](data-access-programming-mfc-atl.md). C + +/ CLI knihovny můžete použít buď nativní ODBC – ovladače nebo ADO.NET. Další informace najdete v tématu [Data Access pomocí ADO.NET (C + +/ CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Microsoft má od roku 2011 zarovnány na rozhraní ODBC jako standard pro nativní aplikace pro připojení k databázím serveru Microsoft SQL Server, v místním prostředí i v cloudu. Další informace najdete v tématu [programování přístupu dat \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ CLI knihovny můžete použít buď nativních ovladačů rozhraní ODBC nebo ADO.NET. Další informace najdete v tématu [Data přístupu pomocí ADO.NET (C + +/ CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) a [přístup k datům v sadě Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>V tomto oddílu
-[Data přístup programování (MFC/ATL)](data-access-programming-mfc-atl.md) popisuje starší data přístup k programování s Visual C++, kde je upřednostňovaný způsob použít jednu z knihovny tříd jako aktivní šablony třídy knihovny (ATL) nebo knihovna Microsoft Foundation Class (MFC), které zjednodušují práci s databází rozhraní API.
 
-[Otevřete připojení k databázi (ODBC)](odbc/open-database-connectivity-odbc.md) knihovna Microsoft Foundation třídy (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database).
+[Přístup k datům programování knihovny MFC nebo ATL)](data-access-programming-mfc-atl.md)<br/>
+Popisuje programování s jazykem Visual C++, kde je upřednostňovaným způsobem pomocí knihoven tříd, jako je například aktivní šablony třídy knihovny (ATL) nebo knihovny Microsoft Foundation Class (MFC), které zjednodušují práci s databází rozhraní API přístupu k datům starší verze.
 
-[Programování technologie OLE DB](oledb/ole-db-programming.md) většinou starší verze rozhraní, což je stále nutné v některých scénářích, konkrétně v případě, že jsou programové ošetření propojené servery.
+[Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
+Knihovny Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database).
+
+[Programování v architektuře OLE DB](oledb/ole-db-programming.md)<br/>
+Většinou starší verze rozhraní, které se stále vyžaduje v některých případech, zejména pokud jsou programové ošetření propojené servery.
 
 ## <a name="related-topics"></a>Související témata
-[Připojit k databázi SQL pomocí C a C++](/azure/sql-database/sql-database-develop-cplusplus-simple) připojit k databázi SQL Azure z aplikací jazyka C nebo C++.
 
-[Microsoft Azure Klientská knihovna pro úložiště pro jazyk C++](https://github.com/Azure/azure-storage-cpp)
-[Azure Storage](/azure/storage/storage-introduction) je řešení cloudového úložiště pro moderní aplikace, které jsou závislé na odolnost, dostupnost a škálovatelnost, aby splňovaly potřeby jejich Zákazníci. Připojte k úložišti Azure z jazyka C++ pomocí klientské knihovny pro úložiště Azure pro jazyk C++.
+[Připojení k SQL Database pomocí jazyka C a C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+Připojení ke službě Azure SQL Database v aplikacích jazyka C nebo C++.
 
-[13.1 ovladač ODBC pro SQL Server – vydání Windows](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) nejnovější ovladače ODBC pro C/C++ na základě aplikací poskytuje robustní data přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database. Poskytuje podporu pro funkce, včetně vždycky šifrovaná, Azure Active Directory a skupiny dostupnosti AlwaysOn. Dostupné taky pro systému MacOS a Linux.     
+[Klientská knihovna pro úložiště Microsoft Azure pro jazyk C++](https://github.com/Azure/azure-storage-cpp)<br/>
+[Azure Storage](/azure/storage/storage-introduction) je řešení cloudového úložiště pro moderní aplikace, které spoléhají na odolnost, dostupnost a škálovatelnost pro potřeby svých zákazníků. Připojení ke službě Azure Storage z jazyka C++ s využitím klientské knihovny Azure Storage pro C++.
+
+[Ovladač ODBC 13.1 pro SQL Server – Windows všeobecně dostupné](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
+Nejnovější ovladač ODBC poskytuje robustní datové přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database pro C/C++ na základě aplikace. Poskytuje podporu pro funkce, včetně funkcí always encrypted, Azure Active Directory a skupin dostupnosti AlwaysOn. Také k dispozici pro MacOS a Linux.     
  
-[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client je samostatné data přístupu aplikace programovací rozhraní (API), použít pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 prostřednictvím SQL Server 2014. Nové aplikace by měly používat 13.1 ovladač ODBC systému SQL Server.
+[Nativní klient systému SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
+Nativní klient systému SQL Server je samostatná data přístup aplikace programovací rozhraní (API), používá se pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 do SQL serveru 2014. Nová aplikace by měly používat ODBC Driver 13.1 pro SQL Server.
 
-[Microsoft Azure C a C++ Developer Center](https://azure.microsoft.com/develop/cpp/) Azure usnadňuje vytváření aplikací C++ s vyšší flexibilitu, škálovatelnost a spolehlivost pomocí nástrojů, které vám rádi.    
+[Středisko pro vývojáře v C++ a C Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
+Azure usnadňuje vývoj aplikací v C++ se zvýšenou flexibilitou, škálovatelností a spolehlivostí za použití oblíbených nástrojů.    
 
-[Používání úložiště Blob z jazyka C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu jako objekty nebo objekty BLOB. Úložiště objektů BLOB můžete ukládat jakýkoli typ textu nebo binárních dat, jako je například dokument, soubor média nebo instalační program aplikace. Úložiště objektů blob se také označuje jako úložiště objektů.
+[Používání úložiště Blob z jazyka C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu jako objektů BLOB. BLOB storage dokáže ukládat jakýkoli druh textu nebo binárních dat, jako je například dokument, soubor médií nebo instalační program aplikace. Úložiště objektů blob se taky označuje jako úložiště objektů.
 
-[ Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) rozhraní ODBC je určen k použití pomocí programovacího jazyka C. Použití rozhraní ODBC zahrnuje tři oblasti: příkazy SQL, rozhraní ODBC funkce volání a C programování.
+[ Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+Rozhraní ODBC je určen pro použití s programovací jazyk C. Použití rozhraní ODBC zahrnuje tři oblasti: volání a programování v jazyce C funkce příkazy SQL, rozhraní ODBC.
 
 ## <a name="see-also"></a>Viz také
+
 [Visual C++](../visual-cpp-in-visual-studio.md)

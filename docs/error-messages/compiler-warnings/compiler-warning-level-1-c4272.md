@@ -1,5 +1,5 @@
 ---
-title: Upozornění (úroveň 1) C4272 kompilátoru | Microsoft Docs
+title: Upozornění (úroveň 1) C4272 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6de736c3226a9d3377769b65604a458c08e25df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00e30646c9fe56132da9cf87ba71cb54ae6a3e8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052956"
 ---
-# <a name="compiler-warning-level-1-c4272"></a>Upozornění (úroveň 1) C4272 kompilátoru
-'function': deklarace __declspec(dllimport); je označen. musíte zadat nativní konvence volání, při importu funkce.  
-  
- Jedná se o chybu export označené jako funkci [__clrcall](../../cpp/clrcall.md) volání konvence a kompilátor problémy toto upozornění, pokud se pokusíte importovat funkci označena `__clrcall`.  
-  
- Následující ukázka generuje C4272:  
-  
-```  
-// C4272.cpp  
-// compile with: /c /W1 /clr  
-__declspec(dllimport) void __clrcall Test();   // C4272  
-__declspec(dllimport) void Test2();   // OK  
+# <a name="compiler-warning-level-1-c4272"></a>Kompilátor upozornění (úroveň 1) C4272
+
+'function': je označené jako __declspec(dllimport); Při importu funkce, musí specifikovat nativní konvence volání.
+
+Jedná se o chybu, chcete-li exportovat funkce označené [__clrcall](../../cpp/clrcall.md) volání konvence a kompilátor toto upozornění vydá, pokud se pokusíte importovat funkce označené `__clrcall`.
+
+Následující ukázka generuje C4272:
+
+```
+// C4272.cpp
+// compile with: /c /W1 /clr
+__declspec(dllimport) void __clrcall Test();   // C4272
+__declspec(dllimport) void Test2();   // OK
 ```

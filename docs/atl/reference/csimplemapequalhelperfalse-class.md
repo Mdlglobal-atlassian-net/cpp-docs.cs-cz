@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052728"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Csimplemapequalhelperfalse – třída
 
@@ -33,7 +33,7 @@ Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimple
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
 ```
 
@@ -66,10 +66,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametry
 
-*k1*  
+*k1*<br/>
 První klíč.
 
-*k2*  
+*k2*<br/>
 Druhý klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -98,5 +98,5 @@ Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem fa
 
 ## <a name="see-also"></a>Viz také
 
-[Csimplemapequalhelper – třída](../../atl/reference/csimplemapequalhelper-class.md)   
+[CSimpleMapEqualHelper – třída](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

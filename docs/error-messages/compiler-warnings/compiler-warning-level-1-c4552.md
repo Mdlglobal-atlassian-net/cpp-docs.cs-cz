@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4552 | Microsoft Docs
+title: Upozornění (úroveň 1) C4552 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3b58d33286163050db533fed00d27abe8903e9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62c08ea81f5f8794a1dd4ff7d0b5644e9a669e0f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048068"
 ---
-# <a name="compiler-warning-level-1-c4552"></a>C4552 kompilátoru upozornění (úroveň 1)
-'operátor': operátor nemá žádný vliv; Očekávaný operátoru s vedlejším účinkem  
-  
- Pokud příkaz výrazu operátor s žádné vedlejším účinkem jako horní části výrazu, je pravděpodobně chyba.  
-  
- Pokud chcete přepsat toto upozornění, uveďte výrazu v závorkách.  
-  
- Následující ukázka generuje C4552:  
-  
-```  
-// C4552.cpp  
-// compile with: /W1  
-int main() {  
-   int i, j;  
-   i + j;   // C4552  
-   // try the following line instead  
-   // (i + j);  
-}  
+# <a name="compiler-warning-level-1-c4552"></a>Kompilátor upozornění (úroveň 1) C4552
+
+'operator': operátor nemá žádný vliv; Očekával se operátor s vedlejším účinkem
+
+Pokud příkaz výrazu má operátor bez vlivu na straně jako horní části výrazu, je pravděpodobně chyba.
+
+Chcete-li přepsat toto upozornění, umístěte výraz v závorkách.
+
+Následující ukázka generuje C4552:
+
+```
+// C4552.cpp
+// compile with: /W1
+int main() {
+   int i, j;
+   i + j;   // C4552
+   // try the following line instead
+   // (i + j);
+}
 ```

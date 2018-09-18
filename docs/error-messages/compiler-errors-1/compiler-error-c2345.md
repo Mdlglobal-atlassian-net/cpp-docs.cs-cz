@@ -1,5 +1,5 @@
 ---
-title: C2345 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2345 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 528afe4ba6c9dd0b22b4664de706ba4370497c88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb20a744c2a8ef67901da10c4933bc38402c710f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048120"
 ---
-# <a name="compiler-error-c2345"></a>C2345 chyby kompilátoru
-align(Value): zarovnání neplatnou hodnotu  
-  
- Předaná hodnota [zarovnat](../../cpp/align-cpp.md) klíčové slovo, které je mimo povolený rozsah.  
-  
- Následující kód vytvoří C2345  
-  
-```  
-// C2345.cpp  
-// compile with: /c  
-__declspec(align(0)) int a;   // C2345  
-__declspec(align(1)) int a;   // OK  
+# <a name="compiler-error-c2345"></a>Chyba kompilátoru C2345
+
+align(Value): Neplatná hodnota zarovnání
+
+Jste předali hodnotu, která [zarovnat](../../cpp/align-cpp.md) – klíčové slovo, které je mimo povolený rozsah.
+
+Následující kód vygeneruje C2345
+
+```
+// C2345.cpp
+// compile with: /c
+__declspec(align(0)) int a;   // C2345
+__declspec(align(1)) int a;   // OK
 ```

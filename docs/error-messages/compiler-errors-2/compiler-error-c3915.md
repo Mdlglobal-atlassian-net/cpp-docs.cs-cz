@@ -1,5 +1,5 @@
 ---
-title: C3915 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3915 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,76 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0220df8fbd1af06dfcc5f5cb018c39698e0fae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e34ad9c292f79bb29684d0984fb7e504dfafa23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051669"
 ---
-# <a name="compiler-error-c3915"></a>C3915 chyby kompilátoru
-"typ" nemá vlastnost Výchozí indexované (třída indexer)  
-  
- Typ nemá výchozí, indexované vlastnosti.  
-  
- Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3915.  
-  
-```  
-// C3915.cpp  
-// compile with: /clr  
-ref class X {  
-public:  
-// uncomment property to resolve this C3915  
-//   property int default[]  
-//   {  
-//      int get(int i)  
-//      {  
-//         return 863;  
-//      }  
-//   }  
-};  
-  
-int main() {  
-   X^ x = new X;  
-   System::Console::WriteLine(x[1]);   // C3915  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- C3915 může také nastat, pokud se pokusíte spotřeba indexeru výchozí ve stejné kompilace, kde je definovaný s <xref:System.Reflection.DefaultMemberAttribute>.  
-  
- Následující ukázka generuje C3915.  
-  
-```  
-// C3915_b.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-[Reflection::DefaultMember("XXX")]  
-ref struct A {  
-   property Double XXX[Double] {  
-      Double get(Double data) {  
-         return data*data;  
-      }  
-   }  
-};  
-  
-ref struct B {  
-   property Double default[Double] {  
-      Double get(Double data) {  
-         return data*data;  
-      }  
-   }  
-};  
-  
-int main() {  
-   A ^ mya = gcnew A();  
-   Console::WriteLine("{0}", mya[3]);   // C3915  
-  
-   B ^ myb = gcnew B();  
-   Console::WriteLine("{0}", myb[3]);   // OK  
-}  
+# <a name="compiler-error-c3915"></a>Chyba kompilátoru C3915
+
+'type' nemá žádnou výchozí indexovanou vlastnost (indexer tříd)
+
+Typ nemá výchozí, indexované vlastnosti.
+
+Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3915.
+
+```
+// C3915.cpp
+// compile with: /clr
+ref class X {
+public:
+// uncomment property to resolve this C3915
+//   property int default[]
+//   {
+//      int get(int i)
+//      {
+//         return 863;
+//      }
+//   }
+};
+
+int main() {
+   X^ x = new X;
+   System::Console::WriteLine(x[1]);   // C3915
+}
+```
+
+## <a name="example"></a>Příklad
+
+C3915 může také dojít, pokud při pokusu o spotřeba indexeru výchozí ve stejném kompilace, kde byl definován s <xref:System.Reflection.DefaultMemberAttribute>.
+
+Následující ukázka generuje C3915.
+
+```
+// C3915_b.cpp
+// compile with: /clr
+using namespace System;
+
+[Reflection::DefaultMember("XXX")]
+ref struct A {
+   property Double XXX[Double] {
+      Double get(Double data) {
+         return data*data;
+      }
+   }
+};
+
+ref struct B {
+   property Double default[Double] {
+      Double get(Double data) {
+         return data*data;
+      }
+   }
+};
+
+int main() {
+   A ^ mya = gcnew A();
+   Console::WriteLine("{0}", mya[3]);   // C3915
+
+   B ^ myb = gcnew B();
+   Console::WriteLine("{0}", myb[3]);   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Agent – třída | Microsoft Docs
+title: Agent – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 33afc48ab06bc12937b36c4ee5ccb4ee0f170216
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047197"
 ---
 # <a name="agent-class"></a>agent – třída
-Třída určena pro použití jako základní třída pro všechny agenty nezávislé. Umožňuje skrýt stavu z jiné agenty a komunikovat pomocí přenosu zpráv.  
+Třída určena pro použití jako základní třída pro všechny agenty nezávislé. Používá se k skrýt stav z další agenty a komunikovat pomocí předávání zpráv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,27 +49,27 @@ class agent;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Agent](#ctor)|Přetíženo. Vytvoří agenta.|  
+|[Agent](#ctor)|Přetíženo. Sestaví agenta.|  
 |[~ agent – destruktor](#dtor)|Zničí agenta.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zrušit](#cancel)|Přesune agenta z buď `agent_created` nebo `agent_runnable` stavy do `agent_canceled` stavu.|  
-|[Spuštění](#start)|Přesune agenta z `agent_created` stavu na `agent_runnable` stavu a plány pro spuštění.|  
-|[Stav](#status)|Synchronní zdroj informace o stavu z agenta.|  
+|[Zrušit](#cancel)|Přesune agenta buď z `agent_created` nebo `agent_runnable` stavy `agent_canceled` stavu.|  
+|[Spuštění](#start)|Přesune z agenta `agent_created` do stavu `agent_runnable` stavu a plány pro spuštění.|  
+|[Stav](#status)|Synchronní zdroj informací o stavu z agenta.|  
 |[status_port](#status_port)|Asynchronní zdroj informací o stavu z agenta.|  
-|[Počkej](#wait)|Čeká na agenta a dokončení úkolu.|  
-|[wait_for_all](#wait_for_all)|Čeká na všechny zadané agentů k dokončení úkolů.|  
-|[wait_for_one](#wait_for_one)|Čeká se pro každý zadaný agentů a dokončení úkolu.|  
+|[Počkej](#wait)|Čeká se na agenta a dokončení úkolu.|  
+|[wait_for_all](#wait_for_all)|Čeká na všechny zadané agentů k dokončení jejich úloh.|  
+|[wait_for_one](#wait_for_one)|Počká, pro každý zadaný agentů a dokončení úkolu.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Provést](#done)|Přesune do agenta `agent_done` stavu, která určuje, zda agent byla dokončena.|  
-|[Spustit](#run)|Představuje hlavní úlohy agenta. `run` by měla být potlačena v odvozené třídě a určuje, co má provést agenta po jeho spuštění.|  
+|[Hotovo](#done)|Přesune do agenta `agent_done` Stav označující, že agent byla dokončena.|  
+|[Spuštění](#run)|Představuje hlavního úkolu agenta. `run` by měla být potlačena v odvozené třídě a určuje, jak agenta postupovat po jeho spuštění.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronních agentů](../../../parallel/concrt/asynchronous-agents.md).  
@@ -84,7 +84,7 @@ class agent;
   
 ##  <a name="ctor"></a> Agent 
 
- Vytvoří agenta.  
+ Sestaví agenta.  
   
 ```
 agent();
@@ -95,16 +95,16 @@ agent(ScheduleGroup& _PGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PScheduler`  
- `Scheduler` Objektů v rámci kterého je naplánováno spuštění úlohy agenta.  
+*_PScheduler*<br/>
+`Scheduler` Objekt v rámci úkolu spuštění agenta je naplánováno.  
   
- `_PGroup`  
- `ScheduleGroup` Objektů v rámci kterého je naplánováno spuštění úlohy agenta. `Scheduler` Objekt použitý je zahrnuto v plánu skupiny.  
+*_PGroup*<br/>
+`ScheduleGroup` Objekt v rámci úkolu spuštění agenta je naplánováno. `Scheduler` Skupina plánování předpokládá používaný objekt.  
   
 ### <a name="remarks"></a>Poznámky  
  Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PGroup` parametry.  
   
-##  <a name="dtor"></a> ~ agenta 
+##  <a name="dtor"></a> ~ agent 
 
  Zničí agenta.  
   
@@ -113,65 +113,65 @@ virtual ~agent();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Jedná se o chybu při zavírání agenta, který není ve stavu terminálu (buď `agent_done` nebo `agent_canceled`). Tím se vyhnout tím, že pro agenta dosáhne stavu terminálu v destruktoru třídy, která dědí z `agent` třídy.  
+ Jedná se o chybu ke zničení agenta, který není ve stavu terminálu (buď `agent_done` nebo `agent_canceled`). To se můžete vyhnout tím, že má agent dosáhne konečného stavu v destruktor třídy, která dědí z `agent` třídy.  
   
 ##  <a name="cancel"></a> Zrušit 
 
- Přesune agenta z buď `agent_created` nebo `agent_runnable` stavy do `agent_canceled` stavu.  
+ Přesune agenta buď z `agent_created` nebo `agent_runnable` stavy `agent_canceled` stavu.  
   
 ```
 bool cancel();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud agenta byla zrušena, `false` jinak. Agenta nelze zrušit, pokud byl již spuštěn nebo je již dokončena.  
+ `true` Pokud agenta byla zrušena, `false` jinak. Agenta nelze zrušit, pokud byl již spuštěn nebo již byla dokončena.  
   
-##  <a name="done"></a> Provést 
+##  <a name="done"></a> Hotovo 
 
- Přesune do agenta `agent_done` stavu, která určuje, zda agent byla dokončena.  
+ Přesune do agenta `agent_done` Stav označující, že agent byla dokončena.  
   
 ```
 bool done();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se přesune do agenta `agent_done` stavu, `false` jinak. Agenta, který byl zrušen nelze přesunout do `agent_done` stavu.  
+ `true` Pokud se přesune do agenta `agent_done` stavu, `false` jinak. Agent, který byl zrušen nelze přesunout do `agent_done` stavu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda by měla být volána na konci `run` metodu, když víte, provádění agenta byla dokončena.  
+ Tato metoda by měla být volána na konci `run` metodu, když víte, provádění vašeho agenta byla dokončena.  
   
-##  <a name="run"></a> Spustit 
+##  <a name="run"></a> Spuštění 
 
- Představuje hlavní úlohy agenta. `run` by měla být potlačena v odvozené třídě a určuje, co má provést agenta po jeho spuštění.  
+ Představuje hlavního úkolu agenta. `run` by měla být potlačena v odvozené třídě a určuje, jak agenta postupovat po jeho spuštění.  
   
 ```
 virtual void run() = 0;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Stav agenta se změní na `agent_started` před tato metoda je volána. Metoda by měla vyvolat `done` v agentovi odpovídající stavem před vrácením a nemusí výjimku jakékoli výjimky.  
+ Stav agenta se změní na `agent_started` klikněte pravým tlačítkem myši před vyvoláním této metody. Metoda by měla vyvolat `done` pomocí příslušný stav před vrácením a nemusí generovat žádné výjimky.  
   
 ##  <a name="start"></a> Spuštění 
 
- Přesune agenta z `agent_created` stavu na `agent_runnable` stavu a plány pro spuštění.  
+ Přesune z agenta `agent_created` do stavu `agent_runnable` stavu a plány pro spuštění.  
   
 ```
 bool start();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud agent spuštěn správně, `false` jinak. Nelze spustit, agenta, který byl zrušen.  
+ `true` Pokud agent spuštěn správně, `false` jinak. Nelze spustit agenta, který byl zrušen.  
   
 ##  <a name="status"></a> Stav 
 
- Synchronní zdroj informace o stavu z agenta.  
+ Synchronní zdroj informací o stavu z agenta.  
   
 ```
 agent_status status();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktuální stav agenta. Všimněte si, že tento stav vrácený změnit ihned po nebyl vrácen.  
+ Vrátí aktuální stav agenta. Všimněte si, že tento stav vrácený změnit ihned po se vrací.  
   
 ##  <a name="status_port"></a> status_port – 
 
@@ -182,11 +182,11 @@ ISource<agent_status>* status_port();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí zdroj zprávy, který může odesílat zprávy o aktuální stav agenta.  
+ Vrátí zprávu zdroj, který může odesílat zprávy o aktuálním stavu agenta.  
   
 ##  <a name="wait"></a> Počkej 
 
- Čeká na agenta a dokončení úkolu.  
+ Čeká se na agenta a dokončení úkolu.  
   
 ```
 static agent_status __cdecl wait(
@@ -195,23 +195,23 @@ static agent_status __cdecl wait(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PAgent`  
- Ukazatel na agenta pro čekání.  
+*_PAgent*<br/>
+Ukazatel na agenta čekání.  
   
- `_Timeout`  
- Maximální doba, pro které chcete počkat, v milisekundách.  
+*_Vypršení časového limitu*<br/>
+Maximální doba, která čekání v milisekundách.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `agent_status` Agenta při čekání dokončení. To může být buď `agent_canceled` nebo `agent_done`.  
+ `agent_status` Agenta po čekání dokončení. Může to být buď `agent_canceled` nebo `agent_done`.  
   
 ### <a name="remarks"></a>Poznámky  
- Když agent zadá dokončení rámci úlohy agenta `agent_canceled` nebo `agent_done` stavy.  
+ Úlohu agenta je dokončeno, když přejde do agenta `agent_canceled` nebo `agent_done` stavy.  
   
- Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out](operation-timed-out-class.md) je vyvolána výjimka, jestliže zadaného časového intervalu vyprší agenta dokončí úlohu.  
+ Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out –](operation-timed-out-class.md) je vyvolána, pokud zadaného časového intervalu vyprší agenta dokončí úlohu.  
   
 ##  <a name="wait_for_all"></a> wait_for_all – 
 
- Čeká na všechny zadané agentů k dokončení úkolů.  
+ Čeká na všechny zadané agentů k dokončení jejich úloh.  
   
 ```
 static void __cdecl wait_for_all(
@@ -222,26 +222,26 @@ static void __cdecl wait_for_all(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `count`  
- Počet agenta ukazatele v poli `_PAgents`.  
+*Počet*<br/>
+Počet ukazatelů agenta v poli `_PAgents`.  
   
- `_PAgents`  
- Pole ukazatele agentů pro čekání.  
+*_PAgents*<br/>
+Pole ukazatelů do agentů čekání.  
   
- `_PStatus`  
- Ukazatel na pole stavy agenta. Každá hodnota stavu bude reprezentovat stav odpovídající agenta, když metoda vrátí.  
+*_PStatus*<br/>
+Ukazatel na pole stavů agenta. Každá hodnota stavu bude reprezentovat stav odpovídajícího agenta po návratu metody.  
   
- `_Timeout`  
- Maximální doba, pro které chcete počkat, v milisekundách.  
+*_Vypršení časového limitu*<br/>
+Maximální doba, která čekání v milisekundách.  
   
 ### <a name="remarks"></a>Poznámky  
- Když agent zadá dokončení rámci úlohy agenta `agent_canceled` nebo `agent_done` stavy.  
+ Úlohu agenta je dokončeno, když přejde do agenta `agent_canceled` nebo `agent_done` stavy.  
   
- Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out](operation-timed-out-class.md) je vyvolána výjimka, jestliže zadaného časového intervalu vyprší agenta dokončí úlohu.  
+ Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out –](operation-timed-out-class.md) je vyvolána, pokud zadaného časového intervalu vyprší agenta dokončí úlohu.  
   
 ##  <a name="wait_for_one"></a> wait_for_one – 
 
- Čeká se pro každý zadaný agentů a dokončení úkolu.  
+ Počká, pro každý zadaný agentů a dokončení úkolu.  
   
 ```
 static void __cdecl wait_for_one(
@@ -253,25 +253,25 @@ static void __cdecl wait_for_one(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `count`  
- Počet agenta ukazatele v poli `_PAgents`.  
+*Počet*<br/>
+Počet ukazatelů agenta v poli `_PAgents`.  
   
- `_PAgents`  
- Pole ukazatele agentů pro čekání.  
+*_PAgents*<br/>
+Pole ukazatelů do agentů čekání.  
   
- `_Status`  
- Odkaz na proměnnou, kde budou umístěné stav agenta.  
+*_Status*<br/>
+Odkaz na proměnnou, kde budou umístěné stav agenta.  
   
- `_Index`  
- Odkaz na proměnnou, kde budou umístěné index agenta.  
+*_Index*<br/>
+Odkaz na proměnnou umístění indexu agenta.  
   
- `_Timeout`  
- Maximální doba, pro které chcete počkat, v milisekundách.  
+*_Vypršení časového limitu*<br/>
+Maximální doba, která čekání v milisekundách.  
   
 ### <a name="remarks"></a>Poznámky  
- Když agent zadá dokončení rámci úlohy agenta `agent_canceled` nebo `agent_done` stavy.  
+ Úlohu agenta je dokončeno, když přejde do agenta `agent_canceled` nebo `agent_done` stavy.  
   
- Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out](operation-timed-out-class.md) je vyvolána výjimka, jestliže zadaného časového intervalu vyprší agenta dokončí úlohu.  
+ Pokud parametr `_Timeout` má jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, výjimka [operation_timed_out –](operation-timed-out-class.md) je vyvolána, pokud zadaného časového intervalu vyprší agenta dokončí úlohu.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

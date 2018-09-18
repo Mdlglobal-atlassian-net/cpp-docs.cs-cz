@@ -1,5 +1,5 @@
 ---
-title: CXX0059 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0059 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050460"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Chyba při vyhodnocování výrazu CXX0059
-Levý operand je třída, není název funkce  
-  
- Levý operand volání funkce byl název třídy a nelze přeložit na volání funkce. Vynechání název členské funkce ve výrazu může způsobit, že k této chybě.  
-  
- Tato chyba je stejný jako CAN0059.
+
+Levý operand je třída není název funkce
+
+Levý operand volání funkce byl název třídy a nelze přeložit na volání funkce. Tuto chybu může způsobovat vynechání názvu členské funkce ve výrazu.
+
+Tato chyba se shoduje s CAN0059.
